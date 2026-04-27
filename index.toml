@@ -1,6 +1,98 @@
 hash-format = "sha256"
 
 [[files]]
-file = "pack.toml"
-hash = ""
-metafile = false
+file = ".github/workflows/add-mod.yml"
+hash = "57134599982d15e91504e1883c40ed3fcf0b6a25cd40ef8867aef86dd6c75231"
+
+[[files]]
+file = ".github/workflows/build.yml"
+hash = "2c6b662e90ca35a2148fb46a549dcddc5a5f3f835523133a9d5a78b891505cae"
+
+[[files]]
+file = ".github/workflows/remove-mod.yml"
+hash = "86a1b89ad6fa8017ae4bddadc4e53af5fd0582ca9b4f93440575a4c218606dd1"
+
+[[files]]
+file = ".github/workflows/update-mods.yml"
+hash = "b187c74f7eb261a640078957df9ab6d1939c0e19bd601d213ab310c385247185"
+
+[[files]]
+file = "LICENSE"
+hash = "a367e594ee80fba5f6979bdd46202c3cbc63ab5b3dbc782b832af1c2275e9ed0"
+
+[[files]]
+file = "README.md"
+hash = "b095fbc28cebc16b7956cd3384c8e647dfd39c40bda58ff2730767230fd301f9"
+
+[[files]]
+file = "config/README.md"
+hash = "86e7944b9da85a39c7dd016ab819eda76892d5bb70cc0deb1c9224580f283175"
+
+[[files]]
+file = "defaultconfigs/README.md"
+hash = "fb4b47e354a896eb39c0bc65ada1f4020b0c01936013c8c1e64780dba2b621fa"
+
+[[files]]
+file = "docs/EDITING.md"
+hash = "0eccd2ad5c605cace0582bec4f37e3c53822cc99d2cf9c2a405f5aacef88e840"
+
+[[files]]
+file = "docs/MODLIST.md"
+hash = "b635eef33a59f302e376c9385ab583d12229a15127a76c33e180ed461997c574"
+
+[[files]]
+file = "docs/PRISM-SETUP.md"
+hash = "0f7f16a2a25af8f0614ffa4b758f3b9058303dc6870b356511dd0bda07506d56"
+
+[[files]]
+file = "kubejs/README.md"
+hash = "dc55272ae40f89dd922cc92b4d77448bf8afdc47be96f80c4ca0a20bdfedd2d6"
+
+[[files]]
+file = "kubejs/server_scripts/example.js"
+hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
+
+[[files]]
+file = "mods/create.pw.toml"
+hash = "dcaf5f2e28db0b9a127d0167456832341045ddc9aec058c3d9fcf53f618d2404"
+metafile = true
+
+[[files]]
+file = "packwizignore"
+hash = "25f4dd5a581785897cd5a05bb5d6426abbf919882eb1c0f500917914a34b47c0"
+
+[[files]]
+file = "resourcepacks/README.md"
+hash = "932ff2e9a4378a583a87c9a7a0609837c5b02b5633e5b8dba381a3b1333a9e9f"
+
+[[files]]
+file = "scripts/bootstrap-mods.sh"
+hash = "63a580f7e2ac27e2b1a4a6279a289e1cfe0d9df30a03f2df3c890f404aa2431a"
+
+[[files]]
+file = "scripts/build-mrpack.sh"
+hash = "2ffac7786318505965a4714ff2caa0dd9db58ca15d2027425c7fe013daab0121"
+
+[[files]]
+file = "scripts/build-prism-bundled.sh"
+hash = "f5c4ae6f5b1652cf6d42e39e6e7ebfba3c8d4348026d88eca3790e85d109b52e"
+
+[[files]]
+file = "scripts/build-prism-installer.sh"
+hash = "8025de90d2f3b32bc9ac6574ebd81e07b0e2af2e6d521d0c5298bb22f017b093"
+
+[[files]]
+file = "scripts/build-prism-skeleton.sh"
+hash = "c01da4965ca0f352026abc5e6d4d0dd12c23ee4f10872491b1e5be20f34de4b0"
+
+[[files]]
+file = "scripts/build-server.sh"
+hash = "984415662f0fd431322ef573b2e13d7bfae326cded0f399fc0d19a080702bf04"
+
+[[files]]
+file = "scripts/setup.sh"
+hash = "a213c16bca4aa68588c19f814a3c34875440eee242893a5a2bcbc7b56e55c3dd"
+
+[[files]]
+file = "shaderpacks/README.md"
+hash = "0380f3632f5d349cf5bf5e1d6bedf04d8ce03eea1b09ef8bd3435e2dc6e2b826"
