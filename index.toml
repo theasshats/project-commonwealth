@@ -95,6 +95,11 @@ hash = "85048cc2c3269c990d551c6ebe5058662087ea5eb89e9da9ade81e3637654934"
 metafile = true
 
 [[files]]
+file = "mods/create-steam-n-rails-1.21.1.pw.toml"
+hash = "104581a7f2a0b1c164399d278675f68701a2147db5a895188298e049d14dcea9"
+metafile = true
+
+[[files]]
 file = "mods/create.pw.toml"
 hash = "dcaf5f2e28db0b9a127d0167456832341045ddc9aec058c3d9fcf53f618d2404"
 metafile = true
@@ -216,4 +221,4 @@ hash = "0380f3632f5d349cf5bf5e1d6bedf04d8ce03eea1b09ef8bd3435e2dc6e2b826"
 
 [[files]]
 file = "wishlist.txt"
-hash = "ce74fe5301a0db12963e9e006504c1d4d471e859bd1d80a0fb2c694775b1d850"
+hash = "749dfc7c0bceae4338a1b99cdf92abfc57fd08756546b036f0dbb798f843e2b9"
