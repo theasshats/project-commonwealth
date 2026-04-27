@@ -1,0 +1,54 @@
+# Mod wishlist
+#
+# Edit this file to add mods in batch. Each line is one mod, in this format:
+#
+#   source:slug          (defaults to side=both)
+#   source:slug:side     (side = both | client | server)
+#
+# Where source is:
+#   mr  -- Modrinth
+#   cf  -- CurseForge
+#
+# Lines starting with # are comments and ignored. Blank lines are ignored.
+#
+# When you commit a change to this file, the "Sync wishlist" workflow runs
+# and adds any mods that aren't already in mods/. It does NOT remove mods --
+# use the "Remove mod" workflow for that, or delete the mods/<slug>.pw.toml
+# files directly.
+#
+# Examples:
+#   mr:create
+#   mr:jei
+#   cf:create-aeronautics-compatability
+#   mr:xaeros-minimap:client
+#
+
+# === Required (Aeronautics core) ===
+mr:create
+mr:sable
+mr:create-aeronautics
+cf:create-aeronautics-compatability
+
+# === Performance ===
+# mr:embeddium
+# mr:ferrite-core
+# mr:modernfix
+
+# === QoL ===
+# mr:jei
+# mr:jade
+# mr:mouse-tweaks
+# mr:xaeros-minimap:client
+# mr:xaeros-world-map:client
+
+# === Create addons ===
+# mr:create-steam-n-rails
+# mr:create-new-age
+# mr:create-enchantment-industry
+
+# === Adventure / content ===
+# mr:alexs-mobs
+# mr:farmers-delight
+# mr:sophisticated-backpacks
+# mr:irons-spells-n-spellbooks
+# mr:supplementaries

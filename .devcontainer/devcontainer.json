@@ -1,0 +1,25 @@
+{
+    "name": "Derpack X: Create dev",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/devcontainers/features/go:1": {
+            "version": "1.22"
+        },
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "21",
+            "installGradle": false,
+            "installMaven": false
+        }
+    },
+    "postCreateCommand": "go install github.com/packwiz/packwiz@latest",
+    "remoteEnv": {
+        "PATH": "${containerEnv:PATH}:/home/vscode/go/bin"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "tamasfe.even-better-toml"
+            ]
+        }
+    }
+}

@@ -35,10 +35,12 @@ The list of mods to read first:
 
 Most edits happen through the GitHub UI — no local install needed:
 
-- **Add a mod** → Actions tab → "Add mod" workflow → Run
-- **Remove a mod** → Actions tab → "Remove mod" workflow → Run
-- **Update mods** → Actions tab → "Update mods" workflow → Run (blank slug = update all)
+- **Add mod(s)** → Actions tab → "Add mod(s)" → Run (single slug or comma-separated batch)
+- **Remove a mod** → Actions tab → "Remove mod" → Run
+- **Update mods** → Actions tab → "Update mods" → Run (blank slug = update all)
+- **Big batch with planning?** → Edit [`wishlist.txt`](wishlist.txt) and commit; the **Sync wishlist** workflow runs and adds anything new
 - **Drop in a config / shaderpack / KubeJS script** → upload via the web UI, then trigger "Update mods" to refresh the index
+- **Need a real terminal?** → spin up a [Codespace](https://github.com/features/codespaces) — packwiz is pre-installed via [`.devcontainer/devcontainer.json`](.devcontainer/devcontainer.json)
 
 Full walkthrough in [`docs/EDITING.md`](docs/EDITING.md).
 

@@ -9,24 +9,36 @@ Default to the GitHub flow when you can. It leaves a clean paper trail of every 
 
 ---
 
-## I want to ADD a mod
+## I want to ADD a mod (or several)
 
 1. Go to the repo on GitHub → **Actions** tab.
-2. Click **Add mod** in the sidebar.
+2. Click **Add mod(s)** in the sidebar.
 3. Click **Run workflow** (top right).
 4. Fill in the form:
-   - **Source**: Modrinth or CurseForge — pick whichever has the mod
-   - **Slug**: the last part of the mod's URL
-     - Modrinth: `modrinth.com/mod/jei` → slug is `jei`
-     - CurseForge: `curseforge.com/minecraft/mc-mods/create-aeronautics-compatability` → slug is `create-aeronautics-compatability`
-   - **Side**: usually `both`. Use `client` for things like minimaps and JEI; `server` is rare.
+   - **Source**: Modrinth or CurseForge — pick whichever has the mod(s)
+   - **Slugs**: one slug, or several separated by commas (e.g. `jei,jade,sophisticated-backpacks`)
+   - **Side**: usually `both`. Use `client` for things like minimaps and JEI; `server` is rare. Applies to all slugs in this run.
 5. Click **Run workflow**.
-6. Wait ~30 seconds. The workflow runs `packwiz add`, commits, and pushes to `main`.
-7. Refresh the repo — you'll see a new commit "Add `<slug>` from `<source>`" by `github-actions[bot]`.
+6. Wait ~30 seconds (longer if you listed 10+ slugs). The workflow runs `packwiz add` for each, commits, and pushes.
+7. Refresh the repo — you'll see one commit covering the whole batch.
 
-If the workflow fails: open the run, scroll to the failed step, and the log will say why (most common: wrong slug, mod not on the platform you picked, no version available for 1.21.1 NeoForge).
+The slug is the last part of the mod's URL:
+- Modrinth: `modrinth.com/mod/jei` → slug is `jei`
+- CurseForge: `curseforge.com/minecraft/mc-mods/create-aeronautics-compatability` → slug is `create-aeronautics-compatability`
+
+If some slugs in a batch fail, the workflow commits the successes and fails at the end — the log lists exactly which slugs worked and which didn't. Failed slugs usually mean a typo, the mod isn't on that platform, or there's no 1.21.1 NeoForge build.
 
 After adding mods, also update [`MODLIST.md`](MODLIST.md) so the human-readable list stays accurate. You can edit it directly in the GitHub UI (pencil icon).
+
+### Alternative: edit the wishlist file
+
+If you want to plan a big batch and review it before applying, edit [`../wishlist.txt`](../wishlist.txt) instead. Each line is `source:slug` or `source:slug:side`. When you commit, the **Sync wishlist** workflow runs and adds anything new. Good for:
+
+- Reviewing what you're about to add (since the file is in the diff)
+- Documenting why a mod is in the pack (use comments above each line)
+- Copy-pasting from someone else's pack list
+
+The wishlist file does NOT remove mods that you delete from it. Use the **Remove mod** workflow for removals.
 
 ---
 
@@ -130,24 +142,41 @@ This takes ~5 minutes. If something fails, check the **Actions** tab — the fai
 
 ---
 
-## Local setup (only if you need it)
+## Need a real terminal? (Codespaces or local)
 
-The GitHub workflows handle adding/removing/updating mods, and the web UI handles file uploads. But a few tasks still benefit from a local checkout:
+The GitHub workflows handle most things, but a few tasks really do need a shell:
 
 - Bulk-editing many config files at once
-- Writing or testing KubeJS scripts (so you can see syntax errors before pushing)
+- Writing or testing KubeJS scripts before pushing
+- Inspecting a packwiz prompt that the auto-yes can't handle
 - Running a local test build before tagging a release
 
-If you want to do this:
+You have two options.
+
+### GitHub Codespaces (browser-based, no local install)
+
+A Codespace is a Linux dev container running in the browser. Free tier: 60 hours/month.
+
+1. On the repo, click **Code** → **Codespaces** tab → **Create codespace on main**.
+2. Wait ~1 minute. Codespaces uses our [`.devcontainer/devcontainer.json`](../.devcontainer/devcontainer.json), which pre-installs Go, Java 21, and packwiz.
+3. You get a VS Code interface in the browser with a real terminal.
+4. Run any packwiz command from the repo root. Common ones:
+   - `packwiz refresh`
+   - `packwiz mr add <slug>`
+   - `packwiz update <slug>`
+   - `./scripts/build-prism-bundled.sh` (slow, downloads jars)
+5. To save your changes: in the terminal, run `git add . && git commit -m "..." && git push`. Or use the VS Code source control panel.
+6. When done, go back to the Codespaces page and **Stop** the codespace (otherwise it keeps consuming your free hours).
+
+### Traditional local checkout
+
+If you'd rather work on your own machine:
 
 1. Install [packwiz](https://packwiz.infra.link/installation/): `go install github.com/packwiz/packwiz@latest` (with [Go](https://go.dev/dl/) installed), or `brew install packwiz` on Mac.
 2. Clone the repo: `git clone <repo-url>`.
-3. From the repo root you can now run any packwiz command. Common ones:
-   - `packwiz refresh` — re-hash files after editing configs
-   - `packwiz serve` — local HTTP server for testing
-   - `./scripts/build-prism-bundled.sh` — build a test zip locally
+3. From the repo root, run any packwiz command.
 
-If you'd rather not install anything: every task above can be done through the GitHub web UI plus the workflows. It's just slightly slower for bulk edits.
+Both paths land you in the same place — a working dev environment. Codespaces is faster to spin up; local is faster long-term if you'll be editing this pack often.
 
 ---
 
