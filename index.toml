@@ -120,11 +120,6 @@ hash = "36debf7653e95a855b4fedacc19027cf2e01960fc0b6d55ef2ffbffbcb455690"
 metafile = true
 
 [[files]]
-file = "mods/embeddium.pw.toml"
-hash = "778c42263b2ba7c9e73553bdcd70f48a3e485ba52b6a83474160d48be696b71f"
-metafile = true
-
-[[files]]
 file = "mods/emi.pw.toml"
 hash = "d3c9b48d7caa2ed964e5d1a4dab1da5655c63f0a7e4a59231c4369be7ffc30e1"
 metafile = true
@@ -291,4 +286,4 @@ hash = "0380f3632f5d349cf5bf5e1d6bedf04d8ce03eea1b09ef8bd3435e2dc6e2b826"
 
 [[files]]
 file = "wishlist.txt"
-hash = "9774f3cd3e3082b00fc0d4460bea48113afed98ff2aebc6e08d3fd3b7cf5f050"
+hash = "14bc697c8d064410c7ad715faff30dae4b1aa803824ae6134072f96186dde762"
