@@ -30,25 +30,27 @@ mr:create-aeronautics
 cf:create-aeronautics-compatability
 
 # === Performance ===
-# mr:embeddium
-# mr:ferrite-core
-# mr:modernfix
+mr:embeddium
+mr:ferrite-core
+mr:modernfix
 
 # === QoL ===
-# mr:jei
-# mr:jade
-# mr:mouse-tweaks
-# mr:xaeros-minimap:client
-# mr:xaeros-world-map:client
+mr:aileron
+cf:elytra-bounce
+mr:jei
+mr:jade
+mr:mouse-tweaks
+mr:xaeros-minimap:client
+mr:xaeros-world-map:client
 
 # === Create addons ===
-# mr:create-steam-n-rails
-# mr:create-new-age
-# mr:create-enchantment-industry
+mr:create-steam-n-rails
+mr:create-new-age
+mr:create-enchantment-industry
 
 # === Adventure / content ===
-# mr:alexs-mobs
-# mr:farmers-delight
-# mr:sophisticated-backpacks
-# mr:irons-spells-n-spellbooks
-# mr:supplementaries
+mr:alexs-mobs
+mr:farmers-delight
+mr:sophisticated-backpacks
+mr:irons-spells-n-spellbooks
+mr:supplementaries
