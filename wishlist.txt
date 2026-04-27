@@ -30,7 +30,6 @@ mr:create-aeronautics
 cf:create-aeronautics-compatability
 
 # === Performance ===
-mr:embeddium
 mr:ferrite-core
 mr:modernfix
 
