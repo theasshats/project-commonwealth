@@ -1,6 +1,18 @@
-// Example: tweak Create recipes if/when needed.
-// This file is a placeholder so the kubejs/ directory is tracked in git.
+// Example KubeJS script. Safe to delete or modify.
+// This file is loaded by the SERVER when it starts up.
 //
-// ServerEvents.recipes(event => {
-//   event.remove({ output: 'create:precision_mechanism' })
-// })
+// See ../README.md for more examples and the KubeJS docs link.
+
+ServerEvents.recipes(event => {
+  // Examples (commented out — uncomment to enable):
+
+  // Remove a recipe by output:
+  // event.remove({ output: 'create:precision_mechanism' })
+
+  // Add a shaped recipe:
+  // event.shaped('minecraft:diamond_block', [
+  //   'DDD',
+  //   'DDD',
+  //   'DDD'
+  // ], { D: 'minecraft:diamond' })
+})

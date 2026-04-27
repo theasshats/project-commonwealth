@@ -1,62 +1,78 @@
 # Derpack X: Create
 
-A Create-focused modpack for Minecraft 1.21.1 / NeoForge built around [Create Aeronautics](https://modrinth.com/mod/create-aeronautics) — physics-driven airships, planes, off-road vehicles, and the rest of the Create ecosystem.
+A Create-focused Minecraft modpack for 1.21.1 / NeoForge, built around [Create Aeronautics](https://modrinth.com/mod/create-aeronautics).
 
-> **Status:** Pre-alpha. Pinned to Create Aeronautics 1.1.3 (released April 2026). Expect breakage on Aeronautics updates.
+---
 
-## Quick start (Prism Launcher)
+## For players: how to install
 
-1. Install [Prism Launcher](https://prismlauncher.org/).
-2. Add a new instance: **Minecraft 1.21.1 → NeoForge 21.1.105**.
-3. Allocate **8GB minimum** (12GB recommended for the kitchen-sink mod list).
-4. Close Prism.
-5. Drop the contents of the latest [release](../../releases) into the instance's `.minecraft` folder, overwriting.
-6. Launch.
+Pick **one** of the three downloads on the latest [release](../../releases) page:
 
-> Mod jars are not in this repo. They live in the GitHub Releases attached zip (private — message me for access if you're not on the friend list).
+| File | What it is | When to use |
+|------|-----------|-------------|
+| `derpack-x-create-prism-bundled-X.Y.Z.zip` | Prism instance with all mod jars baked in | **Recommended.** Drop it into Prism, play. Big file. |
+| `derpack-x-create-prism-installer-X.Y.Z.zip` | Prism instance that downloads mods on first launch | Smaller download, auto-updates on every launch. Needs internet on first run. |
+| `derpack-x-create-X.Y.Z.mrpack` | Modrinth-format pack file | If you use the Modrinth app, or want to import into Prism manually. |
 
-## Structure
+**Steps:** download → open Prism Launcher → Add Instance → Import from zip → pick the file → launch.
+
+Memory and Java args are pre-configured. Java 21 is required (Prism will offer to download it if missing).
+
+See [`docs/PRISM-SETUP.md`](docs/PRISM-SETUP.md) for the full walkthrough.
+
+---
+
+## For collaborators (you, me, contributors)
+
+This repo doesn't store mod jars — it stores a list of *what mods are in the pack* (with URLs). When we cut a release, GitHub Actions downloads the jars and builds the zips users actually install.
+
+The list of mods to read first:
+
+- **[`docs/MODLIST.md`](docs/MODLIST.md)** — human-readable list of every mod, what it does, and why it's in the pack. Start here.
+- **[`docs/EDITING.md`](docs/EDITING.md)** — how to add a mod, drop in a config, or change something. Written for people who've never touched packwiz.
+
+### The three commands you'll actually use
+
+```bash
+packwiz mr add <slug>     # add a mod from Modrinth (e.g. packwiz mr add jei)
+packwiz cf add <slug>     # add a mod from CurseForge
+packwiz update --all      # bump every mod to its newest version
+```
+
+That's most of what touching this repo looks like day to day. After any of these, do `git add . && git commit -m "..."` and push.
+
+### Where things live
 
 ```
 .
-├── pack.toml              # packwiz manifest
-├── mods/                  # one .pw.toml per mod (URL + hash, no jars)
-├── config/                # per-mod configs we ship
-├── defaultconfigs/        # configs only applied to fresh instances
-├── kubejs/                # KubeJS scripts (recipes, tweaks)
-├── resourcepacks/         # bundled resource packs
-├── shaderpacks/           # bundled shaders (note: Aeronautics has shader issues)
-├── scripts/               # build + sync helpers
-├── docs/
-│   └── MODLIST.md         # human-readable mod list
-└── .github/workflows/     # CI: build .mrpack on tag
+├── pack.toml              # Pack name, version, Minecraft + loader version
+├── mods/                  # One small text file per mod (auto-managed, don't edit by hand)
+├── config/                # Mod configs that ALWAYS get applied to the user's instance
+├── defaultconfigs/        # Mod configs only applied on FRESH install (user can override)
+├── kubejs/                # KubeJS scripts for recipe tweaks etc.
+├── resourcepacks/         # Bundled resource packs (.zip files)
+├── shaderpacks/           # Bundled shaderpacks (.zip files)
+├── docs/                  # Human-facing documentation
+├── scripts/               # Build helpers (you almost never run these — CI does)
+└── .github/workflows/     # CI: builds the release zips when you publish a release
 ```
 
-## Development workflow
+Each folder has its own `README.md` explaining what goes inside it.
 
-```bash
-# one-time setup
-./scripts/setup.sh
+### Cutting a release
 
-# add a mod
-packwiz mr add create-aeronautics      # Modrinth
-packwiz cf add aeronautics-compat      # CurseForge
+1. Bump `version` in `pack.toml` (e.g. `0.1.0` → `0.1.1`)
+2. Commit and push to `main`
+3. On GitHub: Releases → Draft a new release → tag `v0.1.1` → Publish
+4. Wait ~5 minutes for the build, then check the release page for attached zips
 
-# refresh hashes after a mod update
-packwiz refresh
-
-# build a .mrpack locally
-./scripts/build-mrpack.sh
-```
-
-Tag a release (`v0.1.0`) and the GitHub Action will publish a `.mrpack` automatically.
+---
 
 ## Known issues
 
-- **Iris/Oculus shaders have visual bugs with Aeronautics ships** (per the mod page). Disable shaders if airships look broken.
-- **Mods that don't use `Sable Companion` may misbehave on physics ships.** That's why `aeronauticscompat` is in the pack — it patches Etched, Cobblemon, sentry turrets, sleeping, chains, etc.
-- **`itemphysic` and `FoamFix`** — leaving notes here from prior pack experience: client-only, do not put on the server.
+- **Iris/Oculus shaders glitch on Aeronautics ships.** Disable shaders if airships look broken. The mod team is aware.
+- **Some non-Aeronautics mods misbehave on physics ships.** That's why `aeronauticscompat` is in the pack — it patches Etched, Cobblemon, sentry turrets, sleeping, chains, and others.
 
 ## License
 
-Pack configuration and scripts: see [LICENSE](LICENSE). Bundled mods retain their original licenses; this repo does not redistribute mod jars.
+Pack configuration and scripts: see [LICENSE](LICENSE) (MIT). Bundled mods retain their original licenses; this repo does not redistribute mod jars — the build pipeline downloads them at release time.
