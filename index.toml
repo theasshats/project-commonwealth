@@ -1,12 +1,16 @@
 hash-format = "sha256"
 
 [[files]]
+file = ".devcontainer/devcontainer.json"
+hash = "bdd9c71945406ce4bfb6bb8b13aced1a1ee520cadbe077fd345dd8f676ef1101"
+
+[[files]]
 file = ".github/actions/setup-packwiz/action.yml"
 hash = "6b2a29d773a278637a08c33e59ad85d8140ececc08d8b056484839b1ce66767d"
 
 [[files]]
 file = ".github/workflows/add-mod.yml"
-hash = "39536457536b298e50be34d375018d98dfdb8a497e7ddb821b34cb2f4e8b274f"
+hash = "bb60ca2bfc51502ab943fdf2048219fa284fe2b7de9e8287300ed0edb21bc18d"
 
 [[files]]
 file = ".github/workflows/build.yml"
@@ -15,6 +19,10 @@ hash = "58e376b436a5453f0e4e1540263d193342e2d684bfe9dce8e3551720d8d06b34"
 [[files]]
 file = ".github/workflows/remove-mod.yml"
 hash = "8bde6ac33ddfd1f3e35878d32665c167add62dcd676e2a98c78e244181d25776"
+
+[[files]]
+file = ".github/workflows/sync-wishlist.yml"
+hash = "b4bc16771393bc9c8ee35f678f27ab51d0a431325b0b5a934c3ec58cda0014ea"
 
 [[files]]
 file = ".github/workflows/update-mods.yml"
@@ -26,7 +34,7 @@ hash = "a367e594ee80fba5f6979bdd46202c3cbc63ab5b3dbc782b832af1c2275e9ed0"
 
 [[files]]
 file = "README.md"
-hash = "b095fbc28cebc16b7956cd3384c8e647dfd39c40bda58ff2730767230fd301f9"
+hash = "91b4b86b7ca7d7e7eb2777aebc3f3eea76e6a104f9f0477ac93704682c39d53f"
 
 [[files]]
 file = "config/README.md"
@@ -38,7 +46,7 @@ hash = "fb4b47e354a896eb39c0bc65ada1f4020b0c01936013c8c1e64780dba2b621fa"
 
 [[files]]
 file = "docs/EDITING.md"
-hash = "0eccd2ad5c605cace0582bec4f37e3c53822cc99d2cf9c2a405f5aacef88e840"
+hash = "3be1fa167853b1d2d983070534b379305baf1f646dffc8a01d140ecef496412c"
 
 [[files]]
 file = "docs/MODLIST.md"
@@ -57,6 +65,11 @@ file = "kubejs/server_scripts/example.js"
 hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
 
 [[files]]
+file = "mods/aileron.pw.toml"
+hash = "a86b49f3eebe85445b5e7c8f9a7ef1e8cb84fa84939fe1f2b933dfb5feb92926"
+metafile = true
+
+[[files]]
 file = "mods/create-aeronautics-compatability.pw.toml"
 hash = "0c79e3caa8d94a77f96540b045ffaad071ef3ad1593bccf6adebbc01df5d08e8"
 metafile = true
@@ -67,13 +80,98 @@ hash = "74f3358e1070f1163d14cb62ee768a389bd758f36b5c21471910e43fbcfacc9e"
 metafile = true
 
 [[files]]
+file = "mods/create-dragons-plus.pw.toml"
+hash = "44df18a2448d91a2e781af5e4ad1a639e70b79b4041bf846b8776166f8d2a5b9"
+metafile = true
+
+[[files]]
+file = "mods/create-enchantment-industry.pw.toml"
+hash = "52f8600e5c7ab7358bee923cfff7cd2428d7599cb1ff3c0fdbd373330f770587"
+metafile = true
+
+[[files]]
+file = "mods/create-new-age.pw.toml"
+hash = "85048cc2c3269c990d551c6ebe5058662087ea5eb89e9da9ade81e3637654934"
+metafile = true
+
+[[files]]
 file = "mods/create.pw.toml"
 hash = "dcaf5f2e28db0b9a127d0167456832341045ddc9aec058c3d9fcf53f618d2404"
 metafile = true
 
 [[files]]
+file = "mods/embeddium.pw.toml"
+hash = "778c42263b2ba7c9e73553bdcd70f48a3e485ba52b6a83474160d48be696b71f"
+metafile = true
+
+[[files]]
+file = "mods/farmers-delight.pw.toml"
+hash = "69495e979400e63b317b80a71bdd9276929d503b12fa0e73bc668c474d5dbc4c"
+metafile = true
+
+[[files]]
+file = "mods/ferrite-core.pw.toml"
+hash = "73360e397134d238ee8fd21d33fd7f9275e9441f74f8f1b6ed92278877c0b9f1"
+metafile = true
+
+[[files]]
+file = "mods/irons-spells-n-spellbooks.pw.toml"
+hash = "46fd3a8062699383239729b7f4937fdd83177581492d3b12c8ad74dd52bfe05a"
+metafile = true
+
+[[files]]
+file = "mods/jade.pw.toml"
+hash = "b6e0a61fea06f8d6d8e1672cf07b682625c4b74efd548d5093cd9c1fed167eec"
+metafile = true
+
+[[files]]
+file = "mods/jei.pw.toml"
+hash = "5367193d3f87b7bc5a81bcd64a5b96a843e76d4df7a83c8bb7e1911aa82dd52e"
+metafile = true
+
+[[files]]
+file = "mods/modernfix.pw.toml"
+hash = "e152bb9ae171e9f34c406bbc29dc36c8d8def9d8f913e1a1bbf82bd63d4e8da9"
+metafile = true
+
+[[files]]
+file = "mods/moonlight.pw.toml"
+hash = "c05fa3fa9bc5700104d928b616b15e70d441085dd060c6501122747dc3805de1"
+metafile = true
+
+[[files]]
+file = "mods/mouse-tweaks.pw.toml"
+hash = "6bc414cc0f2d4c078fe83f384d786343f701f371d657c5279b5b0df1595804bd"
+metafile = true
+
+[[files]]
 file = "mods/sable.pw.toml"
 hash = "735f0a8e564e8c80c282a7ba97fe77c34edec0402883f7154fd0206572537afe"
+metafile = true
+
+[[files]]
+file = "mods/sophisticated-backpacks.pw.toml"
+hash = "e8c3f829458b16691508fe87672d7e70c73fac15663bbebfb9829efd2521fa24"
+metafile = true
+
+[[files]]
+file = "mods/sophisticated-core.pw.toml"
+hash = "23c31613960c38bc67da32c6dcd7e611d6a61bff225739ae87ccdaa7ef6fa1c1"
+metafile = true
+
+[[files]]
+file = "mods/supplementaries.pw.toml"
+hash = "fa0e1562f9dc89d6428546c7388dcfce8706843333d58f16cadce42b56b81085"
+metafile = true
+
+[[files]]
+file = "mods/xaeros-minimap.pw.toml"
+hash = "974c70cb83d75b39a3b0a49fc56db06423d7343b74f80c3cf5437951d743c8e8"
+metafile = true
+
+[[files]]
+file = "mods/xaeros-world-map.pw.toml"
+hash = "f750250b94b5ae4bb453951c80aab690b3993c0547cf4496b591286694c5ad81"
 metafile = true
 
 [[files]]
@@ -115,3 +213,7 @@ hash = "a213c16bca4aa68588c19f814a3c34875440eee242893a5a2bcbc7b56e55c3dd"
 [[files]]
 file = "shaderpacks/README.md"
 hash = "0380f3632f5d349cf5bf5e1d6bedf04d8ce03eea1b09ef8bd3435e2dc6e2b826"
+
+[[files]]
+file = "wishlist.txt"
+hash = "ce74fe5301a0db12963e9e006504c1d4d471e859bd1d80a0fb2c694775b1d850"
