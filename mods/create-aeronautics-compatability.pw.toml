@@ -1,0 +1,13 @@
+name = "Create Aeronautics: Compatability"
+filename = "aeronauticscompat-1.1.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "64044986287367e7f638012c931d8a23528bee41"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7996938
+project-id = 1524351
