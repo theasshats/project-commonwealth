@@ -28,7 +28,6 @@ This repo doesn't store mod jars — it stores a list of *what mods are in the p
 
 The list of mods to read first:
 
-- **[`docs/MODLIST.md`](docs/MODLIST.md)** — human-readable list of every mod, what it does, and why it's in the pack. Start here.
 - **[`docs/EDITING.md`](docs/EDITING.md)** — how to add a mod, drop in a config, or change something. Written for people who've never touched packwiz.
 
 ### How to make changes

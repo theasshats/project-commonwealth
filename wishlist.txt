@@ -1,59 +1,23 @@
 # Mod wishlist
 #
-# Edit this file to add mods in batch. Each line is one mod, in this format:
+# Add lines below for mods you want installed. When you commit, the
+# "Sync wishlist" workflow installs them and clears the entries.
+# Next time you open this file, it'll be empty again.
 #
+# Format:
 #   source:slug          (defaults to side=both)
 #   source:slug:side     (side = both | client | server)
 #
 # Where source is:
-#   mr  -- Modrinth
-#   cf  -- CurseForge
-#
-# Lines starting with # are comments and ignored. Blank lines are ignored.
-#
-# When you commit a change to this file, the "Sync wishlist" workflow runs
-# and adds any mods that aren't already in mods/. It does NOT remove mods --
-# use the "Remove mod" workflow for that, or delete the mods/<slug>.pw.toml
-# files directly.
+#   mr  -- Modrinth      (e.g. mr:jei)
+#   cf  -- CurseForge    (e.g. cf:create-aeronautics-compatability)
 #
 # Examples:
-#   mr:create
 #   mr:jei
-#   cf:create-aeronautics-compatability
 #   mr:xaeros-minimap:client
+#   cf:create-aeronautics-compatability
 #
+# To remove a mod from the pack, use the "Remove mod" workflow instead.
+#
+# === Add new mods below this line ===
 
-# === Required (Aeronautics core) ===
-mr:create
-mr:sable
-mr:create-aeronautics
-cf:create-aeronautics-compatability
-
-# === Performance ===
-mr:ferrite-core
-mr:modernfix
-
-# === QoL ===
-mr:aileron
-mr:jei
-mr:jade
-mr:mouse-tweaks
-mr:xaeros-minimap:client
-mr:xaeros-world-map:client
-
-# === Create addons ===
-mr:create-steam-n-rails-1.21.1
-mr:create-new-age
-mr:create-enchantment-industry
-
-# === Adventure / content ===
-mr:farmers-delight
-mr:sophisticated-backpacks
-mr:irons-spells-n-spellbooks
-mr:supplementaries
-
-# deps
-mr:geckolib
-mr:curios
-mr:player-animator
-mr:irons-lib

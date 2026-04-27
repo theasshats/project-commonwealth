@@ -28,17 +28,21 @@ The slug is the last part of the mod's URL:
 
 If some slugs in a batch fail, the workflow commits the successes and fails at the end — the log lists exactly which slugs worked and which didn't. Failed slugs usually mean a typo, the mod isn't on that platform, or there's no 1.21.1 NeoForge build.
 
-After adding mods, also update [`MODLIST.md`](MODLIST.md) so the human-readable list stays accurate. You can edit it directly in the GitHub UI (pencil icon).
-
 ### Alternative: edit the wishlist file
 
-If you want to plan a big batch and review it before applying, edit [`../wishlist.txt`](../wishlist.txt) instead. Each line is `source:slug` or `source:slug:side`. When you commit, the **Sync wishlist** workflow runs and adds anything new. Good for:
+If you want to plan a batch ahead of time, edit [`../wishlist.txt`](../wishlist.txt) instead. Open the file, add lines for the mods you want, commit. The **Sync wishlist** workflow runs, installs them, and **clears the file**. Next time you open it, blank canvas again.
 
-- Reviewing what you're about to add (since the file is in the diff)
-- Documenting why a mod is in the pack (use comments above each line)
-- Copy-pasting from someone else's pack list
+The format is the same as Add mod: `source:slug` or `source:slug:side`. Use `mr:` for Modrinth, `cf:` for CurseForge.
 
-The wishlist file does NOT remove mods that you delete from it. Use the **Remove mod** workflow for removals.
+```
+mr:jei
+mr:xaeros-minimap:client
+cf:create-aeronautics-compatability
+```
+
+If a slug fails (typo, no NeoForge build, etc.), it gets moved to a "Failed entries" comment block at the bottom of the file for you to review and either fix or remove. Successful entries and entries for mods that are already installed are silently cleared.
+
+To remove a mod from the pack, use the **Remove mod** workflow — the wishlist is for adds only.
 
 ---
 
