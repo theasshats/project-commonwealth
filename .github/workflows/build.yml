@@ -17,7 +17,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Go
+      - name: Set up Java (for packwiz-installer-bootstrap)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Go (for packwiz)
         uses: actions/setup-go@v5
         with:
           go-version: '1.22'
@@ -28,26 +34,46 @@ jobs:
       - name: Refresh packwiz index
         run: packwiz refresh --build
 
-      - name: Read pack version
+      - name: Read pack metadata
         id: meta
         run: |
           version=$(grep -E '^version\s*=' pack.toml | head -1 | sed -E 's/.*"([^"]+)".*/\1/')
-          name=$(grep -E '^name\s*=' pack.toml | head -1 | sed -E 's/.*"([^"]+)".*/\1/' | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g; s/--*/-/g; s/^-//; s/-$//')
+          name=$(grep -E '^name\s*=' pack.toml | head -1 | sed -E 's/.*"([^"]+)".*/\1/')
+          slug=$(echo "$name" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g; s/--*/-/g; s/^-//; s/-$//')
           echo "version=$version" >> "$GITHUB_OUTPUT"
-          echo "name=$name" >> "$GITHUB_OUTPUT"
-          echo "artifact=$name-$version.mrpack" >> "$GITHUB_OUTPUT"
+          echo "slug=$slug" >> "$GITHUB_OUTPUT"
 
-      - name: Export Modrinth pack
+      # 1. .mrpack — small, references mods by URL
+      - name: Build .mrpack
         run: |
           mkdir -p dist
-          packwiz mr export -o "dist/${{ steps.meta.outputs.artifact }}"
+          packwiz mr export -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}.mrpack"
 
+      # 2. Prism (bundled jars) — fat zip, friend imports and plays
+      - name: Build Prism instance (bundled)
+        run: bash scripts/build-prism-bundled.sh
+
+      # 3. Prism (installer) — thin zip, fetches mods on launch
+      - name: Build Prism instance (installer)
+        env:
+          # Bake the raw URL of pack.toml at this tag into the instance.
+          # github.ref_name is the tag (e.g. v0.1.0); release events also expose this.
+          PACK_URL: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.event.release.tag_name || github.ref_name }}/pack.toml
+        run: bash scripts/build-prism-installer.sh
+
+      # 4. Server pack — configs + fetch-mods.sh + run.sh
       - name: Build server pack
         run: bash scripts/build-server.sh
 
+      - name: Clean staging from dist
+        run: rm -rf dist/staging
+
+      - name: List artifacts
+        run: ls -lh dist/
+
       - uses: actions/upload-artifact@v4
         with:
-          name: ${{ steps.meta.outputs.name }}-${{ steps.meta.outputs.version }}
+          name: ${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}
           path: dist/
 
       - name: Upload to GitHub Release

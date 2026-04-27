@@ -1,62 +1,56 @@
 #!/usr/bin/env bash
 # Builds a server-ready zip: configs + KubeJS + a fetch-mods.sh that
-# pulls every jar from the URLs in mods/*.pw.toml.
+# pulls every server-side jar from the URLs in mods/*.pw.toml.
 #
-# Usage on a Linux server (like ishimura):
-#   unzip ntnh-aeronautics-server-<version>.zip
-#   cd ntnh-aeronautics-server
-#   ./fetch-mods.sh
-#   ./run.sh
+# Result: dist/<slug>-server-<version>.zip
 
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "${REPO_ROOT}"
 
-VERSION="$(grep -E '^version\s*=' pack.toml | head -1 | sed -E 's/.*"([^"]+)".*/\1/')"
-NAME="derpack-x-create-server-${VERSION}"
-WORK="dist/${NAME}"
+PACK_NAME="$(grep -E '^name\s*=' pack.toml | head -1 | sed -E 's/.*"([^"]+)".*/\1/')"
+PACK_VERSION="$(grep -E '^version\s*=' pack.toml | head -1 | sed -E 's/.*"([^"]+)".*/\1/')"
+SLUG="$(echo "${PACK_NAME}" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g; s/--*/-/g; s/^-//; s/-$//')"
 
-rm -rf "${WORK}"
-mkdir -p "${WORK}"
+INSTANCE_NAME="${SLUG}-server-${PACK_VERSION}"
+STAGING="dist/staging/${INSTANCE_NAME}"
+OUT="dist/${INSTANCE_NAME}.zip"
 
-# Copy what a server actually needs
+rm -rf "${STAGING}"
+mkdir -p "${STAGING}"
+
 for d in config defaultconfigs kubejs; do
     if [[ -d "${d}" ]]; then
-        cp -r "${d}" "${WORK}/"
+        cp -r "${d}" "${STAGING}/"
     fi
 done
 
-# Generate fetch-mods.sh from packwiz manifests
-cat > "${WORK}/fetch-mods.sh" <<'EOF'
+cat > "${STAGING}/fetch-mods.sh" <<'EOF'
 #!/usr/bin/env bash
 # Auto-generated. Downloads server-side mod jars from the packwiz manifest URLs.
 set -euo pipefail
 mkdir -p mods
 EOF
 
-# Walk mods/*.pw.toml and emit curl lines, skipping client-only mods
 if [[ -d mods ]]; then
     for f in mods/*.pw.toml; do
         [[ -e "$f" ]] || continue
         side="$(grep -E '^side\s*=' "$f" | sed -E 's/.*"([^"]+)".*/\1/' || echo both)"
-        if [[ "${side}" == "client" ]]; then
-            continue
-        fi
+        [[ "${side}" == "client" ]] && continue
         url="$(grep -E '^url\s*=' "$f" | sed -E 's/.*"([^"]+)".*/\1/')"
         if [[ -n "${url}" ]]; then
-            echo "echo \"  fetching $(basename "$f" .pw.toml)\"" >> "${WORK}/fetch-mods.sh"
-            echo "curl -fsSL -o \"mods/$(basename "$f" .pw.toml).jar\" \"${url}\"" >> "${WORK}/fetch-mods.sh"
+            modname="$(basename "$f" .pw.toml)"
+            echo "echo \"  fetching ${modname}\"" >> "${STAGING}/fetch-mods.sh"
+            echo "curl -fsSL -o \"mods/${modname}.jar\" \"${url}\"" >> "${STAGING}/fetch-mods.sh"
         fi
     done
 fi
 
-chmod +x "${WORK}/fetch-mods.sh"
+chmod +x "${STAGING}/fetch-mods.sh"
 
-# Minimal launcher
-cat > "${WORK}/run.sh" <<'EOF'
+cat > "${STAGING}/run.sh" <<'EOF'
 #!/usr/bin/env bash
-# Aikar's flags, 12G heap (matches your existing NTNH tuning)
 set -e
 java -Xms12G -Xmx12G \
     -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 \
@@ -70,28 +64,21 @@ java -Xms12G -Xmx12G \
     @user_jvm_args.txt @libraries/net/neoforged/neoforge/*/unix_args.txt \
     "$@"
 EOF
-chmod +x "${WORK}/run.sh"
+chmod +x "${STAGING}/run.sh"
 
-cat > "${WORK}/README.txt" <<EOF
-Derpack X: Create — Server Pack ${VERSION}
+cat > "${STAGING}/README.txt" <<EOF
+${PACK_NAME} ${PACK_VERSION} — Server Pack
 
-1. Install NeoForge 21.1.x for Minecraft 1.21.1 in this directory:
+1. Install NeoForge for Minecraft 1.21.1 in this directory:
      https://neoforged.net/
 
-2. Run:
-     ./fetch-mods.sh
-
+2. Run:  ./fetch-mods.sh
 3. Accept the EULA in eula.txt
+4. Start: ./run.sh nogui
 
-4. Start the server:
-     ./run.sh nogui
-
-Notes:
-- Tune memory in run.sh if 12G is wrong for your box.
-- Configs in config/ overwrite defaults; defaultconfigs/ apply only on first run.
-- Aeronautics is in active development — back up worlds before updating.
+Tune memory in run.sh if 12G is wrong for your box.
 EOF
 
-(cd dist && zip -qr "${NAME}.zip" "${NAME}")
-echo "Built: dist/${NAME}.zip"
-ls -lh "dist/${NAME}.zip"
+(cd dist/staging && zip -qr "../${INSTANCE_NAME}.zip" "${INSTANCE_NAME}")
+ls -lh "${OUT}"
+echo "Built: ${OUT}"
