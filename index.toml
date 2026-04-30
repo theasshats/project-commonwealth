@@ -276,11 +276,6 @@ hash = "046a80051e21c0bab042ad1b7e27d42a7456fd36cfabf0454e9110ec345078fd"
 metafile = true
 
 [[files]]
-file = "mods/createcolonies.pw.toml"
-hash = "1fbaa49c8b120960e58db12516532dc9f108f289d27525b40ed0233995943070"
-metafile = true
-
-[[files]]
 file = "mods/curios.pw.toml"
 hash = "36debf7653e95a855b4fedacc19027cf2e01960fc0b6d55ef2ffbffbcb455690"
 metafile = true
@@ -537,4 +532,4 @@ hash = "0380f3632f5d349cf5bf5e1d6bedf04d8ce03eea1b09ef8bd3435e2dc6e2b826"
 
 [[files]]
 file = "wishlist.txt"
-hash = "eb7f3a930783e4e7dfa6215f2ea1c54bf305b64c565016a4a90ec2f8dfa16235"
+hash = "58a1eb56bc2f70eb4b8fc5ea3899f04c40ba8d61392bb84b16772968d65d42b7"
