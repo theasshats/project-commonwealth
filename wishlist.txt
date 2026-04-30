@@ -21,5 +21,3 @@
 #
 # === Add new mods below this line ===
 
-# === Failed entries (review these) ===
-# failed: mr:create-utilities
