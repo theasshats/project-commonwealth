@@ -691,6 +691,11 @@ hash = "7a8880ea7dc331692ce1210d300bd156427d4b88f11a49766120992f8edf5f75"
 metafile = true
 
 [[files]]
+file = "mods/revelationary.pw.toml"
+hash = "bc896204604423a7c10565fc29bd8758eb1551e86bfefe5823657fbdc46dc0af"
+metafile = true
+
+[[files]]
 file = "mods/rightclickharvest.pw.toml"
 hash = "87708c5cf041f2c7eede5dc1a5ee0dd517a13c0c7e8c40c359669a5ffabef7db"
 metafile = true
