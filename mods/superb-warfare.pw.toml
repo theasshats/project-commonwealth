@@ -1,13 +1,13 @@
 name = "Superb Warfare"
-filename = "superbwarfare-1.21.1-0.8.8-final-0cfd00d5.jar"
+filename = "superbwarfare-0.8.9-snapshot-mc1.21.1-99de0ec6.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/Cd3DYqzn/versions/IuVaj8GV/superbwarfare-1.21.1-0.8.8-final-0cfd00d5.jar"
+url = "https://cdn.modrinth.com/data/Cd3DYqzn/versions/FBCSTm24/superbwarfare-0.8.9-snapshot-mc1.21.1-99de0ec6.jar"
 hash-format = "sha512"
-hash = "3ce181d52c873d4225299e75c5175fd24fb57caa63ef9332c6488eb5cb7598401ed2816247fade037a969f7f2f0a652653798817e349dd1c1daec168fa6899b2"
+hash = "6114038223f6c567105fe02cea035ec811885b2b5f87d97bf5fdb31ca2c23f73633724cafaf0d31b54f239b1626569a9e55ce8cebe6922d19942af10966083e5"
 
 [update]
 [update.modrinth]
 mod-id = "Cd3DYqzn"
-version = "IuVaj8GV"
+version = "FBCSTm24"
