@@ -61,6 +61,10 @@ file = "kubejs/server_scripts/example.js"
 hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
 
 [[files]]
+file = "mods/README.md"
+hash = "4d261695cfb4cee6ccec0ded9a561e0d3dacf4259be78907f5f230991d85f49e"
+
+[[files]]
 file = "mods/accessories-compat-layer.pw.toml"
 hash = "c255cf4cd29718e3ab0a4c18df8bb7b626e0092c5aad7b4e67f34fc1ad4492f8"
 metafile = true
@@ -332,7 +336,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-food.pw.toml"
-hash = "d246d5c15442740311d31060e86d1009a2a4d8f8aa44f403bae037174df430fc"
+hash = "9659152903c07ccc018e00e09ffe021d78da8be78a83a19ffe269c251e0cd191"
 metafile = true
 
 [[files]]
@@ -362,7 +366,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-let-the-adventure-begin.pw.toml"
-hash = "90f936b5bc3aa77315b35f4475ca529f12487f732c15782c6971e3f91d9905c9"
+hash = "c27afa0779ec479fe6811153607bf23d9242c2c93e02a23a03b934db4bb3f8c3"
 metafile = true
 
 [[files]]
@@ -472,7 +476,7 @@ metafile = true
 
 [[files]]
 file = "mods/data-anchor.pw.toml"
-hash = "ec646719e550269ddc1f536722af5200a7be3de6cec05b7853f77d833be36957"
+hash = "0b849ef9ab98b642043309bc58c81f1a347a43e55c709b01d92523e1fe8efb4a"
 metafile = true
 
 [[files]]
@@ -702,7 +706,7 @@ metafile = true
 
 [[files]]
 file = "mods/midnightlib.pw.toml"
-hash = "3382daf9b5fadbbef742b84fe5b09fa912cc75cd4234e0ba573b85a513354123"
+hash = "73aba17132f267dd76ff682aa84abfb7c09d25a93b9220ee261a1e25337bebc7"
 metafile = true
 
 [[files]]
@@ -722,7 +726,7 @@ metafile = true
 
 [[files]]
 file = "mods/minecolonies.pw.toml"
-hash = "39715ccb6fe29bcfcecd55b006b7c0cc0540e31bd2817898afb9bfb6ce261764"
+hash = "3ea53a3421a50217c28e1aed057fd7baf08e946e90013ba12e84d3e04fad4600"
 metafile = true
 
 [[files]]
@@ -797,7 +801,7 @@ metafile = true
 
 [[files]]
 file = "mods/occultism.pw.toml"
-hash = "3b147d756f0f7d9d4c129399033cd8145878cee01debb7ed1197dbc5133501b2"
+hash = "afd41df32465161f9d2294cc00636c615d1e053c0e89690a6da7b616ec35b326"
 metafile = true
 
 [[files]]
