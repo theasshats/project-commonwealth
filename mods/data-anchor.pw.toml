@@ -11,3 +11,4 @@ hash = ""
 [update.modrinth]
 mod-id = "z2XEADmE"
 version = "izauCsh5"
+pin = true
