@@ -162,10 +162,12 @@ jobs:
           PACK_URL: https://raw.githubusercontent.com/${{ github.repository }}/main/pack.toml
         run: bash scripts/build-prism-installer.sh
 
-      # 4. Server pack
-      - name: Build server pack
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: bash scripts/build-server.sh
+      # 4. Server pack — disabled while in dev. Re-enable when ready to host
+      #    a server. Note: server zip can exceed GitHub's 2 GiB per-asset
+      #    release limit, will need an installer-style approach when re-enabled.
+      # - name: Build server pack
+      #   if: steps.cache.outputs.cache-hit != 'true'
+      #   run: bash scripts/build-server.sh
 
       - name: Clean staging from dist
         if: steps.cache.outputs.cache-hit != 'true'
