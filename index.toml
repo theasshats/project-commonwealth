@@ -547,11 +547,6 @@ hash = "046a80051e21c0bab042ad1b7e27d42a7456fd36cfabf0454e9110ec345078fd"
 metafile = true
 
 [[files]]
-file = "mods/createcolonies.pw.toml"
-hash = "c6129dd7b6f1db8baa64ee9d2c6699eba8d870c181f94a4ed06bf00a0acf953a"
-metafile = true
-
-[[files]]
 file = "mods/createnuclear.pw.toml"
 hash = "b411c5446f2d01c3de71bc1ff773ee10825616074865d92d5fb2cb1a678efcb6"
 metafile = true
