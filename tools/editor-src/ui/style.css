@@ -182,6 +182,39 @@ button:disabled:hover {
   text-decoration: underline;
 }
 
+.settings-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+
+.settings-key-status {
+  display: block;
+  font-size: 11px;
+  margin-top: 4px;
+  color: var(--text-dim);
+}
+
+.settings-key-status.set {
+  color: var(--success);
+}
+
+.settings-key-status.unset {
+  color: var(--text-dim);
+}
+
+.sv-needs-key {
+  text-align: center;
+  padding: 24px;
+}
+
+.sv-needs-key p {
+  color: var(--text-dim);
+  margin: 0 0 14px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
 .mod-list-wrapper {
   background: var(--bg-elev);
   border: 1px solid var(--border);

@@ -371,12 +371,29 @@ function setSvTab(mode) {
 async function fetchVersions(slug) {
   const list = $('#sv-versions-list');
   try {
-    const versions = await apiGet(`/api/mods/${encodeURIComponent(slug)}/versions`);
-    if (!versions || versions.length === 0) {
+    const result = await apiGet(`/api/mods/${encodeURIComponent(slug)}/versions`);
+    // CF mods without a key configured: server returns {needs_key: true, hint: ...}
+    // rather than a list. Show an inline prompt directing the user to Settings.
+    if (result && result.needs_key) {
+      list.innerHTML = `
+        <div class="sv-needs-key">
+          <p>${escapeHtml(result.hint || 'CurseForge API key required.')}</p>
+          <button type="button" id="sv-open-settings-btn">Open Settings</button>
+        </div>`;
+      const btn = document.getElementById('sv-open-settings-btn');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          closeSetVersionModal();
+          openSettings();
+        });
+      }
+      return;
+    }
+    if (!Array.isArray(result) || result.length === 0) {
       list.innerHTML = '<div class="sv-empty">No matching versions found for this loader/MC version.</div>';
       return;
     }
-    list.innerHTML = versions.map(versionRow).join('');
+    list.innerHTML = result.map(versionRow).join('');
     list.querySelectorAll('button[data-version-id]').forEach(btn => {
       btn.addEventListener('click', () => {
         const versionId = btn.dataset.versionId;
@@ -554,6 +571,15 @@ async function openSettings() {
     const cfg = await apiGet('/api/config');
     configCache = cfg;
     $('#settings-prism-path').value = cfg.prism_instance_path || '';
+    $('#settings-cf-key').value = ''; // never pre-fill the field, even if a key is stored
+    const status = $('#settings-cf-key-status');
+    if (cfg.curseforge_api_key_set) {
+      status.textContent = '✓ Key stored. Leave blank to keep, or paste a new value to replace.';
+      status.className = 'settings-key-status set';
+    } else {
+      status.textContent = 'No key configured.';
+      status.className = 'settings-key-status unset';
+    }
 
     const detected = $('#settings-detected');
     const list = $('#settings-detected-list');
@@ -586,8 +612,13 @@ function closeSettings() {
 
 async function saveSettings() {
   const path = $('#settings-prism-path').value.trim();
+  const cfKey = $('#settings-cf-key').value.trim();
+  const payload = { prism_instance_path: path };
+  if (cfKey !== '') {
+    payload.curseforge_api_key = cfKey;
+  }
   try {
-    const r = await apiPost('/api/config', { prism_instance_path: path });
+    const r = await apiPost('/api/config', payload);
     if (r.ok) {
       logStatus('ok', `Saved settings (Prism path: ${path || '(none)'})`);
       closeSettings();

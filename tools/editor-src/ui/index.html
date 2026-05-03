@@ -143,6 +143,22 @@
         <p class="sv-help">Detected Prism instances:</p>
         <ul id="settings-detected-list"></ul>
       </div>
+
+      <hr class="settings-divider" />
+
+      <p class="sv-help">
+        Optional: A CurseForge API key enables version picking for CF-hosted
+        mods in the Set Version modal. Without one, you can still set a CF
+        version by pasting a download URL. Get a free key at
+        <a href="https://console.curseforge.com/" target="_blank" rel="noopener">console.curseforge.com</a>.
+        The key is stored in <code>.editor/config.json</code> (gitignored, never leaves your machine).
+      </p>
+      <label>
+        CurseForge API key
+        <input type="password" id="settings-cf-key" placeholder="$2a$10$..." />
+        <span id="settings-cf-key-status" class="settings-key-status"></span>
+      </label>
+
       <div class="modal-actions">
         <button type="button" id="settings-cancel">Cancel</button>
         <button type="button" id="settings-save" class="primary">Save</button>
