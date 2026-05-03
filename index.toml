@@ -173,7 +173,7 @@ metafile = true
 
 [[files]]
 file = "mods/azurelib.pw.toml"
-hash = "0bc4527d43a4f7a29a62801efe3cde624aeabf519ab0aebf26c06ae6d7fc9f0b"
+hash = "65807f91c2074b3332dfc3b9d57b44ada6e5eec10c6aee071eb58e0ca00b428f"
 metafile = true
 
 [[files]]
@@ -849,11 +849,6 @@ metafile = true
 [[files]]
 file = "mods/game-discs.pw.toml"
 hash = "83baf698fe333dadb27892c9adef1922becf53070f33430af5bdfdee27b352b5"
-metafile = true
-
-[[files]]
-file = "mods/garfield.pw.toml"
-hash = "7f41ffe73b0705cbedbd392e721be85a36f1b2e5ceb0ec7af995bf948c4109d6"
 metafile = true
 
 [[files]]
