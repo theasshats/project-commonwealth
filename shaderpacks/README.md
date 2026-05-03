@@ -6,8 +6,8 @@ Drop `.zip` shaderpacks here. Available to users in Iris/Oculus shader settings.
 
 ## How to add one
 
-1. Drop the `.zip` here, e.g. `shaderpacks/complementary.zip`.
-2. From repo root, run `packwiz refresh`.
-3. Commit.
+1. From your version-named branch (e.g. `0.3.3`), drop the `.zip` here, e.g. `shaderpacks/complementary.zip`.
+2. Run any editor operation to trigger an index refresh.
+3. Commit, push, open a PR.
 
 Make sure the shaderpack is compatible with the Iris/Oculus version we ship (currently Oculus on NeoForge 1.21.1). Some shaders only work with newer versions of Iris.

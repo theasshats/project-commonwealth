@@ -1,16 +1,19 @@
 # `config/` — Mod configs that always get applied
 
-Files in this folder are **always copied to the user's instance** on install and on every update. Use this when you want to enforce a specific config for everyone (e.g. balance tweaks, KubeJS triggers, gameplay-affecting settings).
+Files in this folder are **always copied to the user's instance** on install and on every update. Use this when you want to enforce a specific config for everyone (balance tweaks, KubeJS triggers, gameplay-affecting settings).
 
 If you want a config that the user can override and keep across updates, use [`../defaultconfigs/`](../defaultconfigs/) instead.
 
 ## How to add a config here
 
-1. Run the pack once, configure the mod in-game.
-2. Find the resulting file in your instance's `.minecraft/config/`.
-3. Copy it here, preserving the filename.
-4. From the repo root, run `packwiz refresh` so the index knows about the new file.
-5. Commit and push.
+1. From your version-named branch (e.g. `0.3.3`), launch the pack via the editor's **▶ Build & Launch in Prism** button to generate the mod's default config.
+2. In your Prism instance's `.minecraft/config/`, find the file the mod created.
+3. Edit it in-game or in a text editor until it's how you want it.
+4. Copy that file into this `config/` folder, preserving the filename.
+5. Open the editor and run any operation (or just refresh) — the next operation triggers an index refresh that picks up the new file.
+6. Commit and push, then open a PR.
+
+If you skip step 5, the build workflow will still pick up the file because it runs its own refresh — but the editor's mod list won't reflect it until you trigger an editor operation.
 
 ## What goes here vs. `defaultconfigs/`
 
@@ -18,12 +21,10 @@ If you want a config that the user can override and keep across updates, use [`.
 |---|---|
 | Create rotation speed multipliers | `config/` (gameplay) |
 | Mob spawn rates | `config/` (gameplay) |
-| Recipe difficulty | `config/` (gameplay) |
-| KubeJS scripts | `kubejs/` (different folder, but same idea) |
+| KubeJS trigger configs | `config/` (gameplay) |
+| Server-side mod settings | `config/` |
 | Minimap zoom level | `defaultconfigs/` (preference) |
-| JEI sort order | `defaultconfigs/` (preference) |
-| Keybind defaults | `defaultconfigs/` (preference) |
+| JEI search filter style | `defaultconfigs/` (preference) |
+| Keybindings | `defaultconfigs/` (preference) |
 
-When in doubt, use `defaultconfigs/`. It's nicer to users.
-
-See [`../docs/EDITING.md`](../docs/EDITING.md) for the full explanation.
+Rule of thumb: **`config/` for things that affect gameplay or balance**, **`defaultconfigs/` for things that are personal preference**. When in doubt, use `defaultconfigs/`. It's friendlier to users.

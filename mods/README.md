@@ -1,8 +1,16 @@
 # mods/
 
-Each `.pw.toml` file is a packwiz manifest for one mod. **Don't edit them by hand for normal stuff** — use the workflows (Add mod, Remove mod, Update mods). The workflows compute hashes and update the index correctly.
+Each `.pw.toml` file is a packwiz manifest for one mod. **For normal operations, use the editor** — its UI handles add, remove, pin/unpin, side change, version pick, and hash recompute, all without you touching these files directly.
 
-But sometimes the workflows aren't enough — you need a beta version, an older version, or a specific platform. That's when you edit these files directly.
+Hand-edit when:
+- You need a beta or pre-release version that's not in Modrinth's filtered version list
+- You're switching a mod between Modrinth and CurseForge sources mid-life
+- You're recovering from a botched manual edit
+- The editor doesn't yet support the operation you need
+
+This doc covers those cases.
+
+---
 
 ## What a manifest looks like
 
@@ -25,9 +33,11 @@ version = "VERSIONID"
 
 CurseForge mods use `[update.curseforge]` with `project-id` and `file-id` (numeric) instead of `mod-id` / `version`.
 
+---
+
 ## The pin field — read this before editing manually
 
-`pin = true` tells packwiz "leave this manifest alone during `update --all`". This is what you want when you've manually picked a non-latest version (older, beta, specific build) and don't want it auto-bumped.
+`pin = true` tells packwiz "leave this manifest alone during `update --all`." This is what you want when you've manually picked a non-latest version (older, beta, specific build) and don't want it auto-bumped.
 
 **Critical:** `pin` MUST go at the top level of the file, NOT inside `[update]`. TOML treats everything after a `[section]` header as part of that section, so this:
 
@@ -46,11 +56,15 @@ pin = true                # right — top level, before [download]
 ...
 ```
 
-When `pin = true` is set, `packwiz update <slug>` will skip this mod, AND `packwiz update --all` will skip it. So the workflows can't fix anything for a pinned mod — you have to edit the manifest by hand AND compute the hash yourself.
+The editor's Pin button puts `pin = true` in the right place. If you're hand-editing, double-check the placement.
 
-## Common edits
+---
+
+## Common manual edits
 
 ### Downgrade to an older Modrinth version
+
+The editor's **Set version** button (Modrinth tab) covers most version downgrades. But Modrinth filters versions by loader/MC version, so older versions that pre-date NeoForge support might not show up. In that case, hand-edit:
 
 1. Go to the Modrinth page → Versions tab → find the version you want
 2. **Right-click the green Download button** → Copy Link. URL looks like `https://cdn.modrinth.com/data/PROJECTID/versions/VERSIONID/filename.jar`
@@ -62,15 +76,16 @@ When `pin = true` is set, `packwiz update <slug>` will skip this mod, AND `packw
    - `hash` — see "Computing the hash" below
 5. Add `pin = true` at the top level so future `update --all` doesn't undo this
 6. Commit
+7. (Easier: open the editor and click **⟳ Hash** on this mod — it recomputes from your new URL)
 
 ### Switch a mod from Modrinth to CurseForge (or vice versa)
 
 The `[update.modrinth]` and `[update.curseforge]` sections have different fields, so editing in place is brittle. Easier:
 
-1. **Remove mod** workflow with the current slug
-2. **Add mod** workflow specifying the other source
+1. Editor: **Remove** button on the mod's row
+2. Editor: **+ Add mod** with the other source
 
-For betas only on CF, after Add mod runs, edit the manifest to pin to the beta's file-id (see below) and recompute the hash.
+For betas only on CF, use the editor's **Set version** modal → **Paste URL** tab.
 
 ### Pin a CurseForge beta or specific file
 
@@ -86,36 +101,49 @@ To switch to a specific (e.g. beta) file:
 
 1. CF page → Files tab → All Files → click the file you want
 2. URL ends in `/files/<NUMBER>` — that number is the file-id
-3. Edit `file-id` in the manifest
-4. Update `filename` and `url` to match the new file (download URL is on the same CF page)
-5. Recompute the hash (see below)
-6. Add `pin = true` at the top level
+3. Paste the file's download URL into the editor's **Set version** → **Paste URL** tab
+4. After it sets the version, click **Pin** on that mod's row
+
+For doing this purely by hand without the editor:
+
+1. Edit `file-id` in the manifest
+2. Update `filename` and `url` to match the new file
+3. Recompute the hash (see below)
+4. Add `pin = true` at the top level
 
 ### Change client-only / server-only / both
 
 The `side` field controls which artifacts the mod gets bundled into:
 
 - `side = "both"` — bundled into client AND server packs
-- `side = "client"` — only in client artifacts (Prism, mrpack)
-- `side = "server"` — only in server artifact
+- `side = "client"` — only in client artifacts
+- `side = "server"` — only in server artifact (or omitted from client)
 
-Most mods are `both`. Stuff like Xaero's Minimap, IPN, EMI/JEI should be `client`. Server-side performance mods or admin tools would be `server`.
+Easiest: in the editor, click the **side dropdown** on the mod's row. Pick the value, manifest is rewritten and indexed in one shot.
 
-Just change the field and commit. Build workflow respects this on the next run.
+By hand: change the `side =` line. Note that omitting the line entirely (or setting it to `"both"`) is equivalent — packwiz treats absence as "both."
+
+---
 
 ## Computing the hash
 
 When you edit a manifest by hand to point at a different file, the existing `hash` value is wrong (it was computed from the previous file). Three ways to fix this, in order of convenience:
 
-### Option 1: Compute hash workflow (recommended)
+### Option 1: Editor's ⟳ Hash button (recommended)
 
-Run the **Compute hash** workflow with the mod's slug as input. The workflow downloads the file from the URL in the manifest, computes the SHA-512 hash, writes it back into the manifest, and commits. Works for pinned mods (unlike Update mods).
+In the editor, click the **⟳ Hash** button on that mod's row. The editor reads the manifest's URL, downloads the file, computes SHA-512, and writes the hash back. Works for pinned mods (unlike the Update workflow).
 
-Use this whenever you edit a manifest's URL by hand and need the hash refreshed.
+### Option 2: Compute hash workflow (browser fallback)
 
-### Option 2: Compute it yourself
+If you can't run the editor, use the GitHub Actions workflow:
 
-If you don't want to wait for a workflow run, the hash is a SHA-512 of the actual jar contents.
+- Repo → Actions → "Compute hash" → Run with the slug as input
+
+Same effect as Option 1, runs server-side.
+
+### Option 3: Compute it yourself (full manual)
+
+The hash is a SHA-512 of the actual jar contents.
 
 PowerShell on Windows:
 
@@ -133,7 +161,7 @@ curl -sL "<URL>" | sha512sum | awk '{print $1}'
 
 Paste the resulting lowercase hex string into the `hash =` field (in quotes), commit.
 
-### Option 3: Let Update mods compute it (un-pinned mods only)
+### Option 4: Let packwiz compute it (un-pinned mods only, advanced)
 
 1. Set `hash = ""` (empty string)
 2. Make sure `pin = true` is NOT set
@@ -142,19 +170,25 @@ Paste the resulting lowercase hex string into the `hash =` field (in quotes), co
 
 packwiz will download the file, compute the hash, and write it back. Then if you want it pinned, edit the file again to add `pin = true`.
 
-This works but takes more steps than Option 1. Mostly useful if you're un-pinning anyway.
+This works but takes more steps than Options 1 or 2. Mostly useful if you happen to be un-pinning anyway.
+
+---
 
 ## After editing a manifest
 
-If the URL changed, run **Compute hash** with the mod's slug to refresh the hash and commit. This works for both pinned and un-pinned mods.
+If the URL changed, run **⟳ Hash** in the editor (or Compute hash workflow) to refresh the hash and commit. Works for both pinned and un-pinned mods.
 
-If you only changed `side` or other non-URL fields, just commit — no hash recomputation needed. The build workflow runs `packwiz refresh` itself, which updates the index pointer to your manifest.
+If you only changed `side` or other non-URL fields, just commit — no hash recomputation needed. The build workflow runs `packwiz refresh` itself, which updates the index pointer to your manifest. (The editor also runs refresh after most operations.)
+
+---
 
 ## Don't edit
 
-- `index.toml` in the repo root — it's auto-managed by `packwiz refresh` (the build workflow runs this)
-- The hash field, unless you computed it yourself or set it to `""` to be regenerated by Update mods
+- `index.toml` in the repo root — it's auto-managed by `packwiz refresh`
+- The hash field, unless you computed it yourself or set it to `""` to be regenerated
 - Filenames that don't match what the URL actually serves (will 404 at install time)
+
+---
 
 ## Reference
 

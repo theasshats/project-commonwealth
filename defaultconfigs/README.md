@@ -8,12 +8,15 @@ If you want a config that gets re-applied on every update no matter what, use [`
 
 ## How to add a config here
 
-1. Run the pack once, configure the mod in-game.
-2. Find the resulting file in your instance's `.minecraft/config/`.
-3. Copy it here, preserving the filename and any subdirectory structure.
-4. From the repo root, run `packwiz refresh`.
-5. Commit and push.
+1. From your version-named branch (e.g. `0.3.3`), launch the pack via the editor's **▶ Build & Launch in Prism** button.
+2. Configure the mod in-game.
+3. Find the resulting file in your Prism instance's `.minecraft/config/`.
+4. Copy it here, preserving the filename and any subdirectory structure.
+5. Run any editor operation to trigger an index refresh.
+6. Commit and push, then open a PR.
 
 ## When to use this vs. `config/`
 
-See [`../config/README.md`](../config/README.md) for the comparison table. Short version: gameplay-affecting → `config/`, preferences → `defaultconfigs/`.
+See [`../config/README.md`](../config/README.md) for the comparison table.
+
+Short version: gameplay-affecting → `config/`, preferences → `defaultconfigs/`.

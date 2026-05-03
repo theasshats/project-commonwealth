@@ -1,120 +1,193 @@
-# Editing this pack
+# Editing Derpack X
 
-Quick reference for adding mods, dropping in configs, tweaking behavior. Two ways to do most things:
+How to add mods, change configs, and ship updates. Most of this happens through the Derpack Editor — a local desktop app that runs from the repo. The GitHub Actions workflows still work as a fallback.
 
-- **Through GitHub** (no install required) — click buttons in the Actions tab. Works for adding/removing/updating mods.
-- **Locally with `packwiz` installed** — needed for dropping in config files, KubeJS scripts, or anything that requires inspecting actual game output. See "Local setup" near the bottom.
-
-Default to the GitHub flow when you can. It leaves a clean paper trail of every change in your Actions history.
+This doc assumes you've already done the [one-time setup in the README](../README.md#setup-one-time): GitHub Desktop installed, repo cloned, Java 21 installed.
 
 ---
 
-## I want to ADD a mod (or several)
+## The branch-and-PR flow
 
-1. Go to the repo on GitHub → **Actions** tab.
-2. Click **Add mod(s)** in the sidebar.
-3. Click **Run workflow** (top right).
-4. Fill in the form:
-   - **Source**: Modrinth or CurseForge — pick whichever has the mod(s)
-   - **Slugs**: one slug, or several separated by commas (e.g. `jei,jade,sophisticated-backpacks`)
-   - **Side**: usually `both`. Use `client` for things like minimaps and JEI; `server` is rare. Applies to all slugs in this run.
-5. Click **Run workflow**.
-6. Wait ~30 seconds (longer if you listed 10+ slugs). The workflow runs `packwiz add` for each, commits, and pushes.
-7. Refresh the repo — you'll see one commit covering the whole batch.
+Every edit goes on a branch named after the **next version**. If `main` is at `0.3.2`:
 
-The slug is the last part of the mod's URL:
-- Modrinth: `modrinth.com/mod/jei` → slug is `jei`
-- CurseForge: `curseforge.com/minecraft/mc-mods/create-aeronautics-compatability` → slug is `create-aeronautics-compatability`
+- Patch-level work (mod tweaks, config fixes, version bumps) goes on `0.3.3`
+- Bigger work (mod additions, breaking changes, big config rewrites) goes on `0.4.0`
 
-If some slugs in a batch fail, the workflow commits the successes and fails at the end — the log lists exactly which slugs worked and which didn't. Failed slugs usually mean a typo, the mod isn't on that platform, or there's no 1.21.1 NeoForge build.
+Steps in GitHub Desktop:
 
-### Alternative: edit the wishlist file
+1. **Fetch origin** + **Pull** to make sure you're current
+2. **Current Branch** dropdown → **New Branch**
+3. Name it after the target version (`0.3.3`, `0.4.0`, etc.)
+4. Make sure "Create branch based on `main`" is selected
+5. Click **Create branch**
 
-If you want to plan a batch ahead of time, edit [`../wishlist.txt`](../wishlist.txt) instead. Open the file, add lines for the mods you want, commit. The **Sync wishlist** workflow runs, installs them, and **clears the file**. Next time you open it, blank canvas again.
+You're now on the new branch. Edit, commit, push, open a PR when ready.
 
-The format is the same as Add mod: `source:slug` or `source:slug:side`. Use `mr:` for Modrinth, `cf:` for CurseForge.
+---
 
-```
-mr:jei
-mr:xaeros-minimap:client
-cf:create-aeronautics-compatability
-```
+## Running the editor
 
-If a slug fails (typo, no NeoForge build, etc.), it gets moved to a "Failed entries" comment block at the bottom of the file for you to review and either fix or remove. Successful entries and entries for mods that are already installed are silently cleared.
+1. Make sure you're on your branch (GitHub Desktop confirms this in the top bar).
+2. Open the repo folder in File Explorer.
+3. Double-click `tools\derpack-edit.exe`.
+4. A console window appears, your browser opens to `http://localhost:8765`.
 
-To remove a mod from the pack, use the **Remove mod** workflow — the wishlist is for adds only.
+The editor reads from disk on every action — no need to refresh the page after you make changes elsewhere.
+
+When you're done editing, close the console window (X button) to stop the server.
+
+---
+
+## I want to ADD a mod
+
+### Single mod
+
+1. In the editor, click **+ Add mod**
+2. Pick the source (Modrinth or CurseForge)
+3. Type the slug — that's the last part of the mod's URL:
+   - `modrinth.com/mod/jei` → slug `jei`
+   - `curseforge.com/minecraft/mc-mods/create-aeronautics-compatability` → slug `create-aeronautics-compatability`
+4. Pick a side. Default `both`. Use `client` for things like minimaps and JEI; `server` is rare.
+5. Click **Add**
+
+The status pane will log "Added <slug>" or surface an error if the mod doesn't exist on that platform / for our loader+MC version.
+
+### Many mods at once (Wishlist)
+
+For batch adds — e.g., copying a list from a Modrinth collection or a Discord message:
+
+1. Click **📋 Wishlist (batch add)**
+2. In the textarea, paste one slug per line. Format:
+   ```
+   mr:supplementaries
+   cf:create-mob-spawners
+   handcrafted
+   # comment lines start with # and are ignored
+   ```
+   Lines without a `mr:` / `cf:` prefix default to Modrinth.
+3. Click **Process all**
+4. Per-line results appear below the textarea — green ✓ for success, red ✗ for failure
+5. After processing: failed lines remain in the textarea (so you can fix typos and retry); successful lines clear
+
+Wishlist always sets new mods to `side = "both"` even if Modrinth's metadata says otherwise. If a specific mod really is client-only (Xaero's Minimap) you can flip its side from the table afterward.
 
 ---
 
 ## I want to REMOVE a mod
 
-Actions → **Remove mod** → Run workflow → enter the slug → run.
+In the mod list table, click the **Remove** button on the mod's row. A confirmation modal appears; click Confirm.
+
+The `mods/<slug>.pw.toml` file is deleted and the index is refreshed. GitHub Desktop will show one deleted file in the diff.
 
 ---
 
 ## I want to UPDATE mods
 
-Actions → **Update mods** → Run workflow:
-- Leave the slug blank to update **everything** to latest versions
-- Or enter a specific slug to update just that one
+### A single mod
 
-The workflow checks Modrinth/CurseForge for newer versions and bumps the URL+hash automatically.
+Click **Update** on the mod's row. The editor runs `packwiz update <slug>` and bumps the URL+hash if a newer version is available. Pinned mods can't be updated this way — their button is disabled.
+
+### Everything
+
+Click **Update all (skip pinned)** in the action bar. This iterates every non-pinned mod and bumps each to its latest version. Takes a minute or two.
+
+The status pane logs which mods got bumped.
+
+---
+
+## I want to PIN a mod
+
+Pinning tells the auto-updater "leave this manifest alone." Useful when you've manually picked an older or beta version and don't want it auto-bumped.
+
+Click **Pin** on the mod's row. Icon changes to a colored pin. Click **Unpin** to undo.
+
+Pinned mods still show their **Set version** button, so you can change a pinned mod's version manually — the pin only blocks bulk updates.
+
+---
+
+## I want to use a SPECIFIC version of a mod
+
+Click **Set version** on the mod's row. Modal opens with two tabs:
+
+### From Modrinth (recommended)
+
+The editor fetches the version list filtered to your loader/MC version. Click **Use this version** on whichever entry you want. A confirmation modal appears; confirm. The manifest is rewritten and the hash recomputed automatically.
+
+After setting a specific version, **also click Pin** on that mod's row — otherwise the next "Update all" run will bump it back to latest.
+
+### Paste URL
+
+For CurseForge specifically, or for Modrinth betas not showing in the picker:
+
+1. Switch to the **Paste URL** tab
+2. Paste a direct download URL (right-click the green Download button on Modrinth/CurseForge → Copy Link)
+3. Optional: type a filename if the URL doesn't end with one
+4. Click **Set version from URL**
+
+The editor downloads the file, computes the hash, and writes the manifest.
+
+---
+
+## I want to fix a mod that's set to the WRONG SIDE
+
+Some Create addons end up tagged `client` because the mod author misconfigured their Modrinth project. Fix: in the table, click the side dropdown on that mod's row → pick `both`. The manifest is rewritten and the index refreshed in one shot.
 
 ---
 
 ## I want to drop in a CONFIG file
 
-You have two folders, and the difference matters:
+Two folders, and the difference matters:
 
 ### `config/` — always overwritten on install
 
 Use this for configs you want to **enforce** for every user. Every time someone installs the pack (or the auto-updater runs), files here will overwrite whatever they had.
 
-**Example:** You spent two hours tuning JEI's bookmark sorting. Drop your `jei-client.ini` in `config/jei-client.ini`. Every user gets it.
+**Example:** You spent two hours tuning JEI's bookmark sorting. Drop `jei-client.ini` in `config/`. Every user gets it.
 
 ### `defaultconfigs/` — only seeded on first install
 
 Use this for configs that you want to **suggest** but not enforce. The user gets your version on first install, and any changes they make stick around — future updates won't clobber them.
 
-**Example:** You set `xaerominimap.txt` defaults to a friendly zoom level, but if a user prefers something else, you don't want to keep stomping on their preference. Drop it in `defaultconfigs/`.
+**Example:** Sensible Xaero's Minimap defaults that the user can later override. Drop `xaerominimap.txt` in `defaultconfigs/`.
 
 ### Which do I use?
 
-Rule of thumb: **`config/` for things that affect gameplay or balance** (Create speed multipliers, mob spawn rates, KubeJS scripts), **`defaultconfigs/` for things that are personal preference** (minimap zoom, JEI search filter style).
+**`config/` for things that affect gameplay or balance** (Create speed multipliers, mob spawn rates, KubeJS scripts), **`defaultconfigs/` for things that are personal preference** (minimap zoom, JEI search filter style).
 
 When in doubt, use `defaultconfigs/`. It's friendlier to users.
 
-### Where do I get the config files in the first place?
+### How to drop the file in
 
-Run the pack once, configure the mod in-game, then go grab the file from `.minecraft/config/<modname>.toml` (or whatever the file is). Drop it in the repo using one of:
+1. Run the pack once locally (use the editor's **▶ Build & Launch in Prism** button), configure the mod in-game.
+2. Find the resulting file in your Prism instance's `.minecraft/config/`.
+3. Copy it into the repo's `config/` or `defaultconfigs/` folder, preserving the filename.
+4. The editor's next operation (any operation) will trigger an index refresh, so you don't have to do anything else — just commit the new file.
 
-- **GitHub web UI**: navigate to `config/` or `defaultconfigs/` → "Add file" → "Upload files" → drag the file in → commit.
-- **Local checkout** with `packwiz` (see Local setup below).
-
-After uploading via the web UI, trigger the **Update mods** workflow (with no slug) — it does a `packwiz refresh` which is needed to register the new file in `index.toml`.
+If you didn't run any other editor operation after dropping in the config, you can either run any small operation (e.g., toggle a side dropdown back and forth) or just commit and let the GitHub Actions build do the refresh on release.
 
 ---
 
 ## I want to add a RESOURCEPACK or SHADERPACK
 
-Same flow as configs:
+Same flow as configs, but with `.zip` files:
 
-1. In the GitHub UI, navigate to `resourcepacks/` or `shaderpacks/` → "Add file" → "Upload files" → drag the `.zip` in → commit.
-2. Trigger **Update mods** with no slug to refresh the index.
+1. Drop the `.zip` in `resourcepacks/` or `shaderpacks/`
+2. The next editor operation refreshes the index
+3. Commit
+
+If you want a resource pack auto-enabled by default, you'd also need a `defaultconfigs/options.txt` listing it. Ask if you need this.
 
 ---
 
-## I want to add a KUBEJS script (custom recipe, etc.)
+## I want to add a KUBEJS script
 
-KubeJS lets you write JavaScript files to add/remove/change recipes. Drop your `.js` file in:
+KubeJS lets you write JavaScript files to add, remove, or change recipes (and other game stuff) without making a full mod. Drop `.js` files in:
 
 - `kubejs/server_scripts/` — for recipes, loot, server-side stuff
 - `kubejs/client_scripts/` — for tooltips, JEI hide/show, item renaming
 - `kubejs/startup_scripts/` — for things that run at game launch (rare)
 
 If you're just changing recipes, put it in `server_scripts/`.
-
-You can create the file directly in the GitHub web UI (navigate to the folder → "Add file" → "Create new file"). Then trigger **Update mods** to refresh the index.
 
 Example recipe removal:
 
@@ -128,88 +201,117 @@ See [`../kubejs/README.md`](../kubejs/README.md) for more examples.
 
 ---
 
-## I want to publish a release
+## I want to test the pack before pushing
 
-1. Bump the `version` in `pack.toml` (edit it directly in GitHub's web UI — pencil icon — and commit).
-2. Releases tab → "Draft a new release"
-3. "Choose a tag" → type `v0.1.1` → "Create new tag on publish"
-4. Title: `v0.1.1` (or something descriptive)
-5. Description: write what changed, or just hit "Generate release notes"
-6. Click **Publish release**
+Click **▶ Build & Launch in Prism** in the editor.
 
-GitHub Actions will then:
-- Download every mod jar
-- Build the .mrpack, both Prism zips, and the server zip
-- Attach all four to the release page
+What happens:
+1. The editor builds the pack locally (downloads jars, copies configs)
+2. Copies everything into the Prism instance you've configured under **⚙ Settings**
+3. Opens a confirmation that you can now launch from Prism
 
-This takes ~5 minutes. If something fails, check the **Actions** tab — the failed step will be red and you can read the error log.
+Open Prism, click Play on the configured instance. You're testing exactly what'll be in the next release.
+
+If you haven't configured a Prism instance path yet, click **⚙ Settings** first and pick one. Auto-detected instances should appear if you have any under `%APPDATA%\PrismLauncher\instances\`.
 
 ---
 
-## Need a real terminal? (Codespaces or local)
+## I want to commit and ship my changes
 
-The GitHub workflows handle most things, but a few tasks really do need a shell:
+1. Switch to GitHub Desktop. The "Changes" panel lists every modified file.
+2. Review the diff. Look for unexpected changes (e.g., editor accidentally rewrote a config file).
+3. Write a commit message. Convention: short summary on first line, optional details below.
+4. Click **Commit to <branch>**.
+5. Click **Push origin** in the top bar.
+6. Open the repo on GitHub. A banner appears suggesting you open a Pull Request from your branch into `main`.
+7. Click **Compare & pull request**. Write a description of what changed. Submit.
+8. Wait for review (or self-merge if you're flying solo). Once merged, your changes are on `main`.
 
-- Bulk-editing many config files at once
-- Writing or testing KubeJS scripts before pushing
-- Inspecting a packwiz prompt that the auto-yes can't handle
-- Running a local test build before tagging a release
+---
 
-You have two options.
+## I want to publish a release
 
-### GitHub Codespaces (browser-based, no local install)
+After your PR is merged into main:
 
-A Codespace is a Linux dev container running in the browser. Free tier: 60 hours/month.
+1. On GitHub: **Releases → Draft a new release**
+2. **Choose a tag** → type `v0.3.3` (or whatever the new version is) → **Create new tag on publish**
+3. Title: `v0.3.3`
+4. Description: write what changed, or just hit "Generate release notes"
+5. Click **Publish release**
 
-1. On the repo, click **Code** → **Codespaces** tab → **Create codespace on main**.
-2. Wait ~1 minute. Codespaces uses our [`.devcontainer/devcontainer.json`](../.devcontainer/devcontainer.json), which pre-installs Go, Java 21, and packwiz.
-3. You get a VS Code interface in the browser with a real terminal.
-4. Run any packwiz command from the repo root. Common ones:
-   - `packwiz refresh`
-   - `packwiz mr add <slug>`
-   - `packwiz update <slug>`
-   - `./scripts/build-prism-bundled.sh` (slow, downloads jars)
-5. To save your changes: in the terminal, run `git add . && git commit -m "..." && git push`. Or use the VS Code source control panel.
-6. When done, go back to the Codespaces page and **Stop** the codespace (otherwise it keeps consuming your free hours).
+GitHub Actions will then:
+- Build the .mrpack
+- Build the Prism installer zip
+- Attach both to the release page
 
-### Traditional local checkout
+This takes ~5 minutes the first time, much less if the build cache hits. If something fails, check the **Actions** tab — the failed step will be red.
 
-If you'd rather work on your own machine:
+---
 
-1. Install [packwiz](https://packwiz.infra.link/installation/): `go install github.com/packwiz/packwiz@latest` (with [Go](https://go.dev/dl/) installed), or `brew install packwiz` on Mac.
-2. Clone the repo: `git clone <repo-url>`.
-3. From the repo root, run any packwiz command.
+## Fallbacks
 
-Both paths land you in the same place — a working dev environment. Codespaces is faster to spin up; local is faster long-term if you'll be editing this pack often.
+### When the editor isn't an option
+
+Every operation maps to a GitHub Actions workflow. Open the repo on GitHub → Actions tab → pick the workflow → Run.
+
+| Editor action | Fallback workflow |
+|---|---|
+| + Add mod | "Add mod(s)" |
+| Remove | "Remove mod" |
+| Update / Update all | "Update mods" (blank slug = all) |
+| ⟳ Hash | "Compute hash" |
+| Pin / Unpin | (no workflow yet — edit `mods/<slug>.pw.toml` and add `pin = true` at top level) |
+| Side change | (no workflow yet — edit the manifest's `side` field) |
+| Set version | (no workflow yet — edit the manifest manually, see [`mods/README.md`](../mods/README.md)) |
+
+The workflows commit to whatever branch you ran them on. So if you ran "Add mod" on your `0.3.3` branch, the resulting commit lands on `0.3.3`.
+
+### packwiz CLI
+
+For the few operations that don't have a UI yet (or for batch tasks the editor can't reasonably do), `packwiz` directly is the deepest fallback. Install [Go](https://go.dev/dl/), then:
+
+```sh
+go install github.com/packwiz/packwiz@latest
+```
+
+From the repo root, packwiz commands work normally. Common ones:
+
+- `packwiz refresh`
+- `packwiz mr add <slug>`
+- `packwiz update <slug>` / `packwiz update --all`
+- `packwiz pin <slug>` / `packwiz unpin <slug>`
+
+See [packwiz docs](https://packwiz.infra.link/) for the full reference.
 
 ---
 
 ## Things you should NOT edit by hand
 
-- `mods/*.pw.toml` — these are auto-managed. Use the **Add mod** / **Update mods** workflows.
-- `index.toml` — packwiz manages this. The workflows refresh it automatically.
+- `mods/*.pw.toml` — for normal operations, use the editor. For advanced cases (pinning to a specific URL, switching from Modrinth to CurseForge mid-life), see [`../mods/README.md`](../mods/README.md).
+- `index.toml` — packwiz manages this. The editor and CI both refresh it as needed.
 
 ---
 
 ## Common gotchas
 
-- **Workflow says "no version found"** — the mod doesn't have a 1.21.1 NeoForge build, or you picked the wrong source (some mods are CF-only or Modrinth-only).
-- **Wrong version got picked by Add mod** — the workflow uses `--yes` which auto-accepts. If a mod has multiple candidates and the workflow picked badly, remove it and add it from a local checkout (no `--yes`) so you can pick.
-- **"hash mismatch" on the build workflow** — usually means a file in `config/`, `defaultconfigs/`, `kubejs/` etc. was edited without a refresh. Trigger the **Update mods** workflow with no slug — it does a refresh as part of its run.
-- **Config changes don't apply for existing users** — if you put it in `defaultconfigs/`, it only applies on first install. If they already installed, they keep their old version. Use `config/` if you want to force-update.
+- **"no version found"** — the mod doesn't have a 1.21.1 NeoForge build, or you picked the wrong source (some mods are CF-only or Modrinth-only).
+- **Wrong version got picked by Add mod** — packwiz auto-accepts the first match. If you wanted a different variant, use the editor's Set Version after adding.
+- **"hash mismatch" on the build workflow** — usually means a manifest got hand-edited to a new URL without recomputing the hash. Use the **⟳ Hash** button in the editor (or the Compute hash workflow) to fix.
+- **Config changes don't apply for existing users** — if you put it in `defaultconfigs/`, it only applies on first install. Use `config/` if you want to force-update on existing installs.
+- **Mod loaded as client-only when it should be both** — Modrinth metadata is sometimes wrong for Create addons. Use the side dropdown in the editor to fix.
 
 ---
 
 ## Quick FAQ
 
 **Q: Where do I put a jar I downloaded?**
-A: You don't. We don't ship jars in the repo — only URLs. Use the **Add mod** workflow to register a mod from Modrinth or CurseForge. The build pipeline downloads jars at release time.
+A: You don't. We don't ship jars in the repo — only manifests with URLs. Use **+ Add mod** with a Modrinth/CurseForge slug. The build pipeline doesn't bundle jars either; users' launchers fetch them at install time.
 
 **Q: What if a mod is *only* on some random website, not Modrinth or CurseForge?**
-A: Rare case, currently needs a local packwiz install: `packwiz url add <n> <url>`. Tell me if this comes up and I can add a workflow for it too.
+A: Edge case — the editor doesn't currently support arbitrary URL adds. You can use `packwiz url add <name> <url>` from a local checkout. Mention it in the issue tracker if you hit this often and we'll add a UI for it.
 
 **Q: I broke something. How do I undo?**
-A: Every workflow run is a commit. Repo → Commits → find the bad one → "Revert" button. GitHub will open a PR to undo it.
+A: If you haven't pushed: GitHub Desktop → History → right-click the bad commit → Revert. If you already pushed: open the bad commit on GitHub → "Revert" button → it opens a PR that undoes the change.
 
-**Q: I want to test the pack without making a release.**
-A: Trigger the **Build modpack** workflow manually (Actions tab → Build modpack → Run workflow). It produces all four artifacts in the run's "Artifacts" section, downloadable for 90 days. Inspect the bundled zip to see if mods are there before cutting a real release.
+**Q: My branch fell behind main. How do I sync?**
+A: GitHub Desktop → Branch → Update from main. Resolves any conflicts in your favorite text editor (or just accept incoming for trivial cases).

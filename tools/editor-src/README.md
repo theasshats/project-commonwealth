@@ -65,8 +65,10 @@ All routes return JSON.
 | GET | `/api/pack` | — | `{name, version, author, pack_format}` |
 | GET | `/api/mods` | — | array of mod entries |
 | POST | `/api/mods/add` | `{source, slug, side}` | op result |
+| POST | `/api/mods/batch-add` | `{lines: ["mr:foo", "cf:bar", ...]}` | `{results: [...]}` |
 | POST | `/api/mods/remove` | `{slug}` | op result |
 | POST | `/api/mods/pin` | `{slug, pinned}` | op result |
+| POST | `/api/mods/set-side` | `{slug, side}` ("both" \| "client" \| "server") | op result |
 | POST | `/api/mods/update` | `{slug}` (empty for all) | op result |
 | POST | `/api/mods/set-version` | `{slug, version_id}` or `{slug, url, filename?}` | op result |
 | POST | `/api/mods/compute-hash` | `{slug}` | op result |
