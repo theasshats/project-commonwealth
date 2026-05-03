@@ -609,11 +609,6 @@ hash = "38aa26aa3451c6a833acbb3fc89db69193ce185c6a539d9f2d54799a4e1cfb71"
 metafile = true
 
 [[files]]
-file = "mods/head-in-the-clouds.pw.toml"
-hash = "b293d2b272fbc12caa89dc64ffb4adeb68bdbbc61f5d28b58beafd36c4ce3392"
-metafile = true
-
-[[files]]
 file = "mods/immersive-armors.pw.toml"
 hash = "48db9bdd1c4b427642995c5351af4a7dee203e13310182afbb6c26315341dbd5"
 metafile = true
