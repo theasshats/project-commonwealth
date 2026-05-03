@@ -1,0 +1,12 @@
+name = "Ender Moon"
+filename = "EnderMoon-1.21.1-NeoForge-fabric-1.0.2.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/jcD5fwN4/versions/r2oQgSzB/EnderMoon-1.21.1-NeoForge-fabric-1.0.2.jar"
+hash-format = "sha512"
+hash = "ce3710e70dd8faab45cd56c2b7c0ce2e74c410208ce6a23842336c36a64550ba64dae2cd2295d3ea50fac2379f84ad3f4092d92998d23752384282012b0eaaed"
+
+[update]
+[update.modrinth]
+mod-id = "jcD5fwN4"
+version = "r2oQgSzB"

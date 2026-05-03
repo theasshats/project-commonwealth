@@ -1,0 +1,12 @@
+name = "Garfield"
+filename = "garfield-1.0.2-neoforge-1.20.6.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/9NklOEUb/versions/Ldhi11yG/garfield-1.0.2-neoforge-1.20.6.jar"
+hash-format = "sha512"
+hash = "af72ecbbc9ffa6e7a5a3b486a397a7dd130fc78d738a926c736eab5f6f5188d2d85721cbf14cf3bbfefa36f7f6b2b30b0b15cb0335bc5692262636ead03521f9"
+
+[update]
+[update.modrinth]
+mod-id = "9NklOEUb"
+version = "Ldhi11yG"
