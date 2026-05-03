@@ -1,0 +1,12 @@
+name = "Mob Lassos"
+filename = "MobLassos-v21.1.1-1.21.1-NeoForge.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/ftOBbnu8/versions/Qsj3YEUS/MobLassos-v21.1.1-1.21.1-NeoForge.jar"
+hash-format = "sha512"
+hash = "83a4392b2dc1f3a9f5ac970a15ccf509c69a2e6005fcc7afc2d2dd10daa69b2988671d254e1dac5709b04d3fb7c29a949fb9bcaf6f014e46ff4545ae092696e5"
+
+[update]
+[update.modrinth]
+mod-id = "ftOBbnu8"
+version = "Qsj3YEUS"

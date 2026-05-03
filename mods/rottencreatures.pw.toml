@@ -1,0 +1,12 @@
+name = "Rotten Creatures"
+filename = "rottencreatures-neoforge-1.21.1-1.1.2.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/5Zusp48B/versions/EkvVbxeM/rottencreatures-neoforge-1.21.1-1.1.2.jar"
+hash-format = "sha512"
+hash = "67aa0473b06c2e43e5114f7275a0ee83d94ead60fc21d0d06afae68f7c97d03190462a8a0b8ec76e2422a072d51e9c453bc9eb17b02de49b9fe79ec780e946d1"
+
+[update]
+[update.modrinth]
+mod-id = "5Zusp48B"
+version = "EkvVbxeM"

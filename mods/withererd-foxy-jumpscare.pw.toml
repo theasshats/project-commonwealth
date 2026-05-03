@@ -1,0 +1,12 @@
+name = "Withered Foxy Jumpscare"
+filename = "withererd-foxy-jumpscare-1.3.2.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/fchC4AOW/versions/3EJSOKW8/withererd-foxy-jumpscare-1.3.2.jar"
+hash-format = "sha512"
+hash = "7500363e9b0a62822faeb23d37b6ceca88989c0acdf277e44e91389ab653ddab541d1f13ed19aa720cc037e896e490913ab21a6cab52534bed9189d3058d7165"
+
+[update]
+[update.modrinth]
+mod-id = "fchC4AOW"
+version = "3EJSOKW8"

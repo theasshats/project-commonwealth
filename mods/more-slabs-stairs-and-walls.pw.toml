@@ -1,0 +1,12 @@
+name = "More Slabs Stairs & Walls"
+filename = "moreslabsstairsandwalls-4.2.0.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/bdBzXqbS/versions/251NZEeu/moreslabsstairsandwalls-4.2.0.jar"
+hash-format = "sha512"
+hash = "d1993139371499a01a1a0a39a0a9f95f1340f9953493dbd2e1d1e3c810574d32dc3ff41839c301cdcacae8de130cfeacc994cd1e0a5444ee15ac1577500baaa6"
+
+[update]
+[update.modrinth]
+mod-id = "bdBzXqbS"
+version = "251NZEeu"
