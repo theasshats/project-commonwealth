@@ -723,7 +723,7 @@ metafile = true
 
 [[files]]
 file = "mods/formations.pw.toml"
-hash = "41ea41c71242b710df4768bdd0f3f2433c64600d2d1405472c01993bd7f5da25"
+hash = "36eabc748220aa2ec279622dd29ba6789a4f56a0e272cb9c835f579fc376a76a"
 metafile = true
 
 [[files]]
@@ -779,11 +779,6 @@ metafile = true
 [[files]]
 file = "mods/hypertube.pw.toml"
 hash = "92ada0d7d993d7925e127c6d29a34519d8a5a8274a1c40aeaeb1a4ff646e62bb"
-metafile = true
-
-[[files]]
-file = "mods/ifr25ku.pw.toml"
-hash = "bc3b436d543dacfda9ad2f2bbcdfd054a93cd0c6ba2d18f47d1433f8e71eaa01"
 metafile = true
 
 [[files]]
@@ -928,7 +923,7 @@ metafile = true
 
 [[files]]
 file = "mods/moogs-structure-lib.pw.toml"
-hash = "8e9b61ed721c95cf7fdca46979bb20fdb12aaecccccc92a7822e5ce7a6cbca19"
+hash = "1b9f0f895a466ec47ddd6656d8aeaac266741295e974752ca4ac7b3fdca4b64e"
 metafile = true
 
 [[files]]
@@ -1079,16 +1074,6 @@ metafile = true
 [[files]]
 file = "mods/ritchies-projectile-library.pw.toml"
 hash = "c62b51a8248d15e3cb63880ac123a92dd6a67973a1eafc4c4cb09f3f74481f78"
-metafile = true
-
-[[files]]
-file = "mods/roadarchitect-encounters.pw.toml"
-hash = "3ca364000ae408681720edc4fcd9c1c9735ae9ef665c923e0447e9652b7119ea"
-metafile = true
-
-[[files]]
-file = "mods/roadarchitect.pw.toml"
-hash = "5e7309338d4a9080fd2e7cb783276138a5ea0d5026aac1b83e84057ce899fedc"
 metafile = true
 
 [[files]]

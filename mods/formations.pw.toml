@@ -1,6 +1,5 @@
 name = "Formations (Structure Library)"
 filename = "formations-1.0.4-neoforge-mc1.21.jar"
-side = "server"
 
 [download]
 url = "https://cdn.modrinth.com/data/tPe4xnPd/versions/ybUmDE8h/formations-1.0.4-neoforge-mc1.21.jar"
