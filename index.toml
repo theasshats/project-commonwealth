@@ -610,7 +610,7 @@ metafile = true
 
 [[files]]
 file = "mods/head-in-the-clouds.pw.toml"
-hash = "74bf5b82db50de0d73d35885a3a75330ae5b70b3616ddf466b5b08a8db16771c"
+hash = "b293d2b272fbc12caa89dc64ffb4adeb68bdbbc61f5d28b58beafd36c4ce3392"
 metafile = true
 
 [[files]]
@@ -1046,11 +1046,6 @@ metafile = true
 [[files]]
 file = "mods/titanium.pw.toml"
 hash = "455ba0409bef5fe9bda93434d826a8d2d5eb11c1b7d41ea119256fe3b15da157"
-metafile = true
-
-[[files]]
-file = "mods/tofu-create.pw.toml"
-hash = "a8486c2f6dc7154aad3128ddb317fd9c9db811ed1b21b578d7e36c5c42b7f503"
 metafile = true
 
 [[files]]
