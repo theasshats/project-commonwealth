@@ -5,32 +5,72 @@ file = ".devcontainer/devcontainer.json"
 hash = "bdd9c71945406ce4bfb6bb8b13aced1a1ee520cadbe077fd345dd8f676ef1101"
 
 [[files]]
-file = ".editor/build-staging/.minecraft/kubejs/server_scripts/example.js"
-hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
+file = ".github/actions/setup-packwiz/action.yml"
+hash = "6b2a29d773a278637a08c33e59ad85d8140ececc08d8b056484839b1ce66767d"
 
 [[files]]
-file = ".editor/build-staging/.minecraft/packwiz-installer.jar"
-hash = "c9f646908d340d84773948a9a7d98bc1dae250d35e1016dc6e2b8459760b5598"
+file = ".github/workflows/add-mod.yml"
+hash = "bb60ca2bfc51502ab943fdf2048219fa284fe2b7de9e8287300ed0edb21bc18d"
 
 [[files]]
-file = ".editor/build-staging/instance.cfg"
-hash = "c4e2b0197546f0a1807a185318f33cd4c91a0559daab63a451e016b117645af1"
+file = ".github/workflows/build-editor.yml"
+hash = "aaee2ea6c8ed26d6d419e8155376ae9252e4d0488d4ba0cf57e45e6b63033c43"
 
 [[files]]
-file = ".editor/build-staging/mmc-pack.json"
-hash = "f3fd4fdd8811f271cb56e8c3f0eb0a2f5b6cec809f6a646be1e56c5ac76737ab"
+file = ".github/workflows/build.yml"
+hash = "b63f31ecd7494e3d65d083f25a6fa9ed1ea405aab2aca6466195276e4ff1a1d5"
 
 [[files]]
-file = ".editor/config.json"
-hash = "af52d88de0f67cd9b900d35647337c196b8e509a8f6b693e195f64932730c250"
+file = ".github/workflows/compute-hash.yml"
+hash = "5ecddcaed3576aaedac61860a12f30bb0129584298cea282ae1de9027fdb4a71"
 
 [[files]]
-file = ".editor/packwiz-installer-bootstrap.jar"
-hash = "a8fbb24dc604278e97f4688e82d3d91a318b98efc08d5dbfcbcbcab6443d116c"
+file = ".github/workflows/remove-mod.yml"
+hash = "8bde6ac33ddfd1f3e35878d32665c167add62dcd676e2a98c78e244181d25776"
+
+[[files]]
+file = ".github/workflows/update-mods.yml"
+hash = "d9126477772933202efc2fc67f4ddb85b3db64309900744ce34813ec1e482353"
+
+[[files]]
+file = "LICENSE"
+hash = "a367e594ee80fba5f6979bdd46202c3cbc63ab5b3dbc782b832af1c2275e9ed0"
+
+[[files]]
+file = "README.md"
+hash = "15b3e20eac725df3376cb99b76aca8980d49094771ffa01d9a8f442d3eb103e6"
+
+[[files]]
+file = "config/README.md"
+hash = "1a8fb9efa5fb4bbd14a2bf4f5a6ed21082f59d52bd337461e8365fb54ea65127"
+
+[[files]]
+file = "defaultconfigs/README.md"
+hash = "a03321eab7376c0a6aede15689d668e3df8f5fa2cd34f4c6e4b6600abeed47de"
+
+[[files]]
+file = "docs/DESIGN.md"
+hash = "6246c4f129df9468162e086afdb4a3fef4e3014e55d9171186b37bdb9cb4d7be"
+
+[[files]]
+file = "docs/EDITING.md"
+hash = "0151c84ed7e4c562accced367289a672af57e2f0cc23c573c361f9cf2ce2d127"
+
+[[files]]
+file = "docs/PRISM-SETUP.md"
+hash = "5dd3b50262987600068fce075465a940fe5ffc8a4077df6bc1052c188faacc2b"
+
+[[files]]
+file = "kubejs/README.md"
+hash = "d5ac59914d82a6343e7d1b206901702fcb3e6816c588eb78b8ac58d64e65f83c"
 
 [[files]]
 file = "kubejs/server_scripts/example.js"
 hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
+
+[[files]]
+file = "mods/README.md"
+hash = "bd9e720e6edfbe46b5b990c37485d0b9dcc4df9bffc09bb9016c6f087882b452"
 
 [[files]]
 file = "mods/accessories-compat-layer.pw.toml"
@@ -1072,8 +1112,52 @@ file = "packwizignore"
 hash = "25f4dd5a581785897cd5a05bb5d6426abbf919882eb1c0f500917914a34b47c0"
 
 [[files]]
+file = "resourcepacks/README.md"
+hash = "254b52ada3465717457cde5ab91a78f28cf054f6920240a5260bfa7c46dac1ba"
+
+[[files]]
+file = "scripts/bootstrap-mods.sh"
+hash = "63a580f7e2ac27e2b1a4a6279a289e1cfe0d9df30a03f2df3c890f404aa2431a"
+
+[[files]]
+file = "scripts/build-mrpack.sh"
+hash = "2ffac7786318505965a4714ff2caa0dd9db58ca15d2027425c7fe013daab0121"
+
+[[files]]
+file = "scripts/build-prism-bundled.sh"
+hash = "f5c4ae6f5b1652cf6d42e39e6e7ebfba3c8d4348026d88eca3790e85d109b52e"
+
+[[files]]
+file = "scripts/build-prism-installer.sh"
+hash = "8025de90d2f3b32bc9ac6574ebd81e07b0e2af2e6d521d0c5298bb22f017b093"
+
+[[files]]
+file = "scripts/build-prism-skeleton.sh"
+hash = "c01da4965ca0f352026abc5e6d4d0dd12c23ee4f10872491b1e5be20f34de4b0"
+
+[[files]]
+file = "scripts/build-server.sh"
+hash = "984415662f0fd431322ef573b2e13d7bfae326cded0f399fc0d19a080702bf04"
+
+[[files]]
+file = "scripts/setup.sh"
+hash = "a213c16bca4aa68588c19f814a3c34875440eee242893a5a2bcbc7b56e55c3dd"
+
+[[files]]
+file = "shaderpacks/README.md"
+hash = "0f90cbce3a6b43c51adb9e65500f69adbc425d06dde44255da60c0bde0cade32"
+
+[[files]]
+file = "tools/README.md"
+hash = "377acd023935a885a88420c6ca21fbe6c31138c7d71bec3866cf709c13c73b04"
+
+[[files]]
 file = "tools/derpack-edit.exe"
-hash = "db96e9aa2877cf655b4c0db250d9ef20ca7509cb3821f518fba2a0059a79565d"
+hash = "12adc498dc7017401a6715dd2c2e039a3b547728800b016bd060709427dc73da"
+
+[[files]]
+file = "tools/editor-src/README.md"
+hash = "542f705d01f5f3e5c15267ae364c3cde66a1b270f900a2f16aadff7c6e3632f6"
 
 [[files]]
 file = "tools/editor-src/build.sh"
@@ -1150,7 +1234,3 @@ hash = "8d9ecaf77f49d32d179da480eaac1a78c61e5960021044db30b8e015b081dd94"
 [[files]]
 file = "tools/editor-src/ui/style.css"
 hash = "a7eedea4e922b846a003a189d96bc28736b1d5e2fdea2c1fc40309ef9b16d5dd"
-
-[[files]]
-file = "wishlist.txt"
-hash = "58a1eb56bc2f70eb4b8fc5ea3899f04c40ba8d61392bb84b16772968d65d42b7"
