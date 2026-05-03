@@ -102,6 +102,14 @@ function renderMods() {
       handleRowAction(action, slug, btn);
     });
   });
+  // Wire up per-row dropdowns (side selector, etc.).
+  $$('select[data-action]').forEach(sel => {
+    sel.addEventListener('change', () => {
+      const action = sel.dataset.action;
+      const slug = sel.dataset.slug;
+      handleRowAction(action, slug, sel);
+    });
+  });
 }
 
 function modRow(m) {
@@ -122,12 +130,15 @@ function modRow(m) {
     : `<button data-action="update" data-slug="${escapeHtml(m.slug)}">Update</button>`;
 
   const side = m.side || 'both';
+  const sideOpts = ['both', 'client', 'server'].map(s =>
+    `<option value="${s}"${s === side ? ' selected' : ''}>${s}</option>`
+  ).join('');
 
   return `
     <tr>
       <td><code>${escapeHtml(m.slug)}</code></td>
       <td>${escapeHtml(m.name || '')}</td>
-      <td><button class="side-cell side-${side}" data-action="cycle-side" data-slug="${escapeHtml(m.slug)}" data-side="${side}" title="Click to cycle: both → client → server → both">${side}</button></td>
+      <td><select class="side-select side-${side}" data-action="change-side" data-slug="${escapeHtml(m.slug)}">${sideOpts}</select></td>
       <td>${sourceTag}</td>
       <td class="col-pinned">${pinIcon}</td>
       <td class="col-actions">
@@ -171,21 +182,17 @@ async function handleRowAction(action, slug, btn) {
     case 'compute-hash':
       await doComputeHash(slug);
       break;
-    case 'cycle-side':
-      await doCycleSide(slug, btn ? btn.dataset.side : 'both');
+    case 'change-side':
+      await doSetSide(slug, btn.value);
       break;
   }
 }
 
-async function doCycleSide(slug, currentSide) {
-  // Cycle: both → client → server → both
-  const next = currentSide === 'both' ? 'client'
-             : currentSide === 'client' ? 'server'
-             : 'both';
+async function doSetSide(slug, side) {
   try {
-    const r = await apiPost('/api/mods/set-side', { slug, side: next });
+    const r = await apiPost('/api/mods/set-side', { slug, side });
     if (r.ok) {
-      logStatus('ok', `${slug}: side set to ${next}`);
+      logStatus('ok', `${slug}: side set to ${side}`);
       await loadMods();
     } else {
       logStatus('err', `Set side failed for ${slug}: ${r.error || 'unknown error'}`);
