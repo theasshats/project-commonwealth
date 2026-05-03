@@ -53,14 +53,31 @@ func (s *Server) HandleSetConfig(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Validate that the path exists if non-empty. We accept either an instance
-	// folder (containing instance.cfg) or its .minecraft subfolder, since
-	// Prism instances are conventionally <instance>/.minecraft/mods/.
+	// Validate that the path looks like a Prism instance. We accept either:
+	// - the instance dir itself (containing instance.cfg)
+	// - the .minecraft subdir (since some users might point at that directly)
 	if req.PrismInstancePath != "" {
-		if _, err := os.Stat(req.PrismInstancePath); err != nil {
+		st, err := os.Stat(req.PrismInstancePath)
+		if err != nil {
 			writeError(w, http.StatusBadRequest,
 				"path does not exist: "+req.PrismInstancePath)
 			return
+		}
+		if !st.IsDir() {
+			writeError(w, http.StatusBadRequest,
+				"path is not a directory: "+req.PrismInstancePath)
+			return
+		}
+		// Check for telltale files. Either instance.cfg (instance root) or
+		// mods/+config/ (already inside .minecraft).
+		instanceCfg := filepath.Join(req.PrismInstancePath, "instance.cfg")
+		minecraftSub := filepath.Join(req.PrismInstancePath, ".minecraft")
+		if _, err1 := os.Stat(instanceCfg); err1 != nil {
+			if _, err2 := os.Stat(minecraftSub); err2 != nil {
+				writeError(w, http.StatusBadRequest,
+					"path doesn't look like a Prism instance: missing instance.cfg and .minecraft/. Make sure you point at the instance folder, not the launcher folder.")
+				return
+			}
 		}
 	}
 

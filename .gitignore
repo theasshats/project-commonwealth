@@ -39,5 +39,11 @@ dist/
 build/
 out/
 
-# App-local state — not synced across users
+# App-local state — per-user, not synced
 .editor/
+
+# Editor build outputs (we commit derpack-edit.exe but not intermediate stuff)
+tools/editor-src/bin/
+
+# packwiz source checkout used only by the build-editor workflow
+.packwiz-src/

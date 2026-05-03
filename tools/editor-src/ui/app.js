@@ -226,13 +226,13 @@ async function doUpdateAll() {
     const r = await apiPost('/api/mods/update', { slug: '' });
     if (r.ok) {
       logStatus('ok', 'Update all completed');
-      // Try to surface counts from packwiz output
+      // Show non-empty lines from packwiz's output (deduped)
       if (r.output) {
-        const updated = (r.output.match(/^Updated /gm) || []).length;
-        const skipped = (r.output.match(/^Skipped pinned mod/gm) || []).length;
-        if (updated || skipped) {
-          logStatus('ok', `  ${updated} updated, ${skipped} skipped (pinned)`);
-        }
+        const lines = r.output.split('\n')
+          .map(l => l.trim())
+          .filter(l => l && !l.startsWith('Loading'));
+        // Show the last few lines, which usually contain the summary
+        lines.slice(-5).forEach(l => logStatus('ok', `  ${l}`));
       }
       await loadMods();
     } else {
@@ -442,8 +442,11 @@ async function openSettings() {
     const detected = $('#settings-detected');
     const list = $('#settings-detected-list');
     if (cfg.detected_instances && cfg.detected_instances.length > 0) {
+      // Pick the right path separator. The default root from the server uses
+      // OS-native separators, so just append with whichever the root uses.
+      const sep = (cfg.prism_default_root || '').includes('\\') ? '\\' : '/';
       list.innerHTML = cfg.detected_instances.map(name => {
-        const fullPath = cfg.prism_default_root + '\\' + name;
+        const fullPath = cfg.prism_default_root + sep + name;
         return `<li><a href="#" data-path="${escapeHtml(fullPath)}">${escapeHtml(name)}</a></li>`;
       }).join('');
       list.querySelectorAll('a').forEach(a => {
