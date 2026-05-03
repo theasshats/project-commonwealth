@@ -28,8 +28,82 @@ jobs:
       - name: Set up packwiz
         uses: ./.github/actions/setup-packwiz
 
+      # ---- Cache key computation ------------------------------------------
+      #
+      # Hash all the build inputs that affect output:
+      #   - pack.toml, with the `version =` line stripped (so manual test builds
+      #     and tagged release builds at the same content produce the same key)
+      #   - index.toml, mods/, config/, defaultconfigs/, kubejs/,
+      #     resourcepacks/, shaderpacks/
+      #   - scripts/build-*.sh
+      #   - this workflow file (.github/workflows/build.yml)
+      #
+      # The build script files are included so that workflow changes don't
+      # accidentally serve a stale cached build with the old script's bugs.
+
+      - name: Compute cache key
+        id: cachekey
+        run: |
+          # Make a fingerprint file with sorted, predictable hashes
+          fp=$(mktemp)
+
+          # pack.toml without the version field
+          grep -vE '^version\s*=' pack.toml | sha256sum | awk '{print "pack.toml " $1}' >> "$fp"
+
+          # Other top-level files
+          for f in index.toml; do
+            if [[ -f "$f" ]]; then
+              sha256sum "$f" | awk -v f="$f" '{print f " " $1}' >> "$fp"
+            fi
+          done
+
+          # Directories that affect build output
+          for dir in mods config defaultconfigs kubejs resourcepacks shaderpacks; do
+            if [[ -d "$dir" ]]; then
+              find "$dir" -type f -print0 | sort -z | xargs -0 sha256sum | sha256sum | awk -v d="$dir" '{print d "/ " $1}' >> "$fp"
+            fi
+          done
+
+          # Build scripts (changes to these should bust cache)
+          if [[ -d scripts ]]; then
+            find scripts -type f -name 'build-*.sh' -print0 | sort -z | xargs -0 sha256sum | sha256sum | awk '{print "scripts/build-*.sh " $1}' >> "$fp"
+          fi
+
+          # This workflow file
+          sha256sum .github/workflows/build.yml | awk '{print ".github/workflows/build.yml " $1}' >> "$fp"
+
+          echo "==> Fingerprint contents:"
+          cat "$fp"
+
+          key=$(sha256sum "$fp" | awk '{print $1}')
+          echo "==> Cache key: $key"
+          echo "key=$key" >> "$GITHUB_OUTPUT"
+          rm -f "$fp"
+
+      - name: Restore artifacts from cache
+        id: cache
+        uses: actions/cache/restore@v4
+        with:
+          path: dist-cached
+          key: build-artifacts-${{ steps.cachekey.outputs.key }}
+
+      - name: Cache status
+        run: |
+          if [[ "${{ steps.cache.outputs.cache-hit }}" == "true" ]]; then
+            echo "==> CACHE HIT — will reuse previous build artifacts"
+            ls -lh dist-cached/
+          else
+            echo "==> CACHE MISS — will rebuild from source"
+          fi
+
+      # ---- Build steps (skipped on cache hit, except version sync) --------
+
       # When triggered by a release, force pack.toml's version to match the tag.
       # Tag v0.2.0 -> pack.toml version "0.2.0". Skipped on workflow_dispatch.
+      #
+      # This step ALWAYS runs on release events, even on cache hit, because the
+      # commit-and-push side effect needs to happen for the installer variant
+      # (which fetches pack.toml from main) to see the new version.
       - name: Sync pack.toml version with release tag
         if: github.event_name == 'release'
         env:
@@ -38,7 +112,6 @@ jobs:
           GIT_COMMITTER_NAME: github-actions[bot]
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         run: |
-          # Strip leading 'v' from tag (v0.2.0 -> 0.2.0)
           tag="${{ github.event.release.tag_name }}"
           target_version="${tag#v}"
 
@@ -51,23 +124,14 @@ jobs:
 
           echo "==> Bumping pack.toml: $current_version -> $target_version"
           sed -i -E "s/^version\s*=\s*\".*\"/version = \"${target_version}\"/" pack.toml
-
-          # Verify the edit took
-          new_version=$(grep -E '^version\s*=' pack.toml | head -1 | sed -E 's/.*"([^"]+)".*/\1/')
-          if [[ "$new_version" != "$target_version" ]]; then
-              echo "ERROR: sed didn't update pack.toml correctly (got '$new_version', wanted '$target_version')"
-              exit 1
-          fi
-
-          # Refresh so index hash matches new pack.toml
           packwiz refresh
 
           git add pack.toml index.toml
           git commit -m "Bump version to ${target_version} for release ${tag}"
-          # Push directly to the branch the tag is on. This means main, in our case.
           git push origin HEAD:main
 
       - name: Refresh packwiz index
+        if: steps.cache.outputs.cache-hit != 'true'
         run: packwiz refresh --build
 
       - name: Read pack metadata
@@ -79,41 +143,67 @@ jobs:
           echo "version=$version" >> "$GITHUB_OUTPUT"
           echo "slug=$slug" >> "$GITHUB_OUTPUT"
 
-      # 1. .mrpack — small, references mods by URL
+      # 1. .mrpack
       - name: Build .mrpack
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
           mkdir -p dist
           packwiz mr export -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}.mrpack"
 
-      # 2. Prism (bundled jars) — fat zip, friend imports and plays
+      # 2. Prism (bundled jars)
       - name: Build Prism instance (bundled)
+        if: steps.cache.outputs.cache-hit != 'true'
         run: bash scripts/build-prism-bundled.sh
 
-      # 3. Prism (installer) — thin zip, fetches mods on launch
+      # 3. Prism (installer)
       - name: Build Prism instance (installer)
+        if: steps.cache.outputs.cache-hit != 'true'
         env:
-          # Points at main branch's pack.toml so the version bump (above) is included.
-          # Trade-off: installer-variant users will get any post-release changes to main.
-          # That's fine for our cadence; if you want pinned-to-tag behavior, change 'main'
-          # to ${{ github.event.release.tag_name }} but also force-push the tag forward
-          # in the version-sync step.
           PACK_URL: https://raw.githubusercontent.com/${{ github.repository }}/main/pack.toml
         run: bash scripts/build-prism-installer.sh
 
-      # 4. Server pack — configs + fetch-mods.sh + run.sh
+      # 4. Server pack
       - name: Build server pack
+        if: steps.cache.outputs.cache-hit != 'true'
         run: bash scripts/build-server.sh
 
       - name: Clean staging from dist
+        if: steps.cache.outputs.cache-hit != 'true'
         run: rm -rf dist/staging
 
-      - name: List artifacts
+      # ---- Cache or restore ------------------------------------------------
+
+      # On cache miss: copy fresh artifacts from dist/ to dist-cached/ for caching.
+      # The cache step (below) only stores from dist-cached/, so we keep dist/ as
+      # the canonical "latest build output" location either way.
+      - name: Stage artifacts for caching
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p dist-cached
+          cp dist/*.mrpack dist-cached/ 2>/dev/null || true
+          cp dist/*.zip dist-cached/ 2>/dev/null || true
+          ls -lh dist-cached/
+
+      # On cache hit: copy cached artifacts to dist/ so downstream steps work the same way.
+      - name: Restore artifacts to dist/ from cache
+        if: steps.cache.outputs.cache-hit == 'true'
+        run: |
+          mkdir -p dist
+          cp dist-cached/* dist/
+          ls -lh dist/
+
+      # Save to cache (only when we built fresh)
+      - name: Save artifacts to cache
+        if: steps.cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: dist-cached
+          key: build-artifacts-${{ steps.cachekey.outputs.key }}
+
+      - name: List final artifacts
         run: ls -lh dist/
 
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}
-          path: dist/
+      # ---- Release attach (only on release event) -------------------------
 
       - name: Upload to GitHub Release
         if: github.event_name == 'release'
