@@ -40,9 +40,14 @@ fi
 cp "${BOOTSTRAP_JAR}" "${STAGING}/.minecraft/packwiz-installer-bootstrap.jar"
 
 # Wire up the pre-launch hook in instance.cfg.
-# Prism runs PreLaunchCommand from $INST_MC_DIR before each launch.
+#
+# Prism reads PreLaunchCommand only when OverrideCommands=true; without that
+# flag the command is silently ignored. We also write the command without
+# surrounding quotes — Prism parses the value as a single shell-style string
+# and expands $INST_JAVA / $INST_MC_DIR itself at launch time.
 cat >> "${STAGING}/instance.cfg" <<EOF
-PreLaunchCommand="\$INST_JAVA" -jar "\$INST_MC_DIR/packwiz-installer-bootstrap.jar" -g -s client "${PACK_URL}"
+OverrideCommands=true
+PreLaunchCommand=\$INST_JAVA -jar \$INST_MC_DIR/packwiz-installer-bootstrap.jar -g -s client ${PACK_URL}
 EOF
 
 cat > "${STAGING}/README.txt" <<EOF
