@@ -1129,7 +1129,7 @@ hash = "f5c4ae6f5b1652cf6d42e39e6e7ebfba3c8d4348026d88eca3790e85d109b52e"
 
 [[files]]
 file = "scripts/build-prism-installer.sh"
-hash = "8025de90d2f3b32bc9ac6574ebd81e07b0e2af2e6d521d0c5298bb22f017b093"
+hash = "e27e7473acbc8467d4295a4a7f2bbab67b2051b8dbee2b2a718656a3cfcd6d8c"
 
 [[files]]
 file = "scripts/build-prism-skeleton.sh"
