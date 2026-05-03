@@ -82,6 +82,10 @@ func run() error {
 	mux.HandleFunc("/api/mods/set-version", srv.HandleSetVersion)
 	mux.HandleFunc("/api/mods/compute-hash", srv.HandleComputeHash)
 	mux.HandleFunc("/api/mods/update", srv.HandleUpdate)
+	mux.HandleFunc("GET /api/config", srv.HandleGetConfig)
+	mux.HandleFunc("POST /api/config", srv.HandleSetConfig)
+	mux.HandleFunc("/api/build", srv.HandleBuild)
+	mux.HandleFunc("/api/launch-prism", srv.HandleLaunchPrism)
 	// Pattern routes (Go 1.22+) for variable path segments.
 	mux.HandleFunc("GET /api/mods/{slug}/versions", srv.HandleListVersions)
 

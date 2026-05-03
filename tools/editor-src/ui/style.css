@@ -122,6 +122,66 @@ button.danger:hover {
   border-color: var(--danger-hover);
 }
 
+button.success {
+  background: var(--success);
+  border-color: var(--success);
+  color: white;
+  font-weight: 500;
+}
+
+button.success:hover {
+  background: #5cbf60;
+  border-color: #5cbf60;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background: var(--bg-elev);
+}
+
+.settings-detected {
+  margin-top: 12px;
+}
+
+.settings-detected.hidden {
+  display: none;
+}
+
+.settings-detected ul {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.settings-detected li {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.settings-detected li:last-child {
+  border-bottom: none;
+}
+
+.settings-detected a {
+  color: var(--accent);
+  text-decoration: none;
+  font-family: ui-monospace, "Cascadia Code", "Consolas", monospace;
+  font-size: 12px;
+}
+
+.settings-detected a:hover {
+  text-decoration: underline;
+}
+
 .mod-list-wrapper {
   background: var(--bg-elev);
   border: 1px solid var(--border);
@@ -249,6 +309,12 @@ button.danger:hover {
   align-items: center;
   justify-content: center;
   z-index: 100;
+}
+
+/* Confirm modal needs to stack above other modals (e.g. when a confirm is
+   triggered from inside the set-version modal). */
+#confirm-modal {
+  z-index: 200;
 }
 
 .modal.hidden {

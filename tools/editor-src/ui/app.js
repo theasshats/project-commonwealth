@@ -428,6 +428,97 @@ function submitSvUrl() {
   confirmSetVersion(setVersionSlug, { url, filename, label: filename || url });
 }
 
+// ----- Settings modal ----------------------------------------------------
+
+let configCache = null;
+
+async function openSettings() {
+  $('#settings-modal').classList.remove('hidden');
+  try {
+    const cfg = await apiGet('/api/config');
+    configCache = cfg;
+    $('#settings-prism-path').value = cfg.prism_instance_path || '';
+
+    const detected = $('#settings-detected');
+    const list = $('#settings-detected-list');
+    if (cfg.detected_instances && cfg.detected_instances.length > 0) {
+      list.innerHTML = cfg.detected_instances.map(name => {
+        const fullPath = cfg.prism_default_root + '\\' + name;
+        return `<li><a href="#" data-path="${escapeHtml(fullPath)}">${escapeHtml(name)}</a></li>`;
+      }).join('');
+      list.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          $('#settings-prism-path').value = a.dataset.path;
+        });
+      });
+      detected.classList.remove('hidden');
+    } else {
+      detected.classList.add('hidden');
+    }
+  } catch (err) {
+    logStatus('err', `Could not load settings: ${err.message}`);
+  }
+}
+
+function closeSettings() {
+  $('#settings-modal').classList.add('hidden');
+}
+
+async function saveSettings() {
+  const path = $('#settings-prism-path').value.trim();
+  try {
+    const r = await apiPost('/api/config', { prism_instance_path: path });
+    if (r.ok) {
+      logStatus('ok', `Saved settings (Prism path: ${path || '(none)'})`);
+      closeSettings();
+    } else {
+      logStatus('err', `Settings save failed: ${r.error || 'unknown error'}`);
+    }
+  } catch (err) {
+    logStatus('err', err.message);
+  }
+}
+
+// ----- Build & launch ----------------------------------------------------
+
+async function doBuildLaunch() {
+  // Pre-check: do we have a Prism path configured?
+  let cfg;
+  try {
+    cfg = await apiGet('/api/config');
+  } catch (err) {
+    logStatus('err', `Could not check config: ${err.message}`);
+    return;
+  }
+  if (!cfg.prism_instance_path) {
+    logStatus('err', 'No Prism instance path configured. Open Settings (⚙) and set one.');
+    openSettings();
+    return;
+  }
+
+  logStatus('warn', `Building and copying to ${cfg.prism_instance_path}... (this can take a few minutes)`);
+
+  const btn = $('#build-launch-btn');
+  btn.disabled = true;
+  btn.textContent = '⏳ Building...';
+
+  try {
+    const r = await apiPost('/api/launch-prism', {});
+    if (r.ok) {
+      logStatus('ok', `Built ${r.mod_count} mods, copied to Prism instance.`);
+      logStatus('ok', `→ ${r.hint || 'Open Prism Launcher and click Play.'}`);
+    } else {
+      logStatus('err', `Build/launch failed: ${r.error || 'unknown error'}`);
+    }
+  } catch (err) {
+    logStatus('err', err.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '▶ Build & Launch in Prism';
+  }
+}
+
 // ----- Confirm modal -----------------------------------------------------
 
 let confirmCallback = null;
@@ -482,6 +573,14 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#sv-tab-mr').addEventListener('click', () => setSvTab('mr'));
   $('#sv-tab-url').addEventListener('click', () => setSvTab('url'));
   $('#sv-url-submit').addEventListener('click', submitSvUrl);
+
+  // Settings modal
+  $('#settings-btn').addEventListener('click', openSettings);
+  $('#settings-cancel').addEventListener('click', closeSettings);
+  $('#settings-save').addEventListener('click', saveSettings);
+
+  // Build & launch
+  $('#build-launch-btn').addEventListener('click', doBuildLaunch);
 
   // Confirm modal
   $('#confirm-cancel').addEventListener('click', closeConfirm);

@@ -24,6 +24,8 @@
     <section class="action-bar">
       <button id="add-mod-btn" type="button" class="primary">+ Add mod</button>
       <button id="update-all-btn" type="button">Update all (skip pinned)</button>
+      <button id="build-launch-btn" type="button" class="success">▶ Build & Launch in Prism</button>
+      <button id="settings-btn" type="button" title="Configure Prism instance path">⚙ Settings</button>
       <input type="search" id="search" placeholder="Filter mods..." />
     </section>
 
@@ -89,6 +91,31 @@
       <div class="modal-actions">
         <button type="button" id="confirm-cancel">Cancel</button>
         <button type="button" id="confirm-ok" class="danger">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings modal -->
+  <div id="settings-modal" class="modal hidden" role="dialog" aria-labelledby="settings-title">
+    <div class="modal-content">
+      <h2 id="settings-title">Settings</h2>
+      <p class="sv-help">
+        Configure where the editor copies built mods when you click "Build &amp;
+        Launch in Prism." This should be the path to your Prism Launcher
+        instance folder (the one containing <code>instance.cfg</code> and
+        <code>.minecraft/</code>).
+      </p>
+      <label>
+        Prism instance path
+        <input type="text" id="settings-prism-path" placeholder="C:\Users\You\AppData\Roaming\PrismLauncher\instances\my-instance" />
+      </label>
+      <div id="settings-detected" class="settings-detected hidden">
+        <p class="sv-help">Detected Prism instances:</p>
+        <ul id="settings-detected-list"></ul>
+      </div>
+      <div class="modal-actions">
+        <button type="button" id="settings-cancel">Cancel</button>
+        <button type="button" id="settings-save" class="primary">Save</button>
       </div>
     </div>
   </div>
