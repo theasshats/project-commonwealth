@@ -295,3 +295,127 @@ button.danger:hover {
   gap: 8px;
   margin-top: 20px;
 }
+
+/* ===== Set version modal ===== */
+
+.sv-modal-content {
+  max-width: 640px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sv-tabs {
+  display: flex;
+  gap: 0;
+  margin: 0 0 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sv-tab {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 10px 16px;
+  color: var(--text-dim);
+  cursor: pointer;
+}
+
+.sv-tab.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+.sv-tab:hover {
+  background: var(--bg-row-hover);
+  color: var(--text);
+}
+
+.sv-pane {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 200px;
+}
+
+.sv-pane.hidden {
+  display: none;
+}
+
+.sv-versions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sv-version {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "main btn" "meta btn";
+  gap: 4px 12px;
+  align-items: center;
+}
+
+.sv-v-main {
+  grid-area: main;
+  font-size: 14px;
+}
+
+.sv-v-meta {
+  grid-area: meta;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.sv-v-date {
+  margin-left: 10px;
+  color: var(--text-dim);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.sv-version button {
+  grid-area: btn;
+  white-space: nowrap;
+}
+
+.sv-version:hover {
+  background: var(--bg-row);
+}
+
+.sv-sep {
+  margin: 0 6px;
+}
+
+.sv-type {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 6px;
+}
+
+.sv-type-beta { background: #d6a85f33; color: var(--warn); }
+.sv-type-alpha { background: #c64c4c33; color: var(--danger); }
+
+.sv-loading, .sv-empty, .sv-error {
+  text-align: center;
+  padding: 24px;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.sv-error { color: var(--danger); }
+
+.sv-help {
+  color: var(--text-dim);
+  font-size: 13px;
+  margin: 0 0 16px;
+  line-height: 1.5;
+}

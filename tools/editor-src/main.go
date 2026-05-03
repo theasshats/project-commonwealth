@@ -79,6 +79,11 @@ func run() error {
 	mux.HandleFunc("/api/mods/add", srv.HandleAddMod)
 	mux.HandleFunc("/api/mods/remove", srv.HandleRemoveMod)
 	mux.HandleFunc("/api/mods/pin", srv.HandlePin)
+	mux.HandleFunc("/api/mods/set-version", srv.HandleSetVersion)
+	mux.HandleFunc("/api/mods/compute-hash", srv.HandleComputeHash)
+	mux.HandleFunc("/api/mods/update", srv.HandleUpdate)
+	// Pattern routes (Go 1.22+) for variable path segments.
+	mux.HandleFunc("GET /api/mods/{slug}/versions", srv.HandleListVersions)
 
 	// Static UI served from the embedded assets.
 	uiSubFS, err := fs.Sub(uiAssets, "ui")

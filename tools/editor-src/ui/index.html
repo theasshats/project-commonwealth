@@ -23,6 +23,7 @@
   <main>
     <section class="action-bar">
       <button id="add-mod-btn" type="button" class="primary">+ Add mod</button>
+      <button id="update-all-btn" type="button">Update all (skip pinned)</button>
       <input type="search" id="search" placeholder="Filter mods..." />
     </section>
 
@@ -88,6 +89,41 @@
       <div class="modal-actions">
         <button type="button" id="confirm-cancel">Cancel</button>
         <button type="button" id="confirm-ok" class="danger">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Set version modal -->
+  <div id="sv-modal" class="modal hidden" role="dialog" aria-labelledby="sv-title">
+    <div class="modal-content sv-modal-content">
+      <h2 id="sv-title">Set version</h2>
+      <div class="sv-tabs">
+        <button type="button" id="sv-tab-mr" class="sv-tab active">Pick from Modrinth</button>
+        <button type="button" id="sv-tab-url" class="sv-tab">Paste URL</button>
+      </div>
+      <div id="sv-pane-mr" class="sv-pane">
+        <div id="sv-versions-list" class="sv-versions-list"></div>
+      </div>
+      <div id="sv-pane-url" class="sv-pane hidden">
+        <p class="sv-help">
+          Paste a direct download URL for the mod (e.g. a CurseForge file URL or
+          a beta jar URL from Modrinth). The hash will be computed automatically
+          after setting.
+        </p>
+        <label>
+          URL
+          <input type="url" id="sv-url" placeholder="https://..." />
+        </label>
+        <label>
+          Filename (optional, will be derived from URL if blank)
+          <input type="text" id="sv-filename" placeholder="mod-1.2.3.jar" />
+        </label>
+        <div class="modal-actions">
+          <button type="button" id="sv-url-submit" class="primary">Set version from URL</button>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" id="sv-cancel">Cancel</button>
       </div>
     </div>
   </div>
