@@ -203,7 +203,7 @@ metafile = true
 
 [[files]]
 file = "mods/azurelib.pw.toml"
-hash = "65807f91c2074b3332dfc3b9d57b44ada6e5eec10c6aee071eb58e0ca00b428f"
+hash = "92f4f89ef49c53bdcb5f74454407c4a78b785a8356cbf0d4fe06634d32ca17a6"
 metafile = true
 
 [[files]]
@@ -1167,6 +1167,11 @@ hash = "2814d0d33ca5a6b95da1084b954eca9ca627890455c788811351ad6069a8f3bf"
 metafile = true
 
 [[files]]
+file = "mods/kambrik.pw.toml"
+hash = "88e01539e6317090fd6e79b132a50026f8a408400996c17c2f1a87ee196d8ba1"
+metafile = true
+
+[[files]]
 file = "mods/kiwi.pw.toml"
 hash = "4000348a3ee065f694fb586716e23854e8f82558fb07c2631eebafc61ac3f4a6"
 metafile = true
@@ -1499,6 +1504,11 @@ metafile = true
 [[files]]
 file = "mods/oceans-delight.pw.toml"
 hash = "7bf7c8369bd28212a1e294c60310ccb72f1eb773630970e6ab106ae666766cd3"
+metafile = true
+
+[[files]]
+file = "mods/oh-the-trees-youll-grow.pw.toml"
+hash = "98e8fe48794cc17a634147626a1126bef1abf45fc43fc48c66f6e17190bc4037"
 metafile = true
 
 [[files]]
