@@ -1,12 +1,13 @@
 name = "Samurai Dynasty"
-filename = "samurai_dynasty-0.1.6-1.21.1.jar"
+filename = "samurai_dynasty-0.1.4-1.21.1.jar"
+pin = true
 
 [download]
-url = "https://cdn.modrinth.com/data/lMWJDrbO/versions/L7E1TT34/samurai_dynasty-0.1.6-1.21.1.jar"
+url = "https://cdn.modrinth.com/data/lMWJDrbO/versions/k25W4oJ1/samurai_dynasty-0.1.4-1.21.1.jar"
 hash-format = "sha512"
-hash = "9962d2c6fb96725f4662e9a28a4a0459e4fcdd27fd763ec44783eb44815ecd79326bee6e88495fd62b770bd543e8786a5abebee5e3f821eb3d6ecaf4e927a114"
+hash = "eb455113dd22994dfd1df04a6d55c07c24085df5d7d92a999407bac98e07225beac2032f7712a941f87658590f90484878b7bfb0b4a9ce65bf62ca0a82a71f98"
 
 [update]
 [update.modrinth]
 mod-id = "lMWJDrbO"
-version = "L7E1TT34"
+version = "k25W4oJ1"

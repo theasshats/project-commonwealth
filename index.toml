@@ -203,7 +203,7 @@ metafile = true
 
 [[files]]
 file = "mods/azurelib.pw.toml"
-hash = "92f4f89ef49c53bdcb5f74454407c4a78b785a8356cbf0d4fe06634d32ca17a6"
+hash = "0e44636a6eac42162ab52ded49f37ab7762c7f26e39c152e785919faaff8e750"
 metafile = true
 
 [[files]]
@@ -923,7 +923,7 @@ metafile = true
 
 [[files]]
 file = "mods/epic-samurais.pw.toml"
-hash = "697c0374fd5cc6556f32cb37b6d242d747c88316d3a823ba2cbc3ff1f2c59f38"
+hash = "35ea15512ad8df07fa5a4891333c981045d2f9b313fc0d30deb99ee18094f22d"
 metafile = true
 
 [[files]]
@@ -1107,11 +1107,6 @@ hash = "48db9bdd1c4b427642995c5351af4a7dee203e13310182afbb6c26315341dbd5"
 metafile = true
 
 [[files]]
-file = "mods/immersive-melodies.pw.toml"
-hash = "4a90b36c25d85a2c44adc9f45c7c39d1836dc11d6dc548571887a4db07d94bb5"
-metafile = true
-
-[[files]]
 file = "mods/immersive-paintings.pw.toml"
 hash = "b35194debdbdfeb5d711d84e9869fa46ab79c1b7f98b6273a0d6afb935d42b2d"
 metafile = true
@@ -1264,6 +1259,11 @@ metafile = true
 [[files]]
 file = "mods/libipn.pw.toml"
 hash = "0d2a00252d64ed7d2d9b19994f7accb780304be61f3903d36e810714b414c6cb"
+metafile = true
+
+[[files]]
+file = "mods/lionfish-api.pw.toml"
+hash = "cbc801c8afa23e8ccba23a67d4a7eabe32346723a185df8f4c2588e0a8c4e99b"
 metafile = true
 
 [[files]]
