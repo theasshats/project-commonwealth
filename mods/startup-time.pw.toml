@@ -1,0 +1,12 @@
+name = "Startup Time"
+filename = "startuptime-1.0.0.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/ZRWcncy3/versions/Yf8idZm8/startuptime-1.0.0.jar"
+hash-format = "sha512"
+hash = "d2fa63ee3e813e6835ec5a2c749a65e0d58ed027a67ae610b93a67453e8eadf1bb3077696bf93529ee8b887115d6387cc9f923a5d94bb6ec39f229cc9fce5304"
+
+[update]
+[update.modrinth]
+mod-id = "ZRWcncy3"
+version = "Yf8idZm8"

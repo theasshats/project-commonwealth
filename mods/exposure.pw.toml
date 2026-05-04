@@ -1,0 +1,12 @@
+name = "Exposure"
+filename = "exposure-neoforge-1.21.1-1.9.16.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/hB899VmG/versions/OJ3DFzQc/exposure-neoforge-1.21.1-1.9.16.jar"
+hash-format = "sha512"
+hash = "8c72cb320cde5aa13af31329d0c27000e16e451ccedba6b72da26d12ed28f61054414b2f914cc7e78954fe770ba42cdd5d81388421ac3d973cf7196734aaa0fc"
+
+[update]
+[update.modrinth]
+mod-id = "hB899VmG"
+version = "OJ3DFzQc"
