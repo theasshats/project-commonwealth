@@ -5,6 +5,42 @@ file = ".devcontainer/devcontainer.json"
 hash = "bdd9c71945406ce4bfb6bb8b13aced1a1ee520cadbe077fd345dd8f676ef1101"
 
 [[files]]
+file = ".editor/build-staging (# Name clash 2026-05-04 ylherrC #)/.minecraft/config/README.md"
+hash = "1a8fb9efa5fb4bbd14a2bf4f5a6ed21082f59d52bd337461e8365fb54ea65127"
+
+[[files]]
+file = ".editor/build-staging (# Name clash 2026-05-04 ylherrC #)/.minecraft/defaultconfigs/README.md"
+hash = "a03321eab7376c0a6aede15689d668e3df8f5fa2cd34f4c6e4b6600abeed47de"
+
+[[files]]
+file = ".editor/build-staging (# Name clash 2026-05-04 ylherrC #)/.minecraft/kubejs/README.md"
+hash = "d5ac59914d82a6343e7d1b206901702fcb3e6816c588eb78b8ac58d64e65f83c"
+
+[[files]]
+file = ".editor/build-staging (# Name clash 2026-05-04 ylherrC #)/.minecraft/kubejs/server_scripts/example.js"
+hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
+
+[[files]]
+file = ".editor/build-staging (# Name clash 2026-05-04 ylherrC #)/.minecraft/packwiz-installer.jar"
+hash = "c9f646908d340d84773948a9a7d98bc1dae250d35e1016dc6e2b8459760b5598"
+
+[[files]]
+file = ".editor/build-staging (# Name clash 2026-05-04 ylherrC #)/.minecraft/resourcepacks/README.md"
+hash = "254b52ada3465717457cde5ab91a78f28cf054f6920240a5260bfa7c46dac1ba"
+
+[[files]]
+file = ".editor/build-staging (# Name clash 2026-05-04 ylherrC #)/.minecraft/shaderpacks/README.md"
+hash = "0f90cbce3a6b43c51adb9e65500f69adbc425d06dde44255da60c0bde0cade32"
+
+[[files]]
+file = ".editor/build-staging (# Name clash 2026-05-04 ylherrC #)/instance.cfg"
+hash = "93f12e6329aa3d9a21308b8c92e11352d8198f230503fbb94d44a4826ce0d6ee"
+
+[[files]]
+file = ".editor/build-staging (# Name clash 2026-05-04 ylherrC #)/mmc-pack.json"
+hash = "f3fd4fdd8811f271cb56e8c3f0eb0a2f5b6cec809f6a646be1e56c5ac76737ab"
+
+[[files]]
 file = ".editor/build-staging/.minecraft/config/README.md"
 hash = "1a8fb9efa5fb4bbd14a2bf4f5a6ed21082f59d52bd337461e8365fb54ea65127"
 
@@ -42,7 +78,7 @@ hash = "f3fd4fdd8811f271cb56e8c3f0eb0a2f5b6cec809f6a646be1e56c5ac76737ab"
 
 [[files]]
 file = ".editor/config.json"
-hash = "242c4f7a6f0400a4891adf11125140400a43626a0634fcf7138bc76a3f53786d"
+hash = "af52d88de0f67cd9b900d35647337c196b8e509a8f6b693e195f64932730c250"
 
 [[files]]
 file = ".editor/packwiz-installer-bootstrap.jar"
@@ -278,7 +314,7 @@ metafile = true
 
 [[files]]
 file = "mods/biolith.pw.toml"
-hash = "e28be9e32294f80bf7be78a1eca5ad0cdc73e2fa636f9f0561d746b4fd2a1fe5"
+hash = "5cc4da0e810930e074530d4ced9238eb9b53fc1b2fa58523339fa91878fe81bb"
 metafile = true
 
 [[files]]
@@ -489,6 +525,11 @@ metafile = true
 [[files]]
 file = "mods/create-better-villagers.pw.toml"
 hash = "3c32f2b61b848d25bd09f139e319fb78ec505b80b62b09febb70bc45eeee198a"
+metafile = true
+
+[[files]]
+file = "mods/create-big-cannons-advanced-technologies.pw.toml"
+hash = "1328598c401aca83bf8452ab9fbad2e9da2461216b9f08733ae4f7d47d00274c"
 metafile = true
 
 [[files]]
@@ -713,7 +754,7 @@ metafile = true
 
 [[files]]
 file = "mods/create.pw.toml"
-hash = "dcaf5f2e28db0b9a127d0167456832341045ddc9aec058c3d9fcf53f618d2404"
+hash = "4b0ca63279620ec9ba4c63820a9d4f9ceea9b717227137ea19e5c420c820f858"
 metafile = true
 
 [[files]]
@@ -949,11 +990,6 @@ metafile = true
 [[files]]
 file = "mods/ferrite-core.pw.toml"
 hash = "73360e397134d238ee8fd21d33fd7f9275e9441f74f8f1b6ed92278877c0b9f1"
-metafile = true
-
-[[files]]
-file = "mods/first-person-model.pw.toml"
-hash = "bbcbc7b4f4510f9dde83cac3d7c674536195cdbdd049207552a685c1a291997a"
 metafile = true
 
 [[files]]
@@ -1352,11 +1388,6 @@ hash = "94013fa860b4b6b8dbc93e9d31f0fbd4b0d1e07773101bd6698d1a24a1bb179e"
 metafile = true
 
 [[files]]
-file = "mods/mobs-of-mythology.pw.toml"
-hash = "6644970cc6ee20673acde3ee1edadf84ee4da7b95d5f846fd20a44ddae9ff2ef"
-metafile = true
-
-[[files]]
 file = "mods/modelfix.pw.toml"
 hash = "6f0dcbcffd4400c6cef07f1eeb48cdc25bac0fa01270936feab4c549aff4738e"
 metafile = true
@@ -1687,11 +1718,6 @@ hash = "18ca1d438084a8578f4b75f12233db58ca1deec55f117fb875afa21f2c021559"
 metafile = true
 
 [[files]]
-file = "mods/small-ships.pw.toml"
-hash = "5f0d17d236aad8f111b519c006988c8bf536ee569028c0a34690c4cc229b6403"
-metafile = true
-
-[[files]]
 file = "mods/smartbrainlib.pw.toml"
 hash = "6e7ce9c2aee5bb72d2698eb89035c9b2458d20daa0782e1a03cfba7a6647621e"
 metafile = true
@@ -1717,11 +1743,6 @@ hash = "0281ed9713f3141bdac363056a791845510e14761ea65b4b2813cf96d664b20a"
 metafile = true
 
 [[files]]
-file = "mods/sophisticated-backpacks.pw.toml"
-hash = "5d456b77b7ba6381ee745161d355843c52bdc20b0eab644bd6152dc669ae3d58"
-metafile = true
-
-[[files]]
 file = "mods/sophisticated-core.pw.toml"
 hash = "d34ef6a8ae4fa661524b3d93467004430e66656ba762843d915aaca6a0c23f63"
 metafile = true
@@ -1739,11 +1760,6 @@ metafile = true
 [[files]]
 file = "mods/spawn-mod.pw.toml"
 hash = "d61402c5bb4fbad3a035b6f7434e3cccec8f0a35c44f6c60ab1e3908fd8f0228"
-metafile = true
-
-[[files]]
-file = "mods/spectrum.pw.toml"
-hash = "fabec041cfebc414df4ca2c4fb2ee3f4ba9787d1638a72143bd65a46d64e434b"
 metafile = true
 
 [[files]]
@@ -1789,11 +1805,6 @@ metafile = true
 [[files]]
 file = "mods/stylecolonies.pw.toml"
 hash = "a1559adb829481745c60775d28e7cdba490108ce68ba696bbeeb7571a0a64394"
-metafile = true
-
-[[files]]
-file = "mods/superb-warfare.pw.toml"
-hash = "809d4b83c43c9815c3b6188afeb00a60cd45faac89a7ca9a7da22c3fd4220cc6"
 metafile = true
 
 [[files]]
@@ -1867,18 +1878,8 @@ hash = "455ba0409bef5fe9bda93434d826a8d2d5eb11c1b7d41ea119256fe3b15da157"
 metafile = true
 
 [[files]]
-file = "mods/tofucraftreload.pw.toml"
-hash = "963b12760816abf162e1d579ae03db8112f2178edcf1961fd230bbee0f40f2b7"
-metafile = true
-
-[[files]]
 file = "mods/too-many-paintings.pw.toml"
 hash = "c09c8f64907a8fa87e60d049b0d480c04c3b0427c5e888fc975a026b345e8372"
-metafile = true
-
-[[files]]
-file = "mods/tough-as-nails.pw.toml"
-hash = "1e8f5000848ff7f4bd58d8a5e1f54d7faae28edda247feed16c71a1cb3874fe4"
 metafile = true
 
 [[files]]
@@ -1959,11 +1960,6 @@ metafile = true
 [[files]]
 file = "mods/when-dungeons-arise-seven-seas.pw.toml"
 hash = "8630faa4460132aee0b31448f98acc89e67c28b0439fd7f58a63f6d6584ae334"
-metafile = true
-
-[[files]]
-file = "mods/withererd-foxy-jumpscare.pw.toml"
-hash = "b195add1253062af7b607a947c85f4fc4e90620e54bc48570c4c4b199660433c"
 metafile = true
 
 [[files]]
