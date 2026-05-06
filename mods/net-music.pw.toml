@@ -1,0 +1,12 @@
+name = "Net Music"
+filename = "netmusic-1.5.0-neoforge+mc1.21.1.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/gKNuqaQq/versions/Lh7b9OAw/netmusic-1.5.0-neoforge%2Bmc1.21.1.jar"
+hash-format = "sha512"
+hash = "220c954e9a8216eb23f5859c90906b4d19d943b1f551bf59a7b60e3a528f455314a8e84002d498bd3e196be27f7196781fbb2b3c75a4e3e13c54fd04372f2820"
+
+[update]
+[update.modrinth]
+mod-id = "gKNuqaQq"
+version = "Lh7b9OAw"

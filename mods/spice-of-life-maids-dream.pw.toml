@@ -1,0 +1,12 @@
+name = "Spice of Life: Maids' Dream"
+filename = "solmaiddream-1.0.1.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/dgkLv3Nj/versions/J2DNeh9d/solmaiddream-1.0.1.jar"
+hash-format = "sha512"
+hash = "b20ee19e3d4177278e58e00c3f49bef9f27efc5baf839a9f2ed5620264181af3d50b0d58500054983dd597ae2257185348ea7885f6e5234b853d1596f841b96f"
+
+[update]
+[update.modrinth]
+mod-id = "dgkLv3Nj"
+version = "J2DNeh9d"

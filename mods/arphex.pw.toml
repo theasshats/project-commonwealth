@@ -1,0 +1,12 @@
+name = "Arthropod Phobia Expansions + Horror Bosses / Arachnophobia"
+filename = "ArPhEx-5.0.2-neoforge-1.21.1.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/k0RPP4IO/versions/jawvD7YZ/ArPhEx-5.0.2-neoforge-1.21.1.jar"
+hash-format = "sha512"
+hash = "09a7e63a75ba0173ef6f60a71154a21cf6b5d07a2190d274fc9b75db23f4044ca829385b8931c698c3ed0ef48b06871c545537b2d31e1496b967e38d82922527"
+
+[update]
+[update.modrinth]
+mod-id = "k0RPP4IO"
+version = "jawvD7YZ"
