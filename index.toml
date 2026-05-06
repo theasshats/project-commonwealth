@@ -80,11 +80,6 @@ hash = "ed6e931bcc89e8b4a05751449e7ed7168d3933bcfe4c7f662d12a8bda070e803"
 metafile = true
 
 [[files]]
-file = "mods/athena-ctm.pw.toml"
-hash = "ca4fdebf931acb8578216209bcc396cdfe7d804231f8048794eba5104df30f56"
-metafile = true
-
-[[files]]
 file = "mods/attributefix.pw.toml"
 hash = "a29567cd17fab7ed0b5e33dbc46dbcdfd945657b224916d93d87bf6719fbe675"
 metafile = true
@@ -262,11 +257,6 @@ metafile = true
 [[files]]
 file = "mods/chefs-delight.pw.toml"
 hash = "4c05ea60d85212e4737d23a4b5ee74659a37c7cb9d6ab54c71b2eca56ed1f58c"
-metafile = true
-
-[[files]]
-file = "mods/chipped.pw.toml"
-hash = "ecad7c82cdd9a3c1d749b3dac4ea5ae3c211e9588da3193151beeab9c9379fb7"
 metafile = true
 
 [[files]]
@@ -1015,11 +1005,6 @@ hash = "46fd3a8062699383239729b7f4937fdd83177581492d3b12c8ad74dd52bfe05a"
 metafile = true
 
 [[files]]
-file = "mods/itemphysic.pw.toml"
-hash = "5e0d041982ed3e765b89cc0ccd6db86588dcd97a03e2ed9b6d5f07424123b984"
-metafile = true
-
-[[files]]
 file = "mods/jade.pw.toml"
 hash = "b6e0a61fea06f8d6d8e1672cf07b682625c4b74efd548d5093cd9c1fed167eec"
 metafile = true
@@ -1092,11 +1077,6 @@ metafile = true
 [[files]]
 file = "mods/l_enders-cataclysm.pw.toml"
 hash = "c14baa435b615d0c08e81e93e1848e9d0597eebfec0581114046929e634762b6"
-metafile = true
-
-[[files]]
-file = "mods/lambdynamiclights.pw.toml"
-hash = "23384e5d71abfca933c72d3a351011e3076d903c78c6af20b827285310c9ad36"
 metafile = true
 
 [[files]]
@@ -1460,11 +1440,6 @@ hash = "7a8880ea7dc331692ce1210d300bd156427d4b88f11a49766120992f8edf5f75"
 metafile = true
 
 [[files]]
-file = "mods/rechiseled-chipped.pw.toml"
-hash = "5abff8886adbd7bcbee7e7eed388a3dbaaeba886de45f294a01167dd24116aad"
-metafile = true
-
-[[files]]
 file = "mods/rechiseled-create.pw.toml"
 hash = "e3e04f1664902e639c5d1df39cc8085fdece053827479b452ac728bcd3604c13"
 metafile = true
@@ -1607,6 +1582,11 @@ metafile = true
 [[files]]
 file = "mods/sound.pw.toml"
 hash = "5bb6b05f4fe1b71d0821f21cef8cedba0ffdbcb816132273b7854015d7e59f36"
+metafile = true
+
+[[files]]
+file = "mods/spark.pw.toml"
+hash = "b4ce7d265e136dd8bf58361bff5b77afcabbd7aa6017de660bb6f6c45b378644"
 metafile = true
 
 [[files]]
