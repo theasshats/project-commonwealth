@@ -1,7 +1,6 @@
 // KubeJS Server Script - Reduce Hostile Mob Spawn Rates
 // Place in kubejs/server_scripts/reduce_hostile_spawns.js
-// IMPORTANT: Delete any old versions of this script first!
-// Reload with /reload, check errors with /kubejs errors
+// Delete any old versions first!
 
 // ============================================================
 // CONFIGURATION
@@ -10,8 +9,7 @@
 const HOSTILE_REMOVE_CHANCE = 0.5
 const PASSIVE_REMOVE_CHANCE = 0.3
 
-// Set to true to log each discarded spawn (turn off after testing)
-const DEBUG = true
+const DEBUG = false
 
 const WHITELIST = [
   'minecraft:ender_dragon',
@@ -29,8 +27,6 @@ const WHITELIST = [
   'minecraft:mule',
   'minecraft:player',
   'minecraft:armor_stand',
-  // Add modded bosses here as you find them:
-  // 'cataclysm:netherite_monstrosity',
 ]
 
 const WHITELIST_SET = {}
@@ -39,46 +35,76 @@ for (let i = 0; i < WHITELIST.length; i++) {
 }
 
 // ============================================================
-// Java class references
+// Registry lookup for getting MobCategory from entity type ID
 // ============================================================
-const $Monster = Java.loadClass('net.minecraft.world.entity.monster.Monster')
-const $Animal = Java.loadClass('net.minecraft.world.entity.animal.Animal')
-const $WaterAnimal = Java.loadClass('net.minecraft.world.entity.animal.WaterAnimal')
-const $AmbientCreature = Java.loadClass('net.minecraft.world.entity.ambient.AmbientCreature')
+const $BuiltInRegistries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries')
+const $ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
+
+const categoryCache = {}
+
+function getCategoryForType(typeId) {
+  if (categoryCache[typeId] !== undefined) return categoryCache[typeId]
+
+  try {
+    let rl = $ResourceLocation.parse(typeId)
+    let entityType = $BuiltInRegistries.ENTITY_TYPE.get(rl)
+    if (entityType) {
+      let cat = '' + entityType.getCategory()
+      categoryCache[typeId] = cat
+      return cat
+    }
+  } catch (e) {
+    // ignore
+  }
+
+  categoryCache[typeId] = 'UNKNOWN'
+  return 'UNKNOWN'
+}
 
 // ============================================================
 // SCRIPT
 // ============================================================
 
-EntityEvents.spawned(event => {
+EntityEvents.checkSpawn(event => {
+  // Determine if we should cancel - do all logic first, cancel last
+  let shouldCancel = false
+  let typeId = ''
+  let category = ''
+
   try {
     let entity = event.entity
     if (!entity) return
 
-    // Skip non-living things (items, falling blocks, projectiles, etc.)
-    // Quick filter: if it's not a Monster/Animal/WaterAnimal/AmbientCreature, skip
-    let isHostile = entity instanceof $Monster
-    let isPassive = (entity instanceof $Animal) ||
-                    (entity instanceof $WaterAnimal) ||
-                    (entity instanceof $AmbientCreature)
+    typeId = '' + entity.type
 
-    if (!isHostile && !isPassive) return
-
-    // Get type ID as a string
-    let typeId = '' + entity.type
-
-    // Whitelist check
     if (WHITELIST_SET[typeId]) return
 
-    let removeChance = isHostile ? HOSTILE_REMOVE_CHANCE : PASSIVE_REMOVE_CHANCE
+    let spawnType = '' + event.type
+    if (spawnType !== 'NATURAL' && spawnType !== 'CHUNK_GENERATION') return
+
+    category = getCategoryForType(typeId)
+
+    if (category === 'MISC' || category === 'UNKNOWN') return
+
+    let removeChance = 0
+    if (category === 'MONSTER') {
+      removeChance = HOSTILE_REMOVE_CHANCE
+    } else {
+      removeChance = PASSIVE_REMOVE_CHANCE
+    }
 
     if (Math.random() < removeChance) {
-      entity.discard()
-      if (DEBUG) console.log('[SpawnReduce] Discarded ' + typeId)
+      shouldCancel = true
     }
   } catch (err) {
     console.error('[SpawnReduce] Error: ' + err)
   }
+
+  // Cancel OUTSIDE try/catch so EventExit exception propagates
+  if (shouldCancel) {
+    if (DEBUG) console.log('[SpawnReduce] Cancelled ' + typeId + ' (' + category + ')')
+    event.cancel()
+  }
 })
 
-console.log('[SpawnReduce] Loaded')
+console.log('[SpawnReduce] Loaded (checkSpawn + registry lookup)')
