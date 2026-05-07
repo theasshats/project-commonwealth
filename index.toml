@@ -5,10 +5,6 @@ file = "kubejs/server_scripts/example.js"
 hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
 
 [[files]]
-file = "kubejs/server_scripts/reduce_hostile_spawns.js"
-hash = "59c4a4f178e134ae3c216f87069ff4ce8334813ab25e0d10c538d7c52b7e51ea"
-
-[[files]]
 file = "mods/777.pw.toml"
 hash = "1c79d8c39bac3a369ca4407fa4cb79a9ad12345464353b4d0f45abc2f22c2b58"
 metafile = true
@@ -26,11 +22,6 @@ metafile = true
 [[files]]
 file = "mods/accessories.pw.toml"
 hash = "19cbfb37dc29169b50599dfa328fe12a0ec9caaec8ac02627b5846f3bd9d1425"
-metafile = true
-
-[[files]]
-file = "mods/adorable-hamster-pets.pw.toml"
-hash = "e3a626afc8faa65d4a951570749655754d4f1e92420bcade57441acb511f231e"
 metafile = true
 
 [[files]]
