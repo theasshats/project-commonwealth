@@ -5,11 +5,6 @@ file = "kubejs/server_scripts/example.js"
 hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
 
 [[files]]
-file = "mods/777.pw.toml"
-hash = "1c79d8c39bac3a369ca4407fa4cb79a9ad12345464353b4d0f45abc2f22c2b58"
-metafile = true
-
-[[files]]
 file = "mods/accelerated-decay.pw.toml"
 hash = "0169d8fcf412443fa091249f28b6b1c51f4f69696b6407d26fb7fbb379edc4d9"
 metafile = true
