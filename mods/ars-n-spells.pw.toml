@@ -1,0 +1,8 @@
+   name = "Ars 'n Spells"
+   filename = "ars_n_spells-2.1.0.jar"
+   side = "both"
+
+   [download]
+   url = "https://github.com/Xela112233/Derpack-X/releases/download/mod-mirror/ars_n_spells-2.1.0.jar"
+   hash-format = "sha1"
+   hash = "f530b0e282f131b64e305194620a6134a59950fd"
