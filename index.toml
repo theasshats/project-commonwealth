@@ -921,7 +921,7 @@ metafile = true
 
 [[files]]
 file = "mods/inventory-profiles-next.pw.toml"
-hash = "ab503e89461dff879ee793253e173625b6ab868f570a371323ef725e567cf5ea"
+hash = "03c7dcf8eff915ff2da0f10724fcdb8aa86a81a8e0783790c8123c9d413b0b00"
 metafile = true
 
 [[files]]
