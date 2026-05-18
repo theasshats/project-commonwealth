@@ -630,11 +630,6 @@ hash = "47a2c19ab58b6c98398c4bd531babe4ac5b42d86fb19e4095fc925b4cdcdfcea"
 metafile = true
 
 [[files]]
-file = "mods/death_note.pw.toml"
-hash = "1a82c9b142eda7d0ef65374b8a29c006edf0f47d09db3d4cfd627ff458f449e9"
-metafile = true
-
-[[files]]
 file = "mods/deeperdarker.pw.toml"
 hash = "1fd2a486fd9b537f398d030dee6e48ab32cf8c2b3f907e014700f198e2daf01b"
 metafile = true
