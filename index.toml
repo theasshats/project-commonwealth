@@ -60,6 +60,11 @@ hash = "38dbd0c29a678ebd7b131b3cc153257432166b2e80023a8bb7720ddb94542b27"
 metafile = true
 
 [[files]]
+file = "mods/ars-n-spells.pw.toml"
+hash = "740dd770ce512da12ed514daf77d532afaa759834d158d8f301b84e324190dd7"
+metafile = true
+
+[[files]]
 file = "mods/ars-nouveau.pw.toml"
 hash = "a276b6fef58f44cf000b99979f090265a5b2727fe8f8eee68c2ae25c8d32baf7"
 metafile = true
