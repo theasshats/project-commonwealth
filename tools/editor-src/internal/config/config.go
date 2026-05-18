@@ -13,6 +13,12 @@ type Config struct {
 	// copy bundled mods into when "Launch in Prism" is clicked.
 	// Example: C:\Users\Alex\AppData\Roaming\PrismLauncher\instances\Derpack
 	PrismInstancePath string `json:"prism_instance_path,omitempty"`
+
+	// CurseForgeAPIKey is a personal CurseForge API key, used to fetch the
+	// version list for CF-hosted mods in the Set Version modal. Get one at
+	// https://console.curseforge.com/. Stored locally only — .editor/ is
+	// gitignored so this never leaves the user's machine.
+	CurseForgeAPIKey string `json:"curseforge_api_key,omitempty"`
 }
 
 // Load reads .editor/config.json from the repo root, returning a zero-value

@@ -5,21 +5,28 @@ import (
 	"os"
 	"path/filepath"
 	"runtime"
+	"strings"
 
 	"github.com/derpack/derpack-edit/internal/config"
 )
 
 // configResp is what GET /api/config returns. Includes default Prism path
 // suggestions for the OS so the UI can offer auto-detect.
+//
+// CurseForgeAPIKeySet is a boolean rather than the actual key — we don't ship
+// the key value back over the (admittedly local) HTTP boundary, so the UI
+// can't accidentally render it on screen or expose it via DOM inspection.
 type configResp struct {
-	PrismInstancePath  string   `json:"prism_instance_path"`
-	PrismDefaultRoot   string   `json:"prism_default_root,omitempty"` // %APPDATA%\PrismLauncher\instances on Windows
-	DetectedInstances  []string `json:"detected_instances,omitempty"` // names of folders found there
+	PrismInstancePath   string   `json:"prism_instance_path"`
+	PrismDefaultRoot    string   `json:"prism_default_root,omitempty"` // %APPDATA%\PrismLauncher\instances on Windows
+	DetectedInstances   []string `json:"detected_instances,omitempty"` // names of folders found there
+	CurseForgeAPIKeySet bool     `json:"curseforge_api_key_set"`       // true if a key is configured
 }
 
 func (s *Server) HandleGetConfig(w http.ResponseWriter, r *http.Request) {
 	resp := configResp{
-		PrismInstancePath: s.Config.PrismInstancePath,
+		PrismInstancePath:   s.Config.PrismInstancePath,
+		CurseForgeAPIKeySet: s.Config.CurseForgeAPIKey != "",
 	}
 
 	if root := defaultPrismInstancesRoot(); root != "" {
@@ -42,6 +49,12 @@ func (s *Server) HandleGetConfig(w http.ResponseWriter, r *http.Request) {
 
 type setConfigReq struct {
 	PrismInstancePath string `json:"prism_instance_path"`
+
+	// CurseForgeAPIKey is set when the user updates the key. An empty string
+	// here means "no change" (use ClearCurseForgeAPIKey to wipe it).
+	CurseForgeAPIKey string `json:"curseforge_api_key,omitempty"`
+	// ClearCurseForgeAPIKey, when true, blanks out any stored key.
+	ClearCurseForgeAPIKey bool `json:"clear_curseforge_api_key,omitempty"`
 }
 
 func (s *Server) HandleSetConfig(w http.ResponseWriter, r *http.Request) {
@@ -82,6 +95,12 @@ func (s *Server) HandleSetConfig(w http.ResponseWriter, r *http.Request) {
 	}
 
 	s.Config.PrismInstancePath = req.PrismInstancePath
+	switch {
+	case req.ClearCurseForgeAPIKey:
+		s.Config.CurseForgeAPIKey = ""
+	case req.CurseForgeAPIKey != "":
+		s.Config.CurseForgeAPIKey = strings.TrimSpace(req.CurseForgeAPIKey)
+	}
 	if err := config.Save(s.RepoRoot, s.Config); err != nil {
 		writeError(w, http.StatusInternalServerError, "save config: "+err.Error())
 		return

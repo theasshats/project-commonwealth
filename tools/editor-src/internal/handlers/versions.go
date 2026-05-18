@@ -7,6 +7,7 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/derpack/derpack-edit/internal/curseforge"
 	"github.com/derpack/derpack-edit/internal/hashutil"
 	"github.com/derpack/derpack-edit/internal/modrinth"
 	"github.com/derpack/derpack-edit/internal/packwiz"
@@ -47,8 +48,7 @@ func (s *Server) HandleListVersions(w http.ResponseWriter, r *http.Request) {
 	case "mr":
 		s.listModrinthVersions(w, mod)
 	case "cf":
-		writeError(w, http.StatusNotImplemented,
-			"CurseForge version listing is not supported in this version. Use the 'Paste URL' tab to set a specific CF file.")
+		s.listCurseForgeVersions(w, mod)
 	default:
 		writeError(w, http.StatusBadRequest,
 			"mod has no recognized update source (must be Modrinth or CurseForge)")
@@ -104,7 +104,75 @@ func (s *Server) listModrinthVersions(w http.ResponseWriter, mod *packwiz.Mod) {
 	writeJSON(w, http.StatusOK, out)
 }
 
-// loadersAndVersions extracts loader names and MC versions from pack.toml.
+// listCurseForgeVersions handles the CF source. Requires a CF API key
+// configured in user settings; returns a clear error if missing.
+func (s *Server) listCurseForgeVersions(w http.ResponseWriter, mod *packwiz.Mod) {
+	if mod.Update.CurseForge == nil {
+		writeError(w, http.StatusBadRequest, "mod is not a CurseForge mod")
+		return
+	}
+	if s.Config.CurseForgeAPIKey == "" {
+		// 200 with a structured error so the UI can render a "configure key"
+		// prompt instead of a generic failure. The status field is "needs_key".
+		writeJSON(w, http.StatusOK, map[string]any{
+			"needs_key": true,
+			"hint":      "Add a CurseForge API key in Settings to enable version picking. Get a free key at https://console.curseforge.com/.",
+		})
+		return
+	}
+
+	pack, err := packwiz.LoadPack(s.RepoRoot)
+	if err != nil {
+		writeError(w, http.StatusInternalServerError, err.Error())
+		return
+	}
+	loaders, mcVersions := loadersAndVersions(pack)
+
+	mcVersion := ""
+	if len(mcVersions) > 0 {
+		mcVersion = mcVersions[0]
+	}
+	loaderName := ""
+	if len(loaders) > 0 {
+		loaderName = loaders[0]
+	}
+
+	cf := curseforge.New(s.Config.CurseForgeAPIKey)
+	files, err := cf.ListFiles(int64(mod.Update.CurseForge.ProjectID), mcVersion, loaderName)
+	if err != nil {
+		writeError(w, http.StatusBadGateway, err.Error())
+		return
+	}
+
+	out := make([]versionEntry, 0, len(files))
+	for _, f := range files {
+		// CF sometimes returns null downloadUrl for files behind their auth
+		// wall; skip those rather than offer them as choices that won't work.
+		if f.DownloadURL == "" {
+			continue
+		}
+		// CF doesn't have a separate "version_number" field — DisplayName is
+		// usually a clean version string ("1.21.1-NF-0.2.1") that's fine to
+		// surface as both name and version.
+		out = append(out, versionEntry{
+			ID:            strconv.FormatInt(f.ID, 10),
+			VersionNumber: f.DisplayName,
+			Name:          f.DisplayName,
+			Type:          curseforge.ReleaseTypeName(f.ReleaseType),
+			GameVersions:  f.GameVersions,
+			Loaders:       []string{loaderName},
+			DatePublished: f.FileDate,
+			URL:           f.DownloadURL,
+			Filename:      f.FileName,
+			Size:          f.FileLength,
+		})
+	}
+	sort.SliceStable(out, func(i, j int) bool {
+		return out[i].DatePublished > out[j].DatePublished
+	})
+
+	writeJSON(w, http.StatusOK, out)
+}
 // The "versions" map looks like:
 //   [versions]
 //   minecraft = "1.21.1"
@@ -158,41 +226,83 @@ func (s *Server) HandleSetVersion(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Resolve URL + filename + (optionally) version ID.
+	// Resolve URL + filename + (optionally) version ID / file ID.
 	var (
 		url, filename, versionID string
+		cfFileID                 int64
 	)
 	switch {
 	case req.VersionID != "":
-		// Modrinth picker path. We already have the mod ID; look up the version.
-		if mod.Update.Modrinth == nil {
-			writeError(w, http.StatusBadRequest, "version_id only works for Modrinth mods")
-			return
-		}
-		versions, err := modrinth.ListVersions(mod.Update.Modrinth.ModID, nil, nil)
-		if err != nil {
-			writeError(w, http.StatusBadGateway, err.Error())
-			return
-		}
-		var picked *modrinth.Version
-		for i := range versions {
-			if versions[i].ID == req.VersionID {
-				picked = &versions[i]
-				break
+		// Picker path. The version_id is a Modrinth version ID for MR mods,
+		// or a CurseForge numeric file ID for CF mods.
+		switch mod.Source() {
+		case "mr":
+			versions, err := modrinth.ListVersions(mod.Update.Modrinth.ModID, nil, nil)
+			if err != nil {
+				writeError(w, http.StatusBadGateway, err.Error())
+				return
 			}
-		}
-		if picked == nil {
-			writeError(w, http.StatusNotFound, "version_id not found for this mod")
+			var picked *modrinth.Version
+			for i := range versions {
+				if versions[i].ID == req.VersionID {
+					picked = &versions[i]
+					break
+				}
+			}
+			if picked == nil {
+				writeError(w, http.StatusNotFound, "version_id not found for this mod")
+				return
+			}
+			f := picked.PrimaryFile()
+			if f == nil {
+				writeError(w, http.StatusInternalServerError, "version has no files")
+				return
+			}
+			url = f.URL
+			filename = f.Filename
+			versionID = picked.ID
+
+		case "cf":
+			if s.Config.CurseForgeAPIKey == "" {
+				writeError(w, http.StatusBadRequest,
+					"CurseForge API key required to set version by ID. Add one in Settings, or use the Paste URL tab.")
+				return
+			}
+			fileID, parseErr := strconv.ParseInt(req.VersionID, 10, 64)
+			if parseErr != nil {
+				writeError(w, http.StatusBadRequest, "CurseForge version_id must be a numeric file ID")
+				return
+			}
+			cf := curseforge.New(s.Config.CurseForgeAPIKey)
+			files, err := cf.ListFiles(int64(mod.Update.CurseForge.ProjectID), "", "")
+			if err != nil {
+				writeError(w, http.StatusBadGateway, err.Error())
+				return
+			}
+			var picked *curseforge.File
+			for i := range files {
+				if files[i].ID == fileID {
+					picked = &files[i]
+					break
+				}
+			}
+			if picked == nil {
+				writeError(w, http.StatusNotFound, "file ID not found for this CurseForge mod")
+				return
+			}
+			if picked.DownloadURL == "" {
+				writeError(w, http.StatusBadRequest,
+					"this CurseForge file does not expose a direct download URL (mod author opted out of third-party distribution)")
+				return
+			}
+			url = picked.DownloadURL
+			filename = picked.FileName
+			cfFileID = picked.ID
+
+		default:
+			writeError(w, http.StatusBadRequest, "version_id only works for Modrinth or CurseForge mods")
 			return
 		}
-		f := picked.PrimaryFile()
-		if f == nil {
-			writeError(w, http.StatusInternalServerError, "version has no files")
-			return
-		}
-		url = f.URL
-		filename = f.Filename
-		versionID = picked.ID
 
 	case req.URL != "":
 		url = strings.TrimSpace(req.URL)
@@ -220,6 +330,9 @@ func (s *Server) HandleSetVersion(w http.ResponseWriter, r *http.Request) {
 	mod.Download.Hash = "" // placeholder, computed below
 	if mod.Update.Modrinth != nil && versionID != "" {
 		mod.Update.Modrinth.Version = versionID
+	}
+	if mod.Update.CurseForge != nil && cfFileID != 0 {
+		mod.Update.CurseForge.FileID = int(cfFileID)
 	}
 
 	if err := packwiz.SaveMod(s.RepoRoot, mod); err != nil {
