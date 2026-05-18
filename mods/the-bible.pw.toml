@@ -1,0 +1,12 @@
+name = "The Bible"
+filename = "freefbible-NEOFORGE-1.21.1-1.0.0.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/s5eI4Pvs/versions/1bmQyBTJ/freefbible-NEOFORGE-1.21.1-1.0.0.jar"
+hash-format = "sha512"
+hash = "2595d54b99b79b5f40d9328010ef72a2ecec4af97b894b8ebfc724056d3da6e6647000452c8f264d5f454089a48e16b4a84a0dcd43ee7dc4df124639260ab66d"
+
+[update]
+[update.modrinth]
+mod-id = "s5eI4Pvs"
+version = "1bmQyBTJ"

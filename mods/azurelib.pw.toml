@@ -1,0 +1,14 @@
+name = "AzureLib"
+filename = "azurelib-neo-1.21.1-3.0.39.jar"
+side = "both"
+pin = true
+
+[download]
+url = "https://cdn.modrinth.com/data/7zlUOZvb/versions/U0XjCPrV/azurelib-neo-1.21.1-3.0.39.jar"
+hash-format = "sha512"
+hash = "5fd25e2cb4ed996a006dbabb8ea2fc867c7ba0a021b5d44b86a078d591a7e42b2ab60799467b97f4fb2fc03536fc4ed88b91eaea77bd7e13381d22ae9ce6e638"
+
+[update]
+[update.modrinth]
+mod-id = "7zlUOZvb"
+version = "U0XjCPrV"

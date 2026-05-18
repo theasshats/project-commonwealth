@@ -1,0 +1,12 @@
+name = "Emoji Type"
+filename = "emoji-type-2.3.0-1.21.3-neoforge.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/q7vRRpxU/versions/NnLL3tAH/emoji-type-2.3.0-1.21.3-neoforge.jar"
+hash-format = "sha512"
+hash = "b821d0892edf71e0cb9ea7b4ec3f6c2777ad02aeda0c82bcf82907063d5b75f640477cc1278d97b90f529f338cbfda6c2dfddc49f6dc62f8a5c22b748fe246b9"
+
+[update]
+[update.modrinth]
+mod-id = "q7vRRpxU"
+version = "NnLL3tAH"

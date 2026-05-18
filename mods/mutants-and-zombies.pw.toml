@@ -1,0 +1,12 @@
+name = "Mutants and Zombies"
+filename = "MutantsZombies-1.3.1-NeoForge-mc1.21.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/W0C544GP/versions/h1OOHldk/MutantsZombies-1.3.1-NeoForge-mc1.21.jar"
+hash-format = "sha512"
+hash = "08da2da33ca6c2fc6e0e3161e3808fcdcb1422ed73cc62f4cc304db992617f7e672f55684169ab2f61f5266b08a5fd82d8b6f9e6dd45bc2b7c53c165989fbbe2"
+
+[update]
+[update.modrinth]
+mod-id = "W0C544GP"
+version = "h1OOHldk"

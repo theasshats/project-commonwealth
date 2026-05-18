@@ -1,0 +1,12 @@
+name = "Horde Moon"
+filename = "ZombieMoon-1.21-2.0.1.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/ir4RqbYg/versions/kDQwRRo0/ZombieMoon-1.21-2.0.1.jar"
+hash-format = "sha512"
+hash = "b8982ee507f1f03b2f41bf2abeddf3dd063454a95a0bf500cbe1c7290eb8a7a5cfedbf6875b1afd4cb239624d87e17c3e51c28189ebd43ec1f7bfc51d66dc7b0"
+
+[update]
+[update.modrinth]
+mod-id = "ir4RqbYg"
+version = "kDQwRRo0"

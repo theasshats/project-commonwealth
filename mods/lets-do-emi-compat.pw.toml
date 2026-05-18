@@ -1,0 +1,12 @@
+name = "[Let's Do Addon] EMI Compat"
+filename = "emi-letsdo-compat-2.0.1+1.21.1+neoforge.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/k6hi4lMv/versions/sDXxwL9Z/emi-letsdo-compat-2.0.1%2B1.21.1%2Bneoforge.jar"
+hash-format = "sha512"
+hash = "594112e7f53bc346e1b7a84fb914f519d7fbd49bf068e0bc832bba3e39361b7b5ca341bd8f211d309c475be990d249f9df10719d6aa4fe54d481e597fee1618b"
+
+[update]
+[update.modrinth]
+mod-id = "k6hi4lMv"
+version = "sDXxwL9Z"

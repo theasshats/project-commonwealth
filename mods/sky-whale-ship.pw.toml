@@ -1,0 +1,12 @@
+name = "Sky Whale Ship"
+filename = "sky_whale_ship-neoforge-1.21.1.jar"
+
+[download]
+url = "https://cdn.modrinth.com/data/Uiq88Vjc/versions/a6Zub3tW/sky_whale_ship-neoforge-1.21.1.jar"
+hash-format = "sha512"
+hash = "9dc42cb0d540c360c3c4b6acb2b8d041cc32b8a58c648b352fac07d8a1a00799d2fe79e81abf8f736554f9c1c2025c27ae919b049a15b44183af1baea512fb26"
+
+[update]
+[update.modrinth]
+mod-id = "Uiq88Vjc"
+version = "a6Zub3tW"
