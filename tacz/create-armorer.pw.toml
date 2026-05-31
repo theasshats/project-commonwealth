@@ -4,6 +4,6 @@ side = "both"
 pin = true
 
 [download]
-url = "https://github.com/Xela112233/Derpack-X/releases/download/mod-mirror/create_armorer-1.2.0.1.zip"
+url = "https://github.com/Xela112233/Derpack-X/releases/download/mod-mirror/Create_Armorer-v1.2.0.1.zip"
 hash-format = "sha1"
 hash = "2f718e169a6bd42fe90fa9d28ffa56add0c74b79"
