@@ -9,9 +9,10 @@
 #   - c: common tag membership (data/c/tags/** — lists of ids)
 #   - recipe INDEX: per recipe, "id | type | referenced ids" (a DERIVED navigation index,
 #     NOT the verbatim recipe json — no quantities, patterns, NBT, or conditions)
+#   - loot-table INDEX: per table, "id | type | referenced ids" (same derived index)
 #
-# Deliberately does NOT copy the mods' creative content verbatim: no recipe files, loot
-# tables, lang strings, models, or textures. Output is IDs/tags/derived-index -> safe to commit.
+# Deliberately does NOT copy the mods' creative content verbatim: no verbatim recipe or loot
+# files, lang strings, models, or textures. Output is IDs/tags/derived-index -> safe to commit.
 #
 # Usage: scripts/extract-mod-data.sh <jars-dir> [out-dir]
 set -uo pipefail
@@ -75,6 +76,22 @@ for jar in "${JARS}"/*.jar; do
     rm -rf "${rtmp}"
   fi
 
+  # loot-table INDEX (derived: "table-id | type | referenced ids") — NOT verbatim loot json
+  if command -v jq >/dev/null 2>&1; then
+    ltmp="$(mktemp -d)"
+    unzip -oq "${jar}" 'data/*/loot_table/*.json' 'data/*/loot_tables/*.json' -d "${ltmp}" 2>/dev/null
+    mkdir -p "${OUT}/loot"
+    find "${ltmp}" -type f -name '*.json' 2>/dev/null | sort | while IFS= read -r f; do
+      rel="${f#${ltmp}/}"
+      printf '%s' "${rel}" | grep -qE '^data/[^/]+/loot_tables?/' || continue
+      lid="$(printf '%s' "${rel}" | sed -E 's#^data/([^/]+)/loot_tables?/(.+)\.json$#\1:\2#')"
+      summary="$(jq -r 'try ("\(.type // "?") | " + ([.. | strings | select(test("^[a-z0-9_.-]+:[a-z0-9_./-]+$"))] | unique | join(" "))) catch empty' "${f}" 2>/dev/null)"
+      [ -n "${summary}" ] && printf '%s | %s\n' "${lid}" "${summary}"
+    done > "${OUT}/loot/${name}.txt"
+    [ -s "${OUT}/loot/${name}.txt" ] || rm -f "${OUT}/loot/${name}.txt"
+    rm -rf "${ltmp}"
+  fi
+
   # cross-mod ore census
   unzip -Z1 "${jar}" 2>/dev/null \
     | sed -nE 's#^assets/[^/]+/blockstates/(.*_ore.*)\.json$#'"${name}"': \1#p' >> "${ORES}"
@@ -96,6 +113,7 @@ sort -o "${ORES}" "${ORES}"
   echo
   echo "  by-mod/<jar>.txt            per-mod blocks, items, biome_modifiers, c: tags, deps"
   echo "  recipes/<jar>.txt           per-recipe 'id | type | referenced ids' (derived index, not verbatim)"
+  echo "  loot/<jar>.txt              per-loot-table 'id | type | referenced ids' (derived index, not verbatim)"
   echo "  INDEX-ores.txt              every *_ore blockstate across all mods (data-driven census)"
   echo "  INDEX-biome-modifiers.txt   every neoforge biome_modifier across all mods"
   echo
