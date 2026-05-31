@@ -5,7 +5,14 @@
 > is *coherence* ("of course you'd build this with Create parts"), never extra steps for their own sake.
 
 ## Guardrails (keeps it "Create-ified," not GregTech)
-- One Create-part "gate" per tier is plenty — don't stack requirements.
+- **Gate by complexity, not uniformly.** Simple gear / shared components get a single light part
+  gate; **complex / endgame machines should require real Create *methods*** — `mechanical_crafting`
+  (forces the Mechanical Crafters multiblock) or `sequenced_assembly`, built from mechanisms,
+  casings and electron tubes (incl. TFMG's endgame steel parts: `tfmg:steel_casing`,
+  `tfmg:steel_mechanism`). Don't settle for the cheapest gate on a flagship machine. Northstar is
+  the reference: trivial gear rides a pressed plate, but rocket stations / sealers / circuits go
+  through `mechanical_crafting` + `sequenced_assembly`.
+- One Create-part "gate" per tier is plenty — don't stack requirements *within a tier*.
 - Keep yields fair; don't stretch a 1-step craft into five unless the item truly warrants it.
 - `sequenced_assembly` / multi-stage processing is reserved for **marquee** items, not everyday gear.
 - Ore→metal uses Create **crushing** (the ore-doubling players already like) — a *reward*, not a tax;
