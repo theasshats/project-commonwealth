@@ -8,9 +8,9 @@
 //   - focus_matrix (the field-focus component shared by every module): one precision gate
 //     (create:electron_tube). Cheap, and it flows to all the simple modules — no need to touch
 //     them individually.
-//   - The MACHINES earn genuine depth: TFMG steel casings/mechanisms (the pack's endgame
-//     Create-steel parts) + precision mechanisms, and the two marquee builds go through
-//     create:mechanical_crafting (i.e. you must have built Create's Mechanical Crafters first).
+//   - The flagship MACHINES (projector, interdiction_matrix) are multi-stage sequenced_assembly
+//     chains — staged on the Mechanical Crafters from TFMG steel casings + electron tubes +
+//     precision mechanisms (heaviest tier). Mid-tier machines get rich TFMG-steel crafts.
 //
 // LEFT ALONE: the field-shape modes + all functional modules (inherit the focus_matrix gate),
 // battery, blank_card, and the smelted steel chain — simple items, coherent as-is.
@@ -25,24 +25,38 @@ ServerEvents.recipes(event => {
     D: '#c:gems/diamond', S: '#c:ingots/steel', E: 'create:electron_tube', R: '#c:dusts/redstone'
   })
 
-  // ── MACHINES — endgame tech, gated on TFMG steel parts + mechanisms; marquee builds need the
-  //    Mechanical Crafters (create:mechanical_crafting). ──
+  // ── FLAGSHIP MACHINES — endgame tech, built in STAGES via sequenced_assembly (heaviest tier):
+  //    start from the focus_matrix, deploy steel/circuits/mechanism onto the in-progress part on
+  //    the Mechanical Crafters, then press to finish. Intermediates registered in
+  //    kubejs/startup_scripts/01-intermediate-parts.js. ──
 
-  // FORCE-FIELD PROJECTOR (flagship). orig: c:gems/diamond + c:ingots/steel + battery + focus_matrix
+  // FORCE-FIELD PROJECTOR. orig: c:gems/diamond + c:ingots/steel + battery + focus_matrix
   event.remove({ output: 'mffs:projector' })
-  event.recipes.create.mechanical_crafting('mffs:projector', [
-    'CEC',
-    'BFB',
-    'CMC'
-  ], { C: 'tfmg:steel_casing', E: 'create:electron_tube', B: 'mffs:battery', F: 'mffs:focus_matrix', M: 'create:precision_mechanism' })
+  event.recipes.createSequencedAssembly(
+    ['mffs:projector'], 'mffs:focus_matrix',
+    [
+      event.recipes.createDeploying('derpack:incomplete_force_projector', ['derpack:incomplete_force_projector', 'tfmg:steel_casing']),
+      event.recipes.createDeploying('derpack:incomplete_force_projector', ['derpack:incomplete_force_projector', 'mffs:battery']),
+      event.recipes.createDeploying('derpack:incomplete_force_projector', ['derpack:incomplete_force_projector', 'create:electron_tube']),
+      event.recipes.createDeploying('derpack:incomplete_force_projector', ['derpack:incomplete_force_projector', 'create:precision_mechanism']),
+      event.recipes.createPressing('derpack:incomplete_force_projector', 'derpack:incomplete_force_projector')
+    ]
+  ).transitionalItem('derpack:incomplete_force_projector').loops(1)
 
   // INTERDICTION MATRIX (endgame area-denial). orig: focus_matrix + shock_module + ender_chest
   event.remove({ output: 'mffs:interdiction_matrix' })
-  event.recipes.create.mechanical_crafting('mffs:interdiction_matrix', [
-    ' E ',
-    'SFS',
-    'CMC'
-  ], { E: 'minecraft:ender_chest', S: 'mffs:shock_module', F: 'mffs:focus_matrix', C: 'tfmg:steel_casing', M: 'create:precision_mechanism' })
+  event.recipes.createSequencedAssembly(
+    ['mffs:interdiction_matrix'], 'mffs:focus_matrix',
+    [
+      event.recipes.createDeploying('derpack:incomplete_interdiction_matrix', ['derpack:incomplete_interdiction_matrix', 'tfmg:steel_casing']),
+      event.recipes.createDeploying('derpack:incomplete_interdiction_matrix', ['derpack:incomplete_interdiction_matrix', 'mffs:shock_module']),
+      event.recipes.createDeploying('derpack:incomplete_interdiction_matrix', ['derpack:incomplete_interdiction_matrix', 'minecraft:ender_chest']),
+      event.recipes.createDeploying('derpack:incomplete_interdiction_matrix', ['derpack:incomplete_interdiction_matrix', 'create:precision_mechanism']),
+      event.recipes.createPressing('derpack:incomplete_interdiction_matrix', 'derpack:incomplete_interdiction_matrix')
+    ]
+  ).transitionalItem('derpack:incomplete_interdiction_matrix').loops(1)
+
+  // ── MID-TIER MACHINES — deep but not flagship: rich TFMG-steel crafts, no full chain. ──
 
   // FORTRON GENERATOR (coercion_deriver). orig: c:ingots/steel + battery + focus_matrix
   // The steel_mechanism is TFMG's kinetic part — "this derives Fortron from mechanical power."

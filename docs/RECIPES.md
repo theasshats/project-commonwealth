@@ -13,8 +13,12 @@
   the reference: trivial gear rides a pressed plate, but rocket stations / sealers / circuits go
   through `mechanical_crafting` + `sequenced_assembly`.
 - One Create-part "gate" per tier is plenty — don't stack requirements *within a tier*.
-- Keep yields fair; don't stretch a 1-step craft into five unless the item truly warrants it.
-- `sequenced_assembly` / multi-stage processing is reserved for **marquee** items, not everyday gear.
+- Keep yields fair for everyday gear; don't stretch a 1-step craft into five unless it warrants it.
+- **Endgame / flagship machines SHOULD be multi-stage `sequenced_assembly` chains** (maintainer
+  call — depth is wanted here, GregTech-leaning is OK *for endgame only*). The chain's in-progress
+  item is a registered `derpack:incomplete_*` part (see `kubejs/startup_scripts/`) that Create
+  cycles through `deploying`/`pressing` stages on the Mechanical Crafters. Everyday gear stays a
+  single coherent gate — the heavy chains are the *reward-tier* ceiling, not the baseline.
 - Ore→metal uses Create **crushing** (the ore-doubling players already like) — a *reward*, not a tax;
   the vanilla 1:1 smelt path stays.
 - Never break a chain: if you `remove` a recipe, always add the Create replacement.
