@@ -32,6 +32,28 @@ land in that folder, so we ship it with a packwiz **metafile placed in a `tacz/`
 3. Run `packwiz refresh` (the `refresh` or `add-mod` CI workflow, or the editor) so the file is
    indexed in `index.toml`.
 
+## Removing the stock TaCZ guns (Armorer-only)
+
+We want **only** Create: Armorer's guns — not TaCZ's built-in stock pack (AK/M4/etc.). TaCZ has
+**no config flag to disable default guns** (upstream marked it wontfix, issue #267): the built-in
+pack `tacz_default_gun` is extracted to `.minecraft/tacz/tacz_default_gun/` and reloaded each start.
+So we *override it with an empty pack* and stop TaCZ regenerating it:
+
+- **`config/tacz-pre.toml` → `DefaultPackDebug = true`** — stops TaCZ overwriting the default pack
+  under `.minecraft/tacz/` on launch (default is `false` = overwrite every start).
+- **`tacz/tacz_default_gun/gunpack.meta.json` → `{ "namespace": "tacz" }`** — an emptied default
+  pack: it declares the `tacz` namespace but ships **no `data/` gun/ammo/attachment entries**, so
+  zero stock guns load. With `DefaultPackDebug` on, TaCZ won't clobber it with the bundled pack.
+
+Create: Armorer is a *separate* pack (`create_armorer` namespace) loaded independently, so it's
+untouched. After adding/editing these files, run `packwiz refresh` so `tacz/tacz_default_gun/…` is
+indexed into `index.toml` and shipped as an override.
+
+> **Verify in-game:** the gunsmith table / creative tab shows **only** Create: Armorer guns; no
+> stock AK/M4/Glock; no missing-pack or datapack errors in the log. If stock guns still appear,
+> confirm `DefaultPackDebug` took (check the generated `config/tacz-pre.toml`) and that the empty
+> `tacz_default_gun/gunpack.meta.json` actually landed in `.minecraft/tacz/` (override shipped).
+
 ## Verify in-game
 
 - Create recipes for TaCZ ammo/casings/components appear in JEI and craft via Create

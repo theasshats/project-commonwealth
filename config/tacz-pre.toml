@@ -1,0 +1,7 @@
+#When enabled, the mod will not try to overwrite the default pack under .minecraft/tacz.
+#Since 1.0.4, the overwriting will only run when you start client or a dedicated server
+#
+#Derpack X sets this TRUE so TaCZ won't regenerate its built-in default gun pack
+#(tacz_default_gun) over the emptied override we ship at tacz/tacz_default_gun/ — leaving only the
+#Create: Armorer gun pack. See docs/GUN-PACKS.md ("Removing the stock TaCZ guns").
+DefaultPackDebug = true
