@@ -1,0 +1,4 @@
+deploy/
+README.md
+*.md
+!web/**

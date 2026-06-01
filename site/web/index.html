@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Derpack X — Ishimura</title>
+  <meta name="description" content="Derpack X on Ishimura — a Create Aeronautics modpack for Minecraft 1.21.1. How to join, what's in the pack, and the rules.">
+  <meta name="color-scheme" content="dark">
+
+  <!--
+    Content is filled from the modpack itself (pack.toml + docs).
+    Network-derived values come from the ishimura hosting brief.
+    The ONE thing still to fill is the Discord invite: search for {{DISCORD_INVITE}}.
+    Game connect address is set to mc.ishimura.xyz (the brief's gray-cloud game host) —
+    change it here and in the server's MC_ADDR env if that ever moves.
+  -->
+
+  <meta property="og:title" content="Derpack X — Ishimura">
+  <meta property="og:description" content="A Create Aeronautics modpack for Minecraft 1.21.1. Build airships and fly them off the edge of the world.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">◣</span>
+      <span class="brand-name">ISHIMURA</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#join">Join</a>
+      <a href="#pack">The Pack</a>
+      <a href="#get">Get It</a>
+      <a href="#rules">Rules</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-discord" href="{{DISCORD_INVITE}}" rel="noopener">Discord</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-panel panel">
+        <p class="eyebrow">Ishimura · Minecraft 1.21.1 · NeoForge</p>
+        <h1 class="hero-title">DERPACK&nbsp;X</h1>
+        <p class="hero-tagline">A Create-driven engineering pack built around <strong>Create Aeronautics</strong> — build airships, planes and contraptions, then fly them off the edge of the world.</p>
+
+        <div class="status" id="status" role="status" aria-live="polite">
+          <span class="status-dot status-dot--unknown" aria-hidden="true"></span>
+          <span class="status-text">Checking server…</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="#join">How to join</a>
+          <a class="btn btn--ghost" href="{{DISCORD_INVITE}}" rel="noopener">Join the Discord</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO JOIN -->
+    <section class="section" id="join">
+      <div class="section-inner">
+        <h2 class="section-title"><span class="section-num">01</span> How to join</h2>
+        <ol class="steps">
+          <li>
+            <h3>Install Prism Launcher</h3>
+            <p>Grab <a href="https://prismlauncher.org/" rel="noopener">Prism Launcher</a> (free, open-source, Windows/Mac/Linux). You'll need a Minecraft account and Java&nbsp;21 — Prism offers to download Java for you if it's missing.</p>
+          </li>
+          <li>
+            <h3>Download the pack</h3>
+            <p>From the <a href="https://github.com/Xela112233/Derpack-X/releases/latest" rel="noopener">latest release</a>, grab <code>derpack-x-prism-installer-X.Y.Z.zip</code> (~5&nbsp;MB, recommended). Modrinth-app users can take the <code>.mrpack</code> instead.</p>
+          </li>
+          <li>
+            <h3>Import into Prism</h3>
+            <p><em>Add Instance → Import from zip → Browse</em> to the file → <em>OK</em>. It unpacks small — no mod jars yet, those come on first launch.</p>
+          </li>
+          <li>
+            <h3>Launch once to download mods</h3>
+            <p>Hit <strong>Launch</strong>. The first run pauses a minute or two while it fetches every mod (the Prism log shows progress). Later launches are instant. The instance ships pre-tuned at 8&nbsp;GB&nbsp;min&nbsp;/&nbsp;12&nbsp;GB&nbsp;max — lower the max under <em>Edit → Settings → Java</em> if you have less than 12&nbsp;GB, but never below 4&nbsp;GB.</p>
+          </li>
+          <li>
+            <h3>Connect</h3>
+            <p><em>Multiplayer → Add Server</em>, then paste the address:</p>
+            <div class="copyrow">
+              <code class="copyrow-value" id="server-address">mc.ishimura.xyz</code>
+              <button class="btn btn--small copy-btn" type="button" data-copy="mc.ishimura.xyz" data-copy-label="Copy">Copy</button>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- THE PACK -->
+    <section class="section section--alt" id="pack">
+      <div class="section-inner">
+        <h2 class="section-title"><span class="section-num">02</span> The pack</h2>
+        <dl class="specs">
+          <div class="spec"><dt>Minecraft</dt><dd>1.21.1</dd></div>
+          <div class="spec"><dt>Mod loader</dt><dd>NeoForge 21.1.228</dd></div>
+          <div class="spec"><dt>RAM</dt><dd>8–12&nbsp;GB</dd></div>
+          <div class="spec"><dt>Disk</dt><dd>~12&nbsp;GB free</dd></div>
+        </dl>
+
+        <h3 class="subhead">Highlights</h3>
+        <ul class="highlights">
+          <li><strong>Create Aeronautics</strong> — physics-simulated airships, planes &amp; vehicles built from Create contraptions. The reason the pack exists.</li>
+          <li><strong>Create &amp; add-ons</strong> — the rotational-engineering core everything else is built around.</li>
+          <li><strong>A fuller world</strong> — Alex's Mobs and friends make the overworld worth flying over.</li>
+          <li><strong>It just works on ships</strong> — a compat layer patches third-party mods (sleeping, chains, mobs, turrets…) to behave on moving contraptions.</li>
+          <li><strong>Quality of life</strong> — EMI recipe viewer, AFK sleep, and sane defaults so you build instead of fighting menus.</li>
+        </ul>
+        <p class="note">Pre-alpha and changing between versions — the launcher always installs the current set, and the installer instance auto-syncs each launch.</p>
+      </div>
+    </section>
+
+    <!-- GET IT -->
+    <section class="section" id="get">
+      <div class="section-inner get-inner">
+        <h2 class="section-title"><span class="section-num">03</span> Get the pack</h2>
+        <p>Releases ship small manifest bundles — your launcher fetches the actual mods on first launch, so there's no giant zip to download from here.</p>
+        <a class="btn btn--primary btn--lg" href="https://github.com/Xela112233/Derpack-X/releases/latest" rel="noopener">Latest release →</a>
+        <p class="note">New here? The <a href="https://github.com/Xela112233/Derpack-X/blob/main/docs/PRISM-SETUP.md" rel="noopener">full Prism setup guide</a> walks through it step by step.</p>
+      </div>
+    </section>
+
+    <!-- RULES -->
+    <section class="section section--alt" id="rules">
+      <div class="section-inner">
+        <h2 class="section-title"><span class="section-num">04</span> Rules</h2>
+        <ul class="rules">
+          <li>Don't grief or steal. Build your own; ask before touching someone else's.</li>
+          <li>No cheats, x-ray, or exploit clients.</li>
+          <li>Keep contraptions reasonable — runaway lag machines get cleaned up.</li>
+          <li>Be decent in chat. This is a friend-group server; act like it.</li>
+          <li>If something breaks, say so in the Discord instead of quietly suffering.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="section-inner">
+        <h2 class="section-title"><span class="section-num">05</span> FAQ</h2>
+        <div class="faq">
+          <details>
+            <summary>It won't launch or it crashes on world load.</summary>
+            <p>Most of the time it's too little RAM or a half-finished first download. Make sure Java&nbsp;21 is installed, give the instance 8&nbsp;GB, and let the first launch finish fetching mods. Still stuck? Open <code>.minecraft/logs/latest.log</code>, find the <code>Caused by</code> line, and drop the log in the Discord.</p>
+          </details>
+          <details>
+            <summary>My airship looks broken with shaders on.</summary>
+            <p>Known upstream bug — Iris/Oculus shaders render Aeronautics ships wrong. Turn shaders off when flying.</p>
+          </details>
+          <details>
+            <summary>A mod misbehaves while I'm on a moving ship.</summary>
+            <p>The compat layer is meant to handle exactly that. If a specific mod is still wrong on a contraption, mention which one in the Discord so it can be flagged.</p>
+          </details>
+          <details>
+            <summary>Can I add my own mods?</summary>
+            <p>Client-only cosmetic mods are usually fine. Anything touching world content or networking will desync you from the server — ask first.</p>
+          </details>
+          <details>
+            <summary>How do I report a bug or request a mod?</summary>
+            <p>Post in the Discord. That's the fastest way to reach the people who run the pack — no account on anything else required.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-brand">Ishimura · Derpack X</span>
+      <a href="{{DISCORD_INVITE}}" rel="noopener">Discord</a>
+      <a href="https://github.com/Xela112233/Derpack-X/releases/latest" rel="noopener">Releases</a>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
