@@ -1,0 +1,14 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:gunpowder"
+    }
+  ],
+  "results": [
+    {
+      "amount": 50,
+      "id": "createimmersivetacz:gunpowder_fluid"
+    }
+  ]
+}

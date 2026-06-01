@@ -17,6 +17,22 @@ file = "kubejs/data/createimmersivetacz/recipe/ammo/twelve_gauge_shell_fill.json
 hash = "d8556e24b2879260c51256fc9f8512c001a8885ba5b1ca01fdd418eaceb9fdc3"
 
 [[files]]
+file = "kubejs/data/createimmersivetacz/recipe/gunpowder_fluid.json"
+hash = "23dc2b2be7c26c5d2f1b3ac3c03f0f4596a29e446c954a395746b7dcb73018a5"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/nitropowder_fluid.json"
+hash = "84cf437b79313547b7ee678a04fe3cc89c5c34d4f59cecc4ba4692f505cc1cd6"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/primer.json"
+hash = "21fd7fa0836d3bafc5d87d9629360e3cdb1d3ed606bc3d5ed88159e5b9b4e828"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/primer_from_nitropowder.json"
+hash = "dbb2512b277212b962355adc7486d9f560e33274c96606ffc5deac070fbc20f6"
+
+[[files]]
 file = "kubejs/data/derpack/neoforge/biome_modifier/vein_copper.json"
 hash = "c5147d3f5c679fd97238e625fcd6b806544a66dff28b1aae5b22f3a204adf31c"
 
