@@ -5,17 +5,11 @@
     "B": {
       "item": "createimmersivetacz:gun_barrel"
     },
-    "O": {
+    "C": {
       "item": "create:brass_block"
     },
     "F": {
       "item": "createimmersivetacz:firing_mechanism"
-    },
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "C": {
-      "item": "create:flywheel"
     },
     "T": {
       "item": "createimmersivetacz:gun_trigger"
@@ -25,15 +19,15 @@
     }
   },
   "pattern": [
-    "BOOFI",
-    " CTW "
+    "BCF",
+    " TW"
   ],
   "result": {
     "id": "tacz:modern_kinetic_gun",
     "components": {
       "minecraft:custom_data": {
-        "GunId": "create_armorer:mg_platemag_flywheel",
-        "GunFireMode": "AUTO"
+        "GunId": "create_armorer:pistol_auto_stress",
+        "GunFireMode": "SEMI"
       }
     },
     "count": 1
