@@ -1,10 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "CLAUDE.md"
-hash = "0f6c3e2283a71bba6775bdbe84a2186125218547f456ee9a5e46751cc175b0e0"
-
-[[files]]
 file = "config/createblockchain-common.toml"
 hash = "eaf6c7ba97e4b253817c05e2a34bfef4c277aab1b3b28d8c14bf01e7304aad22"
 

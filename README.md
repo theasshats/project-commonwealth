@@ -4,14 +4,15 @@ A Create-focused Minecraft modpack for 1.21.1 / NeoForge, built around [Create A
 
 ---
 
-## For players: how to install
+## For players
 
-Pick **one** of the downloads on the latest [release](../../releases) page:
+**Everything players need is on the website — [derpack-x.ishimura.xyz](https://derpack-x.ishimura.xyz).** The download, live server status, how to join, the rules, and the FAQ all live there; you shouldn't need to touch this repo at all. Reporting a problem will go through the site too (no GitHub account needed — see #77). The steps below are the same ones the site walks you through, kept here as the canonical reference.
+
+Grab the installer from the site's download button (it always resolves to the latest [release](../../releases)):
 
 | File | What it is | When to use |
 |------|-----------|-------------|
-| `derpack-x-prism-installer-X.Y.Z.zip` | Prism instance that downloads mods on first launch | **Recommended.** Drop into Prism, launch, mods auto-fetch. |
-| `derpack-x-X.Y.Z.mrpack` | Modrinth-format pack file | If you use the Modrinth app, or want to import via Prism's Modrinth importer. |
+| `derpack-x-prism-installer-X.Y.Z.zip` | Prism instance that downloads mods on first launch | Drop into Prism, launch, mods auto-fetch. |
 
 **Steps:** download → open Prism Launcher → Add Instance → Import from zip → pick the file → launch.
 
@@ -27,7 +28,7 @@ See [`docs/PRISM-SETUP.md`](docs/PRISM-SETUP.md) for the full walkthrough.
 
 ## For collaborators: how it works
 
-This repo doesn't store mod jars — it stores manifests describing *what mods are in the pack* (with URLs and hashes). When a release is cut, GitHub Actions builds a small installer zip and a .mrpack from those manifests; the launcher fetches actual jars at install time.
+This repo doesn't store mod jars — it stores manifests describing *what mods are in the pack* (with URLs and hashes). When a release is cut, GitHub Actions builds a small Prism installer zip from those manifests; the launcher fetches actual jars at install time.
 
 There are three ways to make changes, in order of how often they're used:
 
@@ -35,14 +36,14 @@ There are three ways to make changes, in order of how often they're used:
 2. **GitHub Actions workflows** — click buttons in the Actions tab, no install needed. Fallback for when you can't run the editor.
 3. **packwiz CLI directly** — power-user fallback for things the editor doesn't cover yet.
 
-The workflow we follow: each contributor works on a **version-named branch**, edits via the editor, opens a **pull request to main**. Releases are cut from main.
+The workflow we follow: each contributor works on a **version-named branch**, edits via the editor, opens a **pull request to main**. Every PR runs automated merge-gating checks (packwiz index freshness, manifest lint, KubeJS/config parse, Go build & vet) — see [`docs/CI-CHECKS.md`](docs/CI-CHECKS.md). Releases are cut from main.
 
 ### Branch naming
 
 Branches are named after the **next version** they're working toward. Concretely:
 
-- If `main` is at `0.3.2`, work targeting the next patch goes on branch `0.3.3`.
-- If your branch will introduce something bigger (mod additions, breaking changes, big config rewrites), name it after the next minor: `0.4.0`.
+- If `main` is at `0.4.6`, work targeting the next patch goes on branch `0.4.7`.
+- If your branch will introduce something bigger (mod additions, breaking changes, big config rewrites), name it after the next minor: `0.5.0`.
 - Multiple people working in parallel? Branch off whichever target version they're aiming at; merge in version order.
 
 This keeps the branch name and the release tag in lockstep, and makes "what's coming up next" answerable at a glance.
@@ -64,7 +65,7 @@ Then in GitHub Desktop: **File → Clone repository →** pick this repo. You're
 ## Daily workflow
 
 1. Open GitHub Desktop, **Fetch origin** + **Pull**.
-2. Create a new branch (or check out your existing branch). Name it after the next version (e.g. `0.3.3`, `0.4.0`).
+2. Create a new branch (or check out your existing branch). Name it after the next version (e.g. `0.4.7`, `0.5.0`).
 3. Open the repo folder in File Explorer. Double-click `tools\derpack-edit.exe`.
 4. A console window appears, your browser opens to `http://localhost:8765`.
 5. Make changes — add mods, set versions, pin, etc. The status pane logs every operation.
@@ -116,7 +117,7 @@ See [`tools/README.md`](tools/README.md) for the user-facing editor docs and tro
 ├── docs/                  # Human-facing documentation
 ├── scripts/               # Build helpers (CI runs these; you almost never run them directly)
 ├── site/                  # Player-facing website (Go) — runs on ishimura, not in CI; see site/README.md
-└── .github/workflows/     # CI: build modpack, build editor, fallback edit workflows
+└── .github/workflows/     # CI: PR merge-gating checks, release build, editor build, ground-truth digest, fallback edits
 ```
 
 Each folder has its own `README.md` with details.
@@ -127,12 +128,12 @@ Each folder has its own `README.md` with details.
 
 From the `main` branch:
 
-1. Bump `version` in `pack.toml` (e.g. `0.3.2` → `0.3.3`)
+1. Bump `version` in `pack.toml` (e.g. `0.4.6` → `0.4.7`)
 2. Commit and push to `main`
-3. On GitHub: Releases → Draft a new release → tag `v0.3.3` → Publish
-4. Wait for the build, then check the release page for the attached zip and mrpack
+3. On GitHub: Releases → Draft a new release → tag `v0.4.7` → Publish
+4. Wait for the build, then check the release page for the attached Prism installer zip
 
-The build is content-cached: if nothing material changed since the last build, the cached artifacts get attached to the release in seconds. Otherwise it rebuilds from scratch.
+The build runs fresh each time — no caching, ~30s — then attaches the Prism installer zip to the release.
 
 ---
 
@@ -155,7 +156,8 @@ A small player-facing site lives in [`site/`](site/), served at
 **`derpack-x.ishimura.xyz`** (and `modpack.ishimura.xyz`): how to join, what's in
 the pack, rules, FAQ, a live server-status badge, and a download button that
 auto-resolves to the latest release's Prism installer (so it never points at a
-dead/stale asset).
+dead/stale asset). A player bug/issue report form is planned (#77) so problems
+can be filed without a GitHub account — keeping the site the single player touchpoint.
 
 It's a self-contained Go binary that embeds the static site and exposes
 `/api/status` (Minecraft Server List Ping) and `/api/release` (GitHub Releases

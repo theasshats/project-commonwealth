@@ -1,0 +1,93 @@
+name: PR checks
+
+# Merge-gating validation for pull requests. Catches the mistakes that slip past
+# `packwiz refresh` but break the pack at install/update time: a stale index, a
+# misplaced `pin`, an invalid manifest, broken KubeJS JSON/JS, a bad config TOML,
+# or a non-compiling Go change in the editor or site.
+#
+# See docs/CI-CHECKS.md for what each job does and how to make these *required*
+# via a branch-protection ruleset (a repo setting, not committable here).
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-checks-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pack:
+    name: packwiz index
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-packwiz
+
+      - name: index.toml is committed & up to date
+        run: |
+          packwiz refresh
+          if ! git diff --quiet -- index.toml pack.toml; then
+            echo "::error::index.toml / pack.toml are stale. Run 'packwiz refresh' locally and commit the result."
+            git --no-pager diff -- index.toml pack.toml
+            exit 1
+          fi
+          echo "index.toml is up to date."
+
+  manifests:
+    name: manifest lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/lint-manifests.py
+
+  data:
+    name: kubejs / config data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: KubeJS JavaScript syntax (node --check)
+        run: |
+          mapfile -t files < <(find kubejs -name '*.js')
+          if [ "${#files[@]}" -gt 0 ]; then
+            for f in "${files[@]}"; do node --check "$f"; done
+          fi
+          echo "${#files[@]} JS file(s) OK"
+
+      - name: JSON & config TOML parse
+        run: python3 scripts/validate-data.py
+
+  go:
+    name: go build & vet
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: site
+        working-directory: site
+        run: |
+          go build ./...
+          go vet ./...
+          go test ./...
+
+      - name: editor (packwiz.bin is committed)
+        working-directory: tools/editor-src
+        run: |
+          go build ./...
+          go vet ./...
