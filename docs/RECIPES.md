@@ -222,6 +222,32 @@ Full-pass status (every flagship file reviewed):
   `travelers_backpack` / `gliders` (already pressed-sheet, light), `swashbucklers` (black-powder
   flintlocks — kept simple, not TaCZ-hard).
 
+## Magic web (weaving the magic mods together)
+Separate from the Create spine, the **magic** mods are woven into one progression around an arcane
+**spine — Ars Nouveau + Iron's Spellbooks** (the two understandable spellcasters). The rule (maintainer
+steer): *don't force one mod's component into all the others* — so the weave is a handful of **purely
+additive bridge recipes** (`33-magic-web.js`) that never touch an existing magic recipe; they just add
+alt paths so progression flows between systems:
+
+```
+Born in Chaos (necromancy) ──▶ Occultism (summoning) ──▶ arcane SPINE ◀──▶ (Ars ⇄ Iron's)
+```
+
+- **Ars ⇄ Iron's** — Source gem ⇄ arcane essence, each direction catalysed by a **Galosphere** shard
+  (so round-trips cost crystals — no free essence-arbitrage).
+- **Occultism ▶ spine** — joins via its *ritual-made* `otherworld_essence` (not the cheap farmable
+  datura essence), refined with an attunement crystal.
+- **Born in Chaos ▶ Occultism** — its `spiritual_dust` feeds the occult spirit economy, finally giving
+  the necromancy outlier a place in the pack.
+
+**Galosphere's allurite / lumiere shards are the connective thread** (the "arcane attunement crystal"),
+which also gives an underused worldgen mod a magic purpose. All ratios are first-pass — tune in playtest
+against the real essence economies. occultism↔Create was *already* bridged by the **occultengineering**
+mod (create:mixing/compacting/filling), so that branch needs no KubeJS.
+
+Material (non-magic) bridges follow the same additive pattern — e.g. Meadow cheese ▶ Create Cheese
+(`99`, #51).
+
 ## Ground truth
 - Mods with jars on hand → recipes read directly for precise `remove` + replace.
 - Everything else → the **`tools/mod-data/recipes/`** digest (CI) lists each recipe as
