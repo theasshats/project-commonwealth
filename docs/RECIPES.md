@@ -140,7 +140,46 @@ metal/mechanical crafts that bypass Create*. Buckets:
   vanilla decoration.
 - **Structurize** — confirmed a build-*utility* (scepters, build tool, scan/paste); nothing mechanical
   to gate. No change, by design.
+- **Let's Do Meadow cheese** (`99`, closes #51) — additive Create path: Create Cheese's soft curd +
+  Meadow rennet, compacted → a Meadow cheese wheel. Native cheese_form left intact.
 - **Maintainer scope call** — umapyoi (own cosmetic progression) remains the only deferred item.
+
+## Exhaustive re-verification (the "is anything left?" pass)
+A full second sweep across all 32k digested recipes and the 355-mod install list, widened well past
+the first metal-ingot grep:
+
+- **Recipe-type census** — surfaced foreign tech-mod recipe types (`immersiveengineering:metal_press`,
+  `mekanism:*`, `modern_industrialization:*`, `tconstruct:*`, `pneumaticcraft:*`, `railcraft:*`,
+  `energizedpower:*`, …). **All come from `recipe_integration` conditional compat and none of those
+  mods are installed** — they never load, so there is *no* rival-tech Create-bypass in the pack.
+- **Alloy-metal source audit** — checked every recipe whose output is a steel/brass/bronze ingot.
+  Steel's only real shortcuts were already closed (`05`); the rest are storage decompacting. Brass's
+  occultengineering smelt/blast is a recycle loop fed by Create-made brass (its only dust source is
+  crushing a brass ingot). **steel/brass/bronze are fully Create-gated at the source** — and via
+  `#c:` tags + almost-unified that propagates to every downstream mod.
+- **Power/machine keyword net** (machine/generator/reactor/engine/turbine/drill/pump/motor/laser/
+  jetpack/…) over every non-Create mod — turned up only already-handled cases: DnDesires &
+  alcohol_industry are themselves Create addons; ColdSweat/tide are survival/fishing; Cataclysm is
+  boss-drop; occultism/occultengineering are magic; gamediscs is a self-contained arcade novelty.
+  **Nothing new to route.**
+
+Conclusion: the routing work is complete — what remains un-converted is deliberately so.
+
+## Endgame / "should be harder" review
+Asked whether high-power items are too cheap. Finding: **the pack's power items already gate on
+Create's mid/late vocabulary**, so they're endgame-appropriate without extra taxing —
+- **create_jetpack** — `create:copper_backtank` + `precision_mechanism` + shaft + brass plates via
+  mechanical-crafting; netherite tier is a smithing upgrade off a `netherite_backtank`. Flight is
+  correctly backtank-gated.
+- **createnuclear** — reactor blueprint needs steel (now Create-routed) + `precision_mechanism` +
+  display_board; the reactor is a multiblock. Endgame by construction.
+- **create_new_age** — motors/energisers built on andesite/brass casings + "overcharged" mats.
+- **mffs** force-field gear and **modular golems** were already routed onto Create parts in their
+  passes; steel-gating (`05`) pushes their metal tier behind a running Create setup.
+
+No item was found that is both high-power *and* trivially craftable, so no difficulty changes were
+forced. Genuine balance tuning (e.g. jetpack/nuclear costs feeling too low) is a **playtest call** —
+flagged here rather than guessed, since the convention is "costs stay ~comparable," not a grind.
 
 ## Ground truth
 - Mods with jars on hand → recipes read directly for precise `remove` + replace.

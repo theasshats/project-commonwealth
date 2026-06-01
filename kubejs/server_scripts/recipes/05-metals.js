@@ -22,7 +22,13 @@ ServerEvents.recipes(event => {
 
   // KEPT — the Create steel chain (steel stays craftable through these):
   //   tfmg:casting/steel · createmetalwork …compacting(molten_steel) · createbigcannons:compacting/forge_steel_ingot · create_ironworks
-  // ALREADY Create-only: bronze & brass (Ironworks/Metalwork create:mixing).
-  // FLAG (left for review, lower priority): occultengineering smelt/blast of brass_dust -> create:brass_ingot
-  //   is a non-Create brass alt-path — revisit if brass should be Create-only too.
+  // Also KEPT (not bypasses): samurai_dynasty:steel_ingot is just steel_block->9 ingots (storage
+  //   decompacting); the createnuclear/ironworks/cbc "from_block"/"from_nuggets" steel recipes are
+  //   likewise storage conversions — you must already own steel.
+  // ALREADY Create-only: bronze & brass (Ironworks/Metalwork create:mixing / compacting / splashing).
+  // RESOLVED (was a FLAG): occultengineering smelt/blast brass_dust -> create:brass_ingot is NOT a
+  //   bypass — full-pack audit shows brass_dust's only source is occultism:crushing/brass_dust_from_ingot
+  //   (crushing a brass INGOT). It's a recycle loop fed by Create-made brass, so no non-Create brass
+  //   can enter. Bronze has no non-Create source either. So steel/brass/bronze are all fully
+  //   Create-gated at the source.
 })
