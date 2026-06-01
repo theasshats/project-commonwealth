@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/tacz-pre.toml"
+hash = "ec7e4eff3239b976253b0f86c70a9c8d60bca95819bc3a832dce1bd5dd049c77"
+
+[[files]]
 file = "kubejs/data/derpack/neoforge/biome_modifier/vein_copper.json"
 hash = "c5147d3f5c679fd97238e625fcd6b806544a66dff28b1aae5b22f3a204adf31c"
 
@@ -1822,5 +1826,9 @@ metafile = true
 
 [[files]]
 file = "tacz/create-armorer.pw.toml"
-hash = "e36be1aa65dbe26928639cee2b054773209d257038f9835cd4a7482995e93655"
+hash = "839500904a87f2bf7e5600ddcdab03ac94b250a0a1467e2d471b020e9b71d161"
 metafile = true
+
+[[files]]
+file = "tacz/tacz_default_gun/gunpack.meta.json"
+hash = "d4f30e835327aa006b0a0ad7b58022cd55139b8a40183f4a3d9d6fe131e4878e"
