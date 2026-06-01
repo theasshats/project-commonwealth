@@ -129,7 +129,18 @@ metal/mechanical crafts that bypass Create*. Buckets:
   occultism, occultengineering.
 - **Guns — already routed via Immersive TaCZ**: tacz (only workbenches/ammo-boxes use metal; fine).
 - **Deliberately not gated** — see the ledger above (copperage, Galosphere, companions, jakes).
-- **Maintainer scope call** — minecolonies, structurize, umapyoi, full Supplementaries.
+- **MineColonies** (`98`) — *integrated where feasible*: the two **quarries** (real mining machines)
+  now build from Create (andesite_casing/cogwheel → brass_casing/precision_mechanism), keeping the
+  non-consumed `structurize:sceptergold` stamp. The ~55 worker-hut blocks are the colony's own
+  build-tool spine and the cooking/chainmail trees are vanilla-parallel — both left alone.
+- **Supplementaries** (`94`, full pass) — beyond cog_block/turn_table, the mechanical/instrument
+  blocks now route through Create: **wrench** (andesite alloy), **pulley** (cogwheel+shaft),
+  **altimeter** + **wind_vane** (aeronautics instruments → electron_tube / cogwheel). The 20+ candle
+  holders, gold/iron gates & doors, goblets, lamps, and the redstone/explosive novelty gadgets stay
+  vanilla decoration.
+- **Structurize** — confirmed a build-*utility* (scepters, build tool, scan/paste); nothing mechanical
+  to gate. No change, by design.
+- **Maintainer scope call** — umapyoi (own cosmetic progression) remains the only deferred item.
 
 ## Ground truth
 - Mods with jars on hand → recipes read directly for precise `remove` + replace.
