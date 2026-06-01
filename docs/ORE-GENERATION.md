@@ -51,6 +51,14 @@ tags (verified), so one vanilla tag covers all the matching Terralith biomes too
 Use a **specific biome ID** only for special cases (e.g. diamonds *only* in `terralith:amethyst_rainforest`).
 You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:rocky_mountains"]`.
 
+> **Gotcha (crashes world creation):** a `biome_modifier`'s `"biomes"` is a HolderSet. A JSON
+> **array may only contain plain biome IDs** — you **cannot** put a `#tag` inside the array
+> (`["#minecraft:is_taiga", "#minecraft:is_forest"]` fails to parse → "Failed to load registries").
+> A *single* tag as a bare string is fine (`"biomes": "#minecraft:is_mountain"`). To combine
+> several tags (or tags + IDs), make a **custom biome tag** under
+> `kubejs/data/derpack/tags/worldgen/biome/<name>.json` (tag `values` *can* mix `#tag` refs and IDs)
+> and point the modifier at it: `"biomes": "#derpack:<name>"`. That's what the `vein_*` modifiers do.
+
 ---
 
 ## Ores to place

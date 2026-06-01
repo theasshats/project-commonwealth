@@ -1,1 +1,1 @@
-{ "type": "neoforge:add_features", "biomes": [ "#minecraft:is_savanna", "#minecraft:is_badlands" ], "features": "derpack:vein_gold", "step": "underground_ores" }
+{"type": "neoforge:add_features", "biomes": "#derpack:vein_gold", "features": "derpack:vein_gold", "step": "underground_ores"}
