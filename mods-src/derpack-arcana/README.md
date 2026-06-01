@@ -4,10 +4,16 @@ Internal helper mod for **Derpack X** — weaves the magic mods together at the 
 (energy / attribute / behaviour bridges) that the KubeJS recipe web can't express.
 Design & roadmap: [`docs/ARCANA-BRIDGE-MOD.md`](../../docs/ARCANA-BRIDGE-MOD.md).
 
-> **Status: skeleton.** It loads, registers config, and logs which integrations are present. Feature
-> phases (P1 Source↔mana Attunement Font, P2 spell-power crossover, P3 Born-in-Chaos ritual fuel) land
-> incrementally — each behind a `ModList.isLoaded(...)` guard and a config toggle, so it never hard-deps
-> a target mod.
+> **Status: P1 + P2 implemented (CI-compiled; in-game testing pending).** Each feature is behind a
+> `ModList.isLoaded(...)` guard and a config toggle, so it never hard-deps a target mod.
+> - **P1 — Attunement Font** (block): drains nearby Ars Source → grants Iron's mana to the standing
+>   player. Crafted from the magic-web spine reagents (source_gem + arcane_essence + Galosphere shards).
+> - **P2 — spell-power crossover** (automatic): each school's `SpellDamageEvent` is boosted by the
+>   caster's *other*-mod spell-power, by `spellCrossoverFactor`.
+> - **P3 — Born-in-Chaos ritual fuel** (occultism + born_in_chaos_v1): not yet started.
+>
+> In-game verify: mana client-sync after `addMana`; that `addMana` clamps to max mana; crossover
+> magnitudes; whether Ars `SpellDamageEvent` is posted on the game bus.
 
 ## Stack
 - NeoForge **21.1.228**, Minecraft **1.21.1**, Java **21** (matches `pack.toml` `[versions]`).

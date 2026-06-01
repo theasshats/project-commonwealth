@@ -37,8 +37,13 @@ public final class DerpackArcana {
             LOGGER.info("[Derpack Arcana] Source<->mana bridge inactive (config off or a target mod absent).");
         }
 
+        // P2 — spell-power crossover (game-bus listeners). Guarded like P1 so the Ars/Iron's types
+        // in SpellPowerCrossover never classload when a target mod is absent.
+        if (Config.SPELL_POWER_CROSSOVER.get() && loaded("ars_nouveau") && loaded("irons_spellbooks")) {
+            com.derpack.arcana.bridge.SpellPowerCrossover.register();
+        }
+
         // Later phases wire in here, same guarded pattern:
-        //   P2 SpellPowerCrossover.register(modBus);
         //   P3 BornInChaosRitualFuel.register(modBus);  // occultism + born_in_chaos_v1
     }
 

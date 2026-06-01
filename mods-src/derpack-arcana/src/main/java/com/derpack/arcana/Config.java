@@ -15,6 +15,7 @@ public final class Config {
 
     // P2 — shared spell-power attributes
     public static final ModConfigSpec.BooleanValue SPELL_POWER_CROSSOVER;
+    public static final ModConfigSpec.DoubleValue SPELL_CROSSOVER_FACTOR;
 
     // P3 — Born in Chaos souls as Occultism ritual fuel
     public static final ModConfigSpec.BooleanValue BORN_IN_CHAOS_RITUAL_FUEL;
@@ -33,6 +34,9 @@ public final class Config {
         SPELL_POWER_CROSSOVER = b
             .comment("P2: Iron's spell-power gear contributes to Ars spell damage and vice versa.")
             .define("spellPowerCrossover", true);
+        SPELL_CROSSOVER_FACTOR = b
+            .comment("P2: fraction (0..1) of one school's spell-power that carries to the other. Tune in playtest.")
+            .defineInRange("spellCrossoverFactor", 0.5, 0.0, 1.0);
 
         BORN_IN_CHAOS_RITUAL_FUEL = b
             .comment("P3: Born in Chaos soul items usable as Occultism ritual fuel / sacrifice.")

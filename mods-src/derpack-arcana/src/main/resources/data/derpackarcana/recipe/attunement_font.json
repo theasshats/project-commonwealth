@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "LSL",
+    "AVA",
+    "LGL"
+  ],
+  "key": {
+    "S": { "item": "ars_nouveau:source_gem" },
+    "A": { "item": "irons_spellbooks:arcane_essence" },
+    "L": { "item": "galosphere:allurite_shard" },
+    "G": { "item": "galosphere:lumiere_shard" },
+    "V": { "item": "minecraft:amethyst_block" }
+  },
+  "result": {
+    "id": "derpackarcana:attunement_font",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "ars_nouveau" },
+    { "type": "neoforge:mod_loaded", "modid": "irons_spellbooks" },
+    { "type": "neoforge:mod_loaded", "modid": "galosphere" }
+  ]
+}
