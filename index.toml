@@ -21,6 +21,10 @@ file = "kubejs/data/createimmersivetacz/recipe/gunpowder_fluid.json"
 hash = "23dc2b2be7c26c5d2f1b3ac3c03f0f4596a29e446c954a395746b7dcb73018a5"
 
 [[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/lmg.json"
+hash = "e3f076de1bf09351f791e343102b41b8611745d0fe9dbea0e8eeccfa8333dfbe"
+
+[[files]]
 file = "kubejs/data/createimmersivetacz/recipe/nitropowder_fluid.json"
 hash = "84cf437b79313547b7ee678a04fe3cc89c5c34d4f59cecc4ba4692f505cc1cd6"
 
@@ -1859,7 +1863,3 @@ metafile = true
 [[files]]
 file = "tacz/Create_Armorer-v1.2.0.1.zip"
 hash = "479f0ac05833ccec554efa1b22e6f71553c7ebe7f381310c28467a399c98b0ba"
-
-[[files]]
-file = "tacz/Derpack_Armorer_Recipes.zip"
-hash = "05dbd77fe390e2302e2fe57bcc5d85f96ae23879fa46445be2c47b0b35f575c9"

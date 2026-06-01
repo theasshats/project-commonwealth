@@ -64,55 +64,47 @@ pack-folder / instance state.
 > AK/M4/Glock recipes. (Requires that `tacz:gun_smith_table_crafting` recipes load into the recipe
 > manager — confirm none reappear after a `/reload`.)
 
-## Compat overlays
+## Crafting design — everything routes through Create
 
-Two upstream packs ship recipes that don't load on our MC 1.21.1 / NeoForge target. We fix each
-without editing the source packs (Create: Armorer is CC BY-NC-ND — no derivatives), generating the
-fixes mechanically from the originals so they stay faithful: the Armorer gun recipes ship as a
-**separate TaCZ gun pack**, and the Immersive TaCZ casings as a **same-id `kubejs/data` override**
-(KubeJS's datapack outranks the mod jar, so our corrected file shadows the broken one — it's never
-parsed, so no datapack error).
+Gun crafting is **Create-only**: every Armorer gun, ammo, and attachment is built through
+**Create: Immersive TaCZ**'s recipe tree, not the TaCZ gunsmith table. The table still exists as a
+*viewer* (and for in-game attaching/refits), but we ship **no** gunsmith-table crafting recipes —
+Armorer's own (`forge:`-tagged, `recipes/`-plural) ones never load on 1.21 anyway, and we
+deliberately don't re-add them (see the git history for the `Derpack_Armorer_Recipes.zip` gun-pack
+approach that was used while both paths coexisted).
 
-### Create: Armorer recipes — `tacz/Derpack_Armorer_Recipes.zip` (a second gun pack, 35 recipes)
+The Create tree:
 
-Create: Armorer `1.2.0.1` was authored against Forge / MC 1.20 and has two 1.21-incompatibilities
-that stop **every** gun/ammo/attachment recipe from loading (guns still appear in creative — those
-come from `index/`+`data/` — but nothing is craftable at the gunsmith table):
+- **Guns:** `c:ingots/iron` → `gun_barrel` / `gun_trigger` / `firing_mechanism` →
+  `create:mechanical_crafting` → the `create_armorer` gun (one recipe per gun).
+- **Ammo:** `minecraft:gunpowder` → *(mixing)* → gunpowder fluid → *(filling `create:andesite_alloy`)*
+  → `primer` → *(deploy into casing, then fill with gunpowder fluid)* → TaCZ ammo. `createbigcannons`
+  nitropowder feeds the parallel nitropowder/primer branch.
+- **Attachments:** Create part recipes (sheets, pipes, shafts, cylinders…) → the `create_armorer`
+  attachment.
 
-1. **Wrong recipe folder.** Recipes live in `data/create_armorer/recipes/` (plural — the 1.20
-   path). TaCZ mounts each `.minecraft/tacz/` pack as a virtual data pack (`DelegatingPackResources`),
-   so recipes load through the vanilla `RecipeManager`, which in 1.21 only scans `recipe/`
-   (singular). Verified against TaCZ's own default pack, whose 160 recipes sit in `…/data/tacz/recipe/`.
-   TaCZ's `PackConvertor` only rescues the *ancient* root-level `<ns>/recipes/` layout, not this
-   `data/<ns>/recipes/` one — so Armorer falls through the cracks.
-2. **Forge tags.** Ingredients use `forge:*` tags, which are empty on NeoForge 1.21.1. Remapped to
-   `c:*` (`forge:ingots/copper`→`c:ingots/copper`, `forge:gunpowder`→`c:gunpowders`, …). Two tags
-   with no precise `c:` equivalent are bound to the concrete item (`forge:glass/light_blue`→
-   `minecraft:light_blue_stained_glass`).
+## Compat overlays — `kubejs/data/createimmersivetacz/recipe/…` (9 overrides)
 
-Rather than a `kubejs/data` datapack (KubeJS can drop recipes of types it doesn't recognise, and
-TaCZ's `GunSmithTableScreen` builds its list from `recipeManager.getAllRecipesFor(...)`), the fix
-ships as its **own TaCZ gun pack** — `Derpack_Armorer_Recipes.zip`, namespace `derpack_armorer`,
-recipes at `data/derpack_armorer/recipe/…` with `result.id` still pointing at the `create_armorer:`
-guns. This is the same native load path the Armorer zip itself uses (guaranteed read), and it's a
-separate namespace so it doesn't collide with the source pack or touch its CC BY-NC-ND content. Drop
-it into `.minecraft/tacz/` alongside the Armorer zip.
+Immersive TaCZ's tree shipped broken on our MC 1.21.1 / NeoForge / Create 6.0.10 target. We fix it
+with **same-id `kubejs/data` overrides** (KubeJS's datapack outranks the mod jar, so our corrected
+file shadows the broken one — it's never parsed, so no datapack error), generated mechanically from
+the originals so they stay faithful. Two bug classes:
 
-The themed `create_workbench` crafting recipe (a `minecraft:crafting_shaped` with a 1.20-era
-`item`+`nbt` result) is intentionally **not** ported — it would error on 1.21 and is cosmetic; the
-standard TaCZ gunsmith table opens the same crafting UI listing every Armorer gun.
+1. **Invalid fluid declarations (`{"type":"fluid_stack"}`) — 8 recipes.** This isn't valid on
+   NeoForge, so the whole recipe is rejected. The *foundational* `gunpowder_fluid` + `primer` being
+   dead killed the entire ammo tree. Fixed per context (verified against Create 6.0.10's own recipes):
+   - fluid **ingredient** (filling: `primer`, `primer_from_nitropowder`, 4 casing fills) →
+     `{"type":"neoforge:single","amount":N,"fluid":…}`
+   - fluid **result** (mixing: `gunpowder_fluid`, `nitropowder_fluid`) → `{"amount":N,"id":…}`
+2. **Malformed JSON — 1 recipe.** `guns/lmg.json` has a stray trailing `}` (`}}` at EOF), so it never
+   parses and the Flywheel LMG (`mg_platemag_flywheel`) had no recipe. The override is the same file
+   with the extra brace removed.
 
-### Create: Immersive TaCZ casings — `kubejs/data/createimmersivetacz/recipe/ammo/…` (4 recipes)
+With these, the Create tree covers **every craftable Armorer item** (13/13 guns, 5/5 real ammo —
+the `melee_weapon` placeholder has no recipe by design — and 18/18 attachments).
 
-Four `create:sequenced_assembly` casing recipes (`twelve_gauge_shell`, `pneumatic_pistol_casing`,
-`rimmed_blunt_ap_casing`, `slap_casing`) declare their `create:filling` fluid as
-`{"type":"fluid_stack",…}`, which isn't a valid NeoForge fluid ingredient, so the whole recipe is
-rejected (these are the "KubeJS"/datapack errors in the log). The override rewrites just that
-ingredient to the valid form the mod's *working* casings already use:
-`{"type":"neoforge:single","amount":25,"fluid":"createimmersivetacz:gunpowder_fluid"}`.
-
-> Regenerate after a pack update: unzip the source pack/jar and re-run the same `forge:`→`c:` /
-> `fluid_stack`→`neoforge:single` transforms, then `packwiz refresh`.
+> Regenerate after a mod update: unzip the `createimmersivetacz` jar and re-run the
+> `fluid_stack`→(`neoforge:single` | `{amount,id}`) transform, re-validate JSON, then `packwiz refresh`.
 
 ## Verify in-game
 
