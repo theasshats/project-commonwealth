@@ -17,8 +17,9 @@ public final class Config {
     public static final ModConfigSpec.BooleanValue SPELL_POWER_CROSSOVER;
     public static final ModConfigSpec.DoubleValue SPELL_CROSSOVER_FACTOR;
 
-    // P3 — Born in Chaos souls as Occultism ritual fuel
-    public static final ModConfigSpec.BooleanValue BORN_IN_CHAOS_RITUAL_FUEL;
+    // P3 — Born in Chaos souls feed Occultism (Soul Reaping)
+    public static final ModConfigSpec.BooleanValue BORN_IN_CHAOS_SOUL_REAP;
+    public static final ModConfigSpec.DoubleValue SOUL_REAP_CHANCE;
 
     static {
         ModConfigSpec.Builder b = new ModConfigSpec.Builder();
@@ -38,9 +39,12 @@ public final class Config {
             .comment("P2: fraction (0..1) of one school's spell-power that carries to the other. Tune in playtest.")
             .defineInRange("spellCrossoverFactor", 0.5, 0.0, 1.0);
 
-        BORN_IN_CHAOS_RITUAL_FUEL = b
-            .comment("P3: Born in Chaos soul items usable as Occultism ritual fuel / sacrifice.")
-            .define("bornInChaosRitualFuel", true);
+        BORN_IN_CHAOS_SOUL_REAP = b
+            .comment("P3: slaying a Born in Chaos mob can drop Occultism spirit essence (Soul Reaping).")
+            .define("bornInChaosSoulReap", true);
+        SOUL_REAP_CHANCE = b
+            .comment("P3: chance (0..1) for a player-slain Born in Chaos mob to drop Occultism essence.")
+            .defineInRange("soulReapChance", 0.25, 0.0, 1.0);
 
         b.pop();
         SPEC = b.build();

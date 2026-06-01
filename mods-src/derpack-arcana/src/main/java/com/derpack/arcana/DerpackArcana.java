@@ -43,8 +43,11 @@ public final class DerpackArcana {
             com.derpack.arcana.bridge.SpellPowerCrossover.register();
         }
 
-        // Later phases wire in here, same guarded pattern:
-        //   P3 BornInChaosRitualFuel.register(modBus);  // occultism + born_in_chaos_v1
+        // P3 — Soul Reaping: Born in Chaos kills feed Occultism essence. No compile dep on either mod
+        // (namespace check + item-registry lookup), but only worth registering when both are present.
+        if (Config.BORN_IN_CHAOS_SOUL_REAP.get() && loaded("occultism") && loaded("born_in_chaos_v1")) {
+            com.derpack.arcana.bridge.SoulReaping.register();
+        }
     }
 
     private static void logIntegrations() {

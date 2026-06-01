@@ -10,7 +10,9 @@ Design & roadmap: [`docs/ARCANA-BRIDGE-MOD.md`](../../docs/ARCANA-BRIDGE-MOD.md)
 >   player. Crafted from the magic-web spine reagents (source_gem + arcane_essence + Galosphere shards).
 > - **P2 — spell-power crossover** (automatic): each school's `SpellDamageEvent` is boosted by the
 >   caster's *other*-mod spell-power, by `spellCrossoverFactor`.
-> - **P3 — Born-in-Chaos ritual fuel** (occultism + born_in_chaos_v1): not yet started.
+> - **P3 — Soul Reaping** (occultism + born_in_chaos_v1, automatic): slaying a Born in Chaos mob has a
+>   `soulReapChance` to drop Occultism `demons_dream_essence` — feeds the occult economy via combat.
+>   Pure `LivingDropsEvent` + namespace check + item lookup (no compile dep on either mod).
 >
 > In-game verify: mana client-sync after `addMana`; that `addMana` clamps to max mana; crossover
 > magnitudes; whether Ars `SpellDamageEvent` is posted on the game bus.
