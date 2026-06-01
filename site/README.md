@@ -43,6 +43,13 @@ the **Discord invite** — search `web/index.html` for `{{DISCORD_INVITE}}`. The
 game connect address is set to `mc.ishimura.xyz`; if that ever moves, change it
 in `index.html` (the copy button) **and** the `MC_ADDR` env in compose.
 
+Download buttons link to the release's permanent **latest-download** URLs
+(`releases/latest/download/derpack-x-prism-installer.zip` and `…/derpack-x.mrpack`)
+— a direct file download, no GitHub UI. These resolve once a release is published
+by the build workflow, which now attaches stable, version-less copies of both
+artifacts. The **Rules** section is intentionally left as a placeholder (zagwar
+is designing them).
+
 ---
 
 ## Deploy on ishimura (network wiring per the hosting brief)
@@ -93,11 +100,22 @@ email-PIN gate.
 
 ```bash
 docker compose ps | grep modpack         # from the site dir
+# 1. container itself, by name on the media network
 docker run --rm --network media curlimages/curl:latest \
-  -s -o /dev/null -w "internal: %{http_code}\n" http://modpack:8080/healthz   # 200
-curl -sk -o /dev/null -w "via caddy: %{http_code}\n" \
-  -H "Host: derpack-x.ishimura.xyz" https://localhost:443                     # 200
+  -s -o /dev/null -w "internal: %{http_code} %{size_download}b\n" http://modpack:8080/   # 200, ~9KB
+# 2. the Caddy hop — over the docker network, NOT localhost. The tunnel reaches
+#    caddy:443; Caddy does NOT publish 443 to the host, so a localhost:443 test
+#    just returns 000 (no listener) and is misleading.
+docker run --rm --network media curlimages/curl:latest -sk \
+  -o /dev/null -w "via caddy: %{http_code} %{size_download}b\n" \
+  -H "Host: derpack-x.ishimura.xyz" https://caddy:443/                                   # 200, ~9KB
 ```
+
+A `200` with **0 bytes** on the Caddy hop means Caddy has no site block for the
+host — Caddy's `https://caddy { … }` SNI loop forwards the tunnel's request back
+into Caddy by `Host`, and an unmatched host returns an empty `200`. Fix: confirm
+the `derpack-x.ishimura.xyz, modpack.ishimura.xyz` block is in the Caddyfile and
+`docker compose -p media restart caddy`.
 
 Then from off-network (phone on cellular) open `https://derpack-x.ishimura.xyz`
 (and `https://modpack.ishimura.xyz`) — both should load directly, no Cloudflare

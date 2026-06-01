@@ -8,9 +8,12 @@
   <meta name="color-scheme" content="dark">
 
   <!--
-    Content is filled from the modpack itself (pack.toml + docs).
-    Network-derived values come from the ishimura hosting brief.
-    The ONE thing still to fill is the Discord invite: search for {{DISCORD_INVITE}}.
+    Content is filled from the modpack itself.
+    Download buttons point at the release's PERMANENT latest-download URLs
+    (releases/latest/download/derpack-x-prism-installer.zip and derpack-x.mrpack) —
+    a direct file download, no GitHub UI. These resolve once a release is published
+    by the updated build workflow, which now attaches stable-named copies.
+    The ONE placeholder left to fill is the Discord invite: search for {{DISCORD_INVITE}}.
     Game connect address is set to mc.ishimura.xyz (the brief's gray-cloud game host) —
     change it here and in the server's MC_ADDR env if that ever moves.
   -->
@@ -70,7 +73,7 @@
           </li>
           <li>
             <h3>Download the pack</h3>
-            <p>From the <a href="https://github.com/Xela112233/Derpack-X/releases/latest" rel="noopener">latest release</a>, grab <code>derpack-x-prism-installer-X.Y.Z.zip</code> (~5&nbsp;MB, recommended). Modrinth-app users can take the <code>.mrpack</code> instead.</p>
+            <p>Grab the <a href="https://github.com/Xela112233/Derpack-X/releases/latest/download/derpack-x-prism-installer.zip" rel="noopener">Prism installer</a> (~5&nbsp;MB) — one small file, no account or store needed. Prefer the Modrinth app? Use the <a href="https://github.com/Xela112233/Derpack-X/releases/latest/download/derpack-x.mrpack" rel="noopener"><code>.mrpack</code></a> instead.</p>
           </li>
           <li>
             <h3>Import into Prism</h3>
@@ -103,15 +106,43 @@
           <div class="spec"><dt>Disk</dt><dd>~12&nbsp;GB free</dd></div>
         </dl>
 
-        <h3 class="subhead">Highlights</h3>
-        <ul class="highlights">
-          <li><strong>Create Aeronautics</strong> — physics-simulated airships, planes &amp; vehicles built from Create contraptions. The reason the pack exists.</li>
-          <li><strong>Create &amp; add-ons</strong> — the rotational-engineering core everything else is built around.</li>
-          <li><strong>A fuller world</strong> — Alex's Mobs and friends make the overworld worth flying over.</li>
-          <li><strong>It just works on ships</strong> — a compat layer patches third-party mods (sleeping, chains, mobs, turrets…) to behave on moving contraptions.</li>
-          <li><strong>Quality of life</strong> — EMI recipe viewer, AFK sleep, and sane defaults so you build instead of fighting menus.</li>
-        </ul>
-        <p class="note">Pre-alpha and changing between versions — the launcher always installs the current set, and the installer instance auto-syncs each launch.</p>
+        <h3 class="subhead">What's inside</h3>
+        <p class="lede">It started as a Create Aeronautics pack and grew into a full kitchen sink — engineering, magic, monsters and a real player economy sharing one world.</p>
+        <div class="cats">
+          <article class="cat">
+            <h4>⚙️ Create &amp; engineering</h4>
+            <p>The rotational-engineering core, plus <strong>Create Aeronautics</strong> (airships &amp; planes), <strong>Big Cannons</strong>, <strong>Create Nuclear</strong>, trains via <strong>Steam&nbsp;'n'&nbsp;Rails</strong> and dozens of Create add-ons — factories, logistics, jetpacks, the lot.</p>
+          </article>
+          <article class="cat">
+            <h4>✨ Magic &amp; the occult</h4>
+            <p><strong>Ars Nouveau</strong>, <strong>Iron's Spells&nbsp;'n&nbsp;Spellbooks</strong>, <strong>Occultism</strong>, <strong>Modular Golems</strong> and <strong>Grimoire of Gaia</strong> — spellcraft, summoning and rituals running right alongside the gears.</p>
+          </article>
+          <article class="cat">
+            <h4>🐺 Mobs &amp; bosses</h4>
+            <p><strong>Alex's Mobs</strong>, <strong>Mowzie's Mobs</strong>, <strong>L_Ender's Cataclysm</strong>, <strong>Bosses of Mass Destruction</strong>, <strong>Mutant Monsters</strong> and more — a far busier, far more dangerous world to explore.</p>
+          </article>
+          <article class="cat">
+            <h4>🕷️ Arachnids &amp; horror</h4>
+            <p><strong>Born in Chaos</strong>, <strong>Rotten Creatures</strong>, horror bosses and an <strong>arachnophobia</strong> expansion — and blood moons via <strong>Enhanced Celestials</strong> to make the nights properly grim.</p>
+          </article>
+          <article class="cat">
+            <h4>⚔️ Combat &amp; chaos</h4>
+            <p><strong>Better Combat</strong>, <strong>TaCZ</strong> firearms, <strong>Create: Big Cannons</strong> and <strong>SecurityCraft</strong> — defend your builds, raid the dungeons, and blow plenty of things up.</p>
+          </article>
+          <article class="cat">
+            <h4>💰 Economy &amp; colonies</h4>
+            <p>A real player economy: <strong>Numismatics</strong> currency, <strong>Create: Trading Floor</strong> &amp; <strong>Blockchain</strong>, plus <strong>MineColonies</strong> towns and chatty <strong>TownTalk</strong> villagers.</p>
+          </article>
+          <article class="cat">
+            <h4>🍳 Food &amp; farming</h4>
+            <p><strong>Farmer's Delight</strong>, the whole <strong>Let's Do</strong> series (Vinery, Bakery, Meadow…) and <strong>Cooking for Blockheads</strong> — proper cuisine, not just steak.</p>
+          </article>
+          <article class="cat">
+            <h4>🗺️ Worldgen &amp; building</h4>
+            <p><strong>Terralith</strong> &amp; <strong>Tectonic</strong> terrain, <strong>YUNG's</strong> overhauled dungeons, <strong>When Dungeons Arise</strong>, plus <strong>Supplementaries</strong>, <strong>Macaw's</strong> and <strong>Rechiseled</strong> to build with.</p>
+          </article>
+        </div>
+        <p class="note">Hundreds of mods and counting — pre-alpha and shifting between versions. The installer always pulls the current set and auto-syncs each launch.</p>
       </div>
     </section>
 
@@ -119,9 +150,9 @@
     <section class="section" id="get">
       <div class="section-inner get-inner">
         <h2 class="section-title"><span class="section-num">03</span> Get the pack</h2>
-        <p>Releases ship small manifest bundles — your launcher fetches the actual mods on first launch, so there's no giant zip to download from here.</p>
-        <a class="btn btn--primary btn--lg" href="https://github.com/Xela112233/Derpack-X/releases/latest" rel="noopener">Latest release →</a>
-        <p class="note">New here? The <a href="https://github.com/Xela112233/Derpack-X/blob/main/docs/PRISM-SETUP.md" rel="noopener">full Prism setup guide</a> walks through it step by step.</p>
+        <p>One small file (~5&nbsp;MB). Import it into Prism and the launcher pulls every mod on first launch — no giant download, and it auto-syncs each time a new version ships.</p>
+        <a class="btn btn--primary btn--lg" href="https://github.com/Xela112233/Derpack-X/releases/latest/download/derpack-x-prism-installer.zip" rel="noopener">Download for Prism →</a>
+        <p class="note">Using the Modrinth app instead? Grab the <a href="https://github.com/Xela112233/Derpack-X/releases/latest/download/derpack-x.mrpack" rel="noopener"><code>.mrpack</code></a>.</p>
       </div>
     </section>
 
@@ -129,13 +160,7 @@
     <section class="section section--alt" id="rules">
       <div class="section-inner">
         <h2 class="section-title"><span class="section-num">04</span> Rules</h2>
-        <ul class="rules">
-          <li>Don't grief or steal. Build your own; ask before touching someone else's.</li>
-          <li>No cheats, x-ray, or exploit clients.</li>
-          <li>Keep contraptions reasonable — runaway lag machines get cleaned up.</li>
-          <li>Be decent in chat. This is a friend-group server; act like it.</li>
-          <li>If something breaks, say so in the Discord instead of quietly suffering.</li>
-        </ul>
+        <p class="placeholder">Rules are being written — zagwar is designing how players claim land, trade, and interact. Check back soon; ask in the Discord in the meantime.</p>
       </div>
     </section>
 
@@ -173,7 +198,7 @@
     <div class="footer-inner">
       <span class="footer-brand">Ishimura · Derpack X</span>
       <a href="{{DISCORD_INVITE}}" rel="noopener">Discord</a>
-      <a href="https://github.com/Xela112233/Derpack-X/releases/latest" rel="noopener">Releases</a>
+      <a href="https://github.com/Xela112233/Derpack-X/releases/latest/download/derpack-x-prism-installer.zip" rel="noopener">Download</a>
     </div>
   </footer>
 
