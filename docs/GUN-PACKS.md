@@ -64,29 +64,39 @@ pack-folder / instance state.
 > AK/M4/Glock recipes. (Requires that `tacz:gun_smith_table_crafting` recipes load into the recipe
 > manager — confirm none reappear after a `/reload`.)
 
-## Compat overlays (`kubejs/data/`)
+## Compat overlays
 
-Two upstream packs ship recipes that don't load on our MC 1.21.1 / NeoForge target. We fix both
-with **same-id datapack overrides** under `kubejs/data/` (KubeJS's datapack outranks the source
-jar/pack, so our corrected file shadows the broken one — the broken file is never parsed, so there's
-no datapack error). We override rather than edit the source packs (Create: Armorer is CC BY-NC-ND —
-no derivatives), and generate the overrides mechanically from the originals so they stay faithful.
+Two upstream packs ship recipes that don't load on our MC 1.21.1 / NeoForge target. We fix each
+without editing the source packs (Create: Armorer is CC BY-NC-ND — no derivatives), generating the
+fixes mechanically from the originals so they stay faithful: the Armorer gun recipes ship as a
+**separate TaCZ gun pack**, and the Immersive TaCZ casings as a **same-id `kubejs/data` override**
+(KubeJS's datapack outranks the mod jar, so our corrected file shadows the broken one — it's never
+parsed, so no datapack error).
 
-### Create: Armorer recipes — `kubejs/data/create_armorer/recipe/…` (35 recipes)
+### Create: Armorer recipes — `tacz/Derpack_Armorer_Recipes.zip` (a second gun pack, 35 recipes)
 
 Create: Armorer `1.2.0.1` was authored against Forge / MC 1.20 and has two 1.21-incompatibilities
 that stop **every** gun/ammo/attachment recipe from loading (guns still appear in creative — those
-come from `index/`+`data/`, read by TaCZ's own loader — but nothing is craftable at the gunsmith
-table):
+come from `index/`+`data/` — but nothing is craftable at the gunsmith table):
 
 1. **Wrong recipe folder.** Recipes live in `data/create_armorer/recipes/` (plural — the 1.20
-   path). In 1.21 the vanilla `RecipeManager` (which TaCZ's `gun_smith_table_crafting` recipes
-   register into) only scans `recipe/` (singular). Verified against TaCZ's own default pack, whose
-   160 recipes sit in `…/data/tacz/recipe/`. So our overrides live in `recipe/` (singular).
+   path). TaCZ mounts each `.minecraft/tacz/` pack as a virtual data pack (`DelegatingPackResources`),
+   so recipes load through the vanilla `RecipeManager`, which in 1.21 only scans `recipe/`
+   (singular). Verified against TaCZ's own default pack, whose 160 recipes sit in `…/data/tacz/recipe/`.
+   TaCZ's `PackConvertor` only rescues the *ancient* root-level `<ns>/recipes/` layout, not this
+   `data/<ns>/recipes/` one — so Armorer falls through the cracks.
 2. **Forge tags.** Ingredients use `forge:*` tags, which are empty on NeoForge 1.21.1. Remapped to
    `c:*` (`forge:ingots/copper`→`c:ingots/copper`, `forge:gunpowder`→`c:gunpowders`, …). Two tags
    with no precise `c:` equivalent are bound to the concrete item (`forge:glass/light_blue`→
    `minecraft:light_blue_stained_glass`).
+
+Rather than a `kubejs/data` datapack (KubeJS can drop recipes of types it doesn't recognise, and
+TaCZ's `GunSmithTableScreen` builds its list from `recipeManager.getAllRecipesFor(...)`), the fix
+ships as its **own TaCZ gun pack** — `Derpack_Armorer_Recipes.zip`, namespace `derpack_armorer`,
+recipes at `data/derpack_armorer/recipe/…` with `result.id` still pointing at the `create_armorer:`
+guns. This is the same native load path the Armorer zip itself uses (guaranteed read), and it's a
+separate namespace so it doesn't collide with the source pack or touch its CC BY-NC-ND content. Drop
+it into `.minecraft/tacz/` alongside the Armorer zip.
 
 The themed `create_workbench` crafting recipe (a `minecraft:crafting_shaped` with a 1.20-era
 `item`+`nbt` result) is intentionally **not** ported — it would error on 1.21 and is cosmetic; the
