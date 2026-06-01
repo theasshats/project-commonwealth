@@ -2,8 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "FDC",
-    " CR"
+    "FDL",
+    " RC"
   ],
   "key": {
     "F": {
@@ -12,11 +12,14 @@
     "D": {
       "item": "create:deployer"
     },
-    "C": {
-      "item": "create:cogwheel"
+    "L": {
+      "item": "create:large_cogwheel"
     },
     "R": {
       "item": "create:rotation_speed_controller"
+    },
+    "C": {
+      "item": "create:cogwheel"
     }
   },
   "result": {

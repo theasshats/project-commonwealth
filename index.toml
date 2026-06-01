@@ -138,7 +138,7 @@ hash = "56fca1e3a0ffff85119598dd8f28fef850037ab734fe9e82b0409b99ad9ac718"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/gun_barrel.json"
-hash = "d30605de073c27207b27c0284769270c743887125d84e64c107c40b802d92daa"
+hash = "62f45842422f752ae9c8d2c262b4be89acda89a547fda7ac76850d333d1496cf"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/gun_trigger.json"
@@ -230,19 +230,19 @@ hash = "528d46e2c08d904c2ce79f11f46a0b3cfaec89446759e2de704a3ae5371916d2"
 
 [[files]]
 file = "kubejs/data/derpack/recipe/firing_mechanism.json"
-hash = "fe1ec6802bde2e1cf4b89bf4036613e73ee5fa743268b4ea38bae193d0603697"
+hash = "78189f805a3bbdacba4cc688354ac8191c175c0668348ab3cae7052585da3e85"
 
 [[files]]
 file = "kubejs/data/derpack/recipe/gun_barrel.json"
-hash = "b00be96d210aa81282fa3616dde3b970a65f2d6b02c6d84039b7d1cd06736ddd"
+hash = "555c51597e689e7fcea3910482aadd4932975371b6dd196abf55b6e7098b2eb1"
 
 [[files]]
 file = "kubejs/data/derpack/recipe/gun_trigger.json"
-hash = "b9509ec19fd535d0a4fe51396656a3cfdf54a2724e2779a993898fddeed53d4b"
+hash = "dcfd1c7938007539db97b59831015099888d4c145930b9aa1e896edf0036d5fc"
 
 [[files]]
 file = "kubejs/data/derpack/recipe/primer.json"
-hash = "7bb7eed8ab94ea72266de10f478330c6899819683ce8c77261939b355d66f2b0"
+hash = "9f63003561b61c810d7ba7a4cfc0f5f0a0dfa0236b6bba99cfbb423a79beeea2"
 
 [[files]]
 file = "kubejs/data/derpack/worldgen/configured_feature/vein_copper.json"
@@ -2066,4 +2066,4 @@ hash = "479f0ac05833ccec554efa1b22e6f71553c7ebe7f381310c28467a399c98b0ba"
 
 [[files]]
 file = "tacz/Derpack_Armorer_Recipes.zip"
-hash = "d91f9b4d00c72f9054941ce3199166604d97b7a526386abe317a38452c4e0c89"
+hash = "113e8b5e36dbe31bf24827c85b3d4a4313fc4247300af66def313ba660e475db"

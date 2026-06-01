@@ -3,7 +3,7 @@
   "category": "misc",
   "pattern": [
     "BPB",
-    " L "
+    " W "
   ],
   "key": {
     "B": {
@@ -12,8 +12,8 @@
     "P": {
       "item": "create:precision_mechanism"
     },
-    "L": {
-      "item": "minecraft:lever"
+    "W": {
+      "item": "createaddition:copper_wire"
     }
   },
   "result": {

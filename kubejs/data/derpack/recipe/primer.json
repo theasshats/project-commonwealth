@@ -2,19 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "G",
-    "A"
+    "GBG"
   ],
   "key": {
     "G": {
       "tag": "c:gunpowders"
     },
-    "A": {
-      "item": "create:andesite_alloy"
+    "B": {
+      "item": "create:brass_sheet"
     }
   },
   "result": {
     "id": "createimmersivetacz:primer",
-    "count": 2
+    "count": 4
   }
 }
