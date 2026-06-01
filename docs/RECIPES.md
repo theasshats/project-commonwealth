@@ -142,6 +142,9 @@ metal/mechanical crafts that bypass Create*. Buckets:
   to gate. No change, by design.
 - **Let's Do Meadow cheese** (`99`, closes #51) — additive Create path: Create Cheese's soft curd +
   Meadow rennet, compacted → a Meadow cheese wheel. Native cheese_form left intact.
+- **The Bible** (`89`, #17) — de-memed per maintainer call ("sensible, but hard"): the joke recipe
+  (apple/diamond_sword/mutton/…) becomes a gilded, quill-bound holy book built around a **Totem of
+  Undying** — a rare evoker/raid drop as the difficulty gate. Flavor relic, not Create-gated.
 - **Maintainer scope call** — umapyoi (own cosmetic progression) remains the only deferred item.
 
 ## Exhaustive re-verification (the "is anything left?" pass)
