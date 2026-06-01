@@ -108,6 +108,7 @@ vein. Override targets in use (all verified + already shipped):
 | Lead | `createnuclear/neoforge/biome_modifier/lead_ore.json` + `tfmg/neoforge/biome_modifier/lead_ore.json` |
 | Lithium | `tfmg/neoforge/biome_modifier/lithium_ore.json` |
 | Nickel | `tfmg/neoforge/biome_modifier/nickel_ore.json` |
+| Infected diamond (Born in Chaos) | `born_in_chaos_v1/neoforge/biome_modifier/infected_diamond_ore_feature_biome_modifier.json` + `infected_deepslate_diamond_ore_feature_biome_modifier.json` — **shadow only, no vein.** It was a second diamond source injected into all overworld biomes; disabled outright so diamonds come solely from the vanilla diamond vein + thinned vanilla. |
 
 Left untouched: nether ores (`occultism` iesnium, `striated_ores_nether`), the decorative
 `striated_ores_overworld` (scoria/crimsite/stone), and TFMG `oil_deposit`/`oil_well` (fluid).
