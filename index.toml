@@ -229,6 +229,22 @@ file = "kubejs/data/derpack/neoforge/biome_modifier/vein_iron.json"
 hash = "528d46e2c08d904c2ce79f11f46a0b3cfaec89446759e2de704a3ae5371916d2"
 
 [[files]]
+file = "kubejs/data/derpack/recipe/firing_mechanism.json"
+hash = "fe1ec6802bde2e1cf4b89bf4036613e73ee5fa743268b4ea38bae193d0603697"
+
+[[files]]
+file = "kubejs/data/derpack/recipe/gun_barrel.json"
+hash = "b00be96d210aa81282fa3616dde3b970a65f2d6b02c6d84039b7d1cd06736ddd"
+
+[[files]]
+file = "kubejs/data/derpack/recipe/gun_trigger.json"
+hash = "b9509ec19fd535d0a4fe51396656a3cfdf54a2724e2779a993898fddeed53d4b"
+
+[[files]]
+file = "kubejs/data/derpack/recipe/primer.json"
+hash = "7bb7eed8ab94ea72266de10f478330c6899819683ce8c77261939b355d66f2b0"
+
+[[files]]
 file = "kubejs/data/derpack/worldgen/configured_feature/vein_copper.json"
 hash = "c9121f01f487c12865c3310369364d0f03d17219099b288ad583bcfd3f8a3406"
 
@@ -2047,3 +2063,7 @@ metafile = true
 [[files]]
 file = "tacz/Create_Armorer-v1.2.0.1.zip"
 hash = "479f0ac05833ccec554efa1b22e6f71553c7ebe7f381310c28467a399c98b0ba"
+
+[[files]]
+file = "tacz/Derpack_Armorer_Recipes.zip"
+hash = "d91f9b4d00c72f9054941ce3199166604d97b7a526386abe317a38452c4e0c89"
