@@ -86,11 +86,12 @@ You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:
   only the TFMG one and disable both defaults — both register lead under the standard `c:ores/lead`/`c:ingots/lead` tags, so they're interchangeable.*
 - **Lithium** — TFMG — `tfmg:lithium_ore` (+deepslate)
 - **Nickel** — TFMG — `tfmg:nickel_ore` (+deepslate)
-- **Palladium** — Galosphere — `galosphere:palladium_ore` (+`deepslate_palladium_ore`). Veined deep
-  & rare in mountains + dripstone caves. **Not shadowed:** Galosphere never injects palladium into
-  `#minecraft:is_overworld` — its only default gen is intrinsic to the rare `galosphere:crystal_canyons`
-  cave biome (not a biome_modifier), which is already regional, so we leave it as a bonus source
-  (same call as the Meadow alpine ores). Our vein is an additive overworld source.
+- **Palladium** — Galosphere — `galosphere:palladium_ore` (+`deepslate_palladium_ore`). Prestige metal:
+  kept **rare + regional** (mountains + dripstone + deep_dark, `chance 24`) and deliberately **excluded
+  from the `#c:is_underground` "findable everywhere" pass** so it doesn't roll in every cave (the hybrid
+  case in issue #65). **Not shadowed:** Galosphere never injects palladium into `#minecraft:is_overworld` —
+  its only default gen is intrinsic to the rare `galosphere:crystal_canyons` cave biome, already regional,
+  left as a bonus source. Our vein is an additive, deliberately-scarce overworld source.
 
 *Left as-is (not metal ore): TFMG oil (`oil_deposit`/`oil_well` — a fluid), Create/Nuclear/TFMG
 "striated" stone (scoria/crimsite/tuff/andesite), Create: Metalwork (processing only).*
