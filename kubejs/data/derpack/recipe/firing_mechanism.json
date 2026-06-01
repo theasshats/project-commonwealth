@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FDL",
+    "CRC"
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:flint_and_steel"
+    },
+    "D": {
+      "item": "create:deployer"
+    },
+    "L": {
+      "item": "create:large_cogwheel"
+    },
+    "C": {
+      "item": "create:cogwheel"
+    },
+    "R": {
+      "item": "create:rotation_speed_controller"
+    }
+  },
+  "result": {
+    "id": "createimmersivetacz:firing_mechanism",
+    "count": 1
+  }
+}

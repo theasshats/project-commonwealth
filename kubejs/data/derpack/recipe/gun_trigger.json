@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BPB",
+    "BWB"
+  ],
+  "key": {
+    "B": {
+      "item": "create:brass_sheet"
+    },
+    "P": {
+      "item": "create:precision_mechanism"
+    },
+    "W": {
+      "item": "createaddition:copper_wire"
+    }
+  },
+  "result": {
+    "id": "createimmersivetacz:gun_trigger",
+    "count": 1
+  }
+}

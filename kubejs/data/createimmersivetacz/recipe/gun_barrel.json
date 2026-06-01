@@ -1,0 +1,19 @@
+{
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": false,
+  "key": {
+    "I": {
+      "tag": "c:ingots/steel"
+    }
+  },
+  "pattern": [
+    "IIII",
+    "    ",
+    "IIII"
+  ],
+  "result": {
+    "id": "createimmersivetacz:gun_barrel",
+    "count": 1
+  },
+  "category": "misc"
+}

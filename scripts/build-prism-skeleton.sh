@@ -59,8 +59,9 @@ name=${PACK_NAME} ${PACK_VERSION}
 notes=Built from ${PACK_NAME} ${PACK_VERSION} (${VARIANT}).\nSee README in instance for details.
 EOF
 
-# Copy configs/kubejs/etc. that should be on the client
-for d in config defaultconfigs kubejs resourcepacks shaderpacks; do
+# Copy configs/kubejs/etc. that should be on the client.
+# tacz/ carries the committed Create: Armorer gun pack zip -> .minecraft/tacz/ (TaCZ loads it there).
+for d in config defaultconfigs kubejs resourcepacks shaderpacks tacz; do
     if [[ -d "${d}" ]]; then
         cp -r "${d}" "${OUT_DIR}/.minecraft/"
     fi
