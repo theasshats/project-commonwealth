@@ -102,6 +102,35 @@ Recorded here so the calls aren't re-litigated; revisit only if the stated reaso
 > Structurize / umapyoi** (huge own-system progressions) and a full **Supplementaries** decoration
 > pass.
 
+## Full-pack triage (all 158 digested mods)
+Every mod in `tools/mod-data/recipes/` was swept for the only signal that matters — *own-namespace
+metal/mechanical crafts that bypass Create*. Buckets:
+
+- **Converted** (own files, `10`–`97`): immersive_armors, samurai_dynasty, modulargolems, northstar,
+  irons_spellbooks, mffs, travelersbackpack, securitycraft, drones, astikor-carts, exposure,
+  smokeleaf, supplementaries (kinetic blocks only), swashbucklers, **gliders** (metal paraglider
+  tiers → pressed plates), **netmusic** (computer/cd_burner → electron_tube). Plus `05-metals.js`
+  gating steel at the source.
+- **Create addons — already route through Create, nothing to do** (~70 mods): everything `create*`
+  / `cbc` / `tfmg` / `railways` / `GnKinetics` / `createbigcannons` / `CreateNumismatics` /
+  `create_ironworks` / `createmetalwork` / `createnuclear` / `pantographs` / `direct_chute` /
+  `sliceanddice` / `rechiseledcreate` / **DnDesires** (uses andesite_alloy + brass_casing +
+  precision_mechanism + cogwheel + electron_tube already), etc.
+- **Correctly vanilla — organic / decoration / food / mob / worldgen / cosmetic** (the long tail):
+  all `letsdo-*` + `*delight` + cookingforblockheads + alcohol_industry (food); `mcw-*` + woodworks
+  + handcrafted + moreslabsstairsandwalls + rechiseled + domum-ornamentum + copycats + simplehats
+  (decoration/cosmetic); alexsmobs + mowziesmobs + mutantmonsters + born_in_chaos + rottencreatures
+  + GrimoireOfGaia + IllagerInvasion + naturalist + friendsandfoes + ribbits + kobolds +
+  **ArPhEx** (mob-drop gauntlets, netherite binder) + **Cataclysm** (boss-drop gear) (mobs/combat);
+  Terralith + undergroundworlds + deeperdarker + ecologics + upgrade_aquatic (worldgen); Quark
+  (vanilla-style tweaks); **tide** (early fishing tackle); **ColdSweat** (survival utility);
+  gravestone/comforts/bountiful/trashcans (QoL).
+- **Magic — routes through its own apparatus/ritual, gating would violate the spine**: ars_nouveau,
+  occultism, occultengineering.
+- **Guns — already routed via Immersive TaCZ**: tacz (only workbenches/ammo-boxes use metal; fine).
+- **Deliberately not gated** — see the ledger above (copperage, Galosphere, companions, jakes).
+- **Maintainer scope call** — minecolonies, structurize, umapyoi, full Supplementaries.
+
 ## Ground truth
 - Mods with jars on hand → recipes read directly for precise `remove` + replace.
 - Everything else → the **`tools/mod-data/recipes/`** digest (CI) lists each recipe as
