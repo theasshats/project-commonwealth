@@ -6,12 +6,11 @@ A Create-focused Minecraft modpack for 1.21.1 / NeoForge, built around [Create A
 
 ## For players: how to install
 
-Pick **one** of the downloads on the latest [release](../../releases) page:
+Grab the installer from the latest [release](../../releases) page:
 
 | File | What it is | When to use |
 |------|-----------|-------------|
-| `derpack-x-prism-installer-X.Y.Z.zip` | Prism instance that downloads mods on first launch | **Recommended.** Drop into Prism, launch, mods auto-fetch. |
-| `derpack-x-X.Y.Z.mrpack` | Modrinth-format pack file | If you use the Modrinth app, or want to import via Prism's Modrinth importer. |
+| `derpack-x-prism-installer-X.Y.Z.zip` | Prism instance that downloads mods on first launch | Drop into Prism, launch, mods auto-fetch. |
 
 **Steps:** download → open Prism Launcher → Add Instance → Import from zip → pick the file → launch.
 
@@ -27,7 +26,7 @@ See [`docs/PRISM-SETUP.md`](docs/PRISM-SETUP.md) for the full walkthrough.
 
 ## For collaborators: how it works
 
-This repo doesn't store mod jars — it stores manifests describing *what mods are in the pack* (with URLs and hashes). When a release is cut, GitHub Actions builds a small installer zip and a .mrpack from those manifests; the launcher fetches actual jars at install time.
+This repo doesn't store mod jars — it stores manifests describing *what mods are in the pack* (with URLs and hashes). When a release is cut, GitHub Actions builds a small Prism installer zip from those manifests; the launcher fetches actual jars at install time.
 
 There are three ways to make changes, in order of how often they're used:
 
@@ -130,7 +129,7 @@ From the `main` branch:
 1. Bump `version` in `pack.toml` (e.g. `0.3.2` → `0.3.3`)
 2. Commit and push to `main`
 3. On GitHub: Releases → Draft a new release → tag `v0.3.3` → Publish
-4. Wait for the build, then check the release page for the attached zip and mrpack
+4. Wait for the build, then check the release page for the attached Prism installer zip
 
 The build is content-cached: if nothing material changed since the last build, the cached artifacts get attached to the release in seconds. Otherwise it rebuilds from scratch.
 

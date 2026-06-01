@@ -8,7 +8,7 @@ If a decision feels weird, look here first. If it isn't here, it should be — p
 
 ## What is this thing
 
-Derpack X is a Minecraft 1.21.1 / NeoForge modpack distributed via [packwiz](https://packwiz.infra.link/) manifests. The repo doesn't contain mod jars; it contains URLs and hashes. CI builds two release artifacts (a `.mrpack` and a Prism installer zip), both small. End-users' launchers fetch jars from each mod's authoritative source at install time. A custom Go-based local editor handles routine pack maintenance through a web UI; GitHub Actions workflows are a fallback.
+Derpack X is a Minecraft 1.21.1 / NeoForge modpack distributed via [packwiz](https://packwiz.infra.link/) manifests. The repo doesn't contain mod jars; it contains URLs and hashes. CI builds one small release artifact, a Prism installer zip. End-users' launchers fetch jars from each mod's authoritative source at install time. A custom Go-based local editor handles routine pack maintenance through a web UI; GitHub Actions workflows are a fallback.
 
 ---
 
@@ -22,7 +22,7 @@ Why this isn't just a folder of jars. A naive modpack distribution model would z
 4. **Collaboration.** Multiple maintainers pushing big binary blobs into git is painful. Diffs are unreadable, merge conflicts are a nightmare, and the repo's history bloats fast.
 5. **Version tracking.** Plain-text manifests have meaningful diffs. You can see at a glance which mod was bumped, which version was pinned, when something was added or removed — both in PR review and in `git log`.
 
-packwiz addresses all of these. The repo holds tiny `.pw.toml` manifests — one per mod — describing where to fetch the jar (Modrinth or CurseForge) and what its hash should be. Releases ship those manifests as a small `.mrpack` (~100 KB) or a Prism installer zip (~5 MB). The user's launcher fetches the actual jars from each mod's authoritative source at install time, with hash verification.
+packwiz addresses all of these. The repo holds tiny `.pw.toml` manifests — one per mod — describing where to fetch the jar (Modrinth or CurseForge) and what its hash should be. Releases ship those manifests as a small Prism installer zip (~5 MB). The user's launcher fetches the actual jars from each mod's authoritative source at install time, with hash verification.
 
 The trade-off: every install needs internet on first launch, and ongoing operation depends on Modrinth/CurseForge staying reachable. Acceptable — anyone playing modded MC is already online.
 
@@ -70,7 +70,9 @@ Net effect: the collaborator's friction dropped from "I'll just edit my own fold
 
 ## 4. Why we don't redistribute jars
 
-The build only ships manifests, not jars. Releases attach two artifacts: a `.mrpack` (manifests bundled in Modrinth's format) and a Prism installer zip (manifests + a launcher script). Both are small (~5 MB or less). The user's launcher fetches actual mod jars from each mod's authoritative source — Modrinth or CurseForge — at install time.
+The build only ships manifests, not jars. Releases attach one small artifact: a Prism installer zip (manifests + a launcher script, ~5 MB). The user's launcher fetches actual mod jars from each mod's authoritative source — Modrinth or CurseForge — at install time.
+
+We previously also attached a `.mrpack` (manifests in Modrinth's format), but dropped it (issue #73): packwiz's `mr export` bundles the entire `overrides/` tree — `config/`, `kubejs/`, `resourcepacks/`, `shaderpacks/` — so the "manifest-only" file had quietly bloated to ~200 MB, headed for the same 2 GiB asset cap that killed the bundled zip below. Nobody on the friend-group server used it, and the installer is the recommended path anyway, so the export step came out of `build.yml`.
 
 Earlier in the project we also shipped a "bundled" Prism zip with all jars baked in. It worked, but we dropped it for two reasons:
 
