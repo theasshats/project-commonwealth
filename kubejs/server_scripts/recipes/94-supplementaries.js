@@ -38,13 +38,19 @@ ServerEvents.recipes(event => {
     G: 'create:cogwheel', P: '#minecraft:planks', S: 'create:shaft'
   })
 
-  // orig altimeter: c:ingots/copper + redstone  ->  aeronautics instrument, Create electron_tube core.
-  swap('supplementaries:altimeter', [' E ', 'CRC', ' C '], {
-    E: 'create:electron_tube', C: '#c:ingots/copper', R: '#c:dusts/redstone'
+  // altimeter: a brass-housed aeronautics gauge with a glowing readout + electron-tube sensor.
+  // orig: c:ingots/copper + redstone  (cross-mod: create + galosphere + vanilla)
+  swap('supplementaries:altimeter', [' B ', 'CLC', 'RER'], {
+    B: '#c:ingots/brass',            // brass instrument housing
+    C: '#c:ingots/copper',
+    L: 'galosphere:lumiere_shard',   // glowing altitude readout
+    R: '#c:dusts/redstone',
+    E: 'create:electron_tube'        // sensor core
   })
 
-  // orig wind_vane: c:ingots/iron + iron_bars + redstone  ->  spins on a Create cogwheel.
-  swap('supplementaries:wind_vane', [' B ', ' G ', 'IRI'], {
-    B: 'minecraft:iron_bars', G: 'create:cogwheel', I: '#c:ingots/iron', R: '#c:dusts/redstone'
+  // wind_vane: a Create PROPELLER (the thing that actually catches wind) spinning on a cogwheel.
+  // orig: c:ingots/iron + iron_bars + redstone  (cross-mod: create-heavy + vanilla)
+  swap('supplementaries:wind_vane', [' P ', ' G ', 'IRI'], {
+    P: 'create:propeller', G: 'create:cogwheel', I: '#c:ingots/iron', R: '#c:dusts/redstone'
   })
 })

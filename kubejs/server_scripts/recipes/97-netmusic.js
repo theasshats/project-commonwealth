@@ -1,24 +1,38 @@
-// NetMusic — "made through Create" (light touch on the two ELECTRONICS).
+// NetMusic — the two ELECTRONICS, built in the cross-mod synergy style (KubeJS).
 //
-// Most of NetMusic is decoration/QoL audio (megaphone, music_player, CDs) and stays vanilla. But
-// the `computer` and `cd_burner` are literally electronic devices — copper + iron + redstone — so
-// an `create:electron_tube` core (the pack's "circuit" part) is the coherent gate. One light gate
-// each; the simpler audio blocks inherit nothing and are left alone.
+// Mirroring the Immersive-TaCZ approach: instead of a thin "one Create part + vanilla" gate, a
+// device is assembled from real components pulled across the pack's tech mods, so building it
+// actually exercises the Create electrical chain and ties the mods together. A computer/CD burner
+// should feel like assembled electronics, not a crafting-table trinket.
 //
-// Verified against tools/mod-data/recipes/netmusic-1.5.0-neoforge+mc1.21.1.txt.
+// Sourced across: create (framed_glass screen, electron_tube core), create_new_age (copper_circuit —
+// itself a create:deploying product), createaddition (copper_wire), galosphere (allurite_shard as
+// the glowing optical/laser element), + vanilla chassis. The simpler audio blocks (megaphone,
+// music_player, CDs) stay vanilla decoration.
+//
+// Verified against tools/mod-data/recipes/{netmusic,create-new-age,createaddition,Galosphere}-*.txt.
 
 ServerEvents.recipes(event => {
-  // COMPUTER. orig: c:ingots/copper + c:ingots/iron + clock + glass_pane + redstone
+  // COMPUTER — framed-glass screen + logic circuit + electron-tube processor + wiring + iron chassis.
+  // orig: c:ingots/copper + c:ingots/iron + clock + glass_pane + redstone
   event.remove({ id: 'netmusic:computer' })
-  event.shaped('netmusic:computer', ['GKG', 'IEI', 'RCR'], {
-    G: 'minecraft:glass_pane', K: 'minecraft:clock', I: '#c:ingots/iron',
-    E: 'create:electron_tube', R: '#c:dusts/redstone', C: '#c:ingots/copper'
+  event.shaped('netmusic:computer', ['FCF', 'WEW', 'IKI'], {
+    F: 'create:framed_glass',            // screen
+    C: 'create_new_age:copper_circuit',  // logic board
+    W: 'createaddition:copper_wire',     // internal wiring
+    E: 'create:electron_tube',           // processor core
+    I: '#c:ingots/iron',                 // chassis
+    K: 'minecraft:clock'                 // clock signal
   })
 
-  // CD BURNER. orig: c:ingots/copper + c:nuggets/iron + lightning_rod + redstone
+  // CD BURNER — an optical writer: a glowing allurite shard as the "laser", driven through circuitry.
+  // orig: c:ingots/copper + c:nuggets/iron + lightning_rod + redstone
   event.remove({ id: 'netmusic:cd_burner' })
-  event.shaped('netmusic:cd_burner', ['CLC', 'RER', 'CNC'], {
-    C: '#c:ingots/copper', L: 'minecraft:lightning_rod', R: '#c:dusts/redstone',
-    E: 'create:electron_tube', N: '#c:nuggets/iron'
+  event.shaped('netmusic:cd_burner', ['CLC', 'WAW', 'CEC'], {
+    C: '#c:ingots/copper',               // copper housing
+    L: 'minecraft:lightning_rod',        // emitter
+    W: 'createaddition:copper_wire',     // wiring
+    A: 'galosphere:allurite_shard',      // glowing optical/laser element
+    E: 'create:electron_tube'            // controller
   })
 })

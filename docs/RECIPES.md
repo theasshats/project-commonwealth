@@ -184,6 +184,21 @@ No item was found that is both high-power *and* trivially craftable, so no diffi
 forced. Genuine balance tuning (e.g. jetpack/nuclear costs feeling too low) is a **playtest call** —
 flagged here rather than guessed, since the convention is "costs stay ~comparable," not a grind.
 
+## Cross-mod synergy style (mirrors Create: Immersive TaCZ)
+Immersive TaCZ doesn't gate a gun behind one token part — it assembles it from components pulled
+across the pack (fluids, casings, primers, multi-stage parts), so building it exercises the Create
+chain *and* ties mods together. We adopt that style in KubeJS for **flagship devices**: prefer a
+layered recipe that sources real components from sibling mods over a thin "one Create part + vanilla"
+gate — as long as every ingredient is *thematically* justified (no filler). Verified palette in this
+pack: `create` (electron_tube, propeller, framed_glass, sturdy_sheet, fluid_tank, copper_backtank),
+`create_new_age` (copper_circuit/wire — themselves Create-deployed), `createaddition`
+(copper_wire/spool, capacitor, electric_motor, brass_rod), `tfmg` (circuit_board, heavy_plate,
+machinery_casing), `galosphere` (allurite/lumiere shards = glowing optical/readout elements, silver).
+Applied so far: **netmusic** computer (framed_glass + copper_circuit + electron_tube + copper_wire)
+and cd_burner (allurite_shard "laser" + wiring + electron_tube); **supplementaries** altimeter
+(brass housing + glowing lumiere readout + electron_tube) and wind_vane (a real `create:propeller`
+on a cogwheel). Keep this lens when revisiting the earlier flagship passes.
+
 ## Ground truth
 - Mods with jars on hand → recipes read directly for precise `remove` + replace.
 - Everything else → the **`tools/mod-data/recipes/`** digest (CI) lists each recipe as
