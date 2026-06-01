@@ -42,6 +42,8 @@ NeoForge is **not** a packwiz-managed mod — it's a field in `pack.toml` under 
 
 - **Version-named branches**, not personal ones: name a branch for the next version it targets (e.g. `v0.2.0`). Collaborators share it; open a PR into `main` when the version is ready.
 - `pr-checks.yml` runs on **every PR** and gates merges: packwiz index freshness, manifest lint (incl. the `pin` gotcha), KubeJS JS/JSON + config TOML parse, and Go build/vet for the editor + site. Fast, no network. See `docs/CI-CHECKS.md` (incl. how to make the checks *required*).
+  - The **index-freshness** job doubles as a `.packwizignore` guard: a new non-pack dir that should be ignored but isn't (e.g. `site/`) gets pulled in by `packwiz refresh`, drifting the index and failing the check — so forgetting to ignore it (or to refresh) is caught.
+- **After opening a PR, auto-subscribe to its activity** (`subscribe_pr_activity`) without asking — now that `pr-checks.yml` gates every PR, watch the CI + review comments, autofix small/clear failures, and check in before anything ambiguous or architectural. (No harness hook fires on PR creation, so this lives here as agent guidance, not in `settings.json`.)
 - `build.yml` runs on a **release tag** (or manual dispatch): builds the Prism installer zip with the `pack.toml` URL baked in at build time. No caching — the build is ~30s. (No `.mrpack`: it bloated to ~200 MB and nobody used it — dropped per #73.)
 - `build-editor.yml` runs on `tools/editor-src/**` changes (see above).
 - Cutting a release: bump `version` in `pack.toml` → merge to `main` → tag `v0.X.Y` → assets appear in ~5 min.
