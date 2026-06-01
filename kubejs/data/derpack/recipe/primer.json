@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GBG"
+  ],
+  "key": {
+    "G": {
+      "tag": "c:gunpowders"
+    },
+    "B": {
+      "item": "create:brass_sheet"
+    }
+  },
+  "result": {
+    "id": "createimmersivetacz:primer",
+    "count": 4
+  }
+}
