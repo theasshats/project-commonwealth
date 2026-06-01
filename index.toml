@@ -757,8 +757,16 @@ file = "kubejs/server_scripts/recipes/30-modular-golems.js"
 hash = "e1a80e4bece804d4423bfb9a9f2173d6208d15ea8dfd0513dba7537ebcdb683c"
 
 [[files]]
-file = "kubejs/server_scripts/recipes/33-magic-web.js"
-hash = "669a24f251421b0094427c61622d58ebd891423d6e85836cdb9c471d7631f4ed"
+file = "kubejs/server_scripts/recipes/33-magic-web-spine.js"
+hash = "5f8fd72a80f1f5eb268fd5ace384a4ed0468ce2ea2b4a2aedbe47f89f1f3c8a1"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/34-magic-web-occult.js"
+hash = "463a61dfe0a59ae0bdcefde0875ac0b06059a14c0238508a19a8f6a22d1b35e7"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/35-magic-web-mobs.js"
+hash = "2b673631bea97d168d5a2c1459b137de9dfbb97d7c96242388a2cfd02d913a0b"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/40-northstar.js"
