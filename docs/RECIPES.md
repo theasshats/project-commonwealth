@@ -246,7 +246,11 @@ against the real essence economies. occultism↔Create was *already* bridged by 
 mod (create:mixing/compacting/filling), so that branch needs no KubeJS.
 
 Material (non-magic) bridges follow the same additive pattern — e.g. Meadow cheese ▶ Create Cheese
-(`99`, #51).
+(`99`, #51). A sweep for more found the material layer is **already woven by `c:` tags +
+almost-unified**: `createfood`'s mozzarella pulls `c:cheeses` (so Meadow *and* Create cheese feed it
+for free), `c:flour` is referenced 127× (Create's mill flour flows to every baking mod), etc. The
+genuine gap was the Meadow cheese *wheel* (its own non-tag item wasn't Create-producible) — closed by
+`99`. Adding further manual bridges would just duplicate tag unification, so none were.
 
 ## Ground truth
 - Mods with jars on hand → recipes read directly for precise `remove` + replace.
