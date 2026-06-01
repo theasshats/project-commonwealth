@@ -251,13 +251,18 @@ Files: `33-magic-web-spine.js` (Ars hub: imbuement/apparatus refinements + table
   `rotten_heart`→demon essence), Mowzie's (`ice_crystal`→water essence, `glowing_jelly`→source,
   `foliaath_seed`→datura), and a light **Modular Golems** tie (`source_gem`→`empty_upgrade`).
 
-**Authoring / risk:** Create steps use the proven `event.recipes.create.mixing` builder. Ars imbuement/
-enchanting_apparatus and occultism `spirit_fire` use `event.custom({...})` raw JSON whose **field names
-are best-guess (can't verify headless)** — so each ships an `event.shapeless` **table fallback** that
-keeps progression working if the native schema needs an in-game tweak (verify field names in JEI/EMI:
-imbuement `source`/`output`, apparatus `sourceCost`/`result`, spirit_fire `ingredient`/`result`).
-occultism `ritual` is intentionally not authored (pentacle-bound, not KubeJS-safe). Native machines may
-later want a small supporting mod (maintainer call). Ratios are first-pass — tune in playtest.
+**Authoring (schemas jar-verified):** the mod jars were pulled and the custom-recipe formats confirmed,
+so the weave is **native-machine-only** (no table fallbacks needed):
+- `ars_nouveau:imbuement` = `{input, output:{count,id}, source, pedestalItems}` ✓
+- `ars_nouveau:enchanting_apparatus` = `{reagent, pedestalItems, result:{count,id}, sourceCost, keepNbtOfReagent}` ✓
+- `occultism:spirit_fire` = `{ingredient:{item}, result:{count,id}}` ✓
+- `occultengineering:spirit_solution` is a **FLUID** minted by a *heated* `create:mixing` (mb amounts) —
+  so source/ethereal_spirit/soulfire mint it via `event.recipes.create.mixing(Fluid.of(...), [item, Fluid.water(n)]).heated()`.
+Authored with `event.custom({...})` (Ars/occultism) + the proven `event.recipes.create.mixing` builder.
+occultism `ritual` is intentionally not authored (pentacle-bound, not KubeJS-safe). Ratios/source-costs
+are first-pass — tune in playtest. **A custom helper mod stays on the table** for weaving deeper than
+recipes can (e.g. real source↔mana energy bridging, or making Iron's spells castable via Ars source) —
+not needed for the recipe layer, which KubeJS now covers fully.
 
 Material (non-magic) bridges follow the same additive pattern — e.g. Meadow cheese ▶ Create Cheese
 (`99`, #51). A sweep for more found the material layer is **already woven by `c:` tags +
