@@ -29,12 +29,17 @@ public final class DerpackArcana {
         LOGGER.info("[Derpack Arcana] loading — magic-weave helper");
         logIntegrations();
 
-        // Feature bootstrap lands here as each phase is implemented, e.g.:
-        //   if (Config.SOURCE_MANA_BRIDGE.get() && loaded("ars_nouveau") && loaded("irons_spellbooks"))
-        //       SourceManaBridge.register(modBus);   // P1 — the Attunement Font
-        //   if (Config.SPELL_POWER_CROSSOVER.get())  SpellPowerCrossover.register(modBus);   // P2
-        //   if (Config.BORN_IN_CHAOS_RITUAL_FUEL.get() && loaded("occultism") && loaded("born_in_chaos_v1"))
-        //       BornInChaosRitualFuel.register(modBus);   // P3
+        // P1 — Source <-> mana bridge. Guarded so ArsIronsBridge (which references Ars + Iron's API
+        // types) is only classloaded when BOTH mods are present; absent -> the feature simply no-ops.
+        if (Config.SOURCE_MANA_BRIDGE.get() && loaded("ars_nouveau") && loaded("irons_spellbooks")) {
+            com.derpack.arcana.bridge.ArsIronsBridge.init(modBus);
+        } else {
+            LOGGER.info("[Derpack Arcana] Source<->mana bridge inactive (config off or a target mod absent).");
+        }
+
+        // Later phases wire in here, same guarded pattern:
+        //   P2 SpellPowerCrossover.register(modBus);
+        //   P3 BornInChaosRitualFuel.register(modBus);  // occultism + born_in_chaos_v1
     }
 
     private static void logIntegrations() {

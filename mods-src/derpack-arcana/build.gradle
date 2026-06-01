@@ -27,15 +27,15 @@ neoForge {
 repositories {
     mavenCentral()
     maven { url = 'https://maven.neoforged.net/releases' }
-    // Integration-mod API mavens — uncomment per feature as P1+ lands (see docs/ARCANA-BRIDGE-MOD.md):
-    // maven { url = 'https://www.cursemaven.com' }     // Ars Nouveau, Iron's Spells, Born in Chaos
-    // maven { url = 'https://api.modrinth.com/maven' }  // Occultism, Galosphere
+    maven { url = 'https://cursemaven.com' }            // Ars Nouveau, Iron's Spells (P1)
+    // maven { url = 'https://api.modrinth.com/maven' }  // Occultism, Galosphere (P3, later)
 }
 
 dependencies {
-    // Soft-dep APIs are compileOnly and added per-integration when implementing each feature, e.g.:
-    // compileOnly "curse.maven:ars-nouveau-401955:7764018"
-    // compileOnly "curse.maven:irons-spells-n-spellbooks-855414:7907341"
+    // Soft-dep APIs — compileOnly (never bundled; guarded at runtime by ModList.isLoaded).
+    // P1 — Source <-> mana bridge:
+    compileOnly "curse.maven:ars-nouveau-401955:7764018"
+    compileOnly "curse.maven:irons-spells-n-spellbooks-855414:7907341"
 }
 
 // Expand gradle.properties into neoforge.mods.toml at build time.
