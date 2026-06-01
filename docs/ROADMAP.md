@@ -61,8 +61,58 @@ Execute meme removals; resolve duplicate **mechanics** (sort #38, accessory API,
 events, spice-of-life, backpacks, afk); **decide MineColonies auto-production gating** (the big open call).
 
 ### Phase 7 — Stability & QoL 💤 (needs a live server)
-TPS/spark #42 · RAM/GC #48 · flight interactions #43 · inventory sort #38 · claims #25 ·
-shaders caveat #1 · render distance #2 · purple-arrows bug #3.
+RAM/GC #48 · flight interactions #43 · inventory sort #38 · claims #25 · shaders caveat #1 ·
+render distance #2 · purple-arrows bug #3. (TPS audit #42 resolved — fixed in v0.3.5/0.3.6.)
+
+### Phase 8 — CI / merge-gating ✅ (`pr-checks.yml`)
+PR-triggered checks now gate merges: packwiz index freshness, manifest lint (incl. the `pin`
+gotcha), KubeJS JS/JSON + config TOML parse, and Go build/vet for the editor + site. Full rundown
+and how to mark them **required** in `docs/CI-CHECKS.md`. Also dropped the bloated `.mrpack` release
+artifact (#73). **Open:** flip the checks to *required* on `main` via a branch-protection ruleset.
+
+## Needed for release
+
+The small set that gates the next milestone release (tagged `needed-for-release`). Everything else is
+post-release polish or ongoing curation.
+
+- [ ] **Ore-gen verified & tuned** — #58 (playtest + the rarity/regionality call). Phase 1.
+- [ ] **Create recipe spine landed** — #17 / PR #62 enough per-mod passes that "made through Create"
+  is real, not a stub. Phase 3.
+- [ ] **Design spine docs merged** — PR #61 (DESIGN spine, CLAUDE north-star, MODLIST-AUDIT) settled
+  with zagwar and on `main`, so the direction is canon.
+- [ ] **CI required on `main`** — turn on the `pr-checks.yml` ruleset (Phase 8 / `docs/CI-CHECKS.md`).
+- [x] **Release artifacts sane** — `.mrpack` dropped; Prism installer is the single ~5 MB artifact (#73).
+
+**Explicit non-goals** (don't let these creep onto the release path): a server-pack artifact,
+NeoForge auto-bump, bundled-jar distribution — all deliberately out, see `docs/DESIGN.md`.
+
+## Open-issue triage
+
+Every open issue, categorized. `NFR` = needed-for-release. Living trackers (#9/#17/#18/#21) stay open
+by design. See `docs/MODLIST-AUDIT.md` for the curation detail behind the Phase 6 rows.
+
+| # | Title | Area | Phase | NFR | Status / next |
+|---|---|---|---|:---:|---|
+| #58 | Ore-gen playtest + rarity/regionality | worldgen | 1 | ✅ | playtest; zagwar tunes table + picks regionality model |
+| #17 | Recipes to change (living) | recipes | 3 | ✅ | per-mod passes in #62; bible done, death-note needs an item id |
+| #51 | Let's Do Meadow cheese recipes | content | 3 | — | done in #62 (`99-meadow-cheese.js`); playtest then close |
+| #18 | Loot tables to change (living) | loot | 4 | — | `lootjs` pass; pull free end-game gear, maybe seed coins |
+| #21 | Mod-removal suggestions (living) | curation | 6 | — | "~90% of guns" + memes; resolve via MODLIST-AUDIT §A |
+| #60 | umapyoi keep/cut | curation | 6 | — | zagwar playtest verdict; remove manifest if cut |
+| #38 | Inventory sort (IPN/mouse-tweaks) | qol | 6/7 | — | clientsort removed, invtweaks-emu added; pick sort owner, test |
+| #25 | open-parties-and-claims config | content | 7 | — | config drafted (zagwar); needs a server test |
+| #48 | Garbage collection / RAM | performance | 7 | — | tune on the live server; measure with spark |
+| #43 | Flight-system interactions | investigation | 7 | — | playtest jetpack/glider/barrel-roll vs Aeronautics; document |
+| #3 | Purple arrows in hotbar | bug | 7 | — | needs repro; identify the offending mod |
+| #1 | Built-in shaders | discussion | 7 | — | Iris/Oculus break Aeronautics ships — decide ship-a-shader vs "no shaders" |
+| #2 | Far-field render distance | discussion | 7 | — | evaluate a distant-horizons-style mod against TPS cost |
+| #70 | Site `WEB_DIR` bind-mount | site | — | — | optional convenience; low priority |
+| #9 | Mod ideas (living wishlist) | add-mod | 6 | — | keep open; pull from it as clusters are reached |
+| #13 | Create: Harmonics requirements | add-mod | 6 | — | evaluate the add; low priority |
+| #40 | Monitor unofficial 1.21.1 ports | maintenance | — | — | quarterly: migrate to official releases when they ship |
+
+**Closed by this work:** #42 (TPS audit — fixed v0.3.5/0.3.6; mob-count curation continues in #21) ·
+#73 (`.mrpack` dropped from `build.yml`).
 
 ## Cross-cutting notes
 - **Verification gates everything** — headless can't validate KubeJS/worldgen; playtest per phase.
