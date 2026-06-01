@@ -64,47 +64,95 @@ pack-folder / instance state.
 > AK/M4/Glock recipes. (Requires that `tacz:gun_smith_table_crafting` recipes load into the recipe
 > manager — confirm none reappear after a `/reload`.)
 
-## Crafting design — everything routes through Create
+## Crafting design — Create-gated, assembled at the gun smith table
 
-Gun crafting is **Create-only**: every Armorer gun, ammo, and attachment is built through
-**Create: Immersive TaCZ**'s recipe tree, not the TaCZ gunsmith table. The table still exists as a
-*viewer* (and for in-game attaching/refits), but we ship **no** gunsmith-table crafting recipes —
-Armorer's own (`forge:`-tagged, `recipes/`-plural) ones never load on 1.21 anyway, and we
-deliberately don't re-add them (see the git history for the `Derpack_Armorer_Recipes.zip` gun-pack
-approach that was used while both paths coexisted).
+Every Armorer gun, ammo round, and attachment is **gated behind Create**: the ingredients are Create
+parts and processed metals, so you can't make a gun without first building out a Create line. This is
+the gun branch of the pack's Create-driven scarcity economy (see `DESIGN.md`).
 
-The Create tree:
+**Where each thing is crafted:**
 
-- **Guns:** `c:ingots/iron` → `gun_barrel` / `gun_trigger` / `firing_mechanism` →
-  `create:mechanical_crafting` → the `create_armorer` gun (one recipe per gun).
-- **Ammo:** `minecraft:gunpowder` → *(mixing)* → gunpowder fluid → *(filling `create:andesite_alloy`)*
-  → `primer` → *(deploy into casing, then fill with gunpowder fluid)* → TaCZ ammo. `createbigcannons`
-  nitropowder feeds the parallel nitropowder/primer branch.
-- **Attachments:** Create part recipes (sheets, pipes, shafts, cylinders…) → the `create_armorer`
-  attachment.
+- **Guns / ammo / attachments** — at the **TaCZ gun smith table** (`tacz:gun_smith_table_crafting`
+  recipes shipped in `tacz/Derpack_Armorer_Recipes.zip`, namespace `derpack_armorer`). The table is
+  the assembly bench; its recipes list the Create parts each item needs.
+- **The three core gun parts** — `gun_barrel`, `gun_trigger`, `firing_mechanism` (and `primer`) — via
+  **plain shaped recipes** in `kubejs/data/derpack/recipe/`. They're shaped (not Create
+  `mechanical_crafting`) **on purpose**: Immersive TaCZ's own `mechanical_crafting` recipes load but
+  don't render in EMI on this Create build, so vanilla shaped recipes guarantee they're discoverable.
+  The *ingredients* are still all Create/processed-metal, so the Create gating holds.
+- **Immersive TaCZ's native Create tree** (mixing→fluid→filling→primer→casing→ammo, and
+  `mechanical_crafting` guns) still loads as a parallel path (see *Compat overlays*); it just isn't
+  the discoverable one, so we don't rely on it.
 
-## Compat overlays — `kubejs/data/createimmersivetacz/recipe/…` (9 overrides)
+### Recipe themes
 
-Immersive TaCZ's tree shipped broken on our MC 1.21.1 / NeoForge / Create 6.0.10 target. We fix it
-with **same-id `kubejs/data` overrides** (KubeJS's datapack outranks the mod jar, so our corrected
+Recipes are **not formulaic** — each item is themed, leaning on the wider Create ecosystem so the
+parts *read* like what they build. We start from Immersive TaCZ's own (already hand-themed) ingredient
+sets and deepen them:
+
+| Item | Theme / signature ingredients |
+|---|---|
+| **Gun barrel** | a bored **steel** tube — `c:ingots/steel` ring + a Create Addition iron rod (the bore) |
+| **Trigger** | fine mechanism — brass sheets + precision mechanism + Create Addition copper wire |
+| **Firing mechanism** | the striker — Create **deployer** + **rotation speed controller** + cogwheels + flint & steel |
+| **Sidearms / SMG** | lightweight **TFMG aluminum** frames + Create Addition metal rods |
+| **Snipers** | **electrum** precision optics mount + extra steel |
+| **Flywheel MG** | a Create **flywheel** + an **Aeronautics propeller bearing** (rotary feed) |
+| **40mm Cannon** | flagship: **7 barrels**, a wall of steel, aluminum frames, and exotic **Aeronautics levitite** |
+| **Scopes / sights** | glass panes + brass; the telephoto scope uses **Aeronautics aviator's goggles** |
+| **Grips** | each matches its name — gantry-shaft grip→gantry shafts, fluid-pipe grip→fluid pipes, etc. |
+| **Mags** | tiered — brass sheet → +diamond → +netherite for the three extended mags |
+| **Ammo** | HE = steel + heavy powder; AP (`rbapb`) = **diamond-grit** core; pneumatic = copper; etc. |
+
+All ingredient ids are verified against the actual mod jars (`createaddition`, `tfmg`, `aeronautics`,
+`create_ironworks`/steel tag, plus base Create). Cross-mod parts are accessible Create products
+(pressed sheets, drawn wire, alloys) — nothing requires a separate deep tech tree.
+
+### Difficulty intent
+
+Guns are meant to be **a mid-to-late-game investment, not a quick craft** — deliberately costed 2-3
+notches above a "convert the original recipe" baseline:
+
+- **The components carry the cost.** Every gun needs a barrel (**8 steel** each), a trigger
+  (brass + precision mechanism), and a firing mechanism (a **deployer + rotation speed controller** —
+  itself several precision mechanisms). So even a pistol is a real Create commitment, and barrels
+  scale brutally on multi-barrel guns.
+- **Bulk doubled, specials kept lean.** Filler metals/wood are roughly ×2 over the author's baseline;
+  structural/rare parts (barrels, the flywheel, levitite, electrum, propeller bearing) stay at sane
+  counts so recipes get *heavier*, not *grindier-on-one-item*.
+- **The 40mm cannon is an intentional megaproject** — ~70 steel all-in (7 barrels + a steel wall) plus
+  levitite. It should feel like building a field gun, because it is one.
+- **Ammo runs lean** — small batch yields with steel/powder inputs, so feeding the guns is its own
+  ongoing Create-production task rather than a one-off.
+
+Tuning lives entirely in the generator inputs (`GUN_ENH` per-gun tables, the `scale_gun`/`scale_att`
+multipliers, and the `AMMO` table) — costs can be re-balanced per tier without touching item ids.
+
+## Compat overlays — `kubejs/data/` (Immersive TaCZ + Armorer fixes)
+
+Both upstream packs ship data that's broken on our MC 1.21.1 / NeoForge / Create 6.0.10 target. We fix
+each with **same-id `kubejs/data` overrides** (KubeJS's datapack outranks the source, so our corrected
 file shadows the broken one — it's never parsed, so no datapack error), generated mechanically from
-the originals so they stay faithful. Two bug classes:
+the originals so they stay faithful. We never edit the source packs (Create: Armorer is **CC BY-NC-ND**
+— no derivatives).
 
-1. **Invalid fluid declarations (`{"type":"fluid_stack"}`) — 8 recipes.** This isn't valid on
-   NeoForge, so the whole recipe is rejected. The *foundational* `gunpowder_fluid` + `primer` being
-   dead killed the entire ammo tree. Fixed per context (verified against Create 6.0.10's own recipes):
-   - fluid **ingredient** (filling: `primer`, `primer_from_nitropowder`, 4 casing fills) →
-     `{"type":"neoforge:single","amount":N,"fluid":…}`
-   - fluid **result** (mixing: `gunpowder_fluid`, `nitropowder_fluid`) → `{"amount":N,"id":…}`
-2. **Malformed JSON — 1 recipe.** `guns/lmg.json` has a stray trailing `}` (`}}` at EOF), so it never
-   parses and the Flywheel LMG (`mg_platemag_flywheel`) had no recipe. The override is the same file
-   with the extra brace removed.
+**Immersive TaCZ — `kubejs/data/createimmersivetacz/recipe/…`:**
 
-With these, the Create tree covers **every craftable Armorer item** (13/13 guns, 5/5 real ammo —
-the `melee_weapon` placeholder has no recipe by design — and 18/18 attachments).
+1. **Invalid fluid declarations (`{"type":"fluid_stack"}`) — 8 recipes.** Not valid on NeoForge, so the
+   whole recipe is rejected; the foundational `gunpowder_fluid` + `primer` being dead killed the entire
+   native ammo tree. Fixed per context (verified against Create 6.0.10): fluid **ingredient** (filling)
+   → `{"type":"neoforge:single",…}`; fluid **result** (mixing) → `{"amount":N,"id":…}`.
+2. **Malformed JSON — `guns/lmg.json`** had a stray trailing `}`, so the Flywheel LMG never parsed —
+   override removes the extra brace.
+3. **Schema** — `category` + result `count` added to match Create 6.0.10's own recipes.
 
-> Regenerate after a mod update: unzip the `createimmersivetacz` jar and re-run the
-> `fluid_stack`→(`neoforge:single` | `{amount,id}`) transform, re-validate JSON, then `packwiz refresh`.
+**Create: Armorer — `kubejs/data/create_armorer/data/blocks/create_workbench.json`:** the themed
+workbench's tab icons used 1.20-era `{"item":…,"nbt":…}`; 1.21 needs `{"id":…,"components":…}`.
+TaCZ logged a hard `BlockDataLoader`/`BlockIndexLoader` error for `create_armorer:create_workbench` —
+the override rewrites every tab icon to the component form, clearing the error.
+
+> Regenerate after a mod update: re-run the recipe generator (it reads the `createimmersivetacz` and
+> `create_armorer` data straight from the jars/zip), re-validate JSON, then `packwiz refresh`.
 
 ## Verify in-game
 

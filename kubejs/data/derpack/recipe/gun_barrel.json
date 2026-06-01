@@ -3,7 +3,8 @@
   "category": "misc",
   "pattern": [
     "SSS",
-    "SRS"
+    "SRS",
+    "SSS"
   ],
   "key": {
     "S": {

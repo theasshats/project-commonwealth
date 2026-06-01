@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "kubejs/data/create_armorer/data/blocks/create_workbench.json"
+hash = "2fe0d845b737b1648e9bcc193d5584bb4f1b0faeb411977a664099ac27476714"
+
+[[files]]
 file = "kubejs/data/createimmersivetacz/recipe/ammo/40mmhe_casing.json"
 hash = "6ee0632375df0cbbfd11a65375be78acd6de5ea8a81ef9e738ed1bde4eee8e61"
 
@@ -229,16 +233,20 @@ file = "kubejs/data/derpack/neoforge/biome_modifier/vein_iron.json"
 hash = "528d46e2c08d904c2ce79f11f46a0b3cfaec89446759e2de704a3ae5371916d2"
 
 [[files]]
+file = "kubejs/data/derpack/recipe/create_workbench.json"
+hash = "5a1069a65c84f4d1dafac9ae13654b330410159d1f5d0f4fa835caaf2d35703a"
+
+[[files]]
 file = "kubejs/data/derpack/recipe/firing_mechanism.json"
-hash = "78189f805a3bbdacba4cc688354ac8191c175c0668348ab3cae7052585da3e85"
+hash = "8bcb876a502140e08cf43cc2dbc56d6f4d857e3150740aaca4988197d956f9d4"
 
 [[files]]
 file = "kubejs/data/derpack/recipe/gun_barrel.json"
-hash = "555c51597e689e7fcea3910482aadd4932975371b6dd196abf55b6e7098b2eb1"
+hash = "1e3a38d76394c7e0321b49e3b97369b174dbc1995c2271dd375592b130958921"
 
 [[files]]
 file = "kubejs/data/derpack/recipe/gun_trigger.json"
-hash = "dcfd1c7938007539db97b59831015099888d4c145930b9aa1e896edf0036d5fc"
+hash = "c8ae32a3206cd2d7c0b8b0ba490f64c55e45ef42fd004060606610b76160a940"
 
 [[files]]
 file = "kubejs/data/derpack/recipe/primer.json"
@@ -2066,4 +2074,4 @@ hash = "479f0ac05833ccec554efa1b22e6f71553c7ebe7f381310c28467a399c98b0ba"
 
 [[files]]
 file = "tacz/Derpack_Armorer_Recipes.zip"
-hash = "113e8b5e36dbe31bf24827c85b3d4a4313fc4247300af66def313ba660e475db"
+hash = "b62ba1ec0235c6bf3ed5969aefdb003d7f19942285bb0668b27298ca7c6f2487"

@@ -3,7 +3,7 @@
   "category": "misc",
   "pattern": [
     "FDL",
-    " RC"
+    "CRC"
   ],
   "key": {
     "F": {
@@ -15,11 +15,11 @@
     "L": {
       "item": "create:large_cogwheel"
     },
-    "R": {
-      "item": "create:rotation_speed_controller"
-    },
     "C": {
       "item": "create:cogwheel"
+    },
+    "R": {
+      "item": "create:rotation_speed_controller"
     }
   },
   "result": {
