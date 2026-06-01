@@ -35,24 +35,32 @@ land in that folder, so we ship it with a packwiz **metafile placed in a `tacz/`
 ## Removing the stock TaCZ guns (Armorer-only)
 
 We want **only** Create: Armorer's guns — not TaCZ's built-in stock pack (AK/M4/etc.). TaCZ has
-**no config flag to disable default guns** (upstream marked it wontfix, issue #267): the built-in
-pack `tacz_default_gun` is extracted to `.minecraft/tacz/tacz_default_gun/` and reloaded each start.
-So we *override it with an empty pack* and stop TaCZ regenerating it:
+**no config flag to disable default guns** (upstream marked it wontfix, issue #267).
 
-- **`config/tacz-pre.toml` → `DefaultPackDebug = true`** — stops TaCZ overwriting the default pack
-  under `.minecraft/tacz/` on launch (default is `false` = overwrite every start).
-- **`tacz/tacz_default_gun/gunpack.meta.json` → `{ "namespace": "tacz" }`** — an emptied default
-  pack: it declares the `tacz` namespace but ships **no `data/` gun/ammo/attachment entries**, so
-  zero stock guns load. With `DefaultPackDebug` on, TaCZ won't clobber it with the bundled pack.
+A first attempt — `config/tacz-pre.toml` `DefaultPackDebug=true` + an emptied
+`tacz/tacz_default_gun/` override — **did not work**: `DefaultPackDebug` only stops TaCZ
+*overwriting* an existing pack, not *generating* an absent one, so deleting the folder just makes
+TaCZ regenerate the full default pack. (Removed.)
 
-Create: Armorer is a *separate* pack (`create_armorer` namespace) loaded independently, so it's
-untouched. After adding/editing these files, run `packwiz refresh` so `tacz/tacz_default_gun/…` is
-indexed into `index.toml` and shipped as an override.
+Reliable approach instead — **remove the stock guns' crafting recipes in KubeJS**
+(`kubejs/server_scripts/remove-default-tacz-guns.js`):
 
-> **Verify in-game:** the gunsmith table / creative tab shows **only** Create: Armorer guns; no
-> stock AK/M4/Glock; no missing-pack or datapack errors in the log. If stock guns still appear,
-> confirm `DefaultPackDebug` took (check the generated `config/tacz-pre.toml`) and that the empty
-> `tacz_default_gun/gunpack.meta.json` actually landed in `.minecraft/tacz/` (override shipped).
+```js
+ServerEvents.recipes(e => e.remove({ type: 'tacz:gun_smith_table_crafting', id: /^tacz:/ }))
+```
+
+The stock guns' recipes are `tacz:gun_smith_table_crafting` recipes in the `tacz` namespace;
+Create: Armorer's are in the `create_armorer` namespace, so the `id` filter kills every stock-gun
+craft while leaving Armorer. This ships via `kubejs/` (reliably delivered) and is independent of
+pack-folder / instance state.
+
+> **Caveat:** the stock gun *items* still exist in the creative tab — this removes their *crafting*
+> only. Fully hiding them from the gunsmith table would need a working pack-disable, which TaCZ
+> doesn't cleanly support.
+
+> **Verify in-game:** the gunsmith table offers **only** Create: Armorer guns to craft; no stock
+> AK/M4/Glock recipes. (Requires that `tacz:gun_smith_table_crafting` recipes load into the recipe
+> manager — confirm none reappear after a `/reload`.)
 
 ## Verify in-game
 
