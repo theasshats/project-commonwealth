@@ -33,8 +33,20 @@ MC_ADDR=play.example.net:25565 go run .     # point the status badge elsewhere
 ```
 
 Config (env): `LISTEN_ADDR` (default `:8080`), `MC_ADDR` (default
-`mc.ishimura.xyz:25565`). The page is fully usable with JS off — copy button and
-status badge are enhancements.
+`mc.ishimura.xyz:25565`), `GITHUB_REPO` (default `Xela112233/Derpack-X`, used by
+`/api/release`). The page is fully usable with JS off; the copy button, status
+badge and live download resolution are enhancements.
+
+### Endpoints
+
+- `/` — the embedded static site.
+- `/api/status` — cached Minecraft Server List Ping for the live status badge.
+- `/api/release` — cached GitHub Releases lookup (15 min). Resolves the latest
+  release's actual installer/mrpack asset URLs by pattern and lists recent
+  versions, so the download button always points at the real current file even
+  though asset names carry a version. Falls back to the last good result on a
+  transient API error. Optional `GITHUB_TOKEN` raises the API rate limit.
+- `/healthz` — liveness.
 
 ## Content to fill
 
@@ -43,12 +55,12 @@ the **Discord invite** — search `web/index.html` for `{{DISCORD_INVITE}}`. The
 game connect address is set to `mc.ishimura.xyz`; if that ever moves, change it
 in `index.html` (the copy button) **and** the `MC_ADDR` env in compose.
 
-Download buttons link to the release's permanent **latest-download** URLs
-(`releases/latest/download/derpack-x-prism-installer.zip` and `…/derpack-x.mrpack`)
-— a direct file download, no GitHub UI. These resolve once a release is published
-by the build workflow, which now attaches stable, version-less copies of both
-artifacts. The **Rules** section is intentionally left as a placeholder (zagwar
-is designing them).
+The download buttons resolve live via `/api/release`, so they always point at
+the current release's actual installer/mrpack asset (a direct file download, no
+GitHub UI). With JS off they fall back to the static `releases/latest/download/`
+links in the HTML, which work once a release ships the stable, version-less asset
+names the build workflow now attaches. The **Rules** section is intentionally
+left as a placeholder (zagwar is designing them).
 
 ---
 

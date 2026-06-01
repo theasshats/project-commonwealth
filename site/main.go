@@ -12,6 +12,7 @@
 package main
 
 import (
+	"context"
 	"embed"
 	"encoding/json"
 	"io/fs"
@@ -22,6 +23,7 @@ import (
 	"sync"
 	"time"
 
+	"github.com/derpack/derpack-site/internal/github"
 	"github.com/derpack/derpack-site/internal/ping"
 )
 
@@ -39,6 +41,7 @@ func main() {
 	mux := http.NewServeMux()
 	mux.Handle("/", cacheControl(http.FileServer(http.FS(siteFS))))
 	mux.HandleFunc("/api/status", newStatusHandler(cfg))
+	mux.HandleFunc("/api/release", newReleaseHandler(cfg))
 	mux.HandleFunc("/healthz", func(w http.ResponseWriter, _ *http.Request) {
 		w.WriteHeader(http.StatusOK)
 		_, _ = w.Write([]byte("ok"))
@@ -58,12 +61,14 @@ func main() {
 type config struct {
 	listenAddr string
 	mcAddr     string
+	githubRepo string
 }
 
 func loadConfig() config {
 	return config{
 		listenAddr: envOr("LISTEN_ADDR", ":8080"),
 		mcAddr:     envOr("MC_ADDR", "mc.ishimura.xyz:25565"),
+		githubRepo: envOr("GITHUB_REPO", "Xela112233/Derpack-X"),
 	}
 }
 
@@ -112,5 +117,96 @@ func newStatusHandler(cfg config) http.HandlerFunc {
 		w.Header().Set("Content-Type", "application/json")
 		w.Header().Set("Cache-Control", "public, max-age=15")
 		_ = json.NewEncoder(w).Encode(st)
+	}
+}
+
+type releaseSummary struct {
+	Version     string `json:"version"`
+	Name        string `json:"name"`
+	PublishedAt string `json:"published_at"`
+}
+
+type releaseInfo struct {
+	Version       string           `json:"version"`
+	Name          string           `json:"name"`
+	PublishedAt   string           `json:"published_at"`
+	InstallerURL  string           `json:"installer_url"`
+	InstallerSize int64            `json:"installer_size"`
+	MrpackURL     string           `json:"mrpack_url"`
+	Releases      []releaseSummary `json:"releases"`
+	Error         string           `json:"error,omitempty"`
+}
+
+// newReleaseHandler resolves the latest release's actual download URLs from the
+// GitHub API (by asset pattern, so versioned filenames keep working) plus a few
+// recent versions. Cached for 15 minutes; on a transient API failure it serves
+// the last good result rather than breaking the download button.
+func newReleaseHandler(cfg config) http.HandlerFunc {
+	const ttl = 15 * time.Minute
+	var (
+		mu       sync.Mutex
+		cached   releaseInfo
+		fetched  time.Time
+		haveGood bool
+	)
+
+	build := func() releaseInfo {
+		ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+		defer cancel()
+
+		releases, err := github.FetchReleases(ctx, cfg.githubRepo, 5)
+		if err != nil {
+			return releaseInfo{Error: "could not reach GitHub"}
+		}
+
+		var info releaseInfo
+		var latest *github.Release
+		for i := range releases {
+			r := releases[i]
+			if r.Draft {
+				continue
+			}
+			info.Releases = append(info.Releases, releaseSummary{
+				Version:     r.Version(),
+				Name:        r.Name,
+				PublishedAt: r.PublishedAt.Format("2006-01-02"),
+			})
+			if latest == nil && !r.Prerelease {
+				latest = &releases[i]
+			}
+		}
+		if latest != nil {
+			info.Version = latest.Version()
+			info.Name = latest.Name
+			info.PublishedAt = latest.PublishedAt.Format("2006-01-02")
+			if a := latest.AssetMatching("prism-installer", ".zip"); a != nil {
+				info.InstallerURL = a.DownloadURL
+				info.InstallerSize = a.Size
+			}
+			if a := latest.AssetMatching(".mrpack"); a != nil {
+				info.MrpackURL = a.DownloadURL
+			}
+		}
+		return info
+	}
+
+	return func(w http.ResponseWriter, r *http.Request) {
+		mu.Lock()
+		if !haveGood || time.Since(fetched) > ttl {
+			fresh := build()
+			fetched = time.Now()
+			if fresh.Error == "" {
+				cached, haveGood = fresh, true
+			} else if !haveGood {
+				cached = fresh // no good data yet: surface the error
+			}
+			// otherwise keep the last good result, ignore the transient error
+		}
+		info := cached
+		mu.Unlock()
+
+		w.Header().Set("Content-Type", "application/json")
+		w.Header().Set("Cache-Control", "public, max-age=300")
+		_ = json.NewEncoder(w).Encode(info)
 	}
 }

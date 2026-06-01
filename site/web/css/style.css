@@ -194,6 +194,19 @@ a:hover { text-decoration: underline; }
 .get-inner { text-align: center; }
 .get-inner p { max-width: 52ch; margin-inline: auto; }
 .get-inner .btn { margin-top: .4rem; }
+.btn-version { font-weight: 400; opacity: .85; }
+
+/* ---- recent versions (populated from /api/release) ---- */
+.releases { margin-top: 2.4rem; text-align: left; }
+.releases .subhead { text-align: left; }
+.releases-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .4rem; }
+.releases-list li {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .8rem;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: .6rem .85rem;
+}
+.rel-ver { font-family: var(--mono); color: var(--accent); font-weight: 700; }
+.rel-name { color: var(--text-dim); flex: 1 1 12rem; min-width: 0; }
+.rel-date { font-family: var(--mono); color: var(--text-dim); font-size: .8rem; }
 
 /* ---- FAQ ---- */
 .faq { display: grid; gap: .6rem; }

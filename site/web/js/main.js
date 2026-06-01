@@ -63,4 +63,45 @@
   refresh();
   // Light periodic refresh while the tab is open; backend caches so this is cheap.
   setInterval(function () { if (!document.hidden) refresh(); }, 60000);
+
+  // --- latest release: resolve the real download URLs + recent versions ---
+  // Backed by this site's own /api/release (cached server-side). The static
+  // links in the HTML stay as a no-JS fallback; this just points them at the
+  // actual current assets so versioned filenames keep working.
+  fetch("/api/release", { headers: { "Accept": "application/json" } })
+    .then(function (r) { if (!r.ok) throw new Error("bad release"); return r.json(); })
+    .then(function (d) {
+      if (!d || d.error) return; // keep the static fallback links
+
+      var installer = document.getElementById("installer-link");
+      if (installer && d.installer_url) installer.setAttribute("href", d.installer_url);
+      var ver = document.getElementById("installer-version");
+      if (ver && d.version) ver.textContent = " (v" + d.version + ")";
+      var mrpack = document.getElementById("mrpack-link");
+      if (mrpack && d.mrpack_url) mrpack.setAttribute("href", d.mrpack_url);
+
+      var list = document.getElementById("releases-list");
+      var wrap = document.getElementById("releases");
+      if (list && wrap && d.releases && d.releases.length) {
+        list.innerHTML = "";
+        d.releases.forEach(function (rel) {
+          var li = document.createElement("li");
+          var v = document.createElement("span");
+          v.className = "rel-ver";
+          v.textContent = "v" + rel.version;
+          var n = document.createElement("span");
+          n.className = "rel-name";
+          n.textContent = rel.name || "";
+          var dt = document.createElement("time");
+          dt.className = "rel-date";
+          dt.textContent = rel.published_at || "";
+          li.appendChild(v);
+          li.appendChild(n);
+          li.appendChild(dt);
+          list.appendChild(li);
+        });
+        wrap.hidden = false;
+      }
+    })
+    .catch(function () { /* keep the static fallback links */ });
 })();
