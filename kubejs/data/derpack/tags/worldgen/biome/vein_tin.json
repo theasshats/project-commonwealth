@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:is_hill",
+    "minecraft:plains",
+    {
+      "id": "terralith:highlands",
+      "required": false
+    },
+    {
+      "id": "terralith:steppe",
+      "required": false
+    },
+    {
+      "id": "#c:is_underground",
+      "required": false
+    },
+    "minecraft:dripstone_caves",
+    "minecraft:lush_caves",
+    "minecraft:deep_dark"
+  ]
+}

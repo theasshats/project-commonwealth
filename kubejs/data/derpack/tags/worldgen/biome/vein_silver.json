@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:is_hill",
+    {
+      "id": "terralith:rocky_mountains",
+      "required": false
+    },
+    {
+      "id": "terralith:scarlet_mountains",
+      "required": false
+    },
+    {
+      "id": "terralith:granite_cliffs",
+      "required": false
+    },
+    {
+      "id": "#c:is_underground",
+      "required": false
+    },
+    "minecraft:dripstone_caves",
+    "minecraft:lush_caves",
+    "minecraft:deep_dark"
+  ]
+}
