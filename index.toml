@@ -737,8 +737,100 @@ file = "kubejs/server_scripts/example.js"
 hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
 
 [[files]]
+file = "kubejs/server_scripts/recipes/00-create-ify.js"
+hash = "e9f67f7388af8d4866d5741d07c7ff8d7c275701e4e135bde24446a29e2f2453"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/05-metals.js"
+hash = "27307a988d430c42df60ece37ada6f6a3424c2d25eb9d20e9b1f8b2a71fa327c"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/10-immersive-armors.js"
+hash = "2771e51fa8c7bd0bbcf95cc857767ef3449caab5dbecf013d517e3c0b6e96be1"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/20-samurai-dynasty.js"
+hash = "5c69081d7f49f0bca19ec75fcf51f6873e8cafdfbbbbdc7bdbb12d06c0685156"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/30-modular-golems.js"
+hash = "e1a80e4bece804d4423bfb9a9f2173d6208d15ea8dfd0513dba7537ebcdb683c"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/33-magic-web.js"
+hash = "669a24f251421b0094427c61622d58ebd891423d6e85836cdb9c471d7631f4ed"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/40-northstar.js"
+hash = "88960224a04a3e958fb7b6a52bf091604fea44dd12e3de99ac038fa61a8cb69a"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/50-irons-spellbooks.js"
+hash = "6376950f93ae8130902a9fb8f2b80125285186e8309ebbbb184385576597f503"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/60-mffs.js"
+hash = "51473fa90f807bc2ab5c81fbda64f0ebaedaf81453149781668cf643e92975ad"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/70-travelers-backpack.js"
+hash = "c3f35695fdf29cdc531b5323b0211aa10972aa673e7b4e14115a14c4f3fdac9a"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/80-securitycraft.js"
+hash = "ecc681b293943092354a7751fa75bbb746730dd6e7fe85b0fae3ff62e977eba7"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/89-bible.js"
+hash = "aaad721b777896d10baa8abb074cc5b0669c642b4e3625a195c27880baa93048"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/90-drones.js"
+hash = "b66919cef8722844819f88a6d8ad8ab4eae02e921af2f24f31137e32e4ad1191"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/91-astikor-carts.js"
+hash = "81d52eae9f867944430e6f7736d06a80ba588b2cf9d9e805cf5a83542844dc68"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/92-exposure.js"
+hash = "22ec481a7daa665dc46f3e09728c9af230f98025b71c687fd472e821a7f9487d"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/93-smokeleaf.js"
+hash = "529156a99bf4f2d7da0a1d2ed65211f59694785ae9400b65f6e2c54f9791696e"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/94-supplementaries.js"
+hash = "f08ceba1318e194e9b480c036c6a8633d7118d645016f94cded1de10f3b4a95b"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/95-swashbucklers.js"
+hash = "0fd44b9ec91d40e5848c72bf08f1ed8058f9aeaeaff56571e68f81c7bfcaf2ab"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/96-gliders.js"
+hash = "880dfba58856f5a4b8ab2870efc7fcb1aca5fe9d226d7906795d942c8a2487fb"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/97-netmusic.js"
+hash = "12ef3675dfe7625404ef5e49f8f11ad877f60136918334fcb99a1ce823cac21b"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/98-minecolonies.js"
+hash = "501a6617cb9919c1098ef85293601bbcfd3605e79de089ac3a3520892f05644e"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/99-meadow-cheese.js"
+hash = "8142b4ddd8db3447133aa357d41654dc2af74908f9337a25375097895bc2d25a"
+
+[[files]]
 file = "kubejs/server_scripts/remove-default-tacz-guns.js"
 hash = "3b873afb2f1eb1c1bf0a6e9909ecaeb1b189c16427044aa087f6939be8530721"
+
+[[files]]
+file = "kubejs/startup_scripts/01-intermediate-parts.js"
+hash = "6c09092dc0f47bbeec1f63b17714436f1765163110a84e508565b9c90ec948f4"
 
 [[files]]
 file = "mods/accelerated-decay.pw.toml"
