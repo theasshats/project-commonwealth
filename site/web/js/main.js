@@ -73,15 +73,10 @@
     .then(function (d) {
       if (!d || d.error) return; // keep the static fallback links
 
-      // Point every installer / mrpack link at the resolved asset URL.
+      // Point every installer link at the resolved asset URL.
       if (d.installer_url) {
         document.querySelectorAll(".js-installer").forEach(function (a) {
           a.setAttribute("href", d.installer_url);
-        });
-      }
-      if (d.mrpack_url) {
-        document.querySelectorAll(".js-mrpack").forEach(function (a) {
-          a.setAttribute("href", d.mrpack_url);
         });
       }
       var ver = document.getElementById("installer-version");

@@ -42,7 +42,7 @@ badge and live download resolution are enhancements.
 - `/` — the embedded static site.
 - `/api/status` — cached Minecraft Server List Ping for the live status badge.
 - `/api/release` — cached GitHub Releases lookup (15 min). Resolves the latest
-  release's actual installer/mrpack asset URLs by pattern and lists recent
+  release's actual Prism-installer asset URL by pattern and lists recent
   versions, so the download button always points at the real current file even
   though asset names carry a version. Falls back to the last good result on a
   transient API error. Optional `GITHUB_TOKEN` raises the API rate limit.
@@ -56,11 +56,13 @@ game connect address is set to `mc.ishimura.xyz`; if that ever moves, change it
 in `index.html` (the copy button) **and** the `MC_ADDR` env in compose.
 
 The download buttons resolve live via `/api/release`, so they always point at
-the current release's actual installer/mrpack asset (a direct file download, no
+the current release's actual Prism-installer asset (a direct file download, no
 GitHub UI). With JS off they fall back to the static `releases/latest/download/`
-links in the HTML, which work once a release ships the stable, version-less asset
-names the build workflow now attaches. The **Rules** section is intentionally
-left as a placeholder (zagwar is designing them).
+link in the HTML, which works once a release ships the stable, version-less asset
+name the build workflow now attaches. The site links only the Prism installer
+(the `.mrpack` is dropped on purpose: it's currently ~200&nbsp;MB and the
+installer is the recommended path). The **Rules** section is intentionally left
+as a placeholder (zagwar is designing them).
 
 ---
 

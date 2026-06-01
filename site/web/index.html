@@ -9,10 +9,9 @@
 
   <!--
     Content is filled from the modpack itself.
-    Download buttons point at the release's PERMANENT latest-download URLs
-    (releases/latest/download/derpack-x-prism-installer.zip and derpack-x.mrpack):
-    a direct file download, no GitHub UI. These resolve once a release is published
-    by the updated build workflow, which now attaches stable-named copies.
+    Download links (class "js-installer") are rewritten at runtime by /api/release
+    to the latest release's actual Prism-installer asset, so versioned filenames
+    keep working. The static href is just the no-JS fallback.
     The ONE placeholder left to fill is the Discord invite: search for {{DISCORD_INVITE}}.
     Game connect address is set to mc.ishimura.xyz (the brief's gray-cloud game host).
     Change it here and in the server's MC_ADDR env if that ever moves.
@@ -73,7 +72,7 @@
           </li>
           <li>
             <h3>Download the pack</h3>
-            <p>Grab the <a class="js-installer" href="https://github.com/Xela112233/Derpack-X/releases/latest/download/derpack-x-prism-installer.zip" rel="noopener">Prism installer</a> (~5&nbsp;MB), one small file with no account or store needed. Prefer the Modrinth app? Use the <a class="js-mrpack" href="https://github.com/Xela112233/Derpack-X/releases/latest/download/derpack-x.mrpack" rel="noopener"><code>.mrpack</code></a> instead.</p>
+            <p>Grab the <a class="js-installer" href="https://github.com/Xela112233/Derpack-X/releases/latest/download/derpack-x-prism-installer.zip" rel="noopener">Prism installer</a> (~5&nbsp;MB). One small file, no account or store needed.</p>
           </li>
           <li>
             <h3>Import into Prism</h3>
@@ -152,7 +151,6 @@
         <h2 class="section-title"><span class="section-num">03</span> Get the pack</h2>
         <p>One small file (~5&nbsp;MB). Import it into Prism and the launcher pulls every mod on first launch, so there's no giant download, and it auto-syncs each time a new version ships.</p>
         <a class="btn btn--primary btn--lg js-installer" id="installer-link" href="https://github.com/Xela112233/Derpack-X/releases/latest/download/derpack-x-prism-installer.zip" rel="noopener">Download for Prism<span class="btn-version" id="installer-version"></span> →</a>
-        <p class="note">On the Modrinth app instead? Grab the <a class="js-mrpack" href="https://github.com/Xela112233/Derpack-X/releases/latest/download/derpack-x.mrpack" rel="noopener"><code>.mrpack</code></a>.</p>
         <div class="releases" id="releases" hidden>
           <h3 class="subhead">Recent versions</h3>
           <ul class="releases-list" id="releases-list"></ul>

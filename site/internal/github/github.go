@@ -41,7 +41,7 @@ type Asset struct {
 func (r Release) Version() string { return strings.TrimPrefix(r.TagName, "v") }
 
 // AssetMatching returns the first asset whose lower-cased name contains all of
-// the given substrings, or nil. Used to find the installer / mrpack by pattern
+// the given substrings, or nil. Used to find the installer asset by pattern
 // rather than exact filename.
 func (r Release) AssetMatching(parts ...string) *Asset {
 	for i := range r.Assets {
