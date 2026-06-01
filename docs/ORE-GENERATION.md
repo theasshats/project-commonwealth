@@ -87,7 +87,7 @@ You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:
 - **Lithium** — TFMG — `tfmg:lithium_ore` (+deepslate)
 - **Nickel** — TFMG — `tfmg:nickel_ore` (+deepslate)
 - **Palladium** — Galosphere — `galosphere:palladium_ore` (+`deepslate_palladium_ore`). Prestige metal:
-  kept **rare + regional** (mountains + dripstone + deep_dark, `chance 24`) and deliberately **excluded
+  kept **rare + regional** (mountains + dripstone + deep_dark, `chance 14`) and deliberately **excluded
   from the `#c:is_underground` "findable everywhere" pass** so it doesn't roll in every cave (the hybrid
   case in issue #65). **Default `#is_overworld` gen shadowed:** Galosphere 1.5.x renamed *Silver → Palladium*
   but kept the old feature IDs, so `add_silver_ores` (feature `galosphere:ore_silver_small`) was injecting
