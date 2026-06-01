@@ -56,3 +56,53 @@ are currently region-agnostic.
   no longer fail with `i/o timeout`. _(Shipped in 0.4.5; noted here for completeness.)_
 - `docs/ORE-GENERATION.md` expanded: HolderSet array-vs-tag gotcha, 3D/cave-biome notes, the
   shadow table, and per-ore decisions.
+
+---
+
+## 0.4.5 — TaCZ × Create guns + tooling
+
+### 🔫 Gun integration (Timeless & Classics × Create)
+- **Stock TaCZ guns removed** — the pack is **Armorer-only**: vanilla TaCZ default guns are stripped
+  (via KubeJS recipe removal, after the config route proved unreliable) so firearms come exclusively
+  through the Create-integrated path.
+- **All Immersive TaCZ recipes re-authored to the Create 6.0.10 schema** and routed through the
+  Create **Armorer / gun smith table**, requiring Create + Immersive components (with an EMI-visible
+  fallback). Recipe difficulty bumped **+2–3 notches** to fit progression.
+- Added `create-immersive-tacz-integration` and the `create-armorer` pack (shipped as a native TaCZ
+  pack rather than `kubejs/data`).
+
+### 🛠️ Tooling / infrastructure
+- **Editor:** removed the server `WriteTimeout`, so long operations (build, batch-add, version
+  checks) no longer die with `write tcp …: i/o timeout`.
+- **CI ground-truth digest:** new workflow + extractor that indexes every mod's real block/ore IDs,
+  biome modifiers, tags, recipes, and loot tables into `tools/mod-data/`. This is what let later
+  worldgen work verify IDs from the jars instead of guessing (e.g. catching the Galosphere
+  Silver→Palladium rename).
+
+---
+
+## 0.4.4 — Eco-foundation: ore generation + Blockchain gating (PR #56)
+
+> ⚠️ **Shipped broken** — this release introduced the ore-gen layer but a malformed worldgen file
+> crashes world creation. **Do not use 0.4.4/0.4.5 for new worlds; use 0.4.6.** Documented here
+> because the original notes were bare-bones.
+
+### ⛏️ Ore generation — first cut
+- Introduced the whole **GregTech-style vein system**: rare, large, biome-specific veins for **16
+  modded + vanilla ores** (configured feature + placed feature + biome modifier each), with vanilla
+  ore **thinned to a starter trickle**.
+- **Disabled mods' default `#is_overworld` ore gen** via `neoforge:none` shadows so the veins are the
+  intended source — Create zinc, Create: New Age thorium + magnetite, Occultism silver (+deepslate),
+  Create: Nuclear uranium + lead, TFMG lead/lithium/nickel, Create: Ironworks tin, samurai_dynasty
+  jade, irons_spellbooks mithril, expandeddelight salt. Let's Do Meadow alpine ores left regional.
+- Modded ore IDs and biome-modifier override paths verified against the mod jars.
+- _(Known issue, fixed in 0.4.6: the biome modifiers used an invalid tag-in-array form and crashed
+  world creation; copper/diamond thinning referenced nonexistent configured features.)_
+
+### 🪙 Create: Blockchain gating
+- **Currency Miner re-tuned into a slow sink, not a printer:** "Cost per Coin" gated to ~**10×**
+  energy with a steep global ramp (`config/createblockchain-common.toml`), so minting currency is an
+  expensive late-game activity rather than an early exploit.
+
+### 🧭 Project
+- Added `CLAUDE.md` (repo/agent guidance) and `docs/ORE-GENERATION.md` (design + per-ore tables).
