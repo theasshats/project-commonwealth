@@ -20,6 +20,7 @@ You're in an **Anthropic-managed cloud sandbox** with this repo cloned into it �
 - `kubejs/` — KubeJS scripts (recipe tweaks, gameplay).
 - `scripts/` — build helpers.
 - `tools/derpack-edit.exe` — editor binary, **CI-built; never hand-edit.** `tools/editor-src/` — its Go source.
+- `site/` — player-facing website: a self-contained Go binary serving an embedded static site plus `/api/status` (Minecraft ping) and `/api/release` (GitHub Releases lookup). Runs **on the ishimura box** behind the Cloudflare Tunnel + Caddy stack, deployed by hand — **not** in this repo's CI. Served at `derpack-x.ishimura.xyz` / `modpack.ishimura.xyz`. See `site/README.md`.
 - `docs/` — `DESIGN.md` (the why), `EDITING.md`, `PRISM-SETUP.md`.
 
 ## packwiz conventions
