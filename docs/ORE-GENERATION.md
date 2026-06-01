@@ -51,6 +51,17 @@ tags (verified), so one vanilla tag covers all the matching Terralith biomes too
 Use a **specific biome ID** only for special cases (e.g. diamonds *only* in `terralith:amethyst_rainforest`).
 You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:rocky_mountains"]`.
 
+> **Underground = different biomes (important).** MC 1.21 biomes are 3D. Below ground the world is
+> mostly **cave biomes** (`dripstone_caves`/`lush_caves`/`deep_dark` + Terralith `#terralith:reference/cave`,
+> Galosphere, Northstar, Quark…), pooled into `#c:is_underground`. A vein keyed to *surface* tags only
+> generates where that surface biome extends straight down — so it's absent in the cave-biome pockets
+> you actually mine through, making regional veins feel empty while vanilla (which targets
+> `#minecraft:is_overworld`, **including** caves) still shows. **Current choice:** every `vein_*` tag also
+> includes `#c:is_underground` + the three vanilla cave biomes, so veins are findable everywhere you cave.
+> Trade-off: cave pockets are region-agnostic (any cave can roll any ore); strict surface regionality only
+> holds when digging down through stone in-region. Under review (see repo issue) — alternatives are strict
+> regional (drop the cave entries) or hybrid (caves only for utility metals, marquee ores stay regional).
+
 > **Gotcha (crashes world creation):** a `biome_modifier`'s `"biomes"` is a HolderSet. A JSON
 > **array may only contain plain biome IDs** — you **cannot** put a `#tag` inside the array
 > (`["#minecraft:is_taiga", "#minecraft:is_forest"]` fails to parse → "Failed to load registries").

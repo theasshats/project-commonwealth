@@ -1,8 +1,10 @@
 {
   "replace": false,
   "values": [
-    "#minecraft:is_taiga",
-    "#minecraft:is_forest",
+    "terralith:amethyst_rainforest",
+    "terralith:moonlight_grove",
+    "terralith:mirage_isles",
+    "terralith:lavender_forest",
     {
       "id": "#c:is_underground",
       "required": false

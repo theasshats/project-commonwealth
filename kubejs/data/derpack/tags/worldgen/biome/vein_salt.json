@@ -2,6 +2,13 @@
   "replace": false,
   "values": [
     "#c:is_ocean",
-    "#minecraft:is_beach"
+    "#minecraft:is_beach",
+    {
+      "id": "#c:is_underground",
+      "required": false
+    },
+    "minecraft:dripstone_caves",
+    "minecraft:lush_caves",
+    "minecraft:deep_dark"
   ]
 }

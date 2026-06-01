@@ -13,6 +13,13 @@
     {
       "id": "terralith:granite_cliffs",
       "required": false
-    }
+    },
+    {
+      "id": "#c:is_underground",
+      "required": false
+    },
+    "minecraft:dripstone_caves",
+    "minecraft:lush_caves",
+    "minecraft:deep_dark"
   ]
 }

@@ -2,6 +2,12 @@
   "replace": false,
   "values": [
     "#minecraft:is_mountain",
-    "minecraft:dripstone_caves"
+    "minecraft:dripstone_caves",
+    {
+      "id": "#c:is_underground",
+      "required": false
+    },
+    "minecraft:lush_caves",
+    "minecraft:deep_dark"
   ]
 }
