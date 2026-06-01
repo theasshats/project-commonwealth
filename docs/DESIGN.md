@@ -181,6 +181,36 @@ Until then, baking operations into the binary is a "good enough" choice rather t
 
 ---
 
+## 10. Why guns route through Create (and are deliberately hard)
+
+The TaCZ gun integration (Create: Armorer + Create: Immersive TaCZ — full detail in `GUN-PACKS.md`)
+is the gun branch of the pack's Create-driven scarcity economy. We hold it to the same "does it plug
+into Create, or bypass it?" test we apply everywhere: a gun is **never** a quick craft from raw ore.
+Every gun, ammo round, and attachment is gated behind Create parts and processed metals (steel,
+brass/aluminum sheet, precision mechanisms, deployers), so standing up a gun line *means* standing up
+a Create line first.
+
+Two non-obvious choices worth recording:
+
+- **Assembly happens at the TaCZ gun smith table, and the core parts use plain shaped recipes.**
+  Immersive TaCZ's native Create recipes (`mechanical_crafting`, etc.) load fine but **don't render in
+  EMI** on our Create 6.0.10 build — we burned real time confirming that (recipes present in the
+  manager, no parse errors, just invisible). Rather than fight the viewer, the parts (`gun_barrel`,
+  `gun_trigger`, `firing_mechanism`) ship as vanilla shaped recipes so they're discoverable, while
+  their *ingredients* stay all-Create so the gating is intact. The native Create tree still loads as a
+  parallel (un-surfaced) path; if a future Create/EMI version fixes that display we could collapse
+  back onto it.
+
+- **Difficulty is intentional, ~2-3 notches above a naive "convert the original recipe" baseline.**
+  Cost is concentrated in the shared components (an 8-steel barrel + a deployer/RSC firing mechanism
+  per gun), bulk fillers are roughly doubled, ammo yields run lean, and the 40mm cannon is a ~70-steel
+  megaproject on purpose. Guns are a mid-to-late-game payoff, not an early convenience. Thematic
+  variety comes from leaning on the wider Create ecosystem (Aeronautics propeller bearings/levitite,
+  TFMG aluminum, Create Addition rods/wire/electrum) so parts read like what they build. It's all
+  data-driven via a generator, so retuning is changing inputs, not hand-editing ~40 files.
+
+---
+
 ## When updating this doc
 
 If you're making a decision that future-you might forget the rationale for, add it here. If you're undoing a decision that's documented here, update or remove the section — don't leave stale "why we did X" notes after we've stopped doing X.

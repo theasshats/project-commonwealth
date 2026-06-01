@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "CMC",
+    "DfD"
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "C": {
+      "tag": "c:storage_blocks/copper"
+    },
+    "M": {
+      "item": "create:precision_mechanism"
+    },
+    "D": {
+      "item": "minecraft:deepslate_bricks"
+    },
+    "f": {
+      "item": "create:andesite_alloy"
+    }
+  },
+  "result": {
+    "id": "tacz:workbench_b",
+    "count": 1,
+    "components": {
+      "minecraft:custom_data": {
+        "BlockId": "create_armorer:create_workbench"
+      }
+    }
+  }
+}

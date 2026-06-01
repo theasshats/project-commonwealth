@@ -1,0 +1,57 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "createimmersivetacz:twelve_gauge_shell"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "tacz:ammo",
+      "count": 1,
+      "components": {
+        "minecraft:custom_data": {
+          "AmmoId": "tacz:12g"
+        }
+      }
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "createimmersivetacz:twelve_gauge_shell"
+        },
+        {
+          "item": "createimmersivetacz:primer"
+        }
+      ],
+      "results": [
+        {
+          "id": "createimmersivetacz:twelve_gauge_shell"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "createimmersivetacz:twelve_gauge_shell"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 25,
+          "fluid": "createimmersivetacz:gunpowder_fluid"
+        }
+      ],
+      "results": [
+        {
+          "id": "createimmersivetacz:twelve_gauge_shell"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "createimmersivetacz:twelve_gauge_shell"
+  }
+}

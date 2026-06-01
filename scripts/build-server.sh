@@ -25,8 +25,8 @@ OUT="dist/${INSTANCE_NAME}.zip"
 rm -rf "${STAGING}"
 mkdir -p "${STAGING}"
 
-# Configs
-for d in config defaultconfigs kubejs; do
+# Configs (+ tacz/ for the committed Create: Armorer gun pack zip)
+for d in config defaultconfigs kubejs tacz; do
     if [[ -d "${d}" ]]; then
         cp -r "${d}" "${STAGING}/"
     fi

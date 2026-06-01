@@ -1,12 +1,256 @@
 hash-format = "sha256"
 
 [[files]]
+file = "kubejs/data/create_armorer/data/blocks/create_workbench.json"
+hash = "2fe0d845b737b1648e9bcc193d5584bb4f1b0faeb411977a664099ac27476714"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/ammo/40mmhe_casing.json"
+hash = "6ee0632375df0cbbfd11a65375be78acd6de5ea8a81ef9e738ed1bde4eee8e61"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/ammo/40mmhe_casing_fill.json"
+hash = "6a63120c5ba0b98d212b1cfc0cba463271359e4a50e28e0407e4454c247bbba6"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/ammo/grenade_casing.json"
+hash = "e4941686a1ffa8a5df345fd3109f76171f8e189198833bb3476755c59c756e11"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/ammo/grenade_casing_fill.json"
+hash = "11123d1295407ee15fb474734ba2a4323482ba6c742263c895ca655fd91d816d"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/ammo/pneumatic_pistol_casing.json"
+hash = "f28f066a5ba8a956cdee3f9b9426ab9991d6fe3f8af9dfe81e4090836d334996"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/ammo/pneumatic_pistol_casing_fill.json"
+hash = "e0a1e45cb888d6287652dfe4987b0bb5b55a77d15f132ba41d2cf4aaede7661b"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/ammo/rimmed_blunt_ap_casing.json"
+hash = "ff3810038ce2c326825d76815b0fcaba98337fec8ce5bd98453fb99484e212f0"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/ammo/rimmed_blunt_ap_casing_fill.json"
+hash = "283b60faaa5d1beb5dee6de00e9987070050375fc1eab8f9522d3ba5fddbde25"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/ammo/slap_casing.json"
+hash = "d27ad905974c9e5236c8e12e80d599e5ed49554e981bac46f00b52fa0fe28740"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/ammo/slap_casing_fill.json"
+hash = "a1e0eb2893d7af7a966147abdc78a792a020f6378c5ba274442ad7c27a621980"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/ammo/twelve_gauge_shell.json"
+hash = "26605a2341d635f3c08ea1fe4ab35f999b2ccbc7a504c30d8dfd06287c394563"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/ammo/twelve_gauge_shell_fill.json"
+hash = "d8556e24b2879260c51256fc9f8512c001a8885ba5b1ca01fdd418eaceb9fdc3"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/ap_projectile.json"
+hash = "ad583e86f395bce8c54c494ce6832b4e0676851a608309d597e785d6c3d70a2d"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/bigger_cylinder.json"
+hash = "9aae852e71821128bbbddae790022fe1deeb99e8fada8c1263640d7d0dc317af"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/blasting_protocol.json"
+hash = "4dbfbc492e9da6c0b4322db6abf2b1004688820d34d5ab60880b924b3beaa4c5"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/brass_retractor.json"
+hash = "71c131179944fe3d4928850adf1c084ce93000525bb9760711f3619b24a4400e"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/extended_mag_1.json"
+hash = "b981ec85a4e96da7e8584b56e42c8eca80269ad06b1c5af3bb650e493e783794"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/extended_mag_2.json"
+hash = "8ceb9afd69eb4677b2fe08dec251370fe3d91fb2e13e165eca45ff6ee7161b1b"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/extended_mag_3.json"
+hash = "7b750cffe8f7f42138b42547d19b885df21071a23e4cb0811e41820b22a5b982"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/fluid_pipe_grip.json"
+hash = "fb7a9547fe64e860907a21b062e5fd59753bda68c8a56cbca76de75aa70185a1"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/fluid_pipe_muzzle.json"
+hash = "6998ca5e39e091a662fd199ed61b356ee475ff43f6f8177e4147bc3e78e44b72"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/fluid_pipe_scope.json"
+hash = "a56be6cfab628a37121ac053e4d3b7c22431ae8a450e86174f0fa5d6e3ef4e0e"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/gantry_shaft_grip.json"
+hash = "6c04f645cd1540b210653e0caf589692fc4de529dddd9fdbd75549cf79c6c414"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/lava_perfusion_bottle.json"
+hash = "f900dd764062303f9928afcd0170514d4af16b07f7ddc48b2337d1b6dd1b3590"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/medium_distance_scope.json"
+hash = "bc7326bb74759f7a045a19dcbfa5f4de26591a67675648458e8391b05672d60a"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/muzzle_refit_energy_blade.json"
+hash = "d148a51154e16c7590e9ef971318791b7aca940297f4abbdb536ae930d496556"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/shaft_grip.json"
+hash = "9741573711c93bcd383349c494382d9ea9a08a1585d8a890b6eb1b0dfec48cac"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/sight_reflex.json"
+hash = "700df4853c7911a90a6d88ca4b60144e99972e3693f3f937b44d745526837ffe"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/simple_mechanical_sight.json"
+hash = "0cd7756c9f62fd695b061572182d435a21a74746b67063e2862612fcb7abbcb1"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/standard_scope.json"
+hash = "311d8673945dca8497eb93d3aeb5b556f2625b569e9b4ecf75ef397369368565"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/telephoto_scope.json"
+hash = "b2b764ae4fe62f2be1938ba0faa709ead6fc7f956a729ac8c77cec13f42bebec"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/wooden_grip.json"
+hash = "afd8e2c13a42ab5c7bd283d9016ff723bd2570f0c7692032a331c904bf345730"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/attachments/wrench_iron_spike.json"
+hash = "6ab19027b5d6520bc77635dfffc1a11b14d47ff0bf1af2cdda6e13876bcde40e"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/firing_mechanism.json"
+hash = "56fca1e3a0ffff85119598dd8f28fef850037ab734fe9e82b0409b99ad9ac718"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/gun_barrel.json"
+hash = "62f45842422f752ae9c8d2c262b4be89acda89a547fda7ac76850d333d1496cf"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/gun_trigger.json"
+hash = "7aa4e6a75568668999a88a500a6f35ad97f7edb05b5a8349a03dd0256620e762"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/gunpowder_fluid.json"
+hash = "23dc2b2be7c26c5d2f1b3ac3c03f0f4596a29e446c954a395746b7dcb73018a5"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/assault_rifle.json"
+hash = "30909095c4248b361dd491338592ac62045ab32bc847980b88d6766a2ed605c5"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/double_barrel_shotgun.json"
+hash = "6420eb7fe8a547f7f5acbb2ea678eb168979eaea9a76295ed183c971ba08d408"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/field_gun.json"
+hash = "f7c2970015bca3272304701a35c9c275aec89a0a050b81e0059de672bd7dc223"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/grenade_launcher.json"
+hash = "cc3038cbbe27cfbda588127d288796bb2c885a2714a98aec373165abddbfd011"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/lmg.json"
+hash = "1ffbcdbe6adfc3e55d7457d4014c7169f8320f9a313417b1b7ae77e90ff1c5fc"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/melee_wrench.json"
+hash = "5cb6d9ad5759705d0b2d460d7ac9367269818b3aaca269b7321d3c8f6dd5f78e"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/pistol.json"
+hash = "0852626bedf87ef27318782087af1f70b0a30df34248272e47f7374fdb960e47"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/pump_shotgun.json"
+hash = "cf8b1346b2f6c69f44d8323f95bc2e894e63a0b987499d3750ac118cb36ca819"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/revolver.json"
+hash = "23993a2400e2dd992b362e8d714ff82445020542c1399efa50c2c9a7e576d860"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/roller.json"
+hash = "574fb2b39ae662f80e66f379a4aa2aaa924a140d53b3972ae6cbc726c238af83"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/semi_rifle.json"
+hash = "0246086a2c896acf0434eca7041420b6e8c1d33297a504578b2fbfb42f696686"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/smg.json"
+hash = "11e56fbf6f28ceb5549fcdcad476397546793f2ac4a0706fdde9b6d8282b3928"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/sniper.json"
+hash = "3f565b9b9ec71a5dfb7b5b8b7c440018564e6bf05106cd29254795a927a0fa71"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/special_melee_atomic.json"
+hash = "c209131341d3a0a1f176f21568969ed58429171bd6a0a32ce6d189a5b8b71bb4"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/guns/unmelee_wrench.json"
+hash = "963b307b83cdcb6c7e9014849012857114e3f42b1210fd2b2039851509bd9c80"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/nitropowder_fluid.json"
+hash = "84cf437b79313547b7ee678a04fe3cc89c5c34d4f59cecc4ba4692f505cc1cd6"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/primer.json"
+hash = "21fd7fa0836d3bafc5d87d9629360e3cdb1d3ed606bc3d5ed88159e5b9b4e828"
+
+[[files]]
+file = "kubejs/data/createimmersivetacz/recipe/primer_from_nitropowder.json"
+hash = "dbb2512b277212b962355adc7486d9f560e33274c96606ffc5deac070fbc20f6"
+
+[[files]]
 file = "kubejs/data/derpack/neoforge/biome_modifier/vein_copper.json"
 hash = "c5147d3f5c679fd97238e625fcd6b806544a66dff28b1aae5b22f3a204adf31c"
 
 [[files]]
 file = "kubejs/data/derpack/neoforge/biome_modifier/vein_iron.json"
 hash = "528d46e2c08d904c2ce79f11f46a0b3cfaec89446759e2de704a3ae5371916d2"
+
+[[files]]
+file = "kubejs/data/derpack/recipe/create_workbench.json"
+hash = "5a1069a65c84f4d1dafac9ae13654b330410159d1f5d0f4fa835caaf2d35703a"
+
+[[files]]
+file = "kubejs/data/derpack/recipe/firing_mechanism.json"
+hash = "8bcb876a502140e08cf43cc2dbc56d6f4d857e3150740aaca4988197d956f9d4"
+
+[[files]]
+file = "kubejs/data/derpack/recipe/gun_barrel.json"
+hash = "1e3a38d76394c7e0321b49e3b97369b174dbc1995c2271dd375592b130958921"
+
+[[files]]
+file = "kubejs/data/derpack/recipe/gun_trigger.json"
+hash = "c8ae32a3206cd2d7c0b8b0ba490f64c55e45ef42fd004060606610b76160a940"
+
+[[files]]
+file = "kubejs/data/derpack/recipe/primer.json"
+hash = "9f63003561b61c810d7ba7a4cfc0f5f0a0dfa0236b6bba99cfbb423a79beeea2"
 
 [[files]]
 file = "kubejs/data/derpack/worldgen/configured_feature/vein_copper.json"
@@ -39,6 +283,10 @@ hash = "b1cb66ea59955261817a97d3a816f6d2924b7d163c07027d1dd988511b2a289e"
 [[files]]
 file = "kubejs/server_scripts/example.js"
 hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
+
+[[files]]
+file = "kubejs/server_scripts/remove-default-tacz-guns.js"
+hash = "3b873afb2f1eb1c1bf0a6e9909ecaeb1b189c16427044aa087f6939be8530721"
 
 [[files]]
 file = "mods/accelerated-decay.pw.toml"
@@ -451,6 +699,11 @@ hash = "9659152903c07ccc018e00e09ffe021d78da8be78a83a19ffe269c251e0cd191"
 metafile = true
 
 [[files]]
+file = "mods/create-immersive-tacz-integration.pw.toml"
+hash = "667f5f7cce682baba103c2e07cc811d9bbd14e4813361a7db4c9e81f9478a93f"
+metafile = true
+
+[[files]]
 file = "mods/create-integrated-farming.pw.toml"
 hash = "fc49d6cf786feaabbb26ae0109498f5dab7c20fc939bdd650a38d46a31803e7c"
 metafile = true
@@ -582,7 +835,7 @@ metafile = true
 
 [[files]]
 file = "mods/create.pw.toml"
-hash = "4b0ca63279620ec9ba4c63820a9d4f9ceea9b717227137ea19e5c420c820f858"
+hash = "dcaf5f2e28db0b9a127d0167456832341045ddc9aec058c3d9fcf53f618d2404"
 metafile = true
 
 [[files]]
@@ -1814,3 +2067,11 @@ metafile = true
 file = "mods/zeta.pw.toml"
 hash = "cb474b6c0dde741836ed4f796f3b6ab0b9d3cdc0453e651122cd002d5d1f8df8"
 metafile = true
+
+[[files]]
+file = "tacz/Create_Armorer-v1.2.0.1.zip"
+hash = "479f0ac05833ccec554efa1b22e6f71553c7ebe7f381310c28467a399c98b0ba"
+
+[[files]]
+file = "tacz/Derpack_Armorer_Recipes.zip"
+hash = "b62ba1ec0235c6bf3ed5969aefdb003d7f19942285bb0668b27298ca7c6f2487"
