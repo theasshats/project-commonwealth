@@ -73,12 +73,14 @@
     .then(function (d) {
       if (!d || d.error) return; // keep the static fallback links
 
-      var installer = document.getElementById("installer-link");
-      if (installer && d.installer_url) installer.setAttribute("href", d.installer_url);
+      // Point every installer link at the resolved asset URL.
+      if (d.installer_url) {
+        document.querySelectorAll(".js-installer").forEach(function (a) {
+          a.setAttribute("href", d.installer_url);
+        });
+      }
       var ver = document.getElementById("installer-version");
       if (ver && d.version) ver.textContent = " (v" + d.version + ")";
-      var mrpack = document.getElementById("mrpack-link");
-      if (mrpack && d.mrpack_url) mrpack.setAttribute("href", d.mrpack_url);
 
       var list = document.getElementById("releases-list");
       var wrap = document.getElementById("releases");

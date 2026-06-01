@@ -132,7 +132,6 @@ type releaseInfo struct {
 	PublishedAt   string           `json:"published_at"`
 	InstallerURL  string           `json:"installer_url"`
 	InstallerSize int64            `json:"installer_size"`
-	MrpackURL     string           `json:"mrpack_url"`
 	Releases      []releaseSummary `json:"releases"`
 	Error         string           `json:"error,omitempty"`
 }
@@ -182,9 +181,6 @@ func newReleaseHandler(cfg config) http.HandlerFunc {
 			if a := latest.AssetMatching("prism-installer", ".zip"); a != nil {
 				info.InstallerURL = a.DownloadURL
 				info.InstallerSize = a.Size
-			}
-			if a := latest.AssetMatching(".mrpack"); a != nil {
-				info.MrpackURL = a.DownloadURL
 			}
 		}
 		return info
