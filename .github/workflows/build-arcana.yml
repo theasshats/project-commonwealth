@@ -1,0 +1,46 @@
+name: Build Arcana mod
+
+# Compiles the Derpack Arcana helper mod (mods-src/derpack-arcana) on change.
+# Skeleton stage: this is the first real compile — uploads the jar as a build artifact.
+# (Release-to-mod-mirror + packwiz wiring is added once a feature phase is ready to ship.)
+
+on:
+  push:
+    paths:
+      - 'mods-src/derpack-arcana/**'
+      - '.github/workflows/build-arcana.yml'
+  pull_request:
+    paths:
+      - 'mods-src/derpack-arcana/**'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mods-src/derpack-arcana
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Build
+        run: gradle build --no-daemon --stacktrace
+
+      - name: Upload jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: derpack-arcana-jar
+          path: mods-src/derpack-arcana/build/libs/*.jar
+          if-no-files-found: error

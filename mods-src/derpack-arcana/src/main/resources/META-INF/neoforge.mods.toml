@@ -1,0 +1,60 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "${mod_license}"
+issueTrackerURL = "https://github.com/Xela112233/Derpack-X/issues"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+authors = "${mod_authors}"
+description = '''
+Internal helper mod for the Derpack X modpack. Weaves the magic mods together at the CODE layer —
+energy / attribute / behaviour bridges that datapack recipes (kubejs) can't express. Every feature is
+optional and config-gated; if an integrated mod is absent, that feature no-ops. See docs/ARCANA-BRIDGE-MOD.md.
+'''
+
+[[dependencies."${mod_id}"]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"
+
+# Soft integration deps — optional + ordered AFTER, so we load with or without each target mod.
+[[dependencies."${mod_id}"]]
+modId = "ars_nouveau"
+type = "optional"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "irons_spellbooks"
+type = "optional"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "occultism"
+type = "optional"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "born_in_chaos_v1"
+type = "optional"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "galosphere"
+type = "optional"
+ordering = "AFTER"
+side = "BOTH"

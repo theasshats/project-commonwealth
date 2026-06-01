@@ -42,3 +42,6 @@ Thumbs.db
 
 # This file itself
 .packwizignore
+
+# Mod source — built by CI, not pack content
+mods-src/
