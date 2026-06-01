@@ -11,9 +11,10 @@ ServerEvents.recipes(event => {
   const swap = (id, pattern, key) => { event.remove({ output: id }); event.shaped(id, pattern, key) }
 
   // CAMERA (keystone device). orig: iron + glass_pane + button + lever
-  // A pressed-copper body, glass lens, button+lever shutter.
-  swap('exposure:camera', ['BLS', 'SGS'], {
-    B: '#minecraft:buttons', L: 'minecraft:lever', S: 'create:copper_sheet', G: '#c:glass_panes/colorless'
+  // A pressed-copper body + button/lever shutter, focused through a polished rose-quartz LENS
+  // (Create's optical material — cross-mod synergy at comparable cost vs. a plain glass pane).
+  swap('exposure:camera', ['BLS', 'SQS'], {
+    B: '#minecraft:buttons', L: 'minecraft:lever', S: 'create:copper_sheet', Q: 'create:polished_rose_quartz'
   })
 
   // CAMERA STAND (tripod). orig: iron + smooth_stone_slab + stick
@@ -22,9 +23,10 @@ ServerEvents.recipes(event => {
   })
 
   // INTERPLANAR PROJECTOR (endgame). orig: ender_eye + redstone + tinted_glass
-  // Brass-bodied projector around an ender-eye core.
-  swap('exposure:interplanar_projector', [' G ', 'BEB', ' R '], {
-    G: 'minecraft:tinted_glass', B: 'create:brass_sheet', E: 'minecraft:ender_eye', R: '#c:dusts/redstone'
+  // Brass-bodied projector around an ender-eye core, lit by a glowing galosphere:lumiere_shard
+  // (the projection lamp — cross-mod synergy, kept comparable as an endgame piece).
+  swap('exposure:interplanar_projector', ['GLG', 'BEB', ' R '], {
+    G: 'minecraft:tinted_glass', L: 'galosphere:lumiere_shard', B: 'create:brass_sheet', E: 'minecraft:ender_eye', R: '#c:dusts/redstone'
   })
 
   // LEFT ALONE: all film (consumable chemical emulsion), the lightroom (wood/iron-trapdoor

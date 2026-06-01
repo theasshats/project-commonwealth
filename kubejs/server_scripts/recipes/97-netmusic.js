@@ -1,23 +1,21 @@
-// NetMusic electronics — assembled THROUGH Create, in the Immersive-TaCZ style (KubeJS).
+// NetMusic electronics — cross-mod synergy style, kept at COMPARABLE difficulty (KubeJS).
 //
-// Immersive TaCZ doesn't gate a gun on a token part — it assembles it on the MECHANICAL CRAFTER from
-// components sourced across the pack (steel barrel, firing mechanism, precision core, …). We mirror
-// that: a computer / CD burner is real electronics, so it comes off the Mechanical Crafter from parts
-// pulled across the tech mods — not a crafting-table trinket. This both ties the mods together and
-// makes "made through Create" literal (the machine has to run).
+// Borrowing the Immersive-TaCZ idea of sourcing real components across the pack's tech mods (so a
+// device ties the mods together and reads as assembled electronics) — but, unlike the guns (which
+// are deliberately hard because they're strong), these stay roughly as easy as the originals: a
+// rich TABLE craft, not a Mechanical-Crafter gate.
 //
-// Sourced across: create (framed_glass, electron_tube), create_new_age (copper_circuit — itself a
-// create:deploying product), createaddition (copper_wire), galosphere (allurite_shard = the glowing
-// optical/laser element). Simpler audio blocks (megaphone, music_player, CDs) stay vanilla.
+// Sourced across: create (framed_glass, electron_tube), create_new_age (copper_circuit),
+// createaddition (copper_wire), galosphere (allurite_shard = the glowing optical/laser element).
+// Simpler audio blocks (megaphone, music_player, CDs) stay vanilla.
 //
 // Verified against tools/mod-data/recipes/{netmusic,create-new-age,createaddition,Galosphere}-*.txt.
 
 ServerEvents.recipes(event => {
-  // COMPUTER — off the Mechanical Crafter: framed-glass screen, logic circuit, electron-tube
-  // processor, copper wiring, iron chassis, clock signal.
+  // COMPUTER — framed-glass screen, logic circuit, electron-tube chip, copper wiring, iron chassis.
   // orig: c:ingots/copper + c:ingots/iron + clock + glass_pane + redstone
   event.remove({ id: 'netmusic:computer' })
-  event.recipes.create.mechanical_crafting('netmusic:computer', ['FCF', 'WEW', 'IKI'], {
+  event.shaped('netmusic:computer', ['FCF', 'WEW', 'IKI'], {
     F: 'create:framed_glass',
     C: 'create_new_age:copper_circuit',
     W: 'createaddition:copper_wire',
@@ -26,11 +24,10 @@ ServerEvents.recipes(event => {
     K: 'minecraft:clock'
   })
 
-  // CD BURNER — an optical writer: a glowing allurite "laser" focused through wiring + a controller,
-  // assembled on the Mechanical Crafter.
+  // CD BURNER — a glowing allurite shard as the "laser", focused through wiring + a controller.
   // orig: c:ingots/copper + c:nuggets/iron + lightning_rod + redstone
   event.remove({ id: 'netmusic:cd_burner' })
-  event.recipes.create.mechanical_crafting('netmusic:cd_burner', ['CLC', 'WAW', 'CEC'], {
+  event.shaped('netmusic:cd_burner', ['CLC', 'WAW', 'CEC'], {
     C: '#c:ingots/copper',
     L: 'minecraft:lightning_rod',
     W: 'createaddition:copper_wire',

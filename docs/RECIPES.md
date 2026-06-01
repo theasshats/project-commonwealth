@@ -198,12 +198,29 @@ pack: `create` (electron_tube, propeller, framed_glass, sturdy_sheet, fluid_tank
 `create_new_age` (copper_circuit/wire — themselves Create-deployed), `createaddition`
 (copper_wire/spool, capacitor, electric_motor, brass_rod), `tfmg` (circuit_board, heavy_plate,
 machinery_casing), `galosphere` (allurite/lumiere shards = glowing optical/readout elements, silver).
-Applied so far: **netmusic** computer & cd_burner — both off the **Mechanical Crafter**
-(framed_glass + copper_circuit + electron_tube + copper_wire; allurite_shard "laser" + wiring +
-electron_tube); **supplementaries** wind_vane — Mechanical Crafter, a real `create:propeller` on a
-cogwheel; altimeter — layered table craft (brass housing + glowing lumiere readout + electron_tube),
-a handheld gauge that doesn't warrant the crafter. Keep this lens when revisiting the earlier
-flagship passes.
+**Difficulty rule:** the TaCZ guns are *deliberately* hard because they're strong — but for
+everything else **keep cost comparable to the original**. So borrow the *style* (cross-mod parts,
+route through Create) but don't inflate: a table-crafted device stays a (richer) table craft, not a
+Mechanical-Crafter gate. Reserve `mechanical_crafting` / `sequenced_assembly` for items that were
+already endgame/complex (e.g. MFFS machines, Northstar's rocket tech).
+
+Full-pass status (every flagship file reviewed):
+- **Enriched** (cross-mod parts, comparable cost): `netmusic` computer (framed_glass + copper_circuit
+  + electron_tube + copper_wire) & cd_burner (allurite_shard "laser" + wiring); `supplementaries`
+  altimeter (brass + glowing lumiere readout) & wind_vane (a `create:propeller` on a cogwheel);
+  `drones` controller + ion_thruster (createaddition copper_wire / electric_motor — a drone is an
+  electric machine); `securitycraft` laser_block (galosphere allurite_shard emitter + rose-quartz
+  lens) & portable_radar (copper_wire antenna); `exposure` camera (rose-quartz lens) + interplanar
+  projector (lumiere_shard lamp).
+- **Already in this style — kept**: `mffs` (TFMG steel casings + electron tubes + precision mechs via
+  `sequenced_assembly` off Mechanical Crafters — the exemplar); `northstar` (its rocket/oxygen/solar
+  tech already `mechanical_crafting` + `sequenced_assembly`).
+- **Reviewed, intentionally left thin** (enriching would inflate cost or break theme): `immersive_armors`
+  (bulk pressed-sheet armor — mechanizing every piece = grind), `samurai_dynasty` (thematic
+  steel+jade, no machine parts), `modular_golems` / `astikor_carts` / `smokeleaf` (single-keystone
+  gates — one touch routes the whole mod), `irons_spellbooks` (magic; one metal keystone),
+  `travelers_backpack` / `gliders` (already pressed-sheet, light), `swashbucklers` (black-powder
+  flintlocks — kept simple, not TaCZ-hard).
 
 ## Ground truth
 - Mods with jars on hand → recipes read directly for precise `remove` + replace.

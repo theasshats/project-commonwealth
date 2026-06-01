@@ -20,15 +20,17 @@ ServerEvents.recipes(event => {
   const swap = (id, pattern, key) => { event.remove({ output: id }); event.shaped(id, pattern, key) }
 
   // orig portable_radar: c:dusts/redstone + c:ingots/iron + minecraft:redstone_torch
-  // The detection brain -> a Create electron_tube circuit; iron framing -> pressed iron sheet.
-  swap('securitycraft:portable_radar', [' T ', 'SES', ' R '], {
-    T: 'minecraft:redstone_torch', S: 'create:iron_sheet', E: 'create:electron_tube', R: '#c:dusts/redstone'
+  // Detection brain -> a Create electron_tube; iron framing -> pressed iron sheet; createaddition
+  // copper_wire as the antenna feed (cross-mod synergy, comparable cost).
+  swap('securitycraft:portable_radar', [' T ', 'SES', ' W '], {
+    T: 'minecraft:redstone_torch', S: 'create:iron_sheet', E: 'create:electron_tube', W: 'createaddition:copper_wire'
   })
 
   // orig laser_block: c:glass_panes/colorless + c:storage_blocks/redstone + stone_crafting_materials
-  // The lens is Create's optical material, polished rose quartz; redstone block stays the power core.
-  swap('securitycraft:laser_block', [' G ', 'QRQ', ' G '], {
-    G: '#c:glass_panes/colorless', Q: 'create:polished_rose_quartz', R: '#c:storage_blocks/redstone'
+  // The emitter is an actual glowing crystal — galosphere:allurite_shard — focused through a Create
+  // polished-rose-quartz lens; the redstone block stays the power core (cross-mod, comparable cost).
+  swap('securitycraft:laser_block', [' G ', 'QAQ', ' R '], {
+    G: '#c:glass_panes/colorless', Q: 'create:polished_rose_quartz', A: 'galosphere:allurite_shard', R: '#c:storage_blocks/redstone'
   })
 
   // orig mine: c:gunpowders + c:ingots/iron  ->  pressed-iron casing around the charge (kept light;
