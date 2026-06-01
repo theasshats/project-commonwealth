@@ -100,9 +100,15 @@ func run() error {
 	mux.Handle("/", http.FileServer(http.FS(uiSubFS)))
 
 	httpSrv := &http.Server{
-		Handler:      mux,
-		ReadTimeout:  30 * time.Second,
-		WriteTimeout: 60 * time.Second,
+		Handler: mux,
+		// Only bound how long we'll wait for request headers — that's enough to
+		// shrug off a stuck/slow client without killing legitimate work. We do
+		// NOT set WriteTimeout/ReadTimeout: those are whole-connection deadlines
+		// armed at accept time, so a slow handler (build ~minutes, batch-add and
+		// version checks doing many Modrinth fetches + hashing) blows past them
+		// and the final writeJSON dies with "write tcp ...: i/o timeout". Each
+		// handler already enforces its own per-operation context.WithTimeout.
+		ReadHeaderTimeout: 30 * time.Second,
 	}
 
 	// Run server in a goroutine so we can handle shutdown.
