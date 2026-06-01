@@ -222,28 +222,42 @@ Full-pass status (every flagship file reviewed):
   `travelers_backpack` / `gliders` (already pressed-sheet, light), `swashbucklers` (black-powder
   flintlocks — kept simple, not TaCZ-hard).
 
-## Magic web (weaving the magic mods together)
-Separate from the Create spine, the **magic** mods are woven into one progression around an arcane
-**spine — Ars Nouveau + Iron's Spellbooks** (the two understandable spellcasters). The rule (maintainer
-steer): *don't force one mod's component into all the others* — so the weave is a handful of **purely
-additive bridge recipes** (`33-magic-web.js`) that never touch an existing magic recipe; they just add
-alt paths so progression flows between systems:
+## Magic web (weaving the magic mods together) — v2, separate PR (`claude/magic-web`)
+Modelled on the pack's *own* bridge mods: **Ars 'n Spells** makes Ars Nouveau the casting hub that
+wields Iron's spells (→ **Ars is the spine**), and **Create: Occult Engineering** bridges Occultism
+through native machines + a dedicated intermediate (`occultengineering:spirit_solution`, minted by
+`create:mixing` of `otherworld_essence`/`datura` + water). v2 emulates that instead of v1's plain
+table swaps: **Ars `source_gem` is the universal currency**, foreign essences mint into/out of it via
+Ars's **Imbuement Chamber / Enchanting Apparatus**, and the whole occult side funnels through OE's
+existing `spirit_solution`. Everything ADDITIVE — no existing magic recipe touched.
 
 ```
-Born in Chaos (necromancy) ──▶ Occultism (summoning) ──▶ arcane SPINE ◀──▶ (Ars ⇄ Iron's)
+Gaia / Mowzie's drops ┐
+Born in Chaos spirits  ├─▶ occultengineering:spirit_solution ─(OE native)─▶ occult goods
+                       │                          ▲
+Occultism ─────────────┘            create:mixing │ (Ars source mints it too)
+                                                  │
+        Ars Nouveau  ◀──[Imbuement/Apparatus]──▶  arcane SPINE  ◀──[Ars 'n Spells]──▶  Iron's
 ```
 
-- **Ars ⇄ Iron's** — Source gem ⇄ arcane essence, each direction catalysed by a **Galosphere** shard
-  (so round-trips cost crystals — no free essence-arbitrage).
-- **Occultism ▶ spine** — joins via its *ritual-made* `otherworld_essence` (not the cheap farmable
-  datura essence), refined with an attunement crystal.
-- **Born in Chaos ▶ Occultism** — its `spiritual_dust` feeds the occult spirit economy, finally giving
-  the necromancy outlier a place in the pack.
+Files: `33-magic-web-spine.js` (Ars hub: imbuement/apparatus refinements + table fallbacks),
+`34-magic-web-occult.js` (spirit_solution minting via create:mixing + spirit_fire sinks),
+`35-magic-web-mobs.js` (fold in the isolated mods). Highlights:
+- **Ars ⇄ Iron's** — source ⇄ arcane essence through the Imbuement Chamber / Enchanting Apparatus
+  (Galosphere shard keeps the cash-back non-free).
+- **Occult intermediate** — Ars source, Born in Chaos `ethereal_spirit`, and Gaia `soulfire` all
+  `create:mixing` into `occultengineering:spirit_solution`, so every branch flows through OE's reagent.
+- **Isolated mods folded in** — Gaia (`soulfire`→solution, `shiny_pearl`→source, `withered_brain`/
+  `rotten_heart`→demon essence), Mowzie's (`ice_crystal`→water essence, `glowing_jelly`→source,
+  `foliaath_seed`→datura), and a light **Modular Golems** tie (`source_gem`→`empty_upgrade`).
 
-**Galosphere's allurite / lumiere shards are the connective thread** (the "arcane attunement crystal"),
-which also gives an underused worldgen mod a magic purpose. All ratios are first-pass — tune in playtest
-against the real essence economies. occultism↔Create was *already* bridged by the **occultengineering**
-mod (create:mixing/compacting/filling), so that branch needs no KubeJS.
+**Authoring / risk:** Create steps use the proven `event.recipes.create.mixing` builder. Ars imbuement/
+enchanting_apparatus and occultism `spirit_fire` use `event.custom({...})` raw JSON whose **field names
+are best-guess (can't verify headless)** — so each ships an `event.shapeless` **table fallback** that
+keeps progression working if the native schema needs an in-game tweak (verify field names in JEI/EMI:
+imbuement `source`/`output`, apparatus `sourceCost`/`result`, spirit_fire `ingredient`/`result`).
+occultism `ritual` is intentionally not authored (pentacle-bound, not KubeJS-safe). Native machines may
+later want a small supporting mod (maintainer call). Ratios are first-pass — tune in playtest.
 
 Material (non-magic) bridges follow the same additive pattern — e.g. Meadow cheese ▶ Create Cheese
 (`99`, #51). A sweep for more found the material layer is **already woven by `c:` tags +
