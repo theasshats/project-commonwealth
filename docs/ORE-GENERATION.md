@@ -75,9 +75,18 @@ You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:
   only the TFMG one and disable both defaults — both register lead under the standard `c:ores/lead`/`c:ingots/lead` tags, so they're interchangeable.*
 - **Lithium** — TFMG — `tfmg:lithium_ore` (+deepslate)
 - **Nickel** — TFMG — `tfmg:nickel_ore` (+deepslate)
+- **Palladium** — Galosphere — `galosphere:palladium_ore` (+`deepslate_palladium_ore`). Veined deep
+  & rare in mountains + dripstone caves. **Not shadowed:** Galosphere never injects palladium into
+  `#minecraft:is_overworld` — its only default gen is intrinsic to the rare `galosphere:crystal_canyons`
+  cave biome (not a biome_modifier), which is already regional, so we leave it as a bonus source
+  (same call as the Meadow alpine ores). Our vein is an additive overworld source.
 
 *Left as-is (not metal ore): TFMG oil (`oil_deposit`/`oil_well` — a fluid), Create/Nuclear/TFMG
 "striated" stone (scoria/crimsite/tuff/andesite), Create: Metalwork (processing only).*
+
+> **Note — Galosphere silver:** Galosphere also adds its own silver (`galosphere:ore_silver_*`, into
+> `#minecraft:is_overworld` + crystal_canyons), separate from the Occultism silver we vein. Both share
+> the `c:ores/silver` tag. Not yet reconciled — flagged for a later unification pass.
 
 **Nether / dimensional (optional, later pass):** `nether_gold_ore`, `nether_quartz_ore`,
 `ancient_debris`; Occultism `occultism:iesnium_ore` (nether); Deeper Darker (Otherside dimension).
