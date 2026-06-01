@@ -1825,6 +1825,5 @@ hash = "cb474b6c0dde741836ed4f796f3b6ab0b9d3cdc0453e651122cd002d5d1f8df8"
 metafile = true
 
 [[files]]
-file = "tacz/create-armorer.pw.toml"
-hash = "839500904a87f2bf7e5600ddcdab03ac94b250a0a1467e2d471b020e9b71d161"
-metafile = true
+file = "tacz/Create_Armorer-v1.2.0.1.zip"
+hash = "479f0ac05833ccec554efa1b22e6f71553c7ebe7f381310c28467a399c98b0ba"

@@ -7,30 +7,32 @@ guns into Create:
 |---|---|---|---|
 | **TaCZ** | base gun framework | Modrinth `tacz` | `mods/tacz-1.21.1.pw.toml` |
 | **Create: Immersive TaCZ** | Create recipes for TaCZ guns/ammo/attachments — gunpowder & nitropowder *fluids*, casings + fluid-fill, barrels/triggers/primers, scopes/mags/grips | Modrinth `create-immersive-tacz-integration` | `mods/…` (added via the `add-mod` CI workflow) |
-| **Create: Armorer** | a TaCZ *gun pack* — Create-themed guns/ammo/models | CurseForge `tacz-create-armorer-koei` (file 7598625), **CC BY-NC-ND 4.0**, by **Koei** ([source](https://space.bilibili.com/407541278)) | `tacz/create-armorer.pw.toml` → `.minecraft/tacz/` |
+| **Create: Armorer** | a TaCZ *gun pack* — Create-themed guns/ammo/models | CurseForge `tacz-create-armorer-koei` (file 7598625), **CC BY-NC-ND 4.0**, by **Koei** ([source](https://space.bilibili.com/407541278)) | committed zip `tacz/Create_Armorer-v1.2.0.1.zip` → `.minecraft/tacz/` |
 
 > Replaces the abandoned **Create: TaCZ** (`tacz-create`), which was never updated to MC 1.21.1 (issue #27).
 
 ## How gun packs are delivered
 
-TaCZ loads gun packs from `.minecraft/tacz/`. Unlike mods (which land in `mods/`), a gun pack must
-land in that folder, so we ship it with a packwiz **metafile placed in a `tacz/` folder**:
+TaCZ loads gun packs from `.minecraft/tacz/` (it reads both folders **and** `.zip` files there).
+Unlike mods (which land in `mods/`), a gun pack must land in that folder.
 
-- `tacz/create-armorer.pw.toml` points `[download] url` at the zip mirrored on the GitHub
-  `mod-mirror` release (same pattern as `mods/ars-n-spells.pw.toml`). packwiz-installer fetches it
-  to `.minecraft/tacz/create_armorer-1.2.0.1.zip` on **both client and server** — no build-script
-  changes needed (`.packwizignore` does not exclude `tacz/`).
+**We commit the gun-pack zip directly into the repo `tacz/` folder.** The packwiz *metafile* approach
+(a `tacz/*.pw.toml` pointing at the mod-mirror release) was tried first and **did not deliver
+reliably** — packwiz-installer / some `.mrpack` launchers don't place files under non-standard paths
+like `tacz/`, so the zip silently never arrived. Committing it makes delivery deterministic:
+
+- `tacz/Create_Armorer-v1.2.0.1.zip` is a normal committed file. `packwiz refresh` indexes it, so
+  the `.mrpack` carries it as an **override** → `.minecraft/tacz/`.
+- For the Prism builds, `scripts/build-prism-skeleton.sh` and `scripts/build-server.sh` include
+  `tacz` in their copy loop, so the zip is copied into `.minecraft/tacz/` directly.
+- CC BY-NC-ND 4.0 permits **verbatim** redistribution: commit the zip **unmodified**, keep
+  attribution (Koei), non-commercial only.
 
 ### Adding / updating a gun pack
 
-1. Upload the gun-pack zip as an asset on the `mod-mirror` GitHub release (lowercase-underscore
-   name + version, e.g. `create_armorer-1.2.0.1.zip`). CC BY-NC-ND 4.0 permits **verbatim**
-   redistribution: mirror the zip **unmodified**, keep attribution (Koei), and only for a
-   **non-commercial** (free) pack.
-2. Create `tacz/<name>.pw.toml` with `filename`, `side = "both"`, `pin = true`, and a `[download]`
-   block (`url` + `hash-format`/`hash`).
-3. Run `packwiz refresh` (the `refresh` or `add-mod` CI workflow, or the editor) so the file is
-   indexed in `index.toml`.
+1. Drop the gun-pack zip (unmodified) into `tacz/` in the repo.
+2. Run `packwiz refresh` (the editor / CI) so it's indexed in `index.toml`.
+3. Confirm `tacz` is in the copy loops of `build-prism-skeleton.sh` + `build-server.sh`.
 
 ## Removing the stock TaCZ guns (Armorer-only)
 
