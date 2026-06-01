@@ -64,6 +64,46 @@ pack-folder / instance state.
 > AK/M4/Glock recipes. (Requires that `tacz:gun_smith_table_crafting` recipes load into the recipe
 > manager — confirm none reappear after a `/reload`.)
 
+## Compat overlays (`kubejs/data/`)
+
+Two upstream packs ship recipes that don't load on our MC 1.21.1 / NeoForge target. We fix both
+with **same-id datapack overrides** under `kubejs/data/` (KubeJS's datapack outranks the source
+jar/pack, so our corrected file shadows the broken one — the broken file is never parsed, so there's
+no datapack error). We override rather than edit the source packs (Create: Armorer is CC BY-NC-ND —
+no derivatives), and generate the overrides mechanically from the originals so they stay faithful.
+
+### Create: Armorer recipes — `kubejs/data/create_armorer/recipe/…` (35 recipes)
+
+Create: Armorer `1.2.0.1` was authored against Forge / MC 1.20 and has two 1.21-incompatibilities
+that stop **every** gun/ammo/attachment recipe from loading (guns still appear in creative — those
+come from `index/`+`data/`, read by TaCZ's own loader — but nothing is craftable at the gunsmith
+table):
+
+1. **Wrong recipe folder.** Recipes live in `data/create_armorer/recipes/` (plural — the 1.20
+   path). In 1.21 the vanilla `RecipeManager` (which TaCZ's `gun_smith_table_crafting` recipes
+   register into) only scans `recipe/` (singular). Verified against TaCZ's own default pack, whose
+   160 recipes sit in `…/data/tacz/recipe/`. So our overrides live in `recipe/` (singular).
+2. **Forge tags.** Ingredients use `forge:*` tags, which are empty on NeoForge 1.21.1. Remapped to
+   `c:*` (`forge:ingots/copper`→`c:ingots/copper`, `forge:gunpowder`→`c:gunpowders`, …). Two tags
+   with no precise `c:` equivalent are bound to the concrete item (`forge:glass/light_blue`→
+   `minecraft:light_blue_stained_glass`).
+
+The themed `create_workbench` crafting recipe (a `minecraft:crafting_shaped` with a 1.20-era
+`item`+`nbt` result) is intentionally **not** ported — it would error on 1.21 and is cosmetic; the
+standard TaCZ gunsmith table opens the same crafting UI listing every Armorer gun.
+
+### Create: Immersive TaCZ casings — `kubejs/data/createimmersivetacz/recipe/ammo/…` (4 recipes)
+
+Four `create:sequenced_assembly` casing recipes (`twelve_gauge_shell`, `pneumatic_pistol_casing`,
+`rimmed_blunt_ap_casing`, `slap_casing`) declare their `create:filling` fluid as
+`{"type":"fluid_stack",…}`, which isn't a valid NeoForge fluid ingredient, so the whole recipe is
+rejected (these are the "KubeJS"/datapack errors in the log). The override rewrites just that
+ingredient to the valid form the mod's *working* casings already use:
+`{"type":"neoforge:single","amount":25,"fluid":"createimmersivetacz:gunpowder_fluid"}`.
+
+> Regenerate after a pack update: unzip the source pack/jar and re-run the same `forge:`→`c:` /
+> `fluid_stack`→`neoforge:single` transforms, then `packwiz refresh`.
+
 ## Verify in-game
 
 - Create recipes for TaCZ ammo/casings/components appear in JEI and craft via Create
