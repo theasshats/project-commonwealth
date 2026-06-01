@@ -1,4 +1,4 @@
-# Derpack X — player site (`modpack.ishimura.xyz`)
+# Derpack X — player site (`derpack-x.ishimura.xyz` / `modpack.ishimura.xyz`)
 
 The player-facing front door for Derpack X: how to join, what's in the pack, the
 rules, FAQ, and a live server-status badge. Built as a small **Go binary** that
@@ -20,7 +20,8 @@ site/
 │   ├── js/main.js          # copy button + status badge (progressive enhancement)
 │   └── assets/             # logo / small images
 ├── Dockerfile              # multi-stage → distroless, non-root
-└── deploy/                 # compose + Caddy snippets for the box
+├── docker-compose.yml      # standalone — its own project, attaches to the media net
+└── deploy/                 # Caddy snippet for the box
 ```
 
 ## Run / build locally
@@ -50,54 +51,58 @@ This is an ordinary web app → it goes through the tunnel + Caddy (**Path 1**),
 *not* the game-server direct path. `modpack.ishimura.xyz` and the game's
 `mc.ishimura.xyz` coexist because tunnel routing is per-hostname.
 
-**B1 — service dir.** As `xela` (no `sudo`, or you get a root-owned dir):
+It runs as its **own compose project**, separate from the media stack — it only
+*attaches* to the existing external `media` network so Caddy still resolves it
+by name. Served at both `modpack.ishimura.xyz` and `derpack-x.ishimura.xyz`.
+
+**B1 — service dir.** Put it in its own directory (as `xela`, no `sudo`),
+*outside* the media stack — e.g. `~/derpack-site`. Copy this repo's `site/`
+contents into it (so the dir has the `Dockerfile` and `docker-compose.yml`).
+
+**B2 — bring it up (its own project — NOT in the media-stack compose file).**
+From that dir:
 
 ```bash
-mkdir -p "/home/media stack/modpack"
-# copy the contents of this repo's site/ into it (so ./modpack has the Dockerfile)
+docker compose up -d --build
 ```
 
-**B2 — compose service.** Add the block from
-`deploy/docker-compose.snippet.yml` to `/home/media stack/docker-compose.yml`.
-No `ports:` (Caddy reaches it internally), no `networks:` (joins the external
-`media` network by default), no PUID/PGID.
+This builds the image and attaches the `modpack` container to the existing
+external `media` network (created by the media stack). No `ports:`, no PUID/PGID.
 
 **B3 — Caddy block.** Add `deploy/Caddyfile.snippet` to
-`/home/media stack/caddy/Caddyfile` (reverse-proxy by **name**, `modpack:8080`),
-then reload:
+`/home/media stack/caddy/Caddyfile` (one block, both hostnames, reverse-proxy by
+**name** → `modpack:8080`), then reload:
 
 ```bash
 cd "/home/media stack" && docker compose -p media restart caddy
-docker logs --tail 20 caddy   # watch for "certificate obtained" for modpack.ishimura.xyz
+docker logs --tail 20 caddy   # watch for "certificate obtained" for both hostnames
 ```
 
-**B4 — tunnel public hostname (Cloudflare dashboard, can't be done from shell).**
-Zero Trust → Networks → Tunnels → **ishimura** → Public Hostname → Add:
-subdomain `modpack`, domain `ishimura.xyz`, type **HTTPS**, URL **`caddy:443`**,
-and **No TLS Verify: ON**. Auto-creates the proxied DNS record.
+**B4 — tunnel public hostnames (Cloudflare dashboard, can't be done from shell).**
+Zero Trust → Networks → Tunnels → **ishimura** → Public Hostname. Add **two**,
+both type **HTTPS**, URL **`caddy:443`**, **No TLS Verify: ON**:
+- subdomain `modpack`, domain `ishimura.xyz`
+- subdomain `derpack-x`, domain `ishimura.xyz`
+
+Each auto-creates its proxied DNS record.
 
 **B5 — Access: leave OFF.** It's player-facing (like Jellyfin/Seerr), no
 email-PIN gate.
 
-**B6 — deploy.**
-
-```bash
-cd "/home/media stack" && docker compose -p media up -d --build modpack
-```
-
 ### Verify
 
 ```bash
-docker compose -p media ps | grep modpack
+docker compose ps | grep modpack         # from the site dir
 docker run --rm --network media curlimages/curl:latest \
   -s -o /dev/null -w "internal: %{http_code}\n" http://modpack:8080/healthz   # 200
 curl -sk -o /dev/null -w "via caddy: %{http_code}\n" \
-  -H "Host: modpack.ishimura.xyz" https://localhost:443                       # 200
+  -H "Host: derpack-x.ishimura.xyz" https://localhost:443                     # 200
 ```
 
-Then from off-network (phone on cellular) open `https://modpack.ishimura.xyz` —
-it should load directly, no Cloudflare login. A 502 means the cloudflared→Caddy
-hop failed (work the runbook's "Web app returns 502" checklist).
+Then from off-network (phone on cellular) open `https://derpack-x.ishimura.xyz`
+(and `https://modpack.ishimura.xyz`) — both should load directly, no Cloudflare
+login. A 502 means the cloudflared→Caddy hop failed (work the runbook's "Web app
+returns 502" checklist).
 
 ### Notes
 
