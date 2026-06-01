@@ -102,6 +102,17 @@ jobs:
       - name: Clean staging from dist
         run: rm -rf dist/staging
 
+      # Publish stable, version-less copies alongside the versioned artifacts so
+      # the website (and anyone else) can link to a permanent "latest" download:
+      #   .../releases/latest/download/derpack-x-prism-installer.zip
+      #   .../releases/latest/download/derpack-x.mrpack
+      # Same idiom this build already uses to fetch packwiz-installer-bootstrap.
+      - name: Add stable-named copies for permanent latest-download links
+        run: |
+          cd dist
+          cp "$(ls *-prism-installer-*.zip | head -1)" derpack-x-prism-installer.zip
+          cp "$(ls *.mrpack | head -1)" derpack-x.mrpack
+
       - name: List final artifacts
         run: ls -lh dist/
 
