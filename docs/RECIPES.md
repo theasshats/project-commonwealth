@@ -77,6 +77,31 @@ Each branch's key craftables get a Create-part gate or Create-method build:
 
 Pure bypass-recipe removals happen alongside each branch.
 
+## Deliberately NOT gated (reconsidered ledger)
+These mods were re-examined against the ground-truth digest and **left vanilla on purpose**.
+Recorded here so the calls aren't re-litigated; revisit only if the stated reason changes.
+
+- **copperagebackport** — copper tools/armor/buttons are *starter tier* (and register under the
+  `minecraft:` namespace). A Create press gate would **invert progression** — a grind on the
+  cheapest gear. Tier-coherence wins.
+- **Galosphere** — 271 recipes, ~all decoration (allurite/amethyst bricks via stonecutting →
+  correctly vanilla). Its only "gear" (`burrow_anchor`, `chandelier`) is **palladium**, an
+  exploration-tier metal; gating it inverts progression the same way copper does.
+- **Alex's Mobs** — every device (`echolocator` = whale tooth + ambergris, `dimensional_carver` =
+  void-worm parts, `blood_sprayer` = blood sac + proboscis) is built from **mob drops as the
+  primary material**; metal is a minor binder. Create parts would be thematically incoherent.
+- **companions** — the summon/Tesla items (`tesla_coil`, `arm_cannon`, `empty_puppet`) wrap
+  found/dropped `*_block`/`*_arm` parts that **have no standalone recipe**; there's no keystone to
+  gate, and metal is incidental. Revisit only with the jar in hand.
+- **jakes-build-tools** — digest shows `warped_fungus_on_a_stick` in nearly every tool (chisel,
+  trowel, wrench, tape_measure…), almost certainly a **mis-parsed ingredient**. The metal tools
+  (esp. `wrench`/`hammer`) *would* be coherent Create candidates, but authoring `remove`s from a
+  confused digest is too risky — defer until a jar confirms the real shapes.
+
+> Also untouched pending a maintainer scope call (not a coherence skip): **MineColonies /
+> Structurize / umapyoi** (huge own-system progressions) and a full **Supplementaries** decoration
+> pass.
+
 ## Ground truth
 - Mods with jars on hand → recipes read directly for precise `remove` + replace.
 - Everything else → the **`tools/mod-data/recipes/`** digest (CI) lists each recipe as
