@@ -89,16 +89,13 @@ You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:
 - **Palladium** — Galosphere — `galosphere:palladium_ore` (+`deepslate_palladium_ore`). Prestige metal:
   kept **rare + regional** (mountains + dripstone + deep_dark, `chance 24`) and deliberately **excluded
   from the `#c:is_underground` "findable everywhere" pass** so it doesn't roll in every cave (the hybrid
-  case in issue #65). **Not shadowed:** Galosphere never injects palladium into `#minecraft:is_overworld` —
-  its only default gen is intrinsic to the rare `galosphere:crystal_canyons` cave biome, already regional,
-  left as a bonus source. Our vein is an additive, deliberately-scarce overworld source.
+  case in issue #65). **Default `#is_overworld` gen shadowed:** Galosphere 1.5.x renamed *Silver → Palladium*
+  but kept the old feature IDs, so `add_silver_ores` (feature `galosphere:ore_silver_small`) was injecting
+  small palladium blobs into every overworld biome — `neoforge:none`'d. Left as a regional bonus:
+  `add_large_silver_ores` (large palladium, `galosphere:crystal_canyons` only).
 
 *Left as-is (not metal ore): TFMG oil (`oil_deposit`/`oil_well` — a fluid), Create/Nuclear/TFMG
 "striated" stone (scoria/crimsite/tuff/andesite), Create: Metalwork (processing only).*
-
-> **Note — Galosphere silver:** Galosphere also adds its own silver (`galosphere:ore_silver_*`, into
-> `#minecraft:is_overworld` + crystal_canyons), separate from the Occultism silver we vein. Both share
-> the `c:ores/silver` tag. Not yet reconciled — flagged for a later unification pass.
 
 **Nether / dimensional (optional, later pass):** `nether_gold_ore`, `nether_quartz_ore`,
 `ancient_debris`; Occultism `occultism:iesnium_ore` (nether); Deeper Darker (Otherside dimension).
@@ -121,6 +118,7 @@ vein. Override targets in use (all verified + already shipped):
 | Lithium | `tfmg/neoforge/biome_modifier/lithium_ore.json` |
 | Nickel | `tfmg/neoforge/biome_modifier/nickel_ore.json` |
 | Infected diamond (Born in Chaos) | `born_in_chaos_v1/neoforge/biome_modifier/infected_diamond_ore_feature_biome_modifier.json` + `infected_deepslate_diamond_ore_feature_biome_modifier.json` — **shadow only, no vein.** It was a second diamond source injected into all overworld biomes; disabled outright so diamonds come solely from the vanilla diamond vein + thinned vanilla. |
+| Palladium (Galosphere) | `galosphere/neoforge/biome_modifier/add_silver_ores.json` — the `#is_overworld` small-blob injection (feature still named `ore_silver_small` after the Silver→Palladium rename). Veined separately; `add_large_silver_ores` (crystal_canyons) left as a regional bonus. |
 
 Left untouched: nether ores (`occultism` iesnium, `striated_ores_nether`), the decorative
 `striated_ores_overworld` (scoria/crimsite/stone), and TFMG `oil_deposit`/`oil_well` (fluid).
