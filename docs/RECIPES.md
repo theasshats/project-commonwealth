@@ -185,19 +185,25 @@ forced. Genuine balance tuning (e.g. jetpack/nuclear costs feeling too low) is a
 flagged here rather than guessed, since the convention is "costs stay ~comparable," not a grind.
 
 ## Cross-mod synergy style (mirrors Create: Immersive TaCZ)
-Immersive TaCZ doesn't gate a gun behind one token part — it assembles it from components pulled
-across the pack (fluids, casings, primers, multi-stage parts), so building it exercises the Create
-chain *and* ties mods together. We adopt that style in KubeJS for **flagship devices**: prefer a
-layered recipe that sources real components from sibling mods over a thin "one Create part + vanilla"
-gate — as long as every ingredient is *thematically* justified (no filler). Verified palette in this
+Immersive TaCZ doesn't gate a gun behind one token part — it builds intermediate components
+(`gun_barrel` via `mechanical_crafting` of steel, `firing_mechanism` from deployer+cogwheels,
+`primer` by `create:filling` andesite_alloy with gunpowder *fluid*, casings by `create:cutting` brass
+sheet) and then **assembles the gun on the Mechanical Crafter** from those parts, with tiered cores
+(cogwheel → precision_mechanism). So building it actually runs the Create machines *and* ties mods
+together. We mirror that in KubeJS for **flagship devices**: prefer a Create *method*
+(`event.recipes.create.mechanical_crafting` / `filling` / `cutting` / `deploying`) over the crafting
+table, and source real components from sibling mods — every ingredient *thematically* justified, no
+filler. Verified palette in this
 pack: `create` (electron_tube, propeller, framed_glass, sturdy_sheet, fluid_tank, copper_backtank),
 `create_new_age` (copper_circuit/wire — themselves Create-deployed), `createaddition`
 (copper_wire/spool, capacitor, electric_motor, brass_rod), `tfmg` (circuit_board, heavy_plate,
 machinery_casing), `galosphere` (allurite/lumiere shards = glowing optical/readout elements, silver).
-Applied so far: **netmusic** computer (framed_glass + copper_circuit + electron_tube + copper_wire)
-and cd_burner (allurite_shard "laser" + wiring + electron_tube); **supplementaries** altimeter
-(brass housing + glowing lumiere readout + electron_tube) and wind_vane (a real `create:propeller`
-on a cogwheel). Keep this lens when revisiting the earlier flagship passes.
+Applied so far: **netmusic** computer & cd_burner — both off the **Mechanical Crafter**
+(framed_glass + copper_circuit + electron_tube + copper_wire; allurite_shard "laser" + wiring +
+electron_tube); **supplementaries** wind_vane — Mechanical Crafter, a real `create:propeller` on a
+cogwheel; altimeter — layered table craft (brass housing + glowing lumiere readout + electron_tube),
+a handheld gauge that doesn't warrant the crafter. Keep this lens when revisiting the earlier
+flagship passes.
 
 ## Ground truth
 - Mods with jars on hand → recipes read directly for precise `remove` + replace.

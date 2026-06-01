@@ -48,9 +48,11 @@ ServerEvents.recipes(event => {
     E: 'create:electron_tube'        // sensor core
   })
 
-  // wind_vane: a Create PROPELLER (the thing that actually catches wind) spinning on a cogwheel.
-  // orig: c:ingots/iron + iron_bars + redstone  (cross-mod: create-heavy + vanilla)
-  swap('supplementaries:wind_vane', [' P ', ' G ', 'IRI'], {
+  // wind_vane: a Create PROPELLER (catches the wind) on a cogwheel spindle — assembled on the
+  // Mechanical Crafter (Immersive-TaCZ style: real mechanical device, off a Create machine).
+  // orig: c:ingots/iron + iron_bars + redstone
+  event.remove({ output: 'supplementaries:wind_vane' })
+  event.recipes.create.mechanical_crafting('supplementaries:wind_vane', [' P ', 'IGI', ' R '], {
     P: 'create:propeller', G: 'create:cogwheel', I: '#c:ingots/iron', R: '#c:dusts/redstone'
   })
 })
