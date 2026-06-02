@@ -82,6 +82,29 @@ branch**, so this only takes full effect once it's merged to `main`. It can't pu
 from forks (it skips them); this repo's shared version-branches are same-repo, so that's not the
 normal case.
 
+## Auto-refreshing a stale index (automatic)
+
+`resolve-conflicts.yml` (above) only fires on **push-to-`main`** and **PR open/reopen** — it heals
+the *conflict* stacked PRs hit. The other way the index goes stale has nothing to do with conflicts:
+you edit a tracked pack file (a KubeJS script, a config, a manifest) and push **without** running
+`packwiz refresh`. That's a `synchronize` event resolve-conflicts never sees, so the only signal
+was the red **packwiz index** check and a "run refresh and commit" nag.
+
+`.github/workflows/refresh-index.yml` closes that gap. On a PR **opened / reopened / synchronized**
+it runs `packwiz refresh` and, *only if* `index.toml` / `pack.toml` drifted, commits the result
+(`[skip ci]`) and pushes it back to the PR branch. `refresh` can only ever rewrite those two files;
+if it somehow touches anything else the job **bails** instead of committing (that'd mean the
+assumption is wrong and a human should look). Fork PRs are skipped — `GITHUB_TOKEN` can't push to
+another repo's branch, so those authors still refresh by hand.
+
+> **Caveat — it can't make the check go green by itself.** Pushes made with `GITHUB_TOKEN` don't
+> trigger another `pull_request` run, so the auto-refresh commit fires at most once per author push
+> (no loop), but it also **won't re-run `pr-checks.yml`** on that bot commit. The branch is now
+> correct, yet the **packwiz index** check sits on the previous commit. For fully hands-off merging
+> with required checks you need a **PAT or GitHub App token** on the push (a repo-secret decision,
+> not committable here) so the refreshed commit re-triggers the checks. Until then: the index is
+> auto-fixed, and a trivial re-run / next push turns the check green.
+
 ### Manual fallback (when it bails)
 
 When the workflow bails — a genuine content conflict, or `pack.toml` differing beyond the `[index]`
