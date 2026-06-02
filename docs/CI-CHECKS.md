@@ -82,6 +82,22 @@ branch**, so this only takes full effect once it's merged to `main`. It can't pu
 from forks (it skips them); this repo's shared version-branches are same-repo, so that's not the
 normal case.
 
+### Manual fallback (when it bails)
+
+When the workflow bails — a genuine content conflict, or `pack.toml` differing beyond the `[index]`
+hash (e.g. the PR is just behind a `version` bump) — resolve it by hand:
+
+1. On the PR branch, `git merge origin/main` — everything except the generated files auto-merges.
+2. **Don't hand-edit the conflict markers in `index.toml` / `pack.toml`** — regenerate instead:
+   - PR **adds/removes mods or configs** → `packwiz refresh`, then `git add -A`.
+   - PR is **docs / `CLAUDE.md` only** (no indexable changes) → just take main's:
+     `git checkout origin/main -- index.toml pack.toml`.
+3. Resolve any genuine content conflicts (a `.pw.toml` edited on both sides, KubeJS, config) normally.
+4. `git commit` the merge and push — `pr-checks.yml`'s index-freshness job confirms the result.
+
+(The `version`-bump case is a *false* bail: `git merge` auto-resolves `version` to main's, so the
+generated files really are regenerable — the workflow is just being conservative about `pack.toml`.)
+
 ## Making the checks *required* (manual, one-time)
 
 The workflow runs on PRs automatically, but GitHub won't *block* a merge on it until you say so —
