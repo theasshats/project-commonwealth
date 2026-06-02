@@ -750,7 +750,7 @@ hash = "2771e51fa8c7bd0bbcf95cc857767ef3449caab5dbecf013d517e3c0b6e96be1"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/20-samurai-dynasty.js"
-hash = "5c69081d7f49f0bca19ec75fcf51f6873e8cafdfbbbbdc7bdbb12d06c0685156"
+hash = "5d4f0dd33b504005a7d32f9d51141d28d3f086a585c9ff527eedf4e09bc2a87a"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/30-modular-golems.js"
@@ -762,7 +762,7 @@ hash = "669a24f251421b0094427c61622d58ebd891423d6e85836cdb9c471d7631f4ed"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/40-northstar.js"
-hash = "b5414ab09b4a29818fe1a449df3aec6632a96d49d5b9b7b86fcea959f9da2fb3"
+hash = "bbb8f2608e3ce17746d287e91decc614c855457f7952dafbf91f9c38c8353831"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/50-irons-spellbooks.js"
