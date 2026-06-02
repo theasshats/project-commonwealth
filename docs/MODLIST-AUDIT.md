@@ -4,13 +4,19 @@ _356 manifests, audited against the stated goals (CLAUDE.md / DESIGN.md / Phase-
 Slug + knowledge based — items marked ⚠ need confirming from the jar/EMI; the ground-truth
 CI digest will nail those. This is a planning artifact, not a final decision list._
 
-## Stated goals (the yardstick)
-- **Create-driven survival economy "in the spirit of Eco":** scarce, regional, large-vein ores →
-  goods manufactured through Create → sold for currency (**Numismatics**).
-- **Heavy / GregTech-like recipe conversion** — route progression through Create machines.
-- **Built around Create Aeronautics** (airships / planes / vehicles).
-- **Guns = TaCZ + Create Big Cannons.**
-- Friend-group, pre-alpha. Joke mods allowed *if intentional*.
+## The goal (the yardstick)
+**A cooperative PvPvE Create pack for a small crew (~10), scarcity-driven, where every mod earns its
+place by anchoring to one of five systems — or it's cut:**
+- **Create spine** — the tech core; things made through Create (incl. **Create Aeronautics**).
+- **Magic web** — Ars / Iron's / Occultism, bridged.
+- **Economy** — Numismatics + Trading Floor + bounties (scarce regional ores → goods → trade). *In the
+  spirit of Eco, but emergent and optional — not a forced economy.*
+- **Aeronautics & logistics** — ships, trains, drones; the flight/transport ladder.
+- **Survival & seasons** — Serene Seasons × Spice of Life × Cold Sweat.
+
+Progression on-ramps: complex Create tech unlocks via **MineColonies or boss drops**. Guns = TaCZ +
+Create Big Cannons. Friend-group, pre-alpha. Joke mods allowed *only if* they anchor to a system.
+The test for every row below: **what does this anchor to — and if nothing, why is it here?**
 
 ## On-track check — ✅ mostly
 | Goal | State |
@@ -22,10 +28,12 @@ CI digest will nail those. This is a planning artifact, not a final decision lis
 | Create Aeronautics core | ✅ present (+ aeronautics-compatability) |
 | Joke-mod audit | 🟡 this doc + #45 / #60 |
 
-**Two drift risks the modlist reveals:** (1) the pack is **much broader than "Create economy"** —
-heavy food / structure / magic / colony content; (2) several **parallel progression+economy
-systems** (MineColonies, magic mods) that compete with "Create is how you make things." Neither is
-fatal, but both need a deliberate keep/gate call (§D).
+**What the modlist reveals, re-framed under the five-system goal:** the pack is **much broader than
+just "Create"** (heavy food / structure / magic / colony content) and runs **several systems in
+parallel** (magic, economy, colonies). Under the old "everything routes through Create" framing those
+read as drift; under the five-system goal they're **fine — they're the other pillars** — *provided
+each mod anchors to one*. So the work isn't subordinating them to Create; it's (a) cutting what
+anchors to nothing and (b) building the **economy** pillar so the content sprawl gains purpose (§D).
 
 ## A. Fit flags
 
@@ -58,10 +66,10 @@ chain — actually **fits** the grow→process→sell economy; treat as an econo
 |---|---|---|
 | Inventory sort | `inventory-profiles-next` · `mouse-tweaks` · `invtweaks-emu-for-ipn` | IPN owns sort; Mouse Tweaks = drag-fill only (#38; note: `clientsort` isn't actually installed) |
 | Accessory API | `curios` + `accessories` + `accessories-compat-layer` | dual slot APIs — keep both only if mods require each; confirm the compat-layer resolves ⚠ |
-| Tree growth | `dynamictrees`(+`-terralith`,+`plus`) **vs** `oh-the-trees-youll-grow` | two growth systems → likely conflict; pick one ⚠ |
-| Moon events | `enhanced-celestials` · `ender-moon` · `horde-moon` | overlapping; pick one (enhanced-celestials broadest) ⚠ |
+| Tree growth | `dynamictrees`(+`-terralith`,+`plus`) · `oh-the-trees-youll-grow` | **not a duplicate** — `oh-the-trees-youll-grow` is a **library** (tree gen via .nbt; verify what needs it, likely Terralith). Dynamic Trees is the gameplay system — keep/cut on perf merits, separately. #83 |
+| Moon events | `enhanced-celestials` · `ender-moon` · `horde-moon` | **keep as subsidiary spawn drivers**, not standalone: `horde-moon`→`mutants-and-zombies`, `enhanced-celestials`→broad lunar spawn-gating, `ender-moon`→special endermen if any (else keep/cut). #83 |
 | Food diversity | `spice-of-life-maids-dream` + `spice-of-life-onion` | two Spice-of-Life forks → redundant; keep one |
-| Portable storage | `travelersbackpack` + sophisticated backpacks (`sophisticated-core`) | overlap (also a recipe-gate target, §C) |
+| Portable storage | `travelersbackpack` (only real backpack) · `sophisticated-core` | **not a duplicate** — Sophisticated Backpacks/Storage isn't installed; `sophisticated-core` is an **orphan lib** → drop it. Keep `travelersbackpack`. #83 |
 | AFK / sleep | `afk-sleep` + `detect-afk` | overlap; one suffices ⚠ |
 
 ## C. Recipe-change targets (GregTech-conversion scope → #17)
@@ -79,23 +87,25 @@ costs, or nerf the loot source:
   mine-and-sell. **Loot pass (#18):** strip free metal/diamond gear; optionally seed Numismatics
   coins as rare loot.
 
-## D. The two big design calls (decide before the recipe overhaul)
-1. **MineColonies vs "Create is the factory."** `minecolonies` (+ `structurize`, `domum-ornamentum`,
-   `stylecolonies`, `ct-overhaul-village`, `multi-piston`, `towntalk`, `blockui`) is a whole **rival
-   production+labor economy** — colonists auto-mine/farm/craft, which **short-circuits the
-   scarcity-and-Create loop**. Decide: keep as a *village/social* layer with production
-   **disabled/gated**, or cut. This is the single biggest fit question.
-2. **Breadth vs focus.** Food (Farmer's Delight + ~10 Delight/"Let's Do" addons), decoration (5×
-   Macaw's + Supplementaries + Handcrafted + …), structures (Yung's ×5 + more), mobs (~16, #42) —
-   all large. Nothing breaks the theme, but this is a **kitchen-sink survival pack with a
-   Create-economy spine**, not a focused Create pack. Fine if intended — just naming it so recipe
-   scope is set realistically.
+## D. The two big design calls — decided (per the five-system goal)
+1. **MineColonies = a progression on-ramp, woven in (not a rival economy to disable).** `minecolonies`
+   (+ `structurize`, `domum-ornamentum`, `stylecolonies`, `ct-overhaul-village`, `multi-piston`,
+   `towntalk`, `blockui`) stays first-class: it's one of the unlock paths for **complex Create tech**
+   (alongside boss drops), and its differing colony pace is part of what *drives* trade between
+   players. The earlier framing wanted its production disabled/gated as a "rival economy"; the settled
+   goal instead **weaves it into the tech tree**. (Recipe/progression wiring tracked separately.)
+2. **Breadth is fine when it's anchored.** Food (Farmer's Delight + ~10 addons), decoration (5×
+   Macaw's + Supplementaries + …), structures (Yung's ×5 + more), mobs (~16) are all large — and
+   that's OK, because each anchors to a system (food → Survival & seasons; decoration → the
+   settlement/build palette; mobs → Economy via drops/bounties, or boss→keystone gating). The job
+   isn't to shrink to a "focused Create pack" — it's to ensure every cluster anchors, and cut the
+   bits that don't (curation in #83).
 
 ## E. Path forward (sequenced)
 1. **Land current work** — playtest #58/#59 → merge #55/#56; merge #57 + run the digest.
 2. **Curation pass** (#45 / #21 / #60) — remove agreed memes; resolve the §B duplicate-mechanic
    clusters (quick config/manifest edits).
-3. **Decide the two big calls** (§D) — MineColonies role + breadth — *these set the recipe scope*.
+3. **Big design calls — settled** (§D): MineColonies = woven on-ramp; breadth = fine if anchored.
 4. **GregTech recipe overhaul** (#17) — metals/magic/storage through Create; needs the recipe digest.
 5. **Loot pass** (#18) — structure/dungeon loot to fit scarcity; optionally seed coins.
 6. **Economy finish** — Numismatics vendors/values + Trading Floor.

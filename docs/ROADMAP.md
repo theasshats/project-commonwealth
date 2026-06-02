@@ -1,8 +1,10 @@
 # Derpack X — Roadmap (multi-phase)
 
-> Living roadmap for the Create-economy build-out. **Vision:** a broad kitchen-sink survival pack
-> unified by a **Create-driven scarcity economy that penetrates every branch** — see
-> `docs/DESIGN.md` ("the design spine") and `docs/RECIPES.md`.
+> Living roadmap for the build-out. **Goal:** a cooperative PvPvE Create pack for a small crew (~10)
+> where every mod earns its place by anchoring to one of **five systems — Create, magic, economy,
+> aeronautics, survival** — or it's cut; scarcity drives emergent (not forced) trade, and complex
+> tech unlocks via MineColonies or boss drops. See `docs/DESIGN.md` ("the goal — five systems") and
+> `docs/RECIPES.md`.
 >
 > **Standing caveat:** the dev sandbox is **headless** — everything below is authored + structurally
 > validated (JSON valid, JS syntax OK); **an in-game playtest is required before any of it merges**
@@ -56,9 +58,11 @@ Coin values (runtime config), Vendors + pricing (in-world), Trading Floor (villa
 Blockchain Currency Miner already gated (config on #56). Mostly in-world + config — needs the
 generated config TOMLs (upload-based; the digest can't capture runtime configs).
 
-### Phase 6 — Curation & de-dup 💤 (#45, #21 — see `docs/MODLIST-AUDIT.md`)
-Execute meme removals; resolve duplicate **mechanics** (sort #38, accessory API, tree-growth, moon
-events, spice-of-life, backpacks, afk); **decide MineColonies auto-production gating** (the big open call).
+### Phase 6 — Curation & de-dup 💤 (#83, #45, #21 — see `docs/MODLIST-AUDIT.md`)
+Mob/boss + duplicate-mechanic curation (**#83**): clean cuts (arphex, creeper-overhaul,
+mutant-monsters, orphan sophisticated-core), spawn-gating, kobold replacement; meme removals (#45);
+duplicate **mechanics** (sort #38 handled; spice-of-life, afk; trees/moons re-scoped per #83).
+MineColonies is **settled** as a woven progression on-ramp (no longer "gate/disable its production").
 
 ### Phase 7 — Stability & QoL 💤 (needs a live server)
 RAM/GC #48 · flight interactions #43 · inventory sort #38 · claims #25 · shaders caveat #1 ·
@@ -78,8 +82,8 @@ post-release polish or ongoing curation.
 - [ ] **Ore-gen verified & tuned** — #58 (playtest + the rarity/regionality call). Phase 1.
 - [ ] **Create recipe spine landed** — #17 / PR #62 enough per-mod passes that "made through Create"
   is real, not a stub. Phase 3.
-- [ ] **Design spine docs merged** — PR #61 (DESIGN spine, CLAUDE north-star, MODLIST-AUDIT) settled
-  with zagwar and on `main`, so the direction is canon.
+- [ ] **Design/goal docs merged** — PR #61 (DESIGN five-systems goal, CLAUDE north-star,
+  MODLIST-AUDIT) settled with zagwar and on `main`, so the direction is canon.
 - [ ] **CI required on `main`** — turn on the `pr-checks.yml` ruleset (Phase 8 / `docs/CI-CHECKS.md`).
 - [x] **Release artifacts sane** — `.mrpack` dropped; Prism installer is the single ~5 MB artifact (#73).
 
@@ -116,6 +120,6 @@ by design. See `docs/MODLIST-AUDIT.md` for the curation detail behind the Phase 
 
 ## Cross-cutting notes
 - **Verification gates everything** — headless can't validate KubeJS/worldgen; playtest per phase.
-- **Design docs** (DESIGN spine, CLAUDE north-star, MODLIST-AUDIT) are pending in **#61** (zagwar review).
+- **Design docs** (DESIGN five-systems goal, CLAUDE north-star, MODLIST-AUDIT) are pending in **#61** (zagwar review).
 - **Network:** sandbox reaches GitHub only (not Modrinth/CF); jar ground truth comes via the digest or hand-uploads.
 - **Duplicate *items*** (lead/silver/tin/steel ×N) are auto-collapsed by `almost-unified` + `polymorph`.
