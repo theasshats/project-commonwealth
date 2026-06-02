@@ -1,0 +1,118 @@
+# Spawn gating & mob curation (issue #83)
+
+This documents the spawn-control work from the #83 curation pass: **what** each
+file does, **why** the route was chosen, and **what must be verified in-game**
+(none of this can be confirmed in the headless web sandbox — no game runs here).
+
+## Tooling
+
+[In Control!](https://modrinth.com/mod/in-control) (`mods/in-control.pw.toml`,
+`side = "both"`) is the spawn-rule engine. Its config lives in
+`config/incontrol/spawn.json` — a **strict JSON array** of rules evaluated
+top-to-bottom; the first rule whose conditions match a spawn attempt wins and
+its `result` (`deny` / `allow` / `default`) is applied. Confirmed rule keys for
+this build (In Control! 10.2.6, extracted from the jar's `RuleKeys`): `mobs`,
+`mods`, `structures`, `structuretags`, `biomes`, `dimensions`, `mintime`,
+`maxtime`, `minlight`, `maxlight`, `mindifficulty`, `maxdifficulty`, `weather`,
+`hostile`, `passive`, `baby`, `seesky`, `mincount`, `maxcount`, `result`, …
+
+## What's configured
+
+### Grimoire of Gaia kobold — disabled (Task D)
+`config/incontrol/spawn.json` denies `grimoireofgaia:kobold`. GoG registers
+spawns in code (no per-mob config toggle, no datapack `add_spawns` to override),
+so an In Control! `deny` is the cleanest kill switch. The spawn **egg** still
+works (admin/testing); only natural spawning is blocked.
+
+### Rotten Creatures — structures only (Task C)
+Rotten Creatures spawns are **code-driven** (`CommonConfig` weights + per-mob
+`can_*_spawn_on` biome tags) — there are no `add_spawns` biome modifiers to
+override — so In Control! is the right tool. Two rules: an `allow` for the seven
+naturally-spawning mobs (`burned`, `frostbitten`, `glacial_hunter`, `swampy`,
+`undead_miner`, `mummy`, `dead_beard`) when inside a structure in the allowlist,
+then a blanket `deny` for the same seven everywhere else. Summoned adds
+(`zombie_lackey`, `skeleton_lackey`, `hunter_wolf`, scarabs, `immortal`) are
+**not** in the lists, so necromancer/parent-mob mechanics still work.
+
+> ⚠️ **Playtest / maintainer call — the structure allowlist is a vanilla
+> starter set.** It currently lists thematic vanilla structures (mineshaft,
+> stronghold, ancient_city, desert_pyramid, swamp_hut, ocean ruins, ruined
+> portals). The pack ships several structure mods (dungeons-and-taverns,
+> yungs-better-*, when-dungeons-arise, …) whose structures should probably be
+> added. Discover their registry IDs in-game (`/locate structure`, or In
+> Control!'s log warns on unknown structure names) and extend the two `mobs`
+> rules' `structures` arrays. Unknown IDs are ignored (logged), not fatal.
+
+### Mutants and Zombies — moon-gated, NOT via In Control! (Task C)
+**Route chosen — and why it is *not* an In Control! deny:** M&Z must be off
+during normal nights but spawn during the zombie/blood moon. In Control! cannot
+read Enhanced Celestials' lunar event, and — critically — an In Control! `deny`
+on M&Z would **also block the blood-moon spawns**, because EC injects its
+lunar spawns through the *same* natural-spawn path In Control! intercepts. So
+In Control! is the wrong tool here. Instead:
+
+1. **Disable natural spawns at the source.** M&Z adds itself to overworld biomes
+   via seven `neoforge:add_spawns` biome modifiers. Each is overridden to
+   `neoforge:none` in
+   `kubejs/data/mutantszombies/neoforge/biome_modifier/*_biome_modifier.json`.
+   This removes them from every biome's spawn list — deterministic, no In
+   Control! involved. (M&Z's `*SpawnNaturally` config booleans are left at their
+   `true` defaults *on purpose*: that code path only *cancels* spawns, and
+   flipping it could also cancel the EC-injected moon spawns.)
+2. **Re-add them during the blood moon, natively.** EC lunar events carry their
+   own `mob_settings.lunar_spawn_settings.mob_spawn_settings.spawners` list. The
+   `blood_moon` and `super_blood_moon` events are overridden under
+   `kubejs/data/enhancedcelestials/enhancedcelestials/lunar/event/` to add the
+   seven M&Z mobs to the `monster` spawners (weights mirrored from their
+   original biome modifiers). Result: M&Z appears **only** during a (super)
+   blood moon. This is the "enhanced-celestials should also gate mobs" item.
+
+> ⚠️ **Playtest checklist for M&Z:**
+> - Confirm KubeJS `data/` actually overrides EC's dynamic-registry lunar events
+>   and M&Z's biome modifiers (load-order/priority). If KubeJS doesn't win the
+>   override, move these into a standalone datapack that loads after both mods.
+> - Verify no M&Z spawn on a normal night; verify they spawn on a blood moon
+>   (`/lunarevent set enhancedcelestials:blood_moon` via EC's command, or
+>   `/time set night` and wait for one).
+> - The blood-moon `monster` multiplier (2.25 / 4.5) stacks on top of these —
+>   tune weights down if blood moons feel overwhelming with 10+ players.
+>
+> **Horde Moon (`horde-moon`/ZombieMoon)** remains installed as an independent
+> driver. EC's blood moon was chosen as the single clean gate because EC
+> natively supports mob-spawn injection (Horde Moon does not, and would need a
+> KubeJS bridge). If both moons should gate M&Z, the cleanest add is a KubeJS
+> bridge keyed off Horde Moon — left as a follow-up.
+
+### Kobold drops backfill (Task D)
+The standalone **Kobolds** mod's kobolds have **empty** loot tables (they're
+trade/companion-flavored), so disabling GoG's kobold would lose its drops. GoG's
+`kobold` dropped: `grimoireofgaia:fur` (0–2, +looting), iron nuggets
+(`c:nuggets/iron`, 0–3), and rare `grimoireofgaia:box_iron` /
+`grimoireofgaia:bag_arrows`. Those drops are reproduced on `kobolds:kobold` via
+`kubejs/data/kobolds/loot_table/entities/kobold.json` (GoG stays in the pack, so
+its items still exist). Only the base `kobold` is backfilled — the variant
+kobolds (warrior, captain, …) keep their empty tables, matching that GoG had a
+single kobold.
+
+> ⚠️ **Playtest:** confirm `kobolds:kobold` spawns naturally and now drops the
+> GoG items; confirm no GoG kobolds appear. If a variant should also carry the
+> GoG drops, add sibling loot tables.
+
+## Open maintainer decisions (not changed here)
+
+- **`ender-moon` — keep/cut.** The issue said: gate "special endermen"
+  (variant/elite) to ender-moon *if any exist*, else flag. Scan result: **no mod
+  in the pack adds an enderman variant/elite.** The one that did — Mutant
+  Monsters' Mutant Enderman — is **removed in this same pass**. GoG's
+  `ender_girl`/`ender_dragon_girl` are humanoid mobs, not endermen variants. So
+  ender-moon has no unique job → **keep-or-cut is a maintainer call.** Left
+  installed and unchanged.
+- **`oh-the-trees-youll-grow` — kept (do not cut).** It's a tree-gen *library*
+  (`.nbt` templates), not a gameplay mod. Verified on Modrinth that **Terralith
+  does not depend on it** (Terralith deps: lithostitched, cristel-lib,
+  unfixed-seeds, fabric-api), and BYG (its usual consumer) isn't in the pack —
+  so it currently looks like an **orphan library**. Per #83 it stays regardless;
+  flagging for the maintainer: confirm a soft-dep/future use, or cut later.
+- **Dynamic Trees family** (`dynamictrees` + `dynamictreesplus` +
+  `dynamic-trees-terralith`) — separate worldgen/perf decision, **not** an OTTYG
+  duplicate. Left in place pending a maintainer call.
