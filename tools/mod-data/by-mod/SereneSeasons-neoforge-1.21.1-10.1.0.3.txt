@@ -39,5 +39,6 @@ sereneseasons:tropical_calendar_05
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-block/glass_blocks.json :: { "replace": false, "values": [ ]}
+block/glass_blocks :: {"replace": false, "values": []}

@@ -16,6 +16,7 @@ versionRange="[9.0.0,)"
 
 ## blocks
 
+
 ## items
 createmechanicalcompanion:blueprint_painting
 createmechanicalcompanion:booster_rocket
@@ -41,4 +42,6 @@ createmechanicalcompanion:tesla_tail
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
+

@@ -18,9 +18,12 @@ versionRange = "[1.1.13,)"
 
 ## blocks
 
+
 ## items
 
+
 ## neoforge biome_modifiers
-worldgen.json :: { "type": "almostunified:worldgen_unification"}
+worldgen.json :: {"type": "almostunified:worldgen_unification"}
 
 ## c: common tag membership
+

@@ -12,6 +12,7 @@ versionRange="[1.21, 1.21.2)"
 
 ## blocks
 
+
 ## items
 mutantszombies:blister_zombie_spawn_egg
 mutantszombies:crawler_spawn_egg
@@ -22,12 +23,13 @@ mutantszombies:split_head_zombie_spawn_egg
 mutantszombies:zombie_brute_spawn_egg
 
 ## neoforge biome_modifiers
-zombie_brute_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "mutantszombies:zombie_brute", "weight": 8, "minCount": 1, "maxCount": 2 }}
-mutant_brute_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "mutantszombies:mutant_brute", "weight": 5, "minCount": 1, "maxCount": 1 }}
-spitter_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "mutantszombies:spitter", "weight": 9, "minCount": 1, "maxCount": 2 }}
-crawler_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "mutantszombies:crawler", "weight": 10, "minCount": 1, "maxCount": 3 }}
-blister_zombie_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "mutantszombies:blister_zombie", "weight": 12, "minCount": 1, "maxCount": 3 }}
-rotten_mutant_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "mutantszombies:rotten_mutant", "weight": 12, "minCount": 1, "maxCount": 3 }}
-split_head_zombie_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "mutantszombies:split_head_zombie", "weight": 12, "minCount": 1, "maxCount": 2 }}
+blister_zombie_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "mutantszombies:blister_zombie", "weight": 12, "minCount": 1, "maxCount": 3}}
+crawler_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "mutantszombies:crawler", "weight": 10, "minCount": 1, "maxCount": 3}}
+mutant_brute_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "mutantszombies:mutant_brute", "weight": 5, "minCount": 1, "maxCount": 1}}
+rotten_mutant_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "mutantszombies:rotten_mutant", "weight": 12, "minCount": 1, "maxCount": 3}}
+spitter_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "mutantszombies:spitter", "weight": 9, "minCount": 1, "maxCount": 2}}
+split_head_zombie_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "mutantszombies:split_head_zombie", "weight": 12, "minCount": 1, "maxCount": 2}}
+zombie_brute_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "mutantszombies:zombie_brute", "weight": 8, "minCount": 1, "maxCount": 2}}
 
 ## c: common tag membership
+

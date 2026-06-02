@@ -69,5 +69,6 @@ numismatics:yellow_id_card
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-block/relocation_not_supported.json :: { "values": [ "numismatics:andesite_depositor", "numismatics:brass_depositor", "numismatics:blaze_banker" ]}
+block/relocation_not_supported :: {"values": ["numismatics:andesite_depositor", "numismatics:brass_depositor", "numismatics:blaze_banker"]}

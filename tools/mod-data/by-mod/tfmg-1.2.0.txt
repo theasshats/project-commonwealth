@@ -1037,135 +1037,135 @@ tfmg:zinc_grenade
 tfmg:zinc_truss
 
 ## neoforge biome_modifiers
-lead_ore.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "tfmg:lead_ore", "step": "underground_ores"}
-lithium_ore.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "tfmg:lithium_ore", "step": "underground_ores"}
-nickel_ore.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "tfmg:nickel_ore", "step": "underground_ores"}
-oil_deposit.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "tfmg:oil_deposit", "step": "underground_ores"}
-oil_well.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:has_structure/desert_pyramid", "features": "tfmg:oil_well", "step": "fluid_springs"}
-tfmg_striated_ores_nether.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_nether", "features": "tfmg:tfmg_striated_ores_nether", "step": "underground_ores"}
-tfmg_striated_ores_overworld.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "tfmg:tfmg_striated_ores_overworld", "step": "underground_ores"}
+lead_ore.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "tfmg:lead_ore", "step": "underground_ores"}
+lithium_ore.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "tfmg:lithium_ore", "step": "underground_ores"}
+nickel_ore.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "tfmg:nickel_ore", "step": "underground_ores"}
+oil_deposit.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "tfmg:oil_deposit", "step": "underground_ores"}
+oil_well.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:has_structure/desert_pyramid", "features": "tfmg:oil_well", "step": "fluid_springs"}
+tfmg_striated_ores_nether.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_nether", "features": "tfmg:tfmg_striated_ores_nether", "step": "underground_ores"}
+tfmg_striated_ores_overworld.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "tfmg:tfmg_striated_ores_overworld", "step": "underground_ores"}
 
 ## c: common tag membership
-block/concretes.json :: { "values": [ "tfmg:concrete", "tfmg:rebar_concrete" ]}
-block/ores/lead.json :: { "values": [ "tfmg:lead_ore", "tfmg:deepslate_lead_ore" ]}
-block/ores/lithium.json :: { "values": [ "tfmg:lithium_ore", "tfmg:deepslate_lithium_ore" ]}
-block/ores/nickel.json :: { "values": [ "tfmg:nickel_ore", "tfmg:deepslate_nickel_ore" ]}
-block/ores.json :: { "values": [ "tfmg:lead_ore", "tfmg:deepslate_lead_ore", "tfmg:nickel_ore", "tfmg:deepslate_nickel_ore", "tfmg:lithium_ore", "tfmg:deepslate_lithium_ore" ]}
-block/ores_in_ground/deepslate.json :: { "values": [ "tfmg:deepslate_lead_ore", "tfmg:deepslate_nickel_ore", "tfmg:deepslate_lithium_ore" ]}
-block/ores_in_ground/stone.json :: { "values": [ "tfmg:lead_ore", "tfmg:nickel_ore", "tfmg:lithium_ore" ]}
-block/storage_blocks/aluminum.json :: { "values": [ "tfmg:aluminum_block" ]}
-block/storage_blocks/cast_iron.json :: { "values": [ "tfmg:cast_iron_block" ]}
-block/storage_blocks/coal_coke.json :: { "values": [ "tfmg:coal_coke_block" ]}
-block/storage_blocks/constantan.json :: { "values": [ "tfmg:constantan_block" ]}
-block/storage_blocks/lead.json :: { "values": [ "tfmg:lead_block" ]}
-block/storage_blocks/lithium.json :: { "values": [ "tfmg:lithium_block" ]}
-block/storage_blocks/nickel.json :: { "values": [ "tfmg:nickel_block" ]}
-block/storage_blocks/plastic.json :: { "values": [ "tfmg:plastic_block" ]}
-block/storage_blocks/raw_lead.json :: { "values": [ "tfmg:raw_lead_block" ]}
-block/storage_blocks/raw_lithium.json :: { "values": [ "tfmg:raw_lithium_block" ]}
-block/storage_blocks/raw_nickel.json :: { "values": [ "tfmg:raw_nickel_block" ]}
-block/storage_blocks/steel.json :: { "values": [ "tfmg:steel_block" ]}
-block/storage_blocks.json :: { "values": [ "tfmg:raw_nickel_block", "tfmg:raw_lead_block", "tfmg:raw_lithium_block", "tfmg:steel_block", "tfmg:cast_iron_block", "tfmg:aluminum_block", "tfmg:plastic_block", "tfmg:lead_block", "tfmg:constantan_block", "tfmg:nickel_block", "tfmg:lithium_block", "tfmg:coal_coke_block" ]}
-fluid/air.json :: { "values": [ "tfmg:flowing_air", "tfmg:air" ]}
-fluid/cooling_fluid.json :: { "values": [ "tfmg:flowing_cooling_fluid", "tfmg:cooling_fluid" ]}
-fluid/creosote.json :: { "values": [ "tfmg:flowing_creosote", "tfmg:creosote" ]}
-fluid/crude_oil.json :: { "values": [ "tfmg:flowing_crude_oil", "tfmg:crude_oil" ]}
-fluid/diesel.json :: { "values": [ "tfmg:flowing_diesel", "tfmg:diesel" ]}
-fluid/fuel.json :: { "values": [ "tfmg:flowing_lpg", "tfmg:lpg", "tfmg:flowing_butane", "tfmg:butane", "tfmg:flowing_propane", "tfmg:propane", "tfmg:flowing_hydrogen", "tfmg:hydrogen", "tfmg:flowing_furnace_gas", "tfmg:furnace_gas", "tfmg:flowing_gasoline", "tfmg:gasoline", "tfmg:flowing_diesel", "tfmg:diesel", "tfmg:flowing_naphtha", "tfmg:naphtha", "tfmg:flowing_kerosene", "tfmg:kerosene", "tfmg:flowing_creosote", "tfmg:creosote" ]}
-fluid/furnace_gas.json :: { "values": [ "tfmg:flowing_furnace_gas", "tfmg:furnace_gas" ]}
-fluid/gasoline.json :: { "values": [ "tfmg:flowing_gasoline", "tfmg:gasoline" ]}
-fluid/heavy_oil.json :: { "values": [ "tfmg:flowing_heavy_oil", "tfmg:heavy_oil" ]}
-fluid/kerosene.json :: { "values": [ "tfmg:flowing_kerosene", "tfmg:kerosene" ]}
-fluid/lpg.json :: { "values": [ "tfmg:flowing_lpg", "tfmg:lpg" ]}
-fluid/lubrication_oil.json :: { "values": [ "tfmg:flowing_lubrication_oil", "tfmg:lubrication_oil" ]}
-fluid/molten_steel.json :: { "values": [ "tfmg:flowing_molten_steel", "tfmg:molten_steel" ]}
-fluid/naphtha.json :: { "values": [ "tfmg:flowing_naphtha", "tfmg:naphtha" ]}
-item/buckets/air.json :: { "values": [ "tfmg:air_bucket" ]}
-item/buckets/butane.json :: { "values": [ "tfmg:butane_bucket" ]}
-item/buckets/carbon_dioxide.json :: { "values": [ "tfmg:carbon_dioxide_bucket" ]}
-item/buckets/cooling_fluid.json :: { "values": [ "tfmg:cooling_fluid_bucket" ]}
-item/buckets/creosote.json :: { "values": [ "tfmg:creosote_bucket" ]}
-item/buckets/crude_oil.json :: { "values": [ "tfmg:crude_oil_bucket" ]}
-item/buckets/diesel.json :: { "values": [ "tfmg:diesel_bucket" ]}
-item/buckets/ethylene.json :: { "values": [ "tfmg:ethylene_bucket" ]}
-item/buckets/furnace_gas.json :: { "values": [ "tfmg:furnace_gas_bucket" ]}
-item/buckets/gasoline.json :: { "values": [ "tfmg:gasoline_bucket" ]}
-item/buckets/heavy_oil.json :: { "values": [ "tfmg:heavy_oil_bucket" ]}
-item/buckets/hot_air.json :: { "values": [ "tfmg:hot_air_bucket" ]}
-item/buckets/hydrogen.json :: { "values": [ "tfmg:hydrogen_bucket" ]}
-item/buckets/kerosene.json :: { "values": [ "tfmg:kerosene_bucket" ]}
-item/buckets/liquid_asphalt.json :: { "values": [ "tfmg:liquid_asphalt_bucket" ]}
-item/buckets/liquid_concrete.json :: { "values": [ "tfmg:liquid_concrete_bucket" ]}
-item/buckets/liquid_silicon.json :: { "values": [ "tfmg:liquid_silicon_bucket" ]}
-item/buckets/lpg.json :: { "values": [ "tfmg:lpg_bucket" ]}
-item/buckets/lubrication_oil.json :: { "values": [ "tfmg:lubrication_oil_bucket" ]}
-item/buckets/molten_plastic.json :: { "values": [ "tfmg:molten_plastic_bucket" ]}
-item/buckets/molten_slag.json :: { "values": [ "tfmg:molten_slag_bucket" ]}
-item/buckets/molten_steel.json :: { "values": [ "tfmg:molten_steel_bucket" ]}
-item/buckets/napalm.json :: { "values": [ "tfmg:napalm_bucket" ]}
-item/buckets/naphtha.json :: { "values": [ "tfmg:naphtha_bucket" ]}
-item/buckets/neon.json :: { "values": [ "tfmg:neon_bucket" ]}
-item/buckets/propane.json :: { "values": [ "tfmg:propane_bucket" ]}
-item/buckets/propylene.json :: { "values": [ "tfmg:propylene_bucket" ]}
-item/buckets/sulfuric_acid.json :: { "values": [ "tfmg:sulfuric_acid_bucket" ]}
-item/concretes.json :: { "values": [ "tfmg:concrete", "tfmg:rebar_concrete" ]}
-item/dusts/coal_coke.json :: { "values": [ "tfmg:coal_coke_dust" ]}
-item/dusts/saltpeter.json :: { "values": [ "tfmg:nitrate_dust" ]}
-item/dusts/sulfur.json :: { "values": [ "tfmg:sulfur_dust" ]}
-item/dusts.json :: { "values": [ "tfmg:sulfur_dust", "tfmg:nitrate_dust", "tfmg:coal_coke_dust" ]}
-item/ingots/aluminum.json :: { "values": [ "tfmg:aluminum_ingot" ]}
-item/ingots/cast_iron.json :: { "values": [ "tfmg:cast_iron_ingot" ]}
-item/ingots/constantan.json :: { "values": [ "tfmg:constantan_ingot" ]}
-item/ingots/lead.json :: { "values": [ "tfmg:lead_ingot" ]}
-item/ingots/lithium.json :: { "values": [ "tfmg:lithium_ingot" ]}
-item/ingots/nickel.json :: { "values": [ "tfmg:nickel_ingot" ]}
-item/ingots/plastic.json :: { "values": [ "tfmg:plastic_sheet" ]}
-item/ingots/rubber.json :: { "values": [ "tfmg:rubber_sheet" ]}
-item/ingots/silicon.json :: { "values": [ "tfmg:silicon_ingot" ]}
-item/ingots/steel.json :: { "values": [ "tfmg:steel_ingot" ]}
-item/ingots.json :: { "values": [ "tfmg:steel_ingot", "tfmg:cast_iron_ingot", "tfmg:aluminum_ingot", "tfmg:plastic_sheet", "tfmg:lead_ingot", "tfmg:nickel_ingot", "tfmg:constantan_ingot", "tfmg:lithium_ingot" ]}
-item/leathers.json :: { "values": [ "tfmg:synthetic_leather" ]}
-item/nuggets/aluminum.json :: { "values": [ "tfmg:aluminum_nugget" ]}
-item/nuggets/cast_iron.json :: { "values": [ "tfmg:cast_iron_nugget" ]}
-item/nuggets/constantan.json :: { "values": [ "tfmg:constantan_nugget" ]}
-item/nuggets/lead.json :: { "values": [ "tfmg:lead_nugget" ]}
-item/nuggets/lithium.json :: { "values": [ "tfmg:lithium_nugget" ]}
-item/nuggets/nickel.json :: { "values": [ "tfmg:nickel_nugget" ]}
-item/nuggets/steel.json :: { "values": [ "tfmg:steel_nugget" ]}
-item/nuggets.json :: { "values": [ "tfmg:aluminum_nugget", "tfmg:steel_nugget", "tfmg:cast_iron_nugget", "tfmg:constantan_nugget", "tfmg:lead_nugget", "tfmg:nickel_nugget", "tfmg:lithium_nugget" ]}
-item/ores/lead.json :: { "values": [ "tfmg:lead_ore", "tfmg:deepslate_lead_ore" ]}
-item/ores/lithium.json :: { "values": [ "tfmg:lithium_ore", "tfmg:deepslate_lithium_ore" ]}
-item/ores/nickel.json :: { "values": [ "tfmg:nickel_ore", "tfmg:deepslate_nickel_ore" ]}
-item/ores.json :: { "values": [ "tfmg:lead_ore", "tfmg:deepslate_lead_ore", "tfmg:nickel_ore", "tfmg:deepslate_nickel_ore", "tfmg:lithium_ore", "tfmg:deepslate_lithium_ore" ]}
-item/ores_in_ground/deepslate.json :: { "values": [ "tfmg:deepslate_lead_ore", "tfmg:deepslate_nickel_ore", "tfmg:deepslate_lithium_ore" ]}
-item/ores_in_ground/stone.json :: { "values": [ "tfmg:lead_ore", "tfmg:nickel_ore", "tfmg:lithium_ore" ]}
-item/plates/aluminum.json :: { "values": [ "tfmg:aluminum_sheet" ]}
-item/plates/cast_iron.json :: { "values": [ "tfmg:cast_iron_sheet" ]}
-item/plates/lead.json :: { "values": [ "tfmg:lead_sheet" ]}
-item/plates/nickel.json :: { "values": [ "tfmg:nickel_sheet" ]}
-item/plates/steel.json :: { "values": [ "tfmg:heavy_plate" ]}
-item/plates.json :: { "values": [ "tfmg:heavy_plate", "tfmg:aluminum_sheet", "tfmg:nickel_sheet", "tfmg:cast_iron_sheet", "tfmg:lead_sheet", "tfmg:rubber_sheet" ]}
-item/raw_materials/lead.json :: { "values": [ "tfmg:raw_lead" ]}
-item/raw_materials/lithium.json :: { "values": [ "tfmg:raw_lithium" ]}
-item/raw_materials/nickel.json :: { "values": [ "tfmg:raw_nickel" ]}
-item/raw_materials.json :: { "values": [ "tfmg:raw_lead", "tfmg:raw_nickel", "tfmg:raw_lithium" ]}
-item/rods/steel.json :: { "values": [ "tfmg:rebar" ]}
-item/rods.json :: { "values": [ "tfmg:rebar", "minecraft:stick" ]}
-item/storage_blocks/aluminum.json :: { "values": [ "tfmg:aluminum_block" ]}
-item/storage_blocks/cast_iron.json :: { "values": [ "tfmg:cast_iron_block" ]}
-item/storage_blocks/coal_coke.json :: { "values": [ "tfmg:coal_coke_block" ]}
-item/storage_blocks/constantan.json :: { "values": [ "tfmg:constantan_block" ]}
-item/storage_blocks/lead.json :: { "values": [ "tfmg:lead_block" ]}
-item/storage_blocks/lithium.json :: { "values": [ "tfmg:lithium_block" ]}
-item/storage_blocks/nickel.json :: { "values": [ "tfmg:nickel_block" ]}
-item/storage_blocks/plastic.json :: { "values": [ "tfmg:plastic_block" ]}
-item/storage_blocks/raw_lead.json :: { "values": [ "tfmg:raw_lead_block" ]}
-item/storage_blocks/raw_lithium.json :: { "values": [ "tfmg:raw_lithium_block" ]}
-item/storage_blocks/raw_nickel.json :: { "values": [ "tfmg:raw_nickel_block" ]}
-item/storage_blocks/steel.json :: { "values": [ "tfmg:steel_block" ]}
-item/storage_blocks.json :: { "values": [ "tfmg:raw_nickel_block", "tfmg:raw_lead_block", "tfmg:raw_lithium_block", "tfmg:steel_block", "tfmg:cast_iron_block", "tfmg:aluminum_block", "tfmg:plastic_block", "tfmg:lead_block", "tfmg:constantan_block", "tfmg:nickel_block", "tfmg:lithium_block", "tfmg:coal_coke_block" ]}
-item/strings.json :: { "values": [ "tfmg:synthetic_string" ]}
-item/wires/aluminum.json :: { "values": [ "tfmg:aluminum_wire" ]}
-item/wires/constantan.json :: { "values": [ "tfmg:constantan_wire" ]}
-item/wires/copper.json :: { "values": [ "tfmg:copper_wire" ]}
-item/wires.json :: { "values": [ "tfmg:copper_wire", "tfmg:aluminum_wire", "tfmg:constantan_wire" ]}
+block/concretes :: {"values": ["tfmg:concrete", "tfmg:rebar_concrete"]}
+block/ores :: {"values": ["tfmg:lead_ore", "tfmg:deepslate_lead_ore", "tfmg:nickel_ore", "tfmg:deepslate_nickel_ore", "tfmg:lithium_ore", "tfmg:deepslate_lithium_ore"]}
+block/ores/lead :: {"values": ["tfmg:lead_ore", "tfmg:deepslate_lead_ore"]}
+block/ores/lithium :: {"values": ["tfmg:lithium_ore", "tfmg:deepslate_lithium_ore"]}
+block/ores/nickel :: {"values": ["tfmg:nickel_ore", "tfmg:deepslate_nickel_ore"]}
+block/ores_in_ground/deepslate :: {"values": ["tfmg:deepslate_lead_ore", "tfmg:deepslate_nickel_ore", "tfmg:deepslate_lithium_ore"]}
+block/ores_in_ground/stone :: {"values": ["tfmg:lead_ore", "tfmg:nickel_ore", "tfmg:lithium_ore"]}
+block/storage_blocks :: {"values": ["tfmg:raw_nickel_block", "tfmg:raw_lead_block", "tfmg:raw_lithium_block", "tfmg:steel_block", "tfmg:cast_iron_block", "tfmg:aluminum_block", "tfmg:plastic_block", "tfmg:lead_block", "tfmg:constantan_block", "tfmg:nickel_block", "tfmg:lithium_block", "tfmg:coal_coke_block"]}
+block/storage_blocks/aluminum :: {"values": ["tfmg:aluminum_block"]}
+block/storage_blocks/cast_iron :: {"values": ["tfmg:cast_iron_block"]}
+block/storage_blocks/coal_coke :: {"values": ["tfmg:coal_coke_block"]}
+block/storage_blocks/constantan :: {"values": ["tfmg:constantan_block"]}
+block/storage_blocks/lead :: {"values": ["tfmg:lead_block"]}
+block/storage_blocks/lithium :: {"values": ["tfmg:lithium_block"]}
+block/storage_blocks/nickel :: {"values": ["tfmg:nickel_block"]}
+block/storage_blocks/plastic :: {"values": ["tfmg:plastic_block"]}
+block/storage_blocks/raw_lead :: {"values": ["tfmg:raw_lead_block"]}
+block/storage_blocks/raw_lithium :: {"values": ["tfmg:raw_lithium_block"]}
+block/storage_blocks/raw_nickel :: {"values": ["tfmg:raw_nickel_block"]}
+block/storage_blocks/steel :: {"values": ["tfmg:steel_block"]}
+fluid/air :: {"values": ["tfmg:flowing_air", "tfmg:air"]}
+fluid/cooling_fluid :: {"values": ["tfmg:flowing_cooling_fluid", "tfmg:cooling_fluid"]}
+fluid/creosote :: {"values": ["tfmg:flowing_creosote", "tfmg:creosote"]}
+fluid/crude_oil :: {"values": ["tfmg:flowing_crude_oil", "tfmg:crude_oil"]}
+fluid/diesel :: {"values": ["tfmg:flowing_diesel", "tfmg:diesel"]}
+fluid/fuel :: {"values": ["tfmg:flowing_lpg", "tfmg:lpg", "tfmg:flowing_butane", "tfmg:butane", "tfmg:flowing_propane", "tfmg:propane", "tfmg:flowing_hydrogen", "tfmg:hydrogen", "tfmg:flowing_furnace_gas", "tfmg:furnace_gas", "tfmg:flowing_gasoline", "tfmg:gasoline", "tfmg:flowing_diesel", "tfmg:diesel", "tfmg:flowing_naphtha", "tfmg:naphtha", "tfmg:flowing_kerosene", "tfmg:kerosene", "tfmg:flowing_creosote", "tfmg:creosote"]}
+fluid/furnace_gas :: {"values": ["tfmg:flowing_furnace_gas", "tfmg:furnace_gas"]}
+fluid/gasoline :: {"values": ["tfmg:flowing_gasoline", "tfmg:gasoline"]}
+fluid/heavy_oil :: {"values": ["tfmg:flowing_heavy_oil", "tfmg:heavy_oil"]}
+fluid/kerosene :: {"values": ["tfmg:flowing_kerosene", "tfmg:kerosene"]}
+fluid/lpg :: {"values": ["tfmg:flowing_lpg", "tfmg:lpg"]}
+fluid/lubrication_oil :: {"values": ["tfmg:flowing_lubrication_oil", "tfmg:lubrication_oil"]}
+fluid/molten_steel :: {"values": ["tfmg:flowing_molten_steel", "tfmg:molten_steel"]}
+fluid/naphtha :: {"values": ["tfmg:flowing_naphtha", "tfmg:naphtha"]}
+item/buckets/air :: {"values": ["tfmg:air_bucket"]}
+item/buckets/butane :: {"values": ["tfmg:butane_bucket"]}
+item/buckets/carbon_dioxide :: {"values": ["tfmg:carbon_dioxide_bucket"]}
+item/buckets/cooling_fluid :: {"values": ["tfmg:cooling_fluid_bucket"]}
+item/buckets/creosote :: {"values": ["tfmg:creosote_bucket"]}
+item/buckets/crude_oil :: {"values": ["tfmg:crude_oil_bucket"]}
+item/buckets/diesel :: {"values": ["tfmg:diesel_bucket"]}
+item/buckets/ethylene :: {"values": ["tfmg:ethylene_bucket"]}
+item/buckets/furnace_gas :: {"values": ["tfmg:furnace_gas_bucket"]}
+item/buckets/gasoline :: {"values": ["tfmg:gasoline_bucket"]}
+item/buckets/heavy_oil :: {"values": ["tfmg:heavy_oil_bucket"]}
+item/buckets/hot_air :: {"values": ["tfmg:hot_air_bucket"]}
+item/buckets/hydrogen :: {"values": ["tfmg:hydrogen_bucket"]}
+item/buckets/kerosene :: {"values": ["tfmg:kerosene_bucket"]}
+item/buckets/liquid_asphalt :: {"values": ["tfmg:liquid_asphalt_bucket"]}
+item/buckets/liquid_concrete :: {"values": ["tfmg:liquid_concrete_bucket"]}
+item/buckets/liquid_silicon :: {"values": ["tfmg:liquid_silicon_bucket"]}
+item/buckets/lpg :: {"values": ["tfmg:lpg_bucket"]}
+item/buckets/lubrication_oil :: {"values": ["tfmg:lubrication_oil_bucket"]}
+item/buckets/molten_plastic :: {"values": ["tfmg:molten_plastic_bucket"]}
+item/buckets/molten_slag :: {"values": ["tfmg:molten_slag_bucket"]}
+item/buckets/molten_steel :: {"values": ["tfmg:molten_steel_bucket"]}
+item/buckets/napalm :: {"values": ["tfmg:napalm_bucket"]}
+item/buckets/naphtha :: {"values": ["tfmg:naphtha_bucket"]}
+item/buckets/neon :: {"values": ["tfmg:neon_bucket"]}
+item/buckets/propane :: {"values": ["tfmg:propane_bucket"]}
+item/buckets/propylene :: {"values": ["tfmg:propylene_bucket"]}
+item/buckets/sulfuric_acid :: {"values": ["tfmg:sulfuric_acid_bucket"]}
+item/concretes :: {"values": ["tfmg:concrete", "tfmg:rebar_concrete"]}
+item/dusts :: {"values": ["tfmg:sulfur_dust", "tfmg:nitrate_dust", "tfmg:coal_coke_dust"]}
+item/dusts/coal_coke :: {"values": ["tfmg:coal_coke_dust"]}
+item/dusts/saltpeter :: {"values": ["tfmg:nitrate_dust"]}
+item/dusts/sulfur :: {"values": ["tfmg:sulfur_dust"]}
+item/ingots :: {"values": ["tfmg:steel_ingot", "tfmg:cast_iron_ingot", "tfmg:aluminum_ingot", "tfmg:plastic_sheet", "tfmg:lead_ingot", "tfmg:nickel_ingot", "tfmg:constantan_ingot", "tfmg:lithium_ingot"]}
+item/ingots/aluminum :: {"values": ["tfmg:aluminum_ingot"]}
+item/ingots/cast_iron :: {"values": ["tfmg:cast_iron_ingot"]}
+item/ingots/constantan :: {"values": ["tfmg:constantan_ingot"]}
+item/ingots/lead :: {"values": ["tfmg:lead_ingot"]}
+item/ingots/lithium :: {"values": ["tfmg:lithium_ingot"]}
+item/ingots/nickel :: {"values": ["tfmg:nickel_ingot"]}
+item/ingots/plastic :: {"values": ["tfmg:plastic_sheet"]}
+item/ingots/rubber :: {"values": ["tfmg:rubber_sheet"]}
+item/ingots/silicon :: {"values": ["tfmg:silicon_ingot"]}
+item/ingots/steel :: {"values": ["tfmg:steel_ingot"]}
+item/leathers :: {"values": ["tfmg:synthetic_leather"]}
+item/nuggets :: {"values": ["tfmg:aluminum_nugget", "tfmg:steel_nugget", "tfmg:cast_iron_nugget", "tfmg:constantan_nugget", "tfmg:lead_nugget", "tfmg:nickel_nugget", "tfmg:lithium_nugget"]}
+item/nuggets/aluminum :: {"values": ["tfmg:aluminum_nugget"]}
+item/nuggets/cast_iron :: {"values": ["tfmg:cast_iron_nugget"]}
+item/nuggets/constantan :: {"values": ["tfmg:constantan_nugget"]}
+item/nuggets/lead :: {"values": ["tfmg:lead_nugget"]}
+item/nuggets/lithium :: {"values": ["tfmg:lithium_nugget"]}
+item/nuggets/nickel :: {"values": ["tfmg:nickel_nugget"]}
+item/nuggets/steel :: {"values": ["tfmg:steel_nugget"]}
+item/ores :: {"values": ["tfmg:lead_ore", "tfmg:deepslate_lead_ore", "tfmg:nickel_ore", "tfmg:deepslate_nickel_ore", "tfmg:lithium_ore", "tfmg:deepslate_lithium_ore"]}
+item/ores/lead :: {"values": ["tfmg:lead_ore", "tfmg:deepslate_lead_ore"]}
+item/ores/lithium :: {"values": ["tfmg:lithium_ore", "tfmg:deepslate_lithium_ore"]}
+item/ores/nickel :: {"values": ["tfmg:nickel_ore", "tfmg:deepslate_nickel_ore"]}
+item/ores_in_ground/deepslate :: {"values": ["tfmg:deepslate_lead_ore", "tfmg:deepslate_nickel_ore", "tfmg:deepslate_lithium_ore"]}
+item/ores_in_ground/stone :: {"values": ["tfmg:lead_ore", "tfmg:nickel_ore", "tfmg:lithium_ore"]}
+item/plates :: {"values": ["tfmg:heavy_plate", "tfmg:aluminum_sheet", "tfmg:nickel_sheet", "tfmg:cast_iron_sheet", "tfmg:lead_sheet", "tfmg:rubber_sheet"]}
+item/plates/aluminum :: {"values": ["tfmg:aluminum_sheet"]}
+item/plates/cast_iron :: {"values": ["tfmg:cast_iron_sheet"]}
+item/plates/lead :: {"values": ["tfmg:lead_sheet"]}
+item/plates/nickel :: {"values": ["tfmg:nickel_sheet"]}
+item/plates/steel :: {"values": ["tfmg:heavy_plate"]}
+item/raw_materials :: {"values": ["tfmg:raw_lead", "tfmg:raw_nickel", "tfmg:raw_lithium"]}
+item/raw_materials/lead :: {"values": ["tfmg:raw_lead"]}
+item/raw_materials/lithium :: {"values": ["tfmg:raw_lithium"]}
+item/raw_materials/nickel :: {"values": ["tfmg:raw_nickel"]}
+item/rods :: {"values": ["tfmg:rebar", "minecraft:stick"]}
+item/rods/steel :: {"values": ["tfmg:rebar"]}
+item/storage_blocks :: {"values": ["tfmg:raw_nickel_block", "tfmg:raw_lead_block", "tfmg:raw_lithium_block", "tfmg:steel_block", "tfmg:cast_iron_block", "tfmg:aluminum_block", "tfmg:plastic_block", "tfmg:lead_block", "tfmg:constantan_block", "tfmg:nickel_block", "tfmg:lithium_block", "tfmg:coal_coke_block"]}
+item/storage_blocks/aluminum :: {"values": ["tfmg:aluminum_block"]}
+item/storage_blocks/cast_iron :: {"values": ["tfmg:cast_iron_block"]}
+item/storage_blocks/coal_coke :: {"values": ["tfmg:coal_coke_block"]}
+item/storage_blocks/constantan :: {"values": ["tfmg:constantan_block"]}
+item/storage_blocks/lead :: {"values": ["tfmg:lead_block"]}
+item/storage_blocks/lithium :: {"values": ["tfmg:lithium_block"]}
+item/storage_blocks/nickel :: {"values": ["tfmg:nickel_block"]}
+item/storage_blocks/plastic :: {"values": ["tfmg:plastic_block"]}
+item/storage_blocks/raw_lead :: {"values": ["tfmg:raw_lead_block"]}
+item/storage_blocks/raw_lithium :: {"values": ["tfmg:raw_lithium_block"]}
+item/storage_blocks/raw_nickel :: {"values": ["tfmg:raw_nickel_block"]}
+item/storage_blocks/steel :: {"values": ["tfmg:steel_block"]}
+item/strings :: {"values": ["tfmg:synthetic_string"]}
+item/wires :: {"values": ["tfmg:copper_wire", "tfmg:aluminum_wire", "tfmg:constantan_wire"]}
+item/wires/aluminum :: {"values": ["tfmg:aluminum_wire"]}
+item/wires/constantan :: {"values": ["tfmg:constantan_wire"]}
+item/wires/copper :: {"values": ["tfmg:copper_wire"]}

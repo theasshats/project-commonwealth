@@ -221,19 +221,20 @@ dndesires:yellow_bore_block
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-fluid/chocolate_milkshakes.json :: { "values": [ "dndesires:flowing_chocolate_milkshake", "dndesires:chocolate_milkshake" ]}
-fluid/glowberry_milkshakes.json :: { "values": [ "dndesires:flowing_glowberry_milkshake", "dndesires:glowberry_milkshake" ]}
-fluid/pumpkin_milkshakes.json :: { "values": [ "dndesires:flowing_pumpkin_milkshake", "dndesires:pumpkin_milkshake" ]}
-fluid/strawberry_milkshakes.json :: { "values": [ "dndesires:flowing_strawberry_milkshake", "dndesires:strawberry_milkshake" ]}
-fluid/vanilla_milkshakes.json :: { "values": [ "dndesires:flowing_vanilla_milkshake", "dndesires:vanilla_milkshake" ]}
-item/buckets/chocolate_milkshake.json :: { "values": [ "dndesires:chocolate_milkshake_bucket" ]}
-item/buckets/glowberry_milkshake.json :: { "values": [ "dndesires:glowberry_milkshake_bucket" ]}
-item/buckets/pumpkin_milkshake.json :: { "values": [ "dndesires:pumpkin_milkshake_bucket" ]}
-item/buckets/strawberry_milkshake.json :: { "values": [ "dndesires:strawberry_milkshake_bucket" ]}
-item/buckets/vanilla_milkshake.json :: { "values": [ "dndesires:vanilla_milkshake_bucket" ]}
-item/nuggets/coal.json :: { "values": [ "dndesires:coal_piece" ]}
-item/nuggets/diamond.json :: { "values": [ "dndesires:diamond_shard" ]}
-item/nuggets/lapis.json :: { "values": [ "dndesires:lapis_lazuli_shard" ]}
-item/nuggets.json :: { "values": [ "dndesires:lapis_lazuli_shard", "dndesires:diamond_shard", "dndesires:coal_piece" ]}
-item/tools.json :: { "values": [ "dndesires:handheld_saw", "dndesires:handheld_drill", "dndesires:gatling_breaker" ]}
+fluid/chocolate_milkshakes :: {"values": ["dndesires:flowing_chocolate_milkshake", "dndesires:chocolate_milkshake"]}
+fluid/glowberry_milkshakes :: {"values": ["dndesires:flowing_glowberry_milkshake", "dndesires:glowberry_milkshake"]}
+fluid/pumpkin_milkshakes :: {"values": ["dndesires:flowing_pumpkin_milkshake", "dndesires:pumpkin_milkshake"]}
+fluid/strawberry_milkshakes :: {"values": ["dndesires:flowing_strawberry_milkshake", "dndesires:strawberry_milkshake"]}
+fluid/vanilla_milkshakes :: {"values": ["dndesires:flowing_vanilla_milkshake", "dndesires:vanilla_milkshake"]}
+item/buckets/chocolate_milkshake :: {"values": ["dndesires:chocolate_milkshake_bucket"]}
+item/buckets/glowberry_milkshake :: {"values": ["dndesires:glowberry_milkshake_bucket"]}
+item/buckets/pumpkin_milkshake :: {"values": ["dndesires:pumpkin_milkshake_bucket"]}
+item/buckets/strawberry_milkshake :: {"values": ["dndesires:strawberry_milkshake_bucket"]}
+item/buckets/vanilla_milkshake :: {"values": ["dndesires:vanilla_milkshake_bucket"]}
+item/nuggets :: {"values": ["dndesires:lapis_lazuli_shard", "dndesires:diamond_shard", "dndesires:coal_piece"]}
+item/nuggets/coal :: {"values": ["dndesires:coal_piece"]}
+item/nuggets/diamond :: {"values": ["dndesires:diamond_shard"]}
+item/nuggets/lapis :: {"values": ["dndesires:lapis_lazuli_shard"]}
+item/tools :: {"values": ["dndesires:handheld_saw", "dndesires:handheld_drill", "dndesires:gatling_breaker"]}

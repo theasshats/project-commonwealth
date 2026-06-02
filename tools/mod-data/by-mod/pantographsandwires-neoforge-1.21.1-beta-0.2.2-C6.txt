@@ -217,20 +217,21 @@ pantographsandwires:wire_coil
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-blocks/storage_blocks.json :: { "replace": false, "values": [ "pantographsandwires:graphite_block", "pantographsandwires:coal_coke_block" ]}
-blocks/storage_blocks/coal_coke.json :: { "replace": false, "values": [ "pantographsandwires:coal_coke_block" ]}
-blocks/storage_blocks/graphite.json :: { "replace": false, "values": [ "pantographsandwires:graphite_block" ]}
-item/coal_coke.json :: { "replace": false, "values": [ "pantographsandwires:coal_coke" ]}
-item/copper_wires.json :: { "replace": false, "values": [ "pantographsandwires:copper_wire" ]}
-item/dusts/coal_coke.json :: { "replace": false, "values": [ "pantographsandwires:crushed_coal_coke" ]}
-item/graphite_ingots.json :: { "replace": false, "values": [ "pantographsandwires:graphite_ingot" ]}
-item/ingots/graphite.json :: { "replace": false, "values": [ "pantographsandwires:graphite_ingot" ]}
-item/iron_rods.json :: { "replace": false, "values": [ "pantographsandwires:iron_rod" ]}
-item/rods/all_metal.json :: { "replace": false, "values": [ "pantographsandwires:iron_rod" ]}
-item/rods/iron.json :: { "replace": false, "values": [ "pantographsandwires:iron_rod" ]}
-item/storage_blocks.json :: { "replace": false, "values": [ "pantographsandwires:graphite_block", "pantographsandwires:coal_coke_block" ]}
-item/storage_blocks/coal_coke.json :: { "replace": false, "values": [ "pantographsandwires:coal_coke_block" ]}
-item/storage_blocks/graphite.json :: { "replace": false, "values": [ "pantographsandwires:graphite_block" ]}
-item/wires.json :: { "replace": false, "values": [ "pantographsandwires:copper_wire" ]}
-item/wires/copper.json :: { "replace": false, "values": [ "pantographsandwires:copper_wire" ]}
+blocks/storage_blocks :: {"replace": false, "values": ["pantographsandwires:graphite_block", "pantographsandwires:coal_coke_block"]}
+blocks/storage_blocks/coal_coke :: {"replace": false, "values": ["pantographsandwires:coal_coke_block"]}
+blocks/storage_blocks/graphite :: {"replace": false, "values": ["pantographsandwires:graphite_block"]}
+item/coal_coke :: {"replace": false, "values": ["pantographsandwires:coal_coke"]}
+item/copper_wires :: {"replace": false, "values": ["pantographsandwires:copper_wire"]}
+item/dusts/coal_coke :: {"replace": false, "values": ["pantographsandwires:crushed_coal_coke"]}
+item/graphite_ingots :: {"replace": false, "values": ["pantographsandwires:graphite_ingot"]}
+item/ingots/graphite :: {"replace": false, "values": ["pantographsandwires:graphite_ingot"]}
+item/iron_rods :: {"replace": false, "values": ["pantographsandwires:iron_rod"]}
+item/rods/all_metal :: {"replace": false, "values": ["pantographsandwires:iron_rod"]}
+item/rods/iron :: {"replace": false, "values": ["pantographsandwires:iron_rod"]}
+item/storage_blocks :: {"replace": false, "values": ["pantographsandwires:graphite_block", "pantographsandwires:coal_coke_block"]}
+item/storage_blocks/coal_coke :: {"replace": false, "values": ["pantographsandwires:coal_coke_block"]}
+item/storage_blocks/graphite :: {"replace": false, "values": ["pantographsandwires:graphite_block"]}
+item/wires :: {"replace": false, "values": ["pantographsandwires:copper_wire"]}
+item/wires/copper :: {"replace": false, "values": ["pantographsandwires:copper_wire"]}

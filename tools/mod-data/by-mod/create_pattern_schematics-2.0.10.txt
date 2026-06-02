@@ -14,6 +14,7 @@ versionRange="[6.0.1,6.1.0)"
 
 ## blocks
 
+
 ## items
 create_pattern_schematics:empty_pattern_schematic
 create_pattern_schematics:pattern_schematic
@@ -21,4 +22,6 @@ create_pattern_schematics:pattern_schematic_and_quill
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
+

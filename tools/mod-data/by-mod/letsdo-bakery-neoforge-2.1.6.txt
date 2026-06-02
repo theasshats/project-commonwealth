@@ -155,12 +155,13 @@ bakery:wandering_baker_spawn_egg
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/bread.json :: { "replace": false, "values": [ "bakery:crusty_bread", "bakery:baguette", "bakery:braided_bread", "bakery:bun", "bakery:toast", "bakery:bread", "minecraft:bread" ]}
-item/chocolate.json :: { "replace": false, "values": [ "bakery:chocolate_truffle" ]}
-item/container.json :: { "replace": false, "values": [ "bakery:jar" ]}
-item/eggs.json :: { "replace": false, "values": [ "minecraft:egg" ]}
-item/jams.json :: { "replace": false, "values": [ "bakery:strawberry_jam", "bakery:sweetberry_jam", "bakery:glowberry_jam", "bakery:apple_jam", "bakery:chocolate_jam" ]}
-item/milk.json :: { "replace": false, "values": [ "minecraft:milk_bucket" ]}
-item/water_bottles.json :: { "replace": false, "values": [ "minecraft:water_bucket" ]}
-item/wheat.json :: { "replace": false, "values": [ "minecraft:wheat" ]}
+item/bread :: {"replace": false, "values": ["bakery:crusty_bread", "bakery:baguette", "bakery:braided_bread", "bakery:bun", "bakery:toast", "bakery:bread", "minecraft:bread"]}
+item/chocolate :: {"replace": false, "values": ["bakery:chocolate_truffle"]}
+item/container :: {"replace": false, "values": ["bakery:jar"]}
+item/eggs :: {"replace": false, "values": ["minecraft:egg"]}
+item/jams :: {"replace": false, "values": ["bakery:strawberry_jam", "bakery:sweetberry_jam", "bakery:glowberry_jam", "bakery:apple_jam", "bakery:chocolate_jam"]}
+item/milk :: {"replace": false, "values": ["minecraft:milk_bucket"]}
+item/water_bottles :: {"replace": false, "values": ["minecraft:water_bucket"]}
+item/wheat :: {"replace": false, "values": ["minecraft:wheat"]}

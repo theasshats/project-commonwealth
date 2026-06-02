@@ -213,37 +213,37 @@ ecologics:walnut_trapdoor
 ecologics:walnut_wood
 
 ## neoforge biome_modifiers
-add_beach_features.json :: { "type": "neoforge:add_features", "biomes": "minecraft:beach", "features": [ "ecologics:coconut", "ecologics:seashell" ], "step": "vegetal_decoration"}
-add_desert_ruin.json :: { "type": "neoforge:add_features", "biomes": "minecraft:desert", "features": "ecologics:desert_ruin", "step": "surface_structures"}
-add_prickly_pear.json :: { "type": "neoforge:add_features", "biomes": "minecraft:desert", "features": "ecologics:prickly_pear", "step": "vegetal_decoration"}
-add_rooted_azalea_tree.json :: { "type": "neoforge:add_features", "biomes": "minecraft:lush_caves", "features": "ecologics:rooted_azalea_tree", "step": "vegetal_decoration"}
-add_surface_moss_patch.json :: { "type": "neoforge:add_features", "biomes": "minecraft:lush_caves", "features": "ecologics:surface_moss_patch", "step": "vegetal_decoration"}
-add_thin_ice_patch.json :: { "type": "neoforge:add_features", "biomes": [ "minecraft:frozen_ocean", "minecraft:frozen_river", "minecraft:snowy_plains" ], "features": "ecologics:thin_ice_patch", "step": "top_layer_modification"}
-add_walnut_tree.json :: { "type": "neoforge:add_features", "biomes": "minecraft:plains", "features": "ecologics:walnut", "step": "vegetal_decoration"}
-remove_classic_vines_cave_feature.json :: { "type": "neoforge:remove_features", "biomes": "minecraft:lush_caves", "features": "minecraft:classic_vines_cave_feature", "step": "vegetal_decoration"}
-remove_rooted_azalea_tree.json :: { "type": "neoforge:remove_features", "biomes": "minecraft:lush_caves", "features": "minecraft:rooted_azalea_tree", "step": "vegetal_decoration"}
-remove_trees_plains.json :: { "type": "neoforge:remove_features", "biomes": "minecraft:plains", "features": "minecraft:trees_plains", "step": "vegetal_decoration"}
-spawn_camel.json :: { "type": "neoforge:add_spawns", "biomes": "minecraft:desert", "spawners": { "type": "minecraft:camel", "weight": 1, "minCount": 1, "maxCount": 1 }}
-spawn_penguin.json :: { "type": "neoforge:add_spawns", "biomes": [ "minecraft:frozen_ocean", "minecraft:frozen_river", "minecraft:snowy_plains" ], "spawners": { "type": "ecologics:penguin", "weight": 2, "minCount": 4, "maxCount": 5 }}
-spawn_squirrel.json :: { "type": "neoforge:add_spawns", "biomes": "minecraft:plains", "spawners": { "type": "ecologics:squirrel", "weight": 10, "minCount": 2, "maxCount": 3 }}
+add_beach_features.json :: {"type": "neoforge:add_features", "biomes": "minecraft:beach", "features": ["ecologics:coconut", "ecologics:seashell"], "step": "vegetal_decoration"}
+add_desert_ruin.json :: {"type": "neoforge:add_features", "biomes": "minecraft:desert", "features": "ecologics:desert_ruin", "step": "surface_structures"}
+add_prickly_pear.json :: {"type": "neoforge:add_features", "biomes": "minecraft:desert", "features": "ecologics:prickly_pear", "step": "vegetal_decoration"}
+add_rooted_azalea_tree.json :: {"type": "neoforge:add_features", "biomes": "minecraft:lush_caves", "features": "ecologics:rooted_azalea_tree", "step": "vegetal_decoration"}
+add_surface_moss_patch.json :: {"type": "neoforge:add_features", "biomes": "minecraft:lush_caves", "features": "ecologics:surface_moss_patch", "step": "vegetal_decoration"}
+add_thin_ice_patch.json :: {"type": "neoforge:add_features", "biomes": ["minecraft:frozen_ocean", "minecraft:frozen_river", "minecraft:snowy_plains"], "features": "ecologics:thin_ice_patch", "step": "top_layer_modification"}
+add_walnut_tree.json :: {"type": "neoforge:add_features", "biomes": "minecraft:plains", "features": "ecologics:walnut", "step": "vegetal_decoration"}
+remove_classic_vines_cave_feature.json :: {"type": "neoforge:remove_features", "biomes": "minecraft:lush_caves", "features": "minecraft:classic_vines_cave_feature", "step": "vegetal_decoration"}
+remove_rooted_azalea_tree.json :: {"type": "neoforge:remove_features", "biomes": "minecraft:lush_caves", "features": "minecraft:rooted_azalea_tree", "step": "vegetal_decoration"}
+remove_trees_plains.json :: {"type": "neoforge:remove_features", "biomes": "minecraft:plains", "features": "minecraft:trees_plains", "step": "vegetal_decoration"}
+spawn_camel.json :: {"type": "neoforge:add_spawns", "biomes": "minecraft:desert", "spawners": {"type": "minecraft:camel", "weight": 1, "minCount": 1, "maxCount": 1}}
+spawn_penguin.json :: {"type": "neoforge:add_spawns", "biomes": ["minecraft:frozen_ocean", "minecraft:frozen_river", "minecraft:snowy_plains"], "spawners": {"type": "ecologics:penguin", "weight": 2, "minCount": 4, "maxCount": 5}}
+spawn_squirrel.json :: {"type": "neoforge:add_spawns", "biomes": "minecraft:plains", "spawners": {"type": "ecologics:squirrel", "weight": 10, "minCount": 2, "maxCount": 3}}
 
 ## c: common tag membership
-block/storage_blocks.json :: { "replace": false, "values": [ "ecologics:seashell_block" ]}
-block/storage_blocks/seashell.json :: { "replace": false, "values": [ "ecologics:seashell_block" ]}
-item/enchantable/durability.json :: { "replace": false, "values": [ "ecologics:crab_claw" ]}
-item/enchantable/mining.json :: { "replace": false, "values": [ "ecologics:crab_claw" ]}
-item/enchantable/vanishing.json :: { "replace": false, "values": [ "ecologics:crab_claw" ]}
-item/enchantables.json :: { "replace": false, "values": [ "ecologics:crab_claw" ]}
-item/feathers.json :: { "replace": false, "values": [ "ecologics:penguin_feather" ]}
-item/foods.json :: { "replace": false, "values": [ "ecologics:coconut_slice", "ecologics:walnut", "ecologics:prickly_pear", "ecologics:cooked_prickly_pear", "ecologics:crab_meat", "ecologics:tropical_stew" ]}
-item/foods/cooked_meat.json :: { "replace": false, "values": [ "ecologics:crab_meat" ]}
-item/foods/fruit.json :: { "replace": false, "values": [ "ecologics:prickly_pear", "ecologics:cooked_prickly_pear" ]}
-item/foods/nut.json :: { "replace": false, "values": [ "ecologics:walnut" ]}
-item/foods/soup.json :: { "replace": false, "values": [ "ecologics:tropical_stew" ]}
-item/music_discs.json :: { "replace": false, "values": [ "ecologics:music_disc_coconut" ]}
-item/nuts.json :: { "replace": false, "values": [ "ecologics:walnut" ]}
-item/shears.json :: { "replace": false, "values": [ "minecraft:shears", "ecologics:crab_claw" ]}
-item/storage_blocks.json :: { "replace": false, "values": [ "ecologics:seashell_block" ]}
-item/storage_blocks/seashell.json :: { "replace": false, "values": [ "ecologics:seashell_block" ]}
-item/tools.json :: { "replace": false, "values": [ "ecologics:crab_claw" ]}
-item/tools/shears.json :: { "replace": false, "values": [ "ecologics:crab_claw" ]}
+block/storage_blocks :: {"replace": false, "values": ["ecologics:seashell_block"]}
+block/storage_blocks/seashell :: {"replace": false, "values": ["ecologics:seashell_block"]}
+item/enchantable/durability :: {"replace": false, "values": ["ecologics:crab_claw"]}
+item/enchantable/mining :: {"replace": false, "values": ["ecologics:crab_claw"]}
+item/enchantable/vanishing :: {"replace": false, "values": ["ecologics:crab_claw"]}
+item/enchantables :: {"replace": false, "values": ["ecologics:crab_claw"]}
+item/feathers :: {"replace": false, "values": ["ecologics:penguin_feather"]}
+item/foods :: {"replace": false, "values": ["ecologics:coconut_slice", "ecologics:walnut", "ecologics:prickly_pear", "ecologics:cooked_prickly_pear", "ecologics:crab_meat", "ecologics:tropical_stew"]}
+item/foods/cooked_meat :: {"replace": false, "values": ["ecologics:crab_meat"]}
+item/foods/fruit :: {"replace": false, "values": ["ecologics:prickly_pear", "ecologics:cooked_prickly_pear"]}
+item/foods/nut :: {"replace": false, "values": ["ecologics:walnut"]}
+item/foods/soup :: {"replace": false, "values": ["ecologics:tropical_stew"]}
+item/music_discs :: {"replace": false, "values": ["ecologics:music_disc_coconut"]}
+item/nuts :: {"replace": false, "values": ["ecologics:walnut"]}
+item/shears :: {"replace": false, "values": ["minecraft:shears", "ecologics:crab_claw"]}
+item/storage_blocks :: {"replace": false, "values": ["ecologics:seashell_block"]}
+item/storage_blocks/seashell :: {"replace": false, "values": ["ecologics:seashell_block"]}
+item/tools :: {"replace": false, "values": ["ecologics:crab_claw"]}
+item/tools/shears :: {"replace": false, "values": ["ecologics:crab_claw"]}

@@ -69,9 +69,10 @@ occultengineering:zinc_dust
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/ingots/sterling_silver.json :: { "values": [ "occultengineering:sterling_silver_ingot" ]}
-item/nuggets/sterling_silver.json :: { "values": [ "occultengineering:sterling_silver_nugget" ]}
-item/storage_blocks/sterling_silver.json :: { "values": [ "occultengineering:sterling_silver_block" ]}
-item/dusts/brass.json :: { "values": [ "occultengineering:brass_dust" ]}
-item/dusts/zinc.json :: { "values": [ "occultengineering:zinc_dust" ]}
+item/dusts/brass :: {"values": ["occultengineering:brass_dust"]}
+item/dusts/zinc :: {"values": ["occultengineering:zinc_dust"]}
+item/ingots/sterling_silver :: {"values": ["occultengineering:sterling_silver_ingot"]}
+item/nuggets/sterling_silver :: {"values": ["occultengineering:sterling_silver_nugget"]}
+item/storage_blocks/sterling_silver :: {"values": ["occultengineering:sterling_silver_block"]}

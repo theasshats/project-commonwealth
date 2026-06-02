@@ -570,36 +570,37 @@ handcrafted:yellow_sheet
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-block/dyed/black.json :: { "values": [ "handcrafted:black_cushion" ]}
-block/dyed/blue.json :: { "values": [ "handcrafted:blue_cushion" ]}
-block/dyed/brown.json :: { "values": [ "handcrafted:brown_cushion" ]}
-block/dyed/cyan.json :: { "values": [ "handcrafted:cyan_cushion" ]}
-block/dyed/gray.json :: { "values": [ "handcrafted:gray_cushion" ]}
-block/dyed/green.json :: { "values": [ "handcrafted:green_cushion" ]}
-block/dyed/light_blue.json :: { "values": [ "handcrafted:light_blue_cushion" ]}
-block/dyed/light_gray.json :: { "values": [ "handcrafted:light_gray_cushion" ]}
-block/dyed/lime.json :: { "values": [ "handcrafted:lime_cushion" ]}
-block/dyed/magenta.json :: { "values": [ "handcrafted:magenta_cushion" ]}
-block/dyed/orange.json :: { "values": [ "handcrafted:orange_cushion" ]}
-block/dyed/pink.json :: { "values": [ "handcrafted:pink_cushion" ]}
-block/dyed/purple.json :: { "values": [ "handcrafted:purple_cushion" ]}
-block/dyed/red.json :: { "values": [ "handcrafted:red_cushion" ]}
-block/dyed/white.json :: { "values": [ "handcrafted:white_cushion" ]}
-block/dyed/yellow.json :: { "values": [ "handcrafted:yellow_cushion" ]}
-item/dyed/black.json :: { "values": [ "handcrafted:black_cushion", "handcrafted:black_sheet" ]}
-item/dyed/blue.json :: { "values": [ "handcrafted:blue_cushion", "handcrafted:blue_sheet" ]}
-item/dyed/brown.json :: { "values": [ "handcrafted:brown_cushion", "handcrafted:brown_sheet" ]}
-item/dyed/cyan.json :: { "values": [ "handcrafted:cyan_cushion", "handcrafted:cyan_sheet" ]}
-item/dyed/gray.json :: { "values": [ "handcrafted:gray_cushion", "handcrafted:gray_sheet" ]}
-item/dyed/green.json :: { "values": [ "handcrafted:green_cushion", "handcrafted:green_sheet" ]}
-item/dyed/light_blue.json :: { "values": [ "handcrafted:light_blue_cushion", "handcrafted:light_blue_sheet" ]}
-item/dyed/light_gray.json :: { "values": [ "handcrafted:light_gray_cushion", "handcrafted:light_gray_sheet" ]}
-item/dyed/lime.json :: { "values": [ "handcrafted:lime_cushion", "handcrafted:lime_sheet" ]}
-item/dyed/magenta.json :: { "values": [ "handcrafted:magenta_cushion", "handcrafted:magenta_sheet" ]}
-item/dyed/orange.json :: { "values": [ "handcrafted:orange_cushion", "handcrafted:orange_sheet" ]}
-item/dyed/pink.json :: { "values": [ "handcrafted:pink_cushion", "handcrafted:pink_sheet" ]}
-item/dyed/purple.json :: { "values": [ "handcrafted:purple_cushion", "handcrafted:purple_sheet" ]}
-item/dyed/red.json :: { "values": [ "handcrafted:red_cushion", "handcrafted:red_sheet" ]}
-item/dyed/white.json :: { "values": [ "handcrafted:white_cushion", "handcrafted:white_sheet" ]}
-item/dyed/yellow.json :: { "values": [ "handcrafted:yellow_cushion", "handcrafted:yellow_sheet" ]}
+block/dyed/black :: {"values": ["handcrafted:black_cushion"]}
+block/dyed/blue :: {"values": ["handcrafted:blue_cushion"]}
+block/dyed/brown :: {"values": ["handcrafted:brown_cushion"]}
+block/dyed/cyan :: {"values": ["handcrafted:cyan_cushion"]}
+block/dyed/gray :: {"values": ["handcrafted:gray_cushion"]}
+block/dyed/green :: {"values": ["handcrafted:green_cushion"]}
+block/dyed/light_blue :: {"values": ["handcrafted:light_blue_cushion"]}
+block/dyed/light_gray :: {"values": ["handcrafted:light_gray_cushion"]}
+block/dyed/lime :: {"values": ["handcrafted:lime_cushion"]}
+block/dyed/magenta :: {"values": ["handcrafted:magenta_cushion"]}
+block/dyed/orange :: {"values": ["handcrafted:orange_cushion"]}
+block/dyed/pink :: {"values": ["handcrafted:pink_cushion"]}
+block/dyed/purple :: {"values": ["handcrafted:purple_cushion"]}
+block/dyed/red :: {"values": ["handcrafted:red_cushion"]}
+block/dyed/white :: {"values": ["handcrafted:white_cushion"]}
+block/dyed/yellow :: {"values": ["handcrafted:yellow_cushion"]}
+item/dyed/black :: {"values": ["handcrafted:black_cushion", "handcrafted:black_sheet"]}
+item/dyed/blue :: {"values": ["handcrafted:blue_cushion", "handcrafted:blue_sheet"]}
+item/dyed/brown :: {"values": ["handcrafted:brown_cushion", "handcrafted:brown_sheet"]}
+item/dyed/cyan :: {"values": ["handcrafted:cyan_cushion", "handcrafted:cyan_sheet"]}
+item/dyed/gray :: {"values": ["handcrafted:gray_cushion", "handcrafted:gray_sheet"]}
+item/dyed/green :: {"values": ["handcrafted:green_cushion", "handcrafted:green_sheet"]}
+item/dyed/light_blue :: {"values": ["handcrafted:light_blue_cushion", "handcrafted:light_blue_sheet"]}
+item/dyed/light_gray :: {"values": ["handcrafted:light_gray_cushion", "handcrafted:light_gray_sheet"]}
+item/dyed/lime :: {"values": ["handcrafted:lime_cushion", "handcrafted:lime_sheet"]}
+item/dyed/magenta :: {"values": ["handcrafted:magenta_cushion", "handcrafted:magenta_sheet"]}
+item/dyed/orange :: {"values": ["handcrafted:orange_cushion", "handcrafted:orange_sheet"]}
+item/dyed/pink :: {"values": ["handcrafted:pink_cushion", "handcrafted:pink_sheet"]}
+item/dyed/purple :: {"values": ["handcrafted:purple_cushion", "handcrafted:purple_sheet"]}
+item/dyed/red :: {"values": ["handcrafted:red_cushion", "handcrafted:red_sheet"]}
+item/dyed/white :: {"values": ["handcrafted:white_cushion", "handcrafted:white_sheet"]}
+item/dyed/yellow :: {"values": ["handcrafted:yellow_cushion", "handcrafted:yellow_sheet"]}

@@ -70,5 +70,6 @@ mffs:warn_module
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/ingots/steel.json :: { "values": [ "mffs:steel_ingot" ]}
+item/ingots/steel :: {"values": ["mffs:steel_ingot"]}

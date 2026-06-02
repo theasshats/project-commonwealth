@@ -91,8 +91,8 @@ friendsandfoes:wildfire_crown_fragment
 friendsandfoes:wildfire_spawn_egg
 
 ## neoforge biome_modifiers
-friendsandfoes.json :: {	"type": "friendsandfoes:mob_spawns"}
+friendsandfoes.json :: {"type": "friendsandfoes:mob_spawns"}
 
 ## c: common tag membership
-block/villager_job_sites.json :: {"replace":false,"values":["minecraft:beehive","friendsandfoes:acacia_beehive","friendsandfoes:bamboo_beehive","friendsandfoes:birch_beehive","friendsandfoes:cherry_beehive","friendsandfoes:crimson_beehive","friendsandfoes:dark_oak_beehive","friendsandfoes:jungle_beehive","friendsandfoes:mangrove_beehive","friendsandfoes:spruce_beehive","friendsandfoes:warped_beehive"]}
-item/music_discs.json :: {	"replace": false,	"values": [		"friendsandfoes:music_disc_around_the_corner"	]}
+block/villager_job_sites :: {"replace": false, "values": ["minecraft:beehive", "friendsandfoes:acacia_beehive", "friendsandfoes:bamboo_beehive", "friendsandfoes:birch_beehive", "friendsandfoes:cherry_beehive", "friendsandfoes:crimson_beehive", "friendsandfoes:dark_oak_beehive", "friendsandfoes:jungle_beehive", "friendsandfoes:mangrove_beehive", "friendsandfoes:spruce_beehive", "friendsandfoes:warped_beehive"]}
+item/music_discs :: {"replace": false, "values": ["friendsandfoes:music_disc_around_the_corner"]}

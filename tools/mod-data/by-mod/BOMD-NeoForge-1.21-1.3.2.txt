@@ -58,5 +58,6 @@ bosses_of_mass_destruction:void_thorn
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-entity_type/bosses.json :: { "replace": false, "values": [ "bosses_of_mass_destruction:lich", "bosses_of_mass_destruction:obsidilith", "bosses_of_mass_destruction:gauntlet", "bosses_of_mass_destruction:void_blossom" ]}
+entity_type/bosses :: {"replace": false, "values": ["bosses_of_mass_destruction:lich", "bosses_of_mass_destruction:obsidilith", "bosses_of_mass_destruction:gauntlet", "bosses_of_mass_destruction:void_blossom"]}

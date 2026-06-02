@@ -327,21 +327,21 @@ vinery:winemaker_boots
 vinery:winemaker_leggings
 
 ## neoforge biome_modifiers
-add_apple_tree.json :: { "type": "neoforge:add_features", "biomes": "#vinery:spawns_cherry_tree", "features": "vinery:tree_apple", "step": "vegetal_decoration"}
-add_cherry_tree.json :: { "type": "neoforge:add_features", "biomes": "#vinery:spawns_cherry_tree", "features": "vinery:tree_cherry", "step": "vegetal_decoration"}
-add_jungle_red_grape.json :: { "type": "neoforge:add_features", "biomes": "#vinery:spawns_jungle_grape", "features": "vinery:jungle_red_grape_bush_chance", "step": "vegetal_decoration"}
-add_jungle_white_grape.json :: { "type": "neoforge:add_features", "biomes": "#vinery:spawns_jungle_grape", "features": "vinery:jungle_white_grape_bush_chance", "step": "vegetal_decoration"}
-add_red_grape.json :: { "type": "neoforge:add_features", "biomes": "#vinery:spawns_grape", "features": "vinery:red_grape_bush_chance", "step": "vegetal_decoration"}
-add_savanna_red_grape.json :: { "type": "neoforge:add_features", "biomes": "#vinery:spawns_savanna_grape", "features": "vinery:savanna_red_grape_bush_chance", "step": "vegetal_decoration"}
-add_savanna_white_grape.json :: { "type": "neoforge:add_features", "biomes": "#vinery:spawns_savanna_grape", "features": "vinery:savanna_white_grape_bush_chance", "step": "vegetal_decoration"}
-add_taiga_red_grape.json :: { "type": "neoforge:add_features", "biomes": "#vinery:spawns_taiga_grape", "features": "vinery:taiga_red_grape_bush_chance", "step": "vegetal_decoration"}
-add_taiga_white_grape.json :: { "type": "neoforge:add_features", "biomes": "#vinery:spawns_taiga_grape", "features": "vinery:taiga_white_grape_bush_chance", "step": "vegetal_decoration"}
-add_white_grape.json :: { "type": "neoforge:add_features", "biomes": "#vinery:spawns_grape", "features": "vinery:white_grape_bush_chance", "step": "vegetal_decoration"}
+add_apple_tree.json :: {"type": "neoforge:add_features", "biomes": "#vinery:spawns_cherry_tree", "features": "vinery:tree_apple", "step": "vegetal_decoration"}
+add_cherry_tree.json :: {"type": "neoforge:add_features", "biomes": "#vinery:spawns_cherry_tree", "features": "vinery:tree_cherry", "step": "vegetal_decoration"}
+add_jungle_red_grape.json :: {"type": "neoforge:add_features", "biomes": "#vinery:spawns_jungle_grape", "features": "vinery:jungle_red_grape_bush_chance", "step": "vegetal_decoration"}
+add_jungle_white_grape.json :: {"type": "neoforge:add_features", "biomes": "#vinery:spawns_jungle_grape", "features": "vinery:jungle_white_grape_bush_chance", "step": "vegetal_decoration"}
+add_red_grape.json :: {"type": "neoforge:add_features", "biomes": "#vinery:spawns_grape", "features": "vinery:red_grape_bush_chance", "step": "vegetal_decoration"}
+add_savanna_red_grape.json :: {"type": "neoforge:add_features", "biomes": "#vinery:spawns_savanna_grape", "features": "vinery:savanna_red_grape_bush_chance", "step": "vegetal_decoration"}
+add_savanna_white_grape.json :: {"type": "neoforge:add_features", "biomes": "#vinery:spawns_savanna_grape", "features": "vinery:savanna_white_grape_bush_chance", "step": "vegetal_decoration"}
+add_taiga_red_grape.json :: {"type": "neoforge:add_features", "biomes": "#vinery:spawns_taiga_grape", "features": "vinery:taiga_red_grape_bush_chance", "step": "vegetal_decoration"}
+add_taiga_white_grape.json :: {"type": "neoforge:add_features", "biomes": "#vinery:spawns_taiga_grape", "features": "vinery:taiga_white_grape_bush_chance", "step": "vegetal_decoration"}
+add_white_grape.json :: {"type": "neoforge:add_features", "biomes": "#vinery:spawns_grape", "features": "vinery:white_grape_bush_chance", "step": "vegetal_decoration"}
 
 ## c: common tag membership
-items/berries.json :: { "replace": false, "values": [ {"id":"vinery:cherry","required":false} ]}
-items/grapes.json :: { "replace": false, "values": [ "vinery:red_grape", "vinery:white_grape", "vinery:savanna_grapes_red", "vinery:savanna_grapes_white", "vinery:taiga_grapes_red", "vinery:taiga_grapes_white", "vinery:jungle_grapes_red", "vinery:jungle_grapes_white" ]}
-items/milk.json :: { "replace": false, "values": [ "minecraft:milk_bucket" ]}
-items/seeds.json :: { "replace": false, "values": [ "vinery:red_grape_seeds", "vinery:white_grape_seeds", "vinery:savanna_grape_seeds_red", "vinery:savanna_grape_seeds_white", "vinery:taiga_grape_seeds_red", "vinery:taiga_grape_seeds_white", "vinery:jungle_grape_seeds_red", "vinery:jungle_grape_seeds_white" ]}
-items/stripped_logs.json :: { "replace": false, "values": [ "vinery:stripped_dark_cherry_log" ]}
-items/stripped_wood.json :: { "replace": false, "values": [ "vinery:stripped_dark_cherry_wood" ]}
+items/berries :: {"replace": false, "values": [{"id": "vinery:cherry", "required": false}]}
+items/grapes :: {"replace": false, "values": ["vinery:red_grape", "vinery:white_grape", "vinery:savanna_grapes_red", "vinery:savanna_grapes_white", "vinery:taiga_grapes_red", "vinery:taiga_grapes_white", "vinery:jungle_grapes_red", "vinery:jungle_grapes_white"]}
+items/milk :: {"replace": false, "values": ["minecraft:milk_bucket"]}
+items/seeds :: {"replace": false, "values": ["vinery:red_grape_seeds", "vinery:white_grape_seeds", "vinery:savanna_grape_seeds_red", "vinery:savanna_grape_seeds_white", "vinery:taiga_grape_seeds_red", "vinery:taiga_grape_seeds_white", "vinery:jungle_grape_seeds_red", "vinery:jungle_grape_seeds_white"]}
+items/stripped_logs :: {"replace": false, "values": ["vinery:stripped_dark_cherry_log"]}
+items/stripped_wood :: {"replace": false, "values": ["vinery:stripped_dark_cherry_wood"]}

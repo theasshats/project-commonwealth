@@ -82,5 +82,6 @@ comforts:sleeping_bag_yellow
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/ropes.json :: { "values": [ { "id": "quark:rope", "required": false }, { "id": "supplementaries:rope", "required": false }, { "id": "farmersdelight:rope", "required": false } ]}
+item/ropes :: {"values": [{"id": "quark:rope", "required": false}, {"id": "supplementaries:rope", "required": false}, {"id": "farmersdelight:rope", "required": false}]}
