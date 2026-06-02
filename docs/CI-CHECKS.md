@@ -45,6 +45,34 @@ find kubejs -name '*.js' -exec node --check {} +
 - **`packwiz.bin` is committed**, so the editor's `//go:embed assets/packwiz.bin` compiles in CI
   without the build-time download that `tools/editor-src/build.sh` does for release.
 
+## Auto-resolving the index conflict (`/resolve-conflicts`)
+
+`.github/workflows/resolve-conflicts.yml` handles the one conflict that stacked PRs keep hitting:
+the **packwiz-generated files**. When two PRs both add/remove mods, they collide in `index.toml`
+and in the `[index]` hash of `pack.toml` — but there's nothing to *decide*. Both are derived from
+the real content (`mods/*.pw.toml`, `config/`, `kubejs/…`), and the fix is always the same:
+regenerate with `packwiz refresh`.
+
+Comment **`/resolve-conflicts`** on a PR (owner/member/collaborator only) and the workflow merges
+the latest `main` into the PR branch, regenerates the index from the *combined* mod list, and
+pushes the result back. It re-triggers `pr-checks.yml`, so the index-freshness job confirms the
+regeneration was correct.
+
+It is deliberately conservative — it **only** auto-resolves when *every* conflicting file is
+regenerable:
+
+- `index.toml` — always (rebuilt wholesale by `refresh`).
+- `pack.toml` — only if the two sides differ *solely* in the `[index]` hash line. If either side
+  also touched `version`, `minecraft`, or `neoforge`, that's a real human decision and the workflow
+  bails.
+- **Anything else** (the same `.pw.toml` edited on both branches, KubeJS, config) is a genuine
+  content conflict — the merge is aborted and the PR is asked to resolve it by hand.
+
+Note: GitHub runs `issue_comment` workflows from the copy of the file on the **default branch**, so
+this only takes effect once it's merged to `main` (the comment trigger won't fire from a feature
+branch). It can't push to PRs opened from forks; this repo's shared version-branches are same-repo,
+so that's not the normal case.
+
 ## Making the checks *required* (manual, one-time)
 
 The workflow runs on PRs automatically, but GitHub won't *block* a merge on it until you say so —
