@@ -12,6 +12,7 @@ versionRange="[1.21.1]"
 
 ## blocks
 
+
 ## items
 blood_n_particles_datapack:drops_of_blood/bat_parts1
 blood_n_particles_datapack:drops_of_blood/bat_parts2
@@ -200,4 +201,6 @@ minecraft:snowball
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
+

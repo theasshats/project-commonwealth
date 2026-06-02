@@ -425,161 +425,161 @@ tide:yellow_perch_bucket
 tide:yellow_perch_spawn_egg
 
 ## neoforge biome_modifiers
-add_abyss_angler_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "tide:abyss_angler", "maxCount": 1, "minCount": 1, "weight": 4 }}
-add_amber_rockfish_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": { "type": "tide:amber_rockfish", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_anchovy_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": { "type": "tide:anchovy", "maxCount": 6, "minCount": 6, "weight": 10 }}
-add_angelfish_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": { "type": "tide:angelfish", "maxCount": 5, "minCount": 3, "weight": 6 }}
-add_anglerfish_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "tide:anglerfish", "maxCount": 1, "minCount": 1, "weight": 4 }}
-add_aquathorn_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_deep_ocean", "spawners": { "type": "tide:aquathorn", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_arapaima_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:arapaima", "maxCount": 1, "minCount": 1, "weight": 3 }}
-add_ash_perch_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": { "type": "tide:ash_perch", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_bedrock_tetra_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "tide:bedrock_tetra", "maxCount": 5, "minCount": 3, "weight": 2 }}
-add_black_crappie_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:black_crappie", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_blazing_swordfish_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": { "type": "tide:blazing_swordfish", "maxCount": 1, "minCount": 1, "weight": 2 }}
-add_blossom_bass_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#tide:has_cherry_grove_fish", "spawners": { "type": "tide:blossom_bass", "maxCount": 1, "minCount": 1, "weight": 3 }}
-add_bluegill_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:bluegill", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_brook_trout_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:brook_trout", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_bull_shark_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:bull_shark", "maxCount": 1, "minCount": 1, "weight": 1 }}
-add_carp_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:carp", "maxCount": 3, "minCount": 2, "weight": 10 }}
-add_catfish_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:catfish", "maxCount": 3, "minCount": 2, "weight": 6 }}
-add_cave_crawler_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "tide:cave_crawler", "maxCount": 3, "minCount": 2, "weight": 6 }}
-add_cave_eel_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "tide:cave_eel", "maxCount": 1, "minCount": 1, "weight": 6 }}
-add_chorus_cod_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": { "type": "tide:chorus_cod", "maxCount": 5, "minCount": 3, "weight": 6 }}
-add_crimson_fangjaw_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": { "type": "tide:crimson_fangjaw", "maxCount": 4, "minCount": 2, "weight": 3 }}
-add_crystalline_carp_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "tide:crystalline_carp", "maxCount": 5, "minCount": 3, "weight": 2 }}
-add_crystal_shrimp_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "tide:crystal_shrimp", "maxCount": 3, "minCount": 2, "weight": 4 }}
-add_deep_grouper_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "tide:deep_grouper", "maxCount": 5, "minCount": 3, "weight": 6 }}
-add_dripstone_darter_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#tide:has_dripstone_fish", "spawners": { "type": "tide:dripstone_darter", "maxCount": 3, "minCount": 2, "weight": 8 }}
-add_dutchman_sock_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": { "type": "tide:dutchman_sock", "maxCount": 5, "minCount": 3, "weight": 3 }}
-add_elytrout_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": { "type": "tide:elytrout", "maxCount": 4, "minCount": 2, "weight": 3 }}
-add_ember_koi_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": { "type": "tide:ember_koi", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_enderfin_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": { "type": "tide:enderfin", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_endergazer_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": { "type": "tide:endergazer", "maxCount": 5, "minCount": 3, "weight": 6 }}
-add_ender_glider_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": { "type": "tide:ender_glider", "maxCount": 4, "minCount": 2, "weight": 6 }}
-add_flounder_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": { "type": "tide:flounder", "maxCount": 3, "minCount": 2, "weight": 10 }}
-add_frostbite_flounder_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:frostbite_flounder", "maxCount": 1, "minCount": 1, "weight": 3 }}
-add_gilded_minnow_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "tide:gilded_minnow", "maxCount": 5, "minCount": 3, "weight": 2 }}
-add_glowfish_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "tide:glowfish", "maxCount": 5, "minCount": 3, "weight": 4 }}
-add_great_white_shark_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": { "type": "tide:great_white_shark", "maxCount": 1, "minCount": 1, "weight": 1 }}
-add_guppy_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:guppy", "maxCount": 3, "minCount": 2, "weight": 6 }}
-add_inferno_guppy_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": { "type": "tide:inferno_guppy", "maxCount": 5, "minCount": 3, "weight": 3 }}
-add_iron_tetra_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "tide:iron_tetra", "maxCount": 5, "minCount": 3, "weight": 4 }}
-add_lapis_lanternfish_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "tide:lapis_lanternfish", "maxCount": 5, "minCount": 3, "weight": 4 }}
-add_largemouth_bass_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:largemouth_bass", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_luminescent_jellyfish_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "tide:luminescent_jellyfish", "maxCount": 5, "minCount": 3, "weight": 2 }}
-add_mackerel_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": { "type": "tide:mackerel", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_magma_mackerel_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": { "type": "tide:magma_mackerel", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_mahi_mahi_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": { "type": "tide:mahi_mahi", "maxCount": 2, "minCount": 1, "weight": 2 }}
-add_manta_ray_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": { "type": "tide:manta_ray", "maxCount": 1, "minCount": 1, "weight": 2 }}
-add_mantyvern_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": { "type": "tide:mantyvern", "maxCount": 1, "minCount": 1, "weight": 1 }}
-add_mirage_catfish_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:mirage_catfish", "maxCount": 1, "minCount": 1, "weight": 3 }}
-add_mooneye_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:mooneye", "maxCount": 1, "minCount": 1, "weight": 1 }}
-add_obsidian_pike_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": { "type": "tide:obsidian_pike", "maxCount": 4, "minCount": 2, "weight": 6 }}
-add_ocean_perch_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": { "type": "tide:ocean_perch", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_pale_clubfish_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": { "type": "tide:pale_clubfish", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_pike_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:pike", "maxCount": 3, "minCount": 1, "weight": 10 }}
-add_rainbow_trout_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:rainbow_trout", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_red_40_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": { "type": "tide:red_40", "maxCount": 5, "minCount": 3, "weight": 3 }}
-add_red_snapper_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": { "type": "tide:red_snapper", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_sailfish_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": { "type": "tide:sailfish", "maxCount": 2, "minCount": 1, "weight": 2 }}
-add_sand_tiger_shark_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:sand_tiger_shark", "maxCount": 1, "minCount": 1, "weight": 3 }}
-add_shadow_snapper_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "tide:shadow_snapper", "maxCount": 4, "minCount": 2, "weight": 6 }}
-add_slimy_salmon_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#tide:has_swamp_fish", "spawners": { "type": "tide:slimy_salmon", "maxCount": 2, "minCount": 1, "weight": 3 }}
-add_smallmouth_bass_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:smallmouth_bass", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_snatcher_squid_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": { "type": "tide:snatcher_squid", "maxCount": 1, "minCount": 1, "weight": 1 }}
-add_snook_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": { "type": "tide:snook", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_soulscale_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": { "type": "tide:soulscale", "maxCount": 5, "minCount": 3, "weight": 3 }}
-add_sturgeon_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:sturgeon", "maxCount": 1, "minCount": 1, "weight": 3 }}
-add_swordfish_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": { "type": "tide:swordfish", "maxCount": 2, "minCount": 1, "weight": 2 }}
-add_tuna_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": { "type": "tide:tuna", "maxCount": 4, "minCount": 2, "weight": 10 }}
-add_violet_carp_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": { "type": "tide:violet_carp", "maxCount": 4, "minCount": 2, "weight": 6 }}
-add_volcano_tuna_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": { "type": "tide:volcano_tuna", "maxCount": 5, "minCount": 3, "weight": 6 }}
-add_walleye_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:walleye", "maxCount": 3, "minCount": 2, "weight": 6 }}
-add_warped_guppy_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": { "type": "tide:warped_guppy", "maxCount": 5, "minCount": 3, "weight": 3 }}
-add_white_crappie_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:white_crappie", "maxCount": 5, "minCount": 3, "weight": 10 }}
-add_witherfin_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": { "type": "tide:witherfin", "maxCount": 4, "minCount": 2, "weight": 3 }}
-add_yellow_perch_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": { "type": "tide:yellow_perch", "maxCount": 5, "minCount": 3, "weight": 10 }}
+add_abyss_angler_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "tide:abyss_angler", "maxCount": 1, "minCount": 1, "weight": 4}}
+add_amber_rockfish_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": {"type": "tide:amber_rockfish", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_anchovy_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": {"type": "tide:anchovy", "maxCount": 6, "minCount": 6, "weight": 10}}
+add_angelfish_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": {"type": "tide:angelfish", "maxCount": 5, "minCount": 3, "weight": 6}}
+add_anglerfish_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "tide:anglerfish", "maxCount": 1, "minCount": 1, "weight": 4}}
+add_aquathorn_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_deep_ocean", "spawners": {"type": "tide:aquathorn", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_arapaima_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:arapaima", "maxCount": 1, "minCount": 1, "weight": 3}}
+add_ash_perch_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": {"type": "tide:ash_perch", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_bedrock_tetra_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "tide:bedrock_tetra", "maxCount": 5, "minCount": 3, "weight": 2}}
+add_black_crappie_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:black_crappie", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_blazing_swordfish_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": {"type": "tide:blazing_swordfish", "maxCount": 1, "minCount": 1, "weight": 2}}
+add_blossom_bass_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#tide:has_cherry_grove_fish", "spawners": {"type": "tide:blossom_bass", "maxCount": 1, "minCount": 1, "weight": 3}}
+add_bluegill_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:bluegill", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_brook_trout_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:brook_trout", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_bull_shark_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:bull_shark", "maxCount": 1, "minCount": 1, "weight": 1}}
+add_carp_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:carp", "maxCount": 3, "minCount": 2, "weight": 10}}
+add_catfish_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:catfish", "maxCount": 3, "minCount": 2, "weight": 6}}
+add_cave_crawler_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "tide:cave_crawler", "maxCount": 3, "minCount": 2, "weight": 6}}
+add_cave_eel_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "tide:cave_eel", "maxCount": 1, "minCount": 1, "weight": 6}}
+add_chorus_cod_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": {"type": "tide:chorus_cod", "maxCount": 5, "minCount": 3, "weight": 6}}
+add_crimson_fangjaw_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": {"type": "tide:crimson_fangjaw", "maxCount": 4, "minCount": 2, "weight": 3}}
+add_crystal_shrimp_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "tide:crystal_shrimp", "maxCount": 3, "minCount": 2, "weight": 4}}
+add_crystalline_carp_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "tide:crystalline_carp", "maxCount": 5, "minCount": 3, "weight": 2}}
+add_deep_grouper_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "tide:deep_grouper", "maxCount": 5, "minCount": 3, "weight": 6}}
+add_dripstone_darter_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#tide:has_dripstone_fish", "spawners": {"type": "tide:dripstone_darter", "maxCount": 3, "minCount": 2, "weight": 8}}
+add_dutchman_sock_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": {"type": "tide:dutchman_sock", "maxCount": 5, "minCount": 3, "weight": 3}}
+add_elytrout_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": {"type": "tide:elytrout", "maxCount": 4, "minCount": 2, "weight": 3}}
+add_ember_koi_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": {"type": "tide:ember_koi", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_ender_glider_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": {"type": "tide:ender_glider", "maxCount": 4, "minCount": 2, "weight": 6}}
+add_enderfin_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": {"type": "tide:enderfin", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_endergazer_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": {"type": "tide:endergazer", "maxCount": 5, "minCount": 3, "weight": 6}}
+add_flounder_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": {"type": "tide:flounder", "maxCount": 3, "minCount": 2, "weight": 10}}
+add_frostbite_flounder_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:frostbite_flounder", "maxCount": 1, "minCount": 1, "weight": 3}}
+add_gilded_minnow_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "tide:gilded_minnow", "maxCount": 5, "minCount": 3, "weight": 2}}
+add_glowfish_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "tide:glowfish", "maxCount": 5, "minCount": 3, "weight": 4}}
+add_great_white_shark_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": {"type": "tide:great_white_shark", "maxCount": 1, "minCount": 1, "weight": 1}}
+add_guppy_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:guppy", "maxCount": 3, "minCount": 2, "weight": 6}}
+add_inferno_guppy_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": {"type": "tide:inferno_guppy", "maxCount": 5, "minCount": 3, "weight": 3}}
+add_iron_tetra_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "tide:iron_tetra", "maxCount": 5, "minCount": 3, "weight": 4}}
+add_lapis_lanternfish_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "tide:lapis_lanternfish", "maxCount": 5, "minCount": 3, "weight": 4}}
+add_largemouth_bass_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:largemouth_bass", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_luminescent_jellyfish_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "tide:luminescent_jellyfish", "maxCount": 5, "minCount": 3, "weight": 2}}
+add_mackerel_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": {"type": "tide:mackerel", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_magma_mackerel_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": {"type": "tide:magma_mackerel", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_mahi_mahi_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": {"type": "tide:mahi_mahi", "maxCount": 2, "minCount": 1, "weight": 2}}
+add_manta_ray_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": {"type": "tide:manta_ray", "maxCount": 1, "minCount": 1, "weight": 2}}
+add_mantyvern_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": {"type": "tide:mantyvern", "maxCount": 1, "minCount": 1, "weight": 1}}
+add_mirage_catfish_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:mirage_catfish", "maxCount": 1, "minCount": 1, "weight": 3}}
+add_mooneye_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:mooneye", "maxCount": 1, "minCount": 1, "weight": 1}}
+add_obsidian_pike_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": {"type": "tide:obsidian_pike", "maxCount": 4, "minCount": 2, "weight": 6}}
+add_ocean_perch_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": {"type": "tide:ocean_perch", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_pale_clubfish_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": {"type": "tide:pale_clubfish", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_pike_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:pike", "maxCount": 3, "minCount": 1, "weight": 10}}
+add_rainbow_trout_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:rainbow_trout", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_red_40_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": {"type": "tide:red_40", "maxCount": 5, "minCount": 3, "weight": 3}}
+add_red_snapper_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": {"type": "tide:red_snapper", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_sailfish_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": {"type": "tide:sailfish", "maxCount": 2, "minCount": 1, "weight": 2}}
+add_sand_tiger_shark_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:sand_tiger_shark", "maxCount": 1, "minCount": 1, "weight": 3}}
+add_shadow_snapper_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "tide:shadow_snapper", "maxCount": 4, "minCount": 2, "weight": 6}}
+add_slimy_salmon_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#tide:has_swamp_fish", "spawners": {"type": "tide:slimy_salmon", "maxCount": 2, "minCount": 1, "weight": 3}}
+add_smallmouth_bass_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:smallmouth_bass", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_snatcher_squid_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": {"type": "tide:snatcher_squid", "maxCount": 1, "minCount": 1, "weight": 1}}
+add_snook_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": {"type": "tide:snook", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_soulscale_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": {"type": "tide:soulscale", "maxCount": 5, "minCount": 3, "weight": 3}}
+add_sturgeon_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:sturgeon", "maxCount": 1, "minCount": 1, "weight": 3}}
+add_swordfish_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": {"type": "tide:swordfish", "maxCount": 2, "minCount": 1, "weight": 2}}
+add_tuna_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_ocean", "spawners": {"type": "tide:tuna", "maxCount": 4, "minCount": 2, "weight": 10}}
+add_violet_carp_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_end", "spawners": {"type": "tide:violet_carp", "maxCount": 4, "minCount": 2, "weight": 6}}
+add_volcano_tuna_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": {"type": "tide:volcano_tuna", "maxCount": 5, "minCount": 3, "weight": 6}}
+add_walleye_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:walleye", "maxCount": 3, "minCount": 2, "weight": 6}}
+add_warped_guppy_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": {"type": "tide:warped_guppy", "maxCount": 5, "minCount": 3, "weight": 3}}
+add_white_crappie_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:white_crappie", "maxCount": 5, "minCount": 3, "weight": 10}}
+add_witherfin_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": {"type": "tide:witherfin", "maxCount": 4, "minCount": 2, "weight": 3}}
+add_yellow_perch_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_river", "spawners": {"type": "tide:yellow_perch", "maxCount": 5, "minCount": 3, "weight": 10}}
 
 ## c: common tag membership
-item/buckets/empty.json :: { "values": [ "minecraft:bucket" ]}
-item/buckets/entity_water.json :: { "values": [ "minecraft:axolotl_bucket", "minecraft:cod_bucket", "minecraft:pufferfish_bucket", "minecraft:tadpole_bucket", "minecraft:tropical_fish_bucket", "minecraft:salmon_bucket" ]}
-item/buckets/lava.json :: { "values": [ "minecraft:lava_bucket" ]}
-item/buckets/milk.json :: { "values": [ "minecraft:milk_bucket" ]}
-item/buckets/powder_snow.json :: { "values": [ "minecraft:powder_snow_bucket" ]}
-item/buckets/water.json :: { "values": [ "minecraft:water_bucket" ]}
-item/buckets.json :: { "values": [ "#c:buckets/empty", "#c:buckets/water", "#c:buckets/lava", "#c:buckets/milk", "#c:buckets/powder_snow", "#c:buckets/entity_water" ]}
-item/cobblestones/deepslate.json :: { "values": [ "minecraft:cobbled_deepslate", { "id": "#forge:cobblestone/deepslate", "required": false } ]}
-item/cobblestones/infested.json :: { "values": [ "minecraft:infested_cobblestone", { "id": "#forge:cobblestone/infested", "required": false } ]}
-item/cobblestones/mossy.json :: { "values": [ "minecraft:mossy_cobblestone", { "id": "#forge:cobblestone/mossy", "required": false } ]}
-item/cobblestones/normal.json :: { "values": [ "minecraft:cobblestone", { "id": "#forge:cobblestone/normal", "required": false } ]}
-item/cobblestones.json :: { "values": [ "#c:cobblestones/normal", "#c:cobblestones/infested", "#c:cobblestones/mossy", "#c:cobblestones/deepslate", { "id": "#forge:cobblestone", "required": false } ]}
-item/crops/beetroot.json :: { "values": [ "minecraft:beetroot", { "id": "#forge:crops/beetroot", "required": false } ]}
-item/crops/cactus.json :: { "values": [ "minecraft:cactus" ]}
-item/crops/carrot.json :: { "values": [ "minecraft:carrot", { "id": "#forge:crops/carrot", "required": false } ]}
-item/crops/cocoa_bean.json :: { "values": [ "minecraft:cocoa_beans" ]}
-item/crops/melon.json :: { "values": [ "minecraft:melon" ]}
-item/crops/nether_wart.json :: { "values": [ "minecraft:nether_wart", { "id": "#forge:crops/nether_wart", "required": false } ]}
-item/crops/potato.json :: { "values": [ "minecraft:potato", { "id": "#forge:crops/potato", "required": false } ]}
-item/crops/pumpkin.json :: { "values": [ "minecraft:pumpkin" ]}
-item/crops/sugar_cane.json :: { "values": [ "minecraft:sugar_cane" ]}
-item/crops/wheat.json :: { "values": [ "minecraft:wheat", { "id": "#forge:crops/wheat", "required": false } ]}
-item/crops.json :: { "values": [ "#c:crops/beetroot", "#c:crops/cactus", "#c:crops/carrot", "#c:crops/cocoa_bean", "#c:crops/melon", "#c:crops/nether_wart", "#c:crops/potato", "#c:crops/pumpkin", "#c:crops/sugar_cane", "#c:crops/wheat", { "id": "#forge:crops", "required": false } ]}
-item/dusts/redstone.json :: { "values": [ "minecraft:redstone", { "id": "#forge:dusts/redstone", "required": false } ]}
-item/dyes/black.json :: { "values": [ "minecraft:black_dye", { "id": "#forge:dyes/black", "required": false } ]}
-item/dyes/blue.json :: { "values": [ "minecraft:blue_dye", { "id": "#forge:dyes/blue", "required": false } ]}
-item/dyes/brown.json :: { "values": [ "minecraft:brown_dye", { "id": "#forge:dyes/brown", "required": false } ]}
-item/dyes/cyan.json :: { "values": [ "minecraft:cyan_dye", { "id": "#forge:dyes/cyan", "required": false } ]}
-item/dyes/gray.json :: { "values": [ "minecraft:gray_dye", { "id": "#forge:dyes/gray", "required": false } ]}
-item/dyes/green.json :: { "values": [ "minecraft:green_dye", { "id": "#forge:dyes/green", "required": false } ]}
-item/dyes/light_blue.json :: { "values": [ "minecraft:light_blue_dye", { "id": "#forge:dyes/light_blue", "required": false } ]}
-item/dyes/light_gray.json :: { "values": [ "minecraft:light_gray_dye", { "id": "#forge:dyes/light_gray", "required": false } ]}
-item/dyes/lime.json :: { "values": [ "minecraft:lime_dye", { "id": "#forge:dyes/lime", "required": false } ]}
-item/dyes/magenta.json :: { "values": [ "minecraft:magenta_dye", { "id": "#forge:dyes/magenta", "required": false } ]}
-item/dyes/orange.json :: { "values": [ "minecraft:orange_dye", { "id": "#forge:dyes/orange", "required": false } ]}
-item/dyes/pink.json :: { "values": [ "minecraft:pink_dye", { "id": "#forge:dyes/pink", "required": false } ]}
-item/dyes/purple.json :: { "values": [ "minecraft:purple_dye", { "id": "#forge:dyes/purple", "required": false } ]}
-item/dyes/red.json :: { "values": [ "minecraft:red_dye", { "id": "#forge:dyes/red", "required": false } ]}
-item/dyes/white.json :: { "values": [ "minecraft:white_dye", { "id": "#forge:dyes/white", "required": false } ]}
-item/dyes/yellow.json :: { "values": [ "minecraft:yellow_dye", { "id": "#forge:dyes/yellow", "required": false } ]}
-item/foods/cooked_fish.json :: { "values": [ "#tide:cooked_fish", "tide:cooked_fish_slice" ]}
-item/foods/cooked_meat.json :: { "values": [ "minecraft:cooked_beef", "minecraft:cooked_porkchop", "minecraft:cooked_chicken", "minecraft:cooked_rabbit", "minecraft:cooked_mutton", { "id": "#c:foods/cooked_meats", "required": false } ]}
-item/foods/food_poisoning.json :: { "values": [ "minecraft:poisonous_potato", "minecraft:pufferfish", "minecraft:spider_eye", "minecraft:chicken", "minecraft:rotten_flesh" ]}
-item/foods/golden.json :: { "values": [ "minecraft:golden_apple", "minecraft:enchanted_golden_apple", "minecraft:golden_carrot" ]}
-item/foods/raw_fish.json :: { "values": [ "#tide:cookable_fish", "tide:fish_slice" ]}
-item/foods/raw_meat.json :: { "values": [ "minecraft:beef", "minecraft:porkchop", "minecraft:chicken", "minecraft:rabbit", "minecraft:mutton", { "id": "#c:foods/raw_meats", "required": false } ]}
-item/gems/amethyst.json :: { "values": [ "minecraft:amethyst_shard", { "id": "#forge:gems/amethyst", "required": false } ]}
-item/gems/diamond.json :: { "values": [ "minecraft:diamond", { "id": "#forge:gems/diamond", "required": false } ]}
-item/gems/lapis.json :: { "values": [ "minecraft:lapis_lazuli", { "id": "#forge:gems/lapis", "required": false } ]}
-item/gems/prismarine.json :: { "values": [ "minecraft:prismarine_crystals", { "id": "#forge:gems/prismarine", "required": false } ]}
-item/glass_blocks/colorless.json :: { "values": [ "minecraft:glass", { "id": "#forge:glass_colorless", "required": false } ]}
-item/ingots/copper.json :: { "values": [ "minecraft:copper_ingot", { "id": "#forge:ingots/copper", "required": false } ]}
-item/ingots/gold.json :: { "values": [ "minecraft:gold_ingot", { "id": "#forge:ingots/gold", "required": false } ]}
-item/ingots/iron.json :: { "values": [ "minecraft:iron_ingot", { "id": "#forge:ingots/iron", "required": false } ]}
-item/ingots/netherite.json :: { "values": [ "minecraft:netherite_ingot", { "id": "#forge:ingots/netherite", "required": false } ]}
-item/leathers.json :: { "values": [ "minecraft:leather", { "id": "#forge:leather", "required": false } ]}
-item/mushrooms.json :: { "values": [ "minecraft:brown_mushroom", "minecraft:red_mushroom", { "id": "#forge:mushrooms", "required": false } ]}
-item/nuggets/gold.json :: { "values": [ "minecraft:gold_nugget", { "id": "#forge:nuggets/gold", "required": false } ]}
-item/nuggets/iron.json :: { "values": [ "minecraft:iron_nugget", { "id": "#forge:nuggets/iron", "required": false } ]}
-item/obsidians.json :: { "values": [ "minecraft:obsidian", { "id": "#forge:obsidian", "required": false } ]}
-item/seeds/beetroot.json :: { "values": [ "minecraft:beetroot_seeds", { "id": "#forge:seeds/beetroot", "required": false } ]}
-item/seeds/melon.json :: { "values": [ "minecraft:melon_seeds", { "id": "#forge:seeds/melon", "required": false } ]}
-item/seeds/pumpkin.json :: { "values": [ "minecraft:pumpkin_seeds", { "id": "#forge:seeds/pumpkin", "required": false } ]}
-item/seeds/wheat.json :: { "values": [ "minecraft:wheat_seeds", { "id": "#forge:seeds/wheat", "required": false } ]}
-item/seeds.json :: { "values": [ "#c:seeds/beetroot", "#c:seeds/melon", "#c:seeds/pumpkin", "#c:seeds/wheat", { "id": "#forge:seeds", "required": false } ]}
-item/slimeballs.json :: { "values": [ "minecraft:slime_ball" ]}
-item/slime_balls.json :: { "values": [ "minecraft:slime_ball", { "id": "#c:slimeballs", "required": false }, { "id": "#forge:slime_balls", "required": false } ]}
-item/strings.json :: { "values": [ "minecraft:string", { "id": "#forge:strings", "required": false } ]}
-item/tools/bow.json :: { "values": [ "tide:starlight_bow" ]}
-item/tools/fishing_rod.json :: { "values": [ "minecraft:fishing_rod", "#tide:fishing_rods", { "id": "#forge:tools/fishing_rods", "required": false }, { "id": "#c:tools/fishing_rods", "required": false } ]}
-item/tools/knives.json :: { "values": [ { "id": "#farmersdelight:tools/knives", "required": false }, { "id": "#forge:tools/knives", "required": false } ]}
-worldgen/biome/is_badlands.json :: { "values": [ "#minecraft:is_badlands" ]}
-worldgen/biome/is_beach.json :: { "values": [ "#minecraft:is_beach" ]}
-worldgen/biome/is_deep_ocean.json :: { "values": [ "#minecraft:is_deep_ocean" ]}
-worldgen/biome/is_desert.json :: { "values": [ "minecraft:desert", { "id": "#forge:is_desert", "required": false } ]}
-worldgen/biome/is_icy.json :: { "values": [ "minecraft:ice_spikes", "minecraft:frozen_peaks" ]}
-worldgen/biome/is_jungle.json :: { "values": [ "#minecraft:is_jungle" ]}
-worldgen/biome/is_mushroom.json :: { "values": [ "minecraft:mushroom_fields", { "id": "#forge:is_mushroom", "required": false } ]}
-worldgen/biome/is_ocean.json :: { "values": [ "#minecraft:is_ocean", "#c:is_shallow_ocean", "#c:is_deep_ocean" ]}
-worldgen/biome/is_shallow_ocean.json :: { "values": [ "minecraft:ocean", "minecraft:lukewarm_ocean", "minecraft:warm_ocean", "minecraft:cold_ocean", "minecraft:frozen_ocean" ]}
-worldgen/biome/is_snowy.json :: { "values": [ "minecraft:snowy_beach", "minecraft:snowy_plains", "minecraft:ice_spikes", "minecraft:snowy_taiga", "minecraft:grove", "minecraft:snowy_slopes", "minecraft:jagged_peaks", "minecraft:frozen_peaks", { "id": "#forge:is_snowy", "required": false } ]}
-worldgen/biome/is_swamp.json :: { "values": [ "minecraft:swamp", "minecraft:mangrove_swamp", { "id": "#forge:is_swamp", "required": false } ]}
+item/buckets :: {"values": ["#c:buckets/empty", "#c:buckets/water", "#c:buckets/lava", "#c:buckets/milk", "#c:buckets/powder_snow", "#c:buckets/entity_water"]}
+item/buckets/empty :: {"values": ["minecraft:bucket"]}
+item/buckets/entity_water :: {"values": ["minecraft:axolotl_bucket", "minecraft:cod_bucket", "minecraft:pufferfish_bucket", "minecraft:tadpole_bucket", "minecraft:tropical_fish_bucket", "minecraft:salmon_bucket"]}
+item/buckets/lava :: {"values": ["minecraft:lava_bucket"]}
+item/buckets/milk :: {"values": ["minecraft:milk_bucket"]}
+item/buckets/powder_snow :: {"values": ["minecraft:powder_snow_bucket"]}
+item/buckets/water :: {"values": ["minecraft:water_bucket"]}
+item/cobblestones :: {"values": ["#c:cobblestones/normal", "#c:cobblestones/infested", "#c:cobblestones/mossy", "#c:cobblestones/deepslate", {"id": "#forge:cobblestone", "required": false}]}
+item/cobblestones/deepslate :: {"values": ["minecraft:cobbled_deepslate", {"id": "#forge:cobblestone/deepslate", "required": false}]}
+item/cobblestones/infested :: {"values": ["minecraft:infested_cobblestone", {"id": "#forge:cobblestone/infested", "required": false}]}
+item/cobblestones/mossy :: {"values": ["minecraft:mossy_cobblestone", {"id": "#forge:cobblestone/mossy", "required": false}]}
+item/cobblestones/normal :: {"values": ["minecraft:cobblestone", {"id": "#forge:cobblestone/normal", "required": false}]}
+item/crops :: {"values": ["#c:crops/beetroot", "#c:crops/cactus", "#c:crops/carrot", "#c:crops/cocoa_bean", "#c:crops/melon", "#c:crops/nether_wart", "#c:crops/potato", "#c:crops/pumpkin", "#c:crops/sugar_cane", "#c:crops/wheat", {"id": "#forge:crops", "required": false}]}
+item/crops/beetroot :: {"values": ["minecraft:beetroot", {"id": "#forge:crops/beetroot", "required": false}]}
+item/crops/cactus :: {"values": ["minecraft:cactus"]}
+item/crops/carrot :: {"values": ["minecraft:carrot", {"id": "#forge:crops/carrot", "required": false}]}
+item/crops/cocoa_bean :: {"values": ["minecraft:cocoa_beans"]}
+item/crops/melon :: {"values": ["minecraft:melon"]}
+item/crops/nether_wart :: {"values": ["minecraft:nether_wart", {"id": "#forge:crops/nether_wart", "required": false}]}
+item/crops/potato :: {"values": ["minecraft:potato", {"id": "#forge:crops/potato", "required": false}]}
+item/crops/pumpkin :: {"values": ["minecraft:pumpkin"]}
+item/crops/sugar_cane :: {"values": ["minecraft:sugar_cane"]}
+item/crops/wheat :: {"values": ["minecraft:wheat", {"id": "#forge:crops/wheat", "required": false}]}
+item/dusts/redstone :: {"values": ["minecraft:redstone", {"id": "#forge:dusts/redstone", "required": false}]}
+item/dyes/black :: {"values": ["minecraft:black_dye", {"id": "#forge:dyes/black", "required": false}]}
+item/dyes/blue :: {"values": ["minecraft:blue_dye", {"id": "#forge:dyes/blue", "required": false}]}
+item/dyes/brown :: {"values": ["minecraft:brown_dye", {"id": "#forge:dyes/brown", "required": false}]}
+item/dyes/cyan :: {"values": ["minecraft:cyan_dye", {"id": "#forge:dyes/cyan", "required": false}]}
+item/dyes/gray :: {"values": ["minecraft:gray_dye", {"id": "#forge:dyes/gray", "required": false}]}
+item/dyes/green :: {"values": ["minecraft:green_dye", {"id": "#forge:dyes/green", "required": false}]}
+item/dyes/light_blue :: {"values": ["minecraft:light_blue_dye", {"id": "#forge:dyes/light_blue", "required": false}]}
+item/dyes/light_gray :: {"values": ["minecraft:light_gray_dye", {"id": "#forge:dyes/light_gray", "required": false}]}
+item/dyes/lime :: {"values": ["minecraft:lime_dye", {"id": "#forge:dyes/lime", "required": false}]}
+item/dyes/magenta :: {"values": ["minecraft:magenta_dye", {"id": "#forge:dyes/magenta", "required": false}]}
+item/dyes/orange :: {"values": ["minecraft:orange_dye", {"id": "#forge:dyes/orange", "required": false}]}
+item/dyes/pink :: {"values": ["minecraft:pink_dye", {"id": "#forge:dyes/pink", "required": false}]}
+item/dyes/purple :: {"values": ["minecraft:purple_dye", {"id": "#forge:dyes/purple", "required": false}]}
+item/dyes/red :: {"values": ["minecraft:red_dye", {"id": "#forge:dyes/red", "required": false}]}
+item/dyes/white :: {"values": ["minecraft:white_dye", {"id": "#forge:dyes/white", "required": false}]}
+item/dyes/yellow :: {"values": ["minecraft:yellow_dye", {"id": "#forge:dyes/yellow", "required": false}]}
+item/foods/cooked_fish :: {"values": ["#tide:cooked_fish", "tide:cooked_fish_slice"]}
+item/foods/cooked_meat :: {"values": ["minecraft:cooked_beef", "minecraft:cooked_porkchop", "minecraft:cooked_chicken", "minecraft:cooked_rabbit", "minecraft:cooked_mutton", {"id": "#c:foods/cooked_meats", "required": false}]}
+item/foods/food_poisoning :: {"values": ["minecraft:poisonous_potato", "minecraft:pufferfish", "minecraft:spider_eye", "minecraft:chicken", "minecraft:rotten_flesh"]}
+item/foods/golden :: {"values": ["minecraft:golden_apple", "minecraft:enchanted_golden_apple", "minecraft:golden_carrot"]}
+item/foods/raw_fish :: {"values": ["#tide:cookable_fish", "tide:fish_slice"]}
+item/foods/raw_meat :: {"values": ["minecraft:beef", "minecraft:porkchop", "minecraft:chicken", "minecraft:rabbit", "minecraft:mutton", {"id": "#c:foods/raw_meats", "required": false}]}
+item/gems/amethyst :: {"values": ["minecraft:amethyst_shard", {"id": "#forge:gems/amethyst", "required": false}]}
+item/gems/diamond :: {"values": ["minecraft:diamond", {"id": "#forge:gems/diamond", "required": false}]}
+item/gems/lapis :: {"values": ["minecraft:lapis_lazuli", {"id": "#forge:gems/lapis", "required": false}]}
+item/gems/prismarine :: {"values": ["minecraft:prismarine_crystals", {"id": "#forge:gems/prismarine", "required": false}]}
+item/glass_blocks/colorless :: {"values": ["minecraft:glass", {"id": "#forge:glass_colorless", "required": false}]}
+item/ingots/copper :: {"values": ["minecraft:copper_ingot", {"id": "#forge:ingots/copper", "required": false}]}
+item/ingots/gold :: {"values": ["minecraft:gold_ingot", {"id": "#forge:ingots/gold", "required": false}]}
+item/ingots/iron :: {"values": ["minecraft:iron_ingot", {"id": "#forge:ingots/iron", "required": false}]}
+item/ingots/netherite :: {"values": ["minecraft:netherite_ingot", {"id": "#forge:ingots/netherite", "required": false}]}
+item/leathers :: {"values": ["minecraft:leather", {"id": "#forge:leather", "required": false}]}
+item/mushrooms :: {"values": ["minecraft:brown_mushroom", "minecraft:red_mushroom", {"id": "#forge:mushrooms", "required": false}]}
+item/nuggets/gold :: {"values": ["minecraft:gold_nugget", {"id": "#forge:nuggets/gold", "required": false}]}
+item/nuggets/iron :: {"values": ["minecraft:iron_nugget", {"id": "#forge:nuggets/iron", "required": false}]}
+item/obsidians :: {"values": ["minecraft:obsidian", {"id": "#forge:obsidian", "required": false}]}
+item/seeds :: {"values": ["#c:seeds/beetroot", "#c:seeds/melon", "#c:seeds/pumpkin", "#c:seeds/wheat", {"id": "#forge:seeds", "required": false}]}
+item/seeds/beetroot :: {"values": ["minecraft:beetroot_seeds", {"id": "#forge:seeds/beetroot", "required": false}]}
+item/seeds/melon :: {"values": ["minecraft:melon_seeds", {"id": "#forge:seeds/melon", "required": false}]}
+item/seeds/pumpkin :: {"values": ["minecraft:pumpkin_seeds", {"id": "#forge:seeds/pumpkin", "required": false}]}
+item/seeds/wheat :: {"values": ["minecraft:wheat_seeds", {"id": "#forge:seeds/wheat", "required": false}]}
+item/slime_balls :: {"values": ["minecraft:slime_ball", {"id": "#c:slimeballs", "required": false}, {"id": "#forge:slime_balls", "required": false}]}
+item/slimeballs :: {"values": ["minecraft:slime_ball"]}
+item/strings :: {"values": ["minecraft:string", {"id": "#forge:strings", "required": false}]}
+item/tools/bow :: {"values": ["tide:starlight_bow"]}
+item/tools/fishing_rod :: {"values": ["minecraft:fishing_rod", "#tide:fishing_rods", {"id": "#forge:tools/fishing_rods", "required": false}, {"id": "#c:tools/fishing_rods", "required": false}]}
+item/tools/knives :: {"values": [{"id": "#farmersdelight:tools/knives", "required": false}, {"id": "#forge:tools/knives", "required": false}]}
+worldgen/biome/is_badlands :: {"values": ["#minecraft:is_badlands"]}
+worldgen/biome/is_beach :: {"values": ["#minecraft:is_beach"]}
+worldgen/biome/is_deep_ocean :: {"values": ["#minecraft:is_deep_ocean"]}
+worldgen/biome/is_desert :: {"values": ["minecraft:desert", {"id": "#forge:is_desert", "required": false}]}
+worldgen/biome/is_icy :: {"values": ["minecraft:ice_spikes", "minecraft:frozen_peaks"]}
+worldgen/biome/is_jungle :: {"values": ["#minecraft:is_jungle"]}
+worldgen/biome/is_mushroom :: {"values": ["minecraft:mushroom_fields", {"id": "#forge:is_mushroom", "required": false}]}
+worldgen/biome/is_ocean :: {"values": ["#minecraft:is_ocean", "#c:is_shallow_ocean", "#c:is_deep_ocean"]}
+worldgen/biome/is_shallow_ocean :: {"values": ["minecraft:ocean", "minecraft:lukewarm_ocean", "minecraft:warm_ocean", "minecraft:cold_ocean", "minecraft:frozen_ocean"]}
+worldgen/biome/is_snowy :: {"values": ["minecraft:snowy_beach", "minecraft:snowy_plains", "minecraft:ice_spikes", "minecraft:snowy_taiga", "minecraft:grove", "minecraft:snowy_slopes", "minecraft:jagged_peaks", "minecraft:frozen_peaks", {"id": "#forge:is_snowy", "required": false}]}
+worldgen/biome/is_swamp :: {"values": ["minecraft:swamp", "minecraft:mangrove_swamp", {"id": "#forge:is_swamp", "required": false}]}

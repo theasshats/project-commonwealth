@@ -380,24 +380,25 @@ createbigcannons:yaw_controller
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-fluid/molten_steel.json :: { "values": [ "createbigcannons:flowing_molten_steel", "createbigcannons:molten_steel" ]}
-fluid/molten_cast_iron.json :: { "values": [ "createbigcannons:flowing_molten_cast_iron", "createbigcannons:molten_cast_iron" ]}
-fluid/molten_bronze.json :: { "values": [ "createbigcannons:flowing_molten_bronze", "createbigcannons:molten_bronze" ]}
-fluid/molten_nethersteel.json :: { "values": [ "createbigcannons:flowing_molten_nethersteel", "createbigcannons:molten_nethersteel" ]}
-item/ingots/bronze.json :: { "values": [ "createbigcannons:bronze_ingot" ]}
-item/ingots/steel.json :: { "values": [ "createbigcannons:steel_ingot" ]}
-item/ingots/cast_iron.json :: { "values": [ "createbigcannons:cast_iron_ingot" ]}
-item/ingots/nethersteel.json :: { "values": [ "createbigcannons:nethersteel_ingot" ]}
-item/nuggets/bronze.json :: { "values": [ "createbigcannons:bronze_scrap" ]}
-item/nuggets/steel.json :: { "values": [ "createbigcannons:steel_scrap" ]}
-item/nuggets/cast_iron.json :: { "values": [ "createbigcannons:cast_iron_nugget" ]}
-item/nuggets/nethersteel.json :: { "values": [ "createbigcannons:nethersteel_nugget" ]}
-item/storage_blocks/bronze.json :: { "values": [ "createbigcannons:bronze_block" ]}
-item/storage_blocks/steel.json :: { "values": [ "createbigcannons:steel_block" ]}
-item/storage_blocks/cast_iron.json :: { "values": [ "createbigcannons:cast_iron_block" ]}
-item/storage_blocks/nethersteel.json :: { "values": [ "createbigcannons:nethersteel_block" ]}
-block/storage_blocks/bronze.json :: { "values": [ "createbigcannons:bronze_block" ]}
-block/storage_blocks/steel.json :: { "values": [ "createbigcannons:steel_block" ]}
-block/storage_blocks/cast_iron.json :: { "values": [ "createbigcannons:cast_iron_block" ]}
-block/storage_blocks/nethersteel.json :: { "values": [ "createbigcannons:nethersteel_block" ]}
+block/storage_blocks/bronze :: {"values": ["createbigcannons:bronze_block"]}
+block/storage_blocks/cast_iron :: {"values": ["createbigcannons:cast_iron_block"]}
+block/storage_blocks/nethersteel :: {"values": ["createbigcannons:nethersteel_block"]}
+block/storage_blocks/steel :: {"values": ["createbigcannons:steel_block"]}
+fluid/molten_bronze :: {"values": ["createbigcannons:flowing_molten_bronze", "createbigcannons:molten_bronze"]}
+fluid/molten_cast_iron :: {"values": ["createbigcannons:flowing_molten_cast_iron", "createbigcannons:molten_cast_iron"]}
+fluid/molten_nethersteel :: {"values": ["createbigcannons:flowing_molten_nethersteel", "createbigcannons:molten_nethersteel"]}
+fluid/molten_steel :: {"values": ["createbigcannons:flowing_molten_steel", "createbigcannons:molten_steel"]}
+item/ingots/bronze :: {"values": ["createbigcannons:bronze_ingot"]}
+item/ingots/cast_iron :: {"values": ["createbigcannons:cast_iron_ingot"]}
+item/ingots/nethersteel :: {"values": ["createbigcannons:nethersteel_ingot"]}
+item/ingots/steel :: {"values": ["createbigcannons:steel_ingot"]}
+item/nuggets/bronze :: {"values": ["createbigcannons:bronze_scrap"]}
+item/nuggets/cast_iron :: {"values": ["createbigcannons:cast_iron_nugget"]}
+item/nuggets/nethersteel :: {"values": ["createbigcannons:nethersteel_nugget"]}
+item/nuggets/steel :: {"values": ["createbigcannons:steel_scrap"]}
+item/storage_blocks/bronze :: {"values": ["createbigcannons:bronze_block"]}
+item/storage_blocks/cast_iron :: {"values": ["createbigcannons:cast_iron_block"]}
+item/storage_blocks/nethersteel :: {"values": ["createbigcannons:nethersteel_block"]}
+item/storage_blocks/steel :: {"values": ["createbigcannons:steel_block"]}

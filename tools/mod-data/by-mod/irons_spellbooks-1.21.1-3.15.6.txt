@@ -377,26 +377,26 @@ irons_spellbooks:wizard_helmet_hat
 irons_spellbooks:wizard_leggings
 
 ## neoforge biome_modifiers
-add_mithril_ore.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "irons_spellbooks:ore_mithril_placement", "step": "underground_ores"}
-necromancer_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": [ { "type": "irons_spellbooks:necromancer", "weight": 18, "minCount": 1, "maxCount": 1 } ]}
+add_mithril_ore.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "irons_spellbooks:ore_mithril_placement", "step": "underground_ores"}
+necromancer_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": [{"type": "irons_spellbooks:necromancer", "weight": 18, "minCount": 1, "maxCount": 1}]}
 
 ## c: common tag membership
-block/bookshelves.json :: { "replace": false, "values": [ "irons_spellbooks:wisewood_bookshelf" ]}
-block/ores/mithril.json :: { "replace": false, "values": [ "irons_spellbooks:mithril_ore", "irons_spellbooks:deepslate_mithril_ore" ]}
-block/ores.json :: { "replace": false, "values": [ "#c:ores/mithril" ]}
-block/ores_in_ground/deepslate.json :: { "values": [ "irons_spellbooks:deepslate_mithril_ore" ]}
-block/ores_in_ground/stone.json :: { "values": [ "irons_spellbooks:mithril_ore" ]}
-entity_type/bosses.json :: { "replace": false, "values": [ "irons_spellbooks:dead_king", "irons_spellbooks:fire_boss" ]}
-item/bookshelves.json :: { "replace": false, "values": [ "irons_spellbooks:wisewood_bookshelf" ]}
-item/ingots/mithril.json :: { "replace": false, "values": [ "irons_spellbooks:mithril_ingot" ]}
-item/ingots/pyrium.json :: { "replace": false, "values": [ "irons_spellbooks:pyrium_ingot" ]}
-item/ingots.json :: { "replace": false, "values": [ "#c:ingots/mithril", "#c:ingots/pyrium", "irons_spellbooks:arcane_ingot" ]}
-item/ores/mithril.json :: { "replace": false, "values": [ "irons_spellbooks:mithril_ore", "irons_spellbooks:deepslate_mithril_ore" ]}
-item/ores.json :: { "replace": false, "values": [ "#c:ores/mithril" ]}
-item/ores_in_ground/deepslate.json :: { "values": [ "irons_spellbooks:deepslate_mithril_ore" ]}
-item/ores_in_ground/stone.json :: { "values": [ "irons_spellbooks:mithril_ore" ]}
-item/raw_materials/mithril.json :: { "replace": false, "values": [ "irons_spellbooks:raw_mithril" ]}
-item/raw_materials.json :: { "replace": false, "values": [ "#c:raw_materials/mithril" ]}
-item/tools/crossbow.json :: { "replace": false, "values": [ "irons_spellbooks:autoloader_crossbow" ]}
-item/tools/melee_weapon.json :: { "replace": false, "values": [ "irons_spellbooks:magehunter", "irons_spellbooks:keeper_flamberge", "irons_spellbooks:spellbreaker", "irons_spellbooks:amethyst_rapier", "irons_spellbooks:claymore", "irons_spellbooks:misery", "irons_spellbooks:legionnaire_flamberge", "irons_spellbooks:hellrazor", "irons_spellbooks:decrepit_scythe" ]}
-item/tools/ranged_weapon.json :: { "replace": false, "values": [ "irons_spellbooks:autoloader_crossbow" ]}
+block/bookshelves :: {"replace": false, "values": ["irons_spellbooks:wisewood_bookshelf"]}
+block/ores :: {"replace": false, "values": ["#c:ores/mithril"]}
+block/ores/mithril :: {"replace": false, "values": ["irons_spellbooks:mithril_ore", "irons_spellbooks:deepslate_mithril_ore"]}
+block/ores_in_ground/deepslate :: {"values": ["irons_spellbooks:deepslate_mithril_ore"]}
+block/ores_in_ground/stone :: {"values": ["irons_spellbooks:mithril_ore"]}
+entity_type/bosses :: {"replace": false, "values": ["irons_spellbooks:dead_king", "irons_spellbooks:fire_boss"]}
+item/bookshelves :: {"replace": false, "values": ["irons_spellbooks:wisewood_bookshelf"]}
+item/ingots :: {"replace": false, "values": ["#c:ingots/mithril", "#c:ingots/pyrium", "irons_spellbooks:arcane_ingot"]}
+item/ingots/mithril :: {"replace": false, "values": ["irons_spellbooks:mithril_ingot"]}
+item/ingots/pyrium :: {"replace": false, "values": ["irons_spellbooks:pyrium_ingot"]}
+item/ores :: {"replace": false, "values": ["#c:ores/mithril"]}
+item/ores/mithril :: {"replace": false, "values": ["irons_spellbooks:mithril_ore", "irons_spellbooks:deepslate_mithril_ore"]}
+item/ores_in_ground/deepslate :: {"values": ["irons_spellbooks:deepslate_mithril_ore"]}
+item/ores_in_ground/stone :: {"values": ["irons_spellbooks:mithril_ore"]}
+item/raw_materials :: {"replace": false, "values": ["#c:raw_materials/mithril"]}
+item/raw_materials/mithril :: {"replace": false, "values": ["irons_spellbooks:raw_mithril"]}
+item/tools/crossbow :: {"replace": false, "values": ["irons_spellbooks:autoloader_crossbow"]}
+item/tools/melee_weapon :: {"replace": false, "values": ["irons_spellbooks:magehunter", "irons_spellbooks:keeper_flamberge", "irons_spellbooks:spellbreaker", "irons_spellbooks:amethyst_rapier", "irons_spellbooks:claymore", "irons_spellbooks:misery", "irons_spellbooks:legionnaire_flamberge", "irons_spellbooks:hellrazor", "irons_spellbooks:decrepit_scythe"]}
+item/tools/ranged_weapon :: {"replace": false, "values": ["irons_spellbooks:autoloader_crossbow"]}

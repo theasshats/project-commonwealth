@@ -485,6 +485,7 @@ extradelight:coffee_cherries_from_block | minecraft:crafting_shapeless | extrade
 extradelight:coffee_cherries_to_block | minecraft:crafting_shapeless | c:crops/coffee extradelight:coffee_cherry_crate minecraft:crafting_shapeless
 extradelight:coffee_from_bucket | minecraft:crafting_shapeless | extradelight:coffee extradelight:coffee_fluid_bucket minecraft:crafting_shapeless minecraft:glass_bottle
 extradelight:coffee_to_bucket | minecraft:crafting_shapeless | extradelight:coffee extradelight:coffee_fluid_bucket minecraft:bucket minecraft:crafting_shapeless
+extradelight:cookbook | patchouli:shapeless_book_recipe | extradelight:cookbook extradelight:wooden_spoon minecraft:book patchouli:shapeless_book_recipe
 extradelight:cooked_cactus | minecraft:crafting_shapeless | c:cactus/cooked extradelight:cactus_eggs extradelight:scrambled_eggs minecraft:crafting_shapeless
 extradelight:cooking/oven/apple_cheesecake | extradelight:oven | c:foods/milk extradelight:apple_cheesecake extradelight:oven extradelight:pie_dish extradelight:processed/apple farmersdelight:pie_crust
 extradelight:cooking/oven/apple_chips | extradelight:oven | c:apple/sliced c:cinnamon/ground extradelight:apple_chips extradelight:oven extradelight:sheet
@@ -2184,8 +2185,11 @@ extradelight:wooden_spoon | minecraft:crafting_shaped | extradelight:wooden_spoo
 extradelight:xocolatl_crafted | minecraft:crafting_shapeless | c:chili/powder extradelight:xocolati farmersdelight:hot_cocoa minecraft:crafting_shapeless
 extradelight:yeast_pot | minecraft:crafting_shapeless | c:buckets/water extradelight:sweetener extradelight:yeast_pot farmersdelight:canvas minecraft:crafting_shapeless minecraft:flower_pot minecraft:potion
 extradelight:yellow_chocolate_box | minecraft:crafting_shapeless | c:chests c:dyes/yellow c:ribbon extradelight:yellow_chocolate_box minecraft:crafting_shapeless minecraft:paper
-extradelight:cookbook | patchouli:shapeless_book_recipe | extradelight:cookbook extradelight:wooden_spoon minecraft:book patchouli:shapeless_book_recipe
+farmersdelight:apple_pie | extradelight:oven | extradelight:oven extradelight:pie_dish extradelight:processed/apple extradelight:sweetener farmersdelight:apple_pie farmersdelight:pie_crust
 farmersdelight:apple_pie | minecraft:crafting_shapeless | farmersdelight:apple_pie minecraft:crafting_shapeless neoforge:false
+farmersdelight:bacon_sandwich | ? | neoforge:never
+farmersdelight:chicken_sandwich | ? | neoforge:never
+farmersdelight:chocolate_pie | ? | neoforge:never
 farmersdelight:chocolate_pie | minecraft:crafting_shapeless | farmersdelight:chocolate_pie minecraft:crafting_shapeless neoforge:false
 farmersdelight:cooking/aebleflaesk | farmersdelight:cooking | c:apple/sliced extradelight:aebleflaesk extradelight:processed/onion extradelight:toast farmersdelight:bacon farmersdelight:cooking minecraft:sugar
 farmersdelight:cooking/aglio_e_olio | farmersdelight:cooking | c:cheese c:cooking_oil c:pasta extradelight:aglio_e_olio extradelight:processed/chili extradelight:processed/garlic farmersdelight:cooking minecraft:bowl
@@ -2195,6 +2199,7 @@ farmersdelight:cooking/apple_fritters | farmersdelight:cooking | c:flour extrade
 farmersdelight:cooking/apple_sauce | farmersdelight:cooking | extradelight:apple_sauce extradelight:sweetener farmersdelight:cooking minecraft:apple minecraft:bowl
 farmersdelight:cooking/bbq_sugar | farmersdelight:cooking | c:foods/onion c:foods/tomato c:vinegar extradelight:bbq_jar_item extradelight:sweetener farmersdelight:cooking minecraft:glass_bottle
 farmersdelight:cooking/beef_bulgogi | farmersdelight:cooking | c:beef/cubed/raw c:chili/powder c:condiments/hot_sauce c:condiments/soy_sauce extradelight:beef_bulgogi extradelight:processed/garlic extradelight:processed/onion farmersdelight:cooked_rice farmersdelight:cooking
+farmersdelight:cooking/beef_stew | ? | neoforge:never
 farmersdelight:cooking/beef_stew | farmersdelight:cooking | farmersdelight:beef_stew farmersdelight:cooking minecraft:barrier minecraft:glass_bottle neoforge:false
 farmersdelight:cooking/beef_stew_feast | farmersdelight:cooking | c:crops/onion c:flour extradelight:beef_stew_feast extradelight:broth extradelight:serving_pot farmersdelight:cooking minecraft:beef minecraft:carrot minecraft:potato
 farmersdelight:cooking/boiled_egg | farmersdelight:cooking | c:eggs extradelight:boiled_egg farmersdelight:cooking
@@ -2291,6 +2296,8 @@ farmersdelight:cooking/onion_soup | farmersdelight:cooking | c:bread/sliced c:bu
 farmersdelight:cooking/orange_chicken | farmersdelight:cooking | c:chicken/cubed/raw extradelight:breading_misanplas extradelight:orange_chicken extradelight:orange_juice extradelight:orange_zest extradelight:processed/garlic extradelight:processed/ginger extradelight:sweetener farmersdelight:cooking minecraft:bowl neoforge:compound
 farmersdelight:cooking/oxtail_soup | farmersdelight:cooking | c:beef/oxtail extradelight:broth extradelight:oxtail_soup extradelight:processed/tomato farmersdelight:cooking minecraft:bowl minecraft:carrot
 farmersdelight:cooking/pamonha | farmersdelight:cooking | c:foods/milk c:seeds/corn extradelight:corn_husk extradelight:pamonha farmersdelight:cooking
+farmersdelight:cooking/pasta_with_meatballs | ? | neoforge:never
+farmersdelight:cooking/pasta_with_mutton_chop | ? | neoforge:never
 farmersdelight:cooking/peanut_brittle | farmersdelight:cooking | c:butter c:nuts/cooked extradelight:peanut_brittle extradelight:sweetener farmersdelight:cooking
 farmersdelight:cooking/penne_all_arrabbiata | farmersdelight:cooking | c:cooking_oil extradelight:penne extradelight:penne_all_arrabbiata extradelight:processed/chili extradelight:processed/garlic farmersdelight:cooking farmersdelight:tomato_sauce minecraft:bowl
 farmersdelight:cooking/pork_stew | farmersdelight:cooking | c:crops/onion c:flour extradelight:broth extradelight:pork_stew_feast extradelight:serving_pot farmersdelight:cooking minecraft:carrot minecraft:porkchop minecraft:potato
@@ -2298,6 +2305,7 @@ farmersdelight:cooking/pork_tenderloin | farmersdelight:cooking | extradelight:b
 farmersdelight:cooking/potato_soup | farmersdelight:cooking | c:crops/onion c:crops/potato c:foods/milk extradelight:broth extradelight:potato_soup farmersdelight:cooking minecraft:bowl
 farmersdelight:cooking/preserved_lemon_pasta | farmersdelight:cooking | c:butter c:cheese c:pasta extradelight:preserved_lemon_item extradelight:preserved_lemon_pasta extradelight:processed/garlic farmersdelight:cooking minecraft:bowl
 farmersdelight:cooking/pumpkin_custard | farmersdelight:cooking | c:eggs c:foods/milk extradelight:pumpkin_custard extradelight:sweetener farmersdelight:cooking farmersdelight:pumpkin_slice minecraft:glass_bottle
+farmersdelight:cooking/rabbit_stew | ? | neoforge:never
 farmersdelight:cooking/rabbit_stew | farmersdelight:cooking | c:crops/onion c:flour extradelight:broth extradelight:rabbit_stew_feast extradelight:serving_pot farmersdelight:cooking minecraft:carrot minecraft:potato minecraft:rabbit
 farmersdelight:cooking/rice_pudding | farmersdelight:cooking | c:cinnamon/ground c:crops/rice c:foods/milk extradelight:rice_pudding extradelight:sweetener farmersdelight:cooking minecraft:glass_bottle
 farmersdelight:cooking/salisbury_steak_feast | farmersdelight:cooking | c:foods/onion c:mushrooms extradelight:gravy_boat_item extradelight:salisbury_steak_block_item farmersdelight:cooking farmersdelight:minced_beef minecraft:bowl
@@ -2322,38 +2330,30 @@ farmersdelight:cooking/xocolatl | farmersdelight:cooking | c:chili/powder c:food
 farmersdelight:cooking/xocolatl_beans | farmersdelight:cooking | c:chili/powder c:cocoa/powder c:foods/milk extradelight:sweetener extradelight:xocolati farmersdelight:cooking minecraft:glass_bottle
 farmersdelight:cooking/yeast_spread | farmersdelight:cooking | c:salt extradelight:yeast extradelight:yeast_spread farmersdelight:cooking minecraft:bowl
 farmersdelight:cooking/zupa_ogorkowa | farmersdelight:cooking | c:pickle_juice extradelight:broth extradelight:processed/carrot extradelight:processed/onion extradelight:processed/pickled/cucumber extradelight:processed/potato extradelight:zupa_ogorkowa farmersdelight:cooking minecraft:bowl
-farmersdelight:fruit_salad | minecraft:crafting_shapeless | extradelight:processed/apple extradelight:processed/fruit extradelight:processed/melon farmersdelight:fruit_salad farmersdelight:pumpkin_slice minecraft:crafting_shapeless minecraft:glass_bottle
-farmersdelight:honey_cookie | minecraft:crafting_shapeless | farmersdelight:honey_cookie minecraft:crafting_shapeless neoforge:false
-farmersdelight:honey_glazed_ham_block | minecraft:crafting_shapeless | farmersdelight:honey_glazed_ham_block minecraft:crafting_shapeless neoforge:false
-farmersdelight:melon_popsicle | minecraft:crafting_shapeless | farmersdelight:melon_popsicle minecraft:crafting_shapeless neoforge:false
-farmersdelight:mixed_salad | minecraft:crafting_shapeless | extradelight:processed/beetroot extradelight:processed/cabbage extradelight:processed/tomato farmersdelight:mixed_salad minecraft:bowl minecraft:crafting_shapeless
-farmersdelight:pie_crust | minecraft:crafting_shapeless | farmersdelight:pie_crust minecraft:crafting_shapeless neoforge:false
-farmersdelight:roast_chicken_block | minecraft:crafting_shapeless | farmersdelight:roast_chicken_block minecraft:crafting_shapeless neoforge:false
-farmersdelight:shepherds_pie_block | minecraft:crafting_shapeless | farmersdelight:shepherds_pie_block minecraft:crafting_shapeless neoforge:false
-farmersdelight:sweet_berry_cheesecake | minecraft:crafting_shapeless | farmersdelight:sweet_berry_cheesecake minecraft:crafting_shapeless neoforge:false
-farmersdelight:sweet_berry_cookie | minecraft:crafting_shapeless | farmersdelight:sweet_berry_cookie minecraft:crafting_shapeless neoforge:false
-farmersdelight:wheat_dough_from_egg | minecraft:crafting_shapeless | farmersdelight:wheat_dough minecraft:crafting_shapeless neoforge:false
-farmersdelight:wheat_dough_from_water | minecraft:crafting_shapeless | farmersdelight:wheat_dough minecraft:crafting_shapeless neoforge:false
-farmersdelight:apple_pie | extradelight:oven | extradelight:oven extradelight:pie_dish extradelight:processed/apple extradelight:sweetener farmersdelight:apple_pie farmersdelight:pie_crust
-farmersdelight:bacon_sandwich | ? | neoforge:never
-farmersdelight:chicken_sandwich | ? | neoforge:never
-farmersdelight:chocolate_pie | ? | neoforge:never
-farmersdelight:cooking/beef_stew | ? | neoforge:never
-farmersdelight:cooking/pasta_with_meatballs | ? | neoforge:never
-farmersdelight:cooking/pasta_with_mutton_chop | ? | neoforge:never
-farmersdelight:cooking/rabbit_stew | ? | neoforge:never
 farmersdelight:egg_sandwich | ? | neoforge:never
 farmersdelight:fruit_salad | minecraft:crafting_shapeless | c:foods/fruit extradelight:processed/apple extradelight:processed/melon farmersdelight:fruit_salad farmersdelight:pumpkin_slice minecraft:bowl minecraft:crafting_shapeless
+farmersdelight:fruit_salad | minecraft:crafting_shapeless | extradelight:processed/apple extradelight:processed/fruit extradelight:processed/melon farmersdelight:fruit_salad farmersdelight:pumpkin_slice minecraft:crafting_shapeless minecraft:glass_bottle
 farmersdelight:honey_cookie | ? | neoforge:never
+farmersdelight:honey_cookie | minecraft:crafting_shapeless | farmersdelight:honey_cookie minecraft:crafting_shapeless neoforge:false
 farmersdelight:honey_glazed_ham_block | ? | neoforge:never
+farmersdelight:honey_glazed_ham_block | minecraft:crafting_shapeless | farmersdelight:honey_glazed_ham_block minecraft:crafting_shapeless neoforge:false
 farmersdelight:hot_cocoa | ? | neoforge:never
 farmersdelight:melon_juice | ? | neoforge:never
 farmersdelight:melon_popsicle | ? | neoforge:never
+farmersdelight:melon_popsicle | minecraft:crafting_shapeless | farmersdelight:melon_popsicle minecraft:crafting_shapeless neoforge:false
+farmersdelight:mixed_salad | minecraft:crafting_shapeless | extradelight:processed/beetroot extradelight:processed/cabbage extradelight:processed/tomato farmersdelight:mixed_salad minecraft:bowl minecraft:crafting_shapeless
 farmersdelight:pie_crust | ? | neoforge:never
+farmersdelight:pie_crust | minecraft:crafting_shapeless | farmersdelight:pie_crust minecraft:crafting_shapeless neoforge:false
 farmersdelight:roast_chicken_block | ? | neoforge:never
+farmersdelight:roast_chicken_block | minecraft:crafting_shapeless | farmersdelight:roast_chicken_block minecraft:crafting_shapeless neoforge:false
 farmersdelight:shepherds_pie_block | ? | neoforge:never
+farmersdelight:shepherds_pie_block | minecraft:crafting_shapeless | farmersdelight:shepherds_pie_block minecraft:crafting_shapeless neoforge:false
 farmersdelight:sweet_berry_cheesecake | ? | neoforge:never
+farmersdelight:sweet_berry_cheesecake | minecraft:crafting_shapeless | farmersdelight:sweet_berry_cheesecake minecraft:crafting_shapeless neoforge:false
 farmersdelight:sweet_berry_cookie | ? | neoforge:never
+farmersdelight:sweet_berry_cookie | minecraft:crafting_shapeless | farmersdelight:sweet_berry_cookie minecraft:crafting_shapeless neoforge:false
+farmersdelight:wheat_dough_from_egg | minecraft:crafting_shapeless | farmersdelight:wheat_dough minecraft:crafting_shapeless neoforge:false
+farmersdelight:wheat_dough_from_water | minecraft:crafting_shapeless | farmersdelight:wheat_dough minecraft:crafting_shapeless neoforge:false
 minecraft:black_gingham_carpet_from_block | minecraft:crafting_shaped | extradelight:gingham_black extradelight:gingham_carpet_black minecraft:crafting_shaped
 minecraft:blue_gingham_carpet_from_block | minecraft:crafting_shaped | extradelight:gingham_blue extradelight:gingham_carpet_blue minecraft:crafting_shaped
 minecraft:bottlefluid/block.minecraft.water | extradelight:bottle_fluid | extradelight:bottle_fluid minecraft:potion minecraft:water

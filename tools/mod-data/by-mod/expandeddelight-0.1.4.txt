@@ -161,52 +161,52 @@ expandeddelight:wild_peanuts
 expandeddelight:wild_sweet_potato
 
 ## neoforge biome_modifiers
-cinnamon_tree.json :: { "type": "neoforge:add_features", "biomes": "#c:is_jungle", "features": "expandeddelight:cinnamon_tree", "step": "vegetal_decoration"}
-cranberries.json :: { "type": "neoforge:add_features", "biomes": "#c:is_swamp", "features": "expandeddelight:patch_cranberries", "step": "vegetal_decoration"}
-salt_ore.json :: { "type": "neoforge:add_features", "biomes": "#c:is_ocean", "features": "expandeddelight:salt_ore", "step": "underground_ores"}
-wild_asparagus.json :: { "type": "neoforge:add_features", "biomes": "#c:is_plains", "features": "expandeddelight:patch_wild_asparagus", "step": "vegetal_decoration"}
-wild_chili_pepper.json :: { "type": "neoforge:add_features", "biomes": "#c:is_desert", "features": "expandeddelight:patch_wild_chili_pepper", "step": "vegetal_decoration"}
-wild_peanuts.json :: { "type": "neoforge:add_features", "biomes": "#c:is_savanna", "features": "expandeddelight:patch_wild_peanuts", "step": "vegetal_decoration"}
-wild_sweet_potato.json :: { "type": "neoforge:add_features", "biomes": "#c:is_jungle", "features": "expandeddelight:patch_wild_sweet_potato", "step": "vegetal_decoration"}
+cinnamon_tree.json :: {"type": "neoforge:add_features", "biomes": "#c:is_jungle", "features": "expandeddelight:cinnamon_tree", "step": "vegetal_decoration"}
+cranberries.json :: {"type": "neoforge:add_features", "biomes": "#c:is_swamp", "features": "expandeddelight:patch_cranberries", "step": "vegetal_decoration"}
+salt_ore.json :: {"type": "neoforge:add_features", "biomes": "#c:is_ocean", "features": "expandeddelight:salt_ore", "step": "underground_ores"}
+wild_asparagus.json :: {"type": "neoforge:add_features", "biomes": "#c:is_plains", "features": "expandeddelight:patch_wild_asparagus", "step": "vegetal_decoration"}
+wild_chili_pepper.json :: {"type": "neoforge:add_features", "biomes": "#c:is_desert", "features": "expandeddelight:patch_wild_chili_pepper", "step": "vegetal_decoration"}
+wild_peanuts.json :: {"type": "neoforge:add_features", "biomes": "#c:is_savanna", "features": "expandeddelight:patch_wild_peanuts", "step": "vegetal_decoration"}
+wild_sweet_potato.json :: {"type": "neoforge:add_features", "biomes": "#c:is_jungle", "features": "expandeddelight:patch_wild_sweet_potato", "step": "vegetal_decoration"}
 
 ## c: common tag membership
-block/fence_gates/wooden.json :: { "values": [ "expandeddelight:cinnamon_fence_gate" ]}
-block/stripped_logs.json :: { "values": [ "expandeddelight:stripped_cinnamon_log" ]}
-block/stripped_woods.json :: { "values": [ "expandeddelight:stripped_cinnamon_wood" ]}
-item/buckets/milk.json :: { "values": [ "expandeddelight:goat_milk_bucket" ]}
-item/crops/asparagus.json :: { "values": [ "expandeddelight:asparagus" ]}
-item/crops/chili_pepper.json :: { "values": [ "expandeddelight:chili_pepper" ]}
-item/crops/peanut.json :: { "values": [ "expandeddelight:peanut" ]}
-item/crops/sweet_potato.json :: { "values": [ "expandeddelight:sweet_potato" ]}
-item/crops.json :: { "values": [ "#c:crops/asparagus", "#c:crops/sweet_potato", "#c:crops/chili_pepper", { "id": "#c:crops/peanut", "required": false } ]}
-item/dusts/cinnamon.json :: { "values": [ "expandeddelight:cinnamon" ]}
-item/dusts/salt.json :: { "values": [ "expandeddelight:salt" ]}
-item/dusts.json :: { "values": [ "#c:dusts/salt", "#c:dusts/cinnamon" ]}
-item/fence_gates/wooden.json :: { "values": [ "expandeddelight:cinnamon_fence_gate" ]}
-item/foods/asparagus.json :: { "values": [ "expandeddelight:asparagus" ]}
-item/foods/berry.json :: { "values": [ "expandeddelight:cranberries" ]}
-item/foods/cheese.json :: { "values": [ "expandeddelight:cheese_slice" ]}
-item/foods/chili_pepper.json :: { "values": [ "expandeddelight:chili_pepper" ]}
-item/foods/cookie.json :: { "values": [ "expandeddelight:chocolate_cookie", "expandeddelight:sugar_cookie", "expandeddelight:snickerdoodle" ]}
-item/foods/edible_when_placed.json :: { "values": [ "expandeddelight:cheese_wheel", "expandeddelight:goat_cheese_wheel", "expandeddelight:cranberry_cobbler", "expandeddelight:honeyed_goat_cheese_tart" ]}
-item/foods/goat_cheese.json :: { "values": [ "expandeddelight:goat_cheese_slice", { "id": "hearthandharvest:goat_cheese_slice", "required": false } ]}
-item/foods/milk.json :: { "values": [ "expandeddelight:goat_milk_bucket", "expandeddelight:goat_milk_bottle" ]}
-item/foods/peanut.json :: { "values": [ "expandeddelight:peanut" ]}
-item/foods/soup.json :: { "values": [ "expandeddelight:asparagus_soup", "expandeddelight:asparagus_soup_creamy", "expandeddelight:peanut_honey_soup" ]}
-item/foods/sweet_potato.json :: { "values": [ "expandeddelight:sweet_potato" ]}
-item/foods/vegetable.json :: { "values": [ "#c:foods/asparagus", "#c:foods/sweet_potato", "#c:foods/chili_pepper" ]}
-item/foods.json :: { "values": [ "#c:foods/cheese", "#c:foods/goat_cheese" ]}
-item/jams/cranberry.json :: { "values": [ "expandeddelight:cranberry_jelly" ]}
-item/jams/glow_berry.json :: { "values": [ "expandeddelight:glow_berry_jelly" ]}
-item/jams/sweet_berry.json :: { "values": [ "expandeddelight:sweet_berry_jelly" ]}
-item/jams.json :: { "values": [ "#c:jams/sweet_berry", "#c:jams/glow_berry", "#c:jams/cranberry" ]}
-item/juices/apple.json :: { "values": [ "expandeddelight:apple_juice" ]}
-item/juices/cranberry.json :: { "values": [ "expandeddelight:cranberry_juice" ]}
-item/juices/glow_berry.json :: { "values": [ "expandeddelight:glow_berry_juice" ]}
-item/juices/sweet_berry.json :: { "values": [ "expandeddelight:sweet_berry_juice" ]}
-item/juices.json :: { "values": [ "#c:juices/apple", "#c:juices/sweet_berry", "#c:juices/glow_berry", "#c:juices/cranberry" ]}
-item/ores/salt.json :: { "values": [ "expandeddelight:salt_ore", "expandeddelight:deepslate_salt_ore" ]}
-item/ores.json :: { "values": [ "#c:ores/salt" ]}
-item/seeds.json :: { "values": [ "expandeddelight:asparagus_seeds", "expandeddelight:chili_pepper_seeds" ]}
-item/stripped_logs.json :: { "values": [ "expandeddelight:stripped_cinnamon_log" ]}
-item/stripped_woods.json :: { "values": [ "expandeddelight:stripped_cinnamon_wood" ]}
+block/fence_gates/wooden :: {"values": ["expandeddelight:cinnamon_fence_gate"]}
+block/stripped_logs :: {"values": ["expandeddelight:stripped_cinnamon_log"]}
+block/stripped_woods :: {"values": ["expandeddelight:stripped_cinnamon_wood"]}
+item/buckets/milk :: {"values": ["expandeddelight:goat_milk_bucket"]}
+item/crops :: {"values": ["#c:crops/asparagus", "#c:crops/sweet_potato", "#c:crops/chili_pepper", {"id": "#c:crops/peanut", "required": false}]}
+item/crops/asparagus :: {"values": ["expandeddelight:asparagus"]}
+item/crops/chili_pepper :: {"values": ["expandeddelight:chili_pepper"]}
+item/crops/peanut :: {"values": ["expandeddelight:peanut"]}
+item/crops/sweet_potato :: {"values": ["expandeddelight:sweet_potato"]}
+item/dusts :: {"values": ["#c:dusts/salt", "#c:dusts/cinnamon"]}
+item/dusts/cinnamon :: {"values": ["expandeddelight:cinnamon"]}
+item/dusts/salt :: {"values": ["expandeddelight:salt"]}
+item/fence_gates/wooden :: {"values": ["expandeddelight:cinnamon_fence_gate"]}
+item/foods :: {"values": ["#c:foods/cheese", "#c:foods/goat_cheese"]}
+item/foods/asparagus :: {"values": ["expandeddelight:asparagus"]}
+item/foods/berry :: {"values": ["expandeddelight:cranberries"]}
+item/foods/cheese :: {"values": ["expandeddelight:cheese_slice"]}
+item/foods/chili_pepper :: {"values": ["expandeddelight:chili_pepper"]}
+item/foods/cookie :: {"values": ["expandeddelight:chocolate_cookie", "expandeddelight:sugar_cookie", "expandeddelight:snickerdoodle"]}
+item/foods/edible_when_placed :: {"values": ["expandeddelight:cheese_wheel", "expandeddelight:goat_cheese_wheel", "expandeddelight:cranberry_cobbler", "expandeddelight:honeyed_goat_cheese_tart"]}
+item/foods/goat_cheese :: {"values": ["expandeddelight:goat_cheese_slice", {"id": "hearthandharvest:goat_cheese_slice", "required": false}]}
+item/foods/milk :: {"values": ["expandeddelight:goat_milk_bucket", "expandeddelight:goat_milk_bottle"]}
+item/foods/peanut :: {"values": ["expandeddelight:peanut"]}
+item/foods/soup :: {"values": ["expandeddelight:asparagus_soup", "expandeddelight:asparagus_soup_creamy", "expandeddelight:peanut_honey_soup"]}
+item/foods/sweet_potato :: {"values": ["expandeddelight:sweet_potato"]}
+item/foods/vegetable :: {"values": ["#c:foods/asparagus", "#c:foods/sweet_potato", "#c:foods/chili_pepper"]}
+item/jams :: {"values": ["#c:jams/sweet_berry", "#c:jams/glow_berry", "#c:jams/cranberry"]}
+item/jams/cranberry :: {"values": ["expandeddelight:cranberry_jelly"]}
+item/jams/glow_berry :: {"values": ["expandeddelight:glow_berry_jelly"]}
+item/jams/sweet_berry :: {"values": ["expandeddelight:sweet_berry_jelly"]}
+item/juices :: {"values": ["#c:juices/apple", "#c:juices/sweet_berry", "#c:juices/glow_berry", "#c:juices/cranberry"]}
+item/juices/apple :: {"values": ["expandeddelight:apple_juice"]}
+item/juices/cranberry :: {"values": ["expandeddelight:cranberry_juice"]}
+item/juices/glow_berry :: {"values": ["expandeddelight:glow_berry_juice"]}
+item/juices/sweet_berry :: {"values": ["expandeddelight:sweet_berry_juice"]}
+item/ores :: {"values": ["#c:ores/salt"]}
+item/ores/salt :: {"values": ["expandeddelight:salt_ore", "expandeddelight:deepslate_salt_ore"]}
+item/seeds :: {"values": ["expandeddelight:asparagus_seeds", "expandeddelight:chili_pepper_seeds"]}
+item/stripped_logs :: {"values": ["expandeddelight:stripped_cinnamon_log"]}
+item/stripped_woods :: {"values": ["expandeddelight:stripped_cinnamon_wood"]}

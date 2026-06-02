@@ -18,13 +18,16 @@ versionRange="[1.2.0,)"
 
 ## blocks
 
+
 ## items
+
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/ingots/plastic.json :: { "values": [ { "id": "pneumaticcraft:plastic", "required": false } ]}
-fluid/plastic.json :: { "values": [ { "id": "pneumaticcraft:plastic", "required": false }, { "id": "pneumaticcraft:flowing_plastic", "required": false }, { "id": "tfmg:liquid_plastic", "required": false }, { "id": "tfmg:flowing_liquid_plastic", "required": false } ]}
-fluid/lubrication_oil.json :: { "values": [ { "id": "#c:lubricant", "required": false } ]}
-fluid/lubricant.json :: { "values": [ { "id": "#c:lubrication_oil", "required": false } ]}
-fluid/crude_oil.json :: { "values": [ { "id": "pneumaticcraft:flowing_oil", "required": false } ]}
+fluid/crude_oil :: {"values": [{"id": "pneumaticcraft:flowing_oil", "required": false}]}
+fluid/lubricant :: {"values": [{"id": "#c:lubrication_oil", "required": false}]}
+fluid/lubrication_oil :: {"values": [{"id": "#c:lubricant", "required": false}]}
+fluid/plastic :: {"values": [{"id": "pneumaticcraft:plastic", "required": false}, {"id": "pneumaticcraft:flowing_plastic", "required": false}, {"id": "tfmg:liquid_plastic", "required": false}, {"id": "tfmg:flowing_liquid_plastic", "required": false}]}
+item/ingots/plastic :: {"values": [{"id": "pneumaticcraft:plastic", "required": false}]}

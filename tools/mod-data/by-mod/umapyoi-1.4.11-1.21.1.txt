@@ -4,8 +4,8 @@
 license="MIT License"
 modId="umapyoi" #mandatory
 version="1.4.11-1.21.1"
-displayName="Umapyoi" 
-modId="neoforge" 
+displayName="Umapyoi"
+modId="neoforge"
 versionRange="[21.1.0,)" #mandatory
 modId="minecraft"
 versionRange="[1.21.1,1.22)"
@@ -120,11 +120,12 @@ umapyoi:wisdom_mid_item
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/bamboo.json :: { "values": [ "minecraft:bamboo" ]}
-item/bread/wheat.json :: { "values": [ "minecraft:bread" ]}
-item/bread.json :: { "values": [ "#c:bread/wheat" ]}
-item/crops/carrot.json :: { "values": [ { "id": "tfc:food/carrot", "required": false } ]}
-item/milk.json :: { "values": [ "minecraft:milk_bucket" ]}
-item/sugar.json :: { "values": [ "minecraft:sugar" ]}
-item/water.json :: { "values": [ "minecraft:water_bucket" ]}
+item/bamboo :: {"values": ["minecraft:bamboo"]}
+item/bread :: {"values": ["#c:bread/wheat"]}
+item/bread/wheat :: {"values": ["minecraft:bread"]}
+item/crops/carrot :: {"values": [{"id": "tfc:food/carrot", "required": false}]}
+item/milk :: {"values": ["minecraft:milk_bucket"]}
+item/sugar :: {"values": ["minecraft:sugar"]}
+item/water :: {"values": ["minecraft:water_bucket"]}

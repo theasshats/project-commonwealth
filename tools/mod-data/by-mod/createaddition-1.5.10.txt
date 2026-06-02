@@ -91,45 +91,46 @@ createaddition:zinc_sheet
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-block/storage_blocks/electrum.json :: { "values": [ "createaddition:electrum_block" ]}
-block/storage_blocks/biomass.json :: { "values": [ "createaddition:biomass_pellet_block" ]}
-block/storage_blocks/bio.json :: { "values": [ "createaddition:biomass_pellet_block" ]}
-block/storage_blocks.json :: { "values": [ "createaddition:electrum_block", "createaddition:biomass_pellet_block" ]}
-fluid/crude_oil.json :: { "values": []}
-fluid/creosote.json :: { "values": []}
-fluid/plantoil.json :: { "values": [ "createaddition:flowing_seed_oil", "createaddition:seed_oil" ]}
-fluid/biofuel.json :: { "values": [ "createaddition:flowing_bioethanol", "createaddition:bioethanol" ]}
-item/nuggets/electrum.json :: { "values": [ "createaddition:electrum_nugget" ]}
-item/nuggets.json :: { "values": [ "#c:nuggets/electrum" ]}
-item/fuels.json :: { "values": [ "#c:fuels/bio" ]}
-item/foods/edible_when_placed.json :: { "values": [ "createaddition:chocolate_cake", "createaddition:honey_cake" ]}
-item/rods/electrum.json :: { "values": [ "createaddition:electrum_rod" ]}
-item/rods/brass.json :: { "values": [ "createaddition:brass_rod" ]}
-item/rods/gold.json :: { "values": [ "createaddition:gold_rod" ]}
-item/rods/iron.json :: { "values": [ "createaddition:iron_rod" ]}
-item/rods/copper.json :: { "values": [ "createaddition:copper_rod" ]}
-item/rods/all_metal.json :: { "values": [ "createaddition:gold_rod", "createaddition:iron_rod", "createaddition:electrum_rod", "createaddition:brass_rod", "createaddition:copper_rod" ]}
-item/dusts.json :: { "values": [ "#c:dusts/diamond", "#c:dusts/obsidian" ]}
-item/buckets.json :: { "values": [ "createaddition:bioethanol_bucket", "createaddition:seed_oil_bucket" ]}
-item/wires/electrum.json :: { "values": [ "createaddition:electrum_wire" ]}
-item/wires/gold.json :: { "values": [ "createaddition:gold_wire" ]}
-item/wires/iron.json :: { "values": [ "createaddition:iron_wire" ]}
-item/wires/copper.json :: { "values": [ "createaddition:copper_wire" ]}
-item/wires/all_metal.json :: { "values": [ "createaddition:gold_wire", "createaddition:iron_wire", "createaddition:electrum_wire", "createaddition:copper_wire" ]}
-item/fuels/bio.json :: { "values": [ "createaddition:biomass" ]}
-item/foods.json :: { "values": [ "createaddition:chocolate_cake", "createaddition:honey_cake" ]}
-item/plates.json :: { "values": [ "#c:plates/electrum", "#c:plates/zinc" ]}
-item/dusts/obsidian.json :: { "values": [ "create:powdered_obsidian" ]}
-item/dusts/diamond.json :: { "values": [ "createaddition:diamond_grit" ]}
-item/storage_blocks/electrum.json :: { "values": [ "createaddition:electrum_block" ]}
-item/storage_blocks/biomass.json :: { "values": [ "createaddition:biomass_pellet_block" ]}
-item/storage_blocks/bio.json :: { "values": [ "createaddition:biomass_pellet_block" ]}
-item/plates/zinc.json :: { "values": [ "createaddition:zinc_sheet" ]}
-item/plates/electrum.json :: { "values": [ "createaddition:electrum_sheet" ]}
-item/ingots.json :: { "values": [ "#c:ingots/electrum" ]}
-item/wires.json :: { "values": [ "#c:wires/all_metal" ]}
-item/blocks/electrum.json :: { "values": [ "createaddition:electrum_block" ]}
-item/ingots/electrum.json :: { "values": [ "createaddition:electrum_ingot" ]}
-item/rods.json :: { "values": [ "#c:rods/all_metal" ]}
-item/storage_blocks.json :: { "values": [ "createaddition:biomass_pellet_block", "createaddition:electrum_block" ]}
+block/storage_blocks :: {"values": ["createaddition:electrum_block", "createaddition:biomass_pellet_block"]}
+block/storage_blocks/bio :: {"values": ["createaddition:biomass_pellet_block"]}
+block/storage_blocks/biomass :: {"values": ["createaddition:biomass_pellet_block"]}
+block/storage_blocks/electrum :: {"values": ["createaddition:electrum_block"]}
+fluid/biofuel :: {"values": ["createaddition:flowing_bioethanol", "createaddition:bioethanol"]}
+fluid/creosote :: {"values": []}
+fluid/crude_oil :: {"values": []}
+fluid/plantoil :: {"values": ["createaddition:flowing_seed_oil", "createaddition:seed_oil"]}
+item/blocks/electrum :: {"values": ["createaddition:electrum_block"]}
+item/buckets :: {"values": ["createaddition:bioethanol_bucket", "createaddition:seed_oil_bucket"]}
+item/dusts :: {"values": ["#c:dusts/diamond", "#c:dusts/obsidian"]}
+item/dusts/diamond :: {"values": ["createaddition:diamond_grit"]}
+item/dusts/obsidian :: {"values": ["create:powdered_obsidian"]}
+item/foods :: {"values": ["createaddition:chocolate_cake", "createaddition:honey_cake"]}
+item/foods/edible_when_placed :: {"values": ["createaddition:chocolate_cake", "createaddition:honey_cake"]}
+item/fuels :: {"values": ["#c:fuels/bio"]}
+item/fuels/bio :: {"values": ["createaddition:biomass"]}
+item/ingots :: {"values": ["#c:ingots/electrum"]}
+item/ingots/electrum :: {"values": ["createaddition:electrum_ingot"]}
+item/nuggets :: {"values": ["#c:nuggets/electrum"]}
+item/nuggets/electrum :: {"values": ["createaddition:electrum_nugget"]}
+item/plates :: {"values": ["#c:plates/electrum", "#c:plates/zinc"]}
+item/plates/electrum :: {"values": ["createaddition:electrum_sheet"]}
+item/plates/zinc :: {"values": ["createaddition:zinc_sheet"]}
+item/rods :: {"values": ["#c:rods/all_metal"]}
+item/rods/all_metal :: {"values": ["createaddition:gold_rod", "createaddition:iron_rod", "createaddition:electrum_rod", "createaddition:brass_rod", "createaddition:copper_rod"]}
+item/rods/brass :: {"values": ["createaddition:brass_rod"]}
+item/rods/copper :: {"values": ["createaddition:copper_rod"]}
+item/rods/electrum :: {"values": ["createaddition:electrum_rod"]}
+item/rods/gold :: {"values": ["createaddition:gold_rod"]}
+item/rods/iron :: {"values": ["createaddition:iron_rod"]}
+item/storage_blocks :: {"values": ["createaddition:biomass_pellet_block", "createaddition:electrum_block"]}
+item/storage_blocks/bio :: {"values": ["createaddition:biomass_pellet_block"]}
+item/storage_blocks/biomass :: {"values": ["createaddition:biomass_pellet_block"]}
+item/storage_blocks/electrum :: {"values": ["createaddition:electrum_block"]}
+item/wires :: {"values": ["#c:wires/all_metal"]}
+item/wires/all_metal :: {"values": ["createaddition:gold_wire", "createaddition:iron_wire", "createaddition:electrum_wire", "createaddition:copper_wire"]}
+item/wires/copper :: {"values": ["createaddition:copper_wire"]}
+item/wires/electrum :: {"values": ["createaddition:electrum_wire"]}
+item/wires/gold :: {"values": ["createaddition:gold_wire"]}
+item/wires/iron :: {"values": ["createaddition:iron_wire"]}

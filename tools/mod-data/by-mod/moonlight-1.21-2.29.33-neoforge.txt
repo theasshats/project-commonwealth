@@ -19,5 +19,6 @@ moonlight:spawn_box
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/hidden_from_recipe_viewers.json :: { "replace": false, "values": [ "moonlight:placeable_item" ]}
+item/hidden_from_recipe_viewers :: {"replace": false, "values": ["moonlight:placeable_item"]}

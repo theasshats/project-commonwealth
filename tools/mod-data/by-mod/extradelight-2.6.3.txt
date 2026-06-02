@@ -2290,415 +2290,415 @@ extradelight:yellow_picnic_basket
 extradelight:zupa_ogorkowa
 
 ## neoforge biome_modifiers
-apple_tree.json :: { "type": "neoforge:add_features", "biomes": "#c:is_forest", "features": { "feature": { "type": "extradelight:apple_tree", "config": { "decorators": [], "dirt_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "minecraft:dirt" } }, "foliage_placer": { "type": "extradelight:fruit_leaf", "height": 3, "offset": 0, "radius": 2 }, "foliage_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "extradelight:apple_leaves", "Properties": { "age": "0", "distance": "7", "persistent": "false", "sterile": "false" } } }, "force_dirt": false, "ignore_vines": false, "minimum_size": { "type": "minecraft:two_layers_feature_size", "limit": 3, "lower_size": 2, "upper_size": 3 }, "trunk_placer": { "type": "minecraft:straight_trunk_placer", "base_height": 4, "height_rand_a": 0, "height_rand_b": 2 }, "trunk_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "extradelight:fruit_log", "Properties": { "axis": "y" } } } } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 50 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-cinnamon_tree.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_jungle", "features": { "feature": { "type": "extradelight:cinnamon_tree", "config": { "decorators": [], "dirt_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "minecraft:dirt" } }, "foliage_placer": { "type": "minecraft:fancy_foliage_placer", "height": 3, "offset": 0, "radius": 1 }, "foliage_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "extradelight:cinnamon_leaves", "Properties": { "distance": "7", "persistent": "false", "waterlogged": "false" } } }, "force_dirt": false, "ignore_vines": false, "minimum_size": { "type": "minecraft:two_layers_feature_size", "limit": 1, "lower_size": 0, "upper_size": 2 }, "trunk_placer": { "type": "minecraft:straight_trunk_placer", "base_height": 4, "height_rand_a": 2, "height_rand_b": 2 }, "trunk_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "extradelight:cinnamon_log", "Properties": { "axis": "y" } } } } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 10 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-grapefruit_tree.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_jungle", "features": { "feature": { "type": "extradelight:grapefruit_tree", "config": { "decorators": [], "dirt_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "minecraft:dirt" } }, "foliage_placer": { "type": "extradelight:fruit_leaf", "height": 3, "offset": 0, "radius": 2 }, "foliage_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "extradelight:grapefruit_leaves", "Properties": { "age": "0", "distance": "7", "persistent": "false", "sterile": "false" } } }, "force_dirt": false, "ignore_vines": false, "minimum_size": { "type": "minecraft:two_layers_feature_size", "limit": 3, "lower_size": 2, "upper_size": 3 }, "trunk_placer": { "type": "minecraft:straight_trunk_placer", "base_height": 3, "height_rand_a": 0, "height_rand_b": 2 }, "trunk_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "extradelight:fruit_log", "Properties": { "axis": "y" } } } } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 50 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-hazelnut_tree.json :: { "type": "neoforge:add_features", "biomes": "#c:is_forest", "features": { "feature": { "type": "extradelight:hazelnut_tree", "config": { "decorators": [], "dirt_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "minecraft:dirt" } }, "foliage_placer": { "type": "extradelight:fruit_leaf", "height": 3, "offset": 0, "radius": 2 }, "foliage_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "extradelight:hazelnut_leaves", "Properties": { "age": "0", "distance": "7", "persistent": "false", "sterile": "false" } } }, "force_dirt": false, "ignore_vines": false, "minimum_size": { "type": "minecraft:two_layers_feature_size", "limit": 1, "lower_size": 2, "upper_size": 1 }, "trunk_placer": { "type": "minecraft:straight_trunk_placer", "base_height": 4, "height_rand_a": 0, "height_rand_b": 2 }, "trunk_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "extradelight:fruit_log", "Properties": { "axis": "y" } } } } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 50 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-lemon_tree.json :: { "type": "neoforge:add_features", "biomes": "#c:is_hill", "features": { "feature": { "type": "extradelight:lemon_tree", "config": { "decorators": [], "dirt_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "minecraft:dirt" } }, "foliage_placer": { "type": "extradelight:fruit_leaf", "height": 3, "offset": 0, "radius": 2 }, "foliage_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "extradelight:lemon_leaves", "Properties": { "age": "0", "distance": "7", "persistent": "false", "sterile": "false" } } }, "force_dirt": false, "ignore_vines": false, "minimum_size": { "type": "minecraft:two_layers_feature_size", "limit": 3, "lower_size": 2, "upper_size": 3 }, "trunk_placer": { "type": "minecraft:straight_trunk_placer", "base_height": 3, "height_rand_a": 0, "height_rand_b": 2 }, "trunk_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "extradelight:fruit_log", "Properties": { "axis": "y" } } } } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 50 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-lime_tree.json :: { "type": "neoforge:add_features", "biomes": "#c:is_hot", "features": { "feature": { "type": "extradelight:lime_tree", "config": { "decorators": [], "dirt_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "minecraft:dirt" } }, "foliage_placer": { "type": "extradelight:fruit_leaf", "height": 3, "offset": 0, "radius": 2 }, "foliage_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "extradelight:lime_leaves", "Properties": { "age": "0", "distance": "7", "persistent": "false", "sterile": "false" } } }, "force_dirt": false, "ignore_vines": false, "minimum_size": { "type": "minecraft:two_layers_feature_size", "limit": 3, "lower_size": 2, "upper_size": 3 }, "trunk_placer": { "type": "minecraft:straight_trunk_placer", "base_height": 3, "height_rand_a": 0, "height_rand_b": 2 }, "trunk_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "extradelight:fruit_log", "Properties": { "axis": "y" } } } } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 50 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-orange_tree.json :: { "type": "neoforge:add_features", "biomes": "#c:is_wet", "features": { "feature": { "type": "extradelight:orange_tree", "config": { "decorators": [], "dirt_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "minecraft:dirt" } }, "foliage_placer": { "type": "extradelight:fruit_leaf", "height": 3, "offset": 0, "radius": 2 }, "foliage_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "extradelight:orange_leaves", "Properties": { "age": "0", "distance": "7", "persistent": "false", "sterile": "false" } } }, "force_dirt": false, "ignore_vines": false, "minimum_size": { "type": "minecraft:two_layers_feature_size", "limit": 3, "lower_size": 2, "upper_size": 3 }, "trunk_placer": { "type": "minecraft:straight_trunk_placer", "base_height": 3, "height_rand_a": 0, "height_rand_b": 2 }, "trunk_provider": { "type": "minecraft:simple_state_provider", "state": { "Name": "extradelight:fruit_log", "Properties": { "axis": "y" } } } } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 50 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-patch_wild_chili.json :: { "type": "neoforge:add_features", "biomes": "#c:is_hot", "features": { "feature": { "type": "extradelight:wild_chili", "config": { "max_count": 5, "min_count": 2, "tries": 128, "xz_spread": 2, "y_spread": 5 } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 50 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-patch_wild_coffee.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_jungle", "features": { "feature": { "type": "extradelight:wild_coffee", "config": { "max_count": 7, "min_count": 3, "tries": 128, "xz_spread": 5, "y_spread": 5 } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 40 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-patch_wild_corn.json :: { "type": "neoforge:add_features", "biomes": "#c:is_plains", "features": { "feature": { "type": "extradelight:wild_corn", "config": { "max_count": 250, "min_count": 120, "tries": 256, "xz_spread": 12, "y_spread": 25 } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 40 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-patch_wild_cucumber.json :: { "type": "neoforge:add_features", "biomes": "#c:is_hill", "features": { "feature": { "type": "extradelight:wild_cucumber", "config": { "max_count": 3, "min_count": 2, "tries": 64, "xz_spread": 2, "y_spread": 5 } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 40 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-patch_wild_garlic.json :: { "type": "neoforge:add_features", "biomes": { "type": "neoforge:and", "values": [ "#c:is_mountain/slope", "#c:is_temperate" ] }, "features": { "feature": { "type": "extradelight:wild_garlic", "config": { "max_count": 7, "min_count": 3, "tries": 128, "xz_spread": 5, "y_spread": 5 } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 30 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-patch_wild_ginger.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_jungle", "features": { "feature": { "type": "extradelight:wild_ginger", "config": { "max_count": 5, "min_count": 2, "tries": 128, "xz_spread": 2, "y_spread": 5 } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 20 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-patch_wild_mallow.json :: { "type": "neoforge:add_features", "biomes": "#c:is_swamp", "features": { "feature": { "type": "extradelight:wild_mallow", "config": { "max_count": 150, "min_count": 70, "tries": 256, "xz_spread": 10, "y_spread": 5 } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 70 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-patch_wild_mint.json :: { "type": "neoforge:add_features", "biomes": "#c:is_cold", "features": { "feature": { "type": "extradelight:wild_mint", "config": { "max_count": 100, "min_count": 20, "tries": 256, "xz_spread": 10, "y_spread": 5 } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 20 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-patch_wild_peanut.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_jungle", "features": { "feature": { "type": "extradelight:wild_peanut", "config": { "max_count": 7, "min_count": 3, "tries": 128, "xz_spread": 5, "y_spread": 5 } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 50 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
-patch_wild_soybean.json :: { "type": "neoforge:add_features", "biomes": "#c:is_temperate", "features": { "feature": { "type": "extradelight:wild_soybean", "config": { "max_count": 4, "min_count": 2, "tries": 64, "xz_spread": 5, "y_spread": 5 } }, "placement": [ { "type": "minecraft:rarity_filter", "chance": 80 }, { "type": "minecraft:in_square" }, { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG" }, { "type": "minecraft:biome" } ] }, "step": "vegetal_decoration"}
+apple_tree.json :: {"type": "neoforge:add_features", "biomes": "#c:is_forest", "features": {"feature": {"type": "extradelight:apple_tree", "config": {"decorators": [], "dirt_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "minecraft:dirt"}}, "foliage_placer": {"type": "extradelight:fruit_leaf", "height": 3, "offset": 0, "radius": 2}, "foliage_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "extradelight:apple_leaves", "Properties": {"age": "0", "distance": "7", "persistent": "false", "sterile": "false"}}}, "force_dirt": false, "ignore_vines": false, "minimum_size": {"type": "minecraft:two_layers_feature_size", "limit": 3, "lower_size": 2, "upper_size": 3}, "trunk_placer": {"type": "minecraft:straight_trunk_placer", "base_height": 4, "height_rand_a": 0, "height_rand_b": 2}, "trunk_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "extradelight:fruit_log", "Properties": {"axis": "y"}}}}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 50}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+cinnamon_tree.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_jungle", "features": {"feature": {"type": "extradelight:cinnamon_tree", "config": {"decorators": [], "dirt_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "minecraft:dirt"}}, "foliage_placer": {"type": "minecraft:fancy_foliage_placer", "height": 3, "offset": 0, "radius": 1}, "foliage_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "extradelight:cinnamon_leaves", "Properties": {"distance": "7", "persistent": "false", "waterlogged": "false"}}}, "force_dirt": false, "ignore_vines": false, "minimum_size": {"type": "minecraft:two_layers_feature_size", "limit": 1, "lower_size": 0, "upper_size": 2}, "trunk_placer": {"type": "minecraft:straight_trunk_placer", "base_height": 4, "height_rand_a": 2, "height_rand_b": 2}, "trunk_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "extradelight:cinnamon_log", "Properties": {"axis": "y"}}}}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 10}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+grapefruit_tree.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_jungle", "features": {"feature": {"type": "extradelight:grapefruit_tree", "config": {"decorators": [], "dirt_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "minecraft:dirt"}}, "foliage_placer": {"type": "extradelight:fruit_leaf", "height": 3, "offset": 0, "radius": 2}, "foliage_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "extradelight:grapefruit_leaves", "Properties": {"age": "0", "distance": "7", "persistent": "false", "sterile": "false"}}}, "force_dirt": false, "ignore_vines": false, "minimum_size": {"type": "minecraft:two_layers_feature_size", "limit": 3, "lower_size": 2, "upper_size": 3}, "trunk_placer": {"type": "minecraft:straight_trunk_placer", "base_height": 3, "height_rand_a": 0, "height_rand_b": 2}, "trunk_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "extradelight:fruit_log", "Properties": {"axis": "y"}}}}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 50}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+hazelnut_tree.json :: {"type": "neoforge:add_features", "biomes": "#c:is_forest", "features": {"feature": {"type": "extradelight:hazelnut_tree", "config": {"decorators": [], "dirt_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "minecraft:dirt"}}, "foliage_placer": {"type": "extradelight:fruit_leaf", "height": 3, "offset": 0, "radius": 2}, "foliage_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "extradelight:hazelnut_leaves", "Properties": {"age": "0", "distance": "7", "persistent": "false", "sterile": "false"}}}, "force_dirt": false, "ignore_vines": false, "minimum_size": {"type": "minecraft:two_layers_feature_size", "limit": 1, "lower_size": 2, "upper_size": 1}, "trunk_placer": {"type": "minecraft:straight_trunk_placer", "base_height": 4, "height_rand_a": 0, "height_rand_b": 2}, "trunk_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "extradelight:fruit_log", "Properties": {"axis": "y"}}}}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 50}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+lemon_tree.json :: {"type": "neoforge:add_features", "biomes": "#c:is_hill", "features": {"feature": {"type": "extradelight:lemon_tree", "config": {"decorators": [], "dirt_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "minecraft:dirt"}}, "foliage_placer": {"type": "extradelight:fruit_leaf", "height": 3, "offset": 0, "radius": 2}, "foliage_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "extradelight:lemon_leaves", "Properties": {"age": "0", "distance": "7", "persistent": "false", "sterile": "false"}}}, "force_dirt": false, "ignore_vines": false, "minimum_size": {"type": "minecraft:two_layers_feature_size", "limit": 3, "lower_size": 2, "upper_size": 3}, "trunk_placer": {"type": "minecraft:straight_trunk_placer", "base_height": 3, "height_rand_a": 0, "height_rand_b": 2}, "trunk_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "extradelight:fruit_log", "Properties": {"axis": "y"}}}}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 50}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+lime_tree.json :: {"type": "neoforge:add_features", "biomes": "#c:is_hot", "features": {"feature": {"type": "extradelight:lime_tree", "config": {"decorators": [], "dirt_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "minecraft:dirt"}}, "foliage_placer": {"type": "extradelight:fruit_leaf", "height": 3, "offset": 0, "radius": 2}, "foliage_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "extradelight:lime_leaves", "Properties": {"age": "0", "distance": "7", "persistent": "false", "sterile": "false"}}}, "force_dirt": false, "ignore_vines": false, "minimum_size": {"type": "minecraft:two_layers_feature_size", "limit": 3, "lower_size": 2, "upper_size": 3}, "trunk_placer": {"type": "minecraft:straight_trunk_placer", "base_height": 3, "height_rand_a": 0, "height_rand_b": 2}, "trunk_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "extradelight:fruit_log", "Properties": {"axis": "y"}}}}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 50}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+orange_tree.json :: {"type": "neoforge:add_features", "biomes": "#c:is_wet", "features": {"feature": {"type": "extradelight:orange_tree", "config": {"decorators": [], "dirt_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "minecraft:dirt"}}, "foliage_placer": {"type": "extradelight:fruit_leaf", "height": 3, "offset": 0, "radius": 2}, "foliage_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "extradelight:orange_leaves", "Properties": {"age": "0", "distance": "7", "persistent": "false", "sterile": "false"}}}, "force_dirt": false, "ignore_vines": false, "minimum_size": {"type": "minecraft:two_layers_feature_size", "limit": 3, "lower_size": 2, "upper_size": 3}, "trunk_placer": {"type": "minecraft:straight_trunk_placer", "base_height": 3, "height_rand_a": 0, "height_rand_b": 2}, "trunk_provider": {"type": "minecraft:simple_state_provider", "state": {"Name": "extradelight:fruit_log", "Properties": {"axis": "y"}}}}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 50}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+patch_wild_chili.json :: {"type": "neoforge:add_features", "biomes": "#c:is_hot", "features": {"feature": {"type": "extradelight:wild_chili", "config": {"max_count": 5, "min_count": 2, "tries": 128, "xz_spread": 2, "y_spread": 5}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 50}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+patch_wild_coffee.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_jungle", "features": {"feature": {"type": "extradelight:wild_coffee", "config": {"max_count": 7, "min_count": 3, "tries": 128, "xz_spread": 5, "y_spread": 5}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 40}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+patch_wild_corn.json :: {"type": "neoforge:add_features", "biomes": "#c:is_plains", "features": {"feature": {"type": "extradelight:wild_corn", "config": {"max_count": 250, "min_count": 120, "tries": 256, "xz_spread": 12, "y_spread": 25}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 40}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+patch_wild_cucumber.json :: {"type": "neoforge:add_features", "biomes": "#c:is_hill", "features": {"feature": {"type": "extradelight:wild_cucumber", "config": {"max_count": 3, "min_count": 2, "tries": 64, "xz_spread": 2, "y_spread": 5}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 40}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+patch_wild_garlic.json :: {"type": "neoforge:add_features", "biomes": {"type": "neoforge:and", "values": ["#c:is_mountain/slope", "#c:is_temperate"]}, "features": {"feature": {"type": "extradelight:wild_garlic", "config": {"max_count": 7, "min_count": 3, "tries": 128, "xz_spread": 5, "y_spread": 5}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 30}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+patch_wild_ginger.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_jungle", "features": {"feature": {"type": "extradelight:wild_ginger", "config": {"max_count": 5, "min_count": 2, "tries": 128, "xz_spread": 2, "y_spread": 5}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 20}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+patch_wild_mallow.json :: {"type": "neoforge:add_features", "biomes": "#c:is_swamp", "features": {"feature": {"type": "extradelight:wild_mallow", "config": {"max_count": 150, "min_count": 70, "tries": 256, "xz_spread": 10, "y_spread": 5}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 70}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+patch_wild_mint.json :: {"type": "neoforge:add_features", "biomes": "#c:is_cold", "features": {"feature": {"type": "extradelight:wild_mint", "config": {"max_count": 100, "min_count": 20, "tries": 256, "xz_spread": 10, "y_spread": 5}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 20}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+patch_wild_peanut.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_jungle", "features": {"feature": {"type": "extradelight:wild_peanut", "config": {"max_count": 7, "min_count": 3, "tries": 128, "xz_spread": 5, "y_spread": 5}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 50}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
+patch_wild_soybean.json :: {"type": "neoforge:add_features", "biomes": "#c:is_temperate", "features": {"feature": {"type": "extradelight:wild_soybean", "config": {"max_count": 4, "min_count": 2, "tries": 64, "xz_spread": 5, "y_spread": 5}}, "placement": [{"type": "minecraft:rarity_filter", "chance": 80}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"}]}, "step": "vegetal_decoration"}
 
 ## c: common tag membership
-block/cold_sources.json :: { "values": [ "minecraft:ice", "minecraft:blue_ice", "minecraft:frosted_ice", "minecraft:packed_ice", "minecraft:snow_block", "minecraft:powder_snow_cauldron" ]}
-block/dyed/black.json :: { "values": [ "extradelight:black_chocolate_box", "extradelight:gingham_carpet_black", "extradelight:gingham_black", "extradelight:oak_molded_black_wallpaper", "extradelight:wallpaper_black", "extradelight:ribbon_bow_black" ]}
-block/dyed/blue.json :: { "values": [ "extradelight:blue_chocolate_box", "extradelight:gingham_carpet_blue", "extradelight:gingham_blue", "extradelight:oak_molded_blue_wallpaper", "extradelight:wallpaper_blue", "extradelight:ribbon_bow_blue" ]}
-block/dyed/brown.json :: { "values": [ "extradelight:brown_chocolate_box", "extradelight:gingham_carpet_brown", "extradelight:gingham_brown", "extradelight:oak_molded_brown_wallpaper", "extradelight:wallpaper_brown", "extradelight:ribbon_bow_brown" ]}
-block/dyed/cyan.json :: { "values": [ "extradelight:cyan_chocolate_box", "extradelight:gingham_carpet_cyan", "extradelight:gingham_cyan", "extradelight:oak_molded_cyan_wallpaper", "extradelight:wallpaper_cyan", "extradelight:ribbon_bow_cyan" ]}
-block/dyed/gray.json :: { "values": [ "extradelight:gray_chocolate_box", "extradelight:gingham_carpet_gray", "extradelight:gingham_gray", "extradelight:oak_molded_gray_wallpaper", "extradelight:wallpaper_gray", "extradelight:ribbon_bow_gray" ]}
-block/dyed/green.json :: { "values": [ "extradelight:green_chocolate_box", "extradelight:gingham_carpet_green", "extradelight:gingham_green", "extradelight:oak_molded_green_wallpaper", "extradelight:wallpaper_green", "extradelight:ribbon_bow_green" ]}
-block/dyed/light_blue.json :: { "values": [ "extradelight:light_blue_chocolate_box", "extradelight:gingham_carpet_light_blue", "extradelight:gingham_light_blue", "extradelight:oak_molded_light_blue_wallpaper", "extradelight:wallpaper_light_blue", "extradelight:ribbon_bow_light_blue" ]}
-block/dyed/light_gray.json :: { "values": [ "extradelight:light_gray_chocolate_box", "extradelight:gingham_carpet_light_gray", "extradelight:gingham_light_gray", "extradelight:oak_molded_light_gray_wallpaper", "extradelight:wallpaper_light_gray", "extradelight:ribbon_bow_light_gray" ]}
-block/dyed/lime.json :: { "values": [ "extradelight:lime_chocolate_box", "extradelight:gingham_carpet_lime", "extradelight:gingham_lime", "extradelight:oak_molded_lime_wallpaper", "extradelight:wallpaper_lime", "extradelight:ribbon_bow_lime" ]}
-block/dyed/magenta.json :: { "values": [ "extradelight:magenta_chocolate_box", "extradelight:gingham_carpet_magenta", "extradelight:gingham_magenta", "extradelight:oak_molded_magenta_wallpaper", "extradelight:wallpaper_magenta", "extradelight:ribbon_bow_magenta" ]}
-block/dyed/orange.json :: { "values": [ "extradelight:orange_chocolate_box", "extradelight:gingham_carpet_orange", "extradelight:gingham_orange", "extradelight:oak_molded_orange_wallpaper", "extradelight:wallpaper_orange", "extradelight:ribbon_bow_orange" ]}
-block/dyed/pink.json :: { "values": [ "extradelight:pink_chocolate_box", "extradelight:gingham_carpet_pink", "extradelight:gingham_pink", "extradelight:oak_molded_pink_wallpaper", "extradelight:wallpaper_pink", "extradelight:ribbon_bow_pink" ]}
-block/dyed/purple.json :: { "values": [ "extradelight:purple_chocolate_box", "extradelight:gingham_carpet_purple", "extradelight:gingham_purple", "extradelight:oak_molded_purple_wallpaper", "extradelight:wallpaper_purple", "extradelight:ribbon_bow_purple" ]}
-block/dyed/red.json :: { "values": [ "extradelight:red_chocolate_box", "extradelight:gingham_carpet_red", "extradelight:gingham_red", "extradelight:oak_molded_red_wallpaper", "extradelight:wallpaper_red", "extradelight:ribbon_bow_red" ]}
-block/dyed/white.json :: { "values": [ "extradelight:white_chocolate_box", "extradelight:gingham_carpet_white", "extradelight:gingham_white", "extradelight:oak_molded_white_wallpaper", "extradelight:wallpaper_white", "extradelight:ribbon_bow_white" ]}
-block/dyed/yellow.json :: { "values": [ "extradelight:yellow_chocolate_box", "extradelight:gingham_carpet_yellow", "extradelight:gingham_yellow", "extradelight:oak_molded_yellow_wallpaper", "extradelight:wallpaper_yellow", "extradelight:ribbon_bow_yellow" ]}
-block/fence_gates/wooden.json :: { "values": [ "extradelight:cinnamon_fence_gate", "extradelight:fruit_fence_gate" ]}
-block/storage_blocks.json :: { "values": [ "#c:storage_blocks_cheese", "#c:storage_blocks_butter", "#c:storage_blocks_flour", "#c:storage_blocks_corn_meal", "#c:storage_blocks_sugar", "#c:storage_blocks_corn_on_cob", "#c:storage_blocks_corn_husk", "#c:storage_blocks_dried_corn_husk", "#c:storage_blocks_corn_cob", "#c:storage_blocks_ginger", "#c:storage_blocks_eggs", "#c:storage_blocks_apple", "#c:storage_blocks_golden_apple", "#c:storage_blocks_brown_mushroom", "#c:storage_blocks_red_mushroom", "#c:storage_blocks_sweet_berries", "#c:storage_blocks_glow_berries", "#c:storage_blocks_corn_silk", "#c:storage_blocks_ground_cinnamon", "#c:storage_blocks_raw_cinnamon", "#c:storage_blocks_cinnamon_stick", "#c:storage_blocks_bread_crumbs", "#c:storage_blocks_mint", "#c:storage_blocks_marshmallow", "#c:storage_blocks_golden_carrot", "#c:storage_blocks_blood_chocolate_bar", "#c:storage_blocks_dark_chocolate_bar", "#c:storage_blocks_milk_chocolate_bar", "#c:storage_blocks_white_chocolate_bar", "#c:storage_blocks_chili", "#c:storage_blocks_chili_powder", "#c:storage_blocks_peanuts_in_shell", "#c:storage_blocks_peanuts", "#c:storage_blocks_roasted_peanuts", "#c:storage_blocks_hazelnuts_in_shell", "#c:storage_blocks_hazelnuts", "#c:storage_blocks_roasted_hazelnuts", "#c:storage_blocks_mallow_root", "#c:storage_blocks_mallow_powder", "#c:storage_blocks_coffee_cherries", "#c:storage_blocks_green_coffee", "#c:storage_blocks_coffee_beans", "#c:storage_blocks_ground_coffee", "#c:storage_blocks_cocoa_beans", "#c:storage_blocks_roasted_cocoa_beans", "#c:storage_blocks_cocoa_solids", "#c:storage_blocks_cocoa_powder", "#c:storage_blocks_corn_kernels", "#c:storage_blocks_garlic", "#c:storage_blocks_cucumber", "#c:storage_blocks_soybeans", "#c:storage_blocks_salt", "#c:storage_blocks_lemon", "#c:storage_blocks_lime", "#c:storage_blocks_orange", "#c:storage_blocks_grapefruit" ]}
-block/storage_blocks_apple.json :: { "values": [ "extradelight:apple_crate" ]}
-block/storage_blocks_blood_chocolate_bar.json :: { "values": [ "extradelight:blood_chocolate_block" ]}
-block/storage_blocks_bread_crumbs.json :: { "values": [ "extradelight:breadcrumb_sack" ]}
-block/storage_blocks_brown_mushroom.json :: { "values": [ "extradelight:brown_mushroom_crate" ]}
-block/storage_blocks_butter.json :: { "values": [ "extradelight:butter_block" ]}
-block/storage_blocks_cheese.json :: { "values": [ "extradelight:cheese_block" ]}
-block/storage_blocks_chili.json :: { "values": [ "extradelight:chili_crate" ]}
-block/storage_blocks_chili_powder.json :: { "values": [ "extradelight:chili_powder_sack" ]}
-block/storage_blocks_cinnamon_stick.json :: { "values": [ "extradelight:cinnamon_stick_block" ]}
-block/storage_blocks_cocoa_beans.json :: { "values": [ "extradelight:cocoa_beans_sack" ]}
-block/storage_blocks_cocoa_powder.json :: { "values": [ "extradelight:cocoa_powder_sack" ]}
-block/storage_blocks_cocoa_solids.json :: { "values": [ "extradelight:cocoa_solids_sack" ]}
-block/storage_blocks_coffee_beans.json :: { "values": [ "extradelight:coffee_bean_sack" ]}
-block/storage_blocks_coffee_cherries.json :: { "values": [ "extradelight:coffee_cherry_crate" ]}
-block/storage_blocks_corn_cob.json :: { "values": [ "extradelight:corn_cob_bundle" ]}
-block/storage_blocks_corn_husk.json :: { "values": [ "extradelight:corn_husk_bundle" ]}
-block/storage_blocks_corn_kernels.json :: { "values": [ "extradelight:corn_sack" ]}
-block/storage_blocks_corn_meal.json :: { "values": [ "extradelight:cornmeal_sack" ]}
-block/storage_blocks_corn_on_cob.json :: { "values": [ "extradelight:corn_crate" ]}
-block/storage_blocks_corn_silk.json :: { "values": [ "extradelight:corn_silk_sack" ]}
-block/storage_blocks_cucumber.json :: { "values": [ "extradelight:cucumber_crate" ]}
-block/storage_blocks_dark_chocolate_bar.json :: { "values": [ "extradelight:dark_chocolate_block" ]}
-block/storage_blocks_dried_corn_husk.json :: { "values": [ "extradelight:dried_corn_husk_bundle" ]}
-block/storage_blocks_eggs.json :: { "values": [ "extradelight:egg_crate" ]}
-block/storage_blocks_flour.json :: { "values": [ "extradelight:flour_sack" ]}
-block/storage_blocks_garlic.json :: { "values": [ "extradelight:garlic_crate" ]}
-block/storage_blocks_ginger.json :: { "values": [ "extradelight:ginger_crate" ]}
-block/storage_blocks_glow_berries.json :: { "values": [ "extradelight:glow_berry_crate" ]}
-block/storage_blocks_golden_apple.json :: { "values": [ "extradelight:golden_apple_crate" ]}
-block/storage_blocks_golden_carrot.json :: { "values": [ "extradelight:golden_carrot_crate" ]}
-block/storage_blocks_grapefruit.json :: { "values": [ "extradelight:grapefruit_crate" ]}
-block/storage_blocks_green_coffee.json :: { "values": [ "extradelight:green_coffee_beans_sack" ]}
-block/storage_blocks_ground_cinnamon.json :: { "values": [ "extradelight:ground_cinnamon_sack" ]}
-block/storage_blocks_ground_coffee.json :: { "values": [ "extradelight:ground_coffee_sack" ]}
-block/storage_blocks_hazelnuts.json :: { "values": [ "extradelight:hazelnut_sack" ]}
-block/storage_blocks_hazelnuts_in_shell.json :: { "values": [ "extradelight:hazelnut_in_shell_sack" ]}
-block/storage_blocks_lemon.json :: { "values": [ "extradelight:lemon_crate" ]}
-block/storage_blocks_lime.json :: { "values": [ "extradelight:lime_crate" ]}
-block/storage_blocks_mallow_powder.json :: { "values": [ "extradelight:mallow_powder_sack" ]}
-block/storage_blocks_mallow_root.json :: { "values": [ "extradelight:mallow_root_crate" ]}
-block/storage_blocks_marshmallow.json :: { "values": [ "extradelight:marshmallow_block" ]}
-block/storage_blocks_milk_chocolate_bar.json :: { "values": [ "extradelight:milk_chocolate_block" ]}
-block/storage_blocks_mint.json :: { "values": [ "extradelight:mint_sack" ]}
-block/storage_blocks_orange.json :: { "values": [ "extradelight:orange_crate" ]}
-block/storage_blocks_peanuts.json :: { "values": [ "extradelight:peanut_sack" ]}
-block/storage_blocks_peanuts_in_shell.json :: { "values": [ "extradelight:peanut_in_shell_sack" ]}
-block/storage_blocks_raw_cinnamon.json :: { "values": [ "extradelight:raw_cinnamon_block" ]}
-block/storage_blocks_red_mushroom.json :: { "values": [ "extradelight:red_mushroom_crate" ]}
-block/storage_blocks_roasted_cocoa_beans.json :: { "values": [ "extradelight:roasted_cocoa_beans_sack" ]}
-block/storage_blocks_roasted_hazelnuts.json :: { "values": [ "extradelight:roasted_hazelnut_sack" ]}
-block/storage_blocks_roasted_peanuts.json :: { "values": [ "extradelight:roasted_peanut_sack" ]}
-block/storage_blocks_salt.json :: { "values": [ "extradelight:salt_block" ]}
-block/storage_blocks_soybeans.json :: { "values": [ "extradelight:soybean_sack" ]}
-block/storage_blocks_sugar.json :: { "values": [ "extradelight:sugar_sack" ]}
-block/storage_blocks_sweet_berries.json :: { "values": [ "extradelight:sweet_berry_crate" ]}
-block/storage_blocks_white_chocolate_bar.json :: { "values": [ "extradelight:white_chocolate_block" ]}
-fluid/chocolate.json :: { "values": [ "extradelight:blood_chocolate_syrup_fluid", "extradelight:white_chocolate_syrup_fluid", "extradelight:milk_chocolate_syrup_fluid", "extradelight:dark_chocolate_syrup_fluid" ]}
-item/alfredo_sauce.json :: { "values": [ "extradelight:alfredo_sauce" ]}
-item/apple/sliced.json :: { "values": [ "extradelight:sliced_apple" ]}
-item/beef/cooked.json :: { "values": [ "minecraft:cooked_beef" ]}
-item/beef/ground/cooked.json :: { "values": [ "farmersdelight:beef_patty" ]}
-item/beef/ground/raw.json :: { "values": [ "farmersdelight:minced_beef", { "id": "#c:groundmeats/groundbeef", "required": false } ]}
-item/beef/raw.json :: { "values": [ "minecraft:beef" ]}
-item/beef.json :: { "values": [ "#c:beef/cooked", "#c:beef/raw" ]}
-item/block/blood_chocolate.json :: { "values": [ "extradelight:blood_chocolate_block" ]}
-item/block/chocolate.json :: { "values": [ "#c:block/white_chocolate", "#c:block/dark_chocolate", "#c:block/milk_chocolate", "#c:block/blood_chocolate" ]}
-item/block/dark_chocolate.json :: { "values": [ "extradelight:dark_chocolate_block" ]}
-item/block/milk_chocolate.json :: { "values": [ "extradelight:milk_chocolate_block" ]}
-item/block/white_chocolate.json :: { "values": [ "extradelight:white_chocolate_block" ]}
-item/bread/crumbs.json :: { "values": [ "extradelight:breadcrumbs" ]}
-item/bread/sliced.json :: { "values": [ "extradelight:bread_slice" ]}
-item/bread_slices.json :: { "values": [ "extradelight:bread_slice", "extradelight:toast" ]}
-item/butter.json :: { "values": [ "extradelight:butter" ]}
-item/butterscotch.json :: { "values": [ "extradelight:butterscotch" ]}
-item/cactus/cooked.json :: { "values": [ "extradelight:cooked_cactus" ]}
-item/candy/peppermint.json :: { "values": [ "extradelight:mint_candy_blue", "extradelight:mint_candy_green", "extradelight:mint_candy_red" ]}
-item/candy.json :: { "values": [ "extradelight:candy_black", "extradelight:candy_blue", "extradelight:candy_brown", "extradelight:candy_cyan", "extradelight:candy_green", "extradelight:candy_gray", "extradelight:candy_light_blue", "extradelight:candy_light_gray", "extradelight:candy_lime", "extradelight:candy_magenta", "extradelight:candy_orange", "extradelight:candy_pink", "extradelight:candy_purple", "extradelight:candy_red", "extradelight:candy_white", "extradelight:candy_yellow", "extradelight:caramel_candy", "extradelight:mint_candy_blue", "extradelight:mint_candy_green", "extradelight:mint_candy_red", "extradelight:candy_cane_blue", "extradelight:candy_cane_red", "extradelight:candy_cane_green", "extradelight:candied_ginger", "extradelight:candied_citrus_zest" ]}
-item/carrot/grated.json :: { "values": [ "extradelight:grated_carrot" ]}
-item/cheese.json :: { "values": [ "extradelight:cheese", { "id": "#c:foods/cheese", "required": false }, { "id": "#c:cheeses", "required": false }, { "id": "#brewinandchewin:foods/cheese_wedge", "required": false }, { "id": "#pizzadelight:ingredients/cheese_layer", "required": false } ]}
-item/cheeses.json :: { "values": [ "extradelight:cheese" ]}
-item/chili/powder.json :: { "values": [ "extradelight:chili_powder" ]}
-item/chocolate/bar/filled.json :: { "values": [ "#c:chocolate/white/bar/filled", "#c:chocolate/dark/bar/filled", "#c:chocolate/milk/bar/filled", "#c:chocolate/blood/bar/filled" ]}
-item/chocolate/bar.json :: { "values": [ "#c:chocolate/white/bar", "#c:chocolate/dark/bar", "#c:chocolate/milk/bar", "#c:chocolate/blood/bar" ]}
-item/chocolate/blood/bar/filled.json :: { "values": [ "extradelight:blood_chocolate_filled_bar" ]}
-item/chocolate/blood/bar.json :: { "values": [ "extradelight:blood_chocolate_bar" ]}
-item/chocolate/blood/chips.json :: { "values": [ "extradelight:blood_chocolate_chips" ]}
-item/chocolate/blood/truffle.json :: { "values": [ "extradelight:blood_chocolate_truffle" ]}
-item/chocolate/chips.json :: { "values": [ "#c:chocolate/white/chips", "#c:chocolate/dark/chips", "#c:chocolate/milk/chips", "#c:chocolate/blood/chips" ]}
-item/chocolate/dark/bar/filled.json :: { "values": [ "extradelight:dark_chocolate_filled_bar" ]}
-item/chocolate/dark/bar.json :: { "values": [ "extradelight:dark_chocolate_bar" ]}
-item/chocolate/dark/chips.json :: { "values": [ "extradelight:dark_chocolate_chips" ]}
-item/chocolate/dark/truffle.json :: { "values": [ "extradelight:dark_chocolate_truffle" ]}
-item/chocolate/milk/bar/filled.json :: { "values": [ "extradelight:milk_chocolate_filled_bar" ]}
-item/chocolate/milk/bar.json :: { "values": [ "extradelight:milk_chocolate_bar", { "id": "create:bar_of_chocolate", "required": false } ]}
-item/chocolate/milk/chips.json :: { "values": [ "extradelight:milk_chocolate_chips" ]}
-item/chocolate/milk/truffle.json :: { "values": [ "extradelight:milk_chocolate_truffle" ]}
-item/chocolate/truffle.json :: { "values": [ "#c:chocolate/white/truffle", "#c:chocolate/dark/truffle", "#c:chocolate/milk/truffle", "#c:chocolate/blood/truffle" ]}
-item/chocolate/white/bar/filled.json :: { "values": [ "extradelight:white_chocolate_filled_bar" ]}
-item/chocolate/white/bar.json :: { "values": [ "extradelight:white_chocolate_bar" ]}
-item/chocolate/white/chips.json :: { "values": [ "extradelight:white_chocolate_chips" ]}
-item/chocolate/white/truffle.json :: { "values": [ "extradelight:white_chocolate_truffle" ]}
-item/cinnamon/ground.json :: { "values": [ "extradelight:ground_cinnamon", { "id": "#c:dusts/cinnamon", "required": false }, { "id": "#c:groundcinnamon", "required": false } ]}
-item/cinnamon/stick.json :: { "values": [ "extradelight:cinnamon_stick" ]}
-item/cinnamon_logs.json :: { "values": [ "extradelight:cinnamon_log", "extradelight:cinnamon_wood", "extradelight:stripped_cinnamon_log", "extradelight:strippedcinnamon_wood" ]}
-item/cocoa/powder.json :: { "values": [ "extradelight:cocoa_powder" ]}
-item/cocoa/solids.json :: { "values": [ "extradelight:cocoa_solids" ]}
-item/cocoa_beans/roasted.json :: { "values": [ "extradelight:roasted_cocoa_beans" ]}
-item/coffee.json :: { "values": [ "extradelight:coffee" ]}
-item/condiments/aioli.json :: { "values": [ "extradelight:aioli_jar_item" ]}
-item/condiments/bbqsauce.json :: { "values": [ "extradelight:bbq_jar_item" ]}
-item/condiments/bbq_sauce.json :: { "values": [ "extradelight:bbq_jar_item", { "id": "#c:condiments/bbqsauce", "required": false } ]}
-item/condiments/hotsauce.json :: { "values": [ "extradelight:hot_sauce_item" ]}
-item/condiments/hot_sauce.json :: { "values": [ "extradelight:hot_sauce_item", { "id": "#c:condiments/hotsauce", "required": false } ]}
-item/condiments/ketchup.json :: { "values": [ "extradelight:ketchup_jar_item" ]}
-item/condiments/mayonaise.json :: { "values": [ "extradelight:mayo_jar_item" ]}
-item/condiments/mayonnaise.json :: { "values": [ "extradelight:mayo_jar_item", { "id": "#c:condiments/mayonaise", "required": false } ]}
-item/condiments/soysauce.json :: { "values": [ "extradelight:soy_sauce_item" ]}
-item/condiments/soy_sauce.json :: { "values": [ "extradelight:soy_sauce_item", { "id": "#c:condiments/soysauce", "required": false }, { "id": "#c:soy_sauces", "required": false } ]}
-item/condiments.json :: { "values": [ "#c:condiments/ketchup", "#c:condiments/bbq_sauce", "#c:condiments/mayonnaise", "#c:condiments/hot_sauce", "#c:condiments/soy_sauce", "#c:condiments/aioli" ]}
-item/cookie_dough/chocolate.json :: { "values": [ "extradelight:chocolate_cookie_dough" ]}
-item/cookie_dough/chocolate_chip.json :: { "values": [ "extradelight:chocolate_chip_cookie_dough" ]}
-item/cookie_dough/gingerbread.json :: { "values": [ "extradelight:gingerbread_cookie_dough" ]}
-item/cookie_dough/glow_berry.json :: { "values": [ "extradelight:glow_berry_cookie_dough" ]}
-item/cookie_dough/honey.json :: { "values": [ "extradelight:honey_cookie_dough" ]}
-item/cookie_dough/nut_butter.json :: { "values": [ "extradelight:nut_butter_cookie_dough" ]}
-item/cookie_dough/pumpkin.json :: { "values": [ "extradelight:pumpkin_cookie_dough" ]}
-item/cookie_dough/sugar.json :: { "values": [ "extradelight:sugar_cookie_dough" ]}
-item/cookie_dough/sweet_berry.json :: { "values": [ "extradelight:sweet_berry_cookie_dough" ]}
-item/cookie_dough.json :: { "values": [ "extradelight:apple_cookie_dough", "extradelight:chocolate_chip_cookie_dough", "extradelight:gingerbread_cookie_dough", "extradelight:glow_berry_cookie_dough", "extradelight:honey_cookie_dough", "extradelight:pumpkin_cookie_dough", "extradelight:sugar_cookie_dough", "extradelight:sweet_berry_cookie_dough", "extradelight:nut_butter_cookie_dough", "extradelight:chocolate_cookie_dough" ]}
-item/cookingoil/cookingoil.json :: { "values": [ "extradelight:cooking_oil" ]}
-item/cookingoil.json :: { "values": [ "extradelight:cooking_oil" ]}
-item/cooking_oil.json :: { "values": [ "extradelight:cooking_oil", { "id": "#c:cookingoil", "required": false }, { "id": "#c:olive_oils", "required": false } ]}
-item/corn/meal.json :: { "values": [ "extradelight:corn_meal", { "id": "#c:cornmeal", "required": false } ]}
-item/cornmeal.json :: { "values": [ "extradelight:corn_meal" ]}
-item/corn_flakes.json :: { "values": [ "extradelight:corn_flakes" ]}
-item/crops/chile_pepper.json :: { "values": [ "extradelight:chili" ]}
-item/crops/chili/dried.json :: { "values": [ "extradelight:dried_chili" ]}
-item/crops/chili.json :: { "values": [ "extradelight:chili", { "id": "#c:crops/chili_pepper", "required": false }, { "id": "#c:crops/chilipepper", "required": false }, { "id": "#c:crops/chile_pepper", "required": false } ]}
-item/crops/chilipepper.json :: { "values": [ "extradelight:chili" ]}
-item/crops/chili_pepper.json :: { "values": [ "extradelight:chili" ]}
-item/crops/coffee/cooked.json :: { "values": [ "extradelight:coffee_beans", { "id": "#c:crops/coffeebean", "required": false }, { "id": "#c:crops/coffee_beans", "required": false } ]}
-item/crops/coffee/green.json :: { "values": [ "extradelight:green_coffee" ]}
-item/crops/coffee/ground.json :: { "values": [ "extradelight:ground_coffee" ]}
-item/crops/coffee.json :: { "values": [ "extradelight:coffee_cherries" ]}
-item/crops/coffeebean.json :: { "values": [ "extradelight:coffee_beans" ]}
-item/crops/coffee_beans.json :: { "values": [ "extradelight:coffee_beans" ]}
-item/crops/corn.json :: { "values": [ "extradelight:corn_on_cob" ]}
-item/crops/cucumber.json :: { "values": [ "extradelight:cucumber" ]}
-item/crops/garlic.json :: { "values": [ "extradelight:garlic" ]}
-item/crops/ginger.json :: { "values": [ "extradelight:ginger" ]}
-item/crops/grapefruit.json :: { "values": [ "extradelight:grapefruit" ]}
-item/crops/hazelnut/cooked.json :: { "values": [ "extradelight:roasted_hazelnuts" ]}
-item/crops/hazelnut/shelled.json :: { "values": [ "extradelight:hazelnuts" ]}
-item/crops/hazelnut.json :: { "values": [ "extradelight:hazelnuts_in_shell" ]}
-item/crops/lemon.json :: { "values": [ "extradelight:lemon" ]}
-item/crops/lime.json :: { "values": [ "extradelight:lime" ]}
-item/crops/mallow_root.json :: { "values": [ "extradelight:mallow_root" ]}
-item/crops/orange.json :: { "values": [ "extradelight:orange" ]}
-item/crops/peanut/cooked.json :: { "values": [ "extradelight:roasted_peanuts" ]}
-item/crops/peanut/shelled.json :: { "values": [ "extradelight:peanuts" ]}
-item/crops/peanut.json :: { "values": [ "extradelight:peanuts_in_shell" ]}
-item/crops/soybean.json :: { "values": [ "extradelight:soybeans" ]}
-item/crops.json :: { "values": [ "extradelight:ginger", "extradelight:mint", "extradelight:chili", "extradelight:mallow_root", "extradelight:peanuts", "extradelight:garlic", "extradelight:cucumber", "extradelight:soybeans" ]}
-item/croutons.json :: { "values": [ "extradelight:croutons" ]}
-item/dough.json :: { "values": [ { "id": "#c:foods/dough", "required": false }, { "id": "#c:doughs", "required": false } ]}
-item/dusts/cinnamon.json :: { "values": [ "extradelight:ground_cinnamon" ]}
-item/dusts/salt.json :: { "values": [ "extradelight:salt" ]}
-item/dyed/black.json :: { "values": [ "extradelight:black_chocolate_box", "extradelight:gingham_carpet_black", "extradelight:gingham_black", "extradelight:oak_molded_black_wallpaper", "extradelight:wallpaper_black", "extradelight:ribbon_bow_black" ]}
-item/dyed/blue.json :: { "values": [ "extradelight:blue_chocolate_box", "extradelight:gingham_carpet_blue", "extradelight:gingham_blue", "extradelight:oak_molded_blue_wallpaper", "extradelight:wallpaper_blue", "extradelight:ribbon_bow_blue" ]}
-item/dyed/brown.json :: { "values": [ "extradelight:brown_chocolate_box", "extradelight:gingham_carpet_brown", "extradelight:gingham_brown", "extradelight:oak_molded_brown_wallpaper", "extradelight:wallpaper_brown", "extradelight:ribbon_bow_brown" ]}
-item/dyed/cyan.json :: { "values": [ "extradelight:cyan_chocolate_box", "extradelight:gingham_carpet_cyan", "extradelight:gingham_cyan", "extradelight:oak_molded_cyan_wallpaper", "extradelight:wallpaper_cyan", "extradelight:ribbon_bow_cyan" ]}
-item/dyed/gray.json :: { "values": [ "extradelight:gray_chocolate_box", "extradelight:gingham_carpet_gray", "extradelight:gingham_gray", "extradelight:oak_molded_gray_wallpaper", "extradelight:wallpaper_gray", "extradelight:ribbon_bow_gray" ]}
-item/dyed/green.json :: { "values": [ "extradelight:green_chocolate_box", "extradelight:gingham_carpet_green", "extradelight:gingham_green", "extradelight:oak_molded_green_wallpaper", "extradelight:wallpaper_green", "extradelight:ribbon_bow_green" ]}
-item/dyed/light_blue.json :: { "values": [ "extradelight:light_blue_chocolate_box", "extradelight:gingham_carpet_light_blue", "extradelight:gingham_light_blue", "extradelight:oak_molded_light_blue_wallpaper", "extradelight:wallpaper_light_blue", "extradelight:ribbon_bow_light_blue" ]}
-item/dyed/light_gray.json :: { "values": [ "extradelight:light_gray_chocolate_box", "extradelight:gingham_carpet_light_gray", "extradelight:gingham_light_gray", "extradelight:oak_molded_light_gray_wallpaper", "extradelight:wallpaper_light_gray", "extradelight:ribbon_bow_light_gray" ]}
-item/dyed/lime.json :: { "values": [ "extradelight:lime_chocolate_box", "extradelight:gingham_carpet_lime", "extradelight:gingham_lime", "extradelight:oak_molded_lime_wallpaper", "extradelight:wallpaper_lime", "extradelight:ribbon_bow_lime" ]}
-item/dyed/magenta.json :: { "values": [ "extradelight:magenta_chocolate_box", "extradelight:gingham_carpet_magenta", "extradelight:gingham_magenta", "extradelight:oak_molded_magenta_wallpaper", "extradelight:wallpaper_magenta", "extradelight:ribbon_bow_magenta" ]}
-item/dyed/orange.json :: { "values": [ "extradelight:orange_chocolate_box", "extradelight:gingham_carpet_orange", "extradelight:gingham_orange", "extradelight:oak_molded_orange_wallpaper", "extradelight:wallpaper_orange", "extradelight:ribbon_bow_orange" ]}
-item/dyed/pink.json :: { "values": [ "extradelight:pink_chocolate_box", "extradelight:gingham_carpet_pink", "extradelight:gingham_pink", "extradelight:oak_molded_pink_wallpaper", "extradelight:wallpaper_pink", "extradelight:ribbon_bow_pink" ]}
-item/dyed/purple.json :: { "values": [ "extradelight:purple_chocolate_box", "extradelight:gingham_carpet_purple", "extradelight:gingham_purple", "extradelight:oak_molded_purple_wallpaper", "extradelight:wallpaper_purple", "extradelight:ribbon_bow_purple" ]}
-item/dyed/red.json :: { "values": [ "extradelight:red_chocolate_box", "extradelight:gingham_carpet_red", "extradelight:gingham_red", "extradelight:oak_molded_red_wallpaper", "extradelight:wallpaper_red", "extradelight:ribbon_bow_red" ]}
-item/dyed/white.json :: { "values": [ "extradelight:white_chocolate_box", "extradelight:gingham_carpet_white", "extradelight:gingham_white", "extradelight:oak_molded_white_wallpaper", "extradelight:wallpaper_white", "extradelight:ribbon_bow_white" ]}
-item/dyed/yellow.json :: { "values": [ "extradelight:yellow_chocolate_box", "extradelight:gingham_carpet_yellow", "extradelight:gingham_yellow", "extradelight:oak_molded_yellow_wallpaper", "extradelight:wallpaper_yellow", "extradelight:ribbon_bow_yellow" ]}
-item/eggs/boiled.json :: { "values": [ "extradelight:boiled_egg" ]}
-item/fish_flakes.json :: { "values": [ "extradelight:fish_flakes" ]}
-item/fish_sauce.json :: { "values": [ "extradelight:fish_sauce_item" ]}
-item/flour.json :: { "values": [ "extradelight:flour", { "id": "#c:flours/wheat", "required": false } ]}
-item/flours/wheat.json :: { "values": [ "extradelight:flour" ]}
-item/food/starch.json :: { "values": [ "farmersdelight:rice", "extradelight:potato_sticks", "extradelight:grated_potato", "extradelight:sliced_potato" ]}
-item/foods/bread_slice.json :: { "values": [ "extradelight:bread_slice", "extradelight:toast" ]}
-item/foods/cake/slice.json :: { "values": [ "farmersdelight:cake_slice", "extradelight:coffee_cake_slice", "extradelight:chocolate_cake", "extradelight:lemon_cucumber_cake_slice", "extradelight:melon_layer_cake_slice", "extradelight:kyiv_cake_slice" ]}
-item/foods/cheese.json :: { "values": [ "extradelight:cheese" ]}
-item/foods/cooked_egg.json :: { "values": [ "extradelight:boiled_egg", "extradelight:scrambled_eggs" ]}
-item/foods/cooked_wheat_seeds.json :: { "values": [ "extradelight:cooked_wheat_seeds" ]}
-item/foods/cookie/gingerbread.json :: { "values": [ "extradelight:gingerbread_cookie", "extradelight:gingerbread_alex", "extradelight:gingerbread_creeper", "extradelight:gingerbread_diamond", "extradelight:gingerbread_emerald", "extradelight:gingerbread_pickaxe", "extradelight:gingerbread_steve", "extradelight:gingerbread_sword" ]}
-item/foods/cookie/sugar.json :: { "values": [ "extradelight:sugar_cookie", "extradelight:sugar_cookie_alex", "extradelight:sugar_cookie_creeper", "extradelight:sugar_cookie_diamond", "extradelight:sugar_cookie_emerald", "extradelight:sugar_cookie_pickaxe", "extradelight:sugar_cookie_steve", "extradelight:sugar_cookie_sword" ]}
-item/foods/cookie.json :: { "values": [ "extradelight:apple_cookie", "extradelight:glow_berry_cookie", "extradelight:pumpkin_cookie", "extradelight:nut_butter_cookie", "extradelight:chocolate_cookie", "#c:foods/cookie/sugar", "#c:foods/cookie/gingerbread" ]}
-item/foods/custard.json :: { "values": [ "extradelight:apple_custard", "extradelight:caramel_custard", "extradelight:chocolate_custard", "farmersdelight:glow_berry_custard", "extradelight:honey_custard", "extradelight:pumpkin_custard", "extradelight:sweet_berry_custard" ]}
-item/foods/milk.json :: { "values": [ "extradelight:soy_milk" ]}
-item/foods/natto.json :: { "values": [ "extradelight:natto_item" ]}
-item/foods/pickled/egg.json :: { "values": [ "extradelight:pickled_egg_item" ]}
-item/foods/pickled/meat/fish.json :: { "values": [ "extradelight:pickled_fish_item" ]}
-item/foods/pickled/meat/sausage.json :: { "values": [ "extradelight:pickled_sausage_item" ]}
-item/foods/pickled/meat.json :: { "values": [ "#c:foods/pickled/meat/fish", "#c:foods/pickled/meat/sausage" ]}
-item/foods/pickled/vegetables/beetroot.json :: { "values": [ "extradelight:pickled_beet_item" ]}
-item/foods/pickled/vegetables/carrot.json :: { "values": [ "extradelight:pickled_carrot_item" ]}
-item/foods/pickled/vegetables/cucumber/sliced.json :: { "values": [ "extradelight:sliced_gherkin_item" ]}
-item/foods/pickled/vegetables/cucumber.json :: { "values": [ "extradelight:gherkin_item" ]}
-item/foods/pickled/vegetables/onion.json :: { "values": [ "extradelight:pickled_onion_item" ]}
-item/foods/pickled/vegetables.json :: { "values": [ "#c:foods/pickled/vegetables/cucumber", "#c:foods/pickled/vegetables/beetroot", "#c:foods/pickled/vegetables/onion", "#c:foods/pickled/vegetables/carrot" ]}
-item/foods/pickled.json :: { "values": [ "#c:foods/pickled/vegetables", "#c:foods/pickled/meat", "#c:foods/pickled/egg" ]}
-item/foods/popcorn.json :: { "values": [ "extradelight:popcorn" ]}
-item/foods/salami.json :: { "values": [ "extradelight:salami_item" ]}
-item/foods/soup.json :: { "values": [ "extradelight:carrot_soup", "extradelight:cactus_soup", "extradelight:fish_soup", "extradelight:oxtail_soup", "extradelight:potato_soup", "extradelight:tomato_soup", "farmersdelight:chicken_soup", "farmersdelight:noodle_soup", "farmersdelight:pumpkin_soup", "farmersdelight:vegetable_soup" ]}
-item/foods/vegetable.json :: { "values": [ "extradelight:corn_seeds", "extradelight:chili", "extradelight:cucumber" ]}
-item/frosting/black.json :: { "values": [ "extradelight:frosting_black" ]}
-item/frosting/blue.json :: { "values": [ "extradelight:frosting_blue" ]}
-item/frosting/brown.json :: { "values": [ "extradelight:frosting_brown" ]}
-item/frosting/cyan.json :: { "values": [ "extradelight:frosting_cyan" ]}
-item/frosting/gray.json :: { "values": [ "extradelight:frosting_gray" ]}
-item/frosting/green.json :: { "values": [ "extradelight:frosting_green" ]}
-item/frosting/light_blue.json :: { "values": [ "extradelight:frosting_light_blue" ]}
-item/frosting/light_gray.json :: { "values": [ "extradelight:frosting_light_gray" ]}
-item/frosting/lime.json :: { "values": [ "extradelight:frosting_lime" ]}
-item/frosting/magenta.json :: { "values": [ "extradelight:frosting_magenta" ]}
-item/frosting/orange.json :: { "values": [ "extradelight:frosting_orange" ]}
-item/frosting/pink.json :: { "values": [ "extradelight:frosting_pink" ]}
-item/frosting/purple.json :: { "values": [ "extradelight:frosting_purple" ]}
-item/frosting/red.json :: { "values": [ "extradelight:frosting_red" ]}
-item/frosting/white.json :: { "values": [ "extradelight:frosting_white" ]}
-item/frosting/yellow.json :: { "values": [ "extradelight:frosting_yellow" ]}
-item/frosting.json :: { "values": [ "extradelight:frosting_black", "extradelight:frosting_blue", "extradelight:frosting_brown", "extradelight:frosting_cyan", "extradelight:frosting_gray", "extradelight:frosting_green", "extradelight:frosting_light_blue", "extradelight:frosting_light_gray", "extradelight:frosting_lime", "extradelight:frosting_magenta", "extradelight:frosting_orange", "extradelight:frosting_pink", "extradelight:frosting_purple", "extradelight:frosting_red", "extradelight:frosting_white", "extradelight:frosting_yellow" ]}
-item/fruit/apple.json :: { "values": [ "minecraft:apple" ]}
-item/fruit/dried.json :: { "values": [ "extradelight:dried_fruit" ]}
-item/fruit/glow_berry.json :: { "values": [ "minecraft:glow_berries" ]}
-item/fruit/melon.json :: { "values": [ "minecraft:melon_slice" ]}
-item/fruit/sweet_berry.json :: { "values": [ "minecraft:sweet_berries" ]}
-item/fruit.json :: { "values": [ "#c:fruit/apple", "#c:fruit/glow_berry", "#c:fruit/sweet_berry", "#c:fruit/melon", "minecraft:chorus_fruit", "extradelight:lemon", "extradelight:lime", "extradelight:orange", "extradelight:grapefruit" ]}
-item/fruit_logs.json :: { "values": [ "extradelight:fruit_log", "extradelight:fruit_wood", "extradelight:stripped_fruit_log", "extradelight:stripped_fruit_wood" ]}
-item/fudge.json :: { "values": [ "extradelight:fudge" ]}
-item/gelatin.json :: { "values": [ "extradelight:agar_agar" ]}
-item/ginger/grated.json :: { "values": [ "extradelight:grated_ginger" ]}
-item/ginger/sliced.json :: { "values": [ "extradelight:sliced_ginger" ]}
-item/graham_cracker.json :: { "values": [ "extradelight:graham_cracker" ]}
-item/gravy.json :: { "values": [ "extradelight:gravy_boat_item" ]}
-item/groundcinnamon.json :: { "values": [ "extradelight:ground_cinnamon" ]}
-item/ground_meat/cooked.json :: { "values": [ "#c:beef/ground/cooked" ]}
-item/ground_meat/raw.json :: { "values": [ "#c:beef/ground/raw", "#c:pork/ground/raw", "#c:mutton/ground/raw", "#c:rabbit/ground/raw" ]}
-item/gummies.json :: { "values": [ "extradelight:gummies" ]}
-item/ice/cubes.json :: { "values": [ "extradelight:ice_cubes" ]}
-item/ice_cream.json :: { "values": [ "extradelight:ice_cream", "extradelight:apple_ice_cream", "extradelight:chocolate_ice_cream", "extradelight:cookie_dough_ice_cream", "extradelight:glow_berry_ice_cream", "extradelight:honey_ice_cream", "extradelight:mint_chip_ice_cream", "extradelight:pumpkin_ice_cream", "extradelight:sweet_berry_ice_cream" ]}
-item/jam/fruit.json :: { "values": [ "extradelight:jam" ]}
-item/jam/glow_berry.json :: { "values": [ "extradelight:glow_berry_jam" ]}
-item/jam/golden_apple.json :: { "values": [ "extradelight:golden_apple_jam" ]}
-item/jam/mint.json :: { "values": [ "extradelight:mint_jelly" ]}
-item/jam/mundane.json :: { "values": [ "#c:jam/fruit", "#c:jam/mint" ]}
-item/jammable.json :: { "values": [ "#c:foods/fruit", "#c:foods/berry", "#c:crops/carrot" ]}
-item/jams.json :: { "values": [ "extradelight:dynamic_jam", "#c:jam/mundane", "#c:jam/golden_apple", "#c:jam/glow_berry", { "id": "#c:jellies", "required": false } ]}
-item/jellies.json :: { "values": [ "extradelight:dynamic_jam" ]}
-item/kimchi.json :: { "values": [ "extradelight:kimchi_item" ]}
-item/liquid_chocolate.json :: { "values": [ "extradelight:blood_chocolate_syrup_bottle", "extradelight:dark_chocolate_syrup_bottle", "extradelight:milk_chocolate_syrup_bottle", "extradelight:white_chocolate_syrup_bottle" ]}
-item/mallowroot/powder.json :: { "values": [ "extradelight:mallow_powder" ]}
-item/marshmallow.json :: { "values": [ "extradelight:marshmallow" ]}
-item/marshmallow_fluff.json :: { "values": [ "extradelight:marshmallow_fluff_bottle" ]}
-item/meat/cooked.json :: { "values": [ "minecraft:cooked_beef", "minecraft:cooked_chicken", "minecraft:cooked_mutton", "minecraft:cooked_porkchop", "minecraft:cooked_rabbit" ]}
-item/meat/raw.json :: { "values": [ "minecraft:beef", "minecraft:chicken", "minecraft:mutton", "minecraft:porkchop", "minecraft:rabbit", { "id": "#c:rawmeats", "required": false } ]}
-item/meat.json :: { "values": [ "#c:meat/cooked", "#c:meat/raw" ]}
-item/milk/soy.json :: { "values": [ "extradelight:soy_milk", { "id": "#c:milk/soymilk", "required": false }, { "id": "#c:soy_milks", "required": false } ]}
-item/milk/soymilk.json :: { "values": [ "extradelight:soy_milk" ]}
-item/mint.json :: { "values": [ "extradelight:mint" ]}
-item/miso_paste.json :: { "values": [ "extradelight:miso_paste_item" ]}
-item/miso_soup_ingredients.json :: { "values": [ "#extradelight:processed/cabbage", "#c:mushrooms", "#extradelight:processed/carrot", "#extradelight:processed/potato", "#extradelight:processed/onion", { "id": "#c:foods/safe_raw_fish", "required": false } ]}
-item/mortars.json :: { "values": [ "extradelight:mortar_stone" ]}
-item/mutton/ground/raw.json :: { "values": [ { "id": "#c:groundmeats/groundmutton", "required": false } ]}
-item/nougat.json :: { "values": [ "extradelight:nougat" ]}
-item/nutbutters.json :: { "values": [ "extradelight:peanut_butter_bottle" ]}
-item/nuts/cooked.json :: { "values": [ "#c:crops/hazelnut/cooked", "#c:crops/peanut/cooked" ]}
-item/nuts.json :: { "values": [ "#c:crops/hazelnut/shelled", "#c:crops/peanut/shelled" ]}
-item/nut_butter.json :: { "values": [ "extradelight:peanut_butter_bottle", { "id": "#c:nutbutters", "required": false } ]}
-item/offset_spatula.json :: { "values": [ "extradelight:offset_spatula_diamond", "extradelight:offset_spatula_gold", "extradelight:offset_spatula_iron", "extradelight:offset_spatula_netherite", "extradelight:offset_spatula_wood" ]}
-item/onion/sliced.json :: { "values": [ "extradelight:sliced_onion" ]}
-item/pasta.json :: { "values": [ { "id": "#c:foods/pasta", "required": false } ]}
-item/peanut_brittle.json :: { "values": [ "extradelight:peanut_brittle" ]}
-item/pestles.json :: { "values": [ "extradelight:pestle_amethyst", "extradelight:pestle_andesite", "extradelight:pestle_basalt", "extradelight:pestle_blackstone", "extradelight:pestle_deepslate", "extradelight:pestle_diorite", "extradelight:pestle_endstone", "extradelight:pestle_gilded_blackstone", "extradelight:pestle_granite", "extradelight:pestle_stone" ]}
-item/pickle_juice.json :: { "values": [ "extradelight:pickle_juice" ]}
-item/popcorn.json :: { "values": [ "extradelight:popcorn", { "id": "#c:foods/popcorn", "required": false } ]}
-item/pork/ground/raw.json :: { "values": [ { "id": "#c:groundmeats/groundpork", "required": false } ]}
-item/potato/grated.json :: { "values": [ "extradelight:grated_potato" ]}
-item/potato/sliced.json :: { "values": [ "extradelight:sliced_potato" ]}
-item/potato/sticks.json :: { "values": [ "extradelight:potato_sticks" ]}
-item/puffed_rice.json :: { "values": [ "extradelight:crisp_rice" ]}
-item/rabbit/ground/raw.json :: { "values": [ { "id": "#c:groundmeats/groundrabbit", "required": false } ]}
-item/rawmeats.json :: { "values": [ "#c:meat/raw" ]}
-item/ribbon.json :: { "values": [ "extradelight:ribbon_bow_white", "extradelight:ribbon_bow_orange", "extradelight:ribbon_bow_magenta", "extradelight:ribbon_bow_light_blue", "extradelight:ribbon_bow_yellow", "extradelight:ribbon_bow_lime", "extradelight:ribbon_bow_pink", "extradelight:ribbon_bow_gray", "extradelight:ribbon_bow_light_gray", "extradelight:ribbon_bow_cyan", "extradelight:ribbon_bow_purple", "extradelight:ribbon_bow_blue", "extradelight:ribbon_bow_brown", "extradelight:ribbon_bow_green", "extradelight:ribbon_bow_red", "extradelight:ribbon_bow_black" ]}
-item/salami_mix.json :: { "values": [ "extradelight:salami_mix" ]}
-item/salt.json :: { "values": [ "extradelight:salt", { "id": "#c:dusts/salt", "required": false } ]}
-item/sauerkraut.json :: { "values": [ "extradelight:sauerkraut_item" ]}
-item/seeds/corn.json :: { "values": [ "extradelight:corn_seeds" ]}
-item/seeds.json :: { "values": [ "extradelight:corn_seeds", "extradelight:chili_seeds", "extradelight:peanuts", "extradelight:cucumber_seed", "extradelight:soybeans" ]}
-item/slime_balls.json :: { "values": [ "extradelight:seaweed_paste" ]}
-item/soybeans/cooked.json :: { "values": [ "extradelight:cooked_soybeans_item" ]}
-item/soybeans/mashed.json :: { "values": [ "extradelight:mashed_soybeans_item" ]}
-item/soybeans/soaked.json :: { "values": [ "extradelight:soaked_soybeans_item" ]}
-item/soy_milks.json :: { "values": [ "extradelight:soy_milk" ]}
-item/soy_sauces.json :: { "values": [ "extradelight:soy_sauce_item" ]}
-item/spoons.json :: { "values": [ "extradelight:wooden_spoon", "extradelight:stone_spoon", "extradelight:iron_spoon", "extradelight:gold_spoon", "extradelight:diamond_spoon", "extradelight:netherite_spoon" ]}
-item/storage_blocks.json :: { "values": [ "#c:storage_blocks_cheese", "#c:storage_blocks_butter", "#c:storage_blocks_flour", "#c:storage_blocks_corn_meal", "#c:storage_blocks_sugar", "#c:storage_blocks_corn_on_cob", "#c:storage_blocks_corn_husk", "#c:storage_blocks_dried_corn_husk", "#c:storage_blocks_corn_cob", "#c:storage_blocks_ginger", "#c:storage_blocks_eggs", "#c:storage_blocks_apple", "#c:storage_blocks_golden_apple", "#c:storage_blocks_brown_mushroom", "#c:storage_blocks_red_mushroom", "#c:storage_blocks_sweet_berries", "#c:storage_blocks_glow_berries", "#c:storage_blocks_corn_silk", "#c:storage_blocks_ground_cinnamon", "#c:storage_blocks_raw_cinnamon", "#c:storage_blocks_cinnamon_stick", "#c:storage_blocks_bread_crumbs", "#c:storage_blocks_mint", "#c:storage_blocks_marshmallow", "#c:storage_blocks_golden_carrot", "#c:storage_blocks_blood_chocolate_bar", "#c:storage_blocks_dark_chocolate_bar", "#c:storage_blocks_milk_chocolate_bar", "#c:storage_blocks_white_chocolate_bar", "#c:storage_blocks_chili", "#c:storage_blocks_chili_powder", "#c:storage_blocks_peanuts_in_shell", "#c:storage_blocks_peanuts", "#c:storage_blocks_roasted_peanuts", "#c:storage_blocks_hazelnuts_in_shell", "#c:storage_blocks_hazelnuts", "#c:storage_blocks_roasted_hazelnuts", "#c:storage_blocks_mallow_root", "#c:storage_blocks_mallow_powder", "#c:storage_blocks_coffee_cherries", "#c:storage_blocks_green_coffee", "#c:storage_blocks_coffee_beans", "#c:storage_blocks_ground_coffee", "#c:storage_blocks_cocoa_beans", "#c:storage_blocks_roasted_cocoa_beans", "#c:storage_blocks_cocoa_solids", "#c:storage_blocks_cocoa_powder", "#c:storage_blocks_corn_kernels", "#c:storage_blocks_garlic", "#c:storage_blocks_cucumber", "#c:storage_blocks_soybeans", "#c:storage_blocks_salt", "#c:storage_blocks_lemon", "#c:storage_blocks_lime", "#c:storage_blocks_orange", "#c:storage_blocks_grapefruit" ]}
-item/storage_blocks_apple.json :: { "values": [ "extradelight:apple_crate" ]}
-item/storage_blocks_blood_chocolate_bar.json :: { "values": [ "extradelight:blood_chocolate_block" ]}
-item/storage_blocks_bread_crumbs.json :: { "values": [ "extradelight:breadcrumb_sack" ]}
-item/storage_blocks_brown_mushroom.json :: { "values": [ "extradelight:brown_mushroom_crate" ]}
-item/storage_blocks_butter.json :: { "values": [ "extradelight:butter_block_item" ]}
-item/storage_blocks_cheese.json :: { "values": [ "extradelight:cheese_block_item" ]}
-item/storage_blocks_chili.json :: { "values": [ "extradelight:chili_crate" ]}
-item/storage_blocks_chili_powder.json :: { "values": [ "extradelight:chili_powder_sack" ]}
-item/storage_blocks_cinnamon_stick.json :: { "values": [ "extradelight:cinnamon_stick_block" ]}
-item/storage_blocks_cocoa_beans.json :: { "values": [ "extradelight:cocoa_bean_sack" ]}
-item/storage_blocks_cocoa_powder.json :: { "values": [ "extradelight:cocoa_powder_sack" ]}
-item/storage_blocks_cocoa_solids.json :: { "values": [ "extradelight:cocoa_solids_sack" ]}
-item/storage_blocks_coffee_beans.json :: { "values": [ "extradelight:coffee_bean_sack" ]}
-item/storage_blocks_coffee_cherries.json :: { "values": [ "extradelight:coffee_cherry_crate" ]}
-item/storage_blocks_corn_cob.json :: { "values": [ "extradelight:corn_cob_bundle" ]}
-item/storage_blocks_corn_husk.json :: { "values": [ "extradelight:corn_husk_bundle" ]}
-item/storage_blocks_corn_kernels.json :: { "values": [ "extradelight:corn_sack" ]}
-item/storage_blocks_corn_meal.json :: { "values": [ "extradelight:cornmeal_sack" ]}
-item/storage_blocks_corn_on_cob.json :: { "values": [ "extradelight:corn_crate" ]}
-item/storage_blocks_corn_silk.json :: { "values": [ "extradelight:corn_silk_sack" ]}
-item/storage_blocks_cucumber.json :: { "values": [ "extradelight:cucumber_crate_item" ]}
-item/storage_blocks_dark_chocolate_bar.json :: { "values": [ "extradelight:dark_chocolate_block" ]}
-item/storage_blocks_dried_corn_husk.json :: { "values": [ "extradelight:dried_corn_husk_bundle" ]}
-item/storage_blocks_eggs.json :: { "values": [ "extradelight:egg_crate" ]}
-item/storage_blocks_flour.json :: { "values": [ "extradelight:flour_sack" ]}
-item/storage_blocks_garlic.json :: { "values": [ "extradelight:garlic_crate" ]}
-item/storage_blocks_ginger.json :: { "values": [ "extradelight:ginger_crate" ]}
-item/storage_blocks_glow_berries.json :: { "values": [ "extradelight:glow_berry_crate" ]}
-item/storage_blocks_golden_apple.json :: { "values": [ "extradelight:golden_apple_crate" ]}
-item/storage_blocks_golden_carrot.json :: { "values": [ "extradelight:golden_carrot_crate_block" ]}
-item/storage_blocks_grapefruit.json :: { "values": [ "extradelight:grapefruit_crate_item" ]}
-item/storage_blocks_green_coffee.json :: { "values": [ "extradelight:green_coffee_bean_sack" ]}
-item/storage_blocks_ground_cinnamon.json :: { "values": [ "extradelight:ground_cinnamon_sack" ]}
-item/storage_blocks_ground_coffee.json :: { "values": [ "extradelight:ground_coffee_sack" ]}
-item/storage_blocks_hazelnuts.json :: { "values": [ "extradelight:hazelnut_sack" ]}
-item/storage_blocks_hazelnuts_in_shell.json :: { "values": [ "extradelight:hazelnut_in_shell_sack" ]}
-item/storage_blocks_lemon.json :: { "values": [ "extradelight:lemon_crate_item" ]}
-item/storage_blocks_lime.json :: { "values": [ "extradelight:lime_crate_item" ]}
-item/storage_blocks_mallow_powder.json :: { "values": [ "extradelight:mallow_powder_sack" ]}
-item/storage_blocks_mallow_root.json :: { "values": [ "extradelight:mallow_root_crate" ]}
-item/storage_blocks_marshmallow.json :: { "values": [ "extradelight:marshmallow_block" ]}
-item/storage_blocks_milk_chocolate_bar.json :: { "values": [ "extradelight:milk_chocolate_block" ]}
-item/storage_blocks_mint.json :: { "values": [ "extradelight:mint_sack" ]}
-item/storage_blocks_orange.json :: { "values": [ "extradelight:orange_crate_item" ]}
-item/storage_blocks_peanuts.json :: { "values": [ "extradelight:peanut_sack" ]}
-item/storage_blocks_peanuts_in_shell.json :: { "values": [ "extradelight:peanut_in_shell_sack" ]}
-item/storage_blocks_raw_cinnamon.json :: { "values": [ "extradelight:raw_cinnamon_block" ]}
-item/storage_blocks_red_mushroom.json :: { "values": [ "extradelight:red_mushroom_crate" ]}
-item/storage_blocks_roasted_cocoa_beans.json :: { "values": [ "extradelight:roasted_cocoa_bean_sack" ]}
-item/storage_blocks_roasted_hazelnuts.json :: { "values": [ "extradelight:roasted_hazelnut_sack" ]}
-item/storage_blocks_roasted_peanuts.json :: { "values": [ "extradelight:roasted_peanut_sack" ]}
-item/storage_blocks_salt.json :: { "values": [ "extradelight:salt_block_item" ]}
-item/storage_blocks_soybeans.json :: { "values": [ "extradelight:soybean_sack_item" ]}
-item/storage_blocks_sugar.json :: { "values": [ "extradelight:sugar_sack" ]}
-item/storage_blocks_sweet_berries.json :: { "values": [ "extradelight:sweet_berry_crate" ]}
-item/storage_blocks_white_chocolate_bar.json :: { "values": [ "extradelight:white_chocolate_block" ]}
-item/tea_ingredients.json :: { "values": [ "#c:mint", "#extradelight:processed/ginger", "extradelight:corn_silk", "#c:crops/mallow_root" ]}
-item/toast.json :: { "values": [ "extradelight:toast", "extradelight:toast" ]}
-item/toffee.json :: { "values": [ "extradelight:toffee" ]}
-item/tomato/sliced.json :: { "values": [ "extradelight:sliced_tomato" ]}
-item/tools.json :: { "values": [ "#c:spoons", "#c:pestles" ]}
-item/trail_mix.json :: { "values": [ "extradelight:trail_mix" ]}
-item/vegetable/cactus.json :: { "values": [ "extradelight:cactus" ]}
-item/vegetable/corn.json :: { "values": [ "extradelight:corn_on_cob" ]}
-item/vinegar.json :: { "values": [ "extradelight:vinegar" ]}
-item/whipped_cream.json :: { "values": [ "extradelight:whipped_cream" ]}
-item/yeast_spread.json :: { "values": [ "extradelight:yeast_spread" ]}
+block/cold_sources :: {"values": ["minecraft:ice", "minecraft:blue_ice", "minecraft:frosted_ice", "minecraft:packed_ice", "minecraft:snow_block", "minecraft:powder_snow_cauldron"]}
+block/dyed/black :: {"values": ["extradelight:black_chocolate_box", "extradelight:gingham_carpet_black", "extradelight:gingham_black", "extradelight:oak_molded_black_wallpaper", "extradelight:wallpaper_black", "extradelight:ribbon_bow_black"]}
+block/dyed/blue :: {"values": ["extradelight:blue_chocolate_box", "extradelight:gingham_carpet_blue", "extradelight:gingham_blue", "extradelight:oak_molded_blue_wallpaper", "extradelight:wallpaper_blue", "extradelight:ribbon_bow_blue"]}
+block/dyed/brown :: {"values": ["extradelight:brown_chocolate_box", "extradelight:gingham_carpet_brown", "extradelight:gingham_brown", "extradelight:oak_molded_brown_wallpaper", "extradelight:wallpaper_brown", "extradelight:ribbon_bow_brown"]}
+block/dyed/cyan :: {"values": ["extradelight:cyan_chocolate_box", "extradelight:gingham_carpet_cyan", "extradelight:gingham_cyan", "extradelight:oak_molded_cyan_wallpaper", "extradelight:wallpaper_cyan", "extradelight:ribbon_bow_cyan"]}
+block/dyed/gray :: {"values": ["extradelight:gray_chocolate_box", "extradelight:gingham_carpet_gray", "extradelight:gingham_gray", "extradelight:oak_molded_gray_wallpaper", "extradelight:wallpaper_gray", "extradelight:ribbon_bow_gray"]}
+block/dyed/green :: {"values": ["extradelight:green_chocolate_box", "extradelight:gingham_carpet_green", "extradelight:gingham_green", "extradelight:oak_molded_green_wallpaper", "extradelight:wallpaper_green", "extradelight:ribbon_bow_green"]}
+block/dyed/light_blue :: {"values": ["extradelight:light_blue_chocolate_box", "extradelight:gingham_carpet_light_blue", "extradelight:gingham_light_blue", "extradelight:oak_molded_light_blue_wallpaper", "extradelight:wallpaper_light_blue", "extradelight:ribbon_bow_light_blue"]}
+block/dyed/light_gray :: {"values": ["extradelight:light_gray_chocolate_box", "extradelight:gingham_carpet_light_gray", "extradelight:gingham_light_gray", "extradelight:oak_molded_light_gray_wallpaper", "extradelight:wallpaper_light_gray", "extradelight:ribbon_bow_light_gray"]}
+block/dyed/lime :: {"values": ["extradelight:lime_chocolate_box", "extradelight:gingham_carpet_lime", "extradelight:gingham_lime", "extradelight:oak_molded_lime_wallpaper", "extradelight:wallpaper_lime", "extradelight:ribbon_bow_lime"]}
+block/dyed/magenta :: {"values": ["extradelight:magenta_chocolate_box", "extradelight:gingham_carpet_magenta", "extradelight:gingham_magenta", "extradelight:oak_molded_magenta_wallpaper", "extradelight:wallpaper_magenta", "extradelight:ribbon_bow_magenta"]}
+block/dyed/orange :: {"values": ["extradelight:orange_chocolate_box", "extradelight:gingham_carpet_orange", "extradelight:gingham_orange", "extradelight:oak_molded_orange_wallpaper", "extradelight:wallpaper_orange", "extradelight:ribbon_bow_orange"]}
+block/dyed/pink :: {"values": ["extradelight:pink_chocolate_box", "extradelight:gingham_carpet_pink", "extradelight:gingham_pink", "extradelight:oak_molded_pink_wallpaper", "extradelight:wallpaper_pink", "extradelight:ribbon_bow_pink"]}
+block/dyed/purple :: {"values": ["extradelight:purple_chocolate_box", "extradelight:gingham_carpet_purple", "extradelight:gingham_purple", "extradelight:oak_molded_purple_wallpaper", "extradelight:wallpaper_purple", "extradelight:ribbon_bow_purple"]}
+block/dyed/red :: {"values": ["extradelight:red_chocolate_box", "extradelight:gingham_carpet_red", "extradelight:gingham_red", "extradelight:oak_molded_red_wallpaper", "extradelight:wallpaper_red", "extradelight:ribbon_bow_red"]}
+block/dyed/white :: {"values": ["extradelight:white_chocolate_box", "extradelight:gingham_carpet_white", "extradelight:gingham_white", "extradelight:oak_molded_white_wallpaper", "extradelight:wallpaper_white", "extradelight:ribbon_bow_white"]}
+block/dyed/yellow :: {"values": ["extradelight:yellow_chocolate_box", "extradelight:gingham_carpet_yellow", "extradelight:gingham_yellow", "extradelight:oak_molded_yellow_wallpaper", "extradelight:wallpaper_yellow", "extradelight:ribbon_bow_yellow"]}
+block/fence_gates/wooden :: {"values": ["extradelight:cinnamon_fence_gate", "extradelight:fruit_fence_gate"]}
+block/storage_blocks :: {"values": ["#c:storage_blocks_cheese", "#c:storage_blocks_butter", "#c:storage_blocks_flour", "#c:storage_blocks_corn_meal", "#c:storage_blocks_sugar", "#c:storage_blocks_corn_on_cob", "#c:storage_blocks_corn_husk", "#c:storage_blocks_dried_corn_husk", "#c:storage_blocks_corn_cob", "#c:storage_blocks_ginger", "#c:storage_blocks_eggs", "#c:storage_blocks_apple", "#c:storage_blocks_golden_apple", "#c:storage_blocks_brown_mushroom", "#c:storage_blocks_red_mushroom", "#c:storage_blocks_sweet_berries", "#c:storage_blocks_glow_berries", "#c:storage_blocks_corn_silk", "#c:storage_blocks_ground_cinnamon", "#c:storage_blocks_raw_cinnamon", "#c:storage_blocks_cinnamon_stick", "#c:storage_blocks_bread_crumbs", "#c:storage_blocks_mint", "#c:storage_blocks_marshmallow", "#c:storage_blocks_golden_carrot", "#c:storage_blocks_blood_chocolate_bar", "#c:storage_blocks_dark_chocolate_bar", "#c:storage_blocks_milk_chocolate_bar", "#c:storage_blocks_white_chocolate_bar", "#c:storage_blocks_chili", "#c:storage_blocks_chili_powder", "#c:storage_blocks_peanuts_in_shell", "#c:storage_blocks_peanuts", "#c:storage_blocks_roasted_peanuts", "#c:storage_blocks_hazelnuts_in_shell", "#c:storage_blocks_hazelnuts", "#c:storage_blocks_roasted_hazelnuts", "#c:storage_blocks_mallow_root", "#c:storage_blocks_mallow_powder", "#c:storage_blocks_coffee_cherries", "#c:storage_blocks_green_coffee", "#c:storage_blocks_coffee_beans", "#c:storage_blocks_ground_coffee", "#c:storage_blocks_cocoa_beans", "#c:storage_blocks_roasted_cocoa_beans", "#c:storage_blocks_cocoa_solids", "#c:storage_blocks_cocoa_powder", "#c:storage_blocks_corn_kernels", "#c:storage_blocks_garlic", "#c:storage_blocks_cucumber", "#c:storage_blocks_soybeans", "#c:storage_blocks_salt", "#c:storage_blocks_lemon", "#c:storage_blocks_lime", "#c:storage_blocks_orange", "#c:storage_blocks_grapefruit"]}
+block/storage_blocks_apple :: {"values": ["extradelight:apple_crate"]}
+block/storage_blocks_blood_chocolate_bar :: {"values": ["extradelight:blood_chocolate_block"]}
+block/storage_blocks_bread_crumbs :: {"values": ["extradelight:breadcrumb_sack"]}
+block/storage_blocks_brown_mushroom :: {"values": ["extradelight:brown_mushroom_crate"]}
+block/storage_blocks_butter :: {"values": ["extradelight:butter_block"]}
+block/storage_blocks_cheese :: {"values": ["extradelight:cheese_block"]}
+block/storage_blocks_chili :: {"values": ["extradelight:chili_crate"]}
+block/storage_blocks_chili_powder :: {"values": ["extradelight:chili_powder_sack"]}
+block/storage_blocks_cinnamon_stick :: {"values": ["extradelight:cinnamon_stick_block"]}
+block/storage_blocks_cocoa_beans :: {"values": ["extradelight:cocoa_beans_sack"]}
+block/storage_blocks_cocoa_powder :: {"values": ["extradelight:cocoa_powder_sack"]}
+block/storage_blocks_cocoa_solids :: {"values": ["extradelight:cocoa_solids_sack"]}
+block/storage_blocks_coffee_beans :: {"values": ["extradelight:coffee_bean_sack"]}
+block/storage_blocks_coffee_cherries :: {"values": ["extradelight:coffee_cherry_crate"]}
+block/storage_blocks_corn_cob :: {"values": ["extradelight:corn_cob_bundle"]}
+block/storage_blocks_corn_husk :: {"values": ["extradelight:corn_husk_bundle"]}
+block/storage_blocks_corn_kernels :: {"values": ["extradelight:corn_sack"]}
+block/storage_blocks_corn_meal :: {"values": ["extradelight:cornmeal_sack"]}
+block/storage_blocks_corn_on_cob :: {"values": ["extradelight:corn_crate"]}
+block/storage_blocks_corn_silk :: {"values": ["extradelight:corn_silk_sack"]}
+block/storage_blocks_cucumber :: {"values": ["extradelight:cucumber_crate"]}
+block/storage_blocks_dark_chocolate_bar :: {"values": ["extradelight:dark_chocolate_block"]}
+block/storage_blocks_dried_corn_husk :: {"values": ["extradelight:dried_corn_husk_bundle"]}
+block/storage_blocks_eggs :: {"values": ["extradelight:egg_crate"]}
+block/storage_blocks_flour :: {"values": ["extradelight:flour_sack"]}
+block/storage_blocks_garlic :: {"values": ["extradelight:garlic_crate"]}
+block/storage_blocks_ginger :: {"values": ["extradelight:ginger_crate"]}
+block/storage_blocks_glow_berries :: {"values": ["extradelight:glow_berry_crate"]}
+block/storage_blocks_golden_apple :: {"values": ["extradelight:golden_apple_crate"]}
+block/storage_blocks_golden_carrot :: {"values": ["extradelight:golden_carrot_crate"]}
+block/storage_blocks_grapefruit :: {"values": ["extradelight:grapefruit_crate"]}
+block/storage_blocks_green_coffee :: {"values": ["extradelight:green_coffee_beans_sack"]}
+block/storage_blocks_ground_cinnamon :: {"values": ["extradelight:ground_cinnamon_sack"]}
+block/storage_blocks_ground_coffee :: {"values": ["extradelight:ground_coffee_sack"]}
+block/storage_blocks_hazelnuts :: {"values": ["extradelight:hazelnut_sack"]}
+block/storage_blocks_hazelnuts_in_shell :: {"values": ["extradelight:hazelnut_in_shell_sack"]}
+block/storage_blocks_lemon :: {"values": ["extradelight:lemon_crate"]}
+block/storage_blocks_lime :: {"values": ["extradelight:lime_crate"]}
+block/storage_blocks_mallow_powder :: {"values": ["extradelight:mallow_powder_sack"]}
+block/storage_blocks_mallow_root :: {"values": ["extradelight:mallow_root_crate"]}
+block/storage_blocks_marshmallow :: {"values": ["extradelight:marshmallow_block"]}
+block/storage_blocks_milk_chocolate_bar :: {"values": ["extradelight:milk_chocolate_block"]}
+block/storage_blocks_mint :: {"values": ["extradelight:mint_sack"]}
+block/storage_blocks_orange :: {"values": ["extradelight:orange_crate"]}
+block/storage_blocks_peanuts :: {"values": ["extradelight:peanut_sack"]}
+block/storage_blocks_peanuts_in_shell :: {"values": ["extradelight:peanut_in_shell_sack"]}
+block/storage_blocks_raw_cinnamon :: {"values": ["extradelight:raw_cinnamon_block"]}
+block/storage_blocks_red_mushroom :: {"values": ["extradelight:red_mushroom_crate"]}
+block/storage_blocks_roasted_cocoa_beans :: {"values": ["extradelight:roasted_cocoa_beans_sack"]}
+block/storage_blocks_roasted_hazelnuts :: {"values": ["extradelight:roasted_hazelnut_sack"]}
+block/storage_blocks_roasted_peanuts :: {"values": ["extradelight:roasted_peanut_sack"]}
+block/storage_blocks_salt :: {"values": ["extradelight:salt_block"]}
+block/storage_blocks_soybeans :: {"values": ["extradelight:soybean_sack"]}
+block/storage_blocks_sugar :: {"values": ["extradelight:sugar_sack"]}
+block/storage_blocks_sweet_berries :: {"values": ["extradelight:sweet_berry_crate"]}
+block/storage_blocks_white_chocolate_bar :: {"values": ["extradelight:white_chocolate_block"]}
+fluid/chocolate :: {"values": ["extradelight:blood_chocolate_syrup_fluid", "extradelight:white_chocolate_syrup_fluid", "extradelight:milk_chocolate_syrup_fluid", "extradelight:dark_chocolate_syrup_fluid"]}
+item/alfredo_sauce :: {"values": ["extradelight:alfredo_sauce"]}
+item/apple/sliced :: {"values": ["extradelight:sliced_apple"]}
+item/beef :: {"values": ["#c:beef/cooked", "#c:beef/raw"]}
+item/beef/cooked :: {"values": ["minecraft:cooked_beef"]}
+item/beef/ground/cooked :: {"values": ["farmersdelight:beef_patty"]}
+item/beef/ground/raw :: {"values": ["farmersdelight:minced_beef", {"id": "#c:groundmeats/groundbeef", "required": false}]}
+item/beef/raw :: {"values": ["minecraft:beef"]}
+item/block/blood_chocolate :: {"values": ["extradelight:blood_chocolate_block"]}
+item/block/chocolate :: {"values": ["#c:block/white_chocolate", "#c:block/dark_chocolate", "#c:block/milk_chocolate", "#c:block/blood_chocolate"]}
+item/block/dark_chocolate :: {"values": ["extradelight:dark_chocolate_block"]}
+item/block/milk_chocolate :: {"values": ["extradelight:milk_chocolate_block"]}
+item/block/white_chocolate :: {"values": ["extradelight:white_chocolate_block"]}
+item/bread/crumbs :: {"values": ["extradelight:breadcrumbs"]}
+item/bread/sliced :: {"values": ["extradelight:bread_slice"]}
+item/bread_slices :: {"values": ["extradelight:bread_slice", "extradelight:toast"]}
+item/butter :: {"values": ["extradelight:butter"]}
+item/butterscotch :: {"values": ["extradelight:butterscotch"]}
+item/cactus/cooked :: {"values": ["extradelight:cooked_cactus"]}
+item/candy :: {"values": ["extradelight:candy_black", "extradelight:candy_blue", "extradelight:candy_brown", "extradelight:candy_cyan", "extradelight:candy_green", "extradelight:candy_gray", "extradelight:candy_light_blue", "extradelight:candy_light_gray", "extradelight:candy_lime", "extradelight:candy_magenta", "extradelight:candy_orange", "extradelight:candy_pink", "extradelight:candy_purple", "extradelight:candy_red", "extradelight:candy_white", "extradelight:candy_yellow", "extradelight:caramel_candy", "extradelight:mint_candy_blue", "extradelight:mint_candy_green", "extradelight:mint_candy_red", "extradelight:candy_cane_blue", "extradelight:candy_cane_red", "extradelight:candy_cane_green", "extradelight:candied_ginger", "extradelight:candied_citrus_zest"]}
+item/candy/peppermint :: {"values": ["extradelight:mint_candy_blue", "extradelight:mint_candy_green", "extradelight:mint_candy_red"]}
+item/carrot/grated :: {"values": ["extradelight:grated_carrot"]}
+item/cheese :: {"values": ["extradelight:cheese", {"id": "#c:foods/cheese", "required": false}, {"id": "#c:cheeses", "required": false}, {"id": "#brewinandchewin:foods/cheese_wedge", "required": false}, {"id": "#pizzadelight:ingredients/cheese_layer", "required": false}]}
+item/cheeses :: {"values": ["extradelight:cheese"]}
+item/chili/powder :: {"values": ["extradelight:chili_powder"]}
+item/chocolate/bar :: {"values": ["#c:chocolate/white/bar", "#c:chocolate/dark/bar", "#c:chocolate/milk/bar", "#c:chocolate/blood/bar"]}
+item/chocolate/bar/filled :: {"values": ["#c:chocolate/white/bar/filled", "#c:chocolate/dark/bar/filled", "#c:chocolate/milk/bar/filled", "#c:chocolate/blood/bar/filled"]}
+item/chocolate/blood/bar :: {"values": ["extradelight:blood_chocolate_bar"]}
+item/chocolate/blood/bar/filled :: {"values": ["extradelight:blood_chocolate_filled_bar"]}
+item/chocolate/blood/chips :: {"values": ["extradelight:blood_chocolate_chips"]}
+item/chocolate/blood/truffle :: {"values": ["extradelight:blood_chocolate_truffle"]}
+item/chocolate/chips :: {"values": ["#c:chocolate/white/chips", "#c:chocolate/dark/chips", "#c:chocolate/milk/chips", "#c:chocolate/blood/chips"]}
+item/chocolate/dark/bar :: {"values": ["extradelight:dark_chocolate_bar"]}
+item/chocolate/dark/bar/filled :: {"values": ["extradelight:dark_chocolate_filled_bar"]}
+item/chocolate/dark/chips :: {"values": ["extradelight:dark_chocolate_chips"]}
+item/chocolate/dark/truffle :: {"values": ["extradelight:dark_chocolate_truffle"]}
+item/chocolate/milk/bar :: {"values": ["extradelight:milk_chocolate_bar", {"id": "create:bar_of_chocolate", "required": false}]}
+item/chocolate/milk/bar/filled :: {"values": ["extradelight:milk_chocolate_filled_bar"]}
+item/chocolate/milk/chips :: {"values": ["extradelight:milk_chocolate_chips"]}
+item/chocolate/milk/truffle :: {"values": ["extradelight:milk_chocolate_truffle"]}
+item/chocolate/truffle :: {"values": ["#c:chocolate/white/truffle", "#c:chocolate/dark/truffle", "#c:chocolate/milk/truffle", "#c:chocolate/blood/truffle"]}
+item/chocolate/white/bar :: {"values": ["extradelight:white_chocolate_bar"]}
+item/chocolate/white/bar/filled :: {"values": ["extradelight:white_chocolate_filled_bar"]}
+item/chocolate/white/chips :: {"values": ["extradelight:white_chocolate_chips"]}
+item/chocolate/white/truffle :: {"values": ["extradelight:white_chocolate_truffle"]}
+item/cinnamon/ground :: {"values": ["extradelight:ground_cinnamon", {"id": "#c:dusts/cinnamon", "required": false}, {"id": "#c:groundcinnamon", "required": false}]}
+item/cinnamon/stick :: {"values": ["extradelight:cinnamon_stick"]}
+item/cinnamon_logs :: {"values": ["extradelight:cinnamon_log", "extradelight:cinnamon_wood", "extradelight:stripped_cinnamon_log", "extradelight:strippedcinnamon_wood"]}
+item/cocoa/powder :: {"values": ["extradelight:cocoa_powder"]}
+item/cocoa/solids :: {"values": ["extradelight:cocoa_solids"]}
+item/cocoa_beans/roasted :: {"values": ["extradelight:roasted_cocoa_beans"]}
+item/coffee :: {"values": ["extradelight:coffee"]}
+item/condiments :: {"values": ["#c:condiments/ketchup", "#c:condiments/bbq_sauce", "#c:condiments/mayonnaise", "#c:condiments/hot_sauce", "#c:condiments/soy_sauce", "#c:condiments/aioli"]}
+item/condiments/aioli :: {"values": ["extradelight:aioli_jar_item"]}
+item/condiments/bbq_sauce :: {"values": ["extradelight:bbq_jar_item", {"id": "#c:condiments/bbqsauce", "required": false}]}
+item/condiments/bbqsauce :: {"values": ["extradelight:bbq_jar_item"]}
+item/condiments/hot_sauce :: {"values": ["extradelight:hot_sauce_item", {"id": "#c:condiments/hotsauce", "required": false}]}
+item/condiments/hotsauce :: {"values": ["extradelight:hot_sauce_item"]}
+item/condiments/ketchup :: {"values": ["extradelight:ketchup_jar_item"]}
+item/condiments/mayonaise :: {"values": ["extradelight:mayo_jar_item"]}
+item/condiments/mayonnaise :: {"values": ["extradelight:mayo_jar_item", {"id": "#c:condiments/mayonaise", "required": false}]}
+item/condiments/soy_sauce :: {"values": ["extradelight:soy_sauce_item", {"id": "#c:condiments/soysauce", "required": false}, {"id": "#c:soy_sauces", "required": false}]}
+item/condiments/soysauce :: {"values": ["extradelight:soy_sauce_item"]}
+item/cookie_dough :: {"values": ["extradelight:apple_cookie_dough", "extradelight:chocolate_chip_cookie_dough", "extradelight:gingerbread_cookie_dough", "extradelight:glow_berry_cookie_dough", "extradelight:honey_cookie_dough", "extradelight:pumpkin_cookie_dough", "extradelight:sugar_cookie_dough", "extradelight:sweet_berry_cookie_dough", "extradelight:nut_butter_cookie_dough", "extradelight:chocolate_cookie_dough"]}
+item/cookie_dough/chocolate :: {"values": ["extradelight:chocolate_cookie_dough"]}
+item/cookie_dough/chocolate_chip :: {"values": ["extradelight:chocolate_chip_cookie_dough"]}
+item/cookie_dough/gingerbread :: {"values": ["extradelight:gingerbread_cookie_dough"]}
+item/cookie_dough/glow_berry :: {"values": ["extradelight:glow_berry_cookie_dough"]}
+item/cookie_dough/honey :: {"values": ["extradelight:honey_cookie_dough"]}
+item/cookie_dough/nut_butter :: {"values": ["extradelight:nut_butter_cookie_dough"]}
+item/cookie_dough/pumpkin :: {"values": ["extradelight:pumpkin_cookie_dough"]}
+item/cookie_dough/sugar :: {"values": ["extradelight:sugar_cookie_dough"]}
+item/cookie_dough/sweet_berry :: {"values": ["extradelight:sweet_berry_cookie_dough"]}
+item/cooking_oil :: {"values": ["extradelight:cooking_oil", {"id": "#c:cookingoil", "required": false}, {"id": "#c:olive_oils", "required": false}]}
+item/cookingoil :: {"values": ["extradelight:cooking_oil"]}
+item/cookingoil/cookingoil :: {"values": ["extradelight:cooking_oil"]}
+item/corn/meal :: {"values": ["extradelight:corn_meal", {"id": "#c:cornmeal", "required": false}]}
+item/corn_flakes :: {"values": ["extradelight:corn_flakes"]}
+item/cornmeal :: {"values": ["extradelight:corn_meal"]}
+item/crops :: {"values": ["extradelight:ginger", "extradelight:mint", "extradelight:chili", "extradelight:mallow_root", "extradelight:peanuts", "extradelight:garlic", "extradelight:cucumber", "extradelight:soybeans"]}
+item/crops/chile_pepper :: {"values": ["extradelight:chili"]}
+item/crops/chili :: {"values": ["extradelight:chili", {"id": "#c:crops/chili_pepper", "required": false}, {"id": "#c:crops/chilipepper", "required": false}, {"id": "#c:crops/chile_pepper", "required": false}]}
+item/crops/chili/dried :: {"values": ["extradelight:dried_chili"]}
+item/crops/chili_pepper :: {"values": ["extradelight:chili"]}
+item/crops/chilipepper :: {"values": ["extradelight:chili"]}
+item/crops/coffee :: {"values": ["extradelight:coffee_cherries"]}
+item/crops/coffee/cooked :: {"values": ["extradelight:coffee_beans", {"id": "#c:crops/coffeebean", "required": false}, {"id": "#c:crops/coffee_beans", "required": false}]}
+item/crops/coffee/green :: {"values": ["extradelight:green_coffee"]}
+item/crops/coffee/ground :: {"values": ["extradelight:ground_coffee"]}
+item/crops/coffee_beans :: {"values": ["extradelight:coffee_beans"]}
+item/crops/coffeebean :: {"values": ["extradelight:coffee_beans"]}
+item/crops/corn :: {"values": ["extradelight:corn_on_cob"]}
+item/crops/cucumber :: {"values": ["extradelight:cucumber"]}
+item/crops/garlic :: {"values": ["extradelight:garlic"]}
+item/crops/ginger :: {"values": ["extradelight:ginger"]}
+item/crops/grapefruit :: {"values": ["extradelight:grapefruit"]}
+item/crops/hazelnut :: {"values": ["extradelight:hazelnuts_in_shell"]}
+item/crops/hazelnut/cooked :: {"values": ["extradelight:roasted_hazelnuts"]}
+item/crops/hazelnut/shelled :: {"values": ["extradelight:hazelnuts"]}
+item/crops/lemon :: {"values": ["extradelight:lemon"]}
+item/crops/lime :: {"values": ["extradelight:lime"]}
+item/crops/mallow_root :: {"values": ["extradelight:mallow_root"]}
+item/crops/orange :: {"values": ["extradelight:orange"]}
+item/crops/peanut :: {"values": ["extradelight:peanuts_in_shell"]}
+item/crops/peanut/cooked :: {"values": ["extradelight:roasted_peanuts"]}
+item/crops/peanut/shelled :: {"values": ["extradelight:peanuts"]}
+item/crops/soybean :: {"values": ["extradelight:soybeans"]}
+item/croutons :: {"values": ["extradelight:croutons"]}
+item/dough :: {"values": [{"id": "#c:foods/dough", "required": false}, {"id": "#c:doughs", "required": false}]}
+item/dusts/cinnamon :: {"values": ["extradelight:ground_cinnamon"]}
+item/dusts/salt :: {"values": ["extradelight:salt"]}
+item/dyed/black :: {"values": ["extradelight:black_chocolate_box", "extradelight:gingham_carpet_black", "extradelight:gingham_black", "extradelight:oak_molded_black_wallpaper", "extradelight:wallpaper_black", "extradelight:ribbon_bow_black"]}
+item/dyed/blue :: {"values": ["extradelight:blue_chocolate_box", "extradelight:gingham_carpet_blue", "extradelight:gingham_blue", "extradelight:oak_molded_blue_wallpaper", "extradelight:wallpaper_blue", "extradelight:ribbon_bow_blue"]}
+item/dyed/brown :: {"values": ["extradelight:brown_chocolate_box", "extradelight:gingham_carpet_brown", "extradelight:gingham_brown", "extradelight:oak_molded_brown_wallpaper", "extradelight:wallpaper_brown", "extradelight:ribbon_bow_brown"]}
+item/dyed/cyan :: {"values": ["extradelight:cyan_chocolate_box", "extradelight:gingham_carpet_cyan", "extradelight:gingham_cyan", "extradelight:oak_molded_cyan_wallpaper", "extradelight:wallpaper_cyan", "extradelight:ribbon_bow_cyan"]}
+item/dyed/gray :: {"values": ["extradelight:gray_chocolate_box", "extradelight:gingham_carpet_gray", "extradelight:gingham_gray", "extradelight:oak_molded_gray_wallpaper", "extradelight:wallpaper_gray", "extradelight:ribbon_bow_gray"]}
+item/dyed/green :: {"values": ["extradelight:green_chocolate_box", "extradelight:gingham_carpet_green", "extradelight:gingham_green", "extradelight:oak_molded_green_wallpaper", "extradelight:wallpaper_green", "extradelight:ribbon_bow_green"]}
+item/dyed/light_blue :: {"values": ["extradelight:light_blue_chocolate_box", "extradelight:gingham_carpet_light_blue", "extradelight:gingham_light_blue", "extradelight:oak_molded_light_blue_wallpaper", "extradelight:wallpaper_light_blue", "extradelight:ribbon_bow_light_blue"]}
+item/dyed/light_gray :: {"values": ["extradelight:light_gray_chocolate_box", "extradelight:gingham_carpet_light_gray", "extradelight:gingham_light_gray", "extradelight:oak_molded_light_gray_wallpaper", "extradelight:wallpaper_light_gray", "extradelight:ribbon_bow_light_gray"]}
+item/dyed/lime :: {"values": ["extradelight:lime_chocolate_box", "extradelight:gingham_carpet_lime", "extradelight:gingham_lime", "extradelight:oak_molded_lime_wallpaper", "extradelight:wallpaper_lime", "extradelight:ribbon_bow_lime"]}
+item/dyed/magenta :: {"values": ["extradelight:magenta_chocolate_box", "extradelight:gingham_carpet_magenta", "extradelight:gingham_magenta", "extradelight:oak_molded_magenta_wallpaper", "extradelight:wallpaper_magenta", "extradelight:ribbon_bow_magenta"]}
+item/dyed/orange :: {"values": ["extradelight:orange_chocolate_box", "extradelight:gingham_carpet_orange", "extradelight:gingham_orange", "extradelight:oak_molded_orange_wallpaper", "extradelight:wallpaper_orange", "extradelight:ribbon_bow_orange"]}
+item/dyed/pink :: {"values": ["extradelight:pink_chocolate_box", "extradelight:gingham_carpet_pink", "extradelight:gingham_pink", "extradelight:oak_molded_pink_wallpaper", "extradelight:wallpaper_pink", "extradelight:ribbon_bow_pink"]}
+item/dyed/purple :: {"values": ["extradelight:purple_chocolate_box", "extradelight:gingham_carpet_purple", "extradelight:gingham_purple", "extradelight:oak_molded_purple_wallpaper", "extradelight:wallpaper_purple", "extradelight:ribbon_bow_purple"]}
+item/dyed/red :: {"values": ["extradelight:red_chocolate_box", "extradelight:gingham_carpet_red", "extradelight:gingham_red", "extradelight:oak_molded_red_wallpaper", "extradelight:wallpaper_red", "extradelight:ribbon_bow_red"]}
+item/dyed/white :: {"values": ["extradelight:white_chocolate_box", "extradelight:gingham_carpet_white", "extradelight:gingham_white", "extradelight:oak_molded_white_wallpaper", "extradelight:wallpaper_white", "extradelight:ribbon_bow_white"]}
+item/dyed/yellow :: {"values": ["extradelight:yellow_chocolate_box", "extradelight:gingham_carpet_yellow", "extradelight:gingham_yellow", "extradelight:oak_molded_yellow_wallpaper", "extradelight:wallpaper_yellow", "extradelight:ribbon_bow_yellow"]}
+item/eggs/boiled :: {"values": ["extradelight:boiled_egg"]}
+item/fish_flakes :: {"values": ["extradelight:fish_flakes"]}
+item/fish_sauce :: {"values": ["extradelight:fish_sauce_item"]}
+item/flour :: {"values": ["extradelight:flour", {"id": "#c:flours/wheat", "required": false}]}
+item/flours/wheat :: {"values": ["extradelight:flour"]}
+item/food/starch :: {"values": ["farmersdelight:rice", "extradelight:potato_sticks", "extradelight:grated_potato", "extradelight:sliced_potato"]}
+item/foods/bread_slice :: {"values": ["extradelight:bread_slice", "extradelight:toast"]}
+item/foods/cake/slice :: {"values": ["farmersdelight:cake_slice", "extradelight:coffee_cake_slice", "extradelight:chocolate_cake", "extradelight:lemon_cucumber_cake_slice", "extradelight:melon_layer_cake_slice", "extradelight:kyiv_cake_slice"]}
+item/foods/cheese :: {"values": ["extradelight:cheese"]}
+item/foods/cooked_egg :: {"values": ["extradelight:boiled_egg", "extradelight:scrambled_eggs"]}
+item/foods/cooked_wheat_seeds :: {"values": ["extradelight:cooked_wheat_seeds"]}
+item/foods/cookie :: {"values": ["extradelight:apple_cookie", "extradelight:glow_berry_cookie", "extradelight:pumpkin_cookie", "extradelight:nut_butter_cookie", "extradelight:chocolate_cookie", "#c:foods/cookie/sugar", "#c:foods/cookie/gingerbread"]}
+item/foods/cookie/gingerbread :: {"values": ["extradelight:gingerbread_cookie", "extradelight:gingerbread_alex", "extradelight:gingerbread_creeper", "extradelight:gingerbread_diamond", "extradelight:gingerbread_emerald", "extradelight:gingerbread_pickaxe", "extradelight:gingerbread_steve", "extradelight:gingerbread_sword"]}
+item/foods/cookie/sugar :: {"values": ["extradelight:sugar_cookie", "extradelight:sugar_cookie_alex", "extradelight:sugar_cookie_creeper", "extradelight:sugar_cookie_diamond", "extradelight:sugar_cookie_emerald", "extradelight:sugar_cookie_pickaxe", "extradelight:sugar_cookie_steve", "extradelight:sugar_cookie_sword"]}
+item/foods/custard :: {"values": ["extradelight:apple_custard", "extradelight:caramel_custard", "extradelight:chocolate_custard", "farmersdelight:glow_berry_custard", "extradelight:honey_custard", "extradelight:pumpkin_custard", "extradelight:sweet_berry_custard"]}
+item/foods/milk :: {"values": ["extradelight:soy_milk"]}
+item/foods/natto :: {"values": ["extradelight:natto_item"]}
+item/foods/pickled :: {"values": ["#c:foods/pickled/vegetables", "#c:foods/pickled/meat", "#c:foods/pickled/egg"]}
+item/foods/pickled/egg :: {"values": ["extradelight:pickled_egg_item"]}
+item/foods/pickled/meat :: {"values": ["#c:foods/pickled/meat/fish", "#c:foods/pickled/meat/sausage"]}
+item/foods/pickled/meat/fish :: {"values": ["extradelight:pickled_fish_item"]}
+item/foods/pickled/meat/sausage :: {"values": ["extradelight:pickled_sausage_item"]}
+item/foods/pickled/vegetables :: {"values": ["#c:foods/pickled/vegetables/cucumber", "#c:foods/pickled/vegetables/beetroot", "#c:foods/pickled/vegetables/onion", "#c:foods/pickled/vegetables/carrot"]}
+item/foods/pickled/vegetables/beetroot :: {"values": ["extradelight:pickled_beet_item"]}
+item/foods/pickled/vegetables/carrot :: {"values": ["extradelight:pickled_carrot_item"]}
+item/foods/pickled/vegetables/cucumber :: {"values": ["extradelight:gherkin_item"]}
+item/foods/pickled/vegetables/cucumber/sliced :: {"values": ["extradelight:sliced_gherkin_item"]}
+item/foods/pickled/vegetables/onion :: {"values": ["extradelight:pickled_onion_item"]}
+item/foods/popcorn :: {"values": ["extradelight:popcorn"]}
+item/foods/salami :: {"values": ["extradelight:salami_item"]}
+item/foods/soup :: {"values": ["extradelight:carrot_soup", "extradelight:cactus_soup", "extradelight:fish_soup", "extradelight:oxtail_soup", "extradelight:potato_soup", "extradelight:tomato_soup", "farmersdelight:chicken_soup", "farmersdelight:noodle_soup", "farmersdelight:pumpkin_soup", "farmersdelight:vegetable_soup"]}
+item/foods/vegetable :: {"values": ["extradelight:corn_seeds", "extradelight:chili", "extradelight:cucumber"]}
+item/frosting :: {"values": ["extradelight:frosting_black", "extradelight:frosting_blue", "extradelight:frosting_brown", "extradelight:frosting_cyan", "extradelight:frosting_gray", "extradelight:frosting_green", "extradelight:frosting_light_blue", "extradelight:frosting_light_gray", "extradelight:frosting_lime", "extradelight:frosting_magenta", "extradelight:frosting_orange", "extradelight:frosting_pink", "extradelight:frosting_purple", "extradelight:frosting_red", "extradelight:frosting_white", "extradelight:frosting_yellow"]}
+item/frosting/black :: {"values": ["extradelight:frosting_black"]}
+item/frosting/blue :: {"values": ["extradelight:frosting_blue"]}
+item/frosting/brown :: {"values": ["extradelight:frosting_brown"]}
+item/frosting/cyan :: {"values": ["extradelight:frosting_cyan"]}
+item/frosting/gray :: {"values": ["extradelight:frosting_gray"]}
+item/frosting/green :: {"values": ["extradelight:frosting_green"]}
+item/frosting/light_blue :: {"values": ["extradelight:frosting_light_blue"]}
+item/frosting/light_gray :: {"values": ["extradelight:frosting_light_gray"]}
+item/frosting/lime :: {"values": ["extradelight:frosting_lime"]}
+item/frosting/magenta :: {"values": ["extradelight:frosting_magenta"]}
+item/frosting/orange :: {"values": ["extradelight:frosting_orange"]}
+item/frosting/pink :: {"values": ["extradelight:frosting_pink"]}
+item/frosting/purple :: {"values": ["extradelight:frosting_purple"]}
+item/frosting/red :: {"values": ["extradelight:frosting_red"]}
+item/frosting/white :: {"values": ["extradelight:frosting_white"]}
+item/frosting/yellow :: {"values": ["extradelight:frosting_yellow"]}
+item/fruit :: {"values": ["#c:fruit/apple", "#c:fruit/glow_berry", "#c:fruit/sweet_berry", "#c:fruit/melon", "minecraft:chorus_fruit", "extradelight:lemon", "extradelight:lime", "extradelight:orange", "extradelight:grapefruit"]}
+item/fruit/apple :: {"values": ["minecraft:apple"]}
+item/fruit/dried :: {"values": ["extradelight:dried_fruit"]}
+item/fruit/glow_berry :: {"values": ["minecraft:glow_berries"]}
+item/fruit/melon :: {"values": ["minecraft:melon_slice"]}
+item/fruit/sweet_berry :: {"values": ["minecraft:sweet_berries"]}
+item/fruit_logs :: {"values": ["extradelight:fruit_log", "extradelight:fruit_wood", "extradelight:stripped_fruit_log", "extradelight:stripped_fruit_wood"]}
+item/fudge :: {"values": ["extradelight:fudge"]}
+item/gelatin :: {"values": ["extradelight:agar_agar"]}
+item/ginger/grated :: {"values": ["extradelight:grated_ginger"]}
+item/ginger/sliced :: {"values": ["extradelight:sliced_ginger"]}
+item/graham_cracker :: {"values": ["extradelight:graham_cracker"]}
+item/gravy :: {"values": ["extradelight:gravy_boat_item"]}
+item/ground_meat/cooked :: {"values": ["#c:beef/ground/cooked"]}
+item/ground_meat/raw :: {"values": ["#c:beef/ground/raw", "#c:pork/ground/raw", "#c:mutton/ground/raw", "#c:rabbit/ground/raw"]}
+item/groundcinnamon :: {"values": ["extradelight:ground_cinnamon"]}
+item/gummies :: {"values": ["extradelight:gummies"]}
+item/ice/cubes :: {"values": ["extradelight:ice_cubes"]}
+item/ice_cream :: {"values": ["extradelight:ice_cream", "extradelight:apple_ice_cream", "extradelight:chocolate_ice_cream", "extradelight:cookie_dough_ice_cream", "extradelight:glow_berry_ice_cream", "extradelight:honey_ice_cream", "extradelight:mint_chip_ice_cream", "extradelight:pumpkin_ice_cream", "extradelight:sweet_berry_ice_cream"]}
+item/jam/fruit :: {"values": ["extradelight:jam"]}
+item/jam/glow_berry :: {"values": ["extradelight:glow_berry_jam"]}
+item/jam/golden_apple :: {"values": ["extradelight:golden_apple_jam"]}
+item/jam/mint :: {"values": ["extradelight:mint_jelly"]}
+item/jam/mundane :: {"values": ["#c:jam/fruit", "#c:jam/mint"]}
+item/jammable :: {"values": ["#c:foods/fruit", "#c:foods/berry", "#c:crops/carrot"]}
+item/jams :: {"values": ["extradelight:dynamic_jam", "#c:jam/mundane", "#c:jam/golden_apple", "#c:jam/glow_berry", {"id": "#c:jellies", "required": false}]}
+item/jellies :: {"values": ["extradelight:dynamic_jam"]}
+item/kimchi :: {"values": ["extradelight:kimchi_item"]}
+item/liquid_chocolate :: {"values": ["extradelight:blood_chocolate_syrup_bottle", "extradelight:dark_chocolate_syrup_bottle", "extradelight:milk_chocolate_syrup_bottle", "extradelight:white_chocolate_syrup_bottle"]}
+item/mallowroot/powder :: {"values": ["extradelight:mallow_powder"]}
+item/marshmallow :: {"values": ["extradelight:marshmallow"]}
+item/marshmallow_fluff :: {"values": ["extradelight:marshmallow_fluff_bottle"]}
+item/meat :: {"values": ["#c:meat/cooked", "#c:meat/raw"]}
+item/meat/cooked :: {"values": ["minecraft:cooked_beef", "minecraft:cooked_chicken", "minecraft:cooked_mutton", "minecraft:cooked_porkchop", "minecraft:cooked_rabbit"]}
+item/meat/raw :: {"values": ["minecraft:beef", "minecraft:chicken", "minecraft:mutton", "minecraft:porkchop", "minecraft:rabbit", {"id": "#c:rawmeats", "required": false}]}
+item/milk/soy :: {"values": ["extradelight:soy_milk", {"id": "#c:milk/soymilk", "required": false}, {"id": "#c:soy_milks", "required": false}]}
+item/milk/soymilk :: {"values": ["extradelight:soy_milk"]}
+item/mint :: {"values": ["extradelight:mint"]}
+item/miso_paste :: {"values": ["extradelight:miso_paste_item"]}
+item/miso_soup_ingredients :: {"values": ["#extradelight:processed/cabbage", "#c:mushrooms", "#extradelight:processed/carrot", "#extradelight:processed/potato", "#extradelight:processed/onion", {"id": "#c:foods/safe_raw_fish", "required": false}]}
+item/mortars :: {"values": ["extradelight:mortar_stone"]}
+item/mutton/ground/raw :: {"values": [{"id": "#c:groundmeats/groundmutton", "required": false}]}
+item/nougat :: {"values": ["extradelight:nougat"]}
+item/nut_butter :: {"values": ["extradelight:peanut_butter_bottle", {"id": "#c:nutbutters", "required": false}]}
+item/nutbutters :: {"values": ["extradelight:peanut_butter_bottle"]}
+item/nuts :: {"values": ["#c:crops/hazelnut/shelled", "#c:crops/peanut/shelled"]}
+item/nuts/cooked :: {"values": ["#c:crops/hazelnut/cooked", "#c:crops/peanut/cooked"]}
+item/offset_spatula :: {"values": ["extradelight:offset_spatula_diamond", "extradelight:offset_spatula_gold", "extradelight:offset_spatula_iron", "extradelight:offset_spatula_netherite", "extradelight:offset_spatula_wood"]}
+item/onion/sliced :: {"values": ["extradelight:sliced_onion"]}
+item/pasta :: {"values": [{"id": "#c:foods/pasta", "required": false}]}
+item/peanut_brittle :: {"values": ["extradelight:peanut_brittle"]}
+item/pestles :: {"values": ["extradelight:pestle_amethyst", "extradelight:pestle_andesite", "extradelight:pestle_basalt", "extradelight:pestle_blackstone", "extradelight:pestle_deepslate", "extradelight:pestle_diorite", "extradelight:pestle_endstone", "extradelight:pestle_gilded_blackstone", "extradelight:pestle_granite", "extradelight:pestle_stone"]}
+item/pickle_juice :: {"values": ["extradelight:pickle_juice"]}
+item/popcorn :: {"values": ["extradelight:popcorn", {"id": "#c:foods/popcorn", "required": false}]}
+item/pork/ground/raw :: {"values": [{"id": "#c:groundmeats/groundpork", "required": false}]}
+item/potato/grated :: {"values": ["extradelight:grated_potato"]}
+item/potato/sliced :: {"values": ["extradelight:sliced_potato"]}
+item/potato/sticks :: {"values": ["extradelight:potato_sticks"]}
+item/puffed_rice :: {"values": ["extradelight:crisp_rice"]}
+item/rabbit/ground/raw :: {"values": [{"id": "#c:groundmeats/groundrabbit", "required": false}]}
+item/rawmeats :: {"values": ["#c:meat/raw"]}
+item/ribbon :: {"values": ["extradelight:ribbon_bow_white", "extradelight:ribbon_bow_orange", "extradelight:ribbon_bow_magenta", "extradelight:ribbon_bow_light_blue", "extradelight:ribbon_bow_yellow", "extradelight:ribbon_bow_lime", "extradelight:ribbon_bow_pink", "extradelight:ribbon_bow_gray", "extradelight:ribbon_bow_light_gray", "extradelight:ribbon_bow_cyan", "extradelight:ribbon_bow_purple", "extradelight:ribbon_bow_blue", "extradelight:ribbon_bow_brown", "extradelight:ribbon_bow_green", "extradelight:ribbon_bow_red", "extradelight:ribbon_bow_black"]}
+item/salami_mix :: {"values": ["extradelight:salami_mix"]}
+item/salt :: {"values": ["extradelight:salt", {"id": "#c:dusts/salt", "required": false}]}
+item/sauerkraut :: {"values": ["extradelight:sauerkraut_item"]}
+item/seeds :: {"values": ["extradelight:corn_seeds", "extradelight:chili_seeds", "extradelight:peanuts", "extradelight:cucumber_seed", "extradelight:soybeans"]}
+item/seeds/corn :: {"values": ["extradelight:corn_seeds"]}
+item/slime_balls :: {"values": ["extradelight:seaweed_paste"]}
+item/soy_milks :: {"values": ["extradelight:soy_milk"]}
+item/soy_sauces :: {"values": ["extradelight:soy_sauce_item"]}
+item/soybeans/cooked :: {"values": ["extradelight:cooked_soybeans_item"]}
+item/soybeans/mashed :: {"values": ["extradelight:mashed_soybeans_item"]}
+item/soybeans/soaked :: {"values": ["extradelight:soaked_soybeans_item"]}
+item/spoons :: {"values": ["extradelight:wooden_spoon", "extradelight:stone_spoon", "extradelight:iron_spoon", "extradelight:gold_spoon", "extradelight:diamond_spoon", "extradelight:netherite_spoon"]}
+item/storage_blocks :: {"values": ["#c:storage_blocks_cheese", "#c:storage_blocks_butter", "#c:storage_blocks_flour", "#c:storage_blocks_corn_meal", "#c:storage_blocks_sugar", "#c:storage_blocks_corn_on_cob", "#c:storage_blocks_corn_husk", "#c:storage_blocks_dried_corn_husk", "#c:storage_blocks_corn_cob", "#c:storage_blocks_ginger", "#c:storage_blocks_eggs", "#c:storage_blocks_apple", "#c:storage_blocks_golden_apple", "#c:storage_blocks_brown_mushroom", "#c:storage_blocks_red_mushroom", "#c:storage_blocks_sweet_berries", "#c:storage_blocks_glow_berries", "#c:storage_blocks_corn_silk", "#c:storage_blocks_ground_cinnamon", "#c:storage_blocks_raw_cinnamon", "#c:storage_blocks_cinnamon_stick", "#c:storage_blocks_bread_crumbs", "#c:storage_blocks_mint", "#c:storage_blocks_marshmallow", "#c:storage_blocks_golden_carrot", "#c:storage_blocks_blood_chocolate_bar", "#c:storage_blocks_dark_chocolate_bar", "#c:storage_blocks_milk_chocolate_bar", "#c:storage_blocks_white_chocolate_bar", "#c:storage_blocks_chili", "#c:storage_blocks_chili_powder", "#c:storage_blocks_peanuts_in_shell", "#c:storage_blocks_peanuts", "#c:storage_blocks_roasted_peanuts", "#c:storage_blocks_hazelnuts_in_shell", "#c:storage_blocks_hazelnuts", "#c:storage_blocks_roasted_hazelnuts", "#c:storage_blocks_mallow_root", "#c:storage_blocks_mallow_powder", "#c:storage_blocks_coffee_cherries", "#c:storage_blocks_green_coffee", "#c:storage_blocks_coffee_beans", "#c:storage_blocks_ground_coffee", "#c:storage_blocks_cocoa_beans", "#c:storage_blocks_roasted_cocoa_beans", "#c:storage_blocks_cocoa_solids", "#c:storage_blocks_cocoa_powder", "#c:storage_blocks_corn_kernels", "#c:storage_blocks_garlic", "#c:storage_blocks_cucumber", "#c:storage_blocks_soybeans", "#c:storage_blocks_salt", "#c:storage_blocks_lemon", "#c:storage_blocks_lime", "#c:storage_blocks_orange", "#c:storage_blocks_grapefruit"]}
+item/storage_blocks_apple :: {"values": ["extradelight:apple_crate"]}
+item/storage_blocks_blood_chocolate_bar :: {"values": ["extradelight:blood_chocolate_block"]}
+item/storage_blocks_bread_crumbs :: {"values": ["extradelight:breadcrumb_sack"]}
+item/storage_blocks_brown_mushroom :: {"values": ["extradelight:brown_mushroom_crate"]}
+item/storage_blocks_butter :: {"values": ["extradelight:butter_block_item"]}
+item/storage_blocks_cheese :: {"values": ["extradelight:cheese_block_item"]}
+item/storage_blocks_chili :: {"values": ["extradelight:chili_crate"]}
+item/storage_blocks_chili_powder :: {"values": ["extradelight:chili_powder_sack"]}
+item/storage_blocks_cinnamon_stick :: {"values": ["extradelight:cinnamon_stick_block"]}
+item/storage_blocks_cocoa_beans :: {"values": ["extradelight:cocoa_bean_sack"]}
+item/storage_blocks_cocoa_powder :: {"values": ["extradelight:cocoa_powder_sack"]}
+item/storage_blocks_cocoa_solids :: {"values": ["extradelight:cocoa_solids_sack"]}
+item/storage_blocks_coffee_beans :: {"values": ["extradelight:coffee_bean_sack"]}
+item/storage_blocks_coffee_cherries :: {"values": ["extradelight:coffee_cherry_crate"]}
+item/storage_blocks_corn_cob :: {"values": ["extradelight:corn_cob_bundle"]}
+item/storage_blocks_corn_husk :: {"values": ["extradelight:corn_husk_bundle"]}
+item/storage_blocks_corn_kernels :: {"values": ["extradelight:corn_sack"]}
+item/storage_blocks_corn_meal :: {"values": ["extradelight:cornmeal_sack"]}
+item/storage_blocks_corn_on_cob :: {"values": ["extradelight:corn_crate"]}
+item/storage_blocks_corn_silk :: {"values": ["extradelight:corn_silk_sack"]}
+item/storage_blocks_cucumber :: {"values": ["extradelight:cucumber_crate_item"]}
+item/storage_blocks_dark_chocolate_bar :: {"values": ["extradelight:dark_chocolate_block"]}
+item/storage_blocks_dried_corn_husk :: {"values": ["extradelight:dried_corn_husk_bundle"]}
+item/storage_blocks_eggs :: {"values": ["extradelight:egg_crate"]}
+item/storage_blocks_flour :: {"values": ["extradelight:flour_sack"]}
+item/storage_blocks_garlic :: {"values": ["extradelight:garlic_crate"]}
+item/storage_blocks_ginger :: {"values": ["extradelight:ginger_crate"]}
+item/storage_blocks_glow_berries :: {"values": ["extradelight:glow_berry_crate"]}
+item/storage_blocks_golden_apple :: {"values": ["extradelight:golden_apple_crate"]}
+item/storage_blocks_golden_carrot :: {"values": ["extradelight:golden_carrot_crate_block"]}
+item/storage_blocks_grapefruit :: {"values": ["extradelight:grapefruit_crate_item"]}
+item/storage_blocks_green_coffee :: {"values": ["extradelight:green_coffee_bean_sack"]}
+item/storage_blocks_ground_cinnamon :: {"values": ["extradelight:ground_cinnamon_sack"]}
+item/storage_blocks_ground_coffee :: {"values": ["extradelight:ground_coffee_sack"]}
+item/storage_blocks_hazelnuts :: {"values": ["extradelight:hazelnut_sack"]}
+item/storage_blocks_hazelnuts_in_shell :: {"values": ["extradelight:hazelnut_in_shell_sack"]}
+item/storage_blocks_lemon :: {"values": ["extradelight:lemon_crate_item"]}
+item/storage_blocks_lime :: {"values": ["extradelight:lime_crate_item"]}
+item/storage_blocks_mallow_powder :: {"values": ["extradelight:mallow_powder_sack"]}
+item/storage_blocks_mallow_root :: {"values": ["extradelight:mallow_root_crate"]}
+item/storage_blocks_marshmallow :: {"values": ["extradelight:marshmallow_block"]}
+item/storage_blocks_milk_chocolate_bar :: {"values": ["extradelight:milk_chocolate_block"]}
+item/storage_blocks_mint :: {"values": ["extradelight:mint_sack"]}
+item/storage_blocks_orange :: {"values": ["extradelight:orange_crate_item"]}
+item/storage_blocks_peanuts :: {"values": ["extradelight:peanut_sack"]}
+item/storage_blocks_peanuts_in_shell :: {"values": ["extradelight:peanut_in_shell_sack"]}
+item/storage_blocks_raw_cinnamon :: {"values": ["extradelight:raw_cinnamon_block"]}
+item/storage_blocks_red_mushroom :: {"values": ["extradelight:red_mushroom_crate"]}
+item/storage_blocks_roasted_cocoa_beans :: {"values": ["extradelight:roasted_cocoa_bean_sack"]}
+item/storage_blocks_roasted_hazelnuts :: {"values": ["extradelight:roasted_hazelnut_sack"]}
+item/storage_blocks_roasted_peanuts :: {"values": ["extradelight:roasted_peanut_sack"]}
+item/storage_blocks_salt :: {"values": ["extradelight:salt_block_item"]}
+item/storage_blocks_soybeans :: {"values": ["extradelight:soybean_sack_item"]}
+item/storage_blocks_sugar :: {"values": ["extradelight:sugar_sack"]}
+item/storage_blocks_sweet_berries :: {"values": ["extradelight:sweet_berry_crate"]}
+item/storage_blocks_white_chocolate_bar :: {"values": ["extradelight:white_chocolate_block"]}
+item/tea_ingredients :: {"values": ["#c:mint", "#extradelight:processed/ginger", "extradelight:corn_silk", "#c:crops/mallow_root"]}
+item/toast :: {"values": ["extradelight:toast", "extradelight:toast"]}
+item/toffee :: {"values": ["extradelight:toffee"]}
+item/tomato/sliced :: {"values": ["extradelight:sliced_tomato"]}
+item/tools :: {"values": ["#c:spoons", "#c:pestles"]}
+item/trail_mix :: {"values": ["extradelight:trail_mix"]}
+item/vegetable/cactus :: {"values": ["extradelight:cactus"]}
+item/vegetable/corn :: {"values": ["extradelight:corn_on_cob"]}
+item/vinegar :: {"values": ["extradelight:vinegar"]}
+item/whipped_cream :: {"values": ["extradelight:whipped_cream"]}
+item/yeast_spread :: {"values": ["extradelight:yeast_spread"]}

@@ -14,6 +14,7 @@ versionRange="[1.1.1285-1.21.1-snapshot,)"
 
 ## blocks
 
+
 ## items
 minecolonies_tweaks:copyscroll
 minecolonies_tweaks:inventoryscroll
@@ -56,93 +57,94 @@ minecolonies_tweaks:universityscroll
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/bellpeppers.json :: {	"values": [		"minecolonies:bell_pepper"	]}
-item/butter.json :: {	"values": [		"minecolonies:butter"	]}
-item/butters.json :: {	"values": [		"minecolonies:butter"	]}
-item/cabbage.json :: {	"values": [		"minecolonies:cabbage"	]}
-item/cheese.json :: {	"values": [		"minecolonies:cheddar_cheese",		"minecolonies:feta_cheese"	]}
-item/cheeses.json :: {	"values": [		"minecolonies:cheddar_cheese",		"minecolonies:feta_cheese"	]}
-item/condiments.json :: {	"values": [		"minecolonies:soysauce"	]}
-item/corn.json :: {	"values": [		"minecolonies:corn"	]}
-item/cornmeal.json :: {	"values": [		"minecolonies:cornmeal"	]}
-item/crops.json :: {	"values": [		"#c:crops/bellpepper",		"#c:crops/cabbage",		"#c:crops/chickpea",		"#c:crops/corn",		"#c:crops/eggplant",		"#c:crops/garlic",		"#c:crops/onion",		"#c:crops/pea",		"#c:crops/peas",		"#c:crops/rice",		"#c:crops/soybean",		"#c:crops/tomato",		"#c:crops/wheat"	]}
-item/dough.json :: {	"values": [		"minecolonies:bread_dough"	]}
-item/eggplants.json :: {	"values": [		"minecolonies:eggplant"	]}
-item/foods.json :: {	"values": [		"#c:foods/bellpepper",		"#c:foods/cabbage",		"#c:foods/chickpea",		"#c:foods/corn",		"#c:foods/dough",		"#c:foods/eggplant",		"#c:foods/garlic",		"#c:foods/onion",		"#c:foods/pea",		"#c:foods/peas",		"#c:foods/rice",		"#c:foods/soybean",		"#c:foods/tomato",		"#c:foods/wheat"	]}
-item/fruits.json :: {	"values": [		"#c:fruits/bellpepper"	]}
-item/garlic.json :: {	"values": [		"minecolonies:garlic"	]}
-item/grain.json :: {	"values": [		"#c:grain/chickpea",		"#c:grain/rice",		"#c:grain/soybean",		"#c:grain/wheat"	]}
-item/milk.json :: {	"values": [		"minecolonies:large_milk_bottle",		"minecolonies:large_soy_milk_bottle"	]}
-item/milks.json :: {	"values": [		"minecolonies:large_milk_bottle",		"minecolonies:large_soy_milk_bottle"	]}
-item/noodles.json :: {	"values": [		"minecolonies:raw_noodle"	]}
-item/onion.json :: {	"values": [		"minecolonies:onion"	]}
-item/onions.json :: {	"values": [		"#c:onions/onion"	]}
-item/peppers.json :: {	"values": [		"#c:peppers/bellpepper"	]}
-item/rice.json :: {	"values": [		"minecolonies:rice"	]}
-item/salad_ingredients.json :: {	"values": [		"#c:salad_ingredients/cabbage",		"#c:salad_ingredients/tomato"	]}
-item/soy_milks.json :: {	"values": [		"minecolonies:large_soy_milk_bottle"	]}
-item/soy_sauces.json :: {	"values": [		"minecolonies:soysauce"	]}
-item/soybeans.json :: {	"values": [		"minecolonies:soybean"	]}
-item/soysauce.json :: {	"values": [		"minecolonies:soysauce"	]}
-item/tofu.json :: {	"values": [		"minecolonies:tofu"	]}
-item/tomato.json :: {	"values": [		"minecolonies:tomato"	]}
-item/tomatoes.json :: {	"values": [		"minecolonies:tomato"	]}
-item/tortilla.json :: {	"values": [		"minecolonies:tortillas"	]}
-item/tortillas.json :: {	"values": [		"minecolonies:tortillas"	]}
-item/vegetables.json :: {	"values": [		"#c:vegetables/bellpepper",		"#c:vegetables/cabbage",		"#c:vegetables/eggplant",		"#c:vegetables/garlic",		"#c:vegetables/onion",		"#c:vegetables/tomato"	]}
-item/vinegar_ingredients.json :: {	"values": [		"#c:vinegar_ingredients/rice",		"#c:vinegar_ingredients/tomato"	]}
-item/water_bottles.json :: {	"values": [		"minecolonies:large_water_bottle"	]}
-item/wheat.json :: {	"values": [		"minecolonies:durum"	]}
-item/yogurt.json :: {	"values": [		"minecolonies:yogurt"	]}
-item/condiments/soysauce.json :: {	"values": [		"minecolonies:soysauce"	]}
-item/cornmeal/cornmeal.json :: {	"values": [		"minecolonies:cornmeal"	]}
-item/crops/bellpepper.json :: {	"values": [		"minecolonies:bell_pepper"	]}
-item/crops/cabbage.json :: {	"values": [		"minecolonies:cabbage"	]}
-item/crops/chickpea.json :: {	"values": [		"minecolonies:chickpea"	]}
-item/crops/corn.json :: {	"values": [		"minecolonies:corn"	]}
-item/crops/eggplant.json :: {	"values": [		"minecolonies:eggplant"	]}
-item/crops/garlic.json :: {	"values": [		"minecolonies:garlic"	]}
-item/crops/onion.json :: {	"values": [		"minecolonies:onion"	]}
-item/crops/pea.json :: {	"values": [		"minecolonies:peas"	]}
-item/crops/peas.json :: {	"values": [		"minecolonies:peas"	]}
-item/crops/rice.json :: {	"values": [		"minecolonies:rice"	]}
-item/crops/soybean.json :: {	"values": [		"minecolonies:soybean"	]}
-item/crops/tomato.json :: {	"values": [		"minecolonies:tomato"	]}
-item/crops/wheat.json :: {	"values": [		"minecolonies:durum"	]}
-item/foods/bellpepper.json :: {	"values": [		"minecolonies:bell_pepper"	]}
-item/foods/cabbage.json :: {	"values": [		"minecolonies:cabbage"	]}
-item/foods/chickpea.json :: {	"values": [		"minecolonies:chickpea"	]}
-item/foods/corn.json :: {	"values": [		"minecolonies:corn"	]}
-item/foods/dough.json :: {	"values": [		"minecolonies:bread_dough"	]}
-item/foods/eggplant.json :: {	"values": [		"minecolonies:eggplant"	]}
-item/foods/garlic.json :: {	"values": [		"minecolonies:garlic"	]}
-item/foods/onion.json :: {	"values": [		"minecolonies:onion"	]}
-item/foods/pea.json :: {	"values": [		"minecolonies:peas"	]}
-item/foods/peas.json :: {	"values": [		"minecolonies:peas"	]}
-item/foods/rice.json :: {	"values": [		"minecolonies:rice"	]}
-item/foods/soybean.json :: {	"values": [		"minecolonies:soybean"	]}
-item/foods/tomato.json :: {	"values": [		"minecolonies:tomato"	]}
-item/foods/vegetable.json :: {	"values": [		"#c:vegetables/bellpepper",		"#c:vegetables/cabbage",		"#c:vegetables/eggplant",		"#c:vegetables/garlic",		"#c:vegetables/onion",		"#c:vegetables/tomato"	]}
-item/foods/wheat.json :: {	"values": [		"minecolonies:durum"	]}
-item/fruits/bellpepper.json :: {	"values": [		"minecolonies:bell_pepper"	]}
-item/grain/chickpea.json :: {	"values": [		"minecolonies:chickpea"	]}
-item/grain/pea.json :: {	"values": [		"minecolonies:peas"	]}
-item/grain/rice.json :: {	"values": [		"minecolonies:rice"	]}
-item/grain/soybean.json :: {	"values": [		"minecolonies:soybean"	]}
-item/grain/wheat.json :: {	"values": [		"minecolonies:durum"	]}
-item/onions/onion.json :: {	"values": [		"minecolonies:onion"	]}
-item/peppers/bellpepper.json :: {	"values": [		"minecolonies:bell_pepper"	]}
-item/salad_ingredients/cabbage.json :: {	"values": [		"minecolonies:cabbage"	]}
-item/salad_ingredients/tomato.json :: {	"values": [		"minecolonies:tomato"	]}
-item/soysauce/soysauce.json :: {	"values": [		"minecolonies:soysauce"	]}
-item/tortilla/tortilla.json :: {	"values": [		"minecolonies:tortillas"	]}
-item/vegetables/bellpepper.json :: {	"values": [		"minecolonies:bell_pepper"	]}
-item/vegetables/cabbage.json :: {	"values": [		"minecolonies:cabbage"	]}
-item/vegetables/eggplant.json :: {	"values": [		"minecolonies:eggplant"	]}
-item/vegetables/garlic.json :: {	"values": [		"minecolonies:garlic"	]}
-item/vegetables/onion.json :: {	"values": [		"minecolonies:onion"	]}
-item/vegetables/tomato.json :: {	"values": [		"minecolonies:tomato"	]}
-item/vinegar_ingredients/rice.json :: {	"values": [		"minecolonies:rice"	]}
-item/vinegar_ingredients/tomato.json :: {	"values": [		"minecolonies:tomato"	]}
-item/yogurt/yogurt.json :: {	"values": [		"minecolonies:yogurt"	]}
+item/bellpeppers :: {"values": ["minecolonies:bell_pepper"]}
+item/butter :: {"values": ["minecolonies:butter"]}
+item/butters :: {"values": ["minecolonies:butter"]}
+item/cabbage :: {"values": ["minecolonies:cabbage"]}
+item/cheese :: {"values": ["minecolonies:cheddar_cheese", "minecolonies:feta_cheese"]}
+item/cheeses :: {"values": ["minecolonies:cheddar_cheese", "minecolonies:feta_cheese"]}
+item/condiments :: {"values": ["minecolonies:soysauce"]}
+item/condiments/soysauce :: {"values": ["minecolonies:soysauce"]}
+item/corn :: {"values": ["minecolonies:corn"]}
+item/cornmeal :: {"values": ["minecolonies:cornmeal"]}
+item/cornmeal/cornmeal :: {"values": ["minecolonies:cornmeal"]}
+item/crops :: {"values": ["#c:crops/bellpepper", "#c:crops/cabbage", "#c:crops/chickpea", "#c:crops/corn", "#c:crops/eggplant", "#c:crops/garlic", "#c:crops/onion", "#c:crops/pea", "#c:crops/peas", "#c:crops/rice", "#c:crops/soybean", "#c:crops/tomato", "#c:crops/wheat"]}
+item/crops/bellpepper :: {"values": ["minecolonies:bell_pepper"]}
+item/crops/cabbage :: {"values": ["minecolonies:cabbage"]}
+item/crops/chickpea :: {"values": ["minecolonies:chickpea"]}
+item/crops/corn :: {"values": ["minecolonies:corn"]}
+item/crops/eggplant :: {"values": ["minecolonies:eggplant"]}
+item/crops/garlic :: {"values": ["minecolonies:garlic"]}
+item/crops/onion :: {"values": ["minecolonies:onion"]}
+item/crops/pea :: {"values": ["minecolonies:peas"]}
+item/crops/peas :: {"values": ["minecolonies:peas"]}
+item/crops/rice :: {"values": ["minecolonies:rice"]}
+item/crops/soybean :: {"values": ["minecolonies:soybean"]}
+item/crops/tomato :: {"values": ["minecolonies:tomato"]}
+item/crops/wheat :: {"values": ["minecolonies:durum"]}
+item/dough :: {"values": ["minecolonies:bread_dough"]}
+item/eggplants :: {"values": ["minecolonies:eggplant"]}
+item/foods :: {"values": ["#c:foods/bellpepper", "#c:foods/cabbage", "#c:foods/chickpea", "#c:foods/corn", "#c:foods/dough", "#c:foods/eggplant", "#c:foods/garlic", "#c:foods/onion", "#c:foods/pea", "#c:foods/peas", "#c:foods/rice", "#c:foods/soybean", "#c:foods/tomato", "#c:foods/wheat"]}
+item/foods/bellpepper :: {"values": ["minecolonies:bell_pepper"]}
+item/foods/cabbage :: {"values": ["minecolonies:cabbage"]}
+item/foods/chickpea :: {"values": ["minecolonies:chickpea"]}
+item/foods/corn :: {"values": ["minecolonies:corn"]}
+item/foods/dough :: {"values": ["minecolonies:bread_dough"]}
+item/foods/eggplant :: {"values": ["minecolonies:eggplant"]}
+item/foods/garlic :: {"values": ["minecolonies:garlic"]}
+item/foods/onion :: {"values": ["minecolonies:onion"]}
+item/foods/pea :: {"values": ["minecolonies:peas"]}
+item/foods/peas :: {"values": ["minecolonies:peas"]}
+item/foods/rice :: {"values": ["minecolonies:rice"]}
+item/foods/soybean :: {"values": ["minecolonies:soybean"]}
+item/foods/tomato :: {"values": ["minecolonies:tomato"]}
+item/foods/vegetable :: {"values": ["#c:vegetables/bellpepper", "#c:vegetables/cabbage", "#c:vegetables/eggplant", "#c:vegetables/garlic", "#c:vegetables/onion", "#c:vegetables/tomato"]}
+item/foods/wheat :: {"values": ["minecolonies:durum"]}
+item/fruits :: {"values": ["#c:fruits/bellpepper"]}
+item/fruits/bellpepper :: {"values": ["minecolonies:bell_pepper"]}
+item/garlic :: {"values": ["minecolonies:garlic"]}
+item/grain :: {"values": ["#c:grain/chickpea", "#c:grain/rice", "#c:grain/soybean", "#c:grain/wheat"]}
+item/grain/chickpea :: {"values": ["minecolonies:chickpea"]}
+item/grain/pea :: {"values": ["minecolonies:peas"]}
+item/grain/rice :: {"values": ["minecolonies:rice"]}
+item/grain/soybean :: {"values": ["minecolonies:soybean"]}
+item/grain/wheat :: {"values": ["minecolonies:durum"]}
+item/milk :: {"values": ["minecolonies:large_milk_bottle", "minecolonies:large_soy_milk_bottle"]}
+item/milks :: {"values": ["minecolonies:large_milk_bottle", "minecolonies:large_soy_milk_bottle"]}
+item/noodles :: {"values": ["minecolonies:raw_noodle"]}
+item/onion :: {"values": ["minecolonies:onion"]}
+item/onions :: {"values": ["#c:onions/onion"]}
+item/onions/onion :: {"values": ["minecolonies:onion"]}
+item/peppers :: {"values": ["#c:peppers/bellpepper"]}
+item/peppers/bellpepper :: {"values": ["minecolonies:bell_pepper"]}
+item/rice :: {"values": ["minecolonies:rice"]}
+item/salad_ingredients :: {"values": ["#c:salad_ingredients/cabbage", "#c:salad_ingredients/tomato"]}
+item/salad_ingredients/cabbage :: {"values": ["minecolonies:cabbage"]}
+item/salad_ingredients/tomato :: {"values": ["minecolonies:tomato"]}
+item/soy_milks :: {"values": ["minecolonies:large_soy_milk_bottle"]}
+item/soy_sauces :: {"values": ["minecolonies:soysauce"]}
+item/soybeans :: {"values": ["minecolonies:soybean"]}
+item/soysauce :: {"values": ["minecolonies:soysauce"]}
+item/soysauce/soysauce :: {"values": ["minecolonies:soysauce"]}
+item/tofu :: {"values": ["minecolonies:tofu"]}
+item/tomato :: {"values": ["minecolonies:tomato"]}
+item/tomatoes :: {"values": ["minecolonies:tomato"]}
+item/tortilla :: {"values": ["minecolonies:tortillas"]}
+item/tortilla/tortilla :: {"values": ["minecolonies:tortillas"]}
+item/tortillas :: {"values": ["minecolonies:tortillas"]}
+item/vegetables :: {"values": ["#c:vegetables/bellpepper", "#c:vegetables/cabbage", "#c:vegetables/eggplant", "#c:vegetables/garlic", "#c:vegetables/onion", "#c:vegetables/tomato"]}
+item/vegetables/bellpepper :: {"values": ["minecolonies:bell_pepper"]}
+item/vegetables/cabbage :: {"values": ["minecolonies:cabbage"]}
+item/vegetables/eggplant :: {"values": ["minecolonies:eggplant"]}
+item/vegetables/garlic :: {"values": ["minecolonies:garlic"]}
+item/vegetables/onion :: {"values": ["minecolonies:onion"]}
+item/vegetables/tomato :: {"values": ["minecolonies:tomato"]}
+item/vinegar_ingredients :: {"values": ["#c:vinegar_ingredients/rice", "#c:vinegar_ingredients/tomato"]}
+item/vinegar_ingredients/rice :: {"values": ["minecolonies:rice"]}
+item/vinegar_ingredients/tomato :: {"values": ["minecolonies:tomato"]}
+item/water_bottles :: {"values": ["minecolonies:large_water_bottle"]}
+item/wheat :: {"values": ["minecolonies:durum"]}
+item/yogurt :: {"values": ["minecolonies:yogurt"]}
+item/yogurt/yogurt :: {"values": ["minecolonies:yogurt"]}

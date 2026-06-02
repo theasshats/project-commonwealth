@@ -456,16 +456,16 @@ cataclysm:wrath_of_the_desert
 cataclysm:zweiender
 
 ## neoforge biome_modifiers
-cataclysm_mob_spawns.json :: { "type": "cataclysm:cataclysm_mob_spawns"}
+cataclysm_mob_spawns.json :: {"type": "cataclysm:cataclysm_mob_spawns"}
 
 ## c: common tag membership
-entity_type/bosses.json :: { "replace": false, "values": [ "cataclysm:ignis", "cataclysm:netherite_monstrosity", "cataclysm:ender_guardian", "cataclysm:the_harbinger", "cataclysm:the_leviathan", "cataclysm:ancient_remnant", "cataclysm:maledictus", "cataclysm:scylla" ]}
-item/armor/boots.json :: { "replace": false, "values": [ "cataclysm:ignitium_boots" ]}
-item/armor/chestplates.json :: { "replace": false, "values": [ "cataclysm:ignitium_chestplate", "cataclysm:ignitium_elytra_chestplate" ]}
-item/armor/helmets.json :: { "replace": false, "values": [ "cataclysm:monstrous_helm", "cataclysm:ignitium_helmet" ]}
-item/armor/leggings.json :: { "replace": false, "values": [ "cataclysm:ignitium_leggings" ]}
-item/tools/axes.json :: { "replace": false, "values": [ "cataclysm:meat_shredder", "cataclysm:soul_render", "cataclysm:black_steel_axe" ]}
-item/tools/bows.json :: { "replace": false, "values": [ "cataclysm:cursed_bow" ]}
-item/tools/pickaxes.json :: { "replace": false, "values": [ "cataclysm:infernal_forge", "cataclysm:void_forge", "cataclysm:brontes", "cataclysm:black_steel_pickaxe" ]}
-item/tools/swords.json :: { "replace": false, "values": [ "cataclysm:the_incinerator", "cataclysm:athame" ]}
-item/tools/tridents.json :: { "replace": false, "values": [ "cataclysm:coral_spear", "cataclysm:coral_bardiche" ]}
+entity_type/bosses :: {"replace": false, "values": ["cataclysm:ignis", "cataclysm:netherite_monstrosity", "cataclysm:ender_guardian", "cataclysm:the_harbinger", "cataclysm:the_leviathan", "cataclysm:ancient_remnant", "cataclysm:maledictus", "cataclysm:scylla"]}
+item/armor/boots :: {"replace": false, "values": ["cataclysm:ignitium_boots"]}
+item/armor/chestplates :: {"replace": false, "values": ["cataclysm:ignitium_chestplate", "cataclysm:ignitium_elytra_chestplate"]}
+item/armor/helmets :: {"replace": false, "values": ["cataclysm:monstrous_helm", "cataclysm:ignitium_helmet"]}
+item/armor/leggings :: {"replace": false, "values": ["cataclysm:ignitium_leggings"]}
+item/tools/axes :: {"replace": false, "values": ["cataclysm:meat_shredder", "cataclysm:soul_render", "cataclysm:black_steel_axe"]}
+item/tools/bows :: {"replace": false, "values": ["cataclysm:cursed_bow"]}
+item/tools/pickaxes :: {"replace": false, "values": ["cataclysm:infernal_forge", "cataclysm:void_forge", "cataclysm:brontes", "cataclysm:black_steel_pickaxe"]}
+item/tools/swords :: {"replace": false, "values": ["cataclysm:the_incinerator", "cataclysm:athame"]}
+item/tools/tridents :: {"replace": false, "values": ["cataclysm:coral_spear", "cataclysm:coral_bardiche"]}

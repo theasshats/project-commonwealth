@@ -28,8 +28,8 @@ createblockchain:piggy_bank
 createblockchain:remote_finder
 
 ## neoforge biome_modifiers
-add_mining_core_geode.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "createblockchain:mining_core_geode_placed", "step": "local_modifications"}
+add_mining_core_geode.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "createblockchain:mining_core_geode_placed", "step": "local_modifications"}
 
 ## c: common tag membership
-fluid/coolants.json :: { "values": [ "createblockchain:cryotheum_coolant", "createblockchain:flowing_cryotheum_coolant" ]}
-fluid/water.json :: { "values": [ "createblockchain:cryotheum_coolant", "createblockchain:flowing_cryotheum_coolant" ]}
+fluid/coolants :: {"values": ["createblockchain:cryotheum_coolant", "createblockchain:flowing_cryotheum_coolant"]}
+fluid/water :: {"values": ["createblockchain:cryotheum_coolant", "createblockchain:flowing_cryotheum_coolant"]}

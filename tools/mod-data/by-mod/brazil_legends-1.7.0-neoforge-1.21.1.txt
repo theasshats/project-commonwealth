@@ -71,9 +71,10 @@ brazil_legends:upgraded_carved_mapinguari_fang_helmet
 brazil_legends:vision_spell_book
 
 ## neoforge biome_modifiers
-capelobo_stare_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": [ "birch_forest", "forest", "flower_forest" ], "spawners": { "type": "brazil_legends:capelobo_stare", "weight": 10, "minCount": 1, "maxCount": 4 }}
-mapinguari_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": [ "sparse_jungle", "savanna" ], "spawners": { "type": "brazil_legends:mapinguari", "weight": 5, "minCount": 1, "maxCount": 1 }}
-mapinguary_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": [ "old_growth_pine_taiga", "ice_spikes" ], "spawners": { "type": "brazil_legends:mapinguary", "weight": 5, "minCount": 1, "maxCount": 1 }}
-saci_perere_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": "bamboo_jungle", "spawners": { "type": "brazil_legends:saci_perere", "weight": 3, "minCount": 2, "maxCount": 3 }}
+capelobo_stare_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": ["birch_forest", "forest", "flower_forest"], "spawners": {"type": "brazil_legends:capelobo_stare", "weight": 10, "minCount": 1, "maxCount": 4}}
+mapinguari_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": ["sparse_jungle", "savanna"], "spawners": {"type": "brazil_legends:mapinguari", "weight": 5, "minCount": 1, "maxCount": 1}}
+mapinguary_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": ["old_growth_pine_taiga", "ice_spikes"], "spawners": {"type": "brazil_legends:mapinguary", "weight": 5, "minCount": 1, "maxCount": 1}}
+saci_perere_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": "bamboo_jungle", "spawners": {"type": "brazil_legends:saci_perere", "weight": 3, "minCount": 2, "maxCount": 3}}
 
 ## c: common tag membership
+

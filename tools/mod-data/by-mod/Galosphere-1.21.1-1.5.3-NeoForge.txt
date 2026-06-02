@@ -313,34 +313,34 @@ galosphere:wave_pottery_sherd
 galosphere:weapon_rack
 
 ## neoforge biome_modifiers
-add_crystal_canyons_features.json :: { "type": "neoforge:add_features", "biomes": "galosphere:crystal_canyons", "features": [ "galosphere:allurite_ceiling_crystals", "galosphere:allurite_floor_crystals", "galosphere:large_ceiling_allurite_crystals", "galosphere:large_floor_allurite_crystals", "galosphere:lumiere_floor_crystals", "galosphere:lumiere_ceiling_crystals", "galosphere:large_ceiling_lumiere_crystals", "galosphere:large_floor_lumiere_crystals" ], "step": "vegetal_decoration"}
-add_crystal_canyons_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "galosphere:crystal_canyons", "spawners": [ { "type": "galosphere:sparkle", "maxCount": 6, "minCount": 4, "weight": 10 }, { "type": "minecraft:glow_squid", "maxCount": 6, "minCount": 4, "weight": 10 } ]}
-add_large_silver_ores.json :: { "type": "neoforge:add_features", "biomes": "galosphere:crystal_canyons", "features": "galosphere:ore_silver_large", "step": "underground_ores"}
-add_lichen_caves_features.json :: { "type": "neoforge:add_spawns", "biomes": "galosphere:lichen_caves", "spawners": { "type": "galosphere:spectre", "maxCount": 8, "minCount": 8, "weight": 20 }}
-add_lichen_caves_spawns.json :: { "type": "neoforge:add_features", "biomes": "galosphere:lichen_caves", "features": [ "galosphere:bowl_lichen", "galosphere:lichen_caves_vegetation", "galosphere:lichen_cordyceps_column", "galosphere:gravel_patch" ], "step": "vegetal_decoration"}
-add_pink_salt_caves_features.json :: { "type": "neoforge:add_features", "biomes": "galosphere:pink_salt_caves", "features": [ "galosphere:pink_salt_noise_ceiling_patch", "galosphere:pink_salt_noise_ground_patch", "galosphere:pink_salt_straw_ceiling_patch", "galosphere:pink_salt_straw_floor_patch" ], "step": "vegetal_decoration"}
-add_pink_salt_caves_modifications.json :: { "type": "neoforge:add_features", "biomes": "galosphere:pink_salt_caves", "features": "galosphere:oasis", "step": "local_modifications"}
-add_pink_salt_caves_spawns.json :: { "type": "neoforge:add_spawns", "biomes": "galosphere:pink_salt_caves", "spawners": { "type": "galosphere:preserved", "maxCount": 4, "minCount": 4, "weight": 100 }}
-add_silver_ores.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "galosphere:ore_silver_small", "step": "underground_ores"}
+add_crystal_canyons_features.json :: {"type": "neoforge:add_features", "biomes": "galosphere:crystal_canyons", "features": ["galosphere:allurite_ceiling_crystals", "galosphere:allurite_floor_crystals", "galosphere:large_ceiling_allurite_crystals", "galosphere:large_floor_allurite_crystals", "galosphere:lumiere_floor_crystals", "galosphere:lumiere_ceiling_crystals", "galosphere:large_ceiling_lumiere_crystals", "galosphere:large_floor_lumiere_crystals"], "step": "vegetal_decoration"}
+add_crystal_canyons_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "galosphere:crystal_canyons", "spawners": [{"type": "galosphere:sparkle", "maxCount": 6, "minCount": 4, "weight": 10}, {"type": "minecraft:glow_squid", "maxCount": 6, "minCount": 4, "weight": 10}]}
+add_large_silver_ores.json :: {"type": "neoforge:add_features", "biomes": "galosphere:crystal_canyons", "features": "galosphere:ore_silver_large", "step": "underground_ores"}
+add_lichen_caves_features.json :: {"type": "neoforge:add_spawns", "biomes": "galosphere:lichen_caves", "spawners": {"type": "galosphere:spectre", "maxCount": 8, "minCount": 8, "weight": 20}}
+add_lichen_caves_spawns.json :: {"type": "neoforge:add_features", "biomes": "galosphere:lichen_caves", "features": ["galosphere:bowl_lichen", "galosphere:lichen_caves_vegetation", "galosphere:lichen_cordyceps_column", "galosphere:gravel_patch"], "step": "vegetal_decoration"}
+add_pink_salt_caves_features.json :: {"type": "neoforge:add_features", "biomes": "galosphere:pink_salt_caves", "features": ["galosphere:pink_salt_noise_ceiling_patch", "galosphere:pink_salt_noise_ground_patch", "galosphere:pink_salt_straw_ceiling_patch", "galosphere:pink_salt_straw_floor_patch"], "step": "vegetal_decoration"}
+add_pink_salt_caves_modifications.json :: {"type": "neoforge:add_features", "biomes": "galosphere:pink_salt_caves", "features": "galosphere:oasis", "step": "local_modifications"}
+add_pink_salt_caves_spawns.json :: {"type": "neoforge:add_spawns", "biomes": "galosphere:pink_salt_caves", "spawners": {"type": "galosphere:preserved", "maxCount": 4, "minCount": 4, "weight": 100}}
+add_silver_ores.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "galosphere:ore_silver_small", "step": "underground_ores"}
 
 ## c: common tag membership
-block/ores/palladium.json :: { "values": [ "galosphere:palladium_ore", "galosphere:deepslate_palladium_ore" ]}
-block/ores.json :: { "values": [ "#c:ores/palladium" ]}
-block/storage_blocks/palladium.json :: { "values": [ "galosphere:palladium_block" ]}
-block/storage_blocks/raw_palladium.json :: { "values": [ "galosphere:raw_palladium_block" ]}
-block/storage_blocks.json :: { "values": [ "#c:storage_blocks/palladium", "#c:storage_blocks/raw_palladium" ]}
-item/foods.json :: { "values": [ "galosphere:lichen_cordyceps", "galosphere:golden_lichen_cordyceps", "galosphere:salted_jerky", "galosphere:preserved_flesh" ]}
-item/ingots/palladium.json :: { "values": [ "galosphere:palladium_ingot" ]}
-item/ingots.json :: { "values": [ "#c:ingots/palladium" ]}
-item/nuggets/palladium.json :: { "values": [ "galosphere:palladium_nugget" ]}
-item/nuggets.json :: { "values": [ "#c:nuggets/palladium" ]}
-item/ores/palladium.json :: { "values": [ "galosphere:palladium_ore", "galosphere:deepslate_palladium_ore" ]}
-item/ores.json :: { "values": [ "#c:ores/palladium" ]}
-item/raw_materials/palladium.json :: { "values": [ "galosphere:raw_palladium" ]}
-item/raw_materials.json :: { "values": [ "#c:raw_materials/palladium" ]}
-item/storage_blocks/palladium.json :: { "values": [ "galosphere:palladium_block" ]}
-item/storage_blocks/raw_palladium.json :: { "values": [ "galosphere:raw_palladium_block" ]}
-item/storage_blocks.json :: { "values": [ "#c:storage_blocks/palladium", "#c:storage_blocks/raw_palladium" ]}
-item/tools.json :: { "values": [ "galosphere:echo_bell" ]}
-worldgen/biome/is_cave.json :: { "values": [ { "id": "galosphere:crystal_canyons", "required": false }, { "id": "galosphere:lichen_caves", "required": false }, { "id": "galosphere:pink_salt_caves", "required": false } ]}
-worldgen/biome/is_underground.json :: { "values": [ { "id": "galosphere:crystal_canyons", "required": false }, { "id": "galosphere:lichen_caves", "required": false }, { "id": "galosphere:pink_salt_caves", "required": false } ]}
+block/ores :: {"values": ["#c:ores/palladium"]}
+block/ores/palladium :: {"values": ["galosphere:palladium_ore", "galosphere:deepslate_palladium_ore"]}
+block/storage_blocks :: {"values": ["#c:storage_blocks/palladium", "#c:storage_blocks/raw_palladium"]}
+block/storage_blocks/palladium :: {"values": ["galosphere:palladium_block"]}
+block/storage_blocks/raw_palladium :: {"values": ["galosphere:raw_palladium_block"]}
+item/foods :: {"values": ["galosphere:lichen_cordyceps", "galosphere:golden_lichen_cordyceps", "galosphere:salted_jerky", "galosphere:preserved_flesh"]}
+item/ingots :: {"values": ["#c:ingots/palladium"]}
+item/ingots/palladium :: {"values": ["galosphere:palladium_ingot"]}
+item/nuggets :: {"values": ["#c:nuggets/palladium"]}
+item/nuggets/palladium :: {"values": ["galosphere:palladium_nugget"]}
+item/ores :: {"values": ["#c:ores/palladium"]}
+item/ores/palladium :: {"values": ["galosphere:palladium_ore", "galosphere:deepslate_palladium_ore"]}
+item/raw_materials :: {"values": ["#c:raw_materials/palladium"]}
+item/raw_materials/palladium :: {"values": ["galosphere:raw_palladium"]}
+item/storage_blocks :: {"values": ["#c:storage_blocks/palladium", "#c:storage_blocks/raw_palladium"]}
+item/storage_blocks/palladium :: {"values": ["galosphere:palladium_block"]}
+item/storage_blocks/raw_palladium :: {"values": ["galosphere:raw_palladium_block"]}
+item/tools :: {"values": ["galosphere:echo_bell"]}
+worldgen/biome/is_cave :: {"values": [{"id": "galosphere:crystal_canyons", "required": false}, {"id": "galosphere:lichen_caves", "required": false}, {"id": "galosphere:pink_salt_caves", "required": false}]}
+worldgen/biome/is_underground :: {"values": [{"id": "galosphere:crystal_canyons", "required": false}, {"id": "galosphere:lichen_caves", "required": false}, {"id": "galosphere:pink_salt_caves", "required": false}]}

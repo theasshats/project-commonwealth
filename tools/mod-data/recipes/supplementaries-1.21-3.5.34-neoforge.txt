@@ -196,6 +196,9 @@ supplementaries:gold_trapdoor | minecraft:crafting_shaped | c:ingots/gold minecr
 supplementaries:gravel_bricks | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:gravel supplementaries:flag supplementaries:gravel_bricks
 supplementaries:hat_stand | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:planks minecraft:smooth_stone_slab supplementaries:flag supplementaries:hat_stand
 supplementaries:hourglass | minecraft:crafting_shaped | c:ingots/gold minecraft:crafting_shaped minecraft:glass supplementaries:flag supplementaries:hourglass
+supplementaries:inspirations/blackboard_clear | neoforge:conditional | fabric:mod_loaded inspirations:config neoforge:conditional supplementaries:blackboard supplementaries:cauldron_blackboard supplementaries:flag
+supplementaries:inspirations/flag_clear | neoforge:conditional | fabric:mod_loaded inspirations:config neoforge:conditional supplementaries:cauldron_flag_clear supplementaries:flag
+supplementaries:inspirations/flag_dye | neoforge:conditional | fabric:mod_loaded inspirations:config neoforge:conditional supplementaries:cauldron_flag_dye supplementaries:flag supplementaries:flag_white
 supplementaries:integration/lumisene_mixing | create:mixing | create:mixing fabric:mod_loaded minecraft:glow_berries neoforge:mod_loaded supplementaries:flag supplementaries:lumisene
 supplementaries:integration/pancake_fd | minecraft:crafting_shapeless | c:drinks/milk c:eggs c:foods/dough fabric:mod_loaded minecraft:crafting_shapeless minecraft:sugar neoforge:mod_loaded supplementaries:flag supplementaries:pancake
 supplementaries:integration/planter_rich_fd | minecraft:crafting_shaped | fabric:mod_loaded farmersdelight:rich_soil minecraft:bone_meal minecraft:brick minecraft:crafting_shaped neoforge:mod_loaded supplementaries:flag supplementaries:planter
@@ -219,6 +222,8 @@ supplementaries:lock_block | minecraft:crafting_shaped | c:ingots/iron minecraft
 supplementaries:lumisene_bottle | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:glass_bottle minecraft:glow_berries supplementaries:flag supplementaries:lumisene_bottle
 supplementaries:lumisene_bucket | minecraft:crafting_shapeless | minecraft:bucket minecraft:crafting_shapeless minecraft:glow_berries supplementaries:flag supplementaries:lumisene_bucket
 supplementaries:lunch_basket | minecraft:crafting_shaped | minecraft:bamboo minecraft:crafting_shaped minecraft:wool_carpets supplementaries:flag supplementaries:lunch_basket
+supplementaries:neoforge/ash_bricks_fd | farmersdelight:cutting | fabric:mod_loaded farmersdelight:cutting farmersdelight:item_ability supplementaries:ash_brick supplementaries:ash_bricks supplementaries:flag
+supplementaries:neoforge/lapis_bricks_fd | farmersdelight:cutting | fabric:mod_loaded farmersdelight:cutting farmersdelight:item_ability minecraft:lapis_lazuli supplementaries:flag supplementaries:lapis_bricks
 supplementaries:netherite_door | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:netherite_scrap supplementaries:flag supplementaries:gold_door supplementaries:netherite_door
 supplementaries:netherite_trapdoor | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:netherite_scrap supplementaries:flag supplementaries:gold_trapdoor supplementaries:netherite_trapdoor
 supplementaries:notice_board | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:paper minecraft:planks supplementaries:flag supplementaries:notice_board
@@ -306,8 +311,3 @@ supplementaries:way_sign_oak | minecraft:crafting_shapeless | minecraft:crafting
 supplementaries:wicker_fence | minecraft:crafting_shaped | c:rods/wooden minecraft:crafting_shaped minecraft:sugar_cane supplementaries:flag supplementaries:wicker_fence
 supplementaries:wind_vane | minecraft:crafting_shaped | c:ingots/iron minecraft:crafting_shaped minecraft:iron_bars minecraft:redstone supplementaries:flag supplementaries:wind_vane
 supplementaries:wrench | minecraft:crafting_shaped | c:ingots/copper minecraft:crafting_shaped supplementaries:flag supplementaries:wrench
-supplementaries:inspirations/blackboard_clear | neoforge:conditional | fabric:mod_loaded inspirations:config neoforge:conditional supplementaries:blackboard supplementaries:cauldron_blackboard supplementaries:flag
-supplementaries:inspirations/flag_clear | neoforge:conditional | fabric:mod_loaded inspirations:config neoforge:conditional supplementaries:cauldron_flag_clear supplementaries:flag
-supplementaries:inspirations/flag_dye | neoforge:conditional | fabric:mod_loaded inspirations:config neoforge:conditional supplementaries:cauldron_flag_dye supplementaries:flag supplementaries:flag_white
-supplementaries:neoforge/ash_bricks_fd | farmersdelight:cutting | fabric:mod_loaded farmersdelight:cutting farmersdelight:item_ability supplementaries:ash_brick supplementaries:ash_bricks supplementaries:flag
-supplementaries:neoforge/lapis_bricks_fd | farmersdelight:cutting | fabric:mod_loaded farmersdelight:cutting farmersdelight:item_ability minecraft:lapis_lazuli supplementaries:flag supplementaries:lapis_bricks

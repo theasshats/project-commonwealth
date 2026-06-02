@@ -140,7 +140,8 @@ dynamictrees:warped_branch
 dynamictrees:warped_seed
 
 ## neoforge biome_modifiers
-add_dynamic_trees.json :: { "type": "dynamictrees:add_dynamic_trees"}
-run_feature_cancellers.json :: { "type": "dynamictrees:run_feature_cancellers"}
+add_dynamic_trees.json :: {"type": "dynamictrees:add_dynamic_trees"}
+run_feature_cancellers.json :: {"type": "dynamictrees:run_feature_cancellers"}
 
 ## c: common tag membership
+

@@ -1,0 +1,41 @@
+# createimmersivetacz-1.5-neoforge
+
+## mod metadata (id / version / deps)
+license="MIT"
+modId="createimmersivetacz" #mandatory
+version="1.5-neoforge" #mandatory
+displayName="Create Immersive TaCZ" #mandatory
+modId="neoforge" #mandatory
+versionRange="[21.1.228,)" #mandatory
+modId="minecraft"
+versionRange="[1.21.1]"
+modId="create"
+versionRange="[6.0.0,)"
+modId="tacz"
+versionRange="*"
+
+## blocks
+createimmersivetacz:gunpowder_fluid
+createimmersivetacz:nitropowder_fluid
+
+## items
+createimmersivetacz:40mmhe_casing
+createimmersivetacz:firing_mechanism
+createimmersivetacz:grenade_casing
+createimmersivetacz:gun_barrel
+createimmersivetacz:gun_trigger
+createimmersivetacz:gunpowder_bucket
+createimmersivetacz:incomplete_twelve_gauge_shell
+createimmersivetacz:nitropowder_bucket
+createimmersivetacz:pneumatic_pistol_casing
+createimmersivetacz:primer
+createimmersivetacz:rimmed_blunt_ap_casing
+createimmersivetacz:slap_casing
+createimmersivetacz:test_block
+createimmersivetacz:twelve_gauge_shell
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+
