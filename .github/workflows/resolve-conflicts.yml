@@ -1,0 +1,205 @@
+name: Auto-resolve regenerable conflicts
+
+# Automatically keeps open PRs free of the one conflict stacked PRs keep hitting:
+# the packwiz-generated files. `index.toml` is rebuilt by `packwiz refresh`, and
+# the only field `refresh` ever touches in `pack.toml` is the `[index]` hash — so
+# when two PRs both add/remove mods they collide there, but the "resolution" is
+# never to pick a side, it's to regenerate from the merged content.
+#
+# Triggers (no manual command needed):
+#   - push to main         -> re-resolve every open PR (the conflict appears the
+#                             moment main moves ahead of a branch)
+#   - PR opened / reopened -> resolve it immediately if it already collides
+#   - workflow_dispatch    -> resolve a single PR on demand
+#
+# Safety: it ONLY auto-resolves when every conflicting file is regenerable.
+#   - index.toml -> always regenerable (rebuilt wholesale by refresh)
+#   - pack.toml  -> regenerable ONLY if the two sides differ solely in the
+#                   [index] hash line (i.e. nobody touched version / minecraft /
+#                   neoforge). If they differ anywhere else, that's a real human
+#                   decision and we bail.
+# Any other conflicting file (mods/*.pw.toml both edited, kubejs, config, …) is a
+# genuine content conflict — the merge is aborted and a human is asked to resolve.
+#
+# No infinite loop: after a resolution we push to the PR branch, which can re-run
+# this workflow, but the branch is now up to date with main so the merge is a
+# no-op and nothing is pushed.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, reopened]
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: 'PR number to resolve'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    outputs:
+      prs: ${{ steps.list.outputs.prs }}
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Build the list of PRs to process
+        id: list
+        run: |
+          case "${{ github.event_name }}" in
+            push)
+              # Every open PR targeting main — any of them may now collide.
+              prs="$(gh pr list --repo "$GITHUB_REPOSITORY" --base main --state open --json number -q '[.[].number]')" ;;
+            pull_request)
+              prs="[${{ github.event.pull_request.number }}]" ;;
+            workflow_dispatch)
+              prs="[${{ github.event.inputs.pr }}]" ;;
+            *)
+              prs="[]" ;;
+          esac
+          echo "prs=$prs" >> "$GITHUB_OUTPUT"
+          echo "PRs to process: $prs"
+
+  resolve:
+    needs: discover
+    if: needs.discover.outputs.prs != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        pr: ${{ fromJSON(needs.discover.outputs.prs) }}
+    concurrency:
+      group: resolve-conflicts-${{ matrix.pr }}
+      cancel-in-progress: false
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PR: ${{ matrix.pr }}
+    steps:
+      - name: Resolve PR head branch
+        id: pr
+        run: |
+          state="$(gh pr view "$PR" --repo "$GITHUB_REPOSITORY" --json state -q .state)"
+          if [ "$state" != "OPEN" ]; then
+            echo "PR #$PR is $state — skipping."
+            echo "skip=1" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          head_ref="$(gh pr view "$PR" --repo "$GITHUB_REPOSITORY" --json headRefName -q .headRefName)"
+          head_repo="$(gh pr view "$PR" --repo "$GITHUB_REPOSITORY" --json headRepositoryOwner -q .headRepositoryOwner.login)"
+          echo "head_ref=$head_ref" >> "$GITHUB_OUTPUT"
+          if [ "$head_repo" != "${GITHUB_REPOSITORY%%/*}" ]; then
+            echo "PR #$PR is from a fork ($head_repo); cannot push a resolution to it."
+            echo "skip=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.pr.outputs.skip != '1'
+        with:
+          ref: ${{ steps.pr.outputs.head_ref }}
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: ./.github/actions/setup-packwiz
+        if: steps.pr.outputs.skip != '1'
+
+      - name: Merge main, auto-resolving only regenerable conflicts
+        id: merge
+        if: steps.pr.outputs.skip != '1'
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git fetch origin main
+          if git merge --no-commit --no-ff origin/main; then
+            echo "Merge was clean — no conflicts to resolve."
+            # Still refresh in case the merged content drifts the index.
+            packwiz refresh
+            if git diff --quiet && git diff --cached --quiet; then
+              echo "result=clean-nochange" >> "$GITHUB_OUTPUT"
+              git merge --abort || true
+              exit 0
+            fi
+            git add -A
+            git commit -m "Merge main into PR branch; refresh packwiz index"
+            echo "result=clean" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # We have conflicts. Inspect them.
+          mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
+          echo "Conflicting files: ${conflicts[*]}"
+          real_conflicts=()
+          for f in "${conflicts[@]}"; do
+            case "$f" in
+              index.toml)
+                : ;;  # fully regenerable
+              pack.toml)
+                # Regenerable only if the sides differ solely in the [index] hash line.
+                ours_norm="$(git show :2:pack.toml | grep -v '^hash = ' || true)"
+                theirs_norm="$(git show :3:pack.toml | grep -v '^hash = ' || true)"
+                if [ "$ours_norm" != "$theirs_norm" ]; then
+                  real_conflicts+=("$f")
+                fi ;;
+              *)
+                real_conflicts+=("$f") ;;
+            esac
+          done
+
+          if [ "${#real_conflicts[@]}" -gt 0 ]; then
+            echo "result=manual" >> "$GITHUB_OUTPUT"
+            printf '%s\n' "${real_conflicts[@]}" > /tmp/real_conflicts.txt
+            git merge --abort
+            exit 0
+          fi
+
+          # Every conflict is regenerable. Take our side for the generated files
+          # (pack.toml's non-hash content is identical; index.toml is rebuilt
+          # wholesale next), then regenerate from the merged content.
+          git checkout --ours -- pack.toml index.toml
+          git add pack.toml index.toml
+          packwiz refresh
+          git add -A
+          git commit -m "Merge main; regenerate packwiz index (auto-resolve conflicts)"
+          echo "result=resolved" >> "$GITHUB_OUTPUT"
+
+      - name: Push resolution
+        if: steps.pr.outputs.skip != '1' && (steps.merge.outputs.result == 'resolved' || steps.merge.outputs.result == 'clean')
+        run: |
+          for i in 1 2 3 4; do
+            if git push origin HEAD:${{ steps.pr.outputs.head_ref }}; then exit 0; fi
+            sleep $((2 ** i))
+          done
+          git push origin HEAD:${{ steps.pr.outputs.head_ref }}
+
+      - name: Report outcome
+        if: steps.pr.outputs.skip != '1' && always()
+        run: |
+          case "${{ steps.merge.outputs.result }}" in
+            resolved)
+              gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" \
+                --body "🤖 Auto-resolved the packwiz index conflict: merged \`main\` and regenerated \`index.toml\` / \`pack.toml\` from the combined mod list. Re-running PR checks." ;;
+            clean)
+              gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" \
+                --body "🤖 \`main\` merged cleanly into this branch (no conflicts); refreshed the index to be safe." ;;
+            clean-nochange)
+              : ;;  # already up to date — stay quiet, this fires on every push to main
+            manual)
+              # Push-to-main re-checks every PR, so don't re-comment the same
+              # warning on each push — the red index-freshness check already
+              # flags it. Only speak up when the PR is opened or resolved on demand.
+              if [ "${{ github.event_name }}" != "push" ]; then
+                files="$(sed 's/^/- `/; s/$/`/' /tmp/real_conflicts.txt)"
+                gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" \
+                  --body "$(printf '🤖 This PR conflicts in files I can only resolve by hand (I auto-resolve the packwiz-generated \`index.toml\` / \`pack.toml\` index hash, but these are real content changes):\n\n%s\n\nMerge \`main\` and resolve them locally.' "$files")"
+              fi ;;
+            *)
+              echo "No actionable result for PR #$PR." ;;
+          esac
