@@ -762,7 +762,7 @@ hash = "669a24f251421b0094427c61622d58ebd891423d6e85836cdb9c471d7631f4ed"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/40-northstar.js"
-hash = "88960224a04a3e958fb7b6a52bf091604fea44dd12e3de99ac038fa61a8cb69a"
+hash = "b5414ab09b4a29818fe1a449df3aec6632a96d49d5b9b7b86fcea959f9da2fb3"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/50-irons-spellbooks.js"
