@@ -141,12 +141,17 @@ metal/mechanical crafts that bypass Create*. Buckets:
   smokeleaf, supplementaries (kinetic blocks only), swashbucklers, **gliders** (metal paraglider
   tiers → pressed plates), **netmusic** (computer/cd_burner → electron_tube). Plus `05-metals.js`
   gating steel at the source, and **`81-decoration-metal.js`** — an *aggressive decoration weave*
-  (Macaw's metal doors/windows/fences + Supplementaries candle-holders) that routes raw iron through
-  `create:iron_sheet` via **`event.replaceInput`** (ingredient-only swap: shapes/yields/wood variants
-  untouched, cost-neutral, so a pure-decoration mod earns the Create pillar without becoming a grind).
-  `replaceInput` is the preferred tool for this kind of broad "route the metal through Create" weave —
-  reach for it over `remove`+`shaped` whenever you only need to change *what* an item is made of, not
-  its shape.
+  (Macaw's metal doors + metal windows, handcrafted metal furniture, Supplementaries candle-holders)
+  that routes raw iron through `create:iron_sheet` via **`event.replaceInput`** (ingredient-only swap:
+  shapes/yields/wood variants untouched, cost-neutral, so a pure-decoration mod earns the Create pillar
+  without becoming a grind). `replaceInput` is the preferred tool for this kind of broad "route the
+  metal through Create" weave — reach for it over `remove`+`shaped` whenever you only need to change
+  *what* an item is made of, not its shape.
+  - *Deliberately left alone:* Macaw's metal **fences** (stonecut from iron_bars, not the table — cheap
+    decoration on an awkward path); and a blanket "lights cost a bulb" pass — the pack's lamps are
+    **organic** (Galosphere crystal+glowstone, Quark corundum, torch-lit) so a bulb would break theme,
+    while the genuinely electric lights are already woven (bits_n_bobs bulb-lamps, Northstar plate-lamps,
+    securitycraft). Theme-coherence beats forcing the rule.
 - **Create addons — already route through Create, nothing to do** (~70 mods): everything `create*`
   / `cbc` / `tfmg` / `railways` / `GnKinetics` / `createbigcannons` / `CreateNumismatics` /
   `create_ironworks` / `createmetalwork` / `createnuclear` / `pantographs` / `direct_chute` /
