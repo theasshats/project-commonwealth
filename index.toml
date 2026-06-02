@@ -800,6 +800,11 @@ hash = "19cbfb37dc29169b50599dfa328fe12a0ec9caaec8ac02627b5846f3bd9d1425"
 metafile = true
 
 [[files]]
+file = "mods/aeronautics-dyeable-components.pw.toml"
+hash = "b218b7696365829e01cc3b6844913c757836d1ebdb0c49a9abf7a7fcbc0f6678"
+metafile = true
+
+[[files]]
 file = "mods/afk-sleep.pw.toml"
 hash = "f860d14f65c6239b2e5da1a25ac6765ffc14193a55b4c7f345af80de4cebf4a9"
 metafile = true
@@ -1290,6 +1295,16 @@ hash = "480b7c7cf1569b1eb98d199c10ce60a8ad13a534b738aa72e7bbcd3ac966d21e"
 metafile = true
 
 [[files]]
+file = "mods/create-stuff-additions.pw.toml"
+hash = "0ec6556e7e1c8d7b5ee522656adcd51ff59629e589409128241794f7d677c422"
+metafile = true
+
+[[files]]
+file = "mods/create-stuff-n-additions-x-sable-aeronautics.pw.toml"
+hash = "9ad47b3747d5aad0939d148ee9d7f26ee924d42f38e46d8038469fdfb8262c48"
+metafile = true
+
+[[files]]
 file = "mods/create-tfmg.pw.toml"
 hash = "dfbb2a077b144492f48af0255906b146d56011ccb6c6f6e343bab703e8cc0f79"
 metafile = true
@@ -1592,6 +1607,11 @@ metafile = true
 [[files]]
 file = "mods/friends-and-foes-forge.pw.toml"
 hash = "56cc6277b2b36cd935c2d97ecff97449419f479284bd4a3bfec635508282e367"
+metafile = true
+
+[[files]]
+file = "mods/furniture-mods-create-sable-aeronautics.pw.toml"
+hash = "e79db224b31119d6cbe97cd314cfb1c6d6839dca629b3f5e61d6f9edd7a30096"
 metafile = true
 
 [[files]]
@@ -2207,6 +2227,11 @@ metafile = true
 [[files]]
 file = "mods/rottencreatures.pw.toml"
 hash = "9c0eebad19c2e18848d405642bafde08dd08cbe09b06d4755a4238894b596758"
+metafile = true
+
+[[files]]
+file = "mods/sable-collision-damage-create-aeronautics.pw.toml"
+hash = "f467f74e195e8366bdd3965d997f3fd42d3e2c4f2e6464fd54a35028673a9d49"
 metafile = true
 
 [[files]]
