@@ -1,0 +1,118 @@
+{
+  "cluster_size": 24,
+  "density": 0.2,
+  "weight": 12,
+  "layer": "stone",
+  "dimension_filter": [
+    "minecraft:overworld"
+  ],
+  "height_range": {
+    "height": {
+      "type": "minecraft:uniform",
+      "min_inclusive": {
+        "absolute": -56
+      },
+      "max_inclusive": {
+        "absolute": 24
+      }
+    }
+  },
+  "discard_chance_on_air_exposure": 0.0,
+  "biomes": "#derpack:vein_palladium",
+  "generator": {
+    "type": "gtmogs:classic",
+    "primary": {
+      "target": [
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:stone_ore_replaceables"
+          },
+          "state": {
+            "Name": "galosphere:palladium_ore"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:deepslate_ore_replaceables"
+          },
+          "state": {
+            "Name": "galosphere:deepslate_palladium_ore"
+          }
+        }
+      ],
+      "layers": 3
+    },
+    "secondary": {
+      "target": [
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:stone_ore_replaceables"
+          },
+          "state": {
+            "Name": "galosphere:palladium_ore"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:deepslate_ore_replaceables"
+          },
+          "state": {
+            "Name": "galosphere:deepslate_palladium_ore"
+          }
+        }
+      ],
+      "layers": 3
+    },
+    "between": {
+      "target": [
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:stone_ore_replaceables"
+          },
+          "state": {
+            "Name": "tfmg:nickel_ore"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:deepslate_ore_replaceables"
+          },
+          "state": {
+            "Name": "tfmg:deepslate_nickel_ore"
+          }
+        }
+      ],
+      "layers": 2
+    },
+    "sporadic": {
+      "target": [
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:stone_ore_replaceables"
+          },
+          "state": {
+            "Name": "occultism:silver_ore"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:deepslate_ore_replaceables"
+          },
+          "state": {
+            "Name": "occultism:silver_ore_deepslate"
+          }
+        }
+      ],
+      "layers": 1
+    },
+    "y_radius": 4
+  }
+}

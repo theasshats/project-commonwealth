@@ -1,0 +1,118 @@
+{
+  "cluster_size": 40,
+  "density": 0.4,
+  "weight": 80,
+  "layer": "stone",
+  "dimension_filter": [
+    "minecraft:overworld"
+  ],
+  "height_range": {
+    "height": {
+      "type": "minecraft:uniform",
+      "min_inclusive": {
+        "absolute": -24
+      },
+      "max_inclusive": {
+        "absolute": 64
+      }
+    }
+  },
+  "discard_chance_on_air_exposure": 0.0,
+  "biomes": "#derpack:vein_iron",
+  "generator": {
+    "type": "gtmogs:classic",
+    "primary": {
+      "target": [
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:stone_ore_replaceables"
+          },
+          "state": {
+            "Name": "minecraft:iron_ore"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:deepslate_ore_replaceables"
+          },
+          "state": {
+            "Name": "minecraft:deepslate_iron_ore"
+          }
+        }
+      ],
+      "layers": 3
+    },
+    "secondary": {
+      "target": [
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:stone_ore_replaceables"
+          },
+          "state": {
+            "Name": "create_new_age:magnetite_block"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:deepslate_ore_replaceables"
+          },
+          "state": {
+            "Name": "create_new_age:magnetite_block"
+          }
+        }
+      ],
+      "layers": 3
+    },
+    "between": {
+      "target": [
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:stone_ore_replaceables"
+          },
+          "state": {
+            "Name": "tfmg:nickel_ore"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:deepslate_ore_replaceables"
+          },
+          "state": {
+            "Name": "tfmg:deepslate_nickel_ore"
+          }
+        }
+      ],
+      "layers": 2
+    },
+    "sporadic": {
+      "target": [
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:stone_ore_replaceables"
+          },
+          "state": {
+            "Name": "minecraft:gold_ore"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:deepslate_ore_replaceables"
+          },
+          "state": {
+            "Name": "minecraft:deepslate_gold_ore"
+          }
+        }
+      ],
+      "layers": 1
+    },
+    "y_radius": 4
+  }
+}
