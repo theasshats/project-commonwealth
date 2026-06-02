@@ -224,5 +224,6 @@ bits_n_bobs:yellow_chair
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-entity_type/teleporting_not_supported.json :: { "values": [ "bits_n_bobs:inert_stationary_contraption" ]}
+entity_type/teleporting_not_supported :: {"values": ["bits_n_bobs:inert_stationary_contraption"]}

@@ -75,15 +75,16 @@ createfisheryindustry:zinc_sheet
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/cooked_fish_steaks.json :: { "replace": false, "values": [ "createfisheryindustry:cooked_cod_steak", "createfisheryindustry:cooked_salmon_steak" ]}
-item/cooked_mussels.json :: { "replace": false, "values": [ "createfisheryindustry:cooked_blue_mussel", "createfisheryindustry:cooked_mediterranean_mussel" ]}
-item/foods/raw_cod.json :: { "replace": false, "values": [ "createfisheryindustry:cod_steak" ]}
-item/foods/raw_salmon.json :: { "replace": false, "values": [ "createfisheryindustry:salmon_steak" ]}
-item/mussels.json :: { "replace": false, "values": [ "createfisheryindustry:raw_blue_mussel", "createfisheryindustry:raw_mediterranean_mussel" ]}
-item/plates/zinc.json :: { "values": [ "createfisheryindustry:zinc_sheet" ]}
-item/plates.json :: { "values": [ "createfisheryindustry:zinc_sheet" ]}
-item/raw_fish_steaks.json :: { "replace": false, "values": [ "createfisheryindustry:cod_steak", "createfisheryindustry:salmon_steak" ]}
-item/tools/melee_weapon.json :: { "values": [ "createfisheryindustry:harpoon" ]}
-item/tools/ranged_weapon.json :: { "values": [ "createfisheryindustry:harpoon" ]}
-item/tools/spear.json :: { "values": [ "createfisheryindustry:harpoon" ]}
+item/cooked_fish_steaks :: {"replace": false, "values": ["createfisheryindustry:cooked_cod_steak", "createfisheryindustry:cooked_salmon_steak"]}
+item/cooked_mussels :: {"replace": false, "values": ["createfisheryindustry:cooked_blue_mussel", "createfisheryindustry:cooked_mediterranean_mussel"]}
+item/foods/raw_cod :: {"replace": false, "values": ["createfisheryindustry:cod_steak"]}
+item/foods/raw_salmon :: {"replace": false, "values": ["createfisheryindustry:salmon_steak"]}
+item/mussels :: {"replace": false, "values": ["createfisheryindustry:raw_blue_mussel", "createfisheryindustry:raw_mediterranean_mussel"]}
+item/plates :: {"values": ["createfisheryindustry:zinc_sheet"]}
+item/plates/zinc :: {"values": ["createfisheryindustry:zinc_sheet"]}
+item/raw_fish_steaks :: {"replace": false, "values": ["createfisheryindustry:cod_steak", "createfisheryindustry:salmon_steak"]}
+item/tools/melee_weapon :: {"values": ["createfisheryindustry:harpoon"]}
+item/tools/ranged_weapon :: {"values": ["createfisheryindustry:harpoon"]}
+item/tools/spear :: {"values": ["createfisheryindustry:harpoon"]}

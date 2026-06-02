@@ -10,9 +10,12 @@ versionRange = "[21.1.192,)"
 
 ## blocks
 
+
 ## items
 
+
 ## neoforge biome_modifiers
-biome_modifier.json :: { "type": "zeta:biome_modifier"}
+biome_modifier.json :: {"type": "zeta:biome_modifier"}
 
 ## c: common tag membership
+

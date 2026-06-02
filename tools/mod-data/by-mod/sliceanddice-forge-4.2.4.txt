@@ -29,6 +29,7 @@ sliceanddice:sprinkler
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/dough/wheat.json :: { "replace": false, "values": [ { "id": "farmersdelight:wheat_dough", "required": false } ]}
-item/foods/dough.json :: { "replace": false, "values": [ "create:dough" ]}
+item/dough/wheat :: {"replace": false, "values": [{"id": "farmersdelight:wheat_dough", "required": false}]}
+item/foods/dough :: {"replace": false, "values": ["create:dough"]}

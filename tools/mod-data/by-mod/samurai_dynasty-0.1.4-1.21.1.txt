@@ -212,30 +212,30 @@ samurai_dynasty:yumi_pulling_1
 samurai_dynasty:yumi_pulling_2
 
 ## neoforge biome_modifiers
-add_jade_ore.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "samurai_dynasty:jade_ore_placed", "step": "underground_ores"}
-add_spirit_stone.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "samurai_dynasty:spirit_stone_placed", "step": "underground_ores"}
-spawn_akaname.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners":{ "type": "samurai_dynasty:akaname", "weight": 2, "minCount": 1, "maxCount": 3 }}
-spawn_enenra.json :: { "type": "neoforge:add_spawns", "biomes": "#samurai_dynasty:enenra_biomes", "spawners":{ "type": "samurai_dynasty:enenra", "weight": 5, "minCount": 1, "maxCount": 5 }}
-spawn_jorogumo.json :: { "type": "neoforge:add_spawns", "biomes": "#samurai_dynasty:jorogumo_biomes", "spawners":{ "type": "samurai_dynasty:jorogumo", "weight": 20, "minCount": 1, "maxCount": 2 }}
-spawn_kawauso.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_forest", "spawners":{ "type": "samurai_dynasty:kawauso", "weight": 1, "minCount": 1, "maxCount": 1 }}
-spawn_kitsune.json :: { "type": "neoforge:add_spawns", "biomes": "#samurai_dynasty:kitsune_biomes", "spawners":{ "type": "samurai_dynasty:kitsune", "weight": 20, "minCount": 1, "maxCount": 2 }}
-spawn_komainu.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_forest", "spawners":{ "type": "samurai_dynasty:komainu", "weight": 2, "minCount": 1, "maxCount": 2 }}
-spawn_oni.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners":{ "type": "samurai_dynasty:oni", "weight": 1, "minCount": 1, "maxCount": 2 }}
-spawn_tanuki.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_forest", "spawners":{ "type": "samurai_dynasty:tanuki", "weight": 1, "minCount": 1, "maxCount": 1 }}
-spawn_twotailed.json :: { "type": "neoforge:add_spawns", "biomes": "#samurai_dynasty:twotailed_biomes", "spawners":{ "type": "samurai_dynasty:twotailed", "weight": 10, "minCount": 1, "maxCount": 3 }}
+add_jade_ore.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "samurai_dynasty:jade_ore_placed", "step": "underground_ores"}
+add_spirit_stone.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "samurai_dynasty:spirit_stone_placed", "step": "underground_ores"}
+spawn_akaname.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": {"type": "samurai_dynasty:akaname", "weight": 2, "minCount": 1, "maxCount": 3}}
+spawn_enenra.json :: {"type": "neoforge:add_spawns", "biomes": "#samurai_dynasty:enenra_biomes", "spawners": {"type": "samurai_dynasty:enenra", "weight": 5, "minCount": 1, "maxCount": 5}}
+spawn_jorogumo.json :: {"type": "neoforge:add_spawns", "biomes": "#samurai_dynasty:jorogumo_biomes", "spawners": {"type": "samurai_dynasty:jorogumo", "weight": 20, "minCount": 1, "maxCount": 2}}
+spawn_kawauso.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_forest", "spawners": {"type": "samurai_dynasty:kawauso", "weight": 1, "minCount": 1, "maxCount": 1}}
+spawn_kitsune.json :: {"type": "neoforge:add_spawns", "biomes": "#samurai_dynasty:kitsune_biomes", "spawners": {"type": "samurai_dynasty:kitsune", "weight": 20, "minCount": 1, "maxCount": 2}}
+spawn_komainu.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_forest", "spawners": {"type": "samurai_dynasty:komainu", "weight": 2, "minCount": 1, "maxCount": 2}}
+spawn_oni.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_nether", "spawners": {"type": "samurai_dynasty:oni", "weight": 1, "minCount": 1, "maxCount": 2}}
+spawn_tanuki.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_forest", "spawners": {"type": "samurai_dynasty:tanuki", "weight": 1, "minCount": 1, "maxCount": 1}}
+spawn_twotailed.json :: {"type": "neoforge:add_spawns", "biomes": "#samurai_dynasty:twotailed_biomes", "spawners": {"type": "samurai_dynasty:twotailed", "weight": 10, "minCount": 1, "maxCount": 3}}
 
 ## c: common tag membership
-block/ores/jade.json :: { "values": [ "samurai_dynasty:jade_ore", "samurai_dynasty:deepslate_jade_ore" ]}
-block/ores.json :: { "values": [ "#c:ores/jade" ]}
-block/storage_blocks/jade.json :: { "values": [ "samurai_dynasty:jade_block" ]}
-block/storage_blocks/steel.json :: { "values": [ "samurai_dynasty:steel_block" ]}
-block/storage_blocks.json :: { "values": [ "#c:storage_blocks/jade", "#c:storage_blocks/steel" ]}
-item/armors.json :: { "values": [ "samurai_dynasty:steel_helmet", "samurai_dynasty:steel_samurai_helmet", "samurai_dynasty:netherite_samurai_helmet", "samurai_dynasty:light_samurai_helmet", "samurai_dynasty:master_samurai_helmet", "samurai_dynasty:steel_ninja_helmet", "samurai_dynasty:netherite_ninja_helmet", "samurai_dynasty:straw_hat", "samurai_dynasty:steel_chestplate", "samurai_dynasty:steel_samurai_chestplate", "samurai_dynasty:netherite_samurai_chestplate", "samurai_dynasty:light_samurai_chestplate", "samurai_dynasty:master_samurai_chestplate", "samurai_dynasty:steel_ninja_chestplate", "samurai_dynasty:netherite_ninja_chestplate", "samurai_dynasty:kimono", "samurai_dynasty:steel_leggings", "samurai_dynasty:steel_samurai_leggings", "samurai_dynasty:netherite_samurai_leggings", "samurai_dynasty:light_samurai_leggings", "samurai_dynasty:master_samurai_leggings", "samurai_dynasty:ninja_leggings", "samurai_dynasty:steel_boots", "samurai_dynasty:steel_samurai_boots", "samurai_dynasty:netherite_samurai_boots", "samurai_dynasty:light_samurai_boots", "samurai_dynasty:master_samurai_boots", "samurai_dynasty:steel_ninja_boots", "samurai_dynasty:netherite_ninja_boots" ]}
-item/gems/jade.json :: { "values": [ "samurai_dynasty:jade" ]}
-item/gems.json :: { "values": [ "#c:gems/jade" ]}
-item/ingots/steel.json :: { "values": [ "samurai_dynasty:steel_ingot" ]}
-item/ingots.json :: { "values": [ "#c:ingots/steel" ]}
-item/nuggets/steel.json :: { "values": [ "samurai_dynasty:steel_nugget" ]}
-item/nuggets.json :: { "values": [ "#c:nuggets/steel" ]}
-item/ores/jade.json :: { "values": [ "samurai_dynasty:jade_ore", "samurai_dynasty:deepslate_jade_ore" ]}
-item/ores.json :: { "values": [ "#c:ores/jade" ]}
+block/ores :: {"values": ["#c:ores/jade"]}
+block/ores/jade :: {"values": ["samurai_dynasty:jade_ore", "samurai_dynasty:deepslate_jade_ore"]}
+block/storage_blocks :: {"values": ["#c:storage_blocks/jade", "#c:storage_blocks/steel"]}
+block/storage_blocks/jade :: {"values": ["samurai_dynasty:jade_block"]}
+block/storage_blocks/steel :: {"values": ["samurai_dynasty:steel_block"]}
+item/armors :: {"values": ["samurai_dynasty:steel_helmet", "samurai_dynasty:steel_samurai_helmet", "samurai_dynasty:netherite_samurai_helmet", "samurai_dynasty:light_samurai_helmet", "samurai_dynasty:master_samurai_helmet", "samurai_dynasty:steel_ninja_helmet", "samurai_dynasty:netherite_ninja_helmet", "samurai_dynasty:straw_hat", "samurai_dynasty:steel_chestplate", "samurai_dynasty:steel_samurai_chestplate", "samurai_dynasty:netherite_samurai_chestplate", "samurai_dynasty:light_samurai_chestplate", "samurai_dynasty:master_samurai_chestplate", "samurai_dynasty:steel_ninja_chestplate", "samurai_dynasty:netherite_ninja_chestplate", "samurai_dynasty:kimono", "samurai_dynasty:steel_leggings", "samurai_dynasty:steel_samurai_leggings", "samurai_dynasty:netherite_samurai_leggings", "samurai_dynasty:light_samurai_leggings", "samurai_dynasty:master_samurai_leggings", "samurai_dynasty:ninja_leggings", "samurai_dynasty:steel_boots", "samurai_dynasty:steel_samurai_boots", "samurai_dynasty:netherite_samurai_boots", "samurai_dynasty:light_samurai_boots", "samurai_dynasty:master_samurai_boots", "samurai_dynasty:steel_ninja_boots", "samurai_dynasty:netherite_ninja_boots"]}
+item/gems :: {"values": ["#c:gems/jade"]}
+item/gems/jade :: {"values": ["samurai_dynasty:jade"]}
+item/ingots :: {"values": ["#c:ingots/steel"]}
+item/ingots/steel :: {"values": ["samurai_dynasty:steel_ingot"]}
+item/nuggets :: {"values": ["#c:nuggets/steel"]}
+item/nuggets/steel :: {"values": ["samurai_dynasty:steel_nugget"]}
+item/ores :: {"values": ["#c:ores/jade"]}
+item/ores/jade :: {"values": ["samurai_dynasty:jade_ore", "samurai_dynasty:deepslate_jade_ore"]}

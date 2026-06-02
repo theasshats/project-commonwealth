@@ -35,7 +35,8 @@ lootr:trophy
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-block/barrels.json :: { "values": [ "lootr:lootr_barrel" ]}
-block/chests/trapped.json :: { "values": [ "lootr:lootr_trapped_chest" ]}
-block/chests/wooden.json :: { "values": [ "lootr:lootr_chest", "lootr:lootr_inventory" ]}
+block/barrels :: {"values": ["lootr:lootr_barrel"]}
+block/chests/trapped :: {"values": ["lootr:lootr_trapped_chest"]}
+block/chests/wooden :: {"values": ["lootr:lootr_chest", "lootr:lootr_inventory"]}

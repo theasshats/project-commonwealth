@@ -158,14 +158,14 @@ beachparty:trunks
 beachparty:wet_hay_block
 
 ## neoforge biome_modifiers
-add_palm_tree.json :: { "type": "neoforge:add_features", "biomes": "minecraft:beach", "features": "beachparty:palm_tree", "step": "vegetal_decoration"}
-add_sandwaves.json :: { "type": "neoforge:add_features", "biomes": "minecraft:beach", "features": "beachparty:sandwaves", "step": "vegetal_decoration"}
-add_seashells.json :: { "type": "neoforge:add_features", "biomes": "minecraft:beach", "features": "beachparty:seashells", "step": "vegetal_decoration"}
+add_palm_tree.json :: {"type": "neoforge:add_features", "biomes": "minecraft:beach", "features": "beachparty:palm_tree", "step": "vegetal_decoration"}
+add_sandwaves.json :: {"type": "neoforge:add_features", "biomes": "minecraft:beach", "features": "beachparty:sandwaves", "step": "vegetal_decoration"}
+add_seashells.json :: {"type": "neoforge:add_features", "biomes": "minecraft:beach", "features": "beachparty:seashells", "step": "vegetal_decoration"}
 
 ## c: common tag membership
-block/palm_logs.json :: { "replace": false, "values": [ "beachparty:palm_log", "beachparty:stripped_palm_log", "beachparty:palm_wood", "beachparty:stripped_palm_wood" ]}
-block/palm_planks.json :: { "replace": false, "values": [ "beachparty:palm_planks" ]}
-item/palm_logs.json :: { "replace": false, "values": [ "beachparty:palm_log", "beachparty:stripped_palm_log", "beachparty:palm_wood", "beachparty:stripped_palm_wood" ]}
-item/palm_planks.json :: { "replace": false, "values": [ "beachparty:palm_planks" ]}
-item/stripped_logs.json :: { "replace": false, "values": [ "beachparty:stripped_palm_log" ]}
-item/stripped_wood.json :: { "replace": false, "values": [ "beachparty:stripped_palm_wood" ]}
+block/palm_logs :: {"replace": false, "values": ["beachparty:palm_log", "beachparty:stripped_palm_log", "beachparty:palm_wood", "beachparty:stripped_palm_wood"]}
+block/palm_planks :: {"replace": false, "values": ["beachparty:palm_planks"]}
+item/palm_logs :: {"replace": false, "values": ["beachparty:palm_log", "beachparty:stripped_palm_log", "beachparty:palm_wood", "beachparty:stripped_palm_wood"]}
+item/palm_planks :: {"replace": false, "values": ["beachparty:palm_planks"]}
+item/stripped_logs :: {"replace": false, "values": ["beachparty:stripped_palm_log"]}
+item/stripped_wood :: {"replace": false, "values": ["beachparty:stripped_palm_wood"]}

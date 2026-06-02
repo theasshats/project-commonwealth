@@ -1447,71 +1447,71 @@ create:zinc_nugget
 create:zinc_ore
 
 ## neoforge biome_modifiers
-zinc_ore.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "create:zinc_ore", "step": "underground_ores"}
-striated_ores_overworld.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "create:striated_ores_overworld", "step": "underground_ores"}
-striated_ores_nether.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_nether", "features": "create:striated_ores_nether", "step": "underground_ores"}
+striated_ores_nether.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_nether", "features": "create:striated_ores_nether", "step": "underground_ores"}
+striated_ores_overworld.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "create:striated_ores_overworld", "step": "underground_ores"}
+zinc_ore.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "create:zinc_ore", "step": "underground_ores"}
 
 ## c: common tag membership
-fluid/tea.json :: { "values": [ "create:flowing_tea", "create:tea" ]}
-fluid/chocolate.json :: { "values": [ "create:flowing_chocolate", "create:chocolate" ]}
-fluid/honey.json :: { "values": [ "create:flowing_honey", "create:honey" ]}
-item/glass_panes.json :: { "values": [ "create:tiled_glass_pane", "create:framed_glass_pane", "create:horizontal_framed_glass_pane", "create:vertical_framed_glass_pane", "create:oak_window_pane", "create:spruce_window_pane", "create:birch_window_pane", "create:jungle_window_pane", "create:acacia_window_pane", "create:dark_oak_window_pane", "create:mangrove_window_pane", "create:crimson_window_pane", "create:warped_window_pane", "create:cherry_window_pane", "create:bamboo_window_pane", "create:ornate_iron_window_pane", "create:industrial_iron_window_pane", "create:weathered_iron_window_pane" ]}
-item/flours/wheat.json :: { "values": [ "create:wheat_flour" ]}
-item/ingots/brass.json :: { "values": [ "create:brass_ingot" ]}
-item/ingots/zinc.json :: { "values": [ "create:zinc_ingot" ]}
-item/tools/wrench.json :: { "values": [ "create:wrench" ]}
-item/foods.json :: { "values": [ "create:bar_of_chocolate", "create:sweet_roll", "create:chocolate_glazed_berries", "create:honeyed_apple", "create:builders_tea" ]}
-item/ores/zinc.json :: { "values": [ "create:zinc_ore", "create:deepslate_zinc_ore" ]}
-item/glass_panes/colorless.json :: { "values": [ "create:tiled_glass_pane", "create:framed_glass_pane", "create:horizontal_framed_glass_pane", "create:vertical_framed_glass_pane" ]}
-item/nuggets.json :: { "values": [ "create:copper_nugget", "create:zinc_nugget", "create:brass_nugget", "create:experience_nugget" ]}
-item/buckets/chocolate.json :: { "values": [ "create:chocolate_bucket" ]}
-item/buckets/honey.json :: { "values": [ "create:honey_bucket" ]}
-item/ores.json :: { "values": [ "create:zinc_ore", "create:deepslate_zinc_ore" ]}
-item/nuggets/brass.json :: { "values": [ "create:brass_nugget" ]}
-item/nuggets/copper.json :: { "values": [ "create:copper_nugget" ]}
-item/nuggets/zinc.json :: { "values": [ "create:zinc_nugget" ]}
-item/storage_blocks/cardboard.json :: { "values": [ "create:cardboard_block" ]}
-item/storage_blocks/brass.json :: { "values": [ "create:brass_block" ]}
-item/storage_blocks/andesite_alloy.json :: { "values": [ "create:andesite_alloy_block" ]}
-item/storage_blocks/zinc.json :: { "values": [ "create:zinc_block" ]}
-item/storage_blocks/raw_zinc.json :: { "values": [ "create:raw_zinc_block" ]}
-item/enchantables.json :: { "values": [ "create:potato_cannon", "#create:pressurized_air_sources" ]}
-item/storage_blocks.json :: { "values": [ "create:raw_zinc_block", "create:zinc_block", "create:andesite_alloy_block", "create:brass_block", "create:cardboard_block", "create:experience_block" ]}
-item/foods/dough/wheat.json :: { "values": [ "create:dough" ]}
-item/foods/chocolate.json :: { "values": [ "create:bar_of_chocolate" ]}
-item/foods/dough.json :: { "values": [ "create:dough" ]}
-item/foods/fruit.json :: { "values": [ "create:honeyed_apple" ]}
-item/foods/berry.json :: { "values": [ "create:chocolate_glazed_berries" ]}
-item/buckets.json :: { "values": [ "create:honey_bucket", "create:chocolate_bucket" ]}
-item/ingots.json :: { "values": [ "#create:create_ingots" ]}
-item/drinks.json :: { "values": [ "create:builders_tea" ]}
-item/drinks/tea.json :: { "values": [ "create:builders_tea" ]}
-item/ores_in_ground/deepslate.json :: { "values": [ "create:deepslate_zinc_ore" ]}
-item/ores_in_ground/stone.json :: { "values": [ "create:zinc_ore" ]}
-item/raw_materials.json :: { "values": [ "create:raw_zinc" ]}
-item/raw_materials/zinc.json :: { "values": [ "create:raw_zinc" ]}
-item/dusts/obsidian.json :: { "values": [ "create:powdered_obsidian" ]}
-item/plates.json :: { "values": [ "create:sturdy_sheet", "create:cardboard", "create:copper_sheet", "create:brass_sheet", "create:iron_sheet", "create:golden_sheet" ]}
-item/flours.json :: { "values": [ "create:wheat_flour" ]}
-item/glass_blocks/colorless.json :: { "values": [ "create:tiled_glass", "create:framed_glass", "create:horizontal_framed_glass", "create:vertical_framed_glass" ]}
-item/plates/cardboard.json :: { "values": [ "create:cardboard" ]}
-item/plates/iron.json :: { "values": [ "create:iron_sheet" ]}
-item/plates/obsidian.json :: { "values": [ "create:sturdy_sheet" ]}
-item/plates/brass.json :: { "values": [ "create:brass_sheet" ]}
-item/plates/copper.json :: { "values": [ "create:copper_sheet" ]}
-item/plates/gold.json :: { "values": [ "create:golden_sheet" ]}
-block/glass_panes.json :: { "values": [ "create:tiled_glass_pane", "create:framed_glass_pane", "create:horizontal_framed_glass_pane", "create:vertical_framed_glass_pane", "create:oak_window_pane", "create:spruce_window_pane", "create:birch_window_pane", "create:jungle_window_pane", "create:acacia_window_pane", "create:dark_oak_window_pane", "create:mangrove_window_pane", "create:crimson_window_pane", "create:warped_window_pane", "create:cherry_window_pane", "create:bamboo_window_pane", "create:ornate_iron_window_pane", "create:industrial_iron_window_pane", "create:weathered_iron_window_pane" ]}
-block/ores/zinc.json :: { "values": [ "create:zinc_ore", "create:deepslate_zinc_ore" ]}
-block/glass_panes/colorless.json :: { "values": [ "create:tiled_glass_pane", "create:framed_glass_pane", "create:horizontal_framed_glass_pane", "create:vertical_framed_glass_pane" ]}
-block/ores.json :: { "values": [ "create:zinc_ore", "create:deepslate_zinc_ore" ]}
-block/storage_blocks/cardboard.json :: { "values": [ "create:cardboard_block" ]}
-block/storage_blocks/brass.json :: { "values": [ "create:brass_block" ]}
-block/storage_blocks/andesite_alloy.json :: { "values": [ "create:andesite_alloy_block" ]}
-block/storage_blocks/zinc.json :: { "values": [ "create:zinc_block" ]}
-block/storage_blocks/raw_zinc.json :: { "values": [ "create:raw_zinc_block" ]}
-block/storage_blocks.json :: { "values": [ "create:raw_zinc_block", "create:zinc_block", "create:andesite_alloy_block", "create:brass_block", "create:cardboard_block", "create:experience_block" ]}
-block/relocation_not_supported.json :: { "values": [ "create:track" ]}
-block/ores_in_ground/deepslate.json :: { "values": [ "create:deepslate_zinc_ore" ]}
-block/ores_in_ground/stone.json :: { "values": [ "create:zinc_ore" ]}
-block/glass_blocks/colorless.json :: { "values": [ "create:tiled_glass", "create:framed_glass", "create:horizontal_framed_glass", "create:vertical_framed_glass" ]}
-entity_type/teleporting_not_supported.json :: { "values": [ "create:contraption", "create:stationary_contraption", "create:gantry_contraption", "create:carriage_contraption" ]}
+block/glass_blocks/colorless :: {"values": ["create:tiled_glass", "create:framed_glass", "create:horizontal_framed_glass", "create:vertical_framed_glass"]}
+block/glass_panes :: {"values": ["create:tiled_glass_pane", "create:framed_glass_pane", "create:horizontal_framed_glass_pane", "create:vertical_framed_glass_pane", "create:oak_window_pane", "create:spruce_window_pane", "create:birch_window_pane", "create:jungle_window_pane", "create:acacia_window_pane", "create:dark_oak_window_pane", "create:mangrove_window_pane", "create:crimson_window_pane", "create:warped_window_pane", "create:cherry_window_pane", "create:bamboo_window_pane", "create:ornate_iron_window_pane", "create:industrial_iron_window_pane", "create:weathered_iron_window_pane"]}
+block/glass_panes/colorless :: {"values": ["create:tiled_glass_pane", "create:framed_glass_pane", "create:horizontal_framed_glass_pane", "create:vertical_framed_glass_pane"]}
+block/ores :: {"values": ["create:zinc_ore", "create:deepslate_zinc_ore"]}
+block/ores/zinc :: {"values": ["create:zinc_ore", "create:deepslate_zinc_ore"]}
+block/ores_in_ground/deepslate :: {"values": ["create:deepslate_zinc_ore"]}
+block/ores_in_ground/stone :: {"values": ["create:zinc_ore"]}
+block/relocation_not_supported :: {"values": ["create:track"]}
+block/storage_blocks :: {"values": ["create:raw_zinc_block", "create:zinc_block", "create:andesite_alloy_block", "create:brass_block", "create:cardboard_block", "create:experience_block"]}
+block/storage_blocks/andesite_alloy :: {"values": ["create:andesite_alloy_block"]}
+block/storage_blocks/brass :: {"values": ["create:brass_block"]}
+block/storage_blocks/cardboard :: {"values": ["create:cardboard_block"]}
+block/storage_blocks/raw_zinc :: {"values": ["create:raw_zinc_block"]}
+block/storage_blocks/zinc :: {"values": ["create:zinc_block"]}
+entity_type/teleporting_not_supported :: {"values": ["create:contraption", "create:stationary_contraption", "create:gantry_contraption", "create:carriage_contraption"]}
+fluid/chocolate :: {"values": ["create:flowing_chocolate", "create:chocolate"]}
+fluid/honey :: {"values": ["create:flowing_honey", "create:honey"]}
+fluid/tea :: {"values": ["create:flowing_tea", "create:tea"]}
+item/buckets :: {"values": ["create:honey_bucket", "create:chocolate_bucket"]}
+item/buckets/chocolate :: {"values": ["create:chocolate_bucket"]}
+item/buckets/honey :: {"values": ["create:honey_bucket"]}
+item/drinks :: {"values": ["create:builders_tea"]}
+item/drinks/tea :: {"values": ["create:builders_tea"]}
+item/dusts/obsidian :: {"values": ["create:powdered_obsidian"]}
+item/enchantables :: {"values": ["create:potato_cannon", "#create:pressurized_air_sources"]}
+item/flours :: {"values": ["create:wheat_flour"]}
+item/flours/wheat :: {"values": ["create:wheat_flour"]}
+item/foods :: {"values": ["create:bar_of_chocolate", "create:sweet_roll", "create:chocolate_glazed_berries", "create:honeyed_apple", "create:builders_tea"]}
+item/foods/berry :: {"values": ["create:chocolate_glazed_berries"]}
+item/foods/chocolate :: {"values": ["create:bar_of_chocolate"]}
+item/foods/dough :: {"values": ["create:dough"]}
+item/foods/dough/wheat :: {"values": ["create:dough"]}
+item/foods/fruit :: {"values": ["create:honeyed_apple"]}
+item/glass_blocks/colorless :: {"values": ["create:tiled_glass", "create:framed_glass", "create:horizontal_framed_glass", "create:vertical_framed_glass"]}
+item/glass_panes :: {"values": ["create:tiled_glass_pane", "create:framed_glass_pane", "create:horizontal_framed_glass_pane", "create:vertical_framed_glass_pane", "create:oak_window_pane", "create:spruce_window_pane", "create:birch_window_pane", "create:jungle_window_pane", "create:acacia_window_pane", "create:dark_oak_window_pane", "create:mangrove_window_pane", "create:crimson_window_pane", "create:warped_window_pane", "create:cherry_window_pane", "create:bamboo_window_pane", "create:ornate_iron_window_pane", "create:industrial_iron_window_pane", "create:weathered_iron_window_pane"]}
+item/glass_panes/colorless :: {"values": ["create:tiled_glass_pane", "create:framed_glass_pane", "create:horizontal_framed_glass_pane", "create:vertical_framed_glass_pane"]}
+item/ingots :: {"values": ["#create:create_ingots"]}
+item/ingots/brass :: {"values": ["create:brass_ingot"]}
+item/ingots/zinc :: {"values": ["create:zinc_ingot"]}
+item/nuggets :: {"values": ["create:copper_nugget", "create:zinc_nugget", "create:brass_nugget", "create:experience_nugget"]}
+item/nuggets/brass :: {"values": ["create:brass_nugget"]}
+item/nuggets/copper :: {"values": ["create:copper_nugget"]}
+item/nuggets/zinc :: {"values": ["create:zinc_nugget"]}
+item/ores :: {"values": ["create:zinc_ore", "create:deepslate_zinc_ore"]}
+item/ores/zinc :: {"values": ["create:zinc_ore", "create:deepslate_zinc_ore"]}
+item/ores_in_ground/deepslate :: {"values": ["create:deepslate_zinc_ore"]}
+item/ores_in_ground/stone :: {"values": ["create:zinc_ore"]}
+item/plates :: {"values": ["create:sturdy_sheet", "create:cardboard", "create:copper_sheet", "create:brass_sheet", "create:iron_sheet", "create:golden_sheet"]}
+item/plates/brass :: {"values": ["create:brass_sheet"]}
+item/plates/cardboard :: {"values": ["create:cardboard"]}
+item/plates/copper :: {"values": ["create:copper_sheet"]}
+item/plates/gold :: {"values": ["create:golden_sheet"]}
+item/plates/iron :: {"values": ["create:iron_sheet"]}
+item/plates/obsidian :: {"values": ["create:sturdy_sheet"]}
+item/raw_materials :: {"values": ["create:raw_zinc"]}
+item/raw_materials/zinc :: {"values": ["create:raw_zinc"]}
+item/storage_blocks :: {"values": ["create:raw_zinc_block", "create:zinc_block", "create:andesite_alloy_block", "create:brass_block", "create:cardboard_block", "create:experience_block"]}
+item/storage_blocks/andesite_alloy :: {"values": ["create:andesite_alloy_block"]}
+item/storage_blocks/brass :: {"values": ["create:brass_block"]}
+item/storage_blocks/cardboard :: {"values": ["create:cardboard_block"]}
+item/storage_blocks/raw_zinc :: {"values": ["create:raw_zinc_block"]}
+item/storage_blocks/zinc :: {"values": ["create:zinc_block"]}
+item/tools/wrench :: {"values": ["create:wrench"]}

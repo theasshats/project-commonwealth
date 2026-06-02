@@ -663,54 +663,54 @@ ars_nouveau:worn_notebook
 ars_nouveau:yellow_sbed
 
 ## neoforge biome_modifiers
-starbuncle_spawn.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "ars_nouveau:starbuncle", "maxCount": 2, "minCount": 1, "weight": 5 }}
-alakarkinos_spawn.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_beach", "spawners": { "type": "ars_nouveau:alakarkinos", "maxCount": 1, "minCount": 1, "weight": 5 }}
-common_source_berry.json :: { "type": "neoforge:add_features", "biomes": "#ars_nouveau:berry_spawn", "features": "ars_nouveau:placed_berry_bush", "step": "vegetal_decoration"}
-gift_starbuncle_spawn.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "ars_nouveau:gift_starby", "maxCount": 1, "minCount": 1, "weight": 1 }}
-rare_archwood_mix.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "ars_nouveau:placed_mixed_archwoods", "step": "vegetal_decoration"}
-whirlisprig_spawn.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "ars_nouveau:whirlisprig", "maxCount": 2, "minCount": 1, "weight": 5 }}
-drygmy_spawn.json :: { "type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": { "type": "ars_nouveau:drygmy", "maxCount": 2, "minCount": 1, "weight": 3 }}
+alakarkinos_spawn.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_beach", "spawners": {"type": "ars_nouveau:alakarkinos", "maxCount": 1, "minCount": 1, "weight": 5}}
+common_source_berry.json :: {"type": "neoforge:add_features", "biomes": "#ars_nouveau:berry_spawn", "features": "ars_nouveau:placed_berry_bush", "step": "vegetal_decoration"}
+drygmy_spawn.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "ars_nouveau:drygmy", "maxCount": 2, "minCount": 1, "weight": 3}}
+gift_starbuncle_spawn.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "ars_nouveau:gift_starby", "maxCount": 1, "minCount": 1, "weight": 1}}
+rare_archwood_mix.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "ars_nouveau:placed_mixed_archwoods", "step": "vegetal_decoration"}
+starbuncle_spawn.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "ars_nouveau:starbuncle", "maxCount": 2, "minCount": 1, "weight": 5}}
+whirlisprig_spawn.json :: {"type": "neoforge:add_spawns", "biomes": "#minecraft:is_overworld", "spawners": {"type": "ars_nouveau:whirlisprig", "maxCount": 2, "minCount": 1, "weight": 5}}
 
 ## c: common tag membership
-item/planks/archwood.json :: { "values": [ "ars_nouveau:archwood_planks" ]}
-item/fence_gates/wooden.json :: { "values": [ "ars_nouveau:archwood_fence_gate" ]}
-item/gems/source.json :: { "values": [ "ars_nouveau:source_gem" ]}
-item/gems.json :: { "values": [ "ars_nouveau:source_gem" ]}
-item/logs/archwood_stripped.json :: { "values": [ "ars_nouveau:stripped_blue_archwood_log", "ars_nouveau:stripped_green_archwood_log", "ars_nouveau:stripped_red_archwood_log", "ars_nouveau:stripped_purple_archwood_log" ]}
-item/logs/archwood.json :: { "values": [ "ars_nouveau:red_archwood_log", "ars_nouveau:blue_archwood_log", "ars_nouveau:purple_archwood_log", "ars_nouveau:green_archwood_log", "ars_nouveau:red_archwood_wood", "ars_nouveau:blue_archwood_wood", "ars_nouveau:green_archwood_wood", "ars_nouveau:purple_archwood_wood", "ars_nouveau:stripped_blue_archwood_log", "ars_nouveau:stripped_blue_archwood_wood", "ars_nouveau:stripped_green_archwood_log", "ars_nouveau:stripped_green_archwood_wood", "ars_nouveau:stripped_red_archwood_log", "ars_nouveau:stripped_red_archwood_wood", "ars_nouveau:stripped_purple_archwood_log", "ars_nouveau:stripped_purple_archwood_wood" ]}
-item/chests/wooden.json :: { "values": [ "ars_nouveau:archwood_chest" ]}
-item/stripped_logs.json :: { "values": [ "#c:logs/archwood_stripped" ]}
-item/music_discs.json :: { "values": [ "ars_nouveau:music_disc_aria_biblio", "ars_nouveau:music_disc_firel_the_wild_hunt", "ars_nouveau:music_disc_thistle_the_sound_of_glass" ]}
-item/foods.json :: { "values": [ "#ars_nouveau:magic_food" ]}
-item/fruits/berry.json :: { "values": [ "ars_nouveau:sourceberry_bush" ]}
-item/crops.json :: { "values": [ "ars_nouveau:magebloom" ]}
-item/fences.json :: { "values": [ "ars_nouveau:archwood_fence" ]}
-item/armors.json :: { "values": [ "#ars_nouveau:magic_armor" ]}
-item/chests.json :: { "values": [ "ars_nouveau:archwood_chest" ]}
-item/fence_gates.json :: { "values": [ "ars_nouveau:archwood_fence_gate" ]}
-item/storage_blocks/source.json :: { "values": [ "ars_nouveau:source_gem_block" ]}
-item/storage_blocks/quartz.json :: { "values": [ "minecraft:quartz_block" ]}
-item/storage_blocks.json :: { "values": [ "ars_nouveau:source_gem_block" ]}
-item/seeds.json :: { "values": [ "ars_nouveau:magebloom_crop" ]}
-item/foods/fruit.json :: { "values": [ "ars_nouveau:frostaya_pod", "ars_nouveau:bombegranate_pod", "ars_nouveau:mendosteen_pod", "ars_nouveau:bastion_pod" ]}
-item/foods/berry.json :: { "values": [ "ars_nouveau:sourceberry_bush" ]}
-item/fences/wooden.json :: { "values": [ "ars_nouveau:archwood_fence" ]}
-item/stripped_woods.json :: { "values": [ "ars_nouveau:stripped_blue_archwood_wood", "ars_nouveau:stripped_green_archwood_wood", "ars_nouveau:stripped_red_archwood_wood", "ars_nouveau:stripped_purple_archwood_wood" ]}
-item/tools/shield.json :: { "values": [ "ars_nouveau:enchanters_shield" ]}
-item/tools/fishing_rod.json :: { "values": [ "ars_nouveau:enchanters_fishing_rod" ]}
-item/tools/ranged_weapon.json :: { "values": [ "ars_nouveau:spell_bow", "ars_nouveau:spell_crossbow" ]}
-item/tools/bow.json :: { "values": [ "ars_nouveau:spell_bow" ]}
-item/tools/mining_tool.json :: { "values": [ "ars_nouveau:enchanters_gauntlet" ]}
-item/tools/crossbow.json :: { "values": [ "ars_nouveau:spell_crossbow" ]}
-block/fence_gates/wooden.json :: { "values": [ "ars_nouveau:archwood_fence_gate" ]}
-block/relocation_not_supported.json :: { "values": []}
-block/bushes.json :: { "values": [ "ars_nouveau:sourceberry_bush" ]}
-block/chests/wooden.json :: { "values": [ "ars_nouveau:archwood_chest" ]}
-block/fences.json :: { "values": [ "ars_nouveau:archwood_fence" ]}
-block/chests.json :: { "values": [ "ars_nouveau:archwood_chest" ]}
-block/fence_gates.json :: { "values": [ "ars_nouveau:archwood_fence_gate" ]}
-block/storage_blocks/mage_bloom.json :: { "values": [ "ars_nouveau:magebloom_block" ]}
-block/storage_blocks/source_gem.json :: { "values": [ "ars_nouveau:source_gem_block" ]}
-block/storage_blocks.json :: { "values": [ "ars_nouveau:source_gem_block", "ars_nouveau:magebloom_block" ]}
-block/fences/wooden.json :: { "values": [ "ars_nouveau:archwood_fence" ]}
-entity_type/bosses.json :: { "values": [ "ars_nouveau:wilden_boss" ]}
+block/bushes :: {"values": ["ars_nouveau:sourceberry_bush"]}
+block/chests :: {"values": ["ars_nouveau:archwood_chest"]}
+block/chests/wooden :: {"values": ["ars_nouveau:archwood_chest"]}
+block/fence_gates :: {"values": ["ars_nouveau:archwood_fence_gate"]}
+block/fence_gates/wooden :: {"values": ["ars_nouveau:archwood_fence_gate"]}
+block/fences :: {"values": ["ars_nouveau:archwood_fence"]}
+block/fences/wooden :: {"values": ["ars_nouveau:archwood_fence"]}
+block/relocation_not_supported :: {"values": []}
+block/storage_blocks :: {"values": ["ars_nouveau:source_gem_block", "ars_nouveau:magebloom_block"]}
+block/storage_blocks/mage_bloom :: {"values": ["ars_nouveau:magebloom_block"]}
+block/storage_blocks/source_gem :: {"values": ["ars_nouveau:source_gem_block"]}
+entity_type/bosses :: {"values": ["ars_nouveau:wilden_boss"]}
+item/armors :: {"values": ["#ars_nouveau:magic_armor"]}
+item/chests :: {"values": ["ars_nouveau:archwood_chest"]}
+item/chests/wooden :: {"values": ["ars_nouveau:archwood_chest"]}
+item/crops :: {"values": ["ars_nouveau:magebloom"]}
+item/fence_gates :: {"values": ["ars_nouveau:archwood_fence_gate"]}
+item/fence_gates/wooden :: {"values": ["ars_nouveau:archwood_fence_gate"]}
+item/fences :: {"values": ["ars_nouveau:archwood_fence"]}
+item/fences/wooden :: {"values": ["ars_nouveau:archwood_fence"]}
+item/foods :: {"values": ["#ars_nouveau:magic_food"]}
+item/foods/berry :: {"values": ["ars_nouveau:sourceberry_bush"]}
+item/foods/fruit :: {"values": ["ars_nouveau:frostaya_pod", "ars_nouveau:bombegranate_pod", "ars_nouveau:mendosteen_pod", "ars_nouveau:bastion_pod"]}
+item/fruits/berry :: {"values": ["ars_nouveau:sourceberry_bush"]}
+item/gems :: {"values": ["ars_nouveau:source_gem"]}
+item/gems/source :: {"values": ["ars_nouveau:source_gem"]}
+item/logs/archwood :: {"values": ["ars_nouveau:red_archwood_log", "ars_nouveau:blue_archwood_log", "ars_nouveau:purple_archwood_log", "ars_nouveau:green_archwood_log", "ars_nouveau:red_archwood_wood", "ars_nouveau:blue_archwood_wood", "ars_nouveau:green_archwood_wood", "ars_nouveau:purple_archwood_wood", "ars_nouveau:stripped_blue_archwood_log", "ars_nouveau:stripped_blue_archwood_wood", "ars_nouveau:stripped_green_archwood_log", "ars_nouveau:stripped_green_archwood_wood", "ars_nouveau:stripped_red_archwood_log", "ars_nouveau:stripped_red_archwood_wood", "ars_nouveau:stripped_purple_archwood_log", "ars_nouveau:stripped_purple_archwood_wood"]}
+item/logs/archwood_stripped :: {"values": ["ars_nouveau:stripped_blue_archwood_log", "ars_nouveau:stripped_green_archwood_log", "ars_nouveau:stripped_red_archwood_log", "ars_nouveau:stripped_purple_archwood_log"]}
+item/music_discs :: {"values": ["ars_nouveau:music_disc_aria_biblio", "ars_nouveau:music_disc_firel_the_wild_hunt", "ars_nouveau:music_disc_thistle_the_sound_of_glass"]}
+item/planks/archwood :: {"values": ["ars_nouveau:archwood_planks"]}
+item/seeds :: {"values": ["ars_nouveau:magebloom_crop"]}
+item/storage_blocks :: {"values": ["ars_nouveau:source_gem_block"]}
+item/storage_blocks/quartz :: {"values": ["minecraft:quartz_block"]}
+item/storage_blocks/source :: {"values": ["ars_nouveau:source_gem_block"]}
+item/stripped_logs :: {"values": ["#c:logs/archwood_stripped"]}
+item/stripped_woods :: {"values": ["ars_nouveau:stripped_blue_archwood_wood", "ars_nouveau:stripped_green_archwood_wood", "ars_nouveau:stripped_red_archwood_wood", "ars_nouveau:stripped_purple_archwood_wood"]}
+item/tools/bow :: {"values": ["ars_nouveau:spell_bow"]}
+item/tools/crossbow :: {"values": ["ars_nouveau:spell_crossbow"]}
+item/tools/fishing_rod :: {"values": ["ars_nouveau:enchanters_fishing_rod"]}
+item/tools/mining_tool :: {"values": ["ars_nouveau:enchanters_gauntlet"]}
+item/tools/ranged_weapon :: {"values": ["ars_nouveau:spell_bow", "ars_nouveau:spell_crossbow"]}
+item/tools/shield :: {"values": ["ars_nouveau:enchanters_shield"]}
