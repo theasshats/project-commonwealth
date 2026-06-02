@@ -1,12 +1,12 @@
 name = "Derpack X"
 author = "Alex Ignacio-Gamez"
-version = "0.4.3"
+version = "0.4.6"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "56f04a8136a99c8d502c825e9f274270a05134d6b2d731ab9a69b370a2949fcc"
+hash = "aa60e626ffc251d8a76bedbc90ddf6785d978867773207b04235504026439f42"
 
 [versions]
 minecraft = "1.21.1"

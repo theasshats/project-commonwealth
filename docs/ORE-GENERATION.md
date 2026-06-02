@@ -51,6 +51,25 @@ tags (verified), so one vanilla tag covers all the matching Terralith biomes too
 Use a **specific biome ID** only for special cases (e.g. diamonds *only* in `terralith:amethyst_rainforest`).
 You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:rocky_mountains"]`.
 
+> **Underground = different biomes (important).** MC 1.21 biomes are 3D. Below ground the world is
+> mostly **cave biomes** (`dripstone_caves`/`lush_caves`/`deep_dark` + Terralith `#terralith:reference/cave`,
+> Galosphere, Northstar, Quark…), pooled into `#c:is_underground`. A vein keyed to *surface* tags only
+> generates where that surface biome extends straight down — so it's absent in the cave-biome pockets
+> you actually mine through, making regional veins feel empty while vanilla (which targets
+> `#minecraft:is_overworld`, **including** caves) still shows. **Current choice:** every `vein_*` tag also
+> includes `#c:is_underground` + the three vanilla cave biomes, so veins are findable everywhere you cave.
+> Trade-off: cave pockets are region-agnostic (any cave can roll any ore); strict surface regionality only
+> holds when digging down through stone in-region. Under review (see repo issue) — alternatives are strict
+> regional (drop the cave entries) or hybrid (caves only for utility metals, marquee ores stay regional).
+
+> **Gotcha (crashes world creation):** a `biome_modifier`'s `"biomes"` is a HolderSet. A JSON
+> **array may only contain plain biome IDs** — you **cannot** put a `#tag` inside the array
+> (`["#minecraft:is_taiga", "#minecraft:is_forest"]` fails to parse → "Failed to load registries").
+> A *single* tag as a bare string is fine (`"biomes": "#minecraft:is_mountain"`). To combine
+> several tags (or tags + IDs), make a **custom biome tag** under
+> `kubejs/data/derpack/tags/worldgen/biome/<name>.json` (tag `values` *can* mix `#tag` refs and IDs)
+> and point the modifier at it: `"biomes": "#derpack:<name>"`. That's what the `vein_*` modifiers do.
+
 ---
 
 ## Ores to place
@@ -67,6 +86,13 @@ You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:
   only the TFMG one and disable both defaults — both register lead under the standard `c:ores/lead`/`c:ingots/lead` tags, so they're interchangeable.*
 - **Lithium** — TFMG — `tfmg:lithium_ore` (+deepslate)
 - **Nickel** — TFMG — `tfmg:nickel_ore` (+deepslate)
+- **Palladium** — Galosphere — `galosphere:palladium_ore` (+`deepslate_palladium_ore`). Prestige metal:
+  kept **rare + regional** (mountains + dripstone + deep_dark, `chance 14`) and deliberately **excluded
+  from the `#c:is_underground` "findable everywhere" pass** so it doesn't roll in every cave (the hybrid
+  case in issue #65). **Default `#is_overworld` gen shadowed:** Galosphere 1.5.x renamed *Silver → Palladium*
+  but kept the old feature IDs, so `add_silver_ores` (feature `galosphere:ore_silver_small`) was injecting
+  small palladium blobs into every overworld biome — `neoforge:none`'d. Left as a regional bonus:
+  `add_large_silver_ores` (large palladium, `galosphere:crystal_canyons` only).
 
 *Left as-is (not metal ore): TFMG oil (`oil_deposit`/`oil_well` — a fluid), Create/Nuclear/TFMG
 "striated" stone (scoria/crimsite/tuff/andesite), Create: Metalwork (processing only).*
@@ -91,6 +117,8 @@ vein. Override targets in use (all verified + already shipped):
 | Lead | `createnuclear/neoforge/biome_modifier/lead_ore.json` + `tfmg/neoforge/biome_modifier/lead_ore.json` |
 | Lithium | `tfmg/neoforge/biome_modifier/lithium_ore.json` |
 | Nickel | `tfmg/neoforge/biome_modifier/nickel_ore.json` |
+| Infected diamond (Born in Chaos) | `born_in_chaos_v1/neoforge/biome_modifier/infected_diamond_ore_feature_biome_modifier.json` + `infected_deepslate_diamond_ore_feature_biome_modifier.json` — **shadow only, no vein.** It was a second diamond source injected into all overworld biomes; disabled outright so diamonds come solely from the vanilla diamond vein + thinned vanilla. |
+| Palladium (Galosphere) | `galosphere/neoforge/biome_modifier/add_silver_ores.json` — the `#is_overworld` small-blob injection (feature still named `ore_silver_small` after the Silver→Palladium rename). Veined separately; `add_large_silver_ores` (crystal_canyons) left as a regional bonus. |
 
 Left untouched: nether ores (`occultism` iesnium, `striated_ores_nether`), the decorative
 `striated_ores_overworld` (scoria/crimsite/stone), and TFMG `oil_deposit`/`oil_well` (fluid).

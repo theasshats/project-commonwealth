@@ -1,9 +1,13 @@
 name: Build modpack
 
-# Builds the two release artifacts (.mrpack and Prism installer zip) and
-# attaches them to GitHub releases. Both artifacts are small (~5 MB total)
-# since they ship only manifests, not jars — launchers fetch jars at install
-# time from each mod's authoritative source.
+# Builds the release artifact (the Prism installer zip) and attaches it to
+# GitHub releases. It's small (~5 MB) since it ships only manifests, not jars —
+# launchers fetch jars at install time from each mod's authoritative source.
+#
+# We no longer ship a .mrpack: packwiz's mr export bundles the overrides/ tree
+# (config, kubejs, resourcepacks…) so it had bloated to ~200 MB, nobody on the
+# friend-group server used it, and the installer is the recommended path. See
+# issue #73 and docs/DESIGN.md.
 #
 # The build is fast (~30 seconds end to end) so there's no caching layer.
 # We had one in an earlier iteration when bundled-jar zips made builds slow,
@@ -72,22 +76,7 @@ jobs:
       - name: Refresh packwiz index
         run: packwiz refresh --build
 
-      - name: Read pack metadata
-        id: meta
-        run: |
-          version=$(grep -E '^version\s*=' pack.toml | head -1 | sed -E 's/.*"([^"]+)".*/\1/')
-          name=$(grep -E '^name\s*=' pack.toml | head -1 | sed -E 's/.*"([^"]+)".*/\1/')
-          slug=$(echo "$name" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g; s/--*/-/g; s/^-//; s/-$//')
-          echo "version=$version" >> "$GITHUB_OUTPUT"
-          echo "slug=$slug" >> "$GITHUB_OUTPUT"
-
-      # 1. .mrpack — Modrinth's pack format
-      - name: Build .mrpack
-        run: |
-          mkdir -p dist
-          packwiz mr export -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}.mrpack"
-
-      # 2. Prism installer zip — small Prism instance that runs
+      # Prism installer zip — small Prism instance that runs
       # packwiz-installer-bootstrap on every launch to fetch jars from
       # Modrinth/CurseForge.
       #
@@ -102,6 +91,15 @@ jobs:
       - name: Clean staging from dist
         run: rm -rf dist/staging
 
+      # Publish a stable, version-less copy alongside the versioned artifact so
+      # the website (and anyone else) can link to a permanent "latest" download:
+      #   .../releases/latest/download/derpack-x-prism-installer.zip
+      # Same idiom this build already uses to fetch packwiz-installer-bootstrap.
+      - name: Add stable-named copy for permanent latest-download link
+        run: |
+          cd dist
+          cp "$(ls *-prism-installer-*.zip | head -1)" derpack-x-prism-installer.zip
+
       - name: List final artifacts
         run: ls -lh dist/
 
@@ -110,7 +108,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            dist/*.mrpack
             dist/*.zip
           tag_name: ${{ github.event.release.tag_name }}
           fail_on_unmatched_files: true

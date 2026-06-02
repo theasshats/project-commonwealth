@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "terralith:amethyst_rainforest",
+    "terralith:moonlight_grove",
+    "terralith:mirage_isles",
+    "terralith:lavender_forest",
+    {
+      "id": "#c:is_underground",
+      "required": false
+    },
+    "minecraft:dripstone_caves",
+    "minecraft:lush_caves",
+    "minecraft:deep_dark"
+  ]
+}

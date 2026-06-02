@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:desert",
+    {
+      "id": "terralith:desert_oasis",
+      "required": false
+    },
+    {
+      "id": "terralith:white_mesa",
+      "required": false
+    },
+    {
+      "id": "terralith:gravel_desert",
+      "required": false
+    },
+    "#minecraft:is_badlands",
+    {
+      "id": "#c:is_underground",
+      "required": false
+    },
+    "minecraft:dripstone_caves",
+    "minecraft:lush_caves",
+    "minecraft:deep_dark"
+  ]
+}

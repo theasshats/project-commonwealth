@@ -11,17 +11,11 @@ Step-by-step for players. If you've imported a Prism instance before, you can sk
 - 8 GB+ of RAM ideally (the pack uses 8–12 GB)
 - An internet connection for the first launch (mods are fetched from Modrinth/CurseForge)
 
-## Pick which download
+## The download
 
-The release page has two files. Pick **one**:
+### `derpack-x-prism-installer-X.Y.Z.zip`
 
-### `derpack-x-prism-installer-X.Y.Z.zip` (recommended)
-
-A small (~5 MB) Prism instance configured to fetch all mod jars on first launch. Every future launch checks for updates and syncs them automatically. This is the easiest path.
-
-### `derpack-x-X.Y.Z.mrpack`
-
-For Modrinth app users, or if you want to use Prism's "Import from Modrinth" option directly. Equivalent end result to the installer zip — you'll just be picking the mrpack as the import source instead of a Prism zip.
+A small (~5 MB) Prism instance configured to fetch all mod jars on first launch. Every future launch checks for updates and syncs them automatically. This is the only release artifact — we no longer ship a `.mrpack` (it had bloated to ~200 MB and nobody used it).
 
 ## Install (Prism installer zip)
 
@@ -33,14 +27,6 @@ For Modrinth app users, or if you want to use Prism's "Import from Modrinth" opt
 6. Click **OK**.
 
 Prism will unpack the instance scaffold (it's small — no jars yet). You'll see a new instance in your list named "Derpack X X.Y.Z".
-
-## Install (.mrpack)
-
-1. Click **Add Instance** → **Import from zip**.
-2. Select the `.mrpack` file.
-3. Prism will detect it and unpack.
-
-Same result.
 
 ## First launch
 
