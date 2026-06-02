@@ -756,6 +756,11 @@ hash = "19cbfb37dc29169b50599dfa328fe12a0ec9caaec8ac02627b5846f3bd9d1425"
 metafile = true
 
 [[files]]
+file = "mods/aeronautics-dyeable-components.pw.toml"
+hash = "b218b7696365829e01cc3b6844913c757836d1ebdb0c49a9abf7a7fcbc0f6678"
+metafile = true
+
+[[files]]
 file = "mods/afk-sleep.pw.toml"
 hash = "f860d14f65c6239b2e5da1a25ac6765ffc14193a55b4c7f345af80de4cebf4a9"
 metafile = true
@@ -1558,6 +1563,11 @@ metafile = true
 [[files]]
 file = "mods/friends-and-foes-forge.pw.toml"
 hash = "56cc6277b2b36cd935c2d97ecff97449419f479284bd4a3bfec635508282e367"
+metafile = true
+
+[[files]]
+file = "mods/furniture-mods-create-sable-aeronautics.pw.toml"
+hash = "e79db224b31119d6cbe97cd314cfb1c6d6839dca629b3f5e61d6f9edd7a30096"
 metafile = true
 
 [[files]]
