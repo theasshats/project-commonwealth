@@ -69,6 +69,7 @@ trailandtales_delight:torchflower_tea
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/foods/berry.json :: { "values": [ "trailandtales_delight:lantern_fruit", "trailandtales_delight:golden_lantern_fruit" ]}
-item/tools/knife.json :: { "values": [ "trailandtales_delight:cherry_iron_knife", "trailandtales_delight:sniffer_eggshell_knife" ]}
+item/foods/berry :: {"values": ["trailandtales_delight:lantern_fruit", "trailandtales_delight:golden_lantern_fruit"]}
+item/tools/knife :: {"values": ["trailandtales_delight:cherry_iron_knife", "trailandtales_delight:sniffer_eggshell_knife"]}

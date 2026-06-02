@@ -12,9 +12,12 @@ versionRange="[1.21.1, 1.22)"
 
 ## blocks
 
+
 ## items
 freefbible:freef_bible
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
+

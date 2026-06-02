@@ -12,22 +12,24 @@ versionRange = "[21.1.160,)"
 
 ## blocks
 
+
 ## items
 blueprint:template_chest
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-block/bookshelves.json :: { "values": [ "#blueprint:wooden_bookshelves" ]}
-block/chests/trapped.json :: { "values": [ "#blueprint:wooden_trapped_chests" ]}
-block/chests/wooden.json :: { "values": [ "#blueprint:wooden_chests", "#blueprint:wooden_trapped_chests" ]}
-block/ladders.json :: { "values": [ "#blueprint:wooden_ladders" ]}
-entity_type/fishes.json :: { "values": [ "minecraft:cod", "minecraft:salmon", "minecraft:pufferfish", "minecraft:tropical_fish" ]}
-entity_type/milkable.json :: { "values": [ "minecraft:cow", "minecraft:mooshroom", "minecraft:goat" ]}
-item/bookshelves.json :: { "values": [ "#blueprint:wooden_bookshelves" ]}
-item/chests/trapped.json :: { "values": [ "#blueprint:wooden_trapped_chests" ]}
-item/chests/wooden.json :: { "values": [ "#blueprint:wooden_chests", "#blueprint:wooden_trapped_chests" ]}
-item/horse_armor.json :: { "values": [ "minecraft:leather_horse_armor", "minecraft:iron_horse_armor", "minecraft:golden_horse_armor", "minecraft:diamond_horse_armor" ]}
-item/ladders.json :: { "values": [ "#blueprint:wooden_ladders" ]}
-item/milk.json :: { "values": [ "#c:drinks/milk" ]}
-item/pumpkins.json :: { "values": [ "#c:pumpkins/normal" ]}
+block/bookshelves :: {"values": ["#blueprint:wooden_bookshelves"]}
+block/chests/trapped :: {"values": ["#blueprint:wooden_trapped_chests"]}
+block/chests/wooden :: {"values": ["#blueprint:wooden_chests", "#blueprint:wooden_trapped_chests"]}
+block/ladders :: {"values": ["#blueprint:wooden_ladders"]}
+entity_type/fishes :: {"values": ["minecraft:cod", "minecraft:salmon", "minecraft:pufferfish", "minecraft:tropical_fish"]}
+entity_type/milkable :: {"values": ["minecraft:cow", "minecraft:mooshroom", "minecraft:goat"]}
+item/bookshelves :: {"values": ["#blueprint:wooden_bookshelves"]}
+item/chests/trapped :: {"values": ["#blueprint:wooden_trapped_chests"]}
+item/chests/wooden :: {"values": ["#blueprint:wooden_chests", "#blueprint:wooden_trapped_chests"]}
+item/horse_armor :: {"values": ["minecraft:leather_horse_armor", "minecraft:iron_horse_armor", "minecraft:golden_horse_armor", "minecraft:diamond_horse_armor"]}
+item/ladders :: {"values": ["#blueprint:wooden_ladders"]}
+item/milk :: {"values": ["#c:drinks/milk"]}
+item/pumpkins :: {"values": ["#c:pumpkins/normal"]}

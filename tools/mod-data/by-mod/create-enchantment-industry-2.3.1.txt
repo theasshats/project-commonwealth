@@ -46,10 +46,11 @@ create_enchantment_industry:super_experience_nugget
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/nuggets.json :: { "values": [ "create_enchantment_industry:super_experience_nugget" ]}
-item/storage_blocks.json :: { "values": [ "create_enchantment_industry:super_experience_block" ]}
-item/buckets.json :: { "values": [ "create_enchantment_industry:experience_bucket" ]}
-block/lightning_rods.json :: { "values": [ "minecraft:lightning_rod", { "id": "#friendsandfoes:lightning_rods", "required": false } ]}
-block/storage_blocks.json :: { "values": [ "create_enchantment_industry:super_experience_block" ]}
-point_of_interest_type/lightning_rods.json :: { "values": [ "minecraft:lightning_rod", { "id": "#friendsandfoes:lightning_rods", "required": false } ]}
+block/lightning_rods :: {"values": ["minecraft:lightning_rod", {"id": "#friendsandfoes:lightning_rods", "required": false}]}
+block/storage_blocks :: {"values": ["create_enchantment_industry:super_experience_block"]}
+item/buckets :: {"values": ["create_enchantment_industry:experience_bucket"]}
+item/nuggets :: {"values": ["create_enchantment_industry:super_experience_nugget"]}
+item/storage_blocks :: {"values": ["create_enchantment_industry:super_experience_block"]}
+point_of_interest_type/lightning_rods :: {"values": ["minecraft:lightning_rod", {"id": "#friendsandfoes:lightning_rods", "required": false}]}

@@ -42,59 +42,60 @@ createmetalwork:molten_zinc_bucket
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-fluid/andesite_alloy_fluids.json :: { "replace": false, "values": [ { "id": "createmetalwork:flowing_molten_zinc", "required": false }, { "id": "createmetalwork:molten_zinc", "required": false }, { "id": "createmetalwork:flowing_molten_iron", "required": false }, { "id": "createmetalwork:molten_iron", "required": false } ]}
-fluid/molten_andesite.json :: { "replace": false, "values": [ { "id": "createmetalwork:flowing_molten_andesite", "required": false }, { "id": "createmetalwork:molten_andesite", "required": false } ]}
-fluid/molten_andesite_alloy.json :: { "replace": false, "values": [ { "id": "createmetalwork:flowing_molten_andesite_alloy", "required": false }, { "id": "createmetalwork:molten_andesite_alloy", "required": false } ]}
-fluid/molten_brass.json :: { "replace": false, "values": [ { "id": "createmetalwork:flowing_molten_brass", "required": false }, { "id": "createmetalwork:molten_brass", "required": false }, { "id": "molten_metals:flowing_molten_brass", "required": false }, { "id": "molten_metals:molten_brass", "required": false } ]}
-fluid/molten_bronze.json :: { "replace": false, "values": [ { "id": "createmetalwork:flowing_molten_bronze", "required": false }, { "id": "createmetalwork:molten_bronze", "required": false } ]}
-fluid/molten_copper.json :: { "replace": false, "values": [ { "id": "createmetalwork:flowing_molten_copper", "required": false }, { "id": "createmetalwork:molten_copper", "required": false }, { "id": "molten_metals:flowing_molten_copper", "required": false }, { "id": "molten_metals:molten_copper", "required": false } ]}
-fluid/molten_gold.json :: { "replace": false, "values": [ { "id": "createmetalwork:flowing_molten_gold", "required": false }, { "id": "createmetalwork:molten_gold", "required": false }, { "id": "molten_metals:flowing_molten_gold", "required": false }, { "id": "molten_metals:molten_gold", "required": false } ]}
-fluid/molten_iron.json :: { "replace": false, "values": [ { "id": "createmetalwork:flowing_molten_thallasium", "required": false }, { "id": "createmetalwork:molten_thallasium", "required": false }, { "id": "createmetalwork:flowing_molten_iron", "required": false }, { "id": "createmetalwork:molten_iron", "required": false }, { "id": "molten_metals:flowing_molten_iron", "required": false }, { "id": "molten_metals:molten_iron", "required": false } ]}
-fluid/molten_netherite.json :: { "replace": false, "values": [ { "id": "createmetalwork:flowing_molten_netherite", "required": false }, { "id": "createmetalwork:molten_netherite", "required": false }, { "id": "molten_metals:flowing_molten_netherite", "required": false }, { "id": "molten_metals:molten_netherite", "required": false } ]}
-fluid/molten_steel.json :: { "replace": false, "values": [ { "id": "createmetalwork:flowing_molten_steel", "required": false }, { "id": "createmetalwork:molten_steel", "required": false } ]}
-fluid/molten_tin.json :: { "replace": false, "values": [ { "id": "createmetalwork:flowing_molten_tin", "required": false }, { "id": "createmetalwork:molten_tin", "required": false } ]}
-fluid/molten_zinc.json :: { "replace": false, "values": [ { "id": "createmetalwork:flowing_molten_zinc", "required": false }, { "id": "createmetalwork:molten_zinc", "required": false }, { "id": "molten_metals:flowing_molten_zinc", "required": false }, { "id": "molten_metals:molten_zinc", "required": false } ]}
-item/andesite_alloy_nuggets.json :: { "replace": false, "values": [ { "id": "minecraft:iron_nugget", "required": false }, { "id": "create:zinc_nugget", "required": false } ]}
-item/buckets/molten_andesite.json :: { "replace": false, "values": [ { "id": "createmetalwork:molten_andesite_bucket", "required": false } ]}
-item/buckets/molten_andesite_alloy.json :: { "replace": false, "values": [ { "id": "createmetalwork:molten_andesite_alloy_bucket", "required": false } ]}
-item/buckets/molten_brass.json :: { "replace": false, "values": [ { "id": "createmetalwork:molten_brass_bucket", "required": false } ]}
-item/buckets/molten_bronze.json :: { "replace": false, "values": [ { "id": "createmetalwork:molten_bronze_bucket", "required": false } ]}
-item/buckets/molten_copper.json :: { "replace": false, "values": [ { "id": "createmetalwork:molten_copper_bucket", "required": false } ]}
-item/buckets/molten_gold.json :: { "replace": false, "values": [ { "id": "createmetalwork:molten_gold_bucket", "required": false } ]}
-item/buckets/molten_iron.json :: { "replace": false, "values": [ { "id": "createmetalwork:molten_iron_bucket", "required": false } ]}
-item/buckets/molten_netherite.json :: { "replace": false, "values": [ { "id": "createmetalwork:molten_netherite_bucket", "required": false } ]}
-item/buckets/molten_steel.json :: { "replace": false, "values": [ { "id": "createmetalwork:molten_steel_bucket", "required": false } ]}
-item/buckets/molten_tin.json :: { "replace": false, "values": [ { "id": "createmetalwork:molten_tin_bucket", "required": false } ]}
-item/buckets/molten_zinc.json :: { "replace": false, "values": [ { "id": "createmetalwork:molten_zinc_bucket", "required": false } ]}
-item/crushed_raw_materials/adamantite.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_raw_adamantite", "required": false } ]}
-item/crushed_raw_materials/aluminum.json :: { "replace": false, "values": [ { "id": "create:crushed_raw_aluminum", "required": false } ]}
-item/crushed_raw_materials/andesite.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_andesite", "required": false } ]}
-item/crushed_raw_materials/aquarium.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_raw_aquarium", "required": false } ]}
-item/crushed_raw_materials/banglum.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_raw_banglum", "required": false } ]}
-item/crushed_raw_materials/carmot.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_raw_carmot", "required": false } ]}
-item/crushed_raw_materials/copper.json :: { "replace": false, "values": [ { "id": "create:crushed_raw_copper", "required": false } ]}
-item/crushed_raw_materials/gold.json :: { "replace": false, "values": [ { "id": "create:crushed_raw_gold", "required": false } ]}
-item/crushed_raw_materials/iron.json :: { "replace": false, "values": [ { "id": "create:crushed_raw_iron", "required": false } ]}
-item/crushed_raw_materials/kyber.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_raw_kyber", "required": false } ]}
-item/crushed_raw_materials/lead.json :: { "replace": false, "values": [ { "id": "create:crushed_raw_lead", "required": false } ]}
-item/crushed_raw_materials/manganese.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_raw_manganese", "required": false } ]}
-item/crushed_raw_materials/midas_gold.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_raw_midas_gold", "required": false } ]}
-item/crushed_raw_materials/mythril.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_raw_mythril", "required": false } ]}
-item/crushed_raw_materials/netherite_scrap.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_netherite_scrap", "required": false } ]}
-item/crushed_raw_materials/nickel.json :: { "replace": false, "values": [ { "id": "create:crushed_raw_nickel", "required": false } ]}
-item/crushed_raw_materials/orichalcum.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_raw_orichalcum", "required": false } ]}
-item/crushed_raw_materials/osmium.json :: { "replace": false, "values": [ { "id": "create:crushed_raw_osmium", "required": false } ]}
-item/crushed_raw_materials/palladium.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_raw_palladium", "required": false } ]}
-item/crushed_raw_materials/platinum.json :: { "replace": false, "values": [ { "id": "create:crushed_raw_platinum", "required": false } ]}
-item/crushed_raw_materials/prometheum.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_raw_prometheum", "required": false } ]}
-item/crushed_raw_materials/quadrillum.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_raw_quadrillum", "required": false } ]}
-item/crushed_raw_materials/quicksilver.json :: { "replace": false, "values": [ { "id": "create:crushed_raw_quicksilver", "required": false } ]}
-item/crushed_raw_materials/runite.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_raw_runite", "required": false } ]}
-item/crushed_raw_materials/silver.json :: { "replace": false, "values": [ { "id": "create:crushed_raw_silver", "required": false } ]}
-item/crushed_raw_materials/starrite.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_starrite", "required": false } ]}
-item/crushed_raw_materials/stormyx.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_raw_stormyx", "required": false } ]}
-item/crushed_raw_materials/tin.json :: { "replace": false, "values": [ { "id": "create:crushed_raw_tin", "required": false } ]}
-item/crushed_raw_materials/unobtainium.json :: { "replace": false, "values": [ { "id": "createmetalwork:crushed_unobtainium", "required": false } ]}
-item/crushed_raw_materials/uranium.json :: { "replace": false, "values": [ { "id": "create:crushed_raw_uranium", "required": false } ]}
-item/crushed_raw_materials/zinc.json :: { "replace": false, "values": [ { "id": "create:crushed_raw_zinc", "required": false } ]}
+fluid/andesite_alloy_fluids :: {"replace": false, "values": [{"id": "createmetalwork:flowing_molten_zinc", "required": false}, {"id": "createmetalwork:molten_zinc", "required": false}, {"id": "createmetalwork:flowing_molten_iron", "required": false}, {"id": "createmetalwork:molten_iron", "required": false}]}
+fluid/molten_andesite :: {"replace": false, "values": [{"id": "createmetalwork:flowing_molten_andesite", "required": false}, {"id": "createmetalwork:molten_andesite", "required": false}]}
+fluid/molten_andesite_alloy :: {"replace": false, "values": [{"id": "createmetalwork:flowing_molten_andesite_alloy", "required": false}, {"id": "createmetalwork:molten_andesite_alloy", "required": false}]}
+fluid/molten_brass :: {"replace": false, "values": [{"id": "createmetalwork:flowing_molten_brass", "required": false}, {"id": "createmetalwork:molten_brass", "required": false}, {"id": "molten_metals:flowing_molten_brass", "required": false}, {"id": "molten_metals:molten_brass", "required": false}]}
+fluid/molten_bronze :: {"replace": false, "values": [{"id": "createmetalwork:flowing_molten_bronze", "required": false}, {"id": "createmetalwork:molten_bronze", "required": false}]}
+fluid/molten_copper :: {"replace": false, "values": [{"id": "createmetalwork:flowing_molten_copper", "required": false}, {"id": "createmetalwork:molten_copper", "required": false}, {"id": "molten_metals:flowing_molten_copper", "required": false}, {"id": "molten_metals:molten_copper", "required": false}]}
+fluid/molten_gold :: {"replace": false, "values": [{"id": "createmetalwork:flowing_molten_gold", "required": false}, {"id": "createmetalwork:molten_gold", "required": false}, {"id": "molten_metals:flowing_molten_gold", "required": false}, {"id": "molten_metals:molten_gold", "required": false}]}
+fluid/molten_iron :: {"replace": false, "values": [{"id": "createmetalwork:flowing_molten_thallasium", "required": false}, {"id": "createmetalwork:molten_thallasium", "required": false}, {"id": "createmetalwork:flowing_molten_iron", "required": false}, {"id": "createmetalwork:molten_iron", "required": false}, {"id": "molten_metals:flowing_molten_iron", "required": false}, {"id": "molten_metals:molten_iron", "required": false}]}
+fluid/molten_netherite :: {"replace": false, "values": [{"id": "createmetalwork:flowing_molten_netherite", "required": false}, {"id": "createmetalwork:molten_netherite", "required": false}, {"id": "molten_metals:flowing_molten_netherite", "required": false}, {"id": "molten_metals:molten_netherite", "required": false}]}
+fluid/molten_steel :: {"replace": false, "values": [{"id": "createmetalwork:flowing_molten_steel", "required": false}, {"id": "createmetalwork:molten_steel", "required": false}]}
+fluid/molten_tin :: {"replace": false, "values": [{"id": "createmetalwork:flowing_molten_tin", "required": false}, {"id": "createmetalwork:molten_tin", "required": false}]}
+fluid/molten_zinc :: {"replace": false, "values": [{"id": "createmetalwork:flowing_molten_zinc", "required": false}, {"id": "createmetalwork:molten_zinc", "required": false}, {"id": "molten_metals:flowing_molten_zinc", "required": false}, {"id": "molten_metals:molten_zinc", "required": false}]}
+item/andesite_alloy_nuggets :: {"replace": false, "values": [{"id": "minecraft:iron_nugget", "required": false}, {"id": "create:zinc_nugget", "required": false}]}
+item/buckets/molten_andesite :: {"replace": false, "values": [{"id": "createmetalwork:molten_andesite_bucket", "required": false}]}
+item/buckets/molten_andesite_alloy :: {"replace": false, "values": [{"id": "createmetalwork:molten_andesite_alloy_bucket", "required": false}]}
+item/buckets/molten_brass :: {"replace": false, "values": [{"id": "createmetalwork:molten_brass_bucket", "required": false}]}
+item/buckets/molten_bronze :: {"replace": false, "values": [{"id": "createmetalwork:molten_bronze_bucket", "required": false}]}
+item/buckets/molten_copper :: {"replace": false, "values": [{"id": "createmetalwork:molten_copper_bucket", "required": false}]}
+item/buckets/molten_gold :: {"replace": false, "values": [{"id": "createmetalwork:molten_gold_bucket", "required": false}]}
+item/buckets/molten_iron :: {"replace": false, "values": [{"id": "createmetalwork:molten_iron_bucket", "required": false}]}
+item/buckets/molten_netherite :: {"replace": false, "values": [{"id": "createmetalwork:molten_netherite_bucket", "required": false}]}
+item/buckets/molten_steel :: {"replace": false, "values": [{"id": "createmetalwork:molten_steel_bucket", "required": false}]}
+item/buckets/molten_tin :: {"replace": false, "values": [{"id": "createmetalwork:molten_tin_bucket", "required": false}]}
+item/buckets/molten_zinc :: {"replace": false, "values": [{"id": "createmetalwork:molten_zinc_bucket", "required": false}]}
+item/crushed_raw_materials/adamantite :: {"replace": false, "values": [{"id": "createmetalwork:crushed_raw_adamantite", "required": false}]}
+item/crushed_raw_materials/aluminum :: {"replace": false, "values": [{"id": "create:crushed_raw_aluminum", "required": false}]}
+item/crushed_raw_materials/andesite :: {"replace": false, "values": [{"id": "createmetalwork:crushed_andesite", "required": false}]}
+item/crushed_raw_materials/aquarium :: {"replace": false, "values": [{"id": "createmetalwork:crushed_raw_aquarium", "required": false}]}
+item/crushed_raw_materials/banglum :: {"replace": false, "values": [{"id": "createmetalwork:crushed_raw_banglum", "required": false}]}
+item/crushed_raw_materials/carmot :: {"replace": false, "values": [{"id": "createmetalwork:crushed_raw_carmot", "required": false}]}
+item/crushed_raw_materials/copper :: {"replace": false, "values": [{"id": "create:crushed_raw_copper", "required": false}]}
+item/crushed_raw_materials/gold :: {"replace": false, "values": [{"id": "create:crushed_raw_gold", "required": false}]}
+item/crushed_raw_materials/iron :: {"replace": false, "values": [{"id": "create:crushed_raw_iron", "required": false}]}
+item/crushed_raw_materials/kyber :: {"replace": false, "values": [{"id": "createmetalwork:crushed_raw_kyber", "required": false}]}
+item/crushed_raw_materials/lead :: {"replace": false, "values": [{"id": "create:crushed_raw_lead", "required": false}]}
+item/crushed_raw_materials/manganese :: {"replace": false, "values": [{"id": "createmetalwork:crushed_raw_manganese", "required": false}]}
+item/crushed_raw_materials/midas_gold :: {"replace": false, "values": [{"id": "createmetalwork:crushed_raw_midas_gold", "required": false}]}
+item/crushed_raw_materials/mythril :: {"replace": false, "values": [{"id": "createmetalwork:crushed_raw_mythril", "required": false}]}
+item/crushed_raw_materials/netherite_scrap :: {"replace": false, "values": [{"id": "createmetalwork:crushed_netherite_scrap", "required": false}]}
+item/crushed_raw_materials/nickel :: {"replace": false, "values": [{"id": "create:crushed_raw_nickel", "required": false}]}
+item/crushed_raw_materials/orichalcum :: {"replace": false, "values": [{"id": "createmetalwork:crushed_raw_orichalcum", "required": false}]}
+item/crushed_raw_materials/osmium :: {"replace": false, "values": [{"id": "create:crushed_raw_osmium", "required": false}]}
+item/crushed_raw_materials/palladium :: {"replace": false, "values": [{"id": "createmetalwork:crushed_raw_palladium", "required": false}]}
+item/crushed_raw_materials/platinum :: {"replace": false, "values": [{"id": "create:crushed_raw_platinum", "required": false}]}
+item/crushed_raw_materials/prometheum :: {"replace": false, "values": [{"id": "createmetalwork:crushed_raw_prometheum", "required": false}]}
+item/crushed_raw_materials/quadrillum :: {"replace": false, "values": [{"id": "createmetalwork:crushed_raw_quadrillum", "required": false}]}
+item/crushed_raw_materials/quicksilver :: {"replace": false, "values": [{"id": "create:crushed_raw_quicksilver", "required": false}]}
+item/crushed_raw_materials/runite :: {"replace": false, "values": [{"id": "createmetalwork:crushed_raw_runite", "required": false}]}
+item/crushed_raw_materials/silver :: {"replace": false, "values": [{"id": "create:crushed_raw_silver", "required": false}]}
+item/crushed_raw_materials/starrite :: {"replace": false, "values": [{"id": "createmetalwork:crushed_starrite", "required": false}]}
+item/crushed_raw_materials/stormyx :: {"replace": false, "values": [{"id": "createmetalwork:crushed_raw_stormyx", "required": false}]}
+item/crushed_raw_materials/tin :: {"replace": false, "values": [{"id": "create:crushed_raw_tin", "required": false}]}
+item/crushed_raw_materials/unobtainium :: {"replace": false, "values": [{"id": "createmetalwork:crushed_unobtainium", "required": false}]}
+item/crushed_raw_materials/uranium :: {"replace": false, "values": [{"id": "create:crushed_raw_uranium", "required": false}]}
+item/crushed_raw_materials/zinc :: {"replace": false, "values": [{"id": "create:crushed_raw_zinc", "required": false}]}

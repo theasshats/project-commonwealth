@@ -14,6 +14,7 @@ versionRange = "[0.7.0+1.21,)"
 
 ## blocks
 
+
 ## items
 immersive_paintings:glow_graffiti
 immersive_paintings:glow_painting
@@ -22,4 +23,6 @@ immersive_paintings:painting
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
+

@@ -151,16 +151,16 @@ naturalist:vulture_spawn_egg
 naturalist:zebra_spawn_egg
 
 ## neoforge biome_modifiers
-add_animals.json :: { "type": "naturalist:add_animals"}
-remove_farm_animals_savanna.json :: { "type": "neoforge:remove_spawns", "biomes": "#minecraft:is_savanna", "entity_types": [ "minecraft:sheep", "minecraft:pig", "minecraft:chicken", "minecraft:cow" ]}
-remove_farm_animals_swamp.json :: { "type": "neoforge:remove_spawns", "biomes": "#c:is_swamp", "entity_types": [ "minecraft:sheep", "minecraft:pig", "minecraft:chicken", "minecraft:cow" ]}
-remove_forest_pigs.json :: { "type": "neoforge:remove_spawns", "biomes": "#minecraft:is_forest", "entity_types": [ "minecraft:pig" ]}
+add_animals.json :: {"type": "naturalist:add_animals"}
+remove_farm_animals_savanna.json :: {"type": "neoforge:remove_spawns", "biomes": "#minecraft:is_savanna", "entity_types": ["minecraft:sheep", "minecraft:pig", "minecraft:chicken", "minecraft:cow"]}
+remove_farm_animals_swamp.json :: {"type": "neoforge:remove_spawns", "biomes": "#c:is_swamp", "entity_types": ["minecraft:sheep", "minecraft:pig", "minecraft:chicken", "minecraft:cow"]}
+remove_forest_pigs.json :: {"type": "neoforge:remove_spawns", "biomes": "#minecraft:is_forest", "entity_types": ["minecraft:pig"]}
 
 ## c: common tag membership
-block/glass_panes.json :: { "replace": false, "values": [ "naturalist:azure_froglass_pane", "naturalist:crimson_froglass_pane", "naturalist:verdant_froglass_pane" ]}
-item/cooked_eggs.json :: { "replace": false, "values": [ "naturalist:cooked_egg" ]}
-item/cooked_fishes.json :: { "replace": false, "values": [ "minecraft:cooked_cod", "minecraft:cooked_salmon", "naturalist:cooked_bass", "naturalist:cooked_catfish" ]}
-item/cooked_meat.json :: { "replace": false, "values": [ "naturalist:cooked_bass", "naturalist:cooked_catfish", "naturalist:cooked_lizard_tail", "naturalist:cooked_duck" ]}
-item/eggs.json :: { "replace": false, "values": [ "naturalist:tortoise_egg", "naturalist:alligator_egg", "naturalist:duck_egg" ]}
-item/raw_fishes.json :: { "replace": false, "values": [ "minecraft:cod", "minecraft:salmon", "minecraft:tropical_fish", "minecraft:pufferfish", "naturalist:bass", "naturalist:catfish" ]}
-item/raw_meat.json :: { "replace": false, "values": [ "naturalist:lizard_tail", "naturalist:duck" ]}
+block/glass_panes :: {"replace": false, "values": ["naturalist:azure_froglass_pane", "naturalist:crimson_froglass_pane", "naturalist:verdant_froglass_pane"]}
+item/cooked_eggs :: {"replace": false, "values": ["naturalist:cooked_egg"]}
+item/cooked_fishes :: {"replace": false, "values": ["minecraft:cooked_cod", "minecraft:cooked_salmon", "naturalist:cooked_bass", "naturalist:cooked_catfish"]}
+item/cooked_meat :: {"replace": false, "values": ["naturalist:cooked_bass", "naturalist:cooked_catfish", "naturalist:cooked_lizard_tail", "naturalist:cooked_duck"]}
+item/eggs :: {"replace": false, "values": ["naturalist:tortoise_egg", "naturalist:alligator_egg", "naturalist:duck_egg"]}
+item/raw_fishes :: {"replace": false, "values": ["minecraft:cod", "minecraft:salmon", "minecraft:tropical_fish", "minecraft:pufferfish", "naturalist:bass", "naturalist:catfish"]}
+item/raw_meat :: {"replace": false, "values": ["naturalist:lizard_tail", "naturalist:duck"]}
