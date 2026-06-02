@@ -140,7 +140,13 @@ metal/mechanical crafts that bypass Create*. Buckets:
   irons_spellbooks, mffs, travelersbackpack, securitycraft, drones, astikor-carts, exposure,
   smokeleaf, supplementaries (kinetic blocks only), swashbucklers, **gliders** (metal paraglider
   tiers → pressed plates), **netmusic** (computer/cd_burner → electron_tube). Plus `05-metals.js`
-  gating steel at the source.
+  gating steel at the source, and **`81-decoration-metal.js`** — an *aggressive decoration weave*
+  (Macaw's metal doors/windows/fences + Supplementaries candle-holders) that routes raw iron through
+  `create:iron_sheet` via **`event.replaceInput`** (ingredient-only swap: shapes/yields/wood variants
+  untouched, cost-neutral, so a pure-decoration mod earns the Create pillar without becoming a grind).
+  `replaceInput` is the preferred tool for this kind of broad "route the metal through Create" weave —
+  reach for it over `remove`+`shaped` whenever you only need to change *what* an item is made of, not
+  its shape.
 - **Create addons — already route through Create, nothing to do** (~70 mods): everything `create*`
   / `cbc` / `tfmg` / `railways` / `GnKinetics` / `createbigcannons` / `CreateNumismatics` /
   `create_ironworks` / `createmetalwork` / `createnuclear` / `pantographs` / `direct_chute` /
