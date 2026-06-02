@@ -26,10 +26,10 @@ ServerEvents.recipes(event => {
 
   // orig each: northstar:martian_steel (raw ingot) — now the Create-pressed plate, as the
   // space-suit tier already does.
-  swap('northstar:martian_steel_helmet',   ['PPP', 'P P'],        { P })
-  swap('northstar:martian_steel_leggings', ['PPP', 'P P', 'P P'], { P })
-  swap('northstar:martian_steel_boots',    ['P P', 'P P'],        { P })
+  swap('northstar:martian_steel_helmet',   ['PPP', 'P P'],        { P: P })
+  swap('northstar:martian_steel_leggings', ['PPP', 'P P', 'P P'], { P: P })
+  swap('northstar:martian_steel_boots',    ['P P', 'P P'],        { P: P })
   // CHESTPLATE — marquee piece: pressed plate + a precision_mechanism core, matching how
   // Northstar's own tech earns mechanisms. orig: northstar:martian_steel (raw ingot).
-  swap('northstar:martian_steel_chestplate', ['P P', 'PMP', 'PPP'], { P, M: 'create:precision_mechanism' })
+  swap('northstar:martian_steel_chestplate', ['P P', 'PMP', 'PPP'], { P: P, M: 'create:precision_mechanism' })
 })
