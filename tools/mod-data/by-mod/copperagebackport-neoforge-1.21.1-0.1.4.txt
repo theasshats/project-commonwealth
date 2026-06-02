@@ -167,7 +167,8 @@ minecraft:weathered_lightning_rod
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/nuggets/copper.json :: { "replace": false, "values": [ "minecraft:copper_nugget" ]}
-item/chains.json :: { "replace": false, "values": [ "minecraft:copper_chain", "minecraft:exposed_copper_chain", "minecraft:weathered_copper_chain", "minecraft:oxidized_copper_chain", "minecraft:waxed_copper_chain", "minecraft:waxed_exposed_copper_chain", "minecraft:waxed_weathered_copper_chain", "minecraft:waxed_oxidized_copper_chain" ]}
-item/copper_nuggets.json :: { "replace": false, "values": [ "minecraft:copper_nugget" ]}
+item/chains :: {"replace": false, "values": ["minecraft:copper_chain", "minecraft:exposed_copper_chain", "minecraft:weathered_copper_chain", "minecraft:oxidized_copper_chain", "minecraft:waxed_copper_chain", "minecraft:waxed_exposed_copper_chain", "minecraft:waxed_weathered_copper_chain", "minecraft:waxed_oxidized_copper_chain"]}
+item/copper_nuggets :: {"replace": false, "values": ["minecraft:copper_nugget"]}
+item/nuggets/copper :: {"replace": false, "values": ["minecraft:copper_nugget"]}

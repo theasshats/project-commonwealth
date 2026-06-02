@@ -14,11 +14,13 @@ versionRange="[6.0.0,)"
 
 ## blocks
 
+
 ## items
 cmparallelpipes:pipe_wrench
 cmparallelpipes:pipe_wrench_gear
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/tools.json :: { "values": [ "cmparallelpipes:pipe_wrench" ]}
+item/tools :: {"values": ["cmparallelpipes:pipe_wrench"]}

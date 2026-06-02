@@ -485,55 +485,56 @@ born_in_chaos_v1:zombie_fisherman_spawn_egg
 born_in_chaos_v1:zombie_lumberjack_spawn_egg
 
 ## neoforge biome_modifiers
-baby_skeleton_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:baby_skeleton", "weight": 25, "minCount": 1, "maxCount": 2 }}
-baby_spider_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:baby_spider", "weight": 16, "minCount": 3, "maxCount": 5 }}
-barrel_zombie_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:barrel_zombie", "weight": 25, "minCount": 1, "maxCount": 1 }}
-black_argillite_biome_modifier.json :: { "type": "neoforge:add_features", "biomes": "#is_overworld", "features": "born_in_chaos_v1:black_argillite", "step": "underground_ores"}
-bloody_gadfly_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:bloody_gadfly", "weight": 15, "minCount": 1, "maxCount": 1 }}
-bonescaller_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:bonescaller", "weight": 11, "minCount": 1, "maxCount": 1 }}
-bone_imp_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": [ "basalt_deltas", "nether_wastes" ], "spawners": { "type": "born_in_chaos_v1:bone_imp", "weight": 25, "minCount": 1, "maxCount": 2 }}
-corpse_fish_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:corpse_fish", "weight": 7, "minCount": 3, "maxCount": 5 }}
-corpse_fly_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:corpse_fly", "weight": 12, "minCount": 1, "maxCount": 3 }}
-dark_vortex_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:dark_vortex", "weight": 14, "minCount": 1, "maxCount": 1 }}
-decaying_zombie_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:decaying_zombie", "weight": 30, "minCount": 1, "maxCount": 1 }}
-decrepit_skeleton_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:decrepit_skeleton", "weight": 20, "minCount": 1, "maxCount": 1 }}
-dire_hound_leader_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:dire_hound_leader", "weight": 4, "minCount": 1, "maxCount": 1 }}
-door_knight_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:door_knight", "weight": 13, "minCount": 1, "maxCount": 1 }}
-dread_hound_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:dread_hound", "weight": 15, "minCount": 3, "maxCount": 5 }}
-fallen_chaos_knight_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:fallen_chaos_knight", "weight": 5, "minCount": 1, "maxCount": 1 }}
-firelight_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": [ "crimson_forest", "nether_wastes" ], "spawners": { "type": "born_in_chaos_v1:firelight", "weight": 15, "minCount": 1, "maxCount": 3 }}
-glutton_fish_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:glutton_fish", "weight": 2, "minCount": 1, "maxCount": 1 }}
-infected_deepslate_diamond_ore_feature_biome_modifier.json :: { "type": "neoforge:add_features", "biomes": "#is_overworld", "features": "born_in_chaos_v1:infected_deepslate_diamond_ore_feature", "step": "underground_ores"}
-infected_diamond_ore_feature_biome_modifier.json :: { "type": "neoforge:add_features", "biomes": "#is_overworld", "features": "born_in_chaos_v1:infected_diamond_ore_feature", "step": "underground_ores"}
-krampus_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:krampus", "weight": 2, "minCount": 1, "maxCount": 1 }}
-krampus_henchman_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:krampus_henchman", "weight": 9, "minCount": 2, "maxCount": 3 }}
-lifestealer_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:lifestealer", "weight": 3, "minCount": 1, "maxCount": 1 }}
-marigolds_biome_modifier.json :: { "type": "neoforge:add_features", "biomes": [ "badlands", "birch_forest", "dark_forest", "flower_forest", "forest", "jungle", "meadow", "plains" ], "features": "born_in_chaos_v1:marigolds", "step": "vegetal_decoration"}
-missioner_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:missioner", "weight": 4, "minCount": 1, "maxCount": 1 }}
-mother_spider_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:mother_spider", "weight": 13, "minCount": 1, "maxCount": 1 }}
-mrs_pumpkin_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:mrs_pumpkin", "weight": 13, "minCount": 1, "maxCount": 1 }}
-mr_pumpkin_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:mr_pumpkin", "weight": 15, "minCount": 1, "maxCount": 3 }}
-nightmare_stalker_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:nightmare_stalker", "weight": 4, "minCount": 1, "maxCount": 1 }}
-phantom_creeper_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:phantom_creeper", "weight": 8, "minCount": 1, "maxCount": 1 }}
-pumpkin_bruiser_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:pumpkin_bruiser", "weight": 10, "minCount": 1, "maxCount": 1 }}
-pumpkin_dunce_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:pumpkin_dunce", "weight": 16, "minCount": 3, "maxCount": 3 }}
-restless_spirit_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:restless_spirit", "weight": 20, "minCount": 1, "maxCount": 1 }}
-river_mint_biome_modifier.json :: { "type": "neoforge:add_features", "biomes": [ "beach", "river", "stony_shore" ], "features": "born_in_chaos_v1:river_mint", "step": "vegetal_decoration"}
-seared_spirit_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": [ "plains", "sunflower_plains" ], "spawners": { "type": "born_in_chaos_v1:seared_spirit", "weight": 5, "minCount": 1, "maxCount": 1 }}
-senor_pumpkin_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:senor_pumpkin", "weight": 10, "minCount": 1, "maxCount": 2 }}
-siamese_skeletons_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:siamese_skeletons", "weight": 16, "minCount": 1, "maxCount": 1 }}
-sir_pumpkinhead_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:sir_pumpkinhead", "weight": 4, "minCount": 1, "maxCount": 1 }}
-skeleton_demoman_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:skeleton_demoman", "weight": 12, "minCount": 1, "maxCount": 1 }}
-skeleton_thrasher_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:skeleton_thrasher", "weight": 8, "minCount": 1, "maxCount": 1 }}
-spiritof_chaos_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:spiritof_chaos", "weight": 8, "minCount": 1, "maxCount": 1 }}
-spirit_guide_assistant_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:spirit_guide_assistant", "weight": 9, "minCount": 2, "maxCount": 2 }}
-spirit_guide_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:spirit_guide", "weight": 16, "minCount": 1, "maxCount": 1 }}
-supreme_bonescaller_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:supreme_bonescaller", "weight": 1, "minCount": 1, "maxCount": 1 }}
-swarmer_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:swarmer", "weight": 11, "minCount": 1, "maxCount": 1 }}
-thornshell_crab_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:thornshell_crab", "weight": 8, "minCount": 1, "maxCount": 1 }}
-zombie_bruiser_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:zombie_bruiser", "weight": 16, "minCount": 1, "maxCount": 1 }}
-zombie_clown_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:zombie_clown", "weight": 8, "minCount": 1, "maxCount": 1 }}
-zombie_fisherman_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:zombie_fisherman", "weight": 30, "minCount": 1, "maxCount": 1 }}
-zombie_lumberjack_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "born_in_chaos_v1:zombie_lumberjack", "weight": 25, "minCount": 1, "maxCount": 1 }}
+baby_skeleton_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:baby_skeleton", "weight": 25, "minCount": 1, "maxCount": 2}}
+baby_spider_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:baby_spider", "weight": 16, "minCount": 3, "maxCount": 5}}
+barrel_zombie_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:barrel_zombie", "weight": 25, "minCount": 1, "maxCount": 1}}
+black_argillite_biome_modifier.json :: {"type": "neoforge:add_features", "biomes": "#is_overworld", "features": "born_in_chaos_v1:black_argillite", "step": "underground_ores"}
+bloody_gadfly_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:bloody_gadfly", "weight": 15, "minCount": 1, "maxCount": 1}}
+bone_imp_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": ["basalt_deltas", "nether_wastes"], "spawners": {"type": "born_in_chaos_v1:bone_imp", "weight": 25, "minCount": 1, "maxCount": 2}}
+bonescaller_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:bonescaller", "weight": 11, "minCount": 1, "maxCount": 1}}
+corpse_fish_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:corpse_fish", "weight": 7, "minCount": 3, "maxCount": 5}}
+corpse_fly_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:corpse_fly", "weight": 12, "minCount": 1, "maxCount": 3}}
+dark_vortex_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:dark_vortex", "weight": 14, "minCount": 1, "maxCount": 1}}
+decaying_zombie_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:decaying_zombie", "weight": 30, "minCount": 1, "maxCount": 1}}
+decrepit_skeleton_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:decrepit_skeleton", "weight": 20, "minCount": 1, "maxCount": 1}}
+dire_hound_leader_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:dire_hound_leader", "weight": 4, "minCount": 1, "maxCount": 1}}
+door_knight_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:door_knight", "weight": 13, "minCount": 1, "maxCount": 1}}
+dread_hound_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:dread_hound", "weight": 15, "minCount": 3, "maxCount": 5}}
+fallen_chaos_knight_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:fallen_chaos_knight", "weight": 5, "minCount": 1, "maxCount": 1}}
+firelight_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": ["crimson_forest", "nether_wastes"], "spawners": {"type": "born_in_chaos_v1:firelight", "weight": 15, "minCount": 1, "maxCount": 3}}
+glutton_fish_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:glutton_fish", "weight": 2, "minCount": 1, "maxCount": 1}}
+infected_deepslate_diamond_ore_feature_biome_modifier.json :: {"type": "neoforge:add_features", "biomes": "#is_overworld", "features": "born_in_chaos_v1:infected_deepslate_diamond_ore_feature", "step": "underground_ores"}
+infected_diamond_ore_feature_biome_modifier.json :: {"type": "neoforge:add_features", "biomes": "#is_overworld", "features": "born_in_chaos_v1:infected_diamond_ore_feature", "step": "underground_ores"}
+krampus_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:krampus", "weight": 2, "minCount": 1, "maxCount": 1}}
+krampus_henchman_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:krampus_henchman", "weight": 9, "minCount": 2, "maxCount": 3}}
+lifestealer_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:lifestealer", "weight": 3, "minCount": 1, "maxCount": 1}}
+marigolds_biome_modifier.json :: {"type": "neoforge:add_features", "biomes": ["badlands", "birch_forest", "dark_forest", "flower_forest", "forest", "jungle", "meadow", "plains"], "features": "born_in_chaos_v1:marigolds", "step": "vegetal_decoration"}
+missioner_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:missioner", "weight": 4, "minCount": 1, "maxCount": 1}}
+mother_spider_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:mother_spider", "weight": 13, "minCount": 1, "maxCount": 1}}
+mr_pumpkin_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:mr_pumpkin", "weight": 15, "minCount": 1, "maxCount": 3}}
+mrs_pumpkin_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:mrs_pumpkin", "weight": 13, "minCount": 1, "maxCount": 1}}
+nightmare_stalker_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:nightmare_stalker", "weight": 4, "minCount": 1, "maxCount": 1}}
+phantom_creeper_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:phantom_creeper", "weight": 8, "minCount": 1, "maxCount": 1}}
+pumpkin_bruiser_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:pumpkin_bruiser", "weight": 10, "minCount": 1, "maxCount": 1}}
+pumpkin_dunce_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:pumpkin_dunce", "weight": 16, "minCount": 3, "maxCount": 3}}
+restless_spirit_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:restless_spirit", "weight": 20, "minCount": 1, "maxCount": 1}}
+river_mint_biome_modifier.json :: {"type": "neoforge:add_features", "biomes": ["beach", "river", "stony_shore"], "features": "born_in_chaos_v1:river_mint", "step": "vegetal_decoration"}
+seared_spirit_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": ["plains", "sunflower_plains"], "spawners": {"type": "born_in_chaos_v1:seared_spirit", "weight": 5, "minCount": 1, "maxCount": 1}}
+senor_pumpkin_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:senor_pumpkin", "weight": 10, "minCount": 1, "maxCount": 2}}
+siamese_skeletons_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:siamese_skeletons", "weight": 16, "minCount": 1, "maxCount": 1}}
+sir_pumpkinhead_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:sir_pumpkinhead", "weight": 4, "minCount": 1, "maxCount": 1}}
+skeleton_demoman_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:skeleton_demoman", "weight": 12, "minCount": 1, "maxCount": 1}}
+skeleton_thrasher_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:skeleton_thrasher", "weight": 8, "minCount": 1, "maxCount": 1}}
+spirit_guide_assistant_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:spirit_guide_assistant", "weight": 9, "minCount": 2, "maxCount": 2}}
+spirit_guide_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:spirit_guide", "weight": 16, "minCount": 1, "maxCount": 1}}
+spiritof_chaos_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:spiritof_chaos", "weight": 8, "minCount": 1, "maxCount": 1}}
+supreme_bonescaller_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:supreme_bonescaller", "weight": 1, "minCount": 1, "maxCount": 1}}
+swarmer_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:swarmer", "weight": 11, "minCount": 1, "maxCount": 1}}
+thornshell_crab_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:thornshell_crab", "weight": 8, "minCount": 1, "maxCount": 1}}
+zombie_bruiser_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:zombie_bruiser", "weight": 16, "minCount": 1, "maxCount": 1}}
+zombie_clown_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:zombie_clown", "weight": 8, "minCount": 1, "maxCount": 1}}
+zombie_fisherman_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:zombie_fisherman", "weight": 30, "minCount": 1, "maxCount": 1}}
+zombie_lumberjack_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "born_in_chaos_v1:zombie_lumberjack", "weight": 25, "minCount": 1, "maxCount": 1}}
 
 ## c: common tag membership
+

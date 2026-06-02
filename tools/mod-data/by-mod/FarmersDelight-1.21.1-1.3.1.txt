@@ -336,86 +336,86 @@ farmersdelight:yellow_canvas_sign
 farmersdelight:yellow_hanging_canvas_sign
 
 ## neoforge biome_modifiers
-brown_mushroom_colony.json :: { "type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#c:is_mushroom", "features": "farmersdelight:patch_brown_mushroom_colony", "step": "vegetal_decoration"}
-red_mushroom_colony.json :: { "type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#c:is_mushroom", "features": "farmersdelight:patch_red_mushroom_colony", "step": "vegetal_decoration"}
-wild_beetroots.json :: { "type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#minecraft:is_beach", "features": "farmersdelight:patch_wild_beetroots", "step": "vegetal_decoration"}
-wild_cabbages.json :: { "type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#minecraft:is_beach", "features": "farmersdelight:patch_wild_cabbages", "step": "vegetal_decoration"}
-wild_carrots.json :: { "type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#minecraft:is_overworld", "denied_biomes": [ "minecraft:lush_caves", "minecraft:mushroom_fields" ], "features": "farmersdelight:patch_wild_carrots", "max_temperature": 0.9, "min_temperature": 0.4, "step": "vegetal_decoration"}
-wild_onions.json :: { "type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#minecraft:is_overworld", "denied_biomes": [ "minecraft:lush_caves", "minecraft:mushroom_fields" ], "features": "farmersdelight:patch_wild_onions", "max_temperature": 0.9, "min_temperature": 0.4, "step": "vegetal_decoration"}
-wild_potatoes.json :: { "type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#minecraft:is_overworld", "denied_biomes": "#c:is_underground", "features": "farmersdelight:patch_wild_potatoes", "max_temperature": 0.3, "min_temperature": 0.1, "step": "vegetal_decoration"}
-wild_rice.json :: { "type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#c:is_wet/overworld", "denied_biomes": "#c:is_underground", "features": "farmersdelight:patch_wild_rice", "step": "vegetal_decoration"}
-wild_tomatoes.json :: { "type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#c:is_hot/overworld", "denied_biomes": "#c:is_wet", "features": "farmersdelight:patch_wild_tomatoes", "step": "vegetal_decoration"}
+brown_mushroom_colony.json :: {"type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#c:is_mushroom", "features": "farmersdelight:patch_brown_mushroom_colony", "step": "vegetal_decoration"}
+red_mushroom_colony.json :: {"type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#c:is_mushroom", "features": "farmersdelight:patch_red_mushroom_colony", "step": "vegetal_decoration"}
+wild_beetroots.json :: {"type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#minecraft:is_beach", "features": "farmersdelight:patch_wild_beetroots", "step": "vegetal_decoration"}
+wild_cabbages.json :: {"type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#minecraft:is_beach", "features": "farmersdelight:patch_wild_cabbages", "step": "vegetal_decoration"}
+wild_carrots.json :: {"type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#minecraft:is_overworld", "denied_biomes": ["minecraft:lush_caves", "minecraft:mushroom_fields"], "features": "farmersdelight:patch_wild_carrots", "max_temperature": 0.9, "min_temperature": 0.4, "step": "vegetal_decoration"}
+wild_onions.json :: {"type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#minecraft:is_overworld", "denied_biomes": ["minecraft:lush_caves", "minecraft:mushroom_fields"], "features": "farmersdelight:patch_wild_onions", "max_temperature": 0.9, "min_temperature": 0.4, "step": "vegetal_decoration"}
+wild_potatoes.json :: {"type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#minecraft:is_overworld", "denied_biomes": "#c:is_underground", "features": "farmersdelight:patch_wild_potatoes", "max_temperature": 0.3, "min_temperature": 0.1, "step": "vegetal_decoration"}
+wild_rice.json :: {"type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#c:is_wet/overworld", "denied_biomes": "#c:is_underground", "features": "farmersdelight:patch_wild_rice", "step": "vegetal_decoration"}
+wild_tomatoes.json :: {"type": "farmersdelight:add_features_by_filter", "allowed_biomes": "#c:is_hot/overworld", "denied_biomes": "#c:is_wet", "features": "farmersdelight:patch_wild_tomatoes", "step": "vegetal_decoration"}
 
 ## c: common tag membership
-block/fences.json :: { "values": [ "farmersdelight:rope_fence" ]}
-block/fence_gates.json :: { "values": [ "farmersdelight:rope_fence_gate" ]}
-block/mineable/knife.json :: { "values": []}
-block/ropes.json :: { "values": [ "farmersdelight:rope" ]}
-block/storage_blocks/beetroot.json :: { "values": [ "farmersdelight:beetroot_crate" ]}
-block/storage_blocks/cabbage.json :: { "values": [ "farmersdelight:cabbage_crate" ]}
-block/storage_blocks/carrot.json :: { "values": [ "farmersdelight:carrot_crate" ]}
-block/storage_blocks/onion.json :: { "values": [ "farmersdelight:onion_crate" ]}
-block/storage_blocks/potato.json :: { "values": [ "farmersdelight:potato_crate" ]}
-block/storage_blocks/rice.json :: { "values": [ "farmersdelight:rice_bag" ]}
-block/storage_blocks/rice_panicle.json :: { "values": [ "farmersdelight:rice_bale" ]}
-block/storage_blocks/straw.json :: { "values": [ "farmersdelight:straw_bale" ]}
-block/storage_blocks/tomato.json :: { "values": [ "farmersdelight:tomato_crate" ]}
-block/storage_blocks.json :: { "values": [ "#c:storage_blocks/carrot", "#c:storage_blocks/potato", "#c:storage_blocks/beetroot", "#c:storage_blocks/cabbage", "#c:storage_blocks/tomato", "#c:storage_blocks/onion", "#c:storage_blocks/rice", "#c:storage_blocks/rice_panicle", "#c:storage_blocks/straw" ]}
-item/crops/cabbage.json :: { "values": [ "farmersdelight:cabbage", "farmersdelight:cabbage_leaf" ]}
-item/crops/grain.json :: { "values": [ "minecraft:wheat", "farmersdelight:rice" ]}
-item/crops/onion.json :: { "values": [ "farmersdelight:onion" ]}
-item/crops/rice.json :: { "values": [ "farmersdelight:rice" ]}
-item/crops/tomato.json :: { "values": [ "farmersdelight:tomato" ]}
-item/crops.json :: { "values": [ "#c:crops/grain", "#c:crops/cabbage", "#c:crops/onion", "#c:crops/rice", "#c:crops/tomato" ]}
-item/drinks/milk.json :: { "values": [ "farmersdelight:milk_bottle" ]}
-item/drinks.json :: { "values": [ "#farmersdelight:drinks" ]}
-item/fences.json :: { "values": [ "farmersdelight:rope_fence" ]}
-item/fence_gates.json :: { "values": [ "farmersdelight:rope_fence_gate" ]}
-item/foods/cabbage.json :: { "values": [ "farmersdelight:cabbage", "farmersdelight:cabbage_leaf" ]}
-item/foods/cooked_bacon.json :: { "values": [ "farmersdelight:cooked_bacon" ]}
-item/foods/cooked_beef.json :: { "values": [ "minecraft:cooked_beef", "farmersdelight:beef_patty" ]}
-item/foods/cooked_chicken.json :: { "values": [ "minecraft:cooked_chicken", "farmersdelight:cooked_chicken_cuts" ]}
-item/foods/cooked_cod.json :: { "values": [ "minecraft:cooked_cod", "farmersdelight:cooked_cod_slice" ]}
-item/foods/cooked_egg.json :: { "values": [ "farmersdelight:fried_egg" ]}
-item/foods/cooked_fish.json :: { "values": [ "#c:foods/cooked_cod", "#c:foods/cooked_salmon" ]}
-item/foods/cooked_meat.json :: { "values": [ "#c:foods/cooked_chicken", "#c:foods/cooked_pork", "#c:foods/cooked_beef", "#c:foods/cooked_mutton" ]}
-item/foods/cooked_mutton.json :: { "values": [ "minecraft:cooked_mutton", "farmersdelight:cooked_mutton_chops" ]}
-item/foods/cooked_pork.json :: { "values": [ "minecraft:cooked_porkchop", "#c:foods/cooked_bacon" ]}
-item/foods/cooked_salmon.json :: { "values": [ "minecraft:cooked_salmon", "farmersdelight:cooked_salmon_slice" ]}
-item/foods/cookie.json :: { "values": [ "farmersdelight:honey_cookie", "farmersdelight:sweet_berry_cookie" ]}
-item/foods/dough/wheat.json :: { "values": [ "farmersdelight:wheat_dough" ]}
-item/foods/dough.json :: { "values": [ "#c:foods/dough/wheat" ]}
-item/foods/edible_when_placed.json :: { "values": [ "farmersdelight:apple_pie", "farmersdelight:sweet_berry_cheesecake", "farmersdelight:chocolate_pie", "#farmersdelight:feasts" ]}
-item/foods/food_poisoning.json :: { "values": [ "farmersdelight:wheat_dough", "farmersdelight:raw_pasta", "farmersdelight:chicken_cuts", "farmersdelight:nether_salad" ]}
-item/foods/leafy_green.json :: { "values": [ "#c:foods/cabbage" ]}
-item/foods/onion.json :: { "values": [ "farmersdelight:onion" ]}
-item/foods/pasta.json :: { "values": [ "farmersdelight:raw_pasta" ]}
-item/foods/pie.json :: { "values": [ "farmersdelight:apple_pie_slice", "farmersdelight:sweet_berry_cheesecake_slice", "farmersdelight:chocolate_pie_slice", "farmersdelight:pumpkin_pie_slice" ]}
-item/foods/raw_bacon.json :: { "values": [ "farmersdelight:bacon" ]}
-item/foods/raw_beef.json :: { "values": [ "minecraft:beef", "farmersdelight:minced_beef" ]}
-item/foods/raw_chicken.json :: { "values": [ "minecraft:chicken", "farmersdelight:chicken_cuts" ]}
-item/foods/raw_cod.json :: { "values": [ "minecraft:cod", "farmersdelight:cod_slice" ]}
-item/foods/raw_fish.json :: { "values": [ "#c:foods/raw_cod", "#c:foods/raw_salmon" ]}
-item/foods/raw_meat.json :: { "values": [ "#c:foods/raw_chicken", "#c:foods/raw_pork", "#c:foods/raw_beef", "#c:foods/raw_mutton" ]}
-item/foods/raw_mutton.json :: { "values": [ "minecraft:mutton", "farmersdelight:mutton_chops" ]}
-item/foods/raw_pork.json :: { "values": [ "minecraft:porkchop", "#c:foods/raw_bacon" ]}
-item/foods/raw_salmon.json :: { "values": [ "minecraft:salmon", "farmersdelight:salmon_slice" ]}
-item/foods/safe_raw_fish.json :: { "remove": [ "minecraft:pufferfish" ], "values": [ "#c:foods/raw_fish" ]}
-item/foods/soup.json :: { "values": [ "farmersdelight:bone_broth", "farmersdelight:beef_stew", "farmersdelight:vegetable_soup", "farmersdelight:chicken_soup", "farmersdelight:fish_stew", "farmersdelight:pumpkin_soup", "farmersdelight:baked_cod_stew", "farmersdelight:noodle_soup" ]}
-item/foods/tomato.json :: { "values": [ "farmersdelight:tomato" ]}
-item/foods/vegetable.json :: { "values": [ "farmersdelight:onion", "farmersdelight:tomato" ]}
-item/foods.json :: { "values": [ "farmersdelight:tomato_sauce", "farmersdelight:pie_crust", "farmersdelight:pumpkin_slice", "farmersdelight:ham", "farmersdelight:smoked_ham", "farmersdelight:dog_food", "#farmersdelight:snacks", "#farmersdelight:meals", "#farmersdelight:sweets", "#c:foods/leafy_green", "#c:foods/dough", "#c:foods/pasta", "#c:foods/cooked_egg" ]}
-item/ropes.json :: { "values": [ "farmersdelight:rope" ]}
-item/seeds.json :: { "values": [ "farmersdelight:cabbage_seeds", "farmersdelight:rice", "farmersdelight:tomato_seeds" ]}
-item/storage_blocks/beetroot.json :: { "values": [ "farmersdelight:beetroot_crate" ]}
-item/storage_blocks/cabbage.json :: { "values": [ "farmersdelight:cabbage_crate" ]}
-item/storage_blocks/carrot.json :: { "values": [ "farmersdelight:carrot_crate" ]}
-item/storage_blocks/onion.json :: { "values": [ "farmersdelight:onion_crate" ]}
-item/storage_blocks/potato.json :: { "values": [ "farmersdelight:potato_crate" ]}
-item/storage_blocks/rice.json :: { "values": [ "farmersdelight:rice_bag" ]}
-item/storage_blocks/rice_panicle.json :: { "values": [ "farmersdelight:rice_bale" ]}
-item/storage_blocks/straw.json :: { "values": [ "farmersdelight:straw_bale" ]}
-item/storage_blocks/tomato.json :: { "values": [ "farmersdelight:tomato_crate" ]}
-item/storage_blocks.json :: { "values": [ "#c:storage_blocks/carrot", "#c:storage_blocks/potato", "#c:storage_blocks/beetroot", "#c:storage_blocks/cabbage", "#c:storage_blocks/tomato", "#c:storage_blocks/onion", "#c:storage_blocks/rice", "#c:storage_blocks/rice_panicle", "#c:storage_blocks/straw" ]}
-item/tools/knife.json :: { "values": [ "farmersdelight:flint_knife", "farmersdelight:iron_knife", "farmersdelight:diamond_knife", "farmersdelight:golden_knife", "farmersdelight:netherite_knife" ]}
-item/tools.json :: { "values": [ "#c:tools/knife" ]}
+block/fence_gates :: {"values": ["farmersdelight:rope_fence_gate"]}
+block/fences :: {"values": ["farmersdelight:rope_fence"]}
+block/mineable/knife :: {"values": []}
+block/ropes :: {"values": ["farmersdelight:rope"]}
+block/storage_blocks :: {"values": ["#c:storage_blocks/carrot", "#c:storage_blocks/potato", "#c:storage_blocks/beetroot", "#c:storage_blocks/cabbage", "#c:storage_blocks/tomato", "#c:storage_blocks/onion", "#c:storage_blocks/rice", "#c:storage_blocks/rice_panicle", "#c:storage_blocks/straw"]}
+block/storage_blocks/beetroot :: {"values": ["farmersdelight:beetroot_crate"]}
+block/storage_blocks/cabbage :: {"values": ["farmersdelight:cabbage_crate"]}
+block/storage_blocks/carrot :: {"values": ["farmersdelight:carrot_crate"]}
+block/storage_blocks/onion :: {"values": ["farmersdelight:onion_crate"]}
+block/storage_blocks/potato :: {"values": ["farmersdelight:potato_crate"]}
+block/storage_blocks/rice :: {"values": ["farmersdelight:rice_bag"]}
+block/storage_blocks/rice_panicle :: {"values": ["farmersdelight:rice_bale"]}
+block/storage_blocks/straw :: {"values": ["farmersdelight:straw_bale"]}
+block/storage_blocks/tomato :: {"values": ["farmersdelight:tomato_crate"]}
+item/crops :: {"values": ["#c:crops/grain", "#c:crops/cabbage", "#c:crops/onion", "#c:crops/rice", "#c:crops/tomato"]}
+item/crops/cabbage :: {"values": ["farmersdelight:cabbage", "farmersdelight:cabbage_leaf"]}
+item/crops/grain :: {"values": ["minecraft:wheat", "farmersdelight:rice"]}
+item/crops/onion :: {"values": ["farmersdelight:onion"]}
+item/crops/rice :: {"values": ["farmersdelight:rice"]}
+item/crops/tomato :: {"values": ["farmersdelight:tomato"]}
+item/drinks :: {"values": ["#farmersdelight:drinks"]}
+item/drinks/milk :: {"values": ["farmersdelight:milk_bottle"]}
+item/fence_gates :: {"values": ["farmersdelight:rope_fence_gate"]}
+item/fences :: {"values": ["farmersdelight:rope_fence"]}
+item/foods :: {"values": ["farmersdelight:tomato_sauce", "farmersdelight:pie_crust", "farmersdelight:pumpkin_slice", "farmersdelight:ham", "farmersdelight:smoked_ham", "farmersdelight:dog_food", "#farmersdelight:snacks", "#farmersdelight:meals", "#farmersdelight:sweets", "#c:foods/leafy_green", "#c:foods/dough", "#c:foods/pasta", "#c:foods/cooked_egg"]}
+item/foods/cabbage :: {"values": ["farmersdelight:cabbage", "farmersdelight:cabbage_leaf"]}
+item/foods/cooked_bacon :: {"values": ["farmersdelight:cooked_bacon"]}
+item/foods/cooked_beef :: {"values": ["minecraft:cooked_beef", "farmersdelight:beef_patty"]}
+item/foods/cooked_chicken :: {"values": ["minecraft:cooked_chicken", "farmersdelight:cooked_chicken_cuts"]}
+item/foods/cooked_cod :: {"values": ["minecraft:cooked_cod", "farmersdelight:cooked_cod_slice"]}
+item/foods/cooked_egg :: {"values": ["farmersdelight:fried_egg"]}
+item/foods/cooked_fish :: {"values": ["#c:foods/cooked_cod", "#c:foods/cooked_salmon"]}
+item/foods/cooked_meat :: {"values": ["#c:foods/cooked_chicken", "#c:foods/cooked_pork", "#c:foods/cooked_beef", "#c:foods/cooked_mutton"]}
+item/foods/cooked_mutton :: {"values": ["minecraft:cooked_mutton", "farmersdelight:cooked_mutton_chops"]}
+item/foods/cooked_pork :: {"values": ["minecraft:cooked_porkchop", "#c:foods/cooked_bacon"]}
+item/foods/cooked_salmon :: {"values": ["minecraft:cooked_salmon", "farmersdelight:cooked_salmon_slice"]}
+item/foods/cookie :: {"values": ["farmersdelight:honey_cookie", "farmersdelight:sweet_berry_cookie"]}
+item/foods/dough :: {"values": ["#c:foods/dough/wheat"]}
+item/foods/dough/wheat :: {"values": ["farmersdelight:wheat_dough"]}
+item/foods/edible_when_placed :: {"values": ["farmersdelight:apple_pie", "farmersdelight:sweet_berry_cheesecake", "farmersdelight:chocolate_pie", "#farmersdelight:feasts"]}
+item/foods/food_poisoning :: {"values": ["farmersdelight:wheat_dough", "farmersdelight:raw_pasta", "farmersdelight:chicken_cuts", "farmersdelight:nether_salad"]}
+item/foods/leafy_green :: {"values": ["#c:foods/cabbage"]}
+item/foods/onion :: {"values": ["farmersdelight:onion"]}
+item/foods/pasta :: {"values": ["farmersdelight:raw_pasta"]}
+item/foods/pie :: {"values": ["farmersdelight:apple_pie_slice", "farmersdelight:sweet_berry_cheesecake_slice", "farmersdelight:chocolate_pie_slice", "farmersdelight:pumpkin_pie_slice"]}
+item/foods/raw_bacon :: {"values": ["farmersdelight:bacon"]}
+item/foods/raw_beef :: {"values": ["minecraft:beef", "farmersdelight:minced_beef"]}
+item/foods/raw_chicken :: {"values": ["minecraft:chicken", "farmersdelight:chicken_cuts"]}
+item/foods/raw_cod :: {"values": ["minecraft:cod", "farmersdelight:cod_slice"]}
+item/foods/raw_fish :: {"values": ["#c:foods/raw_cod", "#c:foods/raw_salmon"]}
+item/foods/raw_meat :: {"values": ["#c:foods/raw_chicken", "#c:foods/raw_pork", "#c:foods/raw_beef", "#c:foods/raw_mutton"]}
+item/foods/raw_mutton :: {"values": ["minecraft:mutton", "farmersdelight:mutton_chops"]}
+item/foods/raw_pork :: {"values": ["minecraft:porkchop", "#c:foods/raw_bacon"]}
+item/foods/raw_salmon :: {"values": ["minecraft:salmon", "farmersdelight:salmon_slice"]}
+item/foods/safe_raw_fish :: {"remove": ["minecraft:pufferfish"], "values": ["#c:foods/raw_fish"]}
+item/foods/soup :: {"values": ["farmersdelight:bone_broth", "farmersdelight:beef_stew", "farmersdelight:vegetable_soup", "farmersdelight:chicken_soup", "farmersdelight:fish_stew", "farmersdelight:pumpkin_soup", "farmersdelight:baked_cod_stew", "farmersdelight:noodle_soup"]}
+item/foods/tomato :: {"values": ["farmersdelight:tomato"]}
+item/foods/vegetable :: {"values": ["farmersdelight:onion", "farmersdelight:tomato"]}
+item/ropes :: {"values": ["farmersdelight:rope"]}
+item/seeds :: {"values": ["farmersdelight:cabbage_seeds", "farmersdelight:rice", "farmersdelight:tomato_seeds"]}
+item/storage_blocks :: {"values": ["#c:storage_blocks/carrot", "#c:storage_blocks/potato", "#c:storage_blocks/beetroot", "#c:storage_blocks/cabbage", "#c:storage_blocks/tomato", "#c:storage_blocks/onion", "#c:storage_blocks/rice", "#c:storage_blocks/rice_panicle", "#c:storage_blocks/straw"]}
+item/storage_blocks/beetroot :: {"values": ["farmersdelight:beetroot_crate"]}
+item/storage_blocks/cabbage :: {"values": ["farmersdelight:cabbage_crate"]}
+item/storage_blocks/carrot :: {"values": ["farmersdelight:carrot_crate"]}
+item/storage_blocks/onion :: {"values": ["farmersdelight:onion_crate"]}
+item/storage_blocks/potato :: {"values": ["farmersdelight:potato_crate"]}
+item/storage_blocks/rice :: {"values": ["farmersdelight:rice_bag"]}
+item/storage_blocks/rice_panicle :: {"values": ["farmersdelight:rice_bale"]}
+item/storage_blocks/straw :: {"values": ["farmersdelight:straw_bale"]}
+item/storage_blocks/tomato :: {"values": ["farmersdelight:tomato_crate"]}
+item/tools :: {"values": ["#c:tools/knife"]}
+item/tools/knife :: {"values": ["farmersdelight:flint_knife", "farmersdelight:iron_knife", "farmersdelight:diamond_knife", "farmersdelight:golden_knife", "farmersdelight:netherite_knife"]}

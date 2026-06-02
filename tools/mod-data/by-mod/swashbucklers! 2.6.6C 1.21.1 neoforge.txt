@@ -12,6 +12,7 @@ versionRange="[1.21.1]"
 
 ## blocks
 
+
 ## items
 hpm:cannonball
 hpm:corvette_steamship_item
@@ -31,6 +32,7 @@ hpm:swashbuckleritem
 hpm:swashbucklerupgrade
 
 ## neoforge biome_modifiers
-cutterpiratedamaged_biome_modifier.json :: { "type": "neoforge:add_spawns", "biomes": { "type": "neoforge:any" }, "spawners": { "type": "hpm:cutterpiratedamaged", "weight": 1, "minCount": 1, "maxCount": 1 }}
+cutterpiratedamaged_biome_modifier.json :: {"type": "neoforge:add_spawns", "biomes": {"type": "neoforge:any"}, "spawners": {"type": "hpm:cutterpiratedamaged", "weight": 1, "minCount": 1, "maxCount": 1}}
 
 ## c: common tag membership
+

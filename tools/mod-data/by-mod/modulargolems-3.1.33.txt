@@ -335,5 +335,6 @@ modulargolems:yellow_config_card
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/wolf_armor.json :: { "values": [ "minecraft:wolf_armor" ]}
+item/wolf_armor :: {"values": ["minecraft:wolf_armor"]}

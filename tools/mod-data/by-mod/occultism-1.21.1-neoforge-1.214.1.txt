@@ -797,169 +797,169 @@ occultism:witherite_dust
 occultism:wormhole_frame
 
 ## neoforge biome_modifiers
-add_ore_silver.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "occultism:ore_silver", "step": "underground_ores"}
-add_ore_iesnium.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_nether", "features": "occultism:ore_iesnium", "step": "underground_ores"}
-add_tree_otherworld_natural.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:stronghold_biased_to", "features": "occultism:tree_otherworld_natural", "step": "vegetal_decoration"}
-add_grove_underground.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "occultism:grove_underground", "step": "underground_structures"}
-add_tree_otherworld.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:stronghold_biased_to", "features": "occultism:tree_otherworld", "step": "vegetal_decoration"}
-add_ore_silver_deepslate.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "occultism:ore_silver_deepslate", "step": "underground_ores"}
+add_grove_underground.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "occultism:grove_underground", "step": "underground_structures"}
+add_ore_iesnium.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_nether", "features": "occultism:ore_iesnium", "step": "underground_ores"}
+add_ore_silver.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "occultism:ore_silver", "step": "underground_ores"}
+add_ore_silver_deepslate.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "occultism:ore_silver_deepslate", "step": "underground_ores"}
+add_tree_otherworld.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:stronghold_biased_to", "features": "occultism:tree_otherworld", "step": "vegetal_decoration"}
+add_tree_otherworld_natural.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:stronghold_biased_to", "features": "occultism:tree_otherworld_natural", "step": "vegetal_decoration"}
 
 ## c: common tag membership
-item/books.json :: { "values": [ "occultism:dictionary_of_spirits", "minecraft:book" ]}
-item/magma.json :: { "values": [ "minecraft:magma_block" ]}
-item/ingots/iesnium.json :: { "values": [ "occultism:iesnium_ingot" ]}
-item/ingots/silver.json :: { "values": [ "occultism:silver_ingot" ]}
-item/tallow.json :: { "values": [ "occultism:tallow" ]}
-item/tube_corals.json :: { "values": [ "minecraft:tube_coral", "minecraft:tube_coral_fan" ]}
-item/fruits.json :: { "values": [ "minecraft:apple" ]}
-item/tools/knife.json :: { "values": [ "occultism:butcher_knife", "occultism:iesnium_butcher_knife" ]}
-item/tools/metal/axes.json :: { "values": [ "minecraft:iron_axe", "minecraft:golden_axe", "minecraft:diamond_axe", "minecraft:netherite_axe" ]}
-item/tools/mining_tool.json :: { "values": [ "occultism:infused_pickaxe", "occultism:iesnium_pickaxe" ]}
-item/foods.json :: { "values": [ "occultism:datura", "occultism:demons_dream_essence", "occultism:otherworld_essence", "occultism:beaver_nugget", "occultism:cursed_honey", "occultism:sweet_honey_heart", "occultism:demonic_meat" ]}
-item/ores/runium.json :: { "values": [ { "id": "aoa3:runium_ore", "required": false } ]}
-item/ores/emberstone.json :: { "values": [ { "id": "aoa3:emberstone_ore", "required": false } ]}
-item/ores/crystallite.json :: { "values": [ { "id": "aoa3:crystallite_ore", "required": false } ]}
-item/ores/mystite.json :: { "values": [ { "id": "aoa3:mystite_ore", "required": false } ]}
-item/ores/varsium.json :: { "values": [ { "id": "aoa3:varsium_ore", "required": false } ]}
-item/ores/iesnium.json :: { "values": [ "occultism:iesnium_ore" ]}
-item/ores/blue_gemstone.json :: { "values": [ { "id": "aoa3:blue_gemstone_ore", "required": false } ]}
-item/ores/silver.json :: { "values": [ "occultism:silver_ore", "occultism:silver_ore_deepslate" ]}
-item/ores/purple_gemstone.json :: { "values": [ { "id": "aoa3:purple_gemstone_ore", "required": false } ]}
-item/ores/black_quartz.json :: { "values": [ { "id": "actuallyadditions:black_quartz_ore", "required": false } ]}
-item/ores/bone_fragments.json :: { "values": [ { "id": "aoa3:bone_fragments_ore", "required": false } ]}
-item/ores/gemenyte.json :: { "values": [ { "id": "aoa3:gemenyte_ore", "required": false } ]}
-item/ores/ghastly.json :: { "values": [ { "id": "aoa3:ghastly_ore", "required": false } ]}
-item/ores/charged_runium.json :: { "values": [ { "id": "aoa3:charged_runium_ore", "required": false } ]}
-item/ores/dark_gem.json :: { "values": [ { "id": "evilcraft:dark_ores", "required": false }, { "id": "#evilcraft:ores/dark_gem", "required": false } ]}
-item/ores/red_gemstone.json :: { "values": [ { "id": "aoa3:red_gemstone_ore", "required": false } ]}
-item/ores/jewelyte.json :: { "values": [ { "id": "aoa3:jewelyte_ore", "required": false } ]}
-item/ores/elecanium.json :: { "values": [ { "id": "aoa3:elecanium_ore", "required": false } ]}
-item/ores/lyon.json :: { "values": [ { "id": "aoa3:lyon_ore", "required": false } ]}
-item/ores/ornamyte.json :: { "values": [ { "id": "aoa3:ornamyte_ore", "required": false } ]}
-item/ores/limonite.json :: { "values": [ { "id": "aoa3:limonite_ore", "required": false } ]}
-item/ores/yellow_gemstone.json :: { "values": [ { "id": "aoa3:yellow_gemstone_ore", "required": false } ]}
-item/ores/jade.json :: { "values": [ { "id": "aoa3:jade_ore", "required": false } ]}
-item/ores/bloodstone.json :: { "values": [ { "id": "aoa3:bloodstone_ore", "required": false } ]}
-item/ores/blazium.json :: { "values": [ { "id": "aoa3:blazium_ore", "required": false } ]}
-item/ores/shyrestone.json :: { "values": [ { "id": "aoa3:shyrestone_ore", "required": false } ]}
-item/ores/ghoulish.json :: { "values": [ { "id": "aoa3:ghoulish_ore", "required": false } ]}
-item/ores/green_gemstone.json :: { "values": [ { "id": "aoa3:green_gemstone_ore", "required": false } ]}
-item/ores/shyregem.json :: { "values": [ { "id": "aoa3:shyregem_ore", "required": false } ]}
-item/ores/white_gemstone.json :: { "values": [ { "id": "aoa3:white_gemstone_ore", "required": false } ]}
-item/ores/baronyte.json :: { "values": [ { "id": "aoa3:baronyte_ore", "required": false } ]}
-item/nuggets.json :: { "values": [ "#c:nuggets/iesnium", "#c:nuggets/silver" ]}
-item/mushroom_blocks.json :: { "values": [ "minecraft:mushroom_stem", "minecraft:red_mushroom_block", "minecraft:brown_mushroom_block" ]}
-item/seeds.json :: { "values": [ "#c:seeds/datura" ]}
-item/enchanting_tables.json :: { "values": [ "minecraft:enchanting_table" ]}
-item/ores.json :: { "values": [ "#c:ores/iesnium", "#c:ores/silver" ]}
-item/skulls.json :: { "values": [ "minecraft:skeleton_skull", "minecraft:wither_skeleton_skull" ]}
-item/nuggets/iesnium.json :: { "values": [ "occultism:iesnium_nugget" ]}
-item/nuggets/silver.json :: { "values": [ "occultism:silver_nugget" ]}
-item/storage_blocks/iesnium.json :: { "values": [ "occultism:iesnium_block" ]}
-item/storage_blocks/silver.json :: { "values": [ "occultism:silver_block" ]}
-item/storage_blocks/rune.json :: { "values": [ { "id": "forbidden_arcanus:rune_block", "required": false } ]}
-item/storage_blocks/raw_iesnium.json :: { "values": [ "occultism:raw_iesnium_block" ]}
-item/storage_blocks/dark_gem.json :: { "values": [ { "id": "evilcraft:dark_block", "required": false } ]}
-item/storage_blocks/raw_silver.json :: { "values": [ "occultism:raw_silver_block" ]}
-item/crops.json :: { "values": [ "#c:crops/datura" ]}
-item/dusts.json :: { "values": [ "#c:dusts/copper", "#c:dusts/end_stone", "#c:dusts/gold", "#c:dusts/iron", "#c:dusts/iesnium", "#c:dusts/silver", "#c:dusts/obsidian", "#c:dusts/amethyst", "#c:dusts/blackstone", "#c:dusts/blue_ice", "#c:dusts/calcite", "#c:dusts/ice", "#c:dusts/packed_ice", "#c:dusts/dragonyst", "#c:dusts/echo", "#c:dusts/emerald", "#c:dusts/lapis", "#c:dusts/netherite", "#c:dusts/netherite_scrap", "#c:dusts/research", "#c:dusts/witherite", "#c:dusts/otherstone", "#c:dusts/otherrock", "#c:dusts/otherworld_wood" ]}
-item/sky_stones.json :: { "values": [ { "id": "ae2:sky_stone_block", "required": false }, { "id": "ae2:smooth_sky_stone_block", "required": false }, { "id": "ae2:sky_stone_brick", "required": false }, { "id": "ae2:sky_stone_small_brick", "required": false } ]}
-item/lightning_rods.json :: { "values": [ "minecraft:lightning_rod", { "id": "#friendsandfoes:lightning_rods", "required": false } ]}
-item/coal_coke.json :: { "values": [ { "id": "modern_industrialization:coke", "required": false } ]}
-item/storage_blocks.json :: { "values": [ "#c:storage_blocks/iesnium", "#c:storage_blocks/silver", "#c:storage_blocks/raw_iesnium", "#c:storage_blocks/raw_silver" ]}
-item/ingots.json :: { "values": [ "#c:ingots/iesnium", "#c:ingots/silver" ]}
-item/seeds/datura.json :: { "values": [ "occultism:datura_seeds" ]}
-item/crops/datura.json :: { "values": [ "occultism:datura" ]}
-item/ores_in_ground/deepslate.json :: { "values": [ "occultism:silver_ore_deepslate" ]}
-item/ores_in_ground/netherrack.json :: { "values": [ "occultism:iesnium_ore" ]}
-item/ores_in_ground/stone.json :: { "values": [ "occultism:silver_ore" ]}
-item/raw_materials.json :: { "values": [ "#c:raw_materials/iesnium", "#c:raw_materials/silver" ]}
-item/raw_materials/iesnium.json :: { "values": [ "occultism:raw_iesnium" ]}
-item/raw_materials/silver.json :: { "values": [ "occultism:raw_silver" ]}
-item/gems.json :: { "values": [ "occultism:spirit_attuned_gem" ]}
-item/clay.json :: { "values": [ "minecraft:clay_ball" ]}
-item/dusts/blaze.json :: { "values": [ "minecraft:blaze_powder" ]}
-item/dusts/blue_ice.json :: { "values": [ "occultism:crushed_blue_ice" ]}
-item/dusts/research.json :: { "values": [ "occultism:research_fragment_dust" ]}
-item/dusts/blackstone.json :: { "values": [ "occultism:crushed_blackstone" ]}
-item/dusts/iron.json :: { "values": [ "occultism:iron_dust" ]}
-item/dusts/obsidian.json :: { "values": [ "occultism:obsidian_dust" ]}
-item/dusts/iesnium.json :: { "values": [ "occultism:iesnium_dust" ]}
-item/dusts/calcite.json :: { "values": [ "occultism:crushed_calcite" ]}
-item/dusts/silver.json :: { "values": [ "occultism:silver_dust" ]}
-item/dusts/emerald.json :: { "values": [ "occultism:emerald_dust" ]}
-item/dusts/copper.json :: { "values": [ "occultism:copper_dust" ]}
-item/dusts/coal_coke.json :: { "values": [ { "id": "#c:dusts/coke", "required": false } ]}
-item/dusts/lapis.json :: { "values": [ "occultism:lapis_dust" ]}
-item/dusts/dark_gem.json :: { "values": [ { "id": "evilcraft:dark_gem_crushed", "required": false } ]}
-item/dusts/fluix.json :: { "values": [ { "id": "ae2:fluix_dust", "required": false } ]}
-item/dusts/amethyst.json :: { "values": [ "occultism:amethyst_dust" ]}
-item/dusts/witherite.json :: { "values": [ "occultism:witherite_dust" ]}
-item/dusts/dragonyst.json :: { "values": [ "occultism:dragonyst_dust" ]}
-item/dusts/ice.json :: { "values": [ "occultism:crushed_ice" ]}
-item/dusts/end_stone.json :: { "values": [ "occultism:crushed_end_stone" ]}
-item/dusts/certus_quartz.json :: { "values": [ { "id": "ae2:certus_quartz_dust", "required": false } ]}
-item/dusts/gold.json :: { "values": [ "occultism:gold_dust" ]}
-item/dusts/netherite.json :: { "values": [ "occultism:netherite_dust" ]}
-item/dusts/netherite_scrap.json :: { "values": [ "occultism:netherite_scrap_dust" ]}
-item/dusts/echo.json :: { "values": [ "occultism:echo_dust" ]}
-item/dusts/packed_ice.json :: { "values": [ "occultism:crushed_packed_ice" ]}
-item/dusts/otherworld_wood.json :: { "values": [ "occultism:otherworld_ashes" ]}
-item/dusts/otherstone.json :: { "values": [ "occultism:burnt_otherstone" ]}
-item/dusts/sky_stone.json :: { "values": [ { "id": "ae2:sky_dust", "required": false } ]}
-item/dusts/otherrock.json :: { "values": [ "occultism:burnt_otherrock" ]}
-item/tools.json :: { "values": [ { "id": "#occultism:tools/knife", "required": false } ]}
-item/gems/black_quartz.json :: { "values": [ { "id": "actuallyadditions:black_quartz", "required": false } ]}
-item/gems/dark_gem.json :: { "values": [ { "id": "evilcraft:dark_gem", "required": false } ]}
-item/iron_bars.json :: { "values": [ "minecraft:iron_bars" ]}
-item/manuals.json :: { "values": [ "occultism:dictionary_of_spirits" ]}
-block/fence_gates/wooden.json :: { "values": [ "occultism:otherplanks_fence_gate" ]}
-block/ores/iesnium.json :: { "values": [ "occultism:iesnium_ore" ]}
-block/ores/silver.json :: { "values": [ "occultism:silver_ore", "occultism:silver_ore_deepslate" ]}
-block/mushroom_blocks.json :: { "values": [ "minecraft:mushroom_stem", "minecraft:red_mushroom_block", "minecraft:brown_mushroom_block" ]}
-block/enchanting_tables.json :: { "values": [ "minecraft:enchanting_table" ]}
-block/ores.json :: { "values": [ "#c:ores/iesnium", "#c:ores/silver" ]}
-block/storage_blocks/iesnium.json :: { "values": [ "occultism:iesnium_block" ]}
-block/storage_blocks/silver.json :: { "values": [ "occultism:silver_block" ]}
-block/storage_blocks/raw_iesnium.json :: { "values": [ "occultism:raw_iesnium_block" ]}
-block/storage_blocks/raw_silver.json :: { "values": [ "occultism:raw_silver_block" ]}
-block/lightning_rods.json :: { "values": [ "minecraft:lightning_rod", { "id": "#friendsandfoes:lightning_rods", "required": false } ]}
-block/storage_blocks.json :: { "values": [ "#c:storage_blocks/iesnium", "#c:storage_blocks/silver", "#c:storage_blocks/raw_iesnium", "#c:storage_blocks/raw_silver" ]}
-block/ores_in_ground/deepslate.json :: { "values": [ "occultism:silver_ore_deepslate" ]}
-block/ores_in_ground/netherrack.json :: { "values": [ "occultism:iesnium_ore" ]}
-block/ores_in_ground/stone.json :: { "values": [ "occultism:silver_ore" ]}
-block/iron_bars.json :: { "values": [ "minecraft:iron_bars" ]}
-entity_type/squids.json :: { "values": [ "minecraft:squid", "minecraft:glow_squid" ]}
-entity_type/spiders.json :: { "values": [ "minecraft:spider", "minecraft:cave_spider" ]}
-entity_type/pigs.json :: { "values": [ "minecraft:pig" ]}
-entity_type/axolotls.json :: { "values": [ "minecraft:axolotl" ]}
-entity_type/pandas.json :: { "values": [ "minecraft:panda" ]}
-entity_type/wardens.json :: { "values": [ "minecraft:warden", "occultism:possessed_warden" ]}
-entity_type/vex.json :: { "values": [ "minecraft:vex" ]}
-entity_type/llamas.json :: { "values": [ "minecraft:llama", "minecraft:trader_llama" ]}
-entity_type/donkeys.json :: { "values": [ "minecraft:donkey" ]}
-entity_type/golems/iron.json :: { "values": [ "minecraft:iron_golem" ]}
-entity_type/golems/snow.json :: { "values": [ "minecraft:snow_golem" ]}
-entity_type/sheep.json :: { "values": [ "minecraft:sheep" ]}
-entity_type/hoglins.json :: { "values": [ "minecraft:hoglin", "occultism:possessed_hoglin" ]}
-entity_type/shulkers.json :: { "values": [ "minecraft:shulker", "occultism:possessed_weak_shulker", "occultism:possessed_shulker" ]}
-entity_type/camels.json :: { "values": [ "minecraft:camel" ]}
-entity_type/cats.json :: { "values": [ "minecraft:cat", "minecraft:ocelot" ]}
-entity_type/ocelots.json :: { "values": [ "minecraft:ocelot" ]}
-entity_type/armadillos.json :: { "values": [ "minecraft:armadillo" ]}
-entity_type/tadpoles.json :: { "values": [ "minecraft:tadpole" ]}
-entity_type/bees.json :: { "values": [ "minecraft:bee", "occultism:possessed_bee" ]}
-entity_type/dolphins.json :: { "values": [ "minecraft:dolphin" ]}
-entity_type/horses.json :: { "values": [ "minecraft:horse" ]}
-entity_type/chickens.json :: { "values": [ "minecraft:chicken" ]}
-entity_type/parrots.json :: { "values": [ "minecraft:parrot" ]}
-entity_type/wolfs.json :: { "values": [ "minecraft:wolf" ]}
-entity_type/bats.json :: { "values": [ "minecraft:bat", "occultism:bat_familiar" ]}
-entity_type/endermen.json :: { "values": [ "minecraft:enderman", "occultism:possessed_enderman" ]}
-entity_type/cows.json :: { "values": [ "minecraft:cow", "minecraft:mooshroom" ]}
-entity_type/goats.json :: { "values": [ "minecraft:goat", "occultism:mercy_goat", "occultism:goat_familiar" ]}
-entity_type/villagers.json :: { "values": [ "minecraft:villager", "minecraft:wandering_trader", "occultism:wondering_trader" ]}
-entity_type/allay.json :: { "values": [ "minecraft:allay" ]}
-entity_type/fish.json :: { "values": [ "minecraft:cod", "minecraft:salmon", "minecraft:tropical_fish", "minecraft:pufferfish" ]}
-entity_type/mules.json :: { "values": [ "minecraft:mule" ]}
-entity_type/ravagers.json :: { "values": [ "minecraft:ravager" ]}
+block/enchanting_tables :: {"values": ["minecraft:enchanting_table"]}
+block/fence_gates/wooden :: {"values": ["occultism:otherplanks_fence_gate"]}
+block/iron_bars :: {"values": ["minecraft:iron_bars"]}
+block/lightning_rods :: {"values": ["minecraft:lightning_rod", {"id": "#friendsandfoes:lightning_rods", "required": false}]}
+block/mushroom_blocks :: {"values": ["minecraft:mushroom_stem", "minecraft:red_mushroom_block", "minecraft:brown_mushroom_block"]}
+block/ores :: {"values": ["#c:ores/iesnium", "#c:ores/silver"]}
+block/ores/iesnium :: {"values": ["occultism:iesnium_ore"]}
+block/ores/silver :: {"values": ["occultism:silver_ore", "occultism:silver_ore_deepslate"]}
+block/ores_in_ground/deepslate :: {"values": ["occultism:silver_ore_deepslate"]}
+block/ores_in_ground/netherrack :: {"values": ["occultism:iesnium_ore"]}
+block/ores_in_ground/stone :: {"values": ["occultism:silver_ore"]}
+block/storage_blocks :: {"values": ["#c:storage_blocks/iesnium", "#c:storage_blocks/silver", "#c:storage_blocks/raw_iesnium", "#c:storage_blocks/raw_silver"]}
+block/storage_blocks/iesnium :: {"values": ["occultism:iesnium_block"]}
+block/storage_blocks/raw_iesnium :: {"values": ["occultism:raw_iesnium_block"]}
+block/storage_blocks/raw_silver :: {"values": ["occultism:raw_silver_block"]}
+block/storage_blocks/silver :: {"values": ["occultism:silver_block"]}
+entity_type/allay :: {"values": ["minecraft:allay"]}
+entity_type/armadillos :: {"values": ["minecraft:armadillo"]}
+entity_type/axolotls :: {"values": ["minecraft:axolotl"]}
+entity_type/bats :: {"values": ["minecraft:bat", "occultism:bat_familiar"]}
+entity_type/bees :: {"values": ["minecraft:bee", "occultism:possessed_bee"]}
+entity_type/camels :: {"values": ["minecraft:camel"]}
+entity_type/cats :: {"values": ["minecraft:cat", "minecraft:ocelot"]}
+entity_type/chickens :: {"values": ["minecraft:chicken"]}
+entity_type/cows :: {"values": ["minecraft:cow", "minecraft:mooshroom"]}
+entity_type/dolphins :: {"values": ["minecraft:dolphin"]}
+entity_type/donkeys :: {"values": ["minecraft:donkey"]}
+entity_type/endermen :: {"values": ["minecraft:enderman", "occultism:possessed_enderman"]}
+entity_type/fish :: {"values": ["minecraft:cod", "minecraft:salmon", "minecraft:tropical_fish", "minecraft:pufferfish"]}
+entity_type/goats :: {"values": ["minecraft:goat", "occultism:mercy_goat", "occultism:goat_familiar"]}
+entity_type/golems/iron :: {"values": ["minecraft:iron_golem"]}
+entity_type/golems/snow :: {"values": ["minecraft:snow_golem"]}
+entity_type/hoglins :: {"values": ["minecraft:hoglin", "occultism:possessed_hoglin"]}
+entity_type/horses :: {"values": ["minecraft:horse"]}
+entity_type/llamas :: {"values": ["minecraft:llama", "minecraft:trader_llama"]}
+entity_type/mules :: {"values": ["minecraft:mule"]}
+entity_type/ocelots :: {"values": ["minecraft:ocelot"]}
+entity_type/pandas :: {"values": ["minecraft:panda"]}
+entity_type/parrots :: {"values": ["minecraft:parrot"]}
+entity_type/pigs :: {"values": ["minecraft:pig"]}
+entity_type/ravagers :: {"values": ["minecraft:ravager"]}
+entity_type/sheep :: {"values": ["minecraft:sheep"]}
+entity_type/shulkers :: {"values": ["minecraft:shulker", "occultism:possessed_weak_shulker", "occultism:possessed_shulker"]}
+entity_type/spiders :: {"values": ["minecraft:spider", "minecraft:cave_spider"]}
+entity_type/squids :: {"values": ["minecraft:squid", "minecraft:glow_squid"]}
+entity_type/tadpoles :: {"values": ["minecraft:tadpole"]}
+entity_type/vex :: {"values": ["minecraft:vex"]}
+entity_type/villagers :: {"values": ["minecraft:villager", "minecraft:wandering_trader", "occultism:wondering_trader"]}
+entity_type/wardens :: {"values": ["minecraft:warden", "occultism:possessed_warden"]}
+entity_type/wolfs :: {"values": ["minecraft:wolf"]}
+item/books :: {"values": ["occultism:dictionary_of_spirits", "minecraft:book"]}
+item/clay :: {"values": ["minecraft:clay_ball"]}
+item/coal_coke :: {"values": [{"id": "modern_industrialization:coke", "required": false}]}
+item/crops :: {"values": ["#c:crops/datura"]}
+item/crops/datura :: {"values": ["occultism:datura"]}
+item/dusts :: {"values": ["#c:dusts/copper", "#c:dusts/end_stone", "#c:dusts/gold", "#c:dusts/iron", "#c:dusts/iesnium", "#c:dusts/silver", "#c:dusts/obsidian", "#c:dusts/amethyst", "#c:dusts/blackstone", "#c:dusts/blue_ice", "#c:dusts/calcite", "#c:dusts/ice", "#c:dusts/packed_ice", "#c:dusts/dragonyst", "#c:dusts/echo", "#c:dusts/emerald", "#c:dusts/lapis", "#c:dusts/netherite", "#c:dusts/netherite_scrap", "#c:dusts/research", "#c:dusts/witherite", "#c:dusts/otherstone", "#c:dusts/otherrock", "#c:dusts/otherworld_wood"]}
+item/dusts/amethyst :: {"values": ["occultism:amethyst_dust"]}
+item/dusts/blackstone :: {"values": ["occultism:crushed_blackstone"]}
+item/dusts/blaze :: {"values": ["minecraft:blaze_powder"]}
+item/dusts/blue_ice :: {"values": ["occultism:crushed_blue_ice"]}
+item/dusts/calcite :: {"values": ["occultism:crushed_calcite"]}
+item/dusts/certus_quartz :: {"values": [{"id": "ae2:certus_quartz_dust", "required": false}]}
+item/dusts/coal_coke :: {"values": [{"id": "#c:dusts/coke", "required": false}]}
+item/dusts/copper :: {"values": ["occultism:copper_dust"]}
+item/dusts/dark_gem :: {"values": [{"id": "evilcraft:dark_gem_crushed", "required": false}]}
+item/dusts/dragonyst :: {"values": ["occultism:dragonyst_dust"]}
+item/dusts/echo :: {"values": ["occultism:echo_dust"]}
+item/dusts/emerald :: {"values": ["occultism:emerald_dust"]}
+item/dusts/end_stone :: {"values": ["occultism:crushed_end_stone"]}
+item/dusts/fluix :: {"values": [{"id": "ae2:fluix_dust", "required": false}]}
+item/dusts/gold :: {"values": ["occultism:gold_dust"]}
+item/dusts/ice :: {"values": ["occultism:crushed_ice"]}
+item/dusts/iesnium :: {"values": ["occultism:iesnium_dust"]}
+item/dusts/iron :: {"values": ["occultism:iron_dust"]}
+item/dusts/lapis :: {"values": ["occultism:lapis_dust"]}
+item/dusts/netherite :: {"values": ["occultism:netherite_dust"]}
+item/dusts/netherite_scrap :: {"values": ["occultism:netherite_scrap_dust"]}
+item/dusts/obsidian :: {"values": ["occultism:obsidian_dust"]}
+item/dusts/otherrock :: {"values": ["occultism:burnt_otherrock"]}
+item/dusts/otherstone :: {"values": ["occultism:burnt_otherstone"]}
+item/dusts/otherworld_wood :: {"values": ["occultism:otherworld_ashes"]}
+item/dusts/packed_ice :: {"values": ["occultism:crushed_packed_ice"]}
+item/dusts/research :: {"values": ["occultism:research_fragment_dust"]}
+item/dusts/silver :: {"values": ["occultism:silver_dust"]}
+item/dusts/sky_stone :: {"values": [{"id": "ae2:sky_dust", "required": false}]}
+item/dusts/witherite :: {"values": ["occultism:witherite_dust"]}
+item/enchanting_tables :: {"values": ["minecraft:enchanting_table"]}
+item/foods :: {"values": ["occultism:datura", "occultism:demons_dream_essence", "occultism:otherworld_essence", "occultism:beaver_nugget", "occultism:cursed_honey", "occultism:sweet_honey_heart", "occultism:demonic_meat"]}
+item/fruits :: {"values": ["minecraft:apple"]}
+item/gems :: {"values": ["occultism:spirit_attuned_gem"]}
+item/gems/black_quartz :: {"values": [{"id": "actuallyadditions:black_quartz", "required": false}]}
+item/gems/dark_gem :: {"values": [{"id": "evilcraft:dark_gem", "required": false}]}
+item/ingots :: {"values": ["#c:ingots/iesnium", "#c:ingots/silver"]}
+item/ingots/iesnium :: {"values": ["occultism:iesnium_ingot"]}
+item/ingots/silver :: {"values": ["occultism:silver_ingot"]}
+item/iron_bars :: {"values": ["minecraft:iron_bars"]}
+item/lightning_rods :: {"values": ["minecraft:lightning_rod", {"id": "#friendsandfoes:lightning_rods", "required": false}]}
+item/magma :: {"values": ["minecraft:magma_block"]}
+item/manuals :: {"values": ["occultism:dictionary_of_spirits"]}
+item/mushroom_blocks :: {"values": ["minecraft:mushroom_stem", "minecraft:red_mushroom_block", "minecraft:brown_mushroom_block"]}
+item/nuggets :: {"values": ["#c:nuggets/iesnium", "#c:nuggets/silver"]}
+item/nuggets/iesnium :: {"values": ["occultism:iesnium_nugget"]}
+item/nuggets/silver :: {"values": ["occultism:silver_nugget"]}
+item/ores :: {"values": ["#c:ores/iesnium", "#c:ores/silver"]}
+item/ores/baronyte :: {"values": [{"id": "aoa3:baronyte_ore", "required": false}]}
+item/ores/black_quartz :: {"values": [{"id": "actuallyadditions:black_quartz_ore", "required": false}]}
+item/ores/blazium :: {"values": [{"id": "aoa3:blazium_ore", "required": false}]}
+item/ores/bloodstone :: {"values": [{"id": "aoa3:bloodstone_ore", "required": false}]}
+item/ores/blue_gemstone :: {"values": [{"id": "aoa3:blue_gemstone_ore", "required": false}]}
+item/ores/bone_fragments :: {"values": [{"id": "aoa3:bone_fragments_ore", "required": false}]}
+item/ores/charged_runium :: {"values": [{"id": "aoa3:charged_runium_ore", "required": false}]}
+item/ores/crystallite :: {"values": [{"id": "aoa3:crystallite_ore", "required": false}]}
+item/ores/dark_gem :: {"values": [{"id": "evilcraft:dark_ores", "required": false}, {"id": "#evilcraft:ores/dark_gem", "required": false}]}
+item/ores/elecanium :: {"values": [{"id": "aoa3:elecanium_ore", "required": false}]}
+item/ores/emberstone :: {"values": [{"id": "aoa3:emberstone_ore", "required": false}]}
+item/ores/gemenyte :: {"values": [{"id": "aoa3:gemenyte_ore", "required": false}]}
+item/ores/ghastly :: {"values": [{"id": "aoa3:ghastly_ore", "required": false}]}
+item/ores/ghoulish :: {"values": [{"id": "aoa3:ghoulish_ore", "required": false}]}
+item/ores/green_gemstone :: {"values": [{"id": "aoa3:green_gemstone_ore", "required": false}]}
+item/ores/iesnium :: {"values": ["occultism:iesnium_ore"]}
+item/ores/jade :: {"values": [{"id": "aoa3:jade_ore", "required": false}]}
+item/ores/jewelyte :: {"values": [{"id": "aoa3:jewelyte_ore", "required": false}]}
+item/ores/limonite :: {"values": [{"id": "aoa3:limonite_ore", "required": false}]}
+item/ores/lyon :: {"values": [{"id": "aoa3:lyon_ore", "required": false}]}
+item/ores/mystite :: {"values": [{"id": "aoa3:mystite_ore", "required": false}]}
+item/ores/ornamyte :: {"values": [{"id": "aoa3:ornamyte_ore", "required": false}]}
+item/ores/purple_gemstone :: {"values": [{"id": "aoa3:purple_gemstone_ore", "required": false}]}
+item/ores/red_gemstone :: {"values": [{"id": "aoa3:red_gemstone_ore", "required": false}]}
+item/ores/runium :: {"values": [{"id": "aoa3:runium_ore", "required": false}]}
+item/ores/shyregem :: {"values": [{"id": "aoa3:shyregem_ore", "required": false}]}
+item/ores/shyrestone :: {"values": [{"id": "aoa3:shyrestone_ore", "required": false}]}
+item/ores/silver :: {"values": ["occultism:silver_ore", "occultism:silver_ore_deepslate"]}
+item/ores/varsium :: {"values": [{"id": "aoa3:varsium_ore", "required": false}]}
+item/ores/white_gemstone :: {"values": [{"id": "aoa3:white_gemstone_ore", "required": false}]}
+item/ores/yellow_gemstone :: {"values": [{"id": "aoa3:yellow_gemstone_ore", "required": false}]}
+item/ores_in_ground/deepslate :: {"values": ["occultism:silver_ore_deepslate"]}
+item/ores_in_ground/netherrack :: {"values": ["occultism:iesnium_ore"]}
+item/ores_in_ground/stone :: {"values": ["occultism:silver_ore"]}
+item/raw_materials :: {"values": ["#c:raw_materials/iesnium", "#c:raw_materials/silver"]}
+item/raw_materials/iesnium :: {"values": ["occultism:raw_iesnium"]}
+item/raw_materials/silver :: {"values": ["occultism:raw_silver"]}
+item/seeds :: {"values": ["#c:seeds/datura"]}
+item/seeds/datura :: {"values": ["occultism:datura_seeds"]}
+item/skulls :: {"values": ["minecraft:skeleton_skull", "minecraft:wither_skeleton_skull"]}
+item/sky_stones :: {"values": [{"id": "ae2:sky_stone_block", "required": false}, {"id": "ae2:smooth_sky_stone_block", "required": false}, {"id": "ae2:sky_stone_brick", "required": false}, {"id": "ae2:sky_stone_small_brick", "required": false}]}
+item/storage_blocks :: {"values": ["#c:storage_blocks/iesnium", "#c:storage_blocks/silver", "#c:storage_blocks/raw_iesnium", "#c:storage_blocks/raw_silver"]}
+item/storage_blocks/dark_gem :: {"values": [{"id": "evilcraft:dark_block", "required": false}]}
+item/storage_blocks/iesnium :: {"values": ["occultism:iesnium_block"]}
+item/storage_blocks/raw_iesnium :: {"values": ["occultism:raw_iesnium_block"]}
+item/storage_blocks/raw_silver :: {"values": ["occultism:raw_silver_block"]}
+item/storage_blocks/rune :: {"values": [{"id": "forbidden_arcanus:rune_block", "required": false}]}
+item/storage_blocks/silver :: {"values": ["occultism:silver_block"]}
+item/tallow :: {"values": ["occultism:tallow"]}
+item/tools :: {"values": [{"id": "#occultism:tools/knife", "required": false}]}
+item/tools/knife :: {"values": ["occultism:butcher_knife", "occultism:iesnium_butcher_knife"]}
+item/tools/metal/axes :: {"values": ["minecraft:iron_axe", "minecraft:golden_axe", "minecraft:diamond_axe", "minecraft:netherite_axe"]}
+item/tools/mining_tool :: {"values": ["occultism:infused_pickaxe", "occultism:iesnium_pickaxe"]}
+item/tube_corals :: {"values": ["minecraft:tube_coral", "minecraft:tube_coral_fan"]}

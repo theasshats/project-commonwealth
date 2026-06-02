@@ -513,38 +513,39 @@ deeperdarker:yellow_sculk_transmitter_linked
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-block/fences.json :: { "values": [ "deeperdarker:gloomslate_brick_fence" ]}
-block/glass_blocks.json :: { "values": [ "deeperdarker:soundproof_glass" ]}
-block/ores.json :: { "values": [ "deeperdarker:sculk_stone_coal_ore", "deeperdarker:sculk_stone_iron_ore", "deeperdarker:sculk_stone_copper_ore", "deeperdarker:sculk_stone_gold_ore", "deeperdarker:sculk_stone_redstone_ore", "deeperdarker:sculk_stone_emerald_ore", "deeperdarker:sculk_stone_lapis_ore", "deeperdarker:sculk_stone_diamond_ore", "deeperdarker:gloomslate_coal_ore", "deeperdarker:gloomslate_iron_ore", "deeperdarker:gloomslate_copper_ore", "deeperdarker:gloomslate_gold_ore", "deeperdarker:gloomslate_redstone_ore", "deeperdarker:gloomslate_emerald_ore", "deeperdarker:gloomslate_lapis_ore", "deeperdarker:gloomslate_diamond_ore" ]}
-block/stones.json :: { "values": [ "deeperdarker:sculk_stone", "deeperdarker:gloomslate" ]}
-block/stripped_logs.json :: { "values": [ "deeperdarker:stripped_echo_log", "deeperdarker:stripped_blooming_stem" ]}
-block/stripped_woods.json :: { "values": [ "deeperdarker:stripped_echo_wood" ]}
-block/ores/coal.json :: { "values": [ "deeperdarker:sculk_stone_coal_ore", "deeperdarker:gloomslate_coal_ore" ]}
-block/ores/copper.json :: { "values": [ "deeperdarker:sculk_stone_copper_ore", "deeperdarker:gloomslate_copper_ore" ]}
-block/ores/diamond.json :: { "values": [ "deeperdarker:sculk_stone_diamond_ore", "deeperdarker:gloomslate_diamond_ore" ]}
-block/ores/emerald.json :: { "values": [ "deeperdarker:sculk_stone_emerald_ore", "deeperdarker:gloomslate_emerald_ore" ]}
-block/ores/gold.json :: { "values": [ "deeperdarker:sculk_stone_gold_ore", "deeperdarker:gloomslate_gold_ore" ]}
-block/ores/iron.json :: { "values": [ "deeperdarker:sculk_stone_iron_ore", "deeperdarker:gloomslate_iron_ore" ]}
-block/ores/lapis.json :: { "values": [ "deeperdarker:sculk_stone_lapis_ore", "deeperdarker:gloomslate_lapis_ore" ]}
-block/ores/redstone.json :: { "values": [ "deeperdarker:sculk_stone_redstone_ore", "deeperdarker:gloomslate_redstone_ore" ]}
-enchantment/weapon_damage_enhancements.json :: { "values": [ "deeperdarker:sculk_smite" ]}
-item/fences.json :: { "values": [ "deeperdarker:gloomslate_brick_fence" ]}
-item/glass_blocks.json :: { "values": [ "deeperdarker:soundproof_glass" ]}
-item/ores.json :: { "values": [ "deeperdarker:sculk_stone_coal_ore", "deeperdarker:sculk_stone_iron_ore", "deeperdarker:sculk_stone_copper_ore", "deeperdarker:sculk_stone_gold_ore", "deeperdarker:sculk_stone_redstone_ore", "deeperdarker:sculk_stone_emerald_ore", "deeperdarker:sculk_stone_lapis_ore", "deeperdarker:sculk_stone_diamond_ore", "deeperdarker:gloomslate_coal_ore", "deeperdarker:gloomslate_iron_ore", "deeperdarker:gloomslate_copper_ore", "deeperdarker:gloomslate_gold_ore", "deeperdarker:gloomslate_redstone_ore", "deeperdarker:gloomslate_emerald_ore", "deeperdarker:gloomslate_lapis_ore", "deeperdarker:gloomslate_diamond_ore" ]}
-item/stones.json :: { "values": [ "deeperdarker:sculk_stone", "deeperdarker:gloomslate" ]}
-item/stripped_logs.json :: { "values": [ "deeperdarker:stripped_echo_log", "deeperdarker:stripped_blooming_stem" ]}
-item/stripped_woods.json :: { "values": [ "deeperdarker:stripped_echo_wood" ]}
-item/foods/cooked_fish.json :: { "values": [ "deeperdarker:cooked_angler_fish" ]}
-item/foods/raw_fish.json :: { "values": [ "deeperdarker:angler_fish" ]}
-item/ores/coal.json :: { "values": [ "deeperdarker:sculk_stone_coal_ore", "deeperdarker:gloomslate_coal_ore" ]}
-item/ores/copper.json :: { "values": [ "deeperdarker:sculk_stone_copper_ore", "deeperdarker:gloomslate_copper_ore" ]}
-item/ores/diamond.json :: { "values": [ "deeperdarker:sculk_stone_diamond_ore", "deeperdarker:gloomslate_diamond_ore" ]}
-item/ores/emerald.json :: { "values": [ "deeperdarker:sculk_stone_emerald_ore", "deeperdarker:gloomslate_emerald_ore" ]}
-item/ores/gold.json :: { "values": [ "deeperdarker:sculk_stone_gold_ore", "deeperdarker:gloomslate_gold_ore" ]}
-item/ores/iron.json :: { "values": [ "deeperdarker:sculk_stone_iron_ore", "deeperdarker:gloomslate_iron_ore" ]}
-item/ores/lapis.json :: { "values": [ "deeperdarker:sculk_stone_lapis_ore", "deeperdarker:gloomslate_lapis_ore" ]}
-item/ores/redstone.json :: { "values": [ "deeperdarker:sculk_stone_redstone_ore", "deeperdarker:gloomslate_redstone_ore" ]}
-item/tools/melee_weapon.json :: { "values": [ "deeperdarker:resonarium_sword", "deeperdarker:warden_sword" ]}
-item/tools/mining_tool.json :: { "values": [ "deeperdarker:resonarium_pickaxe", "deeperdarker:warden_pickaxe" ]}
-item/tools/ranged_weapon.json :: { "values": [ "deeperdarker:sonorous_staff" ]}
+block/fences :: {"values": ["deeperdarker:gloomslate_brick_fence"]}
+block/glass_blocks :: {"values": ["deeperdarker:soundproof_glass"]}
+block/ores :: {"values": ["deeperdarker:sculk_stone_coal_ore", "deeperdarker:sculk_stone_iron_ore", "deeperdarker:sculk_stone_copper_ore", "deeperdarker:sculk_stone_gold_ore", "deeperdarker:sculk_stone_redstone_ore", "deeperdarker:sculk_stone_emerald_ore", "deeperdarker:sculk_stone_lapis_ore", "deeperdarker:sculk_stone_diamond_ore", "deeperdarker:gloomslate_coal_ore", "deeperdarker:gloomslate_iron_ore", "deeperdarker:gloomslate_copper_ore", "deeperdarker:gloomslate_gold_ore", "deeperdarker:gloomslate_redstone_ore", "deeperdarker:gloomslate_emerald_ore", "deeperdarker:gloomslate_lapis_ore", "deeperdarker:gloomslate_diamond_ore"]}
+block/ores/coal :: {"values": ["deeperdarker:sculk_stone_coal_ore", "deeperdarker:gloomslate_coal_ore"]}
+block/ores/copper :: {"values": ["deeperdarker:sculk_stone_copper_ore", "deeperdarker:gloomslate_copper_ore"]}
+block/ores/diamond :: {"values": ["deeperdarker:sculk_stone_diamond_ore", "deeperdarker:gloomslate_diamond_ore"]}
+block/ores/emerald :: {"values": ["deeperdarker:sculk_stone_emerald_ore", "deeperdarker:gloomslate_emerald_ore"]}
+block/ores/gold :: {"values": ["deeperdarker:sculk_stone_gold_ore", "deeperdarker:gloomslate_gold_ore"]}
+block/ores/iron :: {"values": ["deeperdarker:sculk_stone_iron_ore", "deeperdarker:gloomslate_iron_ore"]}
+block/ores/lapis :: {"values": ["deeperdarker:sculk_stone_lapis_ore", "deeperdarker:gloomslate_lapis_ore"]}
+block/ores/redstone :: {"values": ["deeperdarker:sculk_stone_redstone_ore", "deeperdarker:gloomslate_redstone_ore"]}
+block/stones :: {"values": ["deeperdarker:sculk_stone", "deeperdarker:gloomslate"]}
+block/stripped_logs :: {"values": ["deeperdarker:stripped_echo_log", "deeperdarker:stripped_blooming_stem"]}
+block/stripped_woods :: {"values": ["deeperdarker:stripped_echo_wood"]}
+enchantment/weapon_damage_enhancements :: {"values": ["deeperdarker:sculk_smite"]}
+item/fences :: {"values": ["deeperdarker:gloomslate_brick_fence"]}
+item/foods/cooked_fish :: {"values": ["deeperdarker:cooked_angler_fish"]}
+item/foods/raw_fish :: {"values": ["deeperdarker:angler_fish"]}
+item/glass_blocks :: {"values": ["deeperdarker:soundproof_glass"]}
+item/ores :: {"values": ["deeperdarker:sculk_stone_coal_ore", "deeperdarker:sculk_stone_iron_ore", "deeperdarker:sculk_stone_copper_ore", "deeperdarker:sculk_stone_gold_ore", "deeperdarker:sculk_stone_redstone_ore", "deeperdarker:sculk_stone_emerald_ore", "deeperdarker:sculk_stone_lapis_ore", "deeperdarker:sculk_stone_diamond_ore", "deeperdarker:gloomslate_coal_ore", "deeperdarker:gloomslate_iron_ore", "deeperdarker:gloomslate_copper_ore", "deeperdarker:gloomslate_gold_ore", "deeperdarker:gloomslate_redstone_ore", "deeperdarker:gloomslate_emerald_ore", "deeperdarker:gloomslate_lapis_ore", "deeperdarker:gloomslate_diamond_ore"]}
+item/ores/coal :: {"values": ["deeperdarker:sculk_stone_coal_ore", "deeperdarker:gloomslate_coal_ore"]}
+item/ores/copper :: {"values": ["deeperdarker:sculk_stone_copper_ore", "deeperdarker:gloomslate_copper_ore"]}
+item/ores/diamond :: {"values": ["deeperdarker:sculk_stone_diamond_ore", "deeperdarker:gloomslate_diamond_ore"]}
+item/ores/emerald :: {"values": ["deeperdarker:sculk_stone_emerald_ore", "deeperdarker:gloomslate_emerald_ore"]}
+item/ores/gold :: {"values": ["deeperdarker:sculk_stone_gold_ore", "deeperdarker:gloomslate_gold_ore"]}
+item/ores/iron :: {"values": ["deeperdarker:sculk_stone_iron_ore", "deeperdarker:gloomslate_iron_ore"]}
+item/ores/lapis :: {"values": ["deeperdarker:sculk_stone_lapis_ore", "deeperdarker:gloomslate_lapis_ore"]}
+item/ores/redstone :: {"values": ["deeperdarker:sculk_stone_redstone_ore", "deeperdarker:gloomslate_redstone_ore"]}
+item/stones :: {"values": ["deeperdarker:sculk_stone", "deeperdarker:gloomslate"]}
+item/stripped_logs :: {"values": ["deeperdarker:stripped_echo_log", "deeperdarker:stripped_blooming_stem"]}
+item/stripped_woods :: {"values": ["deeperdarker:stripped_echo_wood"]}
+item/tools/melee_weapon :: {"values": ["deeperdarker:resonarium_sword", "deeperdarker:warden_sword"]}
+item/tools/mining_tool :: {"values": ["deeperdarker:resonarium_pickaxe", "deeperdarker:warden_pickaxe"]}
+item/tools/ranged_weapon :: {"values": ["deeperdarker:sonorous_staff"]}

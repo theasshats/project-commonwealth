@@ -114,6 +114,7 @@ undergroundworlds:wrapped_spawn_egg
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-item/buckets.json :: { "replace": false, "values": [ "undergroundworlds:quicksand_bucket" ]}
-block/chests.json :: { "replace": false, "values": [ "undergroundworlds:temple_chest", "undergroundworlds:web_covered_chest", "undergroundworlds:ice_chest" ]}
+block/chests :: {"replace": false, "values": ["undergroundworlds:temple_chest", "undergroundworlds:web_covered_chest", "undergroundworlds:ice_chest"]}
+item/buckets :: {"replace": false, "values": ["undergroundworlds:quicksand_bucket"]}
