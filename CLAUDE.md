@@ -4,7 +4,7 @@ A **cooperative PvPvE Create pack** for **1.21.1 / NeoForge**, built for a small
 
 **Design north star — five systems; every mod earns its place.** A mod justifies itself by feeding one of the five systems — **Create** (the tech spine), **magic** (Ars/Iron's/Occultism), **economy** (Numismatics + trade), **aeronautics & logistics**, **survival & seasons** — or it gets cut. A mod doesn't have to route through Create specifically; it just has to *belong* somewhere. Progression pushes specialization: complex Create tech unlocks via **MineColonies or boss drops**, and freshness comes from curated content updates, not world resets. For any add or change, ask: **what system does this anchor to — and if none, why is it here?** The why lives in `docs/DESIGN.md`; the live modlist audit + path-forward in `docs/MODLIST-AUDIT.md`.
 
-Distributed as **packwiz manifests, not jars**: the repo holds one `.pw.toml` per mod (download URL + hash), and CI builds a `.mrpack` and a Prism installer zip on release. Pre-alpha, friend-group pack.
+Distributed as **packwiz manifests, not jars**: the repo holds one `.pw.toml` per mod (download URL + hash), and CI builds a Prism installer zip on release (the `.mrpack` was dropped — #73). Pre-alpha, friend-group pack.
 
 ## Where you're running: Claude Code on the web
 
