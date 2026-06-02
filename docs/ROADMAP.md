@@ -15,13 +15,13 @@
 ## Where the work lives (important)
 A fresh clone of `main` now has Phase 0 + Phase 1 ore-gen (#56) + Phase 2 guns (#55) + the design/goal
 docs (#61) + `pr-checks.yml` + the ground-truth digest. The **open** work lives in these PR branches.
-**Merge order** — the three index-touching PRs serialize on `index.toml`/`pack.toml`: **#80 → #62 → #75 → #88 → #82**.
+**Merge order:** the index-touching trio **#62 → #88 → #82** serialize on `index.toml`/`pack.toml` (the auto-resolver re-refreshes between each). **#75** lands right after #62 (stacked on it). **#80** compiles standalone but its magic bridges are **feature-dependent on #62/#75** — land it *with* the magic layer, not before.
 
 | PR | Branch | Holds |
 |---|---|---|
 | **#62** | `claude/recipe-overhaul` | Phase 3 recipes through Create (carries `docs/RECIPES.md` + the digest) |
 | **#75** | `claude/magic-web` | Magic-web v2 KubeJS bridges — **stacked on #62** (re-sync + retarget to `main` when #62 lands) |
-| **#80** | `claude/arcana-mod` | Derpack Arcana code-bridge mod (skeleton; isolated in `mods-src/`, merges anytime) |
+| **#80** | `claude/arcana-mod` | Derpack Arcana code-bridge mod (skeleton, `mods-src/`) — index-isolated, but **feature-dependent on #62/#75**; land with the magic layer |
 | **#82** | `claude/trusting-heisenberg-cbWYb` | GTMOGS ore-gen rework — **gated** on #81 + the #93 model decision |
 | **#88** | `claude/awesome-brown-s4bBD` | Curation pass (#83): mob cuts + In Control! + spawn gating (absorbed #86) |
 
