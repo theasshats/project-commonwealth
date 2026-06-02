@@ -746,7 +746,7 @@ hash = "27307a988d430c42df60ece37ada6f6a3424c2d25eb9d20e9b1f8b2a71fa327c"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/10-immersive-armors.js"
-hash = "2771e51fa8c7bd0bbcf95cc857767ef3449caab5dbecf013d517e3c0b6e96be1"
+hash = "5e7b93deebaa13178b76ba938ce31a0977bbce99d8c3c9c3751f23d142d56657"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/20-samurai-dynasty.js"
@@ -806,7 +806,7 @@ hash = "f08ceba1318e194e9b480c036c6a8633d7118d645016f94cded1de10f3b4a95b"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/95-swashbucklers.js"
-hash = "0fd44b9ec91d40e5848c72bf08f1ed8058f9aeaeaff56571e68f81c7bfcaf2ab"
+hash = "608ddf40d658c110e72192891a48d98c5567efabd81d48b3815b4e68f9c7fa3d"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/96-gliders.js"

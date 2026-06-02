@@ -4,6 +4,28 @@
 > **parts** and **methods** — weaving Create through every branch. **This is NOT a grind.** The bar
 > is *coherence* ("of course you'd build this with Create parts"), never extra steps for their own sake.
 
+## Design rubric (priority order — supersedes older "costs ~comparable" framing)
+When weighing any recipe change, decide in this order:
+
+1. **Balance first.** Nerf powerful things; gate strong gear/weapons/machines deeply. **A swap must
+   never make a powerful item *cheaper* than its vanilla recipe** — an accidental cost *reduction* on
+   a power item is a bug to fix, not a free pass. (Cautionary case: heavy armor was briefly made from
+   pressed sheets and came out *cheaper* than its iron-block original — that's the regression to avoid.)
+2. **Theme second.** Ingredients should *match the output*: **computers cost computer parts, lights
+   cost light bulbs / vacuum cubes, lasers cost optical parts, a drone costs rotors + a motor.** Theme
+   is worth a higher cost.
+3. **Cost-comparability is OPTIONAL.** Don't pare a coherent, well-themed recipe just to match the
+   original count. Only rein in costs that "get out of hand."
+4. **Multi-pillar weaving is the goal.** The pack's five systems are Create / magic / economy /
+   aeronautics / survival; *ideally a mod anchors to two or more of them.* So **decoration or flavor
+   that now needs Create is great** (it weaves that mod into the Create pillar) — as long as it's
+   thematically coherent and not too expensive. The old "leave decoration vanilla" instinct only
+   applies when a Create gate would *invert progression* (e.g. starter-tier copper) or break theme.
+5. **`60-mffs.js` is the gold standard.** Its `sequenced_assembly` chain (staged on the Mechanical
+   Crafters through a registered `derpack:incomplete_*` transitional item) is what "truly woven in"
+   looks like. Use it as the model for powerful/endgame machines; reach for that depth wherever an
+   item's power justifies it, not just where a mod happened to already be complex.
+
 ## Guardrails (keeps it "Create-ified," not GregTech)
 - **Gate by complexity, not uniformly.** Simple gear / shared components get a single light part
   gate; **complex / endgame machines should require real Create *methods*** — `mechanical_crafting`
@@ -12,8 +34,11 @@
   `tfmg:steel_mechanism`). Don't settle for the cheapest gate on a flagship machine. Northstar is
   the reference: trivial gear rides a pressed plate, but rocket stations / sealers / circuits go
   through `mechanical_crafting` + `sequenced_assembly`.
-- One Create-part "gate" per tier is plenty — don't stack requirements *within a tier*.
-- Keep yields fair for everyday gear; don't stretch a 1-step craft into five unless it warrants it.
+- One Create-part "gate" per tier is plenty *for everyday/low-power gear* — don't stack requirements
+  on something weak. Power items are the exception: gate them as deeply as their strength warrants
+  (balance-first), up to the full `sequenced_assembly` treatment.
+- Keep yields fair for everyday gear; don't stretch a trivial craft into five steps for its own sake.
+  But richer, well-themed recipes are welcome where they weave mods together (see the rubric).
 - **Endgame / flagship machines SHOULD be multi-stage `sequenced_assembly` chains** (maintainer
   call — depth is wanted here, GregTech-leaning is OK *for endgame only*). The chain's in-progress
   item is a registered `derpack:incomplete_*` part (see `kubejs/startup_scripts/`) that Create
@@ -80,6 +105,11 @@ Pure bypass-recipe removals happen alongside each branch.
 ## Deliberately NOT gated (reconsidered ledger)
 These mods were re-examined against the ground-truth digest and **left vanilla on purpose**.
 Recorded here so the calls aren't re-litigated; revisit only if the stated reason changes.
+
+> Re-checked under the matured rubric (decoration-through-Create is *encouraged*, not avoided): these
+> still hold, but for the right reason — each would **invert progression** (gating starter/exploration
+> tier) or **break theme** (mob-drop devices want mob drops), *not* because "decoration stays vanilla."
+> A coherent, non-progression-inverting Create touch on any of them later is welcome.
 
 - **copperagebackport** — copper tools/armor/buttons are *starter tier* (and register under the
   `minecraft:` namespace). A Create press gate would **invert progression** — a grind on the
@@ -180,9 +210,11 @@ Create's mid/late vocabulary**, so they're endgame-appropriate without extra tax
 - **mffs** force-field gear and **modular golems** were already routed onto Create parts in their
   passes; steel-gating (`05`) pushes their metal tier behind a running Create setup.
 
-No item was found that is both high-power *and* trivially craftable, so no difficulty changes were
-forced. Genuine balance tuning (e.g. jetpack/nuclear costs feeling too low) is a **playtest call** —
-flagged here rather than guessed, since the convention is "costs stay ~comparable," not a grind.
+No item was found that is both high-power *and* trivially craftable in the first sweep. Under the
+matured rubric (**balance first**), the standing instruction is stronger than the old "costs stay
+~comparable": where a power item *does* read as too cheap, **raise it** (deeper Create gate, up to
+`sequenced_assembly`) rather than leave it. Final numeric tuning (jetpack/nuclear/etc.) is still a
+**playtest call**, but the direction is "nerf the strong," not "preserve parity."
 
 ## Cross-mod synergy style (mirrors Create: Immersive TaCZ)
 Immersive TaCZ doesn't gate a gun behind one token part — it builds intermediate components
@@ -198,11 +230,13 @@ pack: `create` (electron_tube, propeller, framed_glass, sturdy_sheet, fluid_tank
 `create_new_age` (copper_circuit/wire — themselves Create-deployed), `createaddition`
 (copper_wire/spool, capacitor, electric_motor, brass_rod), `tfmg` (circuit_board, heavy_plate,
 machinery_casing), `galosphere` (allurite/lumiere shards = glowing optical/readout elements, silver).
-**Difficulty rule:** the TaCZ guns are *deliberately* hard because they're strong — but for
-everything else **keep cost comparable to the original**. So borrow the *style* (cross-mod parts,
-route through Create) but don't inflate: a table-crafted device stays a (richer) table craft, not a
-Mechanical-Crafter gate. Reserve `mechanical_crafting` / `sequenced_assembly` for items that were
-already endgame/complex (e.g. MFFS machines, Northstar's rocket tech).
+**Difficulty rule (per the rubric above — balance > theme > cost):** strong items (the TaCZ guns,
+force-field machines, flight tech) are *deliberately* hard because they're powerful — gate them
+deeply. For weak/everyday gear, a richer well-themed table craft is fine; **cost-comparability is
+optional, so theme can raise the cost** as long as it doesn't get out of hand. Reach for
+`mechanical_crafting` / `sequenced_assembly` whenever an item's *power* warrants it (MFFS is the
+model), not only when a mod was already complex — but don't put a Mechanical-Crafter gate on a
+trinket.
 
 Full-pass status (every flagship file reviewed):
 - **Enriched** (cross-mod parts, comparable cost): `netmusic` computer (framed_glass + copper_circuit
