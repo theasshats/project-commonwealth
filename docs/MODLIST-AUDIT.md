@@ -55,8 +55,10 @@ chain — actually **fits** the grow→process→sell economy; treat as an econo
   `occult-engineering`, `necronomicon`, `modular-golems` — full parallel power systems (big
   recipe-gate candidates, §C).
 - `mffs` (force fields), `security-craft` ⚠ — base defense; minor fit for a PvE friend group.
-- `sky-whale-ship` ⚠, `companion` / `companions-mod` / `buddy-drones` / `followers-teleport-too` ⚠ —
-  companion/novelty; review value.
+- `sky-whale-ship` ⚠, `companion` (pet dog, zero content → cut, #94) / `companions-mod` /
+  `followers-teleport-too` ⚠ — companion/novelty; review value. **NOT novelties (re-tag, keep):**
+  `buddy-drones` is **Modular Drones** (real logistics → aeronautics pillar); `create-mechanical-companion`
+  is **Create content**.
 
 ## B. Duplicate / overlapping **mechanics** (pick one)
 > Duplicate **items** (lead×2, silver×2, tin, etc.) are largely auto-handled by **`almost-unified`**
@@ -68,8 +70,8 @@ chain — actually **fits** the grow→process→sell economy; treat as an econo
 | Accessory API | `curios` + `accessories` + `accessories-compat-layer` | dual slot APIs — keep both only if mods require each; confirm the compat-layer resolves ⚠ |
 | Tree growth | `dynamictrees`(+`-terralith`,+`plus`) · `oh-the-trees-youll-grow` | **not a duplicate** — `oh-the-trees-youll-grow` is a **library** (tree gen via .nbt; verify what needs it, likely Terralith). Dynamic Trees is the gameplay system — keep/cut on perf merits, separately. #83 |
 | Moon events | `enhanced-celestials` · `ender-moon` · `horde-moon` | **keep as subsidiary spawn drivers**, not standalone: `horde-moon`→`mutants-and-zombies`, `enhanced-celestials`→broad lunar spawn-gating, `ender-moon`→special endermen if any (else keep/cut). #83 |
-| Food diversity | `spice-of-life-maids-dream` + `spice-of-life-onion` | two Spice-of-Life forks → redundant; keep one |
-| Portable storage | `travelersbackpack` (only real backpack) · `sophisticated-core` | **not a duplicate** — Sophisticated Backpacks/Storage isn't installed; `sophisticated-core` is an **orphan lib** → drop it. Keep `travelersbackpack`. #83 |
+| Food diversity | `spice-of-life-maids-dream` · `spice-of-life-onion` · `foodvariations` (SoL: Classic) | **three** Spice-of-Life forks → keep one (#91) |
+| Portable storage | `travelersbackpack` · `create-storage` (· orphan `sophisticated-core`) | **two real backpack systems** — `create-storage` ships a full backpack line too. Pick one (Create: Storage fits the Create spine; or keep Traveler's + disable CS backpacks). Drop the orphan `sophisticated-core`. #83 / #94 |
 | AFK / sleep | `afk-sleep` + `detect-afk` | overlap; one suffices ⚠ |
 
 ## C. Recipe-change targets (GregTech-conversion scope → #17)
@@ -83,9 +85,10 @@ costs, or nerf the loot source:
   upgrades behind Create materials.
 - **Auto-cooking:** `cooking-for-blockheads` (free food auto-craft) — gate or accept (food ≠ economy core).
 - **Structure/dungeon loot** (Yung's ×5, `dungeons-and-taverns`, `when-dungeons-arise-seven-seas`,
-  `towns-and-towers`, `endrem`, `valarian-conquest`) — hand out gear/valuables that bypass
-  mine-and-sell. **Loot pass (#18):** strip free metal/diamond gear; optionally seed Numismatics
-  coins as rare loot.
+  `towns-and-towers`, `endrem`, `valarian-conquest` — **plus** `trek` (104 loot tables!), `tidal-towns`,
+  `underground-village,-stoneholm`, `underground-worlds`, `formations`/`formations-nether`) — hand out
+  gear/valuables that bypass mine-and-sell. **Loot pass (#18):** strip free metal/diamond gear;
+  optionally seed Numismatics coins as rare loot.
 
 ## D. The two big design calls — decided (per the five-system goal)
 1. **MineColonies = a progression on-ramp, woven in (not a rival economy to disable).** `minecolonies`
