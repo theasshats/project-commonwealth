@@ -12,6 +12,30 @@ Derpack X is a Minecraft 1.21.1 / NeoForge modpack distributed via [packwiz](htt
 
 ---
 
+## The goal — five systems, every mod earns its place
+
+**Derpack X is a cooperative PvPvE Create pack for a small crew (~10) where scarcity means nobody can do everything alone — so specializing and trading happen on their own, not as a forced economy. Every mod earns its place: it feeds one of the five systems — Create, magic, economy, aeronautics, survival — or it's cut. Progression pushes you to specialize, complex tech unlocks through MineColonies or boss drops, and freshness comes from curated content updates, not resets.**
+
+That's the whole goal. The rest of this section is what it means in practice.
+
+**Breadth is intentional, but not unconditional.** The pack is large and varied — food, structures, magic, colonies, mobs, decoration, vehicles — because the friend group wants a world with a lot to do. Breadth's failure mode is **incoherence**: a heap of mods that never talk to each other. The fix is *not* "route everything through Create" (the old framing) — it's that every mod **anchors to at least one of five systems**:
+
+1. **Create spine** — the tech core; things made through Create.
+2. **Magic web** — Ars Nouveau / Iron's Spellbooks / Occultism, bridged into one progression.
+3. **Economy** — Numismatics + Trading Floor + bounties: the trade layer that gives content a reason to exist. *The most underused, highest-leverage system — building it makes much of the content sprawl purposeful at once.*
+4. **Aeronautics & logistics** — Create Aeronautics ships, trains, drones; the flight/transport ladder. The pack's flagship content.
+5. **Survival & seasons** — Serene Seasons × Spice of Life × Cold Sweat: the world pushing back.
+
+**The test for any add or change:** *what system does this anchor to — and if none, why is it here?* A mod doesn't have to route through Create; magic, economy, aeronautics, and survival are all legitimate homes. Anything that anchors to nothing — just more content — gets cut. (This replaces the earlier "we never cut, only integrate" rule: integration is still preferred wherever a mod *can* anchor, but content that hooks into nothing is removed.)
+
+**Specialization & trade, not a forced economy.** With ~10 players and scarce regional ores, no one can comfortably solo every system (~3 people to cover all production). Trade emerges from that — people running MineColonies at different rates, different regions holding different ores — rather than from enforced economy mechanics. The player count is small, so the economy is **emergent and optional**: flavor that's nice when it happens, not infrastructure that must work.
+
+**Progression on-ramps.** Complex Create tech unlocks through **MineColonies** (settlement progress) or **boss drops** — weaving colonies and combat *into* the tech tree as on-ramps, rather than leaving them as parallel side-games. MineColonies is a first-class part of the pack, not "a rival economy to disable."
+
+**Freshness without wipes.** Curated content updates keep the world fresh; we don't do seasonal world resets (high-effort, and they destroy the build investment that's half the fun for a friend group). The detailed per-branch weaving (recipes #17, loot #18) happens phase by phase; this section is the *why* behind all of it.
+
+---
+
 ## 1. Why packwiz
 
 Why this isn't just a folder of jars. A naive modpack distribution model would zip the mod jars and host the zip somewhere. That model has several problems we wanted to avoid:
@@ -169,8 +193,8 @@ Until then, baking operations into the binary is a "good enough" choice rather t
 ## 10. Why guns route through Create (and are deliberately hard)
 
 The TaCZ gun integration (Create: Armorer + Create: Immersive TaCZ — full detail in `GUN-PACKS.md`)
-is the gun branch of the pack's Create-driven scarcity economy. We hold it to the same "does it plug
-into Create, or bypass it?" test we apply everywhere: a gun is **never** a quick craft from raw ore.
+is the gun branch of the **Create** system — and the one place we *deliberately* want extra friction,
+so we hold it to a strict Create gate: a gun is **never** a quick craft from raw ore.
 Every gun, ammo round, and attachment is gated behind Create parts and processed metals (steel,
 brass/aluminum sheet, precision mechanisms, deployers), so standing up a gun line *means* standing up
 a Create line first.
