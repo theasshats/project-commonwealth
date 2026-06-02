@@ -97,6 +97,16 @@ if it somehow touches anything else the job **bails** instead of committing (tha
 assumption is wrong and a human should look). Fork PRs are skipped — `GITHUB_TOKEN` can't push to
 another repo's branch, so those authors still refresh by hand.
 
+**It preserves the `.packwizignore` guard.** The index-freshness check doubles as a guard: add a new
+directory that *should* be ignored but isn't (e.g. `site/`), and `packwiz refresh` vacuums it into
+the index, drifting it and failing the check so a human notices. Auto-committing every refresh would
+silently defeat that. So this workflow only auto-commits **pure hash drift** — the same set of
+indexed file *paths*, with changed `hash` values (someone edited a tracked file but forgot to
+refresh). If refresh **adds or removes `[[files]]` entries** (a new dir vacuumed in, a new
+mod/script, a removal), it does *not* touch it: the working tree is left dirty and the red **packwiz
+index** check carries the signal to a human — exactly the pre-existing behaviour. So a forgotten
+`.packwizignore` entry still fails CI; it isn't auto-papered-over.
+
 > **Caveat — it can't make the check go green by itself.** Pushes made with `GITHUB_TOKEN` don't
 > trigger another `pull_request` run, so the auto-refresh commit fires at most once per author push
 > (no loop), but it also **won't re-run `pr-checks.yml`** on that bot commit. The branch is now
