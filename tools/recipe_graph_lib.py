@@ -81,7 +81,7 @@ def build(remove=frozenset({'minecraft'}), overlay=True):
     def link(a, b):
         if a != b:
             adj[a].add(b); adj[b].add(a)
-    def group(toks):
+    def group(toks, method=None):
         toks = [t for t in toks if not _noise(t) and modof(t) in real and modof(t) not in remove]
         toks = list(dict.fromkeys(toks))
         extra = []
@@ -94,12 +94,21 @@ def build(remove=frozenset({'minecraft'}), overlay=True):
             nodes.add(n)
         for b in toks[1:]:
             link(toks[0], b)
+        # Create-spine principle is PARTS + METHODS: a modded machine recipe-type (create:mixing,
+        # farmersdelight:cooking, …) is real connectivity — every item made by it is linked through
+        # the method node, which attaches to that mod's cluster. Vanilla types are universal → dropped.
+        if method and modof(method) in real and modof(method) not in remove:
+            nodes.add(method)
+            for t in toks:
+                link(method, t)
 
     for f in glob.glob(os.path.join(RECIPE_DIR, '*.txt')):
         for line in open(f, encoding='utf-8'):
             p = line.rstrip('\n').split(' | ')
             if len(p) < 3: continue
-            group([t for t in p[2].split() if t != p[1]])
+            rtype = p[1]
+            method = rtype if not rtype.startswith('minecraft:') else None
+            group([t for t in p[2].split() if t != rtype], method=method)
 
     if overlay and os.path.isdir(KUBEJS_DIR):
         mod_nodes = defaultdict(list)
