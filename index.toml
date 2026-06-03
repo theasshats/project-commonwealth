@@ -25,6 +25,10 @@ file = "config/createblockchain-common.toml"
 hash = "eaf6c7ba97e4b253817c05e2a34bfef4c277aab1b3b28d8c14bf01e7304aad22"
 
 [[files]]
+file = "config/incontrol/spawn.json"
+hash = "f34b87e0593eec7e4efca49c8c159e586c9a2ad5bc9046ae396919a711471311"
+
+[[files]]
 file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_deepslate_diamond_ore_feature_biome_modifier.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
@@ -645,6 +649,14 @@ file = "kubejs/data/derpack/worldgen/placed_feature/vein_zinc.json"
 hash = "00833611eb312f6ba5e98534c4753860b0dcf90fa26828f94132a9d459735c03"
 
 [[files]]
+file = "kubejs/data/enhancedcelestials/enhancedcelestials/lunar/event/blood_moon.json"
+hash = "257632a92d799b8e69795fc95bc830496954092fa4bc91006a333f75af94b754"
+
+[[files]]
+file = "kubejs/data/enhancedcelestials/enhancedcelestials/lunar/event/super_blood_moon.json"
+hash = "55671938c1fac242637b43963d2950feee2b67f852739a53b653ea085c02c471"
+
+[[files]]
 file = "kubejs/data/expandeddelight/neoforge/biome_modifier/salt_ore.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
@@ -655,6 +667,10 @@ hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 [[files]]
 file = "kubejs/data/irons_spellbooks/neoforge/biome_modifier/add_mithril_ore.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
+
+[[files]]
+file = "kubejs/data/kobolds/loot_table/entities/kobold.json"
+hash = "629429d6bba9a474951391f3fc624ababa0036abb877694f7d23b1574fe7b113"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_coal_lower.json"
@@ -727,6 +743,34 @@ hash = "ee0206f5bd42738d7267fbe630d67ba53c8b9ecd73d6dfc2d6e12b9c5db8dcba"
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_redstone_lower.json"
 hash = "354770dcbec1ba8964e8724de7da56e4195d8147c3ba4c3608272b8869307bd0"
+
+[[files]]
+file = "kubejs/data/mutantszombies/neoforge/biome_modifier/blister_zombie_biome_modifier.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/mutantszombies/neoforge/biome_modifier/crawler_biome_modifier.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/mutantszombies/neoforge/biome_modifier/mutant_brute_biome_modifier.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/mutantszombies/neoforge/biome_modifier/rotten_mutant_biome_modifier.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/mutantszombies/neoforge/biome_modifier/spitter_biome_modifier.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/mutantszombies/neoforge/biome_modifier/split_head_zombie_biome_modifier.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
+file = "kubejs/data/mutantszombies/neoforge/biome_modifier/zombie_brute_biome_modifier.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
 
 [[files]]
 file = "kubejs/data/occultism/neoforge/biome_modifier/add_ore_silver.json"
@@ -884,6 +928,11 @@ hash = "19cbfb37dc29169b50599dfa328fe12a0ec9caaec8ac02627b5846f3bd9d1425"
 metafile = true
 
 [[files]]
+file = "mods/aeronautics-dyeable-components.pw.toml"
+hash = "b218b7696365829e01cc3b6844913c757836d1ebdb0c49a9abf7a7fcbc0f6678"
+metafile = true
+
+[[files]]
 file = "mods/afk-sleep.pw.toml"
 hash = "f860d14f65c6239b2e5da1a25ac6765ffc14193a55b4c7f345af80de4cebf4a9"
 metafile = true
@@ -916,11 +965,6 @@ metafile = true
 [[files]]
 file = "mods/architectury-api.pw.toml"
 hash = "ea336d25c3e21ef168aec20e1ea470c96949ad29632646ee8e8ab0d74b4bbfc9"
-metafile = true
-
-[[files]]
-file = "mods/arphex.pw.toml"
-hash = "38dbd0c29a678ebd7b131b3cc153257432166b2e80023a8bb7720ddb94542b27"
 metafile = true
 
 [[files]]
@@ -1379,6 +1423,16 @@ hash = "480b7c7cf1569b1eb98d199c10ce60a8ad13a534b738aa72e7bbcd3ac966d21e"
 metafile = true
 
 [[files]]
+file = "mods/create-stuff-additions.pw.toml"
+hash = "0ec6556e7e1c8d7b5ee522656adcd51ff59629e589409128241794f7d677c422"
+metafile = true
+
+[[files]]
+file = "mods/create-stuff-n-additions-x-sable-aeronautics.pw.toml"
+hash = "9ad47b3747d5aad0939d148ee9d7f26ee924d42f38e46d8038469fdfb8262c48"
+metafile = true
+
+[[files]]
 file = "mods/create-tfmg.pw.toml"
 hash = "dfbb2a077b144492f48af0255906b146d56011ccb6c6f6e343bab703e8cc0f79"
 metafile = true
@@ -1441,11 +1495,6 @@ metafile = true
 [[files]]
 file = "mods/creativecore.pw.toml"
 hash = "d6e8a17cd30032fb2eaeb910f65ffca9cd41a6530b607d58dfa18ac619b6d9f1"
-metafile = true
-
-[[files]]
-file = "mods/creeper-overhaul.pw.toml"
-hash = "c8f9f7d112e2e842a46b9a07b1c62092b81e83038033d14efd6612bb9cb3d694"
 metafile = true
 
 [[files]]
@@ -1664,6 +1713,11 @@ hash = "56cc6277b2b36cd935c2d97ecff97449419f479284bd4a3bfec635508282e367"
 metafile = true
 
 [[files]]
+file = "mods/furniture-mods-create-sable-aeronautics.pw.toml"
+hash = "e79db224b31119d6cbe97cd314cfb1c6d6839dca629b3f5e61d6f9edd7a30096"
+metafile = true
+
+[[files]]
 file = "mods/fusion-connected-textures.pw.toml"
 hash = "9342bd3338c6fbb80f84625e2715a6c443b54daff11826f0dfb9ebb6ab411fd2"
 metafile = true
@@ -1761,6 +1815,11 @@ metafile = true
 [[files]]
 file = "mods/immersivemusicmod.pw.toml"
 hash = "c96a2acd3201099def30ea2e4a927776c56d0dc78c189fa53b2881700f9a4605"
+metafile = true
+
+[[files]]
+file = "mods/in-control.pw.toml"
+hash = "8e90c889394fe3e69d75a8aa8466b74af5ff8a26b755abf90b668dcc225b23d5"
 metafile = true
 
 [[files]]
@@ -2084,11 +2143,6 @@ hash = "d5876f4302128e902adc1ff68836fa98f5eda7c22138ef46ccc0fd0dcc0593ed"
 metafile = true
 
 [[files]]
-file = "mods/mutant-monsters.pw.toml"
-hash = "0989e738e4ad3be9e88ababcba8db9591c6d358b0fde0d2af7a91c0c1220fe10"
-metafile = true
-
-[[files]]
 file = "mods/mutants-and-zombies.pw.toml"
 hash = "457ae99513731370bab1230a664ab0acdf3149963f85bacc6b4cc72adeef1682"
 metafile = true
@@ -2289,6 +2343,11 @@ hash = "9c0eebad19c2e18848d405642bafde08dd08cbe09b06d4755a4238894b596758"
 metafile = true
 
 [[files]]
+file = "mods/sable-collision-damage-create-aeronautics.pw.toml"
+hash = "f467f74e195e8366bdd3965d997f3fd42d3e2c4f2e6464fd54a35028673a9d49"
+metafile = true
+
+[[files]]
 file = "mods/sable.pw.toml"
 hash = "e4c43e944439f4941ba1c417ab3ac1ec3dbd9c95a8456a2069641d031317e142"
 metafile = true
@@ -2351,11 +2410,6 @@ metafile = true
 [[files]]
 file = "mods/snowy-spirit.pw.toml"
 hash = "7efbe0c8b42d3231f12f2d7c2be3c6ff4395a50240371ddceb387befcf1e9597"
-metafile = true
-
-[[files]]
-file = "mods/sophisticated-core.pw.toml"
-hash = "d34ef6a8ae4fa661524b3d93467004430e66656ba762843d915aaca6a0c23f63"
 metafile = true
 
 [[files]]
