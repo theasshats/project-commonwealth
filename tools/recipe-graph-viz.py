@@ -28,7 +28,9 @@ def main():
     for a, b in proj: used |= {a, b}
     nodes = [{"id": m, "items": mods.get(m, 1), "bucket": L.bucket(m)}
              for m in sorted(mods) if m in used]
-    links = [{"s": a, "t": b, "w": w} for (a, b), w in proj.items()]
+    nset = {n["id"] for n in nodes}
+    links = [{"s": a, "t": b, "w": w} for (a, b), w in proj.items()
+             if a in nset and b in nset]   # defensive: never emit a dangling endpoint
     print(f"mod nodes: {len(nodes)}  edges (w>=3): {len(links)}")
     html = HTML.replace("__NODES__", json.dumps(nodes)).replace("__LINKS__", json.dumps(links))
     open(OUT, 'w', encoding='utf-8').write(html)

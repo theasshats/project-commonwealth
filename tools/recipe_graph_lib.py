@@ -203,9 +203,9 @@ class Graph:
                 if a >= b: continue
                 ma, mb = modof(a), modof(b)
                 if a.startswith('c:'):
-                    tag_mods[a].add(mb)
+                    if mb != 'c': tag_mods[a].add(mb)   # skip tag–tag edges (mb=='c')
                 elif b.startswith('c:'):
-                    tag_mods[b].add(ma)
+                    if ma != 'c': tag_mods[b].add(ma)
                 elif ma != mb:
                     wt[tuple(sorted((ma, mb)))] += 1
         for tag, mods in tag_mods.items():       # mods sharing a tag are woven via it
