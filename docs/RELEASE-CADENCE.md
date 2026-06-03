@@ -15,9 +15,8 @@ The minor version's **parity** sets the update's job:
 
 - **1.0.0 is even → a performance patch.** Release is a stabilization version: feature-frozen, profiled,
   balanced, shipped.
-- **The last odd version before release (0.15) is the last call for major additions / integrations, and
-  hosts the comprehensive pillar-weave review** (the seams *between* all five systems). After it: feature
-  freeze through 1.0.
+- **The last odd version before release (0.15) is the last call for major additions / integrations.**
+  After it: feature freeze through 1.0.
 - **Version count is open** — extend with as many odd/even pairs as the pillars need (0.12, 0.13, 0.14,
   0.15, …); each feature version earns its own stabilization version.
 
@@ -32,14 +31,38 @@ gates:
 - **EVEN = performance-based pruning.** Is a mod's TPS/RAM cost justified? Cut or optimize the expensive,
   fix what broke, balance.
 
+## Two depths of weaving (plumbing now, depth later)
+
+A cohesive web is the goal — but *meaningful* weaving ("this feeds that, and it's fun") needs hands-on
+play-knowledge, and real play is being saved for launch. So separate the two:
+
+- **Structural weaving — pre-release, mechanical.** Tags unified, no hard duplicates, recipes valid,
+  nothing orphaned, every mod *can* connect. Judgment-light, safe to automate, hard to fake.
+- **Meaningful weaving — post-release, play-informed.** The rich, fun cross-system connections. They need
+  play to author well, so they belong *after* launch (which fits "no resets; freshness from content
+  updates"). Authoring depth from the armchair pre-release produces lifeless threads — don't.
+
+Pre-release, the odd-version thunderdome lays *plumbing* and curates the *set*; the depth accretes through
+post-launch play.
+
+> **Web % is a compass, not a gate.** Use the connectivity tool (#129) to *find* off-web clusters worth a
+> human look — never as a release target. The moment a coverage % is the goal it gets gamed
+> (bridge-recipes-for-the-metric — Goodhart's law). Ask "is this island *intentional* (cosmetic — fine)
+> or a *real gap* (a connection to make later, once it's played)?", not "are we at N%."
+
 ## The odd-version workflow ("thunderdome")
 
 1. **Add** — start the update by adding the candidate mods for the pillar in scope.
-2. **Integrate** — weave them into the systems (recipes / configs / the Create web — #62, #132).
+2. **Integrate (structurally)** — weave them into the systems at the *plumbing* level (tags, valid
+   recipes, no duplicates — #62, #132). Deep gameplay integration waits for play (above).
 3. **Thunderdome (end of update)** — every mod *(the new adds **and** the existing related set)* is
    reviewed against all the others by **feature merit** (the #157 gates: system-anchor,
    no-redundant-mechanic, woven-not-floating). Winners stay; losers are **cut or reworked**. Freeze the
    version once the field has settled.
+
+> Cuts run as a *process* — the field competed, these lost — **depersonalized by design**. The rubric
+> (#157) defaults an unjustified mod to **cut unless argued for**, so the front-loaded modlist's inertia
+> works *for* curation instead of against it.
 
 ## The even-version workflow (stabilization)
 
@@ -51,9 +74,10 @@ gates:
 
 The thunderdome reviews **mods against each other** *within* a feature version. The **weave review**
 reviews **pillars against each other** — the seams *between* the five systems, which no single pillar
-version owns.
+version owns. At this stage it checks the seams **connect and function** (structural); the *deep* fun
+weaving is post-launch.
 
-- **Incremental** — as each pillar lands (its odd version), it's woven into the pillars already built,
+- **Incremental** — as each pillar lands (its odd version), it's wired into the pillars already built,
   and the following even stabilization checks those seams didn't break.
 - **Comprehensive at 0.15** — the last feature version includes a full pillar-weave review: does the
   whole five-system machine actually interlock before the 1.0 freeze? Close the gaps and contradictions.
@@ -90,10 +114,25 @@ every pillar gets its own profile/balance pass before the next piles on. The ord
 odd slots is adjustable. (Milestones are re-organised in the GitHub UI; the automated tooling here can
 set an issue's milestone but can't create or rename one.)
 
+## Why one pillar per release (not mixed)
+
+We considered mixing pillars / per-release web-% targets / integration-depth tiers, and chose **one themed
+pillar per feature version** because:
+
+- **Themed milestones motivate.** On a small crew, "ship the Economy update" *feels* like an
+  accomplishment in a way "raise cohesion to 78%" doesn't — and motivation is a real resource.
+- **Each pillar release is a natural ecosystem-survey** — a moment to step back and pull in what's new
+  and good. Especially **Aeronautics**: its addon ecosystem is young and growing weekly, so reaching it
+  *late* (0.13) is a feature — riper, more stable choices than grabbing everything now.
+- The mixed model was rejected mainly because **deep weaving needs play** (deferred post-release anyway)
+  and a **per-release web-% target is gameable** (see the compass note above).
+
 ## Post-1.0
 
 Keep the rhythm for live content updates — no world resets; freshness comes from curated content updates
-per `docs/DESIGN.md`: **1.1 odd** (feature / thunderdome) → **1.2 even** (perf / balance) → …
+per `docs/DESIGN.md`: **1.1 odd** (feature / thunderdome) → **1.2 even** (perf / balance) → … Post-launch
+is also the home of **meaningful weaving** — the deep, play-informed cross-system connections that can't
+be authored well from the armchair.
 
 ## Recurring passes that ride the cadence
 
