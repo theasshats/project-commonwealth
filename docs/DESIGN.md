@@ -18,7 +18,7 @@ Derpack X is a Minecraft 1.21.1 / NeoForge modpack distributed via [packwiz](htt
 
 That's the whole goal. The rest of this section is what it means in practice.
 
-**Breadth is intentional, but not unconditional.** The pack is large and varied — food, structures, magic, colonies, mobs, decoration, vehicles — because the friend group wants a world with a lot to do. Breadth's failure mode is **incoherence**: a heap of mods that never talk to each other. The fix is *not* "route everything through Create" (the old framing) — it's that every mod **anchors to at least one of five systems**:
+**Breadth is intentional, but not unconditional.** The pack is large and varied — food, structures, magic, colonies, mobs, decoration, vehicles — because the friend group wants a world with a lot to do. Breadth's failure mode is **incoherence**: a heap of mods that never talk to each other. The fix is *not* "route everything through Create" (the old framing) — it's that every mod **anchors to at least one of five systems, and ideally *two*** (one pillar is the floor; the target is two — a mod tied to only one is a candidate for a second weave). Pictured as a graph — every item linked to what it's used for — the pack should read as **one or two cohesive webs, not many isolated clusters** (measurable: `tools/recipe-graph/`, `docs/CONNECTIVITY.md`). The five systems:
 
 1. **Create spine** — the tech core; things made through Create.
 2. **Magic web** — Ars Nouveau / Iron's Spellbooks / Occultism, bridged into one progression.
@@ -26,7 +26,7 @@ That's the whole goal. The rest of this section is what it means in practice.
 4. **Aeronautics & logistics** — Create Aeronautics ships, trains, drones; the flight/transport ladder. The pack's flagship content.
 5. **Survival & seasons** — Serene Seasons × Spice of Life × Cold Sweat: the world pushing back.
 
-**The test for any add or change:** *what system does this anchor to — and if none, why is it here?* A mod doesn't have to route through Create; magic, economy, aeronautics, and survival are all legitimate homes. Anything that anchors to nothing — just more content — gets cut. (This replaces the earlier "we never cut, only integrate" rule: integration is still preferred wherever a mod *can* anchor, but content that hooks into nothing is removed.)
+**The test for any add or change:** *what system does this anchor to — and, since one is the floor, what's its second?* A mod doesn't have to route through Create; magic, economy, aeronautics, and survival are all legitimate homes. Anything that anchors to nothing — just more content — gets cut; anything anchored to only one is a candidate for a second weave (decoration-through-Create, a sellable reagent, a crop that feeds a machine). (This replaces the earlier "we never cut, only integrate" rule: integration is still preferred wherever a mod *can* anchor, but content that hooks into nothing is removed.)
 
 **Specialization & trade, not a forced economy.** With ~10 players and scarce regional ores, no one can comfortably solo every system (~3 people to cover all production). Trade emerges from that — people running MineColonies at different rates, different regions holding different ores — rather than from enforced economy mechanics. The player count is small, so the economy is **emergent and optional**: flavor that's nice when it happens, not infrastructure that must work.
 
