@@ -16,8 +16,11 @@
   `build-arcana.yml`; recipes are JSON/JS-linted by `pr-checks.yml`) and clearly flag what needs a playtest.
 
 ## 1. Pack context & the five pillars
-Minecraft **1.21.1 / NeoForge 21.1.228**, ~356 mods, packwiz-distributed. Every mod should anchor to ≥1:
-1. **Create spine** — "made through Create" (tech mods: done, PR #62).
+Minecraft **1.21.1 / NeoForge 21.1.228**, ~356 mods, packwiz-distributed. **Every mod should anchor to ≥2
+pillars** — one pillar is the floor, *two is the target* (the `docs/RECIPES.md` rubric #4: "multi-pillar
+weaving is the goal"). A mod tied to only one pillar is a candidate for a second weave, not a finished job.
+1. **Create spine** — "made through Create" (tech mods: **MERGED, PR #62 ~v0.4.6** — also added the decoration
+   weave, almost-unified metal dedup, EMI→JEI, and the `tools/recipe-graph/` connectivity toolkit).
 2. **Magic web** — Ars Nouveau + Iron's Spellbooks spine, Occultism branch, **Galosphere** allurite/
    lumiere as connective reagent (recipes PR #75 + the **Arcana** helper mod PR #80).
 3. **Eco-economy** — Numismatics, Create: Blockchain, Trading Floor, Better Villagers, **Bountiful**.
@@ -27,14 +30,30 @@ Minecraft **1.21.1 / NeoForge 21.1.228**, ~356 mods, packwiz-distributed. Every 
 5. **Survival & seasons** — Serene Seasons, Spice of Life (×2), Cold Sweat, the Farmer's Delight / Let's Do food set.
 
 ## 2. Current state (what exists)
-- **PR #62** `claude/recipe-overhaul` — full Create recipe weave (all tech mods). Green, rebased on main.
-- **PR #75** `claude/magic-web` (stacked on #62) — magic essence bridges (`kubejs/server_scripts/recipes/
-  33-magic-web-*.js`): Ars↔Iron's, Occultism via `occultengineering:spirit_solution`, Born-in-Chaos feeder,
-  Gaia/Mowzie's drop sinks, Galosphere catalyst. Green.
+- **PR #62 — MERGED (~v0.4.6).** Full Create recipe weave (all tech mods) + decoration weave + almost-unified
+  metal/pasta dedup + EMI→JEI + the `tools/recipe-graph/` connectivity toolkit. **This is the benchmark** for
+  every other pillar's weave (see §2a).
+- **PR #75** `claude/magic-web` — magic essence bridges (`33-magic-web-*.js`): Ars↔Iron's, Occultism via
+  `occultengineering:spirit_solution`, Born-in-Chaos feeder, Gaia/Mowzie's drop sinks, Galosphere catalyst.
+  **Retargeted to `main`** (#62 merged); CI green. Handoff: `docs/MAGIC-WEB-HANDOFF.md`.
 - **PR #80** `claude/arcana-mod` — the **Arcana** helper mod (`mods-src/derpack-arcana/`): P1 Attunement
   Font (Ars Source→Iron's mana block), P2 spell-power crossover, P3 Soul Reaping (Born-in-Chaos kills →
   Occultism essence). Compiles green. **In-game testing pending** (mana sync, balance, Ars event bus).
-- Branches are stacked: #75 on #62; #80 off `main`. If #62 merges, rebase #75 to main.
+- **Sequence:** #88 (curation) → 0.5.0; then the magic layer (**#75 + #80**) together; #82 ore-gen on its own.
+
+## 2a. The #62 benchmark — what "woven" means for every pillar
+The Create overhaul (#62) is the bar: it didn't just *bridge* tech mods, it wove **every actionable mod**
+through Create — per-mod, at the depth each item's power warranted (the `60-mffs.js` `sequenced_assembly`
+gold standard), and then **measured** the result. Hold the magic / economy / aeronautics / survival weaves
+to the same standard:
+- **Two pillars, not one** (§1) — e.g. a magic reagent that's *also* sellable (magic↔economy), a survival
+  crop that *also* feeds Create (survival↔Create). One-pillar mods are unfinished.
+- **Measure, don't eyeball.** `tools/recipe-graph/` now counts modded **methods** (incl. magic apparatus:
+  `occultism:ritual`, `ars_nouveau:enchanting_apparatus`, …). Run `python3 tools/recipe-graph/recipe-graph.py
+  --remove create` to see how a pillar's mods weave to *each other* with the Create spine pulled out; the
+  goal (`docs/CONNECTIVITY.md`) is **one or two cohesive webs, not many isolated clusters**.
+- **Depth tiering** mirrors #62: light bridges for cheap items, real native-machine / code-layer (Arcana)
+  chains for flagship ones.
 
 ## 3. Established conventions & VERIFIED patterns (do not re-derive)
 ### Pulling mod jars to verify APIs / item ids / recipe schemas
@@ -57,7 +76,7 @@ Minecraft **1.21.1 / NeoForge 21.1.228**, ~356 mods, packwiz-distributed. Every 
 - `event.custom({...raw json...})` — for modded recipe types (Ars/occultism) using the schemas above.
 - `event.shaped/shapeless('2x mod:item', [ingredients])` — vanilla crafting; `#c:tag` ingredients OK.
 - `event.remove({id})` (precise) or `({output})` (broad). `almost-unified` collapses `#c:` duplicates.
-- After ANY pack change you must run `packwiz refresh` (binary: `go install github.com/packwiz/packwiz@latest`)
+- After ANY pack change you must run `./tools/packwiz refresh` (vendored binary — `tools/README.md`)
   and commit `index.toml`/`pack.toml`, or the `pr-checks.yml` "packwiz index" job fails. `mods-src/` is
   in `.packwizignore` (it's mod source, not pack content).
 ### Arcana mod — soft-dep pattern (reuse for every code integration)
