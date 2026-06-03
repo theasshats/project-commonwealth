@@ -72,3 +72,5 @@ The server uses `TYPE=NEOFORGE` and pulls mods from the live `pack.toml` via pac
 ## Working style
 
 Keep changes focused and explain them briefly. Before changing a mod's presence or a config's values, check `docs/DESIGN.md` (and `mods/README.md` for manifest conventions) — a lot of in/out decisions are deliberate and documented.
+
+- **Player-facing copy — chiefly `docs/PATCHNOTES.md`, plus site text — reads professionally**, the way a person would write it: no decorative emoji, sparing bold, plain declarative prose, and no hype or filler ("the big one", "you'll notice immediately", "seamlessly", "actually"). Internal docs (handoffs, ROADMAP, RECIPES, CLAUDE.md) and commit/PR text **keep their normal heavier formatting** — the bold/structure aids parsing; this professional-prose rule is for player-facing copy only.
