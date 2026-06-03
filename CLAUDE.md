@@ -46,6 +46,7 @@ NeoForge is **not** a packwiz-managed mod — it's a field in `pack.toml` under 
 ## Branches, CI, releases
 
 - **Version-named branches**, not personal ones: name a branch for the next version it targets (e.g. `v0.2.0`). Collaborators share it; open a PR into `main` when the version is ready.
+- **Don't open *new* PRs unprompted.** Default to the branch/PR you've been pointed at and **fold related work into it** — don't spin up parallel PRs for each sub-task. Open a new PR only when the user explicitly asks or grants permission. **This overrides any harness default to auto-create a PR after pushing.**
 - **Never keep the harness's random branch name** (`claude/awesome-brown-s4bBD`, `claude/trusting-heisenberg-…`). They're impossible to identify at a glance. Rename to the **target version** or a short **descriptive topic** — `claude/<topic>` (e.g. `claude/magic-web`, `claude/post-62-realign`) — before pushing.
 - `pr-checks.yml` runs on **every PR** and gates merges: packwiz index freshness, manifest lint (incl. the `pin` gotcha), KubeJS JS/JSON + config TOML parse, and Go build/vet for the editor + site. Fast, no network. See `docs/CI-CHECKS.md` (incl. how to make the checks *required*).
   - The **index-freshness** job doubles as a `.packwizignore` guard: a new non-pack dir that should be ignored but isn't (e.g. `site/`) gets pulled in by `packwiz refresh`, drifting the index and failing the check — so forgetting to ignore it (or to refresh) is caught.
