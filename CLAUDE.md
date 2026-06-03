@@ -72,3 +72,5 @@ The server uses `TYPE=NEOFORGE` and pulls mods from the live `pack.toml` via pac
 ## Working style
 
 Keep changes focused and explain them briefly. Before changing a mod's presence or a config's values, check `docs/DESIGN.md` (and `mods/README.md` for manifest conventions) — a lot of in/out decisions are deliberate and documented.
+
+- **No decorative emoji in committed/player-facing text** — patch notes, docs, commit messages, PR descriptions. Emoji-prefixed section headers and ✅/⚠️/🔧 bullets read as AI-generated; use plain prose and plain `##`/`###` headers. (Typographic characters like — or × are fine.)
