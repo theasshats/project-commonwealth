@@ -1,0 +1,25 @@
+# sablecollisiondamage-1.0.7
+
+## mod metadata (id / version / deps)
+license="MIT"
+modId="sablecollisiondamage" #mandatory
+version="1.0.7" #mandatory
+displayName="Sable-Collision damage" #mandatory
+modId="neoforge" #mandatory
+versionRange="[21.1.223,21.2)"
+modId="minecraft"
+versionRange="[1.21.1]"
+modId="sable"
+versionRange="[1.0,)"
+
+## blocks
+
+
+## items
+
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+

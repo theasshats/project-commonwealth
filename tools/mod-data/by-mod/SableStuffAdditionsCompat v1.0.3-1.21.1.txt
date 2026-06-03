@@ -1,0 +1,27 @@
+# SableStuffAdditionsCompat v1.0.3-1.21.1
+
+## mod metadata (id / version / deps)
+license="All Rights Reserved"
+modId="sable_sa_compat" #mandatory
+version="1.0.3" #mandatory
+displayName="Sable: Stuff&Additions Compatibility" #mandatory
+modId="neoforge" #mandatory
+versionRange="[21.1.226,)" #mandatory
+modId="sable"
+versionRange="[1.2.2,)"
+modId="create_sa"
+versionRange="[2.1.3,)"
+modId="minecraft"
+versionRange="[1.21.1]"
+
+## blocks
+
+
+## items
+
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+
