@@ -38,6 +38,7 @@ ServerEvents.recipes(event => {
       event.recipes.create.deploying('derpack:incomplete_force_projector', ['derpack:incomplete_force_projector', 'tfmg:steel_casing']),
       event.recipes.create.deploying('derpack:incomplete_force_projector', ['derpack:incomplete_force_projector', 'mffs:battery']),
       event.recipes.create.deploying('derpack:incomplete_force_projector', ['derpack:incomplete_force_projector', 'create:electron_tube']),
+      event.recipes.create.deploying('derpack:incomplete_force_projector', ['derpack:incomplete_force_projector', 'tfmg:steel_mechanism']),
       event.recipes.create.deploying('derpack:incomplete_force_projector', ['derpack:incomplete_force_projector', 'create:precision_mechanism']),
       event.recipes.create.pressing('derpack:incomplete_force_projector', 'derpack:incomplete_force_projector')
     ]
@@ -51,6 +52,7 @@ ServerEvents.recipes(event => {
       event.recipes.create.deploying('derpack:incomplete_interdiction_matrix', ['derpack:incomplete_interdiction_matrix', 'tfmg:steel_casing']),
       event.recipes.create.deploying('derpack:incomplete_interdiction_matrix', ['derpack:incomplete_interdiction_matrix', 'mffs:shock_module']),
       event.recipes.create.deploying('derpack:incomplete_interdiction_matrix', ['derpack:incomplete_interdiction_matrix', 'minecraft:ender_chest']),
+      event.recipes.create.deploying('derpack:incomplete_interdiction_matrix', ['derpack:incomplete_interdiction_matrix', 'tfmg:steel_mechanism']),
       event.recipes.create.deploying('derpack:incomplete_interdiction_matrix', ['derpack:incomplete_interdiction_matrix', 'create:precision_mechanism']),
       event.recipes.create.pressing('derpack:incomplete_interdiction_matrix', 'derpack:incomplete_interdiction_matrix')
     ]

@@ -11,11 +11,15 @@
 // they already sit in the vanilla web, and Create-gating them would be the grind the guardrails forbid.
 
 ServerEvents.recipes(event => {
-  const xp = chance => Item.of('create:experience_nugget').withChance(chance)
+  // KubeJS Create 1.21: chance outputs use CreateItem.of(item, chance) (NOT .withChance()).
+  const xp = chance => CreateItem.of('create:experience_nugget', chance)
 
-  // Quark worldgen stones → crushed to gravel (Create's stone→gravel→sand vocabulary) + a little XP.
-  // One recipe per base stone collapses the whole limestone/shale/myalite/jasper/permafrost brick family.
-  ;['quark:limestone', 'quark:shale', 'quark:myalite', 'quark:jasper', 'quark:permafrost'].forEach(stone =>
+  // Quark's limestone OVERLAPS Create's own limestone, so crush it straight INTO `create:limestone` —
+  // one canonical limestone (Create's, which already has tons of recipes), rolling Quark's family in.
+  // The other Quark stones have no Create/vanilla equivalent (checked: shale/myalite/jasper/permafrost
+  // are Quark-only), so they crush to gravel + a little XP.
+  event.recipes.create.crushing(['create:limestone', xp(0.1)], 'quark:limestone')
+  ;['quark:shale', 'quark:myalite', 'quark:jasper', 'quark:permafrost'].forEach(stone =>
     event.recipes.create.crushing(['minecraft:gravel', xp(0.12)], stone)
   )
 

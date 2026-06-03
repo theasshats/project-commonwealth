@@ -762,7 +762,7 @@ hash = "669a24f251421b0094427c61622d58ebd891423d6e85836cdb9c471d7631f4ed"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/35-web-bridges.js"
-hash = "50054f0d4d85002d20b3766ce83366130bd1386e408c0b9dc584054623356977"
+hash = "c9aeeae884e4c14e2de78ffb0aca18db9b49f0beeade466d3f60fa8ec26786b5"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/40-northstar.js"
@@ -774,7 +774,7 @@ hash = "6376950f93ae8130902a9fb8f2b80125285186e8309ebbbb184385576597f503"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/60-mffs.js"
-hash = "51473fa90f807bc2ab5c81fbda64f0ebaedaf81453149781668cf643e92975ad"
+hash = "a0f5652cd8608129968b29ae2300459810a228ce1fddcb67328ff8b89dd17364"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/70-travelers-backpack.js"
@@ -826,7 +826,7 @@ hash = "12ef3675dfe7625404ef5e49f8f11ad877f60136918334fcb99a1ce823cac21b"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/98-minecolonies.js"
-hash = "501a6617cb9919c1098ef85293601bbcfd3605e79de089ac3a3520892f05644e"
+hash = "503ba2fd0732ccb18acba32adc5e7c8f074b82c801e912f4b5dba4a82d776b40"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/99-meadow-cheese.js"
