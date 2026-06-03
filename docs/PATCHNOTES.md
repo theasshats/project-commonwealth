@@ -1,5 +1,58 @@
 # Derpack X — Patch Notes
 
+## 0.5.0 — Made Through Create (diff vs 0.4.6)
+
+> **Headline:** the big one — **crafting across the whole pack now flows through Create.** Tech, gear,
+> machines, and a lot of decoration are re-routed through Create **parts** (sheets, casings, mechanisms)
+> and **methods** (pressing, mixing, sequenced assembly), so the Create spine actually *connects* the pack
+> instead of 350 mods sitting side by side. Two things you'll notice immediately: the **recipe viewer is now
+> JEI** (was EMI), and a **mob/spawn curation pass**. Recipe changes apply to new crafts right away — no
+> world reset needed.
+
+### ⚠️ Heads-up: recipe viewer is now JEI (was EMI)
+EMI **can't display Create's processing recipes** on 1.21.1 (pressing/mixing/deploying showed "no recipe" —
+even for base Create items), which is fatal for a Create pack. Switched to **JEI**, with **JER** (loot /
+worldgen / villager trades) and **JEED** (potion-effect info) restoring EMI's extras. Re-check your
+recipe-lookup keybind if it feels off.
+
+### ⚙️ "Made through Create" — the recipe overhaul (#62)
+- **Tech / gear / machines routed through Create**, gated by *complexity*: everyday gear gets one light part;
+  endgame machines (MFFS force-field gear, …) are **staged on the Mechanical Crafters** via sequenced
+  assembly. Covers Immersive Armors, Samurai Dynasty, Modular Golems, Northstar, MFFS, SecurityCraft, Drones,
+  Traveler's Backpack, MineColonies quarries, gliders, and more — originals kept where coherent, never a grind.
+- **Steel/bronze are Create-made at the source** — the iron→steel blasting and MFFS smelt shortcuts are gone;
+  steel comes from Create Ironworks / TFMG / Big Cannons.
+- **Decoration & kitchenware woven in** — Macaw's metal doors & windows, Supplementaries metal decoration, and
+  Farmer's Delight cooking gear now use Create-pressed sheets (cost-neutral). Macaw metal doors get an
+  andesite-alloy accent.
+- **Worldgen leftovers bridged** — orphan stones (Quark, Create Nuclear autunite, TFMG asphalt) now have a
+  Create use so they're not dead-ends.
+- **Flavor:** the meme "bible" is now a Totem-of-Undying-gated holy book; Meadow cheese ⇄ Create cheese bridge.
+
+### 🔗 One of each metal (material unification)
+No more six near-identical "steel ingots" cluttering the recipe viewer. **almost-unified** now collapses
+duplicate metals to a single canonical item each — **steel & bronze → Create: Ironworks**, **lead & cast iron
+→ TFMG** — plus **pasta → Farmer's Delight**. (Heads-up for tinkerers: Galosphere's "silver" is actually its
+*palladium* under a legacy id — intentionally left out of silver unification.)
+
+### 🧹 Curation & spawns (#88)
+- **Removed:** Arphex, Creeper Overhaul, Mutant Monsters (+ the orphaned Sophisticated Core lib).
+- **Spawn gating via In Control!:** Grimoire of Gaia **kobolds no longer spawn naturally** (the standalone
+  **Kobolds** mod fills that niche and inherits GoG's drops); **Rotten Creatures** spawn **only in structures**;
+  **Mutants & Zombies** are gated to **(super) blood moons** only.
+- **Added (aeronautics / furniture):** Create Aeronautics Dyeable Components, Create Stuff 'N Additions
+  (+ Sable & Aeronautics compat), furniture × Create/Sable compat, Sable Collision Damage.
+
+### 🔧 Under the hood
+- **Connectivity tooling** (`tools/recipe-graph/`) — an interactive map + metric for "how woven-together is
+  the pack?", driving the weave work (and CI-regenerated).
+- **Design canon & infra** — the five-systems direction + roadmap, recipe conventions, the player website's
+  **releases page**, and CI that gates every PR (packwiz index freshness, manifest lint, auto-conflict-resolve).
+
+### 📋 Still open (tracked for after 0.5.0)
+- In-game spawn-gating observation (#108) + modded-structure allowlist (#106); the **magic-mod weave**
+  (#75 / #80); the ore-gen model decision (#93); functional-duplicate parts like heavy_plate vs steel sheet (#103).
+
 ## 0.4.6 — World Generation (diff vs 0.4.5)
 
 > **Headline:** this release makes custom ore generation actually work. **0.4.4 and 0.4.5
