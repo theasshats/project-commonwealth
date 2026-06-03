@@ -28,6 +28,11 @@ ServerEvents.recipes(event => {
   // shouldn't cost 9 ingots, and it routes the frame through Create).
   event.replaceInput({ mod: 'mcwwindows' }, 'minecraft:iron_block', 'create:iron_sheet')
 
+  // Macaw's metal DOORS: their filler iron NUGGETS (rivets/hinges) become andesite alloy — the iconic
+  // "forged with Create" accent, ~same tier as a nugget (andesite + iron nugget), so every metal door
+  // reads as Create-made rather than plain iron.
+  event.replaceInput({ mod: 'mcwdoors' }, 'minecraft:iron_nugget', 'create:andesite_alloy')
+
   // 2. Supplementaries metal DECORATION. Scoped by id — the kinetic/instrument blocks (wrench, pulley,
   //    altimeter, wind_vane, cog_block, turn_table) are already Create-gated in 94, so steer clear.
   event.replaceInput({ id: /^supplementaries:candle_holders\// }, '#c:ingots/iron', 'create:iron_sheet')
