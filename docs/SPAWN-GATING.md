@@ -10,11 +10,12 @@ file does, **why** the route was chosen, and **what must be verified in-game**
 `side = "both"`) is the spawn-rule engine. Its config lives in
 `config/incontrol/spawn.json` — a **strict JSON array** of rules evaluated
 top-to-bottom; the first rule whose conditions match a spawn attempt wins and
-its `result` (`deny` / `allow` / `default`) is applied. Confirmed rule keys for
-this build (In Control! 10.2.6, extracted from the jar's `RuleKeys`): `mobs`,
-`mods`, `structures`, `structuretags`, `biomes`, `dimensions`, `mintime`,
-`maxtime`, `minlight`, `maxlight`, `mindifficulty`, `maxdifficulty`, `weather`,
-`hostile`, `passive`, `baby`, `seesky`, `mincount`, `maxcount`, `result`, …
+its `result` (`deny` / `allow` / `default`) is applied. **⚠️ Keys are SINGULAR.** Verified against the
+In Control! 10.2.6 jar (`mcjty.incontrol.rules`): `mob`, `mod`, `biome`, `biometags`, `structure`,
+`structuretags`, `dimension`, `mintime`, `maxtime`, `minlight`, `maxlight`, `mindifficulty`,
+`maxdifficulty`, `weather`, `hostile`, `passive`, `baby`, `seesky`, `mincount`, `maxcount`, `result`, …
+*(An earlier draft of this doc used the plurals `mobs`/`structures`; In Control! rejected them at load
+with "Invalid keywords for spawn.json" — fixed.)*
 
 ## What's configured
 

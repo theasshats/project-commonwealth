@@ -26,7 +26,7 @@ hash = "eaf6c7ba97e4b253817c05e2a34bfef4c277aab1b3b28d8c14bf01e7304aad22"
 
 [[files]]
 file = "config/incontrol/spawn.json"
-hash = "d9fa734ef3ccf3cbd5455ff01afaa4c4961c39a9e379b164c1fb52895133f6d6"
+hash = "f34b87e0593eec7e4efca49c8c159e586c9a2ad5bc9046ae396919a711471311"
 
 [[files]]
 file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_deepslate_diamond_ore_feature_biome_modifier.json"

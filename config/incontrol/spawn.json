@@ -1,11 +1,11 @@
 [
   {
-    "mobs": ["grimoireofgaia:kobold"],
+    "mob": ["grimoireofgaia:kobold"],
     "result": "deny"
   },
 
   {
-    "mobs": [
+    "mob": [
       "rottencreatures:burned",
       "rottencreatures:frostbitten",
       "rottencreatures:glacial_hunter",
@@ -14,7 +14,7 @@
       "rottencreatures:mummy",
       "rottencreatures:dead_beard"
     ],
-    "structures": [
+    "structure": [
       "minecraft:mineshaft",
       "minecraft:mineshaft_mesa",
       "minecraft:stronghold",
@@ -32,7 +32,7 @@
     "result": "allow"
   },
   {
-    "mobs": [
+    "mob": [
       "rottencreatures:burned",
       "rottencreatures:frostbitten",
       "rottencreatures:glacial_hunter",
