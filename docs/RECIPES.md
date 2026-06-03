@@ -140,18 +140,25 @@ metal/mechanical crafts that bypass Create*. Buckets:
   irons_spellbooks, mffs, travelersbackpack, securitycraft, drones, astikor-carts, exposure,
   smokeleaf, supplementaries (kinetic blocks only), swashbucklers, **gliders** (metal paraglider
   tiers → pressed plates), **netmusic** (computer/cd_burner → electron_tube). Plus `05-metals.js`
-  gating steel at the source, and **`81-decoration-metal.js`** — an *aggressive decoration weave*
-  (Macaw's metal doors + metal windows, handcrafted metal furniture, Supplementaries candle-holders)
-  that routes raw iron through `create:iron_sheet` via **`event.replaceInput`** (ingredient-only swap:
-  shapes/yields/wood variants untouched, cost-neutral, so a pure-decoration mod earns the Create pillar
-  without becoming a grind). `replaceInput` is the preferred tool for this kind of broad "route the
-  metal through Create" weave — reach for it over `remove`+`shaped` whenever you only need to change
-  *what* an item is made of, not its shape.
+  gating steel at the source, and **`81-decoration-metal.js`** — an *aggressive decoration + equipment
+  weave* via **`event.replaceInput`** (ingredient-only swap: shapes/yields/non-metal variants untouched,
+  ~cost-neutral, so a mod earns the Create pillar without becoming a grind). Routes base metal **ingots
+  (iron/copper/gold) → concrete `create:{iron,copper,golden}_sheet`** across: Macaw's metal
+  doors/windows/fences/roof-tools, handcrafted metal furniture, Supplementaries metal decoration
+  (candle-holders, gold bars/door/trapdoor/hourglass, fire_pit), and **Delight cooking equipment**
+  (Farmer's Delight cooking_pot/skillet/stove/iron_knife, extradelight chiller/tap — kitchenware as the
+  food↔Create bridge). `replaceInput` is the preferred tool for this kind of broad "route the metal
+  through Create" weave — reach for it over `remove`+`shaped` whenever you only need to change *what* an
+  item is made of, not its shape. **Always target concrete `create:*_sheet` items, not `#c:plates/*`
+  tags** (addon-filled → read as unobtainable in JEI; that was the steel-plate breakage).
   - *Deliberately left alone:* Macaw's metal **fences** (stonecut from iron_bars, not the table — cheap
     decoration on an awkward path); and a blanket "lights cost a bulb" pass — the pack's lamps are
     **organic** (Galosphere crystal+glowstone, Quark corundum, torch-lit) so a bulb would break theme,
     while the genuinely electric lights are already woven (bits_n_bobs bulb-lamps, Northstar plate-lamps,
     securitycraft). Theme-coherence beats forcing the rule.
+  - *Playtest flag:* the Farmer's Delight kitchenware gate is an **early** Create touch on the core
+    cooking loop (a hand-pressed iron sheet before a cooking_pot) — kept because the pack's whole premise
+    is Create-as-spine, but flagged to pull back if it feels bad early.
 - **Create addons — already route through Create, nothing to do** (~70 mods): everything `create*`
   / `cbc` / `tfmg` / `railways` / `GnKinetics` / `createbigcannons` / `CreateNumismatics` /
   `create_ironworks` / `createmetalwork` / `createnuclear` / `pantographs` / `direct_chute` /

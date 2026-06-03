@@ -782,7 +782,7 @@ hash = "ecc681b293943092354a7751fa75bbb746730dd6e7fe85b0fae3ff62e977eba7"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/81-decoration-metal.js"
-hash = "699fbc44eea5af0ccf060e94c57342bc7d220e4417f7d3df27c855c6a5113e42"
+hash = "01f0674280ec530c2966fd84ff11f30fe485f6850ca95874cc83bebad32c659d"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/89-bible.js"
