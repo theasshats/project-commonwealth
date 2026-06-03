@@ -85,7 +85,7 @@ bulb" pass (organic lamps); details + the playtest flag on the FD early-gate are
    ```
    Create methods: `event.recipes.create.pressing/mixing/compacting(...)`, `.mechanical_crafting(out,[pattern],{key})`,
    `.sequenced_assembly([out], seed, [steps]).transitionalItem('derpack:incomplete_x').loops(n)`.
-4. **`node --check`** the file. **Run `packwiz refresh`** (binary: `go install github.com/packwiz/packwiz@latest`)
+4. **`node --check`** the file. **Run `./tools/packwiz refresh`** (vendored binary — see `tools/README.md`)
    and commit `index.toml`/`pack.toml` — the `pr-checks.yml` "packwiz index" job fails otherwise.
 5. Update the ledger/triage in `docs/RECIPES.md`.
 
@@ -113,11 +113,11 @@ bulb" pass (organic lamps); details + the playtest flag on the FD early-gate are
 Operationalizes the north star *"every item forms one or two cohesive webs, not many clusters."* Builds an
 item graph from the digests **+ the live kubejs overlay** and reports the giant component ("the web") vs
 islands. Key properties (full math in `docs/CONNECTIVITY.md`):
-- `python3 tools/recipe-graph.py` — metrics: web %, depth-to-Create-spine, cut-vertices, islands-by-mod.
+- `python3 tools/recipe-graph/recipe-graph.py` — metrics: web %, depth-to-Create-spine, cut-vertices, islands-by-mod.
   Default lens filters vanilla `minecraft:` (it glues everything); `--with-vanilla`, `--jars-only`,
   `--remove a,b,c` (e.g. `--remove minecraft,create` to see how Create's addons weave).
-- `python3 tools/recipe-graph-viz.py` → `tools/recipe-web.html` — **interactive offline** mod map; toggle
-  mods / presets and watch components + web % recompute. Core shared in `tools/recipe_graph_lib.py`.
+- `python3 tools/recipe-graph/recipe-graph-viz.py` → `tools/recipe-graph/recipe-web.html` — **interactive offline** mod map; toggle
+  mods / presets and watch components + web % recompute. Core shared in `tools/recipe-graph/recipe_graph_lib.py`.
 - **Counts Create PARTS *and* METHODS** — a modded recipe-type (`create:mixing`, `occultism:ritual`, …)
   links every item it produces. This is **all-mod**, so it already lights up magic apparatus connectivity —
   **important for the #75 magic-weave PR** (run `--remove create` / inspect occultism/ars clusters there).
@@ -134,6 +134,21 @@ toolkit. Triage of what's left (non-magic; magic is #75):
   (`alexsmobs`, `naturalist`, `cataclysm`…) — ~600 items where a Create link is **arbitrary**. Options posed:
   *one natural link per material* (recommended), *coherent-only/stop*, or *force-everything-to-100%*. Get the
   call before authoring; forcing all of these would be the grind the guardrails forbid.
+
+## 9. Parked for follow-up (playtest fallout)
+- **Steel/bronze dedup (needs an almost-unified config — do carefully).** The pack has ~6 steel items
+  (create_ironworks, tfmg, createbigcannons, createnuclear, mffs, samurai_dynasty) and 2 bronze
+  (create_ironworks, createbigcannons). almost-unified is installed but **ships no config**, and steel/bronze
+  aren't in its default `materials` list, so they aren't unified — the player sees all of them. Fix =
+  `config/almostunified/unify.json` (camelCase keys, v1.4.x): add `"steel"`/`"bronze"` to `materials`, set
+  `priorityOverrides` (or `modPriorities`) so **create_ironworks** is dominant, `itemsHidingJeiRei: true`
+  (auto-hides the rest, incl. the recipe-less mffs/samurai steel). **Gotcha:** a shipped `unify.json`
+  *replaces* the generated default, so it must also reproduce AU's full default materials/tags or it drops
+  unification for every other metal. Safest path: grab the in-game-generated `unify.json` from a test
+  instance, then edit only those fields. (Maintainer asked to keep ironworks for both; tfmg steel is also fine.)
+- **Magic → Immersive Armors (for PR #75).** Loop the magic mods into a few Immersive Armors sets — e.g. the
+  Divine/robe-adjacent sets could take an Ars/Iron's arcane component, giving magic a gear outlet. Additive,
+  magic-PR scope; noted here so it isn't lost.
 
 ## 7. Pointers
 - Design + full triage + deliberately-not-gated ledger: `docs/RECIPES.md`.

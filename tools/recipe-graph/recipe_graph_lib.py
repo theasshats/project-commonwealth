@@ -7,9 +7,9 @@ recipe-graph-viz.py (interactive HTML). See docs/CONNECTIVITY.md for the math.
 import re, glob, os
 from collections import defaultdict, deque
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-RECIPE_DIR = os.path.join(HERE, 'mod-data', 'recipes')
-KUBEJS_DIR = os.path.join(HERE, '..', 'kubejs', 'server_scripts', 'recipes')
+HERE = os.path.dirname(os.path.abspath(__file__))                       # tools/recipe-graph/
+RECIPE_DIR = os.path.join(HERE, '..', 'mod-data', 'recipes')            # tools/mod-data/recipes/
+KUBEJS_DIR = os.path.join(HERE, '..', '..', 'kubejs', 'server_scripts', 'recipes')
 
 _RTYPE = re.compile(r'[a-z_0-9]+:(crafting_shaped|crafting_shapeless|smelting|blasting|smoking|'
                     r'campfire_cooking|stonecutting|smithing_transform|smithing_trim|pressing|mixing|'

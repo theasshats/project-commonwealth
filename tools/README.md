@@ -1,3 +1,17 @@
+# `tools/`
+
+What lives in this folder:
+
+| Thing | What it is |
+|---|---|
+| `derpack-edit.exe` | the **editor** — local web app for managing the pack (the rest of this README). CI-built; never hand-edit. |
+| `recipe-graph/` | **connectivity tooling** — measures "one web vs many clusters" + an interactive viz. See [`recipe-graph/README.md`](recipe-graph/README.md). |
+| `packwiz` | vendored `packwiz` binary (linux/amd64), so agent/CI sessions run `./tools/packwiz …` without `go install`. `.packwizignore`'d. |
+| `mod-data/` | recipe + loot **digests** (`recipes/*.txt`, ground truth for the recipe work). |
+| `editor-src/` | Go source for the editor (CI cross-compiles it to the `.exe`). |
+
+---
+
 # Derpack Editor
 
 A local web app for managing the modpack without using the command line or GitHub Actions workflows. Edit mods through your browser, commit through GitHub Desktop, ship through PRs.
