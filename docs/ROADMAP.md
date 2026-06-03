@@ -42,7 +42,7 @@ v1 model in v0.5.1**, strictly regional. The #56-vs-#82 decision (**#93**) is **
 ore-gen work is all release-tuning:
 - **#81** — early-game ore bootstrap, now that the vanilla starter trickle is gone (`needed-for-release`).
 - **#116** — pre-release tuning: cave ores follow the surface biome, salt trim, rarity curve, Y-bands (`needed-for-release`).
-- **#58** — playtest + rarity/regionality review (zagwar). Written against the old #56 model — refocus onto GTMOGS or fold into #116.
+- **#58** — playtest (you — runs on the server) + rarity/regionality review (zagwar). Written against the old #56 model — refocus onto GTMOGS or fold into #116.
 - **#115** — player-facing prospecting wiki page (kicked off by the GTMOGS move).
 
 ### Phase 2 — Guns / combat ✅ on `main` (#55, #59)
@@ -114,7 +114,7 @@ next), and the `needed-for-release` gate sits last. **Every issue maps to a mile
 *new* issue** — pick the pillar version whose goal it serves, or `Backlog / living` for ongoing trackers
 and not-yet-scheduled work. The backlog is expected to grow well past today's count, so it's the holding
 pen that keeps everything triaged. (The server is up now, so the old "needs the box" items are woven into
-the versions where they fit rather than parked.) Milestones are created/edited on GitHub; this list is the map.
+the versions where they fit rather than parked.) Milestones are created/edited on GitHub; this list is the map. See `docs/TRIAGE.md` for the triage process (label / milestone / assign / close).
 
 **`v0.6.0 — Foundation`** — *Goal: clean boot log, deterministic CI, a fast playtest loop, modlist
 hygiene — decks cleared for the pillar work.* The big front-loaded cleanup (all small, low-risk work).
