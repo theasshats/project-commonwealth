@@ -7,7 +7,7 @@ Paste the block below to start the next Claude session. (Lives here so it surviv
 You're continuing **Derpack X** — a cooperative PvPvE **Create** pack (MC **1.21.1 / NeoForge 21.1.228**)
 for a small crew (~10). Every mod earns its place by anchoring to one of **five systems — Create, magic,
 economy, aeronautics, survival** — or it's cut; scarcity drives emergent trade. North star + guardrails:
-`CLAUDE.md` (read it) and `docs/DESIGN.md`. Full sequenced backlog: `docs/ROADMAP.md`.
+`CLAUDE.md` (read it) and `docs/DESIGN.md`. Milestones + sequenced backlog: `docs/ROADMAP.md`.
 
 ## What's already on `main` (shipped) — current release **v0.5.2**
 - **v0.5.2 — Magic web (#75).** KubeJS bridges weaving Ars Nouveau / Iron's Spells / Occultism into the
@@ -28,10 +28,12 @@ economy, aeronautics, survival** — or it's cut; scarcity drives emergent trade
 |---|---|---|---|
 | **#80** | `claude/arcana-mod` | Derpack Arcana code-bridge mod (skeleton, `mods-src/`) — the magic bridges KubeJS can't express | draft until P1 "Attunement Font" is ready; deviation tracked in #118 |
 
-Everything else is now **issue work, not stacked PRs.** The sequenced backlog is in `docs/ROADMAP.md`
-("Open-issue work-order"). Near-term buckets: **quick wins** (#111/#105/#100/#127/#126) → **boot-log
-correctness** (#119/#120/#121) → **recipe-web dedup** (#103/#101/#102/#113) → **curation**
-(#107/#94/#106/#108/#60).
+Everything else is now **issue work, not stacked PRs**, organized into GitHub **milestones** — the road
+to 1.0 (`v0.6.0` Foundation → the pillar versions `Create spine`/`Economy`/`Survival & Magic`/`Aeronautics`
+→ `v1.0.0` release gate), each with a one-line **goal**; full map in `docs/ROADMAP.md` ("Milestones").
+**Every new issue must be filed under a milestone** (an unmilestoned issue is untriaged). Near-term is
+**v0.6.0 — Foundation**: quick wins (#111/#105/#100/#127/#131/#126) → boot-log (#119/#120/#121) →
+curation (#83/#107/#106/#108/#60/#110).
 
 ## Hard constraints
 - **Headless sandbox** — can't run Minecraft/KubeJS. Validate `node --check` (JS) + JSON/TOML only;

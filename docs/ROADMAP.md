@@ -105,43 +105,57 @@ post-release polish or ongoing curation.
 **Explicit non-goals** (keep off the release path): a server-pack artifact, NeoForge auto-bump,
 bundled-jar distribution — all deliberately out, see `docs/DESIGN.md`.
 
-## Open-issue work-order (sequenced)
+## Milestones — the road to 1.0
 
-The open issues, ordered for execution. Front-loaded with small/middle work; the `needed-for-release`
-items (bucket 7) sit deliberately after it. Living trackers (#9/#17/#18/#21) stay open by design.
+Open issues are organized into GitHub **milestones**, not loose buckets. The structure leans on the
+**five systems**: the small/foundational work is front-loaded to clear the decks, then each pillar gets
+a focused version with a concrete **goal** (its exit criterion — the bar to call it done and move to the
+next), and the `needed-for-release` gate sits last. **Every issue maps to a milestone, and so does every
+*new* issue** — pick the pillar version whose goal it serves, or `Backlog / living` for ongoing trackers
+and not-yet-scheduled work. The backlog is expected to grow well past today's count, so it's the holding
+pen that keeps everything triaged. (The server is up now, so the old "needs the box" items are woven into
+the versions where they fit rather than parked.) Milestones are created/edited on GitHub; this list is the map.
 
-**1 · Quick wins** (small, low-risk, sandbox-doable, unblock the rest)
-#111 pin almost-unified · #105 prune merged branches + auto-delete · #100 orphan-mod sweep ·
-#127 consolidate index-refresh workflows · #126 docs cleanup + index.
+**`v0.6.0 — Foundation`** — *Goal: clean boot log, deterministic CI, a fast playtest loop, modlist
+hygiene — decks cleared for the pillar work.* The big front-loaded cleanup (all small, low-risk work).
+- Quick wins / CI: #111 pin almost-unified · #105 prune merged branches · #100 orphan-mod sweep · #127 consolidate index-refresh workflows · #131 auto-regen the ground-truth digest · #126 docs cleanup + index.
+- Boot-log correctness: #119 dropped recipes · #120 mangled loot tables · #121 remaining ERROR noise.
+- Curation (modlist hygiene): #83 umbrella · #107 Ender Moon · #106 structure allowlist · #108 spawn-gating review · #60 umapyoi · #110 MFFS textures.
+- Server's up: #98 pre-gen test world · #3 purple-arrows repro · #38 inventory-sort verify + close.
 
-**2 · Boot-log correctness** (authorable straight from the boot log)
-#119 re-add dropped recipes · #120 override mangled loot tables · #121 triage the remaining ERRORs.
+**`v0.7.0 — Create spine`** — *Goal: the recipe graph reads as one connected web — no functional-duplicate
+parts, materials unified, Create addons cohere, complex tech gated via MineColonies/boss.*
+#103 duplicate parts (steel-plate family) · #101 limestones · #102 carbon/graphene · #113 connectivity
+islands · #94 un-anchored mods + dup clusters · #132 Create-addon cohesion · #92 MineColonies/boss gating ·
+#112 guns through sequenced assembly · #87 Create Stuff'N Additions · #17 recipes tracker (zagwar).
 
-**3 · Recipe-web dedup** (#62 follow-ups)
-#103 duplicate parts (steel-plate family) · #101 limestones · #102 carbon/graphene · #113 connectivity islands.
+**`v0.8.0 — Economy`** — *Goal: the trade loop is playable end-to-end — coins valued, vendors price,
+bounties pay, mob/structure inputs wired.* The thinnest-integrated pillar; highest leverage.
+#129 mob drops in the connectivity tool (enabler) · #90 Numismatics + Trading Floor + Bountiful + wire
+inputs · #18 loot pass (feeds the economy).
 
-**4 · Curation cleanup** (post-#88)
-#107 Ender Moon keep/cut · #94 + #99 un-anchored mods + midnight-thoughts anchor · #106 structure
-allowlist · #108 spawn-gating behavioral review · #110 MFFS textures · #60 umapyoi (zagwar).
+**`v0.9.0 — Survival & Magic`** — *Goal: the survival interlock (seasons × temperature × food) works in
+play and the magic web is balanced.*
+Survival: #91 interlock (umbrella over #124/#99) + cull the SoL forks · #124 altitude-driven cold · #99
+midnight-thoughts anchor. Magic (the #80 Arcana satellites): #122 post-merge balance · #123 flagship
+depth · #118 Soul-Reaping intent.
 
-**5 · Pillar weaving** (bigger; the two-pillar work)
-#129 mob drops in the connectivity tool · #90 economy pillar · #18 loot pass · #92 MineColonies/boss
-gating · #91 survival interlock (+ #99/#124/#125; cull the 3 SoL forks) · #84 Create/Aeronautics harder ·
-#112 guns through sequenced assembly · #87 Create Stuff'N Additions · #125 Touhou-maids weave ·
-#122/#123 magic-web balance + flagship · #17 recipes tracker (zagwar).
+**`v0.10.0 — Aeronautics & logistics`** — *Goal: airships/flight earn their payoff and logistics are
+woven; flight interactions documented.* (Under-ticketed today — the home for future flight/logistics work.)
+#84 Create + Aeronautics harder · #43 flight-system interactions · #125 Touhou-maids weave.
 
-**6 · Site & nice-to-have**
+**`v0.11.0 — Polish & site`** — *Goal: player wiki live, QoL and the open decisions settled.*
 #115 player wiki · #77 in-site issue submission · #70 WEB_DIR bind-mount · #13 Create: Harmonics eval ·
-#9 mod-ideas wishlist.
+#25 open-parties-and-claims · #1 shaders decision · #2 far-field render distance.
 
-**7 · Release runway [NFR]** (the gate before tagging — deliberately after the middle work)
-#79 require CI on `main` · #81 ore bootstrap · #116 ore-gen tuning · #58 ore-gen review (zagwar) ·
-#78 rename the pack (zagwar).
+**`v1.0.0 — Release` [NFR]** — *Goal: renamed, CI required on `main`, ore-gen tuned + playtested, RAM
+tuned — ship a stable public build.* The needed-for-release gate, deliberately last.
+#79 require CI on `main` · #81 early-game ore bootstrap · #116 ore-gen tuning · #58 ore-gen review
+(refocus onto GTMOGS or fold into #116) · #78 rename the pack (zagwar) · #48 GC/RAM (spark; server's up).
 
-**8 · Needs the live server / a human in-game** (parked)
-#98 pre-gen test world (force-multiplier) · #48 GC/RAM · #43 flight interactions · #25 claims (zagwar) ·
-#3 purple arrows · #1 shaders · #2 render distance · #40 quarterly port watch ·
-#38 inventory sort (close after a quick in-game check).
+**`📋 Backlog / living`** — *Goal: the holding pen — every unscheduled or ongoing issue lands here so
+nothing is untriaged; pull into a version when it's next up. New pillar issues slot into that pillar's milestone.*
+#9 mod-ideas wishlist · #21 mod-removal suggestions · #40 quarterly port watch.
 
 **Recently closed/merged:** #75 (magic web, v0.5.2) · #82 (GTMOGS ore-gen, v0.5.1) · #88 (curation, v0.5.0) ·
 #93 (ore-gen model decided → GTMOGS) · #62 (recipe overhaul, v0.4.6) · #51 (meadow cheese, in #62) ·
