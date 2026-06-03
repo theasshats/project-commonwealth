@@ -778,7 +778,7 @@ hash = "e1a80e4bece804d4423bfb9a9f2173d6208d15ea8dfd0513dba7537ebcdb683c"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/33-magic-web-spine.js"
-hash = "5f8fd72a80f1f5eb268fd5ace384a4ed0468ce2ea2b4a2aedbe47f89f1f3c8a1"
+hash = "7f1517f55858426e1c263939fed96a01aff249e137cb60121e45e73ab0e95307"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/34-magic-web-occult.js"

@@ -41,4 +41,10 @@ ServerEvents.recipes(event => {
   // ── SPINE -> OCCULT FEEDSTOCK: source mints the cheap occult entry essence (on-ramp into the
   //    occult branch handled in 34-magic-web-occult.js). ──
   imbue('occultism:demons_dream_essence', 'ars_nouveau:source_gem', 800)
+
+  // ── OCCULT -> SPINE RETURN: occultism's *premium* ritual-made otherworld_essence cashes back into
+  //    the arcane spine (this is the path 34-magic-web-occult.js refers to as "bridges back to the
+  //    arcane spine in 33"). Allurite-catalysed like the source->essence bond; low source top-up
+  //    because the value rides in the essence. First-pass ratio — tune in playtest. ──
+  imbue('irons_spellbooks:arcane_essence', 'occultism:otherworld_essence', 200, ['galosphere:allurite_shard'])
 })
