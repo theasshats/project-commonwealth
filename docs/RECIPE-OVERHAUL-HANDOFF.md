@@ -1,8 +1,10 @@
 # PR #62 — "Made through Create" recipe overhaul: handoff
 
-> **For a fresh Claude instance** continuing/finishing/verifying the Create recipe overhaul on branch
-> `claude/recipe-overhaul`. Self-contained: read before acting. The deep design + full triage live in
-> `docs/RECIPES.md`; this is the continuation brief (state, conventions, how to extend, what's left).
+> ✅ **MERGED (~v0.4.6).** This is now the **historical record** of the recipe overhaul — kept for the
+> conventions, the file map, and how to extend the weave (future per-mod passes follow the same loop).
+> For *current* priorities read `docs/NEXT-SESSION.md`; the live convention + triage ledger is
+> `docs/RECIPES.md`. **Open follow-ups:** #103 (functional-duplicate parts), and the magic layer is its
+> own PR (#75/#80) — not part of #62.
 
 ## 1. What this PR is
 Re-authors crafting across the pack so it flows **through Create** — its parts (`andesite_alloy`, sheets,
