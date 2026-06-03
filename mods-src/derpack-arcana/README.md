@@ -4,10 +4,11 @@ Internal helper mod for **Derpack X** — weaves the magic mods together at the 
 (energy / attribute / behaviour bridges) that the KubeJS recipe web can't express.
 Design & roadmap: [`docs/ARCANA-BRIDGE-MOD.md`](../../docs/ARCANA-BRIDGE-MOD.md).
 
-> **Status: P1 + P2 + P3 implemented — compiles green in `build-arcana.yml`; in-game testing pending.**
-> Each feature is behind a `ModList.isLoaded(...)` guard and a config toggle, so it never hard-deps a
-> target mod. (P1 is **bidirectional** — right-click toggles direction; P3 is drop-on-kill rather than
-> ritual fuel, since Occultism exposes no clean ritual-completion event — see #118.)
+> **Status: P1 + P2 + P3 implemented; PARKED for now (deeper weave is more work — see `docs/WEAVE-HANDOFF.md`).**
+> Each feature is `ModList.isLoaded(...)`-gated + config-toggleable, so it never hard-deps a target mod.
+> (P1 is **bidirectional** — right-click toggles direction; P3 is drop-on-kill not ritual fuel — #118.)
+> ⚠️ **Crash-on-load was fixed** (don't read config in the `@Mod` constructor). The `mod-mirror` jar is
+> still the **broken pre-fix 0.1.0** — rebuild + re-host + update `mods/derpack-arcana.pw.toml` before shipping.
 > - **P1 — Attunement Font** (block): bridges Ars Source ⇄ Iron's mana for the standing player —
 >   drains nearby Source to grant mana, or (right-click to flip) spends mana to refill a nearby Source
 >   jar. Crafted from the magic-web spine reagents (source_gem + arcane_essence + Galosphere shards).

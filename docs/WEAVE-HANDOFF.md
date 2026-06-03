@@ -36,13 +36,22 @@ weaving is the goal"). A mod tied to only one pillar is a candidate for a second
 - **PR #75** `claude/magic-web` — magic essence bridges (`33-magic-web-*.js`): Ars↔Iron's, Occultism via
   `occultengineering:spirit_solution`, Born-in-Chaos feeder, Gaia/Mowzie's drop sinks, Galosphere catalyst.
   **Retargeted to `main`** (#62 merged); CI green. Handoff: `docs/MAGIC-WEB-HANDOFF.md`.
-- **PR #80** `claude/arcana-mod` — the **Arcana** helper mod (`mods-src/derpack-arcana/`): P1 Attunement
-  Font (Ars Source→Iron's mana block), P2 spell-power crossover, P3 Soul Reaping (Born-in-Chaos kills →
-  Occultism essence). Compiles green (CI-verified on the current head). **Feature-complete; the only
-  remaining ship step is distribution** — host the jar on the `mod-mirror` release + add
-  `mods/derpack-arcana.pw.toml` (runbook in the mod README) — plus **in-game testing** (mana sync,
-  balance, Ars event bus).
-- **Sequence:** #88 (curation) → 0.5.0; then the magic layer (**#75 + #80**) together; #82 ore-gen on its own.
+- **PR #80** `claude/arcana-mod` — the **Arcana** helper mod (`mods-src/derpack-arcana/`): **P1 Attunement
+  Font** (Ars Source ⇄ Iron's mana, **bidirectional** — right-click toggles direction), **P2** spell-power
+  crossover, **P3** Soul Reaping (Born-in-Chaos kills → Occultism essence). Compiles green. **PARKED —
+  pick up another day** (deeper weave is a lot of work). State for the next session:
+  - ⚠️ **Crash-on-load fixed.** The `@Mod` constructor must **never read config** — `Config.X.get()` there
+    throws *"Cannot get config value before config is loaded"* and fails mod loading. Registration is now
+    gated on `ModList.isLoaded` only; each config toggle is checked at **runtime** (tick / event handler).
+    **CI compiles can't catch this — only an in-game load does.** Re-verify it loads in-game when you return.
+  - **Distribution scaffolded but stale:** `mods/derpack-arcana.pw.toml` points at the `mod-mirror` jar,
+    but that hosted jar is the **broken pre-fix 0.1.0**. After the fix: rebuild (`build-arcana.yml` prints
+    the jar sha1), re-host on the `mod-mirror` release, and update the pw.toml `hash` (README runbook).
+  - **In-game testing pending** — playtest checklist is the #80 PR comment (mana client-sync; the P2
+    "does Ars `SpellDamageEvent` actually fire?" check; P3 drop rate).
+  - **Open threads:** #118 (P3 ritual-fuel intent), #122 (magic-layer balance), #110 (placeholder
+    textures), #123 (flagship depth — conceded from #75). Deeper-weave roadmap: §4/§5 below.
+- **Sequence:** #75 magic **recipes SHIPPED** (to `main`); #80 (the code layer) parked, lands later.
 
 ## 2a. The #62 benchmark — what "woven" means for every pillar
 The Create overhaul (#62) is the bar: it didn't just *bridge* tech mods, it wove **every actionable mod**
@@ -83,9 +92,13 @@ to the same standard:
   and commit `index.toml`/`pack.toml`, or the `pr-checks.yml` "packwiz index" job fails. `mods-src/` is
   in `.packwizignore` (it's mod source, not pack content).
 ### Arcana mod — soft-dep pattern (reuse for every code integration)
-- Each feature lives in `com.derpack.arcana.bridge.*` and is registered ONLY inside a
-  `Config.<toggle>.get() && DerpackArcana.loaded("modid")` guard in the `@Mod` constructor, so a class
-  that references another mod's types never classloads when that mod is absent.
+- Each feature lives in `com.derpack.arcana.bridge.*` and is registered inside a
+  `DerpackArcana.loaded("modid")` guard in the `@Mod` constructor, so a class that references another
+  mod's types never classloads when that mod is absent.
+- ⚠️ **Do NOT read `Config.<toggle>.get()` in the constructor** — configs aren't loaded yet there, and it
+  crashes mod loading (*"Cannot get config value before config is loaded"*; CI compiles fine, only an
+  in-game load catches it). Gate registration on `loaded(...)` **presence** only; check the config toggle
+  at **runtime** (in the block-entity tick / event handler), where config is loaded.
 - **Zero-compile-dep pattern** (P3 Soul Reaping): reference other mods purely by string — entity/item
   registry lookups (`BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(...))`, namespace
   checks on `entity.getType()`) + a vanilla event (`LivingDropsEvent`). No cursemaven dep needed.
