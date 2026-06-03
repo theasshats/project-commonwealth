@@ -18,6 +18,9 @@ docs/
 */README.md
 CLAUDE.md
 
+# Player wiki source — staged here, published to the site by hand; not pack content
+wiki/
+
 # Build helpers — only run by CI / maintainers
 scripts/
 tools/
