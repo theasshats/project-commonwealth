@@ -6,7 +6,7 @@ hash = "b70f57eadf6eec0ce43acd4c441f08feac1432826e04cb8e2736a73997c20c08"
 
 [[files]]
 file = "config/almostunified/placeholders.json"
-hash = "43733b207b9f0238c7a5bec47f19e8fd5bec80499b286e0ac4994671702dfed9"
+hash = "df4c6788c7193194a5c6e060810e8fa8e3ffbe7479b714442bd0867062b88528"
 
 [[files]]
 file = "config/almostunified/startup.json"
@@ -18,7 +18,7 @@ hash = "3f0d92c8abaf95a68ff79bb2ef9169fd598500070de7e5a616b755f9c5123e6f"
 
 [[files]]
 file = "config/almostunified/unification/materials.json"
-hash = "4ba99234935506c14d29e9135ceafce97420622a2f52656c5b442cba5a500bc8"
+hash = "f9736b366899beafb0de5795453f1da159222143d5ac4f3c8d3231bbc80a4424"
 
 [[files]]
 file = "config/createblockchain-common.toml"

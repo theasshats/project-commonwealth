@@ -10,7 +10,17 @@
     "c:storage_blocks/steel": "create_ironworks",
     "c:ingots/bronze": "create_ironworks",
     "c:nuggets/bronze": "create_ironworks",
-    "c:storage_blocks/bronze": "create_ironworks"
+    "c:storage_blocks/bronze": "create_ironworks",
+    "c:ingots/lead": "tfmg",
+    "c:nuggets/lead": "tfmg",
+    "c:storage_blocks/lead": "tfmg",
+    "c:raw_materials/lead": "tfmg",
+    "c:storage_blocks/raw_lead": "tfmg",
+    "c:ingots/cast_iron": "tfmg",
+    "c:nuggets/cast_iron": "tfmg",
+    "c:storage_blocks/cast_iron": "tfmg",
+    "c:ingots/silver": "galosphere",
+    "c:nuggets/silver": "galosphere"
   },
   "stone_variants": [
     "stone",
