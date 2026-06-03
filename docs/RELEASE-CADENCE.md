@@ -15,8 +15,9 @@ The minor version's **parity** sets the update's job:
 
 - **1.0.0 is even → a performance patch.** Release is a stabilization version: feature-frozen, profiled,
   balanced, shipped.
-- **The last odd version before release (0.15) is the last call for major additions / integrations.**
-  After it: feature freeze through 1.0.
+- **The last odd version before release (0.15) is the last call for major additions / integrations, and
+  hosts the comprehensive pillar-weave review** (the seams *between* all five systems). After it: feature
+  freeze through 1.0.
 - **Version count is open** — extend with as many odd/even pairs as the pillars need (0.12, 0.13, 0.14,
   0.15, …); each feature version earns its own stabilization version.
 
@@ -46,6 +47,22 @@ gates:
 2. **Prune for performance** (#157 perf gate), **fix bugs** (boot-log pass — #119/#120/#121), **balance**.
 3. **No new mods or features** — even versions only stabilize what the preceding odd version added.
 
+## Pillar-weave review (between pillars)
+
+The thunderdome reviews **mods against each other** *within* a feature version. The **weave review**
+reviews **pillars against each other** — the seams *between* the five systems, which no single pillar
+version owns.
+
+- **Incremental** — as each pillar lands (its odd version), it's woven into the pillars already built,
+  and the following even stabilization checks those seams didn't break.
+- **Comprehensive at 0.15** — the last feature version includes a full pillar-weave review: does the
+  whole five-system machine actually interlock before the 1.0 freeze? Close the gaps and contradictions.
+
+Seams to check (examples): Create ↔ economy (coins minted from Create-processed scarce metals, #136),
+Create ↔ magic (magic gated behind Create components, #146), Create ↔ aeronautics (ships powered and
+built through Create, #143), survival ↔ aeronautics (altitude → Cold Sweat, #124), economy ↔ everything
+(mob-drop bounties #137 + regional trade #139 fed by mining and seasonal crops).
+
 ## Proposed roadmap
 
 One **pillar per odd version**, each followed by a **dedicated even stabilization pass** so feature debt
@@ -62,7 +79,7 @@ never stacks. Extends past 0.11 — the version count is whatever the pillars ne
 | **0.12.0** | even | Stabilization III | Profile + balance + bug-fix everything 0.11 added. |
 | **0.13.0** | odd | **Feature** | **Aeronautics & logistics** — the airship payoff + the transport/logistics ladder. |
 | **0.14.0** | even | Stabilization IV | Profile + balance + bug-fix everything 0.13 added. |
-| **0.15.0** | odd | **Feature — LAST CALL** | **Polish & site** — wiki, onboarding, QoL, claims, the open decisions. Final additions/integrations; then feature freeze. |
+| **0.15.0** | odd | **Feature — LAST CALL + weave review** | **Polish & site** — wiki, onboarding, QoL, claims, the open decisions — **plus the comprehensive pillar-weave review** (all five systems reviewed *between* each other). Final additions/integrations; then feature freeze. |
 | **1.0.0** | even | **Release (perf patch)** | Feature-frozen. Final performance + RAM tuning, ore-gen finalized, renamed, CI required → ship the public build. |
 
 **Migration note.** This expands the milestone set to one pillar per odd version. From the current
@@ -85,6 +102,7 @@ per `docs/DESIGN.md`: **1.1 odd** (feature / thunderdome) → **1.2 even** (perf
 - **Mod-conflict catalog (#160)** — runs on the **even** perf/stabilization pass.
 - **Curation rubric (#157)** — its gates split across the cadence: the *merit* gates fire in the odd
   thunderdome, the *performance* gate fires in even stabilization.
+- **Pillar-weave review** — incremental as each pillar lands; comprehensive at **0.15** before the freeze.
 
 ---
 
