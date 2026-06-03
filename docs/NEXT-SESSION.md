@@ -4,39 +4,44 @@ Paste the block below to start the next Claude session. (Lives here so it surviv
 
 ---
 
-You're continuing **Derpack X** — a **cooperative PvPvE Create pack** (MC 1.21.1 / NeoForge) for a
-small crew (~10) where every mod earns its place by anchoring to one of **five systems — Create,
-magic, economy, aeronautics, survival** — or it's cut; scarcity drives emergent trade. A fresh clone
-of `main` has only the tooling + ground-truth digest + older worldgen — **the current direction and
-the active work live in open PR branches.** Read these first:
+You're continuing **Derpack X** — a cooperative PvPvE **Create** pack (MC **1.21.1 / NeoForge 21.1.228**)
+for a small crew (~10). Every mod earns its place by anchoring to one of **five systems — Create, magic,
+economy, aeronautics, survival** — or it's cut; scarcity drives emergent trade. North star + guardrails:
+`CLAUDE.md` (read it) and `docs/DESIGN.md`.
 
-1. **Direction & plan — PR #61, branch `claude/modlist-audit`** (⚠️ NOT on `main` yet; held for zagwar's review):
-   - `docs/ROADMAP.md` — the multi-phase plan, status, and which PR/branch each phase lives on. **Start here.**
-   - `docs/DESIGN.md` → "**The goal — five systems**" section, and the `CLAUDE.md` intro — the north
-     star: *"what system does this anchor to — and if none, why is it here?"*
-   - `docs/MODLIST-AUDIT.md` — fit flags, duplicate-mechanic clusters, the two big open calls.
-2. **Ground truth — on `main`:** `tools/mod-data/` (facts + recipe + loot indexes for 354 mods).
-   **Grep these for exact recipes — never guess.** Regenerate via Actions ▸ "Ground-truth digest".
+## What's already on `main` (shipped)
+- **Phase 3 — "made through Create" recipe overhaul (#62, MERGED ~v0.4.6).** Crafting routed through
+  Create **parts + methods** across the pack; decoration/equipment weave; worldgen-island bridges; two
+  flavor items; **EMI→JEI** switch (+ JER/JEED — EMI can't render Create recipes); **almost-unified**
+  dedup of steel/bronze/lead/cast_iron (→ Ironworks/TFMG) + pasta (→ Farmer's Delight). Convention +
+  full triage ledger: `docs/RECIPES.md`. Handoff (now historical): `docs/RECIPE-OVERHAUL-HANDOFF.md`.
+- **Phase 0–2:** packwiz pack + editor + CI; ore-gen #56 model; guns (TaCZ + Create Armorer).
+- **Tooling on `main`:** `tools/mod-data/` ground-truth digests (grep these — never guess recipes);
+  **`tools/recipe-graph/`** connectivity metric + interactive viz (`recipe-web.html`, CI-regenerated);
+  **`tools/packwiz`** vendored binary (`./tools/packwiz refresh`).
 
-**Active work — recipe overhaul, PR #62 / branch `claude/recipe-overhaul`** (check this out to continue;
-it also carries the digest and `docs/RECIPES.md`): route crafting through Create **parts + methods**,
-**NOT a grind** (coherence over tedium). Done so far: the convention, the **metals foundation**
-(steel → Create, auto-propagates via `#c:ingots/steel`), **Immersive Armors**, **Samurai Dynasty**.
-**Next: continue per-mod from the digest — Modular Golems → Northstar → magic → storage.** For each:
-read its file in `tools/mod-data/recipes/`, gate the metal/mechanical craftables behind Create parts,
-leave organic/thematic ones alone, keep the original recipe as an `orig:` comment, and do **one commit +
-one PR comment per mod** (the maintainer wants a per-mod record on #62).
+## Active work — open PR branches (the real direction)
+| PR | Branch | Holds | State |
+|---|---|---|---|
+| **#88** | `claude/awesome-brown-s4bBD` | Curation pass (#83): mob/boss cuts + In Control! spawn gating + kobold swap (absorbed #86) | **merge target before 0.5.0** — needs playtest (`docs/SPAWN-GATING.md`) |
+| **#82** | `claude/trusting-heisenberg-cbWYb` | GTMOGS GregTech-style ore-gen rework | gated on #81 bootstrap + model decision |
+| **#80** | `claude/arcana-mod` | Derpack Arcana code-bridge mod (skeleton, `mods-src/`) | land *with* the magic layer |
+| **#75** | `claude/magic-web` | Magic-web v2 KubeJS bridges (Ars spine) | **retarget base → `main`** (was stacked on #62) |
 
-**Hard constraints:**
-- **Headless sandbox** — can't run Minecraft/KubeJS. Validate JS syntax (`node --check`) and JSON only;
-  **everything needs an in-game playtest before merge** (issues #58 ore-gen, #59 guns).
-- **`main` is branch-protected — work on branches and open PRs; never commit to `main`.**
-- **Network:** GitHub reachable; Modrinth/CurseForge are **not** — jar ground truth comes from the digest
-  or maintainer uploads.
+**Merge order:** #88 → 0.5.0 bump; magic layer (#75 then #80) together; #82 ore-gen on its own.
 
-**Don't assume — open decisions for the maintainers:** meme removals (#45, umapyoi #60); the curation
-pass specifics (**#83** — e.g. ender-moon keep/cut, Dynamic Trees perf call). MineColonies is **settled**
-(woven progression on-ramp). Ask before large/destructive changes.
+## Open issues worth knowing
+- **#103** — reconcile functional-duplicate fabricated parts (e.g. TFMG `heavy_plate` vs steel sheet/plate);
+  AU-tag or KubeJS-convert. Follow-up to the recipe overhaul.
+- **#81** — early-game ore bootstrap (couples to #82). **#83** — curation strategy (#88 executes part of it).
 
-**Other open PRs:** #56 ore-gen (20 veins + blockchain gate; playtest #58) · #55 guns (needs
-`create_armorer-1.2.0.1.zip` mirrored to the `mod-mirror` release; playtest #59).
+## Hard constraints
+- **Headless sandbox** — can't run Minecraft/KubeJS. Validate `node --check` (JS) + JSON/TOML only;
+  **everything needs an in-game playtest before merge.**
+- **`main` is branch-protected** — work on branches / open PRs; never commit to `main`.
+- **Network:** GitHub reachable; **Modrinth/CurseForge gated by default** — use `tools/mod-data/` digests
+  (or `tools/packwiz` if the session was granted Modrinth/CDN access).
+
+## Watch-outs (see CLAUDE.md "gotchas")
+- **`galosphere:silver_ingot` is PALLADIUM** (legacy id) — never unify it as silver.
+- Don't re-add EMI. Don't add Veil. itemphysic/FoamFix are client-only. Aeronautics breaks under shaders.

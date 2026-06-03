@@ -13,17 +13,20 @@
 **Status:** ✅ done & on `main` · 🟦 in review (open PR) · 🚧 in progress · ⏳ queued · 💤 not started
 
 ## Where the work lives (important)
-A fresh clone of `main` now has Phase 0 + Phase 1 ore-gen (#56) + Phase 2 guns (#55) + the design/goal
-docs (#61) + `pr-checks.yml` + the ground-truth digest. The **open** work lives in these PR branches.
-**Merge order:** the index-touching trio **#62 → #88 → #82** serialize on `index.toml`/`pack.toml` (the auto-resolver re-refreshes between each). **#75** lands right after #62 (stacked on it). **#80** compiles standalone but its magic bridges are **feature-dependent on #62/#75** — land it *with* the magic layer, not before.
+`main` now carries **Phases 0–3**: tooling + ground-truth digest, ore-gen (#56), guns (#55), design docs
+(#61), `pr-checks.yml`, **and the Phase-3 recipe overhaul (#62, merged ~v0.4.6)** — crafting through Create
++ the decoration weave + worldgen-island bridges + **EMI→JEI** + **almost-unified** metal/pasta dedup +
+`tools/recipe-graph/`. The **open** work lives in these PR branches.
+**Merge order:** **#88** lands next → then bump **0.5.0**; the **magic layer (#75 → #80)** lands together
+(#75 **retargets to `main`** now that #62 merged); **#82** ore-gen serializes on its own. The auto-resolver
+re-refreshes `index.toml`/`pack.toml` between index-touching merges.
 
 | PR | Branch | Holds |
 |---|---|---|
-| **#62** | `claude/recipe-overhaul` | Phase 3 recipes through Create (carries `docs/RECIPES.md` + the digest) |
-| **#75** | `claude/magic-web` | Magic-web v2 KubeJS bridges — **stacked on #62** (re-sync + retarget to `main` when #62 lands) |
-| **#80** | `claude/arcana-mod` | Derpack Arcana code-bridge mod (skeleton, `mods-src/`) — index-isolated, but **feature-dependent on #62/#75**; land with the magic layer |
+| **#88** | `claude/awesome-brown-s4bBD` | Curation pass (#83): mob cuts + In Control! + spawn gating (absorbed #86) — **merge before 0.5.0** |
+| **#75** | `claude/magic-web` | Magic-web v2 KubeJS bridges (Ars spine) — **retarget base → `main`** (was stacked on #62) |
+| **#80** | `claude/arcana-mod` | Derpack Arcana code-bridge mod (skeleton, `mods-src/`) — land *with* the magic layer (#75) |
 | **#82** | `claude/trusting-heisenberg-cbWYb` | GTMOGS ore-gen rework — **gated** on #81 + the #93 model decision |
-| **#88** | `claude/awesome-brown-s4bBD` | Curation pass (#83): mob cuts + In Control! + spawn gating (absorbed #86) |
 
 ## Phases
 
@@ -44,13 +47,15 @@ TaCZ + **Create: Immersive TaCZ** (Create recipes) + **Create: Armorer** gunpack
 `tacz-create`; #27 closed) + Create Big Cannons. Merged and playtested.
 - **Later:** gun→Create recipe polish + gun loot (#17/#18).
 
-### Phase 3 — Recipe overhaul: "made through Create" 🚧 #62
-Route crafting through Create **parts + methods**; **not a grind** (`docs/RECIPES.md` = convention,
-palette, guardrails). Each swap keeps the original as an `orig:` comment; per-pass rationale in #62's comments.
-- **Done:** convention/scaffold · **metals foundation** (steel → Create, auto-propagates via
-  `#c:ingots/steel`) · Immersive Armors · Samurai Dynasty.
-- **Next:** continue per-mod from the digest (Modular Golems → Northstar → magic → storage …) ·
-  decide the flagged `occultengineering` brass alt-path. Tracks #17.
+### Phase 3 — Recipe overhaul: "made through Create" ✅ on `main` (#62, ~v0.4.6)
+Routed crafting through Create **parts + methods** across the pack — **not a grind** (`docs/RECIPES.md` =
+convention, palette, guardrails, full triage ledger). Shipped: metals foundation + **almost-unified**
+dedup (steel/bronze/lead/cast_iron → Ironworks/TFMG, pasta → Farmer's Delight); per-mod gating (Immersive
+Armors, Samurai, Modular Golems, Northstar, MFFS, SecurityCraft, …); the **decoration/equipment weave**
+(`81`); **worldgen-island bridges** (`35`); flavor items (bible `89`, meadow cheese `99`); **EMI→JEI** +
+JER/JEED; and the **`tools/recipe-graph/`** connectivity toolkit + interactive viz.
+- **Follow-ups:** **#103** (reconcile functional-duplicate parts, e.g. heavy_plate vs steel sheet) ·
+  the **magic layer is its own PR** (#75 / #80) · **#84** (Create/Aeronautics difficulty) is a separate pass.
 
 ### Phase 4 — Loot pass ⏳ (#18)
 `lootjs` + the loot index: pull structure/dungeon loot back from free end-game gear; optionally seed
@@ -86,8 +91,8 @@ post-release polish or ongoing curation.
 
 - [ ] **Ore-gen model decided & verified** — **#93** (pick #56-on-main vs #82-GTMOGS) → then #58 playtest
   (+ #81 bootstrap if #82 wins). Phase 1.
-- [ ] **Create recipe spine landed** — #17 / PR #62 enough per-mod passes that "made through Create"
-  is real, not a stub. Phase 3.
+- [x] **Create recipe spine landed** — **#62 merged (~v0.4.6)**; "made through Create" is real across the
+  pack (parts + methods + almost-unified dedup). Phase 3. Follow-up: #103.
 - [ ] **Pack renamed** — #78 (decide the name before players have instances named "Derpack X").
 - [ ] **CI required on `main`** — #79 (turn on the `pr-checks.yml` ruleset; Phase 8 / `docs/CI-CHECKS.md`).
 - [x] **Design/goal docs merged** — PR #61 on `main`; the five-systems direction is canon.
@@ -133,9 +138,10 @@ by design. See `docs/MODLIST-AUDIT.md` for the curation detail behind the Phase 
 | #13 | Create: Harmonics requirements | add-mod | 6 | — | evaluate the add; low priority |
 | #40 | Monitor unofficial 1.21.1 ports | maintenance | — | — | quarterly: migrate to official releases when they ship |
 
-**Recently closed/merged:** #42 (TPS audit) · #73 (`.mrpack` drop) · #45 (meme cull) · #55/#59 (guns) ·
-#56 (ore-gen, on `main`) · #57/#63/#65 (digest/worldgen) · #61 (design docs) · #76/#85/#89 (CI +
-auto-resolver + workflow docs) · #86 (→ #88).
+**Recently closed/merged:** **#62 (recipe overhaul, ~v0.4.6)** + #51 (meadow cheese, in #62) ·
+#42 (TPS audit) · #73 (`.mrpack` drop) · #45 (meme cull) · #55/#59 (guns) · #56 (ore-gen, on `main`) ·
+#57/#63/#65 (digest/worldgen) · #61 (design docs) · #76/#85/#89 (CI + auto-resolver + workflow docs) ·
+#86 (→ #88). **New follow-up:** #103 (functional-duplicate parts).
 
 ## Cross-cutting notes
 - **Verification gates everything** — headless can't validate KubeJS/worldgen; playtest per phase.
