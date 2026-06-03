@@ -124,42 +124,50 @@ the host milestone — no separate slot or date. Rubric: `docs/DESIGN.md` + `doc
 
 **`v0.6.0 — Foundation`** — *Goal: clean boot log, deterministic CI, a fast playtest loop, modlist
 hygiene — decks cleared for the pillar work.* The big front-loaded cleanup (all small, low-risk work).
-- Quick wins / CI: #111 pin almost-unified · #105 prune merged branches · #100 orphan-mod sweep · #127 consolidate index-refresh workflows · #131 auto-regen the ground-truth digest · #126 docs cleanup + index.
+- Quick wins / CI: #111 pin almost-unified · #105 prune merged branches · #100 orphan-mod sweep · #127 consolidate index-refresh workflows · #131 auto-regen the ground-truth digest · #154 config/ vs defaultconfigs audit · #126 docs cleanup + index.
 - Boot-log correctness: #119 dropped recipes · #120 mangled loot tables · #121 remaining ERROR noise.
-- Curation (modlist hygiene — run as the **pass-I curation thunderdome**): #83 umbrella · #107 Ender Moon · #106 structure allowlist · #108 spawn-gating review · #60 umapyoi · #110 MFFS textures.
+- Perf baseline (server's up): #147 spark TPS routine + target · #151 Create contraption guardrails.
+- Curation (modlist hygiene — run as the **pass-I curation thunderdome**, chartered by #157): #157 define the rubric (`docs/CURATION.md`) · #83 umbrella · #107 Ender Moon · #106 structure allowlist · #108 spawn-gating review · #60 umapyoi · #110 MFFS textures.
 - Server's up: #98 pre-gen test world · #3 purple-arrows repro · #38 inventory-sort verify + close.
 
 **`v0.7.0 — Create spine`** — *Goal: the recipe graph reads as one connected web — no functional-duplicate
 parts, materials unified, Create addons cohere, complex tech gated via MineColonies/boss.*
 #103 duplicate parts (steel-plate family) · #101 limestones · #102 carbon/graphene · #113 connectivity
-islands · #132 Create-addon cohesion · #92 MineColonies/boss gating ·
+islands · #132 Create-addon cohesion · #145 kinetic power tier ladder · #92 MineColonies/boss gating ·
 #112 guns through sequenced assembly · #87 Create Stuff'N Additions · #17 recipes tracker (zagwar).
 
 **`v0.8.0 — Economy`** — *Goal: the trade loop is playable end-to-end — coins valued, vendors price,
 bounties pay, mob/structure inputs wired.* The thinnest-integrated pillar; highest leverage.
-#129 mob drops in the connectivity tool (enabler) · #90 Numismatics + Trading Floor + Bountiful + wire
-inputs · #18 loot pass (feeds the economy) · #94 modlist audit (un-anchored mods + new dup clusters).
+#129 mob drops in the connectivity tool (enabler) · #138 pick the shop/transaction mechanism · #136 coin
+tiers + price sheet · #137 Bountiful bounty pools · #150 faucet/sink integrity audit · #139 regional
+export specialization · #90 Numismatics + Trading Floor + Bountiful + wire inputs · #18 loot pass (feeds
+the economy) · #94 modlist audit (un-anchored mods + new dup clusters).
 **Closes with a curation thunderdome (pass II)** — rubric-check what the Create spine + Economy build dragged in.
 
 **`v0.9.0 — Survival & Magic`** — *Goal: the survival interlock (seasons × temperature × food) works in
 play and the magic web is balanced.*
 Survival: #91 interlock (umbrella over #124/#99) + cull the SoL forks · #124 altitude-driven cold · #99
-midnight-thoughts anchor. Magic (the #80 Arcana satellites): #122 post-merge balance · #123 flagship
-depth · #118 Soul-Reaping intent.
+midnight-thoughts anchor · #152 author Cold Sweat world config · #155 death-penalty + gravestone tuning.
+Magic (the #80 Arcana satellites): #122 post-merge balance · #123 flagship depth · #118 Soul-Reaping
+intent · #146 gate Ars/Iron's/Occultism behind Create.
 
 **`v0.10.0 — Aeronautics & logistics`** — *Goal: airships/flight earn their payoff and logistics are
-woven; flight interactions documented.* (Under-ticketed today — the home for future flight/logistics work.)
-#84 Create + Aeronautics harder · #43 flight-system interactions · #125 Touhou-maids weave.
+woven; flight interactions documented.* (Now ticketed out — the flight/logistics pillar.)
+#84 Create + Aeronautics harder · #43 flight-system interactions · #144 airship assembly/docking infra ·
+#143 ship power/fuel economy · #142 audit Create machinery on ships · #141 transport/logistics ladder ·
+#140 airship combat balance (Big Cannons) · #125 Touhou-maids weave.
 **Closes with a curation thunderdome (pass III)** — rubric-check the back-half pillar additions.
 
 **`v0.11.0 — Polish & site`** — *Goal: player wiki live, QoL and the open decisions settled.*
-#115 player wiki · #77 in-site issue submission · #70 WEB_DIR bind-mount · #13 Create: Harmonics eval ·
-#25 open-parties-and-claims · #1 shaders decision · #2 far-field render distance.
+#115 player wiki · #148 in-game onboarding quest/guide · #153 JEI recipe-viewer cleanup pass · #77 in-site
+issue submission · #134 map server to new Cloudflare address · #70 WEB_DIR bind-mount · #13 Create:
+Harmonics eval · #25 open-parties-and-claims · #1 shaders decision · #2 far-field render distance.
 
 **`v1.0.0 — Release` [NFR]** — *Goal: renamed, CI required on `main`, ore-gen tuned + playtested, RAM
 tuned — ship a stable public build.* The needed-for-release gate, deliberately last.
-#79 require CI on `main` · #81 early-game ore bootstrap · #116 ore-gen tuning · #58 ore-gen review
-(refocus onto GTMOGS or fold into #116) · #78 rename the pack (zagwar) · #48 GC/RAM (spark; server's up).
+#149 v1.0.0 readiness checklist (meta-tracker) · #79 require CI on `main` · #81 early-game ore bootstrap ·
+#116 ore-gen tuning · #58 ore-gen review (refocus onto GTMOGS or fold into #116) · #78 rename the pack
+(zagwar) · #48 GC/RAM (spark; server's up).
 **Closes with the final curation thunderdome (pass IV)** — last tighten before the tag, nothing un-anchored ships.
 
 **`📋 Backlog / living`** — *Goal: the holding pen — every unscheduled or ongoing issue lands here so
@@ -170,7 +178,7 @@ nothing is untriaged; pull into a version when it's next up. New pillar issues s
 #93 (ore-gen model decided → GTMOGS) · #62 (recipe overhaul, v0.4.6) · #51 (meadow cheese, in #62) ·
 #117/#128/#130 (patch notes + site reframe) · #42 (TPS) · #73 (`.mrpack` drop) · #45 (meme cull) ·
 #55/#59 (guns) · #56 (per-ore gen, since retired for GTMOGS) · #57/#63/#65 (digest/worldgen) ·
-#61 (design docs) · #76/#85/#89 (CI + auto-resolver + workflow docs) · #86 (→ #88).
+#61 (design docs) · #76/#85/#89 (CI + auto-resolver + workflow docs) · #86 (→ #88) · #133/#135/#156/#158 (docs sync + milestone map + triage playbook + curation-thunderdome scheduling).
 
 ## Cross-cutting notes
 - **Verification gates everything** — headless can't validate KubeJS/worldgen; playtest per phase.
