@@ -123,11 +123,11 @@ reachable from `create:*`: **13602** items (avg **1.8** hops); unreachable: **34
 | 103 | 13 | 23 | tech/gear | `create` |
 | 92 | 19 | 13 | organic/mob | `ecologics` |
 | 85 | 41 | 45 | block/deco | `domum_ornamentum` |
-| 76 | 29 | 9 | organic/mob | `alexsmobs` |
+| 76 | 30 | 9 | organic/mob | `alexsmobs` |
 | 70 | 30 | 17 | organic/mob | `cataclysm` |
 | 69 | 2 | 68 | tech/gear | `tfmg` |
 | 64 | 15 | 28 | organic/mob | `born_in_chaos_v1` |
-| 61 | 19 | 15 | phantom | `spawn` |
+| 61 | 18 | 15 | phantom | `spawn` |
 | 60 | 11 | 14 | block/deco | `galosphere` |
 | 59 | 40 | 10 | other | `mushroomquest` |
 | 53 | 15 | 25 | organic/mob | `beachparty` |
@@ -167,8 +167,8 @@ reachable from `create:*`: **13602** items (avg **1.8** hops); unreachable: **34
 | 6 | 3 | 2 | other | `knightlib` |
 | 6 | 1 | 6 | organic/mob | `ribbits` |
 | 6 | 2 | 5 | other | `moblassos` |
-| 6 | 6 | 1 | other | `smokeleafindustries` |
 | 6 | 6 | 1 | magic | `irons_spellbooks` |
+| 6 | 6 | 1 | other | `smokeleafindustries` |
 | 5 | 1 | 5 | other | `immersive_paintings` |
 | 5 | 2 | 4 | other | `solonion` |
 | 5 | 3 | 2 | other | `endrem` |
