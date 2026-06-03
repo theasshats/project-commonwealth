@@ -1,0 +1,13 @@
+name = "Gregtech: Modern Ore Generation Standalone"
+filename = "gtmogs-1.21.1-1.0.6.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/fNd6d6cd/versions/m0HcaGYd/gtmogs-1.21.1-1.0.6.jar"
+hash-format = "sha512"
+hash = "5887e8022c07c259995fe11129249f3e2c8ad14194be1bd424a3af2794f7f8530123eada74d4b9b49781c7be7a9344ca047f8fba09c1db95d2ffea982efb3796"
+
+[update]
+[update.modrinth]
+mod-id = "fNd6d6cd"
+version = "m0HcaGYd"

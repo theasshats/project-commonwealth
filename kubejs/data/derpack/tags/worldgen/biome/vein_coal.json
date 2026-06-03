@@ -2,13 +2,6 @@
   "replace": false,
   "values": [
     "#minecraft:is_taiga",
-    "#minecraft:is_forest",
-    {
-      "id": "#c:is_underground",
-      "required": false
-    },
-    "minecraft:dripstone_caves",
-    "minecraft:lush_caves",
-    "minecraft:deep_dark"
+    "#minecraft:is_forest"
   ]
 }
