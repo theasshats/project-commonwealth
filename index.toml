@@ -1,6 +1,26 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/almostunified/duplicates.json"
+hash = "b70f57eadf6eec0ce43acd4c441f08feac1432826e04cb8e2736a73997c20c08"
+
+[[files]]
+file = "config/almostunified/placeholders.json"
+hash = "df4c6788c7193194a5c6e060810e8fa8e3ffbe7479b714442bd0867062b88528"
+
+[[files]]
+file = "config/almostunified/startup.json"
+hash = "37f013c49586db025c17f9fa6657c6f239e0169ebc97ef682ff114a2ede43c5e"
+
+[[files]]
+file = "config/almostunified/tags.json"
+hash = "ae21856320bd068d0498b5fc3ae8c49d3102453ba274e7b0fee034392fc2f577"
+
+[[files]]
+file = "config/almostunified/unification/materials.json"
+hash = "d915fc58e3804bd901448e520fcc4329430aca9069ba0d87df3411968906302d"
+
+[[files]]
 file = "config/createblockchain-common.toml"
 hash = "eaf6c7ba97e4b253817c05e2a34bfef4c277aab1b3b28d8c14bf01e7304aad22"
 
@@ -737,8 +757,108 @@ file = "kubejs/server_scripts/example.js"
 hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
 
 [[files]]
+file = "kubejs/server_scripts/recipes/00-create-ify.js"
+hash = "e9f67f7388af8d4866d5741d07c7ff8d7c275701e4e135bde24446a29e2f2453"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/05-metals.js"
+hash = "27307a988d430c42df60ece37ada6f6a3424c2d25eb9d20e9b1f8b2a71fa327c"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/10-immersive-armors.js"
+hash = "5e7b93deebaa13178b76ba938ce31a0977bbce99d8c3c9c3751f23d142d56657"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/20-samurai-dynasty.js"
+hash = "5d4f0dd33b504005a7d32f9d51141d28d3f086a585c9ff527eedf4e09bc2a87a"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/30-modular-golems.js"
+hash = "e1a80e4bece804d4423bfb9a9f2173d6208d15ea8dfd0513dba7537ebcdb683c"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/33-magic-web.js"
+hash = "669a24f251421b0094427c61622d58ebd891423d6e85836cdb9c471d7631f4ed"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/35-web-bridges.js"
+hash = "9739f8fa8e1326a856eb36926ea76a3b7a9734ce89b62720ceff4572b1418c73"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/40-northstar.js"
+hash = "bbb8f2608e3ce17746d287e91decc614c855457f7952dafbf91f9c38c8353831"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/50-irons-spellbooks.js"
+hash = "6376950f93ae8130902a9fb8f2b80125285186e8309ebbbb184385576597f503"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/60-mffs.js"
+hash = "a0f5652cd8608129968b29ae2300459810a228ce1fddcb67328ff8b89dd17364"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/70-travelers-backpack.js"
+hash = "c3f35695fdf29cdc531b5323b0211aa10972aa673e7b4e14115a14c4f3fdac9a"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/80-securitycraft.js"
+hash = "ecc681b293943092354a7751fa75bbb746730dd6e7fe85b0fae3ff62e977eba7"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/81-decoration-metal.js"
+hash = "9e1a5cf30254ba60502527d6ed3e2fc39e88fe16b2100110c89d83e524dc48a7"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/89-bible.js"
+hash = "aaad721b777896d10baa8abb074cc5b0669c642b4e3625a195c27880baa93048"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/90-drones.js"
+hash = "b66919cef8722844819f88a6d8ad8ab4eae02e921af2f24f31137e32e4ad1191"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/91-astikor-carts.js"
+hash = "81d52eae9f867944430e6f7736d06a80ba588b2cf9d9e805cf5a83542844dc68"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/92-exposure.js"
+hash = "22ec481a7daa665dc46f3e09728c9af230f98025b71c687fd472e821a7f9487d"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/93-smokeleaf.js"
+hash = "529156a99bf4f2d7da0a1d2ed65211f59694785ae9400b65f6e2c54f9791696e"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/94-supplementaries.js"
+hash = "f08ceba1318e194e9b480c036c6a8633d7118d645016f94cded1de10f3b4a95b"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/95-swashbucklers.js"
+hash = "608ddf40d658c110e72192891a48d98c5567efabd81d48b3815b4e68f9c7fa3d"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/96-gliders.js"
+hash = "880dfba58856f5a4b8ab2870efc7fcb1aca5fe9d226d7906795d942c8a2487fb"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/97-netmusic.js"
+hash = "12ef3675dfe7625404ef5e49f8f11ad877f60136918334fcb99a1ce823cac21b"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/98-minecolonies.js"
+hash = "503ba2fd0732ccb18acba32adc5e7c8f074b82c801e912f4b5dba4a82d776b40"
+
+[[files]]
+file = "kubejs/server_scripts/recipes/99-meadow-cheese.js"
+hash = "8142b4ddd8db3447133aa357d41654dc2af74908f9337a25375097895bc2d25a"
+
+[[files]]
 file = "kubejs/server_scripts/remove-default-tacz-guns.js"
 hash = "3b873afb2f1eb1c1bf0a6e9909ecaeb1b189c16427044aa087f6939be8530721"
+
+[[files]]
+file = "kubejs/startup_scripts/01-intermediate-parts.js"
+hash = "6c09092dc0f47bbeec1f63b17714436f1765163110a84e508565b9c90ec948f4"
 
 [[files]]
 file = "mods/accelerated-decay.pw.toml"
@@ -1431,31 +1551,6 @@ hash = "9d95c6f451056940c08fe784bc2e3c2fde6a239ae445ead79ba7957d63a54eb3"
 metafile = true
 
 [[files]]
-file = "mods/emi-loot.pw.toml"
-hash = "96fb6176533f4bb8e867726afaafe93789c5575f7bbeda8d002628fb3f12c445"
-metafile = true
-
-[[files]]
-file = "mods/emi-ores.pw.toml"
-hash = "4b58cff4fa7296e9dd9a7f26287f81fbc9f23b05a40ef959f00107a486be74ce"
-metafile = true
-
-[[files]]
-file = "mods/emi-professions-(emip).pw.toml"
-hash = "74ebe9026a83031bd29438ad0da8bec776aa25e7e9177c2661c48052b2e67fd1"
-metafile = true
-
-[[files]]
-file = "mods/emi.pw.toml"
-hash = "d3c9b48d7caa2ed964e5d1a4dab1da5655c63f0a7e4a59231c4369be7ffc30e1"
-metafile = true
-
-[[files]]
-file = "mods/emiffect.pw.toml"
-hash = "556149f3fabd7567300032cbd33be41bc343aba0e59177752c527e05b198c219"
-metafile = true
-
-[[files]]
 file = "mods/emoji-type.pw.toml"
 hash = "9b537fe0f532f004b46e27239eb6d7c880d428a47d034c4dc89e952f5f277580"
 metafile = true
@@ -1696,8 +1791,23 @@ hash = "750f4b552490779af147a9c70a558ab2aa1cbfd8331d5ad69efefa099854dfae"
 metafile = true
 
 [[files]]
+file = "mods/jei.pw.toml"
+hash = "5367193d3f87b7bc5a81bcd64a5b96a843e76d4df7a83c8bb7e1911aa82dd52e"
+metafile = true
+
+[[files]]
 file = "mods/just-blahaj.pw.toml"
 hash = "3737e64e63ff8b7863fa28fe8f81eebdc53d9cc1e6ac15f366f3cc6ddd14e167"
+metafile = true
+
+[[files]]
+file = "mods/just-enough-effect-descriptions-jeed.pw.toml"
+hash = "0605d106371229f3c076f6c49b43465f8318022078a5720c51e32d572d0836d8"
+metafile = true
+
+[[files]]
+file = "mods/just-enough-resources-jer.pw.toml"
+hash = "57571e484b3020d4dc2e7e4568c74faa8e5116b88909f028d7775a421f87ea75"
 metafile = true
 
 [[files]]
@@ -1773,11 +1883,6 @@ metafile = true
 [[files]]
 file = "mods/lets-do-beachparty.pw.toml"
 hash = "64a5531d7aacebc6ad691f76e108938cd0d84d5e5b927b7eac3dcdb38a3dbe87"
-metafile = true
-
-[[files]]
-file = "mods/lets-do-emi-compat.pw.toml"
-hash = "2a23853a7220d13fc19b408f0c744df50fa6526a4b1ef423f5753c0b06ce2fea"
 metafile = true
 
 [[files]]
