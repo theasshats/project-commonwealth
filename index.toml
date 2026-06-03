@@ -841,6 +841,10 @@ file = "kubejs/server_scripts/recipes/36-magic-web-create.js"
 hash = "1fece23f5484582034f2498ebb2363e67ec17f61c905246c14205e4cf093e262"
 
 [[files]]
+file = "kubejs/server_scripts/recipes/37-magic-web-flagship.js"
+hash = "5b75387ef63452e8f8193d805494432cf4bb3c4f264536a63f60f96b1ef32599"
+
+[[files]]
 file = "kubejs/server_scripts/recipes/40-northstar.js"
 hash = "bbb8f2608e3ce17746d287e91decc614c855457f7952dafbf91f9c38c8353831"
 
@@ -914,7 +918,7 @@ hash = "3b873afb2f1eb1c1bf0a6e9909ecaeb1b189c16427044aa087f6939be8530721"
 
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"
-hash = "6c09092dc0f47bbeec1f63b17714436f1765163110a84e508565b9c90ec948f4"
+hash = "40b272d595b97a551b2b53dc7419f1ccdf7deb58cb33daaa0fd17be3c0fae4bc"
 
 [[files]]
 file = "mods/accelerated-decay.pw.toml"

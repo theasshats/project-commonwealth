@@ -13,4 +13,13 @@ StartupEvents.registry('item', event => {
   event.create('derpack:incomplete_interdiction_matrix')
     .displayName('Incomplete Interdiction Matrix')
     .texture('minecraft:item/netherite_scrap')
+
+  // Magic web flagship tier (37-magic-web-flagship.js): the mid-chain "converged essence" — the
+  // occult premium essence distilled on the Imbuement Chamber, then spent as the reagent on the
+  // Enchanting Apparatus where all the schools converge. A magic-native (NOT Create) two-stage
+  // chain, so this intermediate is a real magic item, not a sequenced-assembly transitional.
+  // Placeholder arcane-looking texture for now.
+  event.create('derpack:converged_essence')
+    .displayName('Converged Essence')
+    .texture('minecraft:item/amethyst_shard')
 })
