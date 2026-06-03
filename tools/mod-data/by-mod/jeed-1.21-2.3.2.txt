@@ -1,0 +1,23 @@
+# jeed-1.21-2.3.2
+
+## mod metadata (id / version / deps)
+license = "GLP3"
+modId = "jeed"
+version = "1.21-2.3.2"
+displayName = "Just Enough Effects Descriptions"
+modId = "neoforge"
+versionRange = "[4,)"
+modId = "minecraft"
+versionRange = "[1.21,1.22)"
+
+## blocks
+
+
+## items
+
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+

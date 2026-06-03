@@ -1,0 +1,2 @@
+create_sa:blocks/brass_cube | minecraft:block | create_sa:blocks/brass_cube create_sa:brass_cube minecraft:block minecraft:item minecraft:survives_explosion
+create_sa:blocks/propeller_render_prop | minecraft:block | create_sa:blocks/propeller_render_prop create_sa:propeller_render_prop minecraft:block minecraft:item minecraft:survives_explosion

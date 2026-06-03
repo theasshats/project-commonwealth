@@ -1,0 +1,90 @@
+create_sa:andesite_exoskeleton_recipe | create:mechanical_crafting | c:ingots/zinc c:stones create:andesite_alloy create:belt_connector create:mechanical_crafting create:shaft create_sa:andesite_exoskeleton_chestplate create_sa:heat_engine
+create_sa:andesite_jetpack_recipe | create:mechanical_crafting | c:ingots/zinc create:andesite_alloy create:belt_connector create:cogwheel create:encased_fan create:mechanical_crafting create_sa:andesite_jetpack_chestplate create_sa:heat_engine
+create_sa:blazing_axe_recipe | create:mixing | create:mixing create:powdered_obsidian create_sa:blazing_axe minecraft:golden_axe
+create_sa:blazing_pickaxe_recipe | create:mixing | create:mixing create:powdered_obsidian create_sa:blazing_pickaxe minecraft:golden_pickaxe
+create_sa:blazing_shovel_recipe | create:mixing | create:mixing create:powdered_obsidian create_sa:blazing_shovel minecraft:golden_shovel
+create_sa:blazing_sword_recipe | create:mixing | create:mixing create:powdered_obsidian create_sa:blazing_cleaver minecraft:golden_sword
+create_sa:block_picker_recipe | minecraft:crafting_shaped | c:ingots/copper create:cogwheel create_sa:block_picker create_sa:copper_magnet create_sa:hydraulic_engine minecraft:crafting_shaped
+create_sa:book_and_quill_haunting | create:haunting | create:haunting minecraft:name_tag minecraft:writable_book
+create_sa:brain_tube_coral_revive | create:filling | create:filling create:potion minecraft:brain_coral_block minecraft:dead_brain_coral_block minecraft:healing
+create_sa:brass_axe_recipe | minecraft:crafting_shaped | c:ingots/brass c:rods/wooden create_sa:brass_axe minecraft:crafting_shaped
+create_sa:brass_boots_recipe | minecraft:crafting_shaped | c:ingots/brass create_sa:brass_boots minecraft:crafting_shaped
+create_sa:brass_chestplate_recipe | minecraft:crafting_shaped | c:ingots/brass create_sa:brass_chestplate minecraft:crafting_shaped
+create_sa:brass_cube_recipe | minecraft:crafting_shaped | c:ingots/brass create_sa:brass_cube minecraft:crafting_shaped minecraft:netherite_ingot
+create_sa:brass_drill_head_recipe | minecraft:crafting_shaped | c:ingots/brass create:andesite_alloy create_sa:brass_drill_head create_sa:brass_pickaxe minecraft:crafting_shaped
+create_sa:brass_drone_recipe | create:mechanical_crafting | create:andesite_alloy create:mechanical_crafting create:precision_mechanism create:propeller create:redstone_link create_sa:brass_drone_item
+create_sa:brass_exoskeleton_recipe | create:mechanical_crafting | c:ingots/brass c:storage_blocks/brass create:andesite_alloy create:flywheel create:mechanical_crafting create_sa:brass_exoskeleton_chestplate create_sa:steam_engine
+create_sa:brass_helmet_recipe | minecraft:crafting_shaped | c:ingots/brass create_sa:brass_helmet minecraft:crafting_shaped
+create_sa:brass_hoe_recipe | minecraft:crafting_shaped | c:ingots/brass c:rods/wooden create_sa:brass_hoe minecraft:crafting_shaped
+create_sa:brass_jetpack_recipe | create:mechanical_crafting | c:ingots/brass create:andesite_alloy create:cogwheel create:encased_fan create:mechanical_crafting create_sa:brass_jetpack_chestplate create_sa:steam_engine
+create_sa:brass_leggings_recipe | minecraft:crafting_shaped | c:ingots/brass create_sa:brass_leggings minecraft:crafting_shaped
+create_sa:brass_pickaxe_recipe | minecraft:crafting_shaped | c:ingots/brass c:rods/wooden create_sa:brass_pickaxe minecraft:crafting_shaped
+create_sa:brass_shovel_recipe | minecraft:crafting_shaped | c:ingots/brass c:rods/wooden create_sa:brass_shovel minecraft:crafting_shaped
+create_sa:brass_sword_recipe | minecraft:crafting_shaped | c:ingots/brass c:rods/wooden create_sa:brass_sword minecraft:crafting_shaped
+create_sa:copper_axe_recipe | minecraft:crafting_shaped | c:ingots/copper c:rods/wooden create_sa:copper_axe minecraft:crafting_shaped
+create_sa:copper_boots_recipe | minecraft:crafting_shaped | c:ingots/copper create_sa:copper_boots minecraft:crafting_shaped
+create_sa:copper_chestplate_recipe | minecraft:crafting_shaped | c:ingots/copper create_sa:copper_chestplate minecraft:crafting_shaped
+create_sa:copper_exoskeleton_recipe | minecraft:crafting_shaped | c:ingots/copper c:storage_blocks/copper create:andesite_alloy create:cogwheel create:fluid_tank create_sa:copper_exoskeleton_chestplate create_sa:hydraulic_engine minecraft:crafting_shaped
+create_sa:copper_helmet_recipe | minecraft:crafting_shaped | c:ingots/copper create_sa:copper_helmet minecraft:crafting_shaped
+create_sa:copper_hoe_recipe | minecraft:crafting_shaped | c:ingots/copper c:rods/wooden create_sa:copper_hoe minecraft:crafting_shaped
+create_sa:copper_leggings_recipe | minecraft:crafting_shaped | c:ingots/copper create_sa:copper_leggings minecraft:crafting_shaped
+create_sa:copper_magnet_recipe | minecraft:crafting_shaped | c:ingots/copper create_sa:copper_magnet minecraft:crafting_shaped minecraft:netherite_ingot
+create_sa:copper_pickaxe_recipe | minecraft:crafting_shaped | c:ingots/copper c:rods/wooden create_sa:copper_pickaxe minecraft:crafting_shaped
+create_sa:copper_propeler_recipe | minecraft:crafting_shaped | c:ingots/copper create:andesite_alloy create:cogwheel create:fluid_tank create_sa:copper_jetpack_chestplate create_sa:hydraulic_engine minecraft:crafting_shaped
+create_sa:copper_shovel_recipe | minecraft:crafting_shaped | c:ingots/copper c:rods/wooden create_sa:copper_shovel minecraft:crafting_shaped
+create_sa:copper_sword_recipe | minecraft:crafting_shaped | c:ingots/copper c:rods/wooden create_sa:copper_sword minecraft:crafting_shaped
+create_sa:dead_bubble_coral_revive | create:filling | create:filling create:potion minecraft:bubble_coral_block minecraft:dead_bubble_coral_block minecraft:healing
+create_sa:dead_fire_coral_revive | create:filling | create:filling create:potion minecraft:dead_fire_coral_block minecraft:fire_coral_block minecraft:healing
+create_sa:dead_horn_coral_revive | create:filling | create:filling create:potion minecraft:dead_horn_coral_block minecraft:healing minecraft:horn_coral_block
+create_sa:dead_tube_coral_revive | create:filling | create:filling create:potion minecraft:dead_tube_coral_block minecraft:healing minecraft:tube_coral_block
+create_sa:deepslate_pressing_recipe | create:compacting | create:compacting minecraft:deepslate minecraft:flint minecraft:lava
+create_sa:drone_controller_recipe | minecraft:crafting_shaped | c:ingots/brass create:linked_controller create_sa:drone_controller minecraft:crafting_shaped
+create_sa:experience_axe_recipe | minecraft:crafting_shaped | create_sa:experience_axe create_sa:heap_of_experience create_sa:zinc_handle minecraft:crafting_shaped
+create_sa:experience_pickaxe_recipe | minecraft:crafting_shaped | create_sa:experience_pickaxe create_sa:heap_of_experience create_sa:zinc_handle minecraft:crafting_shaped
+create_sa:experience_shovel_recipe | minecraft:crafting_shaped | create_sa:experience_shovel create_sa:heap_of_experience create_sa:zinc_handle minecraft:crafting_shaped
+create_sa:experience_sword_recipe | minecraft:crafting_shaped | create_sa:experience_sword create_sa:heap_of_experience create_sa:zinc_handle minecraft:crafting_shaped
+create_sa:fan_component_recipe | minecraft:crafting_shaped | c:ingots/zinc create:andesite_alloy create:propeller create_sa:fan_component minecraft:crafting_shaped
+create_sa:flamethrower_recipe | create:mechanical_crafting | c:plates/obsidian create:andesite_alloy create:blaze_burner create:mechanical_crafting create_sa:flamethrower create_sa:heat_engine
+create_sa:grapplin_whisk_recipe | create:mechanical_crafting | c:ingots/zinc create:cogwheel create:mechanical_crafting create:minecart_coupling create:whisk create_sa:grapplin_whisk create_sa:heat_engine
+create_sa:heap_of_experience_recipe | minecraft:crafting_shaped | create:experience_nugget create_sa:heap_of_experience minecraft:crafting_shaped
+create_sa:heat_engine_recipe | create:sequenced_assembly | c:nuggets/copper c:nuggets/zinc create:andesite_alloy create:cogwheel create:deploying create:large_cogwheel create:sequenced_assembly create:zinc_nugget create_sa:heat_engine create_sa:incomplete_heat_engine
+create_sa:hydraulic_engine_recipe | create:sequenced_assembly | c:plates/copper create:andesite_alloy create:copper_sheet create:filling create:pressing create:sequenced_assembly create_sa:hydraulic_engine create_sa:incomplete_hydraulic_engine minecraft:water
+create_sa:incomplete_book_recipe | create:sequenced_assembly | create:deploying create:sequenced_assembly create_sa:incomplete_book minecraft:book minecraft:leather minecraft:paper
+create_sa:incomplete_web_recipe | create:sequenced_assembly | create:deploying create:sequenced_assembly create_sa:incomplete_web minecraft:cobweb minecraft:string
+create_sa:iron_boots_haunting | create:haunting | create:haunting minecraft:chainmail_boots minecraft:iron_boots
+create_sa:iron_chestplate_haunting | create:haunting | create:haunting minecraft:chainmail_chestplate minecraft:iron_chestplate
+create_sa:iron_helmet_haunting | create:haunting | create:haunting minecraft:chainmail_helmet minecraft:iron_helmet
+create_sa:iron_leggings_haunting | create:haunting | create:haunting minecraft:chainmail_leggings minecraft:iron_leggings
+create_sa:large_filling_tank_recipe | minecraft:crafting_shaped | c:ingots/copper create_sa:large_filling_tank create_sa:medium_filling_tank minecraft:crafting_shaped
+create_sa:large_fueling_tank_recipe | minecraft:crafting_shaped | c:plates/obsidian create_sa:large_fueling_tank create_sa:medium_fueling_tank minecraft:crafting_shaped
+create_sa:magma_cream_recipe | create:mixing | create:mixing minecraft:magma_cream minecraft:slime_ball
+create_sa:medium_filling_tank_recipe | minecraft:crafting_shaped | c:ingots/copper create_sa:medium_filling_tank create_sa:small_filling_tank minecraft:crafting_shaped
+create_sa:medium_fueling_tank_recipe | minecraft:crafting_shaped | c:plates/obsidian create_sa:medium_fueling_tank create_sa:small_fueling_tank minecraft:crafting_shaped
+create_sa:netherite_jetpack_recipe | minecraft:smithing_transform | create:fluid_tank create_sa:brass_jetpack_chestplate create_sa:netherite_jetpack_chestplate minecraft:netherite_ingot minecraft:smithing_transform
+create_sa:netherrack_recipe | create:filling | create:filling create:potion minecraft:cobblestone minecraft:healing minecraft:netherrack
+create_sa:obsidian_haunting | create:haunting | create:haunting minecraft:crying_obsidian minecraft:obsidian
+create_sa:portable_drill_recipe | minecraft:crafting_shaped | c:ingots/brass create:cogwheel create_sa:brass_drill_head create_sa:portable_drill create_sa:steam_engine minecraft:crafting_shaped
+create_sa:quartz_gem_crushing | create:crushing | c:gems/quartz create:crushing create:experience_nugget
+create_sa:rose_quartz_axe_recipe | create:mechanical_crafting | c:ingots/gold c:plates/iron create:mechanical_crafting create:polished_rose_quartz create_sa:rose_quartz_axe create_sa:zinc_handle
+create_sa:rose_quartz_pickaxe_recipe | create:mechanical_crafting | c:ingots/gold c:plates/iron create:mechanical_crafting create:polished_rose_quartz create_sa:rose_quartz_pickaxe create_sa:zinc_handle
+create_sa:rose_quartz_shovel_recipe | create:mechanical_crafting | c:ingots/gold c:plates/iron create:mechanical_crafting create:polished_rose_quartz create_sa:rose_quartz_shovel create_sa:zinc_handle
+create_sa:rose_quartz_sword_recipe | create:mechanical_crafting | c:ingots/gold c:plates/iron create:mechanical_crafting create:polished_rose_quartz create_sa:rose_quartz_sword create_sa:zinc_handle
+create_sa:slime_boots_recipe | minecraft:crafting_shaped | create:andesite_alloy create_sa:slime_boots minecraft:crafting_shaped minecraft:slime_ball
+create_sa:slime_helmet_recipe | minecraft:crafting_shaped | create:andesite_alloy create_sa:slime_helmet minecraft:crafting_shaped minecraft:slime_ball
+create_sa:small_filling_tank_recipe | minecraft:crafting_shapeless | create:fluid_tank create_sa:small_filling_tank minecraft:crafting_shapeless
+create_sa:small_fueling_tank_recipe | minecraft:crafting_shaped | c:plates/obsidian create:fluid_tank create_sa:small_fueling_tank minecraft:crafting_shaped
+create_sa:sponge_filling | create:filling | create:filling minecraft:sponge minecraft:water minecraft:wet_sponge
+create_sa:sponge_pressing | create:compacting | create:compacting minecraft:sponge minecraft:water minecraft:wet_sponge
+create_sa:steam_engine_recipe | create:sequenced_assembly | c:plates/brass create:andesite_alloy create:brass_sheet create:cogwheel create:deploying create:large_cogwheel create:propeller create:sequenced_assembly create_sa:incomplete_steam_engine create_sa:steam_engine
+create_sa:vault_component_recipe | minecraft:crafting_shapeless | create:item_vault create_sa:vault_component minecraft:crafting_shapeless
+create_sa:vault_recipe | minecraft:crafting_shapeless | create:item_vault create_sa:vault_component minecraft:crafting_shapeless
+create_sa:zinc_axe_recipe | minecraft:crafting_shaped | c:ingots/zinc c:rods/wooden create_sa:zinc_axe minecraft:crafting_shaped
+create_sa:zinc_boots_recipe | minecraft:crafting_shaped | c:ingots/zinc create_sa:zinc_boots minecraft:crafting_shaped
+create_sa:zinc_chestplate_recipe | minecraft:crafting_shaped | c:ingots/zinc create_sa:zinc_chestplate minecraft:crafting_shaped
+create_sa:zinc_handle_recipe | minecraft:crafting_shaped | c:ingots/zinc create_sa:zinc_handle minecraft:crafting_shaped
+create_sa:zinc_helmet_recipe | minecraft:crafting_shaped | c:ingots/zinc create_sa:zinc_helmet minecraft:crafting_shaped
+create_sa:zinc_hoe_recipe | minecraft:crafting_shaped | c:ingots/zinc c:rods/wooden create_sa:zinc_hoe minecraft:crafting_shaped
+create_sa:zinc_leggings_recipe | minecraft:crafting_shaped | c:ingots/zinc create_sa:zinc_leggings minecraft:crafting_shaped
+create_sa:zinc_pickaxe_recipe | minecraft:crafting_shaped | c:ingots/zinc c:rods/wooden create_sa:zinc_pickaxe minecraft:crafting_shaped
+create_sa:zinc_shovel_recipe | minecraft:crafting_shaped | c:ingots/zinc c:rods/wooden create_sa:zinc_shovel minecraft:crafting_shaped
+create_sa:zinc_sword_recipe | minecraft:crafting_shaped | c:ingots/zinc c:rods/wooden create_sa:zinc_sword minecraft:crafting_shaped

@@ -1,0 +1,23 @@
+# incontrol-1.21-10.2.6
+
+## mod metadata (id / version / deps)
+license="MIT License https://github.com/McJtyMods/InControl/blob/1.21_neo/LICENSE"
+modId="incontrol"
+version="${file.jarVersion}"
+displayName="InControl"
+modId="neoforge"
+versionRange="[21.0,)"
+modId="lostcities"
+versionRange="[1.21-8.2.1,)"
+
+## blocks
+
+
+## items
+
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+

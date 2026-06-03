@@ -1,0 +1,21 @@
+# JustEnoughResources-NeoForge-1.21.1-1.6.0.17
+
+## mod metadata (id / version / deps)
+license="'Don't Be a Jerk' non-commercial care-free license" #mandatory
+modId="jeresources" #mandatory
+version="1.6.0.17" #mandatory
+displayName="Just Enough Resources" #mandatory
+modId="jei"
+versionRange="[16.0.0,)"
+
+## blocks
+
+
+## items
+
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+

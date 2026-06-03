@@ -1,0 +1,23 @@
+# jei-1.21.1-neoforge-19.27.0.340
+
+## mod metadata (id / version / deps)
+license="The MIT License (MIT)"
+modId="jei" #mandatory
+version="19.27.0.340" #mandatory
+displayName="Just Enough Items" #mandatory
+modId="neoforge" #mandatory
+versionRange="[21.0.118-beta,)" #mandatory
+modId="minecraft" #mandatory
+versionRange="[1.21, 1.21.1)" #mandatory
+
+## blocks
+
+
+## items
+
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+

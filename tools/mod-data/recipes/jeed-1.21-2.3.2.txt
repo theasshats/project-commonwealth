@@ -1,0 +1,18 @@
+jeed:absorption | jeed:effect_provider | jeed:effect_provider minecraft:absorption minecraft:totem_of_undying
+jeed:bad_omen | jeed:effect_provider | jeed:effect_provider minecraft:bad_omen minecraft:ominous_bottle minecraft:pillager_spawn_egg minecraft:vindicator_spawn_egg
+jeed:conduit | jeed:effect_provider | jeed:effect_provider minecraft:conduit minecraft:conduit_power
+jeed:darkness | jeed:effect_provider | jeed:effect_provider minecraft:darkness minecraft:sculk_shrieker minecraft:warden_spawn_egg
+jeed:dolphins_grace | jeed:effect_provider | jeed:effect_provider minecraft:dolphin_spawn_egg minecraft:dolphins_grace
+jeed:fire_resistance | jeed:effect_provider | jeed:effect_provider minecraft:fire_resistance minecraft:totem_of_undying
+jeed:glowing | jeed:effect_provider | jeed:effect_provider minecraft:glowing minecraft:spectral_arrow
+jeed:hero_of_the_village | jeed:effect_provider | jeed:effect_provider minecraft:hero_of_the_village minecraft:villager_spawn_egg
+jeed:hunger | jeed:effect_provider | jeed:effect_provider minecraft:hunger minecraft:husk_spawn_egg
+jeed:levitation | jeed:effect_provider | jeed:effect_provider minecraft:levitation minecraft:shulker_spawn_egg
+jeed:mining_fatigue | jeed:effect_provider | jeed:effect_provider minecraft:elder_guardian_spawn_egg minecraft:mining_fatigue
+jeed:poison | jeed:effect_provider | jeed:effect_provider minecraft:cave_spider_spawn_egg minecraft:poison minecraft:witch_spawn_egg
+jeed:potion_acceptors | jeed:potion_provider | jeed:potion_provider minecraft:lingering_potion minecraft:potion minecraft:splash_potion minecraft:tipped_arrow
+jeed:raid_omen | jeed:effect_provider | jeed:effect_provider minecraft:bad_omen minecraft:raid_omen
+jeed:regeneration | jeed:effect_provider | jeed:effect_provider minecraft:regeneration minecraft:totem_of_undying
+jeed:trial_omen | jeed:effect_provider | jeed:effect_provider minecraft:bad_omen minecraft:trial_omen
+jeed:water_breathing | jeed:effect_provider | jeed:effect_provider minecraft:turtle_helmet minecraft:water_breathing
+jeed:wither | jeed:effect_provider | jeed:effect_provider minecraft:wither minecraft:wither_rose minecraft:wither_skeleton_skull minecraft:wither_skeleton_spawn_egg
