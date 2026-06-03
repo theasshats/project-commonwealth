@@ -1,6 +1,26 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/almostunified/duplicates.json"
+hash = "b70f57eadf6eec0ce43acd4c441f08feac1432826e04cb8e2736a73997c20c08"
+
+[[files]]
+file = "config/almostunified/placeholders.json"
+hash = "43733b207b9f0238c7a5bec47f19e8fd5bec80499b286e0ac4994671702dfed9"
+
+[[files]]
+file = "config/almostunified/startup.json"
+hash = "37f013c49586db025c17f9fa6657c6f239e0169ebc97ef682ff114a2ede43c5e"
+
+[[files]]
+file = "config/almostunified/tags.json"
+hash = "3f0d92c8abaf95a68ff79bb2ef9169fd598500070de7e5a616b755f9c5123e6f"
+
+[[files]]
+file = "config/almostunified/unification/materials.json"
+hash = "4ba99234935506c14d29e9135ceafce97420622a2f52656c5b442cba5a500bc8"
+
+[[files]]
 file = "config/createblockchain-common.toml"
 hash = "eaf6c7ba97e4b253817c05e2a34bfef4c277aab1b3b28d8c14bf01e7304aad22"
 
@@ -762,7 +782,7 @@ hash = "669a24f251421b0094427c61622d58ebd891423d6e85836cdb9c471d7631f4ed"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/35-web-bridges.js"
-hash = "c9aeeae884e4c14e2de78ffb0aca18db9b49f0beeade466d3f60fa8ec26786b5"
+hash = "9739f8fa8e1326a856eb36926ea76a3b7a9734ce89b62720ceff4572b1418c73"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/40-northstar.js"
