@@ -1,0 +1,8 @@
+name = "Derpack Arcana"
+filename = "derpackarcana-1.21.1-0.1.0.jar"
+side = "both"
+
+[download]
+url = "https://github.com/Xela112233/Derpack-X/releases/download/mod-mirror/derpackarcana-1.21.1-0.1.0.jar"
+hash-format = "sha1"
+hash = "131d9cb90a977582926a2d247dd871ddd1fe2872"

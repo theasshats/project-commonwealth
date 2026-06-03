@@ -1394,6 +1394,11 @@ hash = "1fd2a486fd9b537f398d030dee6e48ab32cf8c2b3f907e014700f198e2daf01b"
 metafile = true
 
 [[files]]
+file = "mods/derpack-arcana.pw.toml"
+hash = "3683179346c3db1f5d563bb8b72015cb7b03b560ef0efd541e9e572545031379"
+metafile = true
+
+[[files]]
 file = "mods/detect-afk.pw.toml"
 hash = "4e6f715b75614b417e8b7eff6c0d12f5d1f63e68c78910820a624b7a33eff3b4"
 metafile = true
