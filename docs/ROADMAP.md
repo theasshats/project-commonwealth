@@ -4,147 +4,153 @@
 > where every mod earns its place by anchoring to one of **five systems — Create, magic, economy,
 > aeronautics, survival** — or it's cut; scarcity drives emergent (not forced) trade, and complex
 > tech unlocks via MineColonies or boss drops. See `docs/DESIGN.md` ("the goal — five systems") and
-> `docs/RECIPES.md` (lands with #62).
+> `docs/RECIPES.md` (the recipe convention + triage ledger, merged with #62).
 >
-> **Standing caveat:** the dev sandbox is **headless** — everything below is authored + structurally
+> **Standing caveat:** the dev sandbox is **headless** — everything is authored + structurally
 > validated (JSON valid, JS syntax OK); **an in-game playtest is required before any of it merges**
-> (JEI/EMI shows the new recipes/veins, originals gone, no errors in the log).
+> (JEI shows the new recipes/veins, the originals are gone, no errors in the log).
 
 **Status:** ✅ done & on `main` · 🟦 in review (open PR) · 🚧 in progress · ⏳ queued · 💤 not started
 
-## Where the work lives (important)
-`main` now carries **Phases 0–3**: tooling + ground-truth digest, ore-gen (#56), guns (#55), design docs
-(#61), `pr-checks.yml`, **and the Phase-3 recipe overhaul (#62, merged ~v0.4.6)** — crafting through Create
-+ the decoration weave + worldgen-island bridges + **EMI→JEI** + **almost-unified** metal/pasta dedup +
-`tools/recipe-graph/`. The **open** work lives in these PR branches.
-**Merge order:** **#88** lands next → then bump **0.5.0**; the **magic layer (#75 → #80)** lands together
-(#75 **retargets to `main`** now that #62 merged); **#82** ore-gen serializes on its own. The auto-resolver
-re-refreshes `index.toml`/`pack.toml` between index-touching merges.
+**Current release:** **v0.5.2** (Magic Web). MC **1.21.1** / NeoForge **21.1.228**.
 
-| PR | Branch | Holds |
-|---|---|---|
-| **#88** | `claude/awesome-brown-s4bBD` | Curation pass (#83): mob cuts + In Control! + spawn gating (absorbed #86) — **merge before 0.5.0** |
-| **#75** | `claude/magic-web` | Magic-web v2 KubeJS bridges (Ars spine) — **retarget base → `main`** (was stacked on #62) |
-| **#80** | `claude/arcana-mod` | Derpack Arcana code-bridge mod (skeleton, `mods-src/`) — land *with* the magic layer (#75) |
-| **#82** | `claude/trusting-heisenberg-cbWYb` | GTMOGS ore-gen rework — **gated** on #81 + the #93 model decision |
+## Where the work lives
+
+`main` now carries **Phases 0–6**: tooling + ground-truth digest, ore-gen, guns, design docs,
+`pr-checks.yml`, the **recipe overhaul (#62, v0.4.6)**, the **curation/spawn-gating pass (#88, v0.5.0)**,
+the **GTMOGS ore-gen rework (#82, v0.5.1)**, and the **magic web (#75, v0.5.2)**.
+
+**The only open PR is #80** — Derpack Arcana, the code-bridge mod (skeleton in `mods-src/`), a draft
+until its P1 "Attunement Font" is ready. Everything else is now issue work, not stacked PRs.
+
+| Release | Shipped |
+|---|---|
+| v0.4.6 | Recipe overhaul (#62) — "made through Create" + almost-unified dedup + EMI→JEI |
+| v0.5.0 | Curation / spawn-gating (#88) — mob/boss cuts + In Control! gating + kobold swap |
+| v0.5.1 | Ore veins (#82) — GTMOGS GregTech-style mix veins replace the per-ore model |
+| v0.5.2 | Magic web (#75) — KubeJS bridges weaving Ars / Iron's / Occultism into the Create spine |
 
 ## Phases
 
 ### Phase 0 — Tooling & ground truth ✅ (on `main`)
-packwiz pack + editor + build CI. **Ground-truth digest** at `tools/mod-data/` (facts + recipe +
-loot indexes for 356 mods) via **Actions ▸ "Ground-truth digest"** — re-run after modlist changes.
+packwiz pack + editor + build CI. **Ground-truth digest** at `tools/mod-data/` (facts + recipe + loot
+indexes) via **Actions ▸ "Ground-truth digest"** — re-run after modlist changes.
 
-### Phase 1 — Eco foundation: ore-gen + scarcity ✅ on `main` (#56) · ⚠️ model under review
-The **#56 per-ore model is on `main`**: 20 ores as large/rare/biome-specific veins, vanilla thinned to
-a starter trickle, each mod's default gen shadowed with `neoforge:none` (`docs/ORE-GENERATION.md`).
-- **Open decision (#93):** PR **#82** proposes replacing this with **GregTech-style GTMOGS mix veins**
-  *and* removing the vanilla trickle entirely (→ couples to **#81** early-game bootstrap). Decide which
-  model ships v1 before tuning further.
-- **Playtest #58** tunes rarity/regionality for whichever model wins. Meme removals moved to #21/#60.
+### Phase 1 — Eco foundation: ore-gen + scarcity ✅ on `main` — **model settled: GTMOGS**
+The **#56 per-ore model has been retired**; **PR #82 (GTMOGS GregTech-style mix veins) shipped as the
+v1 model in v0.5.1**, strictly regional. The #56-vs-#82 decision (**#93**) is **closed**. Remaining
+ore-gen work is all release-tuning:
+- **#81** — early-game ore bootstrap, now that the vanilla starter trickle is gone (`needed-for-release`).
+- **#116** — pre-release tuning: cave ores follow the surface biome, salt trim, rarity curve, Y-bands (`needed-for-release`).
+- **#58** — playtest + rarity/regionality review (zagwar). Written against the old #56 model — refocus onto GTMOGS or fold into #116.
+- **#115** — player-facing prospecting wiki page (kicked off by the GTMOGS move).
 
-### Phase 2 — Guns / combat ✅ on `main` (#55, #59 done)
-TaCZ + **Create: Immersive TaCZ** (Create recipes) + **Create: Armorer** gunpack (replaces the dead
-`tacz-create`; #27 closed) + Create Big Cannons. Merged and playtested.
-- **Later:** gun→Create recipe polish + gun loot (#17/#18).
+### Phase 2 — Guns / combat ✅ on `main` (#55, #59)
+TaCZ + Create: Immersive TaCZ + Create: Armorer gunpack + Create Big Cannons. Merged and playtested.
+- **Later:** gun→Create recipe reconciliation + sequenced-assembly depth (#112); gun loot (#18).
 
-### Phase 3 — Recipe overhaul: "made through Create" ✅ on `main` (#62, ~v0.4.6)
-Routed crafting through Create **parts + methods** across the pack — **not a grind** (`docs/RECIPES.md` =
-convention, palette, guardrails, full triage ledger). Shipped: metals foundation + **almost-unified**
-dedup (steel/bronze/lead/cast_iron → Ironworks/TFMG, pasta → Farmer's Delight); per-mod gating (Immersive
-Armors, Samurai, Modular Golems, Northstar, MFFS, SecurityCraft, …); the **decoration/equipment weave**
-(`81`); **worldgen-island bridges** (`35`); flavor items (bible `89`, meadow cheese `99`); **EMI→JEI** +
-JER/JEED; and the **`tools/recipe-graph/`** connectivity toolkit + interactive viz.
-- **Follow-ups:** **#103** (reconcile functional-duplicate parts, e.g. heavy_plate vs steel sheet) ·
-  the **magic layer is its own PR** (#75 / #80) · **#84** (Create/Aeronautics difficulty) is a separate pass.
+### Phase 3 — Recipe overhaul: "made through Create" ✅ on `main` (#62, v0.4.6)
+Routed crafting through Create parts + methods across the pack (`docs/RECIPES.md` = convention + full
+triage ledger). Metals foundation + almost-unified dedup; per-mod gating; the decoration/equipment
+weave; worldgen-island bridges; EMI→JEI + JER/JEED; the `tools/recipe-graph/` connectivity toolkit.
+- **Dedup follow-ups:** #103 (functional-duplicate parts), #101 (limestones), #102 (carbon/graphene), #113 (connectivity islands).
+- **Boot-log correctness:** #119 (dropped recipes), #120 (mangled loot tables), #121 (remaining ERROR noise).
+
+### Phase 3b — Magic web ✅ on `main` (#75, v0.5.2)
+KubeJS bridges weaving Ars Nouveau / Iron's Spells / Occultism into the Create spine.
+- **Follow-ups:** #122 (post-merge balance, playtest), #123 (flagship depth, conceded from #75).
+- **Code track:** #80 (Derpack Arcana) — the bridges KubeJS can't express; #118 tracks its P3 deviation.
 
 ### Phase 4 — Loot pass ⏳ (#18)
-`lootjs` + the loot index: pull structure/dungeon loot back from free end-game gear; optionally seed
-Numismatics coins. Not started.
+`lootjs` + the loot index: pull structure/dungeon loot back from free end-game gear; seed Numismatics
+coins. Feeds the economy pillar (#90). Not started.
 
 ### Phase 5 — Economy (Numismatics) 💤 #90
-Coin values (runtime config), Vendors + pricing (in-world), Trading Floor (villager/emerald side),
-**Bountiful** bounties, and **wiring the inputs** (mob drops / structure loot → sellables + bounties).
-Blockchain Currency Miner already gated. The five systems' **highest-leverage, thinnest-in-integration**
-pillar — tracked in **#90**.
+Coin values, vendors + pricing, Trading Floor, **Bountiful** bounties, and **wiring the inputs** (mob
+drops / structure loot → sellables + bounties). The five systems' highest-leverage,
+thinnest-in-integration pillar. **#129** (mob drops in the connectivity tool) is the enabler.
 
-### Phase 6 — Curation & de-dup 🟦 #88 (#83, #94, #21 — see `docs/MODLIST-AUDIT.md`)
-Mob/boss + duplicate-mechanic curation (**#83**, executed in PR **#88**): clean cuts (arphex,
-creeper-overhaul, mutant-monsters, orphan sophisticated-core), In Control! spawn-gating, kobold swap.
-**#94** carries the follow-up misfits (fishing-real/companion cuts, the `create-storage`↔Traveler's
-backpack dup, a third Spice-of-Life fork). Sort #38 handled; trees/moons re-scoped per #83.
-MineColonies is **settled** as a woven progression on-ramp (**#92** wires the tech-gating).
+### Phase 6 — Curation & de-dup ✅ #88 on `main` (v0.5.0) — follow-ups open
+The mob/boss + duplicate-mechanic pass landed (arphex/creeper-overhaul/mutant-monsters cuts, In Control!
+spawn-gating, kobold swap). Remaining curation: **#94** (un-anchored mods + dup clusters), **#107**
+(Ender Moon keep/cut), **#106/#108** (spawn-gating allowlist + behavioral review), **#60** (umapyoi
+verdict, zagwar), **#100** (orphan library jars), **#21** (living removal tracker), **#87** (Create
+Stuff'N Additions balance). MineColonies is settled as a woven on-ramp (#92).
 
 ### Phase 7 — Stability & QoL 💤 (needs a live server)
-RAM/GC #48 · flight interactions #43 · inventory sort #38 · claims #25 · shaders caveat #1 ·
-render distance #2 · purple-arrows bug #3. (TPS audit #42 resolved — fixed in v0.3.5/0.3.6.)
+Playtest pre-gen #98 (force-multiplier) · RAM/GC #48 · flight interactions #43 · claims #25 ·
+purple-arrows bug #3 · shaders caveat #1 · render distance #2. (TPS audit #42 resolved in v0.3.5/0.3.6.)
 
 ### Phase 8 — CI / merge-gating ✅ (`pr-checks.yml`)
-PR-triggered checks now gate merges: packwiz index freshness, manifest lint (incl. the `pin`
-gotcha), KubeJS JS/JSON + config TOML parse, and Go build/vet for the editor + site. Full rundown
-and how to mark them **required** in `docs/CI-CHECKS.md`. Also dropped the bloated `.mrpack` release
-artifact (#73). **Open (#79):** flip the checks to *required* on `main` via a branch-protection ruleset.
+PR-triggered checks gate merges (packwiz index freshness, manifest lint incl. the `pin` gotcha, KubeJS
+JS/JSON + config TOML parse, Go build/vet for the editor + site). Full rundown in `docs/CI-CHECKS.md`.
+- **Open (#79):** flip the checks to *required* on `main` via a branch-protection ruleset — #76 has
+  merged, so this is unblocked (a one-time admin toggle).
+- **CI hygiene:** #127 (consolidate the 3 overlapping index-refresh workflows).
 
 ## Needed for release
 
-The small set that gates the next milestone release (tagged `needed-for-release`). Everything else is
+The set that gates the next milestone release (tagged `needed-for-release`). Everything else is
 post-release polish or ongoing curation.
 
-- [ ] **Ore-gen model decided & verified** — **#93** (pick #56-on-main vs #82-GTMOGS) → then #58 playtest
-  (+ #81 bootstrap if #82 wins). Phase 1.
-- [x] **Create recipe spine landed** — **#62 merged (~v0.4.6)**; "made through Create" is real across the
-  pack (parts + methods + almost-unified dedup). Phase 3. Follow-up: #103.
-- [ ] **Pack renamed** — #78 (decide the name before players have instances named "Derpack X").
-- [ ] **CI required on `main`** — #79 (turn on the `pr-checks.yml` ruleset; Phase 8 / `docs/CI-CHECKS.md`).
-- [x] **Design/goal docs merged** — PR #61 on `main`; the five-systems direction is canon.
-- [x] **Release artifacts sane** — `.mrpack` dropped; Prism installer is the single ~5 MB artifact (#73).
+- [x] **Ore-gen model decided** — **#93 closed**; GTMOGS (#82) shipped as the v1 model in v0.5.1.
+- [ ] **Early-game ore bootstrap** — #81 (vanilla trickle removed; define the replacement). Phase 1.
+- [ ] **Ore-gen tuned for release** — #116 (cave-ore biome follow, rarity curve) + #58 review. Phase 1.
+- [x] **Create recipe spine landed** — #62 (v0.4.6). Follow-ups: #101/#102/#103/#113.
+- [ ] **Pack renamed** — #78 (decide the name with zagwar before players have instances named "Derpack X").
+- [ ] **CI required on `main`** — #79 (turn on the `pr-checks.yml` ruleset; Phase 8).
+- [x] **Design/goal docs merged** — PR #61; the five-systems direction is canon.
+- [x] **Release artifacts sane** — `.mrpack` dropped (#73); Prism installer is the single ~5 MB artifact.
 
-**Explicit non-goals** (don't let these creep onto the release path): a server-pack artifact,
-NeoForge auto-bump, bundled-jar distribution — all deliberately out, see `docs/DESIGN.md`.
+**Explicit non-goals** (keep off the release path): a server-pack artifact, NeoForge auto-bump,
+bundled-jar distribution — all deliberately out, see `docs/DESIGN.md`.
 
-## Open-issue triage
+## Open-issue work-order (sequenced)
 
-The open issues, categorized. `NFR` = needed-for-release. Living trackers (#9/#17/#18/#21) stay open
-by design. See `docs/MODLIST-AUDIT.md` for the curation detail behind the Phase 6 rows.
+The open issues, ordered for execution. Front-loaded with small/middle work; the `needed-for-release`
+items (bucket 7) sit deliberately after it. Living trackers (#9/#17/#18/#21) stay open by design.
 
-| # | Title | Area | Phase | NFR | Status / next |
-|---|---|---|---|:---:|---|
-| #93 | Decide v1 ore-gen model (#56 vs #82) | worldgen | 1 | ✅ | **decision** — gates #58 / #82 / #81 |
-| #58 | Ore-gen playtest + rarity/regionality | worldgen | 1 | ✅ | playtest (for whichever #93 picks) |
-| #78 | Rename the pack | meta | — | ✅ | decide name w/ zagwar before release |
-| #79 | Require CI on `main` (branch protection) | tooling-ci | 8 | ✅ | one-time admin ruleset toggle |
-| #81 | Early-game ore bootstrap (trickle removed) | worldgen | 1 | (✅ if #82) | depends on the #93 decision |
-| #90 | Economy pillar build-out | economy | 5 | — | highest-leverage integration; wire inputs |
-| #91 | Survival & seasons integration | survival | — | — | seasons × SoL × cold-sweat; 3 SoL forks |
-| #92 | MineColonies / boss tech-gating | gameplay | 6 | — | the progression on-ramp |
-| #94 | Modlist misfit follow-up | curation | 6 | — | un-anchored mods + new dup clusters |
-| #83 | Curation: mob/boss + duplicates | curation | 6 | — | decisions; executed in PR #88 |
-| #84 | Make Create + Aeronautics harder | gameplay | 3 | — | KubeJS difficulty; coordinate w/ #62 |
-| #87 | Create Stuff'N Additions balance | gameplay | 6 | — | jetpack dup vs Create Jetpack; after #88 |
-| #77 | Player issue submission via the site | site | — | — | Discord webhook first |
-| #17 | Recipes to change (living) | recipes | 3 | ✅ | per-mod passes in #62; bible done, death-note needs an item id |
-| #51 | Let's Do Meadow cheese recipes | content | 3 | — | done in #62 (`99-meadow-cheese.js`); playtest then close |
-| #18 | Loot tables to change (living) | loot | 4 | — | `lootjs` pass; pull free end-game gear, maybe seed coins |
-| #21 | Mod-removal suggestions (living) | curation | 6 | — | "~90% of guns" + memes; resolve via MODLIST-AUDIT §A |
-| #60 | umapyoi keep/cut | curation | 6 | — | zagwar playtest verdict; remove manifest if cut |
-| #38 | Inventory sort (IPN/mouse-tweaks) | qol | 6/7 | — | clientsort removed, invtweaks-emu added; pick sort owner, test |
-| #25 | open-parties-and-claims config | content | 7 | — | config drafted (zagwar); needs a server test |
-| #48 | Garbage collection / RAM | performance | 7 | — | tune on the live server; measure with spark |
-| #43 | Flight-system interactions | investigation | 7 | — | playtest jetpack/glider/barrel-roll vs Aeronautics; document |
-| #3 | Purple arrows in hotbar | bug | 7 | — | needs repro; identify the offending mod |
-| #1 | Built-in shaders | discussion | 7 | — | Iris/Oculus break Aeronautics ships — decide ship-a-shader vs "no shaders" |
-| #2 | Far-field render distance | discussion | 7 | — | evaluate a distant-horizons-style mod against TPS cost |
-| #70 | Site `WEB_DIR` bind-mount | site | — | — | optional convenience; low priority |
-| #9 | Mod ideas (living wishlist) | add-mod | 6 | — | keep open; pull from it as clusters are reached |
-| #13 | Create: Harmonics requirements | add-mod | 6 | — | evaluate the add; low priority |
-| #40 | Monitor unofficial 1.21.1 ports | maintenance | — | — | quarterly: migrate to official releases when they ship |
+**1 · Quick wins** (small, low-risk, sandbox-doable, unblock the rest)
+#111 pin almost-unified · #105 prune merged branches + auto-delete · #100 orphan-mod sweep ·
+#127 consolidate index-refresh workflows · #126 docs cleanup + index.
 
-**Recently closed/merged:** **#62 (recipe overhaul, ~v0.4.6)** + #51 (meadow cheese, in #62) ·
-#42 (TPS audit) · #73 (`.mrpack` drop) · #45 (meme cull) · #55/#59 (guns) · #56 (ore-gen, on `main`) ·
-#57/#63/#65 (digest/worldgen) · #61 (design docs) · #76/#85/#89 (CI + auto-resolver + workflow docs) ·
-#86 (→ #88). **New follow-up:** #103 (functional-duplicate parts).
+**2 · Boot-log correctness** (authorable straight from the boot log)
+#119 re-add dropped recipes · #120 override mangled loot tables · #121 triage the remaining ERRORs.
+
+**3 · Recipe-web dedup** (#62 follow-ups)
+#103 duplicate parts (steel-plate family) · #101 limestones · #102 carbon/graphene · #113 connectivity islands.
+
+**4 · Curation cleanup** (post-#88)
+#107 Ender Moon keep/cut · #94 + #99 un-anchored mods + midnight-thoughts anchor · #106 structure
+allowlist · #108 spawn-gating behavioral review · #110 MFFS textures · #60 umapyoi (zagwar).
+
+**5 · Pillar weaving** (bigger; the two-pillar work)
+#129 mob drops in the connectivity tool · #90 economy pillar · #18 loot pass · #92 MineColonies/boss
+gating · #91 survival interlock (+ #99/#124/#125; cull the 3 SoL forks) · #84 Create/Aeronautics harder ·
+#112 guns through sequenced assembly · #87 Create Stuff'N Additions · #125 Touhou-maids weave ·
+#122/#123 magic-web balance + flagship · #17 recipes tracker (zagwar).
+
+**6 · Site & nice-to-have**
+#115 player wiki · #77 in-site issue submission · #70 WEB_DIR bind-mount · #13 Create: Harmonics eval ·
+#9 mod-ideas wishlist.
+
+**7 · Release runway [NFR]** (the gate before tagging — deliberately after the middle work)
+#79 require CI on `main` · #81 ore bootstrap · #116 ore-gen tuning · #58 ore-gen review (zagwar) ·
+#78 rename the pack (zagwar).
+
+**8 · Needs the live server / a human in-game** (parked)
+#98 pre-gen test world (force-multiplier) · #48 GC/RAM · #43 flight interactions · #25 claims (zagwar) ·
+#3 purple arrows · #1 shaders · #2 render distance · #40 quarterly port watch ·
+#38 inventory sort (close after a quick in-game check).
+
+**Recently closed/merged:** #75 (magic web, v0.5.2) · #82 (GTMOGS ore-gen, v0.5.1) · #88 (curation, v0.5.0) ·
+#93 (ore-gen model decided → GTMOGS) · #62 (recipe overhaul, v0.4.6) · #51 (meadow cheese, in #62) ·
+#117/#128/#130 (patch notes + site reframe) · #42 (TPS) · #73 (`.mrpack` drop) · #45 (meme cull) ·
+#55/#59 (guns) · #56 (per-ore gen, since retired for GTMOGS) · #57/#63/#65 (digest/worldgen) ·
+#61 (design docs) · #76/#85/#89 (CI + auto-resolver + workflow docs) · #86 (→ #88).
 
 ## Cross-cutting notes
 - **Verification gates everything** — headless can't validate KubeJS/worldgen; playtest per phase.
-- **Design docs** (DESIGN five-systems goal, CLAUDE north-star, MODLIST-AUDIT) are **merged** (#61) — the five-systems direction is canon on `main`.
-- **Network:** sandbox reaches GitHub only (not Modrinth/CF); jar ground truth comes via the digest or hand-uploads.
-- **Duplicate *items*** (lead/silver/tin/steel ×N) are auto-collapsed by `almost-unified` + `polymorph`.
+- **Network:** the sandbox reaches GitHub only (not Modrinth/CF); jar ground truth comes via `tools/mod-data/`.
+- **Duplicate *items*** (lead/silver/tin/steel ×N) are auto-collapsed by `almost-unified` + `polymorph` —
+  but **never unify `galosphere:*silver*`** (it's palladium, not silver); pin almost-unified (#111) to protect the config.
