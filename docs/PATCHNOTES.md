@@ -3,6 +3,46 @@
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme (diff vs prev)", a short lead paragraph, then sections (see CLAUDE.md). -->
 
+## 0.5.1 — Ore Veins (diff vs 0.5.0)
+
+Ore generation is reworked to a GregTech-style model. Instead of ore scattered evenly through the
+ground, ores are concentrated in large regional veins of related materials, vanilla overworld ore
+generation is turned off, and a layer of scattered small ores plus a prospecting system help you find
+the veins. Worldgen only affects newly generated chunks, so use a fresh world or unexplored terrain to
+see it.
+
+### Ore veins
+- Ore now comes from large mix veins. A single vein holds several related ores in layers: a headline
+  ore through the upper part, a second ore through the lower part, and smaller amounts of two more
+  mixed in. An iron vein in the mountains, for example, also carries magnetite, some nickel, and a
+  little gold.
+- Veins are regional. The biome decides what generates: iron and magnetite in mountains, copper in
+  badlands, redstone and lithium in deserts, coal in forests and taiga, zinc and tin in plains,
+  diamond and jade in jungles, lapis in snowy biomes, emerald in peaks, salt along coasts, and so on.
+  Twenty-one veins in all, covering the vanilla ores and the pack's modded metals.
+- Vanilla overworld ore generation is disabled. Veins and small ores are the only sources, so where
+  you settle now determines what you can mine, and what you will need to trade for.
+
+### Small ores
+- Single ore blocks of the common metals are scattered across the world. They are enough to get a
+  first set of tools, and they double as indicators: a cluster of one type hints at a matching vein
+  below.
+
+### Prospecting
+- Break an ore block to locate nearby veins of that material; a message confirms how many were found.
+  With a supported map mod the located veins can be shown on the map with waypoints, and
+  `/gtmogs share_prospection_data <player>` shares your finds with the rest of the group.
+
+### Mods added
+- GregTech Modern Ore Generation Standalone (the vein engine) and its libraries LDLib and
+  Configuration.
+
+### Known rough edges (tuning continues)
+- Balance is not final. Ongoing work covers vein rarity, salt density along coasts, and ore depth.
+- Cave pockets follow the local cave biome rather than the surface biome above them, so veins are
+  currently absent in those pockets; the scattered small ores cover caving in the meantime. Making
+  cave ore follow the surface region is the priority for the next ore-gen pass.
+
 ## 0.5.0 — Made Through Create (diff vs 0.4.6)
 
 Crafting across the pack now routes through Create. Most tech, gear, machines, and a fair amount of
