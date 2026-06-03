@@ -22,7 +22,7 @@
   "generator": {
     "type": "gtmogs:classic",
     "primary": {
-      "target": [
+      "targets": [
         {
           "target": {
             "predicate_type": "minecraft:tag_match",
@@ -45,7 +45,7 @@
       "layers": 3
     },
     "secondary": {
-      "target": [
+      "targets": [
         {
           "target": {
             "predicate_type": "minecraft:tag_match",
@@ -68,7 +68,7 @@
       "layers": 3
     },
     "between": {
-      "target": [
+      "targets": [
         {
           "target": {
             "predicate_type": "minecraft:tag_match",
@@ -91,7 +91,7 @@
       "layers": 2
     },
     "sporadic": {
-      "target": [
+      "targets": [
         {
           "target": {
             "predicate_type": "minecraft:tag_match",
