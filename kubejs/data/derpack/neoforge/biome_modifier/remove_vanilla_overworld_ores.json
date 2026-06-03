@@ -21,6 +21,5 @@
     "minecraft:ore_copper",
     "minecraft:ore_copper_large",
     "minecraft:ore_emerald"
-  ],
-  "step": "underground_ores"
+  ]
 }

@@ -294,91 +294,91 @@ hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/coal.json"
-hash = "b70869a692694625d1add12e33ed487bfa470d17ffc89c0115c6c6346272bdf6"
+hash = "74f571f358b7d22d73859e4a645035dd149244dc8c43675b918197fbc31b55ca"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/copper.json"
-hash = "16c3aeab557e27a809ec204985ec0efb878258e5eddf2fccba45237af794a6e1"
+hash = "7152782222deda8a1687ee1a66da38641fbbe15eec98bf7d94312f23f18eca8f"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/diamond.json"
-hash = "8a118aa820f5adac4e902b0096fbfd48c096e6b10d68817baa540d925929fa96"
+hash = "314abc42ac726229739763481cbcea300ccb163ab204a9f87c6a19ee0e67b6f3"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/emerald.json"
-hash = "47184165b84ddf502b52eedca7bfabff1f3cf41ff43b11ccb57f4e0a51c30d45"
+hash = "a7b0da12bd825ba116f0c1801ed83d38eaeecf9736631f011a2de45e4687cb0a"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/gold.json"
-hash = "6037d4bfd44685f03689375dfe6afc671db08a5001f84e63ba683ccdc56feae8"
+hash = "22b4c62848e3c67f70a5972efed7ef4a90e1594b3bd5f089a68f25494091245f"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/iron.json"
-hash = "039be5012366914f646ba1dae6e8eb6517e28ce457bc7e63ac0ece91b192fcca"
+hash = "9807e44701f6bdd551b1b357ac8e56f9213809d5c07d985e2ae6e13e8a4ae1a8"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/jade.json"
-hash = "3b44fa51155cab831a858554a7128b08302dc3b751b5c4b21a3a1c0ab37c779e"
+hash = "162dd9aeed288f179a0ef06a7f3a6dd853a17bae7f3b524b432579fe504e2582"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/lapis.json"
-hash = "419dbc1a8d226a87b3ebc5271e5cfea22b3aabbec64d4b088e60724a186021aa"
+hash = "cbe765c7e05e09f14a6b8140275e943a42060d6c01357f144cac2c839fbcb5a2"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/lead.json"
-hash = "4715b5cef3ffcce7719db698594e8a695653db30813dba1bf5f266baafa97d8b"
+hash = "b37f503a4671803e162e730430a542ba8aedf932d0e36528b391bf7cb6f83e2c"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/lithium.json"
-hash = "477b8789acf21bfed9595726a24fb35289f30a9f589ef3fe9769360c32cb7d45"
+hash = "5ed0d66f4f40daac66101829c994e2857b8a03631aa23bde101e5c13c419bf08"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/magnetite.json"
-hash = "8079c48b2fa3165ad6b4b5d663f3ac97d300621a675082deb795bdb6e1a96518"
+hash = "def6a14a52e4f861819efe80b2a2291d0f147226dfd8edec920e700997e08eae"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/mithril.json"
-hash = "ed367cffa53e551f999bf59b9f4583e60006a7f57fa2a83be84d61fbdc34a3fd"
+hash = "2c67e2dd6ee394dd5f015fb5e348f5a4df923cbced7df7bed43dd6353cae0b25"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/nickel.json"
-hash = "2883085086f56b8ed1ac47385040d0ce7c23f449c0dad76fd287d29416156888"
+hash = "aaaef4d8b8f38953827b402f52ae65766ba1b4483910f38096b2991315b093e9"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/palladium.json"
-hash = "b089a09cffc5fd627b9ae6724b7796186882ded607c09485ef661be6a1c8d63d"
+hash = "54de50a893ee07f5271b7642b3fab204784446f46f4d0fe5a3a800480b7dcf6e"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/redstone.json"
-hash = "305f98587b920d3e30be36a2720eb29c51c222817d1195b395f11914e407bf4a"
+hash = "9cadb3120d5e5861b0b8cbbfe9019ad1e83ee79c66e1879b29dff7c35033aceb"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/salt.json"
-hash = "dcf5d3d53f7e2f9d4d3d3b0553b5ec298459d2f6fc04c3efe1a64fd2a7844da3"
+hash = "d1c8e293a02c6d0963d13b981b8050a546c0d67e87498ada88d2ab64252f9781"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/silver.json"
-hash = "fe579d91038b73c31a86351a04d8358e936eb17e62a5f9829742b5263c930e79"
+hash = "7e1b076c22b75e4e0f360aa5f6b647d885cebc1b720b74003d6bb4110ae1dd58"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/thorium.json"
-hash = "e89d3c6c5be6b017beb6a4ca34d129f0d6d58d7a2172a67bb20b78324f687fdb"
+hash = "7e4b471deb63b1d0d35f96b5b58a9ec8bd9c7021df6ac1e815c68121df562a01"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/tin.json"
-hash = "cce527b2472d5eb601fbdcfc6e7bce833a00b9232445638dabd96576850bab6c"
+hash = "673d61db916cb35546c89ae4cce54e20720d6656955c485891907074ab752097"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/uranium.json"
-hash = "2d10df609b8c7c55d24353480e69f2688cf728aba6d37b73e202588c5c35d552"
+hash = "678c1171d2a2b8fef9701eba23986f80f29c8d28311d760064e488113a10de27"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/zinc.json"
-hash = "cedfc33e0cc3d6db83e75ceb925c1df8efacf41c10fd0041909ece99b8dc8272"
+hash = "c03dbf1f71ed1e1a35db38de157631771a5e58db3d9c7f9a7c241297eee82565"
 
 [[files]]
 file = "kubejs/data/derpack/neoforge/biome_modifier/remove_vanilla_overworld_ores.json"
-hash = "f4aa833e486f3918c5a44a512d09d0f40e71a2d1c906f9ed8f5b95c11a74523e"
+hash = "dba7b3e7d9407635b855eb23cd22d04ed21a1ede03ab77aa8ed6b5d173b2dcde"
 
 [[files]]
 file = "kubejs/data/derpack/neoforge/biome_modifier/small_ores.json"
