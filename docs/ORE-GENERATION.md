@@ -42,10 +42,12 @@ Each vein's `generator` is `gtmogs:classic`, which is the GTNH layered model:
 - **`sporadic`** — scattered thinly through the whole vein.
 - **`y_radius`** — half-height of the vein (we use 4 → ~9-block-tall veins, like GTNH).
 
-Each of those is a `{ "target": [...], "layers": N }` where `target` is a vanilla ore-target
-list (one entry for `stone_ore_replaceables`, one for `deepslate_ore_replaceables`, so the
-right stone/deepslate variant is placed). Ores with no deepslate variant (magnetite, thorium)
-list the same block in both bands.
+Each of those is a `{ "targets": [...], "layers": N }` where **`targets`** (plural — the
+required GTMOGS codec field; a singular `target` parses as JSON but crashes worldgen at load)
+is a vanilla ore-target list: one entry for `stone_ore_replaceables`, one for
+`deepslate_ore_replaceables`, so the right stone/deepslate variant is placed. Note the *inner*
+per-entry key is the vanilla `target` (the predicate) — don't confuse the two. Ores with no
+deepslate variant (magnetite, thorium) list the same block in both bands.
 
 ## Tuning knobs
 
@@ -66,8 +68,7 @@ Vanilla overworld ore gen is fully removed (`remove_vanilla_overworld_ores.json`
 floor is the **small ores**: single scattered blocks of the common metals across the whole
 overworld (`#minecraft:is_overworld`), low `count`, broad `height_range`. They double as GTNH-style
 **indicators** — a cluster of one type hints at a matching vein below. A proper bootstrap/progression
-pass (what a fresh player does in the first hour now that vanilla is off) is tracked as a follow-up
-issue — see the repo issues.
+pass (what a fresh player does in the first hour now that vanilla is off) is tracked in **issue #81**.
 
 ## Biome targeting: tags (easy) vs IDs (precise)
 
