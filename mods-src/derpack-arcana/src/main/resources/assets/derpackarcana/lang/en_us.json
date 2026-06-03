@@ -1,3 +1,5 @@
 {
-  "block.derpackarcana.attunement_font": "Attunement Font"
+  "block.derpackarcana.attunement_font": "Attunement Font",
+  "block.derpackarcana.attunement_font.mode.source_to_mana": "Attunement Font: Source → mana",
+  "block.derpackarcana.attunement_font.mode.mana_to_source": "Attunement Font: mana → Source"
 }

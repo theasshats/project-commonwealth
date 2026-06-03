@@ -6,10 +6,11 @@ Design & roadmap: [`docs/ARCANA-BRIDGE-MOD.md`](../../docs/ARCANA-BRIDGE-MOD.md)
 
 > **Status: P1 + P2 + P3 implemented — compiles green in `build-arcana.yml`; in-game testing pending.**
 > Each feature is behind a `ModList.isLoaded(...)` guard and a config toggle, so it never hard-deps a
-> target mod. (P1 is source→mana MVP — the reverse mode is deferred; P3 is drop-on-kill rather than
-> ritual fuel, since Occultism exposes no clean ritual-completion event.)
-> - **P1 — Attunement Font** (block): drains nearby Ars Source → grants Iron's mana to the standing
->   player. Crafted from the magic-web spine reagents (source_gem + arcane_essence + Galosphere shards).
+> target mod. (P1 is **bidirectional** — right-click toggles direction; P3 is drop-on-kill rather than
+> ritual fuel, since Occultism exposes no clean ritual-completion event — see #118.)
+> - **P1 — Attunement Font** (block): bridges Ars Source ⇄ Iron's mana for the standing player —
+>   drains nearby Source to grant mana, or (right-click to flip) spends mana to refill a nearby Source
+>   jar. Crafted from the magic-web spine reagents (source_gem + arcane_essence + Galosphere shards).
 > - **P2 — spell-power crossover** (automatic): each school's `SpellDamageEvent` is boosted by the
 >   caster's *other*-mod spell-power, by `spellCrossoverFactor`.
 > - **P3 — Soul Reaping** (occultism + born_in_chaos_v1, automatic): slaying a Born in Chaos mob has a
