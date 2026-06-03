@@ -9,13 +9,6 @@
     "terralith:arid_highlands",
     "terralith:lush_desert",
     "terralith:red_oasis",
-    "terralith:gravel_desert",
-    {
-      "id": "#c:is_underground",
-      "required": false
-    },
-    "minecraft:dripstone_caves",
-    "minecraft:lush_caves",
-    "minecraft:deep_dark"
+    "terralith:gravel_desert"
   ]
 }
