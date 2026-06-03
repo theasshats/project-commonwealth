@@ -27,7 +27,10 @@ hand-built vanilla features for veins anymore. The moving parts:
 | `derpack/tags/worldgen/biome/vein_<vein>.json` | **which biomes** the vein is allowed in | tag `values` (can mix `#tag` refs + biome IDs) |
 | `derpack/worldgen/{configured,placed}_feature/small_<ore>.json` | **small ores** (vanilla features) | `count`, `height_range` |
 | `derpack/neoforge/biome_modifier/small_ores.json` | adds all small ores to `#is_overworld` | `features` list |
-| `derpack/neoforge/biome_modifier/remove_vanilla_overworld_ores.json` | **disables** vanilla ore | `features` list (vanilla `ore_*` IDs) |
+
+Vanilla overworld ore generation is **disabled by GTMOGS itself** — its `removeVanillaOreGen`
+config defaults to `true` (and `removeVanillaLargeOreVeins` too). We don't ship a `remove_features`
+biome modifier for it; the mod handles it. (To *keep* vanilla ore, you'd flip that config off.)
 
 Worked examples in the repo: **iron** (mountains: iron→magnetite→nickel→gold) and **copper**
 (badlands: copper→iron→gold→zinc). Copy the pattern for each new vein.
@@ -64,8 +67,8 @@ deepslate variant (magnetite, thorium) list the same block in both bands.
 
 ## No starter trickle — small ores instead
 
-Vanilla overworld ore gen is fully removed (`remove_vanilla_overworld_ores.json`). The early-game
-floor is the **small ores**: single scattered blocks of the common metals across the whole
+Vanilla overworld ore gen is fully removed by GTMOGS (`removeVanillaOreGen` config, default on).
+The early-game floor is the **small ores**: single scattered blocks of the common metals across the whole
 overworld (`#minecraft:is_overworld`), low `count`, broad `height_range`. They double as GTNH-style
 **indicators** — a cluster of one type hints at a matching vein below. A proper bootstrap/progression
 pass (what a fresh player does in the first hour now that vanilla is off) is tracked in **issue #81**.

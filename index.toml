@@ -377,10 +377,6 @@ file = "kubejs/data/derpack/gtmogs/ore_vein/zinc.json"
 hash = "c03dbf1f71ed1e1a35db38de157631771a5e58db3d9c7f9a7c241297eee82565"
 
 [[files]]
-file = "kubejs/data/derpack/neoforge/biome_modifier/remove_vanilla_overworld_ores.json"
-hash = "dba7b3e7d9407635b855eb23cd22d04ed21a1ede03ab77aa8ed6b5d173b2dcde"
-
-[[files]]
 file = "kubejs/data/derpack/neoforge/biome_modifier/small_ores.json"
 hash = "3ba2216c081198266f6b4f54400b4d7d0c042f6ca487c337145569c719dd66bb"
 

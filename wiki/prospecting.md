@@ -20,15 +20,24 @@ your map.
 ## Step by step
 
 1. Find and break an ore block. A scattered small ore works, or any vein ore you have already
-   exposed.
-2. A chat message confirms how many veins were located ("Prospected N new veins").
-3. Open Xaero's minimap or world map and enable the "Show GT Ore Veins" option.
-4. Located veins appear as ore icons. Set a waypoint on the one you want.
-5. Travel there and dig down. Veins are several blocks tall and hold a few related ores in
-   layers, so one shaft into a vein usually returns more than the headline ore.
-6. When a vein is mined out, mark it as depleted so it stops cluttering the map.
+   exposed. This is the important part: simply seeing ore does nothing — you have to break a
+   block to prospect.
+2. A chat message confirms how many veins were located ("Prospected N new veins"). This message
+   is the reliable confirmation that prospecting happened.
+3. Travel toward the prospected vein and dig down. Veins are several blocks tall and hold a few
+   related ores in layers, so one shaft into a vein usually returns more than the headline ore.
+4. When a vein is mined out, you can mark it as depleted so it stops cluttering your records.
 
 How far each broken block scans is controlled by the `oreBlockProspectRange` setting.
+
+## Map overlay
+
+Prospected veins can be drawn on a map if you have a supported map mod, with a "Show GT Ore
+Veins" option to toggle them and waypoints you can set per vein. Note that the overlay only
+shows veins you have already prospected — an empty overlay usually just means you have not
+broken any ore yet, not that anything is wrong. If you have prospected veins and the option
+does not appear at all, the map integration for your map mod may be off or unsupported; the
+in-world chat confirmation still works regardless.
 
 ## Sharing with your group
 
