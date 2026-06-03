@@ -102,6 +102,23 @@ Each branch's key craftables get a Create-part gate or Create-method build:
 
 Pure bypass-recipe removals happen alongside each branch.
 
+## Material unification (`config/almostunified/`) — ledger
+`almost-unified` collapses multi-mod duplicates of the same material to one **dominant** item (the rest
+auto-hidden in JEI via `recipe_viewer_hiding`). The default config only unifies materials with a
+*prioritized* provider (minecraft/kubejs/create), so metals provided only by addons weren't unifying —
+fixed with `priority_overrides` in `unification/materials.json`:
+
+| Material | Dominant | Why |
+|---|---|---|
+| steel, bronze | `create_ironworks` | maintainer pick; Ironworks provides ingot/nugget/block |
+| lead, cast_iron | `tfmg` | most complete forms (incl. sheet); `cast_iron` added to `placeholders.json` |
+| pasta (+ raw_pasta) | `farmersdelight` | complete provider; grouped via `custom_tags` in `tags.json` |
+
+⚠️ **`galosphere:silver_ingot` is PALLADIUM** (legacy id; tagged `c:ingots/palladium`). The real silver is
+`occultism`; palladium is galosphere-only. **Do NOT add a `c:ingots/silver` → galosphere override** — that
+silently merges palladium into silver. (See CLAUDE.md gotchas.) **#103** tracks the next pass: functional-
+duplicate *fabricated parts* (heavy_plate vs steel sheet/plate) that don't share a tag.
+
 ## Deliberately NOT gated (reconsidered ledger)
 These mods were re-examined against the ground-truth digest and **left vanilla on purpose**.
 Recorded here so the calls aren't re-litigated; revisit only if the stated reason changes.
