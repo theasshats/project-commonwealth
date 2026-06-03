@@ -38,6 +38,11 @@ jobs:
       - name: Build
         run: gradle build --no-daemon --stacktrace
 
+      # Print the jar's sha1 so the mod-mirror packwiz metafile (mods/derpack-arcana.pw.toml,
+      # hash-format = "sha1") can be filled without downloading the artifact. See the mod README.
+      - name: Print jar sha1 (for the mod-mirror metafile)
+        run: sha1sum build/libs/*.jar
+
       - name: Upload jar
         uses: actions/upload-artifact@v4
         with:

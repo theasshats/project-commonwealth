@@ -38,7 +38,10 @@ weaving is the goal"). A mod tied to only one pillar is a candidate for a second
   **Retargeted to `main`** (#62 merged); CI green. Handoff: `docs/MAGIC-WEB-HANDOFF.md`.
 - **PR #80** `claude/arcana-mod` — the **Arcana** helper mod (`mods-src/derpack-arcana/`): P1 Attunement
   Font (Ars Source→Iron's mana block), P2 spell-power crossover, P3 Soul Reaping (Born-in-Chaos kills →
-  Occultism essence). Compiles green. **In-game testing pending** (mana sync, balance, Ars event bus).
+  Occultism essence). Compiles green (CI-verified on the current head). **Feature-complete; the only
+  remaining ship step is distribution** — host the jar on the `mod-mirror` release + add
+  `mods/derpack-arcana.pw.toml` (runbook in the mod README) — plus **in-game testing** (mana sync,
+  balance, Ars event bus).
 - **Sequence:** #88 (curation) → 0.5.0; then the magic layer (**#75 + #80**) together; #82 ore-gen on its own.
 
 ## 2a. The #62 benchmark — what "woven" means for every pillar
