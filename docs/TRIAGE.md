@@ -28,11 +28,12 @@ milestone / body-summary / cross-refs. Note: the list API **omits `assignees`** 
 ## 3 · Milestone every issue (the road to 1.0)
 The backlog is organized into GitHub **milestones**, not loose buckets, and **every issue — including
 every new one — must have one** (an unmilestoned issue is untriaged). Pick the milestone whose **goal**
-it serves; ongoing trackers and not-yet-scheduled work go to **`📋 Backlog / living`**. The map (each
-version's goal / exit-criterion) lives in `docs/ROADMAP.md` → "Milestones — the road to 1.0":
-`v0.6.0 Foundation` → `v0.7.0 Create spine` → `v0.8.0 Economy` → `v0.9.0 Survival & Magic` →
-`v0.10.0 Aeronautics` → `v0.11.0 Polish & site` → `v1.0.0 Release [NFR]`. Set it via `issue_write`
-(`milestone` = the milestone number). Front-load small/foundational work; the maintainer prefers **not**
+it serves; ongoing trackers and not-yet-scheduled work go to **`📋 Backlog / living`**. The map — each
+milestone's goal / exit-criterion and the current ordered set (Foundation → the pillar versions →
+**curation passes** → `v1.0.0 Release [NFR]` → `📋 Backlog / living`) — lives in `docs/ROADMAP.md` →
+"Milestones — the road to 1.0"; **treat that as the source of truth** (milestones get added and reordered
+on GitHub, so don't hardcode the set here). Set the milestone via `issue_write` (`milestone` = the
+milestone number). Front-load small/foundational work; the maintainer prefers **not**
 leading with release blockers.
 
 ## 4 · Re-assign — two people, clear lanes
