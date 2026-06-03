@@ -1,30 +1,41 @@
 #!/usr/bin/env python3
 """Recipe-graph connectivity metric for Derpack X.
 
-Design north star (CLAUDE.md): if you drew a line from every item to what it's used
-for, the result should be ONE or two cohesive webs — not many disconnected clusters.
-This script measures that directly. It reads the recipe digests in
-tools/mod-data/recipes/*.txt (format: `recipe_id | type | <space-separated tokens>`),
-builds an undirected graph where the nodes are real items + `c:` tags and every recipe
-unions all of its tokens together, then reports the connected components.
+North star (CLAUDE.md): if you drew a line from every item to what it's used for, the pack should look
+like ONE or two cohesive webs, not many disconnected clusters. This measures that.
 
-The giant component is "the web". Everything else is an island — a cluster whose items
-only craft among themselves and never link to the spine. Islands are the worklist:
-each one needs ~one bridge recipe to rejoin the web (NOT a gate on every variant).
+It builds an undirected graph (nodes = items + `c:` tags; every recipe unions its tokens) from BOTH:
+  - the mod-jar recipe digests in tools/mod-data/recipes/*.txt, AND
+  - our live kubejs/server_scripts/recipes/*.js overlay (each file unions the item ids it references —
+    coarse but it captures the bridges we author with replaceInput / shaped / create.* methods).
+The giant component is "the web"; everything else is an island = the worklist.
 
-Usage:  python3 tools/recipe-graph.py [recipes_dir]   # prints a markdown report
+Two lenses:
+  - default: vanilla `minecraft:` items are FILTERED OUT, so "connected" means connected through the
+    modded/Create economy, not through a shared stick or dirt block. This is the real picture.
+  - --with-vanilla: keep vanilla (everything looks connected; useful only as an upper bound).
+Flags:  --with-vanilla   keep minecraft: nodes
+        --jars-only      ignore the kubejs overlay (measure the untouched base game)
+
+Usage:  python3 tools/recipe-graph.py [--with-vanilla] [--jars-only]
 """
 import re, sys, glob, os
 from collections import defaultdict
 
-RECIPE_DIR = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file__), 'mod-data', 'recipes')
+HERE = os.path.dirname(os.path.abspath(__file__))
+RECIPE_DIR = os.path.join(HERE, 'mod-data', 'recipes')
+KUBEJS_DIR = os.path.join(HERE, '..', 'kubejs', 'server_scripts', 'recipes')
 
-# Tokens in field 3 that are NOT items/tags: recipe-type ids, mod-loaded conditions, feature flags.
+WITH_VANILLA = '--with-vanilla' in sys.argv
+JARS_ONLY    = '--jars-only' in sys.argv
+
 _RTYPE = re.compile(r'[a-z_0-9]+:(crafting_shaped|crafting_shapeless|smelting|blasting|smoking|'
                     r'campfire_cooking|stonecutting|smithing_transform|smithing_trim|pressing|mixing|'
                     r'crushing|cutting|milling|compacting|deploying|filling|emptying|haunting|splashing|'
                     r'sandpaper_polishing|sequenced_assembly|mechanical_crafting|item_application)$')
-def _noise(tok):
+_TOKEN = re.compile(r'#?([a-z0-9_]+:[a-z0-9_/]+)')   # mod:item or c:tag, optional leading #
+
+def is_noise(tok):
     return (':' not in tok
             or tok.endswith(':flag') or 'feature_item_enabled' in tok
             or re.match(r'(fabric|neoforge|forge):(mod_loaded|not|or|and|always|never|true|false)', tok)
@@ -32,20 +43,22 @@ def _noise(tok):
 
 modof = lambda t: t.split(':', 1)[0]
 
-# Rough buckets for the top island mods, so the report is actionable rather than just a dump.
-# (Interpretation only — the graph itself is mod-agnostic.)
 BUCKET = {
-    'block/deco':  {'more_slabs_stairs_and_walls','upgrade_aquatic','quark','mcwroofs','galosphere',
-                    'domum_ornamentum','usefulfoundation','undergroundworlds','biomeswevegone','dynamictrees'},
+    'block/deco':  {'more_slabs_stairs_and_walls','upgrade_aquatic','quark','mcwroofs','mcwwindows',
+                    'mcwdoors','mcwfences','mcwstairs','galosphere','domum_ornamentum','usefulfoundation',
+                    'undergroundworlds','biomeswevegone','dynamictrees','handcrafted','rechiseled'},
     'tech/gear':   {'createnuclear','createbigcannons','cbc_at','northstar','create_d2d','tfmg',
-                    'create_ironworks','createaddition','dndesires','thermal','silentgear','minecolonies'},
-    'organic/mob': {'alexsmobs','naturalist','vinery','tide','ecologics','deeperdarker','cataclysm',
+                    'create_ironworks','createaddition','dndesires','thermal','silentgear','minecolonies',
+                    'createaeronautics','immersive_armors','modulargolems','mffs'},
+    'food':        {'createfood','extradelight','farmersdelight','expandeddelight','oceansdelight',
+                    'bakery','farm_and_charm','meadow','vinery','chefsdelight'},
+    'organic/mob': {'alexsmobs','naturalist','tide','ecologics','deeperdarker','cataclysm','arphex',
                     'mutantmonsters','beachparty','snowyspirit','grimoireofgaia','deep_aether',
-                    'eternal_starlight','born_in_chaos_v1','farm_and_charm'},
-    'magic':       {'ars_nouveau','forbidden_arcanus'},
+                    'eternal_starlight','born_in_chaos_v1','ribbits'},
+    'magic':       {'ars_nouveau','forbidden_arcanus','occultism','irons_spellbooks','s_a_b'},
     'security':    {'securitycraft'},
-    'misc/util':   {'simplehats','extradelight','supplementaries','snowyspirit'},
-    'phantom':     {'recipe_integration','spawn','minecraft'},   # compat/uninstalled/tag artifacts
+    'misc/util':   {'simplehats','supplementaries'},
+    'phantom':     {'recipe_integration','spawn','minecraft'},
 }
 def bucket(m):
     for b, ms in BUCKET.items():
@@ -54,14 +67,42 @@ def bucket(m):
 
 def build():
     nodes, edges = set(), []
+    def add_group(toks):
+        toks = [t for t in toks if not is_noise(t)]
+        if not WITH_VANILLA:
+            toks = [t for t in toks if modof(t) != 'minecraft']
+        toks = list(dict.fromkeys(toks))
+        for n in toks: nodes.add(n)
+        for b in toks[1:]:
+            edges.append((toks[0], b))
+    # mod-jar digests
     for f in glob.glob(os.path.join(RECIPE_DIR, '*.txt')):
         for line in open(f, encoding='utf-8'):
             p = line.rstrip('\n').split(' | ')
             if len(p) < 3: continue
-            toks = list(dict.fromkeys(t for t in p[2].split() if not _noise(t)))
-            for n in toks: nodes.add(n)
-            for b in toks[1:]:
-                edges.append((toks[0], b))
+            add_group([t for t in p[2].split() if t != p[1]])
+    # live kubejs overlay. Two kinds of edge:
+    #  (a) explicit item ids a file references (shaped/create.* recipes, bridges) -> union them.
+    #  (b) mod-filter weaves: `replaceInput({ mod: 'X' }, ..., 'create:Y')` references mod X only by
+    #      NAME (no item id), so (a) misses it. Detect bare mod-name strings and wire that whole mod's
+    #      items to the file's create:/modded targets — that's how the decoration weave connects mods.
+    if not JARS_ONLY and os.path.isdir(KUBEJS_DIR):
+        mod_nodes = defaultdict(list)
+        for n in nodes: mod_nodes[modof(n)].append(n)
+        known_mods = set(mod_nodes)
+        for f in glob.glob(os.path.join(KUBEJS_DIR, '*.js')):
+            txt = open(f, encoding='utf-8').read()
+            ids = [m.group(1) for m in _TOKEN.finditer(txt)]
+            add_group(ids)
+            # (b) whole-mod bridges
+            targets = [t for t in ids if not is_noise(t) and modof(t) in ('create',)  # Create parts/sheets
+                       and (WITH_VANILLA or modof(t) != 'minecraft')]
+            if targets:
+                named = {w for w in re.findall(r"'([a-z0-9_]+)'", txt) if w in known_mods}
+                for mod in named:
+                    for node in mod_nodes[mod]:
+                        edges.append((node, targets[0]))
+
     parent = {n: n for n in nodes}
     def find(x):
         r = x
@@ -78,29 +119,33 @@ def build():
 def main():
     nodes, comps = build()
     giant = comps[0]
-    items = [n for n in nodes if not n.startswith('c:')]
-    out = sum(len(c) - sum(1 for x in c if x.startswith('c:')) for c in comps[1:])
+    nitems = lambda c: sum(1 for x in c if not x.startswith('c:'))
+    items = sum(nitems(c) for c in comps)
+    off = items - nitems(giant)
+    lens = "WITH vanilla" if WITH_VANILLA else "NO vanilla (modded/Create economy only)"
+    src  = "jars only" if JARS_ONLY else "jars + live kubejs overlay"
     print(f"# Recipe-graph connectivity\n")
-    print(f"_Generated by `tools/recipe-graph.py` from `tools/mod-data/recipes/`._\n")
-    print(f"- nodes: **{len(nodes)}** (items {len(items)}, `c:` tags {len(nodes)-len(items)})")
+    print(f"_Generated by `tools/recipe-graph.py` — lens: **{lens}**, source: {src}._\n")
+    print(f"- item nodes: **{items}**  (+{len(nodes)-items} `c:` tags)")
     print(f"- connected components: **{len(comps)}**")
-    print(f"- giant component (\"the web\"): **{len(giant)}** — {100*len(giant)//len(nodes)}% of all nodes")
-    print(f"- item-nodes OUTSIDE the web (islands): **{out}** across {len(comps)-1} clusters\n")
+    print(f"- giant component (\"the web\"): **{nitems(giant)}** items — {100*nitems(giant)//items}% of items")
+    print(f"- items OUTSIDE the web (islands): **{off}** across {len(comps)-1} clusters\n")
 
-    by_mod = defaultdict(int); by_mod_isl = defaultdict(int)
+    print("## Separate webs / islands by mod (dominant mod of each off-web cluster)\n")
+    by_mod = defaultdict(int); isl = defaultdict(int); big = defaultdict(int)
     for c in comps[1:]:
         cm = defaultdict(int)
         for x in c:
             if not x.startswith('c:'): cm[modof(x)] += 1
         for m, n in cm.items(): by_mod[m] += n
-        if cm: by_mod_isl[max(cm, key=cm.get)] += 1
-
-    print("## Islands by mod\n")
-    print("| items off-web | islands | bucket | mod |")
-    print("|--:|--:|---|---|")
+        if cm:
+            dom = max(cm, key=cm.get); isl[dom] += 1
+            big[dom] = max(big[dom], len(c))
+    print("| items off-web | clusters | biggest | bucket | mod |")
+    print("|--:|--:|--:|---|---|")
     for m, n in sorted(by_mod.items(), key=lambda x: -x[1]):
-        if n >= 4:
-            print(f"| {n} | {by_mod_isl.get(m,0)} | {bucket(m)} | `{m}` |")
+        if n >= 5:
+            print(f"| {n} | {isl.get(m,0)} | {big.get(m,0)} | {bucket(m)} | `{m}` |")
 
 if __name__ == '__main__':
     main()
