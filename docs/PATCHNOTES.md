@@ -3,6 +3,44 @@
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme (diff vs prev)", a short lead paragraph, then sections (see CLAUDE.md). -->
 
+## 0.5.2 — Magic Web (diff vs 0.5.1)
+
+The magic mods are now tied together. Ars Nouveau sits at the center: its Source acts as a common
+currency that other schools' essences convert into and out of, the occult mods funnel through one shared
+reagent, and a number of mob drops and metals that had no purpose now feed the magic systems. Everything
+here is an addition — no existing recipe changed, so these are extra paths rather than replacements.
+Conversion rates are a first pass and will be tuned with play.
+
+### Ars Nouveau at the center
+- Source gems and Iron's Spellbooks arcane essence convert into each other at the Imbuement Chamber and
+  the Enchanting Apparatus, with a Galosphere shard as the catalyst so a round trip costs a crystal
+  instead of being free.
+- Source also produces Occultism's basic essence, and Occultism's higher otherworld essence converts
+  back into the arcane line.
+
+### The occult branch
+- Ars Source and Born in Chaos spirits can be combined with water in a heated mixing basin to make
+  Occult Engineering's spirit solution — the same reagent it already runs on.
+- Born in Chaos spiritual dust and ethereal spirits transmute into Occultism essences on the Spirit Fire.
+
+### Drops with a purpose
+- Drops that previously did nothing now feed the web: Grimoire of Gaia's soulfire, shiny pearls, and its
+  organ drops; Mowzie's Mobs' ice crystals, glowing jelly, and foliaath seeds. Reward gear is left alone.
+- Modular Golems' upgrade base gains an alternative route through Ars Source.
+
+### Magic metals through Create
+- Iron's Spellbooks mithril ore and Occultism's iesnium ore can now be run through the crushing wheels
+  for their raw material, alongside their existing smelting routes.
+
+### Other
+- A few metal building blocks can be recycled in the crushing wheels: Northstar tungsten sheetmetal and
+  grates back into tungsten, and Quark raw-copper bricks back into raw copper.
+
+### Known rough edges
+- Conversion rates and Source costs are first-pass; expect adjustments. The deeper code-level weave
+  (a block that moves Source and mana directly, cross-school spell power) is still in progress and not
+  part of this release.
+
 ## 0.5.1 — Ore Veins (diff vs 0.5.0)
 
 Ore generation is reworked to a GregTech-style model. Instead of ore scattered evenly through the
