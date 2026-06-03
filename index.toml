@@ -1531,31 +1531,6 @@ hash = "9d95c6f451056940c08fe784bc2e3c2fde6a239ae445ead79ba7957d63a54eb3"
 metafile = true
 
 [[files]]
-file = "mods/emi-loot.pw.toml"
-hash = "96fb6176533f4bb8e867726afaafe93789c5575f7bbeda8d002628fb3f12c445"
-metafile = true
-
-[[files]]
-file = "mods/emi-ores.pw.toml"
-hash = "4b58cff4fa7296e9dd9a7f26287f81fbc9f23b05a40ef959f00107a486be74ce"
-metafile = true
-
-[[files]]
-file = "mods/emi-professions-(emip).pw.toml"
-hash = "74ebe9026a83031bd29438ad0da8bec776aa25e7e9177c2661c48052b2e67fd1"
-metafile = true
-
-[[files]]
-file = "mods/emi.pw.toml"
-hash = "d3c9b48d7caa2ed964e5d1a4dab1da5655c63f0a7e4a59231c4369be7ffc30e1"
-metafile = true
-
-[[files]]
-file = "mods/emiffect.pw.toml"
-hash = "556149f3fabd7567300032cbd33be41bc343aba0e59177752c527e05b198c219"
-metafile = true
-
-[[files]]
 file = "mods/emoji-type.pw.toml"
 hash = "9b537fe0f532f004b46e27239eb6d7c880d428a47d034c4dc89e952f5f277580"
 metafile = true
@@ -1796,8 +1771,23 @@ hash = "750f4b552490779af147a9c70a558ab2aa1cbfd8331d5ad69efefa099854dfae"
 metafile = true
 
 [[files]]
+file = "mods/jei.pw.toml"
+hash = "5367193d3f87b7bc5a81bcd64a5b96a843e76d4df7a83c8bb7e1911aa82dd52e"
+metafile = true
+
+[[files]]
 file = "mods/just-blahaj.pw.toml"
 hash = "3737e64e63ff8b7863fa28fe8f81eebdc53d9cc1e6ac15f366f3cc6ddd14e167"
+metafile = true
+
+[[files]]
+file = "mods/just-enough-effect-descriptions-jeed.pw.toml"
+hash = "0605d106371229f3c076f6c49b43465f8318022078a5720c51e32d572d0836d8"
+metafile = true
+
+[[files]]
+file = "mods/just-enough-resources-jer.pw.toml"
+hash = "57571e484b3020d4dc2e7e4568c74faa8e5116b88909f028d7775a421f87ea75"
 metafile = true
 
 [[files]]
@@ -1873,11 +1863,6 @@ metafile = true
 [[files]]
 file = "mods/lets-do-beachparty.pw.toml"
 hash = "64a5531d7aacebc6ad691f76e108938cd0d84d5e5b927b7eac3dcdb38a3dbe87"
-metafile = true
-
-[[files]]
-file = "mods/lets-do-emi-compat.pw.toml"
-hash = "2a23853a7220d13fc19b408f0c744df50fa6526a4b1ef423f5753c0b06ce2fea"
 metafile = true
 
 [[files]]

@@ -32,6 +32,7 @@ You're in an **Anthropic-managed cloud sandbox** with this repo cloned into it �
 - Mods are added by **slug** (Modrinth or CurseForge). There's no search UI — a slug is required.
 - **New mods are forced to `side = "both"`.** Modrinth's per-version side metadata is frequently wrong (mods marked client-only that the server actually needs, and vice-versa); trusting it causes silent breakage at install time. Only narrow a mod's side later, with a reason.
 - After any manifest change, run `packwiz refresh` to rebuild `index.toml`.
+- **A `packwiz` binary is vendored at `tools/packwiz`** (linux/amd64, `.packwizignore`'d so it never enters the pack). Use it directly in agent sessions — `./tools/packwiz refresh`, `./tools/packwiz modrinth add <slug>` — instead of `go install`ing it each time. (Rebuild with `GOBIN=$PWD/tools go install github.com/packwiz/packwiz@latest` if it ever needs bumping.)
 - **Pin gotcha:** when hand-editing a `.pw.toml`, `pin = true` must sit at the **file top level**, not under a `[update.modrinth]` (or any) section — a key after a `[section]` header belongs to that section, so a misplaced pin is silently ignored by `packwiz update`. The editor writes this correctly; hand-edits must not get it wrong.
 
 ## The editor (`tools/editor-src/`)
@@ -56,6 +57,7 @@ NeoForge is **not** a packwiz-managed mod — it's a field in `pack.toml` under 
 ## Mod / gameplay gotchas
 
 - `aeronauticscompat` (CurseForge) is **required, not optional** — it patches third-party mods to behave on physics-simulated ships (Etched, Cobblemon, turrets, sleeping, chains, …). Keep it in the pack.
+- **Recipe viewer is JEI, not EMI.** EMI **cannot render Create's processing recipes** (pressing/mixing/deploying/sequenced-assembly) on 1.21.1 — that hid the entire Create spine (even `create:iron_sheet` showed "no recipe"), which is fatal for a Create pack. Switched to **JEI** (+ **JER** for loot/worldgen/trades, **JEED** for effects) in the recipe-overhaul work. **Don't re-add EMI.**
 - `itemphysic` and `FoamFix` are **client-only — never on the server** (they crash it).
 - **Don't add Veil.** Historical architectural conflict with Sodium/Embeddium. The pack uses **Sodium proper** (native NeoForge now); the Veil conflict is untested against Sodium, so treat it as still-live.
 - **Iris/Oculus shaders break Aeronautics ships visually** — known upstream bug, no fix. If ships look wrong, the answer is "disable shaders," not debugging shader compat.
