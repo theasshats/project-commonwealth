@@ -32,6 +32,11 @@ number honest:
   explicit item ids **and** `replaceInput({ mod: 'X' }, …, 'create:Y')` weaves (which name a mod only by
   filter), wiring those mods into Create. Counting the overlay lifts the giant by ~10 points (to ~75%):
   that delta **is** the recipe overhaul, made visible.
+- **Edges count Create PARTS *and* METHODS — for every mod.** A modded recipe-*type* (`create:mixing`,
+  `farmersdelight:cooking`, `occultism:ritual`, `ars_nouveau:enchanting_apparatus`, …) becomes a node that
+  links every item it produces — "made in that machine" is real connectivity (vanilla types stay dropped as
+  universal). This is what connected `createfood` to `create` (its food is made *in* Create machines, not
+  *from* Create items), and it lights up **magic-apparatus** connectivity too — useful for the #75 magic PR.
 
 ## Beyond connected components (the four sharper lenses)
 

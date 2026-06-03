@@ -11,11 +11,14 @@ casings, cogs, `precision_mechanism`, `electron_tube`) and methods (`pressing`, 
 Create parts"), **not** grind. Minecraft **1.21.1 / NeoForge 21.1.228**, KubeJS-driven.
 
 ## 2. State
-- **Green** on all `pr-checks.yml` gates, **rebased onto `main`** (v0.4.6). Ready for **playtest → merge**.
-- Scope of THIS PR: the Create tech weave **plus** two flavor items (bible `89`, meadow cheese `99`) and a
-  first-pass magic essence bridge (`33-magic-web.js`). **Note:** `33-magic-web.js` is **superseded by PR
-  #75** (`claude/magic-web`, stacked on this branch), which replaces it with native-machine magic bridges.
-  If #62 merges first, rebase #75 onto main.
+- **Green** on all `pr-checks.yml` gates, **rebased onto `main`** (v0.4.6). The PR is **large**; the next
+  step is **in-game playtest → merge** (§6), not more scope. Bridging the long tail of "islands" (§8) is
+  **paused** by maintainer call until this lands.
+- Scope of THIS PR: the Create tech weave, the **decoration/equipment weave** (`81`, §4a — new this round),
+  a first **island-bridging** batch (`35`, §8), two flavor items (bible `89`, meadow cheese `99`), a
+  first-pass magic essence bridge (`33-magic-web.js`), **and a connectivity-measurement toolkit** (§7a).
+- **Magic is a separate PR (#75, `claude/magic-web`, stacked here).** `33-magic-web.js` is superseded by it
+  (native-machine magic bridges). If #62 merges first, rebase #75 onto main. Do **not** add magic weave here.
 - KubeJS is **headless here** — everything is `node --check`'d only; real verification is in-game (§6).
 
 ## 3. File layout (`kubejs/server_scripts/recipes/`)
@@ -26,6 +29,10 @@ Create parts"), **not** grind. Minecraft **1.21.1 / NeoForge 21.1.228**, KubeJS-
 - `10`–`99` — one file per converted mod/branch (immersive_armors, samurai, modular_golems, northstar,
   irons_spellbooks, mffs, travelersbackpack, securitycraft, drones, astikor, exposure, smokeleaf,
   supplementaries, swashbucklers, gliders, netmusic, minecolonies, + bible/cheese flavor).
+- `35-web-bridges.js` — **island bridges** (§8): additive Create-crushing recipes that rejoin orphaned
+  worldgen materials (quark stones, createnuclear autunite, tfmg asphalt) to the web. Nothing gated.
+- `81-decoration-metal.js` — **the decoration/equipment weave** (§4a): routes metal decoration + kitchenware
+  through Create-pressed sheets via `event.replaceInput` (ingredient-only, shapes/yields preserved).
 - `kubejs/startup_scripts/01-intermediate-parts.js` — registers the `derpack:incomplete_*` transitional
   items used by the MFFS `sequenced_assembly` chains (`60-mffs.js`). If you add a sequenced_assembly chain,
   register its in-progress item here.
@@ -36,7 +43,10 @@ Create parts"), **not** grind. Minecraft **1.21.1 / NeoForge 21.1.228**, KubeJS-
   `sequenced_assembly`). Northstar/MFFS are the reference for depth; don't settle for the cheapest gate on a flagship.
 - **Keep difficulty comparable to the original.** (Exception: TaCZ guns are deliberately hard — not in this PR.)
 - **One gate per tier** — don't stack requirements within a tier.
-- **Decoration stays vanilla-craftable** — never Create-gate candle holders, slabs, furniture, etc.
+- **Decoration MAY route through Create now (matured rubric).** Earlier guidance was "leave decoration
+  vanilla"; the maintainer revised it to *"decoration through Create is a plus — it earns a pure-decoration
+  mod a second pillar"* — **provided it's cost-neutral and not a grind** (see §4a). Don't gate decoration
+  behind grindy multi-step chains; route its metal through a pressed sheet, no more.
 - **Don't over-gate magic** — it routes through its own apparatus (that's PR #75's domain, additively).
 - **Comment the original.** Every swap keeps the original ingredients as an `// orig:` comment so review can
   catch accidental easier/harder shifts (e.g. don't silently drop a Totem-of-Undying gate).
@@ -44,6 +54,19 @@ Create parts"), **not** grind. Minecraft **1.21.1 / NeoForge 21.1.228**, KubeJS-
 - **Cross-mod synergy (TaCZ style):** flagship devices may source real components from sibling mods
   (`create_new_age:copper_circuit`, `createaddition:copper_wire`, `galosphere:*_shard`, `create:propeller`)
   — every ingredient *thematically* justified, no filler.
+
+## 4a. The decoration/equipment weave (`81-decoration-metal.js`)
+A broad, **safe** weave distinct from the per-mod gating above. Instead of `remove`+`shaped` (which can
+silently change shapes/yields), it uses **`event.replaceInput(filter, from, to)`** — swap only the
+*ingredient*, preserving every recipe's shape/count/yield and leaving non-metal variants untouched. Used to
+route raw metal in currently-vanilla decoration + kitchenware through Create-pressed sheets:
+- MCW metal doors/windows/fences, handcrafted, Supplementaries candle-holders/gold/fire_pit → `create:{iron,
+  copper,golden}_sheet` (cost-neutral: a sheet is a pressed ingot).
+- Delight kitchenware (FD cooking_pot/skillet/stove, extradelight chiller/tap) → pressed sheet (food↔Create).
+**Rules learned the hard way:** use **concrete `create:*_sheet` items, never `#c:plates/*` tags** (addon-
+filled → unobtainable in JEI; that was the steel-plate breakage). `replaceInput` is the preferred tool for
+any "route the metal through Create" weave. Deliberately left: stonecut fences; a forced "lights need a
+bulb" pass (organic lamps); details + the playtest flag on the FD early-gate are in `docs/RECIPES.md`.
 
 ## 5. How to extend (convert another mod) — the loop
 1. **Ground-truth first.** Read `tools/mod-data/recipes/<mod>.txt` (format: `recipe_id | type | referenced-ids`).
@@ -72,11 +95,45 @@ Create parts"), **not** grind. Minecraft **1.21.1 / NeoForge 21.1.228**, KubeJS-
   - `05-metals.js`: steel only craftable via Create (samurai blast / mffs smelt gone; TFMG/Ironworks/CBC paths remain).
   - MFFS `60`: the `sequenced_assembly` chains stage correctly on Mechanical Crafters (intermediates from `01-…`).
   - MineColonies `98`: quarries craft with the in-grid `structurize:sceptergold` stamp preserved.
+  - **`81-decoration-metal.js`**: MCW metal doors/windows + handcrafted + candle-holders show `create:*_sheet`
+    (not raw ingots); FD cooking_pot/skillet/stove want a pressed iron sheet (the early-gate flag); the
+    already-gated Supplementaries kinetic blocks (`94`) are unchanged (no collision).
+  - **`35-web-bridges.js`**: new Create crushing recipes resolve in JEI (quark stones/autunite/asphalt → gravel/
+    uranium_powder); purely additive, so confirm nothing's original recipe vanished.
   - Polymorph flags no recipe conflicts on changed outputs.
+  - **Live playtest checklist (the merge gate): pinned PR comment "Playtest checklist — recipe overhaul (v2)"
+    + its deltas.** Re-verify the post-report fixes (northstar load error `ad587cb`; steel/martian_steel →
+    concrete sheets `d2ca48c`).
 - **Maintainer scope calls** still open (not coherence skips): **umapyoi** (cosmetic — see #60). MineColonies
   quarries already done; Structurize confirmed utility (no change).
 - **#17 leftover**: "death note" — no craftable recipe found in any installed mod; needs an item pointer if one exists.
 - Decide ordering vs **PR #75** (rebase #75 to main after this merges; it replaces `33-magic-web.js`).
+
+## 7a. Connectivity toolkit (`tools/recipe-graph*`, `docs/CONNECTIVITY.md`)
+Operationalizes the north star *"every item forms one or two cohesive webs, not many clusters."* Builds an
+item graph from the digests **+ the live kubejs overlay** and reports the giant component ("the web") vs
+islands. Key properties (full math in `docs/CONNECTIVITY.md`):
+- `python3 tools/recipe-graph.py` — metrics: web %, depth-to-Create-spine, cut-vertices, islands-by-mod.
+  Default lens filters vanilla `minecraft:` (it glues everything); `--with-vanilla`, `--jars-only`,
+  `--remove a,b,c` (e.g. `--remove minecraft,create` to see how Create's addons weave).
+- `python3 tools/recipe-graph-viz.py` → `tools/recipe-web.html` — **interactive offline** mod map; toggle
+  mods / presets and watch components + web % recompute. Core shared in `tools/recipe_graph_lib.py`.
+- **Counts Create PARTS *and* METHODS** — a modded recipe-type (`create:mixing`, `occultism:ritual`, …)
+  links every item it produces. This is **all-mod**, so it already lights up magic apparatus connectivity —
+  **important for the #75 magic-weave PR** (run `--remove create` / inspect occultism/ars clusters there).
+- Current state: **~78%** in the web (no-vanilla, overlay on), avg **1.8 hops** to Create; load-bearing
+  mods `create`/`extradelight`. Re-run after any recipe change; it's also a regression check.
+
+## 8. Island bridging — PAUSED (worklist for later / next PR)
+Closing islands was started (`35-web-bridges.js`) then **paused to get this PR merged.** Resume via the
+toolkit. Triage of what's left (non-magic; magic is #75):
+- **Coherent, do next:** metal unification (`create_d2d` steel/tin, northstar tungsten → tag into `c:ingots/*`);
+  `vinery` grapes → Create press → juice; remaining worldgen stones.
+- **Open maintainer fork (the blocker):** cosmetic vanilla-material variant families (coral blocks in
+  `more_slabs`/`upgrade_aquatic`, `securitycraft` reinforced blocks, `domum_ornamentum`) + organic/mob gear
+  (`alexsmobs`, `naturalist`, `cataclysm`…) — ~600 items where a Create link is **arbitrary**. Options posed:
+  *one natural link per material* (recommended), *coherent-only/stop*, or *force-everything-to-100%*. Get the
+  call before authoring; forcing all of these would be the grind the guardrails forbid.
 
 ## 7. Pointers
 - Design + full triage + deliberately-not-gated ledger: `docs/RECIPES.md`.
