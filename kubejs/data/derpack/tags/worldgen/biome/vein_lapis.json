@@ -15,13 +15,6 @@
     "terralith:wintry_forest",
     "terralith:wintry_lowlands",
     "terralith:siberian_taiga",
-    "terralith:glacial_chasm",
-    {
-      "id": "#c:is_underground",
-      "required": false
-    },
-    "minecraft:dripstone_caves",
-    "minecraft:lush_caves",
-    "minecraft:deep_dark"
+    "terralith:glacial_chasm"
   ]
 }

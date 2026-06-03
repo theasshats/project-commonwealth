@@ -402,55 +402,55 @@ hash = "9f63003561b61c810d7ba7a4cfc0f5f0a0dfa0236b6bba99cfbb423a79beeea2"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_coal.json"
-hash = "165ed9b944a360d827e363ef8c913f4f3753deebd8d07d21ad50dfe5cd981c25"
+hash = "231d453d0e6c3c82866e25f4042fe9f2dd2f1b04ddee27907370990c78c554fb"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_copper.json"
-hash = "196400d10d7ce965de9bbab7f2dab05424702745b936358e6a3d9d705ed66bbe"
+hash = "bf30af9bd952baf26dfb805aa37a39750061886a4dc2f065b889e9c951b27eb3"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_diamond.json"
-hash = "ef83735e1a9db5e6cbd3310e5079812d1caa4943bca0e7374723cce0ff2d5a37"
+hash = "e819034b14b9819dc3519ef151417401f4f26e4a738f74a38d015482e3d57705"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_emerald.json"
-hash = "084f000d1e1e70a8890f580a7c504646066e393b68c8e3f54f87196df4bba456"
+hash = "ae4c30b0ee20c1ba8b44bfa0503da48fd8e4544e4ec1acd46c4e71abb87565f3"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_gold.json"
-hash = "248c487579693f642b8784f0232499d612fe8912425907cda70454ae91114459"
+hash = "c4c772fd5eca83d22d3412df02e2e441e34501b8864db7379efdbf5cb780837e"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_iron.json"
-hash = "084f000d1e1e70a8890f580a7c504646066e393b68c8e3f54f87196df4bba456"
+hash = "ae4c30b0ee20c1ba8b44bfa0503da48fd8e4544e4ec1acd46c4e71abb87565f3"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_jade.json"
-hash = "1bebcbef2aacc9dc44d0b869f6b9d1c62931488c06b57d61ad65164f8fe8799c"
+hash = "41be86ce16c0e32ae55c8960ca518abac1657514842d2af9d3232f778c07a237"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_lapis.json"
-hash = "60c676ed8f4a8e421fcac8451d9ef487cee70037b2d8f2665a90c2ec806bbc38"
+hash = "a03d3104257f7cd6f7ad39a0eedf08ee58bba6f0cb8c73d21e53dfbe476f7b49"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_lead.json"
-hash = "926a7cd87902b6e8511e8d7c224d83ecbb3705099de02f933795f649d219d934"
+hash = "68b109c832f6b594805ab51658da7e079172be87d092ce4b1a011f71b4599458"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_lithium.json"
-hash = "316b0434ca7e41b42398fc7f28ba1464b54391906a83a78ed4b9326d6a7c3ee8"
+hash = "1a3a90fdcbce2d327ff82000c9b7ca14dd6ba35084536b5c9628acc25a89a03f"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_magnetite.json"
-hash = "926a7cd87902b6e8511e8d7c224d83ecbb3705099de02f933795f649d219d934"
+hash = "68b109c832f6b594805ab51658da7e079172be87d092ce4b1a011f71b4599458"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_mithril.json"
-hash = "7f4eea26787cb499761b040d05d340bc0c897af2c1c06410b7429674ae032ffd"
+hash = "09da3a371357dca38b6bba08a6172c83d8f31aa84698fc3cef9f553a2c533897"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_nickel.json"
-hash = "5d3080a047cb884ca7ff02271c4790927dd177c16e7d8c281dc4018a96067138"
+hash = "92b4906a9b9aeb3c3d92474e8fef13be557f88a1fb45eced8fba52e481cf34d3"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_palladium.json"
@@ -458,31 +458,31 @@ hash = "bc23c67b515bc789a978c01a4765fbc3642e4d0fb1543a5d7fcf9b3659c503e9"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_redstone.json"
-hash = "f99ba6ff288aeb7c7dfabc1574dcdc637f1bff16dadca44ee1d8fd9004ccf830"
+hash = "02272cca5551ab1ba5d2e1e812fdf46534dc5321569c4b96bb9eb9865592d6e1"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_salt.json"
-hash = "dbb9562803299a2b529382b354c5cbbe3e36398485180865a1c7b4d3eeb14b16"
+hash = "907b9e820db27ec0737a0a12e110f7c0e8b3752ba34c2ebe9518c78f417e37a8"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_silver.json"
-hash = "376bda0df92e019700892a2fec4e9400a2f6d081bed7ecbc2c64e72541d06bdf"
+hash = "4f172cbf0955aa7b53e08979ff87495a9b59afb9a36e4513e233b6bbad755656"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_thorium.json"
-hash = "0232d028e1e0cffba589b6e0863a5bf9b2d4973c6f94cc9bf183481e0c3290ac"
+hash = "b9bbb516cbb07a134453c803bf7d2fff2de463d5c6b968c3df23b5022957693a"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_tin.json"
-hash = "49647d38e6cd265dc556a0b24744be0eea6d96b092e51d5b7f1b898af00f7335"
+hash = "eafb565f0950f99d838d56e7a10fcaec6290c671fe6c4fd20158e0dca584fc86"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_uranium.json"
-hash = "6e721586a04a5a4af4ce2755a600efe67359102c7352615c5aecef1d97b1ec6e"
+hash = "bc773d5110824bd9125ac334d440620945eb5e41fdf556b46af831ba8615eb69"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_zinc.json"
-hash = "4034f612b0d1acd9c8de486f8a5d71171a2ef063cc9c290a4bc8303a827699d0"
+hash = "7642b53be6292821aa188f459b1157f750332aceec6a66716deb33530969c2e1"
 
 [[files]]
 file = "kubejs/data/derpack/worldgen/configured_feature/small_coal.json"

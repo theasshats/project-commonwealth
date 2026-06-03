@@ -87,16 +87,20 @@ tags (verified), so one vanilla tag covers all the matching Terralith biomes too
 Use a **specific biome ID** only for special cases (e.g. diamonds *only* in `terralith:amethyst_rainforest`).
 You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:rocky_mountains"]`.
 
-> **Underground = different biomes (important).** MC 1.21 biomes are 3D. Below ground the world is
-> mostly **cave biomes** (`dripstone_caves`/`lush_caves`/`deep_dark` + Terralith `#terralith:reference/cave`,
-> Galosphere, Northstar, Quark…), pooled into `#c:is_underground`. A vein keyed to *surface* tags only
-> generates where that surface biome extends straight down — so it's absent in the cave-biome pockets
-> you actually mine through, making regional veins feel empty while vanilla (which targets
-> `#minecraft:is_overworld`, **including** caves) still shows. **Current choice:** every `vein_*` tag also
-> includes `#c:is_underground` + the three vanilla cave biomes, so veins are findable everywhere you cave.
-> Trade-off: cave pockets are region-agnostic (any cave can roll any ore); strict surface regionality only
-> holds when digging down through stone in-region. Under review (see repo issue) — alternatives are strict
-> regional (drop the cave entries) or hybrid (caves only for utility metals, marquee ores stay regional).
+> **Underground = different biomes (important).** MC 1.21 biomes are 3D. GTMOGS samples the biome
+> at the **vein's Y position** (`getUncachedNoiseBiome`), so the *depth* biome decides eligibility,
+> not the surface. Below ground the world is mostly **cave biomes** (`dripstone_caves`/`lush_caves`/
+> `deep_dark` + Terralith `#terralith:reference/cave`, Galosphere, Northstar, Quark…), pooled into
+> `#c:is_underground`. **Current choice (strict regional):** `vein_*` tags list **only their region's
+> biomes** — no `#c:is_underground` / generic-cave fallback. A vein generates where its surface biome
+> extends down through stone, and is **absent in cave-biome pockets** — that's the price of real
+> regionality (salt stays on coasts, not in every inland cave). Earlier we shipped the opposite (every
+> tag carried `#c:is_underground` + the three vanilla caves "so veins are findable everywhere you
+> cave"), but that made caves region-agnostic — any ore in any cave — which leaked e.g. salt
+> overworld-wide; issue #65. **Bootstrap floor is the global small ores** (`#minecraft:is_overworld`),
+> so caving still turns up *something* everywhere; the regional veins are the bulk source you dig for
+> in-region. Palladium is the deliberate exception — it keeps `dripstone_caves` + `deep_dark` as
+> *intentional* homes (mountains + those caves), not as the old blanket fallback.
 
 > **Gotcha (crashes world creation):** a `biome_modifier`'s `"biomes"` is a HolderSet. A JSON
 > **array may only contain plain biome IDs** — you **cannot** put a `#tag` inside the array
@@ -123,9 +127,9 @@ You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:
 - **Lithium** — TFMG — `tfmg:lithium_ore` (+deepslate)
 - **Nickel** — TFMG — `tfmg:nickel_ore` (+deepslate)
 - **Palladium** — Galosphere — `galosphere:palladium_ore` (+`deepslate_palladium_ore`). Prestige metal:
-  kept **rare + regional** (mountains + dripstone + deep_dark, `chance 14`) and deliberately **excluded
-  from the `#c:is_underground` "findable everywhere" pass** so it doesn't roll in every cave (the hybrid
-  case in issue #65). **Default `#is_overworld` gen shadowed:** Galosphere 1.5.x renamed *Silver → Palladium*
+  **rare + regional**, the deliberate caves exception — its tag is mountains + `dripstone_caves` +
+  `deep_dark` as *intentional* homes (never the old blanket `#c:is_underground` fallback). **Default
+  `#is_overworld` gen shadowed:** Galosphere 1.5.x renamed *Silver → Palladium*
   but kept the old feature IDs, so `add_silver_ores` (feature `galosphere:ore_silver_small`) was injecting
   small palladium blobs into every overworld biome — `neoforge:none`'d. Left as a regional bonus:
   `add_large_silver_ores` (large palladium, `galosphere:crystal_canyons` only).
@@ -190,9 +194,11 @@ biome tag (edit the tag to move a vein). **Composition** is primary → secondar
 | jade | jungle | -24…48 | 32 | 30 | jade → jade → emerald → diamond |
 | palladium | mountains / deep_dark | -56…24 | 24 | 12 | palladium → palladium → nickel → silver |
 
-> Palladium's region tag deliberately omits `#c:is_underground` (kept rare + regional, the hybrid
-> case in issue #65). All other region tags include the cave-biome fallback so veins stay findable
-> while caving — see the underground-biomes note above.
+> All region tags are **strictly regional** — region biomes only, no `#c:is_underground` /
+> generic-cave fallback (issue #65). Veins generate where the region's surface biome extends down,
+> and are absent in cave-biome pockets; the global small ores are the bootstrap floor. Palladium is
+> the deliberate exception (mountains + `dripstone_caves` + `deep_dark` as intentional homes). See
+> the underground-biomes note above.
 
 **Small ores (early-game floor + indicators):** single scattered blocks across `#is_overworld` of
 coal, iron, copper, tin, zinc, gold, silver, nickel, redstone, lapis (low `count`), plus diamond
