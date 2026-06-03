@@ -6,65 +6,6 @@ s_a_b:colonialbase | minecraft:crafting_shapeless | minecraft:crafting_shapeless
 s_a_b:colonialdouble | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:blackdoublesteelblock s_a_b:colonialdoublesteelblock s_a_b:olivedoublesteel
 s_a_b:colonialhard | minecraft:crafting_shaped | minecraft:crafting_shaped s_a_b:blackhardsteelblock s_a_b:colonialhardsteelblock s_a_b:olivehardsteel
 s_a_b:coloniallight | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:blacklightsteelblock s_a_b:coloniallightsteelblock s_a_b:olivelightsteel
-s_a_b:dirtbase | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:dirt s_a_b:steelblock s_a_b:steelblockdirt
-s_a_b:dirtdouble | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:dirt s_a_b:doublesteelblock s_a_b:doublesteelblockdirt
-s_a_b:dirthard | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:dirt s_a_b:hardsteelblock s_a_b:hardsteelblockdirt
-s_a_b:dirtlight | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:dirt s_a_b:lightsteelblock s_a_b:lightsteelblockdirt
-s_a_b:glassarmor | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:glass s_a_b:deleted_mod_element s_a_b:hardsteelblock
-s_a_b:grassbase | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:moss_block s_a_b:steelblock s_a_b:steelblockgrass
-s_a_b:grassdouble | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:moss_block s_a_b:doublesteelblock s_a_b:doublesteelblockgrass
-s_a_b:grasshard | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:moss_block s_a_b:hardsteelblock s_a_b:hardsteelblockgrass
-s_a_b:grasslight | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:moss_block s_a_b:lightsteelblock s_a_b:lightsteelblockgrass
-s_a_b:junglebase | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:jungle_sapling s_a_b:steelblockgrass s_a_b:steelblockgrassjungle
-s_a_b:jungledouble | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:jungle_sapling s_a_b:doublesteelblockgrass s_a_b:doublesteelblockgrassjungle
-s_a_b:junglehard | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:jungle_sapling s_a_b:hardsteelblockgrass s_a_b:hardsteelblockgrassjungle
-s_a_b:junglelight | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:jungle_sapling s_a_b:lightsteelblockgrass s_a_b:lightsteelblockgrassjungle
-s_a_b:lightskybase | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:steelblockcamosky s_a_b:steelblocklightsky s_a_b:whitesteelblock
-s_a_b:lightskydouble | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:doublesteelblockcamosky s_a_b:doublesteelblocklightsky s_a_b:whitedoublesteelblock
-s_a_b:lightskyhard | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:hardsteelblockcamosky s_a_b:hardsteelblocklightsky s_a_b:whitehardsteelblock
-s_a_b:lightskylight | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:lightsteelblockcamosky s_a_b:lightsteelblocklightsky s_a_b:whitelightsteelblock
-s_a_b:myceliumbase | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:mycelium s_a_b:steelblock s_a_b:steelblockmycelium
-s_a_b:myceliumdouble | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:mycelium s_a_b:doublesteelblock s_a_b:doublesteelblockmycelium
-s_a_b:myceliumhard | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:mycelium s_a_b:hardsteelblock s_a_b:hardsteelblockmycelium
-s_a_b:myceliumlight | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:mycelium s_a_b:lightsteelblock s_a_b:lightsteelblockmycelium
-s_a_b:olivedouble | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:limedoublesteelblock s_a_b:olivedoublesteel s_a_b:yellowdoublesteelblock
-s_a_b:olivehard | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:limehardsteelblock s_a_b:olivehardsteel s_a_b:yellowhardsteelblock
-s_a_b:olivelight | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:limelightsteelblock s_a_b:olivelightsteel s_a_b:yellowlightsteelblock
-s_a_b:olivesb | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:limesteelblock s_a_b:olivesteelblock s_a_b:yellowsteelblock
-s_a_b:podzolbase | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:podzol s_a_b:steelblock s_a_b:steelblockpodzol
-s_a_b:podzoldouble | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:podzol s_a_b:doublesteelblock s_a_b:doublesteelblockpodzol
-s_a_b:podzolhard | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:podzol s_a_b:hardsteelblock s_a_b:hardsteelblockpodzol
-s_a_b:podzollight | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:podzol s_a_b:lightsteelblock s_a_b:lightsteelblockpodzol
-s_a_b:psc | minecraft:crafting_shapeless | minecraft:candles minecraft:crafting_shapeless minecraft:paper s_a_b:puritysealsolo
-s_a_b:reddesertbase | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:red_sand s_a_b:steelblock s_a_b:steelblockcamoreddesert
-s_a_b:reddesertdouble | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:red_sand s_a_b:doublesteelblock s_a_b:doublesteelblockcamoreddesert
-s_a_b:reddeserthard | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:red_sand s_a_b:hardsteelblock s_a_b:hardsteelblockcamoreddesert
-s_a_b:reddesertlight | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:red_sand s_a_b:lightsteelblock s_a_b:lightsteelblockcamoreddesert
-s_a_b:sandbagrecipe | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:sand minecraft:white_carpet s_a_b:sandbag
-s_a_b:savannabase | minecraft:crafting_shaped | minecraft:acacia_sapling minecraft:crafting_shaped s_a_b:steelblockgrass s_a_b:steelblockgrasssvanna
-s_a_b:savannadouble | minecraft:crafting_shaped | minecraft:acacia_sapling minecraft:crafting_shaped s_a_b:doublesteelblockgrass s_a_b:doublesteelblockgrasssvanna
-s_a_b:savannahard | minecraft:crafting_shaped | minecraft:acacia_sapling minecraft:crafting_shaped s_a_b:hardsteelblockgrass s_a_b:hardsteelblockgrasssvanna
-s_a_b:savannalight | minecraft:crafting_shaped | minecraft:acacia_sapling minecraft:crafting_shaped s_a_b:lightsteelblockgrass s_a_b:lightsteelblockgrasssvanna
-s_a_b:skybase | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:lightbluesteelblock s_a_b:steelblockcamosky s_a_b:whitesteelblock
-s_a_b:skydouble | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:doublesteelblockcamosky s_a_b:lightbluedoublesteelblock s_a_b:whitedoublesteelblock
-s_a_b:skyhard | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:hardsteelblockcamosky s_a_b:lightbluehardsteelblock s_a_b:whitehardsteelblock
-s_a_b:skylight | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:lightbluelightsteelblock s_a_b:lightsteelblockcamosky s_a_b:whitelightsteelblock
-s_a_b:snowybase | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:snow_block s_a_b:steelblockgrass s_a_b:steelgrasssnowy
-s_a_b:snowydouble | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:snow_block s_a_b:doublesteelblockgrass s_a_b:doublesteelgrasssnowy
-s_a_b:snowyhard | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:snow_block s_a_b:hardsteelblockgrass s_a_b:hardsteelgrasssnowy
-s_a_b:snowylight | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:snow_block s_a_b:lightsteelblockgrass s_a_b:lightsteelgrasssnowy
-s_a_b:swampbase | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:vine s_a_b:steelblockgrass s_a_b:steelblockgrassswamp
-s_a_b:swampdouble | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:vine s_a_b:doublesteelblockgrass s_a_b:doublesteelblockgrassswamp
-s_a_b:swamphard | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:vine s_a_b:hardsteelblockgrass s_a_b:hardsteelblockgrassswamp
-s_a_b:swamplight | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:vine s_a_b:lightsteelblockgrass s_a_b:lightsteelblockgrassswamp
-s_a_b:taigabase | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:spruce_sapling s_a_b:steelblockgrass s_a_b:steelblockgrasstaiga
-s_a_b:taigadouble | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:spruce_sapling s_a_b:doublesteelblockgrass s_a_b:doublesteelblockgrasstaiga
-s_a_b:taigahard | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:spruce_sapling s_a_b:hardsteelblockgrass s_a_b:hardsteelblockgrasstaiga
-s_a_b:taigalight | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:spruce_sapling s_a_b:lightsteelblockgrass s_a_b:lightsteelblockgrasstaiga
-s_a_b:wadendouble | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:bluedoublesteelblock s_a_b:cyandoublesteelblock s_a_b:wardendoublesteelblock
-s_a_b:wardenbase | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:bluesteelblock s_a_b:cyansteelblock s_a_b:wardensteelblock
-s_a_b:wardenhard | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:bluehardsteelblock s_a_b:cyanhardsteelblock s_a_b:wardenhardsteelblock
-s_a_b:wardenlight | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:bluelightsteelblock s_a_b:cyanlightsteelblock s_a_b:wardenlightsteelblock
 s_a_b:compacting/double_steel_block | create:compacting | create:compacting s_a_b:doublesteelblock s_a_b:steelblock tfmg:heavy_plate
 s_a_b:compacting/hard_steel_block | create:compacting | create:compacting s_a_b:hardsteelblock s_a_b:steelblock tfmg:heavy_plate
 s_a_b:compacting/light_steel_block | create:compacting | create:compacting s_a_b:lightsteelblock tfmg:heavy_plate
@@ -205,11 +146,58 @@ s_a_b:crafting/colored/normal/steel_block_rotbraun | minecraft:crafting_shapeles
 s_a_b:crafting/colored/normal/steel_block_ship_bottom | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:redsteelblock s_a_b:steelblockshipbottom s_a_b:whitesteelblock
 s_a_b:crafting/colored/normal/steel_block_white | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:white_dye s_a_b:steelblock s_a_b:whitesteelblock
 s_a_b:crafting/colored/normal/steel_block_yellow | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:yellow_dye s_a_b:steelblock s_a_b:yellowsteelblock
+s_a_b:dirtbase | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:dirt s_a_b:steelblock s_a_b:steelblockdirt
+s_a_b:dirtdouble | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:dirt s_a_b:doublesteelblock s_a_b:doublesteelblockdirt
+s_a_b:dirthard | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:dirt s_a_b:hardsteelblock s_a_b:hardsteelblockdirt
+s_a_b:dirtlight | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:dirt s_a_b:lightsteelblock s_a_b:lightsteelblockdirt
+s_a_b:glassarmor | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:glass s_a_b:deleted_mod_element s_a_b:hardsteelblock
+s_a_b:grassbase | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:moss_block s_a_b:steelblock s_a_b:steelblockgrass
+s_a_b:grassdouble | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:moss_block s_a_b:doublesteelblock s_a_b:doublesteelblockgrass
+s_a_b:grasshard | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:moss_block s_a_b:hardsteelblock s_a_b:hardsteelblockgrass
+s_a_b:grasslight | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:moss_block s_a_b:lightsteelblock s_a_b:lightsteelblockgrass
+s_a_b:junglebase | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:jungle_sapling s_a_b:steelblockgrass s_a_b:steelblockgrassjungle
+s_a_b:jungledouble | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:jungle_sapling s_a_b:doublesteelblockgrass s_a_b:doublesteelblockgrassjungle
+s_a_b:junglehard | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:jungle_sapling s_a_b:hardsteelblockgrass s_a_b:hardsteelblockgrassjungle
+s_a_b:junglelight | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:jungle_sapling s_a_b:lightsteelblockgrass s_a_b:lightsteelblockgrassjungle
+s_a_b:lightskybase | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:steelblockcamosky s_a_b:steelblocklightsky s_a_b:whitesteelblock
+s_a_b:lightskydouble | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:doublesteelblockcamosky s_a_b:doublesteelblocklightsky s_a_b:whitedoublesteelblock
+s_a_b:lightskyhard | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:hardsteelblockcamosky s_a_b:hardsteelblocklightsky s_a_b:whitehardsteelblock
+s_a_b:lightskylight | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:lightsteelblockcamosky s_a_b:lightsteelblocklightsky s_a_b:whitelightsteelblock
 s_a_b:mixing/double_steel_block_melting | create:mixing | create:mixing s_a_b:cut tfmg:molten_steel
 s_a_b:mixing/hard_steel_block_melting | create:mixing | create:mixing s_a_b:hard tfmg:molten_steel
 s_a_b:mixing/light_steel_block_melting | create:mixing | create:mixing s_a_b:light tfmg:molten_steel
 s_a_b:mixing/steel_block_melting | create:mixing | create:mixing s_a_b:basic tfmg:molten_steel
+s_a_b:myceliumbase | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:mycelium s_a_b:steelblock s_a_b:steelblockmycelium
+s_a_b:myceliumdouble | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:mycelium s_a_b:doublesteelblock s_a_b:doublesteelblockmycelium
+s_a_b:myceliumhard | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:mycelium s_a_b:hardsteelblock s_a_b:hardsteelblockmycelium
+s_a_b:myceliumlight | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:mycelium s_a_b:lightsteelblock s_a_b:lightsteelblockmycelium
+s_a_b:olivedouble | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:limedoublesteelblock s_a_b:olivedoublesteel s_a_b:yellowdoublesteelblock
+s_a_b:olivehard | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:limehardsteelblock s_a_b:olivehardsteel s_a_b:yellowhardsteelblock
+s_a_b:olivelight | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:limelightsteelblock s_a_b:olivelightsteel s_a_b:yellowlightsteelblock
+s_a_b:olivesb | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:limesteelblock s_a_b:olivesteelblock s_a_b:yellowsteelblock
+s_a_b:podzolbase | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:podzol s_a_b:steelblock s_a_b:steelblockpodzol
+s_a_b:podzoldouble | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:podzol s_a_b:doublesteelblock s_a_b:doublesteelblockpodzol
+s_a_b:podzolhard | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:podzol s_a_b:hardsteelblock s_a_b:hardsteelblockpodzol
+s_a_b:podzollight | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:podzol s_a_b:lightsteelblock s_a_b:lightsteelblockpodzol
+s_a_b:psc | minecraft:crafting_shapeless | minecraft:candles minecraft:crafting_shapeless minecraft:paper s_a_b:puritysealsolo
+s_a_b:reddesertbase | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:red_sand s_a_b:steelblock s_a_b:steelblockcamoreddesert
+s_a_b:reddesertdouble | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:red_sand s_a_b:doublesteelblock s_a_b:doublesteelblockcamoreddesert
+s_a_b:reddeserthard | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:red_sand s_a_b:hardsteelblock s_a_b:hardsteelblockcamoreddesert
+s_a_b:reddesertlight | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:red_sand s_a_b:lightsteelblock s_a_b:lightsteelblockcamoreddesert
 s_a_b:sandbag | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:sand minecraft:wool s_a_b:sandbag
+s_a_b:sandbagrecipe | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:sand minecraft:white_carpet s_a_b:sandbag
+s_a_b:savannabase | minecraft:crafting_shaped | minecraft:acacia_sapling minecraft:crafting_shaped s_a_b:steelblockgrass s_a_b:steelblockgrasssvanna
+s_a_b:savannadouble | minecraft:crafting_shaped | minecraft:acacia_sapling minecraft:crafting_shaped s_a_b:doublesteelblockgrass s_a_b:doublesteelblockgrasssvanna
+s_a_b:savannahard | minecraft:crafting_shaped | minecraft:acacia_sapling minecraft:crafting_shaped s_a_b:hardsteelblockgrass s_a_b:hardsteelblockgrasssvanna
+s_a_b:savannalight | minecraft:crafting_shaped | minecraft:acacia_sapling minecraft:crafting_shaped s_a_b:lightsteelblockgrass s_a_b:lightsteelblockgrasssvanna
+s_a_b:skybase | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:lightbluesteelblock s_a_b:steelblockcamosky s_a_b:whitesteelblock
+s_a_b:skydouble | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:doublesteelblockcamosky s_a_b:lightbluedoublesteelblock s_a_b:whitedoublesteelblock
+s_a_b:skyhard | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:hardsteelblockcamosky s_a_b:lightbluehardsteelblock s_a_b:whitehardsteelblock
+s_a_b:skylight | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:lightbluelightsteelblock s_a_b:lightsteelblockcamosky s_a_b:whitelightsteelblock
+s_a_b:snowybase | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:snow_block s_a_b:steelblockgrass s_a_b:steelgrasssnowy
+s_a_b:snowydouble | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:snow_block s_a_b:doublesteelblockgrass s_a_b:doublesteelgrasssnowy
+s_a_b:snowyhard | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:snow_block s_a_b:hardsteelblockgrass s_a_b:hardsteelgrasssnowy
+s_a_b:snowylight | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:snow_block s_a_b:lightsteelblockgrass s_a_b:lightsteelgrasssnowy
 s_a_b:stonecutting/blocks/hard_armor_parade_stairs | minecraft:stonecutting | minecraft:stonecutting s_a_b:hardsteelblockcoloredparade s_a_b:lghtsteelstairscoloredparade
 s_a_b:stonecutting/blocks/light_slabs/light_steel_29_slab | minecraft:stonecutting | minecraft:stonecutting s_a_b:lightsteelblockcolored_29 s_a_b:lightsteelslabcolored_29
 s_a_b:stonecutting/blocks/light_slabs/light_steel_29_vslab | minecraft:stonecutting | minecraft:stonecutting s_a_b:lightsteelblockcolored_29 s_a_b:lightsteelvslabcolored_29
@@ -570,3 +558,15 @@ s_a_b:stonecutting/letters_brass/symbols/brassexclamation | minecraft:stonecutti
 s_a_b:stonecutting/letters_brass/symbols/brassminus | minecraft:stonecutting | create:brass_sheet minecraft:stonecutting s_a_b:brassminus
 s_a_b:stonecutting/letters_brass/symbols/brassplus | minecraft:stonecutting | create:brass_sheet minecraft:stonecutting s_a_b:brassplus
 s_a_b:stonecutting/letters_brass/symbols/brassquestion | minecraft:stonecutting | create:brass_sheet minecraft:stonecutting s_a_b:brassquestion
+s_a_b:swampbase | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:vine s_a_b:steelblockgrass s_a_b:steelblockgrassswamp
+s_a_b:swampdouble | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:vine s_a_b:doublesteelblockgrass s_a_b:doublesteelblockgrassswamp
+s_a_b:swamphard | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:vine s_a_b:hardsteelblockgrass s_a_b:hardsteelblockgrassswamp
+s_a_b:swamplight | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:vine s_a_b:lightsteelblockgrass s_a_b:lightsteelblockgrassswamp
+s_a_b:taigabase | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:spruce_sapling s_a_b:steelblockgrass s_a_b:steelblockgrasstaiga
+s_a_b:taigadouble | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:spruce_sapling s_a_b:doublesteelblockgrass s_a_b:doublesteelblockgrasstaiga
+s_a_b:taigahard | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:spruce_sapling s_a_b:hardsteelblockgrass s_a_b:hardsteelblockgrasstaiga
+s_a_b:taigalight | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:spruce_sapling s_a_b:lightsteelblockgrass s_a_b:lightsteelblockgrasstaiga
+s_a_b:wadendouble | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:bluedoublesteelblock s_a_b:cyandoublesteelblock s_a_b:wardendoublesteelblock
+s_a_b:wardenbase | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:bluesteelblock s_a_b:cyansteelblock s_a_b:wardensteelblock
+s_a_b:wardenhard | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:bluehardsteelblock s_a_b:cyanhardsteelblock s_a_b:wardenhardsteelblock
+s_a_b:wardenlight | minecraft:crafting_shapeless | minecraft:crafting_shapeless s_a_b:bluelightsteelblock s_a_b:cyanlightsteelblock s_a_b:wardenlightsteelblock

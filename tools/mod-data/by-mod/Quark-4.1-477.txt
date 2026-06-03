@@ -1829,74 +1829,75 @@ quark:yellow_stool
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-worldgen/biome/is_rare.json :: { "replace": false, "values": [ "quark:glimmering_weald" ]}
-worldgen/biome/is_overworld.json :: { "replace": false, "values": [ "quark:glimmering_weald" ]}
-worldgen/biome/is_underground.json :: { "replace": false, "values": [ "quark:glimmering_weald" ]}
-worldgen/biome/is_mushroom.json :: { "replace": false, "values": [ "quark:glimmering_weald" ]}
-worldgen/biome/is_magical.json :: { "replace": false, "values": [ "quark:glimmering_weald" ]}
-item/glass_panes.json :: { "replace": false, "values": [ "quark:dirty_glass_pane", "quark:framed_glass_pane",	"quark:black_framed_glass_pane",	"quark:blue_framed_glass_pane",	"quark:brown_framed_glass_pane",	"quark:cyan_framed_glass_pane",	"quark:gray_framed_glass_pane",	"quark:green_framed_glass_pane",	"quark:light_blue_framed_glass_pane",	"quark:light_gray_framed_glass_pane",	"quark:lime_framed_glass_pane",	"quark:magenta_framed_glass_pane",	"quark:orange_framed_glass_pane",	"quark:pink_framed_glass_pane",	"quark:purple_framed_glass_pane",	"quark:red_framed_glass_pane",	"quark:white_framed_glass_pane",	"quark:yellow_framed_glass_pane" ]}
-item/stripped_logs.json :: { "replace": false, "values": [ "quark:stripped_azalea_log", "quark:stripped_azalea_wood", "quark:stripped_blossom_log", "quark:stripped_blossom_wood", "quark:stripped_ancient_log", "quark:stripped_ancient_wood" ]}
-item/ingots/copper.json :: { "replace": false, "values": [ 	"minecraft:copper_ingot" ]}
-item/armors/helmets.json :: { "replace": false, "values": [ "quark:forgotten_hat" ]}
-item/glass_blocks.json :: { "replace": false, "values": [ "quark:dirty_glass" ]}
-item/fence_gates/wooden.json :: { "replace": false, "values": [ "quark:azalea_fence_gate", "quark:blossom_fence_gate", "quark:ancient_fence_gate" ]}
-item/storage_blocks/carrot.json :: { "replace": false, "values": [ "quark:carrot_crate" ]}
-item/storage_blocks/cactus.json :: { "replace": false, "values": [ "quark:cactus_block" ]}
-item/storage_blocks/golden_apple.json :: { "replace": false, "values": [ "quark:golden_apple_crate" ]}
-item/storage_blocks/nether_wart.json :: { "replace": false, "values": [ "quark:nether_wart_sack" ]}
-item/storage_blocks/sugar_cane.json :: { "replace": false, "values": [ "quark:sugar_cane_block" ]}
-item/storage_blocks/sweet_berries.json :: { "replace": false, "values": [ "quark:berry_sack" ]}
-item/storage_blocks/stick.json :: { "replace": false, "values": [ "quark:stick_block" ]}
-item/storage_blocks/beetroot.json :: { "replace": false, "values": [ "quark:beetroot_crate" ]}
-item/storage_blocks/charcoal.json :: { "replace": false, "values": [ "quark:charcoal_block" ]}
-item/storage_blocks/potato.json :: { "replace": false, "values": [ "quark:potato_crate" ]}
-item/storage_blocks/chorus_fruit.json :: { "replace": false, "values": [ "quark:chorus_fruit_block" ]}
-item/storage_blocks/gunpowder.json :: { "replace": false, "values": [ "quark:gunpowder_sack" ]}
-item/storage_blocks/golden_carrot.json :: { "replace": false, "values": [ "quark:golden_carrot_crate" ]}
-item/storage_blocks/blaze_rod.json :: { "replace": false, "values": [ "quark:blaze_lantern" ]}
-item/storage_blocks/glow_berries.json :: { "replace": false, "values": [ "quark:glowberry_sack" ]}
-item/storage_blocks/cocoa_beans.json :: { "replace": false, "values": [ "quark:cocoa_beans_sack" ]}
-item/storage_blocks/apple.json :: { "replace": false, "values": [ "quark:apple_crate" ]}
-item/storage_blocks/rabbit_hide.json :: { "replace": false, "values": [ "quark:bonded_rabbit_hide" ]}
-item/storage_blocks/leather.json :: { "replace": false, "values": [ "quark:bonded_leather" ]}
-item/music_discs.json :: { "replace": false, "values": [ "quark:music_disc_endermosh", "quark:music_disc_drips", "quark:music_disc_ocean", "quark:music_disc_rain", "quark:music_disc_wind", "quark:music_disc_fire", "quark:music_disc_clock", "quark:music_disc_crickets", "quark:music_disc_chatter" ]}
-item/storage_blocks.json :: { "replace": false, "values": [ "#c:storage_blocks/charcoal", "#c:storage_blocks/sugar_cane", "#c:storage_blocks/cactus", "#c:storage_blocks/chorus_fruit", "#c:storage_blocks/stick", "#c:storage_blocks/apple", "#c:storage_blocks/golden_apple", "#c:storage_blocks/potato", "#c:storage_blocks/carrot", "#c:storage_blocks/golden_carrot", "#c:storage_blocks/beetroot", "#c:storage_blocks/cocoa_beans", "#c:storage_blocks/nether_wart", "#c:storage_blocks/gunpowder", "#c:storage_blocks/sweet_berries", "#c:storage_blocks/glow_berries", "#c:storage_blocks/blaze_rod", "#c:storage_blocks/leather", "#c:storage_blocks/rabbit_hide" ]}
-item/fence_gates.json :: { "replace": false, "values": [ "quark:ancient_fence_gate", "quark:azalea_fence_gate", "quark:blossom_fence_gate", "quark:nether_brick_fence_gate" ]}
-item/fences.json :: { "replace": false, "values": [ "quark:azalea_fence", "quark:blossom_fence", "quark:ancient_fence" ]}
-item/stone.json :: { "replace": false, "values": [ "quark:jasper", "quark:limestone", "quark:permafrost", "quark:shale", "quark:myalite", "quark:polished_jasper", "quark:polished_limestone", "quark:polished_calcite", "quark:polished_shale", "quark:polished_myalite" ]}
-item/tools.json :: { "replace": false, "values": [ "quark:pickarang", "quark:flamerang" ]}
-item/fences/wooden.json :: { "replace": false, "values": [ "quark:azalea_fence", "quark:blossom_fence", "quark:ancient_fence" ]}
-item/glass_blocks/silica.json :: { "replace": false, "values": [ "quark:dirty_glass" ]}
-block/glass_panes.json :: { "replace": false, "values": [ "quark:dirty_glass_pane", "quark:framed_glass_pane",	"quark:black_framed_glass_pane",	"quark:blue_framed_glass_pane",	"quark:brown_framed_glass_pane",	"quark:cyan_framed_glass_pane",	"quark:gray_framed_glass_pane",	"quark:green_framed_glass_pane",	"quark:light_blue_framed_glass_pane",	"quark:light_gray_framed_glass_pane",	"quark:lime_framed_glass_pane",	"quark:magenta_framed_glass_pane",	"quark:orange_framed_glass_pane",	"quark:pink_framed_glass_pane",	"quark:purple_framed_glass_pane",	"quark:red_framed_glass_pane",	"quark:white_framed_glass_pane",	"quark:yellow_framed_glass_pane" ]}
-block/stripped_logs.json :: { "replace": false, "values": [ "quark:stripped_azalea_log", "quark:stripped_azalea_wood", "quark:stripped_blossom_log", "quark:stripped_blossom_wood", "quark:stripped_ancient_log", "quark:stripped_ancient_wood" ]}
-block/glass_blocks.json :: { "replace": false, "values": [ "quark:dirty_glass" ]}
-block/needs_diamond_tool.json :: { "replace": false, "values": [ "quark:myalite_crystal", "quark:obsidian_pressure_plate", "quark:ender_watcher", "quark:matrix_enchanter" ]}
-block/fence_gates/wooden.json :: { "replace": false, "values": [ "quark:azalea_fence_gate", "quark:blossom_fence_gate", "quark:ancient_fence_gate" ]}
-block/storage_blocks/carrot.json :: { "replace": false, "values": [ "quark:carrot_crate" ]}
-block/storage_blocks/cactus.json :: { "replace": false, "values": [ "quark:cactus_block" ]}
-block/storage_blocks/golden_apple.json :: { "replace": false, "values": [ "quark:golden_apple_crate" ]}
-block/storage_blocks/nether_wart.json :: { "replace": false, "values": [ "quark:nether_wart_sack" ]}
-block/storage_blocks/sugar_cane.json :: { "replace": false, "values": [ "quark:sugar_cane_block" ]}
-block/storage_blocks/sweet_berries.json :: { "replace": false, "values": [ "quark:berry_sack" ]}
-block/storage_blocks/stick.json :: { "replace": false, "values": [ "quark:stick_block" ]}
-block/storage_blocks/beetroot.json :: { "replace": false, "values": [ "quark:beetroot_crate" ]}
-block/storage_blocks/charcoal.json :: { "replace": false, "values": [ "quark:charcoal_block" ]}
-block/storage_blocks/potato.json :: { "replace": false, "values": [ "quark:potato_crate" ]}
-block/storage_blocks/chorus_fruit.json :: { "replace": false, "values": [ "quark:chorus_fruit_block" ]}
-block/storage_blocks/gunpowder.json :: { "replace": false, "values": [ "quark:gunpowder_sack" ]}
-block/storage_blocks/golden_carrot.json :: { "replace": false, "values": [ "quark:golden_carrot_crate" ]}
-block/storage_blocks/blaze_rod.json :: { "replace": false, "values": [ "quark:blaze_lantern" ]}
-block/storage_blocks/glow_berries.json :: { "replace": false, "values": [ "quark:glowberry_sack" ]}
-block/storage_blocks/cocoa_beans.json :: { "replace": false, "values": [ "quark:cocoa_beans_sack" ]}
-block/storage_blocks/apple.json :: { "replace": false, "values": [ "quark:apple_crate" ]}
-block/storage_blocks/rabbit_hide.json :: { "replace": false, "values": [ "quark:bonded_rabbit_hide" ]}
-block/storage_blocks/leather.json :: { "replace": false, "values": [ "quark:bonded_leather" ]}
-block/storage_blocks.json :: { "replace": false, "values": [ "#c:storage_blocks/charcoal", "#c:storage_blocks/sugar_cane", "#c:storage_blocks/cactus", "#c:storage_blocks/chorus_fruit", "#c:storage_blocks/stick", "#c:storage_blocks/apple", "#c:storage_blocks/golden_apple", "#c:storage_blocks/potato", "#c:storage_blocks/carrot", "#c:storage_blocks/golden_carrot", "#c:storage_blocks/beetroot", "#c:storage_blocks/cocoa_beans", "#c:storage_blocks/nether_wart", "#c:storage_blocks/gunpowder", "#c:storage_blocks/sweet_berries", "#c:storage_blocks/glow_berries", "#c:storage_blocks/blaze_rod", "#c:storage_blocks/leather", "#c:storage_blocks/rabbit_hide" ]}
-block/fence_gates.json :: { "replace": false, "values": [ "quark:ancient_fence_gate", "quark:azalea_fence_gate", "quark:blossom_fence_gate", "quark:nether_brick_fence_gate" ]}
-block/needs_stone_tool.json :: { "replace": false, "values": [ "quark:cut_copper_vertical_slab", "quark:exposed_cut_copper_vertical_slab", "quark:oxidized_cut_copper_vertical_slab", "quark:waxed_cut_copper_vertical_slab", "quark:waxed_exposed_cut_copper_vertical_slab", "quark:waxed_oxidized_cut_copper_vertical_slab", "quark:waxed_weathered_cut_copper_vertical_slab", "quark:weathered_cut_copper_vertical_slab", "quark:framed_glass", "quark:white_framed_glass", "quark:orange_framed_glass", "quark:magenta_framed_glass", "quark:light_blue_framed_glass", "quark:yellow_framed_glass", "quark:lime_framed_glass", "quark:pink_framed_glass", "quark:gray_framed_glass", "quark:light_gray_framed_glass", "quark:cyan_framed_glass", "quark:purple_framed_glass", "quark:blue_framed_glass", "quark:brown_framed_glass", "quark:green_framed_glass", "quark:red_framed_glass", "quark:black_framed_glass", "quark:framed_glass_pane", "quark:white_framed_glass_pane", "quark:orange_framed_glass_pane", "quark:magenta_framed_glass_pane", "quark:light_blue_framed_glass_pane", "quark:yellow_framed_glass_pane", "quark:lime_framed_glass_pane", "quark:pink_framed_glass_pane", "quark:gray_framed_glass_pane", "quark:light_gray_framed_glass_pane", "quark:cyan_framed_glass_pane", "quark:purple_framed_glass_pane", "quark:blue_framed_glass_pane", "quark:brown_framed_glass_pane", "quark:green_framed_glass_pane", "quark:red_framed_glass_pane", "quark:black_framed_glass_pane", "quark:iron_plate", "quark:iron_plate_slab", "quark:iron_plate_vertical_slab", "quark:iron_plate_stairs", "quark:rusty_iron_plate", "quark:rusty_iron_plate_slab", "quark:rusty_iron_plate_vertical_slab", "quark:rusty_iron_plate_stairs", "quark:iron_pillar", "quark:iron_ladder", "quark:iron_rod", "quark:grate", "quark:raw_iron_bricks", "quark:raw_copper_bricks", "quark:raw_iron_bricks_stairs", "quark:raw_copper_bricks_stairs", "quark:raw_iron_bricks_slab", "quark:raw_copper_bricks_slab", "quark:raw_iron_bricks_vertical_slab", "quark:raw_copper_bricks_vertical_slab", "quark:raw_copper_bricks_wall", "quark:raw_iron_bricks_wall" ]}
-block/fences.json :: { "replace": false, "values": [ "quark:azalea_fence", "quark:blossom_fence", "quark:ancient_fence" ]}
-block/stone.json :: { "replace": false, "values": [ "quark:jasper", "quark:limestone", "quark:permafrost", "quark:shale", "quark:myalite", "quark:polished_jasper", "quark:polished_limestone", "quark:polished_calcite", "quark:polished_shale", "quark:polished_myalite" ]}
-block/fences/wooden.json :: { "replace": false, "values": [ "quark:azalea_fence", "quark:blossom_fence", "quark:ancient_fence" ]}
-block/glass_blocks/silica.json :: { "replace": false, "values": [ "quark:dirty_glass" ]}
-block/needs_iron_tool.json :: { "replace": false, "values": [ "quark:gold_bars", "quark:raw_gold_bricks", "quark:raw_gold_bricks_stairs", "quark:raw_gold_bricks_slab", "quark:raw_gold_bricks_vertical_slab", "quark:raw_gold_bricks_wall" ]}
+block/fence_gates :: {"replace": false, "values": ["quark:ancient_fence_gate", "quark:azalea_fence_gate", "quark:blossom_fence_gate", "quark:nether_brick_fence_gate"]}
+block/fence_gates/wooden :: {"replace": false, "values": ["quark:azalea_fence_gate", "quark:blossom_fence_gate", "quark:ancient_fence_gate"]}
+block/fences :: {"replace": false, "values": ["quark:azalea_fence", "quark:blossom_fence", "quark:ancient_fence"]}
+block/fences/wooden :: {"replace": false, "values": ["quark:azalea_fence", "quark:blossom_fence", "quark:ancient_fence"]}
+block/glass_blocks :: {"replace": false, "values": ["quark:dirty_glass"]}
+block/glass_blocks/silica :: {"replace": false, "values": ["quark:dirty_glass"]}
+block/glass_panes :: {"replace": false, "values": ["quark:dirty_glass_pane", "quark:framed_glass_pane", "quark:black_framed_glass_pane", "quark:blue_framed_glass_pane", "quark:brown_framed_glass_pane", "quark:cyan_framed_glass_pane", "quark:gray_framed_glass_pane", "quark:green_framed_glass_pane", "quark:light_blue_framed_glass_pane", "quark:light_gray_framed_glass_pane", "quark:lime_framed_glass_pane", "quark:magenta_framed_glass_pane", "quark:orange_framed_glass_pane", "quark:pink_framed_glass_pane", "quark:purple_framed_glass_pane", "quark:red_framed_glass_pane", "quark:white_framed_glass_pane", "quark:yellow_framed_glass_pane"]}
+block/needs_diamond_tool :: {"replace": false, "values": ["quark:myalite_crystal", "quark:obsidian_pressure_plate", "quark:ender_watcher", "quark:matrix_enchanter"]}
+block/needs_iron_tool :: {"replace": false, "values": ["quark:gold_bars", "quark:raw_gold_bricks", "quark:raw_gold_bricks_stairs", "quark:raw_gold_bricks_slab", "quark:raw_gold_bricks_vertical_slab", "quark:raw_gold_bricks_wall"]}
+block/needs_stone_tool :: {"replace": false, "values": ["quark:cut_copper_vertical_slab", "quark:exposed_cut_copper_vertical_slab", "quark:oxidized_cut_copper_vertical_slab", "quark:waxed_cut_copper_vertical_slab", "quark:waxed_exposed_cut_copper_vertical_slab", "quark:waxed_oxidized_cut_copper_vertical_slab", "quark:waxed_weathered_cut_copper_vertical_slab", "quark:weathered_cut_copper_vertical_slab", "quark:framed_glass", "quark:white_framed_glass", "quark:orange_framed_glass", "quark:magenta_framed_glass", "quark:light_blue_framed_glass", "quark:yellow_framed_glass", "quark:lime_framed_glass", "quark:pink_framed_glass", "quark:gray_framed_glass", "quark:light_gray_framed_glass", "quark:cyan_framed_glass", "quark:purple_framed_glass", "quark:blue_framed_glass", "quark:brown_framed_glass", "quark:green_framed_glass", "quark:red_framed_glass", "quark:black_framed_glass", "quark:framed_glass_pane", "quark:white_framed_glass_pane", "quark:orange_framed_glass_pane", "quark:magenta_framed_glass_pane", "quark:light_blue_framed_glass_pane", "quark:yellow_framed_glass_pane", "quark:lime_framed_glass_pane", "quark:pink_framed_glass_pane", "quark:gray_framed_glass_pane", "quark:light_gray_framed_glass_pane", "quark:cyan_framed_glass_pane", "quark:purple_framed_glass_pane", "quark:blue_framed_glass_pane", "quark:brown_framed_glass_pane", "quark:green_framed_glass_pane", "quark:red_framed_glass_pane", "quark:black_framed_glass_pane", "quark:iron_plate", "quark:iron_plate_slab", "quark:iron_plate_vertical_slab", "quark:iron_plate_stairs", "quark:rusty_iron_plate", "quark:rusty_iron_plate_slab", "quark:rusty_iron_plate_vertical_slab", "quark:rusty_iron_plate_stairs", "quark:iron_pillar", "quark:iron_ladder", "quark:iron_rod", "quark:grate", "quark:raw_iron_bricks", "quark:raw_copper_bricks", "quark:raw_iron_bricks_stairs", "quark:raw_copper_bricks_stairs", "quark:raw_iron_bricks_slab", "quark:raw_copper_bricks_slab", "quark:raw_iron_bricks_vertical_slab", "quark:raw_copper_bricks_vertical_slab", "quark:raw_copper_bricks_wall", "quark:raw_iron_bricks_wall"]}
+block/stone :: {"replace": false, "values": ["quark:jasper", "quark:limestone", "quark:permafrost", "quark:shale", "quark:myalite", "quark:polished_jasper", "quark:polished_limestone", "quark:polished_calcite", "quark:polished_shale", "quark:polished_myalite"]}
+block/storage_blocks :: {"replace": false, "values": ["#c:storage_blocks/charcoal", "#c:storage_blocks/sugar_cane", "#c:storage_blocks/cactus", "#c:storage_blocks/chorus_fruit", "#c:storage_blocks/stick", "#c:storage_blocks/apple", "#c:storage_blocks/golden_apple", "#c:storage_blocks/potato", "#c:storage_blocks/carrot", "#c:storage_blocks/golden_carrot", "#c:storage_blocks/beetroot", "#c:storage_blocks/cocoa_beans", "#c:storage_blocks/nether_wart", "#c:storage_blocks/gunpowder", "#c:storage_blocks/sweet_berries", "#c:storage_blocks/glow_berries", "#c:storage_blocks/blaze_rod", "#c:storage_blocks/leather", "#c:storage_blocks/rabbit_hide"]}
+block/storage_blocks/apple :: {"replace": false, "values": ["quark:apple_crate"]}
+block/storage_blocks/beetroot :: {"replace": false, "values": ["quark:beetroot_crate"]}
+block/storage_blocks/blaze_rod :: {"replace": false, "values": ["quark:blaze_lantern"]}
+block/storage_blocks/cactus :: {"replace": false, "values": ["quark:cactus_block"]}
+block/storage_blocks/carrot :: {"replace": false, "values": ["quark:carrot_crate"]}
+block/storage_blocks/charcoal :: {"replace": false, "values": ["quark:charcoal_block"]}
+block/storage_blocks/chorus_fruit :: {"replace": false, "values": ["quark:chorus_fruit_block"]}
+block/storage_blocks/cocoa_beans :: {"replace": false, "values": ["quark:cocoa_beans_sack"]}
+block/storage_blocks/glow_berries :: {"replace": false, "values": ["quark:glowberry_sack"]}
+block/storage_blocks/golden_apple :: {"replace": false, "values": ["quark:golden_apple_crate"]}
+block/storage_blocks/golden_carrot :: {"replace": false, "values": ["quark:golden_carrot_crate"]}
+block/storage_blocks/gunpowder :: {"replace": false, "values": ["quark:gunpowder_sack"]}
+block/storage_blocks/leather :: {"replace": false, "values": ["quark:bonded_leather"]}
+block/storage_blocks/nether_wart :: {"replace": false, "values": ["quark:nether_wart_sack"]}
+block/storage_blocks/potato :: {"replace": false, "values": ["quark:potato_crate"]}
+block/storage_blocks/rabbit_hide :: {"replace": false, "values": ["quark:bonded_rabbit_hide"]}
+block/storage_blocks/stick :: {"replace": false, "values": ["quark:stick_block"]}
+block/storage_blocks/sugar_cane :: {"replace": false, "values": ["quark:sugar_cane_block"]}
+block/storage_blocks/sweet_berries :: {"replace": false, "values": ["quark:berry_sack"]}
+block/stripped_logs :: {"replace": false, "values": ["quark:stripped_azalea_log", "quark:stripped_azalea_wood", "quark:stripped_blossom_log", "quark:stripped_blossom_wood", "quark:stripped_ancient_log", "quark:stripped_ancient_wood"]}
+item/armors/helmets :: {"replace": false, "values": ["quark:forgotten_hat"]}
+item/fence_gates :: {"replace": false, "values": ["quark:ancient_fence_gate", "quark:azalea_fence_gate", "quark:blossom_fence_gate", "quark:nether_brick_fence_gate"]}
+item/fence_gates/wooden :: {"replace": false, "values": ["quark:azalea_fence_gate", "quark:blossom_fence_gate", "quark:ancient_fence_gate"]}
+item/fences :: {"replace": false, "values": ["quark:azalea_fence", "quark:blossom_fence", "quark:ancient_fence"]}
+item/fences/wooden :: {"replace": false, "values": ["quark:azalea_fence", "quark:blossom_fence", "quark:ancient_fence"]}
+item/glass_blocks :: {"replace": false, "values": ["quark:dirty_glass"]}
+item/glass_blocks/silica :: {"replace": false, "values": ["quark:dirty_glass"]}
+item/glass_panes :: {"replace": false, "values": ["quark:dirty_glass_pane", "quark:framed_glass_pane", "quark:black_framed_glass_pane", "quark:blue_framed_glass_pane", "quark:brown_framed_glass_pane", "quark:cyan_framed_glass_pane", "quark:gray_framed_glass_pane", "quark:green_framed_glass_pane", "quark:light_blue_framed_glass_pane", "quark:light_gray_framed_glass_pane", "quark:lime_framed_glass_pane", "quark:magenta_framed_glass_pane", "quark:orange_framed_glass_pane", "quark:pink_framed_glass_pane", "quark:purple_framed_glass_pane", "quark:red_framed_glass_pane", "quark:white_framed_glass_pane", "quark:yellow_framed_glass_pane"]}
+item/ingots/copper :: {"replace": false, "values": ["minecraft:copper_ingot"]}
+item/music_discs :: {"replace": false, "values": ["quark:music_disc_endermosh", "quark:music_disc_drips", "quark:music_disc_ocean", "quark:music_disc_rain", "quark:music_disc_wind", "quark:music_disc_fire", "quark:music_disc_clock", "quark:music_disc_crickets", "quark:music_disc_chatter"]}
+item/stone :: {"replace": false, "values": ["quark:jasper", "quark:limestone", "quark:permafrost", "quark:shale", "quark:myalite", "quark:polished_jasper", "quark:polished_limestone", "quark:polished_calcite", "quark:polished_shale", "quark:polished_myalite"]}
+item/storage_blocks :: {"replace": false, "values": ["#c:storage_blocks/charcoal", "#c:storage_blocks/sugar_cane", "#c:storage_blocks/cactus", "#c:storage_blocks/chorus_fruit", "#c:storage_blocks/stick", "#c:storage_blocks/apple", "#c:storage_blocks/golden_apple", "#c:storage_blocks/potato", "#c:storage_blocks/carrot", "#c:storage_blocks/golden_carrot", "#c:storage_blocks/beetroot", "#c:storage_blocks/cocoa_beans", "#c:storage_blocks/nether_wart", "#c:storage_blocks/gunpowder", "#c:storage_blocks/sweet_berries", "#c:storage_blocks/glow_berries", "#c:storage_blocks/blaze_rod", "#c:storage_blocks/leather", "#c:storage_blocks/rabbit_hide"]}
+item/storage_blocks/apple :: {"replace": false, "values": ["quark:apple_crate"]}
+item/storage_blocks/beetroot :: {"replace": false, "values": ["quark:beetroot_crate"]}
+item/storage_blocks/blaze_rod :: {"replace": false, "values": ["quark:blaze_lantern"]}
+item/storage_blocks/cactus :: {"replace": false, "values": ["quark:cactus_block"]}
+item/storage_blocks/carrot :: {"replace": false, "values": ["quark:carrot_crate"]}
+item/storage_blocks/charcoal :: {"replace": false, "values": ["quark:charcoal_block"]}
+item/storage_blocks/chorus_fruit :: {"replace": false, "values": ["quark:chorus_fruit_block"]}
+item/storage_blocks/cocoa_beans :: {"replace": false, "values": ["quark:cocoa_beans_sack"]}
+item/storage_blocks/glow_berries :: {"replace": false, "values": ["quark:glowberry_sack"]}
+item/storage_blocks/golden_apple :: {"replace": false, "values": ["quark:golden_apple_crate"]}
+item/storage_blocks/golden_carrot :: {"replace": false, "values": ["quark:golden_carrot_crate"]}
+item/storage_blocks/gunpowder :: {"replace": false, "values": ["quark:gunpowder_sack"]}
+item/storage_blocks/leather :: {"replace": false, "values": ["quark:bonded_leather"]}
+item/storage_blocks/nether_wart :: {"replace": false, "values": ["quark:nether_wart_sack"]}
+item/storage_blocks/potato :: {"replace": false, "values": ["quark:potato_crate"]}
+item/storage_blocks/rabbit_hide :: {"replace": false, "values": ["quark:bonded_rabbit_hide"]}
+item/storage_blocks/stick :: {"replace": false, "values": ["quark:stick_block"]}
+item/storage_blocks/sugar_cane :: {"replace": false, "values": ["quark:sugar_cane_block"]}
+item/storage_blocks/sweet_berries :: {"replace": false, "values": ["quark:berry_sack"]}
+item/stripped_logs :: {"replace": false, "values": ["quark:stripped_azalea_log", "quark:stripped_azalea_wood", "quark:stripped_blossom_log", "quark:stripped_blossom_wood", "quark:stripped_ancient_log", "quark:stripped_ancient_wood"]}
+item/tools :: {"replace": false, "values": ["quark:pickarang", "quark:flamerang"]}
+worldgen/biome/is_magical :: {"replace": false, "values": ["quark:glimmering_weald"]}
+worldgen/biome/is_mushroom :: {"replace": false, "values": ["quark:glimmering_weald"]}
+worldgen/biome/is_overworld :: {"replace": false, "values": ["quark:glimmering_weald"]}
+worldgen/biome/is_rare :: {"replace": false, "values": ["quark:glimmering_weald"]}
+worldgen/biome/is_underground :: {"replace": false, "values": ["quark:glimmering_weald"]}

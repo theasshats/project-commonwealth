@@ -128,23 +128,23 @@ snowyspirit:wild_ginger
 snowyspirit:wreath
 
 ## neoforge biome_modifiers
-ginger.json :: { "type": "neoforge:add_features", "biomes": "#snowyspirit:has_wild_ginger", "features": "snowyspirit:wild_ginger", "step": "vegetal_decoration"}
-ginger_dense.json :: { "type": "neoforge:add_features", "biomes": "#snowyspirit:has_wild_ginger_dense", "features": "snowyspirit:wild_ginger_dense", "step": "vegetal_decoration"}
+ginger.json :: {"type": "neoforge:add_features", "biomes": "#snowyspirit:has_wild_ginger", "features": "snowyspirit:wild_ginger", "step": "vegetal_decoration"}
+ginger_dense.json :: {"type": "neoforge:add_features", "biomes": "#snowyspirit:has_wild_ginger_dense", "features": "snowyspirit:wild_ginger_dense", "step": "vegetal_decoration"}
 
 ## c: common tag membership
-block/crops.json :: { "replace": false, "values": [ "snowyspirit:ginger" ]}
-block/crops/ginger.json :: { "replace": false, "values": [ "snowyspirit:ginger" ]}
-block/vegetables.json :: { "replace": false, "values": [ "snowyspirit:ginger" ]}
-block/vegetables/ginger.json :: { "replace": false, "values": [ "snowyspirit:ginger" ]}
-item/crops.json :: { "replace": false, "values": [ "snowyspirit:ginger" ]}
-item/crops/ginger.json :: { "replace": false, "values": [ "snowyspirit:ginger" ]}
-item/drinks.json :: { "replace": false, "values": [ "snowyspirit:eggnog" ]}
-item/drinks/eggnog.json :: { "replace": false, "values": [ "snowyspirit:eggnog" ]}
-item/foods.json :: { "replace": false, "values": [ "snowyspirit:eggnog", "snowyspirit:gingerbread_cookie" ]}
-item/foods/candy.json :: { "replace": false, "values": [ "snowyspirit:gingerbread_cookie", "snowyspirit:candy_cane" ]}
-item/foods/cookie.json :: { "replace": false, "values": [ "snowyspirit:gingerbread_cookie" ]}
-item/foods/vegetable.json :: { "replace": false, "values": [ "snowyspirit:ginger" ]}
-item/music_discs.json :: { "replace": false, "values": [ "snowyspirit:music_disc_a_carol" ]}
-item/seeds.json :: { "replace": false, "values": [ "snowyspirit:ginger_flower" ]}
-item/seeds/ginger.json :: { "replace": false, "values": [ "snowyspirit:ginger_flower" ]}
-item/vegetables/ginger.json :: { "replace": false, "values": [ "snowyspirit:ginger" ]}
+block/crops :: {"replace": false, "values": ["snowyspirit:ginger"]}
+block/crops/ginger :: {"replace": false, "values": ["snowyspirit:ginger"]}
+block/vegetables :: {"replace": false, "values": ["snowyspirit:ginger"]}
+block/vegetables/ginger :: {"replace": false, "values": ["snowyspirit:ginger"]}
+item/crops :: {"replace": false, "values": ["snowyspirit:ginger"]}
+item/crops/ginger :: {"replace": false, "values": ["snowyspirit:ginger"]}
+item/drinks :: {"replace": false, "values": ["snowyspirit:eggnog"]}
+item/drinks/eggnog :: {"replace": false, "values": ["snowyspirit:eggnog"]}
+item/foods :: {"replace": false, "values": ["snowyspirit:eggnog", "snowyspirit:gingerbread_cookie"]}
+item/foods/candy :: {"replace": false, "values": ["snowyspirit:gingerbread_cookie", "snowyspirit:candy_cane"]}
+item/foods/cookie :: {"replace": false, "values": ["snowyspirit:gingerbread_cookie"]}
+item/foods/vegetable :: {"replace": false, "values": ["snowyspirit:ginger"]}
+item/music_discs :: {"replace": false, "values": ["snowyspirit:music_disc_a_carol"]}
+item/seeds :: {"replace": false, "values": ["snowyspirit:ginger_flower"]}
+item/seeds/ginger :: {"replace": false, "values": ["snowyspirit:ginger_flower"]}
+item/vegetables/ginger :: {"replace": false, "values": ["snowyspirit:ginger"]}

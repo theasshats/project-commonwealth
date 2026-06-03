@@ -12,9 +12,12 @@ versionRange = "[1.21,1.22)"
 
 ## blocks
 
+
 ## items
 formations:template_editor
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
+

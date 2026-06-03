@@ -20,9 +20,12 @@ modId = "littletiles"
 
 ## blocks
 
+
 ## items
+
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-block/end_stones.json :: { "replace": false, "values": [ "minecraft:end_stone" ]}
+block/end_stones :: {"replace": false, "values": ["minecraft:end_stone"]}

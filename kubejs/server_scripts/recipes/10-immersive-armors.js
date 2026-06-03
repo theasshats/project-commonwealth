@@ -7,19 +7,23 @@
 // CONVENTION: each swap carries the ORIGINAL ingredients as an `orig:` comment (from the
 // mod-data recipe digest) so review can weigh the author's intent and catch accidental
 // easier/harder shifts. (Digest gives ingredients, not exact shape/counts.)
+//
+// Verified against tools/mod-data/recipes/immersive_armors-1.7.5+1.21.1-neoforge.txt.
 
 ServerEvents.recipes(event => {
   const swap = (id, pattern, key) => { event.remove({ output: id }); event.shaped(id, pattern, key) }
 
-  // ── HEAVY — iron plate. NOTE: orig used iron_block (dense), so sheets may be a touch cheaper. ──
+  // ── HEAVY — dense iron plating. BALANCE: orig used an iron_BLOCK core, so keep that block (the
+  //    "heavy" weight) and add Create-pressed iron SHEETS as the plating gate — never cheaper than
+  //    the iron_block + iron_ingot original. ──
   // orig heavy_helmet:     iron_block + iron_ingot
-  swap('immersive_armors:heavy_helmet',     ['SSS', 'S S'],        { S: 'create:iron_sheet' })
+  swap('immersive_armors:heavy_helmet',     ['SSS', 'SBS'],        { S: 'create:iron_sheet', B: 'minecraft:iron_block' })
   // orig heavy_chestplate: iron_block + iron_ingot
-  swap('immersive_armors:heavy_chestplate', ['S S', 'SSS', 'SSS'], { S: 'create:iron_sheet' })
+  swap('immersive_armors:heavy_chestplate', ['S S', 'SBS', 'SSS'], { S: 'create:iron_sheet', B: 'minecraft:iron_block' })
   // orig heavy_leggings:   iron_block + iron_ingot
-  swap('immersive_armors:heavy_leggings',   ['SSS', 'S S', 'S S'], { S: 'create:iron_sheet' })
+  swap('immersive_armors:heavy_leggings',   ['SBS', 'S S', 'S S'], { S: 'create:iron_sheet', B: 'minecraft:iron_block' })
   // orig heavy_boots:      iron_block + iron_ingot
-  swap('immersive_armors:heavy_boots',      ['S S', 'S S'],        { S: 'create:iron_sheet' })
+  swap('immersive_armors:heavy_boots',      ['S S', 'SBS'],        { S: 'create:iron_sheet', B: 'minecraft:iron_block' })
 
   // ── STEAMPUNK — brass + gears + mechanism core (orig was gold + piston/clock/compass gadgetry) ──
   // orig steampunk_helmet:     gold_ingot + redstone_torch + white_stained_glass

@@ -370,23 +370,23 @@ meadow:yellow_pine_leaves
 meadow:yellow_pine_sapling
 
 ## neoforge biome_modifiers
-add_animals.json :: { "type": "meadow:add_animals"}
-add_biome_modification_meadow.json :: { "type": "neoforge:add_features", "biomes": "minecraft:meadow", "features": [ "meadow:eriophorum_field_patch_placed", "meadow:fallen_pine_tree_checked", "meadow:flower_field_patch_placed", "meadow:forest_trees", "meadow:meadow_trees", "meadow:ores/ore_limestone", "meadow:ores/ore_salt_buried", "meadow:ores/ore_salt_upper", "meadow:small_fir_patch_placed", "meadow:terrain/limestone_boulder_placed", "meadow:terrain/limestone_slab_placed", "meadow:terrain/replace_stone_with_limestone", "meadow:terrain/replace_grass_with_mossy_cobbled_limestone", "meadow:terrain/replace_grass_with_cobbled_limestone", "meadow:terrain/replace_grass_with_coarse_dirt" ], "step": "vegetal_decoration"}
-add_meadow_colors.json :: { "type": "meadow:biome_effects", "biomes": "minecraft:meadow", "grass_color": 9286496, "foliage_color": 5866311}
-remove_biome_modification_meadow.json :: { "type": "neoforge:remove_features", "biomes": "minecraft:meadow", "features": [ "minecraft:flower_meadow", "minecraft:trees_meadow" ], "step": "vegetal_decoration"}
+add_animals.json :: {"type": "meadow:add_animals"}
+add_biome_modification_meadow.json :: {"type": "neoforge:add_features", "biomes": "minecraft:meadow", "features": ["meadow:eriophorum_field_patch_placed", "meadow:fallen_pine_tree_checked", "meadow:flower_field_patch_placed", "meadow:forest_trees", "meadow:meadow_trees", "meadow:ores/ore_limestone", "meadow:ores/ore_salt_buried", "meadow:ores/ore_salt_upper", "meadow:small_fir_patch_placed", "meadow:terrain/limestone_boulder_placed", "meadow:terrain/limestone_slab_placed", "meadow:terrain/replace_stone_with_limestone", "meadow:terrain/replace_grass_with_mossy_cobbled_limestone", "meadow:terrain/replace_grass_with_cobbled_limestone", "meadow:terrain/replace_grass_with_coarse_dirt"], "step": "vegetal_decoration"}
+add_meadow_colors.json :: {"type": "meadow:biome_effects", "biomes": "minecraft:meadow", "grass_color": 9286496, "foliage_color": 5866311}
+remove_biome_modification_meadow.json :: {"type": "neoforge:remove_features", "biomes": "minecraft:meadow", "features": ["minecraft:flower_meadow", "minecraft:trees_meadow"], "step": "vegetal_decoration"}
 
 ## c: common tag membership
-block/allows_cooking.json :: { "replace": false, "values": [ "meadow:stove_tiles_wood", "meadow:stove_tiles_lid", "meadow:stove_tiles" ]}
-block/ores.json :: { "replace": false, "values": [ "meadow:alpine_salt_ore", "meadow:alpine_coal_ore", "meadow:alpine_lapis_ore", "meadow:alpine_gold_ore", "meadow:alpine_emerald_ore", "meadow:alpine_iron_ore", "meadow:alpine_copper_ore", "meadow:alpine_diamond_ore", "meadow:alpine_redstone_ore" ]}
-item/bread.json :: { "replace": false, "values": [ "minecraft:bread" ]}
-item/cheese.json :: { "replace": false, "values": [ "meadow:cheese_slice", "meadow:sheep_cheese_slice", "meadow:grain_cheese_slice", "meadow:amethyst_cheese_slice", "meadow:buffalo_cheese_slice", "meadow:goat_cheese_slice", "meadow:warped_cheese_slice" ]}
-item/cheeses.json :: { "replace": false, "values": [ "meadow:cheese_slice", "meadow:sheep_cheese_slice", "meadow:grain_cheese_slice", "meadow:amethyst_cheese_slice", "meadow:buffalo_cheese_slice", "meadow:goat_cheese_slice", "meadow:warped_cheese_slice" ]}
-item/eggs.json :: { "replace": false, "values": [ "minecraft:egg" ]}
-item/milk.json :: { "replace": false, "values": [ "minecraft:milk_bucket", "meadow:wooden_milk_bucket" ]}
-item/milks.json :: { "replace": false, "values": [ "minecraft:milk_bucket", "meadow:wooden_milk_bucket" ]}
-item/salt.json :: { "replace": false, "values": [ "meadow:alpine_salt" ]}
-item/salts.json :: { "replace": false, "values": [ "meadow:alpine_salt" ]}
-item/stripped_logs.json :: { "replace": false, "values": [ "meadow:stripped_pine_log" ]}
-item/stripped_wood.json :: { "replace": false, "values": [ "meadow:stripped_pine_wood" ]}
-item/water_bottles.json :: { "replace": false, "values": [ "meadow:wooden_water_bucket", "minecraft:water_bucket" ]}
-item/wheat.json :: { "replace": false, "values": [ "minecraft:wheat" ]}
+block/allows_cooking :: {"replace": false, "values": ["meadow:stove_tiles_wood", "meadow:stove_tiles_lid", "meadow:stove_tiles"]}
+block/ores :: {"replace": false, "values": ["meadow:alpine_salt_ore", "meadow:alpine_coal_ore", "meadow:alpine_lapis_ore", "meadow:alpine_gold_ore", "meadow:alpine_emerald_ore", "meadow:alpine_iron_ore", "meadow:alpine_copper_ore", "meadow:alpine_diamond_ore", "meadow:alpine_redstone_ore"]}
+item/bread :: {"replace": false, "values": ["minecraft:bread"]}
+item/cheese :: {"replace": false, "values": ["meadow:cheese_slice", "meadow:sheep_cheese_slice", "meadow:grain_cheese_slice", "meadow:amethyst_cheese_slice", "meadow:buffalo_cheese_slice", "meadow:goat_cheese_slice", "meadow:warped_cheese_slice"]}
+item/cheeses :: {"replace": false, "values": ["meadow:cheese_slice", "meadow:sheep_cheese_slice", "meadow:grain_cheese_slice", "meadow:amethyst_cheese_slice", "meadow:buffalo_cheese_slice", "meadow:goat_cheese_slice", "meadow:warped_cheese_slice"]}
+item/eggs :: {"replace": false, "values": ["minecraft:egg"]}
+item/milk :: {"replace": false, "values": ["minecraft:milk_bucket", "meadow:wooden_milk_bucket"]}
+item/milks :: {"replace": false, "values": ["minecraft:milk_bucket", "meadow:wooden_milk_bucket"]}
+item/salt :: {"replace": false, "values": ["meadow:alpine_salt"]}
+item/salts :: {"replace": false, "values": ["meadow:alpine_salt"]}
+item/stripped_logs :: {"replace": false, "values": ["meadow:stripped_pine_log"]}
+item/stripped_wood :: {"replace": false, "values": ["meadow:stripped_pine_wood"]}
+item/water_bottles :: {"replace": false, "values": ["meadow:wooden_water_bucket", "minecraft:water_bucket"]}
+item/wheat :: {"replace": false, "values": ["minecraft:wheat"]}

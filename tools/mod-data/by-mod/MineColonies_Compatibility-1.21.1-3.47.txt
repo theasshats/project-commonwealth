@@ -32,5 +32,6 @@ minecolonies_compatibility:tacz_dummy_gun
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-block/relocation_not_supported.json :: {	"replace": false,	"values": [		"minecolonies_compatibility:common_network_storage",		{			"required": false,			"id": "minecolonies_compatibility:citizen_stock_keeper"		}	]}
+block/relocation_not_supported :: {"replace": false, "values": ["minecolonies_compatibility:common_network_storage", {"required": false, "id": "minecolonies_compatibility:citizen_stock_keeper"}]}

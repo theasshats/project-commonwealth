@@ -140,7 +140,8 @@ create_connected:vertical_six_way_gearbox
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-block/fences.json :: { "values": [ "create_connected:copycat_fence", "create_connected:wrapped_copycat_fence" ]}
-block/fence_gates.json :: { "values": [ "create_connected:copycat_fence_gate", "create_connected:wrapped_copycat_fence_gate" ]}
-item/music_discs.json :: { "values": [ "create_connected:music_disc_elevator", "create_connected:music_disc_interlude" ]}
+block/fence_gates :: {"values": ["create_connected:copycat_fence_gate", "create_connected:wrapped_copycat_fence_gate"]}
+block/fences :: {"values": ["create_connected:copycat_fence", "create_connected:wrapped_copycat_fence"]}
+item/music_discs :: {"values": ["create_connected:music_disc_elevator", "create_connected:music_disc_interlude"]}

@@ -105,7 +105,8 @@ create_new_age:thorium
 create_new_age:thorium_ore
 
 ## neoforge biome_modifiers
-magnetite_block.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "create_new_age:magnetite_block", "step": "underground_ores"}
-thorium_ore.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "create_new_age:thorium_ore", "step": "underground_ores"}
+magnetite_block.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "create_new_age:magnetite_block", "step": "underground_ores"}
+thorium_ore.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_overworld", "features": "create_new_age:thorium_ore", "step": "underground_ores"}
 
 ## c: common tag membership
+

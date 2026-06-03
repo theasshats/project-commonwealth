@@ -68,26 +68,26 @@ cold_sweat:waterskin/filled_waterskin_cold
 cold_sweat:waterskin/filled_waterskin_hot
 
 ## neoforge biome_modifiers
-soul_stalk.json :: { "type": "neoforge:add_features", "biomes": "#minecraft:is_nether", "features": "cold_sweat:soul_stalk", "step": "vegetal_decoration"}
-entity_spawns.json :: { "type": "cold_sweat:add_spawns", "use_configs": true}
-soul_stalk_common.json :: { "type": "neoforge:add_features", "biomes": "#cold_sweat:increased_soul_stalk", "features": "cold_sweat:soul_stalk_common", "step": "vegetal_decoration"}
+entity_spawns.json :: {"type": "cold_sweat:add_spawns", "use_configs": true}
+soul_stalk.json :: {"type": "neoforge:add_features", "biomes": "#minecraft:is_nether", "features": "cold_sweat:soul_stalk", "step": "vegetal_decoration"}
+soul_stalk_common.json :: {"type": "neoforge:add_features", "biomes": "#cold_sweat:increased_soul_stalk", "features": "cold_sweat:soul_stalk_common", "step": "vegetal_decoration"}
 
 ## c: common tag membership
-dimension_type/bed_works.json :: { "replace": false, "values": []}
-dimension_type/unnatural.json :: { "replace": false, "values": []}
-dimension_type/overworld_like.json :: { "replace": false, "values": []}
-dimension_type/ultrawarm.json :: { "replace": false, "values": []}
-dimension_type/has_raids.json :: { "replace": false, "values": []}
-dimension_type/has_skylight.json :: { "replace": false, "values": []}
-dimension_type/has_sky.json :: { "replace": false, "values": []}
-dimension_type/natural.json :: { "replace": false, "values": []}
-dimension_type/respawn_anchor_works.json :: { "replace": false, "values": []}
-dimension_type/has_ceiling.json :: { "replace": false, "values": []}
-dimension_type/piglin_safe.json :: { "replace": false, "values": []}
-item/ingots/nether_brick.json :: { "replace": false, "values": [ "minecraft:nether_brick" ]}
-item/scales/chameleon.json :: { "replace": false, "values": [ "cold_sweat:chameleon_molt" ]}
-item/furs/goat.json :: { "replace": false, "values": [ "cold_sweat:goat_fur" ]}
-item/foods.json :: { "replace": false, "values": [ "cold_sweat:soul_sprout" ]}
-item/leathers/hoglin.json :: { "replace": false, "values": [ "cold_sweat:hoglin_hide" ]}
-block/player_workstations/crafting_tables.json :: { "replace": false, "values": [ "cold_sweat:sewing_table" ]}
-block/soul_fire.json :: { "replace": false, "values": [ "minecraft:soul_fire", "minecraft:soul_campfire" ]}
+block/player_workstations/crafting_tables :: {"replace": false, "values": ["cold_sweat:sewing_table"]}
+block/soul_fire :: {"replace": false, "values": ["minecraft:soul_fire", "minecraft:soul_campfire"]}
+dimension_type/bed_works :: {"replace": false, "values": []}
+dimension_type/has_ceiling :: {"replace": false, "values": []}
+dimension_type/has_raids :: {"replace": false, "values": []}
+dimension_type/has_sky :: {"replace": false, "values": []}
+dimension_type/has_skylight :: {"replace": false, "values": []}
+dimension_type/natural :: {"replace": false, "values": []}
+dimension_type/overworld_like :: {"replace": false, "values": []}
+dimension_type/piglin_safe :: {"replace": false, "values": []}
+dimension_type/respawn_anchor_works :: {"replace": false, "values": []}
+dimension_type/ultrawarm :: {"replace": false, "values": []}
+dimension_type/unnatural :: {"replace": false, "values": []}
+item/foods :: {"replace": false, "values": ["cold_sweat:soul_sprout"]}
+item/furs/goat :: {"replace": false, "values": ["cold_sweat:goat_fur"]}
+item/ingots/nether_brick :: {"replace": false, "values": ["minecraft:nether_brick"]}
+item/leathers/hoglin :: {"replace": false, "values": ["cold_sweat:hoglin_hide"]}
+item/scales/chameleon :: {"replace": false, "values": ["cold_sweat:chameleon_molt"]}

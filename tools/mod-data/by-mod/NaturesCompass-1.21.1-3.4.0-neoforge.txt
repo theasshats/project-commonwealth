@@ -12,6 +12,7 @@ versionRange="[1.21,1.21.1)"
 
 ## blocks
 
+
 ## items
 naturescompass:naturescompass
 naturescompass:naturescompass_00
@@ -48,4 +49,6 @@ naturescompass:naturescompass_31
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
+

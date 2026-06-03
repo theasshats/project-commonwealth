@@ -59,6 +59,7 @@ ars_nouveau:blocks/green_archwood_wood | minecraft:block | ars_nouveau:blocks/gr
 ars_nouveau:blocks/green_sbed | minecraft:block | ars_nouveau:blocks/green_sbed ars_nouveau:green_sbed minecraft:block minecraft:item minecraft:survives_explosion
 ars_nouveau:blocks/imbuement_chamber | minecraft:block | ars_nouveau:blocks/imbuement_chamber ars_nouveau:imbuement_chamber minecraft:block minecraft:item minecraft:survives_explosion
 ars_nouveau:blocks/item_detector | minecraft:block | ars_nouveau:blocks/item_detector ars_nouveau:item_detector minecraft:block minecraft:item minecraft:survives_explosion
+ars_nouveau:blocks/mage_block | minecraft:block | minecraft:block
 ars_nouveau:blocks/magebloom_block | minecraft:block | ars_nouveau:blocks/magebloom_block ars_nouveau:magebloom_block minecraft:block minecraft:item minecraft:survives_explosion
 ars_nouveau:blocks/magebloom_crop | minecraft:block | ars_nouveau:blocks/magebloom_crop ars_nouveau:magebloom ars_nouveau:magebloom_crop minecraft:alternatives minecraft:apply_bonus minecraft:binomial_with_bonus_count minecraft:block minecraft:block_state_property minecraft:explosion_decay minecraft:fortune minecraft:item
 ars_nouveau:blocks/magelight_torch | minecraft:block | ars_nouveau:blocks/magelight_torch ars_nouveau:magelight_torch minecraft:block minecraft:item minecraft:survives_explosion
@@ -180,8 +181,7 @@ ars_nouveau:blocks/volcanic_sourcelink | minecraft:block | ars_nouveau:blocks/vo
 ars_nouveau:blocks/wixie_cauldron | minecraft:block | ars_nouveau:blocks/wixie_cauldron minecraft:block minecraft:cauldron minecraft:item minecraft:survives_explosion
 ars_nouveau:blocks/yellow_sbed | minecraft:block | ars_nouveau:blocks/yellow_sbed ars_nouveau:yellow_sbed minecraft:block minecraft:item minecraft:survives_explosion
 ars_nouveau:dispel_witch | minecraft:entity | ars_nouveau:dispel_witch ars_nouveau:wixie_shards minecraft:entity minecraft:item minecraft:set_count
+ars_nouveau:entities/wilden_boss | minecraft:entity | minecraft:entity
 ars_nouveau:entities/wilden_guardian | minecraft:entity | ars_nouveau:entities/wilden_guardian ars_nouveau:wilden_spike minecraft:enchanted_count_increase minecraft:entity minecraft:item minecraft:looting minecraft:set_count minecraft:uniform
 ars_nouveau:entities/wilden_hunter | minecraft:entity | ars_nouveau:entities/wilden_hunter ars_nouveau:wilden_horn minecraft:enchanted_count_increase minecraft:entity minecraft:item minecraft:looting minecraft:set_count minecraft:uniform
 ars_nouveau:entities/wilden_stalker | minecraft:entity | ars_nouveau:entities/wilden_stalker ars_nouveau:wilden_wing minecraft:enchanted_count_increase minecraft:entity minecraft:item minecraft:looting minecraft:set_count minecraft:uniform
-ars_nouveau:blocks/mage_block | minecraft:block | minecraft:block
-ars_nouveau:entities/wilden_boss | minecraft:entity | minecraft:entity

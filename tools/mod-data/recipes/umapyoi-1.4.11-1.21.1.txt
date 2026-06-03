@@ -8,6 +8,14 @@ umapyoi:gate | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:g
 umapyoi:gate_door | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:iron_bars umapyoi:gate_door
 umapyoi:hachimi_big | minecraft:crafting_shapeless | c:sugar c:water minecraft:crafting_shapeless minecraft:honey_bottle umapyoi:hachimi_big
 umapyoi:hachimi_mid | minecraft:crafting_shapeless | c:sugar c:water minecraft:crafting_shapeless minecraft:honey_bottle umapyoi:hachimi_mid
+umapyoi:integration/create/mixing/cupcake_from_mixing | create:mixing | create:mixing forge:crops/carrot forge:crops/wheat forge:eggs forge:flour forge:milk forge:mod_loaded forge:sugar umapyoi:cupcake
+umapyoi:integration/create/mixing/hachimi_big_from_mixing | create:mixing | create:mixing forge:honey forge:mod_loaded forge:sugar minecraft:water umapyoi:hachimi_big
+umapyoi:integration/create/mixing/hachimi_from_mixing | create:mixing | create:mixing forge:honey forge:mod_loaded forge:sugar minecraft:water umapyoi:hachimi_mid
+umapyoi:integration/create/mixing/large_vital_from_mixing | create:mixing | create:mixing forge:crops/carrot forge:crops/nether_wart forge:dusts/glowstone forge:dusts/redstone forge:mod_loaded forge:sugar minecraft:water umapyoi:large_energy_drink
+umapyoi:integration/create/mixing/medium_vital_from_mixing | create:mixing | create:mixing forge:crops/carrot forge:crops/nether_wart forge:dusts/redstone forge:mod_loaded forge:sugar minecraft:water umapyoi:medium_energy_drink
+umapyoi:integration/create/mixing/royal_bitter_from_mixing | create:mixing | create:mixing forge:crops/nether_wart forge:dusts/redstone forge:mod_loaded forge:seeds/wheat forge:sugar minecraft:glistering_melon_slice minecraft:water umapyoi:royal_bitter
+umapyoi:integration/create/mixing/small_vital_from_mixing | create:mixing | create:mixing forge:crops/carrot forge:crops/nether_wart forge:mod_loaded forge:sugar minecraft:water umapyoi:small_energy_drink
+umapyoi:integration/create/mixing/sweetcupcake_from_mixing | create:mixing | create:mixing forge:crops/carrot forge:crops/wheat forge:eggs forge:flour forge:milk forge:mod_loaded forge:sugar umapyoi:sweet_cupcake
 umapyoi:jewel | minecraft:crafting_shapeless | c:crops/carrot c:gems/diamond c:gems/emerald minecraft:crafting_shapeless umapyoi:jewel
 umapyoi:large_energy_drink | minecraft:crafting_shapeless | c:crops/carrot c:crops/nether_wart c:dusts/glowstone c:dusts/redstone c:sugar c:water minecraft:crafting_shapeless umapyoi:large_energy_drink
 umapyoi:medium_energy_drink | minecraft:crafting_shapeless | c:crops/carrot c:crops/nether_wart c:dusts/redstone c:sugar c:water minecraft:crafting_shapeless umapyoi:medium_energy_drink
@@ -35,11 +43,3 @@ umapyoi:uma_select_block | minecraft:crafting_shaped | c:gems/diamond minecraft:
 umapyoi:uma_statue | minecraft:crafting_shaped | c:stones minecraft:crafting_shaped umapyoi:jewel umapyoi:uma_statue
 umapyoi:uma_ticket | minecraft:crafting_shapeless | minecraft:crafting_shapeless umapyoi:blank_ticket umapyoi:crystal_silver umapyoi:uma_ticket
 umapyoi:winter_uniform | minecraft:crafting_shaped | minecraft:crafting_shaped minecraft:purple_wool umapyoi:jewel umapyoi:winter_uniform
-umapyoi:integration/create/mixing/cupcake_from_mixing | create:mixing | create:mixing forge:crops/carrot forge:crops/wheat forge:eggs forge:flour forge:milk forge:mod_loaded forge:sugar umapyoi:cupcake
-umapyoi:integration/create/mixing/hachimi_big_from_mixing | create:mixing | create:mixing forge:honey forge:mod_loaded forge:sugar minecraft:water umapyoi:hachimi_big
-umapyoi:integration/create/mixing/hachimi_from_mixing | create:mixing | create:mixing forge:honey forge:mod_loaded forge:sugar minecraft:water umapyoi:hachimi_mid
-umapyoi:integration/create/mixing/large_vital_from_mixing | create:mixing | create:mixing forge:crops/carrot forge:crops/nether_wart forge:dusts/glowstone forge:dusts/redstone forge:mod_loaded forge:sugar minecraft:water umapyoi:large_energy_drink
-umapyoi:integration/create/mixing/medium_vital_from_mixing | create:mixing | create:mixing forge:crops/carrot forge:crops/nether_wart forge:dusts/redstone forge:mod_loaded forge:sugar minecraft:water umapyoi:medium_energy_drink
-umapyoi:integration/create/mixing/royal_bitter_from_mixing | create:mixing | create:mixing forge:crops/nether_wart forge:dusts/redstone forge:mod_loaded forge:seeds/wheat forge:sugar minecraft:glistering_melon_slice minecraft:water umapyoi:royal_bitter
-umapyoi:integration/create/mixing/small_vital_from_mixing | create:mixing | create:mixing forge:crops/carrot forge:crops/nether_wart forge:mod_loaded forge:sugar minecraft:water umapyoi:small_energy_drink
-umapyoi:integration/create/mixing/sweetcupcake_from_mixing | create:mixing | create:mixing forge:crops/carrot forge:crops/wheat forge:eggs forge:flour forge:milk forge:mod_loaded forge:sugar umapyoi:sweet_cupcake

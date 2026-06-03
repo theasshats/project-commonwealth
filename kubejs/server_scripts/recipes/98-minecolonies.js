@@ -12,16 +12,18 @@
 
 ServerEvents.recipes(event => {
   // SIMPLE QUARRY. orig: barrel + iron_pickaxe + planks + sceptergold  ->  andesite-tier machine.
+  // Cost upped a notch: 2 andesite casings + 2 cogwheels + a driving shaft (was 1 casing + 2 cogs).
   event.remove({ id: 'minecolonies:simplequarry' })
-  event.shaped('minecolonies:simplequarry', ['PKP', 'GAG', 'PBS'], {
-    P: '#minecraft:planks', K: 'minecraft:iron_pickaxe', G: 'create:cogwheel',
-    A: 'create:andesite_casing', B: 'minecraft:barrel', S: 'structurize:sceptergold'
+  event.shaped('minecolonies:simplequarry', ['AKA', 'GHG', 'PBS'], {
+    A: 'create:andesite_casing', K: 'minecraft:iron_pickaxe', G: 'create:cogwheel',
+    H: 'create:shaft', P: '#minecraft:planks', B: 'minecraft:barrel', S: 'structurize:sceptergold'
   })
 
   // MEDIUM QUARRY. orig: barrel + diamond_pickaxe + planks + sceptergold  ->  brass/precision tier.
+  // Cost upped a notch: 2 brass casings + 2 precision mechanisms (was 2 casings + 1 mechanism).
   event.remove({ id: 'minecolonies:mediumquarry' })
-  event.shaped('minecolonies:mediumquarry', ['PKP', 'AMA', 'PBS'], {
-    P: '#minecraft:planks', K: 'minecraft:diamond_pickaxe', A: 'create:brass_casing',
-    M: 'create:precision_mechanism', B: 'minecraft:barrel', S: 'structurize:sceptergold'
+  event.shaped('minecolonies:mediumquarry', ['AKA', 'MBM', 'PSP'], {
+    A: 'create:brass_casing', K: 'minecraft:diamond_pickaxe', M: 'create:precision_mechanism',
+    B: 'minecraft:barrel', P: '#minecraft:planks', S: 'structurize:sceptergold'
   })
 })

@@ -109,6 +109,7 @@ copycats:copycat_wooden_pressure_plate
 
 ## neoforge biome_modifiers
 
+
 ## c: common tag membership
-block/fence_gates.json :: { "values": [ "copycats:copycat_fence_gate" ]}
-block/fences.json :: { "values": [ "copycats:copycat_fence" ]}
+block/fence_gates :: {"values": ["copycats:copycat_fence_gate"]}
+block/fences :: {"values": ["copycats:copycat_fence"]}

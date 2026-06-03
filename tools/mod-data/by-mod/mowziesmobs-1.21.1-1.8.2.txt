@@ -101,15 +101,15 @@ mowziesmobs:wrought_helmet
 mowziesmobs:wroughtnaut_spawn_egg
 
 ## neoforge biome_modifiers
-mowzie_mob_spawns.json :: { "type": "mowziesmobs:mowzie_mob_spawns"}
+mowzie_mob_spawns.json :: {"type": "mowziesmobs:mowzie_mob_spawns"}
 
 ## c: common tag membership
-block/sands/colorless.json :: { "values": [ "mowziesmobs:raked_sand" ]}
-block/sands/red.json :: { "values": [ "mowziesmobs:red_raked_sand" ]}
-entity_type/bosses.json :: { "values": [ "mowziesmobs:frostmaw", "mowziesmobs:ferrous_wroughtnaut", "mowziesmobs:umvuthi", "mowziesmobs:sculptor" ]}
-entity_type/capturing_not_supported.json :: { "values": [ "mowziesmobs:frostmaw", "mowziesmobs:ferrous_wroughtnaut", "mowziesmobs:umvuthi", "mowziesmobs:sculptor" ]}
-entity_type/teleporting_not_supported.json :: { "values": [ "mowziesmobs:umvuthi", "mowziesmobs:sculptor" ]}
-item/music_discs.json :: { "values": [ "mowziesmobs:music_disc_petiole" ]}
-item/seeds.json :: { "values": [ "mowziesmobs:foliaath_seed" ]}
-item/slime_balls.json :: { "values": [ "mowziesmobs:glowing_jelly" ]}
-item/tools/spear.json :: { "values": [ "mowziesmobs:spear" ]}
+block/sands/colorless :: {"values": ["mowziesmobs:raked_sand"]}
+block/sands/red :: {"values": ["mowziesmobs:red_raked_sand"]}
+entity_type/bosses :: {"values": ["mowziesmobs:frostmaw", "mowziesmobs:ferrous_wroughtnaut", "mowziesmobs:umvuthi", "mowziesmobs:sculptor"]}
+entity_type/capturing_not_supported :: {"values": ["mowziesmobs:frostmaw", "mowziesmobs:ferrous_wroughtnaut", "mowziesmobs:umvuthi", "mowziesmobs:sculptor"]}
+entity_type/teleporting_not_supported :: {"values": ["mowziesmobs:umvuthi", "mowziesmobs:sculptor"]}
+item/music_discs :: {"values": ["mowziesmobs:music_disc_petiole"]}
+item/seeds :: {"values": ["mowziesmobs:foliaath_seed"]}
+item/slime_balls :: {"values": ["mowziesmobs:glowing_jelly"]}
+item/tools/spear :: {"values": ["mowziesmobs:spear"]}

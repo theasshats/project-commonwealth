@@ -22,6 +22,7 @@ mffs:fortron_capacitor | minecraft:crafting_shaped | c:ingots/steel mffs:battery
 mffs:frequency_card | minecraft:crafting_shaped | c:ingots/gold mffs:blank_card mffs:frequency_card minecraft:crafting_shaped
 mffs:fusion_module | minecraft:crafting_shaped | mffs:focus_matrix mffs:fusion_module mffs:shock_module minecraft:crafting_shaped
 mffs:glow_module | minecraft:crafting_shaped | mffs:focus_matrix mffs:glow_module minecraft:crafting_shaped minecraft:glowstone
+mffs:handbook | patchouli:shapeless_book_recipe | forge:ingots/iron mffs:handbook minecraft:book neoforge:mod_loaded patchouli:shapeless_book_recipe
 mffs:id_card | minecraft:crafting_shaped | c:dusts/redstone mffs:blank_card mffs:id_card minecraft:crafting_shaped
 mffs:interdiction_matrix | minecraft:crafting_shaped | mffs:focus_matrix mffs:interdiction_matrix mffs:shock_module minecraft:crafting_shaped minecraft:ender_chest
 mffs:inverter_module | minecraft:crafting_shaped | c:storage_blocks/lapis mffs:focus_matrix mffs:inverter_module minecraft:crafting_shaped
@@ -41,4 +42,3 @@ mffs:steel_ingot | minecraft:smelting | mffs:steel_compound mffs:steel_ingot min
 mffs:translation_module | minecraft:crafting_shaped | mffs:focus_matrix mffs:scale_module mffs:translation_module minecraft:crafting_shaped
 mffs:tube_mode | minecraft:crafting_shaped | mffs:focus_matrix mffs:tube_mode minecraft:crafting_shaped
 mffs:warn_module | minecraft:crafting_shaped | mffs:focus_matrix mffs:warn_module minecraft:crafting_shaped minecraft:note_block
-mffs:handbook | patchouli:shapeless_book_recipe | forge:ingots/iron mffs:handbook minecraft:book neoforge:mod_loaded patchouli:shapeless_book_recipe

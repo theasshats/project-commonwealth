@@ -114,6 +114,7 @@ companions:wild_antlion_spawn_egg
 companions:wrench
 
 ## neoforge biome_modifiers
-companions_mob_spawns.json :: { "type": "companions:companions_mob_spawns"}
+companions_mob_spawns.json :: {"type": "companions:companions_mob_spawns"}
 
 ## c: common tag membership
+
