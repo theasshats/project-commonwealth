@@ -32,8 +32,10 @@ Everything else is now **issue work, not stacked PRs**, organized into GitHub **
 to 1.0 (`v0.6.0` Foundation → the pillar versions `Create spine`/`Economy`/`Survival & Magic`/`Aeronautics`
 → `v1.0.0` release gate), each with a one-line **goal**; full map in `docs/ROADMAP.md` ("Milestones").
 **Every new issue must be filed under a milestone** (an unmilestoned issue is untriaged). Near-term is
-**v0.6.0 — Foundation**: quick wins (#111/#105/#100/#127/#131/#126) → boot-log (#119/#120/#121) →
-curation (#83/#107/#106/#108/#60/#110).
+**v0.6.0 — Foundation**: quick wins (#111/#105/#100/#127/#131/#154/#126) → boot-log (#119/#120/#121) →
+perf baseline (#147/#151) → curation (#157 rubric → #83/#107/#106/#108/#60/#110). The Economy
+(#136–#139/#150), Survival/Magic (#146/#152/#155) and Aeronautics (#140–#144) pillars are now ticketed
+out under their milestones.
 
 ## Hard constraints
 - **Headless sandbox** — can't run Minecraft/KubeJS. Validate `node --check` (JS) + JSON/TOML only;
