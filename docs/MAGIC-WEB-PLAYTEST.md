@@ -1,11 +1,11 @@
 # Magic web (#75) — in-game playtest checklist
 
-> The recipe weave in `kubejs/server_scripts/recipes/33–37-magic-web-*.js` (+ the metal recyclers in
+> The recipe weave in `kubejs/server_scripts/recipes/33–36-magic-web-*.js` (+ the metal recyclers in
 > `35-web-bridges.js`) is **headless-unverifiable** — the `event.custom` recipes (Ars imbuement /
 > enchanting_apparatus, occultism spirit_fire) load silently and a wrong field just **skips that one
 > recipe**. This list operationalizes the in-game gates from `MAGIC-WEB-HANDOFF.md` §6/§10. Work it
 > station-by-station with JEI open. **Scope: this is the recipe layer only** — the Arcana mod (Attunement
-> Font etc., PR #80) is a separate test.
+> Font etc., PR #80) is a separate test. (A flagship multi-step chain was conceded pre-merge — see #123.)
 
 ## 0. Setup
 - [ ] Pack loads; the magic mods present (Ars Nouveau, Iron's Spellbooks, Occultism, Occult Engineering, Born in Chaos, Grimoire of Gaia, Mowzie's, Modular Golems, Galosphere).
@@ -14,8 +14,8 @@
 
 ## 1. Schema-load gate (the `event.custom` recipes)
 Each must **appear in JEI on the named station**. If absent → wrong field; check the §4 jar-verified schema in `MAGIC-WEB-HANDOFF.md` and the log.
-- [ ] Ars **Imbuement Chamber** shows: `source_gem → arcane_essence`, `source_gem → demons_dream_essence`, `otherworld_essence → arcane_essence` (33); `shiny_pearl → source_gem`, `ice_crystal → water_essence`, `glowing_jelly → source_gem`, `source_gem → empty_upgrade` (35); `otherworld_essence → converged_essence` (37).
-- [ ] Ars **Enchanting Apparatus** shows: `arcane_essence (+lumiere) → 2× source_gem` (33); `converged_essence (+4 schools) → 4× arcane_ingot` (37).
+- [ ] Ars **Imbuement Chamber** shows: `source_gem → arcane_essence`, `source_gem → demons_dream_essence`, `otherworld_essence → arcane_essence` (33); `shiny_pearl → source_gem`, `ice_crystal → water_essence`, `glowing_jelly → source_gem`, `source_gem → empty_upgrade` (35).
+- [ ] Ars **Enchanting Apparatus** shows: `arcane_essence (+lumiere) → 2× source_gem` (33).
 - [ ] Occultism **Spirit Fire** shows: `spiritual_dust → demons_dream_essence`, `ethereal_spirit → otherworld_essence` (34); `withered_brain`/`rotten_heart → demons_dream_essence`, `foliaath_seed → datura` (35).
 
 ## 2. Ars stations — do the recipes actually run?
@@ -37,17 +37,12 @@ Each must **appear in JEI on the named station**. If absent → wrong field; che
 - [ ] `36`: crushing `irons_spellbooks:mithril_ore` and `deepslate_mithril_ore` → **2× raw_mithril** + XP; `occultism:iesnium_ore` → **2× iesnium_dust** + XP (dust still smelts to the ingot).
 - [ ] `35`: crushing `northstar:tungsten_sheetmetal`/`tungsten_grate` → **4× tungsten_nugget**; `quark:raw_copper_bricks` → **2× raw_copper**. (Recycling — lossy, no profit loop.)
 
-## 6. Flagship — "Arcane Convergence" (37), end-to-end
-- [ ] Stage 1 (Imbuement): `otherworld_essence` + both Galosphere shards + ~2000 Source → `derpack:converged_essence`. It renders (placeholder **amethyst** texture is expected — tracked in #110).
-- [ ] Stage 2 (Apparatus): `converged_essence` reagent + 4 pedestals (`source_gem`, `arcane_essence`, `demons_dream_essence`, `ethereal_spirit`) + ~3000 Source → **4× arcane_ingot**.
-- [ ] It's a genuine **two-stage chain** (can't shortcut), and **not cheaper** than the vanilla arcane_ingot craft (rubric #1).
-
-## 7. Balance & regression
-- [ ] **Ratios feel right** — Source costs (1000/800/600/500/400/200; flagship 2000+3000), fluid amounts, crushing yields, the `soulReap…` n/a here. Note anything to tune (all first-pass).
+## 6. Balance & regression
+- [ ] **Ratios feel right** — Source costs (1000/800/600/500/400/200), fluid amounts, crushing yields. Note anything to tune (all first-pass — collected in #122).
 - [ ] **Additive — nothing broke.** Every original magic recipe still works; JEI shows **both** the original acquisition and the new bridge path. No `event.remove` regressions.
 - [ ] No duplicate/conflicting recipes between `35-magic-web-mobs.js` and `35-web-bridges.js` (same numeric prefix, both load).
 
-## 8. Sign-off
-- [ ] Record ratio tweaks (feed back into the `33–37` files).
+## 7. Sign-off
+- [ ] Record ratio tweaks in #122 (feed back into the `33–36` files).
 - [ ] List any recipe that didn't appear in JEI (= a schema field to fix vs `MAGIC-WEB-HANDOFF.md` §4).
 - [ ] Confirm with #80 in the world together (the magic layer ships as #75 + #80).
