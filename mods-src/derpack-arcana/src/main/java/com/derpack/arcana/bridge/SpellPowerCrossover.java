@@ -31,6 +31,9 @@ public final class SpellPowerCrossover {
 
     /** Ars spell hit — boost it by the caster's Iron's spell power. */
     private static void onArsSpellDamage(com.hollingsworth.arsnouveau.api.event.SpellDamageEvent event) {
+        if (!Config.SPELL_POWER_CROSSOVER.get()) {
+            return;
+        }
         LivingEntity caster = event.caster;
         if (caster == null) {
             return;
@@ -49,6 +52,9 @@ public final class SpellPowerCrossover {
 
     /** Iron's spell hit — boost it by the caster's Ars spell-damage bonus. */
     private static void onIronsSpellDamage(io.redspace.ironsspellbooks.api.events.SpellDamageEvent event) {
+        if (!Config.SPELL_POWER_CROSSOVER.get()) {
+            return;
+        }
         SpellDamageSource source = event.getSpellDamageSource();
         Entity casterEntity = source != null ? source.getEntity() : null;
         if (!(casterEntity instanceof LivingEntity caster)) {

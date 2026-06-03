@@ -29,23 +29,27 @@ public final class DerpackArcana {
         LOGGER.info("[Derpack Arcana] loading — magic-weave helper");
         logIntegrations();
 
-        // P1 — Source <-> mana bridge. Guarded so ArsIronsBridge (which references Ars + Iron's API
-        // types) is only classloaded when BOTH mods are present; absent -> the feature simply no-ops.
-        if (Config.SOURCE_MANA_BRIDGE.get() && loaded("ars_nouveau") && loaded("irons_spellbooks")) {
+        // NOTE: config values must NOT be read here — the @Mod constructor runs before configs are
+        // loaded ("Cannot get config value before config is loaded"). Registration is gated on mod
+        // PRESENCE only (ModList is available now); each feature's config toggle is honored at runtime.
+
+        // P1 — Source <-> mana bridge. The loaded() guard also keeps Ars/Iron's API types from
+        // classloading when absent. Toggle (SOURCE_MANA_BRIDGE) is checked in the block-entity tick.
+        if (loaded("ars_nouveau") && loaded("irons_spellbooks")) {
             com.derpack.arcana.bridge.ArsIronsBridge.init(modBus);
         } else {
-            LOGGER.info("[Derpack Arcana] Source<->mana bridge inactive (config off or a target mod absent).");
+            LOGGER.info("[Derpack Arcana] Source<->mana bridge inactive (a target mod is absent).");
         }
 
-        // P2 — spell-power crossover (game-bus listeners). Guarded like P1 so the Ars/Iron's types
-        // in SpellPowerCrossover never classload when a target mod is absent.
-        if (Config.SPELL_POWER_CROSSOVER.get() && loaded("ars_nouveau") && loaded("irons_spellbooks")) {
+        // P2 — spell-power crossover (game-bus listeners). Toggle (SPELL_POWER_CROSSOVER) is checked
+        // inside the listeners.
+        if (loaded("ars_nouveau") && loaded("irons_spellbooks")) {
             com.derpack.arcana.bridge.SpellPowerCrossover.register();
         }
 
-        // P3 — Soul Reaping: Born in Chaos kills feed Occultism essence. No compile dep on either mod
-        // (namespace check + item-registry lookup), but only worth registering when both are present.
-        if (Config.BORN_IN_CHAOS_SOUL_REAP.get() && loaded("occultism") && loaded("born_in_chaos_v1")) {
+        // P3 — Soul Reaping: Born in Chaos kills feed Occultism essence. Toggle (BORN_IN_CHAOS_SOUL_REAP)
+        // is checked in the drops handler.
+        if (loaded("occultism") && loaded("born_in_chaos_v1")) {
             com.derpack.arcana.bridge.SoulReaping.register();
         }
     }
