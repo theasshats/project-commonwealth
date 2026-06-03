@@ -826,7 +826,7 @@ hash = "669a24f251421b0094427c61622d58ebd891423d6e85836cdb9c471d7631f4ed"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/35-web-bridges.js"
-hash = "9739f8fa8e1326a856eb36926ea76a3b7a9734ce89b62720ceff4572b1418c73"
+hash = "2d93e09f246e49a0fc9280d3f786c47386fb15e5aeaddbb606be36426a8c2021"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/40-northstar.js"
