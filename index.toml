@@ -761,6 +761,10 @@ file = "kubejs/server_scripts/recipes/33-magic-web.js"
 hash = "669a24f251421b0094427c61622d58ebd891423d6e85836cdb9c471d7631f4ed"
 
 [[files]]
+file = "kubejs/server_scripts/recipes/35-web-bridges.js"
+hash = "50054f0d4d85002d20b3766ce83366130bd1386e408c0b9dc584054623356977"
+
+[[files]]
 file = "kubejs/server_scripts/recipes/40-northstar.js"
 hash = "bbb8f2608e3ce17746d287e91decc614c855457f7952dafbf91f9c38c8353831"
 
