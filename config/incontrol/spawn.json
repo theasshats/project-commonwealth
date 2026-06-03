@@ -1,0 +1,46 @@
+[
+  {
+    "mob": ["grimoireofgaia:kobold"],
+    "result": "deny"
+  },
+
+  {
+    "mob": [
+      "rottencreatures:burned",
+      "rottencreatures:frostbitten",
+      "rottencreatures:glacial_hunter",
+      "rottencreatures:swampy",
+      "rottencreatures:undead_miner",
+      "rottencreatures:mummy",
+      "rottencreatures:dead_beard"
+    ],
+    "structure": [
+      "minecraft:mineshaft",
+      "minecraft:mineshaft_mesa",
+      "minecraft:stronghold",
+      "minecraft:ancient_city",
+      "minecraft:desert_pyramid",
+      "minecraft:swamp_hut",
+      "minecraft:ocean_ruin_cold",
+      "minecraft:ocean_ruin_warm",
+      "minecraft:ruined_portal",
+      "minecraft:ruined_portal_desert",
+      "minecraft:ruined_portal_swamp",
+      "minecraft:ruined_portal_mountain",
+      "minecraft:ruined_portal_ocean"
+    ],
+    "result": "allow"
+  },
+  {
+    "mob": [
+      "rottencreatures:burned",
+      "rottencreatures:frostbitten",
+      "rottencreatures:glacial_hunter",
+      "rottencreatures:swampy",
+      "rottencreatures:undead_miner",
+      "rottencreatures:mummy",
+      "rottencreatures:dead_beard"
+    ],
+    "result": "deny"
+  }
+]
