@@ -106,3 +106,43 @@ crossover, and Soul Reaping (Born-in-Chaos kills→Occultism essence). Keep the 
 - Design: `docs/RECIPES.md` ("Magic web" section). Digests: `tools/mod-data/recipes/*.txt`, loot: `tools/mod-data/loot/*.txt`.
 - Arcana mod + wider roadmap: `docs/ARCANA-BRIDGE-MOD.md`, `docs/WEAVE-HANDOFF.md`, `docs/INTEGRATION-BRAINSTORM.md`.
 - The two real model bridge mods to study: **Ars 'n Spells** (`ars_n_spells`) and **Create: Occult Engineering** (`occultengineering`).
+
+## 10. Definition of done — does it meet the standard? (next-iteration checklist)
+This PR is currently the **currency-bridge floor** (§2a). Before it merges, it should clear the same bar
+the Create overhaul (#62) set. Work the list:
+
+### Scope & depth (the #62 benchmark)
+- [ ] **Every magic mod ties into ≥2 pillars**, not just magic↔magic essence trades. Magic↔Create is the
+  easy second (occultengineering already bridges Occultism); also look for magic↔economy (a reagent/drop
+  that's sellable) and magic↔survival. A mod that only trades essence with other magic mods is **one
+  pillar — not done** (CLAUDE.md north star; `docs/RECIPES.md` rubric #4).
+- [ ] **Depth is tiered like #62.** Cheap reagents get light bridges; **flagship magic items get real
+  native-machine depth** — the magic analogue of the `60-mffs.js` `sequenced_assembly` gold standard
+  (multi-step imbuement/ritual chains, not a one-step trade). Don't settle for the cheapest bridge on a
+  powerful item (balance-first; rubric #1: never make a power item *cheaper*).
+- [ ] **No isolated magic islands.** Run `python3 tools/recipe-graph/recipe-graph.py --remove create` and
+  read how the magic mods cohere with the Create spine pulled out (the metric now counts magic apparatus
+  methods). Goal (`docs/CONNECTIVITY.md`): one or two cohesive webs. Note the giant-% in the PR.
+
+### Conventions (today's rules)
+- [ ] **Additive + native machines.** Bridges route through Ars imbuement/apparatus, occult
+  spirit_fire / spirit_solution, and rituals — not crafting tables. No existing magic recipe removed
+  (or a `remove` is always paired with a replacement).
+- [ ] **Material unification checked.** Any duplicate magic reagents across mods unified via
+  `config/almostunified/` (custom_tags + priority_override), the way steel/pasta were. ⚠️
+  **`galosphere:silver_ingot` is PALLADIUM** (legacy id) — never unify it as silver (CLAUDE.md gotcha).
+- [ ] **Ratios aren't free arbitrage.** Round-tripping essence A → source → A loses value (Galosphere-shard
+  catalyst, or lossy rates). Tuned, not first-pass.
+
+### Verification (headless can't test — the in-game gates)
+- [ ] **Every bridge shows in JEI** on its correct station, and the `event.custom` schemas (§4) actually
+  load — watch the log for rejected recipes (a wrong field silently skips one). (Viewer is JEI, not EMI.)
+- [ ] **The Ars source / Iron's mana bus works** — imbuement/apparatus consume source and produce output;
+  the Arcana mana grant (PR #80) client-syncs.
+- [ ] **CI green**; `./tools/packwiz refresh` committed.
+
+### Ships with
+- [ ] **The Arcana mod (#80) lands together** (the code-layer depth: Attunement Font, spell-power crossover,
+  Soul Reaping). Keep the recipe layer and the mod consistent.
+- [ ] **Patch-notes entry follows the professional player-facing style** — plain prose, no emoji
+  (`docs/PATCHNOTES.md` / CLAUDE.md "Working style"). This handoff's heavier formatting is internal-only.
