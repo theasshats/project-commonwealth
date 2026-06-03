@@ -19,8 +19,8 @@
     "c:ingots/cast_iron": "tfmg",
     "c:nuggets/cast_iron": "tfmg",
     "c:storage_blocks/cast_iron": "tfmg",
-    "c:ingots/silver": "galosphere",
-    "c:nuggets/silver": "galosphere"
+    "c:foods/pasta": "farmersdelight",
+    "c:foods/raw_pasta": "farmersdelight"
   },
   "stone_variants": [
     "stone",
@@ -43,7 +43,9 @@
     "c:rods/{material}",
     "c:storage_blocks/raw_{material}",
     "c:storage_blocks/{material}",
-    "c:wires/{material}"
+    "c:wires/{material}",
+    "c:foods/pasta",
+    "c:foods/raw_pasta"
   ],
   "ignored_tags": [],
   "ignored_items": [],

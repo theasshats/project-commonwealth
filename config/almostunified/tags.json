@@ -1,5 +1,17 @@
 {
-  "custom_tags": {},
+  "custom_tags": {
+    "c:foods/pasta": [
+      "createfood:pasta",
+      "extradelight:pasta",
+      "farm_and_charm:pasta",
+      "farmersdelight:pasta"
+    ],
+    "c:foods/raw_pasta": [
+      "extradelight:raw_pasta",
+      "farm_and_charm:raw_pasta",
+      "farmersdelight:raw_pasta"
+    ]
+  },
   "tag_substitutions": {},
   "item_tag_inheritance_mode": "ALLOW",
   "item_tag_inheritance": {},

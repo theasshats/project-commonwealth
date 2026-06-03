@@ -14,11 +14,11 @@ hash = "37f013c49586db025c17f9fa6657c6f239e0169ebc97ef682ff114a2ede43c5e"
 
 [[files]]
 file = "config/almostunified/tags.json"
-hash = "3f0d92c8abaf95a68ff79bb2ef9169fd598500070de7e5a616b755f9c5123e6f"
+hash = "ae21856320bd068d0498b5fc3ae8c49d3102453ba274e7b0fee034392fc2f577"
 
 [[files]]
 file = "config/almostunified/unification/materials.json"
-hash = "f9736b366899beafb0de5795453f1da159222143d5ac4f3c8d3231bbc80a4424"
+hash = "d915fc58e3804bd901448e520fcc4329430aca9069ba0d87df3411968906302d"
 
 [[files]]
 file = "config/createblockchain-common.toml"
