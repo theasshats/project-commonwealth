@@ -1,8 +1,9 @@
 # PR #75 — Magic web (weave the magic mods): handoff
 
 > **For a fresh Claude instance** continuing/verifying the magic recipe weave on branch
-> `claude/magic-web` (stacked on `claude/recipe-overhaul` / PR #62). Self-contained: read before acting.
-> Deep design lives in the "Magic web" section of `docs/RECIPES.md`; this is the continuation brief.
+> `claude/magic-web` (now **targets `main`** — #62 merged, this was retargeted + re-synced). Self-contained:
+> read before acting. Deep design lives in the "Magic web" section of `docs/RECIPES.md`; the *scope bar* is
+> §2a below (benchmarked against #62); this is the continuation brief.
 
 ## 1. What this PR is
 Weaves the **magic** mods into one progression around an arcane **spine = Ars Nouveau + Iron's
@@ -13,11 +14,36 @@ is the spine) and **Create: Occult Engineering** bridges via native machines + a
 the mods' **native machines**, not crafting tables. MC **1.21.1 / NeoForge 21.1.228**, KubeJS.
 
 ## 2. State
-- **Green** on `pr-checks.yml`. **Stacked on PR #62** (base = `claude/recipe-overhaul`). If #62 merges
-  first, **rebase this onto `main`**. (This PR's `33-magic-web-spine.js` replaces #62's first-pass
-  `33-magic-web.js` — that file is removed here.)
+- **Retargeted to `main`** (was stacked on #62 / `claude/recipe-overhaul`); `main` merged in cleanly,
+  `pack.toml`/`index.toml` refreshed, **CI green**. The diff vs `main` is now just the three magic files.
+- Confirmed the supersede: this PR's `33-magic-web-spine.js` **replaces** #62's first-pass `33-magic-web.js`
+  (that file is removed); coexists fine with #62's `35-web-bridges.js`.
 - **All recipe schemas were jar-verified** (§4) — the weave is native-machine-only, no fallbacks.
 - KubeJS is **headless here**; real verification is in-game (§6). Ratios/source-costs are **first-pass**.
+- **Lands with the Arcana mod (#80)** as "the magic layer" (sequence: #88 → 0.5.0, then #75 + #80).
+
+## 2a. Scope & the #62 benchmark — what "done" looks like
+This PR is the **first pass: cross-school *currency bridges*** (essences mint into/out of Ars source; occult
+funnels through `spirit_solution`). That's the *floor*, not the ceiling. **Benchmark the full magic weave
+against #62** (the Create overhaul that just merged):
+
+- **#62 didn't just bridge — it wove every actionable mod in**, per-mod, with the depth each item's power
+  warranted (the **`60-mffs.js` `sequenced_assembly` gold standard**, parts+methods, keystone gating). The
+  magic weave should reach the same coherence: not only "trade essence A for essence B," but magic gear /
+  altars / foci genuinely **tying into ≥2 pillars** (the `docs/RECIPES.md` rubric #4 — *multi-pillar weaving
+  is the goal*). Magic→Create is the obvious second pillar (occultengineering already bridges it); magic→
+  economy (sellable reagents) and magic→survival are open.
+- **Measure it, don't eyeball it.** The connectivity toolkit (`tools/recipe-graph/`) now counts **magic
+  apparatus methods** (`occultism:ritual`, `ars_nouveau:enchanting_apparatus`, `ars_nouveau:glyph`, …) as
+  real edges. Run `python3 tools/recipe-graph/recipe-graph.py --remove create` to see how the magic mods
+  weave to *each other* once the Create spine is pulled out — that's the magic web's own cohesion. The goal
+  (per `docs/CONNECTIVITY.md`) is **one or two cohesive webs, not many isolated clusters**; magic currently
+  reads ~99% in-web *because of vanilla glue*, so use the no-vanilla / `--remove create` lens to find the
+  real magic islands and bridge them.
+- **Depth tiering mirrors #62:** light bridges for cheap reagents, real native-machine chains for flagship
+  magic items. The **Arcana mod (#80)** is the code-layer equivalent of #62's heaviest tier — the place for
+  weaves the recipe layer can't express (Source⇄mana, spell-power crossover, soul→essence on kill).
+
 
 ## 3. Files (`kubejs/server_scripts/recipes/`)
 - `33-magic-web-spine.js` — **Ars source = universal currency.** Ars `source_gem` ⇄ Iron's `arcane_essence`
@@ -59,7 +85,9 @@ Authored with `event.custom({...})` (Ars/occultism) + `event.recipes.create.mixi
 - **Balance:** source-costs / fluid amounts / drop-sink rates are first-pass — tune against the real essence
   economies in playtest.
 - **Bus check:** confirm Ars `imbuement`/`apparatus` recipes actually run (source consumed, output produced).
-- **Rebase ordering** vs #62 (above).
+- **Deepen toward the #62 benchmark (§2a):** this PR is the currency-bridge floor; the goal is the magic
+  mods genuinely woven (≥2 pillars each, native-machine depth where power warrants). Measure progress with
+  `tools/recipe-graph/recipe-graph.py --remove create` (it now counts magic apparatus methods).
 
 ## 7. Relationship to the Arcana mod (PR #80)
 This PR is the **recipe/material layer**. The deeper, code-level magic weave lives in the **Arcana** helper
