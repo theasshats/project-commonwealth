@@ -30,6 +30,13 @@
 - from: modulargolems golem core/slot upgrade | via: ars_nouveau:imbuement with source_gem | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: imbuing a golem core with arcane source connects golemancy to the magic web — a magic-infused construct upgrade feels thematically on-point; one imbuement step is proportionate for a mid-tier upgrade slot
 - from: modulargolems golem body parts | via: occultism:spirit_fire transmutation | to: magic | motif: M-11 | power: mid | tone: clash | verdict: REJECT | reason: spirit-fire is for organic-to-essence transmutation (M-11 organic↔magic); applying it to a metal construct body is a tone mismatch — metal parts don't transmute through soul fire; the Ars imbuement above covers the magic pillar cleanly
 
+## create_enchantment_industry   [anchors: Create (1)]
+- from: create_enchantment_industry:experience_bucket (liquid XP fluid) | via: irons_spellbooks:alchemist_cauldron_fill / or as ritual fuel in occultism:ritual | to: magic | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: liquid XP as a ritual/spell-crafting fuel is immediately intuitive — "bottled experience powers the magic circle"; Iron's cauldron already accepts fluids for brewing; this gives the magic pillar a Create-produced consumable it wants
+- from: create_enchantment_industry:experience_bucket | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: REJECT | reason: M-05 via Iron's/Occultism is cleaner and more specific; adding an Ars imbuement route for the same fluid is redundant — one magic bridge is enough for liquid XP
+- from: create_enchantment_industry enchanted books (Printer output) | via: numismatics sell/price | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: a Printer that mass-produces enchanted books makes those books a commodity — players sell surplus enchants to other players via Numismatics; enchanting factory → trade good is an obvious economy loop
+- from: create_enchantment_industry:experience_cake | via: farmersdelight:cooking chain | to: survival | motif: M-12 | power: everyday | tone: clash | verdict: REJECT | reason: the experience_cake is a Create gimmick item, not a food item — routing it through a cooking chain is a tone mismatch; it exists as a humor/XP item, not a survival food. Don't force it into the food web.
+
+
 
 
 

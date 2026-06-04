@@ -21,6 +21,14 @@
 - from: farm_and_charm:butter / farm_and_charm:bacon / farm_and_charm:baked_lamb_ham (high-effort animal products) | via: numismatics sell | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: a husbandry specialist runs a steady surplus of butter and cured meats that traders inland will actually pay for — the animal-feeding loop has a cash outlet
 - from: farm_and_charm:barley (grain) | via: vinery:apple_fermenting / alcohol_industry:alcohol_boiling | to: Create (brewing chain) | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: barley→beer is a natural processing chain, but alcohol_industry is already the brewing spine and this would need a cross-mod recipe that duplicates what vinery + alcohol_industry already cover; adds complexity with no new pillar (stays survival/economy, not Create). Lower priority than the milling ACCEPT above.
 
+## immersive_armors   [anchors: survival (1)]
+- from: immersive_armors:heavy_chestplate / heavy_helmet set (iron-block-heavy) | via: create:pressing (iron sheets as input) + create:mechanical_crafting | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: a set that's literally "layered metal plates" requires pressed iron sheets from the rolling mill — mid-game armor that pulls from the spine instead of the bench
+- from: immersive_armors:divine_chestplate / divine_helmet set (magical protection set) | via: ars_nouveau:enchanting_apparatus + armor_upgrade | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: the Divine set's "block one hit per minute" effect is arcane in flavour — finishing it through the Enchanting Apparatus makes sense; the set bonus is the payoff for the magic investment
+- from: immersive_armors:steampunk_* set (if present) | via: create:mechanical_crafting (brass/copper components) | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: a steampunk set should visibly cost Create materials; brass-trimmed plate from mechanical crafting is the obvious read
+- from: immersive_armors:bone_* set | via: occultism:spirit_fire or ars_nouveau:imbuement | to: magic | motif: M-10 | power: everyday | tone: clash | verdict: REJECT | reason: bone armor is vanilla-mob-drop combat gear, not magical; pulling it into an arcane ritual feels forced. The divine/robe sets are the thematically motivated magic targets; bone stays survival.
+- from: immersive_armors:* sets as sellable goods | via: numismatics sell | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: armor is kept by players, not sold; this is a weak loop. Economy entry is better served by the coin-from-processing chain. Leave this as a maybe at best.
+
+
 
 
 

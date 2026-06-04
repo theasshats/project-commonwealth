@@ -29,6 +29,12 @@
 - from: createimmersivetacz:twelve_gauge_shell / primer / createimmersivetacz ammo outputs | via: numismatics sell — bulk ammo as a consumable trade good (M-09 luxury/processed→coin) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: An "arms dealer" player manufactures rounds on their Create line and sells them to combat-focused crew members — the ammo factory becomes the pack's PvPvE supply economy naturally.
 - from: createimmersivetacz:gun_barrel / firing_mechanism (fabricated gun parts) | via: magic — none coherent | to: magic | motif: no-motif | power: mid | tone: clash | verdict: REJECT | reason: Gun parts have no thematic surface in Ars Nouveau or Occultism; a forced "infuse a gun barrel" edge would be arbitrary. No coherent magic weave exists for this mod.
 
+## undergroundworlds   [anchors: survival (1)]
+- from: undergroundworlds:spider_fang (Black Recluse drop) | via: occultism:spirit_fire transmutation into an arcane reagent (M-11 ritual/spirit sink) | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: A giant cave spider's venom-fang is a natural Occultism ingredient — spirit fire consuming it to yield a spirit catalyst is exactly the "mob drop earns a use" pattern.
+- from: undergroundworlds:temple_bricks / pyramid_bricks (deco block sets) | via: create:crushing lossy recycle (M-04) | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: Salvaging ancient brickwork in a Create machine for gravel + XP is a minor but coherent quality-of-life weave; the brick sets are the only material surface this mod exposes, and M-04 is explicitly the light step for deco blocks.
+- from: undergroundworlds:desert_charm / antidote_flask | via: ars_nouveau:imbuement as reagent (M-10) | to: magic | motif: M-10 | power: mid | tone: ok | verdict: REJECT | reason: The charms already function as standalone gear; routing them as imbuement inputs would require either consuming them (thematically odd — they're wearable) or using them as catalysts in a multi-step craft that has no grounding in Ars Nouveau's existing reagent vocabulary. The spirit_fang (M-11) is the cleaner magic weave.
+
+
 
 
 

@@ -33,3 +33,7 @@
 
 ## letsdocompat   [anchors: survival (1)]
 - LEAVE — support/glue mod (0 items; ships recipes + food tags). It IS the food-web weaving layer (M-12-style unification across Let's Do / Farm&Charm / Farmer's Delight) — it has nothing of its own to give a 2nd pillar. Its function is already cross-cluster connective tissue; treat as infrastructure, not a weave target.
+
+## createmechanicalcompanion   [anchors: Create (1)]
+- from: mechanical wolf + modules (deep sequenced-assembly build) | via: boss drop / MineColonies unlock as gate item for the companion build | to: survival(boss) | motif: M-15 | power: endgame | tone: ok | verdict: REJECT | reason: tempting to gate this brass/netherite flagship behind a boss drop, but it adds a *Create-pillar deepening*, not a 2nd pillar — and the companion is a personal combat buddy; combat isn't a pillar. M-15 would deepen Create, not cross to a new pillar. Surface only as an optional progression-gate idea.
+- LEAVE — Create-gated combat companion; its only build surface is deep Create (already counts toward Create depth, M-06). No tradeable/magic/transport material to route to a genuine 2nd pillar without forcing it.

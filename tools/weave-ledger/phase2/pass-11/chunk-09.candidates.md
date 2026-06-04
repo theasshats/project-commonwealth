@@ -10,5 +10,9 @@ OK — connections sound. Create is the method library (hub), not a mod that nee
 ## occultengineering   [anchors: Create, magic (2)]
 OK — connections sound. The dual-pillar is structural (the mod is a Create×Occultism bridge by design); inbound weaves from `create:compacting/filling/haunting/mixing/pressing` and `occultism:ritual/spirit_fire` are all confirmed in the made-by digest. The reserved `spirit_solution` reagent is correctly flagged. The M-08 economy candidate (sterling_silver → coin) is noted as WEAK and optional — that assessment is sound: sterling_silver is primarily an occult alloy and minting it into the pack's main currency risks diluting scarcity without adding a meaningful weave. Leave as-is unless the economy pillar specifically wants it.
 
+## numismatics   [anchors: economy, Create (2)]
+OK — connections sound. Numismatics is the economy-pillar hub and correctly identified as the *destination* (M-08/M-09), not a source requiring more outgoing edges. The dossier correctly says "leave as the destination." One minor note: the made-by digest shows no foreign recipe types (vanilla only), which is correct for a currency system — coins are crafted but the trade/bank mechanics are runtime, not recipe-typed. No rework needed.
+
+
 
 

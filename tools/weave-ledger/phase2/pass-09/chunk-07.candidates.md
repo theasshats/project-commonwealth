@@ -32,6 +32,12 @@
 ## aileron   [anchors: aeronautics (1)]
 - LEAVE — zero items, zero blocks; pure behavior/enchantment overhaul with no material surface to weave. The enchantments it adds operate on the vanilla Elytra item. Even the magic-via-enchanting_apparatus candidate in the dossier is too speculative (enchants may not be datapack-exposed). No coherent 2nd pillar without forcing.
 
+## createmetalwork   [anchors: Create (1)]
+- from: createmetalwork processed metals (molten scarce regionals: palladium, platinum, osmium, quicksilver) | via: numismatics mint | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: You crush the rare ore, melt it in a superheated basin, and cast it into coin — the Create processing chain is the mint's supply line. Regional scarcity × higher yield = natural coin feedstock.
+- from: createmetalwork molten magic-metal outputs (e.g. molten forms of occultism/galosphere metals) | via: create:mixing (already used inbound) | to: magic | motif: M-03 | power: mid | tone: ok | verdict: ACCEPT | hook: Magic-mod ores already pass through Create crushing; the metalwork layer gives occultism and Ars mages doubled output from their scarce reagent ores — Create is the doubling reward for the magic economy, not just the tech one.
+- from: createmetalwork:molten_steel_bucket / molten_netherite_bucket | via: aeronautics airframe recipe | to: aeronautics | motif: M-23 | power: endgame | tone: ok | verdict: ACCEPT | hook: Steel and netherite are the structural alloys for a real airship hull — pouring molten structural metal is the natural source of airframe plates.
+
+
 
 
 
