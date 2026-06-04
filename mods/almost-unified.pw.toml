@@ -1,6 +1,7 @@
 name = "Almost Unified"
 filename = "almostunified-neoforge-1.21.1-1.4.1.jar"
 side = "both"
+pin = true
 
 [download]
 url = "https://cdn.modrinth.com/data/sdaSaQEz/versions/vvzNMESp/almostunified-neoforge-1.21.1-1.4.1.jar"
