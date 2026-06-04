@@ -67,6 +67,17 @@
 ## cerbons_api   [anchors: support/library (1)]
 - LEAVE — shared code library for CERBON's boss mods; zero items, zero recipe types, no content surface. Genuine zero-content code library.
 
+## gamediscs   [anchors: survival (1)]
+
+### Candidate A — gaming console components via Create mechanical crafting
+- from: gamediscs:processor / gamediscs:redstone_circuit | via: create:mechanical_crafting | to: Create | motif: M-05 | power: mid | tone: ok | verdict: REJECT | reason: M-05 is for a mod's own *flagship* item built in its own machine gated on Create parts — the console's processor isn't gamediscs' "flagship machine," it's a craft component for a novelty toy. Routing it through Create mechanical crafting is a forced edge: it adds friction to a downtime item without any design payoff. The mod's only "power" is whimsy; gating whimsy behind Create processing is anti-fun.
+
+### Candidate B — game discs as rare Numismatics collectible trade good
+- from: gamediscs:game_disc_* (rare drops from skeleton-kill quirk) | via: numismatics sell (M-09) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: the disc-drop mechanic (Skeleton kills Bee/Slime/Frog/Rabbit) is deliberately quirky and random; making discs a coin trade good creates an incentive to grind the mechanic, which turns a whimsical easter egg into a farm loop. That ruins the tone. Leave the acquisition as a happy accident.
+
+- LEAVE — novelty toy with no resource role; no coherent weave surfaces without either forcing a Create gate onto a fun trinket or turning a whimsical drop into a grindable economy input. Both paths harm the mod's purpose.
+
+
 
 
 

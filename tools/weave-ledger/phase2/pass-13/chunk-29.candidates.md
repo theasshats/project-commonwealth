@@ -21,6 +21,9 @@
 ## bigsignwriter   [anchors: support (1)]
 - LEAVE — client-side UI utility that expands sign text input; no items, no methods, purely a decoration-ergonomics tool. Nothing coherent to route through any pillar.
 
+## inventoryprofilesnext   [anchors: client-only QoL (1)]
+- LEAVE — pure client-side inventory ergonomics (sort, dump, lock-slots); no items, no server-side methods, no recipe surface. Zero coherent weave path.
+
 ## companions   [anchors: survival (1)]
 - from: companions:crystallized_blood | via: occultism:ritual | to: magic | motif: M-11 | power: everyday | tone: ok | verdict: ACCEPT | hook: the Soul Furnace's blood-crystals are a spirit-state material — of course Occultism's rituals drink from that same soul well
 - from: companions:crystallized_blood | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: everyday | tone: ok | verdict: ACCEPT | hook: a soul-crystallized reagent attuned through Ars apparatus is a natural step up the arcane ladder

@@ -47,6 +47,17 @@
 
 - LEAVE — recipe datapack with no items of its own; it deepens Create throughput rather than bridging pillars. Any cross-pillar benefit from its outputs (renewable vanilla mats) belongs on the consumer mods, not on this datapack. One deliberate note: if any CUF recipes conflict with Derpack's scarcity intent (e.g. the renewable diamond recipe), they should be trimmed regardless of weaving.
 
+## everycomp   [anchors: support/decoration (1)]
+<!-- Runtime block/recipe generator — auto-generates wood-variant blocks (doors, signs, furniture etc.)
+     in every installed wood type. Its outputs live in host mod namespaces; it has no distinct item identity. -->
+
+- from: everycomp wood-variant outputs (doors, signs, etc.) | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: M-04 is "metal/stone deco crushes back to raw/gravel + XP nugget." Wood variants don't fit M-04's metal/stone-deco scope — they're wood blocks and wouldn't yield a useful crush byproduct. The pattern doesn't apply here.
+
+- from: everycomp wood-variant furniture/blocks | via: numismatics sell | to: economy | motif: M-09 | power: everyday | tone: clash | verdict: REJECT | reason: M-09 is "high-effort consumable (wine, cheese, processed crop) as trade good." Automatically-generated wood variant blocks are low-effort palette-filler, not high-effort craftables. Using them as a coin-sink luxury good is tone-clashing and arbitrary — they exist to fill gaps, not to be premium goods.
+
+- LEAVE — it's a generator, not a content set. Its outputs already ride host mods' recipes (including Create wood shapes, Macaw's doors, etc.); weaving belongs on those host mods. No coherent 2nd pillar from this mod's own surface.
+
+
 
 
 
