@@ -129,6 +129,23 @@ pillar per feature version** because:
 - The mixed model was rejected mainly because a **per-release web-% target is gameable** (see the compass
   note above), and the deep-weaving question is better handled on its own (`docs/WEAVING-STRATEGY.md`).
 
+## Docs to reconcile on acceptance
+
+This proposal isn't settled, so the canonical docs shouldn't change yet — but if it's adopted, these need
+updating to match (ideally folded into this PR so it lands atomically):
+
+- **`docs/ROADMAP.md` + `CLAUDE.md`** — both describe the prior scheme: pillar-per-version (0.6–0.11 → 1.0)
+  and a curation **thunderdome at v0.6 / v0.8 / v0.10** (even content milestones). This proposal expands to
+  0.6–0.15 (one pillar per *odd* version + stabilization evens) and moves the **thunderdome onto the odd
+  feature versions**, with perf-pruning on the evens — i.e. the thunderdome *flips parity*. Biggest
+  reconciliation; right now "thunderdome" means two different things across the docs and this PR.
+- **`docs/CONNECTIVITY.md`** — frames the giant-component % as "the goal." Add the **compass-not-gate**
+  caveat (find islands with it; don't target it — it's gameable; see the web-% note above). The one bit
+  landable independent of the cadence decision.
+- **`docs/DESIGN.md`** — no change needed; "every mod earns its place / cut what anchors to nothing" and
+  the "emergent, optional economy" framing already align (the curation rubric #157 and player-minted
+  economy #136 operationalize it at the issue level).
+
 ## Post-1.0
 
 Keep the rhythm for live content updates — no world resets; freshness comes from curated content updates
