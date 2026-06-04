@@ -10,6 +10,21 @@ theme/balance · **[PLAN]** plan-doc change · **[GITHUB]** issue action · **[N
 
 ---
 
+## Status — Phase 2: 16 passes; THREE full passes; freeze now 3-sample-confident
+
+- **16 passes total.** pass-13/14/15 were all FULL passes (every dossier, `--full`). Merge: **2053 unique
+  candidates, 576 at ≥2-pass agreement, 231 opus-corroborated.**
+- **Freeze hardened to a 3-sample rule** (`phase2-freeze.py --passes 13,14,15`): a mod freezes only if it was
+  LEAVE-only in ALL THREE independent full passes AND has zero accepts anywhere AND 0 blocks/0 items/loot=no.
+  175 mods were LEAVE-only across all three; **160 frozen** after the content/accept guards (15 dev-item libs
+  kept in rotation). **Verified frozen ∩ accepts = NONE.** This closes the single-sample-variance risk the
+  maintainer raised; the only residual gap is the digest false-zero (code-registered content) → needs the #131
+  digest regen, which the maintainer will run next.
+- Loot-seeding now produces real candidates pack-wide (structure/dungeon mods: betterdungeons, dungeons_arise,
+  ctov, betterstrongholds, formationsnether, trek, tidal-towns, t_and_t, betteroceanmonuments, …).
+- Next blind passes: **198 mods / 20 chunks** (160 frozen skipped). Aeronautics now reviewable (levitite →
+  economy/magic outbound corroborated across passes 14+15).
+
 ## Status — Phase 2 multi-pass convergence (9 passes done; STILL BLIND)
 
 Phase 2 is running as independent blind passes (plan §2.x). **pass-00 … pass-08 complete** — 9 passes.
