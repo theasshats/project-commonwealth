@@ -26,3 +26,7 @@
 ## midnightthoughts   [anchors: survival (rest/sleep) (1)]
 - LEAVE — purely a status-effect / sleep-overlay system; ships no items or tags. No material join key exists for any method-routing. No coherent 2nd pillar available.
 
+## sereneseasons   [anchors: survival (1)]
+- from: sereneseasons:season_sensor (redstone output keyed to season) | via: Create redstone logic (gearshifts, contraptions) | to: Create | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: wire the sensor into a Create gearshift so automated farms change crops each season — the world's calendar drives the factory; season_sensor is already an output the dossier flags as the join key for Create
+- from: out-of-season produce (scarce during off-season months) | via: numismatics sell / price | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: the seasonal scarcity argument is real but too diffuse — it's not a specific material being priced, just "things are rarer sometimes"; a proper weave needs a named sellable item, not an ambient calendar effect; WEAK per dossier; reject — let M-16 carry the season pillar
+

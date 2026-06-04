@@ -38,6 +38,20 @@
 - from: expandeddelight:cranberry (crop) | via: serene seasons gating (seasonal reagent) | to: survival/Create | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: cranberries are a late-autumn/winter crop in real life; gating their harvest to the appropriate Serene Season gives them natural scarcity and makes cranberry-based recipes season-sensitive
 - from: expandeddelight:peanut_butter / chili-based foods | via: numismatics (luxury good) | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: cheese wheel already covers the luxury-food→coin weave for this mod; stacking every processed food into the coin system dilutes the scarcity signal — pick the time-gated cheese as the representative, leave faster-cooking foods outside the economy weave
 
+## createlowheated   [anchors: Create (1)]
+- LEAVE — a single-block heat-mechanic tweak with no items to route, no tradeable surface, and no reagent join key. It deepens Create internally (making heat a managed resource) but offers no handle for a 2nd pillar without inventing a forced gate-tax.
+
+## midnightthoughts   [anchors: survival (1)]
+- LEAVE — pure effect/behavior mod with zero items, blocks, or material outputs. The well-rested buff affects the player only; there is no material join key to route through any method. No coherent 2nd pillar possible.
+
+## bountiful   [anchors: economy (1)]
+- from: bountiful reward pool (configurable) | via: numismatics coin payout (set reward = numismatics:cog / spur) | to: economy (deepens existing pillar + connects to Create-minted coin) | motif: M-14 | power: everyday | tone: ok | verdict: ACCEPT | hook: bounties that pay out in Numismatics coins make the bounty board the primary coin faucet — every mob kill, harvest, or crafted item turned in earns spendable currency; the economy pillar becomes self-reinforcing (provisional motif)
+- from: bountiful objective pool (configurable) | via: Create-processed goods as required items (e.g. iron sheet, brass ingot, processed crops) | to: Create | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: Decrees that request Create-processed intermediates mean the bounty board pulls players toward the Create spine — the demand node for processed goods is a job board, not a market; emergent cooperation pressure
+- from: bountiful objective pool | via: magic reagents as required items (ars source gem, occultism spirit solution) | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: a bounty that asks for an Ars gem or an occultism reagent ties magic crafting into the economy loop — magic specialists have a direct coin-earning path that doesn't require combat
+- from: bountiful objective pool | via: farm/harvest outputs from Serene Seasons crops | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: REJECT | reason: M-16 is a reagent-gating motif (season-gated input → method); pointing Decrees at seasonal crops is a config/data decision, not a recipe weave — it's valid pack design but not a motif-routed weave. Record as a design recommendation, not a ACCEPT row.
+
+== CHUNK COMPLETE ==
+
 
 
 
