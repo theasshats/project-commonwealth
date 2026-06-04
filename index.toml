@@ -25,6 +25,10 @@ file = "config/createblockchain-common.toml"
 hash = "eaf6c7ba97e4b253817c05e2a34bfef4c277aab1b3b28d8c14bf01e7304aad22"
 
 [[files]]
+file = "config/everycomp-hazardous.toml"
+hash = "abe2744c46c81c28ef0bee5cc5cbf63c6982ee589f54ec06c9b31d258f841051"
+
+[[files]]
 file = "config/incontrol/spawn.json"
 hash = "f34b87e0593eec7e4efca49c8c159e586c9a2ad5bc9046ae396919a711471311"
 
