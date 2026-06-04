@@ -151,6 +151,22 @@ One pillar only; needs a 2nd. Ars Nouveau is the magic spine — 18 registered r
 
 - from: ars_nouveau archwood surplus (archwood logs/planks) | via: create:milling → Ars recipes | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: archwood is primarily a building block and Ars' own aesthetic material; milling it into dust to feed back into Ars recipes creates a tight loop but no real 2nd-pillar bridge — it stays inside magic. No-motif for "archwood dust" as a Create→magic join. Needs Gate-0 if pursued further.
 
+## astikorcartsredux   [anchors: survival (1)]
+
+One pillar (survival). Rustic horse-drawn carts and farm implements. Zero recipe-types registered; no material outputs beyond bulk crop harvest; crafted from vanilla wood/planks. 0 c:tags.
+
+**Method-pull:**
+- Carts and plows are *functional objects* (a draft animal + implement doing field work), not a material pipeline. There is no processing output from these items that another mod's method wants.
+- The "iron sheets for plow blade / reaper" candidate (M-05) from the dossier: gate the metal-bearing implements behind Create-processed iron sheets. Power-read: carts/plows are early-game tools — everyday, not endgame. Gating them behind Create sheets would be mid/late-game friction on an early tool. That violates the guardrail against gating basic components behind complex recipes. Thin candidate.
+- Economy (M-21 trade-seam / M-09): there are no outputs to sell. The cart hauls things; it doesn't produce sellable goods.
+
+**Theme-fit / red-team:**
+- The mod's tone is deliberately pastoral-medieval — wooden carts pulled by horses. Forcing a Create recipe gate would feel anachronistic (this tool predates the industrial age within the pack's fiction). The "farm before trains" role is its explicit niche.
+- No STRONG candidate survives red-team.
+
+- LEAVE — deliberately vanilla-pastoral transport layer (horse-drawn carts, plow, reaper). No processing outputs, no recipe-types, and the pack's design intent keeps it as early-game farm labor before the Create/Aeronautics logistics era. Forcing a Create-component gate would violate the basic-components guardrail and clash with the mod's tone.
+
+
 
 
 
