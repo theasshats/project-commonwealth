@@ -15,6 +15,10 @@
 ## titanium   [anchors: support/library (1)]
 - LEAVE — HRZNStudio developer library; titanium:test_serializer is a dev-only recipe type, not gameplay. The dev-content blocks (diamond/gold/iron/smashing_table) are internal test scaffolding with no survival identity. Genuine zero-content code library.
 
+## citadel   [anchors: support/library (1)]
+- LEAVE — sbom_xela (Alex's Mobs/Alex's Caves) shared animation/spawn framework. Items present (citadel:citadel_book, debug, effect_item, fancy_item, icon_item) are internal dev tooling with no player-facing recipe identity. The content weaving belongs on Alex's Mobs/Caves, not on this library itself.
+
+
 
 
 

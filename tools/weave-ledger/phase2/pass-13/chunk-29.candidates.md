@@ -15,6 +15,14 @@
 ## moonlight   [anchors: support (1)]
 - LEAVE — shared library for MehVahdJukaar's mods; the only registered items (spawn_box, placeable_item) are internal helper objects, not player-facing materials. No weave surface.
 
+## supermartijn642corelib   [anchors: support (1)]
+- LEAVE — GUI/block/packet scaffolding library; zero items, zero recipe methods, no gameplay content.
+
+## bigsignwriter   [anchors: support (1)]
+- LEAVE — client-side UI utility that expands sign text input; no items, no methods, purely a decoration-ergonomics tool. Nothing coherent to route through any pillar.
+
+
+
 
 
 
