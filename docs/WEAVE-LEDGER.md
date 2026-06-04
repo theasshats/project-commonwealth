@@ -32,20 +32,22 @@ sign-off), because it propagates globally. Reusing an approved motif does not ne
 | M-05 | **Native-method gating** — a mod's flagship item is built *in its own machine*, gated on Create parts as inputs | the mod's own machine type | any↔Create | established · `60-mffs.js` |
 | M-06 | **Sequenced-assembly keystone** — endgame items are multi-stage chains through a `derpack:incomplete_*` part | `create:sequenced_assembly` | Create (depth) | established · `60-mffs.js` |
 | M-07 | **Attunement catalyst** — a worldgen consumable (Galosphere allurite/lumiere shards) gates a conversion so it isn't free arbitrage | rides the host method as a catalyst | magic + survival/worldgen | established · `33`/`80`/`97` |
-| M-08 | **Coin from processed scarcity** — scarce regional metal → Create-processed → minted into coin | `create:*` → `numismatics` mint | Create↔economy | proposed · #136 |
-| M-09 | **Luxury good → coin** — a high-effort consumable (wine, cheese, processed crop) is a sellable trade good | `numismatics` sell/price | survival/food↔economy | proposed |
-| M-10 | **Arcane infusion pull** — a foreign material is refined/attuned into a magic reagent through an arcane infusion method | `ars_nouveau:imbuement` · `forbidden_arcanus:*infusion*` | any↔magic | proposed (generalizes M-01) |
-| M-11 | **Ritual / transmutation sink** — a drop or material is transmuted into an essence through a ritual/spirit method | `occultism:spirit_fire` / `ritual` | organic↔magic | proposed · `34`/`35-magic-web-*` |
-| M-12 | **Processing-chain pull** — a raw crop/material is run through another mod's processing method into a finished/sellable good | `farmersdelight:cooking`/`cutting` · `create:milling`/`mixing` · `extradelight:*` | survival↔Create/economy | proposed (generalizes M-03/M-09) |
+| M-08 | **Coin from processed scarcity** — scarce regional metal → Create-processed → minted into coin | `create:*` → `numismatics` mint | Create↔economy | **accepted** · #136 |
+| M-09 | **Luxury good → coin** — a high-effort consumable (wine, cheese, processed crop) is a sellable trade good | `numismatics` sell/price | survival/food↔economy | **accepted** — ⚠ player-run-currency review in the 0.9 economy update (same caveat as M-14) |
+| M-10 | **Arcane infusion pull** — a foreign material is refined/attuned into a magic reagent through an arcane infusion method | `ars_nouveau:imbuement` · `forbidden_arcanus:*infusion*` | any↔magic | **accepted** (generalizes M-01) — ⚠ **do not gate basic components behind infusion** (depth scales with power) |
+| M-11 | **Ritual / transmutation sink** — a drop or material is transmuted into an essence through a ritual/spirit method | `occultism:spirit_fire` / `ritual` | organic↔magic | **accepted** · `34`/`35-magic-web-*` |
+| M-12 | **Processing-chain pull** — a raw crop/material is run through another mod's processing method into a finished good **or a useful intermediate** (e.g. ferment → solvent/alcohol that *feeds other recipes*) — **if it makes sense** | `farmersdelight:cooking`/`cutting` · `create:milling`/`mixing` · `extradelight:*` | survival↔Create/economy | **accepted** (generalizes M-03/M-09) |
 | M-13 | **Fuel → propulsion** — refined fuel powers an Aeronautics engine/generator (the airship/vehicle supply line) | TFMG / Create-Addition fuel → engine intake | Create↔aeronautics | **accepted** · #143 |
 | M-14 | **Bounty → drop economy** — a bounty board consumes mob drops and pays coin (combat → economy) | `bountiful` board → `numismatics` payout | organic↔economy | **accepted (provisional)** · #137 — ⚠ keep currency **player-run** (Eco-style); revisit in the 0.9 economy update |
 | M-15 | **Boss-key unlock** — a boss drop is the gate item for a complex Create/tech recipe (the DESIGN on-ramp) | the gated machine's own recipe (boss drop as input) | organic↔Create | **accepted** · #92 — must stay thematically sensible |
 | M-16 | **Seasonal reagent** — a crop/material obtainable only in a given Serene Season feeds a machine/ritual | season-gated input → Create/magic method | survival↔Create/magic | **accepted** · #91 — Serene Seasons is a **priority** survival lever; want more of these |
 
 _Motif rules: **compose, don't invent**; a motif carries its **anti-arbitrage rule** (M-01/M-07
-round-trips lose value; M-04 is lossy). New motifs enter via Gate 0 — log the request in `DECISIONS.md`.
-**M-13–M-16 were Gate-0 accepted in the Phase-1 review** (M-01–M-12 seeds; M-08–M-12 still pending an
-explicit blessing)._
+round-trips lose value; M-04 is lossy). **Never gate a *basic / everyday component* behind a complex
+recipe** — recipe depth scales with the item's power (everyday = one light step; flagship = deep chain;
+§7). New motifs enter via Gate 0 — log the request in `DECISIONS.md`. **M-01–M-16 are all Gate-0 accepted**
+(M-09 / M-14 carry a player-run-currency review for the 0.9 economy update; M-10 carries the
+no-basic-components caveat; M-12 explicitly covers useful *intermediates*, not just finished goods)._
 
 ---
 

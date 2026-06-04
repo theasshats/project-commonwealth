@@ -101,13 +101,23 @@ folded onto its existing pillar issue rather than a duplicate:
 - **[NOTE] Ledger location** — `docs/WEAVE-LEDGER.md` + `tools/weave-ledger/` (plan §15), not folded into
   `RECIPES.md`.
 - **[NOTE] `check.py` enforcement** — advisory only (plan proposed advisory → required at 0.15).
-- **[NOTE] Seed motifs** — 12 (M-01..M-12); M-01..M-07 `established` from existing weaves, M-08..M-12
-  `proposed` (pending your Gate-0 blessing before authoring). M-13+ above are proposals only.
-- **[NOTE] Dossier keying** — one card per *content namespace*; 2 addon jars ride a parent namespace with a
+- **[NOTE] Motifs — all 16 Gate-0 accepted.** M-01..M-07 established; **M-08..M-16 accepted**. Caveats
+  carried: M-09/M-14 player-run-currency review in 0.9; M-10 no basic-components; M-12 covers intermediates.
+- **[NOTE] Dossier keying** — one card per *content namespace*; addon jars ride a parent namespace with a
   `__<jar>` suffix.
+- **[NOTE] Next step (your call):** Phase 0.5 (vocabulary expansion) now, then **prep the Phase 2 fan-out
+  and present it for review** before launching (no big fan without sign-off). Cheaper models; usage check
+  after the first big fan.
 
-## Ratified / closed (your confirmations this turn)
+## Ratified / closed (your confirmations)
 
-- ✅ **Spice of Life: keep both** `solclassic` + `solonion` (was flagged as redundant; you want both).
-- ✅ **`samurai_dynasty` silver is real silver**, distinct from Galosphere palladium.
-- ✅ **Decisions-queue approach approved** ("decisions are good") — continuing to surface, not bulk-dump.
+- ✅ **Gate 1 PASSED** — dossier spot-check clean (hubs + sample grounded, sourced, no hallucination).
+- ✅ **Pruned 10 cut mods** — 6 EMI + `arphex` + `creeperoverhaul` + `mutantmonsters` + `sophisticatedcore`
+  dossiers deleted; `build-dossiers.py` `CUT_NS` stops regeneration. Digest reconciliation stays #131
+  (instance still has the jars; `smarter-farmers` still needs a card on a regen). 357 dossiers now.
+- ✅ **Motifs M-08..M-16 blessed** (Gate 0), with the caveats above; **guardrail added: no complex recipe
+  for a basic component** (plan §7 + ledger).
+- ✅ **Spice of Life: keep both** `solclassic` + `solonion` → #91.
+- ✅ **`samurai_dynasty` silver is real silver** ≠ palladium → #177.
+- ✅ **Issue tracking:** comment-on-existing (#137/#143/#92/#91) + new #176/#177 — approved.
+- ✅ **Decisions-queue approach approved** ("decisions are good").

@@ -494,6 +494,10 @@ This is where LLM limits bite hardest, so the mitigations are layered — and th
      method chains, M-05/M-06); **everyday items get *small* integrations** (one coherent gate). Both
      matter equally — the end goal is that *everything* feels intentional, sized to what it is, not that
      only the flagships get attention.
+   - **Never the inverse: no complex recipe for a basic component.** The flip side of power-scaling — an
+     everyday/basic item (a common ingredient, a starter part) must **never** be gated behind a multi-step
+     or infusion/ritual chain. Over-gating basics is as much a defect as under-gating flagships; keep the
+     simple things simple (this is why M-10 arcane-infusion is *not* for basic components).
    - Gives the mod a **real second pillar**, not a magic↔magic-only essence trade.
 4. **The "lifeless thread" test** (explicit anti-patterns — any hit ⇒ reject or escalate):
    - A bridge that exists only to move the metric.

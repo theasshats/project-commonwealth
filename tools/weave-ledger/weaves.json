@@ -84,35 +84,38 @@
       "name": "Coin from processed scarcity",
       "method": "create+numismatics",
       "pillars": "create+economy",
-      "status": "proposed"
+      "status": "accepted"
     },
     {
       "id": "M-09",
       "name": "Luxury good to coin",
       "method": "numismatics",
       "pillars": "survival+economy",
-      "status": "proposed"
+      "status": "accepted",
+      "note": "accepted; player-run-currency review in 0.9 economy update"
     },
     {
       "id": "M-10",
       "name": "Arcane infusion pull",
       "method": "ars_nouveau:imbuement",
       "pillars": "any+magic",
-      "status": "proposed"
+      "status": "accepted",
+      "note": "accepted; do NOT gate basic components behind infusion"
     },
     {
       "id": "M-11",
       "name": "Ritual/transmutation sink",
       "method": "occultism:spirit_fire",
       "pillars": "organic+magic",
-      "status": "proposed"
+      "status": "accepted"
     },
     {
       "id": "M-12",
       "name": "Processing-chain pull",
       "method": "farmersdelight:cooking",
       "pillars": "survival+create/economy",
-      "status": "proposed"
+      "status": "accepted",
+      "note": "accepted; covers useful intermediates (e.g. ferment->solvent) not just finished goods, if it makes sense"
     },
     {
       "id": "M-13",

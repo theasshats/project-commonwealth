@@ -4,7 +4,7 @@
 > This is the shopping list for weaving: to give a mod a 2nd pillar, route one of its materials
 > THROUGH one of these methods (WEAVING-PLAN.md §2.0/§6). Dead compat for uninstalled mods is dropped.
 
-**227 methods across 60 installed mods.**
+**223 methods across 58 installed mods.**
 
 | mod (namespace) | # | registered methods (recipe-types) |
 |---|--:|---|
@@ -26,7 +26,6 @@
 | `meadow` | 4 | `meadow:cheese`, `meadow:cooking`, `meadow:felting`, `meadow:woodcutting` |
 | `createaddition` | 3 | `createaddition:charging`, `createaddition:liquid_burning`, `createaddition:rolling` |
 | `createoreexcavation` | 3 | `createoreexcavation:drilling`, `createoreexcavation:extracting`, `createoreexcavation:vein` |
-| `emi_letsdo_compat` | 3 | `emi_letsdo_compat:cake_cut`, `emi_letsdo_compat:fondue_fill`, `emi_letsdo_compat:fondue_use` |
 | `irons_spellbooks` | 3 | `irons_spellbooks:alchemist_cauldron_brew`, `irons_spellbooks:alchemist_cauldron_empty`, `irons_spellbooks:alchemist_cauldron_fill` |
 | `modulargolems` | 3 | `modulargolems:golem_add_slot`, `modulargolems:golem_assemble`, `modulargolems:golem_replace_part` |
 | `northstar` | 3 | `northstar:electrolysis`, `northstar:engraving`, `northstar:freezing` |
@@ -62,7 +61,6 @@
 | `pantographsandwires` | 1 | `pantographsandwires:combine_wire` |
 | `patchouli` | 1 | `patchouli:shapeless_book_recipe` |
 | `solonion` | 1 | `solonion:upgrade_food_container` |
-| `sophisticatedcore` | 1 | `sophisticatedcore:upgrade_clear` |
 | `spawn` | 1 | `spawn:casting_net_clam` |
 | `tacz` | 1 | `tacz:gun_smith_table_crafting` |
 | `tide` | 1 | `tide:fishy_note_recipe` |
