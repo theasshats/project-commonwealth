@@ -38,6 +38,11 @@
 - from: friendsandfoes copper deco set (copper buttons, lightning rods, copper_golem_head — all copper-tagged blocks) | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: this is the thinnest possible weave — crushing decorative copper back to nuggets adds no player agency that the vanilla copper path doesn't already provide. The "recycles deco" motif is meant for mods with a meaningful deco output that the player actively wants to un-build for materials; a few copper button variants don't rise to that bar. Red-team: a player would ask "why does this deserve a Create recipe?"; no good answer.
 - LEAVE (for a stronger 2nd pillar) — the crab_claw→magic (M-02) edge is accepted and sufficient. The copper-deco angle is rejected as too thin. The mod is deliberately vanilla-balanced; over-connecting it dilutes the design.
 
+## createshufflefilter   [anchors: Create (1)]
+- LEAVE — single-item builder QoL utility (two filter items that randomize Deployer placement). No material outputs, no consumables, no methods. Any 2nd-pillar edge would be forced onto what is essentially a configuration tool for an existing Create mechanic.
+
+== CHUNK COMPLETE ==
+
 
 
 

@@ -34,6 +34,15 @@
 ## bettermineshafts   [anchors: survival (1)]
 - LEAVE — pure structure overhaul; no registry items, no loot tables (loot=no), no methods. Serves the ore-mining loop atmospherically but offers no recipe or method hook. Nothing to weave.
 
+## underground_village   [anchors: survival (1)]
+- from: Stoneholm villagers (underground traders) | via: numismatics trade-seat / villager economy node | to: economy | motif: M-21 | power: everyday | tone: ok | verdict: REJECT | reason: M-21 is provisional and the maintainer leans no; and this is a location/trade-seat task (retune villager trade lists), not a recipe or method weave — defer to the 0.9 economy update trade-seat pass if M-21 is confirmed
+- LEAVE — no registry items, no recipe-types; the economy node angle exists but belongs to a trade-configuration pass rather than a Phase 2 method-routing weave.
+
+## betteroceanmonuments   [anchors: survival (1)]
+- LEAVE — pure structure overhaul; no registry items, no recipe-types; loot tables are vanilla. No method to route through. Same category as bettermineshafts — worldgen polish only.
+
+
+
 
 
 
