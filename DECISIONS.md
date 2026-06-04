@@ -88,6 +88,49 @@ folded onto its existing pillar issue rather than a duplicate:
 > rather than creating duplicates, and filed **new** issues only for the two with no home (#176, #177). Say
 > the word if you'd rather have standalone issues for the others.
 
+## Phase 0.5 — proposed new motifs (Gate-0 review; NOT yet in the registry)
+
+Mined from the 223-method palette + how mods/packs integrate *now*. Methods marked [grounded] are jar-real
+(in the palette); "history" cites current-mod precedent. Kept tight (sprawl guardrail) — approve/reject each:
+- **M-17 Electric/FE charging bridge** — Create: New Age / Create Addition electricity (FE) charges a
+  tool/focus/reagent → bridges the Create **electric tier** into magic/tech gear. Method:
+  `createaddition:charging`. Pillars: Create↔magic/tech. *History:* Create New Age is the electricity addon;
+  Create+Ars packs pair them. [grounded]
+- **M-18 Summoned-spirit logistics** — Occultism **dimensional miner spirits** / `spirit_trade` acquire a
+  scarce material or trade → magic becomes an *acquisition/logistics* provider, not just essences. Method:
+  `occultism:miner` / `spirit_trade`. Pillars: magic↔Create/economy. *History:* Occultism's core mid-game
+  (dimensional mining; Iesnium bottleneck). [grounded]
+- **M-19 Soul / haunting seam** — `create:haunting` (Create's own soul-fire method) transmutes an item into
+  a soul/spirit output → a **native** Create→occult bridge (complements occultengineering). Method:
+  `create:haunting`. Pillars: Create↔magic. *History:* Create haunting + occult packs. [grounded]
+- **M-20 Deploy-application upgrade** — `create:deploying` / `item_application` applies a woven part onto a
+  base to upgrade it (the canonical Create "apply X to Y"); a light-to-mid gate — **not** for basic
+  components (guardrail). Method: `create:deploying` / `item_application`. Pillars: any↔Create. [grounded]
+- **M-21 Trade-seam to economy** — a mod's villager profession / wandering-trader routes into Numismatics
+  (vanilla-style trade → player currency). Pillars: any↔economy. *History:* villager-trade × Numismatics
+  (ties #90). [knowledge — verify]
+- **(blue-sky) M-22 Celestial / lunar reagent** — sibling to M-16: a material/effect available only during
+  an Enhanced Celestials lunar event feeds a method (night-magic flavor). Pillars: survival↔magic/Create.
+  *No in-pack history* — blue-sky.
+- Reagents proposed: createaddition charged/FE items (M-17); occultism iesnium/otherstone (M-18); create
+  haunted/soul items (M-19).
+
+## Phase 2 fan-out plan — FOR YOUR APPROVAL before I launch (no big fan without sign-off)
+
+Per "prep phase 2 fan out for review." Phase 2 = opportunity mapping only (**no authoring**). Proposed run:
+- **Chunking** by **pillar-seam neighborhood** (plan §3.2): ~6–8 chunks over the **72 content mods at <2
+  pillars** + the ≥2-pillar quality audit — e.g. {Create-family addons at 1 pillar}, {food → economy/Create},
+  {mob/boss drops → magic/economy}, {aeronautics + fuel}, {survival/seasons}, {magic web depth},
+  {deco/structure leftovers}.
+- **Per agent (cheaper model — Sonnet):** read its chunk's dossiers + methods palette + ledger; run Phase-2
+  steps 1–5 (issue-sweep → candidates → power-read → theme-fit/red-team → quality-audit); emit
+  one-line-per-candidate **+ the considered-set (incl. rejects + reasons)**. Composes only from accepted
+  motifs M-01..M-16 (+ any M-17+ you bless).
+- **Scale:** ~6–8 Sonnet agents in 1–2 waves; **I check usage with you after wave 1**.
+- **Output for Gate 2:** a consolidated candidate list (accepted + rejected, with power-tier + tone-fit +
+  motif) → becomes the Phase-2.5 milestone-issue set. Nothing authored; instance retires after 2.5.
+- **Launch only on your go.** Tell me if you want a different chunking, model, agent count, or scope first.
+
 ## Run policy (revised per your guidance — supersedes the earlier "cost lesson")
 
 - **Fan-out is fine on cheaper models** (Haiku 4.5 / Sonnet via the Agent `model` override) and is the
