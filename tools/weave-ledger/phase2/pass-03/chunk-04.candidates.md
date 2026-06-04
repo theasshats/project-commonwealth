@@ -20,3 +20,9 @@
 - from: smokeleafindustries FE output / generator | via: createaddition:charging or alternator | to: Create | motif: M-17 | power: mid | tone: ok | verdict: ACCEPT | hook: the smokeleaf generator produces FE; the Create Addition alternator/motor is exactly the FE↔SU bridge — the grow-op powers a Create line or vice-versa, threading the farm into the Create spine without retheming either mod
 - from: raw hemp / buds | via: create:milling | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: smokeleaf already has its own grinder chain (manual_grinder → grinder → extractor); routing raw hemp through Create milling is redundant and bypasses the mod's own progression — depth doesn't scale upward here, it flat-duplicates an existing path; reject to keep the mod's own processing chain intact
 
+## createshufflefilter   [anchors: Create (1)]
+- LEAVE — a single-item Create QoL utility (two filter variants); no outputs, no materials to route, no method join. No coherent 2nd pillar; forcing one would be a defect. Dossier explicitly recommends leave.
+
+## midnightthoughts   [anchors: survival (rest/sleep) (1)]
+- LEAVE — purely a status-effect / sleep-overlay system; ships no items or tags. No material join key exists for any method-routing. No coherent 2nd pillar available.
+
