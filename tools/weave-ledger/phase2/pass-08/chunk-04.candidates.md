@@ -10,4 +10,18 @@
 - from: wheat (raw grain) | via: create:milling (wheat → flour, light single step) | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Create millstone replaces the manual crafting-bowl flour step, threading the bake chain into the tech spine at the earliest, lightest point
 - from: surplus crops/baked goods | via: ars_nouveau Vitalic Sourcelink passive drain | to: magic | motif: M-02 | power: everyday | tone: clash | verdict: REJECT | reason: dossier rates this weak; the Sourcelink role is better owned by dedicated farm mods (Farmers Delight/Farm & Charm) that already mass-produce crops — bakery output is luxury-tier, not bulk biomass
 
+## tfmg   [anchors: Create (1)]
+- from: tfmg:diesel / gasoline / LPG (distilled fuels) | via: Aeronautics engine fuel intake | to: aeronautics | motif: M-13 | power: mid | tone: ok | verdict: ACCEPT | hook: TFMG's distillation tower is the natural supply line for Aeronautics engine fuel; ships don't fly for free
+- from: tfmg combustion engine block (diesel/gasoline engine) | via: Aeronautics drivetrain/propulsion component | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: ACCEPT | hook: TFMG combustion engines are the mechanical heart of a ship's drivetrain — bolt one into the hull before the propellers turn
+- from: tfmg:steel_ingot / cast_iron (processed structural metal) | via: numismatics sell/price | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: refined steel from a blast furnace is scarce, high-effort, and exactly what the economy pillar wants as a traded commodity; the iron→steel gap creates a natural price spread
+- from: tfmg:aluminum_ingot | via: create:crushing / ore-doubling | to: Create | motif: M-03 | power: everyday | tone: ok | verdict: REJECT | reason: tfmg already anchors Create as its primary pillar; ore-doubling within Create is redundant — it would add depth to the same pillar, not a second one. Keep the aeronautics + economy angles as the 2nd/3rd pillars instead.
+- from: tfmg:plastic / tfmg:lubricant | via: ars_nouveau:imbuement or occultism:spirit_fire | to: magic | motif: M-10 | power: mid | tone: clash | verdict: REJECT | reason: industrial petrochemical outputs (plastic, lubricant) have no thematic resonance with arcane/occult methods — the tone clash is significant; better left as pure-industrial goods
+
+## dynamictreesplus   [anchors: survival/worldgen (1)]
+- from: dynamictreesplus:saguaro_fruit (cactus fruit, foraged) | via: create:milling → dye-powder or food-dust intermediate | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Create millstone processes saguaro fruit into a cactus-green dye dust or juice base — a light one-step connection that makes the forager's harvest useful to the Create chain
+- from: dynamictreesplus:saguaro_fruit | via: numismatics sell | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: saguaro fruit is abundant forage from a common cactus biome; pricing an everyday foraged item into the coin economy is under-powered for M-09 (which targets high-effort luxury goods) — the milling route is the better 2nd pillar
+- from: dynamictreesplus mushroom caps (brown/red) | via: farmersdelight:cooking or create:milling into mushroom stew base | to: Create/survival | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: mushroom caps are vanilla-equivalent bulk forage; adding a Create processing step on an item this common edges toward forcing basics behind a machine, violating the depth-scaling rule. The saguaro fruit angle is the targeted, non-redundant hook.
+
+
+
 

@@ -36,4 +36,67 @@ source). The dossier's note that "the weaving direction is foreign goods → num
 price" is accurate and consistent with M-08/M-09 motif semantics. No outgoing edges on numismatics
 make sense; it is the terminal node for all sellable-goods weaves. No rework needed.
 
+## aeronautics_bundled   [anchors: aeronautics (1) — bundle wrapper, Create de-facto]
+REWORK (dossier consistency): the dossier claims 1 anchor but acknowledges Create as de-facto 2nd
+via component crafting. The chunk assigns it to ≥2 pillar audit — this is a dossier debt: the
+anchor field should be updated to "aeronautics, Create (2)" to reflect the reality that levitite/
+propeller/hot-air-burner construction already routes through Create sheets/casings/sequenced-
+assembly (M-06/M-23/M-24).
+Existing connection quality: the de-facto Create→aeronautics bridge is sound. The note that "weaving
+belongs on the `aeronautics` namespace dossier, not this bundle wrapper" is correct — this jar
+registers 0 items/blocks; real auditing should happen on the aeronautics dossier. No arbitrary
+or mis-costed connections visible here because there are none registered.
+Action: update anchor field in dossier from "aeronautics (1)" to "aeronautics, Create (2)" to
+resolve the inconsistency. No recipe authoring implied.
+
+## aeronautics_dyeable_components   [anchors: aeronautics (1)]
+REWORK (chunk mis-assignment): dossier shows 1 pillar (aeronautics only). This mod is a pure
+cosmetic permutation layer (dye + levitite/tire = colored variant) with no processing recipes
+and no cross-pillar connections. The dossier itself says "none — leave." Including it in the
+≥2-pillar quality-audit chunk appears to be a mis-assignment.
+Existing connection quality: no cross-pillar connections exist to audit. The vanilla-crafting dye
+step is correctly evaluated as too thin to be a real 2nd pillar.
+Action: flag for chunk re-assignment (should be in the 1-pillar / LEAVE candidates, not the
+quality-audit set). Do not force a connection.
+
+## alcohol_industry   [anchors: Create, survival (2)]
+OK — connections sound. Inbound weaves (create:filling, create:mixing) are the correct methods:
+the Alcohol Boiler builds on a Create-mixed Alcohol Base fluid → a natural Create↔survival food
+processing chain. The sizing is appropriate: everyday Create mixing input, mid-tier finished
+spirit output (M-12 processing-chain pull).
+REWORK (opportunity, not broken): the dossier flags M-09 (luxury→coin) as a STRONG 3rd-pillar
+candidate — bottled spirits are a natural trade commodity. This is a valid deepening; no existing
+connection is wrong. Worth carrying forward as a Phase 3 proposal for the economy weave pass.
+No lore clash, no mis-costing detected.
+
+## ars_nouveau   [anchors: magic (1)]
+REWORK (chunk mis-assignment): dossier explicitly shows 1 pillar (magic). This mod is the magic
+pillar's spine, not yet wired to Create/economy/survival beyond its own internal loops.
+The dossier's 2nd-pillar candidates are sound (M-02 survival via Vitalic/Agronomic Sourcelinks;
+M-01/M-10 imbuement hub) but remain unauth'd proposals. Including it in a ≥2-pillar quality-audit
+chunk appears to be a mis-assignment.
+Existing connection quality: no cross-pillar connections are in the weave log yet for ars_nouveau,
+so there is nothing to audit as "existing." The made-by methods field shows only vanilla recipes.
+Action: flag for chunk re-assignment. The M-01/M-02/M-10 candidates from the dossier are strong
+and should be actioned in Phase 3 once properly placed in a 1-pillar weave chunk.
+
+## astikorcartsredux   [anchors: survival (1)]
+REWORK (chunk mis-assignment): dossier shows 1 pillar (survival). Pure rustic cart/farm-implement
+mod; no processing recipes; no registered recipe types. The dossier evaluated M-05 (Create iron
+sheets for plow/reaper) as WEAK and said "leave." Including it in a ≥2-pillar quality-audit chunk
+is a mis-assignment.
+Existing connection quality: no cross-pillar connections to audit. No inbound weaves from any
+non-vanilla method. Made-by shows no foreign methods.
+Action: flag for chunk re-assignment. Survival-only leave status is correctly assessed in the
+dossier. Do not force a connection.
+
+## bits_n_bobs   [anchors: Create, survival (2)]
+OK — connections sound. Inbound weaves (create:item_application, create:splashing) are lightweight
+and appropriate for a decorative Create addon — items are finished via Create application methods,
+tying the deco palette into the Create spine (M-20 deploy-application upgrade; M-04 recycles deco
+potential). The sizing is correct: decorative items don't need deep chains.
+REWORK (minor): the dossier's M-04 crushing-back suggestion (tile/chair → crushed-stone) is a
+valid tightening of the Create↔deco loop. Not broken, but worth authoring as one simple crushing
+recipe row. No lore clash, no mis-costing in existing connections.
+
 
