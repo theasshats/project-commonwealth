@@ -10,6 +10,42 @@ theme/balance · **[PLAN]** plan-doc change · **[GITHUB]** issue action · **[N
 
 ---
 
+## Status — Phase 2 multi-pass convergence (4 passes done; STILL BLIND)
+
+Phase 2 is running as independent blind passes (plan §2.x). **pass-00, -01, -02, -03 complete** — 4 passes.
+After this run (`scripts/phase2-merge.py`): **525 unique candidates**, **133 proposed by ≥2 passes** (up from
+54 at 2 passes), **88 opus-corroborated**. The agreement core more than doubled while uniques still grew
+~170, so the passes are **converging but not yet saturated** → staying `--mode blind`; the switch to
+`--mode context-fed` (and then Gate 2) waits until a fresh blind pass adds little. Convergence table lives at
+`tools/weave-ledger/phase2/CANDIDATES.{md,tsv}`.
+
+**[NOTE] How the consensus column works (so Gate 2 reads it right).** `phase2-merge.py` dedups on
+`(mod, from-item, to-pillar, motif)` — **verdict is NOT in the key**, so an ACCEPT in one pass and a REJECT of
+the same edge in another collapse into ONE row. `times_suggested` counts **every** pass that surfaced the edge
+(accepts *and* rejects together → it measures attention, not approval); the `verdicts` TSV column keeps the raw
+split (e.g. `{'ACCEPT':3,'REJECT':1}`); `consensus = max(verdicts)` is the majority verdict. **Read `times` and
+`consensus` together** — a high `times` with `consensus: REJECT` is "robustly noticed and rejected," not a
+candidate. Ties (2/2) break by insertion order (arbitrary) — those are exactly the human-adjudicate rows; the
+`verdicts` dict flags them.
+
+**[G0] New-motif candidates the passes keep re-surfacing — need maintainer Gate-0 before use** (independently
+corroborated across pass-02/03, matching the pending items already noted): **structural-alloy → aeronautics
+airframe/hull** (e.g. `create_ironworks` steel plate); **logistics-carrier / cardboard → aeronautics logistics**
+(`dndesires` packages, copper/golem logistics); a **behavioral-constraint motif** for behaviour-only mods
+(`createpickywheels`, `solclassic`) that have no item surface to route. Multiple agents tagged these `no-motif`
+and correctly declined to author — they're parked pending your call.
+
+**[NOTE] Guardrails held under fan-out.** `createmetalwork` palladium was caught and **escalated, not routed**
+(the Galosphere `silver`=PALLADIUM gotcha); `samurai_dynasty` silver kept off `c:ingots/silver` confusion
+(#177); deliberately-vanilla worldgen/structure/behaviour mods drew `LEAVE` rather than forced edges.
+
+**[NOTE] Quality-audit (chunk-09) recurring REWORKs to fold at Gate 2:** `aeronautics_bundled` is a 0-item
+wrapper (weaves belong on the `aeronautics` ns, not here); `ars_nouveau` / `companions` are under-counted at 1
+pillar with foundational M-01/M-02/M-11 weaves that should be **promoted to Phase-3 priority**; `companions`
+in-mod coins conflict with Numismatics — needs a keep/bridge/suppress call.
+
+---
+
 ## Status — round-2 feedback integrated; now running Gate 1
 
 Phase 0 + Phase 1 complete (**367/367 dossiers VERIFIED**, pushed). This round I integrated your second
