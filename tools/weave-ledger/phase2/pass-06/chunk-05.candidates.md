@@ -32,6 +32,17 @@
 - from: immersive_armors:bone_chestplate set | via: occultism:spirit_fire or ritual (bone armor as an occult body-ward) | to: magic | motif: M-11 | power: mid | tone: ok | verdict: REJECT | reason: the dossier shows the Bone set uses vanilla bone (cheap everyday material); spirit-fire is reserved for transmuting mid-high drops into essences, not for re-gating a mid-tier armor. Tone clashes slightly (Occultism is about summoning/bargaining, not bone-ward crafting). Keep the Divine→Ars weave (M-10) as the single magic tie; don't stack two magic weaves on the same mod.
 - from: full armor sets | via: numismatics sell | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: players keep armor rather than sell it; M-09 is best for consumables/luxuries. Armor as trade good is thin and doesn't fit the scarcity-economy model.
 
+## edf-remastered-5.0-beta4   [anchors: survival (1)]
+- LEAVE — pure behavior datapack, no items, no loot additions, no recipe surface. Nothing to route through any method. The mod makes the dragon harder; that's its entire contribution, and it belongs to the survival pillar alone.
+
+## endermoon   [anchors: survival (1)]
+- LEAVE — spawn-weight event only; no items of its own. Its indirect output (more ender pearls on Ender Moon nights) is a passive amplifier on existing drops. Any ender-pearl weave (e.g. via M-22 lunar/celestial reagent) belongs on the ender pearl itself or on enhancedcelestials, not on this thin event-registration mod. Forcing an M-22 tag here would be attributing a weave to the wrong mod.
+
+## solclassic   [anchors: survival (1)]
+- LEAVE — ambient gameplay rule (diminishing food returns + basket carry); no recipe-type, no material throughput. The mod's 2nd-pillar value is systemic (makes the pack's broad food roster matter, which props up M-09 economy for food sellers), but there is no method-routing weave to hang on it directly. Correct placement: document the systemic amplifier note in DESIGN.md rather than forcing a recipe edge.
+
+== CHUNK COMPLETE ==
+
 
 
 

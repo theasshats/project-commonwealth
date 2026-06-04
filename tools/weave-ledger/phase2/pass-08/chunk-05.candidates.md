@@ -1,5 +1,7 @@
 # Phase 2 candidates — chunk-05
 
+<!-- pass-08 / chunk-05 — blind mode -->
+
 ## dndesires   [anchors: Create (1)]
 - from: dndesires milkshake items (chocolate_milkshake, glowberry_milkshake) | via: farmersdelight:cooking / numismatics sell | to: survival (food variety) | motif: M-09 | power: everyday | tone: ok | verdict: ACCEPT | hook: milkshakes are processed dairy/berry goods — the kind of finished consumable a player sells at the market or packs for a journey; feeding the Spice-of-Life loop makes variety rewarding
 - from: dndesires rubber / processed intermediate | via: create:hydraulic_compacting (its own press) → numismatics mint | to: economy | motif: M-08 | power: mid | tone: ok | verdict: REJECT | reason: rubber is an *intermediate*, not a scarce regional ore — routing rubber straight to a coin misses the spirit of M-08 (scarce ore → processed → coin); better as a machine-input; no clean economy anchor here

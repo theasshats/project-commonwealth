@@ -28,3 +28,12 @@
 - from: obsidian_heart / blazing_eye boss reagents | via: create:sequenced_assembly (or MineColonies unlock) as a required input | to: Create | motif: M-15 (+M-06) | power: endgame | tone: ok | verdict: ACCEPT | hook: directly realizes the pack's north-star rule "complex Create tech unlocks via boss drops" — a flagship reagent gates a deep sequenced-assembly keystone. Depth matches the endgame power tier.
 - from: ancient_anima / void thorns | via: ars_nouveau:imbuement / forbidden_arcanus infusion | to: magic | motif: M-10 | power: endgame | tone: ok | verdict: ACCEPT | hook: void/anima drops are thematically perfect top-tier arcane catalysts; routing them through an infusion gives them a magic role without gating any basic component (endgame-only).
 - from: boss reagents (rare, non-renewable-feeling) | via: bountiful board → numismatics payout / direct sell | to: economy | motif: M-14 (provisional) / M-02 | power: endgame | tone: ok | verdict: ACCEPT | hook: premium bounty turn-ins for the hardest kills — a coin sink for the crew's apex combatants. (M-14 provisional, player-run-currency caveat.)
+
+## bettermineshafts   [anchors: survival (1)]
+- LEAVE — structure overhaul of mineshafts; 0 items/0 blocks, no loot tables (uses vanilla mineshaft loot). Nothing to weave. Indirectly serves the scarce-ore mining loop but exposes no hook.
+
+## mutantszombies   [anchors: survival (1)]
+- from: mutant variants | via: bountiful board → numismatics / M-02 reagent sink | to: economy/magic | motif: M-14 / M-02 | power: everyday | tone: clash | verdict: REJECT | reason: deliberately vanilla-style mob mod — spawn eggs only, loot=no, no item drops. There is no material to route. A bounty edge has nothing to turn in (no signature drop), and adding a drop just to weave it would be over-reach on a content-only difficulty mod. Forcing an edge is the failure mode the briefing warns against.
+- LEAVE — no drops/items; raises night-threat baseline as pure survival content.
+
+== CHUNK COMPLETE ==
