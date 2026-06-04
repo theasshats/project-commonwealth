@@ -31,30 +31,32 @@ gates:
 - **EVEN = performance-based pruning.** Is a mod's TPS/RAM cost justified? Cut or optimize the expensive,
   fix what broke, balance.
 
-## Two depths of weaving (plumbing now, depth later)
+## Two depths of weaving (plumbing vs. taste)
 
-A cohesive web is the goal — but *meaningful* weaving ("this feeds that, and it's fun") needs hands-on
-play-knowledge, and real play is being saved for launch. So separate the two:
+A cohesive web is the goal, and it has two layers:
 
-- **Structural weaving — pre-release, mechanical.** Tags unified, no hard duplicates, recipes valid,
-  nothing orphaned, every mod *can* connect. Judgment-light, safe to automate, hard to fake.
-- **Meaningful weaving — post-release, play-informed.** The rich, fun cross-system connections. They need
-  play to author well, so they belong *after* launch (which fits "no resets; freshness from content
-  updates"). Authoring depth from the armchair pre-release produces lifeless threads — don't.
+- **Structural weaving — plumbing.** Tags unified, no hard duplicates, recipes valid, nothing orphaned,
+  every mod *can* connect. Largely done — the pack runs. Judgment-light, automatable, hard to fake.
+- **Meaningful / taste weaving.** The cross-system connections that are actually *good* and themed — the
+  hard part, and the thing that makes the pack AAA rather than kitchen-sink.
 
-Pre-release, the odd-version thunderdome lays *plumbing* and curates the *set*; the depth accretes through
-post-launch play.
+**How the taste layer gets built — how far LLM tools can take it, and whether it lands pre- or
+post-release — is an open question**, worked separately in
+[`docs/WEAVING-STRATEGY.md`](WEAVING-STRATEGY.md). For the cadence: the odd-version thunderdome lays the
+plumbing and curates the *set*; the taste depth is the weaving-strategy question, not a settled
+per-release deliverable here.
 
 > **Web % is a compass, not a gate.** Use the connectivity tool (#129) to *find* off-web clusters worth a
-> human look — never as a release target. The moment a coverage % is the goal it gets gamed
+> human look — never as a release target. Target a coverage % and it gets gamed
 > (bridge-recipes-for-the-metric — Goodhart's law). Ask "is this island *intentional* (cosmetic — fine)
-> or a *real gap* (a connection to make later, once it's played)?", not "are we at N%."
+> or a *real gap*?", not "are we at N%."
 
 ## The odd-version workflow ("thunderdome")
 
 1. **Add** — start the update by adding the candidate mods for the pillar in scope.
 2. **Integrate (structurally)** — weave them into the systems at the *plumbing* level (tags, valid
-   recipes, no duplicates — #62, #132). Deep gameplay integration waits for play (above).
+   recipes, no duplicates — #62, #132). The taste layer is the weaving-strategy question
+   (`docs/WEAVING-STRATEGY.md`).
 3. **Thunderdome (end of update)** — every mod *(the new adds **and** the existing related set)* is
    reviewed against all the others by **feature merit** (the #157 gates: system-anchor,
    no-redundant-mechanic, woven-not-floating). Winners stay; losers are **cut or reworked**. Freeze the
@@ -74,8 +76,8 @@ post-launch play.
 
 The thunderdome reviews **mods against each other** *within* a feature version. The **weave review**
 reviews **pillars against each other** — the seams *between* the five systems, which no single pillar
-version owns. At this stage it checks the seams **connect and function** (structural); the *deep* fun
-weaving is post-launch.
+version owns. At this stage it checks the seams **connect and function** (structural); the *deep* taste
+weaving is the open weaving-strategy question (`docs/WEAVING-STRATEGY.md`).
 
 - **Incremental** — as each pillar lands (its odd version), it's wired into the pillars already built,
   and the following even stabilization checks those seams didn't break.
@@ -124,15 +126,13 @@ pillar per feature version** because:
 - **Each pillar release is a natural ecosystem-survey** — a moment to step back and pull in what's new
   and good. Especially **Aeronautics**: its addon ecosystem is young and growing weekly, so reaching it
   *late* (0.13) is a feature — riper, more stable choices than grabbing everything now.
-- The mixed model was rejected mainly because **deep weaving needs play** (deferred post-release anyway)
-  and a **per-release web-% target is gameable** (see the compass note above).
+- The mixed model was rejected mainly because a **per-release web-% target is gameable** (see the compass
+  note above), and the deep-weaving question is better handled on its own (`docs/WEAVING-STRATEGY.md`).
 
 ## Post-1.0
 
 Keep the rhythm for live content updates — no world resets; freshness comes from curated content updates
-per `docs/DESIGN.md`: **1.1 odd** (feature / thunderdome) → **1.2 even** (perf / balance) → … Post-launch
-is also the home of **meaningful weaving** — the deep, play-informed cross-system connections that can't
-be authored well from the armchair.
+per `docs/DESIGN.md`: **1.1 odd** (feature / thunderdome) → **1.2 even** (perf / balance) → …
 
 ## Recurring passes that ride the cadence
 
@@ -145,5 +145,6 @@ be authored well from the armchair.
 
 ---
 
-_Refs: `docs/DESIGN.md` (the five-system goal + content-update model), `docs/MODLIST-AUDIT.md` (path
-forward), #157 (curation rubric), #160 (conflict catalog), #161 (mod-update pass), #147 (spark routine)._
+_Refs: `docs/DESIGN.md` (the five-system goal + content-update model), `docs/WEAVING-STRATEGY.md` (the
+taste-weaving question), `docs/MODLIST-AUDIT.md` (path forward), #157 (curation rubric), #160 (conflict
+catalog), #161 (mod-update pass), #147 (spark routine)._
