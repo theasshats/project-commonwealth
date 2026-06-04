@@ -111,8 +111,9 @@ def coverage():
     print(f'  dossiers: {total} total · {verified} VERIFIED · {skeleton} still-skeleton · '
           f'{total - skeleton} touched')
     if total - skeleton:
-        print(f'  anchoring: {multi} at >=2 pillars · {support} support-role · '
-              f'{len(low_pillar)} CONTENT mods at <2 pillars (the weave worklist)')
+        print(f'  anchoring: {multi} at >=2 pillars (coverage met — NOT "done"; existing connections '
+              f'still need a taste/balance audit, WEAVING-PLAN §6) · {support} support-role · '
+              f'{len(low_pillar)} CONTENT mods at <2 pillars (coverage worklist)')
         for name, n in low_pillar[:60]:
             print(f'      [{n}] {name}')
         if len(low_pillar) > 60:

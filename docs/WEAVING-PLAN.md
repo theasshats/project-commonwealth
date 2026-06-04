@@ -143,10 +143,18 @@ canonical and additive-only-by-gate:
 - **New motifs are a human gate (Gate 0).** Because a motif propagates globally, registering a *new* one
   needs maintainer sign-off. Reusing an approved motif does not. This caps "motif sprawl" (too many
   motifs = no vocabulary).
-- **A motif carries its anti-arbitrage rule.** M-01/M-07 round-trips must lose value; M-04 is lossy by
-  design. The rule travels with the motif so every chunk applies it the same way.
-
-### 2.2 The reagent-ownership table — no double-spend
+- **A motif carries its anti-arbitrage rule.** M-01/M-07 round-trips should lose value (but a 1:1 swap is
+  legitimate for genuinely-equivalent materials — see §7); M-04 is lossy by design. The rule travels with
+  the motif so every chunk applies it the same way.
+- **Actively *grow* the vocabulary — with evidence.** The 12 seeds are a floor, not a ceiling; the registry
+  (and the reagent table) **should expand**. New motifs/reagents are best drawn from **how mods and curated
+  packs integrate things *right now*** — not only our own past weaves — each carrying a one-line precedent
+  ("seen in `<pack/mod>`"). **Zero-history, blue-sky proposals are welcome too**, flagged as such for the
+  human Gate-0 review. They must **make sense, stay on-theme, and be balanced**. *Guardrail:* the value is a
+  **shared, legible** vocabulary, so each motif must earn its place — resist sprawl, and the 0.15 review
+  retires any motif nobody composes from (a registry that's never cited is just noise). A dedicated
+  research-backed **vocabulary-expansion pass** (mine current mods/packs for integration patterns) is a
+  Phase-0.5 task, gated like any bulk pass.
 
 The second fragmentation source is two chunks repurposing the same item incompatibly. A short
 **reagent-ownership table** in the ledger reserves the connective items:
@@ -312,9 +320,17 @@ upkeep.
 - **Do:** build the dossier generator (§9.1); define `WEAVE-LEDGER.md` + `weaves.json` schema; **seed the
   motif registry and reagent-ownership table from the *existing* weaves** (magic-web, `35-web-bridges`,
   `60-mffs`, numismatics) so we start from the vocabulary the pack already speaks.
-- **In:** the repo's current kubejs + docs. **Out:** empty-but-scaffolded ledger; ~9 seed motifs.
+- **In:** the repo's current kubejs + docs. **Out:** empty-but-scaffolded ledger; 12 seed motifs.
 - **Tools:** `tools/mod-data/`, existing kubejs, a new generator script.
 - **Gate:** maintainer approves the ledger format + the seed motif list (Gate 0, once).
+
+### Phase 0.5 — Vocabulary expansion (research-backed, gated)
+- **Do:** mine **how mods and curated packs integrate things right now** for additional motifs/reagents
+  beyond the seed 12 — each with a precedent note; plus blue-sky zero-history proposals, flagged. Keep the
+  registry legible (resist sprawl).
+- **In:** the seed registry + web/pack research. **Out:** a *proposed* motif/reagent expansion for review.
+- **Gate (Gate 0):** maintainer approves each new motif/reagent before it can be used to author. Runs as a
+  bounded fan-out (cheaper models, approval-first — see the run policy in `DECISIONS.md`).
 
 ### Phase 1 — Per-mod understanding (parallel, folded into #160)
 - **Do:** for every mod, one targeted web sweep → fill the dossier's judgment fields; **inventory its
@@ -329,13 +345,24 @@ upkeep.
   all 356 — sampling + hubs is the high-leverage check.
 
 ### Phase 2 — Opportunity mapping (per chunk)
-- **Do:** run the recipe-graph as a **compass** (island table + `--remove create`/`--remove minecraft`
-  lenses) and mine dossier **thematic adjacencies *and method-pull matches*** (a mod's loose material ↔
-  another mod's method that could consume it — §6); produce a **candidate weave list** per pillar-seam
-  chunk — one line each: (from-material, →through-**method**, to-pillar, hook, motif, confidence-guess).
-  Mark islands that are *intentionally* vanilla (organic/mob per [`CONNECTIVITY.md`](CONNECTIVITY.md)) as
-  **leave**.
-- **In:** dossiers + recipe-graph + ledger. **Out:** an approved candidate list per chunk.
+- **Do (per chunk):**
+  1. **Issue sweep (step 0).** An agent searches the repo's GitHub issues, **filters** those relevant to
+     the chunk's pillar/mods (e.g. #136 economy, #146 magic-gating, #119 dropped recipes, #103 dup parts,
+     #171/#172 re-author-through-Create), and **passes them through** as inputs — so existing design intent
+     and known problems feed the weave list instead of being rediscovered.
+  2. **Find candidates.** recipe-graph as a **compass** (island table + `--remove create`/`--remove
+     minecraft` lenses) plus dossier **thematic adjacencies and method-pull matches** (a mod's loose
+     material ↔ another mod's method that could consume it — §6). Mark intentionally-vanilla islands
+     (organic/mob) as **leave**.
+  3. **Power-read each candidate.** Gauge the item's tier in its *own* mod (loot rarity, recipe depth, wiki
+     tier — §7) so the proposed integration depth is **sized to the item**: deep for endgame, light for
+     everyday.
+  4. **Theme-fit.** Apply the tone-tags + the adversarial red-team pass (§7 point 5); drop or flag clashes.
+  5. **Quality audit (the ≥2-pillar track).** For the chunk's already-anchored mods, review whether their
+     *existing* connections are on-theme and balanced (not merely present); list rework items.
+- **In:** dossiers + recipe-graph + ledger + filtered issues. **Out:** a **candidate weave list** per
+  chunk — one line each: (from-material, →through-**method**, to-pillar, hook, motif, **power-tier**,
+  **tone-fit**, confidence) — **plus** a short **rework list** for existing weaves that fail the audit.
 - **Gate (Gate 2 — the main taste gate):** maintainer reads the candidate list (cheap: one-liners, not
   code) and marks each **approve / reject / needs-discussion**. This kills lifeless ideas *before*
   authoring, where rejection is nearly free.
@@ -343,15 +370,16 @@ upkeep.
 ### Phase 3 — Authoring (per chunk, rides odd versions)
 - **Do:** **jar-verify the *method* schema** for each target mechanic before writing (the magic-web
   discipline — `unzip -p` the jar; reuse the verified schemas in `archive/MAGIC-WEB-HANDOFF.md` §4); author KubeJS
-  weaves **composing approved motifs**, **authoring into the mod's native method/recipe-type first** and
-  reserving the crafting table for when no fitting method exists; log each in the ledger; run static
-  validation.
+  weaves **composing approved motifs**, **defaulting to the mod's native method/recipe-type** but using a
+  crafting-table recipe where that's the genuinely coherent form (not a lesser fallback — §7); log each in
+  the ledger; run static validation.
 - **In:** approved candidate list + verified schemas + ledger. **Out:** KubeJS recipes + ledger entries +
   a draft PR with a `## Playtest` checklist.
 - **Tools:** KubeJS — **method-first**: `event.recipes.<mod>.<method>(...)` (e.g. `.create.mixing`,
   `.create.crushing`) and `event.custom({ type: '<mod>:<method>', … })` for any mod's custom recipe type
-  (Ars imbuement, Occultism spirit_fire, etc.); `event.shaped/shapeless` only as the no-method fallback;
-  `event.remove`; `./tools/packwiz refresh`, `node --check`, `check.py`, recipe-graph regression.
+  (Ars imbuement, Occultism spirit_fire, etc.); `event.shaped/shapeless` where a table recipe is the
+  coherent form (not a lesser fallback); `event.remove`; `./tools/packwiz refresh`, `node --check`,
+  `check.py`, recipe-graph regression.
 - **Gate (Gate 0 + Gate 3):** a *new* motif → Gate 0; genuine ambiguity (theme clash, balance risk,
   "is this island intentional?") → Gate 3, surfaced as a **few sharp questions** (AskUserQuestion-style),
   not a bulk dump.
@@ -395,9 +423,16 @@ Three complementary signals, used to *find* candidates — never as an acceptanc
    smelts with embers; wine next to a coin economy. These are the *taste* opportunities, and they're the
    reason the dossier layer exists. The best of these usually resolve *into* a method-pull (#1).
 
-**The worklist priority** is the ≥2-pillar rule: mods at **0 or 1** pillar (from the dossier anchor
-count), `tech/gear` islands first (per [`CONNECTIVITY.md`](CONNECTIVITY.md) triage), then per-material
-`block/deco` calls, with `organic/mob`/`magic`-residual/`phantom` **out of scope by design**.
+**The worklist has two tracks, not one:**
+- **(a) Coverage** — mods at **0 or 1** pillar need a *new* weave: `tech/gear` islands first (per
+  [`CONNECTIVITY.md`](CONNECTIVITY.md) triage), then per-material `block/deco`, with
+  `organic/mob`/`magic`-residual/`phantom` out of scope by design.
+- **(b) Quality** — **a mod at ≥2 pillars is *not* automatically done.** Its existing connections still
+  have to be on-theme, tasteful, and balanced; a weave that exists but is arbitrary, lore-clashing, or
+  mis-costed is a defect even when the pillar tally looks fine. So Phase 2 also **audits the connections of
+  already-anchored mods** (sampled, plus the deep-woven hubs from the cut-vertex list), not just fills
+  gaps. Pillar count is necessary, never sufficient — the end goal is **every connection feels
+  intentional**, not a green number.
 
 > **Anti-Goodhart, stated as policy:** no phase, gate, or PR acceptance criterion is allowed to be a
 > connectivity-% target. The metric appears only as (a) a compass that *lists candidates* and (b) a
@@ -420,22 +455,52 @@ This is where LLM limits bite hardest, so the mitigations are layered — and th
    catalyst-gated conversions, tiered gating, coin-from-scarcity). Authoring picks from it; the dossier's
    "how-packs-integrate" field feeds it.
 3. **The theme-coherence rubric** (every weave passes, from [`RECIPES.md`](RECIPES.md)):
-   - **Routes through a *method* first.** If any installed mod has a machine/ritual/infusion/processing
-     type that *fits*, author into it (`event.recipes.<mod>.<method>` / `event.custom`); a bare crafting
-     table is the fallback, not the default. The method *is* the weave.
+   - **Reach for a *method* first.** If any installed mod has a machine/ritual/infusion/processing type
+     that *fits*, author into it (`event.recipes.<mod>.<method>` / `event.custom`) — routing through a
+     mechanic is the higher-yield, more intentional weave. But the bare crafting table is **not a lesser
+     fallback**; it's simply not the *default*. Where a shaped/shapeless recipe is the coherent, in-
+     character way to make the thing, it **is** the right answer. Default to the method; use the table when
+     it makes sense.
    - Input **matches** output ("computers cost computer parts; a drone costs rotors + a motor").
    - **Additive**, or a `remove` is always paired with a replacement (never break a chain).
    - **Balance-first:** never makes a power item *cheaper* than its original; depth scales with power
      (light gate for cheap gear; `sequenced_assembly` keystone for flagships — M-05/M-06).
+   - **Scale the integration to the item's power (read its place in its own mod first).** Before weaving,
+     gauge where the item sits in *its mod's* balance — everyday (cheap, early, common) vs. powerful/
+     endgame (rare or boss drop, deep recipe, high stats). Signals: loot-table rarity
+     (`tools/mod-data/loot/`), recipe depth/cost, the wiki's stated tier, attribute/enchant values.
+     **Powerful endgame items are the key targets for *large, deep* integrations** (multi-step native-
+     method chains, M-05/M-06); **everyday items get *small* integrations** (one coherent gate). Both
+     matter equally — the end goal is that *everything* feels intentional, sized to what it is, not that
+     only the flagships get attention.
    - Gives the mod a **real second pillar**, not a magic↔magic-only essence trade.
 4. **The "lifeless thread" test** (explicit anti-patterns — any hit ⇒ reject or escalate):
    - A bridge that exists only to move the metric.
    - A conversion no player would ever actually do.
-   - A reagent repurposed against its own lore/vibe (the dossier catches this).
-   - Free round-trip arbitrage (A→B→A with no loss) — violates the motif's anti-arbitrage rule.
+   - A reagent repurposed against its own lore/vibe, **or a pairing whose two mods' tones clash** even
+     though each is fine alone — the per-mod dossier catches single-mod misuse but **not** bad *pairwise*
+     fit (see the theme-fit check, point 6).
+   - Free round-trip arbitrage (A→B→A with no loss) **as a rule** — it usually signals a non-weave. But
+     it's **legitimate for equivalent-material unification**: the three limestones already swap 1:1 in
+     `35-web-bridges.js`, and that's the cleanest current handling. Use it sparingly, only where the items
+     genuinely *are* interchangeable; prefer a better mechanic where one exists — a 1:1 swap is an honest
+     placeholder, not a failure.
    - A forced edge onto a deliberately-vanilla island (organic/mob) — "why is jasper convertible to
      granite?" incoherence.
-5. **The honest limit.** An LLM can verify 1–4 — *coherence*. It **cannot reliably judge fun**: whether a
+5. **Pairwise theme-fit check (the dossier is *not* enough).** A per-mod dossier captures each mod's vibe
+   in isolation, but a weave *joins two mods*, and a pairing can clash even when both vibes are individually
+   fine (a whimsical meme drop feeding a solemn arcane ritual; a sci-fi circuit in a druidic altar). Two
+   complementary catches, neither relying on the dossier alone:
+   - **Tone tags + a clash check.** Tag every mod with a small **tone/setting taxonomy** (e.g.
+     `medieval-fantasy`, `arcane`, `industrial`, `sci-fi`, `eldritch`, `naturalist`, `whimsical/meme`,
+     `historical`) as a structured dossier field. A candidate weave that crosses *incompatible* tones is
+     auto-flagged for human review — making "does this fit?" systematic instead of per-reviewer vibes.
+   - **Adversarial red-team pass (independent reviewer).** Before a candidate is authored, a *different*
+     agent than the one that proposed it argues the case **against** the pairing ("why would a player find
+     this jarring or nonsensical?"). The proposer must answer the objection or drop the weave. Independent
+     judgment catches forced/clashing pairings the proposer rationalized; it's the cross-mod analogue of
+     the lifeless-thread test, and it feeds Gate 2.
+6. **The honest limit.** An LLM can verify 1–5 — *coherence*. It **cannot reliably judge fun**: whether a
    sensible weave is, in play, tedious, ignored, or delightful. **Fun is the human gate, and playtest is
    where lifelessness is truly exposed.** The plan does not pretend otherwise; it gets weaves to
    "sensible and grounded" (which LLMs are good at) and routes "fun" to Gates 2 and 4.
