@@ -151,6 +151,52 @@
       "status": "accepted",
       "issue": 91,
       "note": "Serene Seasons is a priority survival lever; want more"
+    },
+    {
+      "id": "M-17",
+      "name": "Electric/FE charging bridge",
+      "method": "createaddition:charging",
+      "pillars": "create+magic/tech",
+      "status": "accepted",
+      "note": "only when it makes sense"
+    },
+    {
+      "id": "M-18",
+      "name": "Summoned-spirit logistics",
+      "method": "occultism:miner/spirit_trade",
+      "pillars": "magic+create/economy",
+      "status": "accepted"
+    },
+    {
+      "id": "M-19",
+      "name": "Soul/haunting seam",
+      "method": "create:haunting",
+      "pillars": "create+magic",
+      "status": "accepted"
+    },
+    {
+      "id": "M-20",
+      "name": "Deploy-application upgrade",
+      "method": "create:deploying/item_application",
+      "pillars": "any+create",
+      "status": "accepted",
+      "note": "light single-step sibling of M-06; not for basics"
+    },
+    {
+      "id": "M-21",
+      "name": "Trade-seam to economy",
+      "method": "villager trade -> numismatics",
+      "pillars": "any+economy",
+      "status": "provisional-explore",
+      "note": "maintainer leans no; surface candidates, do not author"
+    },
+    {
+      "id": "M-22",
+      "name": "Lunar/celestial reagent",
+      "method": "lunar-event-gated input -> create/magic",
+      "pillars": "survival+magic/create",
+      "status": "accepted",
+      "note": "extend across ALL moons (enhanced_celestials, endermoon, any lunar mod)"
     }
   ],
   "reagents": {
@@ -163,7 +209,10 @@
     "irons_spellbooks:arcane_essence": "M-01",
     "tfmg:diesel": "M-13",
     "tfmg:gasoline": "M-13",
-    "_boss_signature_drops": "M-15"
+    "_boss_signature_drops": "M-15",
+    "createaddition:_charged_items": "M-17",
+    "occultism:iesnium_ore": "M-18",
+    "_create_haunted_items": "M-19"
   },
   "weaves": []
 }

@@ -41,13 +41,20 @@ sign-off), because it propagates globally. Reusing an approved motif does not ne
 | M-14 | **Bounty → drop economy** — a bounty board consumes mob drops and pays coin (combat → economy) | `bountiful` board → `numismatics` payout | organic↔economy | **accepted (provisional)** · #137 — ⚠ keep currency **player-run** (Eco-style); revisit in the 0.9 economy update |
 | M-15 | **Boss-key unlock** — a boss drop is the gate item for a complex Create/tech recipe (the DESIGN on-ramp) | the gated machine's own recipe (boss drop as input) | organic↔Create | **accepted** · #92 — must stay thematically sensible |
 | M-16 | **Seasonal reagent** — a crop/material obtainable only in a given Serene Season feeds a machine/ritual | season-gated input → Create/magic method | survival↔Create/magic | **accepted** · #91 — Serene Seasons is a **priority** survival lever; want more of these |
+| M-17 | **Electric / FE charging bridge** — Create electricity (New Age / Create Addition FE) charges a tool/focus/reagent, threading the electric tier into magic/tech gear | `createaddition:charging` | Create↔magic/tech | **accepted** — only *when it makes sense* |
+| M-18 | **Summoned-spirit logistics** — Occultism dimensional miner-spirits / spirit-trade acquire a scarce material or trade; magic as an acquisition/logistics provider | `occultism:miner` / `spirit_trade` | magic↔Create/economy | **accepted** ("ship it, see what comes up") |
+| M-19 | **Soul / haunting seam** — `create:haunting` (Create's soul-fire) transmutes an item into a soul/spirit output — a native Create→occult bridge | `create:haunting` | Create↔magic | **accepted** |
+| M-20 | **Deploy-application upgrade** — `create:deploying` / `item_application` applies a woven part onto a base to upgrade it | `create:deploying` / `item_application` | any↔Create | **accepted** — the **light single-step sibling of M-06** (which chains deploys); not for basics |
+| M-21 | **Trade-seam to economy** — a villager profession / wandering-trader routes into Numismatics (vanilla trade → player currency) | villager trade → `numismatics` | any↔economy | **provisional — EXPLORE only** (maintainer leans *no*; surface candidates for review, do not author) |
+| M-22 | **Lunar / celestial reagent** — a material/effect available only during a moon event feeds a method; **applies to ALL the moons** (Enhanced Celestials + Ender Moon + any lunar mod), not just one | lunar-event-gated input → Create/magic method | survival↔magic/Create | **accepted** — extend across every moon event |
 
 _Motif rules: **compose, don't invent**; a motif carries its **anti-arbitrage rule** (M-01/M-07
 round-trips lose value; M-04 is lossy). **Never gate a *basic / everyday component* behind a complex
 recipe** — recipe depth scales with the item's power (everyday = one light step; flagship = deep chain;
-§7). New motifs enter via Gate 0 — log the request in `DECISIONS.md`. **M-01–M-16 are all Gate-0 accepted**
-(M-09 / M-14 carry a player-run-currency review for the 0.9 economy update; M-10 carries the
-no-basic-components caveat; M-12 explicitly covers useful *intermediates*, not just finished goods)._
+§7). New motifs enter via Gate 0 — log the request in `DECISIONS.md`. **M-01–M-22 are Gate-0 accepted**
+except **M-21 (provisional — explore only, leans no)**. Caveats: M-09/M-14 player-run-currency review
+(0.9); M-10 no basic components; M-12 covers useful *intermediates*; M-17 only when it makes sense; M-20 is
+the light tier of M-06; M-22 spans every moon._
 
 ---
 
