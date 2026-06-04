@@ -44,6 +44,21 @@
 ### Existing connections
 - (none) — mod is 1-pillar aeronautics; no existing weaves to audit.
 
+## alcohol_industry   [anchors: Create, survival (2)]
+
+### Candidate A — finished liquors → Numismatics luxury coin
+- from: alcohol_industry:beer / vodka / whiskey / tequila | via: numismatics sell (M-09) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: bottled spirits are the quintessential tavern trade good; making them Numismatics coin sources gives the entire Create distillery chain a coin payoff and ties a 3rd pillar without retheming anything. The processing depth (Create mixing → alcohol_boiling) matches mid-tier coin value.
+
+### Candidate B — distillery byproduct as a magic solvent/reagent
+- from: alcohol_industry:alcohol_base (excess fluid) | via: ars_nouveau:imbuement or occultism:spirit_fire (alcohol as a solvent/catalyst) | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: distilled alcohol has been a universal solvent and alchemical medium for centuries; routing surplus Alcohol Base into a magic infusion or spirit-fire ritual as a catalyst is both thematically grounded and mechanically interesting. Calibrate as a one-step catalyst, not a deep gate.
+
+### Candidate C — red-team on Candidate B
+- Red-team: does "industrial distillery alcohol" clash with "arcane infusion"? The Ars/Occultism vibe is fantasy-alchemical; distilled spirits as an alchemical base has real-world precedent (tinctures, elixirs). Tone: ok — survives red-team.
+
+### Existing connections audit
+- create:filling + create:mixing inbound (already authored). OK — these are the natural Create inputs for the distillery chain; coherent and well-costed.
+
+
 
 
 

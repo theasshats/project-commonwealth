@@ -25,6 +25,13 @@ LEAVE — Rapier/sub-level physics engine; no items, blocks, or recipe-types reg
 ## openpartiesandclaims   [anchors: support/server-protection (1)]
 LEAVE — chunk-claim + party server-protection framework; zero items, blocks, or methods. No material surface; the mod's function is social/territorial scaffolding, not gameplay content.
 
+## handcrafted   [anchors: support/decoration (1)]
+- from: handcrafted wood furniture (chairs, tables, shelves, cupboards) | via: create:cutting (wood-cutting step on planks → furniture piece) | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: feeding planks through a Create sawblade produces the finished chair stock — wood-cutting IS what Create does with wood; furniture production becomes a small automated chain rather than a pure crafting-table craft
+- from: handcrafted metal/stone trim pieces (andesite_corner_trim, etc.) | via: create:pressing | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: stone/metal trim shapes need pressing from raw slabs — small one-step Create tie that makes the stonecutting-side of the furniture set consistent with Create's sheet-metal workflow
+- from: handcrafted finished furniture sets (e.g. oak dining set: table + 4 chairs + shelf) | via: numismatics sell | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: individual furniture items are everyday construction blocks not luxury consumables; a "furniture set" as a bundled trade good is thematically interesting but there's no mechanic to bundle and sell a set as one item — would require authoring a custom bundle item that doesn't exist; no-motif for the bundle form, and per-piece sales are too cheap to be M-09 luxury goods
+- from: handcrafted:berry_jam_jar | via: farmersdelight:cooking or extradelight:mixing_bowl | to: survival/food | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the jam jar is a consumable/condiment — routing it as an ingredient in a FD or ExtraDelight recipe (e.g. jam toast, filled pastry) ties the furniture mod's food prop into the cooking chain; a jam jar on a shelf that can also be eaten is exactly the cozy homestead fantasy both mods share
+
+
 
 
 
