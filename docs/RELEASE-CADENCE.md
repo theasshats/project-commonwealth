@@ -1,9 +1,8 @@
-# Release cadence — odd/even versioning
+# Release cadence — odd/even versioning (proposal)
 
-> **Status: accepted** — the canonical cadence. `docs/ROADMAP.md`, `CLAUDE.md`, and `docs/CONNECTIVITY.md`
-> have been reconciled to match: the thunderdome runs on the **odd** feature versions, perf-pruning on the
-> **evens**, and the roadmap is expanded to 0.6 → 0.15 → 1.0. Pairs with the recurring passes: the curation
-> rubric (#157), the mod-conflict catalog (#160), and the mod-update pass (#161).
+> **Status: proposal** (for review). Establishes a predictable rhythm for the build-out and recasts
+> the milestone roadmap to match. Pairs with the recurring passes: the curation rubric (#157), the
+> mod-conflict catalog (#160), and the mod-update pass (#161).
 
 ## The model
 
@@ -130,18 +129,22 @@ pillar per feature version** because:
 - The mixed model was rejected mainly because a **per-release web-% target is gameable** (see the compass
   note above), and the deep-weaving question is better handled on its own (`docs/WEAVING-STRATEGY.md`).
 
-## Docs reconciled (on acceptance)
+## Docs to reconcile on acceptance
 
-Accepted; the canonical docs were updated to match, folded in atomically:
+This proposal isn't settled, so the canonical docs shouldn't change yet — but if it's adopted, these need
+updating to match (ideally folded into this PR so it lands atomically):
 
-- **`docs/ROADMAP.md` + `CLAUDE.md`** — rewritten to the odd/even cadence: expanded to 0.6–0.15 → 1.0 (one
-  pillar per *odd* version + stabilization evens), with the **thunderdome moved onto the odd feature
-  versions** and perf-pruning on the evens. "Thunderdome" now means one thing across the docs.
-- **`docs/CONNECTIVITY.md`** — added the **compass-not-gate** caveat (find islands with the %; don't target
-  it — it's gameable).
-- **`docs/DESIGN.md`** — no change needed; "every mod earns its place / cut what anchors to nothing" and the
-  "emergent, optional economy" framing already align (the curation rubric #157 and player-minted economy
-  #136 operationalize it at the issue level).
+- **`docs/ROADMAP.md` + `CLAUDE.md`** — both describe the prior scheme: pillar-per-version (0.6–0.11 → 1.0)
+  and a curation **thunderdome at v0.6 / v0.8 / v0.10** (even content milestones). This proposal expands to
+  0.6–0.15 (one pillar per *odd* version + stabilization evens) and moves the **thunderdome onto the odd
+  feature versions**, with perf-pruning on the evens — i.e. the thunderdome *flips parity*. Biggest
+  reconciliation; right now "thunderdome" means two different things across the docs and this PR.
+- **`docs/CONNECTIVITY.md`** — frames the giant-component % as "the goal." Add the **compass-not-gate**
+  caveat (find islands with it; don't target it — it's gameable; see the web-% note above). The one bit
+  landable independent of the cadence decision.
+- **`docs/DESIGN.md`** — no change needed; "every mod earns its place / cut what anchors to nothing" and
+  the "emergent, optional economy" framing already align (the curation rubric #157 and player-minted
+  economy #136 operationalize it at the issue level).
 
 ## Post-1.0
 

@@ -2,7 +2,7 @@
 
 > ✅ **MERGED (~v0.4.6).** This is now the **historical record** of the recipe overhaul — kept for the
 > conventions, the file map, and how to extend the weave (future per-mod passes follow the same loop).
-> For *current* priorities read `docs/ROADMAP.md`; the live convention + triage ledger is
+> For *current* priorities read `docs/NEXT-SESSION.md`; the live convention + triage ledger is
 > `docs/RECIPES.md`. **Open follow-ups:** #103 (functional-duplicate parts), and the magic layer is its
 > own PR (#75/#80) — not part of #62.
 
@@ -155,5 +155,5 @@ toolkit. Triage of what's left (non-magic; magic is #75):
 ## 7. Pointers
 - Design + full triage + deliberately-not-gated ledger: `docs/RECIPES.md`.
 - Digests: `tools/mod-data/recipes/*.txt` (ground truth). Loot: `tools/mod-data/loot/*.txt`.
-- Wider weave roadmap (beyond Create): the magic web (`docs/archive/MAGIC-WEB-HANDOFF.md`) and `docs/RECIPES.md`.
+- Wider weave roadmap (beyond Create): `docs/WEAVE-HANDOFF.md`, `docs/INTEGRATION-BRAINSTORM.md`.
 - Related issues: #17 (recipes to change), #51 (meadow cheese — closed by `99`), #56/#58 (eco ore-gen + Blockchain).
