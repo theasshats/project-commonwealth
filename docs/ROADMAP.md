@@ -127,7 +127,7 @@ hygiene — decks cleared for the pillar work.* The big front-loaded cleanup (al
 - Quick wins / CI: #111 pin almost-unified · #105 prune merged branches · #100 orphan-mod sweep · #127 consolidate index-refresh workflows · #131 auto-regen the ground-truth digest · #154 config/ vs defaultconfigs audit · #126 docs cleanup + index.
 - Boot-log correctness: #119 dropped recipes · #120 mangled loot tables · #121 remaining ERROR noise.
 - Perf baseline (server's up): #147 spark TPS routine + target · #151 Create contraption guardrails.
-- Curation (modlist hygiene — run as the **pass-I curation thunderdome**, chartered by #157): #157 define the rubric (`docs/CURATION.md`) · #83 umbrella · #107 Ender Moon · #106 structure allowlist · #108 spawn-gating review · #60 umapyoi · #110 MFFS textures.
+- Curation (modlist hygiene — run as the **pass-I curation thunderdome**, chartered by #157): #157 define the rubric (to land as `docs/CURATION.md`) · #83 umbrella · #107 Ender Moon · #106 structure allowlist · #108 spawn-gating review · #60 umapyoi · #110 MFFS textures.
 - Server's up: #98 pre-gen test world · #3 purple-arrows repro · #38 inventory-sort verify + close.
 
 **`v0.7.0 — Create spine`** — *Goal: the recipe graph reads as one connected web — no functional-duplicate

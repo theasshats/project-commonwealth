@@ -4,7 +4,7 @@ Quick process for an issue-triage session — re-label, **milestone**, re-assign
 Written from the post-0.5.2 triage; **update it as the project moves** (issue numbers below will drift).
 
 ## 0 · Get ground truth first — the ROADMAP can lag `main`
-The live tracker is truth; `docs/ROADMAP.md` / `docs/NEXT-SESSION.md` can be stale. Always:
+The live tracker is truth; `docs/ROADMAP.md` can lag `main`. Always:
 1. `git log --oneline -40 | grep -iE "merge pull request|bump version"` — what actually shipped + the current version.
 2. `pack.toml` → current `version`.
 3. List **open PRs** (only those are unmerged work) and **open issues** (`state OPEN`, `perPage 100`).
@@ -63,8 +63,8 @@ which is also why the pillar milestones are shaped the way they are. A one-pilla
 *second* weave; a no-pillar mod is a **cut** candidate (curation). See `CLAUDE.md` + `docs/DESIGN.md`.
 
 ## 8 · After triage — update the docs
-Refresh `docs/ROADMAP.md` (milestones + needed-for-release + recently-merged) and `docs/NEXT-SESSION.md`
-(shipped list + open-PR table + near-term milestone) so the next session starts from truth.
+Refresh `docs/ROADMAP.md` (milestones + needed-for-release + recently-merged) so the next session
+starts from truth.
 
 ## Workflow guardrails (from `CLAUDE.md`)
 - **Branch:** rename the harness's random name to `claude/<topic>` before pushing; never commit to `main`.
