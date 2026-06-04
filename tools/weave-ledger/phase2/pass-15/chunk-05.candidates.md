@@ -45,6 +45,13 @@
 - from: companions:antlion_fur / mob drops | via: farmersdelight:cutting | to: survival | motif: M-12 | power: everyday | tone: clash | verdict: REJECT | reason: companion mob pelts being "cut" in a food-prep station is tonally odd — the companions vibe is gothic-alchemical, not butchery. Force fit; no-motif overlap that survives red-team.
 - OK — dossier's M-11/M-02 magic candidates and M-09 economy candidate are all coherent and well-aimed. The M-04 deco-crush candidate is correctly low-tier. This mod has 3 clear accepted paths (M-11, M-10, M-08) making it a strong 2-pillar target.
 
+## trek-b0.6.1.1   [anchors: survival (1)]
+- from: trek structures (ships, fortresses, ruins, pyramids) chest loot | via: loot-seed — seed Create component / magic reagent / coin drops into trek chest loot tables | to: Create + magic + economy | motif: M-15 (boss-key / progression unlock via exploration) + M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: exploring a Trek ruin yields a Create schematic fragment or rare reagent as a reward — exploration directly funds the tech and magic webs, making world-ranging worthwhile rather than optional.
+- from: trek ocean/island structures | via: loot-seed — seed Numismatics coin and Ars source-infused gems into maritime ruins | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: sunken ships and island ruins are the natural place to find old coin hoards — Numismatics coin seeded here makes exploration an economy on-ramp.
+- from: trek structure chest loot | via: loot-seed — seed valarian_conquest faction items (citizenship papers, mercenary spawn items) | to: survival (faction) | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: no-motif. Seeding faction items is a useful pack editorial choice but doesn't correspond to any established motif M-01..M-24; flag for Gate 0 if desired.
+- REWORK: dossier says "none — leave. Structure datapack with no items/methods; weave it only indirectly via loot-table edits." The briefing (PHASE2-BRIEFING.md delivery mechanisms) explicitly says: "a boss/structure feeding coin, magic reagents, or a progression key is a REAL candidate — do NOT LEAVE a loot-bearing structure mod." Trek has loot=yes; the two ACCEPT rows above are the correct call. The dossier's LEAVE recommendation is wrong per briefing rules and should be overridden.
+
+
 
 
 
