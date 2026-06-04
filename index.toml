@@ -1068,11 +1068,6 @@ hash = "5c0fb5558f40b2eadcda6d7035961f48fa4c7ff24b0b440e59ba505edff97930"
 metafile = true
 
 [[files]]
-file = "mods/coroutil.pw.toml"
-hash = "d901f874a1e09747b8d0d072c38c426eceead1f29c8ba36680f8f0082996b152"
-metafile = true
-
-[[files]]
 file = "mods/crafting-tweaks.pw.toml"
 hash = "6008c5888df80c6f5d8fcd50765b2c2bdbb7b2ba1550c5db89ca096d77a0f3c7"
 metafile = true
@@ -1848,11 +1843,6 @@ hash = "f31297be9617ca9c68a9167c974c29d1c28c2495df333b4263cc117642fc58ea"
 metafile = true
 
 [[files]]
-file = "mods/lionfish-api.pw.toml"
-hash = "cbc801c8afa23e8ccba23a67d4a7eabe32346723a185df8f4c2588e0a8c4e99b"
-metafile = true
-
-[[files]]
 file = "mods/lithium.pw.toml"
 hash = "7e836655ea491de298e88a6999180b982859a972c324f1c8019fcd12d7574be2"
 metafile = true
@@ -1908,11 +1898,6 @@ hash = "439598d0e0c2077e952fa357758038926bf56e8dc62c43bb6d6f2d0f99928b4c"
 metafile = true
 
 [[files]]
-file = "mods/midnightlib.pw.toml"
-hash = "73aba17132f267dd76ff682aa84abfb7c09d25a93b9220ee261a1e25337bebc7"
-metafile = true
-
-[[files]]
 file = "mods/minecolonies-compatibility.pw.toml"
 hash = "145f985bdbebf581c42b18c6e353abd6ad1f631abe735e5303039d27116ab8bc"
 metafile = true
@@ -1930,11 +1915,6 @@ metafile = true
 [[files]]
 file = "mods/mining-speed-tooltips.pw.toml"
 hash = "04af3f8798c38b917bf34ce2d7503ca378c3a28d7ab56637bea1da3f2e4ffe02"
-metafile = true
-
-[[files]]
-file = "mods/mmlib.pw.toml"
-hash = "65db1262f3d0823a0795b8b38328c0eceeb4632892f7c168e3c8e6abf4638735"
 metafile = true
 
 [[files]]
@@ -2415,11 +2395,6 @@ metafile = true
 [[files]]
 file = "mods/tips.pw.toml"
 hash = "3c416c5edc0e545bac325bc1461e63097e82c541f19ce936dbde6c3590e85f26"
-metafile = true
-
-[[files]]
-file = "mods/titanium.pw.toml"
-hash = "455ba0409bef5fe9bda93434d826a8d2d5eb11c1b7d41ea119256fe3b15da157"
 metafile = true
 
 [[files]]
