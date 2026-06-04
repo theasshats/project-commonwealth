@@ -1,0 +1,16 @@
+recipe_integration
+resourcefulconfig
+resourcefullib
+revelationary
+rhino
+ribbits
+rightclickharvest
+ritchiesprojectilelib
+rolling_down_in_the_deep
+rottencreatures
+s_a_b
+sable
+sable_sa_compat
+sablecollisiondamage
+samurai_dynasty
+searchables

@@ -1,0 +1,16 @@
+dynamictreesplus
+ecologics
+edf-remastered-5.0-beta4
+emi
+emi__emiffect-neo
+emi_letsdo_compat
+emi_loot
+emi_ores
+emiprofessions
+emojitype
+endermoon
+endrem
+enhancedcelestials
+entity_model_features
+entity_texture_features
+everycomp

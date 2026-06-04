@@ -1,0 +1,16 @@
+lootjs
+lootr
+mcwdoors
+mcwfences
+mcwroofs
+mcwstairs
+mcwwindows
+meadow
+mffs
+midnightlib
+midnightthoughts
+minecolonies
+minecolonies_compatibility
+minecolonies_tweaks
+miningspeedtooltips
+moblassos
