@@ -77,6 +77,30 @@
 
 - LEAVE — novelty toy with no resource role; no coherent weave surfaces without either forcing a Create gate onto a fun trinket or turning a whimsical drop into a grindable economy input. Both paths harm the mod's purpose.
 
+## northstar   [anchors: Create, aeronautics (2)]
+
+### New candidates — 3rd pillar (economy)
+
+#### Candidate A — Create-processed titanium/tungsten → Numismatics coin minting
+- from: northstar:titanium_ingot / northstar:tungsten_ingot (scarce off-world metals) | via: create:crushing (ore-doubling first) → numismatics mint | to: economy | motif: M-08 | power: endgame | tone: ok | verdict: ACCEPT | hook: titanium and tungsten are the hardest-to-reach metals in the pack (require a rocket and off-world mining); minting them into the highest-value coins creates a natural economy specialization where the "space engineer" is also the pack's premier minter. Scarcity is already enforced by the exploration gate — no additional anti-arbitrage mechanism needed.
+
+#### Candidate B — northstar:advanced_circuit as a high-tech Numismatics trade good
+- from: northstar:advanced_circuit | via: numismatics sell (M-09) | to: economy | motif: M-09 | power: endgame | tone: ok | verdict: ACCEPT | hook: advanced circuits are expensive to fabricate (circuit engraver + deep chain); selling them to other players for coin makes the space-tech specialist the pack's electronics supplier. One-step: the circuit is the finished good, no further processing needed.
+
+#### Candidate C — northstar:biofuel as an Aeronautics engine fuel
+- from: northstar:biofuel | via: TFMG/Create fuel → aeronautics engine intake (M-13) | to: aeronautics | motif: M-13 | power: mid | tone: ok | verdict: ACCEPT | hook: Northstar already ties Create + aeronautics (rockets ARE the transport layer); biofuel produced off-world feeding back into the pack's airship/vehicle engines closes a satisfying loop — the off-world base supplies the pack's fuel supply chain. (Verify biofuel is the right fluid type for M-13 engine intakes; if it's a non-standard fluid, may need a TFMG distillation conversion step.)
+
+#### Candidate D — northstar:martian_steel_ingot as an Aeronautics structural alloy (M-23)
+- from: northstar:martian_steel_ingot | via: aeronautics construction recipe (M-23) | to: aeronautics | motif: M-23 | power: endgame | tone: ok | verdict: ACCEPT | hook: martian steel is explicitly a structural alloy (name implies load-bearing metallurgy); using it in top-tier Aeronautics airframe/hull recipes makes the off-world supply chain a prerequisite for the largest/most capable ships — exactly the depth M-23 is designed to add. Northstar is already aeronautics-anchored so this deepens an existing pillar rather than adding a new one; still worth recording as a strengthening connection.
+
+#### Candidate E — northstar:astronomical_reading as a magic catalyst
+- from: northstar:astronomical_reading (a "read" of celestial/planet positions) | via: ars_nouveau:enchanting_apparatus or occultism:ritual | to: magic | motif: M-22 (lunar/celestial reagent — astronomical readings are celestial data) | power: mid | tone: ok | verdict: ACCEPT | hook: an astronomy reading is literally a record of celestial alignment — feeding it as a catalyst into a lunar ritual or star-attuned enchanting apparatus is thematically airtight (M-22 covers "celestial events feeds a method"). This opens a 3rd pillar (magic) for northstar without retheming any of its content.
+
+### Existing connections audit
+- create:compacting, create:crushing, create:filling, create:mechanical_crafting, create:mixing, create:pressing, create:sandpaper_polishing, create:sequenced_assembly, create:splashing, createaddition:liquid_burning — ALL inbound. OK — these are well-motivated: northstar metals and components are precisely what Create processes. No arbitrary or mis-costed connections detected. The breadth is appropriate for an endgame flagship mod.
+
+== CHUNK COMPLETE ==
+
 
 
 
