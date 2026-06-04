@@ -19,8 +19,9 @@ import os, re, glob, sys, json, random
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOSS = os.path.join(ROOT, 'tools', 'mod-data', 'dossiers')
 PH = os.path.join(ROOT, 'tools', 'weave-ledger', 'phase2')
-SUPPORT = re.compile(r'\b(support|library|lib|api|perf|performance|qol|client|flavor|cosmetic|deco|util|'
-                     r'tooling|framework)\b', re.I)
+# Exclusion is OFF by design: NOTHING is excluded (maintainer call). Even mods with solid existing connections
+# (recipes, mob drops) are reviewed — examining them alongside everything else can surface new links/methods.
+# The only mods absent are CUT ones (no dossier exists). Pure code-libraries will simply LEAVE.
 PILLARS = ('create', 'magic', 'economy', 'aeronautics', 'survival')
 
 
@@ -32,23 +33,20 @@ def main():
     p = int(arg('--pass', '1'))
     seed = int(arg('--seed', str(p)))
     mode = arg('--mode', 'blind')                       # blind | context-fed
-    cov, audit = [], []
+    # Universe = EVERY dossier. No exclusion, no coverage/audit split — one shuffled pool so any mod can share
+    # a chunk with any other (cross-mod adjacency is where new links get found). `well` just counts the
+    # already-well-connected (>=2 pillar) mods for the summary line; it does not gate inclusion.
+    allns, well = [], 0
     for f in sorted(glob.glob(os.path.join(DOSS, '*.md'))):
         ns = os.path.basename(f)[:-3]
         head = open(f, encoding='utf-8').read().split('AUTO-DIGEST-FACTS', 1)[0]
         m = re.search(r'^anchors:\s*(.+)$', head, re.M)
-        anch = m.group(1) if m else ''
-        pill = sum(1 for q in PILLARS if re.search(r'\b' + q, anch, re.I))
-        if SUPPORT.search(anch) and pill < 2:
-            continue
-        (audit if pill >= 2 else cov).append(ns)
-    random.Random(seed).shuffle(cov)                    # the per-pass randomization
-    random.Random(seed + 1000).shuffle(audit)           # shuffle the audit set per seed too (different neighbours)
+        pill = sum(1 for q in PILLARS if re.search(r'\b' + q, m.group(1) if m else '', re.I))
+        well += pill >= 2
+        allns.append(ns)
+    random.Random(seed).shuffle(allns)                  # the per-pass randomization
     size = 10
-    chunks = [cov[i:i + size] for i in range(0, len(cov), size)]
-    # Audit track: chunk the WHOLE >=2-pillar set, not a 14-mod sample. (Previously `aud[:14]` silently
-    # dropped ~44 mods every pass — a deterministic sort meant re-running never reached them. #coverage-gap)
-    chunks += [audit[i:i + size] for i in range(0, len(audit), size)]
+    chunks = [allns[i:i + size] for i in range(0, len(allns), size)]
     n = len(chunks)
     opus_chunk = int(arg('--opus-chunk', str((p - 1) % n + 1)))   # cycle opus across chunks over passes
 
@@ -58,8 +56,8 @@ def main():
         open(os.path.join(d, f'chunk-{i:02d}.txt'), 'w').write('\n'.join(ms) + '\n')
     json.dump({'pass': p, 'seed': seed, 'opus_chunk': opus_chunk, 'n_chunks': n, 'mode': mode},
               open(os.path.join(d, 'MANIFEST.json'), 'w'), indent=2)
-    print(f'pass-{p:02d}: {len(cov)} coverage + {len(aud[:14])} audit -> {n} chunks (seed {seed}, '
-          f'opus=chunk-{opus_chunk:02d}, mode={mode}) -> {d}')
+    print(f'pass-{p:02d}: {len(allns)} mods (ALL dossiers, none excluded; {well} already >=2-pillar) -> '
+          f'{n} chunks (seed {seed}, opus=chunk-{opus_chunk:02d}, mode={mode}) -> {d}')
 
 
 if __name__ == '__main__':

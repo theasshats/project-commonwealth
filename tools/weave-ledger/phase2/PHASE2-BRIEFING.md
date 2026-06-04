@@ -11,8 +11,12 @@ Gate 2 and authoring happens later as milestone work.
 - The methods you can route THROUGH: `tools/weave-ledger/methods-palette.md`.
 
 ## What to produce, per mod
-For every mod in your chunk, propose the connection(s) that give it a **2nd pillar** (or, for a mod already
-at ≥2 pillars in the *quality-audit* chunk, audit its EXISTING connections). The core move is **method-pull**
+Your chunk is a random mix — it may hold any mod (a 1-pillar mod, an already-well-connected mod, even a
+library). **Nothing is excluded** and there is no separate "audit chunk": for **every** mod, do BOTH (a)
+propose new/better cross-pillar links, and (b) if it already has connections, flag any that are weak/arbitrary
+(REWORK). Reviewing well-connected mods alongside the rest is deliberate — it surfaces new links/methods the
+isolated view misses. If a mod genuinely has no content surface (a pure code library), write `LEAVE — <reason>`
+and move on. The core move is **method-pull**
 (WEAVING-PLAN §2.0/§6): cross the mod's loose materials (its `consumes/outputs`) against the methods palette
 and ask **"whose machine / ritual / infusion / processing method WANTS this material?"** — then route it
 through that method.
@@ -47,8 +51,8 @@ Append to `tools/weave-ledger/phase2/chunk-NN.candidates.md` (NN = your chunk nu
 - LEAVE — <reason>                       (use when no coherent 2nd pillar; don't force)
 ## <next ns> …
 ```
-For a **quality-audit** mod (already ≥2 pillars): instead list `REWORK:` items on its *existing* connections
-(arbitrary / lore-clashing / mis-costed), or `OK — connections sound`.
+For a mod that **already has connections** (≥2 pillars): in addition to any new links you find, list `REWORK:`
+items on its *existing* connections (arbitrary / lore-clashing / mis-costed), or `OK — connections sound`.
 
 When EVERY mod in your chunk is done, write a final line exactly: `== CHUNK COMPLETE ==`
 (this marker is how the run knows the chunk finished vs. was interrupted).

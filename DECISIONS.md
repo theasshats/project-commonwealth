@@ -48,13 +48,18 @@ candidate. Ties (2/2) break by insertion order (arbitrary) — those are exactly
 (the Galosphere `silver`=PALLADIUM gotcha); `samurai_dynasty` silver kept off `c:ingots/silver` confusion
 (#177); deliberately-vanilla worldgen/structure/behaviour mods drew `LEAVE` rather than forced edges.
 
-**[NOTE] Coverage-gap bug FOUND + FIXED (passes 00–12 were not exhaustive).** `phase2-chunks.py` chunked the
-72-mod coverage track fully but capped the ≥2-pillar **audit** track at `aud[:14]` with a deterministic sort —
-so the **same 44 audit mods were dropped from every pass** and re-running never reached them. Among the skipped:
-**occultism, irons_spellbooks, minecolonies(+compat), createbigcannons, railways, gtmogs, mffs, trading_floor,
-vinery, illagerinvasion, kobolds** — keystone mods that got neither a 2nd-pillar suggestion nor an audit.
-Fix: the script now shuffles the audit set per seed and chunks the **whole** thing (14 chunks/pass, was 9).
-**Action needed before Gate 2:** one catch-up run over the 44 previously-unreviewed mods (or a full fixed pass).
+**[NOTE] Exclusion ABOLISHED — review EVERYTHING (maintainer call).** Passes 00–12 were not exhaustive on two
+counts, both now fixed in `phase2-chunks.py`: (1) the ≥2-pillar **audit** track was capped at `aud[:14]` with a
+deterministic sort, so the **same 44 well-connected mods were dropped every pass** (occultism, irons_spellbooks,
+minecolonies, createbigcannons, railways, gtmogs, mffs, trading_floor, vinery, illagerinvasion, kobolds, …);
+(2) a crude SUPPORT prose-regex false-excluded **~19 content mods** whose dossier text merely contained
+"flavor"/"deco" (cataclysm + grimoireofgaia = boss-drop sources, naturalist, ecologics, meadow, beachparty,
+dynamictrees, upgrade_aquatic, woodworks, fishingreal, …). **Maintainer's rule: nothing is excluded — having
+solid recipe/mob-drop connections is NOT a reason to skip a mod; reviewing it alongside the rest can surface
+new links/methods.** The chunker now maps **all 357 dossiers** into one shuffled pool (no coverage/audit split,
+no support filter) → 36 chunks/pass. Briefing updated: every mod gets new-link proposal + (if already connected)
+REWORK notes; pure code-libraries just `LEAVE`. **The 13-pass dataset to date covers only ~130 of 357 mods**, so
+a fresh run on the full universe is needed before Gate 2.
 
 **[NOTE] Stat read of the 13-pass set (1078 rows, 575 ACCEPT/501 REJECT).** Economy is over-favored as a 2nd
 pillar (163 accepts, method `numismatics` used 131× — 2× the next) because it is the only pillar with THREE
