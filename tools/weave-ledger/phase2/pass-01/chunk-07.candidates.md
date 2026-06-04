@@ -209,3 +209,62 @@
 
 - LEAVE — zero items, zero registered methods, zero loot tables; vanilla-block structure datapack. The ocean villages are natural waypoints for Aeronautics sea routes (a play-pattern benefit to the aeronautics pillar), but there is nothing to route through a method; no recipe weave is possible.
 
+## create_enchantment_industry   [anchors: Create (1)]
+
+<!-- Method-pull: create_enchantment_industry outputs:
+     - Liquid Experience (fluid — storable XP, pipeable)
+     - enchanted gear / enchanted books (from Blaze Enchanter)
+     - experience_bucket (the bottle form of liquid XP)
+     - super_experience_block / super_experience_nugget (hyper-XP forms)
+     It also registers create_enchantment_industry:grinding (the Mechanical Grindstone recipe type).
+     It consumes: XP (mob farms), Enchanted Books, blaze parts, liquid ink.
+     Cross against methods palette:
+     1. Liquid Experience as a magic-method input — Ars Nouveau and Iron's Spellbooks are both
+        XP-adjacent systems. An Ars imbuement step or Iron's alchemist cauldron could consume
+        liquid XP as a fuel/catalyst for a spell component, replacing a raw XP cost. This is M-10
+        (arcane infusion pull) — route liquid XP through ars_nouveau:enchanting_apparatus or
+        irons_spellbooks:alchemist_cauldron_brew. Thematic fit: "bottled XP as arcane fuel" is
+        exactly the arcane-industrial vibe the mod is going for.
+        Power-read: liquid XP is mid-tier (requires mob farm + CEI setup, but accessible by mid-game).
+        Depth = one step (inject liquid XP into an existing magic recipe as a fluid ingredient).
+        Not complex for a mid component.
+        Red-team: does a magic ritual consuming bottled factory-XP feel right, or does it clash with
+        the arcane aesthetic? Counter-argument: Ars Nouveau is already mechanical (it has an
+        automatable enchanting apparatus); CEI's whole premise is industrializing enchanting. An arcane
+        factory taking industrialized XP as fuel reads as cohesive, not clashing. Survives.
+     2. Enchanting output → Occultism ritual consume — a specific enchanted book (e.g. Mending or
+        a CEI hyper-enchanted template) as a one-time ritual component in occultism:ritual. This is
+        M-11 (ritual transmutation sink) applied to an enchanted item rather than an organic drop.
+        The Occultism/crafting book lore says enchanted books have spiritual "imprint" — consuming
+        one in a ritual to summon a spirit or upgrade a tool has thematic coherence.
+        Power-read: depends on the book; a Mending book is mid; a CEI super_enchanting_template is
+        endgame. Scale depth accordingly.
+        Red-team: is an enchanted book a "mob-drop reagent" (M-02/M-11 territory)? It's not organic,
+        but it's a valued artifact consumed in a ritual — the spirit-fire consuming enchanted
+        knowledge to power a summoning reads plausible. However, this weave direction should be
+        on the magic/occultism side (making Occultism rituals accept liquid XP or enchanted books
+        as components), not on CEI's side. This edges into whether CEI gains the magic pillar
+        or Occultism gains a Create pillar. For CEI: if CEI's liquid XP is an input to magic
+        methods, CEI gains the magic pillar. That's the cleaner framing.
+        Accept: via M-10 (liquid XP → ars_nouveau:enchanting_apparatus or imbuement as arcane fuel).
+     3. Create:grinding (the Mechanical Grindstone) pulling in foreign items — this is CEI's own
+        method. What materials would other mods put THROUGH create_enchantment_industry:grinding?
+        The Mechanical Grindstone is an automated grindstone (removes/weakens enchants to recover
+        XP). A foreign mod's enchanted artifact (e.g. Mowzie's enchanted drops) ground to extract
+        liquid XP is a coherent use. But this is already within the Create pillar (CEI is Create-
+        spine). The grinding mechanic doesn't add a new pillar.
+     4. Economy angle: a Blaze Enchanter producing enchanted trade goods (enchanted tools/weapons
+        for sale via Numismatics). This is M-09 (luxury good → coin). Power-read: automated
+        enchanted gear is mid-endgame. Tone: industrial enchanting factory producing trade goods
+        reads as a natural commercial enterprise. The coin-from-enchanted-goods angle is real.
+        Red-team: this is thin as a dedicated weave — players would naturally do this anyway with
+        a trading mod; there's no recipe to author (you can already sell anything via Numismatics).
+        Unless we author a specific "enchanted item" price list in Numismatics, this is play-pattern,
+        not a weave. Reject.
+     Conclusion: primary 2nd pillar = magic via M-10 (liquid XP → ars_nouveau:imbuement / enchanting
+     apparatus as arcane fuel). One step, mid-tier, coherent. -->
+
+- from: create_enchantment_industry:experience_bucket / liquid_experience (mid — requires mob farm + CEI pipeline) | via: ars_nouveau:enchanting_apparatus as arcane fluid fuel | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: the enchanting apparatus already burns source; swapping in industrialized liquid XP as the fuel for a specific high-tier glyph or book infusion ties the factory-enchanting spine directly into the magic pillar — bottled souls power the apparatus.
+- from: create_enchantment_industry:experience_bucket / liquid_experience | via: irons_spellbooks:alchemist_cauldron_brew as brew-fuel | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: Iron's cauldron brewing a high-tier scroll could draw from a liquid XP tank as its experience-cost fuel — the alchemist's cauldron and the XP pipeline are natural industrial partners.
+- from: create_enchantment_industry enchanted book output | via: numismatics sell | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: automated enchanted goods are already naturally sellable under any Numismatics config; this is a play-pattern, not an authored weave. No recipe to write; nothing structural changes. Reject as a weave candidate.
+
