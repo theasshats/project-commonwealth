@@ -24,6 +24,11 @@ name: Auto-resolve regenerable conflicts
 # No infinite loop: after a resolution we push to the PR branch, which can re-run
 # this workflow, but the branch is now up to date with main so the merge is a
 # no-op and nothing is pushed.
+#
+# Event ownership (issue #127): this workflow owns PR open/reopen, push-to-main,
+# and on-demand dispatch — it merges main and refreshes the index on those. The
+# remaining PR event, `synchronize`, is owned solely by refresh-index.yml, so the
+# two never act on the same event or double-push to a branch.
 
 on:
   push:
@@ -172,12 +177,9 @@ jobs:
 
       - name: Push resolution
         if: steps.pr.outputs.skip != '1' && (steps.merge.outputs.result == 'resolved' || steps.merge.outputs.result == 'clean')
-        run: |
-          for i in 1 2 3 4; do
-            if git push origin HEAD:${{ steps.pr.outputs.head_ref }}; then exit 0; fi
-            sleep $((2 ** i))
-          done
-          git push origin HEAD:${{ steps.pr.outputs.head_ref }}
+        uses: ./.github/actions/push-with-retry
+        with:
+          ref: ${{ steps.pr.outputs.head_ref }}
 
       - name: Report outcome
         if: steps.pr.outputs.skip != '1' && always()

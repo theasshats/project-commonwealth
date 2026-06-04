@@ -38,7 +38,7 @@ find kubejs -name '*.js' -exec node --check {} +
 
 - **`side` is not required.** ~150 existing manifests omit it (packwiz defaults to `both`). The lint
   only rejects an *invalid* `side` value, so it doesn't churn the whole modlist. The "new mods are
-  forced to `both`" convention is enforced by the editor/add workflows, not here.
+  forced to `both`" convention is enforced by the editor, not here.
 - **No `.mrpack` step.** The release no longer ships a `.mrpack` (it had bloated to ~200 MB by
   bundling `overrides/`, and nobody used it — issue **#73**, dropped in `build.yml`). The Prism
   installer is the only release artifact, so there's nothing to size-check here.
@@ -84,15 +84,17 @@ normal case.
 
 ## Auto-refreshing a stale index (automatic)
 
-`resolve-conflicts.yml` (above) only fires on **push-to-`main`** and **PR open/reopen** — it heals
-the *conflict* stacked PRs hit. The other way the index goes stale has nothing to do with conflicts:
-you edit a tracked pack file (a KubeJS script, a config, a manifest) and push **without** running
-`packwiz refresh`. That's a `synchronize` event resolve-conflicts never sees, so the only signal
-was the red **packwiz index** check and a "run refresh and commit" nag.
+`resolve-conflicts.yml` (above) owns **push-to-`main`** and **PR open/reopen** — it heals
+the *conflict* stacked PRs hit (and refreshes the index while it's there). The other way the index
+goes stale has nothing to do with conflicts: you edit a tracked pack file (a KubeJS script, a config,
+a manifest) and push **without** running `packwiz refresh`. That's a `synchronize` event — which
+resolve-conflicts does **not** handle.
 
-`.github/workflows/refresh-index.yml` closes that gap. On a PR **opened / reopened / synchronized**
-it runs `packwiz refresh` and, *only if* `index.toml` / `pack.toml` drifted, commits the result
-(`[skip ci]`) and pushes it back to the PR branch. `refresh` can only ever rewrite those two files;
+`.github/workflows/refresh-index.yml` owns exactly that one event. The two workflows split the PR
+events between them so they never both fire on the same one or race a push to the branch (issue
+**#127**): open/reopen → resolve-conflicts, synchronize → refresh-index. On a PR **synchronize**
+refresh-index runs `packwiz refresh` and, *only if* `index.toml` / `pack.toml` drifted, commits the
+result (`[skip ci]`) and pushes it back to the PR branch. `refresh` can only ever rewrite those two files;
 if it somehow touches anything else the job **bails** instead of committing (that'd mean the
 assumption is wrong and a human should look). Fork PRs are skipped — `GITHUB_TOKEN` can't push to
 another repo's branch, so those authors still refresh by hand.

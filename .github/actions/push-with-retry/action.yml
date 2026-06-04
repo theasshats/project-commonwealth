@@ -1,0 +1,23 @@
+name: Push with retry
+description: >
+  Push HEAD to a branch with exponential-backoff retries. Shared by the index
+  workflows (refresh-index, resolve-conflicts), which both push a regenerated
+  index back to a PR branch that other automation may be touching concurrently.
+
+inputs:
+  ref:
+    description: Target branch name (e.g. the PR head ref) to push HEAD to.
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: |
+        set -euo pipefail
+        for i in 1 2 3 4; do
+          if git push origin "HEAD:${{ inputs.ref }}"; then exit 0; fi
+          sleep $((2 ** i))
+        done
+        # Final attempt — let a real failure surface (and fail the job).
+        git push origin "HEAD:${{ inputs.ref }}"

@@ -7,12 +7,13 @@ name: Auto-refresh packwiz index
 # and commit" — is fully mechanical: `packwiz refresh` regenerates index.toml and
 # only ever rewrites pack.toml's [index] hash, nothing else. So we automate it.
 #
-# This complements resolve-conflicts.yml, which only fires on push-to-main and
-# PR open/reopen (the stacked-PR index *conflict*). The drift this heals is the
-# other half: editing a pack file on a PR and pushing without refreshing — a
-# `synchronize` event resolve-conflicts never sees.
+# This owns exactly one PR event — `synchronize` (new commits pushed to a PR) —
+# and heals one thing: editing a pack file and pushing without `packwiz refresh`.
+# resolve-conflicts.yml owns the *other* PR events (open/reopen) and push-to-main,
+# where it merges main and refreshes too — so the two never act on the same event
+# and can't double-push to a branch (issue #127).
 #
-# Triggers: a PR is opened, reopened, or gets new commits (synchronize).
+# Triggers: a PR gets new commits (synchronize) only.
 #
 # Safety:
 #   - Fork PRs are skipped — the GITHUB_TOKEN can't push to another repo's branch
@@ -35,7 +36,7 @@ name: Auto-refresh packwiz index
 
 on:
   pull_request:
-    types: [opened, reopened, synchronize]
+    types: [synchronize]
 
 permissions:
   contents: write
@@ -59,7 +60,8 @@ jobs:
 
       - uses: ./.github/actions/setup-packwiz
 
-      - name: Refresh, and push only a pure hash-drift result
+      - name: Refresh, and commit only a pure hash-drift result
+        id: refresh
         run: |
           set -euo pipefail
 
@@ -105,9 +107,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add index.toml pack.toml
           git commit -m "Auto-refresh packwiz index [skip ci]"
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
 
-          for i in 1 2 3 4; do
-            if git push origin "HEAD:${{ github.head_ref }}"; then exit 0; fi
-            sleep $((2 ** i))
-          done
-          git push origin "HEAD:${{ github.head_ref }}"
+      - name: Push the refresh
+        if: steps.refresh.outputs.pushed == 'true'
+        uses: ./.github/actions/push-with-retry
+        with:
+          ref: ${{ github.head_ref }}

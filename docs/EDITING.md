@@ -252,19 +252,11 @@ This takes ~5 minutes the first time, much less if the build cache hits. If some
 
 ### When the editor isn't an option
 
-Every operation maps to a GitHub Actions workflow. Open the repo on GitHub → Actions tab → pick the workflow → Run.
-
-| Editor action | Fallback workflow |
-|---|---|
-| + Add mod | "Add mod(s)" |
-| Remove | "Remove mod" |
-| Update / Update all | "Update mods" (blank slug = all) |
-| ⟳ Hash | "Compute hash" |
-| Pin / Unpin | (no workflow yet — edit `mods/<slug>.pw.toml` and add `pin = true` at top level) |
-| Side change | (no workflow yet — edit the manifest's `side` field) |
-| Set version | (no workflow yet — edit the manifest manually, see [`mods/README.md`](../mods/README.md)) |
-
-The workflows commit to whatever branch you ran them on. So if you ran "Add mod" on your `0.3.3` branch, the resulting commit lands on `0.3.3`.
+Mod operations all run through the editor. The browser-based GitHub Actions fallbacks (Add mod(s),
+Remove mod, Update mods, Compute hash) were **retired** once the editor covered everything they did —
+they only duplicated it and raced each other on the index (issue #127). When you can't run the
+editor, drive `packwiz` directly (below); for the manifest-only operations (pin/unpin, `side`, set
+version) edit `mods/<slug>.pw.toml` by hand — see [`mods/README.md`](../mods/README.md).
 
 ### packwiz CLI
 
@@ -296,7 +288,7 @@ See [packwiz docs](https://packwiz.infra.link/) for the full reference.
 
 - **"no version found"** — the mod doesn't have a 1.21.1 NeoForge build, or you picked the wrong source (some mods are CF-only or Modrinth-only).
 - **Wrong version got picked by Add mod** — packwiz auto-accepts the first match. If you wanted a different variant, use the editor's Set Version after adding.
-- **"hash mismatch" on the build workflow** — usually means a manifest got hand-edited to a new URL without recomputing the hash. Use the **⟳ Hash** button in the editor (or the Compute hash workflow) to fix.
+- **"hash mismatch" on the build workflow** — usually means a manifest got hand-edited to a new URL without recomputing the hash. Use the **⟳ Hash** button in the editor to fix.
 - **Config changes don't apply for existing users** — if you put it in `defaultconfigs/`, it only applies on first install. Use `config/` if you want to force-update on existing installs.
 - **Mod loaded as client-only when it should be both** — Modrinth metadata is sometimes wrong for Create addons. Use the side dropdown in the editor to fix.
 
