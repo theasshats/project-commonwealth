@@ -48,6 +48,21 @@ candidate. Ties (2/2) break by insertion order (arbitrary) — those are exactly
 (the Galosphere `silver`=PALLADIUM gotcha); `samurai_dynasty` silver kept off `c:ingots/silver` confusion
 (#177); deliberately-vanilla worldgen/structure/behaviour mods drew `LEAVE` rather than forced edges.
 
+**[NOTE] Coverage-gap bug FOUND + FIXED (passes 00–12 were not exhaustive).** `phase2-chunks.py` chunked the
+72-mod coverage track fully but capped the ≥2-pillar **audit** track at `aud[:14]` with a deterministic sort —
+so the **same 44 audit mods were dropped from every pass** and re-running never reached them. Among the skipped:
+**occultism, irons_spellbooks, minecolonies(+compat), createbigcannons, railways, gtmogs, mffs, trading_floor,
+vinery, illagerinvasion, kobolds** — keystone mods that got neither a 2nd-pillar suggestion nor an audit.
+Fix: the script now shuffles the audit set per seed and chunks the **whole** thing (14 chunks/pass, was 9).
+**Action needed before Gate 2:** one catch-up run over the 44 previously-unreviewed mods (or a full fixed pass).
+
+**[NOTE] Stat read of the 13-pass set (1078 rows, 575 ACCEPT/501 REJECT).** Economy is over-favored as a 2nd
+pillar (163 accepts, method `numismatics` used 131× — 2× the next) because it is the only pillar with THREE
+accepted motifs (M-08/M-09/M-14) all pointing at one sink; accept-rate 57% (vs magic 47%), so it's a vocabulary
+bias, not red-team noise. Aeronautics (43) + survival (40) are the thinnest pillars even after M-23/24. Endgame
+crafts converge on boss-drop keystones: drones:ion_thruster (M-06 ×8), mowziesmobs:ice_crystal &
+bomd:obsidian_heart (dual M-15/M-06 ×5–6). See chat for full breakdown.
+
 **[NOTE] Quality-audit (chunk-09) recurring REWORKs — maintainer calls this turn:**
 - `companions` in-mod coins vs Numismatics → **issue filed: #178** (suppress/bridge/keep, on v0.9.0 — Economy).
 - `ars_nouveau` / `companions` under-counted at 1 pillar (promote foundational M-01/M-02/M-11 weaves) →

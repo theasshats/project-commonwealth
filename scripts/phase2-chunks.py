@@ -43,11 +43,12 @@ def main():
             continue
         (audit if pill >= 2 else cov).append(ns)
     random.Random(seed).shuffle(cov)                    # the per-pass randomization
+    random.Random(seed + 1000).shuffle(audit)           # shuffle the audit set per seed too (different neighbours)
     size = 10
     chunks = [cov[i:i + size] for i in range(0, len(cov), size)]
-    hubs = ['create', 'extradelight', 'touhou_little_maid', 'farm_and_charm', 'occultengineering', 'numismatics']
-    aud = [h for h in hubs if h in audit] + sorted(x for x in audit if x not in hubs)
-    chunks.append(aud[:14])
+    # Audit track: chunk the WHOLE >=2-pillar set, not a 14-mod sample. (Previously `aud[:14]` silently
+    # dropped ~44 mods every pass — a deterministic sort meant re-running never reached them. #coverage-gap)
+    chunks += [audit[i:i + size] for i in range(0, len(audit), size)]
     n = len(chunks)
     opus_chunk = int(arg('--opus-chunk', str((p - 1) % n + 1)))   # cycle opus across chunks over passes
 
