@@ -2469,11 +2469,6 @@ hash = "bbf8f2ba1e4bba18c1f61b2f003063052f56dd9951ceae3e227b6cbf9affd29f"
 metafile = true
 
 [[files]]
-file = "mods/umapyoi.pw.toml"
-hash = "0c062b1ee8b13a74334ed4153835df1b1cdfb2eb10516c19e60bfe37c805477e"
-metafile = true
-
-[[files]]
 file = "mods/underground-village,-stoneholm.pw.toml"
 hash = "9e5eedc2329699c885d2630198e7f2f00979f5eb74aed7acf362957df78454bf"
 metafile = true
