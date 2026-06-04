@@ -99,4 +99,47 @@ REWORK (minor): the dossier's M-04 crushing-back suggestion (tile/chair → crus
 valid tightening of the Create↔deco loop. Not broken, but worth authoring as one simple crushing
 recipe row. No lore clash, no mis-costing in existing connections.
 
+## cbc_at   [anchors: Create, aeronautics (2)]
+OK — connections sound. Inbound weaves (create:cutting, createbigcannons:*_munition_assembly types)
+are the canonical methods for metal barrel fabrication and munition assembly — exactly how a
+Create-native artillery addon should integrate. M-05 (native-method gating for heavy tier) is
+correctly identified as a deepening option, not a missing pillar.
+REWORK (opportunity, not broken): the boss-drop gate (M-05 / M-15) for heavy-autocannon/rocket
+tier is a clean progression hook that the dossier flags but has not been authored. This is a
+design-level proposal for the scarcity curve. No existing connection is arbitrary or mis-costed.
+The Create↔aeronautics pairing is thematically tight (ship-to-ship combat needs Create-fabricated
+cannons on Aeronautics ships).
+
+## chefsdelight   [anchors: survival, economy (2)]
+OK — connections sound. The economy pillar connection is via villager trades (Cook/Chef
+professions selling FD meals), which is a legitimate organic→economy route even though it uses
+vanilla emerald trade rather than Numismatics. No cross-pillar recipe methods are registered.
+REWORK (moderate): the dossier correctly notes that wiring Cook/Chef trades onto Numismatics coins
+instead of emeralds (M-09) would tighten the pack's currency coherence — the current emerald
+trade is a parallel economy that bypasses Numismatics. This is a KubeJS config opportunity (not
+a broken connection, but an integration gap where the economy anchor rests on vanilla rather than
+the pack's actual currency layer). Worth flagging for the 0.9 economy update.
+No lore clash; sizing is appropriate (meals = everyday goods, correct cost level).
+
+## cmpackagecouriers   [anchors: Create, aeronautics (2)]
+OK — connections sound. Inbound weaves (create:cutting, create:deploying) correctly place the
+cardboard plane construction inside the Create craft graph — cutting cardboard + deploying
+assembled components is exactly the right method tier for a logistics addon item. The aeronautics
+anchor (autonomous flying courier = logistics/transport) is coherent and thematically natural.
+No deepening needed; the light-economy adjacency (remote trade fulfillment) noted in the dossier
+is a valid optional future edge but not a gap. No rework required.
+
+## companions   [anchors: survival (1)]
+REWORK (chunk mis-assignment): dossier shows 1 pillar (survival). Large standalone companion/boss
+mod with its own internal coin system (copper/nether/end_coin) and no cross-pillar recipe methods
+in the made-by field. Including it in a ≥2-pillar quality-audit chunk is a mis-assignment.
+Existing connection quality: no cross-pillar connections to audit. The dossier's proposals (M-11
+magic via Occultism spirit_fire for Crystallized Blood/soul gems; M-09 economy via Relic Gold) are
+strong unauth'd candidates, not existing connections.
+Action: flag for chunk re-assignment. The magic (M-11) and economy (M-09) proposals from the
+dossier should be actioned in Phase 3 as 1-pillar→2-pillar weaves. The internal coin system
+(copper/nether/end_coin) represents a competing-currency risk: if companions coins circulate
+alongside Numismatics, they dilute the pack's economy coherence — this is worth a DECISION note.
+
+== CHUNK COMPLETE ==
 

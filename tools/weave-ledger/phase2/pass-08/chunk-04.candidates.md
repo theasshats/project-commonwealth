@@ -22,6 +22,21 @@
 - from: dynamictreesplus:saguaro_fruit | via: numismatics sell | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: saguaro fruit is abundant forage from a common cactus biome; pricing an everyday foraged item into the coin economy is under-powered for M-09 (which targets high-effort luxury goods) — the milling route is the better 2nd pillar
 - from: dynamictreesplus mushroom caps (brown/red) | via: farmersdelight:cooking or create:milling into mushroom stew base | to: Create/survival | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: mushroom caps are vanilla-equivalent bulk forage; adding a Create processing step on an item this common edges toward forcing basics behind a machine, violating the depth-scaling rule. The saguaro fruit angle is the targeted, non-redundant hook.
 
+## expandeddelight   [anchors: survival (1)]
+- from: expandeddelight:salt_ore / deepslate_salt_ore | via: create:crushing (ore → salt dust + byproduct) | to: Create | motif: M-03 | power: everyday | tone: ok | verdict: ACCEPT | hook: Create crushes rock-salt ore into culinary salt — the one-step reward that threads a food-mod ingredient directly into the tech spine without gating anything behind complexity
+- from: expandeddelight:cinnamon (bark/spice) | via: create:milling (cinnamon log/bark → cinnamon dust, i.e. c:dusts/cinnamon) | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Create millstone grinds cinnamon bark into spice dust — a second light processing hook on a food-mod material, same pattern as milling vanilla crops
+- from: expandeddelight:cheese_wheel / aged_goat_cheese (time-gated cask output) | via: numismatics sell/price | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: aging cheese takes real time; a wheel of cask-aged goat cheese is a premium sell-good that naturally rewards the patient specialist
+- from: expandeddelight:salt (c:dusts/salt) | via: occultism:ritual as purification/circle-salt catalyst | to: magic | motif: M-11 | power: everyday | tone: ok | verdict: REJECT | reason: Occultism's ritual circles use chalk, not salt; inserting a food-mod reagent into ritual preparation has no supported hook in Occultism's design — no-motif fits this cleanly, and forcing it reads arbitrary to a player
+
+## betterdungeons   [anchors: survival (1)]
+- LEAVE — no registry items or recipe-types; cannot route any material through a method. Loot-table seeding (coins / magic reagents in Catacombs/Spider Cave chests) is a valid deferred datapack task that would effectively add an economy or magic touch-point, but it is not a Phase 2 recipe weave — flag for the datapack/loot-injection pass instead.
+
+## bettermineshafts   [anchors: survival (1)]
+- LEAVE — pure structure overhaul; no registry items, no loot tables (loot=no), no methods. Serves the ore-mining loop atmospherically but offers no recipe or method hook. Nothing to weave.
+
+
+
+
 
 
 

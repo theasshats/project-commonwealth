@@ -26,6 +26,21 @@
 - from: createmetalwork processed molten metals (molten_steel, molten_brass, molten_netherite, molten_platinum, etc.) | via: numismatics mint (coin from processed scarcity) | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: smelting raw ore into molten ingots via Create is already the effort — minting coin from the refined output closes the Create→economy loop that M-08 is designed for. The ore-doubling yield makes the mint non-trivial but not punishing.
 - from: createmetalwork c:crushed_raw_materials/* (crushed palladium, occultism metals if present, etc.) | via: create:crushing→occultism:ritual or ars_nouveau:imbuement (crushed magic-metal → ritual input) | to: magic | motif: M-03 / M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: the crushed form is the natural mid-step before magic refining; routing crushed palladium or mythril through a ritual makes the metallurgy-magic seam tangible and gives magic users a reason to engage the Create ore pipeline.
 
+## solonion   [anchors: survival (1)]
+- from: solonion:golden_lunchbox (the top-tier food container) | via: create:mechanical_crafting (gate behind a Create-assembled component) | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: the best food-management tool shouldn't be a straight crafting-table upgrade — making it a Create mechanical-crafting output ties personal survival quality-of-life to the tech spine and rewards the player who bothers to set up the machine.
+- from: solonion lunchbox tier upgrades (lunchbag → lunchbox → golden_lunchbox) | via: create:deploying / item_application | to: Create | motif: M-20 | power: mid | tone: ok | verdict: REJECT | reason: the upgrade chain is already handled by solonion's own `upgrade_food_container` recipe-type; duplicating it as a Deployer step adds friction without a clear player payoff, and M-20 warns against using the deploy-upgrade motif for non-flagship items. M-05 for the golden tier is the cleaner, single edge.
+
+## letsdocompat   [anchors: survival (1)]
+- LEAVE — pure glue/bridge mod (no items, no blocks, no methods of its own). It IS the M-12 food-web unification in practice; adding a weave "on top of" a glue mod would be adding a weave to the food mods it connects, not to this mod. Those weaves belong on the food-source mods themselves.
+
+## friendsandfoes   [anchors: survival (1)]
+- from: friendsandfoes:crab_claw | via: occultism:spirit_fire or ars_nouveau:imbuement | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: a crab claw that extends reach is already halfway to a magic ingredient — transmuting it via spirit-fire into an essence (or as an imbuement input for a reach/extension glyph upgrade) is the kind of "of course" routing M-02 is for; combat drops become magic feedstock.
+- from: friendsandfoes copper deco set (copper buttons, lightning rods, copper_golem_head — all copper-tagged blocks) | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: this is the thinnest possible weave — crushing decorative copper back to nuggets adds no player agency that the vanilla copper path doesn't already provide. The "recycles deco" motif is meant for mods with a meaningful deco output that the player actively wants to un-build for materials; a few copper button variants don't rise to that bar. Red-team: a player would ask "why does this deserve a Create recipe?"; no good answer.
+- LEAVE (for a stronger 2nd pillar) — the crab_claw→magic (M-02) edge is accepted and sufficient. The copper-deco angle is rejected as too thin. The mod is deliberately vanilla-balanced; over-connecting it dilutes the design.
+
+
+
+
 
 
 
