@@ -236,6 +236,44 @@ Already at the 2-pillar goal; quality-audit mode applies.
 
 - LEAVE (additional edges) — already at 2 pillars, both grounded. The mod is logistics infrastructure; its value is enabling the Create-based trade network to reach remote outposts. No forced edges needed. The economy adjacency is structural (packages carry trade goods) and doesn't require a separate weave row.
 
+## companions   [anchors: survival (1)]
+
+One pillar only; needs a 2nd. Registered method: `companions:soul_furnace`. Content: ~10 tamable companions, hostile mobs, boss (Sacred Pontiff), Soul Furnace (mob-drop/item → soul reagents), Tesla electricity network, summoning altars.
+
+**Method-pull:**
+- `companions:soul_furnace` converts mob-drops/foods/gems → soul-state reagents: rotten flesh → Crystallized Blood, diamond → soul gem, bread → croissant egg. This is exactly what M-11 (ritual/transmutation sink) and M-02 (mob-drop reagent sink) describe.
+- The Crystallized Blood and soul gems are the natural output to route into the wider magic web — `occultism:spirit_fire` / `ars_nouveau:imbuement` would consume them as magic reagents. That gives the Soul Furnace outputs a home outside the mod's own private altar loop.
+- Boss (Sacred Pontiff) drops Relic Gold and Old Cloth — M-15 (boss-key unlock) and M-09 (luxury good → coin) both apply. Relic Gold is thematically a premium metal; Old Cloth is a rare textile.
+- Tesla/voltaic electrical blocks (voltaic_pillar, tesla_coil, etc.) — deco/machinery deco made from copper-adjacent materials. M-04 (Create recycles deco) could crush them back to copper; WEAK.
+- Create (M-17 electric bridge): the Tesla network produces electricity-like current; `createaddition:charging` is in the palette. However, the Tesla network is a cosmetic/companion power system, not a FE producer that CreateAddition's charger would accept. The two electricity systems are architecturally separate. REJECT.
+
+**Power-read:**
+- Crystallized Blood / soul gems: mid (need hostile mob farming, which takes time to set up).
+- Relic Gold / Old Cloth (boss drop): endgame.
+- Tesla blocks: everyday/cosmetic.
+
+**Theme-fit / red-team:**
+- Soul Furnace → Occultism spirit_fire: the Soul Furnace is explicitly a "soul-state conversion" block; it transmutes items via a soul-fire-adjacent process. Occultism's spirit_fire does the same thing (fire transmutes items). The tone overlap is strong — both are eldritch/alchemical conversion mechanics. A player would nod at Crystallized Blood being accepted in an occult ritual.
+- Soul gems → Ars imbuement: a soul gem going into the imbuement chamber as an arcane reagent reads as coherent — soul-energy is a recognized magic currency. Not forced.
+- Relic Gold → numismatics: a rare boss-drop gold as premium coin stock is exactly M-08 or M-09. Clean.
+- Tesla blocks → Create crushing (M-04): WEAK. The mod's electrical theme is cosmetic within its own system; crushing voltaic pillars for copper is technically possible but unmotivated gameplay-wise. Flag for completeness only.
+
+**Candidates:**
+
+- from: companions:crystallized_blood (Soul Furnace output, mid-tier soul reagent) | via: occultism:spirit_fire or occultism:ritual | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: the Soul Furnace feeds the ritual circle — eldritch alchemy chains from one fire to the next
+
+- from: companions:soul_gem (Soul Furnace diamond output, mid-tier) | via: ars_nouveau:imbuement → source contribution or reagent role | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: a gem distilled through soul-fire carries the arcane charge the imbuement chamber needs
+
+- from: companions boss drop — relic_gold (Sacred Pontiff, endgame) | via: numismatics vendor price (M-09 luxury) or boss-key gate (M-15) | to: economy | motif: M-09 | power: endgame | tone: ok | verdict: ACCEPT | hook: the relic the Pontiff guards is what the bankers want — killing the boss opens the premium coin market
+
+- from: companions boss drop — relic_gold (Sacred Pontiff) | via: boss-drop gate as Create recipe input (M-15) | to: Create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT (either M-09 or M-15 is the right seat; both are coherent — pick one per authoring phase) | hook: the Pontiff's relic is the key component the engineer needs for a complex machine (endgame Create gating)
+
+- from: companions tesla/voltaic deco blocks (copper-based) | via: create:crushing → copper scrap + xp nugget | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: WEAK — the Tesla electrical theme is its own cosmetic system; crushing it for copper creates a gameplay path (dismantle Tesla network for resources) that could perversely incentivize removing the mod's flagship feature. The mod earns its place through companions + boss; the deco recycling is not a strong integration. Leave.
+
+- from: companions:crystallized_blood | via: createaddition:charging (FE/electricity bridge) | to: Create | motif: M-17 | power: mid | tone: clash | verdict: REJECT | reason: the Tesla network and Create's FE system (CreateAddition) are architecturally separate; they don't share a common FE bus. Routing Crystallized Blood through a Create charger would require them to interact in a way neither mod supports. Tone ok but mechanical compatibility unconfirmed; REJECT-for-review.
+
+== CHUNK COMPLETE ==
+
 
 
 
