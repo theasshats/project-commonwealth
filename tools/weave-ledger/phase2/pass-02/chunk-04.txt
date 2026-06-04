@@ -1,0 +1,10 @@
+create_ironworks
+betterstrongholds
+rottencreatures
+immersive_armors
+enhancedcelestials
+modulargolems
+copperagebackport
+create_enchantment_industry
+valarian_conquest
+edf-remastered-5.0-beta4
