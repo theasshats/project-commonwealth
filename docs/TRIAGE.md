@@ -25,6 +25,22 @@ milestone / body-summary / cross-refs. Note: the list API **omits `assignees`** 
 - `playtest-blocked` = can't finish without an in-game check.
 - `issue_write` with `labels` **replaces** the whole set — include the labels you're keeping.
 
+## 2a · Effort estimates (`size:*` labels)
+Each issue also carries a **`size:*`** effort label — the one sanctioned addition to the 16-label
+vocabulary above. The estimate is **solo hands-on time**, decision assumed already settled, and it
+**excludes** boot/settle/playtest waits (flag those separately with `playtest-blocked`).
+
+| Size | Band | Typical |
+|---|---|---|
+| `size:XS` | ≤30 min | one config/manifest edit, a pin, a doc line, a quick decision |
+| `size:S` | 30–60 min | a small recipe/KubeJS/config change, a single-mod keep/cut, a settings toggle |
+| `size:M` | 1–3 hr | multi-file content, an investigation + change, a tooling script |
+| `size:L` | 3–6 hr / half-day | a pillar build-out chunk, multi-mod balance, worldgen + playtest, a new-mod skeleton, a hard bug |
+| `size:XL` | multi-day — **decompose** | pillar umbrellas / recurring frameworks; split into sub-issues |
+
+`size:XL` umbrellas **double-count** their sub-issues — don't sum them into a project total. The
+mechanical "size every open issue" pass is the `/estimate-issues` command.
+
 ## 3 · Milestone every issue (the road to 1.0)
 The backlog is organized into GitHub **milestones**, not loose buckets, and **every issue — including
 every new one — must have one** (an unmilestoned issue is untriaged). Pick the milestone whose **goal**
