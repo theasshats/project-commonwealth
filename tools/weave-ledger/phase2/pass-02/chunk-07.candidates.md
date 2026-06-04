@@ -31,6 +31,14 @@
 - from: dungeons-and-taverns structure loot tables | via: bountiful:bountyboard decree targeting dungeon-adjacent mobs | to: economy | motif: M-14 | power: mid | tone: ok | verdict: ACCEPT | hook: Dungeons & Taverns adds 100+ structures with their own mob spawners; pointing Bountiful Decrees at those structures' mob populations turns exploration into a bounty-economy activity — players are paid coin to clear the structures they would explore anyway (provisional motif — same caveat as M-14)
 - from: dungeons-and-taverns loot (treasure chests in taverns/towers) | via: numismatics coin seeding | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: seeding a few Numismatics coins into tavern and tower loot tables rewards structure-hunting with the pack's actual currency — the tavern is already a commerce node, coins in the chest are thematically obvious
 
+## expandeddelight   [anchors: survival (1)]
+- from: expandeddelight:salt_ore / deepslate_salt_ore | via: create:crushing | to: Create | motif: M-03 | power: everyday | tone: ok | verdict: ACCEPT | hook: salt is an ore that crushes to salt dust (+ maybe extra yield) — the same Create ore-doubling logic that applies to any mineral; salt is a regional ore so crushing is a natural Create-powered extraction step
+- from: expandeddelight:cheese_wheel / goat_cheese_wheel (time-gated luxury) | via: numismatics (trade good / sell) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: aged cheese takes real time in a cask — a player who invests that time has a natural sellable; cheese as a coin-generating luxury good reads as completely obvious in a commerce-driven pack
+- from: expandeddelight:cinnamon (dust/crop) | via: create:milling | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: milling dried cinnamon bark → cinnamon dust is exactly the Millstone's job; a spice processed through the Create spine makes cinnamon an ingredient in the food-Create web
+- from: expandeddelight:cranberry (crop) | via: serene seasons gating (seasonal reagent) | to: survival/Create | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: cranberries are a late-autumn/winter crop in real life; gating their harvest to the appropriate Serene Season gives them natural scarcity and makes cranberry-based recipes season-sensitive
+- from: expandeddelight:peanut_butter / chili-based foods | via: numismatics (luxury good) | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: cheese wheel already covers the luxury-food→coin weave for this mod; stacking every processed food into the coin system dilutes the scarcity signal — pick the time-gated cheese as the representative, leave faster-cooking foods outside the economy weave
+
+
 
 
 
