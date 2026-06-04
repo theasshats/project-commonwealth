@@ -34,9 +34,18 @@
 ## tidal-towns-1.3.4   [anchors: survival (1)]
 - LEAVE — pure vanilla-block structure datapack with no items, blocks, or methods. The ocean settlements are exploration content and a base for sea travel (thematic aeronautics / naval adjacency) but there is no material handle to weave through any method. Like Terralith, value is structural/positional (giving the crew places to find on the sea) rather than ingredient-based. A loot-table rider could in principle point toward Numismatics or Aeronautics gear, but that work belongs on the pack-level loot customisation layer, not this mod's entry.
 
+## trailandtales_delight   [anchors: survival (1)]
+- from: cherry_cheese_pie / ancient_coffee / cherry_petal_tea (multi-step high-effort dishes) | via: numismatics sell / colony deliverable | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: cherry cheese pie and ancient coffee are multi-step artisan goods — pricing them as Numismatics sell items or MineColonies colony deliverables makes the sniffer-crop chain into a coin-earning specialist trade, not just personal food variety
+- from: lantern_fruit / pitcher_taro crops | via: create:milling | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: running Lantern Fruit or Pitcher Taro through a Create mill produces flour/paste intermediates that feed the mod's cooking chain — a light one-step weave that connects the archaeology-flavoured crop to the pack's Create processing web without gating anything basic
+- from: curd_block / cheese_wheel (milk-fermented intermediate) | via: create:pressing | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: redundant with the milling ACCEPT above — two M-12 edges on the same mod for similar-tier ingredients bloats the graph without adding depth; milling covers the crop side cleanly; the cheese chain is already handled by the FD cooking web; one M-12 entry is the right ceiling here
+- from: cooked_sniffer_egg / stuffed_sniffer_egg | via: occultism:spirit_fire | to: magic | motif: M-11 | power: mid | tone: clash | verdict: REJECT | reason: tone clash — sniffer eggs are archaeological-whimsical not arcane; transmuting a cooked novelty food through spirit fire into an occult reagent has no narrative logic and would confuse players; the food/cooking vibe does not cross into Occultism's grimoire aesthetic
 
+## travelersbackpack   [anchors: survival (1)]
+- from: travelersbackpack:netherite / travelersbackpack:dragon / travelersbackpack:end (top-tier themed packs) | via: create:sequenced_assembly | to: Create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: the flagship endgame backpacks (netherite, dragon, end) are gated through a Create sequenced-assembly chain — reaching the largest carry capacity requires engaging the Create spine, making "best backpack" a tech-progression reward rather than a pure crafting-table craft
+- from: travelersbackpack:blank_upgrade / tank_upgrade (upgrade modules) | via: create:pressing | to: Create | motif: M-20 | power: mid | tone: ok | verdict: REJECT | reason: the upgrade modules are mid-tier functional components — threading them through create:pressing is plausible but thin (pressed sheet → upgrade body) and the depth doesn't match the power tier well; the sequenced-assembly endgame hook (M-06) is the cleaner single seam; adding M-20 on top creates overlapping coverage without narrative payoff
+- from: backpack_tank (portable fluid tank) | via: aeronautics / expedition logistics | to: aeronautics | motif: no-motif | power: mid | tone: ok | verdict: REJECT | reason: no-motif — the portable fluid tank is thematically useful for airship expeditions (carry fuel, potions) but there is no recipe method that expresses this connection; it is a narrative adjacency not a graph edge; no accepted motif covers "item is passively useful aboard a ship"
 
-
+== CHUNK COMPLETE ==
 
 
 
