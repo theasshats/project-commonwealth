@@ -13,5 +13,14 @@
 - from: trailandtales_delight:lantern_fruit (c:foods/berry) | via: create:milling → flour/juice intermediate then farmersdelight:cooking (M-12 processing-chain pull) | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Milling lantern fruit before cooking ties the sniffer crop into the Create supply chain — a light, coherent step that doesn't over-complicate a basic ingredient.
 - from: trailandtales_delight:cheese_wheel | via: create:milling (lossy, M-04 recycle) | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: Crushing cheese back to curds via Create is a weaker/redundant weave now that milling lantern fruit already covers the Create pillar; M-12 (lantern fruit) is more coherent and already accepted. Duplicate pillar-win with less thematic clarity.
 
+## dungeons_arise_seven_seas   [anchors: survival (1)]
+- LEAVE — purely a structure/worldgen mod (0 items, 0 blocks in jar). The nautical theme rhymes with aeronautics thematically, but these are static ocean structures with no functional ship mechanics — an aeronautics pillar would be fabricated. Any economy/pillar connection must come from editing its loot tables externally, which belongs to a cross-cutting loot-table pass, not to this mod as its 2nd pillar.
+
+## sky_whale_ship   [anchors: survival (1)]
+- from: sky_whale_ship loot chests (loot-table surface — no registered items) | via: loot-table injection of Aeronautics/Create progression items | to: aeronautics | motif: M-15 (boss-key unlock loosely) | power: mid | tone: ok | verdict: ACCEPT | hook: A sky whale is an airborne dungeon; players only reach it by airship — injecting ship-tech or hull materials into its loot makes it a natural aeronautics milestone destination.
+- from: sky_whale_ship loot | via: numismatics coin / rare trade good in loot | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: Loot-table economy weave is weaker than the aeronautics one, and both can't be fully justified without knowing what the loot contains — the aeronautics angle is stronger and thematically self-reinforcing (you need a ship to get there, you find ship parts). Economy via loot is generic and dilutes the aeronautics hook.
+
+
+
 
 

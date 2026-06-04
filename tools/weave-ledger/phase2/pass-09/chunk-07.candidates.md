@@ -18,6 +18,19 @@
 - from: vc_gliders:paraglider_iron (base tier) | via: create:milling → reinforced paper | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: Iron tier must stay accessible early; routing its reinforced paper through a mill gates the most basic glider behind Create which violates the guardrail against gating everyday components behind complex recipes.
 - from: vc_gliders:nether_upgrade | via: create:haunting | to: Create | motif: M-19 | power: mid | tone: ok | verdict: ACCEPT | hook: The nether-upgrade component gets its fire-resistance by passing through soul-fire in Create's haunting process — a single light step, thematically tight, no over-complexity.
 
+## tide   [anchors: survival (1)]
+- from: tide fish (rare/biome-locked: abyss_angler, alpha_fish, void catches) | via: numismatics sell/price | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: A rare deep-sea catch is worth real coin — biome-locked fish become trade goods, and the angling specialist earns their place at the market.
+- from: tide fish (bulk: anchovy, common catch) | via: farmersdelight:cutting → fish dish + create:milling → fishmeal | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Bulk catches go to the cutting board for a Farmer's Delight dish, or into the mill for fishmeal fertilizer that feeds any crop machine — the fishing surplus has a processing outlet.
+- from: tide:abyss_angler / void-caught fish | via: occultism:spirit_fire or ars_nouveau:imbuement | to: magic | motif: M-02 | power: mid | tone: ok | verdict: REJECT | reason: Red-team: abyssal fish as magic reagents is thematically loose — it's "weird" not "arcane." Weak single-drop use that doesn't survive the tone check. The strong M-09 and M-12 weaves already give tide its 2nd and 3rd pillar connections; this one isn't needed and risks clutter.
+
+## friendsandfoes   [anchors: survival (1)]
+- from: friendsandfoes:crab_claw | via: ars_nouveau:imbuement or occultism:spirit_fire | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: A chitinous claw from a mob-vote creature is exactly the kind of exotic material that a ritual asks for — it's weird, it's rare, it reads as "of course this goes in a spell."
+- from: friendsandfoes copper deco (copper_button, weathered/oxidized lightning rods) | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: The copper deco is vanilla-tier copper — it crushes back to copper nuggets, which is already covered by vanilla copper + M-04 on any copper block. There's no new value here; this is recycling that already works without a recipe entry. Thin/redundant.
+- from: friendsandfoes hostile mob drops (Wildfire / Illusioner loot) | via: numismatics bounty / bountiful board | to: economy | motif: M-14 | power: mid | tone: ok | verdict: ACCEPT | hook: Wildfire and Illusioner are combat-encounter rewards; routing their drops through a bounty board for coin makes the combat encounter economically meaningful. (provisional motif)
+- NOTE on friendsandfoes: mob-vote mobs are deliberately vanilla-feeling; two thin weaves (crab_claw → magic, hostile drops → economy) are enough. Don't over-wire.
+
+
+
 
 
 

@@ -15,3 +15,14 @@
 ## formationsnether   [anchors: survival (1)]
 - from: nether structure loot chests | via: seed a sellable/bounty reward or magic reagent into loot tables → numismatics/bounty | to: economy | motif: M-08 (loose) | power: mid | tone: ok | verdict: REJECT | reason: registers no items — the "weave" is a loot-table edit, not a recipe on this mod. Coherent direction but defer to a loot-seed pass; not an authorable mod-edge here.
 - LEAVE — structure/worldgen-only (0 registry items); any cross-pillar hook lives on the loot table, not on this mod. Note for a future loot-seed pass: its ritual-altar/sanctuary theme would suit a magic reagent drop (M-02/M-07 flavor) over plain coin.
+
+## endermoon   [anchors: survival (1)]
+- from: ender-moon enderman spawn surge → ender-pearl supply tap | via: lunar-event-gated farmable drop feeds a magic/Create method | to: magic | motif: M-22 | power: everyday | tone: ok | verdict: REJECT | reason: M-22 is real here in spirit (a lunar event), but the mod owns no item — the weave belongs on the ender-pearl drop or on the parent enhancedcelestials event system, not on this spawn-weight modifier. Surface for the M-22 lunar-reagent pass at the enhancedcelestials level.
+- LEAVE — spawn-weight event with zero registry items; no material to route. The lunar→reagent idea is M-22-coherent but must be authored on the parent celestial system, not here.
+
+## createshufflefilter   [anchors: Create (1)]
+- LEAVE — single-item builder QoL utility (a Deployer filter). No materials, no method, no tradeable/magic/transport surface; any 2nd pillar would be forced. Its filter items are already pure-Create and belong nowhere else.
+
+## edf-remastered-5.0-beta4   [anchors: survival (1)]
+- from: harder Ender Dragon fight | via: boss drop as gate item for complex Create tech | to: Create | motif: M-15 | power: endgame | tone: ok | verdict: REJECT | reason: M-15 (boss-key) is thematically perfect for a 500-HP multi-phase dragon, BUT this datapack adds NO items and explicitly does NOT touch the dragon's drop table — there's no signature drop to gate on. A weave would mean inventing a drop the mod doesn't have. Surface the *idea* (a boss-key drop on the harder dragon) for whoever owns End-progression drops.
+- LEAVE — behavior-only datapack (0 items, drop table untouched). No material to route; forcing M-15 would fabricate content.

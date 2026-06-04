@@ -32,3 +32,36 @@ two-web membership, not a cluster of one.
 - REWORK (weak candidate only): the WEAK numismatics/sterling_silver M-08 3rd-pillar idea is fine to surface
   but should stay low priority — sterling_silver is occultengineering's structural alloy, and minting it to
   coin competes with its own use; don't author unless a clear surplus exists.
+
+## numismatics   [anchors: economy, Create (2)]
+OK — connections sound. It IS the economy keystone and a Create addon (depends on create; coins/blocks are
+Create-crafted). Correctly a destination hub, not a source — the dossier rightly says LEAVE (don't author an
+outgoing edge from numismatics).
+- Reagent-ownership respected: numismatics:* (spur..sun) reserved to the economy pillar (M-08/M-09). No issue.
+- No rework. The only risk is OTHER mods minting/pricing into it incoherently — that's audited on those mods,
+  not here.
+
+## aeronautics_bundled   [anchors: aeronautics (1), Create de-facto (2)]
+OK — connections sound, with a bookkeeping note.
+- The Create de-facto 2nd pillar (levitite/tires/propellers via Create sheets/casings/sequenced-assembly,
+  M-06) is real and correct.
+- REWORK (bookkeeping, not content): weaving must be recorded on the `aeronautics`/`sable` namespace, NOT this
+  bundle wrapper (0 items/0 blocks register here). The dossier already flags this; ensure the M-23/M-24 build
+  + drivetrain seams (structural alloy -> hull, mechanical component -> propulsion) get logged against
+  `aeronautics`, not `aeronautics_bundled`. Pure provenance correction.
+
+## aeronautics_dyeable_components   [anchors: aeronautics (1)]
+OK — connections sound (cosmetic support role). This is a deliberately-cosmetic skin layer (16 dye variants of
+levitite/tires); the dossier correctly writes LEAVE and rejects forcing a Create/economy edge as a non-edge.
+- AUDIT FLAG (premise): this mod is genuinely at ONE pillar, not >=2. The chunk header assumes >=2; for a pure
+  cosmetic permutation that is the *correct* end state — a forced 2nd pillar here would be a defect. No rework;
+  record as a sanctioned one-pillar support mod, not a gap to fill.
+- Marginal: the "route the dye step through create:mixing for color" idea is correctly tagged gilding/WEAK —
+  do not author; dyeing an everyday cosmetic via a machine step trips depth-scales-with-power.
+
+## alcohol_industry   [anchors: Create, survival (2)]
+OK — connections sound. Genuine two-web membership: Alcohol Base is assembled via create:filling +
+create:mixing (existing inbound weave, M-12), and the boiler outputs drinkable consumables (survival/buff).
+- The STRONG 3rd-pillar candidate (finished liquors -> numismatics, M-09 luxury->coin) is coherent — bottled
+  spirits are a natural trade commodity; carries the standard 0.9 currency caveat. Fine as proposed.
+- No rework on existing edges.

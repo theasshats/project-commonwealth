@@ -14,5 +14,18 @@
 ## trek-b0.6.1.1   [anchors: survival (1)]
 - LEAVE — Structure datapack with no items or methods. Same reasoning as betterstrongholds; loot-table seeding is a valid future data edit but is not a mod-weave edge. One-pillar floor is correct.
 
+## trailandtales_delight   [anchors: survival (1)]
+- from: trailandtales_delight:cheese_wheel / cherry_cheese_pie / ancient_coffee | via: numismatics sell/price | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: aged cheese and ancient coffee are clearly luxury trade goods — multi-step, sniffer-crop inputs make them scarce enough that selling to players/colony is obvious; player nods immediately
+- from: trailandtales_delight:lantern_fruit / pitcher_taro | via: create:milling | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: milling exotic sniffer-found fruits into flour/pulp for further processing is a natural light step; puts a sniffer-crop into the Create food-processing web without over-gating (everyday tier = one step)
+- from: trailandtales_delight:ancient_coffee | via: extradelight:vat or create:mixing | to: Create | motif: M-12 | power: mid | tone: ok | verdict: REJECT | reason: M-09 coin path already gives a strong 2nd pillar; adding a second Create route for the same item would create over-engineering — coffee-as-trade-good is cleaner and more distinct. Keep M-12 on the milling/crop side only; don't double up on the flagship drink.
+
+## createmetalwork   [anchors: Create (1)]
+- from: createmetalwork crushed/molten scarce regional metals (palladium, osmium, platinum, runite, quicksilver…) | via: numismatics mint | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: the whole point of the mod is higher-yield ore processing — the refined output is the natural mint feedstock; "crush ore → smelt molten → cast ingot → mint coin" is one coherent Create→economy pipeline players will walk without prompting
+- from: magic-mod ores (occultism otherstone-metal, galosphere palladium) | via: create:crushing → createmetalwork molten flow | to: magic | motif: M-03 | power: everyday | tone: ok | verdict: ACCEPT | hook: crushed-ore tags already cover palladium (galosphere) and the occultism metals; routing them through createmetalwork's crush+melt pipeline gives magic-mod metals a Create doubling bonus — small, sensible, one step
+- from: createmetalwork:molten_steel (fluid) | via: M-23 aeronautics structural alloy | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: molten steel cast into structural plates is the obvious airframe material; createmetalwork already produces molten_steel; connecting it to aeronautics hull recipes adds depth without a new chain
+- from: createmetalwork molten metals | via: tfmg:casting / create:compacting | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: REJECT | reason: superseded by the molten_steel → M-23 row above; routing every molten metal to aeronautics is over-broad — steel plate is the right single anchor, not the full metal roster
+
+
+
 
 
