@@ -44,6 +44,4 @@ REWORK: OK — connections sound. The Create-tier material ladder (andesite→br
 - from: fxntstorage:backpack_flight_upgrade | via: recipe | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: REJECT | reason: M-24 is specifically about mechanical components feeding Aeronautics drivetrain/control hardware, not wearable personal gear. The flight upgrade is a worn gadget; routing it through M-24 is a mis-motif. The M-23 candidate above (structural framing of aerial logistics) is the cleaner fit, but even that is a stretch — flight backpacks are worn QoL, not airframe construction materials. On red-team: a player wouldn't naturally say "of course I need the backpack to build the airship frame." Reject both as forced.
 - from: fxntstorage:hardened_backpack | via: recipe | to: aeronautics | motif: M-23 | power: endgame | tone: clash | verdict: REJECT | reason: hardened storage boxes/backpacks are survival storage, not structural airframe materials. Routing a storage container into an airframe recipe tone-clashes — players would find it arbitrary. The mod earns its keep at 2 pillars already; forcing an aeronautics edge adds no real design coherence.
 
-
-
-
+== CHUNK COMPLETE ==

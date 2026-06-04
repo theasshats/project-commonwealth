@@ -37,4 +37,13 @@
 ## coroutil   [anchors: library/API (1)]
 - LEAVE — zero content surface: 0 blocks, 0 items, loot=no. Pure shared-AI/config/rendering library for Corosus-family mods; no gameplay surface.
 
+## vinery   [anchors: survival (1)]
+<!-- existing connections: none; 1-pillar candidate -->
+- from: vinery wines/ciders (apple_wine, cherry_wine, chorus_wine, etc.) | via: numismatics sell | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: bottled, aged wines are the textbook luxury trade good — players specialize a vineyard, run the fermentation chain, and sell premium labels at the Numismatics counter; the in-world aging mechanic already differentiates them from basic food.
+- from: vinery:apple_juice / grape_juice | via: create:mixing | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Vinery juices fed into Create's mixing basin as liquid ingredients for a flavored syrup or fermentation-starter fluid — the press output joins the Create processing web, tying the vineyard's everyday flow into the spine.
+- from: vinery:apple_mash | via: create:pressing | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: an alternate pressing path — apples into the Create mechanical press yield apple mash and juice, mirroring how Create presses other crops; the vineyard and the Create workshop share the agricultural processing step.
+- from: vinery wines | via: farmersdelight:cooking | to: survival (depth) | motif: M-12 | power: mid | tone: ok | verdict: REJECT | reason: vinery wines are already finished consumables; routing them back into Farmer's Delight cooking would just produce another cooked dish with no clear design benefit. M-12's strength here is the raw→processed direction (juice/mash), not a finished→cooked loop. Dual M-12 entries (juice and mash) are already accepted; this third one is redundant.
+- from: vinery:chorus_wine | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: chorus wine — distilled from End flora — is imbuement-attuned into an arcane elixir component; the End-origin ingredient gives a coherent resonance with arcane infusion and sets vinery's most exotic wine apart from everyday labels.
+
+== CHUNK COMPLETE ==
 

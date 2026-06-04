@@ -25,6 +25,14 @@
 ## ichunutil   [anchors: support/library (1)]
 - LEAVE — genuine zero-content library; 0 blocks, 0 items, loot=no. Shared rendering/config/util classes for iChun's mods. Nothing to route.
 
+## createfisheryindustry   [anchors: Create, survival (2)]
+- from: createfisheryindustry:seafood_chowder / createfisheryindustry:cooked_lobster / createfisheryindustry:cooked_cod_steak (high-effort processed seafood) | via: numismatics sell/price | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: mechanical fishing → peeled steaks → chowder is a full automated processing chain; the output is a premium food that a sea-trade specialist can sell — encourages maritime specialization and cross-player food trade.
+- from: createfisheryindustry:fish_skin (leather-substitute output) | via: recipe (create:pressing or create:milling) | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: fish_skin is already a byproduct of the peeling chain which is itself a Create-kinetic process; routing it through yet another Create step for a leather-sub just doubles down on an existing pillar without adding a new one. Already at Create; skip.
+- from: createfisheryindustry:harpoon (projectile weapon, mid-tier iron/zinc craft) | via: recipe (create:sequenced_assembly — add a backtank valve part) | to: Create | motif: M-06 | power: mid | tone: ok | verdict: REJECT | reason: harpoon is already in the Create pillar (made via create:sequenced_assembly per existing inbound weaves). M-06 would be redundant — the weapon is already a Create product.
+- OK — existing connections sound for 2 pillars. The M-09 economy ACCEPT above is a clean third weave that completes the maritime provisioner loop.
+- REWORK: no weak connections found in existing anchors. The farmersdelight cooking/cutting inbound weaves are coherent (seafood → food mods). Nothing to flag.
+
+
 
 
 

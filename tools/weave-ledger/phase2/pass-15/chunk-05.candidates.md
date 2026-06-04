@@ -36,6 +36,16 @@
 - from: valarian_conquest:builder station outputs | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: builder station outputs are functional blocks/items, not deco — M-04 is for deco recycling. Forcing a crush path here is arbitrary and degrades the station's identity.
 - REWORK: dossier's M-05 candidate (armorsmith station gated on Create parts) is labelled WEAK. M-20 (deploy/item_application) is a lighter and more appropriate form — a single Create-processed plate as one station input, not a full multi-step gate. The M-05 label is technically wrong (M-05 is native-method gating, not item_application); swap to M-20.
 
+## companions   [anchors: survival (1)]
+- from: companions:crystallized_blood (soul-furnace reagent from mob drops) | via: occultism:spirit_fire | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: Crystallized Blood is a distilled soul essence — feeding it into Occultism's spirit fire transmutes it into an occult reagent, directly linking companion alchemy to the magic web.
+- from: companions:soul_gem (high-tier boss/altar output) | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid-endgame | tone: ok | verdict: ACCEPT | hook: Soul Gems are a latent arcane material that an Ars imbuement refines into source-attuned currency, wiring the companion boss loop to the Ars source economy.
+- from: companions boss drop — Relic Gold (Sacred Pontiff) | via: numismatics mint (via create:*) | to: economy | motif: M-08 | power: endgame | tone: ok | verdict: ACCEPT | hook: Relic Gold is a rare battle trophy from a boss fight; processing it into high-denomination coin makes the Sacred Pontiff the pack's most lucrative combat milestone.
+- from: companions:voltaic_pillar / tesla_coil_block (electrical deco) | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: decommissioned tesla deco grinds back to copper/redstone scrap — the electrical set's recycling path, tying it to the Create spine at minimal friction.
+- from: companions own copper/nether/end coins | via: numismatics bridge (config/recipe unify) | to: economy | motif: M-09 | power: everyday | tone: clash | verdict: REJECT | reason: two competing coin systems in the same pack is a design smell; the dossier flags companions coins as NOT the pack's Numismatics economy. Bridging them risks undermining currency scarcity. Better to leave companions coins as internal mod tokens and not route them through Numismatics.
+- from: companions:antlion_fur / mob drops | via: farmersdelight:cutting | to: survival | motif: M-12 | power: everyday | tone: clash | verdict: REJECT | reason: companion mob pelts being "cut" in a food-prep station is tonally odd — the companions vibe is gothic-alchemical, not butchery. Force fit; no-motif overlap that survives red-team.
+- OK — dossier's M-11/M-02 magic candidates and M-09 economy candidate are all coherent and well-aimed. The M-04 deco-crush candidate is correctly low-tier. This mod has 3 clear accepted paths (M-11, M-10, M-08) making it a strong 2-pillar target.
+
+
 
 
 
