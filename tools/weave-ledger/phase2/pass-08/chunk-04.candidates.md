@@ -41,6 +41,14 @@
 ## betteroceanmonuments   [anchors: survival (1)]
 - LEAVE — pure structure overhaul; no registry items, no recipe-types; loot tables are vanilla. No method to route through. Same category as bettermineshafts — worldgen polish only.
 
+## samurai_dynasty   [anchors: survival (1)]
+- from: samurai_dynasty jade/ruby/onyx/aquamarine ores (c:ores/jade etc.) | via: create:crushing (ore-doubling + gem byproduct) | to: Create | motif: M-03 | power: mid | tone: ok | verdict: ACCEPT | hook: Create crushes samurai gem ores for doubled yield — the standard ore-reward pattern; folds the feudal-Japan ore tier into the tech spine. ⚠ Exclude silver_ore from this weave (Galosphere caveat in CLAUDE.md)
+- from: samurai_dynasty:akaname_tongue / Yokai drops (mob reagents from Oni/Tengu/Kitsune etc.) | via: occultism:spirit_fire (transmute folklore-creature drop into essence) | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: Yokai are spirits by nature — transmuting their drops through Occultism's spirit fire into an essence is exactly what the ritual sink is for; "of course" player nod
+- from: samurai_dynasty jade gem (c:gems/jade, decorative/mid-tier) | via: ars_nouveau:imbuement as attunement catalyst (non-reserved gem) | to: magic | motif: M-10 | power: mid | tone: ok | verdict: REJECT | reason: jade already feeds the Create ore-doubling weave above; adding a second magic weave on the same material risks over-loading a single item; and an attunement catalyst role is better suited to Galosphere's allurite/lumiere (reserved M-07) — jade would dilute that design. Keep jade in Create, Yokai drops in magic.
+- from: samurai_dynasty:steel_ingot (c:ingots/steel — overlaps tfmg/create_ironworks) | via: numismatics sell | to: economy | motif: M-08 | power: mid | tone: ok | verdict: REJECT | reason: steel is already handled by tfmg's stronger economy weave (M-08 accepted above); double-registering samurai_dynasty steel into the same coin sink is redundant unless tag unification routes it there automatically — defer to the unification audit, don't propose a separate explicit weave
+
+== CHUNK COMPLETE ==
+
 
 
 

@@ -10,14 +10,19 @@ theme/balance · **[PLAN]** plan-doc change · **[GITHUB]** issue action · **[N
 
 ---
 
-## Status — Phase 2 multi-pass convergence (4 passes done; STILL BLIND)
+## Status — Phase 2 multi-pass convergence (9 passes done; STILL BLIND)
 
-Phase 2 is running as independent blind passes (plan §2.x). **pass-00, -01, -02, -03 complete** — 4 passes.
-After this run (`scripts/phase2-merge.py`): **525 unique candidates**, **133 proposed by ≥2 passes** (up from
-54 at 2 passes), **88 opus-corroborated**. The agreement core more than doubled while uniques still grew
-~170, so the passes are **converging but not yet saturated** → staying `--mode blind`; the switch to
-`--mode context-fed` (and then Gate 2) waits until a fresh blind pass adds little. Convergence table lives at
-`tools/weave-ledger/phase2/CANDIDATES.{md,tsv}`.
+Phase 2 is running as independent blind passes (plan §2.x). **pass-00 … pass-08 complete** — 9 passes.
+After this run (`scripts/phase2-merge.py`): **828 unique candidates**, **283 proposed by ≥2 passes**,
+**148 opus-corroborated**. Progression: 2 passes → 54 overlap; 4 → 133; **9 → 283**. The agreement core keeps
+growing but uniques are *still* climbing (525 → 828), so **not yet saturated** → staying `--mode blind`; the
+switch to `--mode context-fed` (then Gate 2) waits until a fresh blind pass adds little.
+- **times_suggested distribution:** 545×1, 149×2, 43×3, 32×4, 18×5, 21×6, 8×7, 9×8, 3×9. **47 candidates are
+  high-confidence (times≥5 AND consensus=ACCEPT)** — the Gate-2 short-list core.
+- **M-23/M-24 (new aeronautics seams) landed well:** 27 ACCEPT vs 3 REJECT across passes — the difficulty/depth
+  weave is corroborated, not a one-off. tfmg/create_ironworks/createmetalwork/create_new_age/createaddition
+  are the recurring anchors (steel/alloy → airframe; engine/motor/wire → drivetrain/control).
+Convergence table: `tools/weave-ledger/phase2/CANDIDATES.{md,tsv}`.
 
 **[NOTE] How the consensus column works (so Gate 2 reads it right).** `phase2-merge.py` dedups on
 `(mod, from-item, to-pillar, motif)` — **verdict is NOT in the key**, so an ACCEPT in one pass and a REJECT of
