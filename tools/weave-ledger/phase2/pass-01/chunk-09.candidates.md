@@ -221,6 +221,22 @@ Already at the 2-pillar goal; quality-audit mode applies.
 
 - from: chefsdelight Cook villager profession | via: M-21 (villager trade → numismatics) | to: economy | motif: M-21 | power: mid | tone: ok | verdict: REJECT (provisional motif — leans no per ledger) | reason: M-21 is provisional; maintainer leans no on villager→coin seams. Use M-09 (luxury food → coin) instead, which is accepted. Same outcome, better motif.
 
+## cmpackagecouriers   [anchors: Create, aeronautics (2)]
+
+Already at the 2-pillar goal; quality-audit mode applies.
+
+**Existing connections:**
+- Create ← `create:cutting` + `create:deploying` (cardboard plane crafted through Create). Hard-depends on Create packages/stock-ticker.
+- aeronautics ← autonomous flying courier; it is a logistics aircraft in the same design space as Aeronautics (flying autonomous contraption). Dossier confirms the mapping.
+
+**Audit of EXISTING connections:**
+- OK — Create anchor is genuine (the mod extends Create's own package logistics system; the cardboard plane is built via Create processes).
+- OK — aeronautics/logistics anchor makes sense: a flying courier that delivers packages cross-dimension sits squarely in the aeronautics/logistics pillar.
+- No REWORK items. The dossier notes "light economy adjacency (remote trade fulfilment)" but rightly leaves it — this is logistics infrastructure, not trade goods. The economy link would be that packages *carry* coin-purchased goods, which is already implicit.
+
+- LEAVE (additional edges) — already at 2 pillars, both grounded. The mod is logistics infrastructure; its value is enabling the Create-based trade network to reach remote outposts. No forced edges needed. The economy adjacency is structural (packages carry trade goods) and doesn't require a separate weave row.
+
+
 
 
 

@@ -194,3 +194,18 @@
 
 - LEAVE — pure eating-rule mod with no processable materials. Its diminishing-returns mechanic amplifies the value of diverse food across the survival pillar and indirectly incentivizes food trading (supporting M-09 economy candidates on food-producing mods), but solclassic itself has nothing to route through any method.
 
+## tidal-towns-1.3.4   [anchors: survival (1)]
+
+<!-- Method-pull: Tidal Towns is a structure datapack — zero items, zero registered recipe-types,
+     zero loot. It adds floating ocean villages built from vanilla blocks to deep_ocean biomes.
+     Nothing to route through any method.
+     The dossier is clear: "structure datapack with no items/methods to weave; its value is
+     exploration content (and a base for Aeronautics sea travel), not a recipe edge."
+     The Aeronautics sea-travel note is the most interesting angle: ocean villages are natural
+     waypoints for airship/boat routes, making them logistically relevant to the aeronautics
+     pillar. But that's a play-pattern observation, not a recipe weave.
+     No M-21 angle (no villager/trade unique items). No M-09 (no goods to sell). Nothing.
+     Conclusion: LEAVE. -->
+
+- LEAVE — zero items, zero registered methods, zero loot tables; vanilla-block structure datapack. The ocean villages are natural waypoints for Aeronautics sea routes (a play-pattern benefit to the aeronautics pillar), but there is nothing to route through a method; no recipe weave is possible.
+
