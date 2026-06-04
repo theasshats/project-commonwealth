@@ -1,0 +1,43 @@
+# Phase 2 candidates — chunk-06
+
+## sereneseasons   [anchors: survival (1)]
+- from: season_sensor redstone output | via: create:deploying / contraption logic | to: Create | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: the season sensor feeds a Create gearshift/contraption so automated farms switch crops or open greenhouse shutters on a seasonal clock — the pack's survival-automation loop in one wire
+- from: out-of-season produce (scarce) | via: numismatics sell | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: systemic link only — Serene Seasons does not produce a *specific item* to price; the scarcity effect is already ambient; a recipe edge would be spurious and could make trivial goods artificially tradeable
+- from: season_sensor redstone output | via: Create automation gating | to: Create | motif: M-05 | power: everyday | tone: ok | verdict: REJECT | reason: M-16 (seasonal reagent / automation) already covers this more precisely; M-05 is for gating a mod's flagship item inside its own machine on Create parts — not a redstone/signal bridge; keep M-16 as the governing motif
+
+## sky_whale_ship   [anchors: survival (1)]
+- from: whale-structure loot | via: loot-table → aeronautics destination | to: aeronautics | motif: M-15 | power: mid | tone: ok | verdict: ACCEPT | hook: sky whales are the natural destination for an Aeronautics airship expedition — seeding their loot with Create Aeronautics progression items (propeller blueprints, exotic fuels, Aeronautics schematics) makes them a genuine pillar gate, not just flavour scenery
+- from: whale-structure loot | via: numismatics sell / bounty | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: M-15 boss/destination loot is the cleaner primary anchor and loot tables carry only one focal role gracefully; adding a coin sink on top is thin and dilutes the aeronautics hook; revisit if the 0.9 economy pass wants a high-altitude bounty board
+
+## smokeleafindustries   [anchors: survival (1)]
+- from: refined extracts / gummies (finished consumables) | via: numismatics sell / dealer-trade bridge | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: the strain farm already has dealer/stoner village trades baked in — pricing the refined end-products (gummies, extracts) as Numismatics sell goods turns that existing trade loop into the pack's coin economy, no new machinery needed
+- from: smokeleafindustries:generator FE output | via: createaddition:charging (FE↔kinetic bridge) | to: Create | motif: M-17 | power: mid | tone: ok | verdict: ACCEPT | hook: the smokeleaf generator makes FE from burnable biomass; wiring it through Create Addition's FE↔kinetic conversion folds the otherwise-isolated farm into the Create rotation network — the stoner-tech island becomes a biomass power source for Create contraptions
+- from: raw hemp / buds | via: create:milling | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: smokeleafindustries already has its own grinder/dryer processing chain; routing hemp through Create milling as a *parallel* path creates redundant graph edges without adding meaningful depth — the FE bridge (M-17) is the stronger single join; keep one clean seam not two overlapping ones
+- from: strain seeds / buds | via: occultism:ritual / spirit_fire | to: magic | motif: M-11 | power: mid | tone: clash | verdict: REJECT | reason: tone clash — ritual-transmuting hemp into occult essences reads as thematic nonsense (psychoactive crop ≠ arcane material); the mod's humor vibe does not bridge to Occultism's gothic-grimoire aesthetic
+
+## solclassic   [anchors: survival (1)]
+- LEAVE — ambient food-history rule with no items/materials to weave; no machine or method registered. Its second-pillar value is entirely systemic (the broader the food roster, the more it matters), and that value is delivered for free by the pack's food mods without any recipe edge. Forcing an edge would be a spurious graft onto a deliberately-invisible rule layer.
+
+## solonion   [anchors: survival (1)]
+- from: golden_lunchbox (the tier-3 best food container) | via: create:mechanical_crafting | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: gating the golden lunchbox (the pack's best auto-food QoL item) behind a Create mechanical-crafting step means reaching the comfort tier requires engaging the tech spine — a clean "tech rewards exploration convenience" beat without touching the ambient food rule
+- from: lunchbag→lunchbox upgrade | via: solonion:upgrade_food_container (existing method) | to: Create | motif: M-20 | power: everyday | tone: ok | verdict: REJECT | reason: the upgrade_food_container recipe is vanilla-crafting; re-routing it through create:deploying / item_application would break the expected upgrade UX and the lunchbag→lunchbox is an everyday low-tier step — M-10 guardrail ("never gate a basic component behind a complex recipe") applies; M-05 on the golden tier is the right depth match
+- from: lunchbox food diversity score | via: numismatics economy incentive | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: no material to price — the diversity score is a player stat, not a tradeable item; the economy link is entirely ambient (players with varied diets are more productive traders) and cannot be expressed as a recipe edge
+
+## t_and_t   [anchors: survival (1)]
+- from: village / fort structure loot (chest items) + structure villagers | via: numismatics trade / sell economy seed | to: economy | motif: M-21 | power: everyday | tone: ok | verdict: ACCEPT (provisional motif) | hook: the 16 biome-specific village variants are natural trade hubs — seeding their chest loot and resident villager trades toward Numismatics goods turns every new settlement the crew finds into an economy touchpoint; M-21 is provisional but this is a strong candidate for review
+- from: pillager fort conquest | via: bountiful bounty board → numismatics payout | to: economy | motif: M-14 | power: mid | tone: ok | verdict: REJECT | reason: the fort-conquest loop is a good M-14 candidate in principle but M-14 is already provisional; stacking two provisional-motif verdicts on one mod's second pillar is too speculative — note for human review alongside the M-21 call above; keep the village-trade hook as the primary candidate
+- from: sail-ship / ocean structure loot | via: aeronautics destination | to: aeronautics | motif: M-15 | power: mid | tone: ok | verdict: REJECT | reason: tone stretch — the sail-ship is a static worldgen structure, not an active aeronautics target; sky_whale_ship is the dedicated airborne-destination slot for M-15; duplicating it here dilutes both; the economy hub angle via M-21 is the stronger unique hook for t_and_t
+
+## terralith   [anchors: survival (1)]
+- LEAVE — data-only worldgen overhaul with no items, blocks, or methods of its own. Its real contribution is the terrain and biome diversity that OTHERS' content (regional ores, structure spawning, biome-specific crops via Serene Seasons) lands on. There is no material to route through any method; any weave would be a fiction layered on top of a support mod. Terralith earns its place via the indirect effect of making all the survival/exploration/scarcity systems richer, not by being woven itself.
+
+## tidal-towns-1.3.4   [anchors: survival (1)]
+- LEAVE — pure vanilla-block structure datapack with no items, blocks, or methods. The ocean settlements are exploration content and a base for sea travel (thematic aeronautics / naval adjacency) but there is no material handle to weave through any method. Like Terralith, value is structural/positional (giving the crew places to find on the sea) rather than ingredient-based. A loot-table rider could in principle point toward Numismatics or Aeronautics gear, but that work belongs on the pack-level loot customisation layer, not this mod's entry.
+
+
+
+
+
+
+
+

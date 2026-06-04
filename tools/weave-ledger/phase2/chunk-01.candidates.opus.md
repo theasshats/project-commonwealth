@@ -1,0 +1,23 @@
+# Phase 2 candidates — chunk-01  (OPUS comparison run)
+
+> Independent map; authored nothing. Method-pull first, power-read, theme-fit/red-team, motif-cite.
+> Wrote without reading the Sonnet file. Reagent-ownership + M-01..M-22 respected.
+
+## undergroundworlds   [anchors: survival (1)]
+Power-read: a self-contained biome/dungeon explorer. Charms (Desert Charm = blindness immunity, Antidote Flask = poison immunity) are *mid*-tier Curios gear — useful, not flagship. Weapons (Blade of the Jungle, Freezing tools, Axe of Regrowth) are mid dungeon loot. `spider_fang` (from Black Recluse) is the one genuine loose mob-drop reagent. Temple/Pyramid/Ice brick families are everyday deco. No registered recipe-type of its own — pure method-*consumer* candidate.
+
+- from: undergroundworlds:spider_fang | via: occultism:spirit_fire (or ars_nouveau:imbuement) | to: magic | motif: M-11 (+M-02) | power: everyday | tone: ok | verdict: ACCEPT | hook: a recluse fang is a venom reagent — burn it in spirit-fire into a toxin/poison essence the way every spider drop earns a magic use.
+- from: undergroundworlds:spider_fang | via: bountiful board objective (kill Black Recluse / turn in fangs) → numismatics payout | to: economy | motif: M-14 (provisional) · M-02 | power: everyday | tone: ok | verdict: ACCEPT | hook: dungeon delvers post "clear the spider cave" bounties; the fang is the proof-of-kill the board pays out on.
+- from: undergroundworlds:temple_bricks / pyramid_bricks / ice_bricks (block families) | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: dungeon masonry crushes back to sand/gravel + an xp nugget — lossy salvage so a looted temple-brick haul isn't a dead-end deco island.
+- from: undergroundworlds:desert_charm / antidote_flask | via: ars_nouveau:enchanting_apparatus / imbuement upgrade | to: magic | motif: M-10 | power: mid | tone: ok | verdict: REJECT | reason: the charms ALREADY grant clean status-immunity by design (blindness / poison); re-routing them through an arcane upgrade adds a tax without adding power, and risks gating a finished item behind infusion for no gameplay gain. Leave them as-is; the fang carries the magic tie.
+- from: undergroundworlds:quicksand | via: create:* | to: Create | motif: — | power: everyday | tone: clash | verdict: REJECT | reason: no-motif; quicksand is a hazard-block gimmick with no material to route. Forced edge.
+
+## bakery   [anchors: survival (1) — already downstream of farm_and_charm cooking methods]
+Power-read: finished cakes / tarts / cupcakes / gateaux are the *top* of a multi-station bake chain (crops → flour → dough → bake) — genuinely high-effort consumables. Jams are mid. Bread/buns are everyday. The sweets-buff stack (speed+strength up to 10x) is a notable mid-power effect. Already woven INTO farm_and_charm cooking (made-by), so survival is solid; the open question is a *non-survival* second pillar.
+
+- from: bakery finished cakes/tarts/gateaux (e.g. chocolate_gateau, linzer_tart, bundt_cake) | via: numismatics vendor/price | to: economy | motif: M-09 | power: endgame(food) | tone: ok | verdict: ACCEPT | hook: a decorated gateau is the most labor a kitchen produces — the patisserie sells its showpieces to other players, exactly the luxury-good→coin loop. Scope the sell value to the *finished* cake, not the bread.
+- from: bakery breads/cakes (bulk) | via: minecolonies food supply (zero_waste/restaurant intake) | to: economy/colony | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: a colony restaurant accepts the baker's surplus bread as a feed source — the same luxury-good sink pointed at colonists rather than coin. (Folds into the M-09 line; lighter sibling.)
+- from: bakery wheat → flour | via: create:milling | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: flour is already owned upstream by farm_and_charm (its mincer/crafting_bowl makes flour) AND a Create milling→flour path almost certainly already exists pack-wide; adding bakery's own would be a duplicate everyday edge, not a 2nd pillar for *bakery* (the mill tie belongs to the grain mods, farm_and_charm / expandeddelight). M-09 is the real 2nd pillar here.
+- from: bakery surplus crops/baked goods | via: ars_nouveau agronomic/vitalic sourcelink (passive Source) | to: magic | motif: M-02 | power: everyday | tone: clash | verdict: REJECT | reason: weak + better owned by the farm mods; a baker feeding a magic battery is a thin thread and the dossier itself flags it as better-owned elsewhere.
+
+## expandeddelight   [anchors: survival (1) — rides the Delight cooking web]
