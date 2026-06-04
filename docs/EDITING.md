@@ -1,6 +1,6 @@
 # Editing Derpack X
 
-How to add mods, change configs, and ship updates. Most of this happens through the Derpack Editor — a local desktop app that runs from the repo. The GitHub Actions workflows still work as a fallback.
+How to add mods, change configs, and ship updates. Most of this happens through the Derpack Editor — a local desktop app that runs from the repo. When the editor isn't an option, the packwiz CLI is the fallback.
 
 This doc assumes you've already done the [one-time setup in the README](../README.md#setup-one-time): GitHub Desktop installed, repo cloned, Java 21 installed.
 

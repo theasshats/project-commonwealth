@@ -24,7 +24,7 @@ off those two.
 | Doc | Purpose |
 |---|---|
 | [`PRISM-SETUP.md`](PRISM-SETUP.md) | Player-facing install walkthrough (Prism Launcher). |
-| [`EDITING.md`](EDITING.md) | How to add mods / change configs / ship updates — the editor flow plus CLI/Actions fallbacks. |
+| [`EDITING.md`](EDITING.md) | How to add mods / change configs / ship updates — the editor flow plus the packwiz CLI fallback. |
 | [`CI-CHECKS.md`](CI-CHECKS.md) | What the merge-gating `pr-checks.yml` validates (and how to make the checks required). |
 
 ## Planning & process — living docs
@@ -61,7 +61,7 @@ the five-systems framing; they are **not** interchangeable:
 - `MODLIST-AUDIT.md` is a **snapshot audit** (a planning artifact, not a decision).
 
 **`EDITING.md` ↔ `../mods/README.md`.** `EDITING.md` is the **task walkthrough** (add a mod, change a
-config, ship an update, with editor + Actions fallbacks); `mods/README.md` is the **manifest reference**
+config, ship an update, with the editor + packwiz CLI fallback); `mods/README.md` is the **manifest reference**
 (the `.pw.toml` format, the `pin`-placement gotcha, hash workflows). Link across for depth; keep the
 walkthrough out of the reference and vice-versa.
 
