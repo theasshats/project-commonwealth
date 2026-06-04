@@ -10,6 +10,9 @@ guns, ammo, and attachments were missing and the gun smith table had nothing to 
 now bundles the gun pack the same way the build scripts do, so a fresh build has the full Armorer
 lineup. No recipes or content changed; this only restores files that should have been included.
 
+The stock TaCZ gun smith table can no longer be crafted, so the Create: Armorer table is the one
+survival path to building guns. The stock block still exists in the creative tab.
+
 ## 0.5.2 — Magic Web (diff vs 0.5.1)
 
 The magic mods are now tied together. Ars Nouveau sits at the center: its Source acts as a common
