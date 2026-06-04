@@ -28,6 +28,15 @@
 ## createshufflefilter   [anchors: Create (1)]
 - LEAVE — two-item Create QoL filter utility. Shuffle Filter and Weighted Shuffle Filter are pure builder tools that modulate Deployer randomness; no material I/O, no method, no loot, no thematic adjacency to any other pillar. No coherent second pillar without forcing it.
 
+## valarian_conquest   [anchors: survival (1)]
+- from: valarian_conquest faction drops (shields, weapons, armor — mid-tier faction loot) | via: numismatics sell/price + villager-trade | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: faction loot and citizen-trade are naturally transactional — Numismatics prices captured gear as merchantable spoils of war, making conquest feed the player economy.
+- from: valarian_conquest mercenary hire / faction citizenship | via: numismatics coin (pay-to-recruit) | to: economy | motif: M-21 (provisional) | power: mid | tone: ok | verdict: ACCEPT (provisional motif) | hook: hiring mercenaries or swearing allegiance costs Numismatics coin — combat investment has a direct economic price. Flag provisional: M-21 leans no; surface for review.
+- from: valarian_conquest:armorsmith station | via: create:deploying / item_application (M-20) — gate faction high-tier armor craft on Create-processed plate/chain inputs | to: Create | motif: M-20 | power: mid | tone: ok | verdict: ACCEPT | hook: faction knight armor requires factory-pressed metal plate from a Create line — martial gear earns its power through the tech spine without over-gating common faction drops.
+- from: valarian_conquest boss/elite drops (e.g. signature knight items) | via: ars_nouveau:imbuement or occultism:ritual | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: a conquered faction lord's relic is a magic reagent — battle trophies fuel arcane rituals, tying martial victory to the magic pillar.
+- from: valarian_conquest:builder station outputs | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: builder station outputs are functional blocks/items, not deco — M-04 is for deco recycling. Forcing a crush path here is arbitrary and degrades the station's identity.
+- REWORK: dossier's M-05 candidate (armorsmith station gated on Create parts) is labelled WEAK. M-20 (deploy/item_application) is a lighter and more appropriate form — a single Create-processed plate as one station input, not a full multi-step gate. The M-05 label is technically wrong (M-05 is native-method gating, not item_application); swap to M-20.
+
+
 
 
 

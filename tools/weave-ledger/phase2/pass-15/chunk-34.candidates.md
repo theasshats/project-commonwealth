@@ -13,5 +13,10 @@
 - from: farm_and_charm:barley (grain crop) | via: config / worldgen — Serene Seasons gating | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: barley is a summer/autumn crop; restricting its harvest window (via SereneSeasons crop-config) ties the farmhouse cooking chain to seasonal rhythm — you can't bake barley bread in winter.
 - REWORK: current anchor is survival (1-pillar). No existing cross-pillar connections to flag as weak — the mod has no inbound foreign-method weaves yet. First ACCEPT above (Create milling) and second (M-09 economy sell) together bring it to 3 pillars, which is the goal; the seasonal gating (M-16) is a reinforcing survival-depth touch, not a separate pillar jump.
 
+## createpickywheels   [anchors: Create (1)]
+- from: biome-gated power placement (water wheel → River biome, windmill → open Overworld) | via: config tie | to: survival | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: the biome/placement gate is a genuine survival-world-pushes-back flavor, but it has no material surface — no item, no loot, no recipe to route through a method. It's a behavioral config constraint on an existing Create machine, not a connective weave. No motif covers pure config-gating of another mod's generator. REJECT (no-motif); worth a Gate-0 note if a "geography-gates-power" motif is ever desired, but don't force it now.
+- LEAVE — 0 blocks, 0 items, loot=no. The mod's value is a behavioral constraint on Create generators; it has no material surface to weave. Pure Create-internal balance tweak.
+
+
 
 
