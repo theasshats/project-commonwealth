@@ -313,8 +313,10 @@ connectivity % into a target.
 ## 5. The phases
 
 Each phase states inputs → outputs → tools → the human gate. Phases 0–1 are cadence-independent (run now,
-as Backlog/living, like #160/#161); 2–4 ride the odd feature versions; 5 is the 0.15 review + recurring
-upkeep.
+as Backlog/living, like #160/#161); **Phase 2 → 2.5 is the planning instance's terminal run** — it maps
+opportunities and emits milestone-attached issues, then the instance is **retired** and **Phase 3
+(authoring) onward is milestone work done elsewhere**, riding the odd feature versions; 5 is the 0.15
+review + recurring upkeep.
 
 ### Phase 0 — Scaffolding & vocabulary (one-time)
 - **Do:** build the dossier generator (§9.1); define `WEAVE-LEDGER.md` + `weaves.json` schema; **seed the
@@ -363,9 +365,28 @@ upkeep.
 - **In:** dossiers + recipe-graph + ledger + filtered issues. **Out:** a **candidate weave list** per
   chunk — one line each: (from-material, →through-**method**, to-pillar, hook, motif, **power-tier**,
   **tone-fit**, confidence) — **plus** a short **rework list** for existing weaves that fail the audit.
+- **Record EVERYTHING — including the rejects.** Every proposed integration is logged in the ledger's
+  `considered` set, **including the ones the red-team or theme-fit shot down**, with the kill reason.
+  Nothing is silently dropped: a human reviews the full considered-set (accepted *and* rejected) **before
+  Phase 3**, so a good idea killed for a fixable reason isn't lost and a pattern in the rejects is visible.
 - **Gate (Gate 2 — the main taste gate):** maintainer reads the candidate list (cheap: one-liners, not
   code) and marks each **approve / reject / needs-discussion**. This kills lifeless ideas *before*
   authoring, where rejection is nearly free.
+
+### Phase 2.5 — Issue authoring & handoff (the instance's last step)
+- **Do:** turn each **accepted** integration into a **GitHub issue attached to the right milestone** (its
+  pillar's odd version per [`RELEASE-CADENCE.md`](RELEASE-CADENCE.md): Create→0.7, economy→0.9,
+  survival/magic→0.11, aeronautics→0.13; curation/hygiene→0.6 or Backlog), with the candidate's
+  method / motif / power-tier / sources inlined so the issue is self-contained. **Fold a candidate into an
+  existing issue rather than duplicating it** (the repo already has many milestone-attached pillar issues —
+  e.g. #137 bounties, #143 aeronautics fuel, #92 boss-drop gating, #91 survival/seasons). Then **commit all
+  context** (ledger, dossiers, considered-set).
+- **Why it exists:** **authoring (Phase 3) and everything after is milestone work, done elsewhere** — this
+  planning instance is **shut down after Phase 2.5**. Phase 2.5 *is* the handoff: the durable artifacts are
+  the milestone-attached issues + the committed ledger, not a running session.
+- **In:** approved candidate list + considered-set. **Out:** one milestone-tagged issue per accepted
+  integration (or a comment on the issue it belongs to); committed context.
+- **Gate:** maintainer confirms the issue set before the instance is retired.
 
 ### Phase 3 — Authoring (per chunk, rides odd versions)
 - **Do:** **jar-verify the *method* schema** for each target mechanic before writing (the magic-web

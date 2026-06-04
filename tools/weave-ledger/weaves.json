@@ -113,6 +113,41 @@
       "method": "farmersdelight:cooking",
       "pillars": "survival+create/economy",
       "status": "proposed"
+    },
+    {
+      "id": "M-13",
+      "name": "Fuel to propulsion",
+      "method": "tfmg/createaddition fuel -> aeronautics engine",
+      "pillars": "create+aeronautics",
+      "status": "accepted",
+      "issue": 143
+    },
+    {
+      "id": "M-14",
+      "name": "Bounty to drop economy",
+      "method": "bountiful -> numismatics",
+      "pillars": "organic+economy",
+      "status": "accepted-provisional",
+      "issue": 137,
+      "note": "keep currency player-run (Eco-style); revisit in 0.9 economy update"
+    },
+    {
+      "id": "M-15",
+      "name": "Boss-key unlock",
+      "method": "gated machine recipe (boss drop input)",
+      "pillars": "organic+create",
+      "status": "accepted",
+      "issue": 92,
+      "note": "must stay thematically sensible"
+    },
+    {
+      "id": "M-16",
+      "name": "Seasonal reagent",
+      "method": "serene-season-gated input -> create/magic method",
+      "pillars": "survival+create/magic",
+      "status": "accepted",
+      "issue": 91,
+      "note": "Serene Seasons is a priority survival lever; want more"
     }
   ],
   "reagents": {
@@ -122,7 +157,10 @@
     "occultengineering:spirit_solution": "M-11",
     "create:experience_nugget": "M-03",
     "numismatics:cog": "M-08",
-    "irons_spellbooks:arcane_essence": "M-01"
+    "irons_spellbooks:arcane_essence": "M-01",
+    "tfmg:diesel": "M-13",
+    "tfmg:gasoline": "M-13",
+    "_boss_signature_drops": "M-15"
   },
   "weaves": []
 }

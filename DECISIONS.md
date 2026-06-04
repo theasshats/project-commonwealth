@@ -10,17 +10,20 @@ theme/balance · **[PLAN]** plan-doc change · **[GITHUB]** issue action · **[N
 
 ---
 
-## Status — HOLDING for your review before Gate 1
+## Status — round-2 feedback integrated; now running Gate 1
 
-Phase 0 + Phase 1 complete (**367/367 dossiers VERIFIED**, pushed). Per your instruction I've integrated
-your feedback into the docs and am **holding** — not running Gate 1 (the dossier spot-check) or Phase 2
-until you approve. `check.py` coverage now reads: **58 at ≥2 pillars** (coverage met — *not* "done", per
-your call), **235 support-role**, **74 content mods at <2 pillars**.
+Phase 0 + Phase 1 complete (**367/367 dossiers VERIFIED**, pushed). This round I integrated your second
+batch of feedback (below), **re-ran phases 0–1** (no regen needed — see digest note), filed the decision
+issues, and am now **running Gate 1** (dossier spot-check), with questions bundled at the end.
+`check.py`: **58 at ≥2 pillars** (coverage met — *not* "done"), **235 support-role**, **74 content mods at
+<2 pillars**.
 
-⚠ **The digest is stale — it caveats those numbers.** The mod-data digest predates recent curation:
-**358 manifests vs 367 dossiers**, so ~9 dossiers describe mods no longer in the pack (the **EMI** family
-among them). Before Gate 1 the digest should be regenerated and orphan dossiers pruned — this is exactly
-**#131**. Read the 367 as "≈358 live + ~9 stale."
+✅ **Digest correction (I was wrong last round).** Re-running `build-dossiers.py` on the unchanged digest
+produces **zero** changes — the digest is **not** stale. But EMI is genuinely **absent from the manifests**
+(filename *and* content) yet **present in the digest** → a **manifest↔instance drift** (the instance the
+digest was built from still has EMI jars; that's why your re-run showed no changes). Per your call I handed
+this to a cheaper-model agent to **fold into #131** (the digest issue), *not* a dossier prune. The EMI
+in/out decision is yours — see Gate-1 questions.
 
 ## Your feedback — actions taken this turn
 
@@ -50,40 +53,40 @@ among them). Before Gate 1 the digest should be regenerated and orphan dossiers 
   203 dropped recipes are recipe_integration's conditional-for-absent-mods noise vs. real lost content.
   Did **not** run the count, per your instruction.
 
-## Curation / balance flags — updated per your calls
+## Curation / balance flags — RESOLVED into issues this round
 
-- **[KEEP] Spice of Life — both `solclassic` + `solonion` are desired** (not a cut). **Action queued:**
-  check whether a single **2-in-1 SoL** variant exists that covers both the penalty and reward models
-  (would collapse two mods into one); if so, propose it; else keep both.
-- **[CORRECTION] EMI is already gone — you were right.** There are **no EMI manifests in `mods/`**; the
-  pack already cut the EMI family + `emi_letsdo_compat`. The EMI *dossiers* exist only because the digest
-  is stale. So this isn't a "remove EMI" task — it's the **digest-regen + orphan-prune** above (#131). No
-  separate issue needed.
-- **[ISSUE?] `trashcans` — debate, weighted expensive-or-remove.** Unlimited void sink is mildly
-  anti-scarcity. **Action queued:** debate it; if kept, gate behind a meaningfully **expensive** Create
-  craft, else remove. Candidate GitHub issue — say the word (and a milestone) and I'll file it.
-- **[CONFIRMED] `samurai_dynasty` silver ≠ palladium.** You confirmed it's genuine silver. **Action:**
-  ensure it unifies with the real silver (`occultism`, `c:ingots/silver`) and is **never** merged into
-  Galosphere palladium. (The boot-log stale silver-compat recipe is tracked at #119 §4.)
+- **[#91 comment] Spice of Life — keep both** `solclassic` + `solonion` (per your call). Commented on #91
+  with the keep-both decision + the 2-in-1-variant check action.
+- **[#131 — agent, done] Manifest↔digest drift (broader than EMI).** Corrected from last round (drift, not
+  stale dossiers). The agent folded it into #131 (comment posted) and found **10 digest entries with no
+  manifest** — the 6 EMI jars (confirmed cut, JEI replaced them) **+ `ArPhEx`, `CreeperOverhaul`,
+  `MutantMonsters`, `sophisticatedcore`** (unclear if intentional cuts) — and **1 manifest with no digest
+  entry**: `smarter-farmers` (added after the last digest gen). So ~10 of the 367 dossiers may describe
+  mods no longer shipped, and `smarter-farmers` has no dossier yet. **Gate-1 question:** confirm which of
+  those 10 are truly out (prune their dossiers) vs. in (need re-adding), and regen the digest so
+  `smarter-farmers` gets a card.
+- **[#176 filed] `trashcans`** — new issue: debate, weighted expensive-or-remove (anti-scarcity void sink).
+- **[#177 filed] `samurai_dynasty` silver ≠ palladium** — new issue: unify as `c:ingots/silver`
+  (occultism), never Galosphere palladium; cross-refs #119 §4 / #103.
 
-## Proposed new motifs / reagents — for your Gate-0 review (NOT yet usable to author)
+## Approved motifs (Gate-0 this round) — now in the ledger, tracked on issues
 
-Starter set from common current-mod/pack patterns (history noted); a fuller pass is Phase 0.5. Not added to
-`weaves.json` until you approve.
-- **M-13 Fuel→propulsion** — refined fuels (TFMG diesel/LPG, Create Addition) power Aeronautics engines /
-  generators. Method: engine/generator intake. Pillars: Create↔aeronautics. *History:* TFMG×Aeronautics is
-  a common 1.21 pairing.
-- **M-14 Bounty→drop economy** — a bounty board (`bountiful`) consumes mob drops / pays coin, turning
-  combat into economy. Pillars: organic↔economy. *History:* Bountiful is the standard bounty mod; pairs
-  with Numismatics in trade packs. (Ties to #137.)
-- **M-15 Boss-key unlock** — a boss drop is the gate item for a complex Create/tech recipe (the DESIGN
-  "complex tech unlocks via boss drops" rule). Pillars: organic↔Create. *History:* our own north star;
-  common in progression packs.
-- **M-16 (blue-sky) Seasonal reagent** — a crop/material obtainable only in a given Serene Season feeds a
-  machine/ritual, tying survival-seasons to Create/magic. Pillars: survival↔Create/magic. *No in-pack
-  history yet* — flagged for review.
-- Reagent candidates: `tfmg:diesel`/`gasoline` (M-13), `numismatics` payout coins (M-14), each boss's
-  signature drop (M-15).
+You blessed all four; **M-13–M-16 are now in `WEAVE-LEDGER.md` + `weaves.json` (status `accepted`)**, each
+folded onto its existing pillar issue rather than a duplicate:
+- **M-13 Fuel→propulsion** ("good") → commented on **#143** (aeronautics fuel). `tfmg:diesel`/`gasoline`
+  reserved.
+- **M-14 Bounty→drop economy** ("interesting, add for now") → commented on **#137**, with your caveat:
+  Eco-style economy is **player-run currency**, so board payouts are provisional — **review in the 0.9
+  economy update**.
+- **M-15 Boss-key unlock** ("great, should make sense") → commented on **#92**, with the
+  must-stay-sensible caveat.
+- **M-16 Seasonal reagent** ("damn good use of Serene Season") → commented on **#91**. Recorded as a
+  **priority survival-pillar lever** — you want Serene Seasons to be a major focus; more like it.
+
+> **Judgment call I'm flagging (per "add issues for each point"):** four of your points already had
+> dedicated, milestone-attached issues (#137/#143/#92/#91), so I **commented the decision onto those**
+> rather than creating duplicates, and filed **new** issues only for the two with no home (#176, #177). Say
+> the word if you'd rather have standalone issues for the others.
 
 ## Run policy (revised per your guidance — supersedes the earlier "cost lesson")
 

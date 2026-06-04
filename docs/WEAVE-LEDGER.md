@@ -37,9 +37,15 @@ sign-off), because it propagates globally. Reusing an approved motif does not ne
 | M-10 | **Arcane infusion pull** — a foreign material is refined/attuned into a magic reagent through an arcane infusion method | `ars_nouveau:imbuement` · `forbidden_arcanus:*infusion*` | any↔magic | proposed (generalizes M-01) |
 | M-11 | **Ritual / transmutation sink** — a drop or material is transmuted into an essence through a ritual/spirit method | `occultism:spirit_fire` / `ritual` | organic↔magic | proposed · `34`/`35-magic-web-*` |
 | M-12 | **Processing-chain pull** — a raw crop/material is run through another mod's processing method into a finished/sellable good | `farmersdelight:cooking`/`cutting` · `create:milling`/`mixing` · `extradelight:*` | survival↔Create/economy | proposed (generalizes M-03/M-09) |
+| M-13 | **Fuel → propulsion** — refined fuel powers an Aeronautics engine/generator (the airship/vehicle supply line) | TFMG / Create-Addition fuel → engine intake | Create↔aeronautics | **accepted** · #143 |
+| M-14 | **Bounty → drop economy** — a bounty board consumes mob drops and pays coin (combat → economy) | `bountiful` board → `numismatics` payout | organic↔economy | **accepted (provisional)** · #137 — ⚠ keep currency **player-run** (Eco-style); revisit in the 0.9 economy update |
+| M-15 | **Boss-key unlock** — a boss drop is the gate item for a complex Create/tech recipe (the DESIGN on-ramp) | the gated machine's own recipe (boss drop as input) | organic↔Create | **accepted** · #92 — must stay thematically sensible |
+| M-16 | **Seasonal reagent** — a crop/material obtainable only in a given Serene Season feeds a machine/ritual | season-gated input → Create/magic method | survival↔Create/magic | **accepted** · #91 — Serene Seasons is a **priority** survival lever; want more of these |
 
 _Motif rules: **compose, don't invent**; a motif carries its **anti-arbitrage rule** (M-01/M-07
-round-trips lose value; M-04 is lossy). New motifs enter via Gate 0 — log the request in `DECISIONS.md`._
+round-trips lose value; M-04 is lossy). New motifs enter via Gate 0 — log the request in `DECISIONS.md`.
+**M-13–M-16 were Gate-0 accepted in the Phase-1 review** (M-01–M-12 seeds; M-08–M-12 still pending an
+explicit blessing)._
 
 ---
 
@@ -56,6 +62,8 @@ not a local override. (Two chunks repurposing the same reagent incompatibly is a
 | `create:experience_nugget` | standard `create:crushing` byproduct | M-03 / M-04 |
 | `numismatics:*` (cog / spur / bevel / sprocket / crown / sun) | the coin sink — owned by the economy pillar | M-08 / M-09 |
 | `irons_spellbooks:arcane_essence` | Iron's-side magic currency, bonded to source via M-01 | M-01 |
+| `tfmg:diesel` / `gasoline` / `lubricant` (fuels) | Aeronautics propulsion fuel | M-13 |
+| each boss's signature drop (per boss) | boss-key gate item for complex tech | M-15 |
 
 ---
 
@@ -64,6 +72,11 @@ not a local override. (Two chunks repurposing the same reagent incompatibly is a
 Each authored or proposed connection. Status is a state machine:
 `proposed → approved → authored → validated(static) → playtested`. Confidence is two independent flags:
 **COHERENT** (an LLM can assert) and **BALANCE-OK / BALANCE-PENDING** (only play confirms).
+
+**The `considered` set — record everything, including rejects.** Every integration *proposed* in Phase 2
+is logged here even if the red-team or theme-fit **rejected** it (status `rejected`, with the reason), so a
+human reviews the full set — accepted and killed — before Phase 3, and a good idea dropped for a fixable
+reason isn't lost.
 
 Format:
 ```
