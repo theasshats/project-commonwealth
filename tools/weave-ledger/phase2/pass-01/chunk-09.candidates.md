@@ -183,6 +183,26 @@ Already at the 2-pillar goal; quality-audit mode applies.
 
 - from: bits_n_bobs tile/chair deco blocks | via: create:crushing → crushed stone + xp nugget byproduct | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT (low priority — confirms existing Create anchor; recycle path prevents deco from being a dead end) | hook: a tile floor torn out goes back into the crusher — deco and industry stay one loop
 
+## cbc_at   [anchors: Create, aeronautics (2)]
+
+Already at the 2-pillar goal; quality-audit mode applies.
+
+**Existing connections:**
+- Create ← `create:cutting` + CBC's assembly chain (the munition pipeline). All barrels/breeches are machined from Create metals.
+- aeronautics ← autocannons/rocket pods mount directly on Create Aeronautics ships/contraptions for PvPvE combat. The mod exists specifically for ship armament.
+
+**Audit of EXISTING connections:**
+- OK — Create weave is deep and inbound: barrel machining through `create:cutting`, munition assembly through the CBC chain. Not incidental.
+- OK — aeronautics anchor is structural: the weapons mount on physics ships. Without Aeronautics, this mod's role shrinks significantly.
+- REWORK (design depth, not a missing pillar): the dossier notes that gating the heavy-autocannon / rocket tier behind a boss drop (M-15) or MineColonies unlock would fit the pack's scarcity/progression curve. This is a design improvement on the Create anchor's depth, not a new pillar. Boss-key gate for the heavy tier reads as coherent (endgame ship weapon should require endgame gate).
+
+**No missing pillar; design candidate only:**
+
+- from: cbc_at heavy-autocannon / rocket-pod (endgame tier) | via: boss-drop gate (M-15) | to: Create (depth) | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT (design improvement — scarcity/progression) | hook: you can't bolt a battleship cannon onto a ship until you've earned the boss drop that proves you can survive one
+
+- from: cbc_at munitions (gunpowder/propellant chain) | via: tfmg:coking or create:mixing (chemical propellant) | to: Create | motif: M-12 | power: mid | tone: ok | verdict: REJECT | reason: propellant already feeds through CBC's own assembly chain; adding a TFMG coking step upstream is plausible but speculative without knowing exact propellant recipe ids; flag for review in the artillery/propellant recipe pass rather than accepting blindly here. No-evidence of propellant recipe gap — REJECT-for-review.
+
+
 
 
 

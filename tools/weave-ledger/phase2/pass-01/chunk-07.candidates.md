@@ -141,3 +141,29 @@
 - from: mowziesmobs:sol_visage (endgame Barako boss drop) | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Sol Visage channels solar power; infusing it into the enchanting apparatus (fuelled by source) as a sun-themed arcane catalyst sits cleanly in the magic pillar at appropriate depth.
 - from: mowziesmobs:ice_crystal (endgame, non-renewable boss drop) | via: occultism:spirit_fire → frost essence | to: magic | motif: M-11 | power: endgame | tone: ok | verdict: REJECT | reason: ice_crystal is already used as a boss-key gate (M-15 above). Repurposing it as a consumable ritual reagent burns a unique gear item; supply is per-spawn limited. Double-assignment risks frustrating players. If a second magic weave is needed, prefer sol_visage (M-10 above). Defer to Gate 2.
 
+## t_and_t   [anchors: survival (1)]
+
+<!-- Method-pull: Towns and Towers registers zero items, zero methods. Its content is worldgen
+     structures (16 biome village variants, conquerable forts, ocean sail ships) with vanilla loot
+     tables. The only material "output" is what the structures contain (vanilla loot + villagers).
+     The 16 biome village variants populate the world with trade-ready NPCs across biomes — that
+     is a genuine hook for the economy pillar if we consider that village-type selection determines
+     what professions and trades appear, which drives the Numismatics economy.
+     Dossier candidate: economy via villagers/Numismatics — village structures as trade hubs,
+     feeding the player-run coin economy. This is an M-21 pattern (villager trade → Numismatics),
+     which is provisional and the maintainer leans no. No M-09 angle either — t_and_t produces
+     no processable goods, only structures.
+     Alternative angle: the conquerable forts/camps can become player bases (useful for aeronautics
+     logistics hubs), but that's a play-pattern note, not a weave.
+     Loot table injection: a pack could add pack-specific trade goods to t_and_t village loot
+     chests, but that's a separate loot-table authoring decision (not a weave in this pass).
+     Red-team: every "economy via villages" idea for a zero-item structure mod ultimately reduces
+     to "more village variants → more traders → more trade". That's true but it's the same one
+     pillar (survival/exploration) viewed through a trade lens, not a genuine 2nd pillar.
+     The dossier itself says "the economy hook is via loot/trade tables, not a process".
+     Conclusion: LEAVE — zero items, zero methods; the village-trade angle is M-21 provisional
+     (leans no) and does not constitute an authored weave. Its value is world texture for
+     exploration and base-seeding, which is survival pillar work. -->
+
+- LEAVE — zero items, zero registered methods; pure worldgen structure overhaul. The 16 biome village variants enrich the world and create natural trade-hub locations, but any economy angle routes through M-21 (provisional, leans no) or requires separate loot-table authoring outside this pass. No coherent recipe weave exists.
+
