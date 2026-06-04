@@ -373,6 +373,47 @@ review + recurring upkeep.
   code) and marks each **approve / reject / needs-discussion**. This kills lifeless ideas *before*
   authoring, where rejection is nearly free.
 
+### Phase 2.x — iterative multi-pass exploration (run opportunistically through 0.6.0)
+A single Phase-2 pass under-produces (the first run found ~98 accepts — thinner than expected). One LLM run
+is **one sample**, not the truth. So Phase 2 is re-run as **many independent passes** (2.1, 2.2, 2.3, …),
+accumulating *every* candidate into one master table that **counts how many passes proposed each** — turning
+"did we find it?" into a **confidence** signal. Run a pass whenever free usage is available; stop at
+saturation. Each pass = `phase2-chunks.py` → a fan of agents → `phase2-merge.py`.
+
+1. **Randomize the chunking per pass.** `python3 scripts/phase2-chunks.py --pass N --seed N` re-shuffles
+   which mods share a chunk (writes `phase2/pass-NN/`), so each pass's agents see **different neighbours** —
+   testing whether chunk composition changes the finds (a mod grouped with new neighbours may surface new
+   cross-mod rhymes).
+2. **Fan the chunks on Sonnet** (default — robust + cheap), same `PHASE2-BRIEFING.md`, incremental writes +
+   `== CHUNK COMPLETE ==`, commit per chunk. Resumable exactly like pass-00.
+3. **One Opus agent per pass, cycling chunks.** Each pass runs *one* chunk on Opus instead of Sonnet,
+   advancing the chunk index each pass so Opus covers **every** chunk over ~`n_chunks` passes. **The Opus
+   agent gets the IDENTICAL standard prompt and must NOT be told it is special** — the "you are the
+   comparison" framing distorts its output. The pass `MANIFEST.json` records which chunk was Opus; the merge
+   flags those candidates `from_opus` from the manifest, not from the agent.
+4. **Merge.** `python3 scripts/phase2-merge.py` rebuilds `phase2/CANDIDATES.md`/`.tsv` — one row per unique
+   candidate (deduped on **mod + item + pillar + motif**) with **`times_suggested`** (how many distinct
+   passes proposed it = confidence) and **`from_opus`** (did an Opus run propose it). Rejects accumulate too
+   (a `consensus` column), so the considered-set grows, not just the accepts.
+
+**Blind → context-fed switch (the convergence gate).** Early passes run **blind** (no prior context) so they
+are independent samples. After each merge, watch the **new-candidate yield** (unique-count growth). While
+blind passes keep adding genuinely new candidates, keep them blind. When a blind pass adds **little new**
+("not enough differ" — the runs have converged), switch later passes to **context-fed**
+(`--mode context-fed`): hand the agent the accumulated `CANDIDATES.md` rows for its mods and ask only for
+**what's missing** — alternative routings, deeper finds, gaps — to push past the plateau without re-listing
+the obvious.
+
+**How many passes / stopping.** Plan **≥ `n_chunks` passes** (so Opus covers every chunk at least once),
+and keep going while yield justifies it. **Stop at saturation:** when even a context-fed pass adds almost no
+new candidates. End state: a table where high-`times` rows are the confident, multiply-rediscovered weaves
+and `1`-count rows are speculative.
+
+**Reading the table for Gate 2 / Phase 2.5.** Sort by `times_suggested`: high-count + ACCEPT consensus →
+author first; high-count + REJECT consensus → confidently *not* a weave; `from_opus`-only finds → the
+deeper/subtler ones worth a human look. This convergence prioritization is the antidote to a thin
+single-pass result, and it's what Phase 2.5 files issues from.
+
 ### Phase 2.5 — Issue authoring & handoff (the instance's last step)
 - **Do:** turn each **accepted** integration into a **GitHub issue attached to the right milestone** (its
   pillar's odd version per [`RELEASE-CADENCE.md`](RELEASE-CADENCE.md): Create→0.7, economy→0.9,

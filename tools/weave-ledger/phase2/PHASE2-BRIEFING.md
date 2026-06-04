@@ -54,3 +54,18 @@ When EVERY mod in your chunk is done, write a final line exactly: `== CHUNK COMP
 (this marker is how the run knows the chunk finished vs. was interrupted).
 
 Then return a short summary: per mod, `ns: N accepted / M rejected / leave`.
+
+---
+
+## Multi-pass note (read your pass's MANIFEST.json `mode`)
+This mapping is run as many independent passes (Phase 2.x). Your task prompt will tell you your pass dir.
+
+- **`mode: blind` (default):** work as above — propose independently, do NOT look at other passes' output.
+  Your value is being an *independent sample*; convergence across blind passes is the confidence signal.
+- **`mode: context-fed`:** the blind passes have converged, so don't re-list the obvious. First read the
+  accumulated `tools/weave-ledger/phase2/CANDIDATES.md` rows for YOUR mods, then propose only **what's
+  missing** — alternative method-routings, a deeper/subtler weave, a power-tier or theme nuance the existing
+  rows miss, or a reasoned challenge to an existing row. Same output format; lead each with `NEW:` or
+  `CHALLENGE:` so the merge can tell you extended rather than repeated.
+
+Either way: AUTHOR NOTHING, record rejects with reasons, and keep the incremental write + `== CHUNK COMPLETE ==`.
