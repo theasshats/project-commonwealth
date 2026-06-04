@@ -42,6 +42,11 @@
 - from: gravestone:obituary (death-record paper item) | via: any method | to: any pillar | motif: no-motif | power: everyday | tone: clash | verdict: REJECT | reason: the obituary is a pure informational/QoL item (shows death coords/gear); no motif covers "death record → resource". Any route would be contrived.
 - LEAVE — the mod is a death-recovery utility. Its 1 block (gravestone) and 2 items (gravestone + obituary) have no material role; they are functional objects used in the death loop. A loot=yes flag exists but only because the grave stores the player's existing inventory — no novel loot drops. No coherent weave without forcing it.
 
+## dragonlib   [anchors: support/library (1)]
+- LEAVE — genuine zero-content library; 1 block/item is a dev/test artifact (dragonlib:dragon), loot=no. Provides API/GUI/networking abstractions for MrJulsen's mods. Nothing to route.
+
+== CHUNK COMPLETE ==
+
 
 
 
