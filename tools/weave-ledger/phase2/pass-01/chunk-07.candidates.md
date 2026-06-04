@@ -268,3 +268,32 @@
 - from: create_enchantment_industry:experience_bucket / liquid_experience | via: irons_spellbooks:alchemist_cauldron_brew as brew-fuel | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: Iron's cauldron brewing a high-tier scroll could draw from a liquid XP tank as its experience-cost fuel — the alchemist's cauldron and the XP pipeline are natural industrial partners.
 - from: create_enchantment_industry enchanted book output | via: numismatics sell | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: automated enchanted goods are already naturally sellable under any Numismatics config; this is a play-pattern, not an authored weave. No recipe to write; nothing structural changes. Reject as a weave candidate.
 
+## dungeons-and-taverns-v4.4.4   [anchors: survival (1)]
+
+<!-- Method-pull: Dungeons and Taverns is a datapack: zero registered recipe-types. Its 17 items
+     are actually just minecraft:trial_key and minecraft:ominous_trial_key (vanilla items; the mod
+     ships those as its loot table outputs, not new items of its own namespace). It generates 100+
+     structures (taverns, towers, dungeons, illager hideouts, extra Trial Chambers).
+     The most distinct hook: the in-tavern cartographer sells maps to its structures. This is a
+     villager trade → player (vanilla emerald economy, not Numismatics).
+     Possible angles:
+     1. Economy via tavern cartographer trade → Numismatics. M-21 (provisional, leans no). The
+        cartographer sells maps for emeralds, not coins. To connect to Numismatics would need a
+        currency-exchange step or a loot table override. M-21 is provisional and the maintainer
+        leans no. Surface but reject.
+     2. Economy via loot table seeding — D&T's dungeon loot could be edited to include pack-specific
+        goods (a rare coin cache, a magic component). But that's loot-table authoring, outside this
+        pass, and not a weave in the sense of method-routing.
+     3. The Trial Chamber keys (vanilla minecraft:trial_key / ominous_trial_key) are loot outputs
+        that could be reagents, but they're vanilla items — any weave on them would be about vanilla
+        trial vaults, not D&T specifically.
+     Red-team: dungeons everywhere means more mob kills, more drops, more loot — but this is all
+     play-pattern, not a recipe edge. The structures host hostile encounters that feed existing
+     drop economies (M-02/M-14 on the mobs that spawn in them), but that's true of all dungeon
+     mods and isn't a weave on D&T itself.
+     Conclusion: LEAVE — structural/worldgen datapack with no own items or methods. Any economy
+     angle routes through M-21 (provisional, leans no). No recipe edge exists. -->
+
+- LEAVE — vanilla-item-only worldgen datapack (zero own items/methods). The in-tavern cartographer trade is the closest economy hook but routes through M-21 (provisional, leans no). Dungeon loot seeding is a loot-table authoring decision outside this pass. No recipe weave possible.
+
+== CHUNK COMPLETE ==
