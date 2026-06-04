@@ -4,6 +4,7 @@
 - LEAVE — zero content surface: 0 blocks, 0 items, loot=no. Pure Kotlin dev-framework dependency; no gameplay method, material, or loot table to weave through.
 
 ## dynamictreesplus   [anchors: survival/worldgen (1)]
+<!-- existing connections: none; 1-pillar candidate -->
 - from: dynamictreesplus:saguaro_fruit | via: create:milling | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: saguaro fruit milled into cactus pulp / green dye intermediate — foraged desert yield becomes a Create feedstock, tying the biome layer into the spine.
 - from: dynamictreesplus:red_mushroom_cap / brown_mushroom_cap | via: create:milling | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: mega mushroom caps milled into mushroom powder / red/brown dye — bulk forest forage feeding Create's mixing palette.
 - from: dynamictreesplus:saguaro_fruit | via: numismatics sell | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: saguaro fruit is common ambient forage; pricing it as a luxury trade good undersells M-09 (designed for high-effort consumables). Better as a processing input (accepted above) than a direct sell good. If a processed intermediate emerges from M-12 it could chain into M-09, but the raw fruit alone is too cheap.

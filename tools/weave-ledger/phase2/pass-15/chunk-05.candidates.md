@@ -25,6 +25,10 @@
 - REWORK: dossier lists "economy via numismatics — source_gem or spell scrolls as a sellable good [WEAK]" and suggests deferring it to dedicated arcane-currency weaves. The source_gem ACCEPT above (M-09) supersedes this; the scroll REJECT above captures the boundary. The dossier's "WEAK" label should be upgraded: source_gem→coin IS coherent and belongs in the economy pillar at M-09, whereas scrolls are too risky pre-0.9 review.
 - OK — M-01 (imbuement/enchanting-apparatus as magic currency hub) is the established spine and is correctly anchored. M-02 (Vitalic/Agronomic consuming farm surplus as mob-drop/crop sink) is already noted as the strongest organic→magic link and should be formalized when the survival pillar is woven.
 
+## createshufflefilter   [anchors: Create (1)]
+- LEAVE — two-item Create QoL filter utility. Shuffle Filter and Weighted Shuffle Filter are pure builder tools that modulate Deployer randomness; no material I/O, no method, no loot, no thematic adjacency to any other pillar. No coherent second pillar without forcing it.
+
+
 
 
 
