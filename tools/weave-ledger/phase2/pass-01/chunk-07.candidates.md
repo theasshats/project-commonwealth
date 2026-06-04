@@ -56,3 +56,14 @@
 - from: drones:ion_thruster (endgame component) | via: create:sequenced_assembly (derpack:incomplete_thruster part chain) | to: Create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: ion thrusters need more than hammered iron — a sequenced assembly line winding coils and pressing charge plates is the obvious factory story.
 - from: drones:pocket_drone (assembled item) | via: numismatics sell | to: economy | motif: M-09 | power: mid | tone: clash | verdict: REJECT | reason: the pocket drone is a personal automation tool, not a luxury trade good; framing it as a sellable commodity clashes with the mod's personal-robotics vibe. Nothing about a self-built drone says "merchant stock."
 
+## bettermineshafts   [anchors: survival (1)]
+
+<!-- Method-pull: zero items, zero methods, zero loot tables — pure structure overhaul of vanilla
+     mineshafts (YUNG's). Nothing to route through any method. The mod's value is expanding the
+     underground exploration space and giving scarcity-driven ore hunts richer terrain to operate in.
+     That benefits the Create/survival pillar indirectly (deeper/richer shafts to mine) but offers
+     no recipe hook, no material output, and no method the pack can pull through.
+     Conclusion: LEAVE — structural-only, no materials or methods to weave. -->
+
+- LEAVE — zero items, zero registered methods, zero loot tables; pure YUNG's mineshaft structure overhaul. Indirectly supports the ore-scarcity/survival loop (richer shafts to explore) but provides no material or method that can be woven into a second pillar.
+

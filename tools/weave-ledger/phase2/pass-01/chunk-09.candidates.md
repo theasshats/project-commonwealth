@@ -103,4 +103,24 @@ Pure cosmetic add-on: 16 dyed levitite variants + 4 tire sizes × 16 colors. Reg
 
 - LEAVE — cosmetic skin layer (levitite/tire color variants). No processing methods, no non-trivial outputs, no recipe surface. No coherent 2nd pillar exists that isn't contrived. A forced Create-mixing dye step would gate everyday cosmetics behind machinery for no game reason.
 
+## alcohol_industry   [anchors: Create, survival (2)]
+
+Already at the 2-pillar goal. Inbound weaves confirmed: `create:filling` + `create:mixing` (Alcohol Base assembly through Create). The Alcohol Boiler is the registered method (`alcohol_industry:alcohol_boiling`).
+
+**Existing connections audit:**
+- Create ← `create:filling` + `create:mixing` inbound: solid. The Alcohol Base is assembled with Create machinery before the Boiler finishes it. This is M-12 (processing-chain pull) in action.
+- survival ← drinkable buffs (beer/vodka/whiskey/tequila with effects). Coherent survival output.
+
+**Quality audit:**
+- OK — Create weave is genuine (not incidental). The mod was designed as a Create production-line mod; the two inbound Create methods are load-bearing.
+- OK — survival anchor: consumable effects justify the survival pillar.
+- Gap flagged by dossier: economy is the obvious 3rd. Finished spirits are exactly the kind of luxury good M-09 targets.
+
+**New candidate (deepening, not plugging a gap):**
+
+- from: alcohol_industry:beer / vodka / whiskey / tequila (bottled spirits, mid-effort Create output) | via: numismatics vendor price | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: a crate of spirits is the distillery's export; the same Create chain that makes them ends at the vendor — the economy reads as a production line with a market at the end
+
+- from: alcohol_industry:alcohol_base (fluid) | via: extradelight:vat / ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: clash | verdict: REJECT | reason: Alcohol Base is an industrial intermediate (a feedstock fluid); pulling it into arcane infusion as a magic reagent would require it to carry magical significance it has none of. Tone clash: industrial distillery ≠ arcane ingredient. Leave.
+
+
 
