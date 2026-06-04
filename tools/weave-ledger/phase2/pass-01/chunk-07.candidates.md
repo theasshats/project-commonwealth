@@ -167,3 +167,30 @@
 
 - LEAVE — zero items, zero registered methods; pure worldgen structure overhaul. The 16 biome village variants enrich the world and create natural trade-hub locations, but any economy angle routes through M-21 (provisional, leans no) or requires separate loot-table authoring outside this pass. No coherent recipe weave exists.
 
+## solclassic   [anchors: survival (1)]
+
+<!-- Method-pull: solclassic registers zero recipe-types and produces no material outputs. Its
+     three items are solclassic:basket, solclassic:wicker_basket (food carry containers), and
+     solclassic:food_history_book (a reference item). None of these is a processable material
+     that a method in the palette would want.
+     The mod's mechanic is a global eating rule applied to ALL foods: diminishing returns on
+     repeated foods. Its "join surface" is the food diversity pool — the more varied food the
+     pack ships (Farmer's Delight, Spawn, Snowy Spirit, Farm & Charm, etc.), the more the rule
+     rewards specialization and trading.
+     Dossier candidate: economy via food-variety demand — diminishing returns make a broad cooked-
+     food roster valuable, so trading diverse meals (Numismatics) becomes worthwhile. The link is
+     systemic, not a recipe (M-09 pattern). The dossier labels this WEAK.
+     Assessment: this is correct. The food-diversity pressure amplifies the value of all food
+     producers across the survival pillar, which in turn can feed the economy pillar (cooks sell
+     variety meals). But solclassic itself has no items to route through a method. Any recipe
+     authored here would be on the FOOD MODS' side, not on solclassic's items.
+     Red-team: could we weave the basket? The wicker_basket carries multiple food stacks — a
+     packwiz-assembled basket of meals is a luxury trade good concept, but the basket is a
+     utility container, not a consumable ingredient; routing it through a method makes no
+     sense (you're not crushing/infusing a basket). The food_history_book is also just a UI item.
+     Conclusion: LEAVE — the mod is a pure ambient rule with no processable materials.
+     Its amplifier effect on food-variety value is real but systemic (benefits all food mods
+     collectively, not routable as a recipe edge). -->
+
+- LEAVE — pure eating-rule mod with no processable materials. Its diminishing-returns mechanic amplifies the value of diverse food across the survival pillar and indirectly incentivizes food trading (supporting M-09 economy candidates on food-producing mods), but solclassic itself has nothing to route through any method.
+

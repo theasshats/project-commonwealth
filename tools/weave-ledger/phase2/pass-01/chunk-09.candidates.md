@@ -202,6 +202,26 @@ Already at the 2-pillar goal; quality-audit mode applies.
 
 - from: cbc_at munitions (gunpowder/propellant chain) | via: tfmg:coking or create:mixing (chemical propellant) | to: Create | motif: M-12 | power: mid | tone: ok | verdict: REJECT | reason: propellant already feeds through CBC's own assembly chain; adding a TFMG coking step upstream is plausible but speculative without knowing exact propellant recipe ids; flag for review in the artillery/propellant recipe pass rather than accepting blindly here. No-evidence of propellant recipe gap — REJECT-for-review.
 
+## chefsdelight   [anchors: survival, economy (2)]
+
+Already at the 2-pillar goal; quality-audit mode applies.
+
+**Existing connections:**
+- survival ← Farmer's Delight meals through Cook/Chef villager trades; village structures; food content.
+- economy ← villager trade economy (emerald→meal trades). This is the declared economy anchor.
+
+**Audit of EXISTING connections:**
+- OK — survival is well-grounded (FD-addon meals, village cook structures).
+- REWORK (currency alignment): the economy anchor is emerald-trade villager economy, which is vanilla currency — disconnected from the pack's Numismatics coin economy. A player in a coin-economy pack still uses emeralds for Cook/Chef trades, creating two parallel currencies. The dossier's M-09 suggestion (route trades onto Numismatics coins) is the right fix: KubeJS can reprice the Cook/Chef trades to Numismatics coins so the food trade joins the pack's real economy. This is a medium-priority config task, not a recipe authoring task (no new recipe-type needed — just price configuration).
+- Note: M-21 (trade-seam to economy, provisional) could also apply (villager profession → Numismatics), but the dossier's M-09 routing is cleaner: Cook/Chef sell luxury food goods, so M-09 (luxury good → coin) is the motif. The villager is the delivery mechanism; the coin is the price.
+
+**Deepening candidate (existing 2nd pillar tightening):**
+
+- from: chefsdelight Cook/Chef villager meal sales (Roast Chicken, Honey Glazed Ham, FD feasts) | via: numismatics vendor price (KubeJS trade repricing) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: the village chef takes coins, not emeralds — the cook economy plugs into the pack's real currency instead of running on a parallel barter system
+
+- from: chefsdelight Cook villager profession | via: M-21 (villager trade → numismatics) | to: economy | motif: M-21 | power: mid | tone: ok | verdict: REJECT (provisional motif — leans no per ledger) | reason: M-21 is provisional; maintainer leans no on villager→coin seams. Use M-09 (luxury food → coin) instead, which is accepted. Same outcome, better motif.
+
+
 
 
 
