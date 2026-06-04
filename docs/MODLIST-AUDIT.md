@@ -39,7 +39,7 @@ anchors to nothing and (b) building the **economy** pillar so the content sprawl
 
 **A1 — Pure memes (remove candidates; mostly already decided in #45):**
 `mmmmmmmmmmmm`, `staaaaaaaaaaaack` (mega-stacks → **directly breaks the scarcity economy**),
-`brazil-legends`, `create-more-pipe-bombs-in-packages` (grief), `umapyoi` (→ #60).
+`brazil-legends`, `create-more-pipe-bombs-in-packages` (grief), ~~`umapyoi`~~ (**cut** in v0.6.0 — #60).
 **Keep — harmless flavor:** `just-blahaj`, music discs (`game-discs`, `net-music`, `immersivemusicmod`,
 `steves-lava-chicken…`), `emoji-type`.
 **Rework not remove:** `the-bible` (recipe rework, #17).
