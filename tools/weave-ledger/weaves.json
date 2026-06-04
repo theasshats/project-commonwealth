@@ -197,6 +197,24 @@
       "pillars": "survival+magic/create",
       "status": "accepted",
       "note": "extend across ALL moons (enhanced_celestials, endermoon, any lunar mod)"
+    },
+    {
+      "id": "M-23",
+      "name": "Structural alloy to airframe/hull",
+      "method": "fabricated structural part -> aeronautics construction recipe",
+      "pillars": "create/survival+aeronautics",
+      "status": "accepted",
+      "issue": 143,
+      "note": "build-material seam; adds depth to airship construction; scale with ship tier, not the basic frame"
+    },
+    {
+      "id": "M-24",
+      "name": "Mechanical component to propulsion/control",
+      "method": "component -> aeronautics drivetrain/control recipe",
+      "pillars": "create+aeronautics",
+      "status": "accepted",
+      "issue": 143,
+      "note": "drivetrain side (rotors/engines/control surfaces), distinct from M-13 fuel; depth scales with component power"
     }
   ],
   "reagents": {

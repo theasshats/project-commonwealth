@@ -28,12 +28,16 @@ split (e.g. `{'ACCEPT':3,'REJECT':1}`); `consensus = max(verdicts)` is the major
 candidate. Ties (2/2) break by insertion order (arbitrary) — those are exactly the human-adjudicate rows; the
 `verdicts` dict flags them.
 
-**[G0] New-motif candidates the passes keep re-surfacing — need maintainer Gate-0 before use** (independently
-corroborated across pass-02/03, matching the pending items already noted): **structural-alloy → aeronautics
-airframe/hull** (e.g. `create_ironworks` steel plate); **logistics-carrier / cardboard → aeronautics logistics**
-(`dndesires` packages, copper/golem logistics); a **behavioral-constraint motif** for behaviour-only mods
-(`createpickywheels`, `solclassic`) that have no item surface to route. Multiple agents tagged these `no-motif`
-and correctly declined to author — they're parked pending your call.
+**[G0] New-motif candidates — maintainer ruled this turn:**
+- **Structural-alloy → aeronautics → ACCEPTED, and expanded.** Added **M-23 (structural alloy → airframe/hull)**
+  *and* **M-24 (mechanical component → propulsion/control)** to the ledger + `weaves.json` — "do more for various
+  aeronautics components, part of its difficulty issue." Together with M-13 (fuel) these are the three aeronautics
+  supply seams (build / drivetrain / fuel); they deliberately add depth to airship construction. Tied to #143.
+- **Logistics-carrier / cardboard → aeronautics → REJECTED.** Maintainer: "I do not think this one makes sense."
+  Not added; do not author. (Logistics mods still earn 2nd pillars via other motifs where coherent.)
+- **Behavioral-constraint motif → HELD.** Maintainer: "leave them spinning on this one for now, I'll have an
+  action after the next round." No decision yet; behaviour-only mods (`createpickywheels`, `solclassic`) stay
+  `no-motif` / LEAVE until then.
 
 **[NOTE] Guardrails held under fan-out.** `createmetalwork` palladium was caught and **escalated, not routed**
 (the Galosphere `silver`=PALLADIUM gotcha); `samurai_dynasty` silver kept off `c:ingots/silver` confusion

@@ -47,14 +47,17 @@ sign-off), because it propagates globally. Reusing an approved motif does not ne
 | M-20 | **Deploy-application upgrade** — `create:deploying` / `item_application` applies a woven part onto a base to upgrade it | `create:deploying` / `item_application` | any↔Create | **accepted** — the **light single-step sibling of M-06** (which chains deploys); not for basics |
 | M-21 | **Trade-seam to economy** — a villager profession / wandering-trader routes into Numismatics (vanilla trade → player currency) | villager trade → `numismatics` | any↔economy | **provisional — EXPLORE only** (maintainer leans *no*; surface candidates for review, do not author) |
 | M-22 | **Lunar / celestial reagent** — a material/effect available only during a moon event feeds a method; **applies to ALL the moons** (Enhanced Celestials + Ender Moon + any lunar mod), not just one | lunar-event-gated input → Create/magic method | survival↔magic/Create | **accepted** — extend across every moon event |
+| M-23 | **Structural alloy → airframe/hull** — a load-bearing metal plate/beam/alloy (e.g. `create_ironworks` steel plate) is a required build ingredient for Aeronautics airframes, hulls, and structural blocks; makes airframes cost real fabricated material | fabricated structural part → aeronautics construction recipe | Create/survival↔aeronautics | **accepted** — part of making aeronautics *harder/deeper* (sibling of M-13 fuel); scale depth with ship tier, don't gate the most basic frame behind a deep chain |
+| M-24 | **Mechanical component → propulsion/control** — a mod's mechanical part (rotor, bearing, engine block, gearset, control mechanism) feeds Aeronautics propellers, engines, and control surfaces (rudders/ailerons) — the drivetrain side of the supply line, distinct from M-13 fuel | component → aeronautics drivetrain/control recipe | Create↔aeronautics | **accepted** — companion to M-23/M-13; depth scales with the component's power |
 
 _Motif rules: **compose, don't invent**; a motif carries its **anti-arbitrage rule** (M-01/M-07
 round-trips lose value; M-04 is lossy). **Never gate a *basic / everyday component* behind a complex
 recipe** — recipe depth scales with the item's power (everyday = one light step; flagship = deep chain;
-§7). New motifs enter via Gate 0 — log the request in `DECISIONS.md`. **M-01–M-22 are Gate-0 accepted**
+§7). New motifs enter via Gate 0 — log the request in `DECISIONS.md`. **M-01–M-24 are Gate-0 accepted**
 except **M-21 (provisional — explore only, leans no)**. Caveats: M-09/M-14 player-run-currency review
 (0.9); M-10 no basic components; M-12 covers useful *intermediates*; M-17 only when it makes sense; M-20 is
-the light tier of M-06; M-22 spans every moon._
+the light tier of M-06; M-22 spans every moon; **M-23/M-24 are the aeronautics build + drivetrain seams
+(with M-13 fuel) — they deliberately add depth to airship construction, scale with ship tier.**_
 
 ---
 
