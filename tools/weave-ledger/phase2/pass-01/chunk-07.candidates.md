@@ -87,3 +87,57 @@
 
 - LEAVE — pure behavioral patch (no items, no methods, no materials). The biome/environment gating it applies to Create water wheels and windmills carries genuine survival-pillar flavor, but it is realized entirely by config, not by any authored weave; no recipe edge is possible or appropriate.
 
+## mowziesmobs   [anchors: survival (1)]
+
+<!-- Method-pull: mowziesmobs outputs boss-drop artifacts:
+     - mowziesmobs:ice_crystal (Frostmaw, endgame boss drop)
+     - mowziesmobs:earthrend_gauntlet / wrought helm (Ferrous Wroughtnaut, endgame)
+     - mowziesmobs:sol_visage (Barako, endgame)
+     - mowziesmobs:elokosa_paw / elokosa_paw_crescent / etc. (Elokosa, moon-linked mob — mid/endgame)
+     - mowziesmobs:dart / blowgun (mid, Barakoa-area drop/craft)
+     Cross against methods:
+     - M-15 boss-key unlock: boss drop as gate item in a complex Create recipe. The DESIGN doc says
+       "Create tech unlocks via MineColonies or boss drops" — this is the explicit design intent.
+       Ice_crystal (cold/ice theme) → gates a Create Refrigeration/cooling machine, or a cryo-
+       processing step in sequenced_assembly. Wroughtnaut artifacts (heavy iron/forge theme) → gate
+       a high-tier forge machine or a Create-Cannons heavy cartridge assembly.
+     - M-11 ritual transmutation: Occultism spirit_fire transmutes boss artifacts into a high-tier
+       occult essence. Thematically: Wroughtnaut's soul is forged iron → spirit-fire extracts an
+       "iron spirit" essence. Ice_crystal → spirit-fire yields a frost essence for rituals.
+       But these are flagged artifacts (unbreakable gear items) — the dossier calls them "unique
+       unbreakable gear". Putting them as destructible ritual reagents would consume items a player
+       might wear. Need care: flag as "crafted duplicate from boss-item copy" or accept that a spare
+       drop is consumed. Power-read: these are endgame drops from non-renewable (per-spawn) bosses.
+       M-11 spirit_fire is appropriate in depth (one step for endgame), but consuming a unique-
+       unbreakable item in a ritual could frustrate players. Weaker than M-15.
+     - M-22 lunar: elokosa_paw_* items have moon-phase variants (paw, crescent, full, gibbous, half)
+       which are obviously lunar-themed. Routes nicely through M-22 as a lunar reagent — the paw's
+       power variant (e.g. elokosa_paw_full on a full moon) feeds a magic method or Create process.
+       Theme is natural; the Elokosa howler is clearly a moon-themed mob.
+     Power-read:
+     - ice_crystal, sol_visage, earthrend_gauntlet: endgame (non-renewable per-spawn boss; limited supply).
+     - elokosa_paw variants: mid/endgame (available once the player finds the mob at the right moon phase).
+     Theme-fit:
+     - M-15 (boss-key → Create gate): "of course" — a frost boss drops an ice crystal that powers a
+       cryo-assembly stage in Create. Direct, clear, no tone clash.
+     - M-11 (boss artifact → ritual transmutation): riskier because the artifacts are gear, not
+       consumable reagents; a player might resent burning their unique drop. But if there are multiple
+       boss spawns across the world, spares accumulate. The tone (mythic-tribal + occultism transmutation)
+       is compatible. Flag as endgame, accept with note that a spare-drop assumption is needed.
+     - M-22 (elokosa lunar paw → lunar reagent): elegant — the moon-phase paw variants become a
+       moon-gated magic/Create ingredient, which is exactly what M-22 is for. Strong accept.
+     Red-team M-15: does gating a Create machine behind a boss drop feel arbitrary? No — the DESIGN
+     doc explicitly mandates it. The thematic pairing (ice crystal → cryo process, or wrought-iron
+     artifact → forge step) should be chosen to match the boss's theme. Survives.
+     Red-team M-22: the paw variants being moon-phase dependent means supply is calendar-gated.
+     That's a feature (M-22 exists for this). Players hunting a full-moon paw is a compelling loop.
+     Survives.
+     Red-team M-11 boss artifacts: uniqueness risk noted — this is an endgame weave and supply is
+     limited (per-spawn bosses). Accept but flag the supply concern for balance review. -->
+
+- from: mowziesmobs:ice_crystal (endgame Frostmaw boss drop) | via: create:sequenced_assembly as boss-key gate | to: Create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: a crystal of concentrated frost from a glacier boss is the obvious catalyst for a Create cryo-processing stage — you fought for it, now it unlocks a machine step.
+- from: mowziesmobs:earthrend_gauntlet (endgame Wroughtnaut boss drop) | via: create:sequenced_assembly as boss-key gate | to: Create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Wroughtnaut is an iron-golem-scale forge construct; its gauntlet as a key component in a high-tier Create mechanical assembly reads as "of course" — iron mastery unlocks iron mastery.
+- from: mowziesmobs:elokosa_paw_full / elokosa_paw_crescent (moon-phase drops, mid/endgame) | via: ars_nouveau:imbuement or occultism:ritual as moon-gated reagent | to: magic | motif: M-22 | power: mid | tone: ok | verdict: ACCEPT | hook: the Elokosa is a moon-phase shapeshifter; its paw in the phase it was caught resonates with any moon-attuned ritual — the lunar phase you hunted in is the reagent's power.
+- from: mowziesmobs:sol_visage (endgame Barako boss drop) | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Sol Visage channels solar power; infusing it into the enchanting apparatus (fuelled by source) as a sun-themed arcane catalyst sits cleanly in the magic pillar at appropriate depth.
+- from: mowziesmobs:ice_crystal (endgame, non-renewable boss drop) | via: occultism:spirit_fire → frost essence | to: magic | motif: M-11 | power: endgame | tone: ok | verdict: REJECT | reason: ice_crystal is already used as a boss-key gate (M-15 above). Repurposing it as a consumable ritual reagent burns a unique gear item; supply is per-spawn limited. Double-assignment risks frustrating players. If a second magic weave is needed, prefer sol_visage (M-10 above). Defer to Gate 2.
+

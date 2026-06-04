@@ -166,6 +166,24 @@ One pillar (survival). Rustic horse-drawn carts and farm implements. Zero recipe
 
 - LEAVE — deliberately vanilla-pastoral transport layer (horse-drawn carts, plow, reaper). No processing outputs, no recipe-types, and the pack's design intent keeps it as early-game farm labor before the Create/Aeronautics logistics era. Forcing a Create-component gate would violate the basic-components guardrail and clash with the mod's tone.
 
+## bits_n_bobs   [anchors: Create, survival (2)]
+
+Already at the 2-pillar goal; quality-audit mode applies.
+
+**Existing connections:**
+- Create ← `create:item_application` + `create:splashing` (inbound weaves). Also hard-depends on Create; chain drives transmit Create rotation.
+- survival ← broad decoration palette for builds (deco pillar under survival). Chain pulley is a functional contraption-mover.
+
+**Audit of EXISTING connections:**
+- OK — Create weave is genuine: items are literally made-by Create's item_application and splashing; the chain drive is kinetic Create machinery. Not cosmetic adjacency.
+- OK — survival/decoration is a sanctioned support role. The aesthetic expansion is coherent.
+- REWORK (very light): the dossier flags M-04 (Create recycles deco) — tile/chair blocks crushable back to crushed-stone/planks via `create:crushing`. This tightens the deco-to-Create loop so deco purchases remain part of the Create web even on removal. Worthwhile but low-priority.
+
+**No missing pillar; deepening candidate only:**
+
+- from: bits_n_bobs tile/chair deco blocks | via: create:crushing → crushed stone + xp nugget byproduct | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT (low priority — confirms existing Create anchor; recycle path prevents deco from being a dead end) | hook: a tile floor torn out goes back into the crusher — deco and industry stay one loop
+
+
 
 
 
