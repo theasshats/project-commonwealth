@@ -26,6 +26,12 @@
 ## createshufflefilter   [anchors: Create (1)]
 - LEAVE — single-item builder QoL utility (two filter items); no material outputs, no reagent surface, no coherent 2nd pillar. Forcing a connection (e.g. "shuffle filter crafted with magic") would be pure gate-tax with no design upside.
 
+## dungeons-and-taverns-v4.4.4   [anchors: survival (1)]
+- from: in-tavern cartographer villager trade | via: numismatics (coin-payout config or KubeJS trade swap) | to: economy | motif: M-21 | power: everyday | tone: ok | verdict: REJECT | reason: M-21 is provisional and the maintainer leans no; the cartographer trades emeralds (vanilla), so routing this to Numismatics requires a trade-table edit that is plausible but requires gate-0 sign-off on M-21. Surface for review only. (provisional motif)
+- from: dungeons-and-taverns structure loot tables | via: bountiful:bountyboard decree targeting dungeon-adjacent mobs | to: economy | motif: M-14 | power: mid | tone: ok | verdict: ACCEPT | hook: Dungeons & Taverns adds 100+ structures with their own mob spawners; pointing Bountiful Decrees at those structures' mob populations turns exploration into a bounty-economy activity — players are paid coin to clear the structures they would explore anyway (provisional motif — same caveat as M-14)
+- from: dungeons-and-taverns loot (treasure chests in taverns/towers) | via: numismatics coin seeding | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: seeding a few Numismatics coins into tavern and tower loot tables rewards structure-hunting with the pack's actual currency — the tavern is already a commerce node, coins in the chest are thematically obvious
+
+
 
 
 
