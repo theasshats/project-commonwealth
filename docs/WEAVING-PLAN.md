@@ -14,15 +14,21 @@ present. Two things block an LLM from doing that well: it **lacks play-knowledge
 not "what a mod is *for*"), and **the connectivity metric can't supply taste** (target it and it gets
 gamed). This plan solves both with one central idea and a supporting pipeline:
 
+0. **First principle: methods are resources (§2.0).** A mod is a bag of items **and *methods*** — custom
+   recipe types, machines, rituals, infusions, processing chains. The strongest weave is "**run material X
+   *through* mod Y's method**" (a shard refined in Ars's Imbuement Chamber, a drop transmuted in
+   Occultism's Spirit Fire, a crop pressed/fermented), not a flat crafting-table ingredient swap. Treating
+   every mod's mechanics as a pack-wide **methods palette** to pull from is what makes it a *true* web —
+   and it's exactly the edge the connectivity tool already rewards ("made in that machine" *is* a link).
 1. **A shared design vocabulary (a *motif registry*) + a persistent *weave ledger*.** Weaves are
-   *composed from a small set of approved, recurring connective motifs* (e.g. "Ars source is the
-   universal magic currency," "Create crushing recycles deco," "luxury goods mint into coin"), not
-   invented per-mod. This is the mechanism that keeps 356 locally-authored decisions reading as **one or
-   two webs** instead of 356 ad-hoc edges — and it's the thing that prevents context-window chunking from
-   fragmenting global cohesion.
+   *composed from a small set of approved, recurring connective motifs* — most of them **method-routings**
+   (e.g. "Ars source is the universal magic currency," "Create crushing recycles deco," "transmute a drop
+   through a ritual," "luxury goods mint into coin"), not invented per-mod. This keeps 356 locally-authored
+   decisions reading as **one or two webs** instead of 356 ad-hoc edges, and prevents context-window
+   chunking from fragmenting global cohesion.
 2. **A per-mod understanding layer (the *dossier*)** that teaches the weaver what each mod is, its vibe,
-   and its signature contents — built by a per-mod web sweep (folded into #160) and **grounded against
-   the jar digest** so facts can't be hallucinated.
+   its signature contents, **and its methods** (what it can *do*) — built by a per-mod web sweep (folded
+   into #160) and **grounded against the jar digest** so facts can't be hallucinated.
 3. **A phased pipeline** — scaffold → understand → map opportunities → author → validate → globally
    review — with humans at a handful of **cheap, batched taste gates**, not in the per-mod grind.
 
@@ -53,10 +59,11 @@ From [`WEAVING-STRATEGY.md`](WEAVING-STRATEGY.md) and [`DESIGN.md`](DESIGN.md):
 **Definition of "done" for a weave** (the bar every authored connection clears), inherited from
 [`RECIPES.md`](RECIPES.md) and the magic-web precedent ([`MAGIC-WEB-HANDOFF.md`](MAGIC-WEB-HANDOFF.md)):
 
-> A weave is *coherent* if a player would say **"of course you'd connect these"** — the ingredient
-> matches the output, it routes through the right machine, it's additive (or a removal is replaced), it
-> doesn't make a power item cheaper, and it gives a mod a **second pillar** it didn't have. A weave is
-> *done* only when it's also been **seen in-game and playtested** — that last step is human.
+> A weave is *coherent* if a player would say **"of course you'd connect these"** — the input matches the
+> output, it **routes through the right *method*** (the mod's own machine / ritual / infusion / processing
+> type, not a bare crafting table), it's additive (or a removal is replaced), it doesn't make a power item
+> cheaper, and it gives a mod a **second pillar** it didn't have. A weave is *done* only when it's also
+> been **seen in-game and playtested** — that last step is human.
 
 ---
 
@@ -69,22 +76,65 @@ chunking is exactly what produces "many clusters": each chunk invents its own lo
 the same reagent three incompatible ways, and the global picture fragments. The fix is to make weaves
 **compositions of a shared, small, named vocabulary** that every chunk reads before it writes.
 
+### 2.0 First principle: methods are resources — weave *through* mechanics, not just ingredients
+
+The single most important reframe in this plan, and the thing that makes the result a **true web** rather
+than an ingredient-bridge web:
+
+> **A mod is not just a bag of items — it is a bag of *items **and methods***.** Every mod that matters
+> adds *mechanics*: custom recipe types, machines, multiblocks, rituals, infusions, transmutations,
+> fermentation, spell-casting, processing chains. **Those methods are first-class resources to pull
+> from.** The strongest weave is rarely "item A is an ingredient in item B's crafting recipe" — it's
+> "**a material from mod X is processed *through mod Y's method***": a Galosphere shard refined in Ars's
+> **Imbuement Chamber**; a mob drop transmuted in Occultism's **Spirit Fire**; an ingot pressed on
+> Create's **Press**; a crop run through a **fermentation barrel**; a reagent infused on a
+> **Forbidden Arcanus altar**.
+
+Why this is *the* lever, not a nicety:
+
+- **It's what the connectivity tool actually rewards.** `recipe_graph_lib.py` makes every modded
+  recipe-*type* (`create:mixing`, `occultism:ritual`, `ars_nouveau:enchanting_apparatus`,
+  `farmersdelight:cooking`, …) a graph node that links **everything it produces**. "Made in that machine"
+  *is* connectivity — it's literally what connected `createfood` to `create` (its food is made *in*
+  Create machines, not *from* Create items). Routing a material through a foreign method is therefore the
+  highest-yield, most *meaningful* edge you can author — and the one most likely to feel intentional.
+- **It produces depth, not just a bridge.** A crafting-table ingredient swap is one flat edge. Routing
+  through a method engages the *whole mechanic* — the player builds and runs the machine, which is the fun.
+  This is the difference between #62's deep weave (parts **and methods**, the `60-mffs.js`
+  `sequenced_assembly` gold standard) and a shallow ingredient tax.
+- **The digest already hands us the inventory for free.** The `recipes/<jar>.txt` second column is a
+  ready-made, jar-grounded list of every custom recipe type a mod registers (see §4.1/§9). Methods that
+  *aren't* recipe types — a passive aura, an on-kill effect, an entity interaction, a multiblock behavior
+  — are exactly what the Phase-1 web sweep is for. Both go into the dossier as a first-class **methods**
+  inventory, and the union across all mods is the pack-wide **methods palette** the weaver shops from.
+
+So the motifs below, the dossier (§4.1), opportunity-finding (§6) and authoring (§7) are all built around
+**methods as the connective tissue** — items flow *between* mods *through* each other's mechanics.
+
 ### 2.1 The motif registry — the shared vocabulary
 
-A **motif** is a reusable *kind of connection* with a theme and a home pillar-pair. The pack already has
-several, authored ad hoc; this plan makes them canonical and additive-only-by-gate:
+A **motif** is a reusable *kind of connection* with a theme and a home pillar-pair. **Most motifs are a
+*method-routing*** — "run material X through mod Y's mechanic" — so the table names the **method** each one
+rides (per the §2.0 first principle). The pack already has several, authored ad hoc; this plan makes them
+canonical and additive-only-by-gate:
 
-| ID | Motif | Pillars | Seeded from |
-|---|---|---|---|
-| M-01 | **Arcane currency** — Ars `source_gem` is the universal magic currency; foreign essences mint into/out of it via Ars's own stations | magic↔magic | `33-magic-web-spine.js` |
-| M-02 | **Mob-drop reagent sink** — an isolated mob/boss drop is given a use as a magic/economy input via the consuming mod's native machine | organic↔magic/economy | `35-magic-web-mobs.js` |
-| M-03 | **Create ore-doubling** — ore → crushed via `create:crushing` (+byproduct); a *reward*, vanilla smelt path stays | any↔Create | `RECIPES.md` |
-| M-04 | **Create recycles deco** — metal/stone deco crushes back to raw/gravel + an XP nugget; lossy, so not free dup | block/deco↔Create | `35-web-bridges.js` |
-| M-05 | **Native-machine gating** — a mod's flagship item is built in *its own* machine, gated on Create parts as ingredients | any↔Create | `RECIPES.md`, `60-mffs.js` |
-| M-06 | **Sequenced-assembly keystone** — endgame/flagship items are multi-stage `sequenced_assembly` chains through a `derpack:incomplete_*` part | Create (depth) | `60-mffs.js`, `startup_scripts/01-intermediate-parts.js` |
-| M-07 | **Attunement catalyst** — a worldgen consumable (Galosphere allurite/lumiere shards) gates a conversion so it isn't free arbitrage | magic + survival/worldgen | `33`/`80`/`97` |
-| M-08 | **Coin from processed scarcity** — scarce regional metal → Create-processed → minted into Numismatics coin (the economy seam) | Create↔economy | #136 (planned) |
-| M-09 | **Luxury good → coin** — a high-effort consumable (wine, cheese, processed crop) is a sellable trade good | survival/food↔economy | proposed |
+| ID | Motif | Method it rides | Pillars | Seeded from |
+|---|---|---|---|---|
+| M-01 | **Arcane currency** — Ars `source_gem` is the universal magic currency; foreign essences mint into/out of it | `ars_nouveau:imbuement` / `enchanting_apparatus` | magic↔magic | `33-magic-web-spine.js` |
+| M-02 | **Mob-drop reagent sink** — an isolated mob/boss drop is given a use as a magic/economy input | the consuming mod's native method | organic↔magic/economy | `35-magic-web-mobs.js` |
+| M-03 | **Create ore-doubling** — ore → crushed (+byproduct); a *reward*, vanilla smelt path stays | `create:crushing` | any↔Create | `RECIPES.md` |
+| M-04 | **Create recycles deco** — metal/stone deco crushes back to raw/gravel + an XP nugget; lossy | `create:crushing` | block/deco↔Create | `35-web-bridges.js` |
+| M-05 | **Native-method gating** — a mod's flagship item is built *in its own machine*, gated on Create parts as inputs | the mod's own machine type | any↔Create | `RECIPES.md`, `60-mffs.js` |
+| M-06 | **Sequenced-assembly keystone** — endgame items are multi-stage chains through a `derpack:incomplete_*` part | `create:sequenced_assembly` | Create (depth) | `60-mffs.js`, `startup_scripts/01-intermediate-parts.js` |
+| M-07 | **Attunement catalyst** — a worldgen consumable (Galosphere allurite/lumiere shards) gates a conversion so it isn't free arbitrage | rides the host method as a catalyst | magic + survival/worldgen | `33`/`80`/`97` |
+| M-08 | **Coin from processed scarcity** — scarce regional metal → Create-processed → minted into coin | `create:*` → `numismatics` mint | Create↔economy | #136 (planned) |
+| M-09 | **Luxury good → coin** — a high-effort consumable (wine, cheese, processed crop) is a sellable trade good | `numismatics` sell/price | survival/food↔economy | proposed |
+| M-10 | **Arcane infusion pull** — a foreign material is refined/attuned into a magic reagent **through an arcane infusion method** (Ars imbuement/apparatus, Forbidden Arcanus altar) — the textbook "method as the edge" | `ars_nouveau:imbuement` · `forbidden_arcanus:*infusion*` | any↔magic | generalizes M-01 |
+| M-11 | **Ritual / transmutation sink** — a drop or material is transmuted into an essence **through a ritual/spirit method** | `occultism:spirit_fire` / `ritual` | organic↔magic | `34`/`35-magic-web-*` |
+| M-12 | **Processing-chain pull** — a raw crop/material is run **through another mod's processing method** (fermentation, cooking, milling/mixing) into a finished/sellable good | `farmersdelight:cooking` · `create:milling`/`mixing` · fermentation | survival↔Create/economy | generalizes M-03/M-09 |
+
+> The motif table is **the methods palette in motif form** — adding a motif usually means *adopting a new
+> method as a connective resource*. New methods/motifs enter through Gate 0 (§10).
 
 **Rules that make motifs the anti-fragmentation device:**
 
@@ -173,11 +223,17 @@ off-web cluster is a candidate sub-chunk, already triaged by whether it's worth 
 Stored in-repo, plain text, diff-friendly, parseable by a small cross-check script. Proposed layout:
 
 ```
-tools/mod-data/dossiers/<mod>.md      # one understanding card per mod (Phase 1 output)
+tools/mod-data/dossiers/<mod>.md      # one understanding card per mod, incl. its METHODS (Phase 1 output)
+tools/weave-ledger/methods-palette.md # pack-wide inventory of every mod's methods/recipe-types (auto-gen)
 docs/WEAVE-LEDGER.md                  # motif registry + reagent-ownership + weave log (human-readable)
 tools/weave-ledger/weaves.json        # machine-readable mirror of the weave log (for cross-check)
 tools/weave-ledger/check.py           # ledger ↔ kubejs ↔ recipe-graph consistency checker
 ```
+
+The **methods palette** is the union of every dossier's `methods` block — the catalogue of *connective
+mechanics* the weaver shops from (every `create:*`, `ars_nouveau:*`, `occultism:*`, `farmersdelight:*`, …
+recipe type, plus the non-recipe mechanics the sweep found). It's auto-generated from the digest's
+recipe-type column (§9), so it's jar-grounded and free.
 
 ### 4.1 Dossier card (per mod) — the understanding layer
 
@@ -191,15 +247,25 @@ jar:        Vinery-1.21.1-...           (digest: tools/mod-data/by-mod/Vinery-..
 one-line:   winemaking & Mediterranean cuisine — grow grapes, ferment wine, cook regional dishes.
 vibe:       rustic, agrarian, Mediterranean; slow-craft artisanal.
 signature:  vinery:red_grape, vinery:wine_press(?), vinery:* wines, vinery:cheese  [each → digest id]
-machines:   vinery:fermentation_barrel (native method, if any — verify in recipes/<jar>.txt)
+methods (FIRST-CLASS — what this mod can DO, the resources others pull through):
+  recipe-types (auto, from recipes/<jar>.txt 2nd column):  vinery:fermentation_barrel, vinery:...
+  non-recipe mechanics (from sweep):  grape-vine growth; press→must→ferment chain; aging
+  consumes / outputs: takes fruit → outputs wine/must  ← what foreign material it could accept/feed
 anchors:    survival/food (1)           ← current pillar count
-2nd-pillar candidates:
-  - economy: wine/cheese as sellable luxury goods (M-09)  [STRONG, thematic]
-  - Create:  press grapes via create:pressing? (verify juice item)  [WEAK, check theme]
+2nd-pillar candidates (prefer method-routings — see §6):
+  - economy:  wine/cheese as sellable luxury goods (M-09, via numismatics sell)   [STRONG, thematic]
+  - Create:   run grapes through create:pressing → must, OR feed Create farms into the barrel (M-12) [MED]
+  - magic:    none obvious — leave (don't force)
 how-packs-integrate: <url> — commonly a food/trade mod; pairs with Farmer's Delight.
 sources:    [modrinth url] [wiki url] [digest]
 status:     VERIFIED                    ← or UNVERIFIED (blocks use as a weave basis)
 ```
+
+The `methods` block is the heart of the card. Its **recipe-types are auto-filled from the digest** (the
+`recipes/<jar>.txt` 2nd column is exactly this list — jar-grounded, no hallucination); the **non-recipe
+mechanics** (auras, on-kill effects, growth/processing behaviors, multiblock actions) are what the web
+sweep adds. `consumes / outputs` is the join key for opportunity-finding: it says what foreign material a
+mod's method could *accept* or *feed*.
 
 ### 4.2 Motif registry & reagent-ownership
 
@@ -251,32 +317,41 @@ upkeep.
 - **Gate:** maintainer approves the ledger format + the seed motif list (Gate 0, once).
 
 ### Phase 1 — Per-mod understanding (parallel, folded into #160)
-- **Do:** for every mod, one targeted web sweep → fill the dossier's judgment fields; cross-ground every
-  content claim to a digest line or URL; tag current pillar-anchor count and 2nd-pillar candidates.
-- **In:** digest + web. **Out:** ~356 `VERIFIED` dossiers; a worklist of 0/1-pillar mods.
-- **Tools:** dossier generator (pre-fills facts), web search, the digest.
+- **Do:** for every mod, one targeted web sweep → fill the dossier's judgment fields; **inventory its
+  methods/mechanics** (recipe-types auto-pulled from the digest; non-recipe mechanics from the sweep) and
+  what they consume/output; cross-ground every content claim to a digest line or URL; tag current
+  pillar-anchor count and 2nd-pillar candidates.
+- **In:** digest + web. **Out:** ~356 `VERIFIED` dossiers; the **pack-wide methods palette**; a worklist
+  of 0/1-pillar mods.
+- **Tools:** dossier generator (pre-fills facts **and the recipe-type method list**), web search, the digest.
 - **Gate (Gate 1):** maintainer spot-checks a **sample** + **all load-bearing hub mods** (the
   recipe-graph cut-vertices: `create`, `extradelight`, `touhou_little_maid`, …) for hallucination. Not
   all 356 — sampling + hubs is the high-leverage check.
 
 ### Phase 2 — Opportunity mapping (per chunk)
 - **Do:** run the recipe-graph as a **compass** (island table + `--remove create`/`--remove minecraft`
-  lenses) and mine dossier **thematic adjacencies**; produce a **candidate weave list** per pillar-seam
-  chunk — one line each: (from, to/pillar, hook, motif, rough mechanism, confidence-guess). Mark islands
-  that are *intentionally* vanilla (organic/mob per [`CONNECTIVITY.md`](CONNECTIVITY.md)) as **leave**.
+  lenses) and mine dossier **thematic adjacencies *and method-pull matches*** (a mod's loose material ↔
+  another mod's method that could consume it — §6); produce a **candidate weave list** per pillar-seam
+  chunk — one line each: (from-material, →through-**method**, to-pillar, hook, motif, confidence-guess).
+  Mark islands that are *intentionally* vanilla (organic/mob per [`CONNECTIVITY.md`](CONNECTIVITY.md)) as
+  **leave**.
 - **In:** dossiers + recipe-graph + ledger. **Out:** an approved candidate list per chunk.
 - **Gate (Gate 2 — the main taste gate):** maintainer reads the candidate list (cheap: one-liners, not
   code) and marks each **approve / reject / needs-discussion**. This kills lifeless ideas *before*
   authoring, where rejection is nearly free.
 
 ### Phase 3 — Authoring (per chunk, rides odd versions)
-- **Do:** **jar-verify the recipe schema** for each target machine before writing (the magic-web
+- **Do:** **jar-verify the *method* schema** for each target mechanic before writing (the magic-web
   discipline — `unzip -p` the jar; reuse the verified schemas in `MAGIC-WEB-HANDOFF.md` §4); author KubeJS
-  weaves **composing approved motifs**; log each in the ledger; run static validation.
+  weaves **composing approved motifs**, **authoring into the mod's native method/recipe-type first** and
+  reserving the crafting table for when no fitting method exists; log each in the ledger; run static
+  validation.
 - **In:** approved candidate list + verified schemas + ledger. **Out:** KubeJS recipes + ledger entries +
   a draft PR with a `## Playtest` checklist.
-- **Tools:** KubeJS (`event.recipes.create.*`, `event.custom`, `event.shaped/shapeless`, `event.remove`),
-  `./tools/packwiz refresh`, `node --check`, `check.py`, recipe-graph regression.
+- **Tools:** KubeJS — **method-first**: `event.recipes.<mod>.<method>(...)` (e.g. `.create.mixing`,
+  `.create.crushing`) and `event.custom({ type: '<mod>:<method>', … })` for any mod's custom recipe type
+  (Ars imbuement, Occultism spirit_fire, etc.); `event.shaped/shapeless` only as the no-method fallback;
+  `event.remove`; `./tools/packwiz refresh`, `node --check`, `check.py`, recipe-graph regression.
 - **Gate (Gate 0 + Gate 3):** a *new* motif → Gate 0; genuine ambiguity (theme clash, balance risk,
   "is this island intentional?") → Gate 3, surfaced as a **few sharp questions** (AskUserQuestion-style),
   not a bulk dump.
@@ -300,18 +375,25 @@ upkeep.
 
 ## 6. Finding weave opportunities (compass, never target)
 
-Two complementary signals, used to *find* candidates — never as an acceptance number:
+Three complementary signals, used to *find* candidates — never as an acceptance number:
 
-1. **Structural (recipe-graph as compass).** The island table surfaces off-web clusters; the
+1. **Method-pull (the highest-yield — see §2.0).** Cross the dossiers' `consumes/outputs` against the
+   **methods palette**: a mod with a loose material (a drop, crop, gem, ingot with nowhere to go) and
+   another mod whose **method could consume or produce it** is a prime candidate — *route the material
+   through that method*. This is the edge the connectivity tool rewards most (methods are nodes that link
+   everything they touch) and the one that feels most intentional in play (the player runs a real
+   mechanic). Ask first: **"whose machine/ritual/infusion *wants* this material?"** before "what crafts
+   into what."
+2. **Structural (recipe-graph as compass).** The island table surfaces off-web clusters; the
    `--remove create` lens shows how a pillar coheres with the spine pulled out (the magic web reads ~99%
    in-web only because of vanilla glue — the no-vanilla / `--remove` lenses find the *real* islands). For
    each island, ask the [`CONNECTIVITY.md`](CONNECTIVITY.md) question: **intentional (cosmetic/organic —
-   leave it) or a real gap (bridge it with ~one edge)?** One bridge collapses a whole island; do **not**
-   gate every variant.
-2. **Thematic (dossier adjacency).** Even on-web mods can be *thematically* unconnected. Mining dossier
+   leave it) or a real gap (bridge it with ~one edge)?** The cheapest real bridge is usually a method-pull
+   (#1). One bridge collapses a whole island; do **not** gate every variant.
+3. **Thematic (dossier adjacency).** Even on-web mods can be *thematically* unconnected. Mining dossier
    vibes/signatures surfaces rhymes the metric can't see — a mob that drops embers next to a mod that
    smelts with embers; wine next to a coin economy. These are the *taste* opportunities, and they're the
-   reason the dossier layer exists.
+   reason the dossier layer exists. The best of these usually resolve *into* a method-pull (#1).
 
 **The worklist priority** is the ≥2-pillar rule: mods at **0 or 1** pillar (from the dossier anchor
 count), `tech/gear` islands first (per [`CONNECTIVITY.md`](CONNECTIVITY.md) triage), then per-material
@@ -331,13 +413,17 @@ This is where LLM limits bite hardest, so the mitigations are layered — and th
 1. **Compose from motifs (the strongest mitigation).** A weave built from an established, *already-
    playtested* motif inherits its life. Fresh-invented edges are where lifelessness lives — and those are
    exactly what Gate 0 throttles.
-2. **The established-pattern library.** The motif registry *is* the pattern library, seeded from the
-   pack's own working weaves and the wider modpack-integration canon (ore-doubling-as-reward, essence
-   currencies, native-machine gating, mob-drop sinks, catalyst-gated conversions, tiered gating,
-   coin-from-scarcity). Authoring picks from it; the dossier's "how-packs-integrate" field feeds it.
+2. **The established-pattern library.** The motif registry *is* the pattern library (which is the methods
+   palette in motif form — §2.1), seeded from the pack's own working weaves and the wider
+   modpack-integration canon (ore-doubling-as-reward, essence currencies, **arcane infusion**,
+   **ritual transmutation**, native-method gating, mob-drop sinks, **processing-chain pulls**,
+   catalyst-gated conversions, tiered gating, coin-from-scarcity). Authoring picks from it; the dossier's
+   "how-packs-integrate" field feeds it.
 3. **The theme-coherence rubric** (every weave passes, from [`RECIPES.md`](RECIPES.md)):
-   - Ingredient **matches** output ("computers cost computer parts; a drone costs rotors + a motor").
-   - Routes through the mod's **native machine**, not a crafting table, where the mod has one.
+   - **Routes through a *method* first.** If any installed mod has a machine/ritual/infusion/processing
+     type that *fits*, author into it (`event.recipes.<mod>.<method>` / `event.custom`); a bare crafting
+     table is the fallback, not the default. The method *is* the weave.
+   - Input **matches** output ("computers cost computer parts; a drone costs rotors + a motor").
    - **Additive**, or a `remove` is always paired with a replacement (never break a chain).
    - **Balance-first:** never makes a power item *cheaper* than its original; depth scales with power
      (light gate for cheap gear; `sequenced_assembly` keystone for flagships — M-05/M-06).
@@ -388,10 +474,14 @@ Resist building a pipeline; the digest and recipe-graph already do the heavy lif
 pieces are small:
 
 1. **Dossier generator** — `scripts/build-dossiers.py` (sibling to `extract-mod-data.sh`). Scaffolds one
-   `tools/mod-data/dossiers/<mod>.md` per mod, **pre-filling the factual fields from the digest**
-   (signature items, native methods from `recipes/<jar>.txt`, tags, deps) and leaving the judgment fields
-   (`one-line`, `vibe`, `2nd-pillar candidates`, `sources`) for the Phase-1 sweep. *Grounded by
-   construction* — the skeleton is the jar's truth, so the sweep can't silently invent contents.
+   `tools/mod-data/dossiers/<mod>.md` per mod, **pre-filling the factual fields from the digest** — and,
+   crucially, **the `methods` block: the distinct set of recipe-*types* a mod registers, read straight from
+   the `recipes/<jar>.txt` 2nd column** (e.g. `ars_nouveau:imbuement`, `occultism:spirit_fire`,
+   `create:mixing`) — plus signature items, tags, deps. It leaves the judgment fields (`one-line`, `vibe`,
+   non-recipe mechanics, `2nd-pillar candidates`, `sources`) for the Phase-1 sweep. *Grounded by
+   construction* — the skeleton is the jar's truth, so the sweep can't silently invent contents or methods.
+   The same pass emits `tools/weave-ledger/methods-palette.md` (the union, grouped by pillar) — the
+   shopping list of connective mechanics. (Re-runs after `extract-mod-data.sh` on every #161 update.)
 2. **The ledger format** — `docs/WEAVE-LEDGER.md` (human) + `tools/weave-ledger/weaves.json` (machine
    mirror). Plain text, schema in §4. No database.
 3. **`tools/weave-ledger/check.py`** — the §4.4 cross-check (ledger ↔ kubejs ↔ recipe-graph ↔
@@ -465,6 +555,7 @@ Layered, cheapest first; the last two are human because the sandbox can't launch
 | Risk | How it shows up | Mitigation |
 |---|---|---|
 | **Lifeless threads** | Technically-connected, not fun | Compose from playtested motifs (§7.1); theme rubric + lifeless-thread test (§7.3–4); G2 kills bad ideas pre-authoring; **playtest (G4) is the real exposure** — accepted limit, not solved by LLM. |
+| **Ingredient tunnel-vision** | Only flat crafting-table ingredient swaps; the rich method/mechanic web (infusions, rituals, processing) is ignored → a shallow pack | The §2.0 first principle (methods are resources); `methods` is a first-class dossier block + a pack-wide palette; method-pull is the lead opportunity signal (§6.1) and the lead authoring check (§7.3); recipe-types auto-extracted so the inventory is never missed. |
 | **Metric-gaming (Goodhart)** | Bridge-for-the-%, arbitrary edges | Hard policy: connectivity % is **never** a target/acceptance criterion (§6); weaves justified by motif+theme; metric used only as compass + regression. |
 | **Context fragmentation** | 356 local decisions → many clusters | The motif registry (shared vocabulary) + reagent-ownership (no double-spend) + read-ledger-first + `check.py` (no un-ledgered edges) + the 0.15 global review backstop (§2–3). |
 | **Hallucinated mod facts** | Weave built on contents a mod doesn't have | **Digest-or-URL grounding rule** — every claim cites a jar line or source; `UNVERIFIED` blocks use; dossier generator pre-fills facts *from the jar*; G1 spot-checks hubs; schema verified against the jar before authoring. |
@@ -496,6 +587,16 @@ To show the pipeline end-to-end on one mod. **This authors nothing**; it illustr
 
 Net: `vinery` went from 1 pillar (food) to 2 (food + economy) via an existing motif, one bridge, one cheap
 human gate — and the ledger now records *why*, so the next chunk won't re-spend wine on something else.
+
+**A second, method-centric case (the §2.0 lever in one line).** Suppose a mob mod drops a thematically
+"spectral" item that's a dead-end island (drops → nothing). The opportunity is found by **method-pull**
+(§6.1), not ingredient adjacency: the methods palette shows Occultism's `spirit_fire` and Ars's
+`imbuement` both *want* spirit-flavored inputs. Candidate line:
+`<mob>:spectral_drop → through occultism:spirit_fire → magic | motif: M-11 ritual/transmutation | →essence`.
+The weave isn't a craft — it's *running the drop through an existing ritual method* (`event.custom({ type:
+'occultism:spirit_fire', … })`), which gives the mob mod a magic pillar **and** engages a whole mechanic
+the player builds. Same shape would route a glowing gem through `ars_nouveau:imbuement` (M-10) or a crop
+through a fermentation/`create:milling` chain (M-12). *The method is the weave* — that's the true web.
 
 ---
 
