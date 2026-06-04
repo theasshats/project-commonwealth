@@ -12,7 +12,17 @@ theme/balance/"is this island intentional?" · **[NOTE]** judgment worth surfaci
 
 ## Open — needs your call
 
-_(none yet — Phase 0/1 is tooling + understanding; no weaves authored, so no taste gates fired yet.)_
+- **[NOTE] Phase 1 status (paused at usage limit).** Phase 0 tooling = done. Dossiers: **307/367 filled
+  & VERIFIED**, all pushed. **60 remain as skeletons** — the s–w tail (batches 16–23) whose agents hit the
+  account session limit mid-run. Resume them with `tools/weave-ledger/_batches/batch-16..23.txt`; the
+  generator's merge preserves finished cards, so a re-run is safe and only fills skeletons.
+  Notable content mods still pending: `tfmg`, `touhou_little_maid`, `sereneseasons` (survival core),
+  `sable`/`sky_whale_ship` (aeronautics), `samurai_dynasty`, `smokeleafindustries`, `securitycraft`,
+  `supplementaries`, `terralith`, `titanium`, `meadow`, `ribbits`, `s_a_b`.
+- **[COST LESSON] Don't fan out Opus subagents.** Phase 1 was run as ~23 parallel **Opus** research
+  agents — that exhausted the plan's usage in minutes. The dossier sweep is templated web-research:
+  **run it on Haiku 4.5 (support mods) / Sonnet (content mods)** via the Agent `model` override, a few at
+  a time, not a 23-way Opus fan-out. Apply this to the remaining 60 and to any future bulk pass.
 
 ## Standing defaults I'm proceeding on (override any time)
 
