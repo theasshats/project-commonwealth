@@ -23,6 +23,12 @@ OK — connections sound. Numismatics is the economy-pillar hub and correctly id
 ## alcohol_industry   [anchors: Create, survival (2)]
 OK — connections sound. The Create inbound weave (create:filling + create:mixing confirmed in made-by digest) is solid and appropriate. The M-09 economy candidate (bottled spirits as luxury sell goods) is the natural 3rd-pillar deepening and is correctly identified as STRONG — this is a manufacturing chain with a clear high-effort output (alcoholic drinks with effects), which is precisely the M-09 pattern. The only audit note: the 0.9 player-run-currency caveat on M-09 should be attached to this candidate as well (same global flag as for extradelight/chefsdelight). Mark accordingly.
 
+## ars_nouveau   [anchors: magic (1)]
+- REWORK: The dossier lists anchors as magic (1) with two 2nd-pillar candidates but does NOT reflect any authored inbound weaves in made-by (digest shows vanilla only). The Vitalic/Agronomic sourcelink connection (M-02, organic→magic) and the imbuement hub (M-01/M-10) are both proposed but not yet authored. This is a Phase 2 proposal state, which is correct — but the audit finding is: the 1-pillar status is accurate until these are authored, and the candidates are well-identified. No rework to the logic needed.
+- REWORK: The M-09 economy candidate (source_gem/spell scrolls as sellable goods) is correctly marked WEAK and deprioritized in favor of dedicated arcane-currency weaves. However, there is an unnoticed connection: Ars Nouveau's `ars_nouveau:crush` method (listed in registered recipe-types) could accept foreign minerals/ores as an alternative arcane crushing path — this is a methods-palette method that no dossier has flagged as a pull target. Worth noting as a candidate: foreign materials crushed via `ars_nouveau:crush` would give Ars a mechanical role beyond spellcasting, strengthening the Create↔magic spine via an alternative processing route (M-12). This is not in the current dossier candidates — flag as a new candidate for review.
+- from: foreign ore/mineral | via: ars_nouveau:crush | to: Create/magic | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT (for review) | hook: the Arcane Crusher grinds metals into dust by channeling Source — the magic web contributes to processing, not just buffs
+
+
 
 
 
