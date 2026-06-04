@@ -1,0 +1,10 @@
+minecolonies_compatibility
+ars_n_spells
+modelfix
+snowyspirit
+yet_another_config_lib_v3
+modonomicon
+byzantine
+supplementaries
+better_climbing
+chefsdelight

@@ -1,0 +1,10 @@
+create_hypertube
+prickle
+createoreexcavation
+alexsmobs
+structurize
+durabilitytooltip
+kubejs_create
+dynamictreesplus
+expandeddelight
+formationsnether
