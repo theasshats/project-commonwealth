@@ -1,0 +1,128 @@
+{
+  "_comment": "Machine mirror of docs/WEAVE-LEDGER.md. Kept in sync by hand when authoring weaves; tools/weave-ledger/check.py asserts ledger <-> kubejs <-> dossiers agree. See docs/WEAVING-PLAN.md.",
+  "pre_ledger_files": [
+    "00-create-ify.js",
+    "05-metals.js",
+    "10-immersive-armors.js",
+    "20-samurai-dynasty.js",
+    "30-modular-golems.js",
+    "33-magic-web-spine.js",
+    "34-magic-web-occult.js",
+    "35-magic-web-mobs.js",
+    "35-web-bridges.js",
+    "36-magic-web-create.js",
+    "40-northstar.js",
+    "50-irons-spellbooks.js",
+    "60-mffs.js",
+    "70-travelers-backpack.js",
+    "80-securitycraft.js",
+    "81-decoration-metal.js",
+    "89-bible.js",
+    "90-drones.js",
+    "91-astikor-carts.js",
+    "92-exposure.js",
+    "93-smokeleaf.js",
+    "94-supplementaries.js",
+    "95-swashbucklers.js",
+    "96-gliders.js",
+    "97-netmusic.js",
+    "98-minecolonies.js",
+    "99-meadow-cheese.js"
+  ],
+  "motifs": [
+    {
+      "id": "M-01",
+      "name": "Arcane currency",
+      "method": "ars_nouveau:imbuement",
+      "pillars": "magic",
+      "status": "established"
+    },
+    {
+      "id": "M-02",
+      "name": "Mob-drop reagent sink",
+      "method": "native",
+      "pillars": "organic+magic/economy",
+      "status": "established"
+    },
+    {
+      "id": "M-03",
+      "name": "Create ore-doubling",
+      "method": "create:crushing",
+      "pillars": "any+create",
+      "status": "established"
+    },
+    {
+      "id": "M-04",
+      "name": "Create recycles deco",
+      "method": "create:crushing",
+      "pillars": "deco+create",
+      "status": "established"
+    },
+    {
+      "id": "M-05",
+      "name": "Native-method gating",
+      "method": "native",
+      "pillars": "any+create",
+      "status": "established"
+    },
+    {
+      "id": "M-06",
+      "name": "Sequenced-assembly keystone",
+      "method": "create:sequenced_assembly",
+      "pillars": "create",
+      "status": "established"
+    },
+    {
+      "id": "M-07",
+      "name": "Attunement catalyst",
+      "method": "catalyst",
+      "pillars": "magic+survival",
+      "status": "established"
+    },
+    {
+      "id": "M-08",
+      "name": "Coin from processed scarcity",
+      "method": "create+numismatics",
+      "pillars": "create+economy",
+      "status": "proposed"
+    },
+    {
+      "id": "M-09",
+      "name": "Luxury good to coin",
+      "method": "numismatics",
+      "pillars": "survival+economy",
+      "status": "proposed"
+    },
+    {
+      "id": "M-10",
+      "name": "Arcane infusion pull",
+      "method": "ars_nouveau:imbuement",
+      "pillars": "any+magic",
+      "status": "proposed"
+    },
+    {
+      "id": "M-11",
+      "name": "Ritual/transmutation sink",
+      "method": "occultism:spirit_fire",
+      "pillars": "organic+magic",
+      "status": "proposed"
+    },
+    {
+      "id": "M-12",
+      "name": "Processing-chain pull",
+      "method": "farmersdelight:cooking",
+      "pillars": "survival+create/economy",
+      "status": "proposed"
+    }
+  ],
+  "reagents": {
+    "ars_nouveau:source_gem": "M-01",
+    "galosphere:allurite_shard": "M-07",
+    "galosphere:lumiere_shard": "M-07",
+    "occultengineering:spirit_solution": "M-11",
+    "create:experience_nugget": "M-03",
+    "numismatics:cog": "M-08",
+    "irons_spellbooks:arcane_essence": "M-01"
+  },
+  "weaves": []
+}

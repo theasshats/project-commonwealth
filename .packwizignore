@@ -17,6 +17,7 @@ LICENSE
 docs/
 */README.md
 CLAUDE.md
+DECISIONS.md
 
 # Player wiki source — staged here, published to the site by hand; not pack content
 wiki/
