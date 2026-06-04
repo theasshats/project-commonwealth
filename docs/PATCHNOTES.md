@@ -3,6 +3,13 @@
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme (diff vs prev)", a short lead paragraph, then sections (see CLAUDE.md). -->
 
+## 0.5.3 — Gunsmith delivery fix (diff vs 0.5.2)
+
+Builds made with the pack editor were shipping without the Create: Armorer gun pack, so its
+guns, ammo, and attachments were missing and the gun smith table had nothing to craft. The editor
+now bundles the gun pack the same way the build scripts do, so a fresh build has the full Armorer
+lineup. No recipes or content changed; this only restores files that should have been included.
+
 ## 0.5.2 — Magic Web (diff vs 0.5.1)
 
 The magic mods are now tied together. Ars Nouveau sits at the center: its Source acts as a common
