@@ -51,8 +51,16 @@ counts, run ONE more full pass (`--full`) so the now-visible parts get woven, th
 > tools/mod-data/by-mod/create-aeronautics-bundled-*.txt, and possibly recipes/loot files).
 >
 > Do this, in order:
-> 1. VERIFY the data landed: `grep -A2 'items' tools/mod-data/by-mod/create-aeronautics-bundled-*.txt` should
->    now show real `aeronautics:` IDs (non-empty). If still empty, STOP and tell me — the dump didn't work.
+> 0. PARSE THE RAW DROP: the maintainer committed raw extraction under `tools/mod-data/raw-aeronautics/`
+>    (per #179 — likely `en_us.json` lang file, maybe `registries.json` / recipe / loot JSONs, or the jar
+>    itself). If only the jar is there, `unzip -p <jar> assets/aeronautics/lang/en_us.json`. Parse the
+>    `item.aeronautics.* / block.aeronautics.*` keys into real `aeronautics:` ids and write them into the
+>    `## blocks` / `## items` sections of `tools/mod-data/by-mod/create-aeronautics-bundled-1.21.1-1.2.1.txt`
+>    (one id per line, match the format of any populated by-mod file). Add recipe/loot lines to
+>    `tools/mod-data/recipes/` & `loot/` if the raw drop has them. If `raw-aeronautics/` is empty, STOP — the
+>    extraction didn't land.
+> 1. VERIFY: `grep -A2 'items' tools/mod-data/by-mod/create-aeronautics-bundled-*.txt` now shows real
+>    `aeronautics:` IDs (non-empty).
 > 2. Rebuild dossiers: `python3 scripts/build-dossiers.py`. Confirm `tools/mod-data/dossiers/aeronautics.md`
 >    AUTO-DIGEST-FACTS now shows real counts. NOTE: build-dossiers may regenerate aeronautics.md from the jar
 >    and could clobber the hand-authored sweep — preserve the wiki-grounded "2nd-pillar candidates" + "open gaps"
