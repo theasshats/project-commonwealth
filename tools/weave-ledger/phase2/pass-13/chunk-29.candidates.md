@@ -35,6 +35,19 @@
 - from: companions:soul_gem | via: occultism:spirit_trade | to: magic | motif: M-18 | power: mid | tone: ok | verdict: ACCEPT | hook: Occultism spirits trade in soul-adjacent materials; a soul gem is a credible spirit-trade commodity that opens a magic-logistics lane from companion content
 - REWORK: companions currently has no cross-pillar connections at all — the internal coin economy (copper/nether/end_coin) actively competes with Numismatics without a bridge; the accepted M-09 entry above (coin bridging) addresses this, but the absence of a link is a design gap worth flagging for the 0.9 economy update review.
 
+## createaddition   [anchors: Create (1)]
+- from: createaddition:electrum_ingot | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: electrum (gold+silver) is the classic arcane alloy — of course the Ars apparatus wants it as an infusion ingredient
+- from: createaddition:electrum_ingot | via: occultism:crystallize | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: an occult crystallization step that upgrades electrum into a spirit-reactive form makes the alloy earn its place in two pillars
+- from: createaddition:charging (FE charge method) | via: createaddition:charging → Iron's Spellbooks FE-chargeable focus/wand | to: magic | motif: M-17 | power: mid | tone: ok | verdict: ACCEPT | hook: your Create electrical grid charges the magic gear — the tech layer literally powers the magic layer; conditional on Iron's having FE-chargeable items (BALANCE-PENDING verification)
+- from: createaddition:seed_oil / bioethanol | via: createaddition:liquid_burning → Aeronautics engine/generator intake | to: aeronautics | motif: M-13 | power: mid | tone: ok | verdict: ACCEPT | hook: crop-pressed seed oil feeding the airship's generator is a complete farm-to-flight supply chain
+- from: createaddition:copper_wire / electrum_wire (via rolling) | via: crafting/deploying as aeronautics wiring component | to: aeronautics | motif: M-24 | power: everyday | tone: ok | verdict: ACCEPT | hook: the rolling mill makes the wires; the airship's control surfaces need wires — one feeds the other
+- from: createaddition:seed_oil | via: farmersdelight:cooking chain (crop → oil intermediary) | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: oily crops farmed with Farmer's Delight processing feed the Create energy loop — agriculture becomes a power source
+- from: createaddition:biomass / bioethanol | via: numismatics (processed good → coin) | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: bioethanol is a common processed material without the "scarce / high-effort" character M-09 requires; pricing it as a luxury trade good is arbitrary and undervalues the economy pillar's scarcity signal — it's a fuel, not a luxury
+- REWORK: createaddition's `made-by methods` list contains dead-compat recipe stubs for `mekanism:enriching`, `mekanism:metallurgic_infusing`, and `immersiveengineering:mineral_mix` — these reference mods not in the pack. The stubs are harmless (skipped at load) but add noise; worth pruning if/when recipe files are touched.
+- OK — the Create-side connections (compacting/crushing/mixing/pressing inputs that build the motor/alternator/accumulator chain) are well-formed and appropriately deep for a Create addon.
+
+== CHUNK COMPLETE ==
+
 
 
 

@@ -57,6 +57,63 @@
 
 - LEAVE — it's a generator, not a content set. Its outputs already ride host mods' recipes (including Create wood shapes, Macaw's doors, etc.); weaving belongs on those host mods. No coherent 2nd pillar from this mod's own surface.
 
+## create_new_age   [anchors: Create (1)]
+<!-- Rich content mod: energising recipe-type (FE + rotation → "charged" outputs), electric motors, wires,
+     solar heating plates, nuclear reactor (Thorium ore → Corium), generator coils/magnets.
+     Existing inbound: create:compacting, crushing, cutting, deploying, mechanical_crafting, mixing, pressing,
+     sequenced_assembly — already deep in Create spine.
+     Key loose materials: copper_wire, blank_circuit, copper_circuit, fluxuated_magnetite, corium,
+     thorium_ore, carbon_brushes, electrical_connector, generator_coil, layered_magnet, overcharged wires.
+     Method on offer: create_new_age:energising (route foreign items through this electric-charge step). -->
+
+<!-- --- CANDIDATE 1: magic pillar via M-17 --- -->
+- from: create_new_age:energising (the energiser machine) | via: create_new_age:energising (charges a magic focus/scroll) | to: magic | motif: M-17 | power: mid | tone: ok | verdict: ACCEPT | hook: An Ars Nouveau focus or Iron's Spellbooks scroll gains a crackling "overcharged" tier when run through the Create Energiser — the electric current refines the arcane medium, and suddenly the machine room has a reason to feed the mage.
+<!-- Red-team: Is this coherent or is "electricity charges a magic item" too convenient? The electric+magic
+     junction is a well-established pack trope (Botania/Mana-condenser, etc.). M-17 explicitly covers this
+     ("Create electricity charges a tool/focus/reagent, threading the electric tier into magic/tech gear").
+     It survives. Power: mid (a focus or scroll is mid-tier; not a basic component, not an endgame keystone —
+     one step via energising is right). -->
+
+<!-- --- CANDIDATE 2: aeronautics pillar via M-24 --- -->
+- from: create_new_age:generator_coil / layered_magnet | via: crafting/create:mechanical_crafting | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: ACCEPT | hook: Aeronautics propulsion needs a generator; the CNA generator coil and layered magnet are the exact components a rotational-to-electrical drivetrain would need — the airship's power module becomes a real sub-assembly.
+<!-- Red-team: Is "generator coil for propulsion" mechanical or hand-wavy? Generator coils literally ARE the
+     electrical output of rotation — routing them into an airship engine's power supply is exactly the kind
+     of coherent part that M-24 targets ("mod's mechanical part feeds Aeronautics propellers/engines/control
+     surfaces — the drivetrain side"). Survives. Power: mid (generator coils are mid-tier Create-electric
+     parts, not endgame; one step of mechanical_crafting is proportionate). -->
+
+<!-- --- CANDIDATE 3: economy pillar via M-08 --- -->
+- from: create_new_age:thorium_ore (scarce regional worldgen) | via: create:crushing → numismatics mint | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: Thorium is a rare regional ore; the crew that finds and processes the deposit — crushing it to refined material then minting into coin — controls the nuclear-grade energy economy. Scarcity drives the trading relationship exactly as designed.
+<!-- Red-team: Does Thorium already have a full usage path (nuclear reactor fuel)? Yes — but M-08 is a
+     byproduct / surplus path, not a primary competing use. The crushing byproduct (some thorium dust
+     remainder) going to coin is the "mine surplus to market" path, parallel to the ore-to-reactor path.
+     This is exactly M-08's intent. Power: mid (Thorium is meaningful but not the rarest ore in pack).
+     Both uses coexist; no conflict. -->
+
+<!-- --- CANDIDATE 4: deeper M-06 / M-05 endgame gating --- -->
+- from: create_new_age advanced reactor components (reactor_casing, reactor_rod, reactor_fuel_acceptor) | via: create:sequenced_assembly | to: Create (depth) | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: Building a nuclear reactor isn't a crafting-table affair — the reactor fuel rods and casing pass through a multi-stage sequenced assembly line (deploying insulation, pressing the rod core, compacting the shielding) before the reactor multiblock can even be started.
+<!-- Red-team: Does this over-gate something that should be accessible? No — a nuclear reactor is an
+     explicit endgame structure. Gating its key components behind sequenced assembly is proportionate to
+     its power (M-06: "endgame items are multi-stage chains"). The basic motor should NOT be gated this way
+     (everyday component), but the reactor sub-assembly absolutely fits. Power: endgame; confirmed. -->
+
+<!-- --- CANDIDATE 5: magic via M-11 (corium as ritual reagent) --- -->
+- from: create_new_age:corium (radioactive reactor waste, solid_corium) | via: occultism:spirit_fire / ritual | to: magic | motif: M-11 | power: endgame | tone: ok | verdict: ACCEPT | hook: Corium — the molten nuclear waste product of a reactor meltdown — has an unmistakable "cursed material" energy. Running it through an Occultism spirit-fire ritual transmutes it into a corruption-aligned essence, giving mages a reason to want reactor output and turning nuclear waste into a magic resource.
+<!-- Red-team: Is "radioactive waste → dark magic reagent" tone-appropriate or too on-the-nose? Actually it
+     fits extremely well — Occultism works with soul-fire, corruption, and demonic spirits; corium as a
+     tainted material is coherent thematically. It's also a strong narrative hook (the reactor lab and the
+     occult sanctum share a supply chain). Survives. Power: endgame (solid_corium requires running the
+     reactor, which is a deep Create-electrical investment). -->
+
+<!-- --- CANDIDATE 6: aeronautics via M-13 (overcharged wire / FE as power feed) --- -->
+- from: create_new_age FE generation (motor/generator/solar systems) | via: Aeronautics FE engine intake | to: aeronautics | motif: M-13 | power: mid | tone: ok | verdict: REJECT | reason: M-13 is explicitly "TFMG/Create-Addition fuel → engine intake." FE is not a fuel in that sense — it's a power form the aeronautics engine might consume differently. If aeronautics engines take FE directly, this is M-17 territory. The overlap and ambiguity between M-13 and M-17 here means this is not the clean motif-routing it appears to be; surfacing as a no-motif / escalate rather than forcing a misfit. REJECT — no-motif (FE-as-aeronautics-fuel falls between M-13 and M-17 without a crisp method anchor; flag for Gate-0 clarification if aeronautics FE intake is confirmed in-game).
+
+<!-- --- EXISTING CONNECTIONS AUDIT --- -->
+- OK — existing single anchor (Create) is sound and well-grounded. The mod's recipe inbounds (sequenced_assembly, mechanical_crafting, deploying, pressing, mixing, crushing, compacting, cutting) show it is already deep in the Create spine. The accepted candidates above add magic (M-17 energising + M-11 corium-ritual), aeronautics (M-24 generator-coil drivetrain), and economy (M-08 thorium-to-coin) — bringing it to four pillars, appropriate for a flagship Create add-on.
+
+== CHUNK COMPLETE ==
+
+
 
 
 
