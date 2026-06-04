@@ -4,7 +4,7 @@ Quick process for an issue-triage session — re-label, **milestone**, re-assign
 Written from the post-0.5.2 triage; **update it as the project moves** (issue numbers below will drift).
 
 ## 0 · Get ground truth first — the ROADMAP can lag `main`
-The live tracker is truth; `docs/ROADMAP.md` / `docs/NEXT-SESSION.md` can be stale. Always:
+The live tracker is truth; `docs/ROADMAP.md` can lag `main`. Always:
 1. `git log --oneline -40 | grep -iE "merge pull request|bump version"` — what actually shipped + the current version.
 2. `pack.toml` → current `version`.
 3. List **open PRs** (only those are unmerged work) and **open issues** (`state OPEN`, `perPage 100`).
@@ -24,6 +24,22 @@ milestone / body-summary / cross-refs. Note: the list API **omits `assignees`** 
 - `needed-for-release` = the `v1.0.0` gate set **only** (§6). Keep it tight.
 - `playtest-blocked` = can't finish without an in-game check.
 - `issue_write` with `labels` **replaces** the whole set — include the labels you're keeping.
+
+## 2a · Effort estimates (`size:*` labels)
+Each issue also carries a **`size:*`** effort label — the one sanctioned addition to the 16-label
+vocabulary above. The estimate is **solo hands-on time**, decision assumed already settled, and it
+**excludes** boot/settle/playtest waits (flag those separately with `playtest-blocked`).
+
+| Size | Band | Typical |
+|---|---|---|
+| `size:XS` | ≤30 min | one config/manifest edit, a pin, a doc line, a quick decision |
+| `size:S` | 30–60 min | a small recipe/KubeJS/config change, a single-mod keep/cut, a settings toggle |
+| `size:M` | 1–3 hr | multi-file content, an investigation + change, a tooling script |
+| `size:L` | 3–6 hr / half-day | a pillar build-out chunk, multi-mod balance, worldgen + playtest, a new-mod skeleton, a hard bug |
+| `size:XL` | multi-day — **decompose** | pillar umbrellas / recurring frameworks; split into sub-issues |
+
+`size:XL` umbrellas **double-count** their sub-issues — don't sum them into a project total. The
+mechanical "size every open issue" pass is the `/estimate-issues` command.
 
 ## 3 · Milestone every issue (the road to 1.0)
 The backlog is organized into GitHub **milestones**, not loose buckets, and **every issue — including
@@ -63,8 +79,8 @@ which is also why the pillar milestones are shaped the way they are. A one-pilla
 *second* weave; a no-pillar mod is a **cut** candidate (curation). See `CLAUDE.md` + `docs/DESIGN.md`.
 
 ## 8 · After triage — update the docs
-Refresh `docs/ROADMAP.md` (milestones + needed-for-release + recently-merged) and `docs/NEXT-SESSION.md`
-(shipped list + open-PR table + near-term milestone) so the next session starts from truth.
+Refresh `docs/ROADMAP.md` (milestones + needed-for-release + recently-merged) so the next session
+starts from truth.
 
 ## Workflow guardrails (from `CLAUDE.md`)
 - **Branch:** rename the harness's random name to `claude/<topic>` before pushing; never commit to `main`.
