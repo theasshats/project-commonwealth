@@ -20,6 +20,17 @@
 - from: sky_whale_ship loot chests (loot-table surface — no registered items) | via: loot-table injection of Aeronautics/Create progression items | to: aeronautics | motif: M-15 (boss-key unlock loosely) | power: mid | tone: ok | verdict: ACCEPT | hook: A sky whale is an airborne dungeon; players only reach it by airship — injecting ship-tech or hull materials into its loot makes it a natural aeronautics milestone destination.
 - from: sky_whale_ship loot | via: numismatics coin / rare trade good in loot | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: Loot-table economy weave is weaker than the aeronautics one, and both can't be fully justified without knowing what the loot contains — the aeronautics angle is stronger and thematically self-reinforcing (you need a ship to get there, you find ship parts). Economy via loot is generic and dilutes the aeronautics hook.
 
+## mowziesmobs   [anchors: survival (1)]
+- from: mowziesmobs:ice_crystal | via: create:sequenced_assembly as a keystone input for a high-tier Create machine (M-15/M-06 boss-key gate) | to: Create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: The Frostmaw's Ice Crystal is rare and hard-earned — exactly the kind of gate the pack's design mandates for unlocking complex Create tech. A player slaying Frostmaw to build an advanced machine is coherent and memorable.
+- from: mowziesmobs:sol_visage / mowziesmobs:earthrend_gauntlet | via: occultism:spirit_fire transmutation into an arcane catalyst (M-11 ritual/spirit sink) | to: magic | motif: M-11 | power: endgame | tone: ok | verdict: ACCEPT | hook: Boss artifacts that grant elemental powers (sun mask, iron gauntlet) converting through spirit fire into Occultism catalysts fits the "mythic energy → arcane essence" theme naturally — the spirit fire consumes the relic's bound power.
+- from: mowziesmobs boss drops (any) | via: numismatics bounty board (M-14) | to: economy | motif: M-14 | power: endgame | tone: ok | verdict: REJECT | reason: M-14 is provisional and the maintainer leans no on player-currency bounties in general; also, boss artifacts are reserved as boss-key reagents (M-15 ownership) — routing them to bounty pay-in conflicts with that reservation and dilutes their gate role. Redundant with the two accepted weaves above.
+
+## createimmersivetacz   [anchors: Create (1)]
+- from: createimmersivetacz:twelve_gauge_shell / primer / createimmersivetacz ammo outputs | via: numismatics sell — bulk ammo as a consumable trade good (M-09 luxury/processed→coin) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: An "arms dealer" player manufactures rounds on their Create line and sells them to combat-focused crew members — the ammo factory becomes the pack's PvPvE supply economy naturally.
+- from: createimmersivetacz:gun_barrel / firing_mechanism (fabricated gun parts) | via: magic — none coherent | to: magic | motif: no-motif | power: mid | tone: clash | verdict: REJECT | reason: Gun parts have no thematic surface in Ars Nouveau or Occultism; a forced "infuse a gun barrel" edge would be arbitrary. No coherent magic weave exists for this mod.
+
+
+
 
 
 

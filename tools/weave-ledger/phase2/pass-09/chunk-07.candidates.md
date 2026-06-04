@@ -29,6 +29,10 @@
 - from: friendsandfoes hostile mob drops (Wildfire / Illusioner loot) | via: numismatics bounty / bountiful board | to: economy | motif: M-14 | power: mid | tone: ok | verdict: ACCEPT | hook: Wildfire and Illusioner are combat-encounter rewards; routing their drops through a bounty board for coin makes the combat encounter economically meaningful. (provisional motif)
 - NOTE on friendsandfoes: mob-vote mobs are deliberately vanilla-feeling; two thin weaves (crab_claw → magic, hostile drops → economy) are enough. Don't over-wire.
 
+## aileron   [anchors: aeronautics (1)]
+- LEAVE — zero items, zero blocks; pure behavior/enchantment overhaul with no material surface to weave. The enchantments it adds operate on the vanilla Elytra item. Even the magic-via-enchanting_apparatus candidate in the dossier is too speculative (enchants may not be datapack-exposed). No coherent 2nd pillar without forcing.
+
+
 
 
 

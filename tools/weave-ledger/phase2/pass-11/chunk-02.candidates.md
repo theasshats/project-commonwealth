@@ -26,3 +26,10 @@
 ## edf-remastered-5.0-beta4   [anchors: survival (1)]
 - from: harder Ender Dragon fight | via: boss drop as gate item for complex Create tech | to: Create | motif: M-15 | power: endgame | tone: ok | verdict: REJECT | reason: M-15 (boss-key) is thematically perfect for a 500-HP multi-phase dragon, BUT this datapack adds NO items and explicitly does NOT touch the dragon's drop table — there's no signature drop to gate on. A weave would mean inventing a drop the mod doesn't have. Surface the *idea* (a boss-key drop on the harder dragon) for whoever owns End-progression drops.
 - LEAVE — behavior-only datapack (0 items, drop table untouched). No material to route; forcing M-15 would fabricate content.
+
+## betteroceanmonuments   [anchors: survival (1)]
+- from: ocean-monument loot chests | via: loot-table seed (coin/reagent) → economy | to: economy | motif: M-08 (loose) | power: mid | tone: ok | verdict: REJECT | reason: 0 registry items; the only hook is a loot-table datapack edit, not a recipe on this mod. Coherent but defer to a loot-seed pass.
+- LEAVE — structure overhaul with no registry items/methods. Cross-pillar value lives on the loot table, not the mod.
+
+## letsdocompat   [anchors: survival (1)]
+- LEAVE — support/glue mod (0 items; ships recipes + food tags). It IS the food-web weaving layer (M-12-style unification across Let's Do / Farm&Charm / Farmer's Delight) — it has nothing of its own to give a 2nd pillar. Its function is already cross-cluster connective tissue; treat as infrastructure, not a weave target.

@@ -65,3 +65,36 @@ create:mixing (existing inbound weave, M-12), and the boiler outputs drinkable c
 - The STRONG 3rd-pillar candidate (finished liquors -> numismatics, M-09 luxury->coin) is coherent — bottled
   spirits are a natural trade commodity; carries the standard 0.9 currency caveat. Fine as proposed.
 - No rework on existing edges.
+
+## ars_nouveau   [anchors: magic (1) per dossier — audited as the magic spine]
+OK — connections sound, with an AUDIT-FLAG on the pillar count.
+- AUDIT FLAG (premise): the dossier anchors ars_nouveau at ONE pillar ("not yet wired to Create/economy/
+  survival"), yet this chunk is "mods already at >=2." The 2nd pillar is a *candidate*, not authored. The
+  strongest is magic<->survival via Vitalic/Agronomic Sourcelinks (M-02): foreign crops/mob-deaths/babies
+  already feed Source generation NATIVELY — no recipe needed — so survival is effectively a live 2nd pillar by
+  mechanic, even without an authored recipe edge. Treat that as the real 2nd pillar; record it.
+- Reagent-ownership respected: ars_nouveau:source_gem correctly OWNED as the universal magic currency hub
+  (M-01). No double-spend.
+- REWORK (weak): the numismatics M-09 "source_gem/scrolls as sellable arcane good" candidate is correctly
+  tagged WEAK and "prefer leaving economy to dedicated arcane-currency weaves" — agree; do NOT author. Pricing
+  the magic-currency hub item to coin would couple the M-01 reserved reagent to the economy pillar and invite
+  round-trip arbitrage. Keep it off.
+
+## astikorcartsredux   [anchors: survival (1)]
+OK — connections sound (one-pillar by design).
+- AUDIT FLAG (premise): genuinely at ONE pillar (agrarian field-work + hauling). The dossier correctly writes
+  "none strong — leave" and warns a forced economy/Create edge would be contrived. For vanilla-style transport
+  flavor that is the right call — a 2nd pillar is optional, not a gap.
+- REWORK (weak candidate, lean reject): the M-05 "gate plow blade / reaper on Create-processed iron sheets"
+  idea is the only defensible edge but is WEAK and risks gating an everyday early-game farm tool behind the
+  tech spine — a depth-scales-with-power concern. Carts/implements are meant to precede minecarts/trains. If
+  authored at all, only the *metal* implements (plow/reaper) and only as an alt recipe, never the basic carts.
+
+## bits_n_bobs   [anchors: Create, survival (2)]
+OK — connections sound. Genuine Create membership: two items are MADE-BY create:item_application +
+create:splashing (existing inbound weave), and it hard-depends on Create; the decoration palette is the
+sanctioned survival/build 2nd role.
+- Note: "survival" here = decoration/building, the pack's accepted support pillar — not a forced edge.
+- REWORK (none; reinforcement only): the M-04 "tiles/chairs crush back to crushed-stone/planks via
+  create:crushing" idea is coherent and lossy-correct; a fine reinforcement, optional. The "survival" label is
+  the softest of its two pillars but legitimate for a deco mod hard-bound to Create.

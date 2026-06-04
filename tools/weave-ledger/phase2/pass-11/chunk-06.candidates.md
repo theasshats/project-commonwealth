@@ -16,6 +16,12 @@
 ## ars_n_spells   [anchors: magic (1)]
 - LEAVE — this mod IS a weave (it is the Ars↔Iron's Spellbooks bridge), operating entirely on mana/spell data with zero material I/O surface. Its single pillar is precisely the role it plays: internal magic↔magic connective tissue. Forcing a second pillar onto a connective-tissue mod with no items or methods would create an artificial edge; nothing coherent to route through.
 
+## farm_and_charm   [anchors: survival (1)]
+- from: farm_and_charm:barley / farm_and_charm:oat (raw grains) | via: create:milling | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: grains hit the Millstone for flour before they go in the pot — the farm feeds the Create spine just like any crop, and you need rotation for both
+- from: farm_and_charm:butter / farm_and_charm:bacon / farm_and_charm:baked_lamb_ham (high-effort animal products) | via: numismatics sell | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: a husbandry specialist runs a steady surplus of butter and cured meats that traders inland will actually pay for — the animal-feeding loop has a cash outlet
+- from: farm_and_charm:barley (grain) | via: vinery:apple_fermenting / alcohol_industry:alcohol_boiling | to: Create (brewing chain) | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: barley→beer is a natural processing chain, but alcohol_industry is already the brewing spine and this would need a cross-mod recipe that duplicates what vinery + alcohol_industry already cover; adds complexity with no new pillar (stays survival/economy, not Create). Lower priority than the milling ACCEPT above.
+
+
 
 
 

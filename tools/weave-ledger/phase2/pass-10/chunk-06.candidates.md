@@ -25,6 +25,12 @@
 - from: createmetalwork:molten_steel (fluid) | via: M-23 aeronautics structural alloy | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: molten steel cast into structural plates is the obvious airframe material; createmetalwork already produces molten_steel; connecting it to aeronautics hull recipes adds depth without a new chain
 - from: createmetalwork molten metals | via: tfmg:casting / create:compacting | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: REJECT | reason: superseded by the molten_steel → M-23 row above; routing every molten metal to aeronautics is over-broad — steel plate is the right single anchor, not the full metal roster
 
+## modulargolems   [anchors: Create (1)]
+- from: modulargolems golem bodies (cataclysm cursium / Ice&Fire dragonsteel parts) | via: modulargolems:golem_assemble using boss-drop metals | to: survival (combat progression) | motif: M-02 | power: endgame | tone: ok | verdict: ACCEPT | hook: dragonsteel and cursium are already boss-drop metals in the pack; gating the best golem bodies behind them makes constructs a natural combat-progression reward — players feel the golem tier-ladder as boss-fight payoff
+- from: modulargolems golem core/slot upgrade | via: ars_nouveau:imbuement with source_gem | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: imbuing a golem core with arcane source connects golemancy to the magic web — a magic-infused construct upgrade feels thematically on-point; one imbuement step is proportionate for a mid-tier upgrade slot
+- from: modulargolems golem body parts | via: occultism:spirit_fire transmutation | to: magic | motif: M-11 | power: mid | tone: clash | verdict: REJECT | reason: spirit-fire is for organic-to-essence transmutation (M-11 organic↔magic); applying it to a metal construct body is a tone mismatch — metal parts don't transmute through soul fire; the Ars imbuement above covers the magic pillar cleanly
+
+
 
 
 
