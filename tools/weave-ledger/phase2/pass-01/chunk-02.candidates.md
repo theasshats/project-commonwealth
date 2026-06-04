@@ -36,3 +36,8 @@
 
 ## betterendisland   [anchors: survival (1)]
 - LEAVE — pure structure/worldgen overhaul; zero items, zero loot, zero registered methods, zero c:tags. No material surface to route, no machine to gate, no drop to transmute. Nothing to weave.
+
+## bakery   [anchors: survival (1)]
+- from: bakery:strawberry_cake / chocolate_gateau / linzer_tart / apple_pie (finished luxury baked goods) | via: numismatics sell — high-effort multi-step confections are natural luxury trade goods | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: a fresh-baked cake takes flour, fruit, sugar, and a stove pass — exactly the kind of high-effort consumable a Numismatics market was built for; the bakery becomes a supply node for the coin economy
+- from: wheat (crop input) | via: create:milling — mill wheat to flour as an alternative/preferred supply path into the bakery pipeline | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the Create mill grinds the grain; bakery ovens finish the bread — the food chain runs through the tech spine at the flour step; one light step, appropriate for an everyday ingredient
+- from: bakery surplus crops/breads | via: ars_nouveau Vitalic/Agronomic Sourcelink (passive Source regeneration from placed food) | to: magic | motif: M-10 | power: everyday | tone: ok | verdict: REJECT | reason: this is a weak ambient-generation edge rather than a directed method-routing; the Sourcelink mechanic accepts any food item, so bakery doesn't earn a specific magic anchor — it's diluted across all food mods. Better owned by a dedicated farm/food mod as its primary magic connection. No clear motif ownership here.

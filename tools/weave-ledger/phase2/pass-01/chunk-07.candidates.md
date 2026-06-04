@@ -67,3 +67,23 @@
 
 - LEAVE — zero items, zero registered methods, zero loot tables; pure YUNG's mineshaft structure overhaul. Indirectly supports the ore-scarcity/survival loop (richer shafts to explore) but provides no material or method that can be woven into a second pillar.
 
+## createpickywheels   [anchors: Create (1)]
+
+<!-- Method-pull: zero items, zero methods, zero loot — pure behavioral patch on create:water_wheel
+     and windmill power. No material in/out; nothing to route through any method.
+     The mod's mechanic is a constraint rule (biome + environment gates the generator). That constraint
+     IS the value: it makes the world push back on where players build Create power, which is
+     survival-pillar flavor applied to Create. But it is a config/behavior mod, not a material-producing
+     one, so there is no recipe edge to author.
+     Candidate from dossier: "survival via biome-gated power" — the river/biome/open-air requirements
+     mean the world dictates placement, which aligns with the survival pillar's "world pushes back"
+     philosophy. This is a genuine conceptual 2nd anchor (Create + survival), but it is realized
+     entirely by config, not by any authored weave. It is already doing its job; no edge is needed.
+     Red-team: could we add a recipe using a "river current" item from this mod? No — the mod registers
+     no such items. Forcing a recipe edge onto a pure-behavior mod to manufacture a 2nd-pillar count
+     would be exactly the kind of forced edge the briefing warns against.
+     Conclusion: LEAVE — the survival flavor is real but config-native; no recipe weave is possible
+     or appropriate for a zero-item behavior patch. -->
+
+- LEAVE — pure behavioral patch (no items, no methods, no materials). The biome/environment gating it applies to Create water wheels and windmills carries genuine survival-pillar flavor, but it is realized entirely by config, not by any authored weave; no recipe edge is possible or appropriate.
+

@@ -47,5 +47,27 @@
 - from: endrem:guardian_eye | via: create:sequenced_assembly | to: Create | motif: M-06 | power: endgame | tone: ok | verdict: REJECT | reason: same tone concern — the guardian eye is thematically aquatic/elder-guardian lore, not a manufactured part; and making even one or two portal eyes craft-able via Create would trivialize the exploration gate that is the mod's entire reason to exist (dossier explicitly warns: "keep at most a couple craftable" and "keep costly"); the ritual/magic paths above already give a safety-net craft route; adding a second craft path via Create dilutes the scarcity signal further
 - LEAVE (remaining 12+ eyes) — eyes not listed above remain pure loot/exploration finds; forcing craft routes on all of them defeats the entire mod's purpose; the two accepted magic routes (undead + nether) provide safety-net coverage without hollowing the progression gate
 
+## copperagebackport   [anchors: survival (1)]
+
+- from: minecraft:copper_chest / copper_bars / copper_chain / copper_lantern / copper deco set | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: the copper deco tree crushes back to copper nuggets/raw copper + an XP nugget — same loss-accepting recycle that Create applies to any metal deco; the mod is effectively a vanilla-tier copper expansion and Create already recycles the base copper set this way
+- from: minecraft:copper_axe / copper_boots / copper armor/tools | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: copper tools/armor crushed in a millstone or crushing wheels yields copper nuggets — consistent with M-04's recycle principle and avoids stranded gear at the point where players swap to better materials; light, single-step, no gate
+- from: copperagebackport:copper_button / exposed_copper_button etc. | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: copper buttons are already covered by friendsandfoes (which ships the same button set with the same item ids) — flagged as redundant in the friendsandfoes entry; the deco-crushing weave covers this family at the chest/bars level; a separate button row adds no value and may conflict on item-id if both mods register buttons under overlapping ids
+- from: minecraft:copper_golem_statue (Copper Golem logistics entity) | via: any recipe method | to: aeronautics/logistics | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: the golem's chest-hauling is a behavioral mob mechanic, not a material output; no recipe type can express "golem hauls items between chests"; would require behavioral config, not a weave; no motif covers it; LEAVE the logistics angle
+
+## midnightthoughts   [anchors: survival (1)]
+
+- LEAVE — the mod registers zero items, zero blocks, and zero recipe types; it is a purely behavioral rest/sleep mechanic with no material output or input surface. There is no join key for any recipe method. No coherent 2nd pillar is possible through method-pull or crafting. Thematic neighbors (Serene Seasons, Cold Sweat) are behavioral pillars, not recipe connectors. Confirmed LEAVE.
+
+## vc_gliders   [anchors: aeronautics (1)]
+
+- from: vc_gliders:paraglider_diamond / paraglider_netherite (high-tier gliders) | via: create:mechanical_crafting | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: a diamond or netherite glider is gated behind a Mechanical Crafting recipe using Create metal sheets — flight gear for the upper tiers requires the tech spine, placing personal flight on the same progression ramp as other Create-gated equipment; sensible and expected in a Create pack
+- from: vc_gliders:paraglider_iron (iron glider, entry tier) | via: create:pressing | to: Create | motif: M-05 | power: everyday | tone: ok | verdict: ACCEPT | hook: the iron glider's reinforced paper requires a pressed-iron sheet or pressed leather panel — a single Create step gates the very first flight item, anchoring the whole tier ladder to Create from entry level; light single step, appropriate for everyday power tier
+- from: vc_gliders:copper_upgrade | via: create:pressing | to: Create | motif: M-20 | power: everyday | tone: ok | verdict: ACCEPT | hook: the copper upgrade is applied via a deployer — a pressed copper sheet deployed onto the glider gives the upgrade in one Create step; M-20 (deploy-application upgrade) is the correct light-weave for a single applied upgrade rather than the deep M-06 chain
+- from: vc_gliders:nether_upgrade | via: create:haunting | to: Create / magic | motif: M-19 | power: mid | tone: ok | verdict: ACCEPT | hook: the nether upgrade (soul-fire / heat-themed behavior) is produced by haunting a base glider component over soul fire — Create's haunting method (soul-fire transmutation) is the natural seam; the nether upgrade's heat-resistance theme aligns with haunting's soul-fire output; a player connecting "nether upgrade from soul fire" nods immediately
+- from: vc_gliders:paraglider_gold | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: REJECT | reason: gold gliders have no arcane theme — gold is a vanilla metal, not a magic material in this pack; infusing a gold paraglider in the enchanting apparatus is a tone mismatch (a flying rig fed into ritual magic for no thematic reason); the Create-gating candidates above are more coherent for this tier
+
+== CHUNK COMPLETE ==
+
+
 
 

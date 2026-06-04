@@ -122,5 +122,35 @@ Already at the 2-pillar goal. Inbound weaves confirmed: `create:filling` + `crea
 
 - from: alcohol_industry:alcohol_base (fluid) | via: extradelight:vat / ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: clash | verdict: REJECT | reason: Alcohol Base is an industrial intermediate (a feedstock fluid); pulling it into arcane infusion as a magic reagent would require it to carry magical significance it has none of. Tone clash: industrial distillery ≠ arcane ingredient. Leave.
 
+## ars_nouveau   [anchors: magic (1)]
+
+One pillar only; needs a 2nd. Ars Nouveau is the magic spine — 18 registered recipe-types, the Source economy, the M-01 hub (`source_gem`). Its dossier identifies strong candidates.
+
+**Method-pull:**
+- Ars' Vitalic Sourcelink (mob death/baby events → Source) and Agronomic Sourcelink (crop/tree growth → Source) are *non-recipe* mechanics that already consume organic world-activity passively. The pack's farm/mob mods (FD, ExtraDelight, Alex's Mobs, Naturalist, etc.) generate exactly these events as surplus. This is M-02 (mob-drop reagent sink via Vitalic) and a survival→magic organic link.
+- The `ars_nouveau:imbuement` method is the M-01/M-10 hub: foreign essences/gems → source_gem. Reserved; reuse, don't double-spend.
+- `ars_nouveau:crush` method exists — could crush foreign materials into Ars-relevant dusts, but no strong target identified without the worldgen mods' dossiers at hand; flagging as exploratory.
+
+**Power-read:**
+- source_gem: mid (mid-game progression gate, not day-1). Imbuement chamber requires some setup.
+- Sourcelinks: everyday (just build one near a farm/mob farm).
+- Spell glyphs / enchanting apparatus: mid to endgame.
+
+**Theme-fit / red-team:**
+- survival→magic via Sourcelinks: Players grow crops or breed animals, and the Vitalic/Agronomic Sourcelinks passively accumulate Source. This is *already native to Ars* — no recipe needed; the magic system was designed to drink from the survival world. Red-team: "Is this a weave, or just the mod working?" — it's the mod working, which *is* the weave. The integration is that survival activity powers magic; the connection is structural.
+- economy: source_gem as a sellable good (M-09) is weak — the dossier flags it as weak. Source gems are a magic currency used to power the system; selling them would drain the player's magic infrastructure. Better left as magic-internal.
+- Create→Ars: No Create method directly feeds Ars recipe-types out of the box. The closest coherent path is `create:milling` crushing a worldgen material (archwood log → dust?) → `ars_nouveau:imbuement`, but archwood is Ars' own wood. Alternatively, Create's `create:haunting` (soul-fire transmutation, M-19) producing a spirit-adjacent output that feeds Ars is thematically interesting — but Ars' inputs are organic/gem, not haunted-metal. Flag as exploratory/low-confidence.
+
+**Candidates:**
+
+- from: crop surplus / mob death events (farm mods' organic output) | via: ars_nouveau:agronomic_sourcelink / vitalic_sourcelink (passive drain, not a recipe) | to: survival | motif: M-02 | power: everyday | tone: ok | verdict: ACCEPT | hook: the farm feeds the spell-books — plant more crops, the source jars fill faster; survival and magic are the same loop
+
+- from: foreign essences / lapis / amethyst | via: ars_nouveau:imbuement → source_gem | to: magic (internal) | motif: M-01 | power: mid | tone: ok | verdict: ACCEPT | hook: the imbuement chamber is the universal arcane mint — every magic reagent in the pack passes through it on the way to source_gem
+
+- from: ars_nouveau:source_gem (magic currency) | via: numismatics vendor price | to: economy | motif: M-09 | power: mid | tone: clash | verdict: REJECT | reason: source gems are the operational fuel of the magic system; pricing them as trade goods would incentivize selling them instead of using them, draining the player's magic infrastructure. The currency dossier reserves numismatics coins for the economy pillar; source_gem is already the magic-pillar currency (M-01). Double-currency confusion, wrong direction.
+
+- from: ars_nouveau archwood surplus (archwood logs/planks) | via: create:milling → Ars recipes | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: archwood is primarily a building block and Ars' own aesthetic material; milling it into dust to feed back into Ars recipes creates a tight loop but no real 2nd-pillar bridge — it stays inside magic. No-motif for "archwood dust" as a Create→magic join. Needs Gate-0 if pursued further.
+
+
 
 
