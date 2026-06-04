@@ -62,3 +62,59 @@ One additional candidate the dossier didn't foreground:
 - from: ars_nouveau:archwood_log (archwood burns; Volcanic Sourcelink bonus for archwood) | via: ars_nouveau:imbuement (or haunting as a Create bridge) | to: Create | motif: M-19 | power: everyday | tone: ok | verdict: REJECT | reason: archwood-as-fuel is a passive Source mechanic, not a material that Create's haunting method wants — no meaningful Create output; forced edge.
 - from: ars_nouveau:source_gem | via: create:crushing (crush spent source blocks) | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: source_gem is the reserved magic currency (reagent-ownership); routing it through create:crushing recycle loop would undermine its role as the magic-pillar anchor material. Do not repurpose.
 
+## astikorcartsredux   [anchors: survival (1)]
+The dossier places this at 1 pillar (survival) with a "LEAVE" posture on the 2nd. This is a quality-audit entry for an anchored mod with one pillar — the question is whether the existing single connection is sound, and whether a 2nd is available without forcing.
+
+Existing connection quality: survival is the correct and only anchor — horse-drawn carts and field implements are purely agrarian/rustic flavor. The connection is thematically clean and not over-claimed.
+
+2nd-pillar candidates:
+- from: plow/reaper (iron-bearing implements) | via: create:pressing → iron sheets as crafting ingredient | to: Create | motif: M-05 | power: everyday | tone: ok | verdict: REJECT | reason: the dossier tags this WEAK and correctly so — gating a wooden cart's plow blade behind Create-processed iron sheets is disproportionate for an everyday low-tech tool. These implements are intentionally pre-Create tier (draft animals precede steam engines); forcing a Create gate inverts the progression logic. The "depth scales with power" guardrail kills this.
+- from: astikorcartsredux supply cart (cargo hauling) | via: numismatics vendor — a filled supply cart as a deliverable trade good | to: economy | motif: M-21 (provisional) | power: everyday | tone: clash | verdict: REJECT | reason: M-21 is provisional and leans no; a supply cart is a vehicle, not a vendored consumable; the pairing is contrived. No economy hook is coherent here.
+
+LEAVE — rustic agrarian cart mod; its single survival pillar is clean and correctly sized to its content. Forcing a Create gate or economy edge would violate tone (pre-industrial) and the depth-scales-with-power rule. One pillar is the floor; the floor is met.
+
+## bits_n_bobs   [anchors: Create, survival (2)]
+OK — connections sound.
+Both existing connections are grounded: Create as the primary (it IS a Create addon — depends Create, 2 inbound Create methods: `create:item_application` and `create:splashing`) and survival/decoration as the 2nd (broad deco tile palette serving builders). The chain-pulley and nixie-board items serve real kinetic/display needs inside Create builds.
+
+REWORK: None required. The M-04 candidate (tile blocks crushed back to material) is correctly identified as a reinforcing deepening, not a missing pillar. At authoring time, apply M-04 selectively — stone-type tiles back to crushed stone/gravel is coherent; wooden chairs back to planks is less so (chairs are not deco in the M-04 sense). The dossier's assessment is sound.
+
+## cbc_at   [anchors: Create, aeronautics (2)]
+OK — connections sound.
+Both existing connections are by construction: Create (all barrels/breeches built via `create:cutting` + CBC munition assembly, itself Create-adjacent) and aeronautics (the entire purpose is arming Aeronautics ships/contraptions for PvPvE combat). The 10 registered recipe types (munition assembly/fuzing chains) are all inbound from Create and CBC — the mod IS a specialized Create-aviation munitions factory.
+
+REWORK: None required. The dossier's deepening note (M-15 boss-drop gate for the heavy autocannon/rocket tier) is a design/progression call, not a missing pillar weave. It remains a good candidate for the 0.9 or later progression milestone. The current 2-pillar state is fully justified. No forced edges needed.
+
+## chefsdelight   [anchors: survival, economy (2)]
+OK — connections sound.
+Both existing connections are well-grounded: survival via the Farmer's Delight food/meal content the Cook/Chef villagers sell, and economy via the villager-trade layer (emerald-based commerce, adding a soft food-source trade economy). The mod's content (village structures, cook professions) is coherent with both anchors.
+
+REWORK: One minor point worth flagging. The economy pillar here rides on emerald-based villager trades, which operates outside the pack's Numismatics coin system. This is not a defect — emerald trades are vanilla-compatible — but it means the Cook/Chef villager economy is *disconnected* from the player-run Numismatics economy. The dossier notes the optional deepening (route trades onto Numismatics coins via M-09), and that observation is correct. At authoring time this should be evaluated: if the pack's vision is that all meaningful trade routes through Numismatics, a KubeJS trade-price override would unify the food economy. This is a polish/milestone item, not a current defect.
+
+No REWORK items on the connections themselves.
+
+## cmpackagecouriers   [anchors: Create, aeronautics (2)]
+OK — connections sound.
+Both existing connections are by construction: Create (the mod extends Create's package/logistics layer — built via `create:cutting` + `create:deploying`, both confirmed inbound methods) and aeronautics/logistics (the cardboard plane is a flying autonomous courier, a direct extension of the aeronautics logistics pillar). The design vibe is industrial-logistics, fully Create-native.
+
+REWORK: None required. The dossier correctly notes that a light economy adjacency (remote trade fulfillment) exists but should be left unless the trade tooling wants it. That restraint is sound — the cardboard plane doesn't itself trade goods; it moves packages, and routing it formally into the economy pillar would be a thin narrative stretch. The 2-pillar state is clean and stable.
+
+## companions   [anchors: survival (1)]
+This is a 1-pillar mod; the quality audit covers whether the single anchor is correct and whether the proposed 2nd-pillar candidates in the dossier are sound.
+
+Existing connection quality: survival as the single anchor is the right call — tamable companions, hostile mobs, boss content, and the internal Soul Furnace/Tesla loops are all organic/mob flavor. The mod's self-contained coin system (copper/nether/end coins) does NOT automatically grant an economy anchor since these are not Numismatics coins.
+
+Proposed 2nd-pillar candidates (dossier assessment):
+
+- from: Crystallized Blood / soul gems | via: occultism:spirit_fire or ars_nouveau:imbuement | to: magic | motif: M-11 / M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: a Soul Furnace that converts mob-drops into crystallized essences is a natural upstream supplier for the Occultism/Ars spirit-and-reagent economy — players farming companion mobs to feed the magic web is exactly the cross-pillar loop the pack wants.
+
+- from: companions:relic_gold (boss drop of the Sacred Pontiff) | via: numismatics vendor (sell for coin) | to: economy | motif: M-09 | power: endgame | tone: ok | verdict: ACCEPT | hook: a rare boss relic priced as a luxury collectible/currency good is a natural sell; endgame drops earning meaningful coin keeps the economy tied to challenge, not just automation.
+
+- from: companions:copper_coin / nether_coin / end_coin | via: numismatics exchange (bridge to pack currency) | to: economy | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: bridging two coin systems would require inventing a conversion recipe with no existing motif; the "no-motif → REJECT-for-review" rule applies; also risk of arbitrage between currency systems. Flag for Gate-0 if the coin-unification question is revisited in the 0.9 economy update.
+
+- from: voltaic pillar / tesla coil deco blocks | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: the Tesla electrical aesthetic clashes tonally with Create's clockwork-steam vibe — industrial electricity as a Create recycling feedstock is forced. The dossier correctly tags this WEAK. The mod's deco set is small and not thematically aligned with Create stones/metals in the way M-04 targets.
+
+Top accepted candidate: magic via M-11 (Crystallized Blood/soul gems → occultism:spirit_fire / imbuement) is the cleanest and most thematically coherent 2nd pillar for this mod.
+
+== CHUNK COMPLETE ==
+
