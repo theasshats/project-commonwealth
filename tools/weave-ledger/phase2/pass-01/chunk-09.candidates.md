@@ -89,3 +89,18 @@ Power-read: there is nothing to weave here — no materials, no recipe-types, no
 
 - LEAVE — bundle-wrapper with zero content under this namespace. Weave candidates belong on the `aeronautics` dossier. Forcing an edge here would be attaching to nothing.
 
+## aeronautics_dyeable_components   [anchors: aeronautics (1)]
+
+Pure cosmetic add-on: 16 dyed levitite variants + 4 tire sizes × 16 colors. Registers 0 recipe-types; consumes base levitite/tires + a vanilla dye → colored variant via crafting table (or dye-in-offhand ritual). 0 c:tags.
+
+**Method-pull**: No processing methods registered; no material the palette needs. The dye step uses vanilla dyes — routes through nothing except a crafting table.
+
+**Power-read**: All items are cosmetic; everyday-to-none in power level. No tier progression exists — you color a levitite block the same on day 1 as day 100.
+
+**Theme-fit / red-team**: The candidates the dossier raises:
+- "Route dye via Create mixing for color" — gilding. A levitite block + dye going into a mixer just to produce a colored block is a non-edge. The vanilla crafting table is the correct form. A forced Create mixing step would add friction to a decoration action with zero gameplay benefit and would violate the "don't gate basic/everyday components behind complex recipes" guardrail.
+- "Decoration palette is a sanctioned support role" — correct. The dossier itself concludes LEAVE. A second pillar is not possible without manufacturing an edge.
+
+- LEAVE — cosmetic skin layer (levitite/tire color variants). No processing methods, no non-trivial outputs, no recipe surface. No coherent 2nd pillar exists that isn't contrived. A forced Create-mixing dye step would gate everyday cosmetics behind machinery for no game reason.
+
+

@@ -28,3 +28,31 @@
 - from: alexsmobs:bear_dust (everyday — common bear drop) | via: create:crushing | to: Create | motif: M-03 | power: everyday | tone: ok | verdict: REJECT | reason: crushing bear_dust → generic bonemeal equivalent is a red-herring; bonemeal already exists and the intermediate adds nothing. Depth rule: everyday items need only a light step, but if that step produces nothing the pack doesn't already have, it's wasted noise. Drop.
 - from: alexsmobs rare drops (general mob bounties) | via: bountiful board → numismatics payout | to: economy | motif: M-14 | power: mid | tone: ok | verdict: REJECT | reason: M-14 is provisional (leans-no, player-run currency review in 0.9). Surface candidate but do not accept; file for Gate 2 review.
 
+## drones   [anchors: aeronautics (1)]
+
+<!-- Method-pull: drones outputs the pocket drone (assembled item) and its component blocks
+     (wood_rotor, iron_rotor, ion_thruster, controller, drill, frame). The join surface the
+     dossier identifies is that rotors/thrusters are natural Create-material sinks. Cross against
+     methods palette: create:mechanical_crafting and create:sequenced_assembly take brass/precision
+     parts as inputs (M-05 native-method gating / M-06 sequenced-assembly keystone). The ion_thruster
+     is the natural endgame tier (more exotic, needs electrical logic → Create-Addition FE bridge
+     possible M-17, but let's check fit). The pocket_drone assembled item is the output.
+     Power-read: wood_rotor = early/everyday; iron_rotor = mid; ion_thruster = endgame.
+     Scale depth: wood = light (vanilla craft fine); iron_rotor = one Create step (pressing/crafting);
+     ion_thruster = deeper (sequenced assembly) — matches the briefing's depth-scales-with-power rule.
+     Theme-fit: quadcopter drone + Create factory = obviously industrial; the Aeronautics + Create
+     spine pairing is the intended design. No clash.
+     Red-team M-06 on ion_thruster: sequenced_assembly for the ion thruster is "multi-step chain
+     through a derpack:incomplete_* part" — appropriate for an endgame thrust unit. Does the player
+     find this sensible? Yes — you'd expect factory-machined ion drives. Survives.
+     Red-team M-05 on iron_rotor: gating an iron_rotor behind a create:mechanical_crafting recipe
+     is one light step — iron sheet + a gear blank shaped on the crafting grid. Not over-complex for
+     a mid-tier component. Survives.
+     Red-team M-09 economy: pocket_drone as a sellable "crafted good" is very weak — it's a personal
+     tool, not a luxury consumable; the sell-value framing doesn't fit the mod's vibe. Reject.
+     Conclusion: 2nd pillar = Create via M-05 (iron_rotor mid gate) + M-06 (ion_thruster endgame gate). -->
+
+- from: drones:iron_rotor (mid component) | via: create:mechanical_crafting (iron sheet + gear blank) | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: a spinning rotor is exactly the kind of precision part that comes off a Create mechanical crafter — the factory makes your flier's blades.
+- from: drones:ion_thruster (endgame component) | via: create:sequenced_assembly (derpack:incomplete_thruster part chain) | to: Create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: ion thrusters need more than hammered iron — a sequenced assembly line winding coils and pressing charge plates is the obvious factory story.
+- from: drones:pocket_drone (assembled item) | via: numismatics sell | to: economy | motif: M-09 | power: mid | tone: clash | verdict: REJECT | reason: the pocket drone is a personal automation tool, not a luxury trade good; framing it as a sellable commodity clashes with the mod's personal-robotics vibe. Nothing about a self-built drone says "merchant stock."
+
