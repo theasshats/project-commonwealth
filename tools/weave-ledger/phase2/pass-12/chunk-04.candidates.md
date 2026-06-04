@@ -1,2 +1,11 @@
 # Phase 2 candidates — chunk-04 (pass-12, context-fed)
 
+## dndesires   [anchors: create (1)]
+- NEW: from: dndesires:haunting_sail (the sail that invokes Create haunting on belt items) | via: create:haunting (M-19 — the sail IS the haunting method, but as a foreign-material target: route a magic mob drop through it to yield a soul-infused intermediate) | to: magic | motif: M-19 | power: mid | tone: ok — haunting + magic drops is exactly Create's own soul-seam; the sail just extends the automation form | verdict: ACCEPT | hook: pass a Wither rose or undead drop through the haunting sail and get a soul-tinged reagent without building a separate haunting setup
+- NEW: from: farm_and_charm:barley_seeds / sereneseasons out-of-season grain | via: dndesires:freezing (fan-freeze preserves seasonal crops — an extension of M-16 × M-12) | to: survival | motif: M-16 | power: everyday | tone: ok — freezing to preserve seasonal food is a player-intuitive "of course" | verdict: ACCEPT | hook: freeze surplus summer grain in a D&D freezing-sail line so out-of-season flour is available year-round; Serene Seasons scarcity met by Create automation
+- CHALLENGE: existing rows route rubber→M-23 (aeronautics hull, ACCEPT 3×) and rubber→M-24 (drivetrain, ACCEPT 1×). Both treat rubber as a structural/mechanical aeronautics input. The M-24 row is the subtler and more accurate one — rubber gaskets and seals in propulsion/drive gear, not hull plating. Recommend PROMOTING the M-24 row and DEMOTING M-23 (rubber doesn't plausibly plate an airframe; it seals and damps). The M-23 ACCEPT rows are likely a mis-categorization.
+- CHALLENGE: the "dndesires milkshakes → numismatics M-09" rows (ACCEPT, 3×) assume milkshakes are multi-step processed luxuries on par with wine or aged cheese. Red-team: a milkshake is one hydraulic-press step from milk+cocoa/glowberry — that's mid-effort at best, not premium luxury. The sell price should reflect this; tagging it M-09 "luxury good" may overstate the gate. Suggest ACCEPT with a low-denomination coin (cog/spur) rather than a premium price.
+
+## createshufflefilter   [anchors: create (1)]
+- LEAVE — two filter items with no material outputs, no methods of its own, and no coherent 2nd-pillar join key. All prior passes agree; dossier confirms LEAVE.
+
