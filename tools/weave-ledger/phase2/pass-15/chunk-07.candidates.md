@@ -15,6 +15,16 @@
 - from: moblassos:contract item | via: recipe | to: economy | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: moblassos:contract appears to be a holding item, not a trade-currency item. No motif fits; no-motif → reject-for-review.
 - LEAVE — 13 items, no loot, no blocks, no recipe types; its value is pure mob-transport logistics (utility synergy with aeronautics/MineColonies). There is no material flow to route through a method. Confirmed leave: no coherent 2nd-pillar recipe/loot/config edge survives red-team.
 
+## stylecolonies   [anchors: support (1)]
+- LEAVE — pure blueprint pack for MineColonies; 0 items, 0 blocks, no loot, no recipe types. The Steampunk style consumes Create blocks at colony build time — that's an organic MineColonies build-demand, not a weavable recipe edge. No material surface to route through a method.
+
+## dynamic_fps   [anchors: support (1)]
+- LEAVE — client performance utility; 0 items, 0 blocks, no loot, no recipe types. Pure runtime optimization. Genuine zero-content surface.
+
+## dtterralith   [anchors: survival (1)]
+- from: dtterralith biome-specific seeds (dtterralith:maple_seed, jacaranda_seed, cedar_seed, etc.) | via: loot-seed | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: dtterralith outputs ordinary logs on harvest (the same as vanilla wood). The seeds are the unique item, but there is no material-processing story that meaningfully ties biome-specific tree seeds to a Create method — create:milling seeds already exists for vanilla seeds, and adding dtterralith variants is a volume expansion with no new pillar story. The "loot" flag is likely from Dynamic Trees' own logs/saplings, not a structure. No coherent 2nd-pillar edge.
+- LEAVE — worldgen compatibility layer (Terralith × Dynamic Trees); its outputs (logs, saplings) are vanilla-item-equivalent and already reach Create/cooking webs as plain wood. No bespoke 2nd-pillar edge survives red-team. Confirmed leave.
+
 ## ecologics   [anchors: survival (1)]
 - from: ecologics:coconut (c:foods/fruit) | via: recipe (create:milling → coconut milk/oil intermediate) | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: a Create mill grinds the coconut into coconut flour/oil — a tropical feedstock that feeds farmersdelight/extradelight cooking chains; the processing chain naturally bridges beach-biome foraging to the Create industrial spine
 - from: ecologics:coconut (processed into coconut oil/cream) | via: recipe (extradelight:juicer or farmersdelight:cutting) | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: ACCEPT | hook: tropical coconut products are a niche luxury food export; players in beach biomes can sell processed coconut goods (coconut milk, oil, cream) as sellable trade goods via Numismatics — regional scarcity makes the beach biome economically relevant
@@ -23,6 +33,7 @@
 - from: ecologics:coconut woodset (logs/planks) | via: recipe (create:milling) | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: dossier flags this as weak — vanilla-style woods routing through create:milling yields nothing players don't already get from any wood. The coconut fruit/processing chain (M-12 above) is the coherent Create hook; redundantly also connecting the woodset as M-04 dilutes the focused edge without adding a player-legible story.
 
 ## mffs   [anchors: Create, survival (2)]
+
 REWORK: OK — connections are gold-standard. focus_matrix via M-05 (create:electron_tube), projector/interdiction_matrix via M-06 (sequenced_assembly + derpack:incomplete_* parts), mid-tier via TFMG steel. No rework.
 - from: mffs:blank_card / biometric_identifier | via: recipe (create:mechanical_crafting or tfmg:polarizing) | to: Create | motif: M-05 | power: mid | tone: ok | verdict: REJECT | reason: the core MFFS machines already have deep M-05/M-06 weaves. Adding another Create edge on access-control items (cards/biometrics) would pile on — by the already-woven weave the mod is a reference example for the pattern; adding more edges here is scope creep with diminishing returns. Leave the authored weave as-is.
 - from: mffs: force field protection | via: loot-seed | to: economy | motif: M-14 | power: endgame | tone: ok | verdict: REJECT | reason: MFFS has loot=yes but its loot table is likely a guide book drop, not structure loot; the mod is base-defense tech, not a dungeon mod. Routing it through M-14 (bounty→coin) is thematically fine (bounty for clearing a defended base?) but this is not what M-14 routes through — M-14 is mob-drop → coin, not machine-table → coin. No coherent loot-seed edge.

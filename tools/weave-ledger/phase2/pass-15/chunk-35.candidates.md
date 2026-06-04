@@ -19,4 +19,22 @@
 - from: illagerinvasion:platinum_chunk | via: numismatics mint | to: economy | motif: M-08 | power: mid | tone: ok | verdict: REJECT | reason: platinum_chunk is a mob drop, not a mined/processed ore — M-08 is specifically "scarce regional metal → Create-processed → minted." The accepted M-03 crush candidate could later feed M-08, but the raw drop alone doesn't fit M-08's method-routing cleanly. Flag for reconsideration if M-03 acceptance creates a platinum ingot intermediate.
 - from: illagerinvasion:lost_candle | via: create:haunting | to: magic | motif: M-19 | power: mid | tone: ok | verdict: ACCEPT | hook: the Lost Candle — an illager relic of doomed flame — passed through Create's haunting (soul-fire) ritual to yield a soulfire wax or spirit-infused candle component; cursed-object vibe maps naturally to the soul-fire process.
 
+## moonlight   [anchors: library/API (1)]
+- LEAVE — zero meaningful content surface: 1 internal block (spawn_box), 2 internal items, loot=no. The data-driven-trade and virtual-fluid APIs it exposes are exercised by its dependent mods (e.g. Supplementaries), not weaveable at the moonlight namespace level. Nothing to route through a method.
+
+## geckolib   [anchors: library/API (1)]
+- LEAVE — zero content surface: 0 blocks, 0 items, loot=no. Pure animation/rendering engine; no material, method, or loot to weave.
+
+## cloth_config   [anchors: library/API (1)]
+- LEAVE — zero content surface: 0 blocks, 0 items, loot=no. Config-screen UI library; no gameplay surface.
+
+## xaerominimap   [anchors: client QoL/support (1)]
+- LEAVE — zero content surface: 0 blocks, 0 items, loot=no. Client-only minimap rendering; no items, loot, or method hooks.
+
+## inventoryprofilesnext   [anchors: client QoL/support (1)]
+- LEAVE — zero content surface: 0 blocks, 0 items, loot=no. Client-only inventory sort/move UI; no items, loot, or method hooks.
+
+## coroutil   [anchors: library/API (1)]
+- LEAVE — zero content surface: 0 blocks, 0 items, loot=no. Pure shared-AI/config/rendering library for Corosus-family mods; no gameplay surface.
+
 

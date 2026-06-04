@@ -45,3 +45,16 @@
 - from: alexsmobs:void_worm_effigy | via: loot-seed / boss drop | to: Create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: the void worm effigy — a totem of an endgame beast — unlocks a high-tier Create recipe as a boss-key gate (M-15 boss-key unlock)
 - REWORK: (no existing cross-pillar connections yet — survival only, all candidates are new)
 
+## minecolonies   [anchors: survival + Create (2)]
+- OK — connections sound: quarries already gate on Create parts (M-05) and the colony is the pack's designated progression on-ramp for complex Create tech per DESIGN.md and 98-minecolonies.js. Two pillars established.
+- from: minecolonies colony-produced food (apple_pie, baked_salmon, c:foods/*) | via: numismatics sell | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: ACCEPT | hook: colony kitchens produce surplus food — selling it to the player economy through Numismatics makes the settlement an economic actor, not just a resource sink
+- from: minecolonies:ancienttome (research gate item) | via: loot-seed | to: economy | motif: M-14 | power: mid | tone: ok | verdict: ACCEPT | hook: ancient tomes gate colony research — seeding them into bounty payouts (earn via combat/bounty board) means combat progression feeds colony advancement, a clean loop
+- from: minecolonies colony outputs (compost via minecolonies:composting) | via: create:mixing | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: colony compost feeds a Create fertilizer-mixing step — the settlement's waste stream integrates with the tech spine
+- REWORK: existing Create anchor (M-05 quarry gating) is sound; no rework needed. Survival anchor is structural. The economy and deeper-Create candidates above add a third pillar opportunity without disturbing the existing two.
+
+## createlowheated   [anchors: Create (1)]
+- from: createlowheated:basic_burner | via: recipe (Create parts — iron casing, shaft) | to: Create (depth) | motif: M-05 | power: everyday | tone: ok | verdict: ACCEPT | hook: the burner is a Create heating machine — gating it on a cogwheel + andesite casing keeps it firmly in the tech spine and makes heat a deliberate resource cost
+- from: any solid fuel consumed by basic_burner | via: config tie / survival | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: REJECT | reason: no seasonal angle here — the burner consumes any furnace fuel, there's no seasonal scarcity mechanic to leverage; the M-16 seasonal reagent motif doesn't fit
+- from: createlowheated basic_burner (heat-output machine) | via: config tie — ensure TFMG fuel-burning methods can satisfy the lowheated tier | to: aeronautics/Create | motif: M-13 | power: everyday | tone: ok | verdict: ACCEPT | hook: TFMG diesel/gasoline burning through a basic burner provides lowheated basin heat — the fuel supply chain (M-13 propulsion fuel) doubles as a heat source, threading aeronautics fuel production into Create's heating system (config/compat, not a recipe)
+
+== CHUNK COMPLETE ==

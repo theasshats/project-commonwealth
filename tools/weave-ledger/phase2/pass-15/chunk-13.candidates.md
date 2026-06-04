@@ -39,6 +39,18 @@
 ## blockui   [anchors: support (library) (1)]
 - LEAVE — genuine zero-content UI framework library. No items, blocks, or loot. Hard dependency of MineColonies; no surface to weave.
 
+## createoreexcavation   [anchors: Create (1)]
+- from: createoreexcavation vein outputs (any scarce regional ore) | via: createoreexcavation:vein table → numismatics mint (M-08 chain: drill output → Create process → coin) | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: the Drilling Machine's infinite-but-slow ore output — especially of scarce regional metals — is the exact feedstock for the coin-from-processed-scarcity loop; a pack-design config (adding coin-grade metals to the vein table) makes drilling automation the Create-side economy engine. Delivery: config/datapack (vein recipe additions), not a crafting recipe.
+- from: createoreexcavation:diamond_drill / netherite_drill (drill-head tiers) | via: create:sequenced_assembly | to: Create (depth) | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: the highest drill-head tiers (diamond/netherite) requiring a sequenced-assembly chain (an `incomplete_drill_head` intermediate) makes upgrading your drilling rig a proper Create milestone, not just a crafting-table grind. Scales correctly — endgame tier gets the deep chain.
+- from: createoreexcavation:vein_finder (exploration tool) | via: create:mechanical_crafting | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: the Vein Finder (a field prospecting tool) requiring brass components via mechanical crafting means you need a working Create setup before you can locate infinite veins — a logical gating of the automation tier behind the automation spine.
+- from: createoreexcavation drill outputs (ore) | via: ars_nouveau:imbuement or occultism:ritual | to: magic | motif: M-10 | power: mid | tone: clash — drill ore is already vanilla ore; routing raw crushed ore through a magic ritual for no unique gain adds nothing; the weave is with the downstream processed metal, not the raw ore | verdict: REJECT | reason: no unique material surface; raw ore→magic is handled more coherently via boss-gate and regional-metal weaves elsewhere.
+- REWORK: existing inbound weaves (create:crushing, create:cutting, create:milling, create:mechanical_crafting) are all correct and internal to the Create spine — OK.
+
+## yet_another_config_lib_v3   [anchors: support (1)]
+- LEAVE — genuine zero-content config-screen library. No items, blocks, or loot. Pure API; nothing to route through any method.
+
+== CHUNK COMPLETE ==
+
 
 
 
