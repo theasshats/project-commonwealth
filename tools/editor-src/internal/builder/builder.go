@@ -9,8 +9,8 @@
 //   1. Read pack metadata from pack.toml.
 //   2. Write Prism scaffold files (mmc-pack.json, instance.cfg) into a staging
 //      folder.
-//   3. Copy config/, defaultconfigs/, kubejs/, resourcepacks/, shaderpacks/,
-//      tacz/ into <staging>/.minecraft/.
+//   3. Copy the override dirs listed in scripts/instance-dirs.txt (the source of
+//      truth shared with the install scripts) into <staging>/.minecraft/.
 //   4. Start `packwiz serve` on a free port.
 //   5. Run packwiz-installer-bootstrap (Java) against that server to fetch
 //      every mod jar into <staging>/.minecraft/mods/.
@@ -19,6 +19,7 @@
 package builder
 
 import (
+	"bufio"
 	"context"
 	"fmt"
 	"io"
@@ -93,11 +94,16 @@ func (b *Builder) Build(ctx context.Context, log func(string)) (*Result, error) 
 	}
 	collect("Wrote mmc-pack.json and instance.cfg")
 
-	// 3. Copy config dirs. tacz/ carries the committed Create: Armorer gun-pack
-	// zips -> .minecraft/tacz/ (TaCZ loads gun packs from there); without it the
-	// guns and their gun-smith-table recipes never load. Keep in sync with the
-	// copy loops in scripts/build-prism-skeleton.sh and scripts/build-server.sh.
-	for _, d := range []string{"config", "defaultconfigs", "kubejs", "resourcepacks", "shaderpacks", "tacz"} {
+	// 3. Copy the override dirs. The list is the shared single source of truth in
+	// scripts/instance-dirs.txt (also read by build-prism-skeleton.sh and
+	// build-server.sh) so the editor build and the install scripts can never drift —
+	// that drift is how tacz/ (the Create: Armorer gun packs) once went missing from
+	// editor-built instances. This is a client/Prism build, so it takes "both" + "client".
+	dirs, err := readInstanceDirs(b.RepoRoot, "client")
+	if err != nil {
+		return nil, fmt.Errorf("read scripts/instance-dirs.txt: %w", err)
+	}
+	for _, d := range dirs {
 		src := filepath.Join(b.RepoRoot, d)
 		if _, err := os.Stat(src); err != nil {
 			continue // skip missing dirs
@@ -186,6 +192,37 @@ name=%s %s
 notes=Built locally from %s by derpack-edit.
 `, packName, packVersion, packName)
 	return os.WriteFile(filepath.Join(staging, "instance.cfg"), []byte(contents), 0o644)
+}
+
+// readInstanceDirs reads scripts/instance-dirs.txt — the single source of truth (shared with
+// scripts/build-prism-skeleton.sh and scripts/build-server.sh) for which override directories
+// get copied into a built instance's .minecraft/. Each non-comment line is "<dir> <scope>",
+// scope being "both", "client", or "server"; a dir is returned when its scope is "both" or
+// matches the requested scope ("client" for an editor/Prism build).
+func readInstanceDirs(repoRoot, scope string) ([]string, error) {
+	f, err := os.Open(filepath.Join(repoRoot, "scripts", "instance-dirs.txt"))
+	if err != nil {
+		return nil, err
+	}
+	defer f.Close()
+
+	var dirs []string
+	sc := bufio.NewScanner(f)
+	for sc.Scan() {
+		line := strings.TrimSpace(sc.Text())
+		if line == "" || strings.HasPrefix(line, "#") {
+			continue
+		}
+		fields := strings.Fields(line)
+		s := "both"
+		if len(fields) > 1 {
+			s = fields[1]
+		}
+		if s == "both" || s == scope {
+			dirs = append(dirs, fields[0])
+		}
+	}
+	return dirs, sc.Err()
 }
 
 // copyDir recursively copies srcDir into dstDir.

@@ -25,12 +25,17 @@ OUT="dist/${INSTANCE_NAME}.zip"
 rm -rf "${STAGING}"
 mkdir -p "${STAGING}"
 
-# Configs (+ tacz/ for the committed Create: Armorer gun pack zip)
-for d in config defaultconfigs kubejs tacz; do
+# Copy the override dirs that belong on the server. The list lives in
+# scripts/instance-dirs.txt (shared with build-prism-skeleton.sh and the editor builder) so
+# the three builders can't drift — see that file's header. Server takes scope "both"/"server"
+# (no client-only resource/shaderpacks). tacz/ (scope both) carries the Create: Armorer zip.
+while read -r d scope _; do
+    [[ -z "${d}" || "${d}" == \#* ]] && continue
+    [[ "${scope}" == "both" || "${scope}" == "server" ]] || continue
     if [[ -d "${d}" ]]; then
         cp -r "${d}" "${STAGING}/"
     fi
-done
+done < scripts/instance-dirs.txt
 
 # Bootstrap jar
 BOOTSTRAP_JAR="${REPO_ROOT}/.tools/packwiz-installer-bootstrap.jar"
