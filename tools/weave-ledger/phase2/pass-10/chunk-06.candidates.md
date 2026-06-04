@@ -36,6 +36,17 @@
 - from: create_enchantment_industry enchanted books (Printer output) | via: numismatics sell/price | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: a Printer that mass-produces enchanted books makes those books a commodity — players sell surplus enchants to other players via Numismatics; enchanting factory → trade good is an obvious economy loop
 - from: create_enchantment_industry:experience_cake | via: farmersdelight:cooking chain | to: survival | motif: M-12 | power: everyday | tone: clash | verdict: REJECT | reason: the experience_cake is a Create gimmick item, not a food item — routing it through a cooking chain is a tone mismatch; it exists as a humor/XP item, not a survival food. Don't force it into the food web.
 
+## vc_gliders   [anchors: aeronautics (1)]
+- from: vc_gliders:paraglider_diamond / _netherite (upper tiers) | via: create:pressing (reinforced paper from Create-pressed sheets) + create:mechanical_crafting | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: upper glider tiers require Create-fabricated reinforced panels — flight tech is built on the tech spine; the iron tier stays accessible (one light step), diamond/netherite require pressing; depth scales cleanly with tier
+- from: vc_gliders:paraglider_iron (base tier) reinforced paper | via: create:milling (pulp → paper) | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: milling paper precursors is a very indirect and thin connection for the base glider — the M-05 gating above handles the Create pillar at appropriate tiers; adding a milling step on the everyday iron glider's paper would over-gate the entry item (guardrail: don't gate basics behind complex recipes)
+- from: vc_gliders nether_upgrade | via: create:haunting | to: Create | motif: M-19 | power: mid | tone: ok | verdict: ACCEPT | hook: haunting the nether upgrade component (soul-fire transmutation) to prepare it for extreme-heat updraft behavior is a sensible single-step Create→aeronautics bridge; thematically "soulfire-tempered glider upgrade survives the Nether"
+
+## tidal-towns-1.3.4   [anchors: survival (1)]
+- LEAVE — Structure datapack with no items, blocks, or methods. No recipe surface to weave through. Its value is exploration and a visual destination for sea-going aeronautics travel — that thematic pairing is real but is not an authorable edge. One-pillar floor is correct.
+
+== CHUNK COMPLETE ==
+
+
 
 
 

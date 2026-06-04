@@ -13,6 +13,10 @@ OK — connections sound. The dual-pillar is structural (the mod is a Create×Oc
 ## numismatics   [anchors: economy, Create (2)]
 OK — connections sound. Numismatics is the economy-pillar hub and correctly identified as the *destination* (M-08/M-09), not a source requiring more outgoing edges. The dossier correctly says "leave as the destination." One minor note: the made-by digest shows no foreign recipe types (vanilla only), which is correct for a currency system — coins are crafted but the trade/bank mechanics are runtime, not recipe-typed. No rework needed.
 
+## aeronautics_bundled   [anchors: aeronautics (1); Create de-facto 2nd)]
+- REWORK: The dossier correctly deflects to the `aeronautics` namespace dossier for real weaving, but this wrapper mod still lists only 1 formal anchor (aeronautics), with Create as "de-facto." This is an audit gap: if the real content ids live under `aeronautics`/`sable` (not this namespace), the *bundle wrapper* itself is correctly 1-pillar and should be documented as such explicitly — it's a distribution artifact, not a content mod, so the connection tracking lives on the real `aeronautics` dossier. The dossier should say "this namespace: no connections to audit — see aeronautics dossier" rather than leaving M-06 half-attributed here. Low priority but clarify to avoid double-counting in connectivity metrics.
+
+
 
 
 

@@ -37,6 +37,13 @@
 - from: createmetalwork molten magic-metal outputs (e.g. molten forms of occultism/galosphere metals) | via: create:mixing (already used inbound) | to: magic | motif: M-03 | power: mid | tone: ok | verdict: ACCEPT | hook: Magic-mod ores already pass through Create crushing; the metalwork layer gives occultism and Ars mages doubled output from their scarce reagent ores — Create is the doubling reward for the magic economy, not just the tech one.
 - from: createmetalwork:molten_steel_bucket / molten_netherite_bucket | via: aeronautics airframe recipe | to: aeronautics | motif: M-23 | power: endgame | tone: ok | verdict: ACCEPT | hook: Steel and netherite are the structural alloys for a real airship hull — pouring molten structural metal is the natural source of airframe plates.
 
+## create_new_age   [anchors: Create (1)]
+- from: create_new_age:energising (the Energiser recipe-type) | via: create_new_age:energising → magic tool/focus | to: magic | motif: M-17 | power: mid-endgame | tone: ok | verdict: ACCEPT | hook: An arcane focus or mana battery draws a charge from the Energiser — electricity and magic share the same "stored power" logic and a player immediately nods at it.
+- from: create_new_age:thorium_ore (scarce regional ore, 2 biome-modifiers) | via: numismatics mint (processed → coin) | to: economy | motif: M-08 | power: endgame | tone: ok | verdict: ACCEPT | hook: Thorium is rare, biome-locked, and only extractable by whoever builds a reactor chain — refined reactor-grade metal is exactly the high-tier mint feedstock that M-08 was built for.
+- from: create_new_age advanced motor / generator components | via: aeronautics drivetrain/propulsion recipe | to: aeronautics | motif: M-24 | power: endgame | tone: ok | verdict: ACCEPT | hook: An advanced electric motor IS a propulsion unit — routing Create New Age motors into Aeronautics engines/propellers makes the electric-tier airship a natural endgame step.
+- from: create_new_age:corium (reactor waste) | via: occultism:spirit_fire or create:haunting | to: magic | motif: M-19 | power: endgame | tone: ok | verdict: REJECT | reason: Corium is reactor waste — a nuclear-horror material. Routing it through spirit-fire is thematically jarring (industrial nuclear waste → occult ritual feels forced). The M-17 energising→magic weave is the cleaner Create↔magic bridge; this one doesn't survive tone check.
+
+
 
 
 

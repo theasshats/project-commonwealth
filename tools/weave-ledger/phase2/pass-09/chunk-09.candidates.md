@@ -98,3 +98,47 @@ sanctioned survival/build 2nd role.
 - REWORK (none; reinforcement only): the M-04 "tiles/chairs crush back to crushed-stone/planks via
   create:crushing" idea is coherent and lossy-correct; a fine reinforcement, optional. The "survival" label is
   the softest of its two pillars but legitimate for a deco mod hard-bound to Create.
+
+## cbc_at   [anchors: Create, aeronautics (2)]
+OK — connections sound. Strong two-web membership: entirely Create-machined (made-by create:cutting + CBC's
+*_munition_assembly/fuzing/tracer chain) and it arms Aeronautics ships/contraptions — core PvPvE for the
+aeronautics pillar. The inbound method list is dense and coherent; this is a model M-06-style multi-stage mod.
+- REWORK (none on existing edges). The dossier's only add is a *design* deepening (gate the heavy-autocannon/
+  rocket tier behind a boss-drop or MineColonies unlock, M-05/M-15) to fit the scarcity curve — agree it's a
+  progression choice, not a missing pillar. If pursued, gate only the HEAVY/rocket tier, not the bronze
+  autocannon entry tier (depth scales with power).
+
+## chefsdelight   [anchors: survival, economy (2)]
+OK — connections sound. Real two-pillar membership: adds FD meals (survival/food) AND Cook/Chef villager
+professions selling cooked food (economy via trade).
+- REWORK (mild, theme + currency-coherence): the economy edge currently routes through *emeralds* (vanilla
+  trade), not the pack's Numismatics economy — so it's a parallel currency island, the exact split the pack
+  wants to avoid. The dossier's M-09 deepening (route trades onto numismatics coins) is the right fix and
+  should be promoted from "optional" to a recommended rework: bridge Cook/Chef trades to coins via config/
+  KubeJS so the cook economy joins the real currency. Carries the 0.9 player-run-currency caveat (M-09/M-21
+  trade-seam — note M-21 is provisional/explore-only, so surface for review, don't author unprompted).
+
+## cmpackagecouriers   [anchors: Create, aeronautics (2)]
+OK — connections sound. Genuine two-web membership: moves create:package contents (built via create:cutting +
+create:deploying) and delivers them via an autonomous flying courier (Create logistics + aeronautics/transport
+pillar). Inbound Create methods are real.
+- REWORK (none). The light economy adjacency (remote trade fulfilment) is correctly left unauthored unless
+  trade tooling wants it — agree, don't force a 3rd edge.
+
+## companions   [anchors: survival (1) per dossier]
+OK — connections sound as a content mod, with an AUDIT-FLAG on the pillar count.
+- AUDIT FLAG (premise): the dossier anchors companions at ONE pillar; its 2nd is a *candidate*, not authored.
+  This mod's real risk is being a self-contained ISLAND — it ships its own coins (copper/nether/end) and a
+  private Soul-Furnace/altar reagent loop that do NOT touch the pack's Numismatics economy or the Ars/Occultism
+  magic web. So the >=2 premise is not yet met.
+- STRONGEST fix (record as the 2nd pillar): route Crystallized Blood / soul gems / essences into the magic web
+  via occultism:spirit_fire or ars imbuement (M-11 ritual/transmutation sink, M-02 mob-drop reagent sink) —
+  coherent (soul/blood drops are natural magic reagents) and breaks the island.
+- REWORK (currency clash, important): its internal copper/nether/end coins COMPETE with Numismatics — a direct
+  two-currency conflict the pack explicitly avoids. The M-09 idea (price Relic Gold / soul gems as sellable
+  goods, and/or bridge its coins to Numismatics) is the right resolution; flag the coin-competition as a defect
+  to fix, not merely an optional deepening.
+- The M-04 "Tesla/voltaic deco -> copper scrap via create:crushing" reinforcement is WEAK/optional; fine to
+  leave.
+
+== CHUNK COMPLETE ==

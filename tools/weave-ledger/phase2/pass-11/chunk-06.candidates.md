@@ -28,6 +28,11 @@
 - from: immersive_armors:bone_* set | via: occultism:spirit_fire or ars_nouveau:imbuement | to: magic | motif: M-10 | power: everyday | tone: clash | verdict: REJECT | reason: bone armor is vanilla-mob-drop combat gear, not magical; pulling it into an arcane ritual feels forced. The divine/robe sets are the thematically motivated magic targets; bone stays survival.
 - from: immersive_armors:* sets as sellable goods | via: numismatics sell | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: armor is kept by players, not sold; this is a weak loop. Economy entry is better served by the coin-from-processing chain. Leave this as a maybe at best.
 
+## oceansdelight   [anchors: survival (1)]
+- from: oceansdelight:elder_guardian_roll / oceansdelight:fugu_slice / oceansdelight:cooked_stuffed_squid (high-effort luxury seafood) | via: numismatics sell | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: coastal specialists prepare elaborate dishes nobody else can; inland players pay coin for fugu rolls they'd never make themselves — a natural geography-driven trade
+- from: oceansdelight:cut_tentacles / oceansdelight:guardian (raw ocean drops) | via: farmersdelight:cutting → create:milling (dried/ground seafood intermediate) | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: guardian/squid drops are organic mob materials; routing them through a Create machine (milling into "dried seafood powder") is a stretch with no thematic payoff — a player would ask "why does a Millstone process squid?" The economy angle via finished dishes is already strong and sufficient.
+
+
 
 
 
