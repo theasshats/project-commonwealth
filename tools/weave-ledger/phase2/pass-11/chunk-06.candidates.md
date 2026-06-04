@@ -40,6 +40,16 @@
 ## betterendisland   [anchors: survival (1)]
 - LEAVE — pure structural/worldgen overhaul of the End island; no items, no blocks, no loot tables, no methods registered. Nothing to route a 2nd pillar through. Its value is cosmetic spectacle and atmospheric quality for the dragon fight.
 
+## bosses_of_mass_destruction   [anchors: survival (1)]
+- from: bosses_of_mass_destruction:obsidian_heart (Obsidilith drop) | via: create:sequenced_assembly (as required keystone ingredient) | to: Create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: the obsidian heart is an endgame boss core — it's the final gate piece in a sequenced-assembly chain for a high-tier Create machine; you kill the Obsidilith to unlock the spine's next tier
+- from: bosses_of_mass_destruction:blazing_eye (Nether Gauntlet drop) | via: create:mechanical_crafting (gated component) | to: Create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Gauntlet's eye gates a precision-crafted Create part that you cannot make before you've ventured into the Nether's worst corner
+- from: bosses_of_mass_destruction:ancient_anima (Night Lich drop) | via: ars_nouveau:imbuement or occultism:ritual | to: magic | motif: M-10 | power: endgame | tone: ok | verdict: ACCEPT | hook: anima distilled from an undead lich is exactly what a top-tier Ars ritual or Occultism infusion calls for — dark life-essence as the capstone arcane reagent
+- from: bosses_of_mass_destruction:void_thorns (Void Blossom drop) | via: occultism:spirit_fire | to: magic | motif: M-11 | power: endgame | tone: ok | verdict: ACCEPT | hook: void thorns dissolve into pure spirit-essence in the occult fire — the pack's most alien organic becomes an occultism top-tier reagent
+- from: boss reagents (obsidian_heart / ancient_anima / blazing_eye / void_thorns) | via: numismatics bounty payout (bountiful board) | to: economy | motif: M-14 | power: endgame | tone: ok | verdict: ACCEPT (provisional motif) | hook: rare boss drops command a premium bounty — the crew's best fighter can convert a boss kill into significant coin, connecting combat achievement to the economy
+- from: bosses_of_mass_destruction:ancient_anima | via: forbidden_arcanus infusion | to: magic | motif: M-10 | power: endgame | tone: ok | verdict: REJECT | reason: Forbidden Arcanus infusion is not confirmed installed; the ars_nouveau:imbuement path (already ACCEPT above) covers the same motif more reliably. Duplicate route rejected; keep the Ars one.
+
+== CHUNK COMPLETE ==
+
 
 
 

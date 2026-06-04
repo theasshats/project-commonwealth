@@ -28,6 +28,35 @@ OK — connections sound. The Create inbound weave (create:filling + create:mixi
 - REWORK: The M-09 economy candidate (source_gem/spell scrolls as sellable goods) is correctly marked WEAK and deprioritized in favor of dedicated arcane-currency weaves. However, there is an unnoticed connection: Ars Nouveau's `ars_nouveau:crush` method (listed in registered recipe-types) could accept foreign minerals/ores as an alternative arcane crushing path — this is a methods-palette method that no dossier has flagged as a pull target. Worth noting as a candidate: foreign materials crushed via `ars_nouveau:crush` would give Ars a mechanical role beyond spellcasting, strengthening the Create↔magic spine via an alternative processing route (M-12). This is not in the current dossier candidates — flag as a new candidate for review.
 - from: foreign ore/mineral | via: ars_nouveau:crush | to: Create/magic | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT (for review) | hook: the Arcane Crusher grinds metals into dust by channeling Source — the magic web contributes to processing, not just buffs
 
+## astikorcartsredux   [anchors: survival (1)]
+- REWORK: The dossier's M-05 candidate (gate plow blade/reaper on Create-processed iron sheets) is the right instinct but the reasoning is labeled WEAK — this underrates it. An iron sheet requirement on the metal-bearing implements (plow, reaper) is a single light step proportionate to an everyday/mid item, and it ties the farm-tools tier to the tech spine exactly as M-05 intends. The WEAK rating should be reconsidered: the connection is thematically legible (forged plow blade vs. raw wood carts), architecturally correct, and does not over-engineer. The only honest reason to call it WEAK is if the cart items are fully wooden and iron sheets would be a tier jump — which may be true for the hand_cart/animal_cart but NOT for the plow/reaper (which are metal tools). Recommend splitting: leave wood-only carts vanilla, give plow + reaper a Create iron-sheet input. This is a sound M-05 connection.
+- REWORK: The "none strong — leave" conclusion on the survival-only anchor should be explicit that 1 pillar is acceptable for a flavor/logistics mod, not that no path exists. The plow/reaper M-05 path is viable; the dossier currently soft-dismisses it.
+
+## bits_n_bobs   [anchors: Create, survival (2)]
+OK — connections sound. The Create inbound weaves (create:item_application + create:splashing confirmed in made-by digest) are appropriate. The M-04 deco-recycle candidate (tile blocks crushable via create:crushing) is a correct optional deepening. One minor audit flag: the dossier cites survival as the 2nd pillar (broad decoration palette for builds), which is thematically accurate but architecturally thin — decoration alone is a weak survival anchor. The stronger story is that bits_n_bobs is Create + Create-depth (chain drives, nixie displays are functional mechanical tools, not just deco). If the second pillar is characterized as "Create-kinetic depth" rather than "survival decoration," the case is stronger. Not a blocking rework but worth noting for clarity.
+
+## cbc_at   [anchors: Create, aeronautics (2)]
+OK — connections sound. The Create inbound (create:cutting confirmed in made-by digest, plus CBC assembly chain) is correct. The aeronautics anchor (arms ships/contraptions) is legitimate. The M-05 progression note (gate heavy autocannon/rocket tier behind boss drop or MineColonies) is a design-depth improvement, correctly scoped as optional deepening rather than a missing pillar. No rework needed on existing connections.
+
+## chefsdelight   [anchors: survival, economy (2)]
+- REWORK: The existing economy anchor is characterized as "villager-trade source to the economy pillar" — but villager trades use emeralds (vanilla currency), not Numismatics coins. This means the economy pillar claim rests on an emerald economy, not the pack's actual currency layer. The connection is real (food enters the trade economy) but it's not wired to the pack's economy pillar properly until the emerald→Numismatics bridge is made. The dossier's M-09/M-21 candidate (route cook trades onto numismatics coins) is the fix. The current 2-pillar claim is overstated: chefsdelight is survival + proto-economy, not survival + economy proper. Flag this for the 0.9 economy update.
+- REWORK: The made-by digest shows no foreign recipe types (vanilla only) and 0 items — the mod's content is purely villager profession + structure data. This means there are no recipe-typed inbound weaves to audit; all connections would be data-driven (trade JSON overrides or KubeJS). That's fine, but should be explicit in the dossier: no recipe-type weaves possible here, weaving is trade-table only.
+
+## cmpackagecouriers   [anchors: Create, aeronautics (2)]
+OK — connections sound. Create inbound (create:cutting + create:deploying confirmed in made-by digest) is correct. The aeronautics anchor (autonomous flying courier) is a genuine logistics/aeronautics pillar contribution. The light economy adjacency (remote trade fulfilment) is correctly left as an optional note rather than a forced edge. No rework needed.
+
+## companions   [anchors: survival (1)]
+- REWORK: The dossier's magic candidate (M-11/M-02: Crystallized Blood / soul gems / essences into Occultism spirit_fire or Ars imbuement) is the strongest and most natural weave path, correctly rated STRONG. The connection is thematically coherent (soul alchemy → occult processing), proportionate (mid-tier drops from hostile companions mobs), and doesn't gate basics. This should be the primary connection to propose.
+- REWORK: The M-09 economy candidate (Relic Gold / soul gems as sell goods) is correctly rated MED. One clarification the dossier misses: companions has its own copper/nether/end coins that conflict with Numismatics. The dossier notes this but doesn't fully resolve it — the resolution path is either (a) suppress companions' coins in favor of Numismatics, or (b) define companions' coins as a separate dungeon-only loot currency that doesn't compete (like D&D treasure). This is a design decision that should be logged before authoring any economy weave for companions.
+- REWORK: The M-04 Create candidate (Tesla/voltaic deco → copper/metal scrap via create:crushing) is rated WEAK, which is accurate. The Tesla coil/voltaic pillar aesthetic is gothic-electrical, and crushing it back to copper is mechanically sound but thematically thin (it doesn't add depth, just recyclability). Acceptable as a very light M-04 edge but not a priority.
+
+== CHUNK COMPLETE ==
+
+
+
+
+
+
 
 
 
