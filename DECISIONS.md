@@ -39,10 +39,18 @@ and correctly declined to author — they're parked pending your call.
 (the Galosphere `silver`=PALLADIUM gotcha); `samurai_dynasty` silver kept off `c:ingots/silver` confusion
 (#177); deliberately-vanilla worldgen/structure/behaviour mods drew `LEAVE` rather than forced edges.
 
-**[NOTE] Quality-audit (chunk-09) recurring REWORKs to fold at Gate 2:** `aeronautics_bundled` is a 0-item
-wrapper (weaves belong on the `aeronautics` ns, not here); `ars_nouveau` / `companions` are under-counted at 1
-pillar with foundational M-01/M-02/M-11 weaves that should be **promoted to Phase-3 priority**; `companions`
-in-mod coins conflict with Numismatics — needs a keep/bridge/suppress call.
+**[NOTE] Quality-audit (chunk-09) recurring REWORKs — maintainer calls this turn:**
+- `companions` in-mod coins vs Numismatics → **issue filed: #178** (suppress/bridge/keep, on v0.9.0 — Economy).
+- `ars_nouveau` / `companions` under-counted at 1 pillar (promote foundational M-01/M-02/M-11 weaves) →
+  **deferred to Gate 2 / Phase 2** (decide there, not now).
+- `aeronautics_bundled` 0-item wrapper → weaves redirect to the `aeronautics` ns (mechanical, no decision).
+
+**[G2] Provisional motifs — HOLD (maintainer: "won't decide for a long time").** M-21 trade-seam stays
+*explore-only*; M-09/M-14 player-run-currency caveats stay parked. Surface candidates, do not author; no
+decision requested until much later.
+
+**[NOTE] chefsdelight emerald-economy reprice** — no dedicated issue; recommended to **fold into #136**
+(Numismatics coin tiers + base price sheet) as a single-item reprice rather than a standalone issue.
 
 ---
 
