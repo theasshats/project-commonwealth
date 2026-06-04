@@ -32,6 +32,18 @@
 - OK — existing connections sound for 2 pillars. The M-09 economy ACCEPT above is a clean third weave that completes the maritime provisioner loop.
 - REWORK: no weak connections found in existing anchors. The farmersdelight cooking/cutting inbound weaves are coherent (seafood → food mods). Nothing to flag.
 
+## createtreadmill   [anchors: Create (1)]
+- from: createtreadmill:treadmill (a player-powered kinetic generator) | via: config / design note | to: survival | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: the treadmill is a player-effort → SU device with no material output and no recipe join into another pillar. The closest motif would be a "manual labor → economy" angle (M-09) but the treadmill produces SU, not a trade good. No motif fits cleanly; the mod's value is Create-internal. REJECT no-motif.
+- from: createtreadmill:maid_motor (Soul Orb / Photo consumption) | via: recipe (ars_nouveau:imbuement or occultism:spirit_fire — infuse a Soul Orb into a magic-charged motor variant) | to: magic | motif: M-10 | power: mid | tone: clash | verdict: REJECT | reason: tone clash — the maid-motor is a whimsical mechanical crossover with TLM, not a magic artifact. Forcing it through Ars/Occultism infusion misreads the item's identity. The Soul Orb is a TLM-specific resource, not a generic magic reagent. Reject.
+- LEAVE — 2 blocks, 2 items, loot=yes (minor). The mod adds Create SU sources; its only non-trivial cross-mod join key is the TLM Soul Orb, which is friend-group flavor, not a pillar. No coherent 2nd pillar without forcing it.
+
+## gravestone   [anchors: survival (1)]
+- from: gravestone:gravestone (tombstone block, craftable) | via: recipe (create:crushing — M-04, lossy deco recycle) | to: Create | motif: M-04 | power: everyday | tone: clash | verdict: REJECT | reason: tone clash — crushing a gravestone back to gravel/stone via a Create machine is tonally wrong; the gravestone is a somber utility block placed on death, not a decorative stone block to be recycled. Applying M-04 here is a forced, lore-clashing edge.
+- from: gravestone:obituary (death-record paper item) | via: any method | to: any pillar | motif: no-motif | power: everyday | tone: clash | verdict: REJECT | reason: the obituary is a pure informational/QoL item (shows death coords/gear); no motif covers "death record → resource". Any route would be contrived.
+- LEAVE — the mod is a death-recovery utility. Its 1 block (gravestone) and 2 items (gravestone + obituary) have no material role; they are functional objects used in the death loop. A loot=yes flag exists but only because the grave stores the player's existing inventory — no novel loot drops. No coherent weave without forcing it.
+
+
+
 
 
 

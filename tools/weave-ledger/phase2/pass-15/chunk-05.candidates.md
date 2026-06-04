@@ -51,6 +51,15 @@
 - from: trek structure chest loot | via: loot-seed — seed valarian_conquest faction items (citizenship papers, mercenary spawn items) | to: survival (faction) | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: no-motif. Seeding faction items is a useful pack editorial choice but doesn't correspond to any established motif M-01..M-24; flag for Gate 0 if desired.
 - REWORK: dossier says "none — leave. Structure datapack with no items/methods; weave it only indirectly via loot-table edits." The briefing (PHASE2-BRIEFING.md delivery mechanisms) explicitly says: "a boss/structure feeding coin, magic reagents, or a progression key is a REAL candidate — do NOT LEAVE a loot-bearing structure mod." Trek has loot=yes; the two ACCEPT rows above are the correct call. The dossier's LEAVE recommendation is wrong per briefing rules and should be overridden.
 
+## mcwwindows   [anchors: support/decoration (1)]
+- from: mcwwindows stone parapet / arrow-slit variants | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: deconstructed stone fortification windows crush back to raw stone and gravel — recycling path for builders repurposing old structures, consistent with M-04 lossy deco recycling.
+- from: mcwwindows mosaic glass panes (dyed-glass-based, 16 color variants) | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: breaking down mosaic glass yields sand/glass scraps, same as vanilla glass — minimal but coherent M-04 entry for the glass-based set.
+- from: mcwwindows curtains (wool-based, soft furnishing) | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: clash | verdict: REJECT | reason: crushing fabric curtains is tonally weird — Create's crushing is for stone and metal; wool-fabric items being "crushed" breaks the mechanical vibe. No M-04 for textiles.
+- from: mcwwindows wooden shutters / blinds | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: clash | verdict: REJECT | reason: wooden deco crushes to sticks/planks which Create has no need for — trivial output, no real web edge. Leave wooden variants off.
+- REWORK: dossier's single candidate is stone parapet M-04 WEAK. Stone parapet ACCEPT stands with narrowing to stone/arrow-slit + mosaic glass variants. Same note as mcwfences: a wholesale deco-family pass is the right delivery vehicle; this mod contributes the stone and glass sets to it.
+
+== CHUNK COMPLETE ==
+
 
 
 
