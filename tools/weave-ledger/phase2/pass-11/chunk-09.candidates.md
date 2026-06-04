@@ -16,6 +16,15 @@ OK — connections sound. Numismatics is the economy-pillar hub and correctly id
 ## aeronautics_bundled   [anchors: aeronautics (1); Create de-facto 2nd)]
 - REWORK: The dossier correctly deflects to the `aeronautics` namespace dossier for real weaving, but this wrapper mod still lists only 1 formal anchor (aeronautics), with Create as "de-facto." This is an audit gap: if the real content ids live under `aeronautics`/`sable` (not this namespace), the *bundle wrapper* itself is correctly 1-pillar and should be documented as such explicitly — it's a distribution artifact, not a content mod, so the connection tracking lives on the real `aeronautics` dossier. The dossier should say "this namespace: no connections to audit — see aeronautics dossier" rather than leaving M-06 half-attributed here. Low priority but clarify to avoid double-counting in connectivity metrics.
 
+## aeronautics_dyeable_components   [anchors: aeronautics (1)]
+- REWORK: The dossier says "none — leave" which is the right call for a cosmetic skin layer. However, it currently has only 1 formal anchor. There is one legitimate light weave that reads naturally: dyed levitite/tires consume a vanilla dye in their crafting recipe — routing the dye step through `create:toolbox_dyeing` (Create's toolbox dye method) rather than a crafting table would give this a legitimate Create inbound without being contrived, making it aeronautics + Create (2). This is a M-20 (deploy-application upgrade) borderline or simply `create:toolbox_dyeing` — the dye IS the step, not a complex chain, so it passes the "not gating basics behind complexity" test. The dossier dismisses this as "gilding" but it's not: it's the difference between 1 pillar and 2, and the connection is natural (a Create-flavored dye step on a Create-adjacent component). Flag for review rather than LEAVE unconditionally.
+- REWORK: Alternatively, if the dye recipe cannot route through a Create method (toolbox_dyeing applies to toolboxes, not levitite), then the LEAVE conclusion is correct and the dossier should state that more explicitly as a confirmed dead end, not just a "WEAK — none."
+
+## alcohol_industry   [anchors: Create, survival (2)]
+OK — connections sound. The Create inbound weave (create:filling + create:mixing confirmed in made-by digest) is solid and appropriate. The M-09 economy candidate (bottled spirits as luxury sell goods) is the natural 3rd-pillar deepening and is correctly identified as STRONG — this is a manufacturing chain with a clear high-effort output (alcoholic drinks with effects), which is precisely the M-09 pattern. The only audit note: the 0.9 player-run-currency caveat on M-09 should be attached to this candidate as well (same global flag as for extradelight/chefsdelight). Mark accordingly.
+
+
+
 
 
 

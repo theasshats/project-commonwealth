@@ -34,6 +34,16 @@
 - from: undergroundworlds:temple_bricks / pyramid_bricks (deco block sets) | via: create:crushing lossy recycle (M-04) | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: Salvaging ancient brickwork in a Create machine for gravel + XP is a minor but coherent quality-of-life weave; the brick sets are the only material surface this mod exposes, and M-04 is explicitly the light step for deco blocks.
 - from: undergroundworlds:desert_charm / antidote_flask | via: ars_nouveau:imbuement as reagent (M-10) | to: magic | motif: M-10 | power: mid | tone: ok | verdict: REJECT | reason: The charms already function as standalone gear; routing them as imbuement inputs would require either consuming them (thematically odd — they're wearable) or using them as catalysts in a multi-step craft that has no grounding in Ars Nouveau's existing reagent vocabulary. The spirit_fang (M-11) is the cleaner magic weave.
 
+## endermoon   [anchors: survival (1)]
+- LEAVE — no items, no blocks, no registered methods. The mod is a pure spawn-weight event modifier. Any weave worth having (e.g. ender-pearl supply feeding a Create/magic method on Ender Moon nights) belongs on the Enhanced Celestials system or the ender-pearl item itself, not on this mod, which has no material surface of its own.
+
+## drones   [anchors: aeronautics (1)]
+- from: drones:ion_thruster / drones:iron_rotor (upper-tier thrust components) | via: create:sequenced_assembly gating (M-06 sequenced-assembly keystone) — require precision mechanisms + brass internals built on the sequencer | to: Create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: An ion thruster is not a hand-craft item — building the best drone tier through a Create sequenced-assembly line makes the personal-flight capability feel properly earned and ties drones to the tech spine.
+- from: drones:iron_rotor (mid-tier) | via: create:mechanical_crafting or create:pressing (M-05 native-method gating, light step) | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: Even the mid-tier iron rotor being shaped on a mechanical press (rather than a crafting table) makes sense — spinning components need precision forming, a one-step Create weave that doesn't over-gate a mid-game item.
+- from: drones:pocket_drone (assembled drone) | via: numismatics sell as luxury crafted good (M-09) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: A pocket drone is primarily personal utility gear, not a consumable trade good; the economy weave lacks a clear buyer archetype on a 10-person server (everyone wants their own drone, so there's no recurring sale demand). The Create weaves are the coherent 2nd pillar here.
+
+== CHUNK COMPLETE ==
+
 
 
 

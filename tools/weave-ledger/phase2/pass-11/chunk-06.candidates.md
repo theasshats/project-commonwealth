@@ -32,6 +32,16 @@
 - from: oceansdelight:elder_guardian_roll / oceansdelight:fugu_slice / oceansdelight:cooked_stuffed_squid (high-effort luxury seafood) | via: numismatics sell | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: coastal specialists prepare elaborate dishes nobody else can; inland players pay coin for fugu rolls they'd never make themselves — a natural geography-driven trade
 - from: oceansdelight:cut_tentacles / oceansdelight:guardian (raw ocean drops) | via: farmersdelight:cutting → create:milling (dried/ground seafood intermediate) | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: guardian/squid drops are organic mob materials; routing them through a Create machine (milling into "dried seafood powder") is a stretch with no thematic payoff — a player would ask "why does a Millstone process squid?" The economy angle via finished dishes is already strong and sufficient.
 
+## dynamictreesplus   [anchors: survival (1)]
+- from: dynamictreesplus:saguaro_fruit (foraged desert cactus fruit) | via: create:milling | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: saguaro fruit mills into a cactus-pulp dye intermediate or food flour — desert foraging feeds the spine the way any crop does, making it worth harvesting beyond eating raw
+- from: dynamictreesplus:brown_mushroom_cap / red_mushroom_cap (bulk mushroom blocks) | via: create:milling | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: mega mushroom caps mill to mushroom powder — a cooking ingredient or dye precursor that connects the overgrown mushroom biome to the processing chain
+- from: dynamictreesplus:saguaro_fruit / mushroom output | via: numismatics sell | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: raw forage sells too cheaply to anchor an economy pillar; selling unprocessed fruit/mushrooms is a weak trade loop. The Create milling path is the stronger second pillar and is already accepted; economy via selling the *milled intermediate* would be a downstream M-09 on a different mod.
+
+## betterendisland   [anchors: survival (1)]
+- LEAVE — pure structural/worldgen overhaul of the End island; no items, no blocks, no loot tables, no methods registered. Nothing to route a 2nd pillar through. Its value is cosmetic spectacle and atmospheric quality for the dragon fight.
+
+
+
 
 
 

@@ -43,6 +43,13 @@
 - from: create_new_age advanced motor / generator components | via: aeronautics drivetrain/propulsion recipe | to: aeronautics | motif: M-24 | power: endgame | tone: ok | verdict: ACCEPT | hook: An advanced electric motor IS a propulsion unit — routing Create New Age motors into Aeronautics engines/propellers makes the electric-tier airship a natural endgame step.
 - from: create_new_age:corium (reactor waste) | via: occultism:spirit_fire or create:haunting | to: magic | motif: M-19 | power: endgame | tone: ok | verdict: REJECT | reason: Corium is reactor waste — a nuclear-horror material. Routing it through spirit-fire is thematically jarring (industrial nuclear waste → occult ritual feels forced). The M-17 energising→magic weave is the cleaner Create↔magic bridge; this one doesn't survive tone check.
 
+## dynamictreesplus   [anchors: survival (1)]
+- from: dynamictreesplus:saguaro_fruit | via: create:milling | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Saguaro fruit off the cactus goes into the mill for a cactus-dye or food intermediate — foraging feeds the processing web, same as any other crop-to-mill step.
+- from: dynamictreesplus:brown_mushroom_cap / red_mushroom_cap (bulk felled) | via: farmersdelight:cutting or extradelight:mortar | to: survival/food | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: A felled mega-mushroom dumps cap blocks in bulk; routing them to the cutting board or mortar for mushroom stew base or powder is the obvious "big harvest → kitchen pipeline."
+- from: dynamictreesplus:saguaro_fruit | via: numismatics sell | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: Saguaro fruit is very common desert/mesa worldgen — it has no scarcity to make it a meaningful trade good. Economy weave requires effort/scarcity to justify coin; an abundant passive drop doesn't survive the M-09 power-read. The milling weave is stronger and sufficient.
+
+== CHUNK COMPLETE ==
+
 
 
 
