@@ -30,6 +30,14 @@ issue filing (fold into pillar issues #137/#143/#92/#91; economy items onto v0.9
 > NOTE: re-merge already includes pass-13. If you ever rebuild the freeze, eyeball `LIBRARY-FREEZE.txt` — a
 > content mod that LEAVE'd once shouldn't be frozen; the full pass saw each mod once.
 
+### Parked (from the LIBRARY-FREEZE audit — don't lose these)
+- **Aeronautics digest gap:** `aeronautics`/`sable`/`aeronautics_bundled` register 0 items, so Create
+  Aeronautics' own parts never got a 2nd-pillar review. Before Gate 2 on the aeronautics pillar, regen the
+  digest (#131) so its parts get a dossier, then run them through one pass. Until then M-13/M-23/M-24 only
+  weave INTO aeronautics, never out of it.
+- **Loot-seeding backlog:** 25 loot=yes structure/dungeon mods are frozen from weave-passes (no items/recipes)
+  but their loot tables can carry weave-relevant drops — a Phase-3 datapack task, not a weave pass.
+
 > Phase 2 weave mapping, Derpack X. READ FIRST and follow exactly: tools/weave-ledger/phase2/PHASE2-BRIEFING.md.
 > Pass dir: tools/weave-ledger/phase2/pass-13 (mode=blind). Chunk: chunk-MM. Read your chunk list
 > pass-13/chunk-MM.txt; each mod's dossier tools/mod-data/dossiers/<ns>.md; docs/WEAVE-LEDGER.md (motifs

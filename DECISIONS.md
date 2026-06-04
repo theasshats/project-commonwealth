@@ -48,6 +48,16 @@ candidate. Ties (2/2) break by insertion order (arbitrary) — those are exactly
 (the Galosphere `silver`=PALLADIUM gotcha); `samurai_dynasty` silver kept off `c:ingots/silver` confusion
 (#177); deliberately-vanilla worldgen/structure/behaviour mods drew `LEAVE` rather than forced edges.
 
+**[NOTE] LIBRARY-FREEZE audited completely (207 mods) — freeze STANDS, nothing interesting lost.** 164 are
+truly empty (0 blocks/0 items/loot=no); ~40 are libraries with dev/tooling items; the rest are the `create`
+hub (inbound-only) and deliberately-decorative/vanilla content (`dtterralith` wood, `just_blahaj` plushies) that
+correctly LEAVE. No content keystone frozen. **Two items PARKED (not freeze errors, but real gaps):**
+(1) **Aeronautics digest gap** — `aeronautics` has no dossier and `sable`/`aeronautics_bundled` register 0 items,
+so Create Aeronautics' own parts (props/balloons/hulls) were never reviewable. Needs a digest regen (#131-class)
+before the aeronautics pillar's *own* content can be woven outward — M-13/M-23/M-24 currently only weave *into*
+it. (2) **25 loot=yes structure/dungeon mods** (betterstrongholds, dungeons_arise_seven_seas, ctov, trek, …) —
+correctly out of weave-passes, but their loot tables are a Phase-3 **loot-seeding** backlog item.
+
 **[NOTE] Exclusion ABOLISHED — review EVERYTHING (maintainer call).** Passes 00–12 were not exhaustive on two
 counts, both now fixed in `phase2-chunks.py`: (1) the ≥2-pillar **audit** track was capped at `aud[:14]` with a
 deterministic sort, so the **same 44 well-connected mods were dropped every pass** (occultism, irons_spellbooks,
