@@ -36,9 +36,21 @@ def main():
     # Universe = EVERY dossier. No exclusion, no coverage/audit split — one shuffled pool so any mod can share
     # a chunk with any other (cross-mod adjacency is where new links get found). `well` just counts the
     # already-well-connected (>=2 pillar) mods for the summary line; it does not gate inclusion.
+    #
+    # FREEZE: the ONE full pass (`--full`) reviews literally everything and is used to identify pure
+    # code-libraries (mods that only ever LEAVE) via scripts/phase2-freeze.py -> LIBRARY-FREEZE.txt. Subsequent
+    # blind passes auto-skip that frozen set (proven-empty libraries) so repeat passes don't re-spend on them.
+    # `--full` forces the whole universe regardless of the freeze file.
+    full = '--full' in sys.argv
+    freeze = set()
+    fz = os.path.join(PH, 'LIBRARY-FREEZE.txt')
+    if not full and os.path.exists(fz):
+        freeze = {ln.strip() for ln in open(fz) if ln.strip() and not ln.startswith('#')}
     allns, well = [], 0
     for f in sorted(glob.glob(os.path.join(DOSS, '*.md'))):
         ns = os.path.basename(f)[:-3]
+        if ns in freeze:
+            continue
         head = open(f, encoding='utf-8').read().split('AUTO-DIGEST-FACTS', 1)[0]
         m = re.search(r'^anchors:\s*(.+)$', head, re.M)
         pill = sum(1 for q in PILLARS if re.search(r'\b' + q, m.group(1) if m else '', re.I))
@@ -56,7 +68,8 @@ def main():
         open(os.path.join(d, f'chunk-{i:02d}.txt'), 'w').write('\n'.join(ms) + '\n')
     json.dump({'pass': p, 'seed': seed, 'opus_chunk': opus_chunk, 'n_chunks': n, 'mode': mode},
               open(os.path.join(d, 'MANIFEST.json'), 'w'), indent=2)
-    print(f'pass-{p:02d}: {len(allns)} mods (ALL dossiers, none excluded; {well} already >=2-pillar) -> '
+    scope = 'ALL dossiers, --full' if full else (f'{len(freeze)} frozen libs skipped' if freeze else 'no freeze list yet')
+    print(f'pass-{p:02d}: {len(allns)} mods ({scope}; {well} already >=2-pillar) -> '
           f'{n} chunks (seed {seed}, opus=chunk-{opus_chunk:02d}, mode={mode}) -> {d}')
 
 
