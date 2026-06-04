@@ -4,23 +4,31 @@ Branch: `claude/weaving-plan` (do NOT rename, do NOT open a PR). Commit per chun
 do NOT read candidate files; don't expand on agent summaries. Confirm the user has free usage before each big fan.
 
 ## State at handoff
-- **13 passes done (pass-00 … pass-12).** pass-12 was the first `context-fed` pass; the rest blind.
-- **The dataset is NOT exhaustive yet.** Passes 00–12 only ever reviewed ~130 of 357 mods — two bugs (now
-  fixed) excluded the rest: an `aud[:14]` audit cap and a prose SUPPORT regex. See DECISIONS.md
-  "Exclusion ABOLISHED".
-- **`phase2-chunks.py` now maps ALL 357 dossiers** (no support filter, no coverage/audit split) → 36 chunks/pass.
-  It honors `tools/weave-ledger/phase2/LIBRARY-FREEZE.txt` (skip those), unless `--full` is given.
-- Convergence so far: 1078 unique candidates, ~347 at ≥2-pass agreement (saturated), 575 ACCEPT-consensus.
+- **14 passes done (pass-00 … pass-13).** pass-13 was the FULL pass (all 357 mods, `--full`); pass-12 was
+  context-fed; the rest blind.
+- **Exhaustive coverage achieved.** pass-13 reviewed every dossier. `LIBRARY-FREEZE.txt` now lists the **207
+  LEAVE-only mods** (pure libs/APIs/client/empty-structure) — built by `phase2-freeze.py`, verified to contain
+  no content keystone. Blind passes auto-skip them → **150 mods / 15 chunks per pass** going forward.
+- Convergence: **1413 unique candidates, 389 at ≥2-pass agreement, 209 opus-corroborated.** The full pass
+  added the previously-missing keystones (occultism 5, minecolonies, irons_spellbooks 4, cataclysm 4,
+  grimoireofgaia 3, northstar 5, meadow 6, naturalist 4, companions 6, create_new_age 5, …).
 
-## THE PLAN (do these in order)
+## THE PLAN — steps 1–2 DONE; resume at step 3
 
-### 1. The full pass — pass-13, `--full` (reviews literally everything, flushes out libraries)
+### 1. ~~Full pass (pass-13, `--full`)~~ ✅ DONE — 36/36 merged.
+### 2. ~~Freeze libraries (`phase2-freeze.py --pass 13 --write`)~~ ✅ DONE — 207 frozen, spot-checked.
+
+### 3. Resume blind passes on the reduced (content-only) set — START HERE
 ```
-python3 scripts/phase2-chunks.py --pass 13 --seed 13 --full     # 36 chunks; opus_chunk in MANIFEST.json
+python3 scripts/phase2-chunks.py --pass 14 --seed 14          # auto-skips LIBRARY-FREEZE.txt -> 15 chunks
 ```
-Dispatch **36 background agents**, one per `pass-13/chunk-MM.txt`. Opus on the MANIFEST `opus_chunk`, the rest
-Sonnet. Use the IDENTICAL blind prompt for all (never tell the Opus agent it's special). Commit each chunk as it
-lands; resumable = re-dispatch only chunks missing `== CHUNK COMPLETE ==`. The blind prompt to reuse:
+Dispatch 15 agents (opus = MANIFEST `opus_chunk`, rest sonnet), same blind prompt as below, merge, commit.
+Keep running blind passes until a fresh pass moves the ≥2-pass core little (it's ~389 now). Then switch later
+passes to `--mode context-fed`, and proceed to **Gate 2** (sort CANDIDATES by times_suggested) → Phase 2.5
+issue filing (fold into pillar issues #137/#143/#92/#91; economy items onto v0.9.0 milestone #13).
+
+> NOTE: re-merge already includes pass-13. If you ever rebuild the freeze, eyeball `LIBRARY-FREEZE.txt` — a
+> content mod that LEAVE'd once shouldn't be frozen; the full pass saw each mod once.
 
 > Phase 2 weave mapping, Derpack X. READ FIRST and follow exactly: tools/weave-ledger/phase2/PHASE2-BRIEFING.md.
 > Pass dir: tools/weave-ledger/phase2/pass-13 (mode=blind). Chunk: chunk-MM. Read your chunk list
