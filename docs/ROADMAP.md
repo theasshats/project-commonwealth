@@ -72,10 +72,9 @@ thinnest-in-integration pillar. **#129** (mob drops in the connectivity tool) is
 
 ### Phase 6 — Curation & de-dup ✅ #88 on `main` (v0.5.0) — follow-ups open
 The mob/boss + duplicate-mechanic pass landed (arphex/creeper-overhaul/mutant-monsters cuts, In Control!
-spawn-gating, kobold swap). Remaining curation: **#94** (un-anchored mods + dup clusters), **#107**
-(Ender Moon keep/cut), **#106/#108** (spawn-gating allowlist + behavioral review), **#60** (umapyoi
-verdict, zagwar), **#100** (orphan library jars), **#21** (living removal tracker), **#87** (Create
-Stuff'N Additions balance). MineColonies is settled as a woven on-ramp (#92).
+spawn-gating, kobold swap). Remaining curation: **#94** (un-anchored mods + dup clusters), **#106/#108** (spawn-gating allowlist +
+behavioral review), **#21** (living removal tracker), **#87** (Create Stuff'N Additions balance).
+_Settled: #60 umapyoi cut, #100 orphan libs swept, #107 Ender Moon kept (flavor → v0.11.0)._ MineColonies is settled as a woven on-ramp (#92).
 
 ### Phase 7 — Stability & QoL 💤 (needs a live server)
 Playtest pre-gen #98 (force-multiplier) · RAM/GC #48 · flight interactions #43 · claims #25 ·
@@ -105,74 +104,51 @@ post-release polish or ongoing curation.
 **Explicit non-goals** (keep off the release path): a server-pack artifact, NeoForge auto-bump,
 bundled-jar distribution — all deliberately out, see `docs/DESIGN.md`.
 
-## Milestones — the road to 1.0
+## Milestones — the road to 1.0 (odd/even cadence)
 
-Open issues are organized into GitHub **milestones**, not loose buckets. The structure leans on the
-**five systems**: the small/foundational work is front-loaded to clear the decks, then each pillar gets
-a focused version with a concrete **goal** (its exit criterion — the bar to call it done and move to the
-next), and the `needed-for-release` gate sits last. **Every issue maps to a milestone, and so does every
-*new* issue** — pick the pillar version whose goal it serves, or `Backlog / living` for ongoing trackers
-and not-yet-scheduled work. The backlog is expected to grow well past today's count, so it's the holding
-pen that keeps everything triaged. (The server is up now, so the old "needs the box" items are woven into
-the versions where they fit rather than parked.) Milestones are created/edited on GitHub; this list is the map. See `docs/TRIAGE.md` for the triage process (label / milestone / assign / close).
+Open issues are organized into GitHub **milestones** on an **odd/even release cadence** (`docs/RELEASE-CADENCE.md`): the minor version's parity sets the job. **ODD = feature / integration** — add the pillar's mods, weave them in structurally, then curate by merit (**the thunderdome** — see below). **EVEN = stabilization** — profile, balance, and bug-fix what the prior odd added; *no new mods or features*. One **pillar per odd version**, each followed by its own **even stabilization pass** so feature debt never stacks; the version count is open (extend with odd/even pairs as the pillars need). **`1.0.0` is even → a feature-frozen performance patch.** **Every issue maps to a milestone, and so does every *new* issue** — the pillar's odd version, the stabilization even that follows it, or `📋 Backlog / living`. (Milestones are created/edited on GitHub; this list is the map. See `docs/TRIAGE.md` for the process.)
 
-**Curation is a recurring thunderdome, not a phase.** Each content milestone *closes* with a time-boxed
-~2-hour pass — **v0.6.0, v0.8.0, v0.10.0, and a final sweep at v1.0.0** — where every questionable mod faces
-the rubric: does it anchor a pillar (ideally two of Create / magic / economy / aeronautics / survival), or
-earn its place via a recipe weave? Snap calls, then a quick cleanup (packwiz removals + config). It rides on
-the host milestone — no separate slot or date. Rubric: `docs/DESIGN.md` + `docs/MODLIST-AUDIT.md`.
+**Two kinds of curation — both apply the #157 rubric, on different gates.** The **odd thunderdome** is curation *by competition*: the version's new adds **and** the existing related set are reviewed against each other on merit (system-anchor, no-redundant-mechanic, woven-not-floating); winners stay, losers are cut or reworked, then the version freezes. The **even stabilization** is *performance pruning*: is a mod's TPS/RAM cost justified (spark — #147/#160)? Cut or optimize the expensive, fix what broke, balance. **Web % is a compass, not a gate** — use the connectivity tool (#129) to *find* off-web clusters worth a human look, never as a release target (target it and it gets gamed — Goodhart). The deep *taste*-weaving question is worked separately in `docs/WEAVING-STRATEGY.md`.
 
-**`v0.6.0 — Foundation`** — *Goal: clean boot log, deterministic CI, a fast playtest loop, modlist
-hygiene — decks cleared for the pillar work.* The big front-loaded cleanup (all small, low-risk work).
-- Quick wins / CI: #111 pin almost-unified · #105 prune merged branches · #100 orphan-mod sweep · #127 consolidate index-refresh workflows · #131 auto-regen the ground-truth digest · #154 config/ vs defaultconfigs audit · #126 docs cleanup + index.
+**`v0.6.0 — Foundation` · even / stabilization** — *Goal: clean boot log, deterministic CI, a fast playtest loop, a perf baseline, modlist hygiene — decks cleared for the pillar work.* The initial cleanup, not a feature dump (already even-aligned).
+- Quick wins / CI: #127 consolidate index-refresh workflows · #131 auto-regen the ground-truth digest · #154 config/ vs defaultconfigs audit. _Done in #166: #111 pin · #100 orphan-lib sweep · #126 docs cleanup + index. #105 prune branches → recurring at v0.7.0._
 - Boot-log correctness: #119 dropped recipes · #120 mangled loot tables · #121 remaining ERROR noise.
 - Perf baseline (server's up): #147 spark TPS routine + target · #151 Create contraption guardrails.
-- Curation (modlist hygiene — run as the **pass-I curation thunderdome**, chartered by #157): #157 define the rubric (`docs/CURATION.md`) · #83 umbrella · #107 Ender Moon · #106 structure allowlist · #108 spawn-gating review · #60 umapyoi · #110 MFFS textures.
+- Modlist hygiene (chartered by the #157 rubric — initial keep/cut cleanup, not a feature thunderdome): #157 define the rubric (`docs/CURATION.md`) · #83 umbrella · #106 structure allowlist · #108 spawn-gating review. _Done in #166: #60 umapyoi cut. Moved out: #107 Ender Moon (kept → flavor at v0.11.0), #110 textures (→ v1.0.0 living tracker)._
 - Server's up: #98 pre-gen test world · #3 purple-arrows repro · #38 inventory-sort verify + close.
 
-**`v0.7.0 — Create spine`** — *Goal: the recipe graph reads as one connected web — no functional-duplicate
-parts, materials unified, Create addons cohere, complex tech gated via MineColonies/boss.*
-#103 duplicate parts (steel-plate family) · #101 limestones · #102 carbon/graphene · #113 connectivity
-islands · #132 Create-addon cohesion · #145 kinetic power tier ladder · #92 MineColonies/boss gating ·
-#112 guns through sequenced assembly · #87 Create Stuff'N Additions · #17 recipes tracker (zagwar).
+**`v0.7.0 — Create spine` · odd / feature** — *Goal: the recipe graph reads as one connected web — no functional-duplicate parts, materials unified, Create addons cohere, complex tech gated via MineColonies/boss. Everything builds on this, so it goes first.*
+#103 duplicate parts (steel-plate family) · #101 limestones · #102 carbon/graphene · #113 connectivity islands · #132 Create-addon cohesion · #145 kinetic power tier ladder · #92 MineColonies/boss gating · #112 guns through sequenced assembly · #87 Create Stuff'N Additions · #17 recipes tracker (zagwar) · #105 prune merged branches (recurring hygiene sweep).
+**Closes with the thunderdome** — the Create-related set reviewed by feature merit.
 
-**`v0.8.0 — Economy`** — *Goal: the trade loop is playable end-to-end — coins valued, vendors price,
-bounties pay, mob/structure inputs wired.* The thinnest-integrated pillar; highest leverage.
-#129 mob drops in the connectivity tool (enabler) · #138 pick the shop/transaction mechanism · #136 coin
-tiers + price sheet · #137 Bountiful bounty pools · #150 faucet/sink integrity audit · #139 regional
-export specialization · #90 Numismatics + Trading Floor + Bountiful + wire inputs · #18 loot pass (feeds
-the economy) · #94 modlist audit (un-anchored mods + new dup clusters).
-**Closes with a curation thunderdome (pass II)** — rubric-check what the Create spine + Economy build dragged in.
+**`v0.8.0 — Stabilization I` · even** — *Goal: profile, balance, and bug-fix everything 0.7 added; no new mods.* Spark the Create-spine feature dump (#147 routine), run the mod-conflict catalog (#160), perf-prune by the #157 perf gate, clear any boot-log regressions.
 
-**`v0.9.0 — Survival & Magic`** — *Goal: the survival interlock (seasons × temperature × food) works in
-play and the magic web is balanced.*
-Survival: #91 interlock (umbrella over #124/#99) + cull the SoL forks · #124 altitude-driven cold · #99
-midnight-thoughts anchor · #152 author Cold Sweat world config · #155 death-penalty + gravestone tuning.
-Magic (the #80 Arcana satellites): #122 post-merge balance · #123 flagship depth · #118 Soul-Reaping
-intent · #146 gate Ars/Iron's/Occultism behind Create.
+**`v0.9.0 — Economy` · odd / feature** — *Goal: the trade loop is playable end-to-end — coins valued, vendors price, bounties pay, mob/structure inputs wired.* The thinnest-integrated pillar; highest leverage.
+#129 mob drops in the connectivity tool (enabler) · #138 pick the shop/transaction mechanism · #136 coin tiers + price sheet · #137 Bountiful bounty pools · #150 faucet/sink integrity audit · #139 regional export specialization · #90 Numismatics + Trading Floor + Bountiful + wire inputs · #18 loot pass (feeds the economy) · #94 modlist audit (un-anchored mods + new dup clusters).
+**Closes with the thunderdome.**
 
-**`v0.10.0 — Aeronautics & logistics`** — *Goal: airships/flight earn their payoff and logistics are
-woven; flight interactions documented.* (Now ticketed out — the flight/logistics pillar.)
-#84 Create + Aeronautics harder · #43 flight-system interactions · #144 airship assembly/docking infra ·
-#143 ship power/fuel economy · #142 audit Create machinery on ships · #141 transport/logistics ladder ·
-#140 airship combat balance (Big Cannons) · #125 Touhou-maids weave.
-**Closes with a curation thunderdome (pass III)** — rubric-check the back-half pillar additions.
+**`v0.10.0 — Stabilization II` · even** — *Goal: profile, balance, and bug-fix everything 0.9 added; no new mods.*
 
-**`v0.11.0 — Polish & site`** — *Goal: player wiki live, QoL and the open decisions settled.*
-#115 player wiki · #148 in-game onboarding quest/guide · #153 JEI recipe-viewer cleanup pass · #77 in-site
-issue submission · #134 map server to new Cloudflare address · #70 WEB_DIR bind-mount · #13 Create:
-Harmonics eval · #25 open-parties-and-claims · #1 shaders decision · #2 far-field render distance.
+**`v0.11.0 — Survival & Magic` · odd / feature** — *Goal: the survival interlock (seasons × temperature × food) works in play and the magic web is balanced.*
+Survival: #91 interlock (umbrella over #124/#99) + cull the SoL forks · #124 altitude-driven cold · #99 midnight-thoughts anchor · #152 author Cold Sweat world config · #155 death-penalty + gravestone tuning. Magic (the #80 Arcana satellites): #122 post-merge balance · #123 flagship depth · #118 Soul-Reaping intent · #146 gate Ars/Iron's/Occultism behind Create. Flavor: #107 Ender Moon weave (kept; earn its place via a pillar tie).
+**Closes with the thunderdome.**
 
-**`v1.0.0 — Release` [NFR]** — *Goal: renamed, CI required on `main`, ore-gen tuned + playtested, RAM
-tuned — ship a stable public build.* The needed-for-release gate, deliberately last.
-#149 v1.0.0 readiness checklist (meta-tracker) · #79 require CI on `main` · #81 early-game ore bootstrap ·
-#116 ore-gen tuning · #58 ore-gen review (refocus onto GTMOGS or fold into #116) · #78 rename the pack
-(zagwar) · #48 GC/RAM (spark; server's up).
-**Closes with the final curation thunderdome (pass IV)** — last tighten before the tag, nothing un-anchored ships.
+**`v0.12.0 — Stabilization III` · even** — *Goal: profile, balance, and bug-fix everything 0.11 added; no new mods.*
 
-**`📋 Backlog / living`** — *Goal: the holding pen — every unscheduled or ongoing issue lands here so
-nothing is untriaged; pull into a version when it's next up. New pillar issues slot into that pillar's milestone.*
-#9 mod-ideas wishlist · #21 mod-removal suggestions · #40 quarterly port watch.
+**`v0.13.0 — Aeronautics & logistics` · odd / feature** — *Goal: airships/flight earn their payoff and the transport/logistics ladder is woven; flight interactions documented.* Reached late on purpose — the aeronautics addon ecosystem is young and growing weekly, so later = riper, more stable choices.
+#84 Create + Aeronautics harder · #43 flight-system interactions · #144 airship assembly/docking infra · #143 ship power/fuel economy · #142 audit Create machinery on ships · #141 transport/logistics ladder · #140 airship combat balance (Big Cannons) · #125 Touhou-maids weave.
+**Closes with the thunderdome.**
+
+**`v0.14.0 — Stabilization IV` · even** — *Goal: profile, balance, and bug-fix everything 0.13 added; no new mods.*
+
+**`v0.15.0 — Polish & site + weave review` · odd / feature — LAST CALL** — *Goal: wiki, onboarding, QoL, claims, and the open decisions settled — plus the comprehensive pillar-weave review (all five systems checked against each other) before the freeze.*
+#115 player wiki · #148 in-game onboarding quest/guide · #153 JEI recipe-viewer cleanup pass · #77 in-site issue submission · #134 map server to new Cloudflare address · #70 WEB_DIR bind-mount · #13 Create: Harmonics eval · #25 open-parties-and-claims · #1 shaders decision · #2 far-field render distance.
+**Last call for major additions/integrations**; closes with the final thunderdome + the full pillar-weave review (the seams *between* the five systems), then feature freeze.
+
+**`v1.0.0 — Release` · even / perf patch [NFR]** — *Goal: feature-frozen — final performance + RAM tuning, ore-gen finalized, renamed, CI required → ship the public build.*
+#149 v1.0.0 readiness checklist (meta-tracker) · #79 require CI on `main` · #81 early-game ore bootstrap · #116 ore-gen tuning · #58 ore-gen review (refocus onto GTMOGS or fold into #116) · #78 rename the pack (zagwar) · #48 GC/RAM (spark; server's up) · #110 custom-item textures (living tracker, needed-for-release).
+
+**`📋 Backlog / living`** — *the holding pen so nothing is untriaged; pull into a version when it's next up.* #9 mod-ideas wishlist · #21 mod-removal suggestions · #40 quarterly port watch. Recurring passes that ride the cadence: #160 (mod-conflict catalog — runs on the even stabilization passes) · #161 (mod-update / changelog — feeds the next odd thunderdome).
 
 **Recently closed/merged:** #75 (magic web, v0.5.2) · #82 (GTMOGS ore-gen, v0.5.1) · #88 (curation, v0.5.0) ·
 #93 (ore-gen model decided → GTMOGS) · #62 (recipe overhaul, v0.4.6) · #51 (meadow cheese, in #62) ·

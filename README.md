@@ -114,7 +114,7 @@ See [`tools/README.md`](tools/README.md) for the user-facing editor docs and tro
 ├── tools/
 │   ├── derpack-edit.exe   # The editor binary (auto-built by CI)
 │   └── editor-src/        # Editor source — Go + HTML/CSS/JS
-├── docs/                  # Human-facing documentation
+├── docs/                  # Human-facing documentation (see docs/README.md for the index)
 ├── scripts/               # Build helpers (CI runs these; you almost never run them directly)
 ├── site/                  # Player-facing website (Go) — runs on ishimura, not in CI; see site/README.md
 └── .github/workflows/     # CI: PR merge-gating checks, release build, editor build, ground-truth digest, fallback edits

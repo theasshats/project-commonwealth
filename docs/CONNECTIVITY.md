@@ -38,6 +38,12 @@ number honest:
   universal). This is what connected `createfood` to `create` (its food is made *in* Create machines, not
   *from* Create items), and it lights up **magic-apparatus** connectivity too — useful for the #75 magic PR.
 
+> **The % is a compass, not a gate.** Use it to *find* off-web clusters worth a human look — never as a
+> release target. Target a coverage number and it gets gamed (bridge-recipes-for-the-metric — Goodhart's
+> law), and a high giant-% can still hide lifeless threads. The right question is "is this island
+> *intentional* (cosmetic — fine) or a *real gap*?", not "are we at N%." The deep *taste*-weave behind the
+> number is `docs/WEAVING-STRATEGY.md`; the cadence that uses this tool is `docs/RELEASE-CADENCE.md`.
+
 ## Beyond connected components (the four sharper lenses)
 
 Connectivity is binary — in the web or not. These add nuance (all in the CLI report):
