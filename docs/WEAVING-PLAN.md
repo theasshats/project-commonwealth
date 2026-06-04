@@ -57,7 +57,7 @@ From [`WEAVING-STRATEGY.md`](WEAVING-STRATEGY.md) and [`DESIGN.md`](DESIGN.md):
   (Goodhart — targeting it invites gaming, already visible in some recipes).
 
 **Definition of "done" for a weave** (the bar every authored connection clears), inherited from
-[`RECIPES.md`](RECIPES.md) and the magic-web precedent ([`MAGIC-WEB-HANDOFF.md`](MAGIC-WEB-HANDOFF.md)):
+[`RECIPES.md`](RECIPES.md) and the magic-web precedent ([`archive/MAGIC-WEB-HANDOFF.md`](archive/MAGIC-WEB-HANDOFF.md)):
 
 > A weave is *coherent* if a player would say **"of course you'd connect these"** — the input matches the
 > output, it **routes through the right *method*** (the mod's own machine / ritual / infusion / processing
@@ -342,7 +342,7 @@ upkeep.
 
 ### Phase 3 — Authoring (per chunk, rides odd versions)
 - **Do:** **jar-verify the *method* schema** for each target mechanic before writing (the magic-web
-  discipline — `unzip -p` the jar; reuse the verified schemas in `MAGIC-WEB-HANDOFF.md` §4); author KubeJS
+  discipline — `unzip -p` the jar; reuse the verified schemas in `archive/MAGIC-WEB-HANDOFF.md` §4); author KubeJS
   weaves **composing approved motifs**, **authoring into the mod's native method/recipe-type first** and
   reserving the crafting table for when no fitting method exists; log each in the ledger; run static
   validation.
@@ -527,7 +527,7 @@ Layered, cheapest first; the last two are human because the sandbox can't launch
 3. **Connectivity regression** — re-run `recipe-graph.py` after each chunk; assert we **didn't shatter**
    the web and the *intended* island rejoined. **Compass, not target** — never an acceptance %.
 4. **Schema verification (pre-authoring)** — jar-verify each recipe type before writing it (the GTMOGS
-   `targets`-vs-`target` class of bug sails through CI). Reuse the `MAGIC-WEB-HANDOFF.md` §4 verified
+   `targets`-vs-`target` class of bug sails through CI). Reuse the `archive/MAGIC-WEB-HANDOFF.md` §4 verified
    schemas.
 5. **In-game JEI/EMI sanity** — the recipe renders on the correct station (recipe viewer is **JEI, not
    EMI** — EMI can't render Create processing). Human, in-game.
@@ -620,6 +620,6 @@ through a fermentation/`create:milling` chain (M-12). *The method is the weave* 
 _Refs: [`WEAVING-STRATEGY.md`](WEAVING-STRATEGY.md) (the question this answers), [`RELEASE-CADENCE.md`](RELEASE-CADENCE.md)
 (the cadence it rides), [`DESIGN.md`](DESIGN.md) (five-system north star), [`CONNECTIVITY.md`](CONNECTIVITY.md) +
 `tools/recipe-graph/` (the compass), [`RECIPES.md`](RECIPES.md) (the recipe rubric + pattern source),
-[`MAGIC-WEB-HANDOFF.md`](MAGIC-WEB-HANDOFF.md) (the precedent workstream), `tools/mod-data/` (the digest the
+[`archive/MAGIC-WEB-HANDOFF.md`](archive/MAGIC-WEB-HANDOFF.md) (the precedent workstream), `tools/mod-data/` (the digest the
 dossier grounds against), #157 (curation rubric / thunderdome), #160 (per-mod web sweep — Phase 1 rides it),
 #161 (mod-update pass — keeps dossiers fresh)._
