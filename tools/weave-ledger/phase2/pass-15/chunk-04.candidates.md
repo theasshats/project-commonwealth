@@ -21,3 +21,11 @@
 ## createfurnitureseats   [anchors: support + aeronautics (2)]
 - LEAVE — zero-surface compat/behavior mod: 0 blocks, 0 items, loot=no. Registers foreign furniture as Create seats; no material join surface. Already touches aeronautics (sittable furniture on ships); forcing additional edges would be meaningless.
 
+## revelationary   [anchors: support (1)]
+- LEAVE — genuine zero-surface library: 0 blocks, 0 items, loot=no, no recipe methods. Pure progression-gating API; its downstream effect (hiding Occultism blocks behind advancements) is owned by the consuming mods, not this one.
+
+## comforts   [anchors: survival (1)]
+- from: comforts:sleeping_bag_* (wool+string item, 16 colors) | via: numismatics sell (trade-seam) | to: economy | motif: M-21 | power: everyday | tone: ok | verdict: REJECT | reason: M-21 is provisional (leans no); a dyed sleeping bag as a trade good adds zero thematic signal — too generic to surface for review
+- from: comforts:hammock_* (day-skip block) | via: create:item_application | to: Create | motif: M-20 | power: everyday | tone: clash | verdict: REJECT | reason: applying a Create part onto a hammock has no coherent narrative — the hammock is a simple dyed-cloth item; forcing a deployer step is noise with no player-legible hook
+- LEAVE — comforts stays survival (1). Its items are too generic (dyed wool shapes) and too basic to anchor a second pillar without a forced edge. The dossier's own conclusion stands.
+

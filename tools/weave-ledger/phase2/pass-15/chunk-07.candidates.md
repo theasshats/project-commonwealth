@@ -9,6 +9,12 @@
 ## voicechat   [anchors: support (1)]
 - LEAVE — proximity voice comms infrastructure; 0 items, 0 blocks, no loot, no recipe types. No material surface to weave through.
 
+## moblassos   [anchors: survival (1)]
+- from: moblassos:golden_lasso / emerald_lasso craft | via: recipe (create:mechanical_crafting) | to: Create | motif: M-05 | power: mid | tone: ok | verdict: REJECT | reason: M-05 requires a mod's own machine to be gated on Create parts as inputs. Moblassos has no machine — just craftable tools. Routing lasso crafts through create:mechanical_crafting would be a pure recipe tax with no thematic hook ("you need a mechanical crafter to make a leather rope lasso"). Red-team wins: the lasso is low-tech livestock-wrangling gear; demanding Create precision is a tone clash.
+- from: moblassos:emerald_lasso | via: trade (villager/wandering) | to: economy | motif: M-21 | power: mid | tone: ok | verdict: REJECT | reason: M-21 is provisional (leans no). Also, the lasso is a player-crafted tool with no economy hook beyond "you paid emeralds to craft it." Adding a trade seam here has no resonance.
+- from: moblassos:contract item | via: recipe | to: economy | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: moblassos:contract appears to be a holding item, not a trade-currency item. No motif fits; no-motif → reject-for-review.
+- LEAVE — 13 items, no loot, no blocks, no recipe types; its value is pure mob-transport logistics (utility synergy with aeronautics/MineColonies). There is no material flow to route through a method. Confirmed leave: no coherent 2nd-pillar recipe/loot/config edge survives red-team.
+
 ## fxntstorage   [anchors: Create, survival (2)]
 REWORK: OK — connections sound. The Create-tier material ladder (andesite→brass→hardened) gating backpack/box tiers via create:mechanical_crafting is coherent and correctly costed. No rework warranted.
 - from: fxntstorage:brass_backpack (flight upgrade path) | via: recipe (crafting/create:mechanical_crafting) | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: outfitting your airship crew with brass-tier flight backpacks bridges the storage-logistics mod to the aeronautics pillar — the flight upgrade is literally personal-flight, thematically inseparable from ship ops
