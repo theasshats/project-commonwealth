@@ -28,14 +28,16 @@ economy, aeronautics, survival** — or it's cut; scarcity drives emergent trade
 |---|---|---|---|
 | **#80** | `claude/arcana-mod` | Derpack Arcana code-bridge mod (skeleton, `mods-src/`) — the magic bridges KubeJS can't express | draft until P1 "Attunement Font" is ready; deviation tracked in #118 |
 
-Everything else is now **issue work, not stacked PRs**, organized into GitHub **milestones** — the road
-to 1.0 (`v0.6.0` Foundation → the pillar versions `Create spine`/`Economy`/`Survival & Magic`/`Aeronautics`
-→ `v1.0.0` release gate), each with a one-line **goal**; full map in `docs/ROADMAP.md` ("Milestones").
-**Every new issue must be filed under a milestone** (an unmilestoned issue is untriaged). Near-term is
-**v0.6.0 — Foundation**: quick wins (#111/#105/#100/#127/#131/#154/#126) → boot-log (#119/#120/#121) →
-perf baseline (#147/#151) → curation (#157 rubric → #83/#107/#106/#108/#60/#110). The Economy
-(#136–#139/#150), Survival/Magic (#146/#152/#155) and Aeronautics (#140–#144) pillars are now ticketed
-out under their milestones.
+Everything else is now **issue work, not stacked PRs**, organized into GitHub **milestones** on an
+**odd/even cadence** (`docs/RELEASE-CADENCE.md`): odd = feature/integration + the curation thunderdome,
+even = stabilization (perf/bug/balance, no new mods). One pillar per odd — `v0.7.0` Create spine →
+`v0.9.0` Economy → `v0.11.0` Survival & Magic → `v0.13.0` Aeronautics → `v0.15.0` Polish + weave review —
+each trailed by a stabilization even; `v0.6.0` Foundation and `v1.0.0` (even, feature-frozen perf patch)
+bookend. Full map in `docs/ROADMAP.md` ("Milestones"). **Every new issue must be filed under a milestone**
+(an unmilestoned issue is untriaged). Near-term is **v0.6.0 — Foundation**: quick wins
+(#111/#105/#100/#127/#131/#154/#126) → boot-log (#119/#120/#121) → perf baseline (#147/#151) → modlist
+hygiene (#157 rubric → #83/#107/#106/#108/#60/#110). The Economy (#136–#139/#150), Survival/Magic
+(#146/#152/#155) and Aeronautics (#140–#144) pillars are ticketed out under their (now odd) milestones.
 
 ## Hard constraints
 - **Headless sandbox** — can't run Minecraft/KubeJS. Validate `node --check` (JS) + JSON/TOML only;
