@@ -48,15 +48,20 @@ candidate. Ties (2/2) break by insertion order (arbitrary) — those are exactly
 (the Galosphere `silver`=PALLADIUM gotcha); `samurai_dynasty` silver kept off `c:ingots/silver` confusion
 (#177); deliberately-vanilla worldgen/structure/behaviour mods drew `LEAVE` rather than forced edges.
 
-**[NOTE] LIBRARY-FREEZE audited completely (207 mods) — freeze STANDS, nothing interesting lost.** 164 are
-truly empty (0 blocks/0 items/loot=no); ~40 are libraries with dev/tooling items; the rest are the `create`
-hub (inbound-only) and deliberately-decorative/vanilla content (`dtterralith` wood, `just_blahaj` plushies) that
-correctly LEAVE. No content keystone frozen. **Two items PARKED (not freeze errors, but real gaps):**
-(1) **Aeronautics digest gap** — `aeronautics` has no dossier and `sable`/`aeronautics_bundled` register 0 items,
-so Create Aeronautics' own parts (props/balloons/hulls) were never reviewable. Needs a digest regen (#131-class)
-before the aeronautics pillar's *own* content can be woven outward — M-13/M-23/M-24 currently only weave *into*
-it. (2) **25 loot=yes structure/dungeon mods** (betterstrongholds, dungeons_arise_seven_seas, ctov, trek, …) —
-correctly out of weave-passes, but their loot tables are a Phase-3 **loot-seeding** backlog item.
+**[NOTE] LIBRARY-FREEZE audited + THREE fixes applied (maintainer pushback: "loot tables are Phase-3 actions;
+nothing with a suggestion should be frozen; fix aeronautics").**
+- **Freeze logic corrected** — `phase2-freeze.py` now freezes a mod ONLY if LEAVE-only in the full pass AND zero
+  ACCEPT anywhere in the merged set AND 0 blocks/0 items/loot=no. This un-froze `dungeons_arise_seven_seas` +
+  `endermoon` (both had earlier ACCEPTs a single pass-13 LEAVE wrongly overrode) and all loot/item-bearing mods.
+  Freeze dropped **207 → 163**; verified **frozen ∩ accepts = NONE**. Next pass: 194 mods / 20 chunks.
+- **Loot-seeding is now a first-class candidate** — briefing adds a "Delivery mechanisms" section: a weave can
+  be delivered by recipe, **loot-table seeding** (structure/dungeon mods → seed coin/reagent/boss-key drops),
+  worldgen/event gating, trade, or config. Loot-bearing structure mods must NOT be auto-`LEAVE`'d.
+- **Aeronautics gap fixed as far as possible here** — created a hand-authored `aeronautics` dossier (content ns
+  is `aeronautics:`, not `aeronautics_bundled:`). Only `aeronautics:levitite_blend_bucket` is digest-grounded;
+  the rest of Create Aeronautics' parts are code-registered and the scan missed them. Dossier seeds levitite +
+  the sweep-known parts with OUTBOUND 2nd-pillar candidates (levitite → economy/magic) so the pillar is finally
+  reviewable, banner-flagged PARTIAL. **Still needs a real digest regen on the box (#131) for exact part ids.**
 
 **[NOTE] Exclusion ABOLISHED — review EVERYTHING (maintainer call).** Passes 00–12 were not exhaustive on two
 counts, both now fixed in `phase2-chunks.py`: (1) the ≥2-pillar **audit** track was capped at `aud[:14]` with a

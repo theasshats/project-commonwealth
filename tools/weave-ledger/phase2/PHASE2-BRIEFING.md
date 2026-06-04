@@ -31,10 +31,23 @@ For each candidate, decide ACCEPT or REJECT and record BOTH (the rejects are wan
    `no-motif` and REJECT-for-review (don't invent one). `M-14` and `M-21` are **provisional** — you may
    surface candidates but tag them `(provisional motif)`.
 
+## Delivery mechanisms — a weave is NOT only a recipe (Phase 2 produces Phase-3 actions of every kind)
+A candidate's motif says *what* the link is; its **delivery** says *how* Phase 3 authors it. Recipes are one
+delivery. Name the delivery alongside the motif (`via: <method>`), choosing whichever fits:
+- **recipe** (crafting/Create/ritual/etc.) — the default for mods that register items.
+- **loot-table seeding** — for **structure/dungeon mods** (`loot=yes`, often 0 items of their own): the action
+  is "seed weave-relevant drops into this mod's loot tables" (a Phase-3 datapack edit). A boss/structure feeding
+  coin (M-08/M-14), magic reagents (M-02), or a progression key (M-15) is a REAL candidate — **do NOT `LEAVE`
+  a loot-bearing structure mod just because it has no recipes.** Tag `via: loot-seed`.
+- **worldgen/spawn or event gating** (M-16 seasonal, M-22 lunar), **villager trade** (M-21 provisional),
+  **config tie** (e.g. cross-mod food/temperature hooks) — all valid; name the mechanism.
+
 ## Hard guardrails
 - **Never gate a basic/everyday component behind a complex recipe.** Depth scales with power, both ways.
 - **Don't force edges onto deliberately-vanilla mobs/organic content** — if nothing is coherent, write
-  `LEAVE — <reason>`. A forced "why is this convertible to that?" edge is a defect.
+  `LEAVE — <reason>`. A forced "why is this convertible to that?" edge is a defect. But a mod with a **loot
+  table or any item/block is not "no content"** — reach for a loot-seed or processing candidate before LEAVE;
+  reserve `LEAVE` for genuine zero-surface libraries/behavior mods.
 - **1:1 round-trip swaps** only for genuinely equivalent materials (rare); otherwise avoid.
 - **Method-first**, but a crafting-table recipe is fine where it's the coherent form (not a lesser fallback).
 - Respect **reagent-ownership** (don't repurpose a reserved reagent).
