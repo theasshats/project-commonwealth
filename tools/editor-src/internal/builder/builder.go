@@ -9,8 +9,8 @@
 //   1. Read pack metadata from pack.toml.
 //   2. Write Prism scaffold files (mmc-pack.json, instance.cfg) into a staging
 //      folder.
-//   3. Copy config/, defaultconfigs/, kubejs/, resourcepacks/, shaderpacks/
-//      into <staging>/.minecraft/.
+//   3. Copy config/, defaultconfigs/, kubejs/, resourcepacks/, shaderpacks/,
+//      tacz/ into <staging>/.minecraft/.
 //   4. Start `packwiz serve` on a free port.
 //   5. Run packwiz-installer-bootstrap (Java) against that server to fetch
 //      every mod jar into <staging>/.minecraft/mods/.
@@ -93,8 +93,11 @@ func (b *Builder) Build(ctx context.Context, log func(string)) (*Result, error) 
 	}
 	collect("Wrote mmc-pack.json and instance.cfg")
 
-	// 3. Copy config dirs.
-	for _, d := range []string{"config", "defaultconfigs", "kubejs", "resourcepacks", "shaderpacks"} {
+	// 3. Copy config dirs. tacz/ carries the committed Create: Armorer gun-pack
+	// zips -> .minecraft/tacz/ (TaCZ loads gun packs from there); without it the
+	// guns and their gun-smith-table recipes never load. Keep in sync with the
+	// copy loops in scripts/build-prism-skeleton.sh and scripts/build-server.sh.
+	for _, d := range []string{"config", "defaultconfigs", "kubejs", "resourcepacks", "shaderpacks", "tacz"} {
 		src := filepath.Join(b.RepoRoot, d)
 		if _, err := os.Stat(src); err != nil {
 			continue // skip missing dirs
