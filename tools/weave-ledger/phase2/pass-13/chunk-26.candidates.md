@@ -35,6 +35,19 @@
 
 - LEAVE — its content role is as a method-provider (fan_ending / fan_freezing), not a material source. The weaving belongs on the mods that route materials *through* those methods, not on the library itself. No coherent 2nd pillar from its own material surface.
 
+## create_ultimate_factory   [anchors: Create (1)]
+<!-- Pure recipe datapack — no items of its own; it adds recipes onto Create's existing types. The question
+     is whether any of its authored recipes create a bridging output that could anchor a 2nd pillar.
+     Its outputs: strata stones, diamond (renewable), deepslate, calcite, blaze rods (via lava+coal block),
+     all vanilla materials. No foreign mod outputs. -->
+
+- from: create_ultimate_factory renewable diamond (coal-block+lava→diamond via create:compacting) | via: numismatics coin mint | to: economy | motif: M-08 | power: endgame | tone: clash | verdict: REJECT | reason: M-08 is "scarce regional metal → processed → coin." Renewable diamonds are a vanilla material the mod makes reproducible through Create; the economy anchor for scarcity depends on diamonds *being* scarce in this pack. If CUF's diamond recipe is kept, minting it as coin would undercut scarcity intent. The pack may want to trim this recipe precisely to preserve scarcity — so leaning on it for an economy weave is fragile and tone-clashes with the scarcity-driven design pillar.
+
+- from: create_ultimate_factory renewable blaze rod / calcite outputs | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: REJECT | reason: This mod has no items of its own — the blaze rods are vanilla, and magic imbuement of vanilla materials belongs on the magic mods directly. Weaving here would attach the link to a recipe-datapack with no identity, making provenance confusing. Not a clean surface.
+
+- LEAVE — recipe datapack with no items of its own; it deepens Create throughput rather than bridging pillars. Any cross-pillar benefit from its outputs (renewable vanilla mats) belongs on the consumer mods, not on this datapack. One deliberate note: if any CUF recipes conflict with Derpack's scarcity intent (e.g. the renewable diamond recipe), they should be trimmed regardless of weaving.
+
+
 
 
 

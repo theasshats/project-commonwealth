@@ -58,6 +58,16 @@
 ### Existing connections audit
 - create:filling + create:mixing inbound (already authored). OK — these are the natural Create inputs for the distillery chain; coherent and well-costed.
 
+## kotlinforforge-5.11.0-all   [anchors: support/library (1)]
+- LEAVE — Kotlin language adapter; zero items, zero recipe types, no player-facing content surface. Pure developer runtime dependency.
+
+## xaerominimap   [anchors: support (1)]
+- LEAVE — client-side minimap HUD; zero items, zero recipe types, no gameplay material. Navigation QoL only; no weave surface exists.
+
+## cerbons_api   [anchors: support/library (1)]
+- LEAVE — shared code library for CERBON's boss mods; zero items, zero recipe types, no content surface. Genuine zero-content code library.
+
+
 
 
 
