@@ -18,6 +18,12 @@
 - from: tide fish (any) | via: ars_nouveau:imbuement or occultism:ritual (whole-fish-roster as reagents) | to: magic | motif: M-02 | power: everyday | tone: clash — routing common fish like anchovy through a magic ritual feels arbitrary; the tone only holds for exotic/eldritch species | verdict: REJECT | reason: theme-clash for common species; already covered cleanly by the narrow M-11 candidate above.
 - REWORK: existing farmersdelight:cutting inbound weave (filleting) is solid — OK. No other existing connections to audit.
 
+## terralith   [anchors: survival (1)]
+- from: terralith biome variety (loot=yes, 65 c:tags grounded) | via: loot-seed (Terralith's structure/loot tables) | to: economy | motif: M-08 / M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: Terralith's biome-exclusive structures (buried treasures, hidden vaults in fantastical biomes like Skylands or Mirage Isles) are natural seed-points for scarce regional coin or processed-metal fragments — making exploration of exotic biomes pay off economically without any recipe edge. Delivery: datapack loot-seed into Terralith-tagged structure loot tables. The 65 c:tags indicate it already registers tags other mods key off; seeding coin/regional-metal drops into Terralith's structure chests is coherent and non-intrusive.
+- from: Terralith fantastical biomes (Moonlight Grove, Skylands) | via: worldgen/spawn gating | to: magic | motif: M-22 (lunar/celestial reagent — biome gating is the spatial analogue) | power: mid | tone: ok | verdict: ACCEPT | hook: if a magic reagent (e.g. galosphere lumiere shard, or a custom allurite variant) spawns exclusively in Terralith's sky/moonlight biomes, those biomes become a required travel destination for magic players — world variety becomes a magic supply chain. Delivery: biome-modifier / spawn config that ties a magic material to the celestial/fantastical Terralith biomes.
+- from: Terralith (data-only, no own items, no recipes) | via: recipe | to: any | motif: any | power: n/a | tone: clash — Terralith has zero items; any recipe route invents fictitious items | verdict: REJECT | reason: no items to route; recipe delivery is wrong for a data-only worldgen mod.
+
+
 
 
 

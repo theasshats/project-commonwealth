@@ -29,3 +29,15 @@
 - from: comforts:hammock_* (day-skip block) | via: create:item_application | to: Create | motif: M-20 | power: everyday | tone: clash | verdict: REJECT | reason: applying a Create part onto a hammock has no coherent narrative — the hammock is a simple dyed-cloth item; forcing a deployer step is noise with no player-legible hook
 - LEAVE — comforts stays survival (1). Its items are too generic (dyed wool shapes) and too basic to anchor a second pillar without a forced edge. The dossier's own conclusion stands.
 
+## opacpvp   [anchors: support (1)]
+- LEAVE — genuine zero-surface behavior mod: 0 blocks, 0 items, loot=no. Tiny PvP-rules addon for Open Parties & Claims (/opacpvp toggle); no material surface to route.
+
+## copycats   [anchors: Create (2)]
+- from: copycats:copycat_block family (zinc-built shape containers) | via: create:item_application | to: Create (deeper) | motif: M-20 | power: everyday | tone: ok | verdict: REJECT | reason: copycats already lives entirely inside the Create pillar; using item_application to "apply" a skin is just describing its existing mechanic — not a cross-pillar link, and not adding a 2nd pillar
+- from: copycats blank shapes (mid-tier decorative, zinc-sink) | via: numismatics sell / trade | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: a blank copycat shape is not a "luxury good" — it's a builder component. Selling construction materials as a luxury commodity is a thematic stretch and M-09 calls for high-effort consumables; this fails the tone test
+- OK — connections sound. Copycats is well-placed as a Create-anchored decoration mod (already 2-pillar-adjacent by living inside Create). No rework needed.
+
+## azurelib   [anchors: support/library (1)]
+- LEAVE — genuine zero-surface library: 1 internal utility block (lightblock), 0 items, loot=no, no recipe methods. Animation engine dependency for animated mobs (e.g. Cataclysm); no gameplay surface.
+
+== CHUNK COMPLETE ==

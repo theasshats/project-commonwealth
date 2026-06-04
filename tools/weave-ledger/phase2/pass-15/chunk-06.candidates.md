@@ -23,3 +23,14 @@
 - from: t_and_t loot tables | via: loot-seed | to: magic | motif: M-02 | power: everyday | tone: ok | verdict: ACCEPT | hook: rare folklore/ancient structures occasionally seed a magic reagent (source_gem shard, arcane scroll) — exploration converts to magical progression
 - REWORK: (no existing cross-pillar connections yet — survival only, all candidates are new)
 
+## create_pattern_schematics   [anchors: Create (1)]
+- LEAVE — build-tooling QoL within Create: 3 items (empty_pattern_schematic, pattern_schematic, pattern_schematic_and_quill), no loot, no processing methods. The items are tool/utility items with no material surface to route through another pillar's method. Forcing them into a second pillar would be arbitrary.
+
+## brazil_legends   [anchors: survival (1)]
+- from: brazil_legends:capelobo_claw | via: occultism:spirit_fire | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: a werewolf-cryptid claw transmutes in spirit-fire into a dark essence — folklore meets occult ritual, obvious to a player
+- from: brazil_legends:amber_shard / amber_pearl | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: fossilized amber carries preserved magic; imbuement refines it into a usable arcane reagent
+- from: brazil_legends:big_tongue | via: occultism:ritual | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: the Giant's tongue is a ritual component — folklore grotesque becomes a summoning ingredient
+- from: brazil_legends:amber_shard | via: numismatics sell (loot-seed into trader goods) | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: ACCEPT | hook: raw amber is a curio — rare enough to be a trade good, light integration, one sell step
+- from: brazil_legends:bottle_with_saci | via: numismatics sell | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: a trickster-spirit trapped in a bottle is thematically charged but arbitrary as a coin trade good — the thematic tension between "magic curiosity" and "sell for coin" is too weak; use it as a magic catalyst instead (already ACCEPT via M-10/M-11 path)
+- from: brazil_legends:bloodmoon_sickle | via: config/worldgen (bloodmoon event) | to: survival/magic | motif: M-22 | power: mid | tone: ok | verdict: ACCEPT | hook: the sickle — forged in bloodmoon loot or dropped under a lunar event — ties the weapon to the lunar cycle system (M-22 lunar/celestial reagent, provisional extension to weapon drops)
+
