@@ -85,8 +85,10 @@ def coverage():
         warns.append('no dossiers found — run scripts/build-dossiers.py')
         return
     total = len(files)
-    verified = skeleton = 0
+    verified = skeleton = support = multi = 0
     low_pillar = []
+    support_kw = re.compile(r'\b(support|library|lib|api|perf|performance|qol|client|flavor|cosmetic|'
+                            r'deco|util|tooling|framework)\b', re.I)
     for f in files:
         txt = open(f, encoding='utf-8').read()
         head = txt.split('AUTO-DIGEST-FACTS', 1)[0]
@@ -100,17 +102,21 @@ def coverage():
         if 'TODO' in anch:
             continue  # not yet swept — don't count as a gap yet
         n = sum(1 for p in PILLARS if re.search(r'\b' + p, anch, re.I))
-        if n < 2:
+        if n >= 2:
+            multi += 1
+        elif support_kw.search(anch):
+            support += 1                 # sanctioned support role — a valid anchor, not a weave gap
+        else:
             low_pillar.append((os.path.basename(f)[:-3], n))
     print(f'  dossiers: {total} total · {verified} VERIFIED · {skeleton} still-skeleton · '
           f'{total - skeleton} touched')
-    swept = total - skeleton
-    if swept:
-        print(f'  pillar worklist (swept mods at <2 pillars): {len(low_pillar)}')
-        for name, n in low_pillar[:40]:
+    if total - skeleton:
+        print(f'  anchoring: {multi} at >=2 pillars · {support} support-role · '
+              f'{len(low_pillar)} CONTENT mods at <2 pillars (the weave worklist)')
+        for name, n in low_pillar[:60]:
             print(f'      [{n}] {name}')
-        if len(low_pillar) > 40:
-            print(f'      … +{len(low_pillar) - 40} more')
+        if len(low_pillar) > 60:
+            print(f'      … +{len(low_pillar) - 60} more')
 
 
 def main():

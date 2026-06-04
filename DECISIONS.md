@@ -12,17 +12,36 @@ theme/balance/"is this island intentional?" · **[NOTE]** judgment worth surfaci
 
 ## Open — needs your call
 
-- **[NOTE] Phase 1 status (paused at usage limit).** Phase 0 tooling = done. Dossiers: **307/367 filled
-  & VERIFIED**, all pushed. **60 remain as skeletons** — the s–w tail (batches 16–23) whose agents hit the
-  account session limit mid-run. Resume them with `tools/weave-ledger/_batches/batch-16..23.txt`; the
-  generator's merge preserves finished cards, so a re-run is safe and only fills skeletons.
-  Notable content mods still pending: `tfmg`, `touhou_little_maid`, `sereneseasons` (survival core),
-  `sable`/`sky_whale_ship` (aeronautics), `samurai_dynasty`, `smokeleafindustries`, `securitycraft`,
-  `supplementaries`, `terralith`, `titanium`, `meadow`, `ribbits`, `s_a_b`.
-- **[COST LESSON] Don't fan out Opus subagents.** Phase 1 was run as ~23 parallel **Opus** research
-  agents — that exhausted the plan's usage in minutes. The dossier sweep is templated web-research:
-  **run it on Haiku 4.5 (support mods) / Sonnet (content mods)** via the Agent `model` override, a few at
-  a time, not a 23-way Opus fan-out. Apply this to the remaining 60 and to any future bulk pass.
+- **[STATUS] Phase 0 + Phase 1 COMPLETE.** All **367/367 dossiers VERIFIED** and pushed. `check.py`
+  coverage: **58 mods at ≥2 pillars · 235 support-role · 74 content mods at <2 pillars** — that 74 is the
+  real **Phase-2 weave worklist** (run `python3 tools/weave-ledger/check.py` for the live list). Heaviest
+  clusters in it: the Create-family addons anchored only to Create (`createaddition`, `create_ironworks`,
+  `createmetalwork`, `createnuclear`, `createmechanicalcompanion`, …) and content mobs/structures
+  (`alexsmobs`, `bosses_of_mass_destruction`, `bountiful`, the YUNG's/structure datapacks).
+- **[G2-PREVIEW] Strong weave candidates the sweep surfaced** (for Phase-2 candidate lists, not authored):
+  `tfmg`→aeronautics (diesel/LPG fuels + engines power Aeronautics) · `tacz`→Create gating + ammo
+  coin-sink (M-05/M-08) · `smokeleafindustries`→economy (refined extracts→coin, M-09) · `meadow`→economy
+  (cheese luxury, M-09) · `rottencreatures`/`undergroundworlds`→magic (themed drops via spirit_fire/imbue,
+  M-02/M-11) · `samurai_dynasty`→Create (ore-doubling, M-03) · `upgrade_aquatic`→cooking chain (M-12) ·
+  `createmetalwork` flagged as a natural **M-08 metals→coin hub** · `bountiful` (bounty board) is a ready
+  **economy** anchor.
+- **[CURATION] Flags the sweep raised for the thunderdome (#157), your call:**
+  - `solclassic` (penalty SoL) **and** `solonion` (reward SoL) both installed — redundant Spice-of-Life
+    forks (#91); pick one.
+  - 6 **EMI** addons + `emi_letsdo_compat` are redundant display layers — the pack runs **JEI** per
+    CLAUDE.md. Cut candidates.
+  - `trashcans` = unlimited void sink; mildly anti-scarcity for this pack — consider gating/omitting.
+  - `recipe_integration` ships ~3,700 conditional recipes, most for **uninstalled** mods (mekanism/MI/GT);
+    worth an audit of which actually fire on this modlist.
+  - ⚠ `samurai_dynasty:silver_ore` is tagged **silver** — watch unification vs. the CLAUDE.md
+    Galosphere-palladium / Occultism-silver caveat (don't let it merge wrong).
+- **[NOTE] Identity corrections recorded in dossiers** (namespaces were misleading): `timm`=Traveler's
+  Titles (client) · `trek`=structure datapack (not stamina) · `zombiemoon`=Mutants & Zombies (mobs, not a
+  moon event) · `underground_village`=Stoneholm · `vc_gliders`=Gliders · `s_a_b`=Create: Steel Armor Blocks.
+- **[COST LESSON] Don't fan out Opus subagents.** Phase 1's first pass was ~23 parallel **Opus** agents and
+  it exhausted the plan's usage in minutes (the final 60 were later resumed on Opus by explicit request).
+  For future bulk passes the dossier sweep is templated web-research — **prefer Haiku 4.5 / Sonnet** via the
+  Agent `model` override, a few at a time, not a wide Opus fan-out.
 
 ## Standing defaults I'm proceeding on (override any time)
 
