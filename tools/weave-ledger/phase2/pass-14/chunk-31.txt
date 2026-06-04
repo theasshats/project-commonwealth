@@ -1,0 +1,10 @@
+mysterious_mountain_lib
+createmetalwork
+miningspeedtooltips
+xaerominimap
+create_ultimate_factory
+openpartiesandclaims
+naturalist
+spyglass_improvements
+create_ltab-3.9.2
+immersivearmorhud

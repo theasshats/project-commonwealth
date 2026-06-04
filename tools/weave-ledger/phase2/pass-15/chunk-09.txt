@@ -1,0 +1,10 @@
+jeresources
+citadel
+northstar
+jeed
+corgilib
+aeronautics_bundled
+letsdocompat
+sliceanddice
+smokeleafindustries
+blood_n_particles_datapack

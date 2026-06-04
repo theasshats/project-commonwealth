@@ -1,0 +1,10 @@
+moreoverlays
+recipe_integration
+knightlib
+immersive_paintings
+createimmersivetacz
+trailandtales_delight
+kubejs
+ritchiesprojectilelib
+kiwi
+formationsnether

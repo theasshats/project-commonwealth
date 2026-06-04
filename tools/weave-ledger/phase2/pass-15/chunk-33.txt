@@ -1,0 +1,10 @@
+meadow
+immersive_armors
+rottencreatures
+modulargolems
+bits_n_bobs
+naturescompass
+lithium
+modelfix
+searchables
+creativecore
