@@ -1,0 +1,10 @@
+createaddition
+edf-remastered-5.0-beta4
+create_ultimate_factory
+terralith
+endrem
+createimmersivetacz
+create_enchantment_industry
+ars_n_spells
+createmechanicalcompanion
+enhancedcelestials

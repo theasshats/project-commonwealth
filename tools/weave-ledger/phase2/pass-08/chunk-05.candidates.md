@@ -1,0 +1,8 @@
+# Phase 2 candidates — chunk-05
+
+## dndesires   [anchors: Create (1)]
+- from: dndesires milkshake items (chocolate_milkshake, glowberry_milkshake) | via: farmersdelight:cooking / numismatics sell | to: survival (food variety) | motif: M-09 | power: everyday | tone: ok | verdict: ACCEPT | hook: milkshakes are processed dairy/berry goods — the kind of finished consumable a player sells at the market or packs for a journey; feeding the Spice-of-Life loop makes variety rewarding
+- from: dndesires rubber / processed intermediate | via: create:hydraulic_compacting (its own press) → numismatics mint | to: economy | motif: M-08 | power: mid | tone: ok | verdict: REJECT | reason: rubber is an *intermediate*, not a scarce regional ore — routing rubber straight to a coin misses the spirit of M-08 (scarce ore → processed → coin); better as a machine-input; no clean economy anchor here
+- from: dndesires cardboard packaging | via: create:sequenced_assembly | to: aeronautics | motif: M-06 | power: everyday | tone: ok | verdict: REJECT | reason: cardboard packaging is an everyday logistics item; gating it behind sequenced assembly violates the depth-scales-with-power rule — cardboard is not a flagship item; thematic link to airship freight logistics is too thin to override the rule
+- from: any belt-fed crop/food item | via: dndesires:freezing (freezing sail) | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: routing seasonal crops through the freezing sail bulk-preserves them off-season — a direct Serene Seasons bridge that makes the Create/D&D processing line a food-preservation tool players naturally reach for
+
