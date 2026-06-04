@@ -8,4 +8,11 @@
 - from: Blood/Blue Moon active (world-state flag) | via: event-as-catalyst for occultism:ritual or ars_nouveau:imbuement | to: magic | motif: M-22 | power: mid | tone: ok | verdict: ACCEPT | hook: a ritual only completable under the right moon — Blood Moon for destruction/summoning rituals, Blue Moon for fortune/attunement — fits both lore and the M-22 "all moons" mandate; event-gating means no item manufactured, just timing (anti-arbitrage built in)
 - from: Harvest Moon growth-rate modifier | via: — | to: any | motif: no-motif | power: everyday | tone: ok | verdict: REJECT (no-motif) | reason: Harvest Moon is a passive world-buff on all crops, not an item; can't route it through any method — it's already a free survival bonus, no edge to author
 
+## betterstrongholds   [anchors: survival (1)]
+- LEAVE — Pure structure overhaul; zero registered items, blocks, or methods. Nothing to route through any method. A loot-table tweak (drop a coin or reagent in stronghold chests) is a datapack edit outside Phase 2 scope — flag for milestone content work, not a mod weave. One-pillar floor is correct.
+
+## trek-b0.6.1.1   [anchors: survival (1)]
+- LEAVE — Structure datapack with no items or methods. Same reasoning as betterstrongholds; loot-table seeding is a valid future data edit but is not a mod-weave edge. One-pillar floor is correct.
+
+
 
