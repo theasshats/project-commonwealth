@@ -1,0 +1,51 @@
+# Phase 2 candidates — chunk-32
+
+## sliceanddice   [anchors: Create, survival (2)]
+- REWORK: OK — connections sound. sliceanddice is the designated M-12 bridge between Create and Farmer's Delight; its two pillars are structurally correct and the Slicer is inherently the automation glue. No forced edges or mis-cost. The `loot=yes` flag is present but purely from the Slicer/Sprinkler item entries, not standalone loot tables — no loot-seed surface.
+- from: sliceanddice:sprinkler (fluid-dispenser) | via: recipe (config fluid routing) | to: magic | motif: no-motif | power: everyday | tone: clash | verdict: REJECT | reason: routing modded fluids (e.g. Ars source fluid) through a Sprinkler as a magic delivery is mechanically strained — Ars source is not a piped crop-care fluid; no motif fits a "spray magic on crops" pairing and forcing one would be arbitrary. No second pillar candidate survives.
+
+## securitycraft   [anchors: support (1)]
+- from: reinforced block crafting (high-value blocks) | via: recipe (create:mechanical_crafting) | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: A sentry or reinforced vault wall should cost fabricated Create parts — base-defense tied to the tech spine makes elite security feel earned rather than trivially bought. Gate the Sentry and Briefcase (portable vault) behind Create mechanical_crafting components (precision mechanisms / zinc sheets).
+- from: securitycraft:briefcase / sentry materials | via: recipe (numismatics sell / M-09) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: High-end security hardware is a purchasable luxury — a Briefcase or advanced Keycard Reader priced in coins makes base security a trade-good sink (you buy it or you build the Create chain to make it yourself).
+- REWORK: no existing cross-pillar connections present; both ACCEPT lines above are new additions. The dossier flagged both as WEAK, but method-pull confirms they are buildable — M-05 gating sentry/reinforced gear behind Create components is thematically sound (industrial base defense), and M-09 luxury-sell is proportionate for mid-tier security hardware.
+
+## chefsdelight   [anchors: survival, economy (2)]
+- from: villager Cook/Chef trade tables | via: config/KubeJS (Numismatics coin pricing) | to: economy | motif: M-21 | power: everyday | tone: ok | verdict: ACCEPT (provisional motif) | hook: Cook and Chef villagers price their meals in Numismatics coins rather than emeralds — food trade flows into the pack's actual economy. Tag: (provisional motif — M-21 explores only; surface for human review).
+- from: Farmer's Delight meals sold by Chef villager | via: numismatics sell / M-09 | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: ACCEPT | hook: FD feast items (Roast Chicken, Honey Glazed Ham) are exactly the luxury goods M-09 targets — give them a Numismatics coin sell price so the food pillar has an economy output, not just a survival one. Delivery: KubeJS price event or Numismatics config.
+- REWORK: chefsdelight already spans survival + economy correctly. The M-09 coin-sell deepening is a reinforcement of an existing good anchor, not a rework of a weak one. OK — connections sound; the M-21 coin-trade candidate above is additive.
+
+## brazil_legends   [anchors: survival (1)]
+- from: brazil_legends:capelobo_claw | via: occultism:spirit_fire | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: A cryptid's claw transmuted into an Occultism essence is coherent — folkloric South-American creatures feed the spirit/ritual layer organically. Delivers a second pillar.
+- from: brazil_legends:big_tongue | via: ars_nouveau:imbuement | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: Giant tongue of a Capelobo as a rare imbuement input — grotesque organic reagent matching the Ars Nouveau magic tone (it already eats unusual animal parts). Delivers a second pillar (alternative delivery if Occultism is preferred, choose one or both).
+- from: brazil_legends:amber_shard | via: numismatics sell (M-09) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: Amber is a natural luxury curio — a rare drop from a folklore mob that a merchant would pay good coin for. Lightweight second-pillar anchor.
+- from: brazil_legends:amber_shard | via: ars_nouveau:imbuement catalyst | to: magic | motif: M-10 | power: mid | tone: ok | verdict: REJECT | reason: amber_shard is better placed as an M-09 economy luxury or M-11 spirit-fire sink; using it as *both* an imbuement catalyst AND a coin sell risks double-spend fragmentation. Pick one role cleanly.
+- from: brazil_legends:bottle_with_saci | via: recipe (occultism:ritual — summon/binding) | to: magic | motif: M-11 | power: endgame | tone: ok | verdict: ACCEPT | hook: A bottled trickster spirit (Saci) is an obvious ritual ingredient — could gate an Occultism summoning ritual or count as a bound spirit for a spirit-trade. Thematically tight.
+
+## sparsestructures   [anchors: support (1)]
+- LEAVE — genuine zero-content support mod. No items, no loot tables (loot=no), no blocks. It operates purely on structure-placement registry config. No material surface to route through any method; forcing a weave would be invented from nothing.
+
+## meadow   [anchors: survival (1)]
+- from: meadow:alpine_salt | via: create:milling | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Alpine salt ore → Create millstone → fine salt for cooking chains and alchemical mixing — salt is a universal processing intermediate and a natural Create input. Everyday depth.
+- from: meadow:cheese_wheel | via: numismatics sell (M-09) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: Aged cheese wheels are the canonical luxury food trade good — a Chef villager or Numismatics coin price makes cheese a tangible economy output from the alpine farming loop. Strong fit.
+- from: meadow:chambray_wool (felt textile) | via: create:pressing | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Felt/chambray pressed via Create's pressing method yields a refined textile sheet — cloth as a Create-processable intermediate for decorative or packaging recipes. Light everyday step.
+- from: meadow:alpine_salt + meadow:cheese_wheel | via: farmersdelight:cooking / extradelight:vat | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: meadow already anchors survival; routing its outputs further through FD/ExtraDelight deepens the same pillar rather than adding a second one. Not a weave candidate — it's intra-pillar elaboration.
+- from: meadow:alpine crops (lavender, yarrow) | via: ars_nouveau:imbuement or irons_spellbooks:alchemist_cauldron_brew | to: magic | motif: M-10 | power: everyday | tone: ok | verdict: ACCEPT | hook: Alpine herbs like lavender and yarrow are natural magic reagents — an infusion or alchemist brew requiring alpine mountain herbs bridges the pastoral survival biome into the magic pillar. Everyday depth fits the material.
+- REWORK: meadow has 0 foreign recipe methods consumed (all vanilla only). All weave connections are new. Existing anchor is survival-only; the above Accept rows add Create (M-12 salt + textile) and economy (M-09 cheese) as second pillars, plus a magic option.
+
+## shulkerboxtooltip   [anchors: support/client (1)]
+- LEAVE — pure client-side tooltip renderer. Zero items, zero loot tables, zero blocks. No content surface for any method-pull. A weave would be fabricated.
+
+## kubejs   [anchors: support/tooling (1)]
+- LEAVE — scripting framework/tooling layer. It is the mechanism by which weaves are authored, not a weave target. Zero player-facing items (the generated_bucket placeholder is an artifact, not content). No coherent second pillar exists — it already enables all other pillars rather than belonging to one.
+
+## jeed   [anchors: support/client (1)]
+- LEAVE — JEI documentation display addon. The two registered recipe-types (jeed:effect_provider, jeed:potion_provider) are purely JEI viewer categories, not craftable processing methods. Zero items, zero loot, zero blocks. No material surface.
+
+## createblockchain   [anchors: economy, Create (2)]
+- from: createblockchain:mining_core (geode worldgen consumable) | via: create:crushing | to: Create | motif: M-03 | power: mid | tone: ok | verdict: ACCEPT | hook: Mining Cores come from geodes — crushing a raw geode cluster in a Create millstone/crusher to extract the core gives the Create processing chain a stake in the coin-minting supply line. Scarcity from worldgen becomes the bottleneck through Create.
+- from: createblockchain:currency_miner (FE consumer) | via: createaddition:charging (FE tie) | to: Create | motif: M-17 | power: mid | tone: ok | verdict: REJECT | reason: the miner already uses FE which implies the Create-electricity bridge; the existing anchor already captures this. Adding M-17 explicitly would duplicate the existing Create pillar rather than adding something new. Current anchor is sufficient.
+- from: createblockchain:piggy_bank (chest loot) | via: loot-seed | to: economy | motif: M-08 | power: everyday | tone: ok | verdict: ACCEPT | hook: Seed the piggy_bank loot table with scarce-metal coins (not just base coins) — finding a piggy bank in a dungeon that pays out a regional metal-backed spur or bevel tells the story that coin value traces to regional scarcity. Delivery: loot-table datapack, via: loot-seed.
+- from: createblockchain:mining_core_geode (worldgen structure) | via: loot-seed | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: Geodes that yield Mining Cores could also seed higher-denomination coins in their "geode chest" if applicable — reinforces the worldgen→economy story. Delivery: loot-seed (check if geode has a chest loot table; if not, deprioritize).
+- REWORK: existing Create + economy anchors are structurally sound. The M-08 scarcity-depth refinement noted in the dossier (feed FE from scarce processed metal) is a config/design constraint, not a Phase-3 recipe action — call it a design note rather than a weave candidate. The M-03 core-crushing above adds a Create processing hook that was missing.
+
+== CHUNK COMPLETE ==

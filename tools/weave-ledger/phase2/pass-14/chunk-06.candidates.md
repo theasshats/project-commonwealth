@@ -1,0 +1,52 @@
+# Phase 2 candidates — chunk-06
+
+## accessories   [anchors: support (1)]
+- LEAVE — pure slot-API library with zero items, blocks, or loot tables; no content surface to weave. The wearables that matter live in the host mods.
+
+## cookingforblockheads   [anchors: survival (1)]
+- from: cookingforblockheads:oven / fridge / sink (appliance blocks) | via: recipe (M-05 native-method gating — gate mid-tier kitchen appliances on Create brass fittings / copper sheets as inputs) | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: a proper kitchen oven needs a brass heating element and a copper pipe — the colony cook apprentice saves up for the upgrade
+- from: cookingforblockheads kitchen multiblock (aggregates all food mods' outputs) | via: recipe (M-09 luxury good → coin — the Cooking Table's curated multi-ingredient feast output can be listed as a Numismatics sell-good at premium price) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: a prepared feast tray is worth real coin; the kitchen earns its keep as a catering operation
+- from: Create brass/copper parts gating appliances | via: recipe | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: industrial-grade appliances need fabricated components, not raw planks
+- REWORK: dossier flags economy tie as WEAK because "it sells nothing new (it cooks others' foods)" — that's actually the correct direction for M-09 (the kitchen as an *assembly* node producing sellable feast goods from raw ingredients), so the WEAK rating is mis-framed; the candidate is valid and should be promoted.
+
+## tfmg   [anchors: Create (1)]
+- from: tfmg:diesel / gasoline / LPG (refined fuels from Distillation Tower) | via: recipe / config (fuel tag M-13 — register TFMG fuel buckets/cans as valid Aeronautics engine fuel) | to: aeronautics | motif: M-13 | power: mid | tone: ok | verdict: ACCEPT | hook: the airship runs on what the refinery makes; no refinery, no flight
+- from: tfmg:steel (Industrial Blast Furnace output) | via: recipe (M-23 structural alloy → airframe — steel plates/beams required for mid/high-tier Aeronautics hull and structural frame blocks) | to: aeronautics | motif: M-23 | power: mid-endgame | tone: ok | verdict: ACCEPT | hook: a steel-hulled airship is tougher than a wood-and-copper one; the factory feeds the fleet
+- from: tfmg combustion engine + winder/polarizer mechanical components | via: recipe (M-24 mechanical component → propulsion — combustion engine block or winder assembly used in Aeronautics drivetrain/propeller recipe) | to: aeronautics | motif: M-24 | power: mid-endgame | tone: ok | verdict: ACCEPT | hook: the factory's engine is literally the airship's engine — bolt it in
+- from: tfmg:steel ingot / aluminum ingot (scarce processed output) | via: recipe (M-08 coin from processed scarcity — refined steel and aluminum coins through Numismatics mint) | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: steel is industrial currency; a refined ingot is worth real coin at the trading post
+- from: tfmg:sulfur / saltpeter (chemical by-products of coking/distillation) | via: recipe (M-10 arcane infusion pull — sulfur + saltpeter as reagents into Ars Nouveau imbuement or occultism spirit-fire for volatile magic reactions) | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: alchemists have always needed sulfur; the industrial process just scales supply
+- from: TFMG electricity (FE grid via accumulator/cable) | via: config / recipe (M-17 FE charging bridge — TFMG generators charge Create New Age / Occultism/Ars electric tools via the shared FE bus) | to: magic | motif: M-17 | power: mid | tone: ok | verdict: ACCEPT | hook: the power grid powers the arcane lab too — wire it in
+- from: tfmg:plastic (vat output from biomass/chemical chain) | via: recipe (no-motif — plastic → aeronautics cockpit/control surface component would be M-23/24 adjacent but is a stretch; plastic as a magic sealing compound has no established motif) | to: aeronautics/magic | motif: no-motif | power: mid | tone: ok | verdict: REJECT | reason: no clean motif fit; plastic is an industrial intermediate without a strong hook into magic or aeronautics at this tier — defer to a future motif or a targeted Phase-3 decision
+- REWORK: dossier lists aeronautics as M-06 sequenced-assembly for engines — M-06 is specifically the "sequenced-assembly keystone" for complex chains, which is correct for a multi-step engine build; keep but note that the fuel/fuel-tank tie (M-13) is the primary anchor and M-06 is the depth extension. Both are valid; not arbitrary.
+
+## entity_texture_features   [anchors: support/client (1)]
+- LEAVE — pure client rendering library (OptiFine texture format support); zero items, blocks, loot, or gameplay content. Genuinely zero-surface.
+
+## solclassic   [anchors: survival (1)]
+- from: solclassic:basket / wicker_basket (multi-food carry item) | via: recipe (M-05 or M-12 — basket crafted with a Create copper/brass clasp or a Farmer's Delight cutting-board step, tying the carry tool into a second pillar) | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: a proper food satchel needs a hand-cut leather strap and a metal buckle; basket upgrade earns its one recipe step
+- from: solclassic food-variety pressure (systemic — makes diverse cooked food economically valuable) | via: config / systemic (M-09 luxury-good→coin — diverse meals command Numismatics price; the link is systemic not a recipe) | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: ACCEPT | hook: rare meals fetch a premium because diminishing returns make variety currency — the food trader's whole business model
+- from: solclassic:food_history_book | via: recipe (no obvious second-pillar hook; it's a reference item) | to: — | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: the book is a read-only UI tool; no coherent crafting or magic tie; don't force a recipe on a reference item
+- NOTE: the basket recipe-pull (ACCEPT above) is intentionally light (one step) per the everyday-component guardrail.
+
+## tidal-towns-1.3.4   [anchors: survival/exploration (1)]
+- from: tidal-towns ocean village structures (deep-ocean worldgen, `joshie:ocean_village`) | via: loot-seed (M-14 bounty→drop economy — seed Numismatics coin stacks + bounty tokens into village chest loot tables so exploring a tidal town yields coin, making the ocean route economically worthwhile) | to: economy | motif: M-14 | power: everyday | tone: ok | verdict: ACCEPT | hook: the floating village fishermen trade in coin; find the town, find the treasury
+- from: tidal-towns ocean village structures | via: loot-seed (M-15 boss-key unlock — seed a single rare blueprint/component into the blacksmith chest that gates a Create or Aeronautics sea-vessel recipe, making the ocean town a progression destination) | to: Create/aeronautics | motif: M-15 | power: mid | tone: ok | verdict: ACCEPT | hook: the town's forge holds a hull blueprint you can't craft any other way; the ocean voyage is the unlock
+- from: tidal-towns structures (loot=no in dossier — vanilla loot tables only) | via: loot-seed (the "loot=no" flag means the mod registers no custom loot; the delivery is adding datapack loot-table riders into the vanilla chest types the town uses, which is a standard Phase-3 datapack edit) | to: — | motif: — | power: — | tone: — | verdict: NOTE — loot-seed is still valid here; "loot=no" means no *mod-custom* loot tables, not that the structures have no chests; the Phase-3 action targets vanilla chest types in the village layout
+
+## jei   [anchors: client UI/support (1)]
+- LEAVE — pure recipe-viewer UI with zero items, blocks, or gameplay content. Load-bearing (EMI was dropped because it can't render Create processing; do not touch). Zero content surface.
+
+## foodeffecttooltips   [anchors: support/client (1)]
+- LEAVE — pure client tooltip renderer; zero items, blocks, or loot. No content surface whatsoever.
+
+## lithostitched   [anchors: support/library (1)]
+- LEAVE — worldgen library/API with zero items, blocks, biome modifiers, or loot. Genuine zero-surface dependency (underpins Tectonic etc.); nothing to weave.
+
+## charta   [anchors: survival (1)]
+- from: charta:card_table / dealer_table (social gameplay furniture, loot=yes) | via: loot-seed (M-14 bounty→drop economy — card tables or chest loot seeded with Numismatics coin so winning/finding a card parlor yields currency; fits the gambling-den flavor perfectly) | to: economy | motif: M-14 | power: everyday | tone: ok | verdict: ACCEPT | hook: the house pays out in hard coin; the card table is where the economy flows
+- from: charta bar furniture (bar stools, shelves, glasses — decorative wooden/glass items) | via: recipe (M-04 Create recycles deco — bar stools / shelves crush back to planks + sawdust via create:crushing, earning a Create tie for the deco set) | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: a broken bar stool is just wood again; the Create saw handles the cleanup
+- from: charta:empty_wine_glass / empty_beer_glass | via: recipe (M-12 processing-chain pull — fill wine glass with Vinery wine or Farm & Charm fermented drink via create:filling or extradelight:bottle_fluid, making Charta glasses the serve-ware for the pack's drink mods) | to: survival/food | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the wine glass isn't decoration once it's filled; the brewery and the bar are the same supply chain
+- from: charta card matches (social mechanic — no built-in coin betting) | via: no viable delivery (the dossier confirms no betting hook; KubeJS event wiring for a card-result callback isn't a standard Phase-3 method and would need a new Gate-0 motif) | to: economy | motif: no-motif | verdict: REJECT | reason: no delivery mechanism within established motifs; card-match-as-coin-sink needs a new motif or a mod that registers gamble events — flag for Gate 0 if the maintainer wants card gambling
+- REWORK: dossier's Create candidate cites "create:cutting / pressing weaving bar furniture" as WEAK — M-04 crushing is cleaner (lossy recycle, established motif); the cutting/pressing read is less coherent (you don't press a bar stool). Use M-04 crushing. The wine-glass fill (M-12) is a stronger and more novel hook than the dossier's generic "WEAK" rating suggests; promote it.
+
+== CHUNK COMPLETE ==
