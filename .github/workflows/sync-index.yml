@@ -162,8 +162,23 @@ jobs:
           fi
 
           # --- 2b. STALE path — branch already up to date with main. Refresh, and
-          #         auto-commit ONLY pure hash drift on already-indexed files.
-          git show HEAD:index.toml | grep '^file = ' | sort > /tmp/files_before.txt
+          #         auto-commit content churn within KNOWN pack dirs; bail only when a
+          #         brand-new TOP-LEVEL path enters the index.
+          #
+          # The set of top-level prefixes the index may legitimately gain files under:
+          # the pack-content dirs (scripts/instance-dirs.txt is the shared source of
+          # truth) + mods/, plus any prefix already present in the committed index.
+          # Adding/removing files under those (a new mod manifest, a config, a tacz
+          # zip) is intentional and rolls over. A file under a top-level path NOT in
+          # that set means a directory that should be .packwizignore'd got vacuumed in
+          # (the classic site/ case) — THAT is what we refuse to auto-commit.
+          allowed="$(mktemp)"
+          {
+            awk 'NF && $1 !~ /^#/ {print $1}' scripts/instance-dirs.txt
+            echo mods
+            git show HEAD:index.toml | sed -nE 's#^file = "([^/"]+)(/.*)?"$#\1#p'
+          } | sort -u > "$allowed"
+
           packwiz refresh
 
           if git diff --quiet -- index.toml pack.toml; then
@@ -179,20 +194,20 @@ jobs:
             exit 1
           fi
 
-          # GUARD: a changed file LIST (entries added/removed), with no merge to
-          # justify it, is structural — a new dir that should be in .packwizignore
-          # (e.g. site/) getting vacuumed in, or new content worth a human's eyes.
-          # Don't auto-commit it: leave the working tree dirty so pr-checks' red
-          # "packwiz index" check surfaces it, exactly as before this automation.
-          grep '^file = ' index.toml | sort > /tmp/files_after.txt
-          if ! diff -q /tmp/files_before.txt /tmp/files_after.txt >/dev/null; then
-            echo "::warning::Index file list changed (entries added/removed), not just hashes."
-            diff /tmp/files_before.txt /tmp/files_after.txt || true
+          # GUARD: top-level prefixes the refreshed index references that AREN'T allowed.
+          after="$(grep '^file = ' index.toml | sed -nE 's#^file = "([^/"]+)(/.*)?"$#\1#p' | sort -u)"
+          new="$(comm -23 <(printf '%s\n' "$after") "$allowed")"
+          if [ -n "$new" ]; then
+            echo "::warning::Index gained entries under a new top-level path:"
+            printf '  %s\n' "$new"
+            echo "Not auto-committing — a new dir likely needs a .packwizignore entry (or, if it's"
+            echo "real pack content, an scripts/instance-dirs.txt line). Leaving the red index check"
+            echo "for a human."
             echo "result=stale-bail" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          echo "Pure hash drift on already-indexed files — committing the refresh."
+          echo "Index changes are confined to known pack dirs — committing the refresh."
           git add index.toml pack.toml
           git commit -m "Auto-refresh packwiz index [skip ci]"
           echo "result=refreshed" >> "$GITHUB_OUTPUT"

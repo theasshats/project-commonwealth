@@ -78,12 +78,17 @@ It distinguishes the two cases, because their commit policy differs:
     conflict — the merge is aborted and the PR is asked to resolve by hand (once — it won't re-nag on
     every push to `main`).
 - **Stale (no merge needed).** The branch is already up to date but the author edited a tracked pack
-  file and pushed without `packwiz refresh`. Here it's conservative: it auto-commits **only pure hash
-  drift** (same set of indexed paths, changed `hash` values), with `[skip ci]`. If `refresh` **adds or
-  removes `[[files]]` entries** with no merge to justify it, it does *not* commit — the working tree
-  is left dirty and the red **packwiz index** check carries the signal to a human. That **preserves the
-  `.packwizignore` guard**: a new dir like `site/` getting vacuumed into the index still fails CI
-  instead of being silently auto-committed.
+  file and pushed without `packwiz refresh`. It auto-commits (with `[skip ci]`) as long as the index's
+  changes stay within **known pack directories** — the dirs in `scripts/instance-dirs.txt` (the shared
+  source of truth) plus `mods/`, and any top-level path already in the index. So adding/removing files
+  under those — a new mod manifest, a config, a `tacz/` zip — is intentional churn and **rolls over**.
+  It bails **only** when `refresh` pulls a file in under a **brand-new top-level path** (something not
+  in that set): that's a directory that should have been `.packwizignore`d (the classic `site/` case),
+  so it leaves the working tree dirty and the red **packwiz index** check for a human — who either adds
+  the `.packwizignore` line, or, if it's real pack content, an `instance-dirs.txt` line. (A change at
+  the **repo root** that isn't a known pack dir is exactly this case, and is what fails it.) This is
+  the `.packwizignore` guard, narrowed from "any file-list change" to "a *new top-level path*", so
+  legitimate content edits stop tripping it.
 
 Notes: the `push`/`pull_request` triggers run from the copy of the workflow on the **default
 branch**, so a change to it only takes full effect once merged to `main`. Fork PRs are skipped —
