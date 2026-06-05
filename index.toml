@@ -45,10 +45,6 @@ file = "kubejs/data/create_armorer/data/blocks/create_workbench.json"
 hash = "2fe0d845b737b1648e9bcc193d5584bb4f1b0faeb411977a664099ac27476714"
 
 [[files]]
-file = "kubejs/data/create_armorer/recipe_filters/default.json"
-hash = "540357e309bdc7e64db7ac6338f8c9cd85d6e0a3c4c5b12b7e00de0278558493"
-
-[[files]]
 file = "kubejs/data/create_ironworks/neoforge/biome_modifier/deepslate_tin_ore_biome_modifier.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
@@ -641,10 +637,6 @@ file = "kubejs/data/samurai_dynasty/neoforge/biome_modifier/add_jade_ore.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
-file = "kubejs/data/tacz/recipe_filters/default.json"
-hash = "540357e309bdc7e64db7ac6338f8c9cd85d6e0a3c4c5b12b7e00de0278558493"
-
-[[files]]
 file = "kubejs/data/tfmg/neoforge/biome_modifier/lead_ore.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
@@ -770,7 +762,7 @@ hash = "8142b4ddd8db3447133aa357d41654dc2af74908f9337a25375097895bc2d25a"
 
 [[files]]
 file = "kubejs/server_scripts/remove-default-tacz-guns.js"
-hash = "5fc7b1ce189e91f6944887127551bd1168c47b3c8720d1c18ae86292bf5e1fe1"
+hash = "89b006be50a8168380c26f0cc72d63af04da3d05faa95d05bec21faa234ad8f9"
 
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"
