@@ -43,6 +43,7 @@ permissions:
   contents: write
   pull-requests: write
   issues: write
+  actions: write  # to re-dispatch pr-checks on the head after a token-authored push
 
 jobs:
   discover:
@@ -259,6 +260,15 @@ jobs:
         uses: ./.github/actions/push-with-retry
         with:
           ref: ${{ steps.pr.outputs.head_ref }}
+
+      # GITHUB_TOKEN-authored pushes deliberately don't re-trigger pull_request workflows
+      # (anti-recursion), so the commit we just pushed would otherwise carry the stale red
+      # pr-checks from before the fix and never re-run. workflow_dispatch IS allowed for
+      # GITHUB_TOKEN, so dispatch pr-checks on the new head — the index/lint/build checks
+      # then go green on the fixed commit instead of leaving the pre-fix failure lingering.
+      - name: Re-run PR checks on the fixed head
+        if: steps.pr.outputs.skip != '1' && contains(fromJSON('["merged","refreshed"]'), steps.sync.outputs.result)
+        run: gh workflow run pr-checks.yml --repo "$GITHUB_REPOSITORY" --ref "${{ steps.pr.outputs.head_ref }}"
 
       # An empty superseded version slot (only the auto-staged bump, no human work)
       # is a dead end — close the PR and delete the branch. The correctly-numbered
