@@ -87,10 +87,20 @@ func (s *Server) HandleLaunchPrism(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Also sync configs that affect gameplay or visuals.
-	// Matches the dirs that the builder stages, so the Prism instance ends up
-	// reflecting the full repo state.
-	for _, d := range []string{"config", "defaultconfigs", "kubejs", "resourcepacks", "shaderpacks"} {
+	// Also sync the rest of the override dirs (configs, kubejs, tacz gun packs,
+	// resource/shaderpacks). Read the SAME shared list the builder staged from
+	// (scripts/instance-dirs.txt) so the deploy can't drift from the build — that
+	// drift is exactly how tacz/ landed in staging but never reached the instance.
+	dirs, err := builder.ReadInstanceDirs(s.RepoRoot, "client")
+	if err != nil {
+		writeError(w, http.StatusInternalServerError,
+			"read scripts/instance-dirs.txt: "+err.Error())
+		return
+	}
+	for _, d := range dirs {
+		if d == "mods" {
+			continue // handled above by replaceModsDir
+		}
 		src := filepath.Join(res.StagingDir, ".minecraft", d)
 		if _, err := os.Stat(src); err != nil {
 			continue

@@ -99,7 +99,7 @@ func (b *Builder) Build(ctx context.Context, log func(string)) (*Result, error) 
 	// build-server.sh) so the editor build and the install scripts can never drift —
 	// that drift is how tacz/ (the Create: Armorer gun packs) once went missing from
 	// editor-built instances. This is a client/Prism build, so it takes "both" + "client".
-	dirs, err := readInstanceDirs(b.RepoRoot, "client")
+	dirs, err := ReadInstanceDirs(b.RepoRoot, "client")
 	if err != nil {
 		return nil, fmt.Errorf("read scripts/instance-dirs.txt: %w", err)
 	}
@@ -194,12 +194,13 @@ notes=Built locally from %s by derpack-edit.
 	return os.WriteFile(filepath.Join(staging, "instance.cfg"), []byte(contents), 0o644)
 }
 
-// readInstanceDirs reads scripts/instance-dirs.txt — the single source of truth (shared with
+// ReadInstanceDirs reads scripts/instance-dirs.txt — the single source of truth (shared with
 // scripts/build-prism-skeleton.sh and scripts/build-server.sh) for which override directories
 // get copied into a built instance's .minecraft/. Each non-comment line is "<dir> <scope>",
 // scope being "both", "client", or "server"; a dir is returned when its scope is "both" or
-// matches the requested scope ("client" for an editor/Prism build).
-func readInstanceDirs(repoRoot, scope string) ([]string, error) {
+// matches the requested scope ("client" for an editor/Prism build). Exported so the launch
+// step (handlers) deploys the same set the build staged — they must not drift.
+func ReadInstanceDirs(repoRoot, scope string) ([]string, error) {
 	f, err := os.Open(filepath.Join(repoRoot, "scripts", "instance-dirs.txt"))
 	if err != nil {
 		return nil, err
