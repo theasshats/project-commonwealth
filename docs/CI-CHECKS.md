@@ -104,6 +104,14 @@ branch**, so a change to it only takes full effect once merged to `main`. Fork P
 > secrets.GITHUB_TOKEN }}`, so with the secret a folded/staged PR shows normal green checks; without it,
 > the workflows still run and fix the index, but a bot-pushed commit won't display checks until a human
 > pushes. (The **packwiz index** job is guard-aware regardless, so routine staleness never goes red.)
+>
+> **Also — opening PRs from a workflow.** `release.yml`'s `open-next` calls `gh pr create`. The default
+> `GITHUB_TOKEN` is **blocked** from creating PRs unless **Settings ▸ Actions ▸ General ▸ Workflow
+> permissions ▸ "Allow GitHub Actions to create and approve pull requests"** is enabled (error:
+> *"GitHub Actions is not permitted to create or approve pull requests"*). A **PAT** (`SYNC_PAT`) is
+> **not** subject to that restriction, so setting the secret fixes PR creation *and* check display at
+> once. If you stay on `GITHUB_TOKEN`, enable that checkbox or `open-next` will stage the branch but not
+> open its PR.
 
 ### Manual fallback (when it bails)
 
