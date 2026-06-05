@@ -1490,11 +1490,6 @@ hash = "3937618f06648f5ad0c7be0195b5fa75bf6d7464ee133bd59bb5b13753090de7"
 metafile = true
 
 [[files]]
-file = "mods/entityculling.pw.toml"
-hash = "04a55969e4ae1ad53e706a6a741381813ea5b3f4482d98708574a7adfea408f7"
-metafile = true
-
-[[files]]
 file = "mods/entitytexturefeatures.pw.toml"
 hash = "cf7390cf06a861f7661222773371b429fce4fdd359240ca3c0eff20835471c0c"
 metafile = true
@@ -1662,11 +1657,6 @@ metafile = true
 [[files]]
 file = "mods/im-fast.pw.toml"
 hash = "5317f95cd9c23531b620127a48a4371d6d22d8ba491c72e0218623c7f2c89d52"
-metafile = true
-
-[[files]]
-file = "mods/immediatelyfast.pw.toml"
-hash = "45ca6eb35710aebf2a811d64156c09c3be6212e62133822e62923db7c5cd5e61"
 metafile = true
 
 [[files]]
