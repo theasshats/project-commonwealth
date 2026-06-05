@@ -168,7 +168,17 @@ jobs:
             if [ "${#real[@]}" -gt 0 ]; then
               git merge --abort
               if [ "$superseded" = 1 ]; then
-                echo "result=superseded" >> "$GITHUB_OUTPUT"
+                # Below the current release. If the branch holds nothing but the
+                # auto-staged bump (only github-actions[bot] non-merge commits —
+                # fold-merges are excluded), it's a dead version slot to retire.
+                # If a human committed real work, only flag it so nothing is lost.
+                bot='41898282+github-actions[bot]@users.noreply.github.com'
+                human="$(git log --no-merges 'origin/main..HEAD' --format='%ae' | grep -vF "$bot" || true)"
+                if [ -z "$human" ]; then
+                  echo "result=superseded-empty" >> "$GITHUB_OUTPUT"
+                else
+                  echo "result=superseded" >> "$GITHUB_OUTPUT"
+                fi
               else
                 printf '%s\n' "${real[@]}" > /tmp/real_conflicts.txt
                 echo "result=manual" >> "$GITHUB_OUTPUT"
@@ -250,6 +260,17 @@ jobs:
         with:
           ref: ${{ steps.pr.outputs.head_ref }}
 
+      # An empty superseded version slot (only the auto-staged bump, no human work)
+      # is a dead end — close the PR and delete the branch. The correctly-numbered
+      # next patch is already staged by the release flow's open-next job. Closing on
+      # the push fan-out is a one-shot: once closed the PR leaves the open set, so it
+      # isn't reprocessed.
+      - name: Retire an empty superseded branch
+        if: steps.pr.outputs.skip != '1' && steps.sync.outputs.result == 'superseded-empty'
+        run: |
+          gh pr close "$PR" --repo "$GITHUB_REPOSITORY" --delete-branch \
+            --comment "🤖 Retiring this branch: its \`pack.toml\` version is below the current release on \`main\` and it has no changes beyond the auto-staged version bump. The correctly-numbered next patch is already staged. Reopen and restore the branch if this was a mistake."
+
       - name: Report outcome
         if: steps.pr.outputs.skip != '1' && always()
         run: |
@@ -267,13 +288,14 @@ jobs:
                   --body "$(printf '🤖 This PR conflicts in files I can only resolve by hand (I auto-resolve the packwiz-generated \`index.toml\` / \`pack.toml\`, but these are real content changes):\n\n%s\n\nMerge \`main\` and resolve them locally.' "$files")"
               fi ;;
             superseded)
-              # The branch's pack.toml version is BELOW the current release on main,
-              # so folding main in would mislabel the content. There's no red check
-              # for this, so notify — but only off the push fan-out, to avoid a fresh
-              # comment on every later main push while the branch lingers.
+              # Below the current release AND carries human work, so it wasn't
+              # auto-retired (an empty slot would be). Folding main in would mislabel
+              # the content, so flag it instead. No red check exists for this, so
+              # notify — but only off the push fan-out, to avoid a fresh comment on
+              # every later main push while the branch lingers.
               if [ "${{ github.event_name }}" != "push" ]; then
                 gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" \
-                  --body "🤖 This branch's \`pack.toml\` version is **below** the current release on \`main\`, so I'm not folding the release in (it would mislabel the content). This version branch looks **superseded** — close it, or rebase it onto a version above the current release."
+                  --body "🤖 This branch's \`pack.toml\` version is **below** the current release on \`main\`, and it has its own changes, so I'm neither folding the release in (it would mislabel the content) nor auto-closing it. It looks **superseded** — bump it to a version above the current release (and rebase), or close it if the work has landed elsewhere."
               fi ;;
             *)
               # refreshed / stale-bail / fresh — routine, stay quiet (the index check

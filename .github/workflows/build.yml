@@ -97,6 +97,29 @@ jobs:
       - name: List final artifacts
         run: ls -lh dist/
 
+      # Pull the release body from docs/PATCHNOTES.md — the "## X.Y.Z …" section
+      # for this version, up to the next "## ". Falls back to a placeholder if the
+      # section is missing or still the auto-staged stub (so a forgotten patch note
+      # is visible in the release rather than blocking it). Keep PATCHNOTES current
+      # on the release branch — see CLAUDE.md.
+      - name: Extract patch notes for the release body
+        id: notes
+        if: steps.tag.outputs.tag != ''
+        run: |
+          ver="${{ steps.tag.outputs.tag }}"; ver="${ver#v}"
+          notes=/tmp/release-notes.md
+          awk -v v="$ver" '
+            (index($0, "## " v " ") == 1) || ($0 == "## " v) { grab=1; print; next }
+            grab && /^## / { exit }
+            grab { print }
+          ' docs/PATCHNOTES.md > "$notes" || true
+          if [ ! -s "$notes" ] || grep -qiE 'Draft placeholder|— TBD' "$notes"; then
+            echo "::warning::no finalized patch notes for ${ver} in docs/PATCHNOTES.md"
+            printf '## %s\n\nRelease notes were not finalized in `docs/PATCHNOTES.md` for this version.\n' "$ver" > "$notes"
+          fi
+          echo "----- release body -----"; cat "$notes"
+          echo "path=$notes" >> "$GITHUB_OUTPUT"
+
       # Publish (or update) the release for the resolved tag and attach the zips.
       # action-gh-release creates the tag + release if they don't exist yet
       # (the auto-release path), or updates an existing one (manual UI release).
@@ -108,4 +131,5 @@ jobs:
             dist/*.zip
           tag_name: ${{ steps.tag.outputs.tag }}
           target_commitish: main
+          body_path: ${{ steps.notes.outputs.path }}
           fail_on_unmatched_files: true
