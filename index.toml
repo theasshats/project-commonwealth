@@ -758,7 +758,7 @@ hash = "8142b4ddd8db3447133aa357d41654dc2af74908f9337a25375097895bc2d25a"
 
 [[files]]
 file = "kubejs/server_scripts/remove-default-tacz-guns.js"
-hash = "4591815730e3ede98efa0c3d6a5fe0e82843d9c69784292ce4c15e0629c281f9"
+hash = "7761b2b266e0a1a4e1a046e784e1fc960cefc5c77a5cfc0155c2f03ea6cfbed7"
 
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"
