@@ -22,7 +22,9 @@ milestone / body-summary / cross-refs. Note: the list API **omits `assignees`** 
 `site` · `tooling-ci` · `update-mod` · `worldgen`. (Confirm against the live set; it can grow.)
 - Every issue gets ≥1 **area** label and, where apt, a **type**.
 - `needed-for-release` = the `v1.0.0` gate set **only** (§6). Keep it tight.
-- `playtest-blocked` = can't finish without an in-game check.
+- `playtest-blocked` = can't finish without an in-game check. Also stays on a **closed** issue whose fix
+  has landed but isn't verified in-game yet (see §5): `is:closed label:playtest-blocked` in a milestone =
+  the "fixed but unverified" count. Drop the label once playtest passes.
 - `issue_write` with `labels` **replaces** the whole set — include the labels you're keeping.
 
 ## 2a · Effort estimates (`size:*` labels)
@@ -62,11 +64,22 @@ leading with release blockers.
 - Assign the **active milestone's** work to its owner; leave the long tail **unassigned** as backlog —
   don't self-assign all 50+ (noise; self-actions don't notify anyway).
 
-## 5 · Close — ask first
-- A merged PR often leaves its tracking issue open → close as `completed` with a one-line comment pointing
-  to the live follow-ups (e.g. #93 → #81/#116/#58).
+## 5 · Close — on stage, so the milestone bar ticks up
+- **Close an issue when its fix lands on the version branch** (e.g. committed to `v0.6.0`), not when the
+  branch later merges to `main`. Closing on stage is what makes the milestone % climb *as work happens*,
+  which is the at-a-glance "how much of this version is built?" gauge — close-on-merge would leave it
+  flat-then-spike and re-surface settled work in triage.
+- **Tag the closed issue `playtest-blocked` until it's verified in-game** (§2). The close means "fix
+  implemented"; the label means "not yet confirmed." Drop the label once playtest passes. A failed
+  playtest just **reopens** the issue — normal.
+- **"Version done" ≠ milestone at 100%.** Milestone 100% = all work *implemented*. The hard ship signal is
+  the **`vX.Y.Z` release tag** (`release.yml`, §6). Truly shipped = milestone 100% **and** no
+  `playtest-blocked` left **and** the tag cut.
+- A close still gets a one-line comment pointing to live follow-ups where apt (e.g. #93 → #81/#116/#58),
+  and the PR's `Closes #N` keyword is fine to leave in (a no-op once the issue is already closed).
 - **Living trackers stay open by design:** #9 (mod ideas), #17 (recipes), #18 (loot), #21 (removals).
-- **Always confirm closes** with the maintainer (`AskUserQuestion`) before flipping state.
+- Confirm with the maintainer before closing anything **ambiguous** — a partial fix, a multi-issue PR, or
+  a design-call close. Routine "fix landed on the branch" closes don't need a prompt.
 
 ## 6 · Release gate — `v1.0.0` / `needed-for-release`
 The `needed-for-release`-tagged set is the `v1.0.0 — Release` milestone, deliberately last: rename (#78),
