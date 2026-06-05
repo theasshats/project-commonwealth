@@ -204,56 +204,30 @@ jobs:
             exit 0
           fi
 
-          # --- 2b. STALE path — branch already up to date with main. Refresh, and
-          #         auto-commit content churn within KNOWN pack dirs; bail only when a
-          #         brand-new TOP-LEVEL path enters the index.
-          #
-          # The set of top-level prefixes the index may legitimately gain files under:
-          # the pack-content dirs (scripts/instance-dirs.txt is the shared source of
-          # truth) + mods/, plus any prefix already present in the committed index.
-          # Adding/removing files under those (a new mod manifest, a config, a tacz
-          # zip) is intentional and rolls over. A file under a top-level path NOT in
-          # that set means a directory that should be .packwizignore'd got vacuumed in
-          # (the classic site/ case) — THAT is what we refuse to auto-commit.
-          allowed="$(mktemp)"
-          {
-            awk 'NF && $1 !~ /^#/ {print $1}' scripts/instance-dirs.txt
-            echo mods
-            git show HEAD:index.toml | sed -nE 's#^file = "([^/"]+)(/.*)?"$#\1#p'
-          } | sort -u > "$allowed"
-
-          packwiz refresh
-
-          if git diff --quiet -- index.toml pack.toml; then
-            echo "Index already fresh — nothing to do."
-            echo "result=fresh" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          other="$(git diff --name-only -- . ':(exclude)index.toml' ':(exclude)pack.toml')"
-          if [ -n "$other" ]; then
-            echo "::error::packwiz refresh changed files beyond the index:"
-            echo "$other"
-            exit 1
-          fi
-
-          # GUARD: top-level prefixes the refreshed index references that AREN'T allowed.
-          after="$(grep '^file = ' index.toml | sed -nE 's#^file = "([^/"]+)(/.*)?"$#\1#p' | sort -u)"
-          new="$(comm -23 <(printf '%s\n' "$after") "$allowed")"
-          if [ -n "$new" ]; then
-            echo "::warning::Index gained entries under a new top-level path:"
-            printf '  %s\n' "$new"
-            echo "Not auto-committing — a new dir likely needs a .packwizignore entry (or, if it's"
-            echo "real pack content, an scripts/instance-dirs.txt line). Leaving the red index check"
-            echo "for a human."
-            echo "result=stale-bail" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          echo "Index changes are confined to known pack dirs — committing the refresh."
-          git add index.toml pack.toml
-          git commit -m "Auto-refresh packwiz index [skip ci]"
-          echo "result=refreshed" >> "$GITHUB_OUTPUT"
+          # --- 2b. STALE path — branch already up to date with main. The shared guard
+          #         script (the SAME one pr-checks gates on, so they can't disagree)
+          #         refreshes and returns a verdict:
+          #           fresh     → nothing to do.
+          #           fixable   → staleness confined to known pack dirs (the author forgot
+          #                       `packwiz refresh`); auto-commit the regenerated index.
+          #           violation → refresh pulled in a new top-level path that needs a
+          #                       .packwizignore entry (the classic site/ case). We do NOT
+          #                       auto-commit (it'd vacuum the dir in) and stay green —
+          #                       pr-checks' packwiz index job carries the red for the human.
+          verdict="$(bash scripts/index-guard.sh)" || true
+          echo "index-guard verdict: $verdict"
+          case "$verdict" in
+            fresh)
+              echo "result=fresh" >> "$GITHUB_OUTPUT"
+              exit 0 ;;
+            fixable)
+              git add index.toml pack.toml
+              git commit -m "Auto-refresh packwiz index [skip ci]"
+              echo "result=refreshed" >> "$GITHUB_OUTPUT" ;;
+            *)
+              echo "result=stale-bail" >> "$GITHUB_OUTPUT"
+              exit 0 ;;
+          esac
 
       - name: Push the result
         if: steps.pr.outputs.skip != '1' && contains(fromJSON('["merged","refreshed"]'), steps.sync.outputs.result)
