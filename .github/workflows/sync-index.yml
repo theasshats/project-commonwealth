@@ -43,7 +43,6 @@ permissions:
   contents: write
   pull-requests: write
   issues: write
-  actions: write  # to re-dispatch pr-checks on the head after a token-authored push
 
 jobs:
   discover:
@@ -107,7 +106,11 @@ jobs:
         with:
           ref: ${{ steps.pr.outputs.head_ref }}
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          # PAT (or GitHub App token) if configured, so the fold/refresh push triggers a
+          # normal pull_request run of pr-checks that DISPLAYS on the PR (the green tick).
+          # Falls back to GITHUB_TOKEN, whose pushes don't re-trigger CI — then a bot-folded
+          # commit won't show checks until a human pushes. See docs/CI-CHECKS.md.
+          token: ${{ secrets.SYNC_PAT || secrets.GITHUB_TOKEN }}
 
       - uses: ./.github/actions/setup-packwiz
         if: steps.pr.outputs.skip != '1'
@@ -235,14 +238,6 @@ jobs:
         with:
           ref: ${{ steps.pr.outputs.head_ref }}
 
-      # GITHUB_TOKEN-authored pushes deliberately don't re-trigger pull_request workflows
-      # (anti-recursion), so the commit we just pushed would otherwise carry the stale red
-      # pr-checks from before the fix and never re-run. workflow_dispatch IS allowed for
-      # GITHUB_TOKEN, so dispatch pr-checks on the new head — the index/lint/build checks
-      # then go green on the fixed commit instead of leaving the pre-fix failure lingering.
-      - name: Re-run PR checks on the fixed head
-        if: steps.pr.outputs.skip != '1' && contains(fromJSON('["merged","refreshed"]'), steps.sync.outputs.result)
-        run: gh workflow run pr-checks.yml --repo "$GITHUB_REPOSITORY" --ref "${{ steps.pr.outputs.head_ref }}"
 
       # An empty superseded version slot (only the auto-staged bump, no human work)
       # is a dead end — close the PR and delete the branch. The correctly-numbered
@@ -261,7 +256,7 @@ jobs:
           case "${{ steps.sync.outputs.result }}" in
             merged)
               gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" \
-                --body "🤖 Merged \`main\` and regenerated \`index.toml\` / \`pack.toml\` from the combined content. Re-running PR checks." ;;
+                --body "🤖 Merged \`main\` and regenerated \`index.toml\` / \`pack.toml\` from the combined content." ;;
             manual)
               # push-to-main re-checks every open PR; don't re-nag on each push — the
               # red index-freshness check already carries that signal. Speak up only

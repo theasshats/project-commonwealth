@@ -84,8 +84,12 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
+          # PAT/App token if set, so the staged branch push + PR open trigger a normal
+          # pr-checks run that DISPLAYS on the staged PR. Falls back to GITHUB_TOKEN
+          # (staged PR then shows no checks until a human pushes). See docs/CI-CHECKS.md.
+          token: ${{ secrets.SYNC_PAT || secrets.GITHUB_TOKEN }}
       - name: Stage next patch + minor branches and draft PRs
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.SYNC_PAT || secrets.GITHUB_TOKEN }}
           RELEASED_TAG: ${{ needs.check.outputs.tag }}
         run: bash scripts/open-next-version-branches.sh
