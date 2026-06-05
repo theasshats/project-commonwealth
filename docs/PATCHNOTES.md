@@ -3,6 +3,13 @@
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme (diff vs prev)", a short lead paragraph, then sections (see CLAUDE.md). -->
 
+## 0.6.0 — Foundation (diff vs 0.5.3)
+
+Added Chunky, a chunk pre-generation tool. Running `/chunky radius <n>` then `/chunky start` on the
+server generates the surrounding area ahead of play, so chunks are already on disk before anyone
+explores into them. This keeps live worldgen from stalling the game during a session and gives a
+clean, settled area for performance testing.
+
 ## 0.5.3 — Gunsmith delivery fix (diff vs 0.5.2)
 
 Builds made with the pack editor were shipping without the Create: Armorer gun pack, so its
