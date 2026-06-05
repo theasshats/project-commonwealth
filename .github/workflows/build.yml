@@ -1,7 +1,7 @@
 name: Build modpack
 
-# Builds the release artifact (the Prism installer zip) and attaches it to
-# GitHub releases. It's small (~5 MB) since it ships only manifests, not jars —
+# Builds the release artifact (the Prism installer zip) and attaches it to a
+# GitHub release. It's small (~5 MB) since it ships only manifests, not jars —
 # launchers fetch jars at install time from each mod's authoritative source.
 #
 # We no longer ship a .mrpack: packwiz's mr export bundles the overrides/ tree
@@ -10,10 +10,26 @@ name: Build modpack
 # issue #73 and docs/DESIGN.md.
 #
 # The build is fast (~30 seconds end to end) so there's no caching layer.
-# We had one in an earlier iteration when bundled-jar zips made builds slow,
-# but dropped it once we stopped distributing jars. See docs/DESIGN.md.
+#
+# Triggers:
+#   - workflow_call  — invoked by release.yml on a version bump; passes the tag
+#     to publish under (this is the auto-release path).
+#   - release:published — a release created by hand in the GitHub UI still builds
+#     and uploads (legacy/manual path).
+#   - workflow_dispatch — manual test build, no release (tag input left empty).
+#
+# Version-first model: pack.toml's `version` is the source of truth and drives
+# the tag (release.yml). The old "sync pack.toml from the release tag" step was
+# removed — the tag now follows the file, not the other way around.
 
 on:
+  workflow_call:
+    inputs:
+      tag:
+        description: 'Version tag to publish the release under (e.g. v0.5.4). Empty = build only.'
+        type: string
+        required: false
+        default: ''
   release:
     types: [published]
   workflow_dispatch:
@@ -27,10 +43,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # Check out main rather than the tagged commit, so the version-bump
-          # commit goes on top of main rather than rolling it back.
+          # Always build from main's tip (the merge commit that bumped the
+          # version), not a detached tag commit.
           ref: main
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Resolve which tag (if any) this build should publish a release under:
+      # the workflow_call input, else the release event's tag, else none.
+      - name: Resolve release tag
+        id: tag
+        run: |
+          if [[ -n "${{ inputs.tag }}" ]]; then
+            tag="${{ inputs.tag }}"
+          elif [[ "${{ github.event_name }}" == "release" ]]; then
+            tag="${{ github.event.release.tag_name }}"
+          else
+            tag=""
+          fi
+          echo "tag=${tag}" >> "$GITHUB_OUTPUT"
+          echo "==> release tag: ${tag:-<none, build only>}"
 
       - name: Set up Java (for packwiz-installer-bootstrap)
         uses: actions/setup-java@v4
@@ -41,48 +72,12 @@ jobs:
       - name: Set up packwiz
         uses: ./.github/actions/setup-packwiz
 
-      # When triggered by a release, force pack.toml's version to match the
-      # tag. Tag v0.3.3 -> pack.toml version "0.3.3". Skipped on
-      # workflow_dispatch (manual test builds).
-      #
-      # The commit-and-push side effect is needed for the installer variant,
-      # which fetches pack.toml from main at every client launch.
-      - name: Sync pack.toml version with release tag
-        if: github.event_name == 'release'
-        env:
-          GIT_AUTHOR_NAME: github-actions[bot]
-          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-          GIT_COMMITTER_NAME: github-actions[bot]
-          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-        run: |
-          tag="${{ github.event.release.tag_name }}"
-          target_version="${tag#v}"
-
-          current_version=$(grep -E '^version\s*=' pack.toml | head -1 | sed -E 's/.*"([^"]+)".*/\1/')
-
-          if [[ "$current_version" == "$target_version" ]]; then
-              echo "==> pack.toml already at version $target_version, nothing to sync"
-              exit 0
-          fi
-
-          echo "==> Bumping pack.toml: $current_version -> $target_version"
-          sed -i -E "s/^version\s*=\s*\".*\"/version = \"${target_version}\"/" pack.toml
-          packwiz refresh
-
-          git add pack.toml index.toml
-          git commit -m "Bump version to ${target_version} for release ${tag}"
-          git push origin HEAD:main
-
       - name: Refresh packwiz index
         run: packwiz refresh --build
 
       # Prism installer zip — small Prism instance that runs
       # packwiz-installer-bootstrap on every launch to fetch jars from
       # Modrinth/CurseForge.
-      #
-      # We don't ship a bundled-jars zip (mod redistribution licensing) and
-      # don't ship a server pack (servers run the same bootstrap directly with
-      # `-s server`). See docs/DESIGN.md.
       - name: Build Prism instance (installer)
         env:
           PACK_URL: https://raw.githubusercontent.com/${{ github.repository }}/main/pack.toml
@@ -94,7 +89,6 @@ jobs:
       # Publish a stable, version-less copy alongside the versioned artifact so
       # the website (and anyone else) can link to a permanent "latest" download:
       #   .../releases/latest/download/derpack-x-prism-installer.zip
-      # Same idiom this build already uses to fetch packwiz-installer-bootstrap.
       - name: Add stable-named copy for permanent latest-download link
         run: |
           cd dist
@@ -103,11 +97,15 @@ jobs:
       - name: List final artifacts
         run: ls -lh dist/
 
-      - name: Upload to GitHub Release
-        if: github.event_name == 'release'
+      # Publish (or update) the release for the resolved tag and attach the zips.
+      # action-gh-release creates the tag + release if they don't exist yet
+      # (the auto-release path), or updates an existing one (manual UI release).
+      - name: Publish release
+        if: steps.tag.outputs.tag != ''
         uses: softprops/action-gh-release@v2
         with:
           files: |
             dist/*.zip
-          tag_name: ${{ github.event.release.tag_name }}
+          tag_name: ${{ steps.tag.outputs.tag }}
+          target_commitish: main
           fail_on_unmatched_files: true
