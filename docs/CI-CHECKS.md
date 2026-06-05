@@ -94,13 +94,16 @@ Notes: the `push`/`pull_request` triggers run from the copy of the workflow on t
 branch**, so a change to it only takes full effect once merged to `main`. Fork PRs are skipped —
 `GITHUB_TOKEN` can't push to another repo's branch — so those authors refresh by hand.
 
-> **Note — the check goes green automatically.** `GITHUB_TOKEN` pushes don't re-trigger
-> `pull_request` runs (anti-recursion), so the bot's sync/refresh commit fires at most once per author
-> push (no loop) but also wouldn't re-run `pr-checks` on that commit by itself. So after pushing,
-> `sync-index` **re-dispatches `pr-checks`** (`workflow_dispatch`, which *is* allowed for `GITHUB_TOKEN`)
-> on the new head, turning the checks green on the fixed commit — no PAT needed. And because the
-> **packwiz index** job is guard-aware (it shares `scripts/index-guard.sh` with the fixer), routine
-> staleness passes on the *first* run anyway, so in the common case there's no red to clear.
+> **Note — displaying checks on a bot-pushed commit needs `SYNC_PAT`.** `GITHUB_TOKEN` pushes don't
+> re-trigger `pull_request` runs (anti-recursion), so the bot's fold/refresh commit wouldn't re-run
+> `pr-checks` on its own — and `workflow_dispatch` doesn't help either: those check runs exist on the
+> commit but GitHub **does not surface them in the PR** (no green tick, no required-check status). The
+> fix is a token whose push GitHub treats normally: set a fine-grained **PAT** (or GitHub App token —
+> the more locked-down option, tracked for 1.0.0) as the `SYNC_PAT` secret (`contents` +
+> `pull-requests: write`). `sync-index` (and `release.yml`'s `open-next`) use `${{ secrets.SYNC_PAT ||
+> secrets.GITHUB_TOKEN }}`, so with the secret a folded/staged PR shows normal green checks; without it,
+> the workflows still run and fix the index, but a bot-pushed commit won't display checks until a human
+> pushes. (The **packwiz index** job is guard-aware regardless, so routine staleness never goes red.)
 
 ### Manual fallback (when it bails)
 
