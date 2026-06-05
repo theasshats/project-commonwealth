@@ -33,6 +33,10 @@ file = "config/incontrol/spawn.json"
 hash = "f34b87e0593eec7e4efca49c8c159e586c9a2ad5bc9046ae396919a711471311"
 
 [[files]]
+file = "config/inventoryprofilesnext/inventoryprofilesnext.json"
+hash = "978c0e1e839c71c23f12113a14c18ebffde93f4bba0ba4193aa5f29af91b50ec"
+
+[[files]]
 file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_deepslate_diamond_ore_feature_biome_modifier.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
