@@ -86,5 +86,6 @@ starts from truth.
 - **Branch:** rename the harness's random name to `claude/<topic>` before pushing; never commit to `main`.
 - **PRs:** don't auto-open; fold related work into the branch you're on. Gameplay/content PRs stay
   **draft + carry a `## Playtest` checklist**; docs-only PRs don't. After opening, `subscribe_pr_activity`.
-- **Gotchas:** `galosphere:silver_ingot` is palladium (never unify as silver); don't re-add EMI / add Veil;
+- **Gotchas:** `galosphere:silver_ingot` is palladium (never unify as silver); don't re-add EMI; don't add
+  Sodium/Embeddium (break Create Aeronautics — Veil is required via Sable, see CLAUDE.md / #98);
   itemphysic + FoamFix are client-only; Aeronautics breaks under shaders.

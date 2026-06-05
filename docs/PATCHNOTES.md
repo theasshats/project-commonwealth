@@ -3,6 +3,14 @@
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme (diff vs prev)", a short lead paragraph, then sections (see CLAUDE.md). -->
 
+## 0.5.5 — Client performance mods (diff vs 0.5.4)
+
+Two client-side rendering mods were added to improve frame rate, especially around Create machinery:
+ImmediatelyFast (batches block-entity, text, and UI rendering) and Entity Culling (skips drawing
+entities and block-entities that are out of view). These do not change gameplay. Sodium remains
+absent on purpose: it is incompatible with Create: Aeronautics on this version and turns world
+textures invisible, so frame rate is improved through these renderer-agnostic mods instead.
+
 ## 0.5.4 — Guns crafted through Create (diff vs 0.5.3)
 
 Guns, ammunition, and attachments are now built through their Create recipes, not assembled at the
