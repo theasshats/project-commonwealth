@@ -43,15 +43,22 @@ also offers TaCZ's stock AK/M4/etc.), so we turn it off entirely — in
 
 ```js
 ServerEvents.recipes(event => {
-  event.remove({ type: 'tacz:gun_smith_table_crafting' })  // every gun/ammo/attachment off the bench
-  event.remove({ output: 'tacz:workbench' })               // and the now-useless table block crafts,
-  event.remove({ output: 'tacz:workbench_b' })             // so players can't build a bench that crafts nothing
+  event.remove({ type: 'tacz:gun_smith_table_crafting' })  // every gun/ammo/attachment off the benches
+  // Remove the four table-block crafts too, so nobody builds a bench that crafts nothing.
+  const taczTables = ['tacz:gun_smith_table', 'tacz:workbench_a', 'tacz:workbench_b', 'tacz:workbench_c']
+  taczTables.forEach(id => event.remove({ output: id }))
 })
 ```
 
-The two table-block crafts are matched by **output** (any namespace) to catch the stock TaCZ table
-(`tacz:workbench`) and the Create: Armorer table (`tacz:workbench_b`, which was crafted by both the
-gun pack and our old `kubejs/data/derpack/recipe/create_workbench.json` — now deleted).
+This pack ships **four** TaCZ table-block variants — all driven by the same
+`tacz:gun_smith_table_crafting` recipes (so the recipe-type removal empties every tab on every one):
+
+- `tacz:gun_smith_table` — the **gun crafting table** (stock)
+- `tacz:workbench_a` — the **attachment table**
+- `tacz:workbench_b` — the **Create: Armorer table** (create-themed `create_armorer:create_workbench`, all 12 tabs)
+- `tacz:workbench_c` — the **ammo table**
+
+(`tacz:workbench_b` was also crafted by our old `kubejs/data/derpack/recipe/create_workbench.json`, now deleted.)
 
 `tacz:gun_smith_table_crafting` is a **real custom recipe type registered in the vanilla
 `RecipeManager`**, so KubeJS's `event.remove` *does* match it — this is the **same call that already
