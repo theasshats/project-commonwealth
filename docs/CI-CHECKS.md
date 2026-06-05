@@ -13,7 +13,7 @@ JSON/JS, or a non-compiling editor/site change could all land unreviewed by a ma
 
 | Job | What it checks | Why it matters |
 |---|---|---|
-| **packwiz index** | Runs `packwiz refresh`, then fails if `index.toml` / `pack.toml` changed — i.e. the contributor edited a manifest/config but didn't refresh. | A stale index ships the *old* file set to players (the new mod/config never installs). |
+| **packwiz index** | Runs `scripts/index-guard.sh` (refresh + verdict). **Passes** on a fresh or auto-fixable index (`sync-index` commits the refresh for you); **fails only** on the `.packwizignore` guard — a `packwiz refresh` that pulls files in under a new top-level path. | A new un-ignored dir would vacuum into the index (e.g. `site/`). Routine staleness is auto-handled, so this never flickers red — only the one human case does. |
 | **manifest lint** | `scripts/lint-manifests.py`: required fields, valid `side`, valid `hash-format`, and the **pin-placement gotcha** (a `pin =` under any `[section]` is silently ignored by `packwiz update`). | A malformed manifest or a misplaced pin breaks install or lets a pinned mod drift on update — both are silent. |
 | **kubejs / config data** | `node --check` every `kubejs/**/*.js`; `scripts/validate-data.py` parses every JSON under `kubejs/`, `config/`, `defaultconfigs/` and every TOML under `config/`, `defaultconfigs/`. | The sandbox is headless and can't run Minecraft/KubeJS — a syntax error in a recipe or config only surfaces in-game otherwise. This is the cheapest possible guard. |
 | **go build & vet** | `go build` + `go vet` for both `site/` and `tools/editor-src/` (and `go test` for the site). | The editor binary is rebuilt by `build-editor.yml` only on push to `main`; the site isn't compiled in CI at all. This catches a broken Go change *on the PR* instead of after merge. |
@@ -21,8 +21,8 @@ JSON/JS, or a non-compiling editor/site change could all land unreviewed by a ma
 ## Running the same checks locally
 
 ```bash
-# packwiz index is committed (no diff after refresh)
-packwiz refresh && git diff --exit-code -- index.toml pack.toml
+# packwiz index verdict — prints fresh / fixable / violation (exit 1 only on violation)
+bash scripts/index-guard.sh
 
 # manifests + shipped data
 python3 scripts/lint-manifests.py
@@ -94,13 +94,13 @@ Notes: the `push`/`pull_request` triggers run from the copy of the workflow on t
 branch**, so a change to it only takes full effect once merged to `main`. Fork PRs are skipped —
 `GITHUB_TOKEN` can't push to another repo's branch — so those authors refresh by hand.
 
-> **Caveat — the bot commit can't make the check go green by itself.** Pushes made with
-> `GITHUB_TOKEN` don't trigger another `pull_request` run, so the sync commit fires at most once per
-> author push (no loop), but it also **won't re-run `pr-checks.yml`** on that bot commit. The branch
-> is now correct, yet the **packwiz index** check sits on the previous commit. For fully hands-off
-> merging with required checks you need a **PAT or GitHub App token** on the push (a repo-secret
-> decision, not committable here). Until then: the index is auto-fixed, and a trivial re-run / next
-> push turns the check green.
+> **Note — the check goes green automatically.** `GITHUB_TOKEN` pushes don't re-trigger
+> `pull_request` runs (anti-recursion), so the bot's sync/refresh commit fires at most once per author
+> push (no loop) but also wouldn't re-run `pr-checks` on that commit by itself. So after pushing,
+> `sync-index` **re-dispatches `pr-checks`** (`workflow_dispatch`, which *is* allowed for `GITHUB_TOKEN`)
+> on the new head, turning the checks green on the fixed commit — no PAT needed. And because the
+> **packwiz index** job is guard-aware (it shares `scripts/index-guard.sh` with the fixer), routine
+> staleness passes on the *first* run anyway, so in the common case there's no red to clear.
 
 ### Manual fallback (when it bails)
 
