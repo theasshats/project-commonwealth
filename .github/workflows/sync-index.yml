@@ -7,8 +7,13 @@ name: Keep the packwiz index in sync
 #
 #   - BEHIND MAIN: a stacked PR collides in the generated files once main moves
 #     ahead. We merge main and regenerate. Auto-resolve ONLY regenerable conflicts
-#     (index.toml always; pack.toml only if the sides differ solely in the [index]
-#     hash). Any real content conflict → abort and ask a human.
+#     (index.toml always; pack.toml when the sides differ solely in the [index]
+#     hash, OR solely in the version line AND this branch's version is AHEAD of
+#     main's — a version branch folding in the current release while keeping its own
+#     higher version, so in-progress versions are always tested on the latest
+#     shipped content). A branch whose version is BELOW main's is a superseded
+#     leftover (a 0.5.x branch after 0.6.0 shipped) → bail. Any other real content
+#     conflict → abort and ask a human.
 #
 #   - STALE: the author edited a tracked pack file (a KubeJS script, a config, a
 #     manifest) and pushed without `packwiz refresh`. We regenerate — but
@@ -127,20 +132,57 @@ jobs:
             mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
             echo "Conflicting files: ${conflicts[*]}"
             real=()
+            superseded=0
             for f in "${conflicts[@]}"; do
               case "$f" in
                 index.toml) : ;;  # always regenerable
                 pack.toml)
-                  ours="$(git show :2:pack.toml | grep -v '^hash = ' || true)"
-                  theirs="$(git show :3:pack.toml | grep -v '^hash = ' || true)"
-                  [ "$ours" != "$theirs" ] && real+=("$f") ;;
+                  # Regenerable if the two sides differ ONLY in the [index] hash
+                  # and/or the version line. The version line is special: a version
+                  # branch (v0.6.0, a staged patch) legitimately sits AHEAD of main,
+                  # and we want each release folded in WITHOUT overwriting the
+                  # branch's higher version — so keep ours (the resolution below is
+                  # `checkout --ours`) and carry on. If the branch is BELOW main's
+                  # version it's a superseded leftover (e.g. a 0.5.x patch branch
+                  # after 0.6.0 shipped) — bail so a human closes/rebases it rather
+                  # than mislabelling the folded content. Anything else differing (a
+                  # NeoForge [versions] bump, say) is a genuine conflict.
+                  ours_rest="$(git show :2:pack.toml | grep -vE '^(hash|version) = ' || true)"
+                  theirs_rest="$(git show :3:pack.toml | grep -vE '^(hash|version) = ' || true)"
+                  if [ "$ours_rest" != "$theirs_rest" ]; then
+                    real+=("$f")
+                  else
+                    ours_v="$(git show :2:pack.toml | sed -nE 's/^version[[:space:]]*=[[:space:]]*"([^"]+)".*/\1/p')"
+                    theirs_v="$(git show :3:pack.toml | sed -nE 's/^version[[:space:]]*=[[:space:]]*"([^"]+)".*/\1/p')"
+                    if [ "$ours_v" != "$theirs_v" ]; then
+                      higher="$(printf '%s\n%s\n' "$ours_v" "$theirs_v" | sort -V | tail -1)"
+                      if [ "$higher" != "$ours_v" ]; then
+                        superseded=1
+                        real+=("$f")
+                      fi
+                    fi
+                  fi ;;
                 *) real+=("$f") ;;
               esac
             done
             if [ "${#real[@]}" -gt 0 ]; then
-              printf '%s\n' "${real[@]}" > /tmp/real_conflicts.txt
               git merge --abort
-              echo "result=manual" >> "$GITHUB_OUTPUT"
+              if [ "$superseded" = 1 ]; then
+                # Below the current release. If the branch holds nothing but the
+                # auto-staged bump (only github-actions[bot] non-merge commits —
+                # fold-merges are excluded), it's a dead version slot to retire.
+                # If a human committed real work, only flag it so nothing is lost.
+                bot='41898282+github-actions[bot]@users.noreply.github.com'
+                human="$(git log --no-merges 'origin/main..HEAD' --format='%ae' | grep -vF "$bot" || true)"
+                if [ -z "$human" ]; then
+                  echo "result=superseded-empty" >> "$GITHUB_OUTPUT"
+                else
+                  echo "result=superseded" >> "$GITHUB_OUTPUT"
+                fi
+              else
+                printf '%s\n' "${real[@]}" > /tmp/real_conflicts.txt
+                echo "result=manual" >> "$GITHUB_OUTPUT"
+              fi
               exit 0
             fi
             # All conflicts are regenerable: take our side (pack.toml's non-hash
@@ -218,6 +260,17 @@ jobs:
         with:
           ref: ${{ steps.pr.outputs.head_ref }}
 
+      # An empty superseded version slot (only the auto-staged bump, no human work)
+      # is a dead end — close the PR and delete the branch. The correctly-numbered
+      # next patch is already staged by the release flow's open-next job. Closing on
+      # the push fan-out is a one-shot: once closed the PR leaves the open set, so it
+      # isn't reprocessed.
+      - name: Retire an empty superseded branch
+        if: steps.pr.outputs.skip != '1' && steps.sync.outputs.result == 'superseded-empty'
+        run: |
+          gh pr close "$PR" --repo "$GITHUB_REPOSITORY" --delete-branch \
+            --comment "🤖 Retiring this branch: its \`pack.toml\` version is below the current release on \`main\` and it has no changes beyond the auto-staged version bump. The correctly-numbered next patch is already staged. Reopen and restore the branch if this was a mistake."
+
       - name: Report outcome
         if: steps.pr.outputs.skip != '1' && always()
         run: |
@@ -233,6 +286,16 @@ jobs:
                 files="$(sed 's/^/- `/; s/$/`/' /tmp/real_conflicts.txt)"
                 gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" \
                   --body "$(printf '🤖 This PR conflicts in files I can only resolve by hand (I auto-resolve the packwiz-generated \`index.toml\` / \`pack.toml\`, but these are real content changes):\n\n%s\n\nMerge \`main\` and resolve them locally.' "$files")"
+              fi ;;
+            superseded)
+              # Below the current release AND carries human work, so it wasn't
+              # auto-retired (an empty slot would be). Folding main in would mislabel
+              # the content, so flag it instead. No red check exists for this, so
+              # notify — but only off the push fan-out, to avoid a fresh comment on
+              # every later main push while the branch lingers.
+              if [ "${{ github.event_name }}" != "push" ]; then
+                gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" \
+                  --body "🤖 This branch's \`pack.toml\` version is **below** the current release on \`main\`, and it has its own changes, so I'm neither folding the release in (it would mislabel the content) nor auto-closing it. It looks **superseded** — bump it to a version above the current release (and rebase), or close it if the work has landed elsewhere."
               fi ;;
             *)
               # refreshed / stale-bail / fresh — routine, stay quiet (the index check
