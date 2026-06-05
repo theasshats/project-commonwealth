@@ -67,3 +67,25 @@ jobs:
     permissions:
       contents: write
     secrets: inherit
+
+  # After a release is cut, stage the next patch and next minor branches + draft
+  # PRs (pack.toml pre-bumped + a patch-note stub), so the next version is always
+  # set up and a forgotten bump can't silently skip a release. Skips any branch
+  # that already exists (e.g. the standing v0.6.0 integration branch).
+  open-next:
+    needs: [check, release]
+    if: needs.check.outputs.should_release == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Stage next patch + minor branches and draft PRs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASED_TAG: ${{ needs.check.outputs.tag }}
+        run: bash scripts/open-next-version-branches.sh
