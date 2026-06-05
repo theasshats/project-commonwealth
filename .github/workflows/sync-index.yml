@@ -7,8 +7,13 @@ name: Keep the packwiz index in sync
 #
 #   - BEHIND MAIN: a stacked PR collides in the generated files once main moves
 #     ahead. We merge main and regenerate. Auto-resolve ONLY regenerable conflicts
-#     (index.toml always; pack.toml only if the sides differ solely in the [index]
-#     hash). Any real content conflict → abort and ask a human.
+#     (index.toml always; pack.toml when the sides differ solely in the [index]
+#     hash, OR solely in the version line AND this branch's version is AHEAD of
+#     main's — a version branch folding in the current release while keeping its own
+#     higher version, so in-progress versions are always tested on the latest
+#     shipped content). A branch whose version is BELOW main's is a superseded
+#     leftover (a 0.5.x branch after 0.6.0 shipped) → bail. Any other real content
+#     conflict → abort and ask a human.
 #
 #   - STALE: the author edited a tracked pack file (a KubeJS script, a config, a
 #     manifest) and pushed without `packwiz refresh`. We regenerate — but
@@ -127,20 +132,47 @@ jobs:
             mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
             echo "Conflicting files: ${conflicts[*]}"
             real=()
+            superseded=0
             for f in "${conflicts[@]}"; do
               case "$f" in
                 index.toml) : ;;  # always regenerable
                 pack.toml)
-                  ours="$(git show :2:pack.toml | grep -v '^hash = ' || true)"
-                  theirs="$(git show :3:pack.toml | grep -v '^hash = ' || true)"
-                  [ "$ours" != "$theirs" ] && real+=("$f") ;;
+                  # Regenerable if the two sides differ ONLY in the [index] hash
+                  # and/or the version line. The version line is special: a version
+                  # branch (v0.6.0, a staged patch) legitimately sits AHEAD of main,
+                  # and we want each release folded in WITHOUT overwriting the
+                  # branch's higher version — so keep ours (the resolution below is
+                  # `checkout --ours`) and carry on. If the branch is BELOW main's
+                  # version it's a superseded leftover (e.g. a 0.5.x patch branch
+                  # after 0.6.0 shipped) — bail so a human closes/rebases it rather
+                  # than mislabelling the folded content. Anything else differing (a
+                  # NeoForge [versions] bump, say) is a genuine conflict.
+                  ours_rest="$(git show :2:pack.toml | grep -vE '^(hash|version) = ' || true)"
+                  theirs_rest="$(git show :3:pack.toml | grep -vE '^(hash|version) = ' || true)"
+                  if [ "$ours_rest" != "$theirs_rest" ]; then
+                    real+=("$f")
+                  else
+                    ours_v="$(git show :2:pack.toml | sed -nE 's/^version[[:space:]]*=[[:space:]]*"([^"]+)".*/\1/p')"
+                    theirs_v="$(git show :3:pack.toml | sed -nE 's/^version[[:space:]]*=[[:space:]]*"([^"]+)".*/\1/p')"
+                    if [ "$ours_v" != "$theirs_v" ]; then
+                      higher="$(printf '%s\n%s\n' "$ours_v" "$theirs_v" | sort -V | tail -1)"
+                      if [ "$higher" != "$ours_v" ]; then
+                        superseded=1
+                        real+=("$f")
+                      fi
+                    fi
+                  fi ;;
                 *) real+=("$f") ;;
               esac
             done
             if [ "${#real[@]}" -gt 0 ]; then
-              printf '%s\n' "${real[@]}" > /tmp/real_conflicts.txt
               git merge --abort
-              echo "result=manual" >> "$GITHUB_OUTPUT"
+              if [ "$superseded" = 1 ]; then
+                echo "result=superseded" >> "$GITHUB_OUTPUT"
+              else
+                printf '%s\n' "${real[@]}" > /tmp/real_conflicts.txt
+                echo "result=manual" >> "$GITHUB_OUTPUT"
+              fi
               exit 0
             fi
             # All conflicts are regenerable: take our side (pack.toml's non-hash
@@ -233,6 +265,15 @@ jobs:
                 files="$(sed 's/^/- `/; s/$/`/' /tmp/real_conflicts.txt)"
                 gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" \
                   --body "$(printf '🤖 This PR conflicts in files I can only resolve by hand (I auto-resolve the packwiz-generated \`index.toml\` / \`pack.toml\`, but these are real content changes):\n\n%s\n\nMerge \`main\` and resolve them locally.' "$files")"
+              fi ;;
+            superseded)
+              # The branch's pack.toml version is BELOW the current release on main,
+              # so folding main in would mislabel the content. There's no red check
+              # for this, so notify — but only off the push fan-out, to avoid a fresh
+              # comment on every later main push while the branch lingers.
+              if [ "${{ github.event_name }}" != "push" ]; then
+                gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" \
+                  --body "🤖 This branch's \`pack.toml\` version is **below** the current release on \`main\`, so I'm not folding the release in (it would mislabel the content). This version branch looks **superseded** — close it, or rebase it onto a version above the current release."
               fi ;;
             *)
               # refreshed / stale-bail / fresh — routine, stay quiet (the index check
