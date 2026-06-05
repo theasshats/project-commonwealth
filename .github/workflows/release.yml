@@ -1,0 +1,91 @@
+name: Auto-release on version bump
+
+# Cuts a release automatically when pack.toml's `version` changes on main —
+# i.e. when a version branch/PR (vX.Y.Z) merges with the bump in it. No manual
+# tagging or "create a release" click needed.
+#
+# How it stays out of trouble:
+#   - Idempotent: it only releases when the tag vX.Y.Z does NOT already exist,
+#     so ordinary main pushes (docs, the sync-index [skip ci] auto-commits) are
+#     no-ops — they don't change the version, so the tag is already there.
+#   - [skip ci] commits don't trigger workflows at all, so sync-index's
+#     auto-commits never even start a run here.
+#   - No loop: this runs on push to main, not on tags, so the tag it creates
+#     can't re-trigger it. The build is delegated to build.yml (workflow_call),
+#     whose action-gh-release creates the tag + release in one shot — using
+#     GITHUB_TOKEN, which deliberately does NOT fire build.yml's own
+#     `release:published` trigger, so there's no double build.
+#
+# The version bump itself still lives in the PR (bump pack.toml + a patch note).
+# That's the one human step; see CLAUDE.md "Cutting a release".
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auto-release
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      should_release: ${{ steps.v.outputs.should_release }}
+      tag: ${{ steps.v.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Decide whether this is a new version
+        id: v
+        run: |
+          version=$(grep -E '^version\s*=' pack.toml | head -1 | sed -E 's/.*"([^"]+)".*/\1/')
+          if [[ -z "$version" ]]; then
+            echo "::error::could not read version from pack.toml"
+            exit 1
+          fi
+          tag="v${version}"
+          echo "tag=${tag}" >> "$GITHUB_OUTPUT"
+
+          if git ls-remote --exit-code --tags origin "refs/tags/${tag}" >/dev/null 2>&1; then
+            echo "==> tag ${tag} already exists — nothing to release."
+            echo "should_release=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "==> tag ${tag} is new — releasing."
+            echo "should_release=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  release:
+    needs: check
+    if: needs.check.outputs.should_release == 'true'
+    uses: ./.github/workflows/build.yml
+    with:
+      tag: ${{ needs.check.outputs.tag }}
+    permissions:
+      contents: write
+    secrets: inherit
+
+  # After a release is cut, stage the next patch and next minor branches + draft
+  # PRs (pack.toml pre-bumped + a patch-note stub), so the next version is always
+  # set up and a forgotten bump can't silently skip a release. Skips any branch
+  # that already exists (e.g. the standing v0.6.0 integration branch).
+  open-next:
+    needs: [check, release]
+    if: needs.check.outputs.should_release == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Stage next patch + minor branches and draft PRs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASED_TAG: ${{ needs.check.outputs.tag }}
+        run: bash scripts/open-next-version-branches.sh
