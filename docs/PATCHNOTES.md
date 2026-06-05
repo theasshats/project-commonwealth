@@ -3,12 +3,20 @@
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme (diff vs prev)", a short lead paragraph, then sections (see CLAUDE.md). -->
 
-## 0.6.0 — Foundation (diff vs 0.5.3)
+## 0.6.0 — Foundation (diff vs 0.5.4)
 
 Added Chunky, a chunk pre-generation tool. Running `/chunky radius <n>` then `/chunky start` on the
 server generates the surrounding area ahead of play, so chunks are already on disk before anyone
 explores into them. This keeps live worldgen from stalling the game during a session and gives a
 clean, settled area for performance testing.
+
+## 0.5.4 — Guns crafted through Create (diff vs 0.5.3)
+
+Guns, ammunition, and attachments are now built through their Create recipes, not assembled at the
+gun smith table. The table no longer offers them — nor the stock TaCZ weapons — so the path is the
+Create machinery the recipes were always meant to run on. Use JEI to find a gun's recipe. The gun
+smith table blocks are no longer craftable, since they no longer do anything. Guns and parts you
+already have are unaffected.
 
 ## 0.5.3 — Gunsmith delivery fix (diff vs 0.5.2)
 

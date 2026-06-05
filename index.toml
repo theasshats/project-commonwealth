@@ -389,10 +389,6 @@ file = "kubejs/data/derpack/neoforge/biome_modifier/small_ores.json"
 hash = "3ba2216c081198266f6b4f54400b4d7d0c042f6ca487c337145569c719dd66bb"
 
 [[files]]
-file = "kubejs/data/derpack/recipe/create_workbench.json"
-hash = "5a1069a65c84f4d1dafac9ae13654b330410159d1f5d0f4fa835caaf2d35703a"
-
-[[files]]
 file = "kubejs/data/derpack/recipe/firing_mechanism.json"
 hash = "8bcb876a502140e08cf43cc2dbc56d6f4d857e3150740aaca4988197d956f9d4"
 
@@ -770,7 +766,7 @@ hash = "8142b4ddd8db3447133aa357d41654dc2af74908f9337a25375097895bc2d25a"
 
 [[files]]
 file = "kubejs/server_scripts/remove-default-tacz-guns.js"
-hash = "46e0079d11eca500840f4fa4accc1c498fbcc94d5ee7a8d836a1ecf2ec8d984a"
+hash = "7761b2b266e0a1a4e1a046e784e1fc960cefc5c77a5cfc0155c2f03ea6cfbed7"
 
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"
@@ -2549,7 +2545,3 @@ metafile = true
 [[files]]
 file = "tacz/Create_Armorer-v1.2.0.1.zip"
 hash = "479f0ac05833ccec554efa1b22e6f71553c7ebe7f381310c28467a399c98b0ba"
-
-[[files]]
-file = "tacz/Derpack_Armorer_Recipes.zip"
-hash = "b62ba1ec0235c6bf3ed5969aefdb003d7f19942285bb0668b27298ca7c6f2487"
