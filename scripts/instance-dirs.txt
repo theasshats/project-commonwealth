@@ -1,0 +1,20 @@
+# Single source of truth for the override directories copied into a built
+# instance's .minecraft/. Read by ALL three builders so they can never drift:
+#   - scripts/build-prism-skeleton.sh   (client / Prism)
+#   - scripts/build-server.sh           (server)
+#   - tools/editor-src/internal/builder (the editor's "Build & Launch")
+#
+# Add a directory here and every builder picks it up. Do NOT hardcode this list
+# anywhere else — drift between the editor (what devs use) and the scripts (what
+# users get) is exactly how a dir like tacz/ went missing from editor builds.
+#
+# Format: "<dir> <scope>" per line. Blank lines and # comments are ignored.
+#   scope = both   -> copied into both client and server instances
+#   scope = client -> client only (the server has no use for resource/shaderpacks)
+#   scope = server -> server only (none today; reserved)
+config         both
+defaultconfigs both
+kubejs         both
+resourcepacks  client
+shaderpacks    client
+tacz           both

@@ -14,7 +14,7 @@ What lives in this folder:
 
 # Derpack Editor
 
-A local web app for managing the modpack without using the command line or GitHub Actions workflows. Edit mods through your browser, commit through GitHub Desktop, ship through PRs.
+A local web app for managing the modpack without using the command line. Edit mods through your browser, commit through GitHub Desktop, ship through PRs.
 
 ## Quick start
 
@@ -42,7 +42,7 @@ A local web app for managing the modpack without using the command line or GitHu
 
 - **Doesn't handle git.** Use GitHub Desktop for clone, branch, commit, push, and PRs. This tool only edits files in your working directory — git records those changes, and GitHub Desktop helps you push them.
 - **Doesn't cut releases.** Releases happen via the existing build workflow when you publish a release on GitHub.
-- **Doesn't replace the GitHub Actions workflows.** They still work as a fallback — see [the editing guide](../docs/EDITING.md#fallbacks).
+- **Falls back to the packwiz CLI, not GitHub Actions.** The old browser-button mod-management Actions were retired once this editor covered them (#127); when the editor isn't an option, drive `packwiz` directly — see [the editing guide](../docs/EDITING.md#fallbacks).
 
 ## Branch naming
 

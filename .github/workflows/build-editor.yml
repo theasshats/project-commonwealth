@@ -1,8 +1,11 @@
 name: Build editor
 
-# Auto-builds tools/derpack-edit.exe whenever the editor source changes.
-# The compiled binary is committed back to main with a [skip ci] tag to
-# prevent infinite loops.
+# Auto-builds tools/derpack-edit.exe whenever the editor source changes. It just
+# compiles the editor (cross-compiled for windows/amd64), embedding the COMMITTED
+# tools/editor-src/internal/packwiz/assets/packwiz.bin via go:embed — we no longer
+# rebuild packwiz from source on every run. packwiz rarely changes; bump packwiz.bin
+# manually when it needs it (see CLAUDE.md). The compiled binary is committed back to
+# main with a [skip ci] tag to prevent infinite loops.
 
 on:
   push:
@@ -10,10 +13,15 @@ on:
     paths:
       - 'tools/editor-src/**'
       - '.github/workflows/build-editor.yml'
-  workflow_dispatch: {}  # manual trigger if you want to force a rebuild
+  workflow_dispatch: {}  # manual trigger (e.g. to build the .exe on a PR branch)
 
 permissions:
   contents: write
+
+# Cancel a superseded build of the same ref — only the latest source matters.
+concurrency:
+  group: build-editor-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -27,32 +35,14 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: '1.22'
-
-      # Build packwiz from source. Slower than downloading a prebuilt, but
-      # avoids any dependency on packwiz's CI distribution mechanism.
-      - name: Check out packwiz
-        uses: actions/checkout@v4
-        with:
-          repository: packwiz/packwiz
-          path: .packwiz-src
-          # Pin to a tested commit. Bump as needed.
-          ref: main
-
-      - name: Build packwiz binary
-        run: |
-          set -euo pipefail
-          cd .packwiz-src
-          # Cross-compile for Windows from the Linux runner.
-          GOOS=windows GOARCH=amd64 go build -o ../tools/editor-src/internal/packwiz/assets/packwiz.bin .
-          ls -lh ../tools/editor-src/internal/packwiz/assets/packwiz.bin
+          cache-dependency-path: tools/editor-src/go.sum
 
       - name: Build editor binary
         working-directory: tools/editor-src
         run: |
           set -euo pipefail
-          # Make sure go.sum is fresh.
-          go mod tidy
-          # Cross-compile for Windows.
+          # Cross-compile for Windows. Embeds the committed assets/packwiz.bin
+          # (see CLAUDE.md for how/when to bump packwiz itself).
           GOOS=windows GOARCH=amd64 go build \
             -o ../derpack-edit.exe \
             -ldflags="-s -w" \
