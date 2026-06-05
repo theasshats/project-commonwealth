@@ -43,10 +43,15 @@ also offers TaCZ's stock AK/M4/etc.), so we turn it off entirely — in
 
 ```js
 ServerEvents.recipes(event => {
-  event.remove({ type: 'tacz:gun_smith_table_crafting' })   // every gun/ammo/attachment off the bench
-  event.remove({ id: /^tacz:/, output: 'tacz:workbench' })  // and the now-useless table block craft
+  event.remove({ type: 'tacz:gun_smith_table_crafting' })  // every gun/ammo/attachment off the bench
+  event.remove({ output: 'tacz:workbench' })               // and the now-useless table block crafts,
+  event.remove({ output: 'tacz:workbench_b' })             // so players can't build a bench that crafts nothing
 })
 ```
+
+The two table-block crafts are matched by **output** (any namespace) to catch the stock TaCZ table
+(`tacz:workbench`) and the Create: Armorer table (`tacz:workbench_b`, which was crafted by both the
+gun pack and our old `kubejs/data/derpack/recipe/create_workbench.json` — now deleted).
 
 `tacz:gun_smith_table_crafting` is a **real custom recipe type registered in the vanilla
 `RecipeManager`**, so KubeJS's `event.remove` *does* match it — this is the **same call that already

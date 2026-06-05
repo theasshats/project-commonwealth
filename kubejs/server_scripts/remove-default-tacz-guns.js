@@ -11,6 +11,10 @@
 // every item is still craftable, only the path moves to Create.
 ServerEvents.recipes(event => {
   event.remove({ type: 'tacz:gun_smith_table_crafting' })
-  // With every tab empty the table block is a dead end — remove its (vanilla) craft too.
-  event.remove({ id: /^tacz:/, output: 'tacz:workbench' })
+  // With every tab empty the table blocks are dead ends — remove their (vanilla) crafts too, so
+  // players can't waste resources building a bench that crafts nothing. Matched by output (any
+  // namespace), to catch the stock TaCZ table (tacz:workbench), the Create: Armorer table
+  // (tacz:workbench_b, crafted by both the gun pack and our old derpack recipe), and any future one.
+  event.remove({ output: 'tacz:workbench' })
+  event.remove({ output: 'tacz:workbench_b' })
 })

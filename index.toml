@@ -381,10 +381,6 @@ file = "kubejs/data/derpack/neoforge/biome_modifier/small_ores.json"
 hash = "3ba2216c081198266f6b4f54400b4d7d0c042f6ca487c337145569c719dd66bb"
 
 [[files]]
-file = "kubejs/data/derpack/recipe/create_workbench.json"
-hash = "5a1069a65c84f4d1dafac9ae13654b330410159d1f5d0f4fa835caaf2d35703a"
-
-[[files]]
 file = "kubejs/data/derpack/recipe/firing_mechanism.json"
 hash = "8bcb876a502140e08cf43cc2dbc56d6f4d857e3150740aaca4988197d956f9d4"
 
@@ -762,7 +758,7 @@ hash = "8142b4ddd8db3447133aa357d41654dc2af74908f9337a25375097895bc2d25a"
 
 [[files]]
 file = "kubejs/server_scripts/remove-default-tacz-guns.js"
-hash = "89b006be50a8168380c26f0cc72d63af04da3d05faa95d05bec21faa234ad8f9"
+hash = "4591815730e3ede98efa0c3d6a5fe0e82843d9c69784292ce4c15e0629c281f9"
 
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"

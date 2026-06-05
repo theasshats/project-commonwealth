@@ -7,8 +7,9 @@
 
 Guns, ammunition, and attachments are now built through their Create recipes, not assembled at the
 gun smith table. The table no longer offers them — nor the stock TaCZ weapons — so the path is the
-Create machinery the recipes were always meant to run on. Use JEI to find a gun's recipe. Guns and
-parts you already have are unaffected.
+Create machinery the recipes were always meant to run on. Use JEI to find a gun's recipe. The gun
+smith table blocks are no longer craftable, since they no longer do anything. Guns and parts you
+already have are unaffected.
 
 ## 0.5.3 — Gunsmith delivery fix (diff vs 0.5.2)
 
