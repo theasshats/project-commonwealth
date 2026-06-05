@@ -30,11 +30,12 @@ See [`docs/PRISM-SETUP.md`](docs/PRISM-SETUP.md) for the full walkthrough.
 
 This repo doesn't store mod jars — it stores manifests describing *what mods are in the pack* (with URLs and hashes). When a release is cut, GitHub Actions builds a small Prism installer zip from those manifests; the launcher fetches actual jars at install time.
 
-There are three ways to make changes, in order of how often they're used:
+There are two ways to make changes, in order of how often they're used:
 
 1. **Derpack Editor** (recommended) — local desktop app, GUI, runs from the repo.
-2. **GitHub Actions workflows** — click buttons in the Actions tab, no install needed. Fallback for when you can't run the editor.
-3. **packwiz CLI directly** — power-user fallback for things the editor doesn't cover yet.
+2. **packwiz CLI directly** — fallback for things the editor doesn't cover yet, or when you can't run it.
+
+(The pack used to also expose browser-button GitHub Actions for add/remove/update/hash; those were retired once the editor covered them — see [issue #127](https://github.com/Xela112233/Derpack-X/issues/127).)
 
 The workflow we follow: each contributor works on a **version-named branch**, edits via the editor, opens a **pull request to main**. Every PR runs automated merge-gating checks (packwiz index freshness, manifest lint, KubeJS/config parse, Go build & vet) — see [`docs/CI-CHECKS.md`](docs/CI-CHECKS.md). Releases are cut from main.
 
@@ -117,7 +118,7 @@ See [`tools/README.md`](tools/README.md) for the user-facing editor docs and tro
 ├── docs/                  # Human-facing documentation (see docs/README.md for the index)
 ├── scripts/               # Build helpers (CI runs these; you almost never run them directly)
 ├── site/                  # Player-facing website (Go) — runs on ishimura, not in CI; see site/README.md
-└── .github/workflows/     # CI: PR merge-gating checks, release build, editor build, ground-truth digest, fallback edits
+└── .github/workflows/     # CI: PR merge-gating checks, index sync, release build, editor build, ground-truth digest
 ```
 
 Each folder has its own `README.md` with details.
@@ -139,14 +140,9 @@ The build runs fresh each time — no caching, ~30s — then attaches the Prism 
 
 ## Fallbacks
 
-If the editor doesn't work for you (no Windows machine, can't install Java, whatever), every operation can also be done through GitHub Actions workflows:
+If the editor doesn't work for you (no Windows machine, can't install Java, whatever), every operation can be done with `packwiz` directly from the repo root — `packwiz mr add <slug>` / `packwiz cf add <slug>`, `packwiz update <slug>` (or `--all`), `packwiz pin`/`unpin`, `packwiz refresh`. See [`docs/EDITING.md`](docs/EDITING.md#fallbacks) and [`mods/README.md`](mods/README.md).
 
-- **Add mod(s)** → Actions tab → "Add mod(s)" → Run
-- **Remove a mod** → Actions tab → "Remove mod" → Run
-- **Update mods** → Actions tab → "Update mods" → Run (blank slug = update all)
-- **Compute hash** → Actions tab → "Compute hash" → Run (for manually-edited manifests)
-
-For deepest fallbacks (the rare CLI-only situation), see [`docs/EDITING.md`](docs/EDITING.md) and [`mods/README.md`](mods/README.md).
+(The browser-button GitHub Actions that used to sit here — Add mod(s) / Remove mod / Update mods / Compute hash — were retired; the editor replaced them, [#127](https://github.com/Xela112233/Derpack-X/issues/127).)
 
 ---
 

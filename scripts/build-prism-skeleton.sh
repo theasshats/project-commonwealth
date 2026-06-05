@@ -59,12 +59,16 @@ name=${PACK_NAME} ${PACK_VERSION}
 notes=Built from ${PACK_NAME} ${PACK_VERSION} (${VARIANT}).\nSee README in instance for details.
 EOF
 
-# Copy configs/kubejs/etc. that should be on the client.
-# tacz/ carries the committed Create: Armorer gun pack zip -> .minecraft/tacz/ (TaCZ loads it there).
-for d in config defaultconfigs kubejs resourcepacks shaderpacks tacz; do
+# Copy the override dirs that belong on the client. The list lives in
+# scripts/instance-dirs.txt (shared with build-server.sh and the editor builder) so the
+# three builders can't drift — see that file's header. tacz/ (scope both) carries the
+# committed Create: Armorer gun pack zip -> .minecraft/tacz/ (TaCZ loads it there).
+while read -r d scope _; do
+    [[ -z "${d}" || "${d}" == \#* ]] && continue
+    [[ "${scope}" == "both" || "${scope}" == "client" ]] || continue
     if [[ -d "${d}" ]]; then
         cp -r "${d}" "${OUT_DIR}/.minecraft/"
     fi
-done
+done < scripts/instance-dirs.txt
 
 echo "Prism skeleton built at: ${OUT_DIR}"

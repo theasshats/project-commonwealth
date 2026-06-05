@@ -8,7 +8,7 @@ If a decision feels weird, look here first. If it isn't here, it should be — p
 
 ## What is this thing
 
-Derpack X is a Minecraft 1.21.1 / NeoForge modpack distributed via [packwiz](https://packwiz.infra.link/) manifests. The repo doesn't contain mod jars; it contains URLs and hashes. CI builds one small release artifact, a Prism installer zip. End-users' launchers fetch jars from each mod's authoritative source at install time. A custom Go-based local editor handles routine pack maintenance through a web UI; GitHub Actions workflows are a fallback.
+Derpack X is a Minecraft 1.21.1 / NeoForge modpack distributed via [packwiz](https://packwiz.infra.link/) manifests. The repo doesn't contain mod jars; it contains URLs and hashes. CI builds one small release artifact, a Prism installer zip. End-users' launchers fetch jars from each mod's authoritative source at install time. A custom Go-based local editor handles routine pack maintenance through a web UI; the packwiz CLI is the fallback.
 
 ---
 
@@ -78,14 +78,14 @@ No version-naming dogma. Pick the convention that matches how the team actually 
 
 Why a custom editor instead of just using packwiz CLI or the GitHub Actions workflows. Both alternatives existed before the editor and worked fine for a single technical maintainer. The editor came out of a specific collaboration friction.
 
-The original workflow was: maintainer runs `packwiz` commands locally; collaborator triggers GitHub Actions workflows in the browser ("Add mod" with a slug field, "Update mods," etc.). That worked, sort of. The collaborator was actually editing locally with raw jars and never touching the repo's workflows at all — the friction of "click button, fill form, wait 30 seconds, refresh page" was high enough that he just downloaded jars manually and told the maintainer what to add. The repo and the actually-played pack drifted apart constantly.
+The original workflow was: maintainer runs `packwiz` commands locally; collaborator triggers GitHub Actions workflows in the browser ("Add mod" with a slug field, "Update mods," etc.). That worked, sort of. The collaborator was actually editing locally with raw jars and never touching the repo's workflows at all — the friction of "click button, fill form, wait 30 seconds, refresh page" was high enough that he just downloaded jars manually and told the maintainer what to add. The repo and the actually-played pack drifted apart constantly. (Those browser workflows were eventually retired outright once the editor covered them — see #127.)
 
 The editor exists to close that gap. It's a single .exe that runs from the repo, opens a local web UI, and exposes packwiz operations as buttons. The collaborator can edit the pack the same way the maintainer does, branch and PR through GitHub Desktop, never touch git or YAML or a terminal. The maintainer benefits too — many edits are faster through the UI than through CLI flags or workflow forms.
 
 Three principles drive the design:
 
 1. **The editor doesn't do git.** GitHub Desktop already handles clone/branch/commit/push/PR with a polished UI. Reimplementing any of that would be wasted effort and a worse experience. The editor only edits files in the working directory; git records those changes; GitHub Desktop helps push them.
-2. **The editor doesn't replace anything.** The packwiz CLI still works. The GitHub Actions workflows still work. The editor is *an additional path*, not a forced one. If it breaks, the underlying mechanisms are unchanged.
+2. **The editor doesn't replace the underlying mechanism.** The packwiz CLI still works — the editor is *an additional path* over it, not a forced one, so if it breaks the CLI is unchanged. (The browser GitHub Actions were the other path originally; once the editor fully covered them they were redundant and got retired — #127.)
 3. **The editor is a thin wrapper.** It shells out to packwiz for operations packwiz already supports (add, remove, pin, update, refresh). It only reimplements operations that needed new logic — Modrinth API calls for the version picker, hash recomputation for pinned mods, Prism instance bundling for local testing.
 
 Net effect: the collaborator's friction dropped from "I'll just edit my own folder and tell you" to "I added these mods on branch 0.4.0, PR open." That's the win that justified building the thing.
