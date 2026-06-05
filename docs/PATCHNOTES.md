@@ -3,6 +3,13 @@
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme (diff vs prev)", a short lead paragraph, then sections (see CLAUDE.md). -->
 
+## 0.5.4 — Guns crafted through Create (diff vs 0.5.3)
+
+Guns, ammunition, and attachments are now built through their Create recipes, not assembled at the
+gun smith table. The table no longer offers them — nor the stock TaCZ weapons — so the path is the
+Create machinery the recipes were always meant to run on. Use JEI to find a gun's recipe. Guns and
+parts you already have are unaffected.
+
 ## 0.5.3 — Gunsmith delivery fix (diff vs 0.5.2)
 
 Builds made with the pack editor were shipping without the Create: Armorer gun pack, so its

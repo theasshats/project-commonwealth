@@ -34,37 +34,42 @@ like `tacz/`, so the zip silently never arrived. Committing it makes delivery de
 2. Run `packwiz refresh` (the editor / CI) so it's indexed in `index.toml`.
 3. Confirm `tacz` is in the copy loops of `build-prism-skeleton.sh` + `build-server.sh`.
 
-## Removing the stock TaCZ guns (Armorer-only)
+## Disabling the gun smith table (Create-only crafting)
 
-We want **only** Create: Armorer's guns — not TaCZ's built-in stock pack (AK/M4/etc.). TaCZ has
-**no config flag to disable default guns** (upstream marked it wontfix, issue #267).
+Guns, ammo, and attachments are meant to be **Create-gated** — crafted through the Create recipes
+below, not assembled at the TaCZ gun smith table. The table is a bypass around that gating (and it
+also offers TaCZ's stock AK/M4/etc.), so we turn it off entirely.
 
-A first attempt — `config/tacz-pre.toml` `DefaultPackDebug=true` + an emptied
-`tacz/tacz_default_gun/` override — **did not work**: `DefaultPackDebug` only stops TaCZ
-*overwriting* an existing pack, not *generating* an absent one, so deleting the folder just makes
-TaCZ regenerate the full default pack. (Removed.)
-
-Reliable approach instead — **remove the stock guns' crafting recipes in KubeJS**
-(`kubejs/server_scripts/remove-default-tacz-guns.js`):
+**What does *not* work — KubeJS recipe removal.** The obvious approach,
 
 ```js
 ServerEvents.recipes(e => e.remove({ type: 'tacz:gun_smith_table_crafting', id: /^tacz:/ }))
 ```
 
-The stock guns' recipes are `tacz:gun_smith_table_crafting` recipes in the `tacz` namespace;
-Create: Armorer's are in the `create_armorer` namespace, so the `id` filter kills every stock-gun
-craft while leaving Armorer. This ships via `kubejs/` (reliably delivered) and is independent of
-pack-folder / instance state.
+is a **silent no-op**. TaCZ's gun-smith-table recipes are *not* Minecraft recipes — TaCZ loads them
+into its **own** registry from the gun packs in `.minecraft/tacz/`. KubeJS's `ServerEvents.recipes`
+only sees the vanilla `RecipeManager`, which never contains them, so `remove()` matches nothing.
+(This is why stock + Armorer guns kept crafting at the bench despite that call.)
 
-> **Caveat:** the stock gun *items* still exist in the creative tab — this removes their *crafting*
-> only. Fully hiding them from the gunsmith table would need a working pack-disable, which TaCZ
-> doesn't cleanly support.
+**What works — TaCZ recipe filters.** Each workbench block has a recipe *filter*, and TaCZ reads
+filter files from datapacks (the same `kubejs/data/<ns>/…` override path that already works for the
+workbench block data). We ship two overrides that blacklist everything:
 
-> **Verify in-game:** the gunsmith table offers **only** Create: Armorer guns to craft; no stock
-> AK/M4/Glock recipes. (Requires that `tacz:gun_smith_table_crafting` recipes load into the recipe
-> manager — confirm none reappear after a `/reload`.)
+- `kubejs/data/tacz/recipe_filters/default.json` — the stock TaCZ table
+- `kubejs/data/create_armorer/recipe_filters/default.json` — the Create: Armorer table
 
-## Crafting design — Create-gated, assembled at the gun smith table
+both `{"whitelist": [], "blacklist": ["^.*$"]}` (empty whitelist = "all", then the blacklist
+subtracts all). Every tab — guns, ammo, attachments — shows nothing, on either table. We also stop
+crafting the stock table block itself (`kubejs/server_scripts/remove-default-tacz-guns.js` removes
+the `tacz:workbench` craft, which *is* a vanilla recipe). The committed
+`tacz/Derpack_Armorer_Recipes.zip` (the old `derpack_armorer` table recipes) is dropped — redundant
+once the table is off.
+
+> **Caveat:** the gun *items* still exist in the creative tab; this only removes the survival craft.
+> **Verify in-game:** the gun smith table's tabs are empty (no guns/ammo/attachments to craft), and
+> every Armorer item is instead craftable through its Create recipe (below).
+
+## Crafting design — Create-gated, crafted through Create
 
 Every Armorer gun, ammo round, and attachment is **gated behind Create**: the ingredients are Create
 parts and processed metals, so you can't make a gun without first building out a Create line. This is
@@ -72,17 +77,15 @@ the gun branch of the pack's Create-driven scarcity economy (see `DESIGN.md`).
 
 **Where each thing is crafted:**
 
-- **Guns / ammo / attachments** — at the **TaCZ gun smith table** (`tacz:gun_smith_table_crafting`
-  recipes shipped in `tacz/Derpack_Armorer_Recipes.zip`, namespace `derpack_armorer`). The table is
-  the assembly bench; its recipes list the Create parts each item needs.
+- **Guns / ammo / attachments** — through **Immersive TaCZ's Create recipes**
+  (`kubejs/data/createimmersivetacz/…`): `mechanical_crafting` for guns, mixing→fluid→filling→casing
+  for ammo, and the attachment recipes. These produce the same `create_armorer:*` items the bench used
+  to, and they render in **JEI** (the recipe viewer the pack switched to precisely because EMI can't
+  draw Create processing recipes). The gun smith table is **disabled** (above), so this is the only path.
 - **The three core gun parts** — `gun_barrel`, `gun_trigger`, `firing_mechanism` (and `primer`) — via
-  **plain shaped recipes** in `kubejs/data/derpack/recipe/`. They're shaped (not Create
-  `mechanical_crafting`) **on purpose**: Immersive TaCZ's own `mechanical_crafting` recipes load but
-  don't render in EMI on this Create build, so vanilla shaped recipes guarantee they're discoverable.
-  The *ingredients* are still all Create/processed-metal, so the Create gating holds.
-- **Immersive TaCZ's native Create tree** (mixing→fluid→filling→primer→casing→ammo, and
-  `mechanical_crafting` guns) still loads as a parallel path (see *Compat overlays*); it just isn't
-  the discoverable one, so we don't rely on it.
+  **plain shaped recipes** in `kubejs/data/derpack/recipe/`. Shaped (not Create `mechanical_crafting`)
+  so they're trivially discoverable; the *ingredients* are still all Create/processed-metal, so the
+  Create gating holds.
 
 ### Recipe themes
 
@@ -156,10 +159,13 @@ the override rewrites every tab icon to the component form, clearing the error.
 
 ## Verify in-game
 
-- Create recipes for TaCZ ammo/casings/components appear in JEI and craft via Create
-  (mixing / filling / pressing).
-- Create: Armorer guns appear in the TaCZ gunsmith table / creative tab (loaded from
-  `.minecraft/tacz/`) — e.g. the Salamander 40mm field cannon, Classic M1, Burster grenade launcher.
+- Create recipes for Armorer guns/ammo/attachments/components appear in **JEI** and craft via Create
+  (mechanical crafting / mixing / filling / pressing).
+- Create: Armorer gun *items* exist (creative tab + loaded from `.minecraft/tacz/`) — e.g. the
+  Salamander 40mm field cannon, Classic M1, Burster grenade launcher — and craft **only** through
+  their Create recipe.
+- The **gun smith table tabs are empty** — no guns/ammo/attachments craftable at the bench (stock
+  TaCZ guns included).
 - No registry/datapack errors in the log.
 
 > **Version note:** gun packs are bound to the **TaCZ** version, not Minecraft — they're JSON +

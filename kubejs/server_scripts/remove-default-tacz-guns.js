@@ -1,31 +1,21 @@
-// Remove the stock TaCZ default guns and the default gun smith table block — Armorer-only.
+// Stop the TaCZ gun smith table from being a crafting path — all guns, ammo, and
+// attachments are meant to be Create-gated, crafted through the Create recipes
+// (kubejs/data/createimmersivetacz/...), not assembled at the bench.
 //
-// TaCZ has no config flag to disable its built-in default gun pack (upstream wontfix, issue #267).
-// The DefaultPackDebug + empty-override approach we tried first does NOT work: DefaultPackDebug only
-// stops TaCZ OVERWRITING an existing pack, not GENERATING an absent one — so deleting the folder
-// just makes TaCZ regenerate the full default pack.
+// IMPORTANT — why we do NOT remove the gun-smith-table recipes here:
+// They are NOT Minecraft recipes. TaCZ loads them into its OWN registry from the gun
+// packs in .minecraft/tacz/, so KubeJS's ServerEvents.recipes(...).remove(...) — which
+// only sees the vanilla RecipeManager — matches nothing and silently no-ops. (We learned
+// this the hard way: stock + Armorer guns kept crafting at the bench despite a remove()
+// call here.) The table is instead emptied via TaCZ recipe FILTERS, shipped as datapack
+// overrides:
+//   kubejs/data/tacz/recipe_filters/default.json            (the stock TaCZ table)
+//   kubejs/data/create_armorer/recipe_filters/default.json  (the Create: Armorer table)
+// Both blacklist ^.*$, so every tab — guns, ammo, attachments — shows nothing.
 //
-// Reliable instead: remove the default pack's gun-smith-table recipes directly. They're recipes of
-// type tacz:gun_smith_table_crafting in the `tacz` namespace (Create: Armorer's are in the
-// `create_armorer` namespace), so the id filter keeps Armorer while killing every stock-gun craft.
-// Ships via kubejs/ (which we know is delivered), independent of pack-folder / instance state.
-//
-// Caveat: the stock gun ITEMS still exist in the creative tab — this removes their CRAFTING
-// (the "default gun recipes still work" problem). Fully hiding them needs a working pack-disable,
-// which TaCZ doesn't cleanly support.
-
-// We also disable the DEFAULT gun smith table crafting block so survival players are
-// funnelled onto the Create: Armorer table. TaCZ ships several workbench skins as distinct
-// items; the stock one is `tacz:workbench`. Our Armorer table is a different item,
-// `tacz:workbench_b` (BlockId create_armorer:create_workbench), crafted by the Create-gated
-// `derpack:create_workbench` recipe in kubejs/data/derpack/recipe/ — so removing the stock
-// block's craft by OUTPUT leaves ours untouched. Scope by `id: /^tacz:/` as well so we only
-// ever touch TaCZ's own recipe, never our derpack one (which outputs the same family but a
-// different item id).
-//
-// Caveat (same as the guns): this removes the CRAFTING only — the stock block item still
-// exists in the creative tab; TaCZ has no clean way to unregister it.
+// The workbench ITEM craft removed below IS a normal vanilla recipe, so KubeJS can remove
+// it; with the table emptied the block would only be a dead end. (Caveat: the block item
+// still exists in the creative tab — this removes its crafting only.)
 ServerEvents.recipes(event => {
-  event.remove({ type: 'tacz:gun_smith_table_crafting', id: /^tacz:/ })
   event.remove({ id: /^tacz:/, output: 'tacz:workbench' })
 })
