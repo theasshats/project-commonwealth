@@ -1,0 +1,30 @@
+Derpack Kill Feed
+Copyright (C) 2026 Derpack X
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, version 3 only (GPL-3.0-only).
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program. If not, see <https://www.gnu.org/licenses/>.
+
+----------------------------------------------------------------------------
+NOTE: The complete, verbatim text of the GNU General Public License version 3
+must accompany this file before distribution. Paste the official text from
+https://www.gnu.org/licenses/gpl-3.0.txt below this line. (Left as a pointer
+rather than reproduced here to avoid an inexact copy.)
+----------------------------------------------------------------------------
+
+Attribution
+-----------
+This mod adapts code from Superb Warfare (https://github.com/Mercurows/SuperbWarfare),
+Copyright (C) its authors (Atsuishio, Roki27, Light_Quanta), licensed GPL-3.0.
+Reused: the kill-message queue and the entry slide/fade animation timing
+(KillMessageHandler, KillMessageOverlay, LivingKillRecord) and the attacker
+resolution in the kill path (LivingEventHandler), ported from Kotlin/Forge 1.20.1
+to Java/NeoForge 1.21.1 and stripped of Superb Warfare's guns, vehicles, dog tags,
+custom damage types, and all art assets.

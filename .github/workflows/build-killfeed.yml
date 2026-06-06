@@ -1,0 +1,48 @@
+name: build-killfeed
+
+# Builds the custom Derpack Kill Feed mod jar (mods-src/derpack-killfeed/).
+# This is NOT pack content — the jar is uploaded as an artifact (and can be attached
+# to a release) so it can then be hosted and referenced via a packwiz manifest.
+
+on:
+  push:
+    branches: ['**']
+    paths:
+      - 'mods-src/derpack-killfeed/**'
+      - '.github/workflows/build-killfeed.yml'
+  pull_request:
+    paths:
+      - 'mods-src/derpack-killfeed/**'
+      - '.github/workflows/build-killfeed.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mods-src/derpack-killfeed
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Build
+        run: gradle build --no-daemon
+
+      - name: Upload jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: derpack-killfeed-jar
+          path: mods-src/derpack-killfeed/build/libs/*.jar
+          if-no-files-found: error

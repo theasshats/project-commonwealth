@@ -28,6 +28,10 @@ tools/
 # Player website — its own Go service, deployed by hand on the box; not pack content
 site/
 
+# Custom mod source — built into a jar by CI, then hosted + referenced via a packwiz
+# manifest; the source tree itself is not pack content.
+mods-src/
+
 # Build outputs
 dist/
 build/
