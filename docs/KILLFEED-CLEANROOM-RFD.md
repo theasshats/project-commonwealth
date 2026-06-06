@@ -201,8 +201,24 @@ fresh 1.21.1/NeoForge instance with the built jar installed:
 
 ## 10. Non-goals
 
-No guns, vehicles, armor, dog tags, custom damage types, headshot detection, team-color
-resolution, or any imported art/icons. Just the text feed described above.
+To be clear, since this can be misread: the feed **must** attribute and display kills by
+**guns** (incl. TaCZ — §3.1) and **must** label the **damage type** of each kill (§3.4).
+Those are in scope.
+
+What is out of scope is *building any of that gameplay* into this mod — this is a
+display-only feed, not a combat mod. Specifically, do **not**:
+
+- add any weapons, ammo, vehicles, or armor as items/entities;
+- register any new (custom) damage types of our own — the feed only *reads and labels*
+  whatever damage source caused the death, vanilla or modded;
+- import any third-party art/icons — damage types and weapons are shown as **text**, never
+  icons;
+- implement dog-tag / team-color name systems.
+
+**Headshot detection is optional (stretch).** It is not required. If — and only if — it
+can be derived cheaply from generic, public API without coupling to a specific gun mod's
+internals, you may add a `(headshot)`-style label; otherwise omit it. Do not pull in a
+gun mod's source to get it.
 
 ## 11. Deliverables
 
