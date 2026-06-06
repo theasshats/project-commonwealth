@@ -1964,7 +1964,7 @@ metafile = true
 
 [[files]]
 file = "mods/moonlight.pw.toml"
-hash = "fab671f369f78495f6f1439b7a94d6febd36a940a1ee14813f793d587a7cdebc"
+hash = "2a8038d5ad72b9d09cc2a8c10246e13f1eaa547f8f316cd1d5d602b48d82ae5b"
 metafile = true
 
 [[files]]
@@ -2369,7 +2369,7 @@ metafile = true
 
 [[files]]
 file = "mods/supplementaries.pw.toml"
-hash = "a6eddcd3f7272b85a0e1475abbee8d0291259806ec2ffd0d38fa3ee47d17161f"
+hash = "9f0f16a5919e26038733f568e946bb4cd8b21b457240a9167dfe8024ad0fd013"
 metafile = true
 
 [[files]]
