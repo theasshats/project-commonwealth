@@ -1,12 +1,12 @@
 name = "Modular Golems"
-filename = "modulargolems-3.1.33.jar"
+filename = "modulargolems-3.1.38.jar"
 
 [download]
-url = "https://cdn.modrinth.com/data/gtGDlsAD/versions/ajoO5TkA/modulargolems-3.1.33.jar"
+url = "https://cdn.modrinth.com/data/gtGDlsAD/versions/TOZNxPlx/modulargolems-3.1.38.jar"
 hash-format = "sha512"
-hash = "cfc0e9d2bba5d7d4fa4ec53dfb5b5ea524cfe06b634e5091c4c5654794796937c33b1df503a77a11abe8025e9ea6d73c48ac6f38cf85973c6e1eee580ea39bbb"
+hash = "464cde871ddc28dc761116e1aeb8be980a6c32fa62cb02504dc4a6406c6aa24da01caad651489ef90d731dfcbc92648b020e88a2cdaecc0d99b6652168c21b05"
 
 [update]
 [update.modrinth]
 mod-id = "gtGDlsAD"
-version = "ajoO5TkA"
+version = "TOZNxPlx"

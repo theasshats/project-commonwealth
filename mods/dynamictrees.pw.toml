@@ -1,13 +1,13 @@
 name = "Dynamic Trees"
-filename = "dynamictrees-neoforge-1.21.1-1.7.0.jar"
+filename = "dynamictrees-neoforge-1.21.1-1.7.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "214b57ccd42bc306de8aff347162172fc4ba971b"
+hash = "66b7fd014392904693245e6f440e3c2c9ea45b42"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7661136
+file-id = 8184894
 project-id = 252818
