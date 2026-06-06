@@ -9,9 +9,10 @@ appearing in a stack usually means it *triggered* vanilla work below it, not tha
 it burned cycles — substring frequency over the proto misleads.
 
 Usage:
-    tools/spark-selftime.py <id-or-url>
+    tools/spark-selftime.py <id-or-url-or-file>
     # e.g. tools/spark-selftime.py 0vDM3WuZYK
     #      tools/spark-selftime.py https://spark.lucko.me/0vDM3WuZYK
+    #      tools/spark-selftime.py profile.bin   # a saved bytebin payload
 
 See docs/PERFORMANCE.md (issue #147).
 """
@@ -72,8 +73,13 @@ def self_time(d):
 def main():
     if len(sys.argv) != 2:
         sys.exit(__doc__)
-    ident = sys.argv[1].rstrip("/").split("/")[-1].split("?")[0]
-    data = urllib.request.urlopen(f"https://bytebin.lucko.me/{ident}", timeout=30).read()
+    import os
+    arg = sys.argv[1]
+    if os.path.isfile(arg):
+        data = open(arg, "rb").read()
+    else:
+        ident = arg.rstrip("/").split("/")[-1].split("?")[0]
+        data = urllib.request.urlopen(f"https://bytebin.lucko.me/{ident}", timeout=30).read()
     root = parse(data)
 
     # root field 3 = class -> source-mod table.
