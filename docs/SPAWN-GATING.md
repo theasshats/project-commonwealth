@@ -35,14 +35,37 @@ then a blanket `deny` for the same seven everywhere else. Summoned adds
 (`zombie_lackey`, `skeleton_lackey`, `hunter_wolf`, scarabs, `immortal`) are
 **not** in the lists, so necromancer/parent-mob mechanics still work.
 
-> ⚠️ **Playtest / maintainer call — the structure allowlist is a vanilla
-> starter set.** It currently lists thematic vanilla structures (mineshaft,
-> stronghold, ancient_city, desert_pyramid, swamp_hut, ocean ruins, ruined
-> portals). The pack ships several structure mods (dungeons-and-taverns,
-> yungs-better-*, when-dungeons-arise, …) whose structures should probably be
-> added. Discover their registry IDs in-game (`/locate structure`, or In
-> Control!'s log warns on unknown structure names) and extend the two `mobs`
-> rules' `structures` arrays. Unknown IDs are ignored (logged), not fatal.
+> **Structure allowlist — vanilla + modded (issue #106).** Beyond the thematic
+> vanilla structures (mineshaft, stronghold, ancient_city, desert_pyramid,
+> swamp_hut, ocean ruins, ruined portals) the allowlist now also covers
+> dungeon/ruin/abandoned structures from the pack's structure mods, picked to
+> match the vanilla set's undead-friendly theme (no inhabited villages):
+>
+> - **YUNG's Better Dungeons** (`betterdungeons`): `small_dungeon`,
+>   `zombie_dungeon`, `skeleton_dungeon`, `spider_dungeon`,
+>   `small_nether_dungeon`. (Better Mineshafts/Strongholds overwrite the vanilla
+>   `minecraft:mineshaft`/`stronghold` IDs already in the list — no new IDs.)
+> - **Dungeons and Taverns** (`nova_structures`): the crypts, graveyards, ruins,
+>   and abandoned/illager dungeons (`undead_crypt`, `creeping_crypt`,
+>   `remnant_graveyard`, `remnant_birch_graveyard`, `desert_ruins`,
+>   `jungle_ruins`, `wild_ruin`, `ruin_town`, `conduit_ruin`, `toxic_lair`,
+>   `bunker`, `deepslate_camp`, `badlands_miner_outpost`, `stray_fort`,
+>   `lone_citadel`, `illager_hideout`, `illager_manor`). Taverns, wells,
+>   firewatch towers, and inhabited villages are deliberately left out.
+> - **L_Ender's Cataclysm** (`cataclysm`): the abandoned/cursed/ruined sites
+>   (`abandoned_spire`, `abandoned_temple`, `abandoned_village`,
+>   `cursed_pyramid`, `ruined_citadel`, `sunken_city`, `frosted_prison`).
+> - **When Dungeons Arise: Seven Seas** (`dungeons_arise_seven_seas`): the pirate
+>   ships (`pirate_junk`, `corsair_corvette`, `unicorn_galleon`,
+>   `victory_frigate`, `small_yacht`) — fitting for `dead_beard`.
+>
+> IDs were read straight from each mod jar's `data/<ns>/worldgen/structure/`,
+> so they're exact, not guessed. Only the `allow` rule carries the `structure`
+> list; the trailing `deny` is a blanket everywhere-else rule (no `structure`
+> key). Unknown IDs are ignored (logged), not fatal, so the list is safe to
+> over-cover. **Still playtest-gated:** confirm in-game with `/locate structure`
+> that the modded structures generate and that Rotten Creatures actually spawn
+> inside them (and nowhere else).
 
 ### Mutants and Zombies — moon-gated, NOT via In Control! (Task C)
 **Route chosen — and why it is *not* an In Control! deny:** M&Z must be off
