@@ -5,17 +5,47 @@
 
 ## 0.6.0 — Foundation
 
-Sodium is now in the pack, which should substantially raise frame rate. Profiling traced the low
-spawn frame rate to the vanilla chunk renderer running on the CPU rather than the graphics card, and
-Sodium replaces that renderer. It previously could not be used because it made all world textures
-invisible alongside Create: Aeronautics; a compatibility mod now bridges the two, so Sodium runs with
-Aeronautics and its airships. Sodium is client-side only and does not affect the server. Shaders
-remain unsupported with Aeronautics.
+A foundation pass focused on performance, a full mod refresh, and cleanup. The headline is Sodium,
+which roughly doubles frame rate.
 
-Added Chunky, a chunk pre-generation tool. Running `/chunky radius <n>` then `/chunky start` on the
-server generates the surrounding area ahead of play, so chunks are already on disk before anyone
-explores into them. This keeps live worldgen from stalling the game during a session and gives a
-clean, settled area for performance testing.
+### Performance
+
+- Sodium is now in the pack. Frame rate at a settled base roughly doubled in testing. The slowdown
+  was the game's default terrain renderer running on the CPU rather than the graphics card, and
+  Sodium replaces that renderer. It previously could not be used because it turned all world textures
+  invisible alongside Create: Aeronautics; a compatibility layer now bridges the two, so Sodium runs
+  with Aeronautics and its airships. Sodium is client-side only and does not affect the server.
+  Shaders remain unsupported with Aeronautics.
+- Mob spawning is tuned to ease server load. Some of the more demanding creature mods — Born in
+  Chaos, Mowzie's Mobs, and Grimoire of Gaia — were spawning often enough to cost noticeable tick
+  time. Their natural spawn rates are reduced (not removed); the creatures still appear, just less
+  frequently. This is a first pass and will be retuned with play.
+- Added Chunky, a chunk pre-generation tool. Running `/chunky radius <n>` then `/chunky start` on the
+  server generates the surrounding area ahead of play, so chunks are already on disk before anyone
+  explores into them, which keeps live world generation from stalling a session.
+
+### Updates
+
+- About a month of mod updates were applied across the pack, and the NeoForge version was raised to
+  21.1.233 to match what the updated mods require. Update your launcher's loader version to 21.1.233
+  before playing.
+
+### Fixes
+
+- Locked-slot indicators from Inventory Profiles Next no longer show as stray arrows on the hotbar.
+  Slot locking still works.
+- Cactus is no longer offered as a building-block material where it produced broken decoration
+  blocks.
+
+### Spawns and content
+
+- Rotten Creatures now spawn inside dungeon, crypt, and ruin structures — vanilla ones plus those
+  from YUNG's Better Dungeons, Dungeons and Taverns, L_Ender's Cataclysm, and the When Dungeons Arise
+  Seven Seas set — rather than wandering the open world.
+
+### Removed
+
+- Umapyoi and five unused library mods were removed; nothing that depended on them remains.
 
 ## 0.5.4 — Guns crafted through Create
 
