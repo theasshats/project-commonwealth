@@ -32,6 +32,9 @@ Approximately a month of mod updates has been applied across the pack. NeoForge 
 21.1.233 to meet the requirements of the updated mods. Update your launcher's loader version to
 21.1.233 before playing.
 
+Configured has been added. It provides in-game configuration screens for mods that support it,
+reachable from the mod list, so per-mod settings can be changed without editing config files by hand.
+
 ### Fixes
 
 The locked-slot indicators from Inventory Profiles Next no longer appear as stray arrows on the
@@ -51,7 +54,8 @@ checked against the mod's own files and restored.
 Recipes: the Farm and Charm mincer now processes the ores and logs from Create: TFMG, Occultism,
 Iron's Spells, Let's Do Vinery, and Create that it was meant to; Create: Compressed's crushed-pile
 washing, dough, and polished rose quartz work again; and the cherry-sapling cutting recipe works.
-Crushed raw silver smelts, blasts, and washes into a Galosphere palladium ingot or nugget.
+Crushed raw silver smelts, blasts, and washes into Occultism silver. Create: Compressed's compressed
+crushed uranium pile, which previously had no use here, now washes into Create: Nuclear uranium powder.
 
 Block drops: the Create treadmill, the komainu, kawauso, and tanuki statues, the Stoneholm cleric
 chest, and the Trail and Tales pottery cooking pot and lantern fruits now drop correctly. Smokeleaf

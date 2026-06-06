@@ -20,16 +20,25 @@ under `kubejs/data/`:
   re-added with the corrected `neoforge:mod_loaded` condition.
 - `trailandtales_delight` cutting `cherry_petal_from_cherry_sapling` — the
   unwrapped result entry wrapped in `item`.
-- Create's Galosphere silver compat (smelting/blasting/splashing) **and**
-  `create_compressed`'s galosphere silver pile washing — retargeted to
-  `galosphere:palladium_ingot` / `palladium_nugget` (Galosphere 1.5.3 fully
-  renamed silver→palladium; see the gotcha note below).
+- The stale Galosphere silver compat (Create `smelting`/`blasting`/`splashing`
+  **and** `create_compressed`'s silver pile washing) — these pointed at the
+  no-longer-existent `galosphere:silver_ingot`/`silver_nugget`. **Retargeted to
+  Occultism silver** (`occultism:silver_ingot` / `silver_nugget`), gated on
+  `occultism`. Silver is **not** palladium — Galosphere renamed *its* metal to
+  palladium, but the pack's actual silver is Occultism's (see the gotcha note);
+  `create:crushed_raw_silver` / `create_compressed:crushed_silver_pile` are
+  silver, so they belong in the Occultism silver chain, not palladium.
 - `create_compressed` Create-style processing recipes shipped with the
   pre-Create-6 schema — the splashing crushed-pile washes (copper, gold, iron,
-  zinc, wheat flour, galosphere silver), `mixing/dough_block`, and
+  zinc, wheat flour, silver), `mixing/dough_block`, and
   `sandpaper_polishing/polished_rose_quartz_block` — re-authored to the Create 6
   schema (`id`/`count`/`chance` results, `neoforge:single` fluid). These are
   newly surfaced by the mod update; the original 2026-06-02 log predates them.
+- `create_compressed`'s **compressed crushed uranium pile** had no working
+  output here (its only washes are gated on mekanism / immersiveengineering,
+  neither installed). Added a `create:splashing` recipe washing it into
+  `createnuclear:uranium_powder` ×81 (= the pile's 9 crushed × 9 powder each),
+  gated on `createnuclear`, so it feeds Create: Nuclear's uranium chain.
 
 ### Snowy Spirit — now loads natively, no override needed
 
@@ -77,6 +86,13 @@ That is **no longer true in Galosphere 1.21.1-1.5.3**: the item is now
 `c:ingots/palladium` tag all use `palladium`). There is no `galosphere:silver_*`
 item anymore. The tag guidance still holds — it's `c:ingots/palladium`, never
 `c:ingots/silver` — but the "legacy id retained" half of the note is outdated.
+
+Consequently the stale Create/`create_compressed` "silver compat" recipes that
+pointed at the old Galosphere silver id are **not** retargeted to palladium —
+silver is a different metal. Palladium has its own Galosphere processing; the
+pack's silver is Occultism's, so those recipes route `create:crushed_raw_silver`
+/ `create_compressed:crushed_silver_pile` into `occultism:silver_ingot` /
+`silver_nugget` instead.
 
 ## Accepted as-is — benign for this pack (mod not installed)
 

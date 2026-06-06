@@ -62,15 +62,15 @@ hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
 file = "kubejs/data/create/recipe/blasting/silver_ingot_compat_galosphere.json"
-hash = "ce73d1f4893d0e23c1b5385f65f02dff9477a568cfb71438b4c33d1aad2203f1"
+hash = "a560ba7d8cdccec6b0889d4403672ea72863698bf7ede263ca80cd9fe57a60a2"
 
 [[files]]
 file = "kubejs/data/create/recipe/smelting/silver_ingot_compat_galosphere.json"
-hash = "29a64875e72d71c7d72ad5d3f6ca2d310091a1379e61096a0277b09699ce1636"
+hash = "39040ff1b3d771d7635736e22ddb06ccb6f6da6cc85d398165ceef63ef22f6fc"
 
 [[files]]
 file = "kubejs/data/create/recipe/splashing/galosphere/crushed_raw_silver.json"
-hash = "5360b16ee2dd990071a861e8788133fd6233ae4a053da5b9312bb109147d2786"
+hash = "5173d39e99585f9346d4b60f32c39f53abdd9f6d76186506406420da2fa04d70"
 
 [[files]]
 file = "kubejs/data/create_armorer/data/blocks/create_workbench.json"
@@ -83,6 +83,10 @@ hash = "539ec4adf10ff8dc469e6eece82c451c5af5d504371c2c82d10663f5e3755c28"
 [[files]]
 file = "kubejs/data/create_compressed/recipe/sandpaper_polishing/polished_rose_quartz_block.json"
 hash = "fd742e7f083a45ba0f26972ffa84ab50448be2d1e98031ed281572cee5db8298"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/splashing/createnuclear/crushed_uranium_pile.json"
+hash = "fd44e75dc218446104ec3f8f97a0e1d151a6ac58b4fc5386d483c5fe90e09e21"
 
 [[files]]
 file = "kubejs/data/create_compressed/recipe/splashing/crushed_raw_copper_pile.json"
@@ -102,7 +106,7 @@ hash = "5b79576f4d8b2820ed8e5dbd843ed7fa60c6114db82f28b8bde94454576949ec"
 
 [[files]]
 file = "kubejs/data/create_compressed/recipe/splashing/galosphere/crushed_raw_silver_pile.json"
-hash = "1e0ad7c81c922a7481b3d0a769af93984c73de7ea8138336c088c0fc7f3824f6"
+hash = "d4651adbfed043936ab033ecfe9f9e1a6d96de0083a260cf7d8565259dc3565f"
 
 [[files]]
 file = "kubejs/data/create_compressed/recipe/splashing/wheat_flour_pile.json"
@@ -1200,6 +1204,11 @@ metafile = true
 [[files]]
 file = "mods/configuration.pw.toml"
 hash = "1a3eaa6747c1467a235ee17c29c5e0b264ecb3ac1108d2f794d803b95be92660"
+metafile = true
+
+[[files]]
+file = "mods/configured.pw.toml"
+hash = "af4dc4828902eae1784568632a749fe9a442943f1570ac0ba3ea75e79934be41"
 metafile = true
 
 [[files]]
