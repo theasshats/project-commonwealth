@@ -48,7 +48,7 @@ import re, sys
 v = sys.argv[1]
 path = "docs/PATCHNOTES.md"
 s = open(path, encoding="utf-8").read()
-stub = f"## {v} — TBD (diff vs previous)\n\n_Draft placeholder — replace with real notes before release._\n\n"
+stub = f"## {v} — TBD\n\n_Draft placeholder — replace with real notes before release._\n\n"
 m = re.search(r"^## ", s, flags=re.M)
 idx = m.start() if m else len(s)
 open(path, "w", encoding="utf-8").write(s[:idx] + stub + s[idx:])

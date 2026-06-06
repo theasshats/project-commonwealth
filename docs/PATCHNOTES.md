@@ -1,16 +1,65 @@
 # Derpack X — Patch Notes
 
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
-     "## X.Y.Z — Theme (diff vs prev)", a short lead paragraph, then sections (see CLAUDE.md). -->
+     "## X.Y.Z — Theme", a short lead paragraph, then sections (see CLAUDE.md). -->
 
-## 0.6.0 — Foundation (diff vs 0.5.3)
+## 0.6.0 — Foundation
 
-Added Chunky, a chunk pre-generation tool. Running `/chunky radius <n>` then `/chunky start` on the
-server generates the surrounding area ahead of play, so chunks are already on disk before anyone
-explores into them. This keeps live worldgen from stalling the game during a session and gives a
-clean, settled area for performance testing.
+This release concentrates on performance and maintenance: a new renderer, a full pass of mod updates,
+spawn tuning, and a set of fixes and removals.
 
-## 0.5.3 — Gunsmith delivery fix (diff vs 0.5.2)
+### Performance
+
+Sodium has been added. It replaces the default terrain renderer, which carried out its work on the
+CPU rather than the graphics card and was the primary cause of low frame rates at an established
+base. In testing, frame rates approximately doubled. Sodium could not be used previously because it
+left all world textures invisible alongside Create: Aeronautics; a compatibility layer now reconciles
+the two, so Sodium runs together with Aeronautics and its airships. Sodium is client-side only and
+has no effect on the server. Shaders remain unsupported with Aeronautics.
+
+Natural spawn rates have been reduced for several of the more demanding creature mods — Born in
+Chaos, Mowzie's Mobs, and Grimoire of Gaia. These mobs were appearing often enough to take up a
+noticeable share of server tick time. They still spawn, only less frequently. This is an initial
+adjustment and will be revised with further play.
+
+Chunky, a chunk pre-generation tool, has been added. Running `/chunky radius <n>` followed by
+`/chunky start` on the server generates the surrounding area in advance, so chunks are saved before
+players reach them and live world generation does not stall a session.
+
+### Updates
+
+Approximately a month of mod updates has been applied across the pack. NeoForge has been raised to
+21.1.233 to meet the requirements of the updated mods. Update your launcher's loader version to
+21.1.233 before playing.
+
+### Fixes
+
+The locked-slot indicators from Inventory Profiles Next no longer appear as stray arrows on the
+hotbar. Slot locking continues to function normally.
+
+Cactus is no longer offered as a building material in the cases where it produced broken decoration
+blocks.
+
+### Spawns and content
+
+Rotten Creatures now spawn within dungeon, crypt, and ruin structures rather than across the open
+world. This covers the relevant vanilla structures together with those from YUNG's Better Dungeons,
+Dungeons and Taverns, L_Ender's Cataclysm, and the When Dungeons Arise Seven Seas set.
+
+### Removed
+
+Umapyoi and five unused library mods have been removed. Nothing that depended on them remains in the
+pack.
+
+## 0.5.4 — Guns crafted through Create
+
+Guns, ammunition, and attachments are now built through their Create recipes, not assembled at the
+gun smith table. The table no longer offers them — nor the stock TaCZ weapons — so the path is the
+Create machinery the recipes were always meant to run on. Use JEI to find a gun's recipe. The gun
+smith table blocks are no longer craftable, since they no longer do anything. Guns and parts you
+already have are unaffected.
+
+## 0.5.3 — Gunsmith delivery fix
 
 Builds made with the pack editor were shipping without the Create: Armorer gun pack, so its
 guns, ammo, and attachments were missing and the gun smith table had nothing to craft. The editor
@@ -20,7 +69,7 @@ lineup. No recipes or content changed; this only restores files that should have
 The stock TaCZ gun smith table can no longer be crafted, so the Create: Armorer table is the one
 survival path to building guns. The stock block still exists in the creative tab.
 
-## 0.5.2 — Magic Web (diff vs 0.5.1)
+## 0.5.2 — Magic Web
 
 The magic mods are now tied together. Ars Nouveau sits at the center: its Source acts as a common
 currency that other schools' essences convert into and out of, the occult mods funnel through one shared
@@ -58,7 +107,7 @@ Conversion rates are a first pass and will be tuned with play.
   (a block that moves Source and mana directly, cross-school spell power) is still in progress and not
   part of this release.
 
-## 0.5.1 — Ore Veins (diff vs 0.5.0)
+## 0.5.1 — Ore Veins
 
 Ore generation is reworked to a GregTech-style model. Instead of ore scattered evenly through the
 ground, ores are concentrated in large regional veins of related materials, vanilla overworld ore
@@ -98,7 +147,7 @@ see it.
   currently absent in those pockets; the scattered small ores cover caving in the meantime. Making
   cave ore follow the surface region is the priority for the next ore-gen pass.
 
-## 0.5.0 — Made Through Create (diff vs 0.4.6)
+## 0.5.0 — Made Through Create
 
 Crafting across the pack now routes through Create. Most tech, gear, machines, and a fair amount of
 decoration are built from Create parts (sheets, casings, mechanisms) and methods (pressing, mixing,
@@ -149,7 +198,7 @@ Spawn-gating observation (#108) and the modded-structure allowlist (#106), the m
 the ore-generation model decision (#93), and functional-duplicate parts such as heavy_plate versus steel
 sheet (#103).
 
-## 0.4.6 — World Generation (diff vs 0.4.5)
+## 0.4.6 — World Generation
 
 > **Headline:** this release makes custom ore generation actually work. **0.4.4 and 0.4.5
 > crash the moment you click _Create New World_** (a malformed worldgen file aborts the whole

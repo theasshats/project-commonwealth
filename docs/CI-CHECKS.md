@@ -72,11 +72,15 @@ It distinguishes the two cases, because their commit policy differs:
   whatever `refresh` produces — file-list changes from `main` are legitimate (a mod added on another
   branch). It auto-resolves **only** when every conflicting file is regenerable:
   - `index.toml` — always (rebuilt wholesale by `refresh`).
-  - `pack.toml` — only if the sides differ *solely* in the `[index]` hash line; if either also
-    touched `version` / `minecraft` / `neoforge`, that's a human decision and it bails.
+  - `pack.toml` — when the sides differ *solely* in the `[index]` hash, or *solely* in the `version`
+    line with this branch's version **ahead** of main's (a version branch folding in the current
+    release while keeping its own higher version). A branch whose version is *below* main's is treated
+    as **superseded** (flagged, or auto-retired if it's an empty staged slot); any other field
+    (`minecraft` / `neoforge`) differing is a human decision → it bails.
   - **Anything else** (a `.pw.toml` edited on both sides, KubeJS, config) is a real content
     conflict — the merge is aborted and the PR is asked to resolve by hand (once — it won't re-nag on
-    every push to `main`).
+    every push to `main`). **Exception:** `docs/PATCHNOTES.md` is auto-merged by a `merge=union` driver
+    (`.gitattributes`) — both sides' changelog sections are kept, so the changelog never blocks a fold.
 - **Stale (no merge needed).** The branch is already up to date but the author edited a tracked pack
   file and pushed without `packwiz refresh`. It auto-commits (with `[skip ci]`) as long as the index's
   changes stay within **known pack directories** — the dirs in `scripts/instance-dirs.txt` (the shared
@@ -94,13 +98,24 @@ Notes: the `push`/`pull_request` triggers run from the copy of the workflow on t
 branch**, so a change to it only takes full effect once merged to `main`. Fork PRs are skipped —
 `GITHUB_TOKEN` can't push to another repo's branch — so those authors refresh by hand.
 
-> **Note — the check goes green automatically.** `GITHUB_TOKEN` pushes don't re-trigger
-> `pull_request` runs (anti-recursion), so the bot's sync/refresh commit fires at most once per author
-> push (no loop) but also wouldn't re-run `pr-checks` on that commit by itself. So after pushing,
-> `sync-index` **re-dispatches `pr-checks`** (`workflow_dispatch`, which *is* allowed for `GITHUB_TOKEN`)
-> on the new head, turning the checks green on the fixed commit — no PAT needed. And because the
-> **packwiz index** job is guard-aware (it shares `scripts/index-guard.sh` with the fixer), routine
-> staleness passes on the *first* run anyway, so in the common case there's no red to clear.
+> **Note — displaying checks on a bot-pushed commit needs `SYNC_PAT`.** `GITHUB_TOKEN` pushes don't
+> re-trigger `pull_request` runs (anti-recursion), so the bot's fold/refresh commit wouldn't re-run
+> `pr-checks` on its own — and `workflow_dispatch` doesn't help either: those check runs exist on the
+> commit but GitHub **does not surface them in the PR** (no green tick, no required-check status). The
+> fix is a token whose push GitHub treats normally: set a fine-grained **PAT** (or GitHub App token —
+> the more locked-down option, tracked for 1.0.0) as the `SYNC_PAT` secret (`contents` +
+> `pull-requests: write`). `sync-index` (and `release.yml`'s `open-next`) use `${{ secrets.SYNC_PAT ||
+> secrets.GITHUB_TOKEN }}`, so with the secret a folded/staged PR shows normal green checks; without it,
+> the workflows still run and fix the index, but a bot-pushed commit won't display checks until a human
+> pushes. (The **packwiz index** job is guard-aware regardless, so routine staleness never goes red.)
+>
+> **Also — opening PRs from a workflow.** `release.yml`'s `open-next` calls `gh pr create`. The default
+> `GITHUB_TOKEN` is **blocked** from creating PRs unless **Settings ▸ Actions ▸ General ▸ Workflow
+> permissions ▸ "Allow GitHub Actions to create and approve pull requests"** is enabled (error:
+> *"GitHub Actions is not permitted to create or approve pull requests"*). A **PAT** (`SYNC_PAT`) is
+> **not** subject to that restriction, so setting the secret fixes PR creation *and* check display at
+> once. If you stay on `GITHUB_TOKEN`, enable that checkbox or `open-next` will stage the branch but not
+> open its PR.
 
 ### Manual fallback (when it bails)
 

@@ -1,13 +1,13 @@
 name = "ExtraDelight"
-filename = "extradelight-2.6.3.jar"
+filename = "extradelight-2.6.5.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/yRrY3XII/versions/dNEETyZX/extradelight-2.6.3.jar"
+url = "https://cdn.modrinth.com/data/yRrY3XII/versions/XntyupDn/extradelight-2.6.5.jar"
 hash-format = "sha512"
-hash = "04a471f01c0f14e26700e2acb414e4c0e11c2f41237bc6d72447d53a0b948f8faf03e075d9c0b7fa8b392fde940ef2e3a8afd76b48c5f9bc155dd7deefb19588"
+hash = "567113086ca971b761e926357e784968ac7dfa2b43d7b20c21390ece27d57ec59d90255d35922eedfc1fd34832062484d34d18188d7d57995af1d825787388c0"
 
 [update]
 [update.modrinth]
 mod-id = "yRrY3XII"
-version = "dNEETyZX"
+version = "XntyupDn"
