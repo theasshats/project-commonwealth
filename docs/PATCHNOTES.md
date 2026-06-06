@@ -5,6 +5,13 @@
 
 ## 0.6.0 — Foundation
 
+Sodium is now in the pack, which should substantially raise frame rate. Profiling traced the low
+spawn frame rate to the vanilla chunk renderer running on the CPU rather than the graphics card, and
+Sodium replaces that renderer. It previously could not be used because it made all world textures
+invisible alongside Create: Aeronautics; a compatibility mod now bridges the two, so Sodium runs with
+Aeronautics and its airships. Sodium is client-side only and does not affect the server. Shaders
+remain unsupported with Aeronautics.
+
 Added Chunky, a chunk pre-generation tool. Running `/chunky radius <n>` then `/chunky start` on the
 server generates the surrounding area ahead of play, so chunks are already on disk before anyone
 explores into them. This keeps live worldgen from stalling the game during a session and gives a

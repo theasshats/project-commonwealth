@@ -2213,6 +2213,11 @@ hash = "f467f74e195e8366bdd3965d997f3fd42d3e2c4f2e6464fd54a35028673a9d49"
 metafile = true
 
 [[files]]
+file = "mods/sable-new-sodium-compat.pw.toml"
+hash = "914c0c017cd1bffccfaa1482d01baf72d4b868ed878c0d613126ee64e22b468b"
+metafile = true
+
+[[files]]
 file = "mods/sable.pw.toml"
 hash = "e4c43e944439f4941ba1c417ab3ac1ec3dbd9c95a8456a2069641d031317e142"
 metafile = true
@@ -2275,6 +2280,11 @@ metafile = true
 [[files]]
 file = "mods/snowy-spirit.pw.toml"
 hash = "7efbe0c8b42d3231f12f2d7c2be3c6ff4395a50240371ddceb387befcf1e9597"
+metafile = true
+
+[[files]]
+file = "mods/sodium.pw.toml"
+hash = "d58deb7c54a1b381b1bb6583c016010b0eb0745612687605cce67980637961a7"
 metafile = true
 
 [[files]]
@@ -2475,6 +2485,11 @@ metafile = true
 [[files]]
 file = "mods/valarian-conquest.pw.toml"
 hash = "5e116858f979b7f0f3040334d352a02176233e1345c656d0423d8d0a6053d8ae"
+metafile = true
+
+[[files]]
+file = "mods/veil-lib.pw.toml"
+hash = "627a8401f992e449475d2403d2f02091ade5da0687d5a8dae7b0e9f8986053bc"
 metafile = true
 
 [[files]]
