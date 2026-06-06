@@ -40,6 +40,8 @@ hotbar. Slot locking continues to function normally.
 Cactus is no longer offered as a building material in the cases where it produced broken decoration
 blocks.
 
+Iron's Spellbooks spellbooks now fit the dedicated spellbook accessory slot.
+
 ### Spawns and content
 
 Rotten Creatures now spawn within dungeon, crypt, and ruin structures rather than across the open
