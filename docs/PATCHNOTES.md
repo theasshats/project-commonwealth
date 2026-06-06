@@ -3,6 +3,23 @@
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme", a short lead paragraph, then sections (see CLAUDE.md). -->
 
+## 0.6.0 — Foundation
+
+A round of fixes for content that several mods meant to ship but that was being dropped at load
+because of broken JSON in their files. None of it crashed the game, so it went unnoticed; the result
+was recipes that didn't exist and blocks that dropped nothing. Each was checked against the mod's own
+files and restored.
+
+Recipes restored: the Farm and Charm mincer now processes the ores and logs from Create: TFMG,
+Occultism, Iron's Spells, Let's Do Vinery, and Create that it was meant to; Snowy Spirit's wreaths,
+gumdrops, glow lights, and gingerbread craft again; whiskey, vodka, and tequila bottles can be filled
+at a Spout; and the cherry-sapling cutting recipe works. Crushed raw silver again smelts and blasts
+into a Galosphere palladium ingot (Galosphere renamed its metal silver to palladium).
+
+Block drops fixed: the Create treadmill, the komainu/kawauso/tanuki statues, the Stoneholm cleric
+chest, and the Trail and Tales pottery cooking pot and lantern fruits now drop correctly. Smokeleaf
+Industries houses can generate in plains again.
+
 ## 0.5.4 — Guns crafted through Create
 
 Guns, ammunition, and attachments are now built through their Create recipes, not assembled at the
