@@ -41,19 +41,16 @@ cat > "${OUT_DIR}/mmc-pack.json" <<EOF
 }
 EOF
 
-# JVM args + heap come from the shared single source of truth scripts/instance-jvm.cfg
-# (also read by the editor builder, tools/editor-src/internal/builder/builder.go) so the
-# installer build and the editor build can't drift on Java flags — edit them there.
-JVM_BLOCK="$(grep -vE '^[[:space:]]*(#|$)' scripts/instance-jvm.cfg)"
-
-# instance.cfg — display name, memory, JVM args (from instance-jvm.cfg)
+# instance.cfg — display name, memory, JVM args (Aikar's flags, 12G heap)
 cat > "${OUT_DIR}/instance.cfg" <<EOF
 [General]
 ConfigVersion=1.2
 InstanceType=OneSix
 JavaArchitecture=64
 JavaVersion=21
-${JVM_BLOCK}
+JvmArgs=-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1
+MaxMemAlloc=12288
+MinMemAlloc=8192
 OverrideJavaArgs=true
 OverrideMemory=true
 PermGen=256

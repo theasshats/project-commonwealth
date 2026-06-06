@@ -44,35 +44,11 @@ If you want to pin to a specific old release for some reason, edit the pack URL 
 
 ## Memory and Java args
 
-The instance ships with a safe default: **8 GB min / 12 GB max, G1GC (Aikar's flags)**. That suits a machine with 16 GB or more of system RAM. Tune it to your hardware in **Edit Instance → Settings → Java**.
+The instance comes pre-configured: 8 GB min / 12 GB max, Aikar's flags applied. If your machine has less than 12 GB total RAM, lower the max:
 
-### How much heap to give it
-
-The pack's live working set is roughly **5-7 GB** at render distance 32 — most of an 8 GB heap — so the heap has to leave headroom on top of that, and **render distance is the biggest lever**: lower RD/simulation distance loads fewer chunks and entities, which shrinks the working set so a smaller heap fits.
-
-| System RAM | Max heap (`-Xmx`) | Notes |
-|---|---|---|
-| 8 GB | 4-5 GB | Tight. Run **render distance 8-12**; expect GC pressure at high RD. |
-| 12-16 GB | 8 GB | Comfortable at RD 12-16. The shipped default's 12 GB max is fine here too if nothing else is open. |
-| 24 GB+ | 10-12 GB | Headroom for RD 32. |
-| 32 GB+ | 12-16 GB | Plenty; consider the ZGC option below for smoother frames. |
-
-Set both **Minimum** and **Maximum** memory to the chosen value (a fixed heap is steadiest). **Don't go below 4096 MB — the pack will OOM.** More than ~16 GB buys nothing: the working set doesn't need it, and a huge heap just makes garbage collection slower.
-
-### Smoother frames on a high-RAM machine (optional, advanced)
-
-The default G1 collector pauses the game briefly (~30 ms) every few seconds to collect garbage — usually invisible, but on a high-refresh display it can show up as a periodic dip in the 1% lows. If you have **24 GB+ of system RAM**, switching to **Generational ZGC** removes those pauses (sub-millisecond GC). It needs a larger, fixed heap to work well with this pack's high allocation rate — **don't use it below a 12 GB heap**.
-
-In **Edit Instance → Settings → Java → JVM arguments**, replace the default args with:
-
-```
--XX:+UseZGC -XX:+ZGenerational -XX:+AlwaysPreTouch -XX:+ParallelRefProcEnabled -XX:+DisableExplicitGC -XX:+PerfDisableSharedMem
-```
-
-and set min = max = 12288 (or 16384 if you have 32 GB+). Requires Java 21. If frames don't improve or RAM is tight, revert to the default — ZGC is a spend-RAM-for-smoothness trade, not a fix for low memory.
-
-> **These settings are per-install.** Changing your instance's memory or Java args only affects your copy. The installer ships the default above for **fresh** installs; updating the pack does not change an instance you've already tuned. (Maintainers: the shipped default lives in `scripts/instance-jvm.cfg`, the single source for both the installer and the editor build.)
-
+- Right-click instance → **Edit Instance** → **Settings** → **Java**
+- Set **Maximum memory allocation** to something safe (4096–6144 MB on a low-RAM box)
+- Don't go below 4096 MB — the pack will OOM.
 
 ## Troubleshooting
 
