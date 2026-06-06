@@ -5,47 +5,51 @@
 
 ## 0.6.0 — Foundation
 
-A foundation pass focused on performance, a full mod refresh, and cleanup. The headline is Sodium,
-which roughly doubles frame rate.
+This release concentrates on performance and maintenance: a new renderer, a full pass of mod updates,
+spawn tuning, and a set of fixes and removals.
 
 ### Performance
 
-- Sodium is now in the pack. Frame rate at a settled base roughly doubled in testing. The slowdown
-  was the game's default terrain renderer running on the CPU rather than the graphics card, and
-  Sodium replaces that renderer. It previously could not be used because it turned all world textures
-  invisible alongside Create: Aeronautics; a compatibility layer now bridges the two, so Sodium runs
-  with Aeronautics and its airships. Sodium is client-side only and does not affect the server.
-  Shaders remain unsupported with Aeronautics.
-- Mob spawning is tuned to ease server load. Some of the more demanding creature mods — Born in
-  Chaos, Mowzie's Mobs, and Grimoire of Gaia — were spawning often enough to cost noticeable tick
-  time. Their natural spawn rates are reduced (not removed); the creatures still appear, just less
-  frequently. This is a first pass and will be retuned with play.
-- Added Chunky, a chunk pre-generation tool. Running `/chunky radius <n>` then `/chunky start` on the
-  server generates the surrounding area ahead of play, so chunks are already on disk before anyone
-  explores into them, which keeps live world generation from stalling a session.
+Sodium has been added. It replaces the default terrain renderer, which carried out its work on the
+CPU rather than the graphics card and was the primary cause of low frame rates at an established
+base. In testing, frame rates approximately doubled. Sodium could not be used previously because it
+left all world textures invisible alongside Create: Aeronautics; a compatibility layer now reconciles
+the two, so Sodium runs together with Aeronautics and its airships. Sodium is client-side only and
+has no effect on the server. Shaders remain unsupported with Aeronautics.
+
+Natural spawn rates have been reduced for several of the more demanding creature mods — Born in
+Chaos, Mowzie's Mobs, and Grimoire of Gaia. These mobs were appearing often enough to take up a
+noticeable share of server tick time. They still spawn, only less frequently. This is an initial
+adjustment and will be revised with further play.
+
+Chunky, a chunk pre-generation tool, has been added. Running `/chunky radius <n>` followed by
+`/chunky start` on the server generates the surrounding area in advance, so chunks are saved before
+players reach them and live world generation does not stall a session.
 
 ### Updates
 
-- About a month of mod updates were applied across the pack, and the NeoForge version was raised to
-  21.1.233 to match what the updated mods require. Update your launcher's loader version to 21.1.233
-  before playing.
+Approximately a month of mod updates has been applied across the pack. NeoForge has been raised to
+21.1.233 to meet the requirements of the updated mods. Update your launcher's loader version to
+21.1.233 before playing.
 
 ### Fixes
 
-- Locked-slot indicators from Inventory Profiles Next no longer show as stray arrows on the hotbar.
-  Slot locking still works.
-- Cactus is no longer offered as a building-block material where it produced broken decoration
-  blocks.
+The locked-slot indicators from Inventory Profiles Next no longer appear as stray arrows on the
+hotbar. Slot locking continues to function normally.
+
+Cactus is no longer offered as a building material in the cases where it produced broken decoration
+blocks.
 
 ### Spawns and content
 
-- Rotten Creatures now spawn inside dungeon, crypt, and ruin structures — vanilla ones plus those
-  from YUNG's Better Dungeons, Dungeons and Taverns, L_Ender's Cataclysm, and the When Dungeons Arise
-  Seven Seas set — rather than wandering the open world.
+Rotten Creatures now spawn within dungeon, crypt, and ruin structures rather than across the open
+world. This covers the relevant vanilla structures together with those from YUNG's Better Dungeons,
+Dungeons and Taverns, L_Ender's Cataclysm, and the When Dungeons Arise Seven Seas set.
 
 ### Removed
 
-- Umapyoi and five unused library mods were removed; nothing that depended on them remains.
+Umapyoi and five unused library mods have been removed. Nothing that depended on them remains in the
+pack.
 
 ## 0.5.4 — Guns crafted through Create
 
