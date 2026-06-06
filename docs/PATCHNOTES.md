@@ -11,10 +11,11 @@ was recipes that didn't exist and blocks that dropped nothing. Each was checked 
 files and restored.
 
 Recipes restored: the Farm and Charm mincer now processes the ores and logs from Create: TFMG,
-Occultism, Iron's Spells, Let's Do Vinery, and Create that it was meant to; Snowy Spirit's wreaths,
-gumdrops, glow lights, and gingerbread craft again; whiskey, vodka, and tequila bottles can be filled
-at a Spout; and the cherry-sapling cutting recipe works. Crushed raw silver again smelts and blasts
-into a Galosphere palladium ingot (Galosphere renamed its metal silver to palladium).
+Occultism, Iron's Spells, Let's Do Vinery, and Create that it was meant to; Create: Compressed's
+crushed-pile washing (copper, gold, iron, zinc, silver), dough, and polished rose quartz work again;
+the alcohol base bottle can be filled at a Spout; and the cherry-sapling cutting recipe works.
+Crushed raw silver again smelts, blasts, and washes into a Galosphere palladium ingot or nugget
+(Galosphere renamed its metal silver to palladium).
 
 Block drops fixed: the Create treadmill, the komainu/kawauso/tanuki statues, the Stoneholm cleric
 chest, and the Trail and Tales pottery cooking pot and lantern fruits now drop correctly. Smokeleaf

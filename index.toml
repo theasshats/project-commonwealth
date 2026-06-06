@@ -29,16 +29,8 @@ file = "config/incontrol/spawn.json"
 hash = "f34b87e0593eec7e4efca49c8c159e586c9a2ad5bc9046ae396919a711471311"
 
 [[files]]
-file = "kubejs/data/alcohol_industry/recipe/filling/tequila_bottle.json"
-hash = "7c00ab14f65907192a85966a0cf4f1a9def458e2e518b5c744306d37fa00f17f"
-
-[[files]]
-file = "kubejs/data/alcohol_industry/recipe/filling/vodka_bottle.json"
-hash = "e6f6d056fd56c9f7c34f6fcafb27a75b0ce76c73125d93efa363ffdfdd35133a"
-
-[[files]]
-file = "kubejs/data/alcohol_industry/recipe/filling/whiskey_bottle.json"
-hash = "9fc24508b8ce19dfc62b84242501e7ca8c779ae2f4b27fa6297544d4b2fdbb88"
+file = "kubejs/data/alcohol_industry/recipe/filling/alcohol_base_bottle.json"
+hash = "0a8468385310a99c6768282db5f3276d34a53ee7b18d5402e4c6419565fff9f2"
 
 [[files]]
 file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_deepslate_diamond_ore_feature_biome_modifier.json"
@@ -67,6 +59,38 @@ hash = "5360b16ee2dd990071a861e8788133fd6233ae4a053da5b9312bb109147d2786"
 [[files]]
 file = "kubejs/data/create_armorer/data/blocks/create_workbench.json"
 hash = "2fe0d845b737b1648e9bcc193d5584bb4f1b0faeb411977a664099ac27476714"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/mixing/dough_block.json"
+hash = "539ec4adf10ff8dc469e6eece82c451c5af5d504371c2c82d10663f5e3755c28"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/sandpaper_polishing/polished_rose_quartz_block.json"
+hash = "fd742e7f083a45ba0f26972ffa84ab50448be2d1e98031ed281572cee5db8298"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/splashing/crushed_raw_copper_pile.json"
+hash = "0202588d3912441647e14190342b7a714934bd2936cc2712a869d75bb9d326dc"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/splashing/crushed_raw_gold_pile.json"
+hash = "346304e32eaf5d23852902f54cf1f2b7c5a4ec95d8ba8e7ed2016e5758617e6c"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/splashing/crushed_raw_iron_pile.json"
+hash = "b97475184db828323ad58b96ca6e03e0be2e58bcfa3049a6f10d0cd91d1b2ea7"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/splashing/crushed_raw_zinc_pile.json"
+hash = "5b79576f4d8b2820ed8e5dbd843ed7fa60c6114db82f28b8bde94454576949ec"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/splashing/galosphere/crushed_raw_silver_pile.json"
+hash = "1e0ad7c81c922a7481b3d0a769af93984c73de7ea8138336c088c0fc7f3824f6"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/splashing/wheat_flour_pile.json"
+hash = "7c197d59824b5efe758c7e41b5ac57c27ea78123370323622aa1bba87c04c706"
 
 [[files]]
 file = "kubejs/data/create_ironworks/neoforge/biome_modifier/deepslate_tin_ore_biome_modifier.json"
@@ -743,210 +767,6 @@ hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 [[files]]
 file = "kubejs/data/smokeleafindustries/tags/worldgen/biome/has_structure/smokeleaf_house_biomes.json"
 hash = "4474d8995572248bcbc4dd348bcdc5fbc030cd96051fdf68a00904a996611bce"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/candy_cane.json"
-hash = "b83d7a0f3977dda2bd4892bd50968b6d29a6cd8d914f1bc5c95b11406566919e"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/candy_cane_block.json"
-hash = "da889f61ec81bbc93454adc13353cab8ab8b9d357848715d0bc60b4950d0fcb6"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/candy_cane_block_uncrafting.json"
-hash = "ff41cfa72cb9d1cd29e4ac198f5535c216b6bffa54101f541f7b21f4099dbb27"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/eggnog.json"
-hash = "dbff80f6821508cdf823e8e0d86e7bf6d83b14f865c45fa37b5caf7bb8a053b0"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/ginger_crate.json"
-hash = "db9249969bc4a28c774b35c1d1af690f296155cf0851e1eb8ef5a7954b120520"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/ginger_crate_uncrafting.json"
-hash = "b0cc76555c5aa42a162c27ea6dc93d45a1225ac594cf37a92b146c8caf8dd5d4"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gingerbread.json"
-hash = "5e6ca3ae3d9d53d9f93b3079a9e81ceb5d561c4df45a24fe014d30cb1298302c"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gingerbread_compressed.json"
-hash = "e1ecee6a79f036cb78e9bd6cdd71a55eb04d90f2a944407c9d9d886855ff0735"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gingerbread_cookie.json"
-hash = "2e37c001de76e694a0c39c5a49ff22a9a6c3e52185769b4abe0e5d942b875e71"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gingerbread_door.json"
-hash = "ad8dbcee60847a8037a37bb295cb50b4e8b2f2b05a520dc2864b3e15e24426d8"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gingerbread_frosted.json"
-hash = "f2128dd9484686a7adc74b4d8934522e9e4407db692c3a62d37721b226192426"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gingerbread_slab.json"
-hash = "5e15bb48a014577ef1862b0885fd42a0a707ce3ac5c7cfccb2d13377db8b7666"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gingerbread_stairs.json"
-hash = "3d648bf2ddef6074b105bf28aa9b4d87a599db7c98d58734b0a76d9b4b0ec0c6"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gingerbread_trapdoor.json"
-hash = "319383997fc096bfd9378988cea1ac9e4cd4988316687139414b1012137ef3b7"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_black.json"
-hash = "065e4d110e41a7a8a81ba30f565cfcb4a72e0db0cb07ffca56455fd4f7e01b81"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_blue.json"
-hash = "d1565491477690fc9d01fdda5310735b585eef3f03dad45b4992d09dce8239a7"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_brown.json"
-hash = "79031ba0f7a5b835c1de4be51517139a801d1f7be3ef9400054f5305f99d9910"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_cyan.json"
-hash = "fc5679ab5c6309185d3905c828429f129e1ebf9099565d56845e4f2591bcc3ad"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_gray.json"
-hash = "94781f8a251279175dba7587dcf31c08830bdbc9849865dd9200665035c92387"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_green.json"
-hash = "0898892a59cd88c6e20dccf28edd7c9d7669dcd4521bfb38cdd5d17655a7ea05"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_light_blue.json"
-hash = "c0154a9c1464853ebc011cdd6bbb05fdacd4b29122d994416933065587f9edc0"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_light_gray.json"
-hash = "6da0bcb15ced57bc01d28205f002443ccb9b6a853bb2514ba89a7a4570ddd94e"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_lime.json"
-hash = "3190d8144c6ec9ea4b59de234d18fb04835bea198410eb91330e28b0785fca7b"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_magenta.json"
-hash = "0d5c175959fff7791475b99bc2ba914b38f548a11b3d88fabf03444f3dc0fe63"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_orange.json"
-hash = "8a2a2e550dec6b96b0c3a8a07449ea27a9df56e3482db9b0e4020d11dfecc5c7"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_pink.json"
-hash = "450170f04f39a67534fc6aacd53280a29f17c7375ac0b356d2b71ed3247410eb"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_prismatic.json"
-hash = "40d54374a1046262959ef2921638b6a0cc9288831726a61d632d2bc03116e8f3"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_purple.json"
-hash = "40a94ff28c78969b758fec7d7d557daf30e459552b1d4503ea0b4ae822578e72"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_red.json"
-hash = "5947d80bf5ba543e9a1300ce0830a38b38c530be68c993c09d02392f260fa6e8"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_white.json"
-hash = "d34767be765544754d88f40b97c2b9691257970a7169bbc13b340e5a656d1b6f"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/glow_lights_yellow.json"
-hash = "b7b1773bfc3905d404ded470f2b2077e4b78a25f3267afa6bc075881af3a9b24"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_black.json"
-hash = "56acaff79dc32f996f7f2247d2b522b3539f19bc61d12c4523e7732881299758"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_blue.json"
-hash = "86372202800d6d49eb8328f3b3b2053919c2538d7e3c37991a7b1a9f8e61129c"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_brown.json"
-hash = "e301a738a58e7bdc572cf195f8c6ede7f278e4dbbfe5ec7907fa3adbea8c97e4"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_cyan.json"
-hash = "a45c104f3aba3461ac2b8944872c1f63c6ce332e33a1b307fb879331ff64110e"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_gray.json"
-hash = "0a4d624ee7ed136a08256edb50129f50be3c9befbf855151c6dda175d97e6f99"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_green.json"
-hash = "054340134e403de165ca6b0621adcba35db43ef35b091246055dcf37ab7fa1c1"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_light_blue.json"
-hash = "edf5313f555430fdf72e43da0e014b5025b0a22ade72a1687f9fc5312ff505ac"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_light_gray.json"
-hash = "818c25bea6f1e7d9dc936c1fae3b0966dc145381de7f36e40f9a11222768ac05"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_lime.json"
-hash = "a16d459a7721a7e52b6829d9d0b353955e27488d876a6720f23a9df756c2dda1"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_magenta.json"
-hash = "be94c94b13b31386fd05cb5432f16e15faa34598925c60ea39790e7dc2dca2e4"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_orange.json"
-hash = "0b6a6d4442f06c42ad57d2cbe7f880c837bcfe4ba6e99cea298b9769791d35b7"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_pink.json"
-hash = "d723143b2dcfc8eccddc1ca5b6deaf995ba0cc3e76fde32801f971be688762b8"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_purple.json"
-hash = "7da7a1b826f2c2d4e6c4538428c5c6c5857d7bac1d54ca0a3989da042253e373"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_red.json"
-hash = "838f1e286675273aaef9e03149e6e0b9e09e58bec1feb30c5d0e9ae6062ace96"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_white.json"
-hash = "10622bde98443505a61f37bfd0daa5bcdb83f89afc44c04ba2fe68d7dd8ac9d1"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/gumdrop_yellow.json"
-hash = "ead584c9cd1852bf9716275c5b9ec9ffec1bcdd3c4ff26d369eae4b393221305"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/red_dye_from_ginger_flower.json"
-hash = "210f400232ccfb5e9785637aa61f7691a0ffc880ab87e536668c2ce771031436"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/sled_oak.json"
-hash = "1d3a7cc1710f398655b345eac68203f0fb6a61b3e4cedb76b00c4f5ca586089f"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/snow_globe.json"
-hash = "4a326bac6ad1f7a28756068d77cc120f437628fac15a250d0741ab096efe8103"
-
-[[files]]
-file = "kubejs/data/snowyspirit/recipe/wreath.json"
-hash = "0369eded180a08ff03dce28c13f459157840c40b930ebbd788c59f98a817564d"
 
 [[files]]
 file = "kubejs/data/stoneholm/loot_table/cleric.json"

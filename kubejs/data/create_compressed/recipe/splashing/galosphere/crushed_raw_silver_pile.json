@@ -1,0 +1,4 @@
+{ "neoforge:conditions": [ { "type": "neoforge:mod_loaded", "modid": "galosphere" } ],
+  "type": "create:splashing",
+  "ingredients": [ { "item": "create_compressed:crushed_silver_pile" } ],
+  "results": [ { "id": "galosphere:palladium_nugget", "count": 81 } ] }

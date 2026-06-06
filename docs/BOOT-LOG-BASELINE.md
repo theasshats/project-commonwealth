@@ -3,7 +3,9 @@
 Documents the boot-log `ERROR` lines that are **not ours to fix** (upstream
 bugs, cosmetic, or no-ops for mods we don't ship), so they don't get
 re-investigated each boot. Companion to the content fixes in #119 (recipes)
-and #120 (loot/tags). Source: `latest.log`, 2026-06-02.
+and #120 (loot/tags). Reconciled against `latest.log`, 2026-06-06 (a later
+boot than the 2026-06-02 log the issues were filed from; the pack had updated
+in between, which moved a couple of items — see notes).
 
 After the #119/#120 overrides land, the remaining ERRORs should all map to an
 entry below. If a new one appears that isn't here, it's worth a look.
@@ -16,16 +18,36 @@ under `kubejs/data/`:
 - `recipe_integration` farm_and_charm mincer recipes for installed mods
   (tfmg, occultism, irons_spellbooks, vinery, create) — the `mod_laoded` typo,
   re-added with the corrected `neoforge:mod_loaded` condition.
-- Snowy Spirit recipes (wreaths, gumdrops, glow lights, gingerbread, …) — the
-  Fabric-only `snowyspirit:flag` resource condition stripped so they load on
-  NeoForge.
-- `alcohol_industry` whiskey/vodka/tequila bottle filling — re-authored to the
-  Create 6 filling schema (`neoforge:single` fluid ingredient, `id` result).
+- `alcohol_industry:filling/alcohol_base_bottle` — re-authored to the Create 6
+  filling schema (`neoforge:single` fluid ingredient, `id` result).
 - `trailandtales_delight` cutting `cherry_petal_from_cherry_sapling` — the
   unwrapped result entry wrapped in `item`.
-- Create's Galosphere silver compat (smelting/blasting/splashing) — retargeted
-  to `galosphere:palladium_ingot` / `palladium_nugget` (Galosphere 1.5.3 fully
+- Create's Galosphere silver compat (smelting/blasting/splashing) **and**
+  `create_compressed`'s galosphere silver pile washing — retargeted to
+  `galosphere:palladium_ingot` / `palladium_nugget` (Galosphere 1.5.3 fully
   renamed silver→palladium; see the gotcha note below).
+- `create_compressed` Create-style processing recipes shipped with the
+  pre-Create-6 schema — the splashing crushed-pile washes (copper, gold, iron,
+  zinc, wheat flour, galosphere silver), `mixing/dough_block`, and
+  `sandpaper_polishing/polished_rose_quartz_block` — re-authored to the Create 6
+  schema (`id`/`count`/`chance` results, `neoforge:single` fluid). These are
+  newly surfaced by the mod update; the original 2026-06-02 log predates them.
+
+### Snowy Spirit — now loads natively, no override needed
+
+The 2026-06-02 log dropped all 50 Snowy Spirit recipes on the Fabric-only
+`snowyspirit:flag` resource condition. In the 2026-06-06 boot they load with no
+error: the pack now carries the Fabric resource-conditions API
+(`fabric_resource_conditions_api_v1`), so `snowyspirit:flag` resolves and the
+mod's own config toggles for those recipes are respected. An override would
+re-add them unconditionally and defeat those toggles, so **no Snowy Spirit
+override ships** — the earlier-planned one was dropped after the new log.
+
+### alcohol_industry — only the base bottle is broken now
+
+The 2026-06-02 log flagged whiskey/vodka/tequila bottle filling; on 2026-06-06
+those load fine and only `filling/alcohol_base_bottle` still fails (same stale
+schema). Only that one is overridden.
 - `createtreadmill` treadmill block drop — `treadmill_item` → `treadmill`.
 - `samurai_dynasty` komainu/kawauso/tanuki statue drops — wrong-namespace
   `minecraft:` → `samurai_dynasty:`, plus the missing `block` key on the
