@@ -18,8 +18,6 @@ under `kubejs/data/`:
 - `recipe_integration` farm_and_charm mincer recipes for installed mods
   (tfmg, occultism, irons_spellbooks, vinery, create) — the `mod_laoded` typo,
   re-added with the corrected `neoforge:mod_loaded` condition.
-- `alcohol_industry:filling/alcohol_base_bottle` — re-authored to the Create 6
-  filling schema (`neoforge:single` fluid ingredient, `id` result).
 - `trailandtales_delight` cutting `cherry_petal_from_cherry_sapling` — the
   unwrapped result entry wrapped in `item`.
 - Create's Galosphere silver compat (smelting/blasting/splashing) **and**
@@ -43,11 +41,17 @@ mod's own config toggles for those recipes are respected. An override would
 re-add them unconditionally and defeat those toggles, so **no Snowy Spirit
 override ships** — the earlier-planned one was dropped after the new log.
 
-### alcohol_industry — only the base bottle is broken now
+### alcohol_industry — base bottle is upstream-broken, not overridable
 
-The 2026-06-02 log flagged whiskey/vodka/tequila bottle filling; on 2026-06-06
-those load fine and only `filling/alcohol_base_bottle` still fails (same stale
-schema). Only that one is overridden.
+The 2026-06-02 log flagged whiskey/vodka/tequila bottle filling; those now load
+fine. Only `filling/alcohol_base_bottle` still fails — and **it can't be fixed
+from our side.** Re-authoring it to the Create 6 schema cleared the schema
+error but exposed the real problem: its result, `alcohol_industry:alcohol_base`,
+is **not a registered item** (the drinks beer/vodka/whiskey/tequila each have an
+item + lang entry; `alcohol_base` has only a vestigial model, no lang key, no
+registration). The recipe fills a bottle to produce a non-existent item — an
+upstream dev leftover. No override ships for it; the single remaining KubeJS
+"empty output" warning on it is accepted noise. (Reported-upstream candidate.)
 - `createtreadmill` treadmill block drop — `treadmill_item` → `treadmill`.
 - `samurai_dynasty` komainu/kawauso/tanuki statue drops — wrong-namespace
   `minecraft:` → `samurai_dynasty:`, plus the missing `block` key on the
@@ -57,8 +61,13 @@ schema). Only that one is overridden.
 - `trailandtales_delight` pottery cooking pot — `farmersdelight:copy_meal`
   (removed in FD 1.3.1) → vanilla `minecraft:copy_components`; lantern_fruits
   boolean `ropelogged: false` → string `"false"`.
-- `smokeleafindustries` house structure biome tag — `#miencraft:is_plains`
-  typo → `#minecraft:is_plains`.
+- `smokeleafindustries` house structure biome tag — the broken
+  `#miencraft:is_plains` reference. The override uses `"replace": true` (a
+  merge would keep the mod's broken entry) and points at `#c:is_plains`. Note:
+  `#minecraft:is_plains` (what #120 assumed the typo should be) **does not
+  exist** — `is_plains` is not a vanilla biome tag; the valid convention tag is
+  `c:is_plains`, which is exactly the `required:false` fallback the mod already
+  listed. Verified against the 2026-06-06 playtest log.
 
 ### Galosphere silver→palladium — CLAUDE.md gotcha is stale for 1.5.3
 
@@ -85,6 +94,9 @@ item anymore. The tag guidance still holds — it's `c:ingots/palladium`, never
   `cmpackagecouriers:*` (references uninstalled `create_factory_logistics`),
   `fxntstorage:*`, `s_a_b:glassarmor` — target mods/deps not installed.
 - `irons_spellbooks:test/ring_gen_break_me` — upstream dev/test artifact.
+- `create_compressed:splashing/oreganized/crushed_raw_lead_pile` — oreganized
+  not installed; the recipe skips ("not a json object" under its absent-mod
+  condition). The installed-mod create_compressed piles are fixed (see above).
 - Most of `recipe_integration`'s ~3,700 conditional recipes — gated on mods we
   don't ship (regions_unexplored, eternal_starlight, cobblemon, sgjourney, …).
 
@@ -106,6 +118,15 @@ item anymore. The tag guidance still holds — it's `c:ingots/palladium`, never
   (4) — benign double-registration.
 - **GeckoLib / AzureLib / touhou_little_maid** animation/expression parse
   failures — asset bugs in those mods; cosmetic.
+- **Epic Samurais statue models** (3 `ModelBakery` WARNs) — the komainu/kawauso/
+  tanuki statue block models parent to `minecraft:tanuki_statue` etc. (the same
+  wrong-namespace typo as the loot tables, but on the client model side). The
+  loot drops are fixed; this is a separate client-asset bug that would need a
+  `kubejs/assets/` model override to silence. Cosmetic (statue may render with a
+  missing-model fallback). Upstream report candidate.
+- **Trail & Tales `budding_lantern_fruits` model** — references
+  `farmersdelight:block/crop_cross`, a model FD removed in 1.3.x. Cosmetic
+  (growth-stage model); the lantern_fruits loot drop itself is fixed.
 - **Xaero's** `Online mod data expired!` — version phone-home, irrelevant offline.
 - `Invalid path in pack` packaging litter (`TODO.txt`, `LICENSE.txt`,
   `... copy.json`, `...(1).ogg`) — harmless, upstream only.

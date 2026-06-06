@@ -49,10 +49,6 @@ file = "kubejs/assets/inventoryprofilesnext/textures/gui/overlay_new.png"
 hash = "cce47379706d8eb5075a66e9710353bc659971b4f26f1fe1e9813956fdfe0ee4"
 
 [[files]]
-file = "kubejs/data/alcohol_industry/recipe/filling/alcohol_base_bottle.json"
-hash = "0a8468385310a99c6768282db5f3276d34a53ee7b18d5402e4c6419565fff9f2"
-
-[[files]]
 file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_deepslate_diamond_ore_feature_biome_modifier.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
@@ -786,7 +782,7 @@ hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
 file = "kubejs/data/smokeleafindustries/tags/worldgen/biome/has_structure/smokeleaf_house_biomes.json"
-hash = "4474d8995572248bcbc4dd348bcdc5fbc030cd96051fdf68a00904a996611bce"
+hash = "db85cdb6a55253b6025b2b107d000577eb1a4b53902fd01f010f84a632b41afb"
 
 [[files]]
 file = "kubejs/data/stoneholm/loot_table/cleric.json"
