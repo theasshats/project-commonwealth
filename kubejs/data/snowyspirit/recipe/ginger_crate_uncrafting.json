@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "snowyspirit:ginger_crate"
+    }
+  ],
+  "result": {
+    "id": "snowyspirit:ginger",
+    "count": 9
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    { "item": "minecraft:glass_bottle" },
+    { "type": "neoforge:single", "amount": 100, "fluid": "alcohol_industry:whiskey" }
+  ],
+  "results": [
+    { "id": "alcohol_industry:whiskey" }
+  ]
+}
