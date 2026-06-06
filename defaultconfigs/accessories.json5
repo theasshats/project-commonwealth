@@ -1,5 +1,5 @@
 {
-	"useExperimentalCaching": false,
+	"useExperimentalCaching": true,
 	"clientOptions": {
 		"equipControl": "MUST_NOT_CROUCH",
 		"forceNullRenderReplacement": false,

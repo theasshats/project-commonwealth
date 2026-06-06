@@ -1,10 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "config/accessories.json5"
-hash = "16eae24dd7d73ea1409799da1d0912953584a3349ebf8d0dfb38be932a50fa53"
-
-[[files]]
 file = "config/accessories_compat.json5"
 hash = "7ddb79a2c30485cf2f8ae3c641b6cc48d4a75c7752010ec16f8b0a22b4ea9ae6"
 
@@ -47,6 +43,10 @@ hash = "978c0e1e839c71c23f12113a14c18ebffde93f4bba0ba4193aa5f29af91b50ec"
 [[files]]
 file = "config/mixinhelper.json"
 hash = "08e068267eaa4a73c2b0caa17669f5b5516f6de7458c547579a9d8700924e63a"
+
+[[files]]
+file = "defaultconfigs/accessories.json5"
+hash = "2d34c1d20dfa9047a4ba9bfab54cbd89232cc0ba966acf0aac1f1c110581f624"
 
 [[files]]
 file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_deepslate_diamond_ore_feature_biome_modifier.json"
