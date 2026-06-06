@@ -25,6 +25,30 @@ spawns in code (no per-mob config toggle, no datapack `add_spawns` to override),
 so an In Control! `deny` is the cleanest kill switch. The spawn **egg** still
 works (admin/testing); only natural spawning is blocked.
 
+### Heavy-AI mob spawn throttle (perf — #98 / #83)
+A `/spark profiler` of the integrated-server tick (settled, pre-generated world)
+showed the **lows/TPS spikes are mob-AI pathfinding**, not render and not
+Create/MineColonies. The mods most present in the spike capture were **Born in
+Chaos** (`born_in_chaos_v1`), **Mowzie's Mobs** (`mowziesmobs`), and **Grimoire
+of Gaia** (`grimoireofgaia`). First-pass mitigation: three `mod`-scoped rules
+using In Control!'s `random` condition (fraction of spawn attempts the deny rule
+fires on) to **throttle, not remove** their natural spawns — keeping the content
+while cutting the standing population that pathfinds each tick:
+
+| Mod | `random` | Effect |
+|---|---|---|
+| `born_in_chaos_v1` | 0.6 | ~60% of natural spawns denied (the bulk undead spawner — biggest lever) |
+| `grimoireofgaia` | 0.5 | ~50% denied (the kobold rule above still fully denies kobolds) |
+| `mowziesmobs` | 0.5 | ~50% denied (rare elites; secondary, throttles standing count) |
+
+Spawn **eggs** and structure/boss mechanics are unaffected (only natural spawn
+attempts roll against `random`). These numbers are a **deliberate first pass** —
+tune against a fresh TPS profile after playtest; if the lows persist, the next
+levers are a global mob-cap trim and Cold Sweat / Accessories per-tick cost
+(both showed in the *baseline* tick, not the spikes). Server-perf axis tracked
+under #83 (and the TPS routine #147), distinct from the now-solved client-render
+goal in #98.
+
 ### Rotten Creatures — structures only (Task C)
 Rotten Creatures spawns are **code-driven** (`CommonConfig` weights + per-mob
 `can_*_spawn_on` biome tags) — there are no `add_spawns` biome modifiers to

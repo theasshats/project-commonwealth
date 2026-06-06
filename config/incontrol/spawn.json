@@ -80,5 +80,21 @@
       "rottencreatures:dead_beard"
     ],
     "result": "deny"
+  },
+
+  {
+    "mod": ["born_in_chaos_v1"],
+    "random": 0.6,
+    "result": "deny"
+  },
+  {
+    "mod": ["grimoireofgaia"],
+    "random": 0.5,
+    "result": "deny"
+  },
+  {
+    "mod": ["mowziesmobs"],
+    "random": 0.5,
+    "result": "deny"
   }
 ]

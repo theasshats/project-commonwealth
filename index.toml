@@ -30,7 +30,7 @@ hash = "abe2744c46c81c28ef0bee5cc5cbf63c6982ee589f54ec06c9b31d258f841051"
 
 [[files]]
 file = "config/incontrol/spawn.json"
-hash = "dab6bc08c51c84168ed4f0193b87a8c5a5109c742f11b1e49c73b95003dcecc3"
+hash = "6e7bdbcf03f24075bf5ab15be98f0647aa002af96b624ba449bfe200910ab48c"
 
 [[files]]
 file = "config/inventoryprofilesnext/inventoryprofilesnext.json"
