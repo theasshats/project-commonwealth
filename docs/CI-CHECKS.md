@@ -72,11 +72,15 @@ It distinguishes the two cases, because their commit policy differs:
   whatever `refresh` produces — file-list changes from `main` are legitimate (a mod added on another
   branch). It auto-resolves **only** when every conflicting file is regenerable:
   - `index.toml` — always (rebuilt wholesale by `refresh`).
-  - `pack.toml` — only if the sides differ *solely* in the `[index]` hash line; if either also
-    touched `version` / `minecraft` / `neoforge`, that's a human decision and it bails.
+  - `pack.toml` — when the sides differ *solely* in the `[index]` hash, or *solely* in the `version`
+    line with this branch's version **ahead** of main's (a version branch folding in the current
+    release while keeping its own higher version). A branch whose version is *below* main's is treated
+    as **superseded** (flagged, or auto-retired if it's an empty staged slot); any other field
+    (`minecraft` / `neoforge`) differing is a human decision → it bails.
   - **Anything else** (a `.pw.toml` edited on both sides, KubeJS, config) is a real content
     conflict — the merge is aborted and the PR is asked to resolve by hand (once — it won't re-nag on
-    every push to `main`).
+    every push to `main`). **Exception:** `docs/PATCHNOTES.md` is auto-merged by a `merge=union` driver
+    (`.gitattributes`) — both sides' changelog sections are kept, so the changelog never blocks a fold.
 - **Stale (no merge needed).** The branch is already up to date but the author edited a tracked pack
   file and pushed without `packwiz refresh`. It auto-commits (with `[skip ci]`) as long as the index's
   changes stay within **known pack directories** — the dirs in `scripts/instance-dirs.txt` (the shared

@@ -1,16 +1,16 @@
 # Derpack X — Patch Notes
 
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
-     "## X.Y.Z — Theme (diff vs prev)", a short lead paragraph, then sections (see CLAUDE.md). -->
+     "## X.Y.Z — Theme", a short lead paragraph, then sections (see CLAUDE.md). -->
 
-## 0.6.0 — Foundation (diff vs 0.5.4)
+## 0.6.0 — Foundation
 
 Added Chunky, a chunk pre-generation tool. Running `/chunky radius <n>` then `/chunky start` on the
 server generates the surrounding area ahead of play, so chunks are already on disk before anyone
 explores into them. This keeps live worldgen from stalling the game during a session and gives a
 clean, settled area for performance testing.
 
-## 0.5.4 — Guns crafted through Create (diff vs 0.5.3)
+## 0.5.4 — Guns crafted through Create
 
 Guns, ammunition, and attachments are now built through their Create recipes, not assembled at the
 gun smith table. The table no longer offers them — nor the stock TaCZ weapons — so the path is the
@@ -18,7 +18,7 @@ Create machinery the recipes were always meant to run on. Use JEI to find a gun'
 smith table blocks are no longer craftable, since they no longer do anything. Guns and parts you
 already have are unaffected.
 
-## 0.5.3 — Gunsmith delivery fix (diff vs 0.5.2)
+## 0.5.3 — Gunsmith delivery fix
 
 Builds made with the pack editor were shipping without the Create: Armorer gun pack, so its
 guns, ammo, and attachments were missing and the gun smith table had nothing to craft. The editor
@@ -28,7 +28,7 @@ lineup. No recipes or content changed; this only restores files that should have
 The stock TaCZ gun smith table can no longer be crafted, so the Create: Armorer table is the one
 survival path to building guns. The stock block still exists in the creative tab.
 
-## 0.5.2 — Magic Web (diff vs 0.5.1)
+## 0.5.2 — Magic Web
 
 The magic mods are now tied together. Ars Nouveau sits at the center: its Source acts as a common
 currency that other schools' essences convert into and out of, the occult mods funnel through one shared
@@ -66,7 +66,7 @@ Conversion rates are a first pass and will be tuned with play.
   (a block that moves Source and mana directly, cross-school spell power) is still in progress and not
   part of this release.
 
-## 0.5.1 — Ore Veins (diff vs 0.5.0)
+## 0.5.1 — Ore Veins
 
 Ore generation is reworked to a GregTech-style model. Instead of ore scattered evenly through the
 ground, ores are concentrated in large regional veins of related materials, vanilla overworld ore
@@ -106,7 +106,7 @@ see it.
   currently absent in those pockets; the scattered small ores cover caving in the meantime. Making
   cave ore follow the surface region is the priority for the next ore-gen pass.
 
-## 0.5.0 — Made Through Create (diff vs 0.4.6)
+## 0.5.0 — Made Through Create
 
 Crafting across the pack now routes through Create. Most tech, gear, machines, and a fair amount of
 decoration are built from Create parts (sheets, casings, mechanisms) and methods (pressing, mixing,
@@ -157,7 +157,7 @@ Spawn-gating observation (#108) and the modded-structure allowlist (#106), the m
 the ore-generation model decision (#93), and functional-duplicate parts such as heavy_plate versus steel
 sheet (#103).
 
-## 0.4.6 — World Generation (diff vs 0.4.5)
+## 0.4.6 — World Generation
 
 > **Headline:** this release makes custom ore generation actually work. **0.4.4 and 0.4.5
 > crash the moment you click _Create New World_** (a malformed worldgen file aborts the whole

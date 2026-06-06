@@ -6,7 +6,6 @@
 # changelog: a version branch (v0.6.0, a staged patch) adds its own section while
 # each release adds another on main, so a fold collides at the top every time.
 # `union` keeps BOTH sides' added lines (no conflict markers), so sync-index's fold
-# succeeds and never bails to a human. (A human tidies the seam / "diff vs" baseline
-# when finalizing the release notes — the union is structurally correct, just not
-# perfectly spaced.)
+# succeeds and never bails to a human. (A human tidies the seam when finalizing the
+# release notes — the union is structurally correct, just not perfectly spaced.)
 docs/PATCHNOTES.md merge=union
