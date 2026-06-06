@@ -1,0 +1,34 @@
+{
+  "warning": "Managed by Derpack X. Disables Supplementaries' Sodium fluid-render compat mixin, which is incompatible with the alpha Sodium the Aeronautics bridge requires (Supplementaries #2011). Cosmetic only: Lumisene loses its special emissive glow under Sodium. See #98.",
+  "enabled": true,
+  "blacklist": {
+    "mixins": [
+      "net.mehvahdjukaar.supplementaries.mixins.neoforge.compat.CompatSodiumFluidRendererMixin"
+    ],
+    "mixinConfigs": [],
+    "targetClasses": []
+  },
+  "priorities": {
+    "mixinConfigPriorities": {},
+    "mixinPriorities": {}
+  },
+  "methodRemovals": {
+    "rules": []
+  },
+  "audit": {
+    "enabled": false,
+    "outputFile": "mixinhelper-report.json",
+    "includeAnnotations": false
+  },
+  "debug": {
+    "verbose": false,
+    "logBlacklistActions": true,
+    "logMethodRemovals": false
+  },
+  "guardrails": {
+    "enabled": true,
+    "bypassProtectedClasses": false,
+    "additionalProtectedPatterns": [],
+    "excludeFromProtection": []
+  }
+}

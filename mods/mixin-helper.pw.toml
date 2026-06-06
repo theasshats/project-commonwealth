@@ -1,0 +1,13 @@
+name = "Mixin Helper"
+filename = "mixinhelper-1.1.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/r6BhGlY3/versions/B0K3K8DV/mixinhelper-1.1.0.jar"
+hash-format = "sha512"
+hash = "d8826237a91193e26a235754ca2f5d9fa9ebb30dc0102b0a02876d8ff5d97503230757ea38c883882f9474a83c00b7bf43361d5d52b1e54cbcf35bc63270c52d"
+
+[update]
+[update.modrinth]
+mod-id = "r6BhGlY3"
+version = "B0K3K8DV"

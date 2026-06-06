@@ -37,6 +37,10 @@ file = "config/inventoryprofilesnext/inventoryprofilesnext.json"
 hash = "978c0e1e839c71c23f12113a14c18ebffde93f4bba0ba4193aa5f29af91b50ec"
 
 [[files]]
+file = "config/mixinhelper.json"
+hash = "08e068267eaa4a73c2b0caa17669f5b5516f6de7458c547579a9d8700924e63a"
+
+[[files]]
 file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_deepslate_diamond_ore_feature_biome_modifier.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
@@ -1925,6 +1929,11 @@ metafile = true
 [[files]]
 file = "mods/mining-speed-tooltips.pw.toml"
 hash = "04af3f8798c38b917bf34ce2d7503ca378c3a28d7ab56637bea1da3f2e4ffe02"
+metafile = true
+
+[[files]]
+file = "mods/mixin-helper.pw.toml"
+hash = "b1db34488f2c61fca404d87cdd49a8347b4f4bcae62ab5407447070100289573"
 metafile = true
 
 [[files]]
