@@ -45,6 +45,10 @@ file = "defaultconfigs/accessories.json5"
 hash = "2d34c1d20dfa9047a4ba9bfab54cbd89232cc0ba966acf0aac1f1c110581f624"
 
 [[files]]
+file = "kubejs/assets/inventoryprofilesnext/textures/gui/overlay_new.png"
+hash = "cce47379706d8eb5075a66e9710353bc659971b4f26f1fe1e9813956fdfe0ee4"
+
+[[files]]
 file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_deepslate_diamond_ore_feature_biome_modifier.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
