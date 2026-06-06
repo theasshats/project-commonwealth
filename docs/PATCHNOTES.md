@@ -42,6 +42,22 @@ blocks.
 
 Iron's Spellbooks spellbooks now fit the dedicated spellbook accessory slot.
 
+### Recovered content
+
+A number of recipes and block drops that several mods intended to ship were being discarded at load
+because of malformed files, with no visible sign beyond a missing recipe or an empty drop. Each was
+checked against the mod's own files and restored.
+
+Recipes: the Farm and Charm mincer now processes the ores and logs from Create: TFMG, Occultism,
+Iron's Spells, Let's Do Vinery, and Create that it was meant to; Create: Compressed's crushed-pile
+washing, dough, and polished rose quartz work again; the alcohol base bottle fills at a Spout; and
+the cherry-sapling cutting recipe works. Crushed raw silver smelts, blasts, and washes into a
+Galosphere palladium ingot or nugget.
+
+Block drops: the Create treadmill, the komainu, kawauso, and tanuki statues, the Stoneholm cleric
+chest, and the Trail and Tales pottery cooking pot and lantern fruits now drop correctly. Smokeleaf
+Industries houses can generate in plains again.
+
 ### Spawns and content
 
 Rotten Creatures now spawn within dungeon, crypt, and ruin structures rather than across the open

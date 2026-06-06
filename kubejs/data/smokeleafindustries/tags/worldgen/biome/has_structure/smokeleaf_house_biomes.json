@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:is_plains",
+    { "id": "#c:is_plains", "required": false }
+  ]
+}

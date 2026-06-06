@@ -1,0 +1,3 @@
+{ "type": "create:sandpaper_polishing",
+  "ingredients": [ { "item": "create_compressed:rose_quartz_crystal_block" } ],
+  "results": [ { "id": "create_compressed:rose_quartz_polished_block" } ] }

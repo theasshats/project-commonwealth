@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": { "min": 1.0, "max": 4.0, "type": "minecraft:uniform" },
+      "entries": [
+        { "type": "minecraft:item", "weight": 10, "name": "minecraft:redstone",
+          "functions": [ { "function": "minecraft:set_count", "count": { "min": 1.0, "max": 12.0, "type": "minecraft:uniform" } } ] },
+        { "type": "minecraft:item", "weight": 1, "name": "minecraft:enchanted_golden_apple" },
+        { "type": "minecraft:item", "weight": 10, "name": "minecraft:glow_berries",
+          "functions": [ { "function": "minecraft:set_count", "count": { "min": 1.0, "max": 6.0, "type": "minecraft:uniform" } } ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 3,
+          "functions": [ { "function": "minecraft:set_components", "components": { "minecraft:potion_contents": "minecraft:regeneration" } } ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 3,
+          "functions": [ { "function": "minecraft:set_components", "components": { "minecraft:potion_contents": "minecraft:night_vision" } } ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 3,
+          "functions": [ { "function": "minecraft:set_components", "components": { "minecraft:potion_contents": "minecraft:strong_harming" } } ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 3,
+          "functions": [ { "function": "minecraft:set_components", "components": { "minecraft:potion_contents": "minecraft:strength" } } ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 3,
+          "functions": [ { "function": "minecraft:set_components", "components": { "minecraft:potion_contents": "minecraft:invisibility" } } ] }
+      ]
+    }
+  ]
+}

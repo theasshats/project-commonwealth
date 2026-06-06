@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [ { "condition": "minecraft:survives_explosion" } ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "trailandtales_delight:pottery_cooking_pot",
+          "functions": [
+            {
+              "function": "minecraft:copy_components",
+              "source": "block_entity",
+              "include": [ "minecraft:custom_name", "farmersdelight:meal", "farmersdelight:container" ]
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "trailandtales_delight:block/pottery_cooking_pot"
+}

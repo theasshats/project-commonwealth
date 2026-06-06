@@ -49,6 +49,10 @@ file = "kubejs/assets/inventoryprofilesnext/textures/gui/overlay_new.png"
 hash = "cce47379706d8eb5075a66e9710353bc659971b4f26f1fe1e9813956fdfe0ee4"
 
 [[files]]
+file = "kubejs/data/alcohol_industry/recipe/filling/alcohol_base_bottle.json"
+hash = "0a8468385310a99c6768282db5f3276d34a53ee7b18d5402e4c6419565fff9f2"
+
+[[files]]
 file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_deepslate_diamond_ore_feature_biome_modifier.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
@@ -61,8 +65,52 @@ file = "kubejs/data/create/neoforge/biome_modifier/zinc_ore.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
+file = "kubejs/data/create/recipe/blasting/silver_ingot_compat_galosphere.json"
+hash = "ce73d1f4893d0e23c1b5385f65f02dff9477a568cfb71438b4c33d1aad2203f1"
+
+[[files]]
+file = "kubejs/data/create/recipe/smelting/silver_ingot_compat_galosphere.json"
+hash = "29a64875e72d71c7d72ad5d3f6ca2d310091a1379e61096a0277b09699ce1636"
+
+[[files]]
+file = "kubejs/data/create/recipe/splashing/galosphere/crushed_raw_silver.json"
+hash = "5360b16ee2dd990071a861e8788133fd6233ae4a053da5b9312bb109147d2786"
+
+[[files]]
 file = "kubejs/data/create_armorer/data/blocks/create_workbench.json"
 hash = "2fe0d845b737b1648e9bcc193d5584bb4f1b0faeb411977a664099ac27476714"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/mixing/dough_block.json"
+hash = "539ec4adf10ff8dc469e6eece82c451c5af5d504371c2c82d10663f5e3755c28"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/sandpaper_polishing/polished_rose_quartz_block.json"
+hash = "fd742e7f083a45ba0f26972ffa84ab50448be2d1e98031ed281572cee5db8298"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/splashing/crushed_raw_copper_pile.json"
+hash = "0202588d3912441647e14190342b7a714934bd2936cc2712a869d75bb9d326dc"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/splashing/crushed_raw_gold_pile.json"
+hash = "346304e32eaf5d23852902f54cf1f2b7c5a4ec95d8ba8e7ed2016e5758617e6c"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/splashing/crushed_raw_iron_pile.json"
+hash = "b97475184db828323ad58b96ca6e03e0be2e58bcfa3049a6f10d0cd91d1b2ea7"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/splashing/crushed_raw_zinc_pile.json"
+hash = "5b79576f4d8b2820ed8e5dbd843ed7fa60c6114db82f28b8bde94454576949ec"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/splashing/galosphere/crushed_raw_silver_pile.json"
+hash = "1e0ad7c81c922a7481b3d0a769af93984c73de7ea8138336c088c0fc7f3824f6"
+
+[[files]]
+file = "kubejs/data/create_compressed/recipe/splashing/wheat_flour_pile.json"
+hash = "7c197d59824b5efe758c7e41b5ac57c27ea78123370323622aa1bba87c04c706"
 
 [[files]]
 file = "kubejs/data/create_ironworks/neoforge/biome_modifier/deepslate_tin_ore_biome_modifier.json"
@@ -311,6 +359,10 @@ hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 [[files]]
 file = "kubejs/data/createnuclear/neoforge/biome_modifier/uranium_ore.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
+
+[[files]]
+file = "kubejs/data/createtreadmill/loot_table/blocks/treadmill.json"
+hash = "1488936e86133dc573aadbf9f816d2e0d5be836750ca88aa3258eb1adba461a6"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/coal.json"
@@ -649,8 +701,96 @@ file = "kubejs/data/occultism/neoforge/biome_modifier/add_ore_silver_deepslate.j
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/create/raw_zinc_from_deepslate_ore.json"
+hash = "a68d490766efcdea622dec4b19349f097d976503d9eda6972aa137b258fa19e2"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/create/raw_zinc_from_ore.json"
+hash = "b19cab015b385867f133a1db88de9c5aa748411800b95431a996f58915539d23"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/irons_spellbooks/raw_mithril_from_deepslate_ore.json"
+hash = "fd2a6c30682182f57ffc2789a25af9deb365589a52a80fc6d47d4ef56d76c55c"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/irons_spellbooks/raw_mithril_from_ore.json"
+hash = "1bc848f7585e7565c5bc7e339fb24fc14dd0b74e61bbaab4a119b0b495e0354a"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/occultism/otherworld_log.json"
+hash = "2e54aa82825d4d1a6f25d910722c5fd65967f96f427c2378bfd93b18704f4178"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/occultism/otherworld_wood.json"
+hash = "d978f3e173647c6cd14e3bc02186ed2cb784042f267890f22edc4c3fe90390f0"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/occultism/raw_iesnium_from_ore.json"
+hash = "341d325948f9a9a1e67fd386bf8cd2d6104ed35e43b572cf0f1bea01238191d2"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/occultism/raw_silver_from_deepslate_ore.json"
+hash = "4aedd71df1a3b509f1d05a9c790e17b1dab185fdc6e1b9ec164273b00b947063"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/occultism/raw_silver_from_ore.json"
+hash = "39ae53d57c85ca000a21c075dc3e2460c3d85fae25e78f39e84c543fb82a90ef"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/tfmg/raw_lead_from_deepslate_ore.json"
+hash = "319fa3db0e58730d560e56ee2d99448da4c60d36dae4d9db6afcd6ca1b49abe9"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/tfmg/raw_lead_from_ore.json"
+hash = "fdb5a4d54d475ac9232aa101a19557d4d7c397f55f45158ad26adc7fe8a1c673"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/tfmg/raw_lithium_from_deepslate_ore.json"
+hash = "f50e64a3cbf2d9b1240459c5574ba4a579a928746e0e5bcab1a90cb53fd07bb5"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/tfmg/raw_lithium_from_ore.json"
+hash = "2d4a11d0befc4606a237141b472eec6ea1896b7f16f7613d076c32faff6a9ca6"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/tfmg/raw_nickel_from_deepslate_ore.json"
+hash = "667ba1f8b72397331635425d45548fe2b0e764a8f7ddb50bccf9d406b5f11f48"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/tfmg/raw_nickel_from_ore.json"
+hash = "9f752fbff85ba3aa3e2476dd42126a32d2c7ddbb75e105b652eabd9813a153ae"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/vinery/dark_cherry_log.json"
+hash = "fce681ed19eaf7a72f24095626ca43df33e01206675a5ccdc44ca82b89def2bf"
+
+[[files]]
+file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/vinery/dark_cherry_wood.json"
+hash = "7cd48250646781f2f7a95ba61b29a3db33ef6fe334a77628a20e204a6571c96e"
+
+[[files]]
+file = "kubejs/data/samurai_dynasty/loot_table/blocks/kawauso_statue.json"
+hash = "9a78c97269819ebddf31729a78d12108cf952ec1814e2a63bf3ac7363f44d10c"
+
+[[files]]
+file = "kubejs/data/samurai_dynasty/loot_table/blocks/komainu_statue.json"
+hash = "9be744e69b1295b7222537e4da2771ae3b521cc106ce538efb46239e8b1b7abb"
+
+[[files]]
+file = "kubejs/data/samurai_dynasty/loot_table/blocks/tanuki_statue.json"
+hash = "337f1b272d4a01aa373939f2ab4e90467c0fe01b4385f762a8c541ffe87a7461"
+
+[[files]]
 file = "kubejs/data/samurai_dynasty/neoforge/biome_modifier/add_jade_ore.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
+
+[[files]]
+file = "kubejs/data/smokeleafindustries/tags/worldgen/biome/has_structure/smokeleaf_house_biomes.json"
+hash = "4474d8995572248bcbc4dd348bcdc5fbc030cd96051fdf68a00904a996611bce"
+
+[[files]]
+file = "kubejs/data/stoneholm/loot_table/cleric.json"
+hash = "8155c95ff62935de12af5079d54f3c0ba5f36303e84809c6ab4ef15e517ac26c"
 
 [[files]]
 file = "kubejs/data/tfmg/neoforge/biome_modifier/lead_ore.json"
@@ -663,6 +803,18 @@ hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 [[files]]
 file = "kubejs/data/tfmg/neoforge/biome_modifier/nickel_ore.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
+
+[[files]]
+file = "kubejs/data/trailandtales_delight/loot_table/blocks/lantern_fruits.json"
+hash = "8393dbf4a02bf9157b990d08da840f6b468296cc41e0c0b1d09501b3599c09b9"
+
+[[files]]
+file = "kubejs/data/trailandtales_delight/loot_table/blocks/pottery_cooking_pot.json"
+hash = "9fa3c1ca2cc6c2705a9c33dfc8e5b6c44f172fde0be0396f73437b78449b6731"
+
+[[files]]
+file = "kubejs/data/trailandtales_delight/recipe/cutting/cherry_petal_from_cherry_sapling.json"
+hash = "015b8cb0b08aa636585c2a0b2bd759cd23ce6f64b8a6e8e409e22deb996d7cf1"
 
 [[files]]
 file = "kubejs/server_scripts/example.js"
