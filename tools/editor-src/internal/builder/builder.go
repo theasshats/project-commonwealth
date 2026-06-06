@@ -89,7 +89,11 @@ func (b *Builder) Build(ctx context.Context, log func(string)) (*Result, error) 
 	if err := writeMmcPack(staging, mcVersion, neoforgeVersion); err != nil {
 		return nil, err
 	}
-	if err := writeInstanceCfg(staging, pack.Name, pack.Version); err != nil {
+	jvmBlock, err := ReadInstanceJvm(b.RepoRoot)
+	if err != nil {
+		return nil, fmt.Errorf("read scripts/instance-jvm.cfg: %w", err)
+	}
+	if err := writeInstanceCfg(staging, pack.Name, pack.Version, jvmBlock); err != nil {
 		return nil, err
 	}
 	collect("Wrote mmc-pack.json and instance.cfg")
@@ -175,23 +179,49 @@ func writeMmcPack(staging, mcVer, neoforgeVer string) error {
 	return os.WriteFile(filepath.Join(staging, "mmc-pack.json"), []byte(contents), 0o644)
 }
 
-func writeInstanceCfg(staging, packName, packVersion string) error {
+func writeInstanceCfg(staging, packName, packVersion, jvmBlock string) error {
+	// jvmBlock is the JvmArgs/MaxMemAlloc/MinMemAlloc lines from the shared
+	// single source of truth scripts/instance-jvm.cfg (see ReadInstanceJvm),
+	// spliced into the [General] section so it can't drift from the install scripts.
 	contents := fmt.Sprintf(`[General]
 ConfigVersion=1.2
 InstanceType=OneSix
 JavaArchitecture=64
 JavaVersion=21
-JvmArgs=-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1
-MaxMemAlloc=12288
-MinMemAlloc=8192
+%s
 OverrideJavaArgs=true
 OverrideMemory=true
 PermGen=256
 iconKey=default
 name=%s %s
 notes=Built locally from %s by derpack-edit.
-`, packName, packVersion, packName)
+`, jvmBlock, packName, packVersion, packName)
 	return os.WriteFile(filepath.Join(staging, "instance.cfg"), []byte(contents), 0o644)
+}
+
+// ReadInstanceJvm reads scripts/instance-jvm.cfg — the single source of truth (shared with
+// scripts/build-prism-skeleton.sh) for the Prism instance's JVM args + heap (the JvmArgs,
+// MaxMemAlloc and MinMemAlloc lines). Comments (#) and blank lines are stripped; the remaining
+// key=value lines are returned joined by newlines, ready to splice into instance.cfg's
+// [General] section. Shared so the editor build and the installer can't drift on Java flags —
+// same rationale as ReadInstanceDirs.
+func ReadInstanceJvm(repoRoot string) (string, error) {
+	data, err := os.ReadFile(filepath.Join(repoRoot, "scripts", "instance-jvm.cfg"))
+	if err != nil {
+		return "", err
+	}
+	var lines []string
+	for _, ln := range strings.Split(string(data), "\n") {
+		t := strings.TrimSpace(ln)
+		if t == "" || strings.HasPrefix(t, "#") {
+			continue
+		}
+		lines = append(lines, t)
+	}
+	if len(lines) == 0 {
+		return "", fmt.Errorf("scripts/instance-jvm.cfg has no JVM/heap lines")
+	}
+	return strings.Join(lines, "\n"), nil
 }
 
 // ReadInstanceDirs reads scripts/instance-dirs.txt — the single source of truth (shared with
