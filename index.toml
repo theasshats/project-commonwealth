@@ -1234,7 +1234,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-more-package-couriers.pw.toml"
-hash = "e5f8663e5fd87af461b558d78f9dd1697c95a0a3a4e13c460fa5aca717d34bb4"
+hash = "9f6612c3600da90585aaac1020de82c7efaf8d6bfd07b59a56a4489b2e4dd81c"
 metafile = true
 
 [[files]]
@@ -2219,7 +2219,7 @@ metafile = true
 
 [[files]]
 file = "mods/sable.pw.toml"
-hash = "e4c43e944439f4941ba1c417ab3ac1ec3dbd9c95a8456a2069641d031317e142"
+hash = "a6693ee3db7b1c9026311096443fd898f1c52bb2b73efc2de964c37105d3ff81"
 metafile = true
 
 [[files]]
