@@ -50,8 +50,11 @@ Dungeons and Taverns, L_Ender's Cataclysm, and the When Dungeons Arise Seven Sea
 
 ### Removed
 
-Umapyoi and five unused library mods have been removed. Nothing that depended on them remains in the
-pack.
+Bosses of Mass Destruction has been removed, along with its library dependency. Its four
+structure-bosses overlapped L_Ender's Cataclysm, which remains as the pack's endgame boss mod.
+
+Umapyoi and five unused library mods were also removed. Nothing that depended on any of these remains
+in the pack.
 
 ## 0.5.4 — Guns crafted through Create
 

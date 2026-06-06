@@ -960,11 +960,6 @@ hash = "407b91677d1d956287ae5c4aa308bea0c5d39568d6e9dce5b760d908ec5875cf"
 metafile = true
 
 [[files]]
-file = "mods/bosses-of-mass-destruction-forge.pw.toml"
-hash = "b3ff93884fbb83e9879a28f06c3ca330d88a43d3a973624ea428eb29bf6ff9e9"
-metafile = true
-
-[[files]]
 file = "mods/bountiful.pw.toml"
 hash = "81e1c627c553aecd5105e2d6df0bc80d4dd03acda3e8fd86b8d267c68f8475b4"
 metafile = true
@@ -992,11 +987,6 @@ metafile = true
 [[files]]
 file = "mods/byzantine-styles-pack-for-minecolonies.pw.toml"
 hash = "17385465977d23245fc8d9a5ebe7230201fe3d67f7ad0f637a6752d1d3f67b91"
-metafile = true
-
-[[files]]
-file = "mods/cerbons-api.pw.toml"
-hash = "479dab388743fb59d3399d2d87a0a7dc0819a4184b74f734fa9cc1eecdd6f6f6"
 metafile = true
 
 [[files]]
