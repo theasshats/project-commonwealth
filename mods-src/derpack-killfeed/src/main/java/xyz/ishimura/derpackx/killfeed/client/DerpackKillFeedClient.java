@@ -3,11 +3,11 @@
  */
 package xyz.ishimura.derpackx.killfeed.client;
 
-import net.minecraft.client.gui.VanillaGuiLayers;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
+import net.neoforged.neoforge.client.gui.VanillaGuiLayers;
 import net.neoforged.neoforge.common.NeoForge;
 import xyz.ishimura.derpackx.killfeed.DerpackKillFeed;
 
