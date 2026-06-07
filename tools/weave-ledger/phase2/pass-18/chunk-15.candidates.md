@@ -126,6 +126,17 @@ REWORK check: economy + Create (2) is the correct and complete picture. Numismat
 
 - LEAVE (outgoing edges) — the right model is to keep numismatics as a pure destination; adding originating weave edges from numismatics itself would invert the hub architecture. OK — connections sound as 2-anchor destination hub; no new proposals.
 
+## oceansdelight   [anchors: survival (1)]
+Power-read: 1 block, 25 items, loot=no; already uses farmersdelight:cooking + farmersdelight:cutting (inbound). Outputs high-effect seafood dishes (fugu = poison-risk delicacy, elder_guardian_roll, guardian_soup). Ocean-mob-gated food supply.
+
+- from: oceansdelight:fugu_slice / oceansdelight:elder_guardian_roll | via: numismatics vendor | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: Elder guardian sushi and fugu sell at premium to inland settlements that can't source ocean ingredients themselves — the coast specialist trades prepared seafood for coin, making the underwater biome a supply-chain node. High effort (guardian kill → cut → cook) = high price tag.
+- from: oceansdelight:cooked_stuffed_squid / oceansdelight:baked_tentacle_on_a_stick | via: numismatics vendor | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: Mid-tier prepared seafood creates a reliable commodity trade — squid dishes are less prestigious than elder guardian rolls but more producible; a dedicated cook can supply steady stock, funding their fishing/cooking operation through coin.
+- from: oceansdelight raw drops (guardian_tail, cut_tentacles) | via: create:milling | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: Milling ocean mob drops into a paste/meal is not an established Create processing pattern; milling is for grains/minerals, not animal tissue. Tone clash — a millstone grinding guardian flesh reads wrong for the Create industrial aesthetic. Reject on tone.
+- from: oceansdelight:guardian_soup (effect dish) | via: ars_nouveau:potion_flask | to: magic | motif: M-10 | power: mid | tone: ok | verdict: REJECT | reason: Guardian soup already confers effects natively as food; converting it into a potion flask or imbuement ingredient layers complexity onto an item whose effect delivery (eating) is already defined. M-10 is for "foreign material refined into a magic reagent," but guardian soup is a food, not an ore/material. The role doesn't fit the motif; reject.
+
+REWORK: survival (1) is correct as sole anchor; the FD inbound is within survival. New edges: economy via M-09 (luxury + mid-tier seafood dishes) takes oceansdelight to survival + economy (2 anchors). Direct, coherent, low-effort Phase 3 action (add 2 vendor entries).
+
+
 
 
 
