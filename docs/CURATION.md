@@ -33,7 +33,7 @@ See `docs/ROADMAP.md` ("Milestones — the road to 1.0") for the per-version sch
    systems — **Create** or **magic** (production), **survival** (pressure), or the **economy**
    (distribution & trade, including its **logistics/aeronautics** arm) — or a cross-cutting production
    route (MineColonies, boss drops) or the scarcity foundation — *or* a sanctioned support role:
-   **library/API, performance, QoL, decoration palette, or curated friend-group flavor**. Anchors to
+   **library/API, performance, QoL, decoration palette, or curated co-op-group flavor**. Anchors to
    nothing → **cut**. (`docs/DESIGN.md` + `docs/SYSTEMS.md`; the "if none, why is it here?" test. The
    goal is *two* anchors — one is the floor, so a one-system mod is a candidate for a second weave, not a
    cut.)

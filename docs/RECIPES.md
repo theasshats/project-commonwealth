@@ -94,7 +94,7 @@ ServerEvents.recipes(event => {
 ```
 - Target by **tags** where possible so a change spans mods.
 - `remove({ output })` kills all recipes for an item without needing its exact id.
-- Verify in-game: JEI/EMI shows the new recipe; no recipe errors in the log.
+- Verify in-game: JEI shows the new recipe; no recipe errors in the log.
 
 ## Scope & sequence (per-branch)
 Each branch's key craftables get a Create-part gate or Create-method build:
