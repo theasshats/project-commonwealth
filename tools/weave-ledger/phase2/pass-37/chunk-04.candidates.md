@@ -261,3 +261,39 @@ Existing connections: 1 anchor (survival). Dossier identifies three candidates: 
 
 - from: cataclysm:amethyst_bless (Altar of Amethyst) | via: magic item → amethyst_bless blessing | to: magic | motif: M-10 | power: endgame | tone: clash — the altar is world-unique (only in the Sunken City) and designed for a specific boss fight mechanic; co-opting it for general magic item blessing feels like it would cheapen the boss-site context and conflict with the intended scarcity | verdict: REJECT | reason: thematic conflict with the intended boss-fight scarcity mechanic; the altar is not a general infusion station.
 
+## hpm   [anchors: aeronautics (1)]
+
+Existing connections: 1 anchor (aeronautics/logistics — water transport). Dossier identifies Create M-05/M-06 gating and economy M-09 (cut). Also notes curation overlap with Aeronautics + Big Cannons.
+
+**Method-pull analysis:**
+- Ship items: `hpm:cutteritem`, `hpm:cuttermilitariseditem`, `hpm:pirate_cutter_item`, `hpm:corvette_steamship_item`, `hpm:raftitem`. Each is a placeable ship-entity item. Currently crafted from vanilla wood/iron. Routing key components behind Create mechanical_crafting (M-05) is coherent — a wooden cutter needs precision-crafted fittings, a steamship needs a Create-made boiler.
+- `hpm:hand_cannon` / `hpm:hand_mortar`: handheld ship artillery. These are mid-tier weapons. The mortar especially (explosive shell) could route through `createbigcannons:cartridge_assembly` or `cbc_at:rocket_assembly` for its munitions, bridging hpm with the military-industrial Create spine.
+- `hpm:largehull` / `hpm:largemast`: hull/mast components are the raw ship-building materials. Route hull fabrication through `create:mechanical_crafting` (M-05: the hull is "made in its own machine" gated on Create parts — though its machine is a crafting table, M-05 spirit = gate behind Create) — better framing is M-23 (structural alloy → airframe: a Create-fabricated hull plate/beam as a required ship component). Power: mid for small ships, endgame for the steamship/corvette.
+- Curation flag: hpm ships are not Create Aeronautics physics ships and overlap with Create Big Cannons' artillery. The dossier's own note flags this for thunderdome. Not a weave issue, but relevant — don't over-invest weaving a mod that may be curated out.
+- Economy: ships as high-value trade goods — a shipwright's service (M-33 service-for-hire: builds ships for other players). Or ships as the logistics vessel (M-31: bulk goods require ship transport). The raft especially is a low-cost bulk-goods carrier — M-31 analog. But hpm ships are not Create Aeronautics; they don't interact with the aeronautics logistics system directly. Flag.
+- Survival: naval combat with hand cannon/mortar adds a water-based danger angle. This feeds danger-pressure (survival). Second anchor if combined with Create gating.
+
+- from: hpm:largehull / hpm:corvette_steamship_item (hull components) | via: create:mechanical_crafting (gate hull plates on fabricated Create structural parts) | to: Create | motif: M-23 | power: mid (cutter) to endgame (steamship) | tone: ok — a corvette steamship needing Create-fabricated hull plating and a steam boiler component is architecturally natural; low-tech rafts stay wood-cheap, warships need engineering | verdict: ACCEPT | hook: the steamship's hull isn't planked — it's riveted from Create-pressed iron plates; commissioning a warship is a Create project as much as a sailing one.
+
+- from: hpm:hand_mortar munitions (mortar_ball) | via: createbigcannons:cartridge_assembly (route mortar shells through CBC assembly) | to: Create | motif: M-29 | power: mid | tone: ok — naval munitions using the same Create Big Cannon assembly chain as the siege weapons ties hpm into the military-Create production route; the arms supplier serves both the ship-gunner and the shore battery | verdict: ACCEPT | hook: the mortar rounds come off the same Create assembly line as Big Cannon shells; one armsmaker supplies both the fleet and the fortress.
+
+- from: hpm ships as bulk-cargo transport vessels | via: player logistics use | to: economy | motif: M-31 | power: mid | tone: ok (marginal) — the raft is described as slow but big storage; using it as a bulk waterway carrier gives the river/ocean route a meaningful logistics role alongside Aeronautics | verdict: ACCEPT | hook: heavy goods travel cheaper by raft down the river than by airship; the water route competes with the sky route on cost, not on speed — both are needed.
+
+- from: hpm military ships | via: numismatics as high-value trade good / shipwright economy | motif: M-09 (retired) or M-33 | power: endgame | tone: ok | verdict: REJECT | reason: M-09 retired (bare sell link); M-33 (service: a shipwright builds ships for others) is valid but is ambient player behavior, not a recipe weave; no method to author it against.
+
+NOTE: the dossier's thunderdome flag is real — if hpm is curated out as a curation-thunderdome casualty, these weaves are moot. Flag for curation review before authoring.
+
+## lootr   [anchors: support/QoL (1)]
+
+Existing connections: 1 anchor (support — multiplayer loot fairness). Dossier says "none — support role."
+
+**Method-pull analysis:**
+- Lootr replaces structure loot containers with per-player-instanced versions. It reads ALL existing loot tables but adds no loot of its own.
+- loot=yes: lootr blocks exist as world objects (they ARE the replaced chests), but the loot content is always another mod's table. No unique drop to route.
+- A potential economy angle: instanced loot means every player gets a fair share, which in a ~10-player co-op context makes structure exploration a reliable material-acquisition route. This is an ambient loop improvement (scarcity relief via exploration), not a weave.
+- Could lootr be used as a loot-seed target? Technically yes — any pack loot-edits already apply to lootr's containers since it reads vanilla loot tables. But lootr itself is the infrastructure, not the target.
+- No items to route, no method to author against, no second anchor coherent.
+
+LEAVE — QoL infrastructure for multiplayer loot fairness; no items/blocks of its own, loot content is always another mod's table. Sanctioned support role.
+
+== CHUNK COMPLETE ==
