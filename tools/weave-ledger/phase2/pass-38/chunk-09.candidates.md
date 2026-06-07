@@ -28,6 +28,14 @@ OK — the aeronautics anchor is sound. ACCEPT the create (M-05 mechanical_craft
 ## xaerominimap   [anchors: support/navigation (1)]
 - LEAVE — client-side map/waypoint UI; no items, no recipes, no loot, no game mechanics. Nothing to route.
 
+## formationsnether   [anchors: survival (1)]
+- from: formationsnether structure loot tables (altars, cabins, sanctuaries, castles) | via: loot-seed | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: Nether ruins and ritual altars would plausibly hold scrolls, reagents, and occult artifacts — a loot-seed of Iron's Spellbooks scrolls, Occultism ritual components, or Ars Nouveau source gems as altar drops turns exploration from "vanilla loot chest" into "magic expedition." The Nether-danger pressure also makes the find meaningful. Players find scrolls in ruins; the magic specialist gains a reason to mount Nether expeditions. The "ritual altars" structure type is the natural anchor — ritual loot from a ritual structure.
+- from: formationsnether structure loot tables (cabins, campsites) | via: loot-seed | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: Nether campsites and cabins seeded with Numismatics coins or rare trade-goods (a trade-route relic, a foreign coin stack) rewards explorers with something the economy arm values — combat-specialist sells Nether loot to non-combat players who can't reach it safely. Distinct from M-02 (not a reagent — a currency or trade good). Supports M-34: danger location → specialist farms → economy gets scarce goods.
+- from: formationsnether structure loot (castles, sanctuaries) | via: loot-seed | to: survival/danger | motif: M-15 | power: endgame | tone: ok | verdict: REJECT | reason: M-15 (boss-key unlock) is specifically for *boss drops* as gate items for complex recipes; a structure-chest find is not a boss drop and doesn't fit the motif. The castles may have a "boss loot" feel but the mod adds no boss entity and the motif's logic ("drop gates complex tech") doesn't apply to a generic chest. REJECT on motif mismatch — the M-02 and M-34 loot-seeds above cover the content well.
+
+REWORK: existing "economy via numismatics" candidate in dossier is flagged as WEAK and leans on bare-sellable language. Replace: the mechanism is loot-seed of M-34 (combat-route supply: combat specialist farms Nether ruins, sells rare finds to non-fighters) and M-02 (mob-drop/structure reagent sink: magic items seeded into altar loot). Both are via loot-seed, not recipe — this is the correct delivery for a structure mod.
+
+
 
 
 

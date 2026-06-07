@@ -46,3 +46,33 @@ existing surface, doesn't invent it. Reject that direction.
 - LEAVE — client-only HUD overlay with zero items, methods, or loot. Not a code library in the
   strict sense (it has behavior), but has no content surface to weave — the same functional
   conclusion: nothing to propose here without inventing content the mod doesn't ship.
+
+## irons_lib   [anchors: support/library (1)]
+
+Dossier confirms: Iron431's shared framework, providing armor transmog table and player-statue
+multiblock plus a Patreon API. Ships 4 items/blocks (the transmog_table and player_statue in two
+namespaces). Loot=yes per the jar counts, but that loot is the player_statue's drop, not a
+structure chest.
+
+Power-read:
+- Transmog table: reskins armor appearance without changing stats/NBT in any way another mod would
+  care about. It consumes an armor item to change look — not a material that a Create crusher or
+  ritual would plausibly want.
+- Player statue: purely cosmetic decorative multiblock. No material output, no joinable recipe.
+- The Patreon API: dev scaffolding; zero player surface.
+
+Red-team: could transmog_table be part of a service-for-hire economy link (M-33 — "enchant-for-
+hire" analogy where a transmog specialist reskins gear for coin)? The mechanic is purely cosmetic
+and not gated on materials, so the service is a "just GUI" operation — a player-run barber's table.
+That's thematically plausible (a cosmetics specialist sells appearance services) but M-33 requires
+the work to be *labor* on another player's materials, which transmog is. However, the service
+creates zero demand pull on production and zero scarcity loop feedback — it's pure vanity. This
+sits at the ambient "nice to have" level, not a load-bearing loop connection. Reject.
+
+Could the transmog table take a KubeJS recipe that requires an Ars/magic reagent to unlock
+high-tier appearances (M-10 arcane infusion pull)? That would be inventing a recipe on a cosmetic
+block to manufacture a weave — authoring, not mapping. The existing item surface gives no hook.
+
+- LEAVE — library with cosmetic-only content (transmog table, player statue). No material is
+  routable through any pack method. Forced edges would be authoring new content *onto* the mod, not
+  weaving *through* it. The dossier's own candidate assessment reaches the same conclusion.

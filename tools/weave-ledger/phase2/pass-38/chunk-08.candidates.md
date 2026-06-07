@@ -28,3 +28,26 @@ OK — existing FD connection sound; three new candidates above advance the loop
 Zero items, zero blocks, zero loot, client-only volumetric cloud renderer. No content surface whatsoever.
 - LEAVE — pure client-side renderer; no items/blocks/loot; zero material surface; any edge would be invented noise.
 
+## sereneseasons   [anchors: survival (1)]
+
+Serene Seasons is the pack's priority survival lever (per WEAVE-LEDGER M-16: "Serene Seasons is a priority survival lever; want more of these"). It has a season_sensor block, a calendar item, and a loot=yes tag. The dossier flags M-09 (retired) as the economy candidate — must not be proposed. The real candidates are the M-16 motif (seasonal reagent) and the sensor→Create logic link.
+
+**Candidate 1 — season_sensor → Create gearshift/contraption automation (M-16 + Create production)**
+Power-read: the season_sensor is a redstone block — everyday, available once you know about it. Routing it into Create's shaft gearshifts or analog levers to flip automated farm configurations per season is exactly the loop: seasonal scarcity → Create automation adapts → production shifts. Theme: a Create farm that auto-switches crops when the sensor fires a new season signal is textbook Create-pack play. Red-team: this is a config/contraption design, not a recipe edge — but the delivery is `via: config tie / Create contraption logic`, which is a valid delivery mechanism. The motif is M-16 (seasonal reagent as a gating input to a Create process — here the gating is automated contraption switching, not a recipe ingredient per se). Strictly M-16 is "seasonal crop/material feeds a machine"; the sensor-as-redstone-signal to switch a contraption is slightly adjacent. However: a cleaner M-16 read is that out-of-season crops produce much less, so a player must time planting to season — the sensor just makes that timing automatable via Create.
+- from: sereneseasons:season_sensor (redstone output) | via: Create contraption redstone/gearshift | to: create | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: Wire the season sensor to Create gearshifts so an automated farm contraption switches its crop rotation when the season changes — the calendar forces production planning
+
+**Candidate 2 — seasonal crop scarcity as Bountiful demand gates (M-16 / M-26)**
+Power-read: out-of-season crops are scarce (everyday when in-season, rare off-season). Pointing Bountiful Decrees at out-of-season crops makes seasonal scarcity generate economic demand — someone who has a greenhouse farm can sell warm-season crops in winter. This is M-16 threading into M-26/economy demand gating.
+- from: out-of-season crops (sereneseasons fertility modifier) | via: bountiful decree objective pool | to: economy | motif: M-16 | power: everyday/scarce off-season | tone: ok | verdict: ACCEPT | hook: Bountiful boards request out-of-season produce, making a greenhouse operator the seasonal supplier — Serene Seasons scarcity becomes an economy pressure
+
+**Candidate 3 — season-locked crop → magic ritual ingredient (M-16)**
+Power-read: mid (requires knowing the season). WEAVE-LEDGER explicitly calls for more M-16 links. An Ars Nouveau or Occultism ritual requiring a spring-only bloom or autumn-harvested grain gates a magic recipe behind the seasonal calendar.
+- from: seasonal crop (spring/autumn exclusive) | via: ars_nouveau:imbuement or occultism:ritual | to: magic | motif: M-16 | power: mid | tone: ok | verdict: ACCEPT | hook: A magic ritual requires a blossom that only grows in spring — the season sensor tells you when to harvest, and a magician must time their craft to the calendar
+
+REWORK: dossier candidate M-09 is correctly retired. No existing connections to flag. All three above are genuine M-16 extensions.
+
+## immersivearmorhud   [anchors: client-only UI / support (1)]
+
+Zero items, zero blocks, zero loot. Purely a visual HUD renderer for armor durability. No material surface.
+- LEAVE — client-only UI with no items/blocks/loot; a display mod with zero weaving surface.
+

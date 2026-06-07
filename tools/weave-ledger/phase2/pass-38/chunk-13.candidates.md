@@ -68,4 +68,26 @@ Candidate D — boss-drop gate, M-15:
 - from: finished sets as sellable smithed goods | via: bare sell | to: economy | motif: M-09 | power: — | tone: — | verdict: REJECT | reason: M-09 retired; armor sell links are ambient endpoints, not demand-gates
 - from: immersive_armors:wither_* / boss-skull gate | via: create:pressing (reinforcing vanilla boss gate) | to: create | motif: M-15 | power: mid-high | tone: ok | verdict: REJECT | reason: wither skull is already a vanilla boss-key; adding a Create step is recipe hardening within survival/Create, not a new cross-system link worth a separate weave proposal
 
+## create_better_villagers   [anchors: create, economy (2)]
+
+REWORK check: already 2-anchor (Create + economy). Evaluate existing connections and look for new links.
+
+Existing connections review:
+- Create: professions tied to Create workstations (Basin, Rotation Speed Controller, Steam Engine, Mechanical Arm) — sounds solid. A Create profession that *sells Create parts* directly ties into the Create spine.
+- Economy: villager trades are the economy surface — emerald-denominated, which is vanilla's trade layer, not Numismatics. The pack's economy pillar is Numismatics-based (player-minted coin, M-08). This is a REWORK candidate.
+
+REWORK — existing economy connection: villager emerald trades are vanilla's NPC trade economy, not the pack's player-run Numismatics economy. The dossier flags re-denominating to Numismatics coins (M-08) as optional. Evaluate:
+- The pack's economy is player-run: NPC faucets (M-14/M-21 cut). Villagers selling Create parts for emeralds is technically an NPC faucet of Create parts — it's a source of Create components that bypasses player production. Under the player-run ruling, this may be fine (it's not a coin faucet, just a part source), but the "economy" anchor is weakly grounded in the pack's Numismatics layer.
+- The honest read: create_better_villagers' economy anchor is its *role as a trade route* — players going to villagers for Create parts is a Create-parts market. Whether that's "the pack's economy" is debatable; it's more of a Create-supply route with a vanilla-economic delivery.
+- The Numismatics redenomination suggestion (dossier) is a config/KubeJS feasibility question; if achievable, it strengthens the economy anchor by routing through the pack's actual coin layer. This is a Phase-3 candidate (config tie, not a recipe weave).
+
+New link candidates:
+- survival via M-28 (colony route): the Miner villager (buys/sells raw andesite/copper/brass) is structurally adjacent to a MineColonies Miner role — but Create Better Villagers uses vanilla villagers, not MineColonies. A colony weave here would need to be *bridging* the two trade systems, which is a design decision, not a recipe edge.
+- Verdict on new links: no strong new cross-system weave beyond what's already flagged.
+
+- REWORK: existing "economy" anchor is valid but rides vanilla emerald trades rather than the pack's Numismatics layer — the connection would be stronger if trades were re-denominated to player-minted coin (M-08, via config/KubeJS); flag for Phase-3 economy pillar work (v0.9.0)
+- OK — Create anchor is sound (professions keyed to Create workstation blocks, trades in Create parts)
+- from: Create-part trades (Andesite/Brass/Copper Worker) | via: Numismatics coin re-denomination (config/KubeJS) | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: a Brass Worker paid in player-minted Brass Cogs rather than emeralds makes the Create trade loop feel like *the* economy, not a vanilla side-channel
+
+
 

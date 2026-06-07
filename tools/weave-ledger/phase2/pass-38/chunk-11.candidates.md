@@ -60,6 +60,21 @@ Rich content surface: venison, bushmeat, antler, glow_goop, shellstone/froglass 
 
 REWORK: dossier lists M-04 as WEAK for shellstone deco recycle — upgrading to ACCEPT above; the deco set is real registered blocks (not vanilla-only) so M-04 applies cleanly. The M-02 antler note ("leave unless a magic mod wants it") is promoted to ACCEPT with imbuement routing.
 
+## oceansdelight   [anchors: survival (1)]
+
+Already routes through farmersdelight:cooking and farmersdelight:cutting (inbound weaves exist). Both candidates in the dossier are M-09/M-12 — M-09 is retired; M-12 is the right framing.
+
+- from: oceansdelight raw drops (guardian flesh, tentacles, fugu) | via: farmersdelight:cutting + create:milling/pressing | to: create | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: Guardian tentacles and elder-guardian flesh are rich marine ingredients; routing them through Create milling (dried salt-flakes, fish paste) or pressing (tentacle ink) before FD cooking deepens the processing chain — a coast-base player mills and presses raw ocean drops into intermediate ingredients that a cooking specialist assembles into high-value dishes, splitting ocean harvesting from culinary production.
+
+- from: oceansdelight:fugu_slice / elder_guardian_roll (high-effort, effect-granting dishes) | via: M-26 consumption sink | to: survival/economy | motif: M-26 | power: mid | tone: ok | verdict: ACCEPT | hook: Effect-granting seafood (fugu's poison-risk, guardian soup's strength) is consumed to solve survival pressure (boss fights, cold biome exploration) — perishable high-value dishes are spent against danger, keeping demand for coast-fishing production live.
+
+- from: oceansdelight ocean dishes as luxury goods | via: numismatics trade | to: economy | motif: M-09 (RETIRED) | power: — | tone: — | verdict: REJECT | reason: M-09 retired. The coast-to-inland trade is real emergent economy but not a motif edge to author; the demand-gating form is M-26 (dishes consumed against pressure), already accepted above.
+
+- from: oceansdelight:guardian_soup block (a pot of soup, like FD's feast blocks) | via: farmersdelight:food_serving + extradelight:feast | to: survival | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: Guardian soup is a block-form feast — wiring its serving through extradelight:feast mechanics lets a tavern/ship galley serve multiple players at once, reinforcing the co-op feeding loop without adding a new weave type.
+
+OK — existing FD inbound connections are sound; what's missing is the Create processing step upstream of FD cooking, filed above.
+
+
 
 
 
