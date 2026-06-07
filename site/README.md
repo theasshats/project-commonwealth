@@ -33,7 +33,7 @@ MC_ADDR=play.example.net:25565 go run .     # point the status badge elsewhere
 ```
 
 Config (env): `LISTEN_ADDR` (default `:8080`), `MC_ADDR` (default
-`mc.ishimura.xyz:25565`), `GITHUB_REPO` (default `Xela112233/Derpack-X`, used by
+`mc.ishimura.xyz:25565`), `GITHUB_REPO` (default `derpack-org/Derpack-X`, used by
 `/api/release`). The page is fully usable with JS off; the copy button, status
 badge and live download resolution are enhancements.
 
