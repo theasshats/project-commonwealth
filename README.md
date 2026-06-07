@@ -2,6 +2,10 @@
 
 A Create-focused Minecraft modpack for 1.21.1 / NeoForge, built around [Create Aeronautics](https://modrinth.com/mod/create-aeronautics).
 
+It's a **cooperative PvPvE** pack for a small crew (~10), **scarcity-driven**: ores are scarce and regional, so nobody can do everything alone — you specialize and trade. The design is one interlocking loop — **scarcity → pressure → production → economy** (inspired by the game *Eco*), where every mod earns its place by feeding a system (Create / magic — production · survival — pressure · economy — distribution & trade, incl. logistics/aeronautics) or it's cut.
+
+**Design & docs:** [`docs/SYSTEMS.md`](docs/SYSTEMS.md) (the structural model) · [`docs/DESIGN.md`](docs/DESIGN.md) (the why) · [`docs/ROADMAP.md`](docs/ROADMAP.md) (the plan + release cadence) · full index in [`docs/README.md`](docs/README.md).
+
 ---
 
 ## For players
@@ -30,11 +34,12 @@ See [`docs/PRISM-SETUP.md`](docs/PRISM-SETUP.md) for the full walkthrough.
 
 This repo doesn't store mod jars — it stores manifests describing *what mods are in the pack* (with URLs and hashes). When a release is cut, GitHub Actions builds a small Prism installer zip from those manifests; the launcher fetches actual jars at install time.
 
-There are three ways to make changes, in order of how often they're used:
+There are two ways to make changes, in order of how often they're used:
 
 1. **Derpack Editor** (recommended) — local desktop app, GUI, runs from the repo.
-2. **GitHub Actions workflows** — click buttons in the Actions tab, no install needed. Fallback for when you can't run the editor.
-3. **packwiz CLI directly** — power-user fallback for things the editor doesn't cover yet.
+2. **packwiz CLI directly** — fallback for things the editor doesn't cover yet, or when you can't run it.
+
+(The pack used to also expose browser-button GitHub Actions for add/remove/update/hash; those were retired once the editor covered them — see [issue #127](https://github.com/derpack-org/Derpack-X/issues/127).)
 
 The workflow we follow: each contributor works on a **version-named branch**, edits via the editor, opens a **pull request to main**. Every PR runs automated merge-gating checks (packwiz index freshness, manifest lint, KubeJS/config parse, Go build & vet) — see [`docs/CI-CHECKS.md`](docs/CI-CHECKS.md). Releases are cut from main.
 
@@ -116,8 +121,7 @@ See [`tools/README.md`](tools/README.md) for the user-facing editor docs and tro
 │   └── editor-src/        # Editor source — Go + HTML/CSS/JS
 ├── docs/                  # Human-facing documentation (see docs/README.md for the index)
 ├── scripts/               # Build helpers (CI runs these; you almost never run them directly)
-├── site/                  # Player-facing website (Go) — runs on ishimura, not in CI; see site/README.md
-└── .github/workflows/     # CI: PR merge-gating checks, release build, editor build, ground-truth digest, fallback edits
+└── .github/workflows/     # CI: PR merge-gating checks, index sync, release build, editor build, ground-truth digest
 ```
 
 Each folder has its own `README.md` with details.
@@ -139,20 +143,17 @@ The build runs fresh each time — no caching, ~30s — then attaches the Prism 
 
 ## Fallbacks
 
-If the editor doesn't work for you (no Windows machine, can't install Java, whatever), every operation can also be done through GitHub Actions workflows:
+If the editor doesn't work for you (no Windows machine, can't install Java, whatever), every operation can be done with `packwiz` directly from the repo root — `packwiz mr add <slug>` / `packwiz cf add <slug>`, `packwiz update <slug>` (or `--all`), `packwiz pin`/`unpin`, `packwiz refresh`. See [`docs/EDITING.md`](docs/EDITING.md#fallbacks) and [`mods/README.md`](mods/README.md).
 
-- **Add mod(s)** → Actions tab → "Add mod(s)" → Run
-- **Remove a mod** → Actions tab → "Remove mod" → Run
-- **Update mods** → Actions tab → "Update mods" → Run (blank slug = update all)
-- **Compute hash** → Actions tab → "Compute hash" → Run (for manually-edited manifests)
-
-For deepest fallbacks (the rare CLI-only situation), see [`docs/EDITING.md`](docs/EDITING.md) and [`mods/README.md`](mods/README.md).
+(The browser-button GitHub Actions that used to sit here — Add mod(s) / Remove mod / Update mods / Compute hash — were retired; the editor replaced them, [#127](https://github.com/derpack-org/Derpack-X/issues/127).)
 
 ---
 
 ## Player website
 
-A small player-facing site lives in [`site/`](site/), served at
+The player-facing site lives in its **own repo** now —
+[`derpack-org/derpack-site`](https://github.com/derpack-org/derpack-site)
+(split out of this repo's former `site/` directory). It's served at
 **`derpack-x.ishimura.xyz`** (and `modpack.ishimura.xyz`): how to join, what's in
 the pack, rules, FAQ, a live server-status badge, and a download button that
 auto-resolves to the latest release's Prism installer (so it never points at a
@@ -161,12 +162,9 @@ can be filed without a GitHub account — keeping the site the single player tou
 
 It's a self-contained Go binary that embeds the static site and exposes
 `/api/status` (Minecraft Server List Ping) and `/api/release` (GitHub Releases
-lookup). It runs **on the ishimura box** behind the Cloudflare Tunnel + Caddy
-stack and is **deployed by hand, not by this repo's CI**. Build, run, and deploy
-details are in [`site/README.md`](site/README.md).
-
-To edit the site's content, change the files under `site/web/` and redeploy on
-the box (`docker compose up -d --build`), then purge the Cloudflare cache.
+lookup — which still reads **this** repo's releases). It runs **on the ishimura
+box** behind the Cloudflare Tunnel + Caddy stack and is **deployed by hand, not
+by this repo's CI**. Build, run, and deploy details are in that repo's README.
 
 ---
 

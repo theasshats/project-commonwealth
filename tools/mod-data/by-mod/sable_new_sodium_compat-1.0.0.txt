@@ -1,0 +1,29 @@
+# sable_new_sodium_compat-1.0.0
+
+## mod metadata (id / version / deps)
+license = "MIT"
+modId = "sable_new_sodium_compat" #mandatory
+version = "1.0.0" #mandatory
+displayName = "Sable: New Sodium Compat" #mandatory
+modId = "neoforge" #mandatory
+versionRange = "[21,)" #mandatory
+modId = "minecraft"
+versionRange = "[1.21.1,1.22)"
+modId = "sodium"
+versionRange = "[0.8.12-alpha.2,)"
+modId = "sable"
+versionRange = "[1.2.2,1.2.3)"
+modId = "veil"
+versionRange = "[4.1.2,)"
+
+## blocks
+
+
+## items
+
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+

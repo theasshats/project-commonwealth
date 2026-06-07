@@ -1,0 +1,283 @@
+name: Keep the packwiz index in sync
+
+# Single owner of "regenerate the packwiz-generated index on a PR" (issue #127 —
+# this replaces the old refresh-index.yml + resolve-conflicts.yml pair, which
+# overlapped on pull_request events and could race each other's push). It heals
+# both ways index.toml / pack.toml go wrong on a PR:
+#
+#   - BEHIND MAIN: a stacked PR collides in the generated files once main moves
+#     ahead. We merge main and regenerate. Auto-resolve ONLY regenerable conflicts
+#     (index.toml always; pack.toml when the sides differ solely in the [index]
+#     hash, OR solely in the version line AND this branch's version is AHEAD of
+#     main's — a version branch folding in the current release while keeping its own
+#     higher version, so in-progress versions are always tested on the latest
+#     shipped content). A branch whose version is BELOW main's is a superseded
+#     leftover (a 0.5.x branch after 0.6.0 shipped) → bail. Any other real content
+#     conflict → abort and ask a human.
+#
+#   - STALE: the author edited a tracked pack file (a KubeJS script, a config, a
+#     manifest) and pushed without `packwiz refresh`. We regenerate — but
+#     conservatively: only PURE HASH DRIFT on already-indexed files is auto-committed.
+#     If the file LIST changed (entries added/removed) we bail and leave the red
+#     "packwiz index" check for a human, so the .packwizignore guard still stands
+#     (a new un-ignored top-level dir getting vacuumed in must not be silently committed).
+#
+# One workflow + per-PR concurrency means nothing races a push to a branch. No
+# infinite loop: pushes use GITHUB_TOKEN, which doesn't re-trigger pull_request,
+# and after a resolution the branch is up to date with main so the next run is a
+# no-op.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, reopened, synchronize]
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: 'PR number to sync'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    outputs:
+      prs: ${{ steps.list.outputs.prs }}
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Build the list of PRs to process
+        id: list
+        run: |
+          case "${{ github.event_name }}" in
+            push)
+              # Every open PR targeting main — any of them may now collide.
+              prs="$(gh pr list --repo "$GITHUB_REPOSITORY" --base main --state open --json number -q '[.[].number]')" ;;
+            pull_request)
+              prs="[${{ github.event.pull_request.number }}]" ;;
+            workflow_dispatch)
+              prs="[${{ github.event.inputs.pr }}]" ;;
+            *)
+              prs="[]" ;;
+          esac
+          echo "prs=$prs" >> "$GITHUB_OUTPUT"
+          echo "PRs to process: $prs"
+
+  sync:
+    needs: discover
+    if: needs.discover.outputs.prs != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        pr: ${{ fromJSON(needs.discover.outputs.prs) }}
+    concurrency:
+      group: sync-index-${{ matrix.pr }}
+      cancel-in-progress: false
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PR: ${{ matrix.pr }}
+    steps:
+      - name: Resolve PR head branch
+        id: pr
+        run: |
+          state="$(gh pr view "$PR" --repo "$GITHUB_REPOSITORY" --json state -q .state)"
+          if [ "$state" != "OPEN" ]; then
+            echo "PR #$PR is $state — skipping."
+            echo "skip=1" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          head_ref="$(gh pr view "$PR" --repo "$GITHUB_REPOSITORY" --json headRefName -q .headRefName)"
+          head_repo="$(gh pr view "$PR" --repo "$GITHUB_REPOSITORY" --json headRepositoryOwner -q .headRepositoryOwner.login)"
+          echo "head_ref=$head_ref" >> "$GITHUB_OUTPUT"
+          if [ "$head_repo" != "${GITHUB_REPOSITORY%%/*}" ]; then
+            echo "PR #$PR is from a fork ($head_repo); can't push a fix to it."
+            echo "skip=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.pr.outputs.skip != '1'
+        with:
+          ref: ${{ steps.pr.outputs.head_ref }}
+          fetch-depth: 0
+          # PAT (or GitHub App token) if configured, so the fold/refresh push triggers a
+          # normal pull_request run of pr-checks that DISPLAYS on the PR (the green tick).
+          # Falls back to GITHUB_TOKEN, whose pushes don't re-trigger CI — then a bot-folded
+          # commit won't show checks until a human pushes. See docs/CI-CHECKS.md.
+          token: ${{ secrets.SYNC_PAT || secrets.GITHUB_TOKEN }}
+
+      - uses: ./.github/actions/setup-packwiz
+        if: steps.pr.outputs.skip != '1'
+
+      - name: Merge main if behind, then regenerate the index
+        id: sync
+        if: steps.pr.outputs.skip != '1'
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # --- 1. Bring in main (if the branch is behind), resolving only the
+          #        regenerable generated-file conflicts; bail on real ones. -------
+          git fetch origin main
+          merged=0
+          if git merge --no-commit --no-ff origin/main; then
+            # Clean merge. If anything got staged, main actually brought changes.
+            if ! git diff --cached --quiet; then
+              merged=1
+            fi
+          else
+            mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
+            echo "Conflicting files: ${conflicts[*]}"
+            real=()
+            superseded=0
+            for f in "${conflicts[@]}"; do
+              case "$f" in
+                index.toml) : ;;  # always regenerable
+                pack.toml)
+                  # Regenerable if the two sides differ ONLY in the [index] hash
+                  # and/or the version line. The version line is special: a version
+                  # branch (v0.6.0, a staged patch) legitimately sits AHEAD of main,
+                  # and we want each release folded in WITHOUT overwriting the
+                  # branch's higher version — so keep ours (the resolution below is
+                  # `checkout --ours`) and carry on. If the branch is BELOW main's
+                  # version it's a superseded leftover (e.g. a 0.5.x patch branch
+                  # after 0.6.0 shipped) — bail so a human closes/rebases it rather
+                  # than mislabelling the folded content. Anything else differing (a
+                  # NeoForge [versions] bump, say) is a genuine conflict.
+                  ours_rest="$(git show :2:pack.toml | grep -vE '^(hash|version) = ' || true)"
+                  theirs_rest="$(git show :3:pack.toml | grep -vE '^(hash|version) = ' || true)"
+                  if [ "$ours_rest" != "$theirs_rest" ]; then
+                    real+=("$f")
+                  else
+                    ours_v="$(git show :2:pack.toml | sed -nE 's/^version[[:space:]]*=[[:space:]]*"([^"]+)".*/\1/p')"
+                    theirs_v="$(git show :3:pack.toml | sed -nE 's/^version[[:space:]]*=[[:space:]]*"([^"]+)".*/\1/p')"
+                    if [ "$ours_v" != "$theirs_v" ]; then
+                      higher="$(printf '%s\n%s\n' "$ours_v" "$theirs_v" | sort -V | tail -1)"
+                      if [ "$higher" != "$ours_v" ]; then
+                        superseded=1
+                        real+=("$f")
+                      fi
+                    fi
+                  fi ;;
+                *) real+=("$f") ;;
+              esac
+            done
+            if [ "${#real[@]}" -gt 0 ]; then
+              git merge --abort
+              if [ "$superseded" = 1 ]; then
+                # Below the current release. If the branch holds nothing but the
+                # auto-staged bump (only github-actions[bot] non-merge commits —
+                # fold-merges are excluded), it's a dead version slot to retire.
+                # If a human committed real work, only flag it so nothing is lost.
+                bot='41898282+github-actions[bot]@users.noreply.github.com'
+                human="$(git log --no-merges 'origin/main..HEAD' --format='%ae' | grep -vF "$bot" || true)"
+                if [ -z "$human" ]; then
+                  echo "result=superseded-empty" >> "$GITHUB_OUTPUT"
+                else
+                  echo "result=superseded" >> "$GITHUB_OUTPUT"
+                fi
+              else
+                printf '%s\n' "${real[@]}" > /tmp/real_conflicts.txt
+                echo "result=manual" >> "$GITHUB_OUTPUT"
+              fi
+              exit 0
+            fi
+            # All conflicts are regenerable: take our side (pack.toml's non-hash
+            # content is identical; index.toml is rebuilt wholesale next).
+            git checkout --ours -- pack.toml index.toml
+            git add pack.toml index.toml
+            merged=1
+          fi
+
+          # --- 2a. MERGE path — regenerate from the merged content and commit
+          #         whatever refresh produces (file-list changes from main are
+          #         legitimate: that's the stacked-PR index conflict we exist to fix).
+          if [ "$merged" = 1 ]; then
+            packwiz refresh
+            git add -A
+            git commit -m "Merge main; regenerate packwiz index"
+            echo "result=merged" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # --- 2b. STALE path — branch already up to date with main. The shared guard
+          #         script (the SAME one pr-checks gates on, so they can't disagree)
+          #         refreshes and returns a verdict:
+          #           fresh     → nothing to do.
+          #           fixable   → staleness confined to known pack dirs (the author forgot
+          #                       `packwiz refresh`); auto-commit the regenerated index.
+          #           violation → refresh pulled in a new top-level path that needs a
+          #                       .packwizignore entry. We do NOT auto-commit (it'd
+          #                       vacuum the dir in) and stay green —
+          #                       pr-checks' packwiz index job carries the red for the human.
+          verdict="$(bash scripts/index-guard.sh)" || true
+          echo "index-guard verdict: $verdict"
+          case "$verdict" in
+            fresh)
+              echo "result=fresh" >> "$GITHUB_OUTPUT"
+              exit 0 ;;
+            fixable)
+              git add index.toml pack.toml
+              git commit -m "Auto-refresh packwiz index [skip ci]"
+              echo "result=refreshed" >> "$GITHUB_OUTPUT" ;;
+            *)
+              echo "result=stale-bail" >> "$GITHUB_OUTPUT"
+              exit 0 ;;
+          esac
+
+      - name: Push the result
+        if: steps.pr.outputs.skip != '1' && contains(fromJSON('["merged","refreshed"]'), steps.sync.outputs.result)
+        uses: ./.github/actions/push-with-retry
+        with:
+          ref: ${{ steps.pr.outputs.head_ref }}
+
+
+      # An empty superseded version slot (only the auto-staged bump, no human work)
+      # is a dead end — close the PR and delete the branch. The correctly-numbered
+      # next patch is already staged by the release flow's open-next job. Closing on
+      # the push fan-out is a one-shot: once closed the PR leaves the open set, so it
+      # isn't reprocessed.
+      - name: Retire an empty superseded branch
+        if: steps.pr.outputs.skip != '1' && steps.sync.outputs.result == 'superseded-empty'
+        run: |
+          gh pr close "$PR" --repo "$GITHUB_REPOSITORY" --delete-branch \
+            --comment "🤖 Retiring this branch: its \`pack.toml\` version is below the current release on \`main\` and it has no changes beyond the auto-staged version bump. The correctly-numbered next patch is already staged. Reopen and restore the branch if this was a mistake."
+
+      - name: Report outcome
+        if: steps.pr.outputs.skip != '1' && always()
+        run: |
+          case "${{ steps.sync.outputs.result }}" in
+            merged)
+              gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" \
+                --body "🤖 Merged \`main\` and regenerated \`index.toml\` / \`pack.toml\` from the combined content." ;;
+            manual)
+              # push-to-main re-checks every open PR; don't re-nag on each push — the
+              # red index-freshness check already carries that signal. Speak up only
+              # when the PR is opened/reopened or synced, or resolved on demand.
+              if [ "${{ github.event_name }}" != "push" ]; then
+                files="$(sed 's/^/- `/; s/$/`/' /tmp/real_conflicts.txt)"
+                gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" \
+                  --body "$(printf '🤖 This PR conflicts in files I can only resolve by hand (I auto-resolve the packwiz-generated \`index.toml\` / \`pack.toml\`, but these are real content changes):\n\n%s\n\nMerge \`main\` and resolve them locally.' "$files")"
+              fi ;;
+            superseded)
+              # Below the current release AND carries human work, so it wasn't
+              # auto-retired (an empty slot would be). Folding main in would mislabel
+              # the content, so flag it instead. No red check exists for this, so
+              # notify — but only off the push fan-out, to avoid a fresh comment on
+              # every later main push while the branch lingers.
+              if [ "${{ github.event_name }}" != "push" ]; then
+                gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" \
+                  --body "🤖 This branch's \`pack.toml\` version is **below** the current release on \`main\`, and it has its own changes, so I'm neither folding the release in (it would mislabel the content) nor auto-closing it. It looks **superseded** — bump it to a version above the current release (and rebase), or close it if the work has landed elsewhere."
+              fi ;;
+            *)
+              # refreshed / stale-bail / fresh — routine, stay quiet (the index check
+              # speaks for stale-bail; nothing to say for the rest).
+              echo "Result: ${{ steps.sync.outputs.result }} — no comment." ;;
+          esac

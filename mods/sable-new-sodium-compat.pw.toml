@@ -1,0 +1,14 @@
+name = "Sable: New Sodium Compat"
+filename = "sable_new_sodium_compat-1.0.0.jar"
+side = "client"
+pin = true
+
+[download]
+hash-format = "sha1"
+hash = "a4aa7ec9c1ba96828058f799254d08c27c07108a"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8143694
+project-id = 1553530

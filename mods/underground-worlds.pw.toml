@@ -1,12 +1,12 @@
 name = "Underground Worlds"
-filename = "undergroundworlds-neoforge-3.0.1-1.21.1.jar"
+filename = "undergroundworlds-neoforge-3.0.2-1.21.1.jar"
 
 [download]
-url = "https://cdn.modrinth.com/data/g9fDJQZe/versions/8chVaCao/undergroundworlds-neoforge-3.0.1-1.21.1.jar"
+url = "https://cdn.modrinth.com/data/g9fDJQZe/versions/aqtQkQ70/undergroundworlds-neoforge-3.0.2-1.21.1.jar"
 hash-format = "sha512"
-hash = "a6f22c32c4c2e280619dcf46a6404666fb441b31c1ea875911c7e0bd20377056944060c82a84fb9665c0fa3438bf985af925e408c7acec16e8c6c8fb7710ccf7"
+hash = "f6920b3fa97c84b3c80df7bb3cba79ca206d1730b9210966eeaaae2c7f7096f4625a0b5b8d2d207e1b92c35838c396a116db4c556a1fb70473d2a20aeb11afbc"
 
 [update]
 [update.modrinth]
 mod-id = "g9fDJQZe"
-version = "8chVaCao"
+version = "aqtQkQ70"

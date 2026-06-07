@@ -1,0 +1,23 @@
+# midnightthoughts-1.4
+
+## mod metadata (id / version / deps)
+license = "MIT"
+modId = "midnightthoughts"
+version = "1.4"
+displayName = "Midnight Thoughts"
+modId = "neoforge"
+versionRange = "[21.1.0,)"
+modId = "minecraft"
+versionRange = "[1.21.1,1.22)"
+
+## blocks
+
+
+## items
+
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+

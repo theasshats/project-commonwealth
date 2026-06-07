@@ -11,7 +11,9 @@ off those two.
 
 | Doc | Purpose |
 |---|---|
-| [`DESIGN.md`](DESIGN.md) | **The why** behind the architecture — the canonical "five systems" rationale. If a decision feels weird, look here first. |
+| [`DESIGN.md`](DESIGN.md) | **The why** behind the architecture — the systems-loop rationale and all the architectural decisions. If a decision feels weird, look here first. |
+| [`SYSTEMS.md`](SYSTEMS.md) | **The canonical structural model** — the systems as one causal loop (scarcity → pressure → production → economy; *Eco*-inspired). How the parts interlock: production (Create/magic), the economy (trade + logistics/aeronautics), pressure (survival), the recipe/gating spine, the ecological cost. The old flat "five systems" framing is retired here. |
+| [`CURATION.md`](CURATION.md) | **The curation rubric** — the charter every keep/cut pass scores mods against (the 8 gates). |
 | [`RECIPES.md`](RECIPES.md) | The "Made through Create" recipe convention **and the live triage ledger** — the most-referenced doc; the source of truth for recipe changes. |
 | [`CONNECTIVITY.md`](CONNECTIVITY.md) | The "one web, not many clusters" connectivity metric — turns the north-star web goal into a number you can re-check (`tools/recipe-graph/`). |
 | [`ORE-GENERATION.md`](ORE-GENERATION.md) | The GTMOGS mix-vein ore-gen model (GTNH-style regional veins) and its config. |
@@ -24,17 +26,15 @@ off those two.
 | Doc | Purpose |
 |---|---|
 | [`PRISM-SETUP.md`](PRISM-SETUP.md) | Player-facing install walkthrough (Prism Launcher). |
-| [`EDITING.md`](EDITING.md) | How to add mods / change configs / ship updates — the editor flow plus CLI/Actions fallbacks. |
+| [`EDITING.md`](EDITING.md) | How to add mods / change configs / ship updates — the editor flow plus the packwiz CLI fallback. |
 | [`CI-CHECKS.md`](CI-CHECKS.md) | What the merge-gating `pr-checks.yml` validates (and how to make the checks required). |
 
 ## Planning & process — living docs
 
 | Doc | Purpose |
 |---|---|
-| [`ROADMAP.md`](ROADMAP.md) | **The plan** — multi-phase build-out and the milestone map (the road to 1.0). The sequencing source of truth; can lag `main`. |
-| [`MODLIST-AUDIT.md`](MODLIST-AUDIT.md) | Modlist-vs-goals audit. A **planning artifact / snapshot**, explicitly not a final decision list. |
+| [`ROADMAP.md`](ROADMAP.md) | **The plan** — multi-phase build-out and the milestone map + the odd/even cadence (the road to 1.0). The sequencing source of truth; can lag `main`. |
 | [`TRIAGE.md`](TRIAGE.md) | Issue-triage playbook (re-label / milestone / assign / close / sequence). |
-| [`RELEASE-CADENCE.md`](RELEASE-CADENCE.md) | Odd/even versioning rhythm — **proposal**, for review. |
 | [`WEAVING-STRATEGY.md`](WEAVING-STRATEGY.md) | Weave-the-web thinking — **DRAFT**, not settled. |
 
 ## Player-facing copy
@@ -51,17 +51,27 @@ priorities. See [`archive/`](archive/):
 - `archive/RECIPE-OVERHAUL-HANDOFF.md` — the #62 "Made through Create" overhaul (merged ~v0.4.6). Live convention now lives in `RECIPES.md`.
 - `archive/MAGIC-WEB-HANDOFF.md` — the #75 magic-web recipe weave (merged ~v0.5.2). Live design in `RECIPES.md` ("Magic web").
 - `archive/MAGIC-WEB-PLAYTEST.md` — the #75 in-game playtest checklist.
+- `archive/MODLIST-AUDIT.md` — the modlist-vs-goals snapshot. **Superseded** by `SYSTEMS.md` (model) + `CURATION.md` (rubric) + `ROADMAP.md` (plan); kept for its §A/§B/§C analysis. Archived v0.6.0.
+- `archive/RELEASE-CADENCE.md` — the odd/even cadence proposal + extended rationale. **Accepted**; the canonical cadence now lives in `ROADMAP.md` (rationale folded in). Archived v0.6.0.
+- `archive/ROTTEN-CREATURES-STRUCTURES.md` — the #106 spawn-allowlist review sheet. Durable rules live in `SPAWN-GATING.md`. Archived v0.6.0.
+
+### Still-live docs that were *candidates* (kept, with a note)
+
+- **`ARCANA-BRIDGE-MOD.md`** — **kept**: forward-looking design for the Derpack Arcana magic-weave helper mod, which is **Magic-pillar (v0.11.0)** work, not a finished artifact. Archive once that mod ships (or is dropped).
+- **`BOOT-LOG-BASELINE.md`** — **kept** as a living reference (the accepted boot-log-noise catalog future passes check against). Trim the #119/#120/#121-specific sections now those have closed.
 
 ## Conventions
 
-**The canonical split — don't duplicate the "five systems" preamble.** Three docs open with a version of
-the five-systems framing; they are **not** interchangeable:
-- `DESIGN.md` is **canonical** (the *why*) — cite it; don't re-argue it elsewhere.
-- `ROADMAP.md` is the **plan** (the *when / in what order*).
-- `MODLIST-AUDIT.md` is a **snapshot audit** (a planning artifact, not a decision).
+**The canonical split — don't duplicate the systems preamble.** Several docs open with a version of
+the systems-loop framing; they are **not** interchangeable:
+- `SYSTEMS.md` is **canonical for the structure** (the *how it interlocks* — the loop). The model itself.
+- `DESIGN.md` is **canonical for the rationale** (the *why*) — cite it; don't re-argue it elsewhere.
+- `ROADMAP.md` is the **plan** (the *when / in what order*) and the **cadence map** (odd/even).
+- `CURATION.md` is the **keep/cut charter** (the gates a mod must pass).
+- (`archive/MODLIST-AUDIT.md` is the old **snapshot audit** — historical, superseded by the above.)
 
 **`EDITING.md` ↔ `../mods/README.md`.** `EDITING.md` is the **task walkthrough** (add a mod, change a
-config, ship an update, with editor + Actions fallbacks); `mods/README.md` is the **manifest reference**
+config, ship an update, with the editor + packwiz CLI fallback); `mods/README.md` is the **manifest reference**
 (the `.pw.toml` format, the `pin`-placement gotcha, hash workflows). Link across for depth; keep the
 walkthrough out of the reference and vice-versa.
 

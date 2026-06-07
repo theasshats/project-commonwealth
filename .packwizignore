@@ -26,9 +26,6 @@ wiki/
 scripts/
 tools/
 
-# Player website — its own Go service, deployed by hand on the box; not pack content
-site/
-
 # Build outputs
 dist/
 build/

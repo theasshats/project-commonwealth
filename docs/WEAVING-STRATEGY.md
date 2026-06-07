@@ -7,8 +7,10 @@
 ## The goal
 
 Derpack X's identity is *"one or two cohesive webs, not many clusters"* — every mod tied into ≥2 of the
-five systems (Create / magic / economy / aeronautics / survival). The pack is broad on purpose; what
-makes it **AAA rather than kitchen-sink** is the **weave**: the sense that the mods *belong together* and
+systems (Create / magic — production; survival — pressure; economy — distribution & trade, incl.
+logistics/aeronautics), which form one causal loop (the *Eco*-style scarcity → pressure → production →
+economy; canonical model in `docs/SYSTEMS.md`). The pack is broad on purpose; what makes it **AAA rather
+than kitchen-sink** is the **weave**: the sense that the mods *belong together* and
 feed each other. The stated ambition is to reach that **with minimal manual effort** — i.e. accomplish
 the weave **primarily with LLM tools**.
 
@@ -73,6 +75,6 @@ LLM tools**, centered on:
 
 ---
 
-_Refs: `docs/RELEASE-CADENCE.md` (the cadence this rides), `docs/DESIGN.md` (the five-system goal),
+_Refs: `docs/archive/RELEASE-CADENCE.md` (the cadence this rides), `docs/DESIGN.md` (the goal), `docs/SYSTEMS.md` (the systems loop),
 `docs/CONNECTIVITY.md` + `tools/recipe-graph/` (the web metric), `tools/mod-data/` (the digest),
 #62 / #132 (structural weave to date), #157 (curation rubric), #160 (per-mod web research)._

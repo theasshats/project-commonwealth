@@ -1,0 +1,8 @@
+kobolds:kobold_iron_axe | minecraft:smithing_transform | kobolds:kobold_iron_axe kobolds:kobold_template minecraft:iron_axe minecraft:iron_ingot minecraft:smithing_transform
+kobolds:kobold_iron_hoe | minecraft:smithing_transform | kobolds:kobold_iron_hoe kobolds:kobold_template minecraft:iron_hoe minecraft:iron_ingot minecraft:smithing_transform
+kobolds:kobold_iron_pickaxe | minecraft:smithing_transform | kobolds:kobold_iron_pickaxe kobolds:kobold_template minecraft:iron_ingot minecraft:iron_pickaxe minecraft:smithing_transform
+kobolds:kobold_iron_shovel | minecraft:smithing_transform | kobolds:kobold_iron_shovel kobolds:kobold_template minecraft:iron_ingot minecraft:iron_shovel minecraft:smithing_transform
+kobolds:kobold_iron_spear_sb | minecraft:smithing_transform | kobolds:kobold_iron_spear_sb kobolds:kobold_template minecraft:iron_ingot minecraft:iron_spear minecraft:smithing_transform neoforge:mod_loaded
+kobolds:kobold_iron_sword | minecraft:smithing_transform | kobolds:kobold_iron_sword kobolds:kobold_template minecraft:iron_ingot minecraft:iron_sword minecraft:smithing_transform
+kobolds:kobold_smith_trim | minecraft:smithing_trim | kobolds:kobold_template minecraft:smithing_trim minecraft:trim_materials minecraft:trimmable_armor
+kobolds:kobold_trim_template | minecraft:crafting_shaped | kobolds:kobold_template minecraft:crafting_shaped minecraft:diamond minecraft:tuff

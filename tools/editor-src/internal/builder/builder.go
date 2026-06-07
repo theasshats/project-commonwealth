@@ -9,8 +9,8 @@
 //   1. Read pack metadata from pack.toml.
 //   2. Write Prism scaffold files (mmc-pack.json, instance.cfg) into a staging
 //      folder.
-//   3. Copy config/, defaultconfigs/, kubejs/, resourcepacks/, shaderpacks/
-//      into <staging>/.minecraft/.
+//   3. Copy the override dirs listed in scripts/instance-dirs.txt (the source of
+//      truth shared with the install scripts) into <staging>/.minecraft/.
 //   4. Start `packwiz serve` on a free port.
 //   5. Run packwiz-installer-bootstrap (Java) against that server to fetch
 //      every mod jar into <staging>/.minecraft/mods/.
@@ -19,6 +19,7 @@
 package builder
 
 import (
+	"bufio"
 	"context"
 	"fmt"
 	"io"
@@ -88,13 +89,25 @@ func (b *Builder) Build(ctx context.Context, log func(string)) (*Result, error) 
 	if err := writeMmcPack(staging, mcVersion, neoforgeVersion); err != nil {
 		return nil, err
 	}
-	if err := writeInstanceCfg(staging, pack.Name, pack.Version); err != nil {
+	jvmBlock, err := ReadInstanceJvm(b.RepoRoot)
+	if err != nil {
+		return nil, fmt.Errorf("read scripts/instance-jvm.cfg: %w", err)
+	}
+	if err := writeInstanceCfg(staging, pack.Name, pack.Version, jvmBlock); err != nil {
 		return nil, err
 	}
 	collect("Wrote mmc-pack.json and instance.cfg")
 
-	// 3. Copy config dirs.
-	for _, d := range []string{"config", "defaultconfigs", "kubejs", "resourcepacks", "shaderpacks"} {
+	// 3. Copy the override dirs. The list is the shared single source of truth in
+	// scripts/instance-dirs.txt (also read by build-prism-skeleton.sh and
+	// build-server.sh) so the editor build and the install scripts can never drift —
+	// that drift is how tacz/ (the Create: Armorer gun packs) once went missing from
+	// editor-built instances. This is a client/Prism build, so it takes "both" + "client".
+	dirs, err := ReadInstanceDirs(b.RepoRoot, "client")
+	if err != nil {
+		return nil, fmt.Errorf("read scripts/instance-dirs.txt: %w", err)
+	}
+	for _, d := range dirs {
 		src := filepath.Join(b.RepoRoot, d)
 		if _, err := os.Stat(src); err != nil {
 			continue // skip missing dirs
@@ -166,23 +179,81 @@ func writeMmcPack(staging, mcVer, neoforgeVer string) error {
 	return os.WriteFile(filepath.Join(staging, "mmc-pack.json"), []byte(contents), 0o644)
 }
 
-func writeInstanceCfg(staging, packName, packVersion string) error {
+func writeInstanceCfg(staging, packName, packVersion, jvmBlock string) error {
+	// jvmBlock is the JvmArgs/MaxMemAlloc/MinMemAlloc lines from the shared
+	// single source of truth scripts/instance-jvm.cfg (see ReadInstanceJvm),
+	// spliced into the [General] section so it can't drift from the install scripts.
 	contents := fmt.Sprintf(`[General]
 ConfigVersion=1.2
 InstanceType=OneSix
 JavaArchitecture=64
 JavaVersion=21
-JvmArgs=-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1
-MaxMemAlloc=12288
-MinMemAlloc=8192
+%s
 OverrideJavaArgs=true
 OverrideMemory=true
 PermGen=256
 iconKey=default
 name=%s %s
 notes=Built locally from %s by derpack-edit.
-`, packName, packVersion, packName)
+`, jvmBlock, packName, packVersion, packName)
 	return os.WriteFile(filepath.Join(staging, "instance.cfg"), []byte(contents), 0o644)
+}
+
+// ReadInstanceJvm reads scripts/instance-jvm.cfg — the single source of truth (shared with
+// scripts/build-prism-skeleton.sh) for the Prism instance's JVM args + heap (the JvmArgs,
+// MaxMemAlloc and MinMemAlloc lines). Comments (#) and blank lines are stripped; the remaining
+// key=value lines are returned joined by newlines, ready to splice into instance.cfg's
+// [General] section. Shared so the editor build and the installer can't drift on Java flags —
+// same rationale as ReadInstanceDirs.
+func ReadInstanceJvm(repoRoot string) (string, error) {
+	data, err := os.ReadFile(filepath.Join(repoRoot, "scripts", "instance-jvm.cfg"))
+	if err != nil {
+		return "", err
+	}
+	var lines []string
+	for _, ln := range strings.Split(string(data), "\n") {
+		t := strings.TrimSpace(ln)
+		if t == "" || strings.HasPrefix(t, "#") {
+			continue
+		}
+		lines = append(lines, t)
+	}
+	if len(lines) == 0 {
+		return "", fmt.Errorf("scripts/instance-jvm.cfg has no JVM/heap lines")
+	}
+	return strings.Join(lines, "\n"), nil
+}
+
+// ReadInstanceDirs reads scripts/instance-dirs.txt — the single source of truth (shared with
+// scripts/build-prism-skeleton.sh and scripts/build-server.sh) for which override directories
+// get copied into a built instance's .minecraft/. Each non-comment line is "<dir> <scope>",
+// scope being "both", "client", or "server"; a dir is returned when its scope is "both" or
+// matches the requested scope ("client" for an editor/Prism build). Exported so the launch
+// step (handlers) deploys the same set the build staged — they must not drift.
+func ReadInstanceDirs(repoRoot, scope string) ([]string, error) {
+	f, err := os.Open(filepath.Join(repoRoot, "scripts", "instance-dirs.txt"))
+	if err != nil {
+		return nil, err
+	}
+	defer f.Close()
+
+	var dirs []string
+	sc := bufio.NewScanner(f)
+	for sc.Scan() {
+		line := strings.TrimSpace(sc.Text())
+		if line == "" || strings.HasPrefix(line, "#") {
+			continue
+		}
+		fields := strings.Fields(line)
+		s := "both"
+		if len(fields) > 1 {
+			s = fields[1]
+		}
+		if s == "both" || s == scope {
+			dirs = append(dirs, fields[0])
+		}
+	}
+	return dirs, sc.Err()
 }
 
 // copyDir recursively copies srcDir into dstDir.

@@ -1,9 +1,115 @@
 # Derpack X — Patch Notes
 
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
-     "## X.Y.Z — Theme (diff vs prev)", a short lead paragraph, then sections (see CLAUDE.md). -->
+     "## X.Y.Z — Theme", a short lead paragraph, then sections (see CLAUDE.md). -->
 
-## 0.5.2 — Magic Web (diff vs 0.5.1)
+## 0.6.0 — Foundation
+
+This release concentrates on performance and maintenance: a new renderer, a full pass of mod updates,
+spawn tuning, and a set of fixes and removals.
+
+### Performance
+
+Sodium has been added. It replaces the default terrain renderer, which carried out its work on the
+CPU rather than the graphics card and was the primary cause of low frame rates at an established
+base. In testing, frame rates approximately doubled. Sodium could not be used previously because it
+left all world textures invisible alongside Create: Aeronautics; a compatibility layer now reconciles
+the two, so Sodium runs together with Aeronautics and its airships. Sodium is client-side only and
+has no effect on the server. Shaders remain unsupported with Aeronautics.
+
+Natural spawn rates have been reduced for several of the more demanding creature mods — Born in
+Chaos, Mowzie's Mobs, and Grimoire of Gaia. These mobs were appearing often enough to take up a
+noticeable share of server tick time. They still spawn, only less frequently. This is an initial
+adjustment and will be revised with further play.
+
+Chunky, a chunk pre-generation tool, has been added. Running `/chunky radius <n>` followed by
+`/chunky start` on the server generates the surrounding area in advance, so chunks are saved before
+players reach them and live world generation does not stall a session.
+
+Memory and garbage-collection settings were tuned. The client instance ships with G1GC at 8 GB minimum /
+12 GB maximum and a 50 ms collection-pause target, so the brief periodic GC hitches are shorter and less
+noticeable on high-refresh displays. The setup guide adds a system-RAM-to-heap table and an optional
+Generational ZGC configuration for machines with 24 GB or more (`docs/PRISM-SETUP.md`). These ship in the
+installer, so a fresh install or reinstall picks them up.
+
+### Updates
+
+Approximately a month of mod updates has been applied across the pack. NeoForge has been raised to
+21.1.233 to meet the requirements of the updated mods. Update your launcher's loader version to
+21.1.233 before playing.
+
+Configured has been added. It provides in-game configuration screens for mods that support it,
+reachable from the mod list, so per-mod settings can be changed without editing config files by hand.
+
+### Fixes
+
+The locked-slot indicators from Inventory Profiles Next no longer appear as stray arrows on the
+hotbar. Slot locking continues to function normally.
+
+Cactus is no longer offered as a building material in the cases where it produced broken decoration
+blocks.
+
+Iron's Spellbooks spellbooks now fit the dedicated spellbook accessory slot.
+
+### Recovered content
+
+A number of recipes and block drops that several mods intended to ship were being discarded at load
+because of malformed files, with no visible sign beyond a missing recipe or an empty drop. Each was
+checked against the mod's own files and restored.
+
+Recipes: the Farm and Charm mincer now processes the ores and logs from Create: TFMG, Occultism,
+Iron's Spells, Let's Do Vinery, and Create that it was meant to; Create: Compressed's crushed-pile
+washing, dough, and polished rose quartz work again; and the cherry-sapling cutting recipe works.
+Crushed raw silver smelts, blasts, and washes into Occultism silver. Create: Compressed's compressed
+crushed uranium pile, which previously had no use here, now washes into Create: Nuclear uranium powder.
+
+Block drops: the Create treadmill, the komainu, kawauso, and tanuki statues, the Stoneholm cleric
+chest, and the Trail and Tales pottery cooking pot and lantern fruits now drop correctly. Smokeleaf
+Industries houses can generate in plains again.
+
+### Spawns and content
+
+Rotten Creatures spawning has been tuned per mob so each undead appears where it fits. The Undead
+Miner is limited to mineshafts and mining dungeons; Frostbitten and the Glacial Hunter to cold biomes
+and snowy forts; Swampy to swamps; the Mummy to deserts, pyramids, and crypts; Burned to ruined
+portals and Nether structures; and Dead Beard to ocean ruins, with a smaller chance aboard the When
+Dungeons Arise pirate ships. Spawns draw on the relevant vanilla structures together with those from
+YUNG's Better Dungeons and Dungeons and Taverns.
+
+### Food and diet
+
+The two Spice of Life diet mods have been replaced by Diet – AppleSeed Edition, a single nutrition
+system that tracks five food groups and grants small benefits for eating a varied diet. It reads each
+food's groups from its recipe automatically, so it covers the whole pack without per-item setup. The
+separate Touhou Little Maid diet addon is unrelated and stays.
+
+### Removed
+
+Bosses of Mass Destruction has been removed, along with its library dependency. Its four
+structure-bosses overlapped L_Ender's Cataclysm, which remains as the pack's endgame boss mod.
+
+Umapyoi and five unused library mods were also removed. Nothing that depended on any of these remains
+in the pack.
+
+## 0.5.4 — Guns crafted through Create
+
+Guns, ammunition, and attachments are now built through their Create recipes, not assembled at the
+gun smith table. The table no longer offers them — nor the stock TaCZ weapons — so the path is the
+Create machinery the recipes were always meant to run on. Use JEI to find a gun's recipe. The gun
+smith table blocks are no longer craftable, since they no longer do anything. Guns and parts you
+already have are unaffected.
+
+## 0.5.3 — Gunsmith delivery fix
+
+Builds made with the pack editor were shipping without the Create: Armorer gun pack, so its
+guns, ammo, and attachments were missing and the gun smith table had nothing to craft. The editor
+now bundles the gun pack the same way the build scripts do, so a fresh build has the full Armorer
+lineup. No recipes or content changed; this only restores files that should have been included.
+
+The stock TaCZ gun smith table can no longer be crafted, so the Create: Armorer table is the one
+survival path to building guns. The stock block still exists in the creative tab.
+
+## 0.5.2 — Magic Web
 
 The magic mods are now tied together. Ars Nouveau sits at the center: its Source acts as a common
 currency that other schools' essences convert into and out of, the occult mods funnel through one shared
@@ -41,7 +147,7 @@ Conversion rates are a first pass and will be tuned with play.
   (a block that moves Source and mana directly, cross-school spell power) is still in progress and not
   part of this release.
 
-## 0.5.1 — Ore Veins (diff vs 0.5.0)
+## 0.5.1 — Ore Veins
 
 Ore generation is reworked to a GregTech-style model. Instead of ore scattered evenly through the
 ground, ores are concentrated in large regional veins of related materials, vanilla overworld ore
@@ -81,7 +187,7 @@ see it.
   currently absent in those pockets; the scattered small ores cover caving in the meantime. Making
   cave ore follow the surface region is the priority for the next ore-gen pass.
 
-## 0.5.0 — Made Through Create (diff vs 0.4.6)
+## 0.5.0 — Made Through Create
 
 Crafting across the pack now routes through Create. Most tech, gear, machines, and a fair amount of
 decoration are built from Create parts (sheets, casings, mechanisms) and methods (pressing, mixing,
@@ -132,7 +238,7 @@ Spawn-gating observation (#108) and the modded-structure allowlist (#106), the m
 the ore-generation model decision (#93), and functional-duplicate parts such as heavy_plate versus steel
 sheet (#103).
 
-## 0.4.6 — World Generation (diff vs 0.4.5)
+## 0.4.6 — World Generation
 
 > **Headline:** this release makes custom ore generation actually work. **0.4.4 and 0.4.5
 > crash the moment you click _Create New World_** (a malformed worldgen file aborts the whole

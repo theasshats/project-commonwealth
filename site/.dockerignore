@@ -1,5 +1,0 @@
-deploy/
-docker-compose.yml
-README.md
-*.md
-!web/**

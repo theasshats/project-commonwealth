@@ -1,0 +1,27 @@
+# configured-neoforge-1.21.1-2.6.3
+
+## mod metadata (id / version / deps)
+license = "GNU Lesser General Public License v3.0"
+modId = "configured"
+version = "2.6.3"
+displayName = "Configured"
+modId = "neoforge"
+versionRange = "[21.1.211,)"
+modId = "minecraft"
+versionRange = "[1.21.1,)"
+modId = "framework"
+versionRange = "[0.13.5,)"
+modId = "jei"
+versionRange = "[19.25.0.322,)"
+
+## blocks
+
+
+## items
+
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+

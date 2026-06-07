@@ -1,12 +1,12 @@
 name = "Companions!"
-filename = "companions-neoforge-1.21.1-1.2.2.jar"
+filename = "companions-neoforge-1.21.1-1.2.3.jar"
 
 [download]
-url = "https://cdn.modrinth.com/data/ArBFNu9T/versions/Xy6wE3IT/companions-neoforge-1.21.1-1.2.2.jar"
+url = "https://cdn.modrinth.com/data/ArBFNu9T/versions/qkRpmgnf/companions-neoforge-1.21.1-1.2.3.jar"
 hash-format = "sha512"
-hash = "ba608dc197ae68494696b88918e570a5470c962108c2c0e0d5a434898a08a4eeeec1b115a130bb5dd3e5baec88e8c4ffc5470a4feaaf7bde6e32b2b5a3279da4"
+hash = "168e17053530cfb26fcaf2871a3bc66689747ab8d3e669583163533488a28d1a14d12da200517a3485c44f0da46788cd42c160a5aca28296cca5347e36418f84"
 
 [update]
 [update.modrinth]
 mod-id = "ArBFNu9T"
-version = "Xy6wE3IT"
+version = "qkRpmgnf"

@@ -133,13 +133,12 @@ When you edit a manifest by hand to point at a different file, the existing `has
 
 In the editor, click the **⟳ Hash** button on that mod's row. The editor reads the manifest's URL, downloads the file, computes SHA-512, and writes the hash back. Works for pinned mods (unlike the Update workflow).
 
-### Option 2: Compute hash workflow (browser fallback)
+### Option 2: packwiz CLI (fallback)
 
-If you can't run the editor, use the GitHub Actions workflow:
-
-- Repo → Actions → "Compute hash" → Run with the slug as input
-
-Same effect as Option 1, runs server-side.
+If you can't run the editor, do it locally with packwiz: re-add or update the mod so packwiz
+recomputes the hash — `packwiz update <slug>` (un-pinned), or re-run `packwiz mr add <slug>` /
+`packwiz cf add <slug>`. (The browser "Compute hash" Action that used to live here was retired with
+the rest of the dispatch workflows — the editor replaced them, issue #127.)
 
 ### Option 3: Compute it yourself (full manual)
 
@@ -166,7 +165,7 @@ Paste the resulting lowercase hex string into the `hash =` field (in quotes), co
 1. Set `hash = ""` (empty string)
 2. Make sure `pin = true` is NOT set
 3. Commit
-4. Run **Update mods** workflow with this mod's slug
+4. Run `packwiz update <slug>` (or the editor's Update)
 
 packwiz will download the file, compute the hash, and write it back. Then if you want it pinned, edit the file again to add `pin = true`.
 
@@ -176,9 +175,9 @@ This works but takes more steps than Options 1 or 2. Mostly useful if you happen
 
 ## After editing a manifest
 
-If the URL changed, run **⟳ Hash** in the editor (or Compute hash workflow) to refresh the hash and commit. Works for both pinned and un-pinned mods.
+If the URL changed, run **⟳ Hash** in the editor (or `packwiz update <slug>`) to refresh the hash and commit. Works for both pinned and un-pinned mods.
 
-If you only changed `side` or other non-URL fields, just commit — no hash recomputation needed. The build workflow runs `packwiz refresh` itself, which updates the index pointer to your manifest. (The editor also runs refresh after most operations.)
+If you only changed `side` or other non-URL fields, just commit — no hash recomputation needed. CI's auto-refresh (and the editor after most operations) runs `packwiz refresh`, which updates the index pointer to your manifest.
 
 ---
 
