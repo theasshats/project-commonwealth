@@ -90,6 +90,21 @@ Power-read: 149 blocks, 348 items. Full underground dimension (the Otherside, ga
 
 REWORK: The dossier lists "economy via numismatics — Otherside-only soul materials are scarce, dangerous-to-get goods → sellable for coin (M-09 luxury good → coin)" as a WEAK candidate. M-09 is RETIRED — this entry should be expunged from the dossier. The dossier's magic candidates (M-11/M-02) are directionally correct; this pass adds M-15 (heart_of_the_deep → Ars apparatus) and M-23 (warden_carapace → aeronautics hull) as new additions not previously listed.
 
+## towntalk   [anchors: support/flavor (1)]
+
+LEAVE — audio flavor addon for MineColonies (colonist voice barks). No items, no blocks, no recipe types. The functionality is cosmetic voice lines; no gameplay mechanics, nothing to route. Rides on MineColonies which holds the real colony/economy weave. Genuine zero-content-surface mod in its sanctioned support role.
+
+## just_blahaj   [anchors: decoration/flavor (1)]
+
+Power-read: 31 placeable plush shark blocks in dye/pride-flag/novelty variants. Crafted from vanilla wool + dye. `loot=yes` but as decorative blocks that retain player username when placed. No processing methods.
+
+- from: just_blahaj plushies (wool + dye crafted, placed decoration) | via: create:crushing — a placed blahaj could crush back to wool scraps + dye (M-04 deco recycle, lossy) | to: create | motif: M-04 | power: everyday | tone: clash — M-04 is for deco blocks with a coherent material identity (stone families, metal tiles); a plush shark toy recycles through a Create Crusher is tonally absurd and undermines the lighthearted mood of the item. The briefing's hard guardrail: "don't force edges onto deliberately vanilla/organic content." This is exactly that case. | verdict: REJECT | reason: tone clash — the mod is explicitly "wholesome/friend-group flavor"; running plushies through an industrial Crusher is the anti-thesis of its vibe. Even if mechanically possible, it's a defect weave.
+
+- from: just_blahaj plushies (crafted items, all 31 variants) | via: colony request / M-28 — MineColonies colonists could request blahaj plushies as a happiness/comfort good (colony upkeep requiring deco items for colonist morale, per the colony's needs system) | to: economy | motif: M-28 | power: everyday | tone: ok — colonists wanting comfort items is thematically neat (a colony is a community; comfort matters) and gives the plushies a functional demand pull | verdict: REJECT | reason: MineColonies colonist request items are game-controlled comfort/need mechanics, not a player-economy exchange. This is an NPC-demand pull, not a player-run trade link. M-28 (colony route) is for *production routes* (cheaper/faster via colony or colony-locked output), not for commoditizing a decoration as colonist happiness fuel — that would be an invented mechanic, not an existing one. No surviving rationale.
+
+LEAVE — the plushies are curated flavor with no coherent production/economy/magic surface. The wool-and-dye craft is the entire interaction; forcing a second system anchor creates defect edges. Correctly stays as single-anchor decoration/flavor support.
+
+
 
 
 

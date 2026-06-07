@@ -186,3 +186,21 @@ the economy-is-player-run ruling. Leave at 2.
   player-facing crafting method to route material through — the loot-seed (accepted above) is the correct
   actionable edge. This reject records the villager-trade idea explicitly so it isn't re-proposed.
 
+## underground_village   [anchors: survival (1)]
+
+- from: underground_village chest loot (underground dungeon-village chests — loot=yes) |
+  via: loot-seed (inject region-relevant underground goods) | to: economy | motif: M-30 |
+  power: everyday | tone: ok (an underground settlement's chests holding subterranean goods — deepslate
+  minerals, fungal items, underground-specific drops — is immediately logical; players find resources tied
+  to where they are in the world) | verdict: ACCEPT |
+  hook: seed underground village loot tables with depth-relevant materials (deepslate derivatives, underground
+  fungi, raw metal samples) so Stoneholm settlements are economy nodes for deep-strata scarcity goods —
+  the underground biome having its own regional offering.
+
+- from: underground_village settlement location (underground, near ores) | via: MineColonies colony route
+  placed near or overlapping Stoneholm | to: economy | motif: M-28 | power: mid | tone: ok (a colony
+  establishing around an underground village as a mining hub is a natural emergent play) | verdict: REJECT |
+  reason: this is a player strategy, not a weaveable edge — the mod has no recipe type or method to route
+  through, and MineColonies colony placement is player choice, not a designed connection. No delivery
+  mechanism exists; the loot-seed above is the concrete actionable edge.
+

@@ -75,3 +75,11 @@ Food-web glue mod. It IS the weaving layer for the food cluster, but has no cont
 - from: letsdocompat food-tag unification (items/foods/leafy_green and other c:tags) | via: existing farmersdelight/extradelight/farm_and_charm methods | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: letsdocompat already anchors to survival — this is its only anchor by construction (it wires food chains together). Its c:tag output (leafy_green) is consumed by the food mods it bridges; that's its function, not a new weave edge. No second anchor is coherent for a pure bridge mod.
 - LEAVE — the mod IS the food-system weave glue; it has no standalone content to give it a second pillar. Its survival anchor is well-founded and it serves the "one web not clusters" goal directly.
 
+## shulkerboxtooltip   [anchors: support/QoL (1)]
+
+- LEAVE — genuine zero-content client QoL mod. Container hover-preview tooltip; no items, no blocks, no methods, no loot. Nothing to weave.
+
+## biolith   [anchors: support/worldgen-library (1)]
+
+- LEAVE — genuine zero-content worldgen API library. Biome placement framework with no items, no blocks, no methods, no loot. The library that other biome mods are built on, never a content node itself.
+

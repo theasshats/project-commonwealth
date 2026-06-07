@@ -31,6 +31,21 @@ OK — the M-30 biome-gate → survival link is real and already partially ackno
 - from: Copper Golem (minecraft:copper_golem_statue) | via: no recipe method — behavioral | to: economy | motif: M-33 | power: mid | tone: ok | verdict: REJECT | reason: the Copper Golem's chest-to-chest hauling is genuinely logistics-flavored, but it is a mob entity, not a method or recipe — it can't be "routed through" a method palette entry. The economy link would be behavioral (golem moves goods between chests = primitive logistics), which is a no-recipe delivery type. The tone is fine, but the connection is loose: the golem is slow, manual-bred, and a novelty logistics tool — it doesn't advance the economy loop in a measurable way. REJECT as no-motif (it touches M-33 service-for-hire thematically but is mob behavior, not an authored delivery).
 REWORK note: dossier marks economy link via Copper Golem as [WEAK] — confirmed; reject stands. The M-04/M-03 Create links are the real second anchor. No existing connections to rework beyond confirming the dossier's own [WEAK] flag.
 
+## numismatics   [anchors: economy, create (2)]
+- from: numismatics:cog / spur / crown (coins) | via: create:pressing (scarce regional metal → coin blank → pressed coin) | to: create | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: coins are player-minted, not vendor-given — a Create pressing step turns a processed metal (andesite alloy blank, a copper blank) into the pack's settlement medium; the pressing step means minting is itself a specialization (only a player with a running press makes coins), which is exactly the M-08 framing. This reinforces the existing Create anchor with a specific method tie rather than just "Create-styled crafting."
+- from: numismatics vendor block | via: any player-traded good → M-26 consumption | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: the vendor block is the economy distribution endpoint — calling it a survival weave just because goods flow through it and get consumed is restating the ambient loop endpoint (M-09-style), not a distinct weave. REJECT — bare sell-link.
+REWORK: The dossier's "2nd-anchor candidates" section notes M-09 (luxury good→coin) which is explicitly retired. That row should be removed from the dossier — it references a cut motif. Flag for dossier cleanup.
+OK — existing connections (economy + Create) are sound. The M-08 pressing step is a method-routing improvement to the Create anchor (makes it specific, not just "it depends on create"). No other new anchors needed; numismatics is a destination hub.
+
+## kambrik   [anchors: support/library (1)]
+- LEAVE — Kotlin developer-framework library; 0 blocks, 0 items; no gameplay surface. Pulled as a dependency of Kotlin-based mods; nothing to weave.
+
+## spark   [anchors: support/performance (1)]
+- LEAVE — server-side profiler; command-only diagnostic tool; 0 blocks, 0 items, no recipe surface; nothing to weave.
+
+
+
+
 
 
 

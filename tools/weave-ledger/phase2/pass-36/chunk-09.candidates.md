@@ -82,6 +82,36 @@ LEAVE — Verified client-only model-replacement engine. 0 blocks, 0 items, no l
 
 LEAVE — Verified client UI recipe viewer. 0 blocks, 0 items, no loot, no processing methods. Load-bearing for Create recipe visibility (do not swap to EMI per CLAUDE.md). Nothing to weave.
 
+## valarian_conquest   [anchors: survival (1)]
+
+76 blocks, 319 items, loot=yes. Medieval factions, custom crafting stations (armorsmith, builder, barber_surgeon), faction loot. Single anchor — survival. Rich content; target a 2nd anchor.
+
+Candidates:
+
+- from: valarian_conquest faction gear (shields, faction armor, weapons) | via: create:mechanical_crafting or create:pressing as a gating input | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: Valarian's armorsmith station crafts faction gear — gate it on a Create-pressed steel plate or brass fitting as a required input, so the martial gear line depends on Create production. A medieval armorer using industrially-pressed plate is coherent (Valarian's vibe is quasi-realistic medieval conquest). Mid tier; the armorsmith station is the "own machine" of M-05. Depth scales with gear tier (basic shields = lighter gate; knight armor = heavier gate).
+
+- from: valarian_conquest citizenship items / faction allegiance gates | via: KubeJS colony-route lock (M-28) | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: A MineColonies tavern/barracks could be the recruitment point for Valarian citizens — getting a citizenship item cheaper/faster if you have a colony structure, making the colony player a natural faction-hub. Colony route links the economy's settlement arm to the survival faction system. Players who build colonies become political brokers as well as producers.
+
+- from: valarian_conquest boss/dungeon loot (faction dungeon/keep chest loot, loot=yes) | via: loot-seed | to: economy | motif: M-34 | power: endgame | tone: ok | verdict: ACCEPT | hook: Faction keeps and outposts hold loot; seed a scarce Create part or magic reagent into those chests — the combat specialist who raids faction strongholds brings back components that non-combat players need. Turns the faction danger into the supplier half of the boss-economy loop (M-34). via: loot-seed.
+
+- from: valarian_conquest mercenary hire / faction trade | via: Numismatics coin as hire medium | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: Hiring mercenaries or buying faction allegiance through Numismatics coin makes the faction system a demand sink for minted currency — players who control coin also control military labor. This is M-08 (player-minted currency finding a demand node) not M-09 (NPC vendor), because the mercenaries are player-adjacent economic agents, not NPCs paying out coin — the player spends coin. The demand-gate on coin is the weave.
+
+- from: valarian_conquest armorsmith / builder / barber_surgeon stations as ≥3 crafting surfaces | via: KubeJS locked-exclusive gating | to: economy | motif: M-37 | power: mid | tone: ok | verdict: REJECT | reason: M-37 is research/knowledge gate (MineColonies research, Ars spell-knowledge). Valarian's stations are just crafting blocks, not a research unlock — they don't carry the "knowledge isn't tradeable" mechanic M-37 requires. The connection would be a misuse of the motif. REJECT; the armorsmith station is better served under M-05.
+
+- from: valarian_conquest faction banner blocks (76 blocks include many banner variants) | via: create:cutting deco (M-04) | to: Create | motif: M-04 | power: everyday | tone: clash | verdict: REJECT | reason: Crushing faction banners back to raw material (M-04 recycles deco) would be jarring — these are quest/allegiance items with narrative weight, not generic deco blocks. Theme clash: a player would find it odd that their Barathian banner gets mechanically shredded for fiber.
+
+## ding   [anchors: support (client QoL) (1)]
+
+LEAVE — Verified client audio-cue only (load-complete sound). 0 blocks, 0 items, no loot, no methods. No material surface; nothing to weave.
+
+## better_climbing   [anchors: support (QoL) (1)]
+
+LEAVE — Verified pure movement-feel tweak (ladder/vine climbing physics). 0 blocks, 0 items, no loot, no methods. No content surface; nothing to weave.
+
+
+
+
+
 
 
 

@@ -116,3 +116,60 @@ Method-pull: no items to route. No recipe types. No loot tables of its own. The 
 
 REWORK: OK — single survival anchor correct; no existing recipe connections to evaluate.
 
+## farmersdelight   [anchors: survival, Create (2)]
+
+Rich content mod (132 blocks, 187 items, 9 biome-modifiers, loot=yes). 4 registered recipe types: farmersdelight:cooking, farmersdelight:cutting, farmersdelight:dough, farmersdelight:food_serving. Already woven into Create (create:milling/mixing/filling for flour and ingredient prep). This is the pack's central food-processing hub.
+
+Power-read: the crops (cabbage/tomato/onion/rice) are everyday-tier; cooking-pot stews are mid-tier; hearty feasts (food_serving) are mid-to-endgame social items. The cutting board + cooking pot methods accept any modded ingredient via c:tags — they're the widest-mouth ingestion point in the food layer.
+
+**Candidate A — M-16 seasonal reagent pull (survival ↔ Create/magic)**
+Serene Seasons makes some crops seasonal. FD's cabbage/tomato/rice yield to season-gating. A seasonal FD crop as the input to a magic infusion (e.g. ars_nouveau:imbuement) or Create mixing step gives a seasonal gate on a recipe. For example: tomato → sun-dried (extradelight:drying_rack, summer only) → catalyst for an Ars reagent synthesis. This advances the survival→production edge.
+- from: farmersdelight:tomato (or cabbage/onion) | via: farmersdelight:cooking → ars_nouveau:imbuement | to: magic | motif: M-16 | power: everyday | tone: ok — a seasonal vegetable as a minor reagent input is sensible; it doesn't force-gate basics | verdict: ACCEPT | hook: the infusion only works with fresh summer tomatoes — so the magic lab times its rituals around the harvest.
+
+**Candidate B — M-28 colony route (production ↔ economy)**
+FD's crops and stews are exactly the kind of basic provisioning that a MineColonies colony requests via its supply system. A colony bakery/cook hut that consumes FD cabbage/rice/tomato to produce cooked meals for colony workers (cheaper route to the diet system's pressure) is a pure M-28 weave: colony consumes FD basics, output is fed colonists (and colonists produce other goods cheaper). This also ties FD into the economy pillar — colony output as one production route's cheaper basics.
+- from: farmersdelight:cabbage / rice / tomato (crops) | via: minecolonies cook/baker hut | to: economy | motif: M-28 | power: everyday | tone: ok — feeding colonists with fresh vegetables is the most natural colony demand imaginable | verdict: ACCEPT | hook: your colony's cook hut consumes cabbage and rice from the farm, paying back in cheaper colony-made goods.
+
+**Candidate C — M-12 processing-chain pull deeper (Create ↔ survival)**
+The dossier notes Create milling/mixing/filling already feed into FD. The missing richer chain: FD's straw byproduct (farmersdelight:straw, from cutting rice/wheat) → create:pressing → straw bale → MineColonies compost input. This loops FD's byproduct back through Create into the colony production route, tightening circularity.
+- from: farmersdelight:straw | via: create:pressing → minecolonies:composting | to: Create / economy | motif: M-32 | power: everyday | tone: ok — straw as a byproduct that feeds compost is a classic agrarian loop | verdict: ACCEPT | hook: the harvesting line's straw waste goes straight into the Create press and then into the colony compost heap, nothing wasted.
+
+**Candidate D — M-09-style / bare sellable link**
+Dossier notes "high-tier cooked dishes as sellable goods." This is M-09 (retired) — bare sell link. Reject.
+- from: farmersdelight:beef_stew / farmersdelight:apple_pie | via: bare sell | to: economy | motif: M-09 (retired) | power: mid | tone: n/a | verdict: REJECT | reason: M-09 retired; "sellable" is the ambient endpoint of the loop. The demand-gating weave (M-28 colony provisioning above) is the valid form of this idea.
+
+**Existing connections review:**
+create:milling (grain→flour) and create:mixing/filling feeding into FD recipes — these are real M-12 processing-chain pulls. The survival anchor from diet-pressure is sound. No REWORK needed.
+
+REWORK: OK — existing Create (M-12 processing chain) + survival (diet-pressure) connections are coherent.
+
+## smartbrainlib   [anchors: library/support (1)]
+
+Developer AI framework (Brain/goal system) used by mob mods. Zero items, zero blocks, zero recipe types, zero loot. Pure code dependency.
+
+- LEAVE — genuine zero-content code library (AI framework); no items, no methods, no loot. Nothing to weave.
+
+REWORK: OK — no existing connections; support-role only.
+
+## blueprint   [anchors: library/support (1)]
+
+Team Abnormals shared code framework. Zero recipe types. Ships one item (blueprint:template_chest — a vanilla-style deco chest) and 13 c:tags as shared tag scaffolding. Content surface is essentially nil.
+
+The template_chest is a trivial deco item; the c:tags are scaffolding for downstream Abnormals mods. No processing method. No loot.
+
+- LEAVE — library/API with one trivial deco item and no processing methods; the template_chest has no coherent weave role that wouldn't be completely forced. Nothing to route.
+
+REWORK: OK — no existing connections; support-role only.
+
+## modonomicon   [anchors: support/QoL (1)]
+
+Data-driven guidebook system. Six items (the book variants and leaflet) but these are display-only books — not materials, not consumed by any processing method, no loot, no recipe types. It's a documentation framework.
+
+Could the modonomicon book be used as a recipe ingredient (M-37 research/knowledge gate — a book that must be crafted as a progression key)? Red-team: the books are guidebooks, not spellbooks or crafting components. Forcing them into a recipe is purely arbitrary — a player would not find "why does this crafting guide unlock a machine" sensible. The theme clashes with the books' role as passive documentation.
+
+- from: modonomicon:modonomicon (book) | via: crafting-table recipe as a progression prerequisite | to: Create/magic | motif: M-37 | power: everyday | tone: clash — guidebooks as crafting components is arbitrary; they carry no power and adding them as recipe ingredients is pure filler | verdict: REJECT | reason: tone clash — the book is documentation, not a reagent or key; forcing it into a recipe is an arbitrary filler edge. M-37 is better served by actual knowledge-gating (MineColonies research, Ars spell-knowledge) than a crafted guidebook ingredient.
+
+- LEAVE — documentation framework; the book items have no coherent weave role (crafting a guidebook into a machine recipe is thematically arbitrary and adds no real depth).
+
+REWORK: OK — no existing connections; support-role only.
+

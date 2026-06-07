@@ -124,3 +124,27 @@ Trek has loot=yes and a wide variety of structure types — the PHASE2-BRIEFING 
 
 OK — survival anchor is sound. Loot-seed links to magic (M-02) and aeronautics (M-15 analogue) are the clean 2nd anchors.
 
+## dtterralith   [anchors: survival/worldgen-compat (1)]
+
+Compatibility bridge: makes Terralith biomes generate Dynamic Trees species instead of static vanilla trees. Outputs ordinary logs/saplings. Has loot=yes (104 blocks, 33 items — tree species seeds/saplings and biome-specific leaf blocks). No recipe types.
+
+**Method-pull analysis:**
+The items it registers are biome-specific seeds: dtterralith:amethyst_seed, cedar_seed, jacaranda_seed, kapok_seed, maple_seed, giga_spruce_seed, etc. These are planting materials — propagating Terralith-specific tree species. The downstream output is biome-keyed exotic wood logs.
+
+**Candidate 1: exotic biome-keyed seeds as seasonal/regional material in Create processing chains**
+- from: dtterralith:maple_seed / cedar_seed / jacaranda_seed (biome-specific, region-locked) | via: create:milling | to: create | motif: M-30 (regional-scarcity gate) | power: everyday (seeds are planting-tier materials) | tone: ok — biome-keyed seeds being milled for biome-specific byproducts (cedar oil, maple syrup analogues, exotic wood pulp) is coherent with regional specialty production | verdict: ACCEPT | hook: a player settled in a Terralith cedar biome can mill cedar seeds for a cedar extract unavailable elsewhere — regional specialty production that requires trade with players from other biomes. The regional scarcity foundation directly drives this.
+
+**Candidate 2: exotic wood (kapok, jacaranda) as Create cutting → specialty plank for aeronautics or deco**
+- from: dtterralith exotic logs (kapok, jacaranda, amethyst tree) | via: create:cutting | to: create | motif: M-04 (Create recycles deco) / M-12 | power: everyday | tone: ok — unique log types feeding Create's sawmill is a natural production step | verdict: REJECT | reason: this is vanilla-adjacent — any log goes through create:cutting to planks. This isn't a cross-system weave; it's the default behavior. Not worth recording as a Phase-3 action for dtterralith specifically; it applies to every wood mod.
+
+**Candidate 3: amethyst_seed as magic catalyst / attunement ingredient**
+- from: dtterralith:amethyst_seed | via: ars_nouveau:imbuement | to: magic | motif: M-07 (attunement catalyst) | power: mid (amethyst_seed requires finding a Terralith amethyst-biome; not everywhere) | tone: ok — an amethyst-bearing tree seed used as a magic catalyst fits the "worldgen consumable gates a conversion" pattern of M-07 | verdict: ACCEPT | hook: the amethyst seed, found only in Terralith's rare amethyst grove biomes, becomes a catalyst input for an Ars Nouveau imbuement — exploration-gated magic ingredient that makes the biome worth seeking and the seed worth farming or trading.
+
+OK — survival/worldgen anchor is sound. Two new links: regional-scarcity Create processing (M-30, M-12) for biome-keyed seeds, and attunement catalyst for amethyst_seed (M-07).
+
+## dataanchor   [anchors: support/library (1)]
+
+Developer utility library (data-attachment + network plumbing). No items, no loot, no methods. Pure code infrastructure.
+
+- LEAVE — genuine zero-content code library. Data-attachment and packet-handling utilities; no player-facing items, no loot, no recipe types. Required as a dependency only. No weave surface of any kind.
+
