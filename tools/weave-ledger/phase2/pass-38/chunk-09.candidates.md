@@ -68,6 +68,21 @@ OK — connections sound. M-05 + M-06 are the authored weave already, and those 
 ## lionfishapi   [anchors: support/library (1)]
 - LEAVE — genuine zero-content animation/entity API (dependency for L_Ender's mods, no player-facing items/blocks). Nothing to route.
 
+## edf-remastered-5.0-beta4   [anchors: survival (1)]
+- from: Ender Dragon loot (vanilla dragon egg + XP) | via: loot-seed | to: create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: The dragon fight is now a harder, multi-phase endgame boss (500 HP, enraged phases, summoned mobs). The vanilla dragon egg is already a boss-key candidate but the mod makes the fight harder — so the drop *should* be more valuable. Seed the dragon's enhanced loot table (via datapack edit, which is this mod's native customization surface since it's a datapack-style behavior mod) with a Create-gated component (e.g., a rare alloy or a "dragon heart" that feeds a Create sequenced assembly chain as an M-15 boss-key). This uses the mod's own loot-table mechanism (loot=yes) and makes the harder fight pay off in the tech web.
+- from: Ender Dragon loot | via: loot-seed | to: magic | motif: M-02 | power: endgame | tone: ok | verdict: ACCEPT | hook: An enhanced dragon fight dropping an occult/arcane reagent (Occultism binding material, an Ars Nouveau endgame essence, or Iron's Spellbooks eldritch-school scroll) seeds the magic web with an endgame loot pull — a magic specialist has a direct reason to fight the harder dragon, and their reagent drop feeds rituals / high-tier spell progression. The eldritch-affinity thematic fit with the Ender Dragon is strong.
+- from: edf-remastered summoned end-zombies | via: loot-seed | to: survival | motif: M-34 | power: mid | tone: ok | verdict: REJECT | reason: The summoned end-zombies are phase-specific minions with no special drops (they're vanilla zombie variants in the End context). Seeding them with rare loot would undermine the boss-fight cadence (farm the minions to avoid the boss). The combat-route supply motif is better fulfilled by the dragon's own loot table (ACCEPT above). REJECT — seeding minion drops distracts from the boss-drop focus.
+
+REWORK: dossier said LEAVE because "does not change dragon drops" — but the loot=yes flag and the mod being a datapack-style behavior mod means its loot tables are the correct surface to add drops TO. The dossier LEAVE is a missed opportunity: the right action is a loot-seed edit that adds weave-relevant drops to the (now-harder) dragon encounter. The two ACCEPT candidates above correct this.
+
+## biolith   [anchors: support/worldgen-API (1)]
+- LEAVE — genuine zero-content worldgen library (biome placement framework; dependency for biome mods). No items, no recipes, no loot. Nothing to route.
+
+## lithium   [anchors: support/performance (1)]
+- LEAVE — general-purpose server-tick optimization mod; no items, no recipes, no loot, no gameplay content. Nothing to route.
+
+
+
 
 
 

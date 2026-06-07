@@ -157,6 +157,29 @@ Candidate D — economy / boss-drop → combat supply, M-34:
 - from: brazil_legends:bloodmoon_sickle (weapon drop) | via: combat-specialist trade | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: the Saci hunts are perilous enough that a combat specialist corners the market on bloodmoon sickles and trades them to the rest of the group
 - from: brazil_legends:amber_pearl / amber as luxury | via: bare sell | to: economy | motif: M-09 | power: — | tone: — | verdict: REJECT | reason: M-09 retired; ambient sell is not a demand-gate
 
+## createmechanicalcompanion   [anchors: create (1)]
+
+Power-read: Mechanical Wolf Link (Curios head slot). Build chain: create:sequenced_assembly + mechanical_crafting + sandpaper_polishing + deploying. Modules add combat/utility. Items include netherite_plates, optical_sensor, quantum_drive, regenerative_casing — a deep brass/netherite-tier Create chain. This is a late-game Create item (after sequenced assembly is available + netherite).
+
+Method-pull: outputs a companion entity; inputs are Create-deep (precision/regenerative casing, netherite plates). No material outputs — nothing to route through another method. The modules (mounted_crossbow, mob_radar, optical_sensor) are all inputs consumed in the wolf's construction.
+
+Can it anchor a 2nd system?
+- Survival: it's a combat/exploration companion — it serves survival in practice (helps in combat, pings hostiles). But the mod's *anchor* isn't survival pressure; it's a Create reward that helps with survival. A survival anchor requires the mod to generate survival pressure or produce survival goods, not just assist with it.
+  - Could gate a module behind a boss drop (M-15): the optical_sensor or quantum_drive could require a boss-drop key component as an ingredient, making the wolf's best modules dependent on combat progression.
+  - Power-read: endgame modules (shock-on-hit, teleport) are late-game enough to warrant a boss-drop gate.
+  - Theme-fit: a mechanical wolf with a boss-drop component for its advanced sensor makes sense (the endgame combat module needs the endgame boss material).
+  - Motif: M-15 (boss-key unlock for a complex Create recipe).
+  - ACCEPT — conditional on which boss and which module (this is a Phase-3 decision on which boss drops gate which module)
+- Magic: no magic surface — the wolf is purely mechanical. ars_nouveau:armor_upgrade *could* theoretically upgrade the wolf link (it's a Curios item), but that's a stretch; the mod's vibe is clockwork, not arcane.
+- Economy: loot=yes (has a spawn_egg for illager engineers — combat NPCs). The illager engineer drops could be a M-34 combat-supply route, but the Wolf itself is personal gear, not traded goods.
+
+Red-team for survival (M-15 boss-gate): Is gating a companion module behind a boss drop heavy? The wolf is already late-game (netherite-tier); the most powerful modules getting a boss-gate is depth-appropriate. Avoid gating the basic wolf itself — just the endgame modules.
+
+- from: createmechanicalcompanion advanced module (e.g. optical_sensor / quantum_drive) | via: boss drop as input component (KubeJS recipe gate) | to: survival | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Mechanical Wolf's battlefield sensor needs a component only a fought-for boss can yield — the best combat companion is gated behind actual combat
+- from: create:haunting on a wolf component → spirit output | via: create:haunting | to: magic | motif: M-19 | power: endgame | tone: clash | verdict: REJECT | reason: haunting a mechanical wolf part into a soul item clashes with the mod's clockwork-mechanical vibe; there is no natural magic surface here
+- from: createmechanicalcompanion as companion / trade good | via: bare sell | to: economy | motif: M-09 | power: — | tone: — | verdict: REJECT | reason: M-09 retired; a personal companion isn't a traded good
+
+
 
 
 

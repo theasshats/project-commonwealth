@@ -234,3 +234,38 @@ action, not one-offs.
   cost; abundant wood doesn't qualify. No loop advancement.
 
 Summary for mcwstairs: 1 accepted (M-04 crush recycle), 1 rejected (fuel sink).
+
+## lootr   [anchors: support/QoL (1)]
+
+Dossier confirms: per-player instanced loot system — each player gets their own roll on any vanilla
+or modded loot-table container. Ships 9 blocks/10 items (the reskinned container variants and a
+trophy block). Loot=yes per counts, but this is the mod's own container items, not structure loot
+of its own. No recipe-types.
+
+Power-read: the mechanism is purely a loot-fairness layer — it wraps existing vanilla/modded loot
+tables with per-player instancing. It does not generate new loot, does not own loot tables for
+structures, and does not register any routable material.
+
+The briefing says: "do NOT `LEAVE` a loot-bearing structure mod just because it has no recipes —
+tag `via: loot-seed`." But the distinction is important: lootr is NOT a structure mod. It is a
+loot-fairness engine that wraps other mods' structures. The loot-seed escape is for mods that own
+structure loot tables (so we can seed weave-relevant drops into them). Lootr owns no structure
+tables to seed into — it only modifies how other tables are delivered.
+
+The `lootr:trophy` item is interesting: a decorative trophy block that spawns in lootr containers
+(per its jar). But it's a cosmetic drop, not a routable material.
+
+Red-team: could the trophy be a material input to something? It's cosmetic; routing it through
+Ars imbuement or occultism ritual would be purely forced — a trophy is not a magic reagent.
+
+Could lootr's per-player instancing create an "exploration fairness" loop anchor? No — this is
+a QoL framing, not a loop connection.
+
+Could lootr's container blocks themselves be crafted to have a Create/magic use? The blocks are
+inert containers that lootr auto-places; they're not player-crafted objects with meaningful item
+identity. No hook.
+
+- LEAVE — loot-fairness engine with no own structure loot tables and no routable material. The
+  loot-seed escape does not apply (lootr wraps other mods' tables; it owns none). The trophy item
+  is cosmetic with no plausible method-pull. This is a genuine support/QoL role with no second-
+  anchor surface.

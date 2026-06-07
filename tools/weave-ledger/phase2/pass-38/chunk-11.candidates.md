@@ -138,6 +138,25 @@ Rich surface: 16 themed eye items (loot=yes, blocks=1, items=20), progression ga
 
 OK — the dossier's two candidate clusters survive; the sequenced-assembly candidate is accepted with a critical scope limit (≤2 eyes, not a wholesale route).
 
+## createfood   [anchors: survival, create (2)]
+
+Already 2 anchors. Dossier's main 2nd-anchor candidate is M-09 (retired). Need to evaluate whether the existing 2-anchor claim is sound and find the real demand-gating economy link.
+
+**Existing connections review:** survival (diet/nutrition) + create (processing chain) — both anchors are sound. The Create connection is deep: createfood AUTHORS recipes onto create:milling, mixing, pressing, compacting, deploying — it IS a Create processing chain. Survival anchor via food/nutrition is clear.
+
+REWORK: dossier's "economy via numismatics" (M-09) candidate is retired — reject it.
+
+- from: createfood finished dishes (high-effort, multi-step Create chain) | via: M-26 consumption sink | to: survival/economy | motif: M-26 | power: mid | tone: ok | verdict: ACCEPT | hook: Pizzas, pastries, and ice cream are consumed against hunger/diet-variety pressure (Cold Sweat warm-meal bonus; diet nutrition groups) — the Create chain output is perpetually spent against survival needs, ensuring the production loop keeps turning without a coin faucet.
+
+- from: createfood dish processing chain (large c:tags consumer including raw_meats, doughs, cheese) | via: create:milling / farmersdelight:cooking | to: create | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: Createfood already IS M-12 at scale (2424 c:tags consumed through Create methods) — reinforcing that it's the terminus of the food processing web (raw crop → mill → mix → FD cook → finished dish) is worth noting as the most complete M-12 instantiation in the pack.
+
+- from: createfood finished dishes (pizza, cake, ice cream) | via: numismatics sell | to: economy | motif: M-09 (RETIRED) | power: — | tone: — | verdict: REJECT | reason: M-09 retired. The economy link is real (cook specialists sell processed food) but the weave form must be demand-gating — M-26 (consumption against pressure) is the correct authority here, accepted above.
+
+- from: createfood:apple_jam_block / createfood:apple_jam_bottle (aging candidate) | via: extradelight:drying_rack or vinery ferment | to: survival/economy | motif: M-35 | power: mid | tone: ok | verdict: ACCEPT | hook: Jam and preserve items are natural aging/maturation candidates — letting them mature on an ExtraDelight drying rack or in a Vinery ferment vessel before becoming a premium trade good adds the value-adding time axis to the food chain, distinguishing basic jam from aged preserve and creating a food-aging specialist role.
+
+OK — 2-anchor connections (survival + create) are both sound and deep. The missing edge is M-26 and M-35, not M-09.
+
+
 
 
 

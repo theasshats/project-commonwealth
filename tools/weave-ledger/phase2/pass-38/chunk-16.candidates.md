@@ -30,3 +30,15 @@
 ## bookshelf   [anchors: support/library (1)]
 - LEAVE — genuine zero-content code library (Darkhax utility framework). No items, blocks, or recipe types. Sanctioned support role; no weave possible.
 
+## moonlight   [anchors: support/library (1)]
+- LEAVE — genuine zero-content library (MehVahdJukaar shared API). The spawn_box/placeable_item registrations are internal framework helpers, not player-facing content. No weave surface.
+
+## companion   [anchors: support/QoL (1)]
+- LEAVE — pure behavior mod (pet safety teleport/retreat). Zero items/blocks/recipe types. Nothing to route.
+
+## clumps   [anchors: support/performance (1)]
+- LEAVE — genuine zero-content performance mod (XP orb merging). No items, blocks, or methods. Sanctioned server-perf support role.
+
+## do_a_barrel_roll   [anchors: support/client-QoL (1)]
+- LEAVE — pure client-side camera/movement behavior (elytra roll/pitch/yaw). No items, blocks, or recipe types. Touches elytra, not Create Aeronautics ships; no material surface to route.
+

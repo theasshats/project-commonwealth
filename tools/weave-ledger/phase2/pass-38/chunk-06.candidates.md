@@ -134,6 +134,10 @@ LEAVE — Rapier physics engine library backing Aeronautics ships; 0 blocks, 0 i
 ## notenoughanimations   [anchors: support/client-visual (1)]
 LEAVE — client-side cosmetic animation overrides; 0 blocks, 0 items, no recipe types, loot=no. Visual-only; no gameplay surface. Genuine zero-surface case.
 
+## glitchcore   [anchors: support/library (1)]
+LEAVE — Glitchfiend loader-abstraction library backing Serene Seasons / Biomes O' Plenty / TerraBlender; 0 blocks, 0 items, no recipe types, loot=no. No content surface to weave. The seasonal/biome weaves belong to the content mods that use this library. Genuine zero-surface case.
+
+
 
 
 

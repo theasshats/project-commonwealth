@@ -62,3 +62,9 @@ REWORK: dossier "2nd-anchor candidates" notes M-06 (engine as sequenced keystone
 ## packetfixer   [anchors: support/compat (1)]
 LEAVE — genuine zero-content network-layer fix; raises packet/NBT limits. Zero items, zero blocks, no recipe types, no gameplay surface. No weave is possible or coherent.
 
+## kiwi   [anchors: support/library (1)]
+LEAVE — genuine zero-content developer library (registration helpers, GUI/font, config plumbing for Snownee mods). Zero items, zero blocks, no recipe types. No weave is possible or coherent.
+
+## txnilib   [anchors: support/library (1)]
+LEAVE — genuine zero-content multiversion code library (dependency for Txni mods only). Zero items, zero blocks, no recipe types. No weave is possible or coherent.
+

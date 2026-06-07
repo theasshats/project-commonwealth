@@ -72,3 +72,9 @@ OK — existing 2-anchor (Create + aeronautics) classification is sound. The M-2
 - from: recipe_integration occultism:crushing bridge | via: occultism:crushing | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: the Occultism crushing paths recipe_integration provides make foreign mob drops / materials processable in the occult tree — audit which ones fire; if they cover installed mod items (Alex's Mobs, Cataclysm drops), they're free M-11 links already live
 - from: recipe_integration | via: bare "it cross-links everything" | verdict: REJECT (as blanket claim) | reason: the dossier explicitly warns most c:tags reference uninstalled mods; "it connects mods" without specifying which connections fire is not a weave candidate — only the audited active subset counts; blanket credit is not a weave
 
+## durabilitytooltip   [anchors: support client QoL (1)]
+LEAVE — client-side tooltip renderer for numeric durability; zero items, blocks, or methods. Pure UI display mod. No content surface to weave. Sanctioned support role.
+
+## azurelib   [anchors: support library (1)]
+LEAVE — GeckoLib-fork animation engine; zero gameplay content (one internal lightblock utility). Pulled as a hard dependency by animated-mob mods (Cataclysm). No items, methods, or weave surface. Genuine zero-surface library.
+
