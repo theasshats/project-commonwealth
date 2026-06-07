@@ -81,3 +81,80 @@ REWORK: No existing connections to flag (mod is 1-anchor). Candidates A and B es
 - from: smokeleafindustries:*_weed / hemp_crop | via: create:milling | to: create | motif: M-12 | power: everyday | tone: clash | verdict: REJECT | reason: the mod's own grinder already handles raw-bud processing at the same tier; adding a Create milling path as an alternate would partially duplicate the mod's own processing chain and blur what the specialised machines are for. The FE bridge (Candidate B) is the cleaner Create seam — it extends the energy network rather than duplicating the processing step. Keep only B.
 
 REWORK: No existing connections to flag (1-anchor). Candidates A and B establish economy + Create second anchors.
+
+## astikorcartsredux   [anchors: survival (1)]
+
+**Power-read:** Carts are crafted from vanilla wood/planks — everyday tier, no exotic ingredients. The plow/reaper/seed-drill are mid-tier by utility value (farming throughput tools requiring a draft animal). No registered recipe-types; all mechanics are hitched-entity behaviour. The mod is a low-tech pre-Create farming aid. Dossier already notes there is no strong 2nd-anchor candidate and flags as optional.
+
+**Candidate A — Create-processed metal parts gate farm implements (M-05), REJECT**
+- from: astikorcartsredux:oak_plow / oak_reaper (metal-bearing implements) | via: gated KubeJS recipe using create:pressing (iron sheet) as ingredient | to: create | motif: M-05 | power: everyday | tone: clash | verdict: REJECT | reason: plow/reaper blades are pre-industrial farming tools; gating them on Create-pressed iron sheets would make early-game farming depend on mid-game Create access, violating the "never gate a basic/everyday component behind a complex recipe" guardrail. These tools should remain available before the Create tier unlocks; the thematic clash (hand-carved wooden plow needing a factory) is a red flag.
+
+**Candidate B — supply cart as early-game logistics (aeronautics loop-feedforward), REJECT**
+- from: astikorcartsredux:oak_supply_cart | via: no method available | to: aeronautics | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: no-motif — the cart is a flavour precursor to Aeronautics logistics but there is no recipe method that routes the cart's material surface into the aeronautics drivetrain or airframe. It's a progression-narrative note ("carts before ships"), not a weavable connection.
+
+LEAVE — no coherent 2nd anchor available without forcing an edge. Survival anchor (agrarian field-work) stands on its own; one-pillar mod is a candidate for a "second weave" in future but no clean seam exists today.
+
+## bettercombat   [anchors: support (1)]
+- LEAVE — pure combat-framework mod; no items, no blocks, no processing methods; provides JSON-driven weapon-moveset behavior as a framework that other mods' weapons plug into. There is no material surface to route through another mod's method; weaving the framework itself makes no sense.
+
+## spawn   [anchors: survival (1)]
+
+**Power-read:** Clams (casting-net interaction, color-variant collectables) are mid-tier by effort (net + specific biome); crab/barnacle are ambient drops accessible early-game; angler fish is a rare deep-water mob. The date-palm wood set is everyday (decorative). The mod already has FD cooking/cutting inbound weaves (existing), meaning it participates in the food processing web. The 165 blocks and 296 items are dominated by deco/biome-flavour blocks; the food-relevant outputs (seafood drops) are the connective tissue.
+
+**Candidate A — seafood/clam as Numismatics luxury sell-goods (M-09), ACCEPT**
+- from: spawn:angler_fish / spawn clam items / spawn crab drops | via: numismatics sell/price | to: economy | motif: M-09 | power: mid | tone: ok — rare aquatic catches (glowing anglerfish, color-variant clams) as premium trade goods at the Trading Floor is a coherent "exotic seafood specialist" economic role; the casting-net mechanic adds effort investment that justifies a price premium | verdict: ACCEPT | hook: a jar of color-sorted clams and a smoked anglerfish fillet fetch coin at the dockside stall — the fisherman has something worth sailing for
+
+**Candidate B — Create crushing for coral/clam shells as deco processing (M-04), REJECT**
+- from: spawn clam-case / barnacle / algal_reefstone blocks | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: clash | verdict: REJECT | reason: M-04 (Create recycles deco) is designed for metal/stone deco blocks that yield raw material back — it maps poorly onto living coral/clam shells which have no obvious "raw output" equivalent. Crushing organic sea-life blocks into gravel + XP nugget would be thematically odd and provides no meaningful scarcity or production value. The FD cooking bridge (existing) is the more coherent processing anchor.
+
+**Candidate C — Create fishing industry (M-12), REJECT**
+- from: spawn aquatic mobs/fish | via: createfisheryindustry:bait_trap / peeling | to: create | motif: M-12 | power: mid | tone: ok | verdict: REJECT | reason: the mod's critters are ambient/biome-flavour mobs, not fish-farm feedstock; routing them into createfisheryindustry bait traps would require the fish to spawn in bait-trap range, which is biome-dependent and unreliable. The weave is technically possible but the join key (mob spawns near player-placed traps) is too loose to be reliable. Flag for reconsideration if createfisheryindustry is tuned to work with spawn's biomes.
+
+REWORK: No existing connections to flag beyond the FD inbound weaves (which are sound — existing anchor is intact). Candidate A establishes the economy second anchor.
+
+## balm   [anchors: support (1)]
+- LEAVE — multi-loader abstraction library (BlayTheNinth); no player-facing items beyond scaffolding c:tags for iron/gold nuggets (which are generic, not balm's own). The gameplay content (Waystones, Cooking for Blockheads, etc.) lives in the dependent mods, not here. Nothing to weave at the library layer.
+
+## architectury   [anchors: support (1)]
+- LEAVE — cross-platform modding API (events, networking, registry abstractions); zero player-facing content; a near-ubiquitous dependency with no items, blocks, or methods to route through. Nothing to weave.
+
+## tfmg   [anchors: Create (1)]
+
+**Power-read:** Steel (Industrial Blast Furnace → coke + iron → steel) is mid-game, requiring Create setup + coal coke infrastructure. Fuels (diesel/gasoline/LPG from distillation tower) are mid-to-endgame by facility investment. The Distillation Tower is a multiblock requiring significant Create machinery. Aluminum/constantan/lead/nickel/lithium are the deeper metals, gated on ore access. The electricity grid (Voltage network) is the late/endgame tier. With 584 items, 123 c:tags, and 8 recipe-types, TFMG is the heaviest Create addon in the pack — it should have multiple second-anchor connections.
+
+**Candidate A — TFMG fuels as Aeronautics propulsion supply (M-13), ACCEPT**
+- from: tfmg:diesel / tfmg:gasoline / tfmg:liquefied_petroleum_gas | via: TFMG distillation → engine intake (Aeronautics combustion engine / TFMG combustion engine) | to: aeronautics | motif: M-13 | power: mid | tone: ok — TFMG is literally the fuel refinery that Aeronautics needs; the pack's canonical fuel supply chain is exactly this loop: crude oil → pumpjack → distillation tower → diesel/gasoline → ship engine | verdict: ACCEPT | hook: the ship doesn't fly until the distillation tower is running — the airship fleet is downstream of the refinery
+
+**Candidate B — TFMG steel as Aeronautics airframe material (M-23), ACCEPT**
+- from: tfmg:steel_ingot / tfmg:steel_plate (via create:pressing) | via: fabricated structural part → aeronautics construction recipe | to: aeronautics | motif: M-23 | power: mid | tone: ok — structural steel for airframes is the natural material answer; a steel-framed ship is appropriately harder to build than a wood-frame one, gating serious aeronautics behind the blast-furnace tier | verdict: ACCEPT | hook: the corvette-class airframe calls for TFMG steel plates — the factory tier gates the ship tier
+
+**Candidate C — TFMG combustion engine / electric motor as Aeronautics propulsion component (M-24), ACCEPT**
+- from: tfmg:combustion_engine / tfmg:electric_motor (winding products) | via: component → aeronautics engine/propeller recipe | to: aeronautics | motif: M-24 | power: mid/endgame | tone: ok — the winding/polarizing machines produce motors; feeding a TFMG motor into an Aeronautics engine assembly makes the drivetrain depend on the electrical manufacturing tier | verdict: ACCEPT | hook: spinning up an advanced propulsion unit takes a TFMG-wound motor — the electrician and the pilot need each other
+
+**Candidate D — TFMG steel/fuel as Numismatics sell-goods (M-08/M-09), ACCEPT**
+- from: tfmg:steel_ingot / tfmg:diesel (canned) | via: numismatics sell/price | to: economy | motif: M-08 + M-09 | power: mid | tone: ok — processed steel and canned fuel are high-labour goods with real production costs; a TFMG specialist selling steel billets and fuel cans at the Trading Floor is the industrial trade loop the economy pillar wants | verdict: ACCEPT | hook: the refinery player sells fuel cans and steel ingots for coin — the economy runs on what the factory produces
+
+**Candidate E — TFMG electricity grid as Create-New-Age / createaddition bridge (M-17), REJECT**
+- from: tfmg Voltage/FE grid | via: createaddition:charging / create_new_age FE bridge | to: create | motif: M-17 | power: endgame | tone: ok | verdict: REJECT | reason: TFMG already is a Create addon — it's already anchored in Create and its electricity grid is an extension of the Create spine, not a foreign "FE → Create" bridge. Calling this M-17 would be circular; the interesting bridges are outbound to aeronautics and economy (Candidates A–D), not back into Create. Not a new connection.
+
+REWORK: No existing connections to flag (1-anchor, but should become 3 after Candidates A–D). Candidates A–D establish aeronautics (fuel+airframe+drivetrain) and economy second anchors.
+
+## northstar   [anchors: Create, aeronautics (2)]
+
+**Power-read:** Titanium/tungsten are post-rocket metals — endgame tier (require space travel to access). Martian steel is late-mid (Mars landing). Advanced circuits are endgame (require the circuit engraver + titanium). The astronomical_reading is a mid-game service item. The three registered methods (electrolysis, engraving, freezing) can accept foreign inputs.
+
+**Candidate A — titanium/tungsten as Aeronautics high-tier structural/propulsion material (M-23/M-24), ACCEPT**
+- from: northstar:titanium_ingot / northstar:tungsten_ingot | via: fabricated part → aeronautics high-tier airframe or engine recipe | to: aeronautics | motif: M-23 + M-24 | power: endgame | tone: ok — space metals as the material gate for the pack's most advanced ships is exactly the "depth scales with ship tier" rule M-23 specifies; a heavy titanium airframe is coherently more capable than a TFMG steel one | verdict: ACCEPT | hook: the fastest ship in the fleet is plated in northstar titanium — getting off-world means getting better ships
+
+**Candidate B — northstar:advanced_circuit as Aeronautics control-surface component (M-24), ACCEPT**
+- from: northstar:advanced_circuit | via: component → aeronautics control/navigation recipe | to: aeronautics | motif: M-24 | power: endgame | tone: ok — an advanced circuit (circuit-engraver product from titanium-tier) gating the autopilot/control system of a high-end ship is thematically sharp; space-tech enabling better ships is the intended progression | verdict: ACCEPT | hook: the ship's autopilot needs a northstar circuit — flight-capable tech gates on space-capable tech
+
+**Candidate C — titanium via Numismatics as scarce space-metal coin (M-08), REJECT**
+- from: northstar:titanium_ingot | via: numismatics mint | to: economy | motif: M-08 | power: endgame | tone: ok | verdict: REJECT | reason: the dossier flags this as MED; the balance concern is that titanium is only reachable post-rocket, making it a very late coin source that doesn't help early/mid economy. Also, the pack's M-08 framing is "regional metal → Create-processed → minted into coin" — titanium is planetary-scarcity (off-world), not regional-scarcity; the motif applies but the timing makes it an economic oddity. Flag for the 0.9 economy update; don't block aeronautics weaves on it.
+
+**Candidate D — northstar:electrolysis accepts TFMG/foreign fluids (M-12 processing pull), REJECT**
+- from: tfmg brine/oil or other pack fluids | via: northstar:electrolysis | to: create | motif: M-12 | power: mid | tone: ok | verdict: REJECT | reason: while Northstar's electrolysis machine could technically accept foreign fluids, this would create a dependency-loop between two Create addons (TFMG → Northstar processing) that blurs each mod's role. The cleaner flow is one-directional (Northstar's outputs enable Aeronautics), not a circular inter-addon processing dependency. Keep the flow simple.
+
+OK — existing Create + aeronautics dual anchor is sound. Candidates A + B deepen the aeronautics connection with endgame-tier materials. The economic coin angle is deferred to the 0.9 update review.
+
+REWORK: The "aeronautics" anchor deserves a stronger explicit connection than "rockets = off-world logistics" — the dossier labels it correctly but the weave needs the explicit airframe/circuit recipes (Candidates A+B) to make it real rather than just narrative.
