@@ -188,4 +188,21 @@ REWORK: dossier's existing connections are sound but the magic anchor is not yet
 
 - LEAVE (for weaving) — patchouli is a documentation framework; its book items are functional only as produced guide books. No coherent weave adds a 2nd anchor to a docs library. The mod earns its place as a dependency of Ars Nouveau, Occultism, and similar magic mods.
 
+## createfood   [anchors: survival, Create (2)]
+
+**Method-pull:** Already at 2 anchors, heavily woven into Create + FD methods (10+ inbound recipe types). Its 2424 c:tags and 1993 items make it one of the largest food webs in the pack. The dossier's economy candidate cites M-09 (retired). The real economy question is: does the cooking chain produce a good that *gates demand* in a non-ambient way?
+
+- from: createfood finished dishes (bacon_pizza, apple_cheesecake, apple_ice_cream) | via: consumption as food | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: this is ambient — food creates hunger demand by being eaten; that's already the survival anchor the mod holds. M-26 as a "new weave" here adds no 2nd anchor. Records as rejected.
+
+- from: createfood high-tier baked goods (multi-stage dishes) | via: minecolonies:composting (failed ingredients) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: multi-stage Create food chains produce waste (failed dough, spoiled filling) — routing this via minecolonies:composting makes the colony's composter a sink for the food chain's byproducts, tying the cook specialist to the colony route; the colony composter produces fertilizer that feeds farm output that feeds more createfood inputs — a circular route that crosses economy (colony) and survival (farming)
+
+- from: createfood dishes requiring fish/seafood inputs | via: farmersdelight:cooking (already) — cross-route demand pull | to: economy | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: createfood recipes that call for c:foods/raw_fish pull in upgrade_aquatic / oceansdelight fish catches — a cook specialist must either catch their own ocean fish or trade with a coast fisher; this cross-route dependency (food chain requires a separate production supplier) is the clearest economy link without any NPC faucet; the dependency is already present in the c:tag system and just needs to be made explicit/deliberate
+
+- from: createfood dishes requiring seasonal crops | via: season-gated ingredient → Create processing chain | to: survival | motif: M-16 | power: mid | tone: ok | verdict: ACCEPT | hook: Create food recipes that call for a specifically seasonal ingredient (e.g. a summer berry, a winter-grain flour only available when Serene Seasons allows it) become themselves seasonal — a pizza that needs summer tomatoes can only be made in summer; the cook specialist has a planning horizon driven by seasons, deepening the survival-pressure face of the food web
+
+- from: createfood as luxury finished-goods | via: bare sell | verdict: REJECT | reason: M-09 retired — "baker/cook mints coin from food" is ambient economy endpoint. Records as rejected.
+
+REWORK: OK — existing survival + Create anchors are correct and well-founded. The dossier's M-09 economy candidate is the retired motif; the M-29 (cross-route fish dependency) and M-28 (colony compost sink) above are the proper economy framings. The M-16 (seasonal ingredient) is a new survival-depth candidate that adds planning pressure to the already-strong food web. The two-anchor target is already met; the candidates above deepen it.
+
+== CHUNK COMPLETE ==
 

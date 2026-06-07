@@ -142,9 +142,15 @@ Method-pull candidates:
 
 LEAVE — client-side procedural animation enhancer; 0 blocks, 0 items, no loot, no gameplay effect. Pure cosmetic polish. Nothing to weave.
 
+## create_pattern_schematics   [anchors: create (1)]
 
+Power-read: 0 blocks, 3 items (pattern_schematic, empty_pattern_schematic, pattern_schematic_and_quill). Build-automation tooling — tiles a schematic endlessly, rides Create contraptions/gantries for auto-build of repeating structures. No resource conversion. Purely Create-internal build QoL.
 
+Method-pull candidates:
+- from: create_pattern_schematics:pattern_schematic | via: aeronautics/logistics | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: the Pattern Schematic's ability to ride a moving Create train or gantry to auto-build repeating structures (tracks, infrastructure, bridges) is exactly the kind of bulk-construction logistics tool the aeronautics/logistics arm uses to lay infrastructure at scale — a player building a railway or airship dock uses Pattern Schematic for the repeating structural section, making the schematic an aeronautics-infrastructure enabling item. This is a functional/behavioral weave (the item is used within the aeronautics logistics context), not a recipe. Via: config framing / design note (it is an aeronautics-infrastructure tool).
+- from: create_pattern_schematics items | via: recipe | to: economy | motif: M-33 | power: mid | tone: ok | verdict: REJECT | reason: the schematic items could be framed as a "construction service" (M-33 service-for-hire — a builder charges for a schematic that auto-builds a client's infrastructure). But a schematic item being copied and sold doesn't really fit M-33, which is about performing work on materials rather than selling a tool. The copy-and-sell dynamic is ambient trade (M-09 pattern, retired) not a service loop. REJECT (doesn't fit M-33 cleanly; closer to selling a tool, not performing a service).
 
+== CHUNK COMPLETE ==
 
 
 
