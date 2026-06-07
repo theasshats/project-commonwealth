@@ -11,3 +11,6 @@ LEAVE — genuine zero-content code library; the JS runtime backing KubeJS scrip
 ## libipn   [anchors: support/library (1)]
 LEAVE — genuine zero-content code library (GUI/config/logging API for IPN). Zero items, zero blocks, no recipe types, no gameplay surface. No weave is possible or coherent.
 
+## sounds   [anchors: support/client-polish (1)]
+LEAVE — client-only audio overhaul; zero items, zero blocks, zero recipe types. The mod emits sounds on events but has no gameplay surface, no material, no method to route through. Pure polish; no weave is coherent.
+
