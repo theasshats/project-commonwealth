@@ -50,4 +50,22 @@ REWORK: dossier's 2nd-anchor candidate cited M-09 ("luxury good → coin") which
 
 REWORK: OK — existing Create anchor is sound and dossier candidates are well-aimed. The M-08 candidate in the dossier is correct (and accepted here). The "survival/worldgen" note in the dossier is better framed as M-30 (regional scarcity gate) than as a standalone survival weave, which the ACCEPT above does.
 
+## upgrade_aquatic   [anchors: survival (1)]
+
+**Method-pull:** The mod exports raw/cooked fish c:tags and a wood/deco block family. Already pulls through `woodworks:sawmill`. Fish outputs are the primary weave surface — they tag as `c:foods/raw_fish`, `cooked_fish`, `raw_perch`, `raw_pike`, `raw_lionfish`, `cooked_perch`, `cooked_pike`, `cooked_lionfish`, plus `pie` and `berry`. The wood families (driftwood/riverwood) map to M-04.
+
+- from: upgrade_aquatic raw fish (pike/perch/lionfish) | via: farmersdelight:cooking + create:mixing | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the pack's processing chain — raw fish through the cutting board into FD dishes, or milled/mixed in Create into a fish sauce / brine — turns ocean diversity into a real cooking web; lionfish in particular (a real-world invasive) works as an exotic delicacy ingredient that requires more prep steps, naturally deepening its chain
+
+- from: upgrade_aquatic:driftwood_* / riverwood_* blocks | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: deco wood families crush lossy back to sawdust/gravel + xp-nugget, standard Create deco-recycle; adds the aquatic wood sets to the Create recycling web with no added complexity
+
+- from: upgrade_aquatic cooked fish (cooked_pike, cooked_perch, cooked_lionfish) | via: consumption as food | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: this is ambient — food is consumed by eating, which is already the survival pressure it creates. M-26 (consumption sink) applies when an item is specifically *spent* against pressure in a *mechanic* (fuel/upkeep). The fish being food is the mod's core identity, not a new weave. Records as rejected to document.
+
+- from: upgrade_aquatic coralstone block family | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: coralstone is a large deco family but its crushing is a low-value rote addition (gravel/sand + xp nugget); the driftwood/riverwood accept above already covers the "aquatic deco → Create recycle" slot cleanly. Adding coralstone too is duplicative without adding a second pillar. Keep the reject to avoid over-weaving.
+
+REWORK: OK — survival anchor is correct. The dossier's M-12 candidate (fish → cooking chain) is well-aimed and accepted. The M-09 ("luxury sellable") candidate is retired; the correct economy framing for prepared seafood would be M-33 (a cook specialist selling prepared dishes as a service/trade), but that's emergent social behavior, not a packable weave — no economy candidate is accepted here.
+
+## corgilib   [anchors: support / library (1)]
+
+- LEAVE — genuine zero-content library: 0 blocks, 0 items, no loot, no recipes. Shared loot/worldgen/datagen utilities for dependent mods (Alex's Caves etc.). No player-facing surface to weave.
+
 

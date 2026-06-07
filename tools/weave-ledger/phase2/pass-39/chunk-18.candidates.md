@@ -59,6 +59,18 @@ No coherent motif fits. The items are too simple (everyday, cheap crafting-table
 - from: createshufflefilter:shuffle_filter | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: everyday | tone: clash | verdict: REJECT | reason: tone clash — a probabilistic mechanical filter gaining "magic weighting" is incoherent; the items are industrial, not arcane.
 - LEAVE (2nd anchor) — no coherent weave survives red-team; Create anchor stands alone for a pure-Create QoL utility item.
 
+## createaddoncompatibility   [anchors: support — library/compat (1)]
+
+Power-read: Zero blocks, zero items, loot=no. A compat layer that drives Almost Unified to merge cross-addon duplicate items (plastic, copycats, gearboxes, lubricant, kerosene). Has 5 c:tags (item/ingots/plastic being the notable one) and one inbound `tfmg:distillation` recipe to seed TFMG plastic into the unified chain. It's glue, not content.
+
+Candidates examined:
+- The `c:ingots/plastic` tag this mod provides IS the unified plastic ingot canonical item. Could plastic be woven into another system? Red-team: plastic is already a Create-ecosystem material (produced via TFMG distillation, used in Create addons). Any weave of plastic belongs to TFMG or the producing addon, not to this unification-only mod. Mis-attribution if woven here. REJECT.
+- Could the unification itself be gated (e.g. "unlock the plastic unification recipe via MineColonies research")? Red-team: that's architecturally wrong — unification is a technical deduplication, not a gameplay unlock. It fires at load time. REJECT.
+- Design note (not a weave): the CLAUDE.md galosphere palladium warning is directly relevant here — the `c:ingots/plastic` unification should be verified it doesn't accidentally catch galosphere's palladium (id mismatch). This is a config-correctness matter for human review, not a Phase-3 action.
+
+- LEAVE — support/compat role; the actual material weaves belong to the mods being unified (TFMG for plastic, etc.); no standalone content surface.
+
+
 
 
 

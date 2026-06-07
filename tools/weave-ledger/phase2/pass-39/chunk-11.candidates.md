@@ -36,6 +36,14 @@ OK — Create anchor is sound. The survival M-26 consumption link above complete
 - from: poultry products (feathers) | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: everyday | tone: ok | verdict: REJECT | reason: feathers as a magic infusion input are thematically weak — feathers are a vanilla commodity, not a special material needing arcane refinement. Arcane infusion (M-10) is intended for non-basic components; feathers are everyday. Violates the "don't gate basics behind complex recipe" rule.
 OK — Create + survival anchors are sound. The M-28 colony route (roost→colony bulk supply) and M-12 lava-net→tech-chain are the additions; lava net especially advances the loop (Nether-sourced material into tech production).
 
+## create_factory   [anchors: create, survival (2)]
+- from: create_factory jam/cream/nectar fluids (sweet_berries_jam, glow_berries_nectar, cream_bucket) | via: extradelight:evaporator or extradelight:drying_rack | to: survival | motif: M-35 | power: mid | tone: ok | verdict: ACCEPT | hook: jam/nectar fluids age into a thicker preserve or concentrate on a drying rack — the maturation step adds the aging specialist role to confectionery production; a jam-maker who tends the rack is a time-value producer others buy from, not just a sugar-source.
+- from: create_factory:caramel_waffle / honey_waffle (finished sweets) | via: minecolonies colony requests / M-28 | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: a colony Baker/Cook hut requests desserts as a colony food supply — waffles/rolls are a colony-deliverable mid-tier food that a Create confectionery specialist produces and the colony consumes; the colony-demand loop closes the production→economy edge without a bare sell link.
+- from: create_factory:cream_bucket (cream fluid) | via: create_cheese:maturing or extradelight:chiller | to: survival | motif: M-35 | power: everyday | tone: ok | verdict: REJECT | reason: cream→cheese maturation is already covered by the trailandtales_delight cheese wheel and create_cheese mod — double-tracking a maturing step on cream that another mod already owns creates overlap. Don't add it here; let create_cheese own the dairy-aging seam.
+- from: create_factory ruby/chocolate variants | via: create:sequenced_assembly | to: create | motif: M-06 | power: endgame | tone: clash | verdict: REJECT | reason: waffles and candy apples are everyday food items — gating them behind sequenced assembly (endgame Create) violates the depth-scales-with-power rule. The mod's own craft already uses create:mixing/pressing/filling, which is the right tier for confectionery. No endgame justification.
+REWORK: dossier's "economy via numismatics sell [M-09]" is retired (M-09 retired). Replaced by M-28 colony-demand link above, which is the correct player-run economy mechanism for food goods.
+
+
 
 
 

@@ -13,3 +13,8 @@
 
 ## edf-remastered-5.0-beta4   [anchors: survival/boss-difficulty (1)]
 - LEAVE — pure Ender Dragon behavioral overhaul (more HP, phases, AI). loot=yes in manifest but the dossier confirms it adds NO new drops or rewards; vanilla dragon loot is unchanged. No new material surface exists; a loot-seed would be inventing content this mod doesn't provide. The mod earns its place as danger-pressure amplification — that's its anchor and it needs no weave.
+
+## minecolonies   [anchors: survival, create (2)]
+OK — connections sound. M-05 (quarries on Create parts) is correct and load-bearing; survival (settlement/food) is the right primary anchor. Existing connections: no rework needed.
+- from: MineColonies colony worker system (basics cheaper + colony exclusives) | via: MineColonies huts/requests/research (M-28 colony route) | to: economy | motif: M-28 | power: mid-to-endgame (colony research depth) | tone: ok — the colony IS the cheaper-basics + locked-exclusives route that makes trade necessary; this formalizes that role as an economy anchor | verdict: ACCEPT | hook: a colony player produces basics cheaper and holds exclusive outputs nobody else can make — the trade loop depends on them
+- from: MineColonies Alchemist / Mystical Site huts | via: MineColonies colony route → magic production (M-28) | to: magic | motif: M-28 | power: mid (hut-level gated) | tone: ok — SYSTEMS.md §3 explicitly names the colony as a route "across both tech *and* magic"; the Alchemist hut producing magic reagents is the colony's magic arm | verdict: ACCEPT | hook: you don't need to master Ars Nouveau yourself — commission the colony's alchemist and buy what you need

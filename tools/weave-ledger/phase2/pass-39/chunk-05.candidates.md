@@ -72,3 +72,11 @@ Power read: purely a well-rested buff from sleeping; no items, no blocks, no mat
 
 - LEAVE — zero items/blocks, behavior-only rest/buff mod. No material surface to weave; thematic synergy with Cold Sweat/Serene Seasons is ambient, not a method-routing. Genuine zero-content surface.
 
+## detect-afk-1.2.2   [anchors: support/QoL-server (1)]
+
+- LEAVE — pure server-side AFK detection utility. Zero blocks, zero items, no processing. Sanctioned support/QoL role. Nothing to weave.
+
+## invtweaksemuforipn   [anchors: support/client-compat (1)]
+
+- LEAVE — pure client-side InvTweaks keybind emulation shim over IPN. Zero items/blocks, no world content, no material surface. Sanctioned support role.
+
