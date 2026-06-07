@@ -177,4 +177,9 @@ REWORK: 1-anchor mod with two strong dossier candidates; assess both plus any ne
   that doesn't advance any new pillar — it's a nice-to-have deco-to-Create connection but redundant for
   the anchor count; drop it and let M-03 carry the Create connection
 
+## betteranimationscollection   [anchors: support/visual (1)]
+- LEAVE — client-only cosmetic mod; replaces vanilla mob animation models with smoother variants. 0 blocks,
+  0 items, no recipe methods. Pure rendering tweak, no gameplay content. Genuine zero-surface LEAVE.
+
+== CHUNK COMPLETE ==
 
