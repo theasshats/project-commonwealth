@@ -111,5 +111,31 @@ Red-team: spirit_solution is reserved — does this violate the ownership rule? 
 
 OK on existing Create anchor. Two new candidates ACCEPTED (M-15 boss-key for dragonsteel/cursium bodies; M-11 spirit_solution golem upgrade giving magic a second anchor). One REJECTED (source_gem reagent-ownership conflict + weak tone).
 
+## patchouli   [anchors: support/library (1)]
+
+Power-read: produces guide-book items crafted from vanilla materials (paper/leather/wool — trivial) via patchouli:shapeless_book_recipe. The books are documentation surfaces, not gameplay resources. The mod is a dependency for Ars Nouveau, Occultism, etc., which author their own guide books in it.
+
+Candidate — pack-authored guidebook: use patchouli:shapeless_book_recipe to craft a Derpack X pack-guide (a custom book authored as pack content), scoped as player-facing onboarding. This is a deliverable but not a cross-system weave in the motif sense — it's documentation, not a loop connection.
+- from: patchouli:guide_book (documentation item) | via: any pack-authored book content | to: support | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: no-motif — this is documentation/onboarding, not a cross-system material flow. Valuable work (a pack guide is useful) but not a Phase-2 weave candidate. Belongs as a separate documentation task.
+
+LEAVE — genuine library/documentation mod. No items or methods with weave-relevant material surface. Books are authored by other mods that use Patchouli as a platform; any weave belongs on those mods.
+
+## create_compressed   [anchors: create (1)]
+
+Power-read: compresses Create's own bulk intermediates (crushed ores, sheets, flour, mechanical parts) into storage blocks. Everyday tier — it's pure inventory management. No foreign-material processing. Already uses create:crushing/milling/mixing/splashing/sandpaper_polishing.
+
+Candidate — crushed ore piles → bulk-washing → aeronautics scrap recovery (M-23)
+- from: create_compressed:crushed_<metal>_pile | via: create:splashing (bulk washing) + aeronautics hull recipe | to: aeronautics | motif: M-23 | power: everyday | tone: clash — M-23 is "structural alloy/plate as required airframe ingredient." A crushed ore pile is a raw intermediate, not a structural component; including raw ore piles in airframe recipes would be thematically incoherent (you don't build a hull from unrefined ore powder). | verdict: REJECT | reason: raw crushed ore is not a structural alloy; M-23 requires fabricated plates/beams, not ore piles. The compressed piles are storage convenience, not hull material.
+
+Candidate — create_compressed:mechanism_block / cogwheel_block → aeronautics drivetrain (M-24)
+- from: create_compressed:mechanism_block (a 9× precision-mechanism block) | via: aeronautics drivetrain recipe | to: aeronautics | motif: M-24 | power: mid | tone: ok — a compressed block of precision mechanisms is a reasonable bulk-supply input for an aeronautics propulsion/control assembly; using the compressed form (a storage convenience) rather than loose mechanisms saves inventory space and implies bulk production. | verdict: REJECT | reason: the mechanism_block is a storage item (9 precision mechanisms compressed into a block, unmake with bulk washing). Adding it as an aeronautics recipe input would mean players need to compress mechanisms before using them, which is an arbitrary friction step. M-24 should take the mechanism itself, not the compressed block. The compressed block is a convenience, not a new material — no weave justification.
+
+LEAVE — Create-internal storage/QoL; no foreign material or coherent 2nd-pillar edge. Dossier conclusion holds.
+
+## nochatreports   [anchors: support/privacy (1)]
+
+LEAVE — genuine zero-content privacy/networking mod. No items, no methods, no material surface. Nothing to weave.
+
+
 
 

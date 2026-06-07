@@ -41,6 +41,17 @@ Power-read: 1 block (gravestone), 2 items (gravestone + obituary); loot=yes (the
 - from: gravestone:gravestone (loot table) | via: loot-seed | to: economy | motif: M-14 (provisional motif) | power: everyday | tone: clash | verdict: REJECT | reason: Gravestone is a death-recovery vessel; seeding coin into its loot table (pay to loot your own grave?) inverts its utility design and is confusing to players. The recovery mechanic is anti-frustration; monetizing it creates a friction-punishment loop the mod was designed to prevent. Theme clash → reject.
 - LEAVE — after exhausting candidates: the mod has 2 items total (gravestone + obituary) and its sole mechanic is inventory recovery. No material input/output, no processing surface. Any 2nd anchor requires forcing a connection the mod isn't built for. The single survival anchor is its correct role.
 
+## railways   [anchors: Create, aeronautics (2)]
+Power-read: 617 blocks, 1015 items; loot=yes; already uses create:mechanical_crafting + create:sequenced_assembly (inbound). Conductor caps, locometal stock, bench carts, semaphores. Mature 2-anchor mod.
+
+REWORK check: Create + aeronautics is a strong, coherent pairing for a train-system add-on. The anchors are correctly assigned and the inbound recipe methods are appropriate (a train mod building on Create's assembly line is exactly right). No rework needed.
+
+- from: railways:locometal blocks (structural steel-adjacent material) | via: aeronautics airframe construction | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: REJECT | reason: Locometal is a train-body building block, not a structural alloy for airframes; its role is already in the aeronautics pillar as train/rail logistics. Applying M-23 (airframe hull) to locometal would conflate train-rolling-stock with airship construction — tonally adjacent but functionally inappropriate. The aeronautics anchor is already carried by the rail-transport role; M-23 would be double-counting in a confusing way.
+- from: railways:conductor_cap (completed caps) | via: numismatics vendor | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: Conductor caps are a cosmetic crafting output, not a processed scarce good with economy loop significance. A vendor selling caps creates an economy edge but the trade is trivial (bench-craftable cosmetics); it doesn't meaningfully advance the scarcity→pressure→production→economy loop. Low value, skip.
+
+OK — connections sound. Create + aeronautics (transport arm) is the right 2-anchor fit; no new edges needed.
+
+
 
 
 

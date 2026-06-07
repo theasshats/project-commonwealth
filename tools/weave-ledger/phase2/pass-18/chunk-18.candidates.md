@@ -35,3 +35,9 @@
 - from: per-player deathCount scoreboard | via: bounty/economy event hook (e.g. a death-tax coin sink, or PvP-death bounty payout) | to: economy | motif: M-14 | power: everyday | tone: clash | verdict: REJECT | reason: there's a faint thematic pull (deaths ↔ a PvPvE bounty/combat economy), but death-count is a *read-only tab-list cosmetic* — it owns no item, drop, or method, only displays a vanilla scoreboard stat. M-14 needs a board that consumes drops and pays coin; this mod has no such surface to route THROUGH, so any link would be inventing a mechanic the mod doesn't have. Tone also clashes — a bragging-rights tally isn't an economy lever. Record + REJECT.
 - LEAVE — genuine zero-surface support cosmetic (0 blocks / 0 items / 0 recipes / loot=no): it only reads the vanilla deathCount objective and prints it in the player list. No material, drop, structure, or method exists to method-pull. Light survival *flavor* (a shared crew death tally) but a cosmetic, not a system — sanctioned support role, needs no weave.
 
+## glitchcore   [anchors: support (1)]
+- LEAVE — genuine zero-content code library (0 blocks / 0 items / 0 recipes / loot=no). Glitchfiend's loader-abstraction API (config/registry/worldgen helpers) backing Serene Seasons et al.; no gameplay of its own. It *backs* a survival-pillar mod (Serene Seasons) but provides no surface to route THROUGH — the weaving happens on Serene Seasons, not here. Pure dependency; needs no weave.
+
+## modelfix   [anchors: support (1)]
+- LEAVE — genuine zero-content client rendering fix (0 blocks / 0 items / 0 recipes / loot=no). Patches baked-model / block-entity render gaps and z-fighting; no material, drop, or method. Sanctioned performance/bugfix support role; nothing to weave.
+

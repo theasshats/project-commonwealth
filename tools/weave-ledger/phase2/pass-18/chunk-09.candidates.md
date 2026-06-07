@@ -48,4 +48,18 @@ REWORK: existing 2nd-anchor candidates in dossier — evaluate both.
 - from: woodworks deco blocks (boards, bookshelves, chests, ladders) | via: create:crushing → raw plank + gravel + create:experience_nugget (lossy) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: over-decorated your cabin? a crusher reclaims planks from the boards — the Create web treats wood deco like any other buildable
 - from: woodworks deco outputs (boards, ladders) | via: woodworks:sawmill or create:cutting (overlap/bridge) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: this is a cosmetic recipe-unification (making the Sawmill and Create's saw read as one web), not a cross-system weave — it doesn't add a new pillar anchor or advance the loop; it's maintenance-polish, not a weave candidate worth tracking as M-12; and M-04 (crushing back) already earns Create as the second anchor
 
+## blueprint   [anchors: support/library (1)]
+- LEAVE — Team Abnormals shared code framework; 0 blocks, 1 trivial template chest item, no recipe
+  methods. The template chest is a vanilla-style item; the library itself is the only real content and it
+  is code API. The 13 c:tags it ships are tag scaffolding for dependent mods, not novel materials.
+  Genuine library LEAVE.
+
+## create_jetpack   [anchors: create, aeronautics (2)]
+REWORK: OK — connections sound. Already at 2 anchors (Create-air-fuelled personal flight = Create +
+aeronautics). The dossier correctly notes a possible progression gate (MineColonies/boss-drop unlock) but
+that is a gating call, not a new pillar weave. No further cross-system link is coherent: magic would
+mean "enchant the jetpack through an arcane infusion" (awkward — the jetpack is pneumatic, not arcane),
+economy is too shallow (just "sell it"), and survival is already implicit via the backtank supply pressure.
+No new candidates.
+
 
