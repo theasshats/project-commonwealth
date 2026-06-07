@@ -17,3 +17,9 @@
 
 ## nochatreports   [anchors: support/privacy (1)]
 - LEAVE — chat-signing/reporting intercept; 0 items, 0 methods; purely a networking privacy mod
+
+## rechiseledcreate   [anchors: Create, decoration (2)]
+OK — existing rows sufficient; mod already has ≥2 anchors (Create kinetic method + decoration palette); M-04 deco-recycle ACCEPT and M-28 colony window request ACCEPT cover the real edges; no uncaptured motif survives red-team
+
+## t_and_t   [anchors: survival (1)]
+- CHALLENGE | from: t_and_t sail-ship loot | via: loot-seed | to: aeronautics | motif: M-23 | verdict: REJECT | hook: M-23 is "structural alloy/plate → airframe hull construction ingredient"; a schematic or canvas found in a sail-ship chest is not a structural alloy — the motif is misapplied; the correct motif for a loot-seeded blueprint/gate-item is M-15 (boss-key unlock: the document gates a complex aeronautics recipe) or M-34 (exploration/combat yields supply); M-23 should not tag informational loot drops

@@ -45,6 +45,16 @@ LEAVE — numerical ping display only; no items, no mechanics. Nothing to route.
 ## invtweaksemuforipn   [anchors: support (1)]
 LEAVE — client-only InvTweaks keybind emulation shim; no items, no mechanics, no recipe surface. Nothing to route.
 
+## create_factory   [anchors: Create, survival (2)]
+- NEW | from: create_factory:sweet_berries_jam fluid (jam output) | via: Serene Seasons config-tie (sweet berries are summer/fall only; jam production is supply-gated by season) | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: the jam line depends on sweet berries, which Serene Seasons makes summer/fall seasonal — the confectionery factory has a genuine harvest-window supply constraint that forces stockpiling or trading, a quieter M-16 tie than an overt reagent gate but mechanically real and not yet clearly accepted in prior rows.
+- NEW | from: create_factory:cream_bucket (cream fluid) | via: create_cheese:maturing | to: survival | motif: M-35 | power: mid | tone: ok | verdict: ACCEPT | hook: cream poured into the cheese-maturing vat over time yields aged dairy — a natural maturation chain that threads the confectionery mod's cream fluid into the cheese production line, adding a time-cost to the dairy intermediate and creating a specialist opportunity (the dairy-to-cheese converter).
+- CHALLENGE | from: create_factory cream/jam fluids | via: ars_nouveau:imbuement (sweet essence / sweetener as imbuement catalyst) | to: magic | motif: M-10 | verdict: REJECT | hook: the 5-vote REJECT consensus on this is correct. Honey and jam have no established arcane resonance in this pack's magic web; forcing them as imbuement catalysts is thematic noise. The dossier's own dossier-note says "M-09, MED" for the economy angle (which is itself retired) — the mod earns its 2 anchors from Create + survival without a magic reach.
+
+## particlerain   [anchors: support (1)]
+LEAVE — client-side weather particle rendering; no items, no mechanics, no material surface. Nothing to route.
+
+
+
 
 
 
