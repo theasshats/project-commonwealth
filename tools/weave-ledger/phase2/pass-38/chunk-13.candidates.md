@@ -305,6 +305,46 @@ Candidate C — Create / colony via M-28 (colony route):
 - from: DT tree harvest via MineColonies lumberjack | via: colony hut (cheaper/faster bulk-wood route) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: the colony lumberjack efficiently fell whole DT trees while a Create harvester struggles with their irregular branch geometry — bulk wood supply becomes the colony specialist's edge
 - from: DT logs bulk output | via: create:milling | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: DT logs flowing to Create milling is ambient (any log source does this); the Create automated-harvester incompatibility makes a DT↔Create coupling contrived; no new cross-system edge
 
+## ichunutil   [anchors: support/library (1)]
+
+Zero items, zero recipe types, zero loot. Shared-class library for iChun's mods. Zero content surface.
+
+- LEAVE — pure utility library; no items, blocks, recipes, or loot of its own; no weave surface. Dependency only.
+
+## moreculling   [anchors: support/performance (1)]
+
+Zero items, zero recipe types, zero loot. Client rendering-performance optimization. Zero content surface.
+
+- LEAVE — pure performance/rendering library; no items, blocks, recipes, or loot; no content to weave.
+
+## touhou_little_maid   [anchors: survival (1)]
+
+Power-read: The Altar (registered recipe-type: altar_recipe_serializers) is mid-to-endgame — it requires power-point bottles (each ~0.5 points; a maid costs 5-10+), plus vanilla mats (diamond, gold, lapis, redstone, iron, coal). A maid itself is mid-endgame; the Broom (flight + maid rider) is mid; the Camera (capture+summon) is mid. Power-point bottles are low-effort consumables (village loot / maid-fairy drops). The Altar is KubeJS-extensible.
+
+Candidate A — magic / via the Altar recipe-type as a ritual sink, M-05 + M-11:
+- The Altar is a non-Create ritual method accepting arbitrary item inputs. Route a magic reagent or boss-drop through an altar recipe to produce an upgraded maid or a Broom variant — the altar reads as a Shinto summoning ritual (Torii + pillars, Gohei staff).
+- Specifically: seed Ars Nouveau source_gem or a boss drop as an altar input to summon a rare/stronger maid variant or unlock a special module.
+- Power-read: a boss-drop-gated altar recipe for an endgame maid variant is endgame-appropriate.
+- Theme-fit: shrine-maiden summoning a spirit companion using magical offerings is extremely coherent — the altar is already thematically a Shinto ritual. Feeding it a magic reagent or a boss-drop reads as "the right offering."
+- Red-team: the Touhou theme is anime/Japanese folklore — Ars Nouveau's school-magic European aesthetic is a tone gap but not a hard clash; Occultism is darker and might be a better fit. The key is the altar accepting the material, not what system it came from.
+- Motif: M-11 (ritual/transmutation sink — the Altar is an analog of a ritual method) and M-05 (native-method gating — the mod's flagship (maid) produced in its own machine, gated on cross-system inputs).
+- ACCEPT (strong for M-05; M-11 applies as a style note)
+
+Candidate B — economy / power-point bottles as a trade good, M-26 (consumption sink):
+- Power-point bottles are a consumable currency (maid upkeep + summoning cost). A maid-heavy player needs many bottles. If bottles are farmable but time-consuming, they could be traded (a fairy-farm specialist sells bottles to maid-owners).
+- Power-read: everyday (village loot / fairy drops — not scarce but time-consuming to farm at scale).
+- Theme-fit: maid guilds running on "faith points" (power bottles) as consumable currency is very thematic.
+- Motif: M-26 (consumption sink — power-point bottles are spent against the maid upkeep, so demand never zeros). ACCEPT — but this is more of a design note (maids require ongoing consumption, creating continuous demand) than a recipe weave.
+
+Candidate C — Create (explicit note in dossier: LEAVE — no natural Create routing):
+- The altar is the non-Create path intentionally. Do not force it.
+- REJECT — Create edge on TLM is explicitly contrived; the altar is the deliberate non-Create path
+
+- from: ars_nouveau:source_gem / boss drop as altar input | via: touhou_little_maid:altar_recipe_serializers | to: magic | motif: M-05 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Shrine Altar accepts magical offerings to summon a higher-grade maid — a source gem or boss-drop is the right tribute for an exceptional companion
+- from: power-point bottles as ongoing maid upkeep consumable | via: consumption mechanic (upkeep demand) | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: maids need power-points to function — a fairy-farm specialist sells bottles to maid-owners; ongoing consumption creates persistent demand
+- from: TLM altar / maid via Create routing | via: any Create method | to: create | motif: — | power: — | tone: clash | verdict: REJECT | reason: the altar is the deliberate non-Create path; forcing Create into TLM contradicts its design intent (noted explicitly in dossier)
+
+
 
 
 

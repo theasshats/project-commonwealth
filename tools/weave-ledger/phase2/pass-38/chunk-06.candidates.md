@@ -249,6 +249,10 @@ OK — existing Create + survival anchors are directionally sound (behavioral Cr
 
 Summary: 4 ACCEPT (M-12 cooking-chain from roost, M-12 fishery processing, M-12 bakery coupling, M-31 logistics at scale), 1 REJECT.
 
+## cubes_without_borders   [anchors: support/client-QoL (1)]
+LEAVE — client-only Video Settings option (borderless fullscreen); 0 blocks, 0 items, no recipe types, loot=no. Display/windowing feature with no gameplay surface. Genuine zero-surface case.
+
+
 
 
 
