@@ -32,6 +32,15 @@ OK — M-08 (FE→coins, geode-scarce Mining Core), M-30 (regional geode scarcit
 
 - NEW | from: createblockchain:cryotheum_coolant_bucket (consumable thermal fluid the Currency Miner requires to run) | via: tfmg:vat_machine_recipe or create:mixing (chemical processing of a cold-fluid compound) | to: create | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: the minter needs coolant the refinery makes — the currency specialist depends on the TFMG chemist for sustained minting throughput, forcing a cross-route dependency between the two tech producers (nobody mints alone).
 
+## tfmg   [anchors: Create (1); strong candidates for aeronautics + economy + survival]
+OK — M-13 (fuels), M-23 (steel/aluminum airframe), M-24 (combustion engine drivetrain), M-08 (steel→coin), M-17 (voltage→magic charging), M-29 (plastic cross-route) all well-covered. Two genuine gaps in method-routing not yet captured:
+
+- NEW | from: tfmg:cast_iron (c:ingots/cast_iron, Industrial Blast Furnace byproduct — produced en route to steel) | via: create:mechanical_crafting (feeds createbigcannons:ap_shell and cannon mounts which require c:ingots/cast_iron) | to: survival | motif: M-32 | power: mid | tone: ok | verdict: ACCEPT | hook: the blast furnace's cast-iron offcut is exactly what the cannon foundry needs — the industrial tier's own byproduct arms the combat tier without a separate supply chain (circularity closes a loop: industry → weapons → scarcity pressure).
+
+- NEW | from: tfmg:lithium (c:ingots/lithium, ore-gen regionalized ore — gates the TFMG accumulator / voltage grid) | via: GTMOGS regional ore-gen config | to: economy | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: lithium is the battery metal: whoever settles above a lithium vein controls the FE grid, making the TFMG electric tier itself a regional specialty that others must trade for rather than build themselves.
+
+
+
 
 
 

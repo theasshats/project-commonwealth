@@ -171,3 +171,31 @@ Gaps to probe:
 
 The M-05 row (apple_press/fermentation_barrel gated on Create brass fittings, 1 ACCEPT) is the one flagged pending. Red-team: the apple_press and fermentation_barrel are mid-game crafting blocks (not endgame), and gating them on Create brass makes the whole vinery winemaking pipeline Create-dependent. This is reasonable for a mid-tier machine gate — brass fittings for a pressurized sealed barrel is thematically sound and the depth fits (mid, not endgame). The 1-ACCEPT is sparse; it deserves more evaluation but isn't worth challenging given it's thematically coherent and appropriately costed. Leave it as-is.
 
+## mousetweaks   [anchors: support/QoL (1)]
+
+LEAVE — client-side inventory input handling; 0 blocks, 0 items, no gameplay surface. No weave possible.
+
+## citadel   [anchors: support/library (1)]
+
+LEAVE — animation/spawn framework library; minimal player-facing items are developer debug tools (citadel:debug, citadel:effect_item), not survival materials. `loot=yes` but the loot is the debug lectern dropping itself. No weave surface.
+
+## valarian_conquest   [anchors: survival (1)]
+
+Existing rows are very dense. Converged ACCEPTs: M-05 (armorsmith station gated on Create parts), M-08 (faction structure loot → coin), M-33 (mercenary hire as service-for-hire), M-34 (faction loot traded by combat specialist), M-02 (faction boss/elite drop as magic reagent), M-15 (faction commander drop as boss-key gate), M-20 (Create-stamped crest plate deployed onto armor), M-37 (citizenship tier requiring MineColonies-researched component).
+
+Gaps to probe:
+
+**Gap 1**: The **M-28 barber_surgeon station** row (1 ACCEPT) proposes that the colony barber_surgeon station demands valarian medical supplies — linking faction content to MineColonies. This is structurally sound: a valarian_conquest barber_surgeon station could supply medical items to a MineColonies Healer hut request. However the method-routing requires that MineColonies *requests* valarian-specific items (bandages, medical supplies), not just generic vanilla items. Whether valarian_conquest ships unique medical supplies is unclear from the dossier — the barber_surgeon is a workstation block with no enumerated output items in the dossier. Flag as uncertain; the row deserves a reality-check note.
+
+- NEW | from: valarian_conquest:barber_surgeon station (faction medical workstation — produces healing/medical items if any unique outputs exist) | via: minecolonies colony Healer/Hospital request | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: if the barber_surgeon produces unique healing items, the colony Healer hut requesting them makes the faction medic a colony supplier — note: verify that valarian_conquest:barber_surgeon actually outputs named items (not just vanilla bandages) before authoring
+
+**Gap 2**: The **M-16 seasonal recruitment** angle. Could faction recruitment (rescuing citizens from structures) be modulated by Serene Seasons — e.g., fewer mercenaries venture out in winter? This is a config/behavioral note, not a method-routing. No Phase-3 action available. Pass.
+
+**Gap 3**: The **M-29 cross-route** where a faction gear recipe requires a magic reagent (from Iron's / Ars) has not been proposed. Red-team: faction armor is medieval-martial; requiring arcane reagents to craft a knight's breastplate would be a tone clash (a blacksmith smiths steel, not sorcery). The Valarian aesthetic is explicitly non-magical. Reject.
+
+**Gap 4**: A **M-31 logistics** angle for faction loot. Faction Outpost/Keep structures are potentially scattered across the world. A combat specialist raiding distant keeps needs to haul the loot home — this is an emergent logistics use, not a recipe action. M-31 applies when a good's bulk *requires* the logistics arm; faction loot is low-volume and player-carried. Not M-31. Pass.
+
+The M-05 split (8 ACCEPTs / 4 REJECTs) on armorsmith station gating deserves a challenge note. The core objection (the armorsmith is an unregistered recipe type — it's a vanilla crafting surface) is structurally valid: M-05 requires the mod's OWN machine; the armorsmith is just a crafting table stand-in. The correct framing is M-20 (create:deploying applies a Create-pressed plate to faction armor as an upgrade step) or simply adding Create parts as KubeJS crafting ingredients, which is M-29 (cross-route dependency). Neither is M-05. The existing M-05 ACCEPTs may be mislabelled.
+
+- CHALLENGE | from: valarian_conquest:armorsmith station as a gating machine | via: recipe (gate station-crafted gear on Create brass/plate inputs) | to: create | motif: M-05 | verdict: REJECT | hook: M-05 requires the mod's OWN registered recipe type as the gate; the armorsmith station is an unregistered vanilla crafting block — gating its outputs on Create parts is a KubeJS recipe modification (M-29 cross-route dependency), not an M-05 native-method gate; the 8-ACCEPT rows should be relabelled M-29
+
