@@ -113,6 +113,21 @@ Client-only biome-color-blending performance and visual mod. No items, no blocks
 
 LEAVE — genuine zero-content performance mod. No items, no methods, no loot tables. Rendering pipeline improvement; nothing to route.
 
+## sky_whale_ship   [anchors: survival (1)]
+
+Four giant flying whale structures that drift across the sky — explorable loot-bearing set-pieces with hidden chests and some hostile mobs. loot=no in the dossier digest (loot ships as structure/worldgen data, not registered loot tables); 0 items/blocks registered. The draw is exploration destination + potential loot-seed target.
+
+Power-read: The whales are endgame-adjacent exploration destinations (reaching one requires significant vertical travel, and some carry hostiles). A good loot-seed target for high-value progression items. The aeronautics angle is strong: these are airborne destinations naturally reached by airship.
+
+- from: sky_whale_ship structures (airborne exploration destination) | via: loot-seed (datapack edit seeding Aeronautics/Create progression items into whale loot tables) | to: aeronautics | motif: M-15 | power: mid/endgame | tone: ok | verdict: ACCEPT | hook: Sky whales are the premiere aerial destination in the pack — seeding mid/endgame Aeronautics ship components or structural alloys into their loot tables makes building an airship the natural means to reach them (and their reward validates the investment). The airship builds toward the whale; the whale rewards the airship. A clean progression loop inside the aeronautics pillar.
+
+- from: sky_whale_ship loot (thematic: ancient airborne creatures) | via: loot-seed → occultism:spirit_fire | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: Giant ancient sky creatures suggest rare magical essence — seeding a unique whale-drop (e.g. "sky_whale:ambergris" or a generic rare bone/scale tag) into the whale's loot and then giving it a spirit_fire transmutation into an Occultism rare essence creates a magic-reagent reason to hunt sky whales. M-02: mob/boss drop → magic input. Scales well with the difficulty of reaching them.
+
+- from: sky_whale_ship loot | via: numismatics / economy as bounty target | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: Sky whales are dangerous destinations that require team effort to board and loot — the rare drops function as combat-route supply (M-34): a combat/aeronautics specialist farms the whale loot and trades the unique materials to non-flying players. The whale makes combat specialists the sole source of certain sky-origin materials.
+
+- from: sky_whale_ship structures (ambient biome presence) | via: aeronautics flight | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: REJECT | reason: M-31 is "bulk goods require aeronautics logistics to move at scale" — not about destinations. The aeronautics link is better captured by the M-15 loot-seed above (reaching them requires a ship). M-31 doesn't fit an exploration-destination mod.
+
+
 
 
 

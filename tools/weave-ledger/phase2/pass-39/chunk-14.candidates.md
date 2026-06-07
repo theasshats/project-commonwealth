@@ -94,4 +94,14 @@ REWORK: The dossier marks it as "support (decoration palette — MineColonies st
 
 REWORK: dossier's 2nd-anchor candidates both cite M-09 (retired) and M-12. M-12 is noted above as rejected (redundant). The real economy angle is M-34 (accepted above). The magic angle via M-11 (fugu → toxin reagent) is new and strong.
 
+## createpickywheels   [anchors: Create (1)]
+
+**Method-pull:** Purely a behavior-patch mod — no blocks, no items, no loot. It re-gates Create's water wheel (needs a River biome + actual water body) and windmill (needs open air, Overworld-only). Its entire effect is making geography constrain where power can be built.
+
+- from: Create water wheel / windmill placement requirement (River biome, open-air biome) | via: gameplay constraint / config | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: the biome-placement constraint means the survival world (rivers, open plains, biome geography) *dictates* where a Create player can build their power source — early power is not free to place anywhere; the player must read the landscape to site their generator, tying the survival/exploration face of the world to the Create production spine; this is the mod's core design intent and it maps directly onto the "world pushes back" survival pressure
+
+- from: createpickywheels river-biome water-wheel constraint | via: config-tie | to: economy | motif: M-30 | power: everyday | tone: ok | verdict: REJECT | reason: the biome constraint creates a geographic power *production* cost, but it doesn't create a regional scarcity of a *good* that must be traded — you just have to build near a river, not trade power. The constraint is a survival-pressure flavor on Create, not an economy weave. The survival ACCEPT above is the right home for this. Records as rejected.
+
+REWORK: OK — single Create anchor is appropriate. The survival weave above (M-16) is the natural 2nd anchor and was already surfaced in the dossier as a "MED" candidate — accepted here.
+
 

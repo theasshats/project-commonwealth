@@ -74,3 +74,28 @@ Concrete candidates:
 
 REWORK: dossier's economy-via-numismatics candidate was already flagged WEAK and is correctly rejected (bare sell link). The M-05 Create-gating candidate in the dossier is sound; this pass confirms it and narrows to the Oven/Fridge level rather than the Cooking Table.
 
+## naturalist   [anchors: survival (1)]
+
+One anchor — needs a second. Rich content: 28 blocks (froglass, shellstone), 104 items, loot=yes. Outputs: venison, bushmeat, antler, glow_goop, snail shell, butterfly. Registered method: naturalist:net (captures small critters). Dossier flags M-09 (retired), M-04, M-12.
+
+Method-pull:
+- venison / bushmeat (raw meat): farmersdelight:cutting or create:milling could process these into cuts/sausage. M-12 processing-chain pull — meat from wildlife enters the food processing chain.
+- antler: bone-analog reagent. Occultism's spirit_fire turns organic matter into magical intermediates. antler → occultism spirit_fire → bone-ash or chalk analog? That's M-11. Could also be ars_nouveau:imbuement as an arcane additive (M-10). Antler as a natural talisman — thematically coherent with hunting-magic traditions.
+- glow_goop (firefly/jar material, light-emitting): Ars Nouveau is built on luminescent spell components; glow_goop has a strong arcane-bioluminescent tone. Feed into ars_nouveau:imbuement as a light reagent. M-10, M-02.
+- shellstone/froglass deco: can crush back to raw/sand + xp nugget via create:crushing. M-04 lossy recycle.
+- butterfly (net-captured): Ars has alakarkinos_conversion and summon_ritual types; a butterfly could be an arcane familiar catalyst via M-11 (ritual). Power: everyday creature.
+- glow_goop: also plausible as a Create enchantment industry input (create_enchantment_industry:grinding → experience fluid) — bioluminescent materials → liquid XP. M-10 adjacent.
+- Seasonal angle: naturalist animals spawn in specific biomes; their populations behave seasonally (bears hibernate in winter conceptually). Could tie bear drops to a winter pressure event — M-16, but endermoon-style (no item output from naturalist itself, just behavioral). Weak without a registered method.
+
+Concrete candidates:
+
+- from: naturalist:venison / naturalist:bushmeat (raw meat) | via: farmersdelight:cutting | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Naturalist deer and boar supply a butcher's cutting board with wildlife game — venison cuts and bushmeat strips feed the food cluster's high-protein diet demand, routing wild hunt into the survival food web.
+- from: naturalist:antler | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: everyday | tone: ok | verdict: ACCEPT | hook: Antler is a classic animist component — feeding it through the imbuement apparatus as an arcane input (powering an earth/nature glyph recipe) makes hunting a supply chain for the magic specialist; survival drops → magic production.
+- from: naturalist:glow_goop (bioluminescent fluid) | via: ars_nouveau:imbuement | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: Firefly glow_goop is a natural luminescent reagent; the imbuement apparatus converts it into a light-based spell component — catching fireflies on Ender Moon nights (M-22) yields magic supply during the lunar event.
+- from: naturalist:glow_goop | via: create_enchantment_industry:grinding | to: create | motif: M-10 | power: mid | tone: ok | verdict: REJECT | reason: The grinding method turns enchanted items into XP fluid — glow_goop isn't enchanted, so there's no clean method routing here. Tone-adjacent but no registered hook.
+- from: naturalist:shellstone / froglass deco blocks | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: Stone and glass deco from aquatic naturalist fauna crushes back to sand/gravel + XP nugget in the crusher — a lossy but coherent recycle link tying the deco palette to the Create metal economy.
+- from: naturalist:butterfly (net-captured) | via: ars_nouveau:summon_ritual or occultism:ritual | to: magic | motif: M-11 | power: everyday | tone: ok | verdict: REJECT | reason: Butterfly as a ritual component is romantic but the net-capturing mechanic registers naturalist:net (not a summoning type), and a butterfly sacrifice feels tonally off for Ars's whimsical school. Antler and glow_goop are cleaner M-02/M-10 hooks already accepted; this redundant route adds no new system contact.
+- from: naturalist animals (deer/bear) | via: M-34 combat-route supply (hunting as a combat-adjacent profession) | to: economy | motif: M-34 | power: everyday | tone: ok | verdict: ACCEPT | hook: A dedicated hunter farms venison and antler to trade with food specialists and magic users who can't or don't want to hunt — hunting becomes a trade-supplying profession, advancing the loop's economy leg via the combat-supply motif.
+
+REWORK: dossier M-09 is retired (correct). Dossier M-04 (shellstone crush) is the weakest link but passes thematic coherence; accepted above. Dossier M-12 (meat processing) confirmed and extended to farmersdelight:cutting specifically.
+
