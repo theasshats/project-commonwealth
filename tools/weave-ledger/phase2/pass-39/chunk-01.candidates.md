@@ -95,3 +95,6 @@
 ## createfurnitureseats   [anchors: support/compat + aeronautics (2)]
 - LEAVE — pure compat/behavior bridge; zero items, zero blocks, zero loot, zero recipe types. Its function is tagging foreign furniture as Create seats so they work on ships — all content weight belongs to the furniture mods it bridges. Already touches aeronautics (ships). No independent content surface to route through any method; forcing a magic or economy edge would be meaningless.
 
+## jeed   [anchors: support/client-UI (1)]
+- LEAVE — JEI display addon (effect documentation categories); zero items, zero blocks, zero loot. Its two "recipe-types" (effect_provider, potion_provider) are JEI display providers, not craftable methods — nothing to route through. Pure client-side documentation layer.
+
