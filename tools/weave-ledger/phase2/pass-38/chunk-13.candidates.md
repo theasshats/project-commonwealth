@@ -89,5 +89,24 @@ New link candidates:
 - OK — Create anchor is sound (professions keyed to Create workstation blocks, trades in Create parts)
 - from: Create-part trades (Andesite/Brass/Copper Worker) | via: Numismatics coin re-denomination (config/KubeJS) | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: a Brass Worker paid in player-minted Brass Cogs rather than emeralds makes the Create trade loop feel like *the* economy, not a vanilla side-channel
 
+## pantographsandwires   [anchors: create, aeronautics (2)]
+
+REWORK check: already 2-anchor (Create + aeronautics). Evaluate existing connections and look for new links.
+
+Existing connections review:
+- Create: 6 inbound Create recipe types including sequenced_assembly — very deeply wired. Sound.
+- Aeronautics: overhead-line infrastructure for electric Create trains (trains = aeronautics/logistics arm). Sound — this is the build content for the logistics spine.
+
+Any new link?
+- Its coal_coke and graphite material tags (c:item/dusts/coal_coke, c:item/ingots/graphite) are outputs that any other mod could pull through a method. Coal coke is a fuel feedstock; graphite is an electrical-conductor material.
+- M-13 (fuel → propulsion): coal_coke is a legitimate fuel intermediate. If the pack's Aeronautics engines accept solid fuels, coal_coke from pantographsandwires feeding an engine is M-13. However, TFMG also produces coal_coke (coking process) — this would be a shared tag, not a new weave exclusive to pantographsandwires.
+- M-32 (byproduct → input): graphite as an intermediate for TFMG's industrial blasting / polarizing — graphite electrodes in industrial processes. A real materials-chemistry chain but needs a second mod to consume graphite.
+- The tags exist and are usable, but since coal_coke/graphite are already produced by TFMG (the primary fuel/industrial spine), any weave through those tags would be a TFMG weave that pantographsandwires happens to contribute to via the shared tag — not a pantographsandwires-specific 2nd-anchor.
+
+- OK — Create anchor: deeply wired via 6 Create recipe types including sequenced_assembly. Sound.
+- OK — Aeronautics anchor: catenary wires + pantographs are literally the rail-electrification infrastructure for the logistics network. Sound.
+- from: pantographsandwires:coal_coke (tag: c:item/dusts/coal_coke) | via: TFMG coking chain / engine fuel | to: aeronautics | motif: M-13 | power: mid | tone: ok | verdict: REJECT | reason: coal_coke is a shared c: tag also produced by TFMG's primary coking method; the weave is on the tag, not specific to pantographsandwires — attributing it here would double-count the coal_coke route already anchored in TFMG
+
+
 
 

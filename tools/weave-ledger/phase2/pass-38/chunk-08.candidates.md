@@ -51,3 +51,25 @@ REWORK: dossier candidate M-09 is correctly retired. No existing connections to 
 Zero items, zero blocks, zero loot. Purely a visual HUD renderer for armor durability. No material surface.
 - LEAVE — client-only UI with no items/blocks/loot; a display mod with zero weaving surface.
 
+## copperagebackport   [anchors: survival (1)]
+
+70 blocks, 81 items, loot=yes. Copper tools/armor, Copper Golem (item-sorting mob), copper deco blocks in four oxidation stages. Core material: copper ingots (c:ingots/copper — a Create staple). The dossier identifies M-04 (recycle) and M-03 (ore-doubling), plus an aeronautics Copper Golem candidate (flagged WEAK).
+
+**Candidate 1 — copper deco/tools → create:crushing recycle (M-04)**
+Power-read: everyday copper deco (lanterns, bars, chains, chests). Crushing oxidized copper blocks back to copper nuggets/raw + XP nugget is the clean M-04 application. No tone clash — Create already crushes all vanilla copper; this just extends the same pattern to the backported blocks. Red-team: the minecraft:-namespaced blocks should already be crushed by vanilla Create rules if Create covers them; only the copperagebackport:-namespaced button variants would be genuinely new. Worth confirming scope, but the principle is sound.
+- from: copperagebackport:copper_button (oxidized variants) / minecraft:copper_bars / copper_chain / copper_chest | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: Weathered and oxidized copper fittings crush back to copper nuggets on a Create millstone, closing the deco→materials loop on the backported copper set
+
+**Candidate 2 — copper tools/armor → create:crushing (M-04, tool recycling)**
+Power-read: everyday tools. Copper tools are weaker than iron and quickly replaced; crushing them back to nuggets gives a gentle recycle path consistent with M-04's "lossy" spirit. Red-team: vanilla Create already handles copper ingots; the tool/armor shapes are likely not covered unless explicitly added. Coherent extension.
+- from: minecraft:copper_axe / copper_sword / copper_boots etc. | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: Worn-out copper tools crushed in a millstone yield copper nuggets — the backport's tool tier feeds back into Create's copper economy without requiring a dedicated smelter
+
+**Candidate 3 — Copper Golem as a low-tech item-logistics tier (M-20 / aeronautics-adjacent)**
+Power-read: mid (requires copper blocks + crafting, available early). The Copper Golem routes items between copper chests — an organic item-logistics mob predating Create's mechanical logistics. Theme: it could be framed as a "pre-automation" logistics step before Create belts, reinforcing the "Create is the spine, not the only option" message. Red-team: the aeronautics link is very thin — the Golem doesn't move cargo spatially, it sorts locally. The logistics arm of economy is about *physical transport*, not local sorting. Not a clean aeronautics or economy weave; the golem is a survival/early-game QoL mob. Flagging REJECT for aeronautics framing; it doesn't advance the loop.
+- from: minecraft:copper_golem_statue (Copper Golem item-sorting) | via: n/a | to: aeronautics | motif: no-motif | power: mid | tone: clash (local sorting ≠ cargo transport) | verdict: REJECT | reason: Copper Golem is a local chest-sorter, not a cargo logistics tool; forcing it into the aeronautics/logistics arm misrepresents its scale and advances no meaningful loop edge
+
+**Candidate 4 — copper oxidation stages as Create splashing input (M-12 / Create processing)**
+Power-read: everyday. Create's splashing method uses water; oxidized copper deoxidizing (via scraping in vanilla — waxing/unwaxing) could be represented as a splashing step to clean oxidized copper back to fresh copper, or inversely, splashing copper blocks to accelerate oxidation. Theme: coherent with Create's water-handling. Red-team: vanilla already has scraping with an axe; a Create splashing override for the same result is redundant unless it produces a distinct byproduct. Without a meaningful byproduct (verdigris dust? a dye?) the step is a parallel of vanilla, not an advance.
+- from: oxidized copper variants | via: create:splashing | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: splashing to de-oxidize copper duplicates vanilla axe-scraping without a meaningful byproduct; depth without a downstream use is not a loop-advancing step
+
+REWORK: no existing connections to flag (mod currently at 1 anchor).
+

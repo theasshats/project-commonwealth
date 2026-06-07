@@ -76,3 +76,30 @@ block to manufacture a weave — authoring, not mapping. The existing item surfa
 - LEAVE — library with cosmetic-only content (transmog table, player statue). No material is
   routable through any pack method. Forced edges would be authoring new content *onto* the mod, not
   weaving *through* it. The dossier's own candidate assessment reaches the same conclusion.
+
+## bettermineshafts   [anchors: survival (1)]
+
+Dossier confirms: YUNG's mineshaft overhaul — structural/worldgen mod only. Zero items, zero blocks
+of its own, loot=no (uses vanilla mineshaft loot tables unmodified), no recipe-types.
+
+Power-read: the structural improvement is meaningful for survival pressure — more dangerous,
+sprawling mineshafts with ore caverns — but there is no material surface. The mod does not register
+its own loot tables, so even a loot-seed approach (the briefing's explicit alternative to LEAVE for
+structure mods) cannot apply here: the loot tables belong to vanilla, not this mod.
+
+Red-team: is there anything in the expanded geometry — side rooms, ore caverns — that could carry
+a weave? The side rooms might contain chests if vanilla mineshaft does; but the loot is vanilla's
+and any seeding would be to vanilla's tables (attributable to vanilla, not bettermineshafts). The
+structural geometry itself has no hook.
+
+Could we call bettermineshafts a "pressure amplifier" that feeds the scarcity → pressure edge more
+richly? Yes in design terms — bigger, more dangerous mineshafts = more risk in ore extraction = more
+pressure on players to specialize and trade. But this is the *ambient* pressure role of exploration
+content, not a weave (no method-pull, no material join). It's the same as BetterCaves or any
+terrain overhaul: it enriches survival without needing an explicit weave link.
+
+- LEAVE — structural worldgen overhaul with no own items, no own loot tables, and no material
+  surface. The loot-seed escape valve (used for structure mods with loot tables) does not apply
+  because bettermineshafts uses vanilla's tables unmodified. Survival anchor is earned through
+  the enriched underground environment; a second anchor requires a material hook this mod
+  simply does not provide.

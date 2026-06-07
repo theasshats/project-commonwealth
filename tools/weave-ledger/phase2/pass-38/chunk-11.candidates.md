@@ -74,6 +74,20 @@ Already routes through farmersdelight:cooking and farmersdelight:cutting (inboun
 
 OK — existing FD inbound connections are sound; what's missing is the Create processing step upstream of FD cooking, filed above.
 
+## particlerain   [anchors: support/client (1)]
+
+Pure client rendering — no items, no blocks, no loot, no gameplay mechanics. Zero content surface.
+
+- LEAVE — pure client atmospheric visual mod (particle-based weather rendering); registers no items, no blocks, no loot; no gameplay surface to weave.
+
+## followersteleporttoo   [anchors: support/QoL (1)]
+
+Pure behavior patch — no items, no blocks, no loot. Genuine zero-content mod.
+
+- LEAVE — pure QoL behavior mod (pet teleport fix); registers no items, no blocks, no loot; zero content surface.
+
+
+
 
 
 

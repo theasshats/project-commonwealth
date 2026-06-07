@@ -24,6 +24,13 @@
 - REWORK: OK — connections sound. Economy (keystone) and Create (addon dependency, coin blocks crafted via Create) are both load-bearing and correctly framed. Numismatics IS the hub other mods weave TO (M-08 player-minted currency); it doesn't need outgoing weaves of its own. No new anchors proposed — adding a third would dilute its role as the settlement-medium node. The dossier's note about M-09 being the natural 2nd-anchor candidate is now moot since M-09 was retired; the framing should stay as-is.
 - from: numismatics vendor block | via: config-based pricing on combat drops (M-34 combat-route supply) | to: economy | motif: M-34 | power: mid | tone: ok | verdict: REJECT | reason: the economy link is already the mod's primary anchor; a "combat drops priced at vendors" edge is the ambient endpoint of the loop (every product sells), which is exactly what the retire of M-09 ruled out as a weave; the weave belongs on the combat-drop mod, not here
 
+## createaddition   [anchors: create (1)]
+- from: createaddition:charging (FE charger) | via: createaddition:charging recipe on Iron's Spellbooks charged foci/spell-batteries | to: magic | motif: M-17 | power: mid | tone: ok | verdict: ACCEPT | hook: the Create electrician runs the charging station that tops up the mage's spell battery — a sensible division of labor across the two production routes
+- from: createaddition:seed_oil (farmed crop → liquid fuel) | via: create:milling (seeds→powder) or extradelight:juicer → createaddition:liquid_burning (FE from bio-oil) | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: an agrarian player grows oilseeds to supply the factory's generators — farming feeds the electric spine rather than just feeding people
+- from: createaddition:rolling → c:rods/wires | via: aeronautics construction recipe (wiring/control surface ingredient) | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: ACCEPT | hook: a ship's electrical control surfaces need rolled copper wire — the electrical specialist becomes the aeronaut's supply chain for wiring
+- from: createaddition:seed_oil / bioethanol | via: createaddition:liquid_burning as aeronautics generator fuel | to: aeronautics | motif: M-13 | power: everyday | tone: ok | verdict: REJECT | reason: M-13 (fuel → propulsion) is already reserved for TFMG diesel/gasoline/lubricant per reagent-ownership; bio-oil as aeronautics fuel would conflict with the defined propulsion-fuel hierarchy — better left as an FE-generation fuel (survival weave) rather than competing with M-13's reserved fuels
+
+
 
 
 
