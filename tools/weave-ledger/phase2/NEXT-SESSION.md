@@ -45,7 +45,7 @@ agent it's the comparison). Same briefing as below. Commit per chunk; resumable 
 > Phase 2 weave mapping, Derpack X. READ FIRST and follow exactly: tools/weave-ledger/phase2/PHASE2-BRIEFING.md.
 > Pass dir: tools/weave-ledger/phase2/pass-16 (mode=blind). Chunk: chunk-MM. Read your chunk list
 > pass-16/chunk-MM.txt; each mod's dossier tools/mod-data/dossiers/<ns>.md; docs/WEAVE-LEDGER.md (motifs
-> M-01..M-24 + reagent ownership); tools/weave-ledger/methods-palette.md. For EVERY mod do BOTH: propose
+> M-01..M-38 + reagent ownership); tools/weave-ledger/methods-palette.md. For EVERY mod do BOTH: propose
 > new/better cross-pillar links (method-pull, power-read, theme/red-team, motif) AND, if it already has
 > connections, flag REWORK on weak/arbitrary ones. AUTHOR NOTHING. Record ACCEPT/REJECT with reasons; LEAVE only
 > for a genuine zero-content code library. INDEPENDENT blind sample — do NOT read other passes or CANDIDATES.md.

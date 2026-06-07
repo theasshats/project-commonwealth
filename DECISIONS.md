@@ -10,6 +10,36 @@ theme/balance · **[PLAN]** plan-doc change · **[GITHUB]** issue action · **[N
 
 ---
 
+## Motif rework (Gate-0) — economy reframed + 13 new motifs (maintainer-directed, after pass 27)
+
+- **[G0] Economy is player-run — vendor-sell is not a weave.** Maintainer ruling: nothing is "sold for
+  money" to an NPC; value exists only because another player needs what they can't make. So **"sellable" is
+  the ambient endpoint of the loop, never a weave** — the weave is the *demand-gating*. Applied to the motif
+  registry: **M-08 reframed** to *player-minted currency* (settlement medium); **M-09 retired**; **M-14 +
+  M-21 cut** as NPC coin faucets. (`docs/WEAVE-LEDGER.md` updated.) **Conflict:** open issue **#137**
+  (Bountiful→coin) is the cut M-14 — flagged to re-scope/close in **#240**.
+- **[G0] 13 new motifs added (M-25–M-38; M-27 deliberately skipped).** From the design discussion against
+  `docs/SYSTEMS.md`: M-25 ecological cost, M-26 consumption sink, M-28 colony route, M-29 cross-route
+  dependency, M-30 regional-scarcity gate, M-31 logistics-required bulk, M-32 byproduct→input, M-33
+  service-for-hire, M-34 combat-route supply, M-35 maturation/aging, M-36 perishability, M-37
+  research/knowledge gate, M-38 tooling wear. **M-27 unassigned** (diet-demand considered & rejected — food
+  demand is ambient). Rejected: razor-and-blades, demand-cycle (folded into M-16), hazardous (covered by
+  danger/logistics).
+- **[G0] Two status tiers.** Most ride existing methods (author now). **MECHANISM-PENDING** (concept
+  accepted, no implementing method — build-task, not a weave): **M-25** ecological cost (#222), **M-36**
+  perishability (#238), **M-38** tooling wear (#239), plus the economy's dynamic-pricing side (#240, v0.9).
+- **[GITHUB] Filed #238 (perishability, Survival), #239 (tooling wear, Backlog), #240 (player-run economy
+  model, Economy).** #222 already covered ecological cost.
+- **[NOTE] Economy de-emphasis trial (passes 24–26).** A prompt-level "generic-sellable → REJECT" clause was
+  run for 3 passes (`ECONOMY-DEEMPHASIS.md`); it worked at the proposal level but barely moved the cumulative
+  27% economy share (cumulative `times_suggested` is dominated by passes 0–23). **The motif rework is the
+  durable fix** — it removes vendor-sell from the vocabulary so it can't be re-proposed, and is the basis for
+  re-tagging the existing economy candidates at Gate 2. Pass tooling/briefing updated to M-01..M-38.
+- **To undo:** revert the `docs/WEAVE-LEDGER.md` + `PHASE2-BRIEFING.md`/`NEXT-SESSION.md` motif edits and
+  close #238/#239/#240.
+
+---
+
 ## Status — passes 16/17/18 run (full-coverage, post-unfreeze); 19 passes total
 
 - **[NOTE] Three simultaneous full passes (16/17/18) complete + merged.** First passes after retiring the

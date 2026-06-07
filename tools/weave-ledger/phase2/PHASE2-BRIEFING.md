@@ -37,9 +37,16 @@ For each candidate, decide ACCEPT or REJECT and record BOTH (the rejects are wan
    wiki). Size the integration to it — deep multi-step only for endgame/flagship; one light step for everyday.
 3. **Theme-fit / red-team**: would a player find the pairing sensible, or do the two mods' tones clash? Argue
    *against* it briefly; keep only if it survives. A clash → REJECT (record it).
-4. **Motif**: cite the accepted motif it composes (M-01..M-24 in the ledger). If it fits no motif, mark it
-   `no-motif` and REJECT-for-review (don't invent one). `M-14` and `M-21` are **provisional** — you may
-   surface candidates but tag them `(provisional motif)`.
+4. **Motif**: cite the accepted motif it composes (M-01..M-38 in the ledger). If it fits no motif, mark it
+   `no-motif` and REJECT-for-review (don't invent one).
+   - **Economy is player-run (rework #163/#240).** "It's sellable / mint it for coin" is the *ambient*
+     endpoint of the loop, **not a weave** — REJECT bare sell links. An economy link only counts when it
+     *gates demand*: M-08 player-minted currency, M-26 consumption, M-28 colony, M-29 cross-route, M-30
+     regional scarcity, M-33 service, M-34 combat-supply, M-37 research. **M-09 retired; M-14 + M-21 cut**
+     (NPC coin faucets) — do not propose them.
+   - **MECHANISM-PENDING motifs are NOT Phase-3 weaves** — M-25 (ecological cost), M-36 (perishability),
+     M-38 (tooling wear) have no implementing method in the pack; they're build-tasks (#222/#238/#239), so
+     don't propose them as weaves you'd author against existing methods.
 
 ## Delivery mechanisms — a weave is NOT only a recipe (Phase 2 produces Phase-3 actions of every kind)
 A candidate's motif says *what* the link is; its **delivery** says *how* Phase 3 authors it. Recipes are one
