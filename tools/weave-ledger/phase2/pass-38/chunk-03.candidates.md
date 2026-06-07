@@ -75,6 +75,11 @@
 ## mru   [anchors: support/library (1)]
 - LEAVE — genuine zero-content code library; no items, no blocks, no loot; nothing to weave
 
+## mousetweaks   [anchors: support/client-QoL (1)]
+- LEAVE — genuine zero-content client inventory-management tweak; no items, no blocks, no loot; nothing to weave
+
+== CHUNK COMPLETE ==
+
 
 
 

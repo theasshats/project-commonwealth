@@ -102,3 +102,7 @@ LEAVE — boot-time logger; prints one log line after loading completes. Zero it
 - from: moblassos lasso craft recipe (uses gold/diamond/emerald) | via: create:pressing or mechanical_crafting | to: create | motif: M-05 | power: mid | tone: ok | verdict: REJECT | reason: M-05 (native-method gating) requires the mod's flagship item to be built in its OWN machine, gated on Create parts. Moblassos has no machine; forcing its craft through Create mechanical_crafting would be a recipe override without a mod-native machine backing. The lasso is a QoL item, not a flagship tech item — gating it behind mechanical_crafting adds friction to a convenience tool, which violates the "don't gate basic/everyday components behind complex recipes" guardrail. REJECT.
 REWORK: dossier "2nd-anchor candidates" correctly identifies aeronautics as weak and recommends LEAVE; this analysis agrees. The one viable candidate found is M-28 (colony route: lasso as colony-management tool demand). This gives a meaningful second anchor without forcing an edge.
 
+## citadel   [anchors: support/library (1)]
+LEAVE — lightweight library (animation framework, spawn handling, shared utilities) for Alex's Mobs and related mods by sbom_xela. The citadel:lectern and debug items are internal tooling, not gameplay content. No recipe types, no real loot table surface (the loot=yes digest field is for internal debug items, not world loot). No weave is possible or coherent.
+
+== CHUNK COMPLETE ==

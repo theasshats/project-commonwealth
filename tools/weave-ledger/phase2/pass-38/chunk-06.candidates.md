@@ -187,6 +187,34 @@ OK — existing Create + economy anchors sound. New links: M-30 (regional geode 
 
 Summary: 2 ACCEPT (M-30 regional scarcity, M-29 reactor cross-route), 1 REJECT.
 
+## alcohol_industry   [anchors: create, survival (2)]
+Existing connections: 2 anchors (Create — filling/mixing processing chain; survival — drinkable consumables with status effects). Two anchors meets the target. Review for REWORK.
+
+Power-read: The Alcohol Boiler is mid-tier — a heated processing block that takes Create-assembled Alcohol Base fluid and converts it to bottled/bucketed spirits. The output tier: beer/vodka/whiskey/tequila are status-effect consumables, not endgame items. Mid-effort production chain (Create mixing → filling → boiling). The mod has one unique recipe-type (alcohol_industry:alcohol_boiling).
+
+Candidates:
+
+- from: alcohol_industry spirits (beer/vodka/whiskey/tequila) | via: minecolonies colony supply / tavern | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: A MineColonies Tavern or Inn keeper requests a steady supply of bottled spirits for colony morale/happiness — the distiller player fills colony supply contracts, making spirits a colony-demanded commodity that gates settlement quality without being an NPC coin sink.
+
+  Red-team: Does MineColonies have a tavern/inn worker that requests alcohol? MineColonies does have a Tavern building and potentially requests food/drinks for colony happiness. The framing is that spirits are "colony luxury goods" the colony management system assigns demand to. M-28 (colony route as demand-gating) is correct — the colony creates repeating demand, making the distiller a supplier rather than just a player buff-farmer. Tone: industrial distillery supplying a colonial settlement — coherent. Not the same as "sellable."
+
+- from: alcohol_industry:beer (grain ferment) | via: Serene Seasons seasonal crop gating | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: The grain/hop inputs to beer production are summer/autumn crops; spring distilling means working from stored reserves — the distillery follows the harvest calendar, making seasonal brewing a real specialist role and tying the industry to survival's temporal pressure.
+
+  Red-team: Does beer in alcohol_industry use grain/hop inputs? The dossier says it "consumes Alcohol Base fluid + flavor ingredients" — the base itself is built from fermentable crops via Create mixing. If those crops are season-gated, the base becomes seasonal. The link is one level indirect (crop → base → spirits) but the chain is short. M-16 is the seasonal reagent motif; if the base's grain inputs are Serene-Seasons-sensitive, the spirit chain inherits that. Coherent.
+
+- from: alcohol_industry:whiskey/vodka/tequila (bottled spirits) | via: extradelight:vat / evaporator | to: survival | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: Distilled spirits feed ExtraDelight's vat or evaporator to produce sauces, marinades, or a spirit-infused cooking ingredient — the distillery chain slots into the cooking web, extending alcohol_industry's output into the food production system.
+
+  Red-team: Is routing spirits through extradelight:vat coherent? Alcohol in cooking (spirits as a cooking input — wine reduction, flambé sauce, spirit marinade) is real cuisine. ExtraDelight has a vat machine for processing liquids. The tone is consistent with the rustic-industrial cooking web the pack builds. M-12 (processing-chain pull where a mid-output feeds another process) fits. Not forced.
+
+- from: alcohol_industry spirits (as fuel) | via: tfmg:distillation or createaddition:liquid_burning | to: create | motif: M-13 | power: mid | tone: clash | verdict: REJECT | reason: Ethanol/spirits as an engine fuel is technically real but the dossier's spirits (beer/vodka/whiskey/tequila) are modeled as player-consumable drinks, not fuel liquids. Treating the colony's whiskey supply as engine fuel is a tone conflict between the culinary/survival theme and the industrial fuel system. TFMG already has diesel/gasoline for M-13; adding spirits as a competing fuel source would dilute the specialization. Reject.
+
+REWORK: Dossier proposes M-09 economy link ("bottled spirits as luxury sell-goods"). M-09 is retired. The M-28 colony demand link is the correct reframe. Flag.
+
+OK — existing Create + survival anchors sound. New links add economy (M-28 colony demand) and deepen survival (M-16 seasonal, M-12 cooking-chain pull).
+
+Summary: 3 ACCEPT (M-28 colony demand, M-16 seasonal, M-12 spirits-into-cooking), 1 REJECT.
+
+
 
 
 

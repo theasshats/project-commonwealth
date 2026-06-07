@@ -221,6 +221,18 @@ One genuine surface: a weighted_shuffle_filter controlling a Deployer in a seque
 
 - LEAVE — two-item Create filter utility; no material output or loot; all depth is within the Create pillar (deployer behavior). No coherent 2nd-anchor candidate found.
 
+## curios   [anchors: support/library (1)]
+
+Pure accessory slot framework API. No items, no blocks, no loot. However, Curios quietly underpins Ars Nouveau, Iron's Spellbooks, and other magic accessories — every magic ring/amulet in the pack that grants stat bonuses flows through Curios slots.
+
+- from: curios accessory slots (ring/amulet/charm slots) | via: ars_nouveau / irons_spellbooks magic accessories | to: magic | motif: M-10 | power: everyday | tone: ok | verdict: REJECT | reason: The weave is on the HOST mod's accessories (Ars rings, Iron's amulets), not on Curios itself. Curios has no items to route; claiming M-10 for Curios is attributing the weave to the wrong node. Any magic-accessory weave belongs on the host mod's dossier. Curios as infrastructure is correctly LEAVE.
+
+- from: curios accessory slots enabling equipment of crafted trinkets | via: general | to: — | motif: no-motif | power: — | tone: — | verdict: REJECT | reason: Infrastructure mods with no own items/blocks/loot have no weave surface; the correct classification is LEAVE.
+
+- LEAVE — accessory slot API/library; registers no items, no blocks, no loot; all content belongs to dependent mods. Zero independent weave surface.
+
+== CHUNK COMPLETE ==
+
 
 
 

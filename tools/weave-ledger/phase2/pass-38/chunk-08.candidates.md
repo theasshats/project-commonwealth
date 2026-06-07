@@ -198,3 +198,10 @@ Candidate stretch — obituary as a Bountiful bounty objective (M-34 / economy)?
 
 LEAVE — death-recovery utility with no tradeable material surface; the only item (obituary) fails the theme/red-team test as a trade good; no loop-advancing weave exists.
 
+## modonomicon   [anchors: support/documentation (1)]
+
+Zero blocks, 6 items (book variants + leaflet), no loot, no recipe types. Pure in-game guidebook framework. The dossier correctly flags support role, no weave candidates.
+
+Power-read: the book items are documentation carriers. Could Modonomicon books be gated behind progression (M-37 research gate analog)? The modonomicon book IS the progression gate mechanism — packs use it to document and gate knowledge. But the book itself has no material value; it's a wiki. No loot table makes it impossible to seed via loot-seed. Red-team: any "book as trade good" framing is invented noise; the books contain documentation, not power.
+- LEAVE — documentation/guidebook framework; books are information carriers with no material surface or production value; no loop-advancing weave exists.
+
