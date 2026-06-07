@@ -379,6 +379,52 @@ Candidate C — survival / loot-seed (loot=yes, DO blocks appear in MineColonies
 - from: Architect's Cutter gated behind MineColonies research | via: minecolonies research (colony progression gate) | to: economy | motif: M-28 | power: everyday-mid | tone: ok | verdict: ACCEPT | hook: the Architect's Cutter is a colony-unlocked tool — you need a colony to access the most detailed architectural vocabulary, making colony progression the prerequisite for endgame construction
 - from: DO structure loot seeding | via: loot-seed | to: economy | motif: M-08 | power: everyday | tone: ok | verdict: REJECT | reason: DO doesn't own independent worldgen structures; its loot is MineColonies schematic loot — the weave belongs to MineColonies, not DO
 
+## grimoireofgaia   [anchors: survival (1)]
+
+Power-read: Large bestiary (dozens of mob types). Drops: nuggets/fragments across many materials (mid — farming hostiles), rings (mid-high artifacts), shields (mid), busts/dolls (mid-endgame vanity from mini-bosses), boss drops (endgame — valkyrie/gorgon/minotaur/vampire/sphinx busts + rare loot). c:tags include item/nuggets/diamond + item/nuggets/emerald (significant — these flow into the vanilla economy automatically). loot=yes. Already has inbound weaves: create:emptying (a drop is bottled), farmersdelight:cutting (an ingredient is cut).
+
+Candidate A — magic / occultism:spirit_fire or ars_nouveau:imbuement, M-02 + M-11:
+- GoG's numerous mob-drop fragments/nuggets/pieces → spirit_fire transmutation → occult essence / magic reagent.
+- The bestiary is mythic (harpies, gorgons, minotaurs, dryads) — their drops have strong thematic resonance with occult ritual ingredients.
+- Power-read: fragments are mid (farming common GoG mobs); mini-boss drops (busts) are mid-high. One spirit_fire step for common fragments; a rarer ritual for mini-boss drops.
+- Theme-fit: gorgon blood, harpy feathers, dryad essence → occult reagents is mythically coherent. Ars Nouveau's school-magic is a slight tone gap (GoG is darker mythic) but imbuement works. Occultism spirit_fire is the stronger fit.
+- Motif: M-02 (mob-drop reagent sink) and M-11 (ritual/transmutation sink).
+- ACCEPT (strong — this is the natural weave for GoG)
+
+Candidate B — economy / boss busts as trade goods, M-34:
+- Mini-boss busts (bust_gorgon, bust_minotaur, etc.) are rare drops from difficult encounters. A combat specialist farms mini-bosses and sells busts to non-combat players who want them for decoration.
+- Power-read: mini-boss bust = mid-high; boss drop = endgame.
+- Motif: M-34 (combat-route supply).
+- Theme-fit: GoG is explicitly a difficulty layer for combat specialists — its rare drops are meant to flow out of combat to other players. Natural.
+- ACCEPT
+
+Candidate C — Create / create:crushing, M-03 + M-02:
+- GoG drops metal nuggets/fragments (already tagged c:nuggets/diamond, c:nuggets/emerald — vanilla-compatible). Running GoG mineral fragments through create:crushing to yield dust/crushed intermediate (M-03 ore-doubling analog) or a bonus byproduct.
+- Power-read: nuggets are mid-everyday; crushing a fragment into dust is one light step.
+- Theme-fit: crushing monster mineral fragments in a Create machine is fine — not exciting but coherent.
+- Red-team: GoG already touches create:emptying (a bottle is filled with a drop). Adding create:crushing of its mineral fragments is a natural extension — Create already interacts with GoG content.
+- Motif: M-03 (Create ore-doubling — applying to fragment→dust, not ore→crushed, but the same method).
+- ACCEPT (light — one crushing step on mineral fragments; no depth issue since fragments are mid)
+
+Candidate D — economy / artifact rings as locked-exclusive trade goods, M-37 or M-29:
+- The 6 artifact rings (Ring of Speed/Jump/Haste) are mid-high items with real utility effects. These could be locked behind specific GoG boss-kill progression (research/knowledge gate — M-37), making them flow from combat specialists to buyers.
+- Motif: M-34 (combat-route supply — rings flow from fighters to others).
+- Power-read: artifact rings are mid-high.
+- ACCEPT — ring artifacts as combat-supply economy goods (M-34 extension of the bust route)
+
+Candidate E — REWORK check on existing connections:
+- create:emptying inbound (a drop is bottled) — sounds like a reasonable recipe but it's unclear which drop and what the bottle does. If it's just a cosmetic bottle, the weave value is low. If the bottled drop is a magic reagent input, it reinforces M-11. Flagging as "verify intent of the emptying recipe."
+- farmersdelight:cutting inbound — an ingredient from GoG is cut via FD's cutting board. This ties GoG to the food/cooking web (survival). Worth verifying what's cut and if it makes culinary sense (harpy feathers → not food; but a GoG ingredient that's food-adjacent like a slime → cutting). Weak if it's just cosmetic cutting.
+
+- from: grimoireofgaia mob fragments / drops (harpy feather, gorgon blood type, minotaur material) | via: occultism:spirit_fire | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: the mythic bestiary's drops are exactly the dark-organic reagents occultism's rituals demand — fragment by spirit-fire into essence
+- from: grimoireofgaia:bust_gorgon / bust_minotaur / rare artifact rings | via: combat-specialist trade (loot from difficult mini-bosses) | to: economy | motif: M-34 | power: mid-endgame | tone: ok | verdict: ACCEPT | hook: mini-boss busts and artifact rings only flow to people who fight the GoG bosses — a combat specialist corners the supply and trades to non-combat builders who want the decoration or the ring's effect
+- from: grimoireofgaia mineral fragments (c:nuggets/diamond, c:nuggets/emerald, material fragments) | via: create:crushing | to: create | motif: M-03 | power: mid | tone: ok | verdict: ACCEPT | hook: crushing a gorgon's mineral fragment yields a small amount of dust and an XP nugget — a Create player processing GoG drops for material scraps; already has a create:emptying touch, so the mod is partially wired to Create
+- from: grimoireofgaia:bust_* / rings as ambient sell goods | via: bare sell | to: economy | motif: M-09 | power: — | tone: — | verdict: REJECT | reason: M-09 retired; the sell endpoint is ambient — the M-34 combat-supply framing covers this correctly without a bare sell link
+- REWORK — existing create:emptying inbound: verify what drop is bottled and what the bottle's downstream use is; if purely cosmetic the weave has no loop value; if the bottle feeds a magic recipe the connection is sound but should be documented explicitly
+- REWORK — existing farmersdelight:cutting inbound: verify what GoG ingredient is cut and whether it connects to the food/diet system; if the cut output feeds a recipe the survival link is real; if it's a decorative cut with no downstream it's an orphaned edge
+
+== CHUNK COMPLETE ==
+
 
 
 
