@@ -1,0 +1,409 @@
+# Mod review tracker — every mod gets human eyes before 1.0
+
+> **Generated, one-time** (not auto-maintained). Master index for the pre-1.0 mod-review sweep: every mod in the pack is assigned to exactly one milestone for human review, **bucketed by pillar and capped per milestone** so no single release reviews everything at once. Overflow from the big pillars (Survival, Polish) lands in the stabilization evens that follow. Mirrored by one GitHub issue per milestone (the live checklists); this doc is the at-a-glance map.
+
+**Why:** pre-alpha → public release raises the bar (CLAUDE.md). Green CI only proves things parse/build; it can't judge fit, balance, duplication, or runtime behaviour. So every mod needs a human pass before 1.0, scheduled rather than crammed.
+
+**Review rubric.** Per mod, a human confirms: **(1) it loads** (no boot/world errors), **(2) it anchors** to its pillar and ideally a *second* system per the SYSTEMS.md two-anchor target, **(3) no unaddressed duplication/overlap** with another mod, **(4) config is sane** for public/varied-hardware play. Tick the box once reviewed; note cut/keep/weave follow-ups as linked issues.
+
+**Coverage:** 356 mods across 10 milestones. Bucketing: pillar-first, cap 40, overflow → stabilization evens / 1.0.
+
+| Milestone | Mods | Pillar focus |
+|---|--:|---|
+| v0.7.0 — Create spine | 27 | Create & tech addons |
+| v0.8.0 — Stabilization I | 40 | Performance + spillover |
+| v0.9.0 — Economy & logistics | 40 | Economy/logistics/colonies/aeronautics |
+| v0.10.0 — Stabilization II | 40 | Survival spillover (worldgen/structures) |
+| v0.11.0 — Magic | 9 | Magic |
+| v0.12.0 — Stabilization III | 40 | Survival spillover |
+| v0.13.0 — Survival | 40 | Survival core (mobs/food/combat) |
+| v0.14.0 — Stabilization IV | 40 | Survival/polish spillover |
+| v0.15.0 — Polish & site | 40 | Decoration/QoL/UI |
+| v1.0.0 — Release | 40 | Libraries & final sweep |
+
+
+## v0.7.0 — Create spine  (27 mods)
+
+- [ ] `copycats` — Create: Copycats+  _(Create)_
+- [ ] `create` — Create  _(Create)_
+- [ ] `create-bits-n-bobs` — Create: Bits 'n' Bobs  _(Create)_
+- [ ] `create-compressed` — Create Compressed  _(Create)_
+- [ ] `create-connected` — Create: Connected  _(Create)_
+- [ ] `create-enchantment-industry` — Create: Enchantment Industry  _(Create)_
+- [ ] `create-factory` — Create: Factory  _(Create)_
+- [ ] `create-fluid` — Create: Fluid  _(Create)_
+- [ ] `create-ironworks` — Create: Ironworks  _(Create)_
+- [ ] `create-jetpack` — Create Jetpack  _(Create)_
+- [ ] `create-low-heated` — Create Low-Heated  _(Create)_
+- [ ] `create-metalwork` — Create: Metalwork  _(Create)_
+- [ ] `create-new-age` — Create: New Age  _(Create)_
+- [ ] `create-ore-excavation` — Create Ore Excavation  _(Create)_
+- [ ] `create-stuff-additions` — Create Stuff 'N Additions  _(Create)_
+- [ ] `create-tfmg` — Create: The Factory Must Grow  _(Create)_
+- [ ] `create-ultimate-factory` — Create: Ultimate Factory  _(Create)_
+- [ ] `createaddition` — Create Crafts & Additions  _(Create)_
+- [ ] `createaddoncompatibility` — Create: Addon Compatibility  _(Create)_
+- [ ] `createnuclear` — Create Nuclear  _(Create)_
+- [ ] `createtreadmill` — Create:Treadmill  _(Create)_
+- [ ] `gears-n-kinetics` — Create: Gears n' Kinetics  _(Create)_
+- [ ] `rechiseled-create` — Rechiseled: Create  _(Create)_
+- [ ] `slice-and-dice` — Create Slice & Dice  _(Create)_
+- [ ] `wits` — WITS (What Is This Structure?)  _(Library/support)_
+- [ ] `yungs-api` — YUNG's API  _(Library/support)_
+- [ ] `zeta` — Zeta  _(Library/support)_
+
+## v0.8.0 — Stabilization I  (40 mods)
+
+- [ ] `accelerated-decay` — Accelerated Decay  _(Perf)_
+- [ ] `alternate-current` — Alternate Current  _(Perf)_
+- [ ] `better-animations-collection` — Better Animations Collection  _(Perf)_
+- [ ] `better-clouds` — Better Clouds  _(Perf)_
+- [ ] `chunky` — Chunky  _(Perf)_
+- [ ] `clumps` — Clumps  _(Perf)_
+- [ ] `create-stuff-n-additions-x-sable-aeronautics` — Create Stuff 'N Additions x Sable & Aeronautics Compat  _(Perf)_
+- [ ] `dynamic-fps` — Dynamic FPS  _(Perf)_
+- [ ] `dynamic-trees-terralith` — Dynamic Trees - Terralith  _(Perf)_
+- [ ] `entity-model-features` — [EMF] Entity Model Features  _(Perf)_
+- [ ] `entitytexturefeatures` — [ETF] Entity Texture Features  _(Perf)_
+- [ ] `ferrite-core` — FerriteCore  _(Perf)_
+- [ ] `fogoverrides` — Fog Overrides  _(Perf)_
+- [ ] `furniture-mods-create-sable-aeronautics` — furniture mods - create/sable(aeronautics) compatibility  _(Perf)_
+- [ ] `fusion-connected-textures` — Fusion (Connected Textures)  _(Perf)_
+- [ ] `im-fast` — I'm Fast  _(Perf)_
+- [ ] `lithium` — Lithium  _(Perf)_
+- [ ] `modelfix` — Model Gap Fix  _(Perf)_
+- [ ] `modernfix` — ModernFix  _(Perf)_
+- [ ] `moreculling` — More Culling  _(Perf)_
+- [ ] `not-enough-animations` — Not Enough Animations  _(Perf)_
+- [ ] `packet-fixer` — Packet Fixer  _(Perf)_
+- [ ] `particle-rain` — Particle Rain  _(Perf)_
+- [ ] `resourceful-lib` — Resourceful Lib  _(Library/support)_
+- [ ] `revelationary` — Revelationary  _(Library/support)_
+- [ ] `rhino` — Rhino  _(Library/support)_
+- [ ] `ritchies-projectile-library` — Ritchie's Projectile Library  _(Library/support)_
+- [ ] `sable` — Sable  _(Perf)_
+- [ ] `sable-collision-damage-create-aeronautics` — Sable: Collision damage (Create Aeronautics)  _(Perf)_
+- [ ] `sable-new-sodium-compat` — Sable: New Sodium Compat  _(Perf)_
+- [ ] `searchables` — Searchables  _(Library/support)_
+- [ ] `smartbrainlib` — SmartBrainLib  _(Library/support)_
+- [ ] `sodium` — Sodium  _(Perf)_
+- [ ] `spark` — spark  _(Perf)_
+- [ ] `startup-time` — Startup Time  _(Perf)_
+- [ ] `supermartijn642s-config-lib` — SuperMartijn642's Config Lib  _(Library/support)_
+- [ ] `supermartijn642s-core-lib` — SuperMartijn642's Core Lib  _(Library/support)_
+- [ ] `terrablender` — TerraBlender  _(Library/support)_
+- [ ] `txnilib` — TxniLib  _(Library/support)_
+- [ ] `veil-lib` — Veil Lib  _(Library/support)_
+
+## v0.9.0 — Economy & logistics  (40 mods)
+
+- [ ] `aeronautics-dyeable-components` — Create Aeronautics: Dyeable Components  _(Economy)_
+- [ ] `aileron` — Aileron  _(Economy)_
+- [ ] `blockui` — BlockUI  _(Economy)_
+- [ ] `bountiful` — Bountiful  _(Economy)_
+- [ ] `byzantine-styles-pack-for-minecolonies` — Byzantine Styles Pack for Minecolonies  _(Economy)_
+- [ ] `create-additional-logistics` — Create: Additional Logistics  _(Economy)_
+- [ ] `create-aeronautics` — Create Aeronautics  _(Economy)_
+- [ ] `create-aeronautics-compatability` — Create Aeronautics: Compatability  _(Economy)_
+- [ ] `create-blockchain` — Create: Blockchain  _(Economy)_
+- [ ] `create-mobile-packages` — Create: Mobile Packages  _(Economy)_
+- [ ] `create-more-package-couriers` — Create More: Package Couriers  _(Economy)_
+- [ ] `create-more-parallel-pipes` — Create More: Parallel Pipes  _(Economy)_
+- [ ] `create-more-pipe-bombs-in-packages` — Create More: Pipe Bombs in Packages  _(Economy)_
+- [ ] `create-pantographs-and-wires` — Create: Pantographs & Wires  _(Economy)_
+- [ ] `create-pattern-schematics` — Create: Pattern Schematics  _(Economy)_
+- [ ] `create-picky-wheels` — Create Picky Wheels  _(Economy)_
+- [ ] `create-shuffle-filter` — Create: Shuffle Filter  _(Economy)_
+- [ ] `create-steam-n-rails-1.21.1` — Steam 'n' Rails Neoforge  _(Economy)_
+- [ ] `create-storage-neo-forge` — Create: Storage [Neo/Forge]  _(Economy)_
+- [ ] `create-threaded-trains` — Create: Threaded Trains  _(Economy)_
+- [ ] `create-trading-floor` — Create: Trading floor  _(Economy)_
+- [ ] `create-train-lights` — Create Train Lights  _(Economy)_
+- [ ] `create-train-parts` — Create Train Parts  _(Economy)_
+- [ ] `create-tweaked-controllers` — Create: Tweaked Controllers  _(Economy)_
+- [ ] `direct-chute` — Create: Direct Chute  _(Economy)_
+- [ ] `do-a-barrel-roll` — Do a Barrel Roll  _(Economy)_
+- [ ] `domum-ornamentum` — Domum Ornamentum  _(Economy)_
+- [ ] `gliders` — Gliders  _(Economy)_
+- [ ] `hypertube` — Create: Hypertubes  _(Economy)_
+- [ ] `minecolonies` — MineColonies  _(Economy)_
+- [ ] `minecolonies-compatibility` — Compatibility addon for MineColonies  _(Economy)_
+- [ ] `minecolonies-tweaks` — Tweaks addon for MineColonies  _(Economy)_
+- [ ] `mob-lassos` — Mob Lassos  _(Economy)_
+- [ ] `multi-piston` — Multi-Piston  _(Economy)_
+- [ ] `northstar-redux` — Create: Northstar - Redux  _(Economy)_
+- [ ] `numismatics` — Create: Numismatics  _(Economy)_
+- [ ] `sky-whale-ship` — Sky Whale Ship  _(Economy)_
+- [ ] `structurize` — Structurize  _(Economy)_
+- [ ] `stylecolonies` — Stylecolonies  _(Economy)_
+- [ ] `travelersbackpack` — Traveler's Backpack  _(Economy)_
+
+## v0.10.0 — Stabilization II  (40 mods)
+
+- [ ] `fishing-real` — Fishing Real  _(Survival)_
+- [ ] `followers-teleport-too` — Followers Teleport Too  _(Survival)_
+- [ ] `food-effect-tooltips-forge` — Food Effect Tooltips (Forge)  _(Survival)_
+- [ ] `formations` — Formations (Structure Library)  _(Survival)_
+- [ ] `friends-and-foes-forge` — Friends&Foes (Forge/NeoForge)  _(Survival)_
+- [ ] `galosphere` — Galosphere  _(Survival)_
+- [ ] `gravestone-mod` — GraveStone Mod  _(Survival)_
+- [ ] `grimoire-of-gaia` — Grimoire of Gaia  _(Survival)_
+- [ ] `gtmogs` — Gregtech: Modern Ore Generation Standalone  _(Survival)_
+- [ ] `horde-moon` — Horde Moon  _(Survival)_
+- [ ] `illager-invasion` — Illager Invasion  _(Survival)_
+- [ ] `immersive-armor-hud` — Immersive Armor HUD  _(Survival)_
+- [ ] `immersive-armors` — Immersive Armors  _(Survival)_
+- [ ] `in-control` — In Control!  _(Survival)_
+- [ ] `just-blahaj` — Just Blahaj  _(Survival)_
+- [ ] `justenoughbreeding` — Just Enough Breeding (JEBr)  _(Survival)_
+- [ ] `kobolds` — Kobolds  _(Survival)_
+- [ ] `l_enders-cataclysm` — L_Ender's Cataclysm  _(Survival)_
+- [ ] `let-me-feed-you` — Let Me Feed You!  _(Survival)_
+- [ ] `lets-do-addon-compat` — [Let's Do Addon] Compat  _(Survival)_
+- [ ] `lets-do-bakery-farmcharm-compat` — [Let's Do] Bakery - Farm&Charm Compat  _(Survival)_
+- [ ] `lets-do-beachparty` — [Let's Do] Beachparty  _(Survival)_
+- [ ] `lets-do-farm-charm` — [Let's Do] Farm & Charm  _(Survival)_
+- [ ] `lets-do-meadow` — [Let's Do] Meadow  _(Survival)_
+- [ ] `lets-do-vinery` — [Let's Do] Vinery  _(Survival)_
+- [ ] `lootr` — Lootr  _(Survival)_
+- [ ] `mowzies-mobs` — Mowzie's Mobs  _(Survival)_
+- [ ] `mushroom-quest` — Mushroom Quest  _(Survival)_
+- [ ] `mutants-and-zombies` — Mutants and Zombies  _(Survival)_
+- [ ] `naturalist` — Naturalist  _(Survival)_
+- [ ] `natures-compass` — Nature's Compass  _(Survival)_
+- [ ] `oceans-delight` — Ocean's Delight  _(Survival)_
+- [ ] `oh-the-trees-youll-grow` — Oh The Trees You'll Grow  _(Survival)_
+- [ ] `ribbits` — Ribbits  _(Survival)_
+- [ ] `rightclickharvest` — RightClickHarvest  _(Survival)_
+- [ ] `rolling-down-in-the-deep` — Rolling Down in the Deep  _(Survival)_
+- [ ] `rottencreatures` — Rotten Creatures  _(Survival)_
+- [ ] `serene-seasons` — Serene Seasons  _(Survival)_
+- [ ] `smarter-farmers-farmers-replant` — Smarter Farmers (farmers replant)  _(Survival)_
+- [ ] `snowy-spirit` — Snowy Spirit  _(Survival)_
+
+## v0.11.0 — Magic  (9 mods)
+
+- [ ] `ars-nouveau` — Ars Nouveau  _(Magic)_
+- [ ] `irons-spells-n-spellbooks` — Iron's Spells 'n Spellbooks  _(Magic)_
+- [ ] `mffs` — Modular Force Field System  _(Magic)_
+- [ ] `modonomicon` — Modonomicon  _(Magic)_
+- [ ] `modular-golems` — Modular Golems  _(Magic)_
+- [ ] `occult-engineering` — Create: Occult Engineering  _(Magic)_
+- [ ] `occultism` — Occultism  _(Magic)_
+- [ ] `patchouli` — Patchouli  _(Magic)_
+- [ ] `smokeleaf-industries` — Smokeleaf Industries  _(Magic)_
+
+## v0.12.0 — Stabilization III  (40 mods)
+
+- [ ] `lootjs` — LootJS: KubeJS Addon  _(Library/support)_
+- [ ] `mixin-helper` — Mixin Helper  _(Library/support)_
+- [ ] `moogs-structure-lib` — Moog's Structure Lib (moogs_structures)  _(Library/support)_
+- [ ] `moonlight` — Moonlight Lib  _(Library/support)_
+- [ ] `mru` — M.R.U  _(Library/support)_
+- [ ] `necronomicon` — Necronomicon API  _(Library/support)_
+- [ ] `notenoughcrashes` — Not Enough Crashes  _(Library/support)_
+- [ ] `owo-lib` — oωo (owo-lib)  _(Library/support)_
+- [ ] `platform` — Platform  _(Library/support)_
+- [ ] `playeranimator` — playerAnimator  _(Library/support)_
+- [ ] `polymorph` — Polymorph  _(Library/support)_
+- [ ] `ponder` — Ponder for KubeJS  _(Library/support)_
+- [ ] `prickle` — Prickle  _(Library/support)_
+- [ ] `puzzles-lib` — Puzzles Lib  _(Library/support)_
+- [ ] `recipe-integration` — Recipe Integration  _(Library/support)_
+- [ ] `resourceful-config` — Resourceful Config  _(Library/support)_
+- [ ] `sparsestructures` — Sparse Structures  _(Survival)_
+- [ ] `spawn-mod` — Spawn  _(Survival)_
+- [ ] `spice-of-life-maids-dream` — Spice of Life: Maids' Dream  _(Survival)_
+- [ ] `steel-armor-blocks` — Create: Steel armor blocks  _(Survival)_
+- [ ] `swashbucklers` — Swashbucklers  _(Survival)_
+- [ ] `tacz-1.21.1` — [UNOFFICIAL] TaCZ 1.21.1 NeoForge Port  _(Survival)_
+- [ ] `tectonic` — Tectonic  _(Survival)_
+- [ ] `terralith` — Terralith  _(Survival)_
+- [ ] `tidal-towns` — Tidal Towns  _(Survival)_
+- [ ] `tide` — Tide 2  _(Survival)_
+- [ ] `towns-and-towers` — Towns and Towers  _(Survival)_
+- [ ] `trailtales-delight` — Trail&Tales Delight  _(Survival)_
+- [ ] `trek` — Trek  _(Survival)_
+- [ ] `underground-village,-stoneholm` — Underground Village, Stoneholm  _(Survival)_
+- [ ] `underground-worlds` — Underground Worlds  _(Survival)_
+- [ ] `upgrade-aquatic` — Upgrade Aquatic  _(Survival)_
+- [ ] `valarian-conquest` — Valarian Conquest  _(Survival)_
+- [ ] `when-dungeons-arise-seven-seas` — When Dungeons Arise: Seven Seas  _(Survival)_
+- [ ] `yacl` — YetAnotherConfigLib (YACL)  _(Polish/QoL)_
+- [ ] `yungs-better-dungeons` — YUNG's Better Dungeons  _(Survival)_
+- [ ] `yungs-better-end-island` — YUNG's Better End Island  _(Survival)_
+- [ ] `yungs-better-mineshafts` — YUNG's Better Mineshafts  _(Survival)_
+- [ ] `yungs-better-ocean-monuments` — YUNG's Better Ocean Monuments  _(Survival)_
+- [ ] `yungs-better-strongholds` — YUNG's Better Strongholds  _(Survival)_
+
+## v0.13.0 — Survival  (40 mods)
+
+- [ ] `alexs-mobs(1.21.1)` — Alex's Mobs (Unofficial Port)  _(Survival)_
+- [ ] `bbrb` — Better Biome Reblend  _(Survival)_
+- [ ] `better-combat` — Better Combat  _(Survival)_
+- [ ] `blood-n-particles-mod` — Blood N Particles Mod  _(Survival)_
+- [ ] `borninchaos` — Born in Chaos  _(Survival)_
+- [ ] `brazil-legends` — Brazil Legends  _(Survival)_
+- [ ] `chefs-delight` — Chef's Delight - Farmer's Delight Villagers  _(Survival)_
+- [ ] `cold-sweat` — Cold Sweat  _(Survival)_
+- [ ] `comforts` — Comforts  _(Survival)_
+- [ ] `companion` — Companion 🐕  _(Survival)_
+- [ ] `companions-mod` — Companions!  _(Survival)_
+- [ ] `cooking-for-blockheads` — Cooking for Blockheads  _(Survival)_
+- [ ] `create-alcohol-industry` — Create: Alcohol Industry  _(Survival)_
+- [ ] `create-better-villagers` — Create: Better Villagers  _(Survival)_
+- [ ] `create-big-cannons` — Create Big Cannons  _(Survival)_
+- [ ] `create-big-cannons-advanced-technologies` — Create Big Cannons: Advanced Technologies  _(Survival)_
+- [ ] `create-central-kitchen` — Create: Central Kitchen  _(Survival)_
+- [ ] `create-cheese` — Create: Cheese Factory  _(Survival)_
+- [ ] `create-confectionery` — Create Confectionery  _(Survival)_
+- [ ] `create-dragons-plus` — Create: Dragons Plus  _(Survival)_
+- [ ] `create-dreams-and-desires` — Create: Dreams & Desires  _(Survival)_
+- [ ] `create-fishery-industry` — Create: Fishery Industry  _(Survival)_
+- [ ] `create-food` — Create: Food  _(Survival)_
+- [ ] `create-immersive-tacz-integration` — Create: Immersive TaCZ Integration  _(Survival)_
+- [ ] `create-integrated-farming` — Create: Integrated Farming  _(Survival)_
+- [ ] `create-let-the-adventure-begin` — Create: Let The Adventure Begin  _(Survival)_
+- [ ] `create-mechanical-companion` — Create: Mechanical Companion  _(Survival)_
+- [ ] `ct-overhaul-village` — ChoiceTheorem's Overhauled Village  _(Survival)_
+- [ ] `deeperdarker` — Deeper and Darker  _(Survival)_
+- [ ] `diet-appleseed-edition` — Diet - AppleSeed Edition  _(Survival)_
+- [ ] `dungeons-and-taverns` — Dungeons and Taverns  _(Survival)_
+- [ ] `ecologics` — Ecologics  _(Survival)_
+- [ ] `edf-remastered` — Ender Dragon Fight Remastered  _(Survival)_
+- [ ] `ender-moon` — Ender Moon  _(Survival)_
+- [ ] `endrem` — End Remastered  _(Survival)_
+- [ ] `enhanced-celestials` — Enhanced Celestials - Blood, Blue, & Harvest (Super) Moons  _(Survival)_
+- [ ] `epic-samurais` — Samurai Dynasty  _(Survival)_
+- [ ] `expanded-delight` — Expanded Delight  _(Survival)_
+- [ ] `extradelight` — ExtraDelight  _(Survival)_
+- [ ] `farmers-delight` — Farmer's Delight  _(Survival)_
+
+## v0.14.0 — Stabilization IV  (40 mods)
+
+- [ ] `kleeslabs` — KleeSlabs  _(Polish/QoL)_
+- [ ] `libipn` — libIPN  _(Polish/QoL)_
+- [ ] `macaws-doors` — Macaw's Doors  _(Polish/QoL)_
+- [ ] `macaws-fences-and-walls` — Macaw's Fences and Walls  _(Polish/QoL)_
+- [ ] `macaws-roofs` — Macaw's Roofs  _(Polish/QoL)_
+- [ ] `macaws-stairs` — Macaw's Stairs  _(Polish/QoL)_
+- [ ] `macaws-windows` — Macaw's Windows  _(Polish/QoL)_
+- [ ] `midnight-thoughts` — Midnight Thoughts  _(Polish/QoL)_
+- [ ] `mining-speed-tooltips` — Mining Speed Tooltips  _(Polish/QoL)_
+- [ ] `mmmmmmmmmmmm` — MmmMmmMmmMmm  _(Polish/QoL)_
+- [ ] `more-overlays-updated` — More Overlays Updated  _(Polish/QoL)_
+- [ ] `more-slabs-stairs-and-walls` — More Slabs Stairs & Walls  _(Polish/QoL)_
+- [ ] `mouse-tweaks` — Mouse Tweaks  _(Polish/QoL)_
+- [ ] `net-music` — Net Music  _(Polish/QoL)_
+- [ ] `no-chat-reports` — No Chat Reports  _(Polish/QoL)_
+- [ ] `opacpvp` — Open Parties and Claims PvP Support  _(Polish/QoL)_
+- [ ] `open-parties-and-claims` — Open Parties and Claims  _(Polish/QoL)_
+- [ ] `ping-wheel` — Ping Wheel  _(Polish/QoL)_
+- [ ] `quark` — Quark  _(Polish/QoL)_
+- [ ] `rechiseled` — Rechiseled  _(Polish/QoL)_
+- [ ] `security-craft` — SecurityCraft  _(Polish/QoL)_
+- [ ] `shulkerboxtooltip` — Shulker Box Tooltip  _(Polish/QoL)_
+- [ ] `simple-hats` — Simple Hats  _(Polish/QoL)_
+- [ ] `simple-voice-chat` — Simple Voice Chat  _(Polish/QoL)_
+- [ ] `sound` — Sounds  _(Polish/QoL)_
+- [ ] `sound-physics-remastered` — Sound Physics Remastered  _(Polish/QoL)_
+- [ ] `spyglass-improvements` — Spyglass Improvements  _(Polish/QoL)_
+- [ ] `staaaaaaaaaaaack` — Staaaaaaaaaaaack (Stxck)  _(Polish/QoL)_
+- [ ] `steves-lava-chicken-music-disc-backport` — Steve's lava chicken music disc backport  _(Polish/QoL)_
+- [ ] `supplementaries` — Supplementaries  _(Polish/QoL)_
+- [ ] `the-bible` — The Bible  _(Polish/QoL)_
+- [ ] `tips` — Tips  _(Polish/QoL)_
+- [ ] `too-many-paintings` — Too Many Paintings!  _(Polish/QoL)_
+- [ ] `touhou-little-maid` — Touhou Little Maid  _(Polish/QoL)_
+- [ ] `towntalk` — TownTalk  _(Polish/QoL)_
+- [ ] `trash-cans` — Trash Cans  _(Polish/QoL)_
+- [ ] `trashslot` — TrashSlot  _(Polish/QoL)_
+- [ ] `woodworks` — Woodworks  _(Polish/QoL)_
+- [ ] `xaeros-minimap` — Xaero's Minimap  _(Polish/QoL)_
+- [ ] `xaeros-world-map` — Xaero's World Map  _(Polish/QoL)_
+
+## v0.15.0 — Polish & site  (40 mods)
+
+- [ ] `accessories` — Accessories  _(Polish/QoL)_
+- [ ] `afk-sleep` — AFK Sleep  _(Polish/QoL)_
+- [ ] `almost-unified` — Almost Unified  _(Polish/QoL)_
+- [ ] `appleskin` — AppleSkin  _(Polish/QoL)_
+- [ ] `astikorcarts-redux` — AstikorCarts Redux  _(Polish/QoL)_
+- [ ] `attributefix` — AttributeFix  _(Polish/QoL)_
+- [ ] `backport-copper-age` — Copper Age Backport  _(Polish/QoL)_
+- [ ] `better-climbing` — Better Climbing  _(Polish/QoL)_
+- [ ] `better-mods-button` — Better Mods Button  _(Polish/QoL)_
+- [ ] `better-ping-display` — Better Ping Display [Forge/NeoForge]  _(Polish/QoL)_
+- [ ] `bigsignwriter` — Big Sign Writer  _(Polish/QoL)_
+- [ ] `buddy-drones` — Buddy Drones  _(Polish/QoL)_
+- [ ] `build-guide` — Build Guide  _(Polish/QoL)_
+- [ ] `chat-heads` — Chat Heads  _(Polish/QoL)_
+- [ ] `configured` — Configured  _(Polish/QoL)_
+- [ ] `controlling` — Controlling  _(Polish/QoL)_
+- [ ] `crafting-tweaks` — Crafting Tweaks  _(Polish/QoL)_
+- [ ] `cubes-without-borders` — Cubes Without Borders  _(Polish/QoL)_
+- [ ] `death-count` — Death Count  _(Polish/QoL)_
+- [ ] `detect-afk` — Detect AFK Players  _(Polish/QoL)_
+- [ ] `ding` — Ding  _(Polish/QoL)_
+- [ ] `double-doors` — Double Doors  _(Polish/QoL)_
+- [ ] `durability-tooltip` — Durability Tooltip  _(Polish/QoL)_
+- [ ] `dynamictrees` — Dynamic Trees  _(Polish/QoL)_
+- [ ] `dynamictreesplus` — Dynamic Trees Plus  _(Polish/QoL)_
+- [ ] `emoji-type` — Emoji Type  _(Polish/QoL)_
+- [ ] `every-compat` — Every Compat (Wood Good)  _(Polish/QoL)_
+- [ ] `exposure` — Exposure  _(Polish/QoL)_
+- [ ] `formations-nether` — Formations Nether  _(Polish/QoL)_
+- [ ] `game-discs` — Game Discs  _(Polish/QoL)_
+- [ ] `handcrafted` — Handcrafted  _(Polish/QoL)_
+- [ ] `immersive-paintings` — Immersive Paintings  _(Polish/QoL)_
+- [ ] `immersivemusicmod` — The Immersive Music Mod  _(Polish/QoL)_
+- [ ] `inventory-profiles-next` — Inventory Profiles Next  _(Polish/QoL)_
+- [ ] `invtweaks-emu-for-ipn` — InvTweaks Emu for IPN  _(Polish/QoL)_
+- [ ] `jade` — Jade 🔍  _(Polish/QoL)_
+- [ ] `jakes-build-tools` — Jake's Build Tools  _(Polish/QoL)_
+- [ ] `jei` — Just Enough Items (JEI)  _(Polish/QoL)_
+- [ ] `just-enough-effect-descriptions-jeed` — Just Enough Effect Descriptions (JEED)  _(Polish/QoL)_
+- [ ] `just-enough-resources-jer` — Just Enough Resources (JER)  _(Polish/QoL)_
+
+## v1.0.0 — Release  (40 mods)
+
+- [ ] `accessories-compat-layer` — Accessories Compatibility Layer  _(Library/support)_
+- [ ] `architectury-api` — Architectury API  _(Library/support)_
+- [ ] `ars-n-spells` — Ars 'n Spells  _(Library/support)_
+- [ ] `azurelib` — AzureLib  _(Library/support)_
+- [ ] `bagus-lib` — Bagus Lib  _(Library/support)_
+- [ ] `balm` — Balm  _(Library/support)_
+- [ ] `better-compatibility-checker` — Better Compatibility Checker  _(Library/support)_
+- [ ] `better-library` — Better Library  _(Library/support)_
+- [ ] `biolith` — Biolith  _(Library/support)_
+- [ ] `blueprint` — Blueprint  _(Library/support)_
+- [ ] `bookshelf-lib` — Bookshelf  _(Library/support)_
+- [ ] `bundle-recipe` — Bundle Recipe  _(Library/support)_
+- [ ] `charta` — Charta  _(Library/support)_
+- [ ] `citadel-(1.21.1-port)` — Citadel (Unofficial Port)  _(Library/support)_
+- [ ] `cloth-config` — Cloth Config API  _(Library/support)_
+- [ ] `collective` — Collective  _(Library/support)_
+- [ ] `configuration` — Configuration  _(Library/support)_
+- [ ] `corgilib` — CorgiLib  _(Library/support)_
+- [ ] `crash-assistant` — Crash Assistant  _(Library/support)_
+- [ ] `creativecore` — CreativeCore  _(Library/support)_
+- [ ] `cristel-lib` — Cristel Lib  _(Library/support)_
+- [ ] `curios` — Curios API (Forge/NeoForge)  _(Library/support)_
+- [ ] `data-anchor` — Data Anchor  _(Library/support)_
+- [ ] `dragonlib` — DragonLib  _(Library/support)_
+- [ ] `fzzy-config` — Fzzy Config  _(Library/support)_
+- [ ] `geckolib` — GeckoLib  _(Library/support)_
+- [ ] `glitchcore` — GlitchCore  _(Library/support)_
+- [ ] `ichunutil` — iChunUtil  _(Library/support)_
+- [ ] `irons-lib` — Iron's Lib  _(Library/support)_
+- [ ] `jamlib` — JamLib  _(Library/support)_
+- [ ] `kambrik` — Kambrik  _(Library/support)_
+- [ ] `kiwi` — Kiwi 🥝  _(Library/support)_
+- [ ] `knight-lib` — Knight Lib  _(Library/support)_
+- [ ] `kotlin-for-forge` — Kotlin for Forge  _(Library/support)_
+- [ ] `kubejs` — KubeJS  _(Library/support)_
+- [ ] `kubejs-create` — KubeJS Create  _(Library/support)_
+- [ ] `l2library` — L2 Library  _(Library/support)_
+- [ ] `ldlib` — LDLib  _(Library/support)_
+- [ ] `lionfish-api` — Lionfish-API  _(Library/support)_
+- [ ] `lithostitched` — Lithostitched  _(Library/support)_
