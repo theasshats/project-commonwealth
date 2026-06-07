@@ -57,3 +57,6 @@
 
 ## blockui   [anchors: support/library-UI-API (1)]
 - LEAVE — genuine zero-content UI framework library (LDTTeam); no items, no methods, no loot. Hard dependency of MineColonies whose weave belongs to MineColonies. Sanctioned support anchor; no weave needed.
+
+## structurize   [anchors: support/library-MineColonies-build-engine (1)]
+- LEAVE — MineColonies blueprint/schematic engine; its 14 items are workflow tools (build-tool scepter, scan-tool, shape-tool, caliper, placeholder substitution blocks) with no method pull and no material role. Forcing a recipe edge on schematic-operation tools would be contrived. No loot tables. Its weave is MineColonies' weave. Sanctioned support anchor; no weave needed.

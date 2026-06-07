@@ -14,6 +14,13 @@
 - from: farm_and_charm ground meat / dried goods | via: farm_and_charm:drying → create:mixing | to: create | motif: M-12 | power: mid | tone: ok | verdict: REJECT | reason: drying-rack output as a mixing intermediate is plausible but the chain is short and survives well inside the food-mod web already; adding a Create mixing step would be busywork (a second M-12 edge on top of the grain milling one). One clear M-12 weave is sufficient for an everyday food mod.
 - from: farm_and_charm:butter / animal surplus | via: economy (sell/trade to other players) | motif: M-09 | verdict: REJECT | reason: M-09 is retired — bare sell links are the ambient endpoint of the loop, not a weave. The M-28 colony-route edge above is the real economy anchor.
 
+## ichunutil   [anchors: support/library (1)]
+- LEAVE — zero-content shared-class library for iChun's mods; 0 items, 0 blocks, no gameplay mechanics. No weave surface.
+
+## mcwdoors   [anchors: support/deco (1)]
+- from: wooden door variants (barn/cottage/stable/etc.) | via: create:cutting | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: a Create saw mills planks into Macaw's wooden door variants — a carpenter automates the full door palette on a belt, turning decorative choices into production-line decisions. One light step for an everyday commodity; appropriate depth.
+- from: iron/metal door variants | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: M-04 lossy recycle is a weak edge even when valid — adds a small recycling loop but doesn't advance the loop. Only worth doing as part of a wholesale Macaw's-family deco crush pass, not as a standalone weave for this mod.
+
 ## bundle_recipe   [anchors: support/QoL (1)]
 - LEAVE — datapack-only; re-enables vanilla bundle crafting with vanilla leather/string. Zero new items or blocks; no foreign material surface to route through any method.
 

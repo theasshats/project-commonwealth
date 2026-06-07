@@ -20,6 +20,15 @@
 ## mutantszombies   [anchors: survival (1)]
 - LEAVE — zombie/mutant variant mobs with no drops (loot=no) and only spawn eggs registered. The briefing's loot-seed path requires something to seed FROM; these mobs have no existing drop table to augment or seed, so any edge would be inventing content whole-cloth, which is the explicit failure mode. The mod raises night-threat pressure (survival) — that's coherent and sufficient.
 
+## betterclouds   [anchors: support/visual (1)]
+- LEAVE — volumetric cloud renderer only; 0 items/blocks/loot, no methods. Zero content surface; nothing to weave.
+
+## rhino   [anchors: support/library (1)]
+- LEAVE — pure JavaScript engine (Rhino fork); the runtime under KubeJS scripts. 0 items/blocks/loot, no methods, no content. Genuine zero-surface library; nothing to weave.
+
+## fzzy_config   [anchors: support/library (1)]
+- LEAVE — Kotlin config serialization/GUI engine; 0 items/blocks/loot, no methods. Genuine zero-surface library; nothing to weave.
+
 ## tacz   [anchors: support (1)]
 - from: tacz gun/ammo recipes (gun_smith_table_crafting inputs) | via: recipe — gate gun bodies + ammo cartridges behind Create-pressed iron sheets, brass casings, and precision-mechanism parts (M-05 native-method gating; high-tier guns via M-06 sequenced-assembly chain) | to: create | motif: M-05 | power: mid (basic guns) / endgame (elite rifles via sequenced assembly) | tone: ok — industrial Create forge producing firearms is internally consistent; PvPvE pack arms production off the Create spine fits the design perfectly | verdict: ACCEPT | hook: the gun_smith_table runs on Create-pressed metal; ore scarcity gates your firepower
 - from: tacz:ammo (consumable) | via: combat-route supply — ammo is spent every engagement; an arms-maker specialist (who mastered Create-gated gun production) supplies others who can't or won't climb that chain (M-34 combat-route supply) | to: economy | motif: M-34 | power: mid-to-endgame (ongoing ammo burn) | tone: ok — PvPvE arms market is natural; the distinction from M-09 is that this is a specialist-to-non-specialist supply trade, not a bare sell link | verdict: ACCEPT | hook: the arms maker feeds the fighters who feed the market — nobody has to fight AND forge

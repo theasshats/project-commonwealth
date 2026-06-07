@@ -104,4 +104,12 @@ REWORK: dossier's 2nd-anchor candidates both cite M-09 (retired) and M-12. M-12 
 
 REWORK: OK — single Create anchor is appropriate. The survival weave above (M-16) is the natural 2nd anchor and was already surfaced in the dossier as a "MED" candidate — accepted here.
 
+## emojitype   [anchors: support / client UI (1)]
+
+- LEAVE — genuine zero-content client mod: no items, no recipes, no loot, no server-side behavior. Chat shortcode autocomplete only. No game-loop surface exists.
+
+## owo   [anchors: support / library (1)]
+
+- LEAVE — genuine zero-content code library: 0 blocks, 0 items, no loot. UI/config/networking framework for dependent mods. No player-facing surface.
+
 

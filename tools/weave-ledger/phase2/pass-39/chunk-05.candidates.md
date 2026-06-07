@@ -118,3 +118,19 @@ Power read: hypertube + entrance + accelerator are mid-tier infrastructure — s
 
 OK — existing Create + aeronautics connections are sound. One new economy-arm link (M-33 transit service) is coherent and new.
 
+## rottencreatures   [anchors: survival (1)]
+
+Power read: biome/event-gated zombie variants, each dropping themed kill-loot — frozen_rotten_flesh (Frostbitten/cold biomes), magma_rotten_flesh (Swampy?), corrupted_wart (Swampy, poison mechanic), mob heads (decorative), treasure_chest (pirate Dead Beard). loot=yes. These drops are mid-tier, fight-gated, non-craftable inputs — prime M-02 / M-11 targets. The dossier already flagged magic and Create as strong candidates.
+
+- from: rottencreatures:frozen_rotten_flesh | via: occultism:spirit_fire (transmutation into a cold essence / cryomantic reagent) | to: magic | motif: M-11 | power: mid | tone: ok — a frostbitten zombie's flesh transmuting into an icy spirit essence in spirit fire is lore-coherent; cold-thematic mob drop → cold magic reagent makes immediate sense to a player | verdict: ACCEPT | hook: the Frostbitten's frozen flesh doesn't burn in spirit fire — it crystallizes into a chill essence the Occultist uses for cold rituals
+
+- from: rottencreatures:corrupted_wart | via: ars_nouveau:imbuement (arcane infusion into a corruption catalyst) | to: magic | motif: M-10 | power: mid | tone: ok — wart from a poison/swamp undead makes a natural corruption/blight catalyst in an arcane infusion, thematic with Ars Nouveau's growth magic and the mod's swamp origin | verdict: ACCEPT | hook: the Swampy zombie's corrupted wart, steeped in source through the imbuement altar, distills into a blight catalyst — what poisons you can poison a spell
+
+- from: rottencreatures:magma_rotten_flesh | via: create:haunting (soul-fire transmutation) | to: create | motif: M-19 | power: mid | tone: ok — passing magma-inflected rotten flesh through Create's haunting process (soul fire) gives it a fire/soul conversion output; M-19 is the native Create→occult soul-fire bridge, and fire-themed mob drops are the natural input | verdict: ACCEPT | hook: the magma zombie's scorched flesh, passed through the haunting fan, soul-fires into an ember residue that feeds the Create/occult chain
+
+- from: rottencreatures:frozen_rotten_flesh | via: create:crushing | to: create | motif: M-02 | power: mid | tone: ok — crushing a frozen drop yields a cold byproduct (ice crystals / freeze-dust) that another Create process could use | verdict: REJECT | reason: occultism:spirit_fire is the stronger and more thematic route for frozen flesh (accepted above); adding a Create crushing path for the same item is a double-claim on the same drop without adding loop depth. Keep the spirit_fire route as the primary sink.
+
+- from: rottencreatures:treasure_chest (Dead Beard pirate drop) | via: loot-seed / economy | to: economy | motif: M-34 | power: mid | tone: ok — the pirate captain's treasure chest is a combat-route supply drop; a combat specialist farming Dead Beard provides the chest contents to non-combat players | verdict: ACCEPT | hook: Dead Beard's chest drops the kind of loot only a fighter can reach — traders pay combat specialists for the pirate's haul
+
+- from: rottencreatures mob heads | via: bare 'decorative sellable' | to: economy | motif: M-09 (retired) | power: everyday | tone: n/a | verdict: REJECT | reason: mob heads are decorative; "they're sellable" is the retired M-09 ambient endpoint, not a demand-gating weave. No mechanism gates demand for them.
+

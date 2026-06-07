@@ -75,6 +75,15 @@ LEAVE — client-side render overlay with zero items, blocks, loot, or gameplay 
 
 LEAVE — JEI addon that surfaces mob-drop, dungeon-loot, and worldgen-distribution data; display-only with no material surface, no items, no processing. Genuinely useful for the scarcity design (players see where regional ores live) but it's documentation infrastructure, not a loop node. Nothing to weave.
 
+## create_compressed   [anchors: create (1)]
+
+Power-read: 30 blocks, 30 items — crushed-ore piles, sheet blocks, mechanism/cogwheel/belt/shaft bundles, flour/dough piles. Already uses create:crushing, milling, mixing, splashing, sandpaper_polishing. Pure Create-internal storage/automation QoL; no foreign material. Dossier correctly identifies it as Create-internal support.
+
+Method-pull candidates:
+- from: create_compressed crushed_<metal>_pile blocks (bulk) | via: aeronautics/logistics — train bulk cargo | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: compressed crushed-ore piles are exactly the kind of heavy, bulk intermediate that makes train/airship logistics economically meaningful — shipping 9× crushed copper in one block rather than 9 loose items is the point of compression, and it makes bulk ore trade a job for the aeronautics/logistics arm rather than player backpacks. The M-31 link is thematic rather than a recipe (it's a pack-design framing that the aeronautics arm moves compressed ore between regional processing hubs). via: config/design framing (aeronautics/logistics move method).
+- from: create_compressed:mechanism_block / belt_block / shaft_bundle | via: create:mechanical_crafting | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: REJECT | reason: the compressed mechanism/belt/shaft blocks are storage formats for existing Create parts, not distinct mechanical components. Using a shaft_bundle as an Aeronautics drivetrain input is a storage trick (9 shafts in a block), not a new mechanical specialty — it collapses the supply chain rather than adding depth. M-24 should require a genuinely distinct component type (like gnkinetics gears), not a compression block. REJECT (bad fit for M-24; storage format ≠ mechanical component).
+
+
 
 
 
