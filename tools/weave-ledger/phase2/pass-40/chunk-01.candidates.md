@@ -133,3 +133,23 @@ The argument for M-06 gating: in a scarcity pack, *free infinite void* is a bala
 
 - CHALLENGE | from: trashcans:ultimate_trash_can | via: create:sequenced_assembly | to: create | motif: M-06 | verdict: REJECT | hook: the gating argument is a balance note (valid), but the *weave* is spurious — gating a void-sink behind sequenced_assembly doesn't advance the loop (scarcity→pressure→production→economy); it gates a loop-destructive tool, which is a recipe-balance decision, not a cross-system connection; the correct action is a balance gate in pack config/KubeJS, not a M-06 weave entry; in a scarcity pack, consider whether trash cans should be gated at all or simply removed for byproduct-sink lines (M-32)
 
+## xaeroworldmap
+LEAVE — client-only world map UI (0 blocks, 0 items, no recipe-types); navigation support mod; sanctioned support role; nothing to weave.
+
+## necronomicon
+LEAVE — pure code library (0 blocks, 0 items, no recipe-types); config/helper API for dependents; sanctioned support role; nothing to weave.
+
+## upgrade_aquatic   [anchors: survival (1)]
+Existing rows: M-12 (raw fish → farmersdelight:cutting + cooking) is 5 ACCEPT strong consensus; M-02/M-10 (jellyfish/thrasher drops → imbuement or loot-seed) has split (5 ACCEPT / 1 REJECT); M-04 (coralstone → create:crushing) is heavily split (12-ACCEPT / 12-REJECT across rows — the REJECT camp correctly calls it "thin" for everyday deco); M-12 (driftwood/riverwood → woodworks:sawmill) is REJECT because already inbound; M-11 (lionfish flesh as spirit_fire poison reagent) has 2 ACCEPT; M-10 (prismarine rod → enchanting_apparatus) has 2 ACCEPT; M-30 (fish as region-locked ocean good) has 1 ACCEPT; M-35 (dried/salted fish as aged trade good) has 1 ACCEPT.
+
+Missing angles:
+
+1. M-35 (aged fish) is proposed once (1 ACCEPT) but not strongly formulated: lionfish is venomous and rare; drying or salting it on an extradelight:drying_rack produces a preserved product with a distinct identity ("salted lionfish") that's worth shipping inland. This is the most clearly unexplored cross-system link.
+2. The createfisheryindustry:peeling route (2 ACCEPT) is worth a specific row — the Fishery Industry peeler is a Create-adjacent method that processes fish into fillets and skin; using it with upgrade_aquatic's fish is a precise method-pull that the existing rows only touch lightly.
+3. M-30 (ocean fish as region-locked) is 1 ACCEPT and under-argued: pike and perch come from rivers, lionfish from ocean biomes — a player without ocean access must trade for them; the food-variety demand from the diet system means this is a genuine scarcity→economy edge.
+
+- NEW | from: upgrade_aquatic cooked_lionfish / raw_lionfish (venomous rare fish — c:foods/food_poisoning tag) | via: extradelight:drying_rack or extradelight:evaporator (salt or dry the lionfish into a preserved "salted lionfish" — an aged trade good that inland players can't source) | to: economy | motif: M-35 | power: mid | tone: ok | verdict: ACCEPT | hook: fresh lionfish spoils and its venom makes it hard to handle; a coastal specialist dries it into shelf-stable salted lionfish that trades to inland players who need the protein variety — the aging step makes distance matter
+- NEW | from: upgrade_aquatic raw_pike / raw_perch / raw_lionfish (ocean/river biome-locked fish — no ocean biome, no lionfish) | via: farmersdelight:cutting (fillet) + farmersdelight:cooking → cooked fish dishes, consumed for diet variety (M-12 production + M-30 scarcity gate) | to: economy | motif: M-30 | power: everyday | tone: ok | verdict: ACCEPT | hook: lionfish only spawn in warm ocean biomes; an inland player who needs coastal protein for diet variety has to trade — the fish weaves diet pressure into regional scarcity as the loop intends
+- CHALLENGE | from: upgrade_aquatic:*_coralstone deco family | via: create:crushing | to: create | motif: M-04 | verdict: REJECT | hook: the 12-REJECT consensus is correct for deco-only coralstone — every REJECT correctly identifies this as "thin deco recycling with negligible loop contribution"; coralstone has no metal content, no meaningful byproduct identity, and the crushing output (gravel + XP) adds nothing the pack doesn't already have; reserve M-04 for materials with recoverable content (metal, glass, stone with a real feedstock role); skip coralstone entirely
+
+== CHUNK COMPLETE ==

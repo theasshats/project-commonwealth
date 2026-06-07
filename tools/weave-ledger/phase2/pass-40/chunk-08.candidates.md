@@ -53,6 +53,16 @@ LEAVE — client-only InvTweaks keybind emulation shim; no items, no mechanics, 
 ## particlerain   [anchors: support (1)]
 LEAVE — client-side weather particle rendering; no items, no mechanics, no material surface. Nothing to route.
 
+## farm_and_charm   [anchors: survival (1)]
+- NEW | from: farm_and_charm:barley / oat (dried grain via farm_and_charm:drying rack) | via: farm_and_charm:drying → create:milling (dried grain year-round into flour) | to: create | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: drying the seasonal grain harvest pre-mills it into a storable intermediate — the drying rack converts a season-locked crop into an off-season milling feedstock, making the M-16 survival pressure survivable through a two-step chain (dry in season → mill year-round); this drying-as-preservation bridge isn't captured by any existing row, which all treat M-16 as a simple season-gate rather than a multi-step anti-scarcity chain.
+- NEW | from: farm_and_charm:nettle_tea / ribwort_tea (herbal teas, craft-consumable) | via: diet system consumption (AppleSeed groups — teas satisfy a Sugars/Grains group) | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: herbal teas are consumables that satisfy a diet group in AppleSeed Edition, creating ongoing demand on the herb-farming output — a quiet M-26 consumption tie that previous rows missed because they tried the wrong angle (M-10 imbuement, correctly rejected); the consumption-via-diet-group is the natural home.
+- CHALLENGE | from: farm_and_charm:barley / oat grains | via: vinery:apple_mashing or extradelight:vat → numismatics | to: economy | motif: M-12 | verdict: REJECT | hook: the 4-vote split on this row reflects its fundamental problem — it routes via M-12 (processing-chain pull) but terminates in Numismatics, which is an economy endpoint. The motif mismatch makes this an M-09-flavored link (grain → alcohol → sell), which is retired. The processing chain from grain to fermentation is a valid M-35 (maturation), but only if the output feeds another system rather than landing in a coin vendor. Re-express as grain → alcohol (M-35) as an intermediate the economy distributes, not a coin-endpoint.
+
+## creativecore   [anchors: support (1)]
+LEAVE — dev library (GUI/packet/event API) with no items, no recipe types, no game mechanics. Nothing to route.
+
+
+
 
 
 

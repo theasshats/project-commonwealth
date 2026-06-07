@@ -23,3 +23,10 @@ OK — existing rows sufficient; mod already has ≥2 anchors (Create kinetic me
 
 ## t_and_t   [anchors: survival (1)]
 - CHALLENGE | from: t_and_t sail-ship loot | via: loot-seed | to: aeronautics | motif: M-23 | verdict: REJECT | hook: M-23 is "structural alloy/plate → airframe hull construction ingredient"; a schematic or canvas found in a sail-ship chest is not a structural alloy — the motif is misapplied; the correct motif for a loot-seeded blueprint/gate-item is M-15 (boss-key unlock: the document gates a complex aeronautics recipe) or M-34 (exploration/combat yields supply); M-23 should not tag informational loot drops
+- NEW | from: t_and_t village/fort structures | via: loot-seed (worldgen-placed Trading Floor stall block seeded into T&T village structure templates via datapack structure override) | to: economy | motif: M-33 | power: everyday | tone: ok | verdict: ACCEPT | hook: each biome-specific T&T village has one pre-placed Trading Floor stall wired into its central square — the village is a trade hub by structure, not just by suggestion; players travel to a jungle village expecting different goods than the tundra village, and the stall confirms it mechanically
+
+## spawn   [anchors: survival (1)]
+- NEW | from: spawn:date_bunch (date palm fruit from date_log tree set) | via: vinery:apple_fermenting → aged date wine | to: economy | motif: M-35 | power: mid | tone: ok | verdict: ACCEPT | hook: date palms yield a fruit that ferments in a vinery barrel over time — a date wine that must age before it's worth anything, tying the spawn wood set's unique fruit into the maturation-specialist role; the aging time (not just the processing step) is what creates value and makes this M-35 rather than M-12
+
+## owo   [anchors: support/library (1)]
+- LEAVE — declarative GUI/config library; 0 items, 0 methods, no player-facing content

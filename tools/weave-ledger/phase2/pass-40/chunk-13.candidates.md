@@ -48,6 +48,15 @@ LEAVE — Create fluid-pipe QoL tool (Pipe Wrench); 2 items, no blocks, no loot,
 ## collective
 LEAVE — Serilum shared code library; zero items, blocks, loot, or recipe types. No content surface to weave.
 
+## recipe_integration   [anchors: support/bridge (1)]
+- NEW | from: recipe_integration createaddition:rolling and createaddition:charging active paths (the mod fires these for any installed mod whose materials match) | via: audit action — confirm which rolling/charging entries fire for pack-installed mods (gnkinetics gears? magic-mod ingots?); if charging paths touch Ars/Iron's materials, this auto-delivers M-17 electric-bridge weaves without further authoring | to: create | motif: M-17 | power: mid | tone: ok | verdict: ACCEPT | hook: recipe_integration may already be silently firing electric-charging bridges for magic-mod metals via createaddition:charging — an audit that confirms this validates those M-17 weaves without any Phase-3 recipe work; if they're absent, seeding them here is the natural Phase-3 action
+- CHALLENGE | from: recipe_integration inert c:tags (aether, mekanism, MI, GT… — uninstalled mods) | via: any | to: any | motif: n/a | verdict: REJECT | hook: the existing rejection consensus is correct — these 82 c:tags are dormant and should be audited for KubeJS tag-override conflicts, not proposed as weaves; flagging them here as a Phase-3 audit task is the right scope, not a weave proposal
+
+## toomanypaintings
+LEAVE — decorative painting mod with a placement GUI; zero items, blocks, loot, or recipe types. The one existing row (Supplementaries item_lore on a painting) was correctly rejected as no-motif narrative. No content surface exists to route through any method.
+
+
+
 
 
 

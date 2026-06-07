@@ -104,6 +104,31 @@ Also: the M-12 crop-fuel rows correctly accept seed_oil/bioethanol as a farming�
 - CHALLENGE | from: createaddition:electrum_ingot | via: numismatics mint | to: economy | motif: M-08 | verdict: REJECT | hook: electrum is the rolling-mill's primary conductor (wires, rods throughout the FE tier) — minting it into coin creates a dual-role conflict where the same alloy is both production feedstock and currency, which erodes both; tin (create_ironworks) is the pack's dedicated coin-metal candidate; electrum should stay an industrial alloy, not a coin.
 - NEW | from: createaddition:seed_oil / bioethanol | via: createaddition:liquid_burning → FE → createaddition:charging (tesla coil powers magic gear) | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the farming surplus that feeds the tesla coil is what keeps the magic specialist's focus charged — agriculture (survival pillar) drives the energy spine (Create) that powers magic; a three-node loop-advance edge rarely articulated as a chain.
 
+## cloth_config   [anchors: support (1)]
+
+Library-only, no items, no blocks, no loot. No rows in CANDIDATES.tsv. Dossier: leave.
+
+LEAVE — config-screen API library; no content surface.
+
+## ferritecore   [anchors: support (1)]
+
+Perf-only mod, zero items, zero blocks. No rows in CANDIDATES.tsv. Dossier: leave.
+
+LEAVE — memory-optimization library; sanctioned perf anchor, no content surface to weave.
+
+## mowziesmobs   [anchors: survival (1)]
+
+Existing rows: rich. Accepted: M-15 ice_crystal as Create boss-key gate (19×), M-06 ice_crystal/earthrend sequenced_assembly (13×), M-22 elokosa_paw lunar-reagent (10×), M-34 combat-route supply (11×), M-11 artifacts → spirit_fire magic transmutation (various), M-10 ice_crystal/sol_visage → Ars imbuement, M-02 boss drops as magic-reagent sinks. Rejected: M-06 for eye-trivializing risk, M-08 bounty.
+
+The M-22 elokosa_paw angle (10×) is the strongest underdeveloped angle. The paw variants are literally named for moon phases (crescent, gibbous, full, half, closed). This is the cleanest M-22 in the pack — a mob whose *drops are phase-labeled*. What's not yet articulated: the *method routing*. Existing rows say "Ars imbuement or occultism:ritual as moon-gated reagent" generically. The sharper routing: elokosa_paw_full → occultism:ritual (the full-moon ritual context matches Occultism's lunar ritual hooks), while elokosa_paw_crescent → ars_nouveau:imbuement (the crescent is a waning-magic catalyst). Two distinct paws, two distinct method routings, one M-22 motif — this level of specificity is missing.
+
+Also missing: the Grottol (ore-eating mob that drops diamonds) has an M-32 (byproduct → input) angle that nobody proposed. The Grottol eats ores and emits diamonds — its *waste byproduct* (excess crushed stone / ore fragments it doesn't digest) could feed the Create crushing chain as a byproduct. Very light edge but untried.
+
+- NEW | from: mowziesmobs:elokosa_paw_full | via: occultism:ritual (full-moon ritual context) | to: magic | motif: M-22 | power: mid | tone: ok | verdict: ACCEPT | hook: a full-moon paw placed in a ritual circle amplifies the occultist's lunar working — the Elokosa's body is a phase-clock, so only the right paw unlocks the right night's ritual; demands the player track the moon.
+- NEW | from: mowziesmobs:elokosa_paw_crescent | via: ars_nouveau:imbuement (crescent as waning-moon catalyst) | to: magic | motif: M-22 | power: mid | tone: ok | verdict: ACCEPT | hook: the crescent paw is the Ars catalyst for a waning-moon imbuement — the moth-spirit's waning phase channels diminishment magic; distinct paw, distinct method, same M-22 motif covering both Ars and Occultism.
+- CHALLENGE | from: mowziesmobs:earthrend_gauntlet | via: create:sequenced_assembly (boss drop as M-06 keystone) | to: create | motif: M-06 | verdict: REJECT | hook: the earthrend gauntlet is already a finished unbreakable weapon — using it *as a component input* in a sequenced assembly chain destroys a rare artifact to make something else; the correct motif is M-15 (boss drop as a gate key/prerequisite, not consumed), not M-06 (which requires the item to be an *intermediate* in the chain); several accepted M-06 rows for this artifact are motif-mislabeled.
+
+
 
 
 

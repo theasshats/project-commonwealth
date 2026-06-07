@@ -132,6 +132,23 @@ The **bulk-dyeing** rows are all correctly REJECTed (cosmetic, not loop-advancin
 
 OK — no new proposals needed beyond the M-24 CHALLENGE above. The mod is a Create-anchored method platform; its second-anchor question is fully resolved by the fan methods being used by other mods.
 
+## createnuclear   [anchors: Create (1)]
+Existing rows well-cover: M-08 ACCEPT (uranium/steel → numismatics mint, dominant at 16v1 and multiple corroboration rows), M-23 ACCEPT (steel as airframe structural alloy), M-06 ACCEPT (reactor_core/casing → sequenced assembly), M-19 ACCEPT (enriched_soul_soil → create:haunting → occult intermediate), M-26 ACCEPT (anti-radiation armor as consumption/upkeep sink), M-30 ACCEPT (uranium/steel region-locked), M-03 ACCEPT (lead ore → crushing for doubling).
+
+The M-08 rows are over-represented — at least 8 distinct accepted rows all saying "uranium/steel can be minted as coin." This is one weave counted many times. Only one M-08 ACCEPT for createnuclear is needed.
+
+- CHALLENGE | from: createnuclear uranium/steel (multiple overlapping rows) | via: numismatics mint | to: economy | motif: M-08 | verdict: REJECT | hook: 8+ separate M-08 ACCEPTs on the same material (uranium/steel → coin) are redundant; the ledger should carry exactly one M-08 entry for createnuclear (uranium is the primary, steel the secondary) — the extra rows inflate the acceptance count without adding new weave surface
+
+One genuinely missing angle: the **radiation hazard** from createnuclear creates a survival-pressure edge that no single row has cleanly resolved. The REJECT rows on this correctly note "no motif" and "no Cold Sweat cross-link" — but M-26 (consumption sink) is the right framing: the anti-radiation armor *degrades* from use near the reactor, creating an ongoing consumption demand. The existing M-26 ACCEPT (4v1) covers this. However, it framing as "armor degrades" — is that actually true? The dossier says anti_radiation armor is a set but doesn't confirm degradation mechanics. If it has standard armor durability, then yes, M-26 applies normally. If it's undamageable (hazmat suit as static equipment), M-26 doesn't apply.
+
+- NEW | from: createnuclear:reactor_core / reactor_casing (endgame multiblock parts requiring precision assembly) | via: create:mechanical_crafting | to: create | motif: M-05 | power: endgame | tone: ok | verdict: ACCEPT | hook: assembling a reactor core requires precision-machined reactor casings that can only be fabricated in a Create Mechanical Crafter — the nuclear power tier is gated by the industrial spine's most complex assembly station, not just ingredient count
+
+Red-team: Existing M-06 ACCEPT (4v1, sequenced assembly for reactor frame components) competes with this M-05 proposal. M-06 is for "derpack:incomplete_*" multi-stage chains (the pack's endgame keystones). M-05 is "flagship item built in its own machine, gated on Create parts." The reactor is not technically "its own machine" building itself — it's assembled from parts. M-06 (sequenced assembly as multi-step precision manufacture) is actually the better motif for reactor components. The existing M-06 ACCEPT covers this better than M-05.
+
+Withdraw the new M-05 proposal — the M-06 ACCEPT already covers it more precisely.
+
+
+
 
 
 
