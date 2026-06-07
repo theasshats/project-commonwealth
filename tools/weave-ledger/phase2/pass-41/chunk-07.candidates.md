@@ -95,3 +95,17 @@ Gaps:
 
 OK — s_a_b existing rows sufficient for the core anchors; brass typeface M-12 is the one genuine gap.
 
+## glitchcore   [anchors: support/library (1)]
+
+LEAVE — pure loader-abstraction library; 0 blocks, 0 items, no gameplay surface. No weave possible.
+
+## zombiemoon   [anchors: survival (1)]
+
+Existing rows are exhausted and the dossier is explicit: 0 items, 0 blocks, `loot=no`, vanilla rotten flesh drops only. No unique reagent exists to route through any method. The split on M-34 (3 ACCEPTs vs. 4 REJECTs) is interesting — let me re-examine.
+
+M-34 "combat specialist farms harder undead and trades surplus drops" is structurally correct in the loop (danger → combat-supply → economy), but the drops are indistinguishable from vanilla zombie drops. A "combat specialist" farms harder zombiemoon Brutes and harvests *rotten flesh at higher volume* — that's quantitative, not qualitative. For M-34 to count, the drop needs to be distinct enough that players trade specifically for it. Rotten flesh is not. The M-34 ACCEPTs overstate the case.
+
+- CHALLENGE | from: zombiemoon mob drops (Zombie Brute / Crawler / Spitter — harder undead variants) | via: emergent trade | to: economy | motif: M-34 | verdict: REJECT | hook: M-34 requires a *distinct* drop that non-combat players specifically trade for; zombiemoon drops are vanilla rotten flesh at higher volume — quantity isn't distinctiveness, and there's no demand-gate that makes rotten flesh a trade good players seek out by name
+
+LEAVE — no second anchor reachable; the mod is a pure survival-pressure (difficulty) addition with no routable material surface.
+

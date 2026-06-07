@@ -35,3 +35,16 @@ CHALLENGE | from: bits_n_bobs:large_nixie_tube / nixie_board | via: economy — 
 
 ## libipn
 LEAVE — GUI/config/logging library for Inventory Profiles Next (0 blocks / 0 items / no recipe-types). Pure code dependency, nothing to route.
+
+## gtmogs
+OK — existing rows sufficient. gtmogs is the worldgen substrate (it disables vanilla ore gen and generates only KubeJS-authored veins), already anchored survival+economy. The accepted rows correctly place the weave *downstream* in the ores it makes regional (M-30), and the magic-metal vein-lock (Occultism silver / amethyst veins → M-30) is captured. Every reject that tried to route gtmogs's own config-marker blocks (overworld/nether/end_marker) through a recipe or loot-seed is sound — the markers are worldgen anchors, not player goods. Nothing to add; it enables motifs rather than carrying one.
+
+## tidal-towns-1.3.4
+CHALLENGE | from: tidal-towns ocean-village blacksmith chest | via: loot-seed of a rare hull/vessel blueprint that gates a Create/Aeronautics recipe | to: create | motif: M-15 | verdict: REJECT | hook: the unlock-in-a-chest idea is good and should survive, but the motif is wrong — M-15 is specifically a *boss-DROP* key (its reagent-ownership entry is "each boss's signature drop"), and tidal-towns has no boss. A unique blueprint seeded into a structure chest that gates an aeronautics recipe is a plain progression-gate loot-seed (cross-route demand, closer to M-29: you must explore the sea town to unlock the build), not a boss-key. Keep the weave, drop the M-15 label.
+
+## dtterralith
+CHALLENGE | from: dtterralith:amethyst_seed (and other exotic tree seeds) | via: ars_nouveau:imbuement / M-07 attunement (seed as an arcane catalyst) | to: magic | motif: M-10 | verdict: REJECT | hook: these seed→imbuement rows are split across reviewers for a sound reason — a dynamic-tree seed is a *planting item*, not a reagent, and imbuing one to get arcane essence is thematically awkward. The mod's loot=yes surface already offers a cleaner magic route that is accepted: a biome-locked crystalline shard dropped from amethyst-grove canopy leaves (M-02 loot-seed). That harvest-gated drop is the right magic tie; the seed-imbuement routing should yield to it rather than run in parallel.
+NEW | from: dtterralith region-locked logs/planks (jacaranda, kapok, cedar — biome-exclusive species) | via: M-29 cross-route — a magic or aeronautics recipe that *requires* a specific exotic plank, so the player in that Terralith biome supplies the builder elsewhere | to: economy | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: jacaranda only grows in its Terralith biome, so making (say) a decorative airship cabin or an Ars ritual frame call for that exact plank turns "nice-looking wood" into a real cross-region trade dependency — sharper than the bare M-30 worldgen-distribution note because it names a recipe that consumes it.
+
+## entity_texture_features
+LEAVE — client rendering engine for OptiFine-format random/emissive entity textures (0 blocks / 0 items). Cosmetic resourcepack support; no game content to weave.

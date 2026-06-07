@@ -115,6 +115,16 @@ M-05 hearth-on-Create-brass is the dominant ACCEPT (37 votes). M-26 fuel-consump
 
 OK — M-05 hearth-gating is the load-bearing 2nd-anchor weave. The two NEW rows above add the missing fuel-chain motivation (M-26 TFMG diesel) and the soul_stalk output-pathway that prior rows left dangling (M-19 completed through Occultism).
 
+## create_jetpack   [anchors: Create, aeronautics (2)]
+
+Already 2-anchor. Well-covered: M-06 netherite sequenced-assembly (6 ACCEPTs), M-15 boss-key (many ACCEPTs), M-37 research-unlock (2 ACCEPTs), M-33 courier-service (1 ACCEPT). The dossier itself says "leave" for further weaves. No prior row has explicitly resolved the motif question for the jetpack's *power tier* — multiple passes propose both M-15 and M-06 for the netherite tier without distinguishing which is primary.
+
+- NEW | from: create_jetpack:netherite_jetpack (lava-traversal endgame personal flight) | via: create:sequenced_assembly (multi-step netherite assembly) | to: create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: M-06 is the right motif for the netherite tier — it's the *assembly chain* (sequenced-assembly keystone), while M-15 is the *boss-key input gate*; both apply and are complementary: the boss drop is the required *input*, the sequenced-assembly is the required *process* — together they make lava-flight a genuine endgame milestone rather than a flat bench recipe
+- CHALLENGE | from: create_jetpack:jetpack (brass tier mid-game flight) | via: M-15 boss-drop gating | to: survival | motif: M-15 | verdict: REJECT | hook: M-15 gating is calibrated for endgame/flagship items; the brass jetpack is mid-tier (backtank + brass = normal Create progression); gating mid-tier personal mobility behind a boss drop over-prices entry-level flight and creates a progression bottleneck the dossier explicitly notes ("gating a brass jetpack behind a boss drop" is flagged as a concern in the prior rows); M-15 belongs only on the netherite tier
+
+OK — the mod is correctly 2-anchor. The NEW above clarifies the M-06/M-15 complementary role for the netherite tier; the CHALLENGE resolves the brass-tier over-gating risk.
+
+
 
 
 

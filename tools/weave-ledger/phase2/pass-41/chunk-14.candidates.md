@@ -42,4 +42,11 @@ Existing rows are extensive and cover the core vectors well: M-11/M-02 (soul_dus
 
 - CHALLENGE | from: deeperdarker soul materials (soul_dust, soul_crystal) | via: create:haunting | to: create | motif: M-19 | verdict: REJECT | hook: soul_dust and soul_crystal are already strong M-11/M-02 magic reagents — routing them also through create:haunting double-spends the same material without adding a new system anchor (haunting produces soul-adjacent outputs; feeding already-magical soul_crystal INTO haunting has no clear product and no thematic logic beyond "it is soul stuff"). M-19's value is using Create's soul-fire to transmute ordinary items into soul-adjacent forms (e.g. haunting plain gloomslate → haunted variant), not consuming finished soul reagents. The 1 ACCEPT row in existing passes should be reconsidered.
 
+## supermartijn642configlib   [anchors: support (1)]
+LEAVE — pure config API library, zero content surface. No rows existed; none are needed.
+
+## lootjs   [anchors: support (1)]
+LEAVE — packdev scripting library (loot-table modification API), zero player-facing content. No rows existed; none are needed. Note: lootjs is the *enabler* of M-02 mob-drop weaves, not a weave node itself.
+
+
 

@@ -53,7 +53,36 @@ Existing rows are well-converged: M-12 (ginger → create:milling, farmersdeligh
 
 - NEW | from: snowyspirit:ginger (c:crops/ginger, winter-season crop) | via: irons_spellbooks:alchemist_cauldron_brew (ginger as a warming-potion reagent — brew a Warmth or Cold Resistance potion needing ginger root) | to: magic | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: the winter-harvested ginger root is the herbalist's potion base — Iron's cauldron needs fresh ginger to brew the cold-resistance flask that Cold Sweat players actually need in winter; a seasonal crop directly feeding the magic alchemist's pressure-relief recipe
 
-- NEW | from: snowyspirit:eggnog | via: alcohol_industry:alcohol_boiling or vinery:apple_fermenting (age eggnog through a fermentation step to produce "aged nog" — a higher-value specialty spirit with a distinct diet-group tag) | to: create | motif: M-35 | power: everyday | tone: ok | verdict: ACCEPT | hook: raw eggnog sits in the barrel until it deepens — aged nog earns a premium Sugars/Dairy diet contribution that plain eggnog doesn't; a winter specialist who times the batch earns a maturation good worth trading; pairs the seasonal crop with the aging-specialist economy
+- NEW | from: snowyspirit:eggnog | via: alcohol_industry:alcohol_boiling or vinery:apple_fermenting (age eggnog through a fermentation step to produce "aged nog" — a higher-value specialty spirit with a distinct diet-group tag) | to: survival | motif: M-35 | power: everyday | tone: ok | verdict: ACCEPT | hook: raw eggnog sits in the barrel until it deepens — aged nog earns a premium Sugars/Dairy diet contribution that plain eggnog doesn't; a winter specialist who times the batch earns a maturation good worth trading; pairs the seasonal crop with the aging-specialist economy
+
+## cmparallelpipes   [anchors: Create (1)]
+
+All passes and the dossier agree: a single-utility Create plumbing tool with no second-pillar surface. The M-05 pipe-wrench-behind-Create-parts rows correctly score low (gating a QoL tool behind a deeper recipe just to hit pillar count violates the "never gate basics behind complex recipes" guardrail). The LEAVE verdict is correct.
+
+LEAVE — pure Create plumbing QoL tool; 2 items, no recipe types, no second-system surface; forcing a pillar edge on a wrench would violate the depth-scales-with-power rule (it's an everyday tool).
+
+## bettercombat   [anchors: support/combat framework (1)]
+
+Zero items, zero recipe types, JSON-driven combat-animation framework. No content surface to weave.
+
+LEAVE — pure behavior framework; no items, no methods, no materials; anchors as a support role.
+
+## smartbrainlib   [anchors: support/library (1)]
+
+Pure AI library. No content surface.
+
+LEAVE — code-only AI library; zero content surface; no weave possible.
+
+## tacz   [anchors: support/PvPvE flavor (1)]
+
+Existing rows are very dense. The M-05 (gun_smith_table → Create-pressed inputs), M-06 (high-tier guns → sequenced assembly), M-26 (ammo consumption), M-34 (combat-supply economy), M-30 (regional ore-scarcity → ammo materials), M-15 (boss-key component for top-tier firearms) rows are all well-accepted and converged. What's genuinely missing: the *MineColonies route* for ammo production as a cheaper-basics path, and the *loot-seed for ammo as dungeon reward* (which one pass names but doesn't develop fully).
+
+- NEW | from: tacz:ammo_box (consumable bulk ammo) | via: minecolonies hut request / MineColonies blacksmith route (colony blacksmith produces basic ammo cartridges cheaper than hand-crafting; mid-tier ammo remains Create-assembly-only) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: the colony armorer churns out basic 9mm rounds faster than any solo Create line — the combat specialist buys cheap ammo from the settlement player instead of running their own factory; M-28's cheaper-basics route applied to the ammo supply chain, separating everyday ammo from high-tier Create-exclusive loadouts
+
+- NEW | from: tacz:m67 (grenade) | via: loot-seed (seed m67 into TACZ's own loot tables or into combat-structure loot tables of compatible mods — military crate / dungeon chests) | to: survival | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: grenades found in ruins are the kind of pre-war scavenge that rewards dangerous exploration — the m67 as a loot-table mob-drop-adjacent reward (found, not crafted) connects the danger face of survival to tacz's combat economy without requiring a boss
+
+CHALLENGE | from: tacz:gun_smith_table + metals | via: MineColonies colony-workshop route | to: economy | motif: M-28 | verdict: WEAK | hook: the single existing M-28 row ("colony workshop produces guns slower/cheaper") is accepted once but underdeveloped; more critically, the dossier notes guns are data-driven via JSON configs, so a MineColonies blacksmith producing *guns* (not just ammo) requires a custom colony-craft recipe for each gun model — that is significant authoring work that wasn't flagged in the proposal; the ammo-only M-28 route (above) is the correct cheaper-basics form; gun production stays Create-exclusive to maintain the locked-exclusive anti-erosion wall
+
 
 
 

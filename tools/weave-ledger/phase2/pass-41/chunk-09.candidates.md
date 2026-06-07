@@ -75,6 +75,31 @@ What's missing: the aeronautics provisioning angle (M-31) for the automated kitc
 
 ## createlowheated   [anchors: Create (1)]
 
+Existing rows cover: M-26 fuel-consumption sink (ACCEPT ×5+, strongest signal — heat now costs real fuel); M-05 basic_burner gated on Create parts (ACCEPT ×1, REJECT ×1 — contested); M-32 TFMG coke as premium burner fuel (ACCEPT ×2); M-05 heat-condition on woven basin recipes (ACCEPT ×1). Correctly REJECTs: M-13 liquid-fuel (solid-only), M-16 seasonal gating (no seasonal angle), M-29 magic-heat-tier (contrived).
+
+The 2nd anchor is clearly survival via M-26 (fuel demand from coal/charcoal farms ties production to the survival supply chain). What's genuinely missing is a clearer survival framing for the fuel-demand path, and a check on whether the basic_burner itself benefits from an M-28 colony route:
+
+- NEW | from: createlowheated:basic_burner (requires solid furnace fuel to run Create basin processes) | via: MineColonies colony route (a charcoal burner / woodcutter hut produces charcoal cheaply in bulk as the colony-cheaper path to heat fuel, vs. manual mining) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: the burner that makes heat a managed resource makes a charcoal-producing colony a load-bearing supplier for every Create processor in the server — heat is now a colony product, not a solo task.
+- CHALLENGE | from: createlowheated "lowheated" heat tier as a magic cross-route dependency | via: M-29 — a magic reagent (e.g. Ars allurite catalyst) unlocks or sustains the lowheated tier | to: magic | motif: M-29 | verdict: REJECT | hook: the lowheated tier is a Create-internal heat condition injected on basin recipes; there is no API surface for a magic reagent to alter heat tier (it would require a custom mechanic, not Phase-3 recipe authoring). Multiple existing REJECTs correctly identify this as a no-surface crossing.
+- NEW | from: solid furnace fuel (coal / charcoal / biomass pellets — any c:fuels item accepted by basic_burner) | via: createlowheated:basic_burner consumption (ongoing burn demand) | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: heat is now a fuel sink that never stops — every basket of charcoal that burns in the burner is demand the survival/farming loop must refill; the Create specialist and the charcoal farmer are permanently coupled.
+
+Note: the M-26 fuel-consumption weave has near-unanimous support in existing rows and is the cleanest path to a 2nd anchor. The M-28 colony-charcoal row adds a concrete delivery mechanism that the existing rows don't specify.
+
+## fishingreal   [anchors: survival (1)]
+
+Existing rows: all REJECT — behavior-layer tweak, no items of its own, weave surface belongs to fish-content mods above it. This consensus is correct.
+
+OK — existing LEAVE verdict sufficient. No new candidates.
+
+## netmusic   [anchors: support (1)]
+
+Existing rows: nearly all REJECT. One ACCEPT (TLM altar-routing of music_cd, confirming the existing made-by method). The majority correctly identifies this as cosmetic audio with no material loop contribution.
+
+OK — existing rows sufficient. The one ACCEPT is the TLM altar existing made-by connection — already logged. No new candidates.
+
+## companions   [anchors: survival (1)]
+
+
 
 
 

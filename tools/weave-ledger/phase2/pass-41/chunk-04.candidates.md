@@ -54,7 +54,28 @@ Already ≥2. Existing rows cover M-08 (coin loot-seed, strong accept 13×), M-2
 Existing rows are crowded with M-20/M-23/M-04 all describing the same "require pressed brass/copper sheets" weave, plus M-28 (colony requests) and M-24/M-31 (arm_extender / logistics). The sheet-input weave has split verdicts because M-04 and M-20 and M-23 are being used interchangeably for it — that's the real problem. Challenge the motif confusion; then note the one missing angle.
 
 - CHALLENGE | from: create_train_parts brass/copper sliding window / train step (pressed-sheet-input rows filed under M-04, M-20, and M-23 simultaneously) | via: create:pressing (brass/copper sheets as recipe inputs) | to: create | motif: M-04 | verdict: REJECT | hook: the same weave ("require Create-pressed sheet as crafting input") is accepted under three different motif labels in the existing rows — M-04 (deco-recycle), M-20 (deploy-application upgrade), and M-23 (structural alloy→airframe). Only one is correct: M-20 (a single light deploy/application step that consumes a pressed sheet as input to make the fitting feel machined) is the right motif for everyday deco fittings; M-04 is specifically lossy crush-recycle, and M-23 is load-bearing structural hull alloy — neither fits a cosmetic train window. Consolidate to M-20 and retire the M-04/M-23 variants.
-- NEW | from: create_train_parts brass/copper train fittings (windows, steps, slides) as a bulk commodity for equipping multiple trains | via: MineColonies colony builder requests at scale (stationmaster hut orders fittings for platform upgrades) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: the colony's station-building project orders twenty brass steps and six sliding windows from the Create shop — the train fitter becomes a regular supplier, not a one-time crafter
+- NEW | from: create_train_parts brass/copper train fittings (windows, steps, slides) as a bulk commodity for equipping multiple trains | via: MineColonies colony builder requests at scale (stationmaster hut orders fittings for platform upgrades) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: the colony's station-building project orders twenty brass steps and six sliding windows from the Create shop — the train fitter becomes a standing supplier, not a one-time crafter
+
+## createthreadedtrains   [anchors: support (1)]
+
+No prior rows. Zero items/blocks, pure server-side performance threading for Create's railway network.
+
+LEAVE — performance mod; no content surface.
+
+## accessories   [anchors: support (1)]
+
+No prior rows. Zero items/blocks, slot-framework API only.
+
+LEAVE — pure library/API; no content surface.
+
+## mcwroofs   [anchors: support (decoration palette) (1)]
+
+Existing rows: all M-04 (stone/brick crush-recycle), all split 50/50 or REJECT-majority. The dossier itself flags this as WEAK (600-block wholesale pass is low-value busywork). No existing row attempts a different angle. Worth a targeted NEW rather than a wholesale M-04 sweep:
+
+The 600-block M-04 pass is the wrong framing — it's not about the count, it's about whether a *specific small subset* of high-tier or modded-stone roof blocks has real recycling value. That subset exists: terracotta/deepslate roof variants are expensive to obtain; a crush-recycle path for those specifically is non-trivial. But this is still low-value for the pack's purposes — the dossier is right. However, one genuinely untried angle: mcwroofs provides roof-geometry blocks that could serve as MineColonies colony building material, creating a demand-gate that earns a second anchor.
+
+- NEW | from: mcwroofs stone/brick/terracotta roof variants (a curated subset — e.g. deepslate roof, andesite roof) | via: MineColonies builder hut requests (colony town-hall or house tier-up requests specific roof blocks for architectural upgrades) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: the colony architect's tier-3 town hall specification calls for proper cut-stone roof tiles — not stairs stacked sideways — and the builder submits the request to whoever has the Macaw's Roofs stock
+
 
 
 
