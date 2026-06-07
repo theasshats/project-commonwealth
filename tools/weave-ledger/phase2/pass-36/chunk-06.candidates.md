@@ -68,6 +68,29 @@ Method-pull for a 3rd anchor: locometal is a distinctive material (branded railw
 
 OK — connections sound on the core two anchors (Create + aeronautics). The locometal → M-23 candidate is a genuine new addition the dossier missed.
 
+## fogoverrides   [anchors: support/client-visual (1)]
+
+LEAVE — pure client-side atmosphere config. No items, no blocks, no recipe types, no in-world mechanics. Adjusts fog density/color per biome and dimension via config. No content surface; genuine zero-surface support mod in its sanctioned role.
+
+## deeperdarker   [anchors: survival (1)]
+
+Power-read: 149 blocks, 348 items. Full underground dimension (the Otherside, gated by Heart of the Deep), 4 biomes, 8 mobs, Warden armor tier, soul/sculk material family. loot=yes. Distinctive drops: soul_dust, soul_crystal, sculk_bone, warden_carapace, reinforced_echo_shard, heart_of_the_deep. Two native recipe types: deeperdarker:gloomslate_pot_recipe, deeperdarker:sculk_transmitter_coloring. Already consuming create:crushing + farmersdelight:cutting (inbound weaves). The soul-resonance theme (soul_dust, soul_crystal) is a natural magic bridge; heart_of_the_deep gates the dimension itself (high-tier boss gate item).
+
+- from: deeperdarker:soul_dust / soul_crystal | via: occultism:spirit_fire — transmute soul dust into occultism:witch_'s_gold (or a named Otherside spirit essence), giving the Otherside dimension a direct occultism reagent feed | to: magic | motif: M-11 | power: endgame | tone: ok — soul-themed items transmuting through spirit fire is thematically exact; the deep-dark is as "soulish" as Occultism's demonics, and this routes Otherside danger into the magic web | verdict: ACCEPT | hook: the soul dust you harvest from the Otherside's mobs dissolves in spirit fire into an occultism essence — the Warden's realm feeds the occultist's workbench
+
+- from: deeperdarker:heart_of_the_deep (rare Warden drop, gates the Otherside dimension) | via: ars_nouveau:enchanting_apparatus — the heart is placed as an offering to the apparatus to unlock an Ars Nouveau tier-3 spell or an Ars upgrade, making the rarest Warden drop the key to top-tier Ars progression | to: magic | motif: M-15 | power: endgame | tone: ok — the Warden is the deep-dark's apex threat; its heart gating a magic power-unlock is directly sensible; the enchanting apparatus is an Ars Nouveau method | verdict: ACCEPT | hook: surviving the Warden hunt earns the Heart of the Deep — the only key to unlocking your highest Ars Nouveau spell tier
+
+- from: deeperdarker gloomslate / sculk_stone block families | via: create:crushing — gloomslate → gravel + XP nugget (lossy recycle, M-04); already partly wired per the inbound create:crushing weave | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: salvaging excess Otherside stone through a crusher strips it back to gravel and experience — the deep-dark's building material enters the Create recycling loop
+
+- from: deeperdarker:warden_carapace (Warden-tier drop) | via: create:mechanical_crafting or create:sequenced_assembly as a required component for high-tier Aeronautics armor plating / hull reinforcement | to: aeronautics | motif: M-23 | power: endgame | tone: ok — the Warden is the hardest overworld non-boss; its carapace as a reinforcing material for elite airframe armor plating is thematically coherent (hardest biological armor → hardest ship plating) | verdict: ACCEPT | hook: only Warden Carapace provides the hull-grade reinforcement needed for the top-tier airship's armored section — the deep-dark hunt is the prerequisite for the ultimate ship build
+
+- from: deeperdarker soul/sculk drops | via: create:haunting — run deeperdarker soul-adjacent items (echo shards?) through create:haunting to produce a soul-charge byproduct, bridging Create's soul-fire method to the Otherside material set | to: create | motif: M-19 | power: mid | tone: ok — soul fire is thematically resonant with soul_dust/soul_crystal; the Otherside is the soul underworld, and Create's haunting method is its soul-fire processor | verdict: REJECT | reason: the soul_crystal/soul_dust already have a better and stronger routing through occultism:spirit_fire (M-11, already ACCEPTed above) — adding a second Create-haunting route for the same material set would split the soul-reagent's identity across two methods. Better to keep one clean magic-weave destination and not dilute. The create:crushing (M-04) for the stone blocks is the appropriate Create anchor; M-19 here would be redundant.
+
+- from: deeperdarker:sculk_bone (mob drop from Sculk Snappers/Leech) | via: ars_nouveau:crush — sculk bones crushed at an Ars source nexus to yield a skeletal-soul dust reagent | to: magic | motif: M-02 | power: mid | tone: ok — mob drop fed into a magic processing method is M-02's core form | verdict: REJECT | reason: the soul_dust + spirit_fire route (M-11, ACCEPTed) is the stronger and cleaner magic entry point; adding a separate Ars crush route for sculk_bone introduces two independent soul-material lanes into magic, which fragments the design. One primary magic weave (M-11 soul_dust → occultism, M-15 heart_of_the_deep → Ars) is cleaner than three. Keep sculk_bone as secondary loot flavor for now; it can be revisited if the spirit_fire route is blocked.
+
+REWORK: The dossier lists "economy via numismatics — Otherside-only soul materials are scarce, dangerous-to-get goods → sellable for coin (M-09 luxury good → coin)" as a WEAK candidate. M-09 is RETIRED — this entry should be expunged from the dossier. The dossier's magic candidates (M-11/M-02) are directionally correct; this pass adds M-15 (heart_of_the_deep → Ars apparatus) and M-23 (warden_carapace → aeronautics hull) as new additions not previously listed.
+
+
 
 
 

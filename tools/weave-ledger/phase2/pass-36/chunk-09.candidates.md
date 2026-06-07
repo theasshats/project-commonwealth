@@ -74,6 +74,16 @@ LEAVE — Verified config-serialization library (Kotlin TOML backend). 0 blocks,
 
 LEAVE — Verified pure behavior-patch / mixin glue with 0 blocks, 0 items, no loot, no processing methods. Required (CLAUDE.md) for the aeronautics pillar, but has no content surface to weave. Its single anchor is correctly labeled aeronautics.
 
+## entity_model_features   [anchors: support (client rendering/resourcepack) (1)]
+
+LEAVE — Verified client-only model-replacement engine. 0 blocks, 0 items, no loot, no methods. Purely cosmetic render support; nothing to weave.
+
+## jei   [anchors: client-only UI (support) (1)]
+
+LEAVE — Verified client UI recipe viewer. 0 blocks, 0 items, no loot, no processing methods. Load-bearing for Create recipe visibility (do not swap to EMI per CLAUDE.md). Nothing to weave.
+
+
+
 
 
 

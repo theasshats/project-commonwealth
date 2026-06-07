@@ -54,3 +54,24 @@ Sanctioned decoration palette anchor. Target: find a coherent 2nd anchor via met
 
 - LEAVE — genuine zero-content behavior-only QoL mod. Single-slab-break interaction; no items, no blocks registered, no methods, no loot. Nothing to weave.
 
+## northstar   [anchors: create, aeronautics (2)]
+
+Already at ≥2 anchors. Auditing connections + checking for new links.
+
+REWORK: OK — connections sound. Heavily Create-woven (crushing/mixing/pressing/sequenced_assembly used inbound) and its rockets ARE the off-world logistics pillar. The dossier's "economy via numismatics minting from titanium/tungsten" candidate (M-08) is worth accepting below. The M-09 luxury-good candidate in the dossier is correctly flagged WEAK — M-09 is retired; reject it.
+
+New link candidates:
+- from: northstar:titanium_ingot / northstar:tungsten_ingot (scarce off-world ores, obtained only via rocket/space expedition) | via: create:pressing → numismatics mint | to: economy | motif: M-08 | power: endgame | tone: ok | verdict: ACCEPT | hook: space metals are genuinely scarce (regional + off-world gated) — pressing them into a high-denomination coin creates the settlement medium for the highest economic tier; the player who controls rocket access controls the supply of the rarest coin, a real specialization
+- from: northstar:advanced_circuit | via: create:sequenced_assembly (as a required component in high-tier Create/aeronautics recipes) | to: create/aeronautics | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: advanced circuits from space technology gate complex Create machinery — a natural high-tier sequenced-assembly keystone that forces tech players to invest in rocketry for the highest machines
+- from: northstar:biofuel (c:tag liquid fuel) | via: createaddition:liquid_burning | to: aeronautics | motif: M-13 | power: mid | tone: ok | verdict: ACCEPT | hook: biofuel is a renewable off-world crop output that powers engines — the logistics arm runs on space-derived fuel, creating a supply chain from the off-world base back to the fleet
+- from: northstar:advanced_circuit / northstar:astronomical_reading | via: occultism:spirit_trade (M-18 spirit acquisition of scarce off-world materials) | to: magic | motif: M-18 | power: endgame | tone: ok | verdict: REJECT | reason: spirit trade acquiring off-world circuits is thematically strained — occult spirits fetching space tech feels arbitrary, not "of course." The two tones (eldritch spirit vs. hard sci-fi rocket) clash. Reject on theme-fit.
+- from: northstar:martian_steel_ingot | via: create:compacting → structural alloy plate → aeronautics hull | to: aeronautics | motif: M-23 | power: endgame | tone: ok | verdict: ACCEPT | hook: Martian steel is a space-sourced structural alloy — using it as high-tier airframe/hull plating creates a direct demand signal from the aeronautics fleet back to the rocket program, tying both halves of the logistics pillar together
+- from: northstar:titanium_ingot | via: northstar:electrolysis or create:crushing (ore-doubling) | to: create | motif: M-03 | power: endgame | tone: ok | verdict: REJECT | reason: M-03 is specifically ore-doubling (ore → crushed + byproduct) and northstar already uses create:crushing inbound — it's already doing ore-doubling internally. Redundant; no new edge.
+
+## letsdocompat   [anchors: survival (1)]
+
+Food-web glue mod. It IS the weaving layer for the food cluster, but has no content of its own to give a second anchor. Check if a method-pull reveals something the dossier missed.
+
+- from: letsdocompat food-tag unification (items/foods/leafy_green and other c:tags) | via: existing farmersdelight/extradelight/farm_and_charm methods | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: letsdocompat already anchors to survival — this is its only anchor by construction (it wires food chains together). Its c:tag output (leafy_green) is consumed by the food mods it bridges; that's its function, not a new weave edge. No second anchor is coherent for a pure bridge mod.
+- LEAVE — the mod IS the food-system weave glue; it has no standalone content to give it a second pillar. Its survival anchor is well-founded and it serves the "one web not clusters" goal directly.
+

@@ -104,3 +104,50 @@ Data-driven worldgen library for Moog's structure mods. 0 blocks, 0 items, loot=
 
 - LEAVE — worldgen library/API; 0 blocks, 0 items, no recipe types; any loot/weave belongs on the dependent structure mods, not the library
 
+## born_in_chaos_v1   [anchors: survival (1)]
+
+Halloween-themed hostile-mob mod: 50 biome-modifiers spawning aggressive undead mobs, a seasonal Pumpkinhead miniboss (Oct 25–Nov 5 or summon-gated), plus dark_metal_deposit ore/ingots, argillite build palette, bundle_of_bones, soul_saber, nightmare_scythe, bag_of_candy. 111 blocks, 355 items, loot=yes.
+
+**This is a rich content mod — let me power-read each candidate carefully.**
+
+**Candidate 1 — Create ore-doubling on dark_metal_deposit (M-03):**
+- dark_metal_deposit is an ore block dropped ~9% from Fallen Chaos Knights and ~16% from Missionaries (not worldgen-placed ore, but a drop). The naming suggests a "deposit" that could function like a ore lump.
+- Power: mid (comes from specific mob combat, not trivially mined). One crushing step is proportionate.
+- Tone: a gothic dark-metal ore being crushed in Create machinery feels industrially coherent — the Create spine refines the spoils of combat. A player would understand "I can double my dark metal haul by running drops through the Crusher."
+- Red-team: dark_metal_deposit is a mob drop not a worldgen ore — calling it M-03 is a slight stretch (M-03 is "ore → crushed + byproduct"). But the mechanism is identical (crush raw material to nugget/dust + byproduct); the origin (mob vs ground) doesn't change the method's fit. ACCEPT.
+- Motif: M-03 (Create ore-doubling) — strict sense is for worldgen ore, but the dossier explicitly suggests it and the method is identical.
+
+**Candidate 2 — Magic via occultism:spirit_fire / ars_nouveau:imbuement on bundle_of_bones / soul-flavored drops (M-11/M-10):**
+- bundle_of_bones is a bone-pile drop from undead enemies. The mod's "bundle_of_the_soul" debuff and soul_saber name give a clear soul/necromancy thematic signal.
+- Occultism spirit_fire transmutes drops into essences — a soul-pile transmuted into an occult intermediate is exactly the kind of necromantic organic-to-magic link M-11 targets.
+- Power: everyday/mid (bundle_of_bones is a common mob drop; soul_saber is a rarer weapon).
+- Tone: undead, soul-theme, gothic horror → Occultism necromancy. This is strong thematic coherence. A player would say "of course the soul-bundle goes into the occult ritual."
+- Red-team: Is bundle_of_bones *just* bones? If it's functionally identical to vanilla bone meal then the weave is redundant. But the dossier gives it its own ID and lists it as a drop separate from vanilla bones — it's a distinct item with distinct flavor. Spirit fire on this specific drop (not vanilla bones) is a coherent edge.
+- Motif: M-11 (ritual/spirit transmutation sink) — a mob drop transmuted into a magic intermediate via occultism:spirit_fire. ACCEPT.
+
+**Candidate 3 — Create:crushing on dark_metal_block for deco recycle (M-04):**
+- dark_metal_block is a decorative block made from dark metal ingots. Crushing it back (lossy, M-04) is the standard deco-recycle pattern.
+- Power: everyday. Tone: ok — industrial recycle of a gothic block.
+- This is weaker than M-03 on the ore itself; it's a consequence of having block forms, not a meaningful loop link.
+- Verdict: REJECT — M-03 on the raw drop is the stronger connection; M-04 on the block form is derivative and low-value.
+
+**Candidate 4 — Boss-key gate using Pumpkinhead boss drop (M-15):**
+- Pumpkinhead is a seasonal miniboss with multi-phase fight and unique drops (Pumpkin Staff, Soul Saber). These are mid-endgame items.
+- M-15: a boss drop is the gate item for a complex Create/tech recipe. The Pumpkin Staff / Soul Saber as a key ingredient for something on the Create spine (e.g., haunting a component, or gating an enchanted aeronautics part) is thematically fitting — a rare seasonal boss enabling a specific production capability.
+- Power: endgame (requires defeating a summoned seasonal boss). A multi-step chain is proportionate.
+- Tone: gothic horror boss enabling dark industrial capability — coherent, not clashing.
+- Red-team: The boss is seasonal (Oct 25–Nov 5 or summon-gated). A boss-key that's season-locked is also M-16-adjacent (seasonal reagent). That's a dual-motif — M-15 + M-16 isn't contradictory, but note that the seasonal constraint makes this harder than a standard boss-key.
+- Verdict: ACCEPT M-15. The seasonal dimension is a bonus (it's a harder gate), not a problem.
+
+**Candidate 5 — M-34 combat-route supply (economy linkage):**
+- The mod's hostile mobs produce dark_metal, soul drops, and boss items. A combat specialist farms these and trades them to non-combat players — the classic M-34 combat-route supply pattern.
+- This is the economy anchor the dossier is missing. The combat-specialist who farms Chaos mobs and bosses trades their drops (dark metal, bundle_of_bones) to the Create player who needs them for M-03 crushing or to the magic player who needs them for M-11 rituals. The demand is real (both the Create and magic candidates above consume these drops).
+- Tone: undead farming is a legitimate PvPvE combat specialization. Fine.
+- Verdict: ACCEPT M-34 — the combat-route supply economy link is exactly what the loop needs (danger → production input → trade). This gives the mod its 2nd anchor via economy.
+
+- from: born_in_chaos_v1:dark_metal_deposit | via: create:crushing | to: create | motif: M-03 | power: mid | tone: ok | verdict: ACCEPT | hook: haul dark-metal deposits from fallen Chaos Knights through the Create crusher — double the ingot yield just like any ore, making the Create spine the refinery for gothic combat spoils
+- from: born_in_chaos_v1:bundle_of_bones | via: occultism:spirit_fire | to: magic | motif: M-11 | power: everyday | tone: ok | verdict: ACCEPT | hook: the soul-tainted bone bundles of the undead transmute cleanly in the occult flame — gothic combat supplies the necromancer's reagent shelf
+- from: born_in_chaos_v1:pumpkinhead boss drops (Pumpkin Staff / Soul Saber) | via: create:sequenced_assembly or magic infusion as gate input | to: create/magic | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: the seasonal Pumpkinhead — only summonable or available Oct-Nov — holds the key component for a specific high-tier recipe; fighting the boss is the only path to that capability
+- from: born_in_chaos_v1 mob drops (dark_metal, bundle_of_bones, boss items) | via: emergent trade | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: a combat specialist farms Chaos mobs for dark metal and soul drops; the Create player buys them for M-03 crushing, the magic player buys them for M-11 rituals — danger produces tradeable supply
+- from: born_in_chaos_v1:dark_metal_block | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: derivative of M-03 on the ore drop — the lossy deco-recycle is valid in isolation but adds no new loop link; M-03 is the load-bearing connection and M-04 here is redundant noise
+

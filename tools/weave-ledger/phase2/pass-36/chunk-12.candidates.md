@@ -123,3 +123,66 @@ the economy-is-player-run ruling. Leave at 2.
   conceptually wrong (you build a ship hull from plates, not compressed cogwheels). No-motif fit for this
   specific routing.
 
+## grimoireofgaia   [anchors: survival (1)]
+
+- from: grimoireofgaia mob-drop fragments/nuggets (large catalogue of exotic drops — diamond/emerald nuggets,
+  bone fragments, misc material nuggets) | via: occultism:spirit_fire or occultism:ritual | to: magic |
+  motif: M-11 | power: mid | tone: ok (mythic-creature remnants transmuted into spirit essences via ritual is
+  the exact tone Occultism targets — monster girls and folklore beasts feeding dark magic is coherent and a
+  player would nod immediately) | verdict: ACCEPT |
+  hook: Grimoire mob drops are transmuted into Occultism spirit essences or reagents via spirit-fire / ritual,
+  making the mythic bestiary a supplier for the magic pillar and forcing combat players to feed spirit-crafters.
+
+- from: grimoireofgaia mob-drop fragments | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid |
+  tone: ok (bestiary drops → arcane infusion catalyst fits Ars' register; a harpy feather or gorgon scale
+  refined into an arcane reagent via imbuement apparatus is sensible fantasy) | verdict: ACCEPT |
+  hook: select Grimoire fragments become Ars Nouveau imbuement catalysts or glyphs-recipe inputs, pulling the
+  mythic bestiary into the arcane web alongside the spirit-fire path.
+
+- from: grimoireofgaia mini-boss busts (bust_gorgon / bust_valkyrie / bust_sphinx / bust_vampire — endgame loot
+  from named mini-bosses) | via: boss drops as create:sequenced_assembly gate items | to: create | motif: M-15 |
+  power: endgame | tone: ok (a gorgon bust as the key to a complex Create machine feels like a trophy-unlock;
+  the thematic gap between fantasy busts and Create machines is real but the boss-gate motif is intended
+  precisely to bridge danger → tech, and the busts' mythic prestige earns gate status) | verdict: ACCEPT |
+  hook: a Grimoire mini-boss bust (e.g. gorgon or sphinx) is a required input in a sequenced-assembly recipe for
+  a high-tier Create component, making mini-boss killing the key to a machine unlock.
+
+- from: grimoireofgaia:pearl_block (decorative mob-related block) | via: create:crushing | to: create |
+  motif: M-04 | power: everyday | tone: ok (pearl material crushed into powder for alchemical use) |
+  verdict: REJECT | reason: pearl_block appears to be a deco block, not a meaningful processing feedstock; the
+  yield would be arbitrary (what does crushing a pearl block give?). The M-04 motif calls for a lossy
+  recycling that makes logical sense — deco metal/stone → raw/gravel. Pearl → crushed "pearl powder" has
+  no established target recipe in the pack. Weaker than the reagent-sink paths above.
+
+- from: grimoireofgaia artifact rings (Ring of Speed/Jump/Haste — equippable, mid-tier gear) |
+  via: create:deploying / item_application | to: create | motif: M-20 | power: mid | tone: clash —
+  a ring applied via a Create deployer to upgrade gear reads as mechanically forced; the rings are self-
+  contained equipment items, not component upgrades. The deployer is for slotting a part into a base, not
+  socketing a ring into armor. | verdict: REJECT | reason: theme/mechanical clash; rings are equipped in
+  player slots, not deployed onto a machine-crafted base via Create. Wrong method for the material.
+
+- from: grimoireofgaia mob drops (combat output) | via: emergent trade — combat specialists sell drops to
+  magic specialists | to: economy | motif: M-34 | power: everyday | tone: ok | verdict: ACCEPT |
+  hook: Grimoire drops are high-variety mob rewards that magic players can't farm efficiently if they've
+  specialized in crafting/colony; a combat player farms the bestiary and trades the reagents to magic
+  specialists — the dual role of the bestiary (pressure/danger and a production input for magic) is exactly
+  the M-34 combat-supply loop.
+
+## ctov   [anchors: survival (1)]
+
+- from: ctov structure loot tables (loot=yes — biome-tailored villages have chest loot) |
+  via: loot-seed (inject economy-relevant items into structure chests) | to: economy | motif: M-30 |
+  power: everyday | tone: ok (finding regional goods in a biome-specific village is exactly what regional
+  scarcity means — a desert village has desert goods, a mushroom village has mushroom goods) |
+  verdict: ACCEPT |
+  hook: seed ctov village loot tables with region-appropriate raw materials (desert village → cactus/spice,
+  mountain village → stone/ore, mushroom village → mushroom products) so villages are discovery nodes for
+  regional scarcity goods, not just trade hubs. The loot-seed action is a Phase-3 datapack edit.
+
+- from: ctov villager population | via: villager trade (M-33 service-for-hire) | to: economy | motif: M-33 |
+  power: everyday | tone: ok (biome-specific villages as economy nodes where specialists can set up service
+  stalls near villages) | verdict: REJECT | reason: M-21 is cut (NPC coin faucet) and bare villager-trade
+  links are rejected; M-33 is player-to-player labor, not NPC trade seating. The ctov villages have no
+  player-facing crafting method to route material through — the loot-seed (accepted above) is the correct
+  actionable edge. This reject records the villager-trade idea explicitly so it isn't re-proposed.
+

@@ -104,3 +104,23 @@ Already 2 anchors (survival via Farmer's Delight food; economy via Cook/Chef vil
 
 REWORK: existing economy anchor (villager emerald trades) should be reframed as M-26 consumption demand, not M-21 NPC coin faucet. The survival anchor is sound.
 
+## trek-b0.6.1.1   [anchors: survival (1)]
+
+150+ vanilla-block structures across biomes: flying islands, ships, fortresses, ruins, pyramids, camps, towers. No own items/blocks. loot=yes (chest loot tables). Server-side, no client required.
+
+**Method-pull analysis:**
+Trek has loot=yes and a wide variety of structure types — the PHASE2-BRIEFING is clear: don't LEAVE a loot-bearing structure mod. The delivery mechanism is loot-seed. The structure variety (ships, ruins, camps, towers, fortresses, ancient buildings) maps naturally onto:
+- Rare exploration components seeded into appropriate structure types (ship → nautical/aeronautics parts; fortress/ancient building → magic reagents or boss-key materials)
+- The vibe range is wide enough that different structure types can seed different system outputs
+
+**Candidate 1: ancient building / pyramid loot seeding magic reagents (Ars source gems, Occultism datura)**
+- from: trek ancient_building / pyramid chest | via: loot-seed | to: magic | motif: M-02 | power: mid (pyramids/ancient ruins feel like the right rarity tier for occult materials) | tone: ok — ancient ruins containing arcane relics is thematically coherent; the player reading is "these ruins were from a civilization that practiced magic" | verdict: ACCEPT | hook: exploring an ancient pyramid and finding a datura herb or a source gem feels like recovering lost magical knowledge — ties exploration danger to the magic production route.
+
+**Candidate 2: shipwreck / ocean island loot seeding aeronautics/nautical components**
+- from: trek ship / ocean island chest | via: loot-seed | to: aeronautics | motif: M-15 (analogue — progression key from structure) | power: mid-endgame (ocean structure finds require travel + survival pressure) | tone: ok — shipwrecks yield salvaged maritime components that a Create Aeronautics builder repurposes; the "salvaged from a wreck" reading is strongly coherent | verdict: ACCEPT | hook: a player wrecking into a submerged ship finds a damaged control surface or propeller diagram that unlocks or provides a Create Aeronautics build component — the dangerous ocean becomes the supply route for airship parts.
+
+**Candidate 3: camp / cottage loot yielding generic food/coin drops (bare economy link)**
+- from: trek camp/cottage chests | via: loot-seed | to: economy | motif: M-08 | power: everyday | tone: ok but weak | verdict: REJECT | reason: seeding Numismatics coins directly from world-generated loot is an NPC coin faucet (M-14 territory, CUT). Coin must be player-minted. Could seed coin-mintable raw metal instead, but that's covered by vanilla ore drops and GTMOGS regional ore-gen already — no added value from Trek loot tables specifically.
+
+OK — survival anchor is sound. Loot-seed links to magic (M-02) and aeronautics (M-15 analogue) are the clean 2nd anchors.
+

@@ -53,6 +53,26 @@
 ## wits   [anchors: support/QoL (1)]
 - LEAVE — server-side debug command (/wits); 0 items, 0 blocks, no loot; nothing to route.
 
+## dummmmmmy   [anchors: support/QoL (1)]
+- LEAVE — single-item (target dummy) combat-test utility; its only surface is "hit it to see numbers." No material flows, no loot, no processing method. Forcing a magic/combat weave (e.g. "test spells on it") is a use-case, not a connection — the weave would be on the spell mod, not on the dummy.
+
+## patchouli   [anchors: support/library (1)]
+- LEAVE — guide-book library/framework; no survival material, no loot, no processing method. The shapeless_book_recipe method just crafts the guide book itself. Nothing to route through any external method.
+
+## citadel   [anchors: support/library (1)]
+- LEAVE — animation/spawn framework library; 5 dev-tool items (citadel_book, debug, effect_item, fancy_item, icon_item), loot=yes but it's library dev loot not player-progression loot. No method surface for weaving.
+
+## toomanypaintings   [anchors: support/decoration palette (1)]
+- LEAVE — UI-driven painting variant selector, 0 items/blocks/loot registered in jar; pure client-side deco expansion. Nothing to route.
+
+## ldlib2   [anchors: support/library (1)]
+- LEAVE — GregTech-lineage UI/rendering/sync library; 2 dev-test blocks, 1 dev-test item, no loot, no recipe-types; zero player-facing content. Nothing to route.
+
+
+
+
+
+
 
 
 

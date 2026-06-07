@@ -78,5 +78,36 @@
 - from: dungeons-and-taverns tavern cartographer | via: villager trade | to: economy | motif: M-37 | power: mid | tone: ok | verdict: REJECT | reason: the cartographer sells information (maps) but the progression unlock here would be route-knowledge, not a recipe gate — M-37 is research gating a recipe, not map-buying; no clean motif fits; the M-33 service reading above is the correct framing
 - REWORK: dossier flags M-09 as its only economy candidate then correctly dismisses it; the loot-seed + M-34/M-02/M-33 candidates above are the proper routes — all three accepted above, none requiring M-09 or M-14/M-21
 
+## doubledoors   [anchors: support/QoL (1)]
+
+- LEAVE — Behavioral door-interaction convenience mod; zero items, zero blocks, no loot. Pure interaction-behavior support role with no material or method surface. Genuine zero-content QoL mod.
+
+## xaeroworldmap   [anchors: support/navigation (1)]
+
+- LEAVE — Client-side world-map UI; zero items, zero blocks, no loot, no gameplay surface. Navigation support tool; the weaving opportunity is in the exploration/survival mods it helps navigate (dungeons, biomes, structures), not in xaeroworldmap itself.
+
+## bcc   [anchors: support/modpack-ops (1)]
+
+- LEAVE — Version-handshake utility; zero items, zero blocks, no loot. Genuine zero-content server-ops support mod with no game surface to route through.
+
+## createfisheryindustry   [anchors: create, survival (2)]
+
+OK — connections sound. The Create spine anchor (kinetic traps + mechanical peeler) and the survival anchor (diving gear + food output) are both well-grounded and coherent.
+
+- from: createfisheryindustry:fish_skin | via: farmersdelight:cutting / extradelight:drying_rack | to: economy | motif: M-35 | power: mid | tone: ok | verdict: ACCEPT | hook: fish skin is a legitimate leather substitute — processed through drying or cutting into a stable material that aged maritime goods (satchels, harnesses) are tanned from, giving the fisher-specialist a matured/processed good to trade; the aging step (rack drying) is a value-add that makes scale production necessary
+- from: createfisheryindustry:seafood_chowder / cooked steaks / mussel_soup | via: farmersdelight:cooking | to: economy | motif: M-26 | power: mid | tone: ok | verdict: ACCEPT | hook: high-nutrition seafood is a perishable consumption sink for the diet/pressure loop — chowder and cooked seafood feed the five-group nutrition demand (Protein group), drawing continuous demand from any player maintaining diet bonuses
+- from: createfisheryindustry:harpoon_gun (pneumatic harpoon, Create backtank-powered) | via: create:sequenced_assembly | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: ACCEPT | hook: the pneumatic harpoon gun runs off a Create backtank — it's already a pneumatic/Create weapon; gating a ship-mounted or boarding-action harpoon variant through sequenced assembly ties combat-maritime gear into the aeronautics build ladder; a ship that can fire harpoons is a natural aeronautics milestone
+- from: createfisheryindustry:copper_diving_leggings | via: create:sequenced_assembly | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: REJECT | reason: diving leggings are survival/underwater gear, not a propulsion or control component — forcing them into the aeronautics drivetrain motif is a tone stretch; they belong in the survival anchor as dive exploration gear, not in aeronautics
+- REWORK: dossier's only 2nd-anchor candidate is M-09 luxury good→coin (retired) — REJECT; the M-26 consumption, M-35 maturation, and M-24 aeronautics-adjacent hook above are the right economy/aeronautics links
+
+## kobolds   [anchors: economy, survival (2)]
+
+OK — connections sound. The economy anchor (emerald-based trading civilization) and survival anchor (underground structure / combat encounter layer) are both well-grounded.
+
+- from: kobolds:kobold_skull | via: occultism:spirit_fire | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: kobold skulls transmuted in spirit-fire become an occult essence — the tiny lizard-folk's remains feed the spirit world; coherent flavor (skull → spiritual residue) and a genuine mob-drop reagent sink into the magic pillar
+- from: kobolds Prospector enchantment (sold by kobold enchanter) | via: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: kobold enchanters provide Prospector (mining luck) as a service trade — players visit kobold dens specifically to get mining-enhancing enchants, making the kobold civilization a specialist service node in the economy; this is a "knowledge-as-a-service" trade, not an NPC coin faucet (the player brings emeralds, gets enchanting labor)
+- from: kobolds redstone goods (engineer kobold trades) | via: recipe | to: create | motif: M-29 | power: everyday | tone: ok | verdict: REJECT | reason: kobold redstone trades produce vanilla redstone components (no unique items); tying this into Create as a cross-route dependency is too thin — there's no unique kobold item that can serve as a Create recipe gate; the trade is just emerald→vanilla item and doesn't advance the loop
+- from: kobolds pirate den (jungle pirate kobolds, captain trades gold tools) | via: loot-seed | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: seeding pirate-den loot with maritime salvage components (rope, rigging, hull-patch materials) makes pirate kobold clearances a supply mission feeding the aeronautics logistics arm — combat specialists raid dens, trade the salvage to ship-builders
+
 
 
