@@ -59,3 +59,18 @@ CHALLENGE | from: galosphere:preserved_transform_recipe (amber) | via: ars_nouve
 ## create   [anchors: Create (1)]
 OK — existing rows sufficient. Dossier explicitly flags "N/A as recipient — Create is the hub other mods weave INTO." All rows are REJECTs and correctly so. No new candidates.
 
+## farmersdelight   [anchors: survival, Create (2)]
+Existing strong ACCEPTs: M-12 (create:milling grain → flour, the core processing-chain pull), M-16 (seasonal crops — cabbage/tomato/onion/rice gated by Serene Seasons), M-28 (colony provisioning — high-tier stews feed MineColonies cook hut), M-26 (diet-variety consumption, ongoing demand), M-35 (apple_cider → vinery:apple_fermenting maturation). Coverage is broad and the mod sits firmly at 2+ anchors.
+
+What is missing or under-examined:
+
+1. **M-29 cross-route dependency** — the existing rows propose FD crops beside an Ars Agronomic Sourcelink generating Source (1 ACCEPT). This is a real gap: a Farmer's Delight crop farm placed next to an Ars Nouveau Agronomic Sourcelink passively generates Source from crop growth. That makes FD farming a *magic input* without any explicit recipe — a behavior-based cross-route. But M-29 requires a *recipe* cross-dependency (a recipe in one route needing an input from another), not emergent behavior. The Sourcelink interaction is ambient, not a ledger weave. Correct to leave this as a flavor note rather than a row.
+
+2. **M-19 haunting / soul seam** — one row proposed farmersdelight:skillet via create:haunting (REJECT: tone clash). Agree — haunting food has no coherent narrative here.
+
+3. **M-37 research gate** — not attempted. The FD cooking_pot or cutting_board could be required by a MineColonies cook/baker hut as a building recipe (gated by colony research). One existing row (M-28, 2 ACCEPTs) covers the food-provisioning angle but not the *construction* angle. A colony Cook hut requiring a Farmer's Delight cooking_pot as a building component (not just food provisioning) would be M-28 + M-37 combined: the hut itself costs a FD block, and unlocking higher cooking tiers within MineColonies requires colony research. This is a subtler, stronger weave than the provisioning rows already captured.
+
+NEW | from: farmersdelight:cooking_pot (the kitchen appliance) | via: minecolonies hut building recipe (KubeJS data) | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: the MineColonies Cook hut requires a Farmer's Delight Cooking Pot as a placed building component — you can't staff a colony kitchen without one, so the mod earns a mandatory colony route anchor that makes every settlement need a FD kitchen investment, not just food as optional provisioning.
+
+CHALLENGE | from: farmersdelight cooked meals as MineColonies colonist food supply | via: minecolonies:composting / colonist-feed config | to: economy | motif: M-12 | verdict: PARTIAL-REWORK — multiple rows use M-12 for colony provisioning but M-12 is "processing-chain pull" (raw material → processed good through a method). Colony *food provisioning* (feeding colonists) is closer to M-28 (colony route). The existing M-28 rows (3 ACCEPTs) correctly use M-28; the M-12-tagged colony rows are mis-motifed. At Gate 2, consolidate the colony-feeding rows under M-28 only.
+

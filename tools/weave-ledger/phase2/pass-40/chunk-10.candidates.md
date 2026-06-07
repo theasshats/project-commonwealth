@@ -42,3 +42,20 @@
 ## corgilib   [anchors: support/library (1)]
 - LEAVE — loot/worldgen helper library; no content.
 
+## create_sa   [anchors: Create, aeronautics (2)]
+- CHALLENGE | from: create_sa blazing tools (blazing_pickaxe / blazing_axe etc.) | via: ars_nouveau:imbuement | to: magic | motif: M-10 | verdict: REJECT | hook: the M-10 blazing-tool cluster has ~15 rows across many passes and remains split (~9 ACCEPT / ~7 REJECT). The red-team case is correct and underweighted: blazing tools are *Create's own mid-tier gear* built through Create's crushing/mixing/sequenced chain; routing them through a magic infusion adds a cross-system gate that muddies the Create production spine and makes an item that should be purely achievable by a Create specialist depend on a magic specialist for its base form. The accepted form of Create↔magic dependency is M-29 (cross-route on a *high-tier* or module item), not M-10 applied to a workhorse tool. Recommend collapsing all M-10 blazing rows to REJECT and investing instead in the cleaner M-29 angle below.
+- NEW | from: create_sa:brass_drone_item (owner-locked drone, requires a sensor module) | via: create:sequenced_assembly gated on ars_nouveau:source_gem (sensor optic) | to: magic | motif: M-29 | power: endgame | tone: ok | verdict: ACCEPT | hook: the drone's "arcane sensor" module — which lets it detect magic entities / locate ores via Ars affinity — requires a source gem from the magic specialist; a Create gadgeteer cannot self-supply the sensor and must trade; exactly the cross-route dependency M-29 names, on a high-value endgame item that deserves the depth.
+- NEW | from: create_sa andesite armor set / brass armor pieces (mid-tier wearables) | via: minecolonies:zero_waste or colony blacksmith hut | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: a colony's Blacksmith hut can produce the base andesite/brass armor components cheaper than the raw Create chain — the colony route gives armor to players who want it without a full Create setup, while the Create-specialist route remains for higher-tier variants; this is the cheap-basics half of M-28's dual role.
+
+## entity_model_features   [anchors: support/rendering (1)]
+- LEAVE — client model-replacement engine for OptiFine CEM resourcepacks; no game content.
+
+## modernfix   [anchors: support/performance (1)]
+- LEAVE — JVM/loader perf patches; no content.
+
+## trashslot   [anchors: support/client-QoL (1)]
+- LEAVE — inventory trash UI; no content.
+
+## yungsapi   [anchors: support/library (1)]
+- LEAVE — YUNG's structure jigsaw library; no content.
+

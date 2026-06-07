@@ -21,6 +21,12 @@ LEAVE — numerical ping display only; no items, no mechanics. Nothing to route.
 - CHALLENGE | from: mcwstairs stone/brick stair variants | via: create:crushing | to: create | motif: M-04 | verdict: REJECT | hook: the split vote (15 ACCEPT / 16 REJECT) reflects genuine ambiguity; the dossier itself calls this WEAK. The M-04 motif exists for deco-family blocks where the crush-back is a deliberate recycling path — but with 224 stair variants across stone AND wood families, a wholesale crushing pass creates recipe clutter (224 new crush recipes) for marginal gameplay value. The decoration palette is a sanctioned support anchor; a targeted deco-family crush pass is better scoped to a later builder-content sweep, not this mod alone.
 - NEW | from: mcwstairs wood platform / railing blocks | via: woodworks:sawmill (the sawmill registered in the methods palette) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the woodworks sawmill can recut wood-family stair/platform/railing variants into planks or strips — a consistent wood-processing step that pulls architectural deco into the Create-adjacent wood-cutting pipeline without needing a new motif.
 
+## mushroomquest   [anchors: survival (1)]
+- NEW | from: mushroomquest:resin_orb (sticky amber-like resin block item) | via: create:compacting | to: create | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: compacting resin orbs under heat yields a processed resin sealant usable in Create mechanical-crafting gaskets or as a waterproofing intermediate — an untouched item the mod ships that has a clear industrial-material read nobody has proposed yet.
+- NEW | from: mushroomquest glowshrooms (blue / green / magenta) | via: create:haunting (soul fire transmutation) | to: magic | motif: M-19 | power: everyday | tone: ok | verdict: ACCEPT | hook: glowshrooms routed through Create haunting yield a soul-infused spore — a bioluminescent reagent distinct from vanilla glowstone that feeds the occult web; the haunting method already bridges Create to occultism and the glowing-fungus-to-spirit-material reading is thematically coherent.
+- CHALLENGE | from: mushroomquest deadly / mythical caps | via: occultism:spirit_fire or ars_nouveau:imbuement | to: magic | motif: M-11 | verdict: REJECT | hook: existing ACCEPT rows (21 votes) are well-founded on M-11 — keeping this as is. No challenge warranted; the reagent use of rare mushroom caps as occultism/ars inputs is the strongest second anchor here and prior passes have already argued it well.
+
+
 
 
 

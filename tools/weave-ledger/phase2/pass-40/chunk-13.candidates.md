@@ -15,6 +15,17 @@ LEAVE — pure developer data-attachment library; zero items, blocks, loot, or r
 - NEW | from: oceansdelight:elder_guardian_roll / oceansdelight:guardian_soup (high-saturation effect dishes) | via: M-16 seasonal reagent (Serene Seasons winter makes ocean surface dangerous/icy, making guardian farming harder — config the dishes as Bountiful objectives that pay extra in winter, tying ocean food scarcity to seasons) | to: survival | motif: M-16 | power: mid | tone: ok | verdict: ACCEPT | hook: guardian soup is rarer in winter when the ocean is dangerous to reach — the seasonal driver feeds back into this pillar's premium food without touching guardian AI
 - CHALLENGE | from: oceansdelight:cut_tentacles / guardian flesh | via: farmersdelight:cutting → create:milling (fishmeal) | to: create | motif: M-12 | verdict: REJECT | hook: the most common existing ACCEPT for this route (consensus REJECT 9v4) is correctly rejected — no fishmeal item or Create consumer for it exists in the pack; the processing chain dead-ends at FD and adds no cross-system edge; the existing rejection consensus is right and should be the settled verdict
 
+## sound_physics_remastered
+LEAVE — client-only audio simulation mod; zero items, blocks, loot, or recipe types. No content surface to weave.
+
+## chat_heads
+LEAVE — client UI overlay drawing player faces in chat; zero items, blocks, loot, or recipe types. No content surface to weave.
+
+## cmpackagepipebomb   [anchors: create (1)]
+LEAVE — every proposed weave correctly rejected across all blind passes. The pipebomb is a Create-flavored PvP prank item with no coherent second-pillar hook: M-06 over-gates a gag; M-29 (nitropowder fill) tone-clashes with a novelty trap; M-34 misuses the combat-supply motif (no boss loot here). The dossier's own verdict (leave) is correct.
+
+
+
 
 
 
