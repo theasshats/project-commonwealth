@@ -32,6 +32,21 @@ OK — M-08 (FE→coins, geode-scarce Mining Core), M-30 (regional geode scarcit
 
 - NEW | from: createblockchain:cryotheum_coolant_bucket (consumable thermal fluid the Currency Miner requires to run) | via: tfmg:vat_machine_recipe or create:mixing (chemical processing of a cold-fluid compound) | to: create | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: the minter needs coolant the refinery makes — the currency specialist depends on the TFMG chemist for sustained minting throughput, forcing a cross-route dependency between the two tech producers (nobody mints alone).
 
+## bakery   [anchors: survival (1); candidates target Create + economy]
+OK — M-12 (milling/wheat→flour), M-28 (colony cook-hut demand), M-26 (consumption sink), M-35 (jam→ferment) all covered. One angle missing from the accepted set:
+
+- NEW | from: bakery baked goods (finished cakes, tarts, pies — multi-step, player-specialized output requiring baker_station + Farm & Charm chain) | via: service-for-hire (a bakery-specialist player bakes to order, accepting ingredients + coin from diet-pressured clients) | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: nobody wants to build a whole bakery chain just for the Sugars group buff; the baker player is the obvious specialist, and other players bring their apples and milk — the labor exchange is as natural as an enchanter-for-hire, and the diet pressure (appleseed M-26) makes the service continuously in demand.
+
+## better_lib
+LEAVE — pure config/messaging library; 0 items/blocks. Nothing to weave.
+
+## appleseed   [anchors: survival (1); 2nd anchor is demand-side only]
+OK — existing rows correctly identify this as a demand driver (M-26, M-16 seasonal diet, M-28 colony food demand). The dossier explicitly says "its 'output' is DEMAND." All recipe-forcing rows are correctly rejected. One gap:
+
+- NEW | from: appleseed balanced-diet buff (requires diversity across all 5 nutrient groups) | via: config/mechanic — explicitly configure each group's buff to include a small movement/speed benefit (Grains), brief regeneration (Protein), or fire/cold resistance (relevant to Cold Sweat) | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: wiring the diet buffs to Cold Sweat pressure (e.g. balanced diet reduces cold threshold slightly, diet imbalance worsens it) closes the survival pressure loop tightly: the diet mechanic and the climate mechanic reinforce each other rather than sitting in parallel, and both pull on the food-production chain.
+
+Note: this is a config-tie proposal (appleseed + Cold Sweat config interaction), not a recipe. The existing M-26 rows focus on consumption demand but not on which specific buffs make the diet system mechanically interlocking with other survival mechanics.
+
 ## tfmg   [anchors: Create (1); strong candidates for aeronautics + economy + survival]
 OK — M-13 (fuels), M-23 (steel/aluminum airframe), M-24 (combustion engine drivetrain), M-08 (steel→coin), M-17 (voltage→magic charging), M-29 (plastic cross-route) all well-covered. Two genuine gaps in method-routing not yet captured:
 
