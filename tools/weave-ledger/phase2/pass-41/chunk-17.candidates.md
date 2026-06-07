@@ -123,6 +123,17 @@ Already 2-pillar and very dense. Existing rows cover M-37, M-28, M-15 (ancientto
 
 - NEW | from: minecolonies colony food outputs (apple_pie, baked_salmon, c:foods/bread, c:foods/vegetable) | via: ars_nouveau:agronomic_sourcelink passive drain (surplus food placed near an Agronomic Sourcelink generates Source — the colony Cook overproduces, the magic player places the surplus nearby) | to: magic | motif: M-02 | power: everyday | tone: ok | verdict: ACCEPT | hook: the colony baker's surplus goes to the mage's garden — every apple pie placed within the Agronomic Sourcelink radius generates Source; a settlement player who produces food in bulk becomes the magic player's passive fuel supply, threading two non-overlapping routes into mutual dependence
 
+## alexsmobs   [anchors: survival (1)]
+
+Existing rows are very dense and well-converged. Core accepted weaves: M-02 (mob drops → Occultism spirit_fire / Ars imbuement), M-10 (ambergris / ender_residue → magic infusion), M-11 (ambergris / void_worm parts → occultism ritual), M-15 (void_worm_beak as boss-key gate), M-34 (combat-supply economy), M-19 (ender_residue → create:haunting). One gap: no pass examined the leafcutter_ant_chamber's *colony route* as an M-28 candidate specifically for the organic-material supply chain. Another: alexsmobs:bear_fur / bison_fur feeding Cold Sweat (M-26 consumption as insulation wear) — this is accepted twice but underdeveloped in the power-tier framing.
+
+- NEW | from: alexsmobs:bear_fur / bison_fur (everyday mob-drop, cold-biome animals) | via: cold_sweat sewing table or crafting recipe (fur → insulation layer for Cold Sweat armor/clothing — the basic survival pressure of cold temperatures drives repeating demand for hunted furs) | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: a Cold Sweat winter drains insulation faster than you replace it — bear fur is the everyday consumable that the hunter farms and the settler buys; pressure renews demand continuously, and the bear is the lowest-effort source; the survival consumption loop closes directly through a real Cold Sweat mechanic
+
+- NEW | from: alexsmobs:leafcutter_ant_chamber (passive biomass output) | via: minecolonies:composting (route ant-chamber leaf-mold / biomass into the colony composter as feedstock, making the anthill a passive organic input for colony agriculture) | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: the anthill churns out leaf-fragment biomass the colony composter can digest — a passive resource generator feeding the settlement's agricultural infrastructure; the survival player who keeps an anthill near their colony gains a composting edge without hand-gathering, threading fauna into the colony route
+
+CHALLENGE | from: alexsmobs:banana / acacia_blossom (everyday organic food drops) | via: farmersdelight:cutting or extradelight:juicer | to: survival | motif: M-12 | verdict: REJECT | hook: consistently split (4 ACCEPT / 4 REJECT in the CANDIDATES) and the rejection logic is correct: processing bananas or blossoms through FD/ExtraDelight adds processing steps within the *survival pillar* without crossing into a new system; alexsmobs already anchors survival; the M-12 route here just deepens survival without earning a second anchor for the mod; M-02 (magic infusion of exotic drops) and M-15 (void_worm boss-key) are the correct second-anchor moves.
+
+
 
 
 

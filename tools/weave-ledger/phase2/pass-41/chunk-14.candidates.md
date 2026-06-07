@@ -66,6 +66,27 @@ LEAVE — server/world-tick optimization only, zero content surface. No rows exi
 ## companion   [anchors: support (1)]
 LEAVE — pet QoL behavior mod, zero items/blocks/recipe-types. No rows existed; none are needed.
 
+## chefsdelight   [anchors: survival + economy (2)]
 
+Already 2 anchors — existing rows cover M-26 (feast consumption), M-33 (Cook/Chef labor service), M-08 (loot-seed cook-structure coin), M-28 (colony Cook hut), M-16 (seasonal trade list), M-37 (research gate). The mod is well-connected. One genuine gap and one challenge:
+
+- NEW | from: chefsdelight Cook/Chef feast outputs (Roast Chicken, Honey Glazed Ham — high-nutrition multi-group meals) | via: extradelight:drying_rack (a Chef's brined ham hangs on the drying rack before becoming Honey Glazed Ham — one pre-cooking preparation step using the FD-ecosystem drying method) | to: survival | motif: M-35 | power: mid | tone: ok | verdict: ACCEPT | hook: the feast doesn't come from the cooking pot alone — the ham cures on the drying rack first; aging as a specialist step makes the Chef's premium output qualitatively different from a plain cook, creating a time-gated demand signal that can't be instantly satisfied.
+
+- CHALLENGE | from: chefsdelight Cook/Chef villager trades | via: KubeJS config re-mapping trades to numismatics coin | to: economy | motif: M-08 | verdict: REJECT | hook: M-08 is player-minted currency (scarce metal → Create-processed → pressed coin); re-mapping an NPC's emerald trade to numismatics coin is an NPC-faucet pattern — coin from outside the player economy, exactly what M-14 was cut for. The existing split (1A/1R) row for this should resolve as REJECT. The M-08 loot-seed row (finding coin in cook-structure chests) is distinct and valid; the *trade re-mapping* version is not.
+
+OK — existing rows are generally sound; the M-35 aging step and M-08 trade-remapping challenge are the key additions.
+
+## bagus_lib   [anchors: support (1)]
+LEAVE — pure shared code library (baguchi's mod suite), zero content surface. No rows existed; none are needed.
+
+## bettermineshafts   [anchors: survival (1)]
+
+Existing rows: M-08 loot-seed ACCEPT (2A/1R) and M-02 loot-seed ACCEPT (2A/1R). However the dossier clearly states `loot=no` and notes the mod uses vanilla mineshaft loot tables (it only expands the *structure*, not the loot tables). This is the critical issue the existing rows fail to resolve cleanly:
+
+- CHALLENGE | from: bettermineshafts expanded mineshaft structures | via: loot-seed (inject weave-relevant items into the structures' loot) | to: economy | motif: M-08 | verdict: REJECT | hook: the dossier says `loot=no` and uses vanilla `chests/abandoned_mineshaft` — Better Mineshafts does not register its own loot table path. A loot-seed here is editing the vanilla mineshaft table, not bettermineshafts-specific content. The 2 ACCEPTs conflate "Better Mineshafts has chests" with "Better Mineshafts has its own loot tables" — it does not. Any loot-seed edit is a vanilla-table modification that applies whether bettermineshafts is installed or not, so it's not a bettermineshafts weave.
+
+- CHALLENGE | from: bettermineshafts expanded mineshaft structures | via: loot-seed (inject rare magic reagent as a dungeon find) | to: magic | motif: M-02 | verdict: REJECT | hook: same reason as M-08 above — `loot=no` means the mod has no owned loot table to seed. The 2 ACCEPTs should be reconsidered; the correct action is to edit the vanilla `abandoned_mineshaft` table (which happens to appear in Better Mineshafts' larger structures but is not its property). That edit is valid for its own sake but should not be attributed to this mod as its weave.
+
+LEAVE — no owned loot table, no items, no methods. The two existing ACCEPT rows are grounded on an incorrect reading of the dossier and should be resolved to REJECT.
 
 

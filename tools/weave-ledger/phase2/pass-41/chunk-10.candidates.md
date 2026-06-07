@@ -100,4 +100,22 @@ OK — existing rows sufficient. The mod already has 2 anchors (Create material-
 
 ## drones   [anchors: aeronautics (1)]
 
+Existing rows cover: M-06/M-05 Create gating of iron_rotor/ion_thruster/controller (27 / 24 ACCEPT — dominant, strong), M-20 drill block as create:deploying application, M-17 ion_thruster FE-charging via create_new_age:energising (1 ACCEPT — niche but coherent), M-37 colony research gate for controller, M-33 drill-drone service-for-hire, M-29 drill-drone × createoreexcavation cross-route. These cover the core weaves. What is missing: (a) the **wood_rotor vs iron_rotor vs ion_thruster power-tier gradient** is mentioned in passing but no row explicitly maps the correct Create depth to each tier (wood = vanilla, iron = mechanical_crafting, ion = sequenced_assembly) — this is a calibration note not a new weave, but the context-fed pass should flag it; (b) **no M-34 combat-supply row** — the drone's beacon ability block enables a combat drone (attacks enemies in range); a combat-drone specialist is a M-34 supplier of autonomous combat support to non-combat players.
+
+- NEW | from: drones:wood_rotor (entry-tier thrust, everyday) / drones:iron_rotor (mid) / drones:ion_thruster (endgame) | via: three-tier calibration — wood_rotor stays vanilla craft (guardrail: everyday); iron_rotor via create:mechanical_crafting (pressed iron plates + shaft = mid-tier machined rotor); ion_thruster via create:sequenced_assembly through a derpack:incomplete_thruster part (endgame, M-06 keystone) | to: create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: this is a power-tier nuance that existing rows state individually but no row combines all three tiers into one calibration note; the gradient (vanilla → mechanical → sequenced) is exactly the depth-scales-with-power principle applied to the drone progression
+
+- NEW | from: drones:drill + drones:beacon (combat ability blocks that can be mounted in drone bodies) | via: emergent trade — a combat-drone specialist builds beacon-ability drones and deploys them in other players' claimed areas as hired defense; the drone IS the service good | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: a player who doesn't want to fight buys a beacon-drone from the specialist and positions it at their base — the automaton is the labor commodity; service-for-hire at the pillar where iron-rotor fabrication and combat-automation meet
+
+## trashcans   [anchors: support/automation-QoL (1)]
+
+Existing rows are split between REJECT (anti-scarcity by nature, 6 REJECTs) and one nuanced ACCEPT (gate the ultimate_trash_can behind sequenced assembly so infinite-void is a meaningful build milestone). The REJECT majority is correct for a scarcity pack. One gap: no row addresses the **balance note explicitly** — in a scarcity-driven pack, free unlimited item deletion at the crafting-table tier is a design hazard (it trivializes the M-32 byproduct → input loop and M-26 consumption-sink design intent). That design note should be surfaced as a row.
+
+- NEW | from: trashcans:ultimate_trash_can (voids items + fluids + FE at unlimited rate) | via: create:sequenced_assembly (gate the ultimate_trash_can behind a sequenced_assembly chain using a derpack:incomplete_void_valve part — a precision valve that controls the void rate; the common item_trash_can stays cheap) | to: create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: unlimited matter deletion should cost real fabrication — the ultimate trash can is a precision void-valve that earns its place behind the assembly line; the common item_trash_can remains a crafting-table starter, preserving access while making infinite throughput a milestone
+
+## kleeslabs   [anchors: support/QoL (1)]
+
+LEAVE — zero-surface behavior mod (no items, no blocks, no loot, no recipe-types; single-slab-break interaction only). Nothing to route through any method.
+
+## travelersbackpack   [anchors: survival (1)]
+
 
