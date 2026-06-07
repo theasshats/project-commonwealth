@@ -62,4 +62,13 @@ mean "enchant the jetpack through an arcane infusion" (awkward — the jetpack i
 economy is too shallow (just "sell it"), and survival is already implicit via the backtank supply pressure.
 No new candidates.
 
+## trashcans   [anchors: support/automation QoL (1)]
+- LEAVE — void blocks for items/fluids/FE; 4 items, no recipe methods, outputs nothing (deletes). The
+  dossier's balance note stands: in a scarcity pack, making voiding trivial erodes byproduct value, but
+  that is a config/balance concern, not a weave opportunity. There is no material to route and no second
+  system to anchor to. Genuine LEAVE.
+  BALANCE-FLAG: in a scarcity pack, unlimited item/fluid voiding can trivialize byproduct value — worth a
+  config review (e.g. disable the trash cans entirely in favor of Create's own overflow mechanisms, or
+  rate-limit them) before the economy pillar lands.
+
 

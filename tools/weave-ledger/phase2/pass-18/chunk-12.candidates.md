@@ -51,4 +51,13 @@ REWORK: existing anchor is Create (1), which is the floor. The three ACCEPTs abo
 - from: moblassos:hostile_lasso (captures weakened monsters) | via: occultism:spirit_fire or ritual | to: magic | motif: M-11 | power: mid | tone: ok | verdict: REJECT | reason: the hostile lasso captures monsters at <50% HP — you could imagine the captured mob being transmuted via Occultism ritual into an essence. But the lasso holds a *live mob entity*, not a drop item; M-11 routes *drops/materials* through spirit_fire, not living captured mobs. The mechanic doesn't map onto the motif cleanly; the tone is borderline (capturing live mobs for ritual use is flavourful but the mod's vibe is "pokeball logistics," not occult harvesting). Reject — the mechanic gap is real.
 LEAVE — no coherent 2nd anchor found after method-pull. The mob-transport utility is genuine but purely behavioral (no material output to route through any machine). Confirm as 1-anchor survival QoL.
 
+## trashslot   [anchors: support/client QoL (1)]
+LEAVE — inventory trash slot UI; deletes items. Zero items, blocks, loot, or material flows. Genuine zero-content client convenience mod; nothing to route.
+
+## ldlib2   [anchors: support/library (1)]
+LEAVE — UI/rendering/data-sync library (GregTech lineage). The two registered blocks (renderer_model, test_2) are confirmed dev/test artifacts. Zero player-facing content; pure developer infrastructure. Genuine zero-surface library.
+
+## jade   [anchors: support/client UI (1)]
+LEAVE — client "what-am-I-looking-at" HUD tooltip. Zero items, blocks, loot, material flows. Pure informational overlay; nothing to route through any method.
+
 
