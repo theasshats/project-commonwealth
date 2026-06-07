@@ -134,7 +134,3 @@ New candidate — scarcity foundation:
 
 
 
-
-
-
-
