@@ -1,11 +1,14 @@
 # Phase 2 — next-session runbook (read with CLAUDE.md + READINESS-REVIEW.md)
 
-> **LATEST — passes 35–39 ran blind + merged.** Now **40 passes (pass-00…39)**: **7,032 total → 6,124 live +
-> 908 dead-motif quarantined**; live **Gate-2 core (≥5+ACCEPT) = 433**, ≥2 = 1,892, ~198 mods. Over the 5-pass
-> batch `new` held **~236/pass** (volume NOT saturating — mostly singletons), but **live-core gains
-> decelerated 29→19→16→22→13** — the *valuable* signal is tapering. **Recommended next: Phase 2.5 triage**
-> (`TRIAGE-PLAN.md`) on the live core, or context-fed refine; further *blind* passes are low-value. Runner
-> below still works (next blind would be `--pass 40`).
+> **LATEST — 42 passes done (pass-00…41): 35–39 blind + 40–41 context-fed refine, all merged.**
+> **7,282 total → 6,373 live + 909 dead-motif quarantined**; live **Gate-2 core (≥5+ACCEPT) = 435**, ≥2 =
+> 2,387, ~198 mods. The 2 context-fed passes added ~+125 unique each (≈half blind's rate) and grew the ≥2
+> corroboration band by +228, but the **live core stayed flat (433→439→435)** — the 2nd refine pass
+> *net-pruned* the core as CHALLENGE lines flipped weak ACCEPTs to mixed/REJECT. **Refine has saturated;
+> further passes (blind or context-fed) are not worth running.** The context-fed CHALLENGE layer flagged many
+> bad existing rows for triage (loot=no loot-seeds, motif mislabels M-10/M-23/M-24, NPC coin-faucet rows,
+> motif-duplicate proliferation). **Next: Phase 2.5 triage** (`TRIAGE-PLAN.md`) — corpus is mature and ready
+> to consolidate. (Pass runner below still works if ever needed: next would be `--pass 42`.)
 
 Branch: `claude/weaving-plan` (do NOT rename, do NOT open a PR). Keep your own context light; do NOT read the
 chunk candidate files; rely on agent summaries + merge output. **Any pass fan-out is gated — confirm the
