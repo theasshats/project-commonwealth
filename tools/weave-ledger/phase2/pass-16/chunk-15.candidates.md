@@ -159,6 +159,49 @@ REWORK:
 - Existing aeronautics anchor: sound (rockets = aeronautics). OK.
 - New ACCEPTs: economy (M-08 titanium→coin + M-09 circuit→trade) adds economy as anchor 3; magic (M-17 electrolysis FE bridge + M-22 astronomical reading) adds magic as anchor 4. Strong multi-system candidate.
 
+## curios   [anchors: support/library (1)]
+
+Power-read: 0 blocks, 0 items, loot=no. Pure API providing accessory slot framework. No content of its own — it is the plumbing that other mods' trinkets/rings/amulets plug into.
+
+LEAVE — genuine zero-content library/API. Support role is correct; the magic pillar's accessories exist because of curios, but curios itself has nothing to route.
+
+## jamlib   [anchors: support/library (1)]
+
+Power-read: 0 blocks, 0 items, loot=no. Pure developer-library for JamCoreModding's mods. No player-facing content.
+
+LEAVE — genuine zero-content library/API. Support role is correct; no weave possible.
+
+## playeranimator   [anchors: support/library (1)]
+
+Power-read: 0 blocks, 0 items, loot=no. Pure client animation library (KosmX). No gameplay items or methods.
+
+LEAVE — genuine zero-content animation API. Support role is correct; no weave possible.
+
+## aeronautics   [anchors: aeronautics (1) — create de-facto 2nd, jar-grounded]
+
+Power-read: The dossier is the most thoroughly researched in the chunk — jar-grounded (#179), 141 blocks/18 items across three sub-namespaces (aeronautics/simulated/offroad). Items stratify: everyday (rope couplings, honey glue, end_stone_powder), mid (propeller bearings, hot-air burner, gyroscopic_mechanism), endgame (pearlescent levitite, Physics Assembler, portable engine, advanced hull). Already uses create:mixing/sequenced_assembly/deploying/crushing/filling/splashing/mechanical_crafting. The dossier already has a rich set of 2nd-anchor candidates identified.
+
+- from: aeronautics:levitite_blend (bulk zinc-gated mixing output) | via: numismatics sell (M-09 — levitite blend as a crafted commodity the specialist mints/sells; or M-08 if framed as processed-metal → coin) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: levitite blend is the pack's lift material — every builder who wants to fly needs it, and only Create specialists with zinc can make it at scale; the lift-material specialist becomes a key economy node
+- from: aeronautics:levitite (crystallized lift material — post-blend in-world step) | via: ars_nouveau:imbuement or KubeJS catalyst requirement (M-10 arcane infusion pull — require an Ars/Occultism catalyst adjacent during the in-world crystallization step) | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: raw levitite blend crystallizes only in the presence of an active arcane attunement (a source gem placed adjacent during the reaction) — the magic pillar gates the lift-material supply, forcing aeronautics builders to engage with magic
+- from: aeronautics:adjustable_burner (hot-air lift source — burns furnace fuel) | via: config tag-JSON extending its fuel tag to include TFMG diesel/gasoline (M-13 fuel→propulsion) | to: economy/create (TFMG fuels) | motif: M-13 | power: everyday | tone: ok | verdict: ACCEPT | hook: a hot-air airship's burner accepts refined diesel alongside coal/charcoal — the fuel refinery (TFMG specialists) becomes the fleet's logistics supplier for long-range lift operations
+- from: simulated:rope_coupling / simulated:spring (docking logistics items) | via: numismatics / trading floor config-tie (M-21 provisional — docking stations at trading posts as economy infrastructure) | to: economy | motif: M-21 | power: mid | tone: ok | verdict: REJECT | reason: M-21 is provisional (maintainer leans no — villager trade→numismatics). Rope coupling as a trade node is config-side not a recipe, and the motif is flagged for explore-only. Tag as provisional-only. Reject per M-21 provisioning rule.
+- from: aeronautics borehead bearing (flying drill contraption) | via: create:crushing output → numismatics mint (M-08 — the borehead mines ore; that ore gets Create-crushed → minted) | to: economy | motif: M-08 | power: endgame | tone: ok | verdict: ACCEPT | hook: an airborne mining rig (borehead bearing contraption) is the pack's most automated ore extractor — its ore output flows directly into the Create coin-minting pipeline, making airship-mining the premium economy production route
+- from: offroad:tire variants (small/large/monstrous) | via: create:pressing (rubber-sheet pressing, if a rubber material exists in the modpack, or TFMG polymer output → pressed tire) | to: create | motif: M-20 | power: everyday | tone: ok | verdict: ACCEPT | hook: Aeronautics tires are pressed from rubber/polymer sheets in a Create press — the vehicle shop sources its tire stock from a Create fabrication line
+- from: simulated:gyroscopic_mechanism | via: northstar:engraving (the gyro mechanism requires circuit-precision engraving — an advanced_circuit is an engraved component; routing gyro assembly through Northstar's engraver ties the space-tech tier to the gyro supply chain) | to: create (Northstar-Create depth) | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: a gyroscopic propeller bearing requires an engraved precision mechanism from the circuit engraver — the space-tech specialist produces the flight-control components for top-tier ships
+- from: aeronautics:pearlescent_levitite (higher-tier lift — currently code-only recipe) | via: create:sequenced_assembly (multi-step M-06 keystone chain — incomplete_levitite_core → pearlescent via deploying/pressing/haunting) | to: create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: pearlescent levitite, the endgame lift material, requires a full sequenced-assembly line — it is the aeronautics pillar's flagship deep-chain item, making it the natural M-06 keystone for ship advancement
+- from: aeronautics dyeable tires (cosmetic color variants via addon) | via: numismatics sell (M-09 — cosmetic tires as low-tier trade goods for vehicle customizers) | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: cosmetic color variants as "luxury goods" sold via Numismatics is extremely thin — dyed tires are vehicle cosmetics, not the high-effort consumables M-09 is designed for. The loop advance is near-zero. Reject; the stronger economy candidates above are sufficient.
+
+REWORK:
+- Current aeronautics anchor: the pillar's own spine — correct and necessary. Create is a de-facto 2nd (jar-proven zinc/brass/gyro/casing all route through Create:mixing/sequenced_assembly). These are sound.
+- The dossier correctly flags aeronautics as under-reviewed for outbound weaves. The ACCEPTs above address the main gaps:
+  - Economy: M-09 levitite sell + M-08 borehead-ore→coin (both valid, non-redundant)
+  - Magic: M-10 levitite crystallization catalyst (strong — gates lift material behind magic pillar)
+  - Create: M-13 TFMG burner fuel tag, M-06 pearlescent assembly chain, M-20 tire pressing, M-06 gyro-engraver depth
+- The dossier's merge-conflict section (HEAD vs. a82b961) should be reconciled by a human — both sides describe the same candidates; the jar-grounded HEAD version is more authoritative.
+
+== CHUNK COMPLETE ==
+
+
 
 
 
