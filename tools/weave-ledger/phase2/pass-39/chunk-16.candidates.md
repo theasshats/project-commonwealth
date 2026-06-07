@@ -212,3 +212,25 @@ Method-pull:
 
 LEAVE — zero-content physics behavior addon; serves the aeronautics system but has no material surface to weave. Sanctioned support role.
 
+## friendsandfoes   [anchors: survival (1)]
+
+One anchor — needs a second. 28 blocks (beehives × wood types, copper buttons/rods, deco), 44 items, loot=yes, 2 c:tags. Key drops: crab_claw (→ reach potion), copper_golem_head, hostile-mob loot (Wildfire/Illusioner). Dossier flags M-04 (copper deco crush) and M-02 (mob drop → magic reagent), both marked honest-but-thin.
+
+Method-pull:
+- crab_claw: vanilla brewing ingredient (reach extension potion). This is the strongest hook — it's a reagent for a specific potion. Could also go through ars_nouveau:potion_flask or irons_spellbooks:alchemist_cauldron to make it a magic ingredient beyond vanilla brewing. M-02 mob-drop reagent sink.
+- Wildfire / Illusioner are hostile mobs with loot. The Wildfire is fire/heat-themed — its drops (if any, flagged in hostile loot) could feed TFMG or Create's thermal processes. But checking the items list: no wildfire-specific drops shown. The Illusioner here is the vanilla one (not illagerinvasion's), and its drops are vanilla emeralds/enchanted bows.
+- copper_golem_head: a copper block variant used as a decorative head. create:crushing recycles it to copper nuggets (M-04).
+- Wooden beehives (in every wood type): a crafting convenience. No special material, but honeycomb from beehives feeds the food cluster (honey-based recipes in farmersdelight/extradelight). Not a weave from friendsandfoes specifically, but an indirect supply — the beehive variety makes beekeeping more accessible.
+- Buttercup flower: a decorative flower. Could feed ars_nouveau:imbuement as a nature/life catalyst (M-10), but every flower mod has this; it's thin unless buttercup is distinctive.
+- copper buttons (oxidizing, waxable): purely functional decor. No weave beyond M-04 crush.
+- The Copper Golem presses copper buttons — it could be thematic as an automation assistant that presses Create's pressing mechanism inputs (a copper-golem-assisted copper button line). But this is behavioral, not a recipe weave.
+
+Concrete candidates:
+
+- from: friendsandfoes:crab_claw | via: ars_nouveau:potion_flask or irons_spellbooks:alchemist_cauldron_brew | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: The crab claw is a natural pincered reagent — the magic brewer runs it through the Alchemist's Cauldron to produce an extended-reach spell component; mob-drop from a coastal critter feeds the magic production route.
+- from: friendsandfoes:copper_golem_head / copper_button deco | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: Copper deco from oxidizing copper golems and buttons crushes back to copper nuggets + XP in the Create mill — the copper theme of the mod ties its decorative blocks to the Create copper economy (lossy recycle).
+- from: friendsandfoes (Wildfire hostile mob) | via: loot-seed — Wildfire drops a fire-core or blaze-analog material seeded into its loot table | to: create | motif: M-02 | power: mid | tone: ok | verdict: REJECT | reason: The Wildfire's drops are not confirmed in the dossier item list (no wildfire-specific drop item); the mod's drops are generic hostile loot. Seeding a fake drop would be authoring, which is forbidden in Phase 2.
+- from: friendsandfoes (wooden beehives, all wood types) | via: minecolonies requests / colony beekeeper hut | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: A MineColonies Beekeeper hut can be stocked with the full wood-type beehive set — the variety makes the colony's apiary functional across all biomes, and honeycomb from the colony feeds the food cluster; the beehive variety is the colony's apiary infrastructure supply.
+
+REWORK: Dossier M-04 (copper deco crush) confirmed as acceptable (thin but coherent). Dossier M-02 (hostile drops → magic) is the strongest path and is confirmed via crab_claw specifically. The "leave acceptable" caveat in the dossier was overly cautious — there are two solid weaves here.
+

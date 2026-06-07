@@ -178,4 +178,14 @@ REWORK: dossier's existing connections are sound but the magic anchor is not yet
 
 - LEAVE — genuine zero-content library: 0 blocks, 0 items, no loot. Structure-config/runtime-datapack framework for structure mods (Towns & Towers, etc.). No player-facing surface.
 
+## patchouli   [anchors: support / library-docs (1)]
+
+**Method-pull:** Primarily a library — provides the guide-book framework. Has 1 registered method (`patchouli:shapeless_book_recipe`) and 9 book-cover items (book_blue, book_brown, book_red, etc.). These colored books are the physical crafting components that produce guide books. They have no functional role beyond book-crafting.
+
+- from: patchouli colored books (book_blue/red/green/etc.) | via: ars_nouveau:enchanting_apparatus | to: magic | motif: M-10 | power: everyday | tone: clash | verdict: REJECT | reason: a blank book cover being imbued into a magic reagent is completely arbitrary — the books have no arcane identity, they're just placeholder cover items for the guide system. Imbuing a blue book into source gem is not a player-nod. Tone clash.
+
+- from: patchouli:guide_book (pack guidebook authored by devs) | via: MineColonies research / progression unlock | to: economy | motif: M-37 | power: everyday | tone: ok | verdict: REJECT | reason: M-37 (research/knowledge gate) is about a recipe unlocked by research that the item can't carry — patchouli's guide book is *documentation*, not a progression gate. Using it as a knowledge-gate item would be a forced edge (the book is already free to craft with `patchouli:shapeless_book_recipe`). Records as rejected.
+
+- LEAVE (for weaving) — patchouli is a documentation framework; its book items are functional only as produced guide books. No coherent weave adds a 2nd anchor to a docs library. The mod earns its place as a dependency of Ars Nouveau, Occultism, and similar magic mods.
+
 

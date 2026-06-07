@@ -80,3 +80,6 @@ REWORK: Economy anchor is WEAK as-is — trades are emerald-denominated (vanilla
 
 ## necronomicon   [anchors: support/library (1)]
 - LEAVE — pure code library (0 blocks, 0 items, loot=no); config/helper API for ElocinDev mods (here: opacpvp dependency). No gameplay surface. Genuine zero-content library.
+
+## formations   [anchors: survival/exploration (1)]
+- LEAVE — scatter-structure worldgen with no registered item-drops (loot=no); uses vanilla/modded block palettes to build ambient ruins and altars. One template_editor tool is author-only, not player-facing. The briefing's loot-seed candidate path requires loot=yes; that applies to the structures themselves if given loot tables, not to Formations as the generator. No coherent 2nd anchor without seeding loot tables — which is a datapack action on the structures, not a weave of the mod.
