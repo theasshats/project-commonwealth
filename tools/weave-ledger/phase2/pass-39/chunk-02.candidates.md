@@ -139,6 +139,19 @@ Power-read: everyday decoration blocks. Any Create crush weave would be M-04 (lo
 
 LEAVE — pending a coordinated wholesale deco-crush pass (M-04). No single-mod accept here.
 
+## solmaiddream   [anchors: survival (1)]
+
+"Spice of Life: Maids' Dream" — a Touhou Little Maid addon that tracks unique foods fed to maids and grants permanent stat growth at milestones. Single item: food_book. No processing methods. Hard dep on touhou_little_maid.
+
+Power-read: niche flavor addon — the mechanic (maid diet tracking) is entirely driven by whatever foods the pack provides; solmaiddream adds no food pool of its own. The food_book is everyday (informational item, no crafting complexity needed).
+
+- from: solmaiddream food_book | via: supplementaries:antique_book | to: survival | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: supplementaries:antique_book wraps written books with cover art — the food_book is a functional inspect item, not a lore book; the antique wrapping adds no gameplay link and belongs to no accepted motif. No weave.
+
+- from: solmaiddream maid-diet milestone stat growth (maid gains hearts/armor) | via: survival pressure — maid as companion combat unit | to: survival | motif: M-26 | power: mid | tone: ok | verdict: REJECT | reason: the maid-stat-growth mechanic is already survival-anchored (diet variety/food demand). Trying to weave the stat side into M-26 would duplicate the existing anchor, not add a new system.
+
+LEAVE — the mod's only content hook is the food pool of the wider pack (which it rides as a passenger); forcing a second anchor would be artificial. Stays at 1 anchor (survival flavor); the maid's diet mechanic is its own closed loop. Dossier assessment correct.
+
+
 
 
 

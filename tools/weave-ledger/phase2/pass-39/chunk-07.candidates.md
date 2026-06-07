@@ -63,3 +63,6 @@
 
 ## moreoverlays   [anchors: support/QoL-client (1)]
 - LEAVE — client-side HUD overlay (light-level marker, chunk grid, JEI-search dim); zero items, no methods, no loot tables. Sanctioned support anchor; nothing to route through any method.
+
+## timm   [anchors: support/QoL-client (1)]
+- LEAVE — client-side biome/dimension title display; zero items, no methods, no loot tables. Sanctioned support anchor; nothing to route through any method. (It pairs with Terralith to announce new biomes, reinforcing regional identity — an indirect scarcity-legibility contribution, but not a recipe weave.)

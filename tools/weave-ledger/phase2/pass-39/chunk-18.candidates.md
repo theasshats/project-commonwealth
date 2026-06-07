@@ -86,6 +86,55 @@ Power-read: Zero blocks, zero items, loot=no. A Kotlin developer-framework libra
 
 - LEAVE — genuine zero-content code library (Kotlin dev framework); nothing to weave by definition.
 
+## drones   [anchors: aeronautics (1)]
+
+Power-read: 6 blocks, 7 items, loot=yes. A personal quadcopter mod: assemble a miniature drone from blocks on a Frame next to a Controller; pack it into a `pocket_drone` item, equip it, and it provides abilities based on what blocks you built it from. Rotor tiers: wood (light) → iron (mid) → ion_thruster (endgame). Controller and frame are the assembly hub. Drill block = assists mining; lodestone = item-pickup magnet; beacon = attack enemies. The "ability block" body design means ANY mod's functional block can be incorporated as a drone body part.
+
+The dossier notes Create materials as natural sinks for rotors/thruster/controller (brass, precision parts) and mentions M-06/M-05 for gating better tiers behind Create fabrication. The M-09 luxury sell link in the dossier is retired — ignore it.
+
+**Method-pull analysis:**
+
+**A. Rotors / ion thruster — Create production gating (M-05 / M-06)**
+- `drones:wood_rotor`: everyday tier, wood + iron crafting table. Fine unmodified — it's a starter tier.
+- `drones:iron_rotor`: mid tier. Create-press → iron sheet → rotor sub-assembly is a natural M-03/M-05 step. One processing step fits mid-tier depth.
+- `drones:ion_thruster`: endgame / flagship. The ion thruster is the top-tier propulsion for heavy or fast drones — this is the right item for a multi-step sequenced-assembly chain (M-06). Fitting inputs: brass/electron tubes (Create-native), a precision mechanism, an `occultism:spirit_solution` or `create_new_age:energised_component` for the "ion" energy element, and a netherite plate as a mass anchor. Theme-fit: "ion" implies electrical/energetic fabrication, which maps to Create New Age's energising method (M-17 — electric charging bridge). Survives red-team: a player would nod — "of course an ion thruster is a high-end Create build, not a vanilla craft." ACCEPT.
+- `drones:controller` (assembly controller): mid-tier hub item. A Create-milling or mechanical_crafting recipe for the controller is a sensible one-step gating (M-05). Survives red-team. ACCEPT (light, single-step — not sequenced-assembly level).
+
+**B. Ability-block body — seasonal/magic pull (M-16 / M-10)**
+- The "ability block" design means a drone's *body* can incorporate a magic-origin block (e.g. an Ars Nouveau sourcelink block, or an Occultism ritual block fragment), turning the drone into a magic-enhanced device. Red-team: the connection is thematically plausible but mechanically loose — the mod doesn't register any recipe type, so a "magic body" drone is a player-behavior thing, not a method-routing weave. Nothing to author as a Phase-3 recipe here. No formal motif fits without authoring a new one. REJECT — no-motif, not a Phase-3 recipe action (it's player-behavior, not a method-routing).
+
+**C. Pocket drone as logistics arm item (M-31)**
+- A drill-equipped drone assists mining and item pickup autonomously. This IS the logistics arm: a drone carrying bulk goods or performing auto-logistics around a base is exactly the aeronautics-as-distribution concept. The current anchor is already aeronautics — this weave doesn't ADD a second anchor, it reinforces the first. Still worth flagging as the loop-narrative for the aeronautics anchor (the drone IS the "low-altitude logistics" node, not a flight toy), but it doesn't add a new system. NOT a new anchor candidate — just confirmation the aeronautics anchor is the right one.
+
+**D. Colony supply route (M-28)**
+- A drone built to auto-harvest or carry goods could be "unlocked" via MineColonies research (the Mechanic or Engineer hut researching "drone fabrication"). Theme-fit: MineColonies already has mechanical production routes; a personal drone as a colony research unlock is coherent. Red-team: the drone's current recipe is in-world multiblock assembly (not a KubeJS recipe gate), so "locking" it behind colony research is a progression design that cuts across the in-world build mechanic. It's possible but architecturally ambiguous — the Phase-3 action would be a KubeJS recipe-gate on the Controller or a colony research lock on the ion thruster. The connection is real (a colony's engineering department would plausibly research drone fab), and the motif is M-28. Mid-to-endgame depth fits. Survives red-team. ACCEPT (flagged for Phase-3 as a progression lock on ion thruster or controller via MineColonies research, not a recipe replacement).
+
+**E. Boss-drop component (M-15)**
+- The ion thruster or optical sensor could require a boss-drop key component — e.g. a wither/cataclysm boss shard as the ionization catalyst. Theme-fit: a device that fires ion bursts having a dangerous origin material is coherent. Red-team: the boss route already covers many high-tier gates; adding another "boss drop required for drone thruster" has to be earned — the question is whether the drone thruster is iconic enough to deserve a dedicated boss-key slot vs. just being another Create-chain item. Given that the drone is a flagship personal-automation item (not mass-production), a boss-key input at the ion tier is plausible, especially if it reinforces the dual-role of bosses (pressure + production route). ACCEPT, but lower confidence — needs a specific boss thematically linked (an Ender-side boss for "ion" tech flavor seems most coherent; to be decided at Phase 3).
+
+**F. Loot table seeding (loot=yes)**
+- The dossier shows loot=yes. The mod has loot tables — likely dropped controller/parts from mobs or structures. Could seed in weave-relevant items: an economy-critical component (Numismatics coin for M-08 doesn't apply — that's a player-minted medium), or a magic reagent (e.g. an ars_nouveau source_gem shard or an occultism spirit solution fragment). Red-team: seeding a magic reagent into drone loot tables is coherent if the drone is imagined as "salvaged tech from dangerous places." But the loot=yes here is most likely the controller/frame dropping on mob kill (the Buddy Drone mod drops items when killed), not a structure loot table. Without a confirmed structure loot table, loot-seed is lower-value. REJECT — seeding magic reagents into a personal-device drop table is thematically strained; prioritize the recipe-chain weaves above.
+
+**Existing connections:** Only 1 anchor (aeronautics). No existing cross-system connections to flag REWORK on.
+
+Summary for drones:
+- ACCEPT: ion thruster via create:sequenced_assembly + create_new_age:energising (M-06/M-17) — endgame Create gate, aeronautics→Create, deep multi-step
+- ACCEPT: controller via create:mechanical_crafting (M-05) — mid-tier native-method gate, aeronautics→Create, one light step
+- ACCEPT: iron_rotor via create:pressing (M-03/M-05) — mid-tier ore-doubling/processing pull, aeronautics→Create, one light step
+- ACCEPT: ion thruster or controller via MineColonies research lock (M-28) — colony progression gate, aeronautics→economy
+- ACCEPT (low confidence): ion thruster requires boss-drop input (M-15) — survival/danger→aeronautics/Create; specific boss TBD
+- REJECT: ability-block body incorporating magic blocks as a magic weave — no-motif; player behavior, not method-routing
+- REJECT: pocket drone loot-seed with magic reagents — tone strained; no confirmed structure loot
+
+from: drones:iron_rotor | via: create:pressing | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: iron rotors aren't raw-crafted — a Create press stamps the flight surfaces, adding appropriate material depth to a mid-tier component
+from: drones:controller | via: create:mechanical_crafting | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: the drone assembly controller is a precision device; mechanical crafting for brass/electron-tube assembly reads naturally for mid-tier
+from: drones:ion_thruster | via: create:sequenced_assembly + create_new_age:energising | to: create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: an ion thruster demands multi-stage fabrication through Create — charged precision parts, an energised core — not a simple craft; the flagship drone tier earns its depth
+from: drones:ion_thruster | via: minecolonies research lock | to: economy | motif: M-28 | power: endgame | tone: ok | verdict: ACCEPT | hook: a colony's Engineering hut researches drone fabrication — without that research, the thruster recipe is locked; makes the colony route the non-boss path to top-tier personal flight
+from: drones:ion_thruster | via: boss-drop input component | to: survival | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: ion propulsion needs a volatile catalyst only recoverable from a high-tier boss; the fighter's path to elite drone tier
+from: drones:pocket_drone (ability blocks from magic mods) | via: ars_nouveau:imbuement or occultism:ritual | to: magic | motif: no-motif | power: mid | tone: ok | verdict: REJECT | reason: the "magic block in drone body" is player-behavior, not a method-routing weave; no authoring target exists for Phase 3 without inventing a new mechanic
+from: drones (loot tables) | via: loot-seed | to: magic | motif: M-02 | power: mid | tone: clash | verdict: REJECT | reason: loot=yes is most likely mob-item drop (killed drone), not a structure loot table; seeding magic reagents into a personal-device drop is thematically strained; the recipe-chain weaves above are higher value
+
+
 
 
 

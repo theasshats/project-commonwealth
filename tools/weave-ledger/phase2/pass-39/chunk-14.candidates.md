@@ -112,4 +112,14 @@ REWORK: OK — single Create anchor is appropriate. The survival weave above (M-
 
 - LEAVE — genuine zero-content code library: 0 blocks, 0 items, no loot. UI/config/networking framework for dependent mods. No player-facing surface.
 
+## gamediscs   [anchors: survival / curated novelty (1)]
+
+**Method-pull:** The mod has 13 items: a Gaming Console, 7 game discs, and 5 component parts (battery, control_pad, display, processor, redstone_circuit). Discs are obtained by a specific kill condition (skeleton kills bee/slime/frog/rabbit). The console is assembled from the components. This is self-contained novelty — loot=no, no registered recipe types.
+
+- from: gamediscs:processor / gamediscs:redstone_circuit | via: create:mechanical_crafting or create:sequenced_assembly | to: Create | motif: M-05 | power: everyday | tone: ok | verdict: REJECT | reason: the mod's theme is deliberately retro-arcade whimsy; gating a toy console's parts behind Create machinery would feel mismatched — you're not building a computer, you're crafting a plastic gadget. M-05 is for gating a mod's *flagship* item behind Create as a depth mechanism; a toy console is not a flagship item in the loop's terms. The dossier already flags this as WEAK. Records as rejected.
+
+- from: gamediscs game discs (mob-kill drops) | via: occultism:spirit_fire | to: magic | motif: M-11 | power: everyday | tone: clash | verdict: REJECT | reason: a retro game disc has zero magical identity; transmuting a "Pong disc" into a spirit essence is thematically absurd. The clash is decisive.
+
+- LEAVE (for weaving purposes) — the novelty framing is correct; this mod earns its place as curated downtime content for a ~10-player co-op group. No coherent 2nd anchor weave exists that survives a theme-fit check. The dossier's recommendation to leave is sound.
+
 
