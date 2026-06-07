@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "tag": "aeronautics_dyeable_components:small_tires"
+        },
+        {
+            "item": "minecraft:light_blue_dye"
+        }
+    ],
+    "result": {
+        "count": 1,
+        "id": "aeronautics_dyeable_components:light_blue_small_tire"
+    }
+}

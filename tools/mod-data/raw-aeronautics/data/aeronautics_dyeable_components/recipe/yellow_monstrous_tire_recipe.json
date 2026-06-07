@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "tag": "aeronautics_dyeable_components:monstrous_tires"
+        },
+        {
+            "item": "minecraft:yellow_dye"
+        }
+    ],
+    "result": {
+        "count": 1,
+        "id": "aeronautics_dyeable_components:yellow_monstrous_tire"
+    }
+}

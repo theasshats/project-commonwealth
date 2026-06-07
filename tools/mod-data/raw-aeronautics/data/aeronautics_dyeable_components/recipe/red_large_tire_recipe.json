@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "tag": "aeronautics_dyeable_components:large_tires"
+        },
+        {
+            "item": "minecraft:red_dye"
+        }
+    ],
+    "result": {
+        "count": 1,
+        "id": "aeronautics_dyeable_components:red_large_tire"
+    }
+}

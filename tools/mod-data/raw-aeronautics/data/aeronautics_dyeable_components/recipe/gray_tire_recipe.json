@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "tag": "aeronautics_dyeable_components:normal_tires"
+        },
+        {
+            "item": "minecraft:gray_dye"
+        }
+    ],
+    "result": {
+        "count": 1,
+        "id": "aeronautics_dyeable_components:gray_tire"
+    }
+}
