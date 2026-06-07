@@ -53,6 +53,37 @@ New candidates via method-pull:
 
 - from: create_sa:brass_exoskeleton_chestplate (strength/haste aura) | via: create_new_age:energising | to: create | motif: M-17 | power: mid | tone: ok | verdict: ACCEPT | hook: The exoskeleton's aura is mechanical muscle — charging it through Create New Age's energising station (FE charge → boosted aura duration/intensity) threads the electric tier into the wearable-tech line, making Create's electrical sub-system a required upgrade step for the exo's best performance.
 
+## create_central_kitchen   [anchors: create/survival (2)]
+
+A Create↔FarmersDelight/ExtraDelight bridge mod with no items/blocks of its own (0 registered). Automates cooking via Packager/Mechanical Arm; adds sequenced-assembly food recipes. Pure recipe/integration layer.
+
+Existing anchors REWORK check:
+REWORK: Create anchor — OK. The mod's entire purpose is routing food-processing through Create automation (Packager, Mechanical Arm, sequenced-assembly sandwich/pie chains). Coherent.
+REWORK: Survival anchor — OK. It feeds finished dishes / survival foods out of Create machinery, directly closing the loop from food production into survival pressure. Sound.
+
+New candidates via method-pull:
+
+- from: create_central_kitchen sequenced-assembly feast/dish (finished dishes) | via: farmersdelight:food_serving / economy demand | to: economy | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: Automated Create kitchens produce surplus feast-food — framing finished dishes as consumable upkeep for MineColonies workers/colony population (food consumed to sustain the settlement) gives the kitchen's output a sustained consumption-sink demand. A colony specialist buys feasts from the kitchen specialist; the loop turns. M-26 (consumption against pressure/upkeep).
+
+- from: create_central_kitchen blaze_stove (requires Blaze to operate) | via: survival/danger → combat-route supply | to: survival/economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: The Blaze Stove is powered by a live Blaze — a combat player must supply blaze rods/blazes from Nether runs to keep the kitchen running at 4x speed. This makes the combat-route supply (M-34) directly feed Create's automated kitchen, creating cross-specialist dependency: kitchen operator buys blaze fuel from a Nether runner.
+
+- from: create_central_kitchen finished fluids (ice cream / sauce / drink) | via: numismatics / economy | to: economy | motif: M-26 | power: mid | tone: ok | verdict: REJECT | reason: bare "finished dishes are sellable luxury goods" is M-09 (retired) territory — the ambient endpoint of the loop, not a weave. The M-26 colony-upkeep angle above is stronger and already accepted; a duplicate sell-link adds nothing.
+
+## revelationary   [anchors: support (1)]
+
+A progression-gating library — no items, no blocks, no loot, no methods. Gates block visibility behind advancements via a datapack API. Pure code infrastructure; other mods (Occultism otherworld blocks) hook it.
+
+LEAVE — genuine zero-content code library. No items, no methods, no loot tables, no materials. The reveal/disguise mechanic enables M-05 (native-method gating) in its dependent mods, but revelationary itself has nothing to route through any method palette entry.
+
+## smartbrainlib   [anchors: support/library (1)]
+
+Developer AI framework — no items, no blocks, no loot, no methods, no player-facing content. A code-only Brain/AI system consumed by mob mods (Alex's Mobs, Naturalist).
+
+LEAVE — genuine zero-content code library/API. No items, no methods, no loot. The smarter mob AI it enables is a precondition for other mods' mob drops (which those mods' dossiers handle), but smartbrainlib itself is a pure dependency with nothing to route.
+
+
+
+
 
 
 

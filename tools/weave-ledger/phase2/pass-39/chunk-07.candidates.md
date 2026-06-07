@@ -24,3 +24,15 @@
 - from: Stoneholm villager trades | via: loot-seed / trade-table edit | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: Stoneholm merchants offer colony-exclusive goods only accessible via MineColonies production, seating underground villages as economy waypoints that reward regional exploration over self-sufficiency
 - from: underground village as economy node | via: M-09 (retired) Numismatics sell | to: economy | motif: M-09 (retired) | power: — | tone: — | verdict: REJECT | reason: M-09 retired; bare "villagers sell things for coin" is an NPC coin faucet (M-21 cut too); redirect to M-33 service framing (villagers require specific goods to trade, not just give coin)
 - REWORK: dossier 2nd-anchor candidate cites M-09 (Numismatics trade = NPC faucet) — retired; replace with M-02 loot-seed + M-33 service-for-hire (villagers need goods, don't hand out coin).
+
+## particlerain   [anchors: support/client-atmosphere (1)]
+- LEAVE — client-side rendering mod; zero items, no methods, no loot tables. Visual weather particles only; nothing to route through any method. Sanctioned support anchor (atmosphere) requires no weave.
+
+## bookshelf   [anchors: support/library (1)]
+- LEAVE — genuine zero-content code library (Darkhax utility framework); no items, no methods, no loot tables. Sanctioned support anchor; no weave possible or needed.
+
+## sound_physics_remastered   [anchors: support/client-immersion (1)]
+- LEAVE — client-only audio simulation; zero items, no methods, no loot tables. Nothing to route through any method; sanctioned support anchor requires no weave.
+
+## kubejs_create   [anchors: support/modpack-tooling (1)]
+- LEAVE — scripting bridge exposing Create's recipe-types to KubeJS scripts; it is the tool that *builds* weaves, not a weave target itself. Zero items, no in-game methods, no loot tables. Sanctioned support anchor requires no weave.

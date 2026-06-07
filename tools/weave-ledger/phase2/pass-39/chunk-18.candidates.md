@@ -37,6 +37,29 @@ Power-read: Zero blocks, zero items, loot=no. A Kotlin language adapter (KotlinL
 
 - LEAVE — genuine zero-content code library (language runtime adapter); nothing to weave by definition.
 
+## createshufflefilter   [anchors: Create (1)]
+
+Power-read: Two items — `shuffle_filter` and `weighted_shuffle_filter`. Filter items slotted into Create Deployers/rollers to randomize which block/item is placed. No loot table, no loot=yes. Their own recipes are vanilla crafting table. Everyday tier — a small utility accessory for Create automation builders.
+
+Candidates examined:
+
+A. Via method-pull: what methods WANT a randomized-placement filter?
+   - `create:deploying` is the primary consumer — shuffle_filter slots into Deployers. The filter itself is just a controller item; it doesn't get "produced" by any method. The gap is whether the filter *item* can be woven as a craftable output of another system.
+   - Could `createshufflefilter:shuffle_filter` be a *sellable crafted specialty tool* for colony/economy routing? Red-team: it's a cheap, two-ingredient crafting-table item (likely iron + a filter base). Treating a basic QoL filter as an economy good forces it. M-09 is retired; bare sell links are rejected. REJECT.
+   - Could the weighted variant be an ars_nouveau imbuement (imbue a shuffle_filter with weight logic via a source-gem step)? Red-team: thematically clashing — a probabilistic filter is a mechanical concept, not a magical one. The imbuement step would be arbitrary. REJECT — tone clash.
+   - Could Create-side methods produce the *weighted* variant (e.g., `create:pressing` or `create:sequenced_assembly` for precision weighting)? Power-read: the weighted filter is everyday-to-mid tier at best (just a more precise version of the same filter). The BRIEFING guardrail says don't gate basics behind complex recipes. The items are trivially craftable QoL items, not endgame outputs. A multi-step Create production chain for what is essentially "a better filter" would over-engineer a minor accessory. REJECT — depth doesn't scale with power here; the item isn't worth a complex chain.
+
+B. Thematic adjacency: does randomized placement connect to any system naturally?
+   - Randomized Deployer placement could enable automated building of varied structures (roads, walls, deco), which connects to the aeronautics/logistics arm (building landing pads, decking ships). But this is a *player behavior* (how they use the tool), not a cross-system weave.
+   - The weighted variant could let a player automate crop/seed variety placement seasonally — touching survival's seasonal layer. But again, this is player-use behavior, not a method-routing weave.
+
+No coherent motif fits. The items are too simple (everyday, cheap crafting-table items) and too narrow in function to anchor to a second system via method-pull without forcing an arbitrary edge. The single Create anchor (it's a Create filter accessory) is sufficient and honest.
+
+- from: createshufflefilter:weighted_shuffle_filter | via: create:sequenced_assembly | to: create | motif: M-06 | power: everyday | tone: clash | verdict: REJECT | reason: everyday/cheap QoL item; gating a basic filter behind sequenced-assembly violates the depth-scales-with-power guardrail; the item isn't a flagship output.
+- from: createshufflefilter:shuffle_filter | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: everyday | tone: clash | verdict: REJECT | reason: tone clash — a probabilistic mechanical filter gaining "magic weighting" is incoherent; the items are industrial, not arcane.
+- LEAVE (2nd anchor) — no coherent weave survives red-team; Create anchor stands alone for a pure-Create QoL utility item.
+
+
 
 
 

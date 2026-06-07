@@ -50,3 +50,25 @@ OK — connections sound via rechiseledcreate (the companion mod that is the exp
 
 - LEAVE — pure client rendering/resource-pack engine (ETF). Zero blocks, zero items, no world content; OptiFine-format random/emissive texture support only. Sanctioned support role; no weave possible.
 
+## cmpackagecouriers   [anchors: create, aeronautics (2)]
+
+Already at 2 anchors. Evaluate for new angles and existing connection quality.
+
+Power read: cardboard_plane is a mid-tier autonomous courier (requires Create packages + chunkloaded base); the location_transmitter + portable_stock_ticker are the logistics infrastructure items. This is logistics automation, no material processing of its own.
+
+- from: cmpackagecouriers:cardboard_plane | via: create:cutting + create:deploying (already inbound) | to: economy | motif: M-31 | power: mid | tone: ok — the cardboard plane physically moves packages cross-base; at trade scale (player→player goods delivery) it IS the logistics-required bulk-good transport arm; M-31 (logistics-required bulk good) fires when the plane is the distribution method for player-traded goods rather than just personal transport | verdict: ACCEPT | hook: a player-run courier route between colonies is only viable at scale with automated planes — trading bulk goods across the map requires the air courier network
+
+- from: cmpackagecouriers:portable_stock_ticker (remote order placement) | via: economy tooling (Trading Floor / Numismatics order integration) | to: economy | motif: M-33 | power: mid | tone: ok — placing a remote purchase order from a distant outpost while someone else fulfills it IS the service-for-hire model (someone ships goods on request); the stock ticker is the player-economy interface enabling this labor model | verdict: ACCEPT | hook: a courier player offers "order and deliver" service: you ticker-request goods from the field, they ship them — a live trade facilitated by the courier infrastructure
+
+- from: cmpackagecouriers logistics arm | via: bare 'remote trade fulfillment' framing | to: economy | motif: no-motif | power: mid | tone: n/a | verdict: REJECT | reason: "it supports remote trade" is ambient economy flavor without a gating mechanism; the accepted M-31 and M-33 framings above are the correct mechanism-specific forms
+
+OK — existing Create + aeronautics connections are sound (built via create:cutting + create:deploying, moves packages by air). Two new economy-arm links above elevate it to 3 anchors (Create/aeronautics/economy) — fitting, as a courier IS the economy's logistics arm in motion.
+
+## midnightthoughts   [anchors: survival/rest (1)]
+
+Power read: purely a well-rested buff from sleeping; no items, no blocks, no materials. The dossier correctly notes no material join-key for a 2nd pillar.
+
+- from: well-rested buff | via: config tie to Cold Sweat / Serene Seasons (thematic synergy) | to: survival | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: a buff-from-sleeping mechanic that pairs thematically with the temperature/seasons survival stack has no material surface to route through any method; "it makes cold nights feel bad if you skip sleep" is ambient flavor, not a weave against a method. No motif exists for a behavior-only effect pairing.
+
+- LEAVE — zero items/blocks, behavior-only rest/buff mod. No material surface to weave; thematic synergy with Cold Sweat/Serene Seasons is ambient, not a method-routing. Genuine zero-content surface.
+

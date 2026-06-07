@@ -36,4 +36,18 @@ REWORK: dossier's 2nd-anchor candidate cited M-09 ("luxury good → coin") which
 
 - LEAVE — zero content surface: no items, no recipes, no loot tables. Client-side inventory sorting and slot-locking UI only. Already handled in CLAUDE.md as a texture-override case (the IPN arrow fix). No weave is possible or desirable.
 
+## create_ironworks   [anchors: Create (1)]
+
+**Method-pull:** The mod outputs a full metal-vocabulary (tin, bronze, steel ingots/plates/nuggets/storage blocks, armor, tools) via Create methods. Its 44 c:tags make it a natural join key for any metal-consuming method. Already well-anchored to Create; the dossier correctly identifies the two main candidates.
+
+- from: create_ironworks:tin_ingot / create_ironworks:steel_ingot | via: create:pressing → numismatics mint | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: tin is a genuinely scarce new regional ore — crushing → alloying → pressing into a Numismatics denomination (a "tin spur" or equivalent) makes the minting step itself a Create specialization; the scarcity of tin ore (3 biome-modifiers, not ubiquitous) means only tin-region players can mint it, enforcing regional economic roles
+
+- from: create_ironworks:steel_plate | via: aeronautics construction recipe | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: steel plate is the archetypal structural metal — requiring it as an airframe ingredient for mid-tier Aeronautics hulls is exactly what M-23 was made for; steel plate is earned (Create alloy chain: ore → crushed → mixed → steel → pressed plate), so airframes cost real fabricated material rather than raw iron; scales with ship tier
+
+- from: create_ironworks:bronze_ingot / bronze_armor | via: occultism:ritual or ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: clash | verdict: REJECT | reason: bronze is an industrial alloy, not a magical material; imbuing a bronze ingot into a magic reagent has no player-nod — there's no folkloric or thematic bridge between tin/copper alloys and arcane infusion in this pack's palette (tin/bronze → magic is the wrong flavor pairing). The Create → aeronautics and economy links are the coherent routes.
+
+- from: create_ironworks:tin_ingot (regional ore) | via: worldgen-scarcity constraint | to: economy | motif: M-30 | power: everyday | tone: ok | verdict: ACCEPT | hook: tin ore is seeded by 3 biome-modifiers (not a universal spawn), making tin — and by extension bronze and the tin-mint coin — a region-locked good that must be traded across regions to reach players who lack it; the scarcity is already built into the worldgen, this weave surfaces it as a named trade dependency
+
+REWORK: OK — existing Create anchor is sound and dossier candidates are well-aimed. The M-08 candidate in the dossier is correct (and accepted here). The "survival/worldgen" note in the dossier is better framed as M-30 (regional scarcity gate) than as a standalone survival weave, which the ACCEPT above does.
+
 

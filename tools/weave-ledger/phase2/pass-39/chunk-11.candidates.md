@@ -29,6 +29,14 @@ OK — Create anchor is sound. The survival M-26 consumption link above complete
 ## packetfixer   [anchors: support/compat (1)]
 - LEAVE — pure network packet-size fix; no items, blocks, loot, or methods. Genuine zero-content compatibility mod; sanctioned support role. Nothing to route.
 
+## create_integrated_farming   [anchors: create, survival (2)]
+- from: roost products (eggs, feathers, meat) — steady passive output | via: farmersdelight:cooking | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: a colony-contracted poultry farm (roost array driven by Create automation) produces bulk eggs/feathers cheaper than individual hunting — the colony route for protein/feathers makes the farming specialist the supply node for the cooking trade web; roost output is a colony-deliverable input (cheaper basics via colony = M-28).
+- from: fishing_net catches (fish/aquatic drops) | via: create:crushing | to: create | motif: M-32 | power: everyday | tone: ok | verdict: REJECT | reason: fish crushing is already covered by vanilla/FarmersDelight cutting; adding create:crushing on top is redundant depth for an everyday item. The fishing net's output is food/bait — it belongs in the food chain, not a Create processing chain. M-32 (byproduct→input) works here only if fish byproducts (bones, scales) feed another machine's recipe — plausible but the dossier doesn't confirm the net drops materials that have Create uses yet. Flag as weak.
+- from: lava_fishing_net (lava catches — magma cream / blaze rod / fire charge) | via: create:mixing or tfmg methods | to: create | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: lava fishing outputs fire-adjacent drops (blaze rods, magma cream) that Create's mixing or TFMG's hot_blast/industrial_blasting can consume as processing inputs — magma cream into a Create or TFMG recipe, blaze rods ground for fuel. The lava net is the automated fishing arm for Nether materials; its outputs slot naturally into the tech/smelting chain.
+- from: poultry products (feathers) | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: everyday | tone: ok | verdict: REJECT | reason: feathers as a magic infusion input are thematically weak — feathers are a vanilla commodity, not a special material needing arcane refinement. Arcane infusion (M-10) is intended for non-basic components; feathers are everyday. Violates the "don't gate basics behind complex recipe" rule.
+OK — Create + survival anchors are sound. The M-28 colony route (roost→colony bulk supply) and M-12 lava-net→tech-chain are the additions; lava net especially advances the loop (Nether-sourced material into tech production).
+
+
 
 
 
