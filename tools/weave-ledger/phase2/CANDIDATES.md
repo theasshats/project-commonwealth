@@ -1,309 +1,324 @@
 # Phase 2.x — master candidate table (convergence accumulator)
 
-_Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass-02, pass-03, pass-04, pass-05, pass-06, pass-07, pass-08, pass-09, pass-10, pass-11, pass-12, pass-13, pass-14, pass-15, pass-16, pass-17, pass-18, pass-19, pass-20, pass-21, pass-22, pass-23, pass-24, pass-25, pass-26, pass-27, pass-28, pass-29, pass-30, pass-31, pass-32, pass-33, pass-34, pass-35, pass-36. `times` = how many independent passes proposed this candidate (confidence); `opus` = an Opus run also proposed it. Re-run after every pass._
+_Built by `scripts/phase2-merge.py` over **38 pass(es)**: pass-00, pass-01, pass-02, pass-03, pass-04, pass-05, pass-06, pass-07, pass-08, pass-09, pass-10, pass-11, pass-12, pass-13, pass-14, pass-15, pass-16, pass-17, pass-18, pass-19, pass-20, pass-21, pass-22, pass-23, pass-24, pass-25, pass-26, pass-27, pass-28, pass-29, pass-30, pass-31, pass-32, pass-33, pass-34, pass-35, pass-36, pass-37. `times` = how many independent passes proposed this candidate (confidence); `opus` = an Opus run also proposed it. Re-run after every pass._
 
-**5448 live candidates** (deduped on mod + item + pillar + motif). _Excludes 62 candidate(s) for 4 cut mod(s) (build-dossiers `CUT_NS`)._ _Quarantines 884 dead-motif row(s) (M-09 retired, M-14/M-21 cut, #163/#240) to `CANDIDATES-dead-motifs.tsv`._
+**5676 live candidates** (deduped on mod + item + pillar + motif). _Excludes 62 candidate(s) for 4 cut mod(s) (build-dossiers `CUT_NS`)._ _Quarantines 889 dead-motif row(s) (M-09 retired, M-14/M-21 cut, #163/#240) to `CANDIDATES-dead-motifs.tsv`._
 
 | times | opus | mod | from → | via (method) | pillar | motif | consensus |
 |--:|:--:|---|---|---|---|---|---|
-| 34 | ✓ | `deeperdarker` | deeperdarker:soul_dust / soul_crystal (Othersi | occultism:spirit_fire | magic | M-11 | ACCEPT |
-| 34 | ✓ | `expandeddelight` | expandeddelight:salt_ore / deepslate_salt_ore | create:crushing | create | M-03 | ACCEPT |
-| 33 | ✓ | `cold_sweat` | cold_sweat:hearth (the multiblock climate-cont | create:mechanical_crafting (gate i | create | M-05 | ACCEPT |
-| 33 |  | `dynamictreesplus` | dynamictreesplus:saguaro_fruit | create:milling | create | M-12 | ACCEPT |
+| 35 | ✓ | `deeperdarker` | deeperdarker:soul_dust / soul_crystal (Othersi | occultism:spirit_fire | magic | M-11 | ACCEPT |
+| 35 | ✓ | `expandeddelight` | expandeddelight:salt_ore / deepslate_salt_ore | create:crushing | create | M-03 | ACCEPT |
+| 34 | ✓ | `cold_sweat` | cold_sweat:hearth (the multiblock climate-cont | create:mechanical_crafting (gate i | create | M-05 | ACCEPT |
+| 34 |  | `dynamictreesplus` | dynamictreesplus:saguaro_fruit | create:milling | create | M-12 | ACCEPT |
+| 34 | ✓ | `tfmg` | tfmg:diesel / tfmg:gasoline / tfmg:lpg (TFMG d | TFMG combustion engine → Aeronauti | aeronautics | M-13 | ACCEPT |
+| 33 |  | `enhancedcelestials` | enhancedcelestials:meteor | create:crushing | create | M-04 | ACCEPT |
 | 33 | ✓ | `farm_and_charm` | farm_and_charm:barley / oat (grains) | create:milling | create | M-12 | ACCEPT |
-| 33 | ✓ | `tfmg` | tfmg:diesel / tfmg:gasoline / tfmg:lpg (TFMG d | TFMG combustion engine → Aeronauti | aeronautics | M-13 | ACCEPT |
-| 32 |  | `enhancedcelestials` | enhancedcelestials:meteor | create:crushing | create | M-04 | ACCEPT |
-| 30 | ✓ | `undergroundworlds` | undergroundworlds:spider_fang (Black Recluse d | occultism:spirit_fire | magic | M-11 | ACCEPT |
-| 29 |  | `cookingforblockheads` | cookingforblockheads:oven / cookingforblockhea | create:mechanical_crafting (gate e | create | M-05 | ACCEPT |
-| 28 |  | `endrem` | endrem:undead_eye | occultism:ritual (wither skeleton  | magic | M-11 | ACCEPT |
-| 28 | ✓ | `friendsandfoes` | friendsandfoes:crab_claw | ars_nouveau:imbuement OR occultism | magic | M-02 | ACCEPT |
-| 28 |  | `immersive_armors` | immersive_armors:heavy_chestplate set (Heavy / | create:pressing (plates) + create: | create | M-05 | ACCEPT |
+| 31 | ✓ | `undergroundworlds` | undergroundworlds:spider_fang (Black Recluse d | occultism:spirit_fire | magic | M-11 | ACCEPT |
+| 30 |  | `cookingforblockheads` | cookingforblockheads:oven / cookingforblockhea | create:mechanical_crafting (gate e | create | M-05 | ACCEPT |
+| 29 |  | `endrem` | endrem:undead_eye | occultism:ritual (wither skeleton  | magic | M-11 | ACCEPT |
+| 29 | ✓ | `friendsandfoes` | friendsandfoes:crab_claw | ars_nouveau:imbuement OR occultism | magic | M-02 | ACCEPT |
+| 29 |  | `immersive_armors` | immersive_armors:heavy_chestplate set (Heavy / | create:pressing (plates) + create: | create | M-05 | ACCEPT |
 | 27 |  | `brazil_legends` | brazil_legends:capelobo_claw | occultism:spirit_fire | magic | M-11 | ACCEPT |
-| 26 | ✓ | `createaddition` | createaddition:charging method + createadditio | createaddition:charging → irons_sp | magic | M-17 | ACCEPT |
-| 26 |  | `rottencreatures` | rottencreatures:frozen_rotten_flesh (Frostbitt | occultism:spirit_fire | magic | M-11 | ACCEPT |
-| 25 |  | `drones` | drones:ion_thruster | create:sequenced_assembly | create | M-06 | ACCEPT |
+| 27 | ✓ | `createaddition` | createaddition:charging method + createadditio | createaddition:charging → irons_sp | magic | M-17 | ACCEPT |
+| 27 |  | `rottencreatures` | rottencreatures:frozen_rotten_flesh (Frostbitt | occultism:spirit_fire | magic | M-11 | ACCEPT |
+| 26 |  | `drones` | drones:ion_thruster | create:sequenced_assembly | create | M-06 | ACCEPT |
+| 25 |  | `companions` | companions:crystallized_blood (Soul Furnace ou | occultism:spirit_fire or occultism | magic | M-11 | ACCEPT |
+| 25 | ✓ | `enhancedcelestials` | Blood/Harvest/Blue Moon event state (no item) | any recipe-type method | magic | M-22 | ACCEPT |
 | 25 |  | `expandeddelight` | expandeddelight:cinnamon (c:dusts/cinnamon) | create:milling | create | M-12 | ACCEPT |
-| 24 |  | `companions` | companions:crystallized_blood (Soul Furnace ou | occultism:spirit_fire or occultism | magic | M-11 | ACCEPT |
-| 24 | ✓ | `enhancedcelestials` | Blood/Harvest/Blue Moon event state (no item) | any recipe-type method | magic | M-22 | ACCEPT |
-| 24 |  | `illagerinvasion` | illagerinvasion:platinum_chunk (Invoker/illage | `create:crushing` → platinum ingot | create | M-03 | ACCEPT |
+| 25 |  | `illagerinvasion` | illagerinvasion:platinum_chunk (Invoker/illage | `create:crushing` → platinum ingot | create | M-03 | ACCEPT |
+| 24 |  | `brazil_legends` | brazil_legends:amber_shard | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
+| 24 |  | `dynamictreesplus` | dynamictreesplus:brown_mushroom_cap / red_mush | farmersdelight:cutting | create | M-12 | ACCEPT |
+| 24 |  | `illagerinvasion` | illagerinvasion:hallowed_gem (Invoker boss dro | `ars_nouveau:imbuement` as an arca | magic | M-02 | ACCEPT |
 | 24 |  | `immersive_armors` | immersive_armors:divine_chestplate set | ars_nouveau:enchanting_apparatus | magic | M-10 | ACCEPT |
-| 23 |  | `brazil_legends` | brazil_legends:amber_shard | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
+| 23 |  | `born_in_chaos_v1` | born_in_chaos_v1:dark_metal_deposit | recipe (create:crushing) | create | M-03 | ACCEPT |
+| 23 |  | `born_in_chaos_v1` | born_in_chaos_v1:bundle_of_bones | recipe (occultism:spirit_fire) | magic | M-11 | ACCEPT |
+| 23 |  | `create_ironworks` | create_ironworks:tin_ingot / c:ingots/tin (sca | create:crushing → numismatics mint | economy | M-08 | ACCEPT |
 | 23 |  | `create_new_age` | create_new_age:thorium_ore (scarce biome-gated | create:crushing → numismatics mint | economy | M-08 | ACCEPT |
-| 23 |  | `dynamictreesplus` | dynamictreesplus:brown_mushroom_cap / red_mush | farmersdelight:cutting | create | M-12 | ACCEPT |
-| 23 |  | `illagerinvasion` | illagerinvasion:hallowed_gem (Invoker boss dro | `ars_nouveau:imbuement` as an arca | magic | M-02 | ACCEPT |
+| 23 |  | `drones` | drones:iron_rotor | create:mechanical_crafting (brass  | create | M-05 | ACCEPT |
+| 23 |  | `mushroomquest` | mushroomquest deadly / mythical mushroom caps | occultism:spirit_fire or ars_nouve | magic | M-11 | ACCEPT |
 | 22 | ✓ | `aileron` | aileron Elytra enchantments | ars_nouveau:enchanting_apparatus / | magic | M-10 | ACCEPT |
-| 22 |  | `born_in_chaos_v1` | born_in_chaos_v1:dark_metal_deposit | recipe (create:crushing) | create | M-03 | ACCEPT |
-| 22 |  | `born_in_chaos_v1` | born_in_chaos_v1:bundle_of_bones | recipe (occultism:spirit_fire) | magic | M-11 | ACCEPT |
-| 22 |  | `create_ironworks` | create_ironworks:tin_ingot / c:ingots/tin (sca | create:crushing → numismatics mint | economy | M-08 | ACCEPT |
 | 22 |  | `create_new_age` | create_new_age:energising (method: the Energis | create_new_age:energising of a mag | magic | M-17 | ACCEPT |
-| 22 |  | `drones` | drones:iron_rotor | create:mechanical_crafting (brass  | create | M-05 | ACCEPT |
+| 22 |  | `createmetalwork` | createmetalwork processed metals (molten_<scar | numismatics coin mint — refined mo | economy | M-08 | ACCEPT |
 | 22 |  | `meadow` | meadow:alpine_salt | create:milling | create | M-12 | ACCEPT |
-| 22 |  | `mushroomquest` | mushroomquest deadly / mythical mushroom caps | occultism:spirit_fire or ars_nouve | magic | M-11 | ACCEPT |
 | 21 | ✓ | `copperagebackport` | copper deco blocks (copper_chest, copper_bars, | create:crushing | create | M-04 | ACCEPT |
-| 21 |  | `createmetalwork` | createmetalwork processed metals (molten_<scar | numismatics coin mint — refined mo | economy | M-08 | ACCEPT |
+| 21 |  | `irons_spellbooks` | irons_spellbooks:arcane_essence | ars_nouveau:imbuement | magic | M-01 | ACCEPT |
 | 21 |  | `mushroomquest` | mushroomquest edible/effect mushrooms (common  | farmersdelight:cooking + extradeli | create | M-12 | ACCEPT |
-| 20 |  | `irons_spellbooks` | irons_spellbooks:arcane_essence | ars_nouveau:imbuement | magic | M-01 | ACCEPT |
-| 20 |  | `occultengineering` | occultengineering:sterling_silver (ingot, Crea | create:crushing → numismatics vend | economy | M-08 | ACCEPT |
-| 20 |  | `rottencreatures` | rottencreatures:magma_rotten_flesh (magma-vari | occultism:spirit_fire | magic | M-11 | ACCEPT |
+| 21 |  | `occultengineering` | occultengineering:sterling_silver (ingot, Crea | create:crushing → numismatics vend | economy | M-08 | ACCEPT |
+| 21 |  | `rottencreatures` | rottencreatures:magma_rotten_flesh (magma-vari | occultism:spirit_fire | magic | M-11 | ACCEPT |
+| 21 |  | `trailandtales_delight` | trailandtales_delight:lantern_fruit (tagged it | create:milling | create | M-12 | ACCEPT |
+| 20 |  | `bits_n_bobs` | bits_n_bobs tile/chair deco blocks | create:crushing → crushed stone +  | create | M-04 | ACCEPT |
+| 20 |  | `dynamictrees` | dynamictrees:dendro_potion | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
+| 20 | ✓ | `northstar` | northstar:titanium_ingot / northstar:tungsten_ | create:crushing (ore-doubling firs | economy | M-08 | ACCEPT |
+| 20 |  | `quark` | quark deco blocks (vertical slabs, polished st | create:crushing | create | M-04 | ACCEPT |
+| 20 | ✓ | `rechiseled` | rechiseled decoration blocks (all variants) | rechiseledcreate Mechanical Chisel | create | M-04 | ACCEPT |
+| 20 |  | `sereneseasons` | sereneseasons:season_sensor (redstone output k | Create redstone logic (gearshifts, | create | M-16 | ACCEPT |
 | 20 |  | `spawn` | spawn seafood (general) | createfisheryindustry:bait_trap —  | create | M-12 | ACCEPT |
-| 20 |  | `trailandtales_delight` | trailandtales_delight:lantern_fruit (tagged it | create:milling | create | M-12 | ACCEPT |
-| 19 |  | `bits_n_bobs` | bits_n_bobs tile/chair deco blocks | create:crushing → crushed stone +  | create | M-04 | ACCEPT |
-| 19 |  | `dynamictrees` | dynamictrees:dendro_potion | ars_nouveau:imbuement | magic | M-10 | REJECT |
+| 19 |  | `betterdungeons` | betterdungeons loot tables | loot-table seeding of Ars/Occultis | magic | M-02 | ACCEPT |
+| 19 |  | `ecologics` | ecologics:coconut (raw fruit) | recipe (create:milling) | create | M-12 | ACCEPT |
 | 19 |  | `illagerinvasion` | illagerinvasion:illusionary_dust | recipe (occultism:spirit_fire) | magic | M-11 | ACCEPT |
+| 19 |  | `mcwfences` | mcwfences metal fence variants (iron/copper/et | create:crushing | create | M-04 | ACCEPT |
 | 19 |  | `mowziesmobs` | mowziesmobs:ice_crystal (Frostmaw drop) | create:sequenced_assembly (gate in | create | M-15 | ACCEPT |
-| 19 | ✓ | `northstar` | northstar:titanium_ingot / northstar:tungsten_ | create:crushing (ore-doubling firs | economy | M-08 | ACCEPT |
-| 19 |  | `quark` | quark deco blocks (vertical slabs, polished st | create:crushing | create | M-04 | ACCEPT |
-| 19 | ✓ | `rechiseled` | rechiseled decoration blocks (all variants) | rechiseledcreate Mechanical Chisel | create | M-04 | ACCEPT |
-| 19 |  | `sereneseasons` | sereneseasons:season_sensor (redstone output k | Create redstone logic (gearshifts, | create | M-16 | ACCEPT |
+| 19 |  | `samurai_dynasty` | samurai_dynasty jade/ruby/onyx/aquamarine ores | create:crushing | create | M-03 | ACCEPT |
+| 19 |  | `tide` | tide raw fish output (c:foods/raw_fish, bulk s | farmersdelight:cutting → create:mi | create | M-12 | ACCEPT |
+| 19 |  | `trek-b0.6.1.1` | trek structures | loot-seed | magic | M-02 | ACCEPT |
 | 19 |  | `undergroundworlds` | undergroundworlds:spider_fang | ars_nouveau:imbuement | magic | M-02 | ACCEPT |
-| 18 |  | `betterdungeons` | betterdungeons loot tables | loot-table seeding of Ars/Occultis | magic | M-02 | ACCEPT |
+| 19 |  | `undergroundworlds` | undergroundworlds temple/pyramid bricks (theme | create:crushing → crushed stone +  | create | M-04 | ACCEPT |
 | 18 |  | `charta` | charta bar furniture (bar shelves, stools, car | create:cutting (wood panels → shap | create | M-04 | REJECT |
 | 18 |  | `create_enchantment_industry` | create_enchantment_industry:experience_bucket  | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
-| 18 |  | `ecologics` | ecologics:coconut (raw fruit) | recipe (create:milling) | create | M-12 | ACCEPT |
+| 18 | ✓ | `deeperdarker` | deeperdarker gloomslate / sculk_stone block fa | create:crushing | create | M-04 | ACCEPT |
 | 18 | ✓ | `galosphere` | galosphere deco blocks (allurite/lumiere brick | `create:crushing` (lossy recycle) | create | M-04 | ACCEPT |
 | 18 |  | `hpm` | hpm:corvette_steamship_item | create:sequenced_assembly | create | M-06 | ACCEPT |
-| 18 |  | `mcwfences` | mcwfences metal fence variants (iron/copper/et | create:crushing | create | M-04 | ACCEPT |
-| 18 |  | `samurai_dynasty` | samurai_dynasty jade/ruby/onyx/aquamarine ores | create:crushing | create | M-03 | ACCEPT |
-| 18 |  | `tide` | tide raw fish output (c:foods/raw_fish, bulk s | farmersdelight:cutting → create:mi | create | M-12 | ACCEPT |
-| 18 |  | `trek-b0.6.1.1` | trek structures | loot-seed | magic | M-02 | ACCEPT |
-| 18 |  | `undergroundworlds` | undergroundworlds temple/pyramid bricks (theme | create:crushing → crushed stone +  | create | M-04 | ACCEPT |
-| 17 | ✓ | `deeperdarker` | deeperdarker gloomslate / sculk_stone block fa | create:crushing | create | M-04 | ACCEPT |
+| 18 |  | `vc_gliders` | vc_gliders:paraglider_iron / _gold / _diamond  | create:pressing (metal sheets) + c | create | M-05 | ACCEPT |
+| 17 | ✓ | `create_ironworks` | create_ironworks:steel_plate / steel_ingot (fa | aeronautics airframe/hull recipe ( | aeronautics | M-23 | ACCEPT |
 | 17 |  | `friendsandfoes` | friendsandfoes copper deco (copper buttons / l | create:crushing | create | M-04 | REJECT |
+| 17 |  | `grimoireofgaia` | grimoireofgaia mob fragments (generic nuggets/ | occultism:spirit_fire | magic | M-11 | ACCEPT |
+| 17 |  | `mcwwindows` | mcwwindows stone parapet / arrow-slit variants | create:crushing | create | M-04 | ACCEPT |
 | 17 |  | `rottencreatures` | rottencreatures:corrupted_wart | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
+| 17 |  | `snowyspirit` | snowyspirit:ginger (c:crops/ginger) | recipe (create:milling) | create | M-12 | ACCEPT |
 | 17 | ✓ | `tfmg` | tfmg:steel (blast-furnace output) | aeronautics hull/airframe construc | aeronautics | M-23 | ACCEPT |
-| 17 |  | `vc_gliders` | vc_gliders:paraglider_iron / _gold / _diamond  | create:pressing (metal sheets) + c | create | M-05 | ACCEPT |
 | 16 |  | `alexsmobs` | alexsmobs:ender_residue (End biome drop, exoti | occultism:spirit_fire | magic | M-11 | ACCEPT |
 | 16 |  | `ars_nouveau` | `ars_nouveau:source_gem` ↔ foreign essences | `ars_nouveau:imbuement` | magic | M-01 | ACCEPT |
-| 16 | ✓ | `create_ironworks` | create_ironworks:steel_plate / steel_ingot (fa | aeronautics airframe/hull recipe ( | aeronautics | M-23 | ACCEPT |
+| 16 | ✓ | `bakery` | bakery wheat → flour path | create:milling | create | M-12 | ACCEPT |
+| 16 |  | `cataclysm` | cataclysm:ancient_metal_ingot | recipe (create:pressing → sheets,  | create | M-15 | ACCEPT |
 | 16 |  | `createnuclear` | createnuclear:uranium (ore → dust → fuel, c:or | create:crushing → numismatics mint | economy | M-08 | ACCEPT |
 | 16 |  | `createoreexcavation` | createoreexcavation vein-table outputs (scarce | numismatics coin (processed scarce | economy | M-08 | ACCEPT |
+| 16 |  | `dynamictrees` | dynamictrees branch/log items | create:milling | create | M-12 | REJECT |
 | 16 |  | `endrem` | endrem:magical_eye (arcane-named variant) | ars_nouveau:enchanting_apparatus | magic | M-10 | ACCEPT |
 | 16 |  | `enhancedcelestials` | enhancedcelestials:space_moss_block | ars_nouveau:imbuement (source-gem  | magic | M-10 | REJECT |
-| 16 |  | `grimoireofgaia` | grimoireofgaia mob fragments (generic nuggets/ | occultism:spirit_fire | magic | M-11 | ACCEPT |
-| 16 |  | `mcwwindows` | mcwwindows stone parapet / arrow-slit variants | create:crushing | create | M-04 | ACCEPT |
-| 16 |  | `snowyspirit` | snowyspirit:ginger (c:crops/ginger) | recipe (create:milling) | create | M-12 | ACCEPT |
+| 16 |  | `gnkinetics` | gnkinetics:planetary_gear / gnkinetics:worm_ge | recipe (aeronautics construction r | aeronautics | M-24 | ACCEPT |
+| 16 | ✓ | `kobolds` | kobolds:kobold_skull | occultism:spirit_fire | magic | M-02 | ACCEPT |
+| 16 |  | `mcwstairs` | mcwstairs stone/brick/blackstone stair variant | create:crushing | create | M-04 | ACCEPT |
+| 16 |  | `naturalist` | naturalist:shellstone / froglass | create:crushing | create | M-04 | ACCEPT |
+| 16 |  | `securitycraft` | securitycraft reinforcing materials (scarce mo | create:mechanical_crafting (gate t | create | M-05 | ACCEPT |
+| 16 |  | `trek-b0.6.1.1` | trek structures | loot-seed | create | M-15 | ACCEPT |
 | 16 | ✓ | `undergroundworlds` | undergroundworlds:temple_bricks / pyramid_bric | create:crushing | create | M-04 | ACCEPT |
-| 15 | ✓ | `bakery` | bakery wheat → flour path | create:milling | create | M-12 | ACCEPT |
-| 15 |  | `cataclysm` | cataclysm:ancient_metal_ingot | recipe (create:pressing → sheets,  | create | M-15 | ACCEPT |
-| 15 |  | `dynamictrees` | dynamictrees branch/log items | create:milling | create | M-12 | REJECT |
+| 15 |  | `create_ironworks` | create_ironworks:steel_ingot / steel plate (it | M-23 structural alloy → aeronautic | aeronautics | M-23 | ACCEPT |
+| 15 |  | `createaddition` | createaddition:seed_oil / bioethanol | Aeronautics liquid_burning fuel (M | aeronautics | M-13 | ACCEPT |
 | 15 |  | `gamediscs` | gamediscs:processor / gamediscs:redstone_circu | create:mechanical_crafting | create | M-05 | ACCEPT |
-| 15 |  | `gnkinetics` | gnkinetics:planetary_gear / gnkinetics:worm_ge | recipe (aeronautics construction r | aeronautics | M-24 | ACCEPT |
-| 15 | ✓ | `kobolds` | kobolds:kobold_skull | occultism:spirit_fire | magic | M-02 | ACCEPT |
-| 15 |  | `mcwstairs` | mcwstairs stone/brick/blackstone stair variant | create:crushing | create | M-04 | ACCEPT |
-| 15 |  | `naturalist` | naturalist:shellstone / froglass | create:crushing | create | M-04 | ACCEPT |
+| 15 |  | `northstar` | northstar:biofuel | TFMG/Create fuel → aeronautics eng | aeronautics | M-13 | ACCEPT |
 | 15 |  | `rottencreatures` | rottencreatures:frozen_rotten_flesh | create:haunting | create | M-19 | REJECT |
-| 15 |  | `securitycraft` | securitycraft reinforcing materials (scarce mo | create:mechanical_crafting (gate t | create | M-05 | ACCEPT |
 | 15 |  | `sky_whale_ship` | sky_whale_ship loot chests (onboard structure  | custom loot-table entries — place  | aeronautics | M-15 | ACCEPT |
-| 15 |  | `trek-b0.6.1.1` | trek structures | loot-seed | create | M-15 | ACCEPT |
 | 15 |  | `vc_gliders` | vc_gliders:paraglider_diamond / paraglider_net | create:mechanical_crafting | create | M-05 | ACCEPT |
 | 14 |  | `alexsmobs` | alexsmobs:ambergris (mid drop, whale-type mob) | occultism:spirit_fire | magic | M-02 | ACCEPT |
 | 14 | ✓ | `betterstrongholds` | betterstrongholds loot tables | loot-seed | magic | M-02 | ACCEPT |
-| 14 |  | `create_ironworks` | create_ironworks:steel_ingot / steel plate (it | M-23 structural alloy → aeronautic | aeronautics | M-23 | ACCEPT |
+| 14 |  | `copperagebackport` | copperagebackport copper deco blocks (copper_b | create:crushing | create | M-04 | ACCEPT |
 | 14 |  | `create_ltab-3.9.2` | create_ltab structure loot tables | loot-seed (seed Ars Nouveau source | magic | M-02 | REJECT |
 | 14 |  | `create_new_age` | create_new_age:corium (reactor waste) | occultism:spirit_fire | magic | M-11 | ACCEPT |
 | 14 |  | `createaddition` | farmed seeds / crops → createaddition:seed_oil | M-12 processing-chain pull — agric | survival | M-12 | ACCEPT |
-| 14 |  | `createaddition` | createaddition:seed_oil / bioethanol | Aeronautics liquid_burning fuel (M | aeronautics | M-13 | ACCEPT |
+| 14 | ✓ | `extradelight` | extradelight crops/outputs (dried goods, syrup | `create:milling` (grain→flour) + ` | create | M-12 | ACCEPT |
+| 14 |  | `extradelight` | extradelight:evaporator / vat outputs (salt, s | create:pressing or create:mixing | create | M-12 | ACCEPT |
+| 14 | ✓ | `formationsnether` | formationsnether loot tables (loot=yes; Nether | loot-table edit to insert a magic  | magic | M-02 | ACCEPT |
+| 14 |  | `friendsandfoes` | friendsandfoes:copper_golem_head | create:crushing | create | M-04 | REJECT |
 | 14 | ✓ | `galosphere` | galosphere:allurite_shard / lumiere_shard | existing reserved M-07 attunement  | magic | M-07 | ACCEPT |
 | 14 |  | `naturalist` | naturalist:antler | ars_nouveau:enchanting_apparatus o | magic | M-02 | ACCEPT |
-| 14 |  | `northstar` | northstar:biofuel | TFMG/Create fuel → aeronautics eng | aeronautics | M-13 | ACCEPT |
+| 14 |  | `samurai_dynasty` | samurai_dynasty:akaname_tongue / Yokai drops ( | occultism:spirit_fire or ritual | magic | M-02 | ACCEPT |
+| 14 |  | `trek-b0.6.1.1` | trek structures (ship holds, pyramid chests, f | loot-seed | economy | M-08 | ACCEPT |
 | 14 | ✓ | `undergroundworlds` | undergroundworlds:desert_charm / antidote_flas | ars_nouveau:enchanting_apparatus / | magic | M-10 | REJECT |
+| 14 |  | `upgrade_aquatic` | upgrade_aquatic coralstone blocks | create:crushing | create | M-04 | REJECT |
 | 14 |  | `woodworks` | woodworks wood-deco blocks (boards, bookshelve | create:crushing → plank/sawdust +  | create | M-04 | ACCEPT |
+| 13 | ✓ | `alexsmobs` | alexsmobs:ambergris (rare whale-adjacent drop  | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
+| 13 |  | `alexsmobs` | alexsmobs:bear_dust / bone-type drops | create:crushing → bone meal / crus | create | M-02 | ACCEPT |
 | 13 | ✓ | `bakery` | wheat (crop input) | create:milling — mill wheat to flo | create | M-12 | ACCEPT |
-| 13 |  | `copperagebackport` | copperagebackport copper deco blocks (copper_b | create:crushing | create | M-04 | ACCEPT |
+| 13 |  | `cataclysm` | cataclysm:witherite_ingot / cursium_ingot (bos | occultism:spirit_fire | magic | M-11 | ACCEPT |
 | 13 |  | `deeperdarker` | deeperdarker:gloomslate / sculk_stone block fa | create:crushing | create | M-04 | ACCEPT |
 | 13 |  | `ecologics` | ecologics:azalea_flower | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 13 | ✓ | `endermoon` | Ender Moon event (mass enderman spawn night) | lunar-event-gated ender pearl supp | magic | M-22 | ACCEPT |
-| 13 | ✓ | `extradelight` | extradelight crops/outputs (dried goods, syrup | `create:milling` (grain→flour) + ` | create | M-12 | ACCEPT |
-| 13 |  | `extradelight` | extradelight:evaporator / vat outputs (salt, s | create:pressing or create:mixing | create | M-12 | ACCEPT |
-| 13 | ✓ | `formationsnether` | formationsnether loot tables (loot=yes; Nether | loot-table edit to insert a magic  | magic | M-02 | ACCEPT |
-| 13 |  | `friendsandfoes` | friendsandfoes:copper_golem_head | create:crushing | create | M-04 | REJECT |
 | 13 |  | `galosphere` | galosphere:silver_ingot (=palladium, c:ingots/ | `create:crushing` (ore-doubling) | create | M-03 | ACCEPT |
 | 13 | ✓ | `grimoireofgaia` | c:nuggets/diamond, c:nuggets/emerald, metal fr | create:crushing / compacting | create | M-03 | ACCEPT |
 | 13 |  | `irons_spellbooks` | irons_spellbooks:mithril_ore / raw_mithril | create:crushing | create | M-03 | ACCEPT |
+| 13 |  | `mcwroofs` | mcwroofs stone/brick/andesite roof variants | create:crushing | create | M-04 | ACCEPT |
 | 13 |  | `mowziesmobs` | mowziesmobs:ice_crystal (Frostmaw drop, endgam | create:sequenced_assembly | create | M-06 | ACCEPT |
 | 13 | ✓ | `ribbits` | ribbits:toadstool / ribbits:red_toadstool (mus | recipe (create:milling) | create | M-04 | REJECT |
-| 13 |  | `samurai_dynasty` | samurai_dynasty:akaname_tongue / Yokai drops ( | occultism:spirit_fire or ritual | magic | M-02 | ACCEPT |
+| 13 |  | `t_and_t` | t_and_t loot tables (chests in village/fort/sa | loot-seed | economy | M-08 | ACCEPT |
 | 13 |  | `tfmg` | tfmg:steel_ingot (iron → Industrial Blast Furn | numismatics mint | economy | M-08 | ACCEPT |
-| 13 |  | `trek-b0.6.1.1` | trek structures (ship holds, pyramid chests, f | loot-seed | economy | M-08 | ACCEPT |
-| 13 |  | `upgrade_aquatic` | upgrade_aquatic coralstone blocks | create:crushing | create | M-04 | REJECT |
-| 12 | ✓ | `alexsmobs` | alexsmobs:ambergris (rare whale-adjacent drop  | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
-| 12 |  | `alexsmobs` | alexsmobs:bear_dust / bone-type drops | create:crushing → bone meal / crus | create | M-02 | ACCEPT |
+| 13 |  | `tfmg` | tfmg:steel_ingot (processed scarcity, multi-st | crafting / aeronautics structural  | aeronautics | M-23 | ACCEPT |
+| 13 | ✓ | `vc_gliders` | vc_gliders:copper_upgrade | create:pressing | create | M-20 | ACCEPT |
+| 12 | ✓ | `alexsmobs` | alexsmobs:void_worm_beak (+ void_worm cartilag | a complex Create/tech recipe gated | create | M-15 | ACCEPT |
+| 12 |  | `ars_nouveau` | ars_nouveau Vitalic Sourcelink (consumes mob d | native Sourcelink mechanic | survival | M-02 | ACCEPT |
+| 12 |  | `beachparty` | beachparty:mini_fridge ice output | create:mixing (cooling chain) or c | create | M-12 | REJECT |
 | 12 | ✓ | `betterdungeons` | dungeon chest loot | loot-table seeding of magic reagen | magic | M-02 | ACCEPT |
 | 12 |  | `betteroceanmonuments` | betteroceanmonuments loot tables | loot-seed | magic | M-02 | ACCEPT |
 | 12 |  | `brazil_legends` | brazil_legends:big_tongue | occultism:spirit_fire | magic | M-02 | ACCEPT |
-| 12 |  | `cataclysm` | cataclysm:witherite_ingot / cursium_ingot (bos | occultism:spirit_fire | magic | M-11 | ACCEPT |
 | 12 |  | `create_ltab-3.9.2` | create_ltab structure loot tables (loot=yes) | loot-seed (seed numismatics coin i | economy | M-08 | ACCEPT |
 | 12 |  | `ctov` | ctov village loot tables | loot-seed | magic | M-02 | ACCEPT |
 | 12 |  | `ctov` | ctov structure chests (village + outpost loot  | loot-seed (add Numismatics coin /  | economy | M-08 | ACCEPT |
 | 12 |  | `hpm` | hpm:largehull / hpm:largemast (ship hull/mast  | create:mechanical_crafting | create | M-05 | ACCEPT |
 | 12 |  | `kobolds` | kobolds:kobold_skull | occultism:spirit_fire (M-11) | magic | M-11 | ACCEPT |
-| 12 |  | `mcwroofs` | mcwroofs stone/brick/andesite roof variants | create:crushing | create | M-04 | ACCEPT |
+| 12 | ✓ | `mcwdoors` | mcwdoors iron/metal door variants | create:crushing | create | M-04 | ACCEPT |
+| 12 |  | `naturalist` | naturalist:glow_goop | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 12 |  | `naturalist` | naturalist:venison + naturalist:bushmeat | recipe (farmersdelight:cutting / c | create | M-12 | ACCEPT |
 | 12 |  | `occultism` | occultism:dimensional_mineshaft (void-dimensio | occultism:miner | economy | M-18 | ACCEPT |
+| 12 |  | `oceansdelight` | oceansdelight:cut_tentacles / guardian drops | farmersdelight:cutting → create:mi | create | M-12 | REJECT |
+| 12 |  | `rechiseledcreate` | rechiseledcreate window/stone variants | `create:crushing` | create | M-04 | ACCEPT |
 | 12 |  | `smokeleafindustries` | smokeleafindustries:generator FE output | createaddition:charging (FE↔kineti | create | M-17 | ACCEPT |
 | 12 | ✓ | `smokeleafindustries` | raw hemp / buds | create:milling | create | M-12 | REJECT |
-| 12 |  | `t_and_t` | t_and_t loot tables (chests in village/fort/sa | loot-seed | economy | M-08 | ACCEPT |
+| 12 |  | `smokeleafindustries` | smokeleafindustries raw hemp/buds | create:milling | create | M-12 | ACCEPT |
+| 12 |  | `supplementaries` | supplementaries:flax (c:crops/flax) | create:milling | create | M-12 | ACCEPT |
 | 12 |  | `tacz` | tacz turret/vehicle-mount theming | aeronautics structural use | aeronautics |  | REJECT |
-| 12 |  | `tfmg` | tfmg:steel_ingot (processed scarcity, multi-st | crafting / aeronautics structural  | aeronautics | M-23 | ACCEPT |
+| 12 | ✓ | `tide` | tide exotic fish (abyss_angler, void catches) | occultism:ritual / ars imbuement | magic | M-02 | REJECT |
 | 12 |  | `tide` | tide:abyss_angler / void-fish | occultism:spirit_fire or ars_nouve | magic | M-02 | REJECT |
-| 12 | ✓ | `vc_gliders` | vc_gliders:copper_upgrade | create:pressing | create | M-20 | ACCEPT |
 | 12 |  | `vinery` | vinery:apple_mash / grape_juice | create:pressing | create | M-12 | ACCEPT |
+| 11 |  | `aeronautics` | aeronautics:adjustable_burner (hot-air lift so | config tag-JSON extending its fuel | create | M-13 | ACCEPT |
 | 11 |  | `alexsmobs` | alexsmobs:bear_dust (rare, combat drop) | occultism:ritual | magic | M-02 | ACCEPT |
-| 11 | ✓ | `alexsmobs` | alexsmobs:void_worm_beak (+ void_worm cartilag | a complex Create/tech recipe gated | create | M-15 | ACCEPT |
-| 11 |  | `ars_nouveau` | ars_nouveau Vitalic Sourcelink (consumes mob d | native Sourcelink mechanic | survival | M-02 | ACCEPT |
-| 11 |  | `beachparty` | beachparty:mini_fridge ice output | create:mixing (cooling chain) or c | create | M-12 | REJECT |
+| 11 |  | `betterdungeons` | betterdungeons loot tables (datapack-overridab | numismatics coin seeding | economy | M-08 | ACCEPT |
 | 11 | ✓ | `betterstrongholds` | betterstrongholds loot tables | loot-seed | economy | M-08 | ACCEPT |
+| 11 |  | `bits_n_bobs` | bits_n_bobs:chain_pulley | recipe | aeronautics | M-24 | ACCEPT |
 | 11 |  | `cold_sweat` | cold_sweat:filled_waterskin (hot/cold) | create:filling (already exists as  | create | M-12 | REJECT |
+| 11 |  | `createfood` | createfood seasonal ingredient variants (fruit | serene-seasons-gated crop inputs | survival | M-16 | ACCEPT |
 | 11 |  | `createnuclear` | createnuclear:autunite (glowing uranium-bearin | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 11 |  | `deeperdarker` | deeperdarker:heart_of_the_deep (boss drop — Wa | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 11 |  | `deeperdarker` | deeperdarker:heart_of_the_deep | occultism:ritual or ars_nouveau:im | magic | M-02 | ACCEPT |
-| 11 | ✓ | `mcwdoors` | mcwdoors iron/metal door variants | create:crushing | create | M-04 | ACCEPT |
+| 11 |  | `handcrafted` | handcrafted:berry_jam_jar | farmersdelight:cooking or extradel | survival | M-12 | ACCEPT |
 | 11 |  | `meadow` | meadow:chambray_wool / felt textile | create:milling | create | M-12 | ACCEPT |
 | 11 |  | `modulargolems` | ars_nouveau:source_gem or occultism:otherstone | modulargolems:golem_assemble — inc | magic | M-10 | ACCEPT |
-| 11 |  | `naturalist` | naturalist:glow_goop | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
-| 11 |  | `oceansdelight` | oceansdelight:cut_tentacles / guardian drops | farmersdelight:cutting → create:mi | create | M-12 | REJECT |
-| 11 |  | `rechiseledcreate` | rechiseledcreate window/stone variants | `create:crushing` | create | M-04 | REJECT |
-| 11 |  | `smokeleafindustries` | smokeleafindustries raw hemp/buds | create:milling | create | M-12 | ACCEPT |
-| 11 |  | `supplementaries` | supplementaries:flax (c:crops/flax) | create:milling | create | M-12 | ACCEPT |
+| 11 |  | `rottencreatures` | rottencreatures:corrupted_wart (generic undead | ars_nouveau:crush | magic | M-02 | ACCEPT |
 | 11 | ✓ | `tfmg` | tfmg combustion engine / flywheel assembly | aeronautics propulsion/drivetrain  | aeronautics | M-24 | ACCEPT |
 | 11 | ✓ | `tfmg` | tfmg:steel / tfmg:aluminum ingot (processed sc | numismatics sell / M-08 coin from  | economy | M-08 | ACCEPT |
-| 11 | ✓ | `tide` | tide exotic fish (abyss_angler, void catches) | occultism:ritual / ars imbuement | magic | M-02 | REJECT |
 | 11 |  | `travelersbackpack` | travelersbackpack tank upgrade / backpack_upgr | create:pressing (pressed plates as | create | M-20 | ACCEPT |
+| 11 |  | `travelersbackpack` | travelersbackpack upgrade modules (tank_upgrad | travelersbackpack:backpack_upgrade | create | M-06 | ACCEPT |
 | 11 |  | `valarian_conquest` | valarian_conquest:armorsmith / builder station | create:mechanical_crafting — gate  | create | M-05 | ACCEPT |
-| 10 |  | `aeronautics` | aeronautics:adjustable_burner (hot-air lift so | config tag-JSON extending its fuel | create | M-13 | ACCEPT |
 | 10 |  | `alexsmobs` | alexsmobs:ambergris (rare ocean-mob drop — spe | occultism:spirit_fire → spirit-rea | magic | M-11 | ACCEPT |
-| 10 |  | `betterdungeons` | betterdungeons loot tables (datapack-overridab | numismatics coin seeding | economy | M-08 | ACCEPT |
 | 10 |  | `betteroceanmonuments` | betteroceanmonuments loot tables (monument che | loot-seed | economy | M-08 | ACCEPT |
 | 10 | ✓ | `betterstrongholds` | betterstrongholds loot tables | loot-seed | create | M-15 | REJECT |
-| 10 |  | `bits_n_bobs` | bits_n_bobs:chain_pulley | recipe | aeronautics | M-24 | ACCEPT |
 | 10 |  | `cbc_at` | cbc_at heavy-autocannon / rocket-pod (endgame  | boss-drop gate (M-15) | create | M-15 | ACCEPT |
 | 10 |  | `companions` | companions:soul_gem (Soul Furnace diamond outp | ars_nouveau:imbuement → source con | magic | M-10 | ACCEPT |
+| 10 |  | `create_better_villagers` | create_better_villagers villager trades | numismatics (coin denominated trad | economy | M-08 | ACCEPT |
 | 10 |  | `create_enchantment_industry` | create_enchantment_industry liquid XP (experie | irons_spellbooks:alchemist_cauldro | magic | M-10 | ACCEPT |
 | 10 |  | `create_ironworks` | create_ironworks:bronze_ingot / brass pieces | aeronautics drivetrain/propeller r | aeronautics | M-24 | ACCEPT |
+| 10 | ✓ | `createblockchain` | createblockchain:mining_core (geode worldgen c | create:crushing | create | M-03 | ACCEPT |
 | 10 |  | `createfisheryindustry` | createfisheryindustry:fish_skin | create:milling or farmersdelight:c | create | M-12 | REJECT |
-| 10 |  | `createfood` | createfood seasonal ingredient variants (fruit | serene-seasons-gated crop inputs | survival | M-16 | ACCEPT |
 | 10 |  | `dndesires` | dndesires milkshake foods | farm_and_charm:stove / extradeligh | survival | M-12 | ACCEPT |
 | 10 |  | `dndesires` | dndesires:rubber (hydraulic_press sap→rubber) | M-24 (mechanical component → propu | aeronautics | M-24 | ACCEPT |
 | 10 |  | `drones` | drones:controller (assembly controller) | create:mechanical_crafting | create | M-05 | ACCEPT |
 | 10 |  | `dtterralith` | dtterralith exotic seeds (jacaranda_seed, mapl | create:milling (saplings/seeds → w | create | M-12 | ACCEPT |
+| 10 |  | `endermoon` | endermoon Ender Moon event (passive enderman-s | M-22 lunar/celestial reagent — dec | magic | M-22 | ACCEPT |
 | 10 |  | `fxntstorage` | fxntstorage:backpack_flight_upgrade | create:mechanical_crafting (M-20 d | aeronautics | M-24 | REJECT |
+| 10 |  | `galosphere` | galosphere:silver_ingot (refined palladium) | `numismatics` mint (Create-process | economy | M-08 | ACCEPT |
 | 10 |  | `grimoireofgaia` | grimoireofgaia drops (nuggets/fragments) | recipe (ars_nouveau:imbuement) | magic | M-10 | ACCEPT |
-| 10 |  | `handcrafted` | handcrafted:berry_jam_jar | farmersdelight:cooking or extradel | survival | M-12 | ACCEPT |
+| 10 |  | `mowziesmobs` | mowziesmobs boss drops (general) | emergent trade | economy | M-34 | ACCEPT |
 | 10 |  | `northstar` | northstar:martian_steel_ingot | aeronautics construction recipe (M | aeronautics | M-23 | ACCEPT |
 | 10 | ✓ | `occultism` | foreign mob/boss drops | occultism:spirit_fire | magic | M-11 | ACCEPT |
 | 10 | ✓ | `oceansdelight` | oceansdelight raw seafood intermediates (cut_t | create:cutting / farmersdelight:cu | create | M-12 | REJECT |
-| 10 |  | `rottencreatures` | rottencreatures:corrupted_wart (generic undead | ars_nouveau:crush | magic | M-02 | ACCEPT |
 | 10 |  | `sky_whale_ship` | sky_whale_ship loot chests | loot-seed | magic | M-02 | REJECT |
+| 10 |  | `supplementaries` | supplementaries:ash (c:dusts/ash) | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 10 |  | `tidal-towns-1.3.4` | tidal-towns ocean-village structures | loot-seed (seed numismatics coins  | economy | M-08 | ACCEPT |
 | 10 |  | `trailandtales_delight` | trailandtales_delight:cheese_wheel | create_cheese:maturing | create | M-12 | ACCEPT |
-| 10 |  | `travelersbackpack` | travelersbackpack upgrade modules (tank_upgrad | travelersbackpack:backpack_upgrade | create | M-06 | ACCEPT |
 | 10 |  | `undergroundworlds` | undergroundworlds:spider_fang | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 10 |  | `valarian_conquest` | valarian_conquest faction armor/weapon sets (k | create:pressing / mechanical_craft | create | M-05 | REJECT |
+| 10 |  | `woodworks` | woodworks:sawmill recipe type | woodworks:sawmill (bridged output  | create | M-12 | REJECT |
+| 9 |  | `beachparty` | beachparty:coconut (open coconut / coconut mea | create:milling | create | M-12 | ACCEPT |
+| 9 |  | `bountiful` | bountiful objective pool | farm/harvest outputs from Serene S | survival | M-16 | ACCEPT |
+| 9 | ✓ | `bountiful` | bountiful bounty reward pool | numismatics coin payout (set decre | economy | M-08 | ACCEPT |
 | 9 |  | `copperagebackport` | minecraft:copper_chest / copper_bars / copper_ | create:crushing | create | M-04 | ACCEPT |
-| 9 |  | `create_better_villagers` | create_better_villagers villager trades | numismatics (coin denominated trad | economy | M-08 | ACCEPT |
+| 9 |  | `create_dragons_plus` | create_dragons_plus:ending (Bulk Ending fan me | create_dragons_plus:ending | magic | M-10 | ACCEPT |
 | 9 |  | `create_sa` | create_sa blazing tools (blazing_pickaxe, blaz | ars_nouveau:imbuement or occultism | magic | M-10 | ACCEPT |
 | 9 |  | `createaddition` | createaddition:electrum_ingot / c:ingots/elect | numismatics mint | economy | M-08 | REJECT |
-| 9 | ✓ | `createblockchain` | createblockchain:mining_core (geode worldgen c | create:crushing | create | M-03 | REJECT |
 | 9 |  | `createimmersivetacz` | createimmersivetacz:gun_barrel / firing_mechan | create:sequenced_assembly | create | M-06 | REJECT |
+| 9 |  | `createnuclear` | createnuclear:steel_block / steel_ingot | aeronautics airframe construction | aeronautics | M-23 | ACCEPT |
 | 9 |  | `createoreexcavation` | createoreexcavation:diamond_drill / netherite_ | create:sequenced_assembly | create | M-06 | REJECT |
 | 9 | ✓ | `domum_ornamentum` | domum_ornamentum ornamental blocks (timberfram | domum_ornamentum:architects_cutter | create | M-04 | ACCEPT |
-| 9 |  | `endermoon` | endermoon Ender Moon event (passive enderman-s | M-22 lunar/celestial reagent — dec | magic | M-22 | ACCEPT |
+| 9 |  | `drones` | drones:wood_rotor | any complex method | create | M-05 | REJECT |
+| 9 |  | `dungeons-and-taverns-v4.4.4` | dungeons-and-taverns magic loot items (spell s | loot-seed | magic | M-02 | ACCEPT |
+| 9 |  | `enhancedcelestials` | Harvest Moon event (faster growth) | M-16 seasonal-reagent — a crop har | create | M-16 | ACCEPT |
 | 9 | ✓ | `enhancedcelestials` | Harvest Moon crop-growth buff (global accelera | M-16 seasonal hook | survival | M-16 | REJECT |
+| 9 |  | `expandeddelight` | expandeddelight:cheese_wheel (aged) | extradelight:evaporator or farmers | economy | M-35 | ACCEPT |
 | 9 |  | `farmersdelight` | farmersdelight:straw (cutting byproduct) | create:milling | create | M-12 | REJECT |
+| 9 | ✓ | `formationsnether` | formationsnether loot tables (ritual-altar che | loot-table seeding of numismatics  | economy | M-08 | REJECT |
 | 9 | ✓ | `formationsnether` | Nether structure loot tables | occultism:spirit_fire / ritual (dr | magic | M-02 | ACCEPT |
 | 9 |  | `friendsandfoes` | friendsandfoes:crab_claw | ars_nouveau:imbuement | magic | M-10 | REJECT |
-| 9 |  | `galosphere` | galosphere:silver_ingot (refined palladium) | `numismatics` mint (Create-process | economy | M-08 | ACCEPT |
 | 9 |  | `gravestone` | gravestone:gravestone (tombstone block, crafta | recipe (create:crushing — M-04, lo | create | M-04 | REJECT |
 | 9 |  | `grimoireofgaia` | grimoireofgaia mob-drop fragments/nuggets (the | occultism:spirit_fire or occultism | magic | M-02 | ACCEPT |
 | 9 |  | `hpm` | hpm:hand_cannon / hand_mortar | create:pressing + tacz:gun_smith_t | create | M-05 | ACCEPT |
+| 9 |  | `modulargolems` | modulargolems golem upgrade slots (add_1_slot  | ars_nouveau:imbuement or occultism | magic | M-10 | ACCEPT |
 | 9 |  | `more_slabs_stairs_and_walls` | more_slabs_stairs_and_walls stone/wood cut var | recipe (create:cutting) | create | M-12 | ACCEPT |
-| 9 |  | `mowziesmobs` | mowziesmobs boss drops (general) | emergent trade | economy | M-34 | ACCEPT |
+| 9 |  | `mowziesmobs` | mowziesmobs:elokosa_paw (crescent / gibbous /  | ars_nouveau:imbuement OR magic met | magic | M-22 | ACCEPT |
+| 9 |  | `mowziesmobs` | mowziesmobs:earthrend_gauntlet (endgame Wrough | create:sequenced_assembly as boss- | create | M-15 | ACCEPT |
 | 9 |  | `occultism` | occultism:silver_ingot (real silver, c:ingots/ | recipe (create:crushing) | create | M-03 | ACCEPT |
 | 9 |  | `occultism` | occultism:crushing (ore doubler) | occultism:crushing | create | M-03 | ACCEPT |
+| 9 |  | `pantographsandwires` | pantographsandwires:coal_coke (c:item/dusts/co | tfmg:coking | create | M-32 | ACCEPT |
 | 9 |  | `rottencreatures` | rottencreatures:magma_rotten_flesh (Immortal / | create:haunting | create | M-19 | ACCEPT |
+| 9 |  | `samurai_dynasty` | samurai_dynasty:jade (gem) | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 9 |  | `sereneseasons` | season_sensor redstone output | create:deploying / contraption log | create | M-16 | ACCEPT |
 | 9 |  | `smokeleafindustries` | smokeleafindustries FE output / generator | createaddition:charging or alterna | create | M-17 | ACCEPT |
-| 9 |  | `supplementaries` | supplementaries:ash (c:dusts/ash) | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
+| 9 |  | `tacz` | tacz high-tier gun or endgame attachment | recipe (create:sequenced_assembly  | create | M-06 | ACCEPT |
 | 9 |  | `tfmg` | tfmg:combustion_engine (mechanical component) | Aeronautics drivetrain/propulsion  | aeronautics | M-24 | ACCEPT |
 | 9 | ✓ | `tide` | tide fish byproducts / trophies | create:crushing / milling → fishme | create | M-12 | ACCEPT |
 | 9 |  | `vinery` | vinery grapes / apple_mash | create:pressing | create | M-12 | ACCEPT |
-| 9 |  | `woodworks` | woodworks:sawmill recipe type | woodworks:sawmill (bridged output  | create | M-12 | REJECT |
+| 8 |  | `aeronautics` | levitite | `ars_nouveau:imbuement` — refined  | magic | M-10 | ACCEPT |
+| 8 |  | `alexsmobs` | alexsmobs:ender_residue (mid/endgame drop, end | occultism:spirit_fire | magic | M-02 | ACCEPT |
 | 8 |  | `alexsmobs` | alexsmobs:banana / alexsmobs:acacia_blossom (e | farmersdelight:cutting or extradel | survival | M-12 | REJECT |
 | 8 |  | `astikorcartsredux` | astikorcartsredux cart (oak_supply_cart etc.) | create:pressing or create:mechanic | create | M-05 | ACCEPT |
-| 8 |  | `beachparty` | beachparty:coconut (open coconut / coconut mea | create:milling | create | M-12 | ACCEPT |
 | 8 |  | `betterdungeons` | betterdungeons loot tables | loot seeding → boss-key drop for c | create | M-15 | ACCEPT |
-| 8 |  | `bountiful` | bountiful objective pool | farm/harvest outputs from Serene S | survival | M-16 | ACCEPT |
-| 8 | ✓ | `bountiful` | bountiful bounty reward pool | numismatics coin payout (set decre | economy | M-08 | ACCEPT |
+| 8 |  | `brazil_legends` | brazil_legends:big_tongue (Cuca/folklore drop) | occultism:ritual | magic | M-11 | REJECT |
 | 8 |  | `cataclysm` | cataclysm boss drop (weapon trophy / ignitium  | numismatics sell (high-value scarc | economy | M-08 | ACCEPT |
 | 8 |  | `cataclysm` | cataclysm:cursium_ingot / witherite_ingot | recipe (occultism:spirit_fire or a | magic | M-11 | ACCEPT |
+| 8 |  | `copycats` | copycats copycat blocks (structural/architectu | aeronautics hull skin (copycat tex | aeronautics | M-23 | REJECT |
 | 8 |  | `create_cheese` | create_cheese:cheese_curds (intermediate) | extradelight:mixing_bowl / farmers | survival | M-12 | ACCEPT |
 | 8 |  | `create_connected` | create_connected:kinetic_battery | recipe (crafting/create:mechanical | aeronautics | M-24 | ACCEPT |
-| 8 |  | `create_dragons_plus` | create_dragons_plus:ending (Bulk Ending fan me | create_dragons_plus:ending | magic | M-10 | ACCEPT |
 | 8 |  | `create_dragons_plus` | create_dragons_plus:freezing (Bulk Freezing fa | create_dragons_plus:freezing | survival | M-16 | ACCEPT |
+| 8 | ✓ | `create_enchantment_industry` | liquid experience | ars_nouveau:imbuement / forbidden_ | magic | M-10 | REJECT |
 | 8 |  | `create_ironworks` | create_ironworks:steel_ingot (near-Netherite,  | occultism:spirit_fire or ars_nouve | magic | M-10 | REJECT |
 | 8 |  | `create_ironworks` | create_ironworks:tin_ore → crushed tin → creat | numismatics mint → coin | economy | M-08 | ACCEPT |
 | 8 |  | `create_new_age` | create_new_age:energising (method) | create_new_age:energising | aeronautics | M-24 | ACCEPT |
+| 8 |  | `createfood` | createfood finished dishes → colony supply | MineColonies hut requests | economy | M-28 | ACCEPT |
 | 8 |  | `createmetalwork` | createmetalwork molten_steel (a structural all | aeronautics airframe/hull ingredie | aeronautics | M-23 | ACCEPT |
 | 8 |  | `createmetalwork` | createmetalwork:molten_steel_bucket | aeronautics structural recipe (ste | aeronautics | M-23 | ACCEPT |
 | 8 |  | `createnuclear` | createnuclear:steel_ingot (c:ingots/steel, sca | numismatics mint | economy | M-08 | ACCEPT |
-| 8 |  | `createnuclear` | createnuclear:steel_block / steel_ingot | aeronautics airframe construction | aeronautics | M-23 | ACCEPT |
-| 8 |  | `drones` | drones:wood_rotor | any complex method | create | M-05 | REJECT |
-| 8 |  | `dungeons-and-taverns-v4.4.4` | dungeons-and-taverns magic loot items (spell s | loot-seed | magic | M-02 | ACCEPT |
 | 8 |  | `dynamictrees` | dynamictrees:branch (generic branch drops from | create:milling | create | M-12 | ACCEPT |
+| 8 |  | `ecologics` | ecologics:coconut_slice (clears all effects on | recipe (ars_nouveau:imbuement or o | magic | M-10 | ACCEPT |
 | 8 |  | `endrem` | endrem:corrupted_eye | create:sequenced_assembly (derpack | create | M-06 | REJECT |
 | 8 | ✓ | `endrem` | endrem eyes (generic loot) | create:sequenced_assembly — make 1 | create | M-06 | REJECT |
-| 8 |  | `enhancedcelestials` | Harvest Moon event (faster growth) | M-16 seasonal-reagent — a crop har | create | M-16 | ACCEPT |
-| 8 |  | `expandeddelight` | expandeddelight:cheese_wheel (aged) | extradelight:evaporator or farmers | economy | M-35 | ACCEPT |
+| 8 | ✓ | `extradelight` | extradelight feasts / complex dishes | minecolonies:composting or KubeJS  | economy | M-28 | ACCEPT |
 | 8 |  | `farm_and_charm` | farm_and_charm:barley (grain) | vinery:apple_mashing or extradelig | economy | M-12 | REJECT |
-| 8 | ✓ | `formationsnether` | formationsnether loot tables (ritual-altar che | loot-table seeding of numismatics  | economy | M-08 | REJECT |
+| 8 |  | `gnkinetics` | gnkinetics:industrial_gear / gnkinetics:large_ | recipe (aeronautics construction r | aeronautics | M-24 | ACCEPT |
 | 8 |  | `handcrafted` | handcrafted wood furniture (chairs, tables, sh | create:cutting (wood-cutting step  | create | M-12 | ACCEPT |
 | 8 |  | `illagerinvasion` | illagerinvasion:hallowed_gem | boss-key (M-15 gating) | create | M-15 | ACCEPT |
 | 8 |  | `mcwwindows` | mcwwindows:*_mosaic_glass variants | create:crushing | create | M-04 | REJECT |
-| 8 |  | `modulargolems` | modulargolems golem upgrade slots (add_1_slot  | ars_nouveau:imbuement or occultism | magic | M-10 | ACCEPT |
 | 8 |  | `more_slabs_stairs_and_walls` | more_slabs_stairs_and_walls stone cuts (cobble | recipe (create:crushing) | create | M-04 | ACCEPT |
-| 8 |  | `mowziesmobs` | mowziesmobs:elokosa_paw (crescent / gibbous /  | ars_nouveau:imbuement OR magic met | magic | M-22 | ACCEPT |
-| 8 |  | `mowziesmobs` | mowziesmobs:earthrend_gauntlet (endgame Wrough | create:sequenced_assembly as boss- | create | M-15 | ACCEPT |
 | 8 |  | `mowziesmobs` | mowziesmobs:ice_crystal | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
-| 8 |  | `pantographsandwires` | pantographsandwires:coal_coke (c:item/dusts/co | tfmg:coking | create | M-32 | ACCEPT |
 | 8 |  | `rottencreatures` | rottencreatures:corrupted_wart | occultism:spirit_fire | magic | M-11 | ACCEPT |
 | 8 |  | `s_a_b` | s_a_b:hardsteelblock or doublesteelblock | create:sequenced_assembly (multi-s | create | M-06 | ACCEPT |
-| 8 |  | `samurai_dynasty` | samurai_dynasty:jade (gem) | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
+| 8 |  | `samurai_dynasty` | samurai_dynasty spirit_stone blocks (decorativ | create:crushing | create | M-04 | REJECT |
+| 8 | ✓ | `samurai_dynasty` | samurai_dynasty steel ingot (c:ingots/steel) | create:crushing or create:pressing | create | M-03 | ACCEPT |
+| 8 |  | `snowyspirit` | snowyspirit:sled | (none — sled is terrain-based, not | aeronautics |  | REJECT |
 | 8 |  | `spawn` | spawn:clam (color variants) + crab drops | create:milling → seafood meal / sh | create | M-12 | ACCEPT |
 | 8 |  | `tacz` | tacz gun_smith_table_crafting inputs (metals:  | recipe (tacz:gun_smith_table_craft | create | M-05 | ACCEPT |
-| 8 |  | `tacz` | tacz high-tier gun or endgame attachment | recipe (create:sequenced_assembly  | create | M-06 | ACCEPT |
+| 8 |  | `trailandtales_delight` | trailandtales_delight:ancient_coffee | extradelight:vat or create:mixing | create | M-12 | ACCEPT |
+| 8 |  | `upgrade_aquatic` | upgrade_aquatic driftwood / riverwood wood set | woodworks:sawmill (already woven — | create | M-12 | REJECT |
 | 8 |  | `vc_gliders` | vc_gliders reinforced paper feedstock | create:milling (pulp chain — M-12) | create | M-12 | REJECT |
-| 7 |  | `aeronautics` | levitite | `ars_nouveau:imbuement` — refined  | magic | M-10 | ACCEPT |
 | 7 |  | `aeronautics_dyeable_components` | dyed levitite / dyed tire | create:toolbox_dyeing or create:mi | create | M-04 | REJECT |
 | 7 |  | `aileron` | Elytra (vanilla item) | ars_nouveau:enchanting_apparatus | magic | M-10 | REJECT |
-| 7 |  | `alexsmobs` | alexsmobs:ender_residue (mid/endgame drop, end | occultism:spirit_fire | magic | M-02 | ACCEPT |
+| 7 |  | `alcohol_industry` | alcohol_industry:alcohol_base (fluid) | extradelight:vat / ars_nouveau:imb | magic | M-10 | REJECT |
 | 7 |  | `appleseed` | appleseed diet-variety demand signal (continuo | config/demand driver | create | M-12 | ACCEPT |
+| 7 |  | `astikorcartsredux` | astikorcartsredux:oak_plow / reaper / seed_dri | create:pressing (iron plates as cr | create | M-05 | ACCEPT |
 | 7 |  | `bakery` | bakery finished goods (cakes / tarts / cupcake | MineColonies cook-hut delivery dem | economy | M-28 | ACCEPT |
 | 7 | ✓ | `betterdungeons` | dungeon chest loot | loot-table seeding of numismatics  | economy | M-08 | REJECT |
-| 7 |  | `brazil_legends` | brazil_legends:big_tongue (Cuca/folklore drop) | occultism:ritual | magic | M-11 | REJECT |
+| 7 |  | `cataclysm` | cataclysm boss drops (witherite_ingot, ancient | emergent player trade | economy | M-34 | ACCEPT |
 | 7 |  | `cbc_at` | cbc_at munitions (AP rounds, rockets) | bountiful bounty objective | economy | M-34 | ACCEPT |
 | 7 |  | `companions` | companions tesla/voltaic deco blocks (copper-b | create:crushing → copper scrap + x | create | M-04 | REJECT |
-| 7 |  | `copycats` | copycats copycat blocks (structural/architectu | aeronautics hull skin (copycat tex | aeronautics | M-23 | REJECT |
-| 7 | ✓ | `create_enchantment_industry` | liquid experience | ars_nouveau:imbuement / forbidden_ | magic | M-10 | REJECT |
 | 7 |  | `create_factory` | create_factory jam/spread/nectar fluids | farmersdelight:cooking (as sauce/c | survival | M-12 | ACCEPT |
 | 7 |  | `create_new_age` | create_new_age:corium (reactor waste) | occultism:spirit_fire or ars_nouve | magic | M-10 | ACCEPT |
 | 7 | ✓ | `create_train_parts` | create_train_parts brass/copper window and ste | recipe (require create:brass_sheet | create | M-04 | ACCEPT |
+| 7 |  | `create_tweaked_controllers` | create_tweaked_controllers:tweaked_lectern_con | create:mechanical_crafting (as a c | create | M-05 | ACCEPT |
+| 7 | ✓ | `createbigcannons` | cannon-grade steel ingot (createbigcannons:ste | create:* processing → numismatics  | economy | M-08 | ACCEPT |
 | 7 |  | `createblockchain` | createblockchain:piggy_bank (chest loot) | loot-seed | economy | M-08 | REJECT |
-| 7 |  | `createfood` | createfood finished dishes → colony supply | MineColonies hut requests | economy | M-28 | ACCEPT |
 | 7 |  | `createimmersivetacz` | createimmersivetacz:nitropowder_bucket (fluid) | tfmg:vat_machine_recipe | create | M-12 | ACCEPT |
 | 7 |  | `createmetalwork` | createmetalwork molten magic-metal outputs (e. | create:mixing (already used inboun | magic | M-03 | ACCEPT |
 | 7 |  | `createtreadmill` | createtreadmill:treadmill (physical-effort kin | recipe (crafting-table) | survival |  | REJECT |
 | 7 |  | `drones` | `drones:iron_rotor` / `drones:ion_thruster` (t | `create:sequenced_assembly` (ion t | create | M-06 | ACCEPT |
-| 7 |  | `ecologics` | ecologics:coconut_slice (clears all effects on | recipe (ars_nouveau:imbuement or o | magic | M-10 | REJECT |
+| 7 |  | `dungeons_arise_seven_seas` | dungeons_arise_seven_seas fortress/ruin loot | loot-seed (magic reagents) | magic | M-02 | ACCEPT |
 | 7 |  | `endrem` | endrem:nether_eye | ars_nouveau:imbuement (fire charge | magic | M-10 | ACCEPT |
 | 7 |  | `endrem` | endrem:guardian_eye | create:sequenced_assembly | create | M-06 | REJECT |
-| 7 | ✓ | `extradelight` | extradelight feasts / complex dishes | minecolonies:composting or KubeJS  | economy | M-28 | ACCEPT |
+| 7 |  | `exposure` | exposure:camera (gold + glass instrument) | create:sequenced_assembly | create | M-06 | REJECT |
 | 7 |  | `farm_and_charm` | farm_and_charm:barley (grain) | sereneseasons fertility | survival | M-16 | ACCEPT |
+| 7 |  | `farm_and_charm` | farm_and_charm grain/meat outputs (bulk surplu | MineColonies provisioning | economy | M-28 | ACCEPT |
 | 7 | ✓ | `formationsnether` | nether structure loot chests | seed a sellable/bounty reward or m | economy | M-08 | REJECT |
 | 7 |  | `friendsandfoes` | Wildfire / Illusioner drops (hostile loot) | occultism:spirit_fire | magic | M-02 | ACCEPT |
-| 7 |  | `gnkinetics` | gnkinetics:industrial_gear / gnkinetics:large_ | recipe (aeronautics construction r | aeronautics | M-24 | ACCEPT |
 | 7 |  | `gnkinetics` | gnkinetics:worm_gear / gnkinetics:industrial_g | aeronautics construction recipe (d | aeronautics | M-24 | ACCEPT |
 | 7 |  | `handcrafted` | handcrafted furniture sets (per-wood variants) | M-28 colony route — MineColonies c | economy | M-28 | ACCEPT |
+| 7 |  | `hpm` | hpm:largehull / hpm:smallhull | recipe (create:mechanical_crafting | create | M-23 | ACCEPT |
 | 7 |  | `illagerinvasion` | illagerinvasion:platinum_chunk | numismatics mint | economy | M-08 | REJECT |
+| 7 |  | `kobolds` | kobolds:kobold_skull | ars_nouveau:imbuement (M-10) | magic | M-10 | REJECT |
 | 7 |  | `minecolonies` | minecolonies University research | knowledge gate | economy | M-37 | ACCEPT |
 | 7 |  | `modulargolems` | modulargolems golem assembly (boss/mob-drop me | modulargolems:golem_assemble | survival | M-02 | ACCEPT |
 | 7 |  | `mowziesmobs` | mowziesmobs:earthrend_gauntlet (Wroughtnaut dr | create:sequenced_assembly (gate in | create | M-06 | ACCEPT |
@@ -311,35 +326,35 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 7 |  | `naturalist` | naturalist:glow_goop | loot-seed (seeded into naturalist  | magic | M-02 | ACCEPT |
 | 7 | ✓ | `northstar` | northstar:titanium_ingot / northstar:martian_s | recipe (aeronautics airframe/hull  | aeronautics | M-23 | ACCEPT |
 | 7 |  | `occultism` | occultism:spirit_trade (summoned trader) | occultism:spirit_trade | economy | M-33 | ACCEPT |
+| 7 | ✓ | `oceansdelight` | oceansdelight:fugu_slice (poison delicacy) | occultism:spirit_fire / ars imbuem | magic | M-11 | REJECT |
 | 7 |  | `railways` | railways:locometal blocks (deco stock) | create:crushing | create | M-04 | ACCEPT |
 | 7 |  | `ribbits` | ribbits:mossy_oak_planks | recipe (create:cutting) | create | M-04 | REJECT |
+| 7 | ✓ | `ribbits` | Ribbit sorcerer buff trades (survival-side) →  | loot-seed / trade config | economy | M-08 | ACCEPT |
 | 7 |  | `samurai_dynasty` | samurai_dynasty:silver_ore / silver ingot | create:crushing (ore-doubling) | create | M-03 | REJECT |
-| 7 |  | `samurai_dynasty` | samurai_dynasty spirit_stone blocks (decorativ | create:crushing | create | M-04 | REJECT |
-| 7 | ✓ | `samurai_dynasty` | samurai_dynasty steel ingot (c:ingots/steel) | create:crushing or create:pressing | create | M-03 | ACCEPT |
 | 7 |  | `samurai_dynasty` | samurai_dynasty Yokai drops (akaname_tongue, e | occultism:spirit_fire | magic | M-11 | ACCEPT |
 | 7 |  | `samurai_dynasty` | samurai_dynasty Immortal drop (storm-lich / bo | boss-key gate | create | M-15 | ACCEPT |
 | 7 |  | `samurai_dynasty` | samurai_dynasty Yokai drops | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
+| 7 |  | `securitycraft` | securitycraft reinforced block / keycard | recipe — keycard reader requires a | economy | M-08 | REJECT |
 | 7 |  | `snowyspirit` | snowyspirit:ginger / gingerbread_cookie / eggn | farmersdelight:cooking or extradel | survival | M-12 | ACCEPT |
-| 7 |  | `snowyspirit` | snowyspirit:sled | (none — sled is terrain-based, not | aeronautics |  | REJECT |
+| 7 |  | `spawn` | spawn:crab / crab drops (cooked crab, crab cla | farmersdelight:cooking + create:mi | create | M-12 | ACCEPT |
 | 7 |  | `tfmg` | TFMG Voltage/FE power grid | createaddition:charging → magic to | magic | M-17 | ACCEPT |
 | 7 |  | `tide` | tide:abyss_angler / void-fish | occultism:spirit_fire | magic | M-11 | ACCEPT |
 | 7 |  | `tide` | tide raw fish (biome-locked species) | GTMOGS regional ore-gen analogousl | economy | M-30 | ACCEPT |
 | 7 |  | `trading_floor` | trading_floor:trading_depot | trading_floor depot feeding coin p | economy | M-08 | ACCEPT |
-| 7 |  | `trailandtales_delight` | trailandtales_delight:ancient_coffee | extradelight:vat or create:mixing | create | M-12 | ACCEPT |
 | 7 |  | `travelersbackpack` | travelersbackpack:netherite / travelersbackpac | create:sequenced_assembly | create | M-06 | ACCEPT |
 | 7 |  | `travelersbackpack` | travelersbackpack tank + hose as portable flui | aeronautics logistics (passive) | aeronautics |  | REJECT |
-| 7 |  | `upgrade_aquatic` | upgrade_aquatic driftwood / riverwood wood set | woodworks:sawmill (already woven — | create | M-12 | REJECT |
 | 7 |  | `valarian_conquest` | faction armor/weapon (armorsmith station) | create:mechanical_crafting or M-05 | create | M-05 | ACCEPT |
 | 7 | ✓ | `vc_gliders` | reinforced paper (glider feedstock) | create:pressing | create | M-12 | REJECT |
+| 7 |  | `woodworks` | woodworks:*_boards / *_bookshelf / *_chest | create:crushing | create | M-04 | ACCEPT |
 | 6 |  | `aeronautics` | aeronautics:levitite (crystallized lift materi | ars_nouveau:imbuement or KubeJS ca | magic | M-10 | ACCEPT |
-| 6 |  | `alcohol_industry` | alcohol_industry:alcohol_base (fluid) | extradelight:vat / ars_nouveau:imb | magic | M-10 | REJECT |
 | 6 |  | `appleseed` | appleseed diet buff | design note (magic buff foods → ex | magic |  | REJECT |
-| 6 |  | `astikorcartsredux` | astikorcartsredux:oak_plow / reaper / seed_dri | create:pressing (iron plates as cr | create | M-05 | ACCEPT |
+| 6 |  | `ars_nouveau` | ars_nouveau spell scrolls / enchanted gear | player trade | economy | M-33 | ACCEPT |
+| 6 |  | `bakery` | bakery baked goods (surplus production) | ars_nouveau:imbuement (Vitalic sou | magic | M-10 | REJECT |
 | 6 | ✓ | `bakery` | bakery surplus crops/baked goods | ars_nouveau agronomic/vitalic sour | magic | M-02 | REJECT |
 | 6 |  | `betteroceanmonuments` | betteroceanmonuments loot tables | loot-seed | create | M-15 | REJECT |
 | 6 |  | `born_in_chaos_v1` | born_in_chaos_v1:bagof_candy | season-gated recipe (ExtraDelight  | survival | M-16 | REJECT |
+| 6 |  | `brazil_legends` | brazil_legends:capelobo_claw / brazil_legends: | occultism:spirit_fire | magic | M-02 | ACCEPT |
 | 6 |  | `cataclysm` | cataclysm:ancient_metal_ingot / witherite_ingo | create:crushing → create:pressing  | create | M-03 | ACCEPT |
-| 6 |  | `cataclysm` | cataclysm boss drops (witherite_ingot, ancient | emergent player trade | economy | M-34 | ACCEPT |
 | 6 |  | `companions` | companions:relic_gold (Sacred Pontiff boss dro | numismatics mint | economy | M-08 | ACCEPT |
 | 6 |  | `companions` | companions:tesla_coil_block / voltaic_pillar_b | create:crushing | create | M-04 | REJECT |
 | 6 |  | `companions` | companions:voltaic_pillar / tesla_coil_block ( | create:crushing | create | M-04 | REJECT |
@@ -347,15 +362,22 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 6 |  | `cookingforblockheads` | cookingforblockheads:cooking_table (the kitche | create:mechanical_crafting (gate o | create | M-05 | REJECT |
 | 6 |  | `copperagebackport` | Copper Golem (minecraft:copper_golem_statue, l | thematic adjacency to Create logis | aeronautics |  | REJECT |
 | 6 |  | `copycats` | copycats blank shapes | create:cutting (stonecutter equiv, | create | M-04 | REJECT |
+| 6 |  | `create_confectionery` | create_confectionery (chocolate brick blocks — | create:crushing back to raw + XP n | create | M-04 | ACCEPT |
+| 6 |  | `create_dragons_plus` | create_dragons_plus:dragon_breath fluid (the B | create_dragons_plus:ending → ars_n | magic | M-10 | ACCEPT |
+| 6 |  | `create_factory` | create_factory sweets | minecolonies hut or colony request | economy | M-28 | ACCEPT |
 | 6 |  | `create_jetpack` | create_jetpack:netherite_jetpack (endgame vari | create:sequenced_assembly | create | M-06 | ACCEPT |
 | 6 |  | `create_sa` | create_sa:brass_drone_item (programmable auton | config/recipe | aeronautics | M-24 | REJECT |
-| 6 |  | `create_tweaked_controllers` | create_tweaked_controllers:tweaked_lectern_con | create:mechanical_crafting (as a c | create | M-05 | ACCEPT |
+| 6 |  | `create_train_parts` | create_train_parts:brass_sliding_window / trai | create:pressing (brass sheet → pre | create | M-04 | ACCEPT |
 | 6 |  | `createaddition` | `createaddition:rolling` producing `c:rods/all | Aeronautics structural hull/frame  | aeronautics | M-24 | ACCEPT |
-| 6 | ✓ | `createbigcannons` | cannon-grade steel ingot (createbigcannons:ste | create:* processing → numismatics  | economy | M-08 | ACCEPT |
 | 6 |  | `createblockchain` | createblockchain:mining_core (geode worldgen c | GTMOGS regional ore-gen / loot-see | economy | M-30 | ACCEPT |
 | 6 |  | `createimmersivetacz` | createimmersivetacz:twelve_gauge_shell / rifle | combat use (ammo as expendable) | economy | M-26 | ACCEPT |
+| 6 |  | `createmechanicalcompanion` | createmechanicalcompanion:optical_sensor / qua | ars_nouveau:imbuement | magic | M-10 | REJECT |
+| 6 |  | `createmetalwork` | createmetalwork crushed magic-mod ores (occult | create:crushing → magic ore doubli | magic | M-03 | ACCEPT |
 | 6 |  | `createnuclear` | createnuclear reactor SU output (massive kinet | aeronautics engine intake (M-13 ex | aeronautics | M-13 | REJECT |
+| 6 |  | `createnuclear` | createnuclear:uranium (regional ore) | GTMOGS regional ore-gen | economy | M-30 | ACCEPT |
 | 6 |  | `createoreexcavation` | createoreexcavation vein-table (configurable p | pack design lever — add coin-grade | economy | M-30 | ACCEPT |
+| 6 |  | `createtreadmill` | createtreadmill:treadmill (player-powered SU s | create:* network consumption | survival | M-26 | ACCEPT |
+| 6 |  | `ctov` | ctov outpost chest loot | loot-seed | survival | M-34 | ACCEPT |
 | 6 | ✓ | `deeperdarker` | deeperdarker:heart_of_the_deep | a complex Create/aeronautics recip | create | M-15 | ACCEPT |
 | 6 |  | `deeperdarker` | deeperdarker:soul_crystal | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 6 |  | `dndesires` | dndesires:rubber (hydraulic_compacting output) | aeronautics construction recipe | aeronautics | M-23 | ACCEPT |
@@ -363,17 +385,15 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 6 |  | `dungeons-and-taverns-v4.4.4` | dungeons-and-taverns loot (treasure chests in  | numismatics coin seeding | economy | M-08 | ACCEPT |
 | 6 |  | `dungeons-and-taverns-v4.4.4` | dungeons-and-taverns structure loot (deeper/en | loot-seed | create | M-15 | ACCEPT |
 | 6 |  | `dungeons-and-taverns-v4.4.4` | structure loot (coins/relics) | loot-seed (seed numismatics coin i | economy | M-08 | ACCEPT |
-| 6 |  | `dungeons_arise_seven_seas` | dungeons_arise_seven_seas fortress/ruin loot | loot-seed (magic reagents) | magic | M-02 | ACCEPT |
-| 6 |  | `exposure` | exposure:camera (gold + glass instrument) | create:sequenced_assembly | create | M-06 | REJECT |
+| 6 |  | `dungeons_arise_seven_seas` | dungeons_arise_seven_seas structure loot table | loot-seed — seed numismatics coins | economy | M-08 | ACCEPT |
+| 6 | ✓ | `expandeddelight` | expandeddelight:cinnamon_log / cinnamon (dust) | create:milling | create | M-12 | ACCEPT |
 | 6 |  | `extradelight` | extradelight high-tier feast ingredient (seaso | serene seasons gate (config) | survival | M-16 | ACCEPT |
-| 6 |  | `farm_and_charm` | farm_and_charm grain/meat outputs (bulk surplu | MineColonies provisioning | economy | M-28 | ACCEPT |
 | 6 |  | `fluid` | fluid:centrifugal_pump / fluid:smart_fluid_int | aeronautics ship build (structural | aeronautics | M-24 | REJECT |
 | 6 |  | `fluid` | fluid:neon_tube (decorative lighting block) | recipe (create:crushing → M-04) | create | M-04 | REJECT |
 | 6 |  | `formations` | formations generated altars/pedestals | loot-seed | magic | M-02 | ACCEPT |
 | 6 |  | `friendsandfoes` | friendsandfoes:crab_claw | occultism:spirit_fire | magic | M-11 | REJECT |
-| 6 |  | `hpm` | hpm:largehull / hpm:smallhull | recipe (create:mechanical_crafting | create | M-23 | ACCEPT |
+| 6 |  | `grimoireofgaia` | grimoireofgaia mini-boss drops (busts, rings) | emergent player trade | economy | M-34 | ACCEPT |
 | 6 |  | `immersive_armors` | immersive_armors:bone_chestplate set | occultism:spirit_fire or ritual (b | magic | M-11 | REJECT |
-| 6 |  | `kobolds` | kobolds:kobold_skull | ars_nouveau:imbuement (M-10) | magic | M-10 | REJECT |
 | 6 | ✓ | `mcwroofs` | stone/brick/andesite/deepslate roof variants | create:crushing | create | M-04 | ACCEPT |
 | 6 |  | `minecolonies` | minecolonies:ancienttome (research gate item) | create:mechanical_crafting or crea | create | M-15 | REJECT |
 | 6 |  | `minecolonies_tweaks` | c:crops/* unified tags (corn, rice, soybean, t | create:milling | create | M-12 | ACCEPT |
@@ -386,18 +406,19 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 6 |  | `northstar` | northstar:advanced_circuit | create:sequenced_assembly (northst | create | M-06 | ACCEPT |
 | 6 |  | `occultengineering` | occultengineering:spirit_solution | occultism:ritual or ars_nouveau:im | magic | M-11 | REJECT |
 | 6 |  | `occultism` | foreign mob drops (any c:tag mob drop) | occultism:spirit_fire | magic | M-11 | ACCEPT |
-| 6 | ✓ | `oceansdelight` | oceansdelight:fugu_slice (poison delicacy) | occultism:spirit_fire / ars imbuem | magic | M-11 | REJECT |
+| 6 |  | `pantographsandwires` | pantographsandwires:graphite (c:item/ingots/gr | ars_nouveau:imbuement or occultism | magic | M-10 | REJECT |
 | 6 |  | `railways` | railways locometal blocks (many color variants | create:crushing | create | M-04 | ACCEPT |
-| 6 | ✓ | `ribbits` | Ribbit sorcerer buff trades (survival-side) →  | loot-seed / trade config | economy | M-08 | ACCEPT |
 | 6 |  | `s_a_b` | s_a_b:hardsteelblock (hard armor plate) | create:sequenced_assembly | aeronautics | M-23 | ACCEPT |
 | 6 |  | `s_a_b` | s_a_b steel blocks (as ballistic-grade materia | recipe | create | M-06 | ACCEPT |
 | 6 |  | `samurai_dynasty` | samurai_dynasty:akaname_tongue / Yokai mob dro | occultism:spirit_fire or ars_nouve | magic | M-11 | ACCEPT |
 | 6 |  | `samurai_dynasty` | samurai_dynasty:steel (c:ingots/steel) | create:crushing (for any excess st | create | M-03 | ACCEPT |
+| 6 |  | `samurai_dynasty` | `samurai_dynasty:akaname_tongue` / Yokai drops | `ars_nouveau:imbuement` | magic | M-10 | ACCEPT |
 | 6 |  | `securitycraft` | securitycraft:sentry (automated turret) | recipe using createbigcannons comp | create | M-05 | ACCEPT |
-| 6 |  | `securitycraft` | securitycraft reinforced block / keycard | recipe — keycard reader requires a | economy | M-08 | REJECT |
 | 6 | ✓ | `sereneseasons` | sereneseasons:season_sensor (redstone output o | create:item_application / contrapt | create | M-05 | ACCEPT |
+| 6 |  | `simplehats` | simplehats grab-bags (mob drops from hostile m | loot-seed (add rare hat bags to bo | survival | M-34 | ACCEPT |
+| 6 |  | `sky_whale_ship` | sky-whale loot tables (custom loot chests on w | loot-table seeding (aeronautics pr | aeronautics | M-15 | ACCEPT |
+| 6 |  | `smokeleafindustries` | smokeleafindustries products | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 6 |  | `snowyspirit` | snowyspirit:ginger (c:crops/ginger) | season-gated input (Serene Seasons | survival | M-16 | ACCEPT |
-| 6 |  | `spawn` | spawn:crab / crab drops (cooked crab, crab cla | farmersdelight:cooking + create:mi | create | M-12 | ACCEPT |
 | 6 |  | `spawn` | spawn:date_log / date_planks | create:crushing → M-04 recycle | create | M-04 | REJECT |
 | 6 |  | `spawn` | spawn clam/fish catches (bulk aquatic goods) | aeronautics/logistics (bulk perish | aeronautics | M-31 | ACCEPT |
 | 6 |  | `t_and_t` | t_and_t conquerable outpost/fort as unlock gat | crafting-table (boss-key pattern) | create | M-15 | ACCEPT |
@@ -406,66 +427,66 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 6 |  | `terralith` | Terralith fantastical biomes (Moonlight Grove, | worldgen/spawn gating | magic | M-22 | ACCEPT |
 | 6 |  | `tfmg` | tfmg:aluminum (c:ingots/aluminum, from bauxite | aeronautics airframe (lightweight  | aeronautics | M-23 | ACCEPT |
 | 6 |  | `tidal-towns-1.3.4` | tidal-towns ocean-village blacksmith chest | loot-seed (seed cataclysm amethyst | magic | M-02 | REJECT |
+| 6 |  | `travelersbackpack` | travelersbackpack fluid tanks (portable fluid  | aeronautics logistics role | aeronautics | M-31 | REJECT |
+| 6 |  | `upgrade_aquatic` | upgrade_aquatic jellyfish / thrasher mob drops | loot-seed — add coin or a magic re | magic | M-02 | ACCEPT |
 | 6 |  | `valarian_conquest` | valarian_conquest faction loot (shields, facti | loot-seed (seed numismatics coin i | economy | M-08 | ACCEPT |
-| 6 |  | `woodworks` | woodworks:*_boards / *_bookshelf / *_chest | create:crushing | create | M-04 | ACCEPT |
+| 6 |  | `vinery` | vinery wines (aged, effect-bearing) | vinery:wine_fermentation maturatio | economy | M-35 | ACCEPT |
+| 6 |  | `zombiemoon` | zombiemoon hostile mobs (Zombie Brute, Crawler | loot-seed | magic | M-02 | REJECT |
 | 5 |  | `alexsmobs` | alexsmobs:skunk_spray (environmental, common) | create:mixing | create | M-12 | REJECT |
 | 5 |  | `alexsmobs` | alexsmobs:banana (tropical food, renewable fro | farmersdelight:cooking or extradel | economy | M-12 | ACCEPT |
 | 5 |  | `alexsmobs` | alexsmobs:ender_residue (void worm drop, endga | ars_nouveau:imbuement → arcane rea | magic | M-10 | ACCEPT |
 | 5 | ✓ | `alexsmobs` | alexsmobs mob drops (general) | M-34 combat-route supply — rare dr | economy | M-34 | ACCEPT |
 | 5 |  | `appleseed` | appleseed diet-variety demand signal | config/tuning (demand driver, not  | create | M-26 | ACCEPT |
 | 5 |  | `ars_nouveau` | ars_nouveau archwood surplus (archwood logs/pl | create:milling → Ars recipes | create | M-12 | ACCEPT |
-| 5 |  | `ars_nouveau` | ars_nouveau spell scrolls / enchanted gear | player trade | economy | M-33 | ACCEPT |
-| 5 |  | `bakery` | bakery baked goods (surplus production) | ars_nouveau:imbuement (Vitalic sou | magic | M-10 | REJECT |
 | 5 |  | `bakery` | bakery:apple_jam / bakery:chocolate_jam (high- | ars_nouveau:imbuement as alchemica | magic | M-10 | REJECT |
 | 5 |  | `beachparty` | beachparty:mini_fridge_freezing ice output | Create cooling chain (upstream) | create | M-12 | REJECT |
+| 5 |  | `betteroceanmonuments` | monument chest loot tables | loot-seed | magic | M-02 | ACCEPT |
+| 5 |  | `betterstrongholds` | betterstrongholds loot chests | loot-seed | economy | M-34 | ACCEPT |
 | 5 |  | `born_in_chaos_v1` | born_in_chaos_v1:black_argillite (deco stone) | create:crushing | create | M-04 | REJECT |
 | 5 |  | `bountiful` | bountiful objective pool (configurable) | Create-processed goods as required | create | M-12 | ACCEPT |
-| 5 |  | `brazil_legends` | brazil_legends:capelobo_claw / brazil_legends: | occultism:spirit_fire | magic | M-02 | ACCEPT |
+| 5 |  | `brazil_legends` | brazil_legends:bottle_with_saci | recipe (occultism:ritual — summon/ | magic | M-11 | ACCEPT |
 | 5 |  | `cataclysm` | cataclysm:azure_seastone (deco blocks) | create:crushing → gravel/raw stone | create | M-04 | REJECT |
 | 5 |  | `cataclysm` | cataclysm:amethyst_crab_meat (blessed) | farmersdelight:cooking | survival | M-12 | ACCEPT |
 | 5 |  | `cataclysm` | cataclysm azure_seastone / black_steel decorat | create:crushing (M-04 recycles dec | create | M-04 | REJECT |
 | 5 |  | `charta` | charta gambling / card matches + numismatics c | no method (behavior wiring, not it | economy |  | REJECT |
+| 5 |  | `charta` | charta:card_table (tavern furniture) | create:cutting (sawmill step) | create | M-04 | ACCEPT |
 | 5 |  | `charta` | charta filled wine/beer glasses | beachparty:palm_bar_mixing or vine | survival | M-12 | ACCEPT |
 | 5 |  | `cold_sweat` | cold_sweat temperature system | M-16 seasonal reagent config-tie | survival | M-16 | ACCEPT |
 | 5 |  | `cookingforblockheads` | cookingforblockheads kitchen as MineColonies c | config / MineColonies hut recipe | economy | M-28 | ACCEPT |
+| 5 |  | `copycats` | copycats:copycat_block (blank zinc shape) | create:crushing (recycle) | create | M-04 | REJECT |
 | 5 | ✓ | `create_cheese` | create_cheese:maturing station (tag-driven, ac | maturing | economy | M-35 | ACCEPT |
-| 5 |  | `create_confectionery` | create_confectionery (chocolate brick blocks — | create:crushing back to raw + XP n | create | M-04 | ACCEPT |
 | 5 |  | `create_connected` | create_connected:kinetic_battery / create_conn | recipe (create:sequenced_assembly) | create | M-06 | REJECT |
-| 5 |  | `create_dragons_plus` | create_dragons_plus:dragon_breath fluid (the B | create_dragons_plus:ending → ars_n | magic | M-10 | ACCEPT |
 | 5 |  | `create_enchantment_industry` | create_enchantment_industry:experience_bucket  | occultism:ritual | magic | M-11 | REJECT |
 | 5 |  | `create_factory` | create_factory cream/jam fluids | ars_nouveau:imbuement (sweet essen | magic | M-10 | REJECT |
-| 5 |  | `create_factory` | create_factory sweets | minecolonies hut or colony request | economy | M-28 | ACCEPT |
 | 5 |  | `create_integrated_farming` | roost egg output | farmersdelight:cutting / extradeli | survival | M-12 | ACCEPT |
+| 5 |  | `create_ironworks` | create_ironworks:bronze_ingot / tin_ingot | ars_nouveau:imbuement or occultism | magic | M-10 | REJECT |
 | 5 |  | `create_ironworks` | create_ironworks:bronze_plate / bronze_ingot | aeronautics drivetrain/control (M- | aeronautics | M-24 | ACCEPT |
 | 5 |  | `create_jetpack` | create_jetpack:netherite_jetpack | boss-drop gating (KubeJS recipe ga | survival | M-15 | ACCEPT |
 | 5 |  | `create_new_age` | create_new_age advanced_motor / reinforced_mot | aeronautics drivetrain | aeronautics | M-24 | ACCEPT |
 | 5 | ✓ | `create_new_age` | `create_new_age:thorium_ore` (regional scarcit | GTMOGS regional ore-gen → its reac | economy | M-30 | ACCEPT |
-| 5 |  | `create_train_parts` | create_train_parts:brass_sliding_window / trai | create:pressing (brass sheet → pre | create | M-04 | REJECT |
+| 5 | ✓ | `createbigcannons` | createbigcannons shells/munitions (big_cartrid | M-34 combat-route supply | economy | M-34 | ACCEPT |
 | 5 |  | `createfood` | createfood finished dishes (pizza, pie, ice cr | create:mixing / farmersdelight:coo | economy | M-26 | ACCEPT |
-| 5 |  | `createmechanicalcompanion` | createmechanicalcompanion:optical_sensor / qua | ars_nouveau:imbuement | magic | M-10 | REJECT |
+| 5 |  | `createlowheated` | createlowheated heat tier (lowheated) as a fue | config link to survival fuels (cha | survival | M-16 | REJECT |
+| 5 |  | `createlowheated` | createlowheated:basic_burner (fuel consumption | M-26 consumption | survival | M-26 | ACCEPT |
 | 5 |  | `createmechanicalcompanion` | createmechanicalcompanion:mechanical_wolf_link | loot-seed | survival | M-15 | ACCEPT |
-| 5 |  | `createmetalwork` | createmetalwork crushed magic-mod ores (occult | create:crushing → magic ore doubli | magic | M-03 | ACCEPT |
 | 5 | ✓ | `createmetalwork` | c:crushed_raw_materials/* (palladium, osmium,  | create:crushing → numismatics mint | economy | M-08 | ACCEPT |
 | 5 |  | `createnuclear` | createnuclear:enriched_soul_soil (enriched rec | recipe (create:haunting feed — sou | magic | M-19 | ACCEPT |
-| 5 |  | `createnuclear` | createnuclear:uranium (regional ore) | GTMOGS regional ore-gen | economy | M-30 | ACCEPT |
-| 5 |  | `createtreadmill` | createtreadmill:treadmill (player-powered SU s | create:* network consumption | survival | M-26 | ACCEPT |
-| 5 |  | `ctov` | ctov outpost chest loot | loot-seed | survival | M-34 | ACCEPT |
 | 5 |  | `deeperdarker` | deeperdarker:sculk_bone / warden_carapace | occultism:ritual | magic | M-02 | ACCEPT |
 | 5 |  | `deeperdarker` | deeperdarker:heart_of_the_deep (rare Warden dr | recipe gate — Heart of the Deep as | magic | M-15 | ACCEPT |
 | 5 |  | `dndesires` | dndesires:asphalt (colored palette) | aeronautics construction recipe | aeronautics | M-23 | REJECT |
 | 5 | ✓ | `domum_ornamentum` | DO ornamental blocks (timberframes, shingles,  | create:crushing | create | M-04 | ACCEPT |
 | 5 |  | `dtterralith` | dtterralith region-specific logs (e.g. jacaran | create:crushing (deco log → gravel | create | M-04 | REJECT |
-| 5 |  | `dungeons_arise_seven_seas` | dungeons_arise_seven_seas structure loot table | loot-seed — seed numismatics coins | economy | M-08 | ACCEPT |
+| 5 | ✓ | `dungeons_arise_seven_seas` | dungeons_arise_seven_seas structures (nautical | aeronautics ship-exploration frami | aeronautics |  | REJECT |
 | 5 |  | `ecologics` | ecologics coconut woodset | create:cutting (saw) | create | M-04 | REJECT |
 | 5 |  | `ecologics` | ecologics:coconut woodset (logs/planks) | recipe (create:milling) | create | M-04 | REJECT |
 | 5 |  | `edf-remastered-5.0-beta4` | Ender Dragon fight (harder, multi-phase) | loot-seed — seed dragon loot table | create | M-15 | ACCEPT |
-| 5 | ✓ | `expandeddelight` | expandeddelight:cinnamon_log / cinnamon (dust) | create:milling | create | M-12 | ACCEPT |
 | 5 |  | `expandeddelight` | expandeddelight:salt (c:dusts/salt) | create:mixing | create | M-12 | REJECT |
 | 5 |  | `exposure` | exposure:black_and_white_film (craft requires  | create:pressing silver → film base | create | M-12 | ACCEPT |
+| 5 |  | `exposure` | exposure:aged_photograph | exposure:photograph_aging | economy | M-35 | ACCEPT |
 | 5 |  | `farmersdelight` | farmersdelight seasonal crops (cabbage/tomato  | config-gated Serene Seasons season | survival | M-16 | ACCEPT |
 | 5 | ✓ | `friendsandfoes` | copper deco blocks (copper_button, lightning_r | create:crushing | create | M-04 | ACCEPT |
 | 5 |  | `galosphere` | galosphere:preserved_transform_recipe (amber p | galosphere:preserved_transform_rec | magic | M-10 | REJECT |
-| 5 |  | `grimoireofgaia` | grimoireofgaia mini-boss drops (busts, rings) | emergent player trade | economy | M-34 | ACCEPT |
+| 5 |  | `gamediscs` | gamediscs:processor | create:pressing (pressed circuit b | create | M-12 | REJECT |
 | 5 |  | `handcrafted` | handcrafted furniture pieces (chairs, tables,  | create:cutting (route a representa | create | M-04 | ACCEPT |
 | 5 |  | `illagerinvasion` | illagerinvasion Imbuing Table (enchant-boostin | M-33 service-for-hire | economy | M-33 | ACCEPT |
 | 5 |  | `irons_spellbooks` | mob drops (irons_spellbooks apothecarist / ice | occultism:spirit_fire or ars_nouve | magic | M-02 | ACCEPT |
@@ -473,49 +494,47 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 5 |  | `irons_spellbooks` | irons_spellbooks mob bosses (apothecarist etc. | occultism:spirit_fire | magic | M-11 | ACCEPT |
 | 5 | ✓ | `mcwdoors` | metal/iron door + iron-framed glass-door varia | create:crushing | create | M-04 | ACCEPT |
 | 5 | ✓ | `mcwwindows` | stone parapet / arrow-slit / mosaic glass bloc | create:crushing | create | M-04 | ACCEPT |
+| 5 |  | `meadow` | meadow:alpine_salt | extradelight:evaporator | survival | M-12 | ACCEPT |
 | 5 |  | `meadow` | meadow:chambray_wool (felted wool textile) | ars_nouveau:imbuement (attune the  | magic | M-10 | REJECT |
 | 5 |  | `meadow` | meadow:cheese_wheel (finished product) | M-35 maturation — cheese must age  | economy | M-35 | ACCEPT |
+| 5 |  | `modulargolems` | modulargolems golem body (boss/mid metal: Cata | modulargolems:golem_assemble gated | survival | M-15 | ACCEPT |
 | 5 |  | `more_slabs_stairs_and_walls` | gravity-block cuts (concrete-powder/sand/grave | create:crushing | create | M-04 | REJECT |
 | 5 |  | `mowziesmobs` | mowziesmobs:sol_visage (Barako drop) | ars_nouveau:imbuement or occultism | magic | M-11 | ACCEPT |
+| 5 |  | `mowziesmobs` | mowziesmobs:sol_visage (Barako drop) | irons_spellbooks:alchemist_cauldro | magic | M-02 | ACCEPT |
+| 5 |  | `naturalist` | naturalist:antler | recipe (occultism:spirit_fire — bo | magic | M-11 | ACCEPT |
 | 5 |  | `naturalist` | naturalist shellstone / froglass (deco blocks) | create:crushing | create | M-04 | REJECT |
 | 5 |  | `northstar` | northstar:titanium_ingot | create:crushing (ore-doubling, tit | create | M-03 | REJECT |
 | 5 |  | `occultism` | occultism:silver_ingot (real silver, c:ingots/ | numismatics mint | economy | M-08 | ACCEPT |
-| 5 |  | `pantographsandwires` | pantographsandwires:graphite (c:item/ingots/gr | ars_nouveau:imbuement or occultism | magic | M-10 | REJECT |
 | 5 |  | `pantographsandwires` | pantographsandwires:coal_coke (c:item/dusts/co | tfmg:coking | create | M-12 | ACCEPT |
 | 5 |  | `pantographsandwires` | pantographsandwires:graphite | create:milling | create | M-12 | REJECT |
 | 5 |  | `quark` | quark:apple_crate / quark:carrot_crate / quark | create:milling | create | M-12 | ACCEPT |
 | 5 |  | `quark` | quark storage crate blocks (apple_crate, carro | create:compacting | create | M-12 | ACCEPT |
+| 5 |  | `quark` | quark:smithing_rune (decorative smithing upgra | ars_nouveau:enchanting_apparatus | magic | M-10 | REJECT |
 | 5 |  | `railways` | railways locometal blocks (structural panel) | aeronautics hull recipe (structura | aeronautics | M-23 | REJECT |
 | 5 |  | `rottencreatures` | rottencreatures mob heads (decorative blocks) | create:crushing | create | M-04 | REJECT |
 | 5 |  | `rottencreatures` | rottencreatures:frozen_rotten_flesh | create:crushing | create | M-02 | REJECT |
 | 5 |  | `samurai_dynasty` | samurai_dynasty:jade_ore / samurai_dynasty:rub | create:crushing | create | M-03 | ACCEPT |
 | 5 | ✓ | `samurai_dynasty` | jade/ruby/onyx/aquamarine ores | create:crushing | create | M-03 | ACCEPT |
 | 5 | ✓ | `samurai_dynasty` | Yokai drops (akaname_tongue etc.) | occultism:spirit_fire / ars_nouvea | magic | M-02 | ACCEPT |
-| 5 |  | `samurai_dynasty` | `samurai_dynasty:akaname_tongue` / Yokai drops | `ars_nouveau:imbuement` | magic | M-10 | ACCEPT |
-| 5 |  | `simplehats` | simplehats grab-bags (mob drops from hostile m | loot-seed (add rare hat bags to bo | survival | M-34 | ACCEPT |
-| 5 |  | `sky_whale_ship` | sky-whale loot tables (custom loot chests on w | loot-table seeding (aeronautics pr | aeronautics | M-15 | ACCEPT |
 | 5 |  | `sky_whale_ship` | sky_whale_ship structures (aerial loot chests) | loot-seed | economy | M-34 | ACCEPT |
 | 5 |  | `smokeleafindustries` | smokeleafindustries:hemp_crop / raw bud | create:milling | create | M-12 | ACCEPT |
 | 5 |  | `smokeleafindustries` | smokeleafindustries FE machines | createaddition FE↔kinetic bridge | create | M-05 | ACCEPT |
-| 5 |  | `smokeleafindustries` | smokeleafindustries products | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 5 | ✓ | `snowyspirit` | ginger crop (c:crops/ginger / snowyspirit:ging | create:milling | create | M-12 | ACCEPT |
 | 5 |  | `spawn` | spawn critter drops (ant_pupa, barnacle, seal  | occultism:spirit_fire | magic | M-11 | ACCEPT |
 | 5 |  | `supplementaries` | supplementaries:ash (c:dusts/ash) | create:mixing (ash as a flux/reage | create | M-12 | ACCEPT |
 | 5 |  | `t_and_t` | t_and_t loot tables | loot-seed | magic | M-02 | ACCEPT |
+| 5 |  | `tacz` | tacz:gun_smith_table_crafting inputs (metal/co | create:pressing + tacz:gun_smith_t | create | M-05 | ACCEPT |
 | 5 |  | `tacz` | high-tier tacz guns (endgame variants) | create:sequenced_assembly keystone | create | M-06 | ACCEPT |
 | 5 |  | `tfmg` | tfmg:sulfur / saltpeter (c:dusts) | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 5 | ✓ | `tfmg` | tfmg flamethrower/napalm weaponry | combat flavor | survival |  | REJECT |
 | 5 | ✓ | `tide` | tide season-locked catches (Serene Seasons-gat | a season-gated input → Create/magi | create | M-16 | ACCEPT |
 | 5 |  | `tide` | tide:abyss_angler or exotic fish | ars_nouveau:imbuement (M-10) | magic | M-10 | REJECT |
 | 5 |  | `touhou_little_maid` | touhou_little_maid:broom (endgame rideable fli | touhou_little_maid:altar_recipe_se | magic | M-10 | ACCEPT |
-| 5 |  | `travelersbackpack` | travelersbackpack fluid tanks (portable fluid  | aeronautics logistics role | aeronautics | M-31 | REJECT |
 | 5 |  | `underground_village` | underground_village structure chests | loot-seed (add arcane reagents / s | magic | M-02 | ACCEPT |
 | 5 |  | `upgrade_aquatic` | upgrade_aquatic raw fish (raw_pike / raw_perch | farmersdelight:cutting | economy | M-12 | ACCEPT |
-| 5 |  | `upgrade_aquatic` | upgrade_aquatic jellyfish / thrasher mob drops | loot-seed — add coin or a magic re | magic | M-02 | ACCEPT |
+| 5 |  | `vc_gliders` | vc_gliders:paraglider_netherite (top tier) | create:sequenced_assembly | create | M-06 | REJECT |
 | 5 |  | `vc_gliders` | vc_gliders:paraglider_iron (base tier glider) | create:pressing (reinforced paper  | create | M-12 | REJECT |
 | 5 |  | `vinery` | vinery wines (effect-bearing consumables) | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
-| 5 |  | `vinery` | vinery wines (aged, effect-bearing) | vinery:wine_fermentation maturatio | economy | M-35 | ACCEPT |
-| 5 |  | `zombiemoon` | zombiemoon hostile mobs (Zombie Brute, Crawler | loot-seed | magic | M-02 | ACCEPT |
 | 4 |  | `aeronautics` | aeronautics levitite blend in-world crystalliz | ars_nouveau:imbuement or occultism | magic | M-10 | ACCEPT |
 | 4 |  | `aeronautics` | aeronautics:levitite_blend crystallization ste | KubeJS catalyst (Ars/Occultism cat | magic | M-10 | ACCEPT |
 | 4 |  | `aeronautics` | levitite blend (aeronautics:levitite_blend) | create:mixing (zinc nugget + end_s | economy | M-30 | ACCEPT |
@@ -526,114 +545,127 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 4 |  | `ars_nouveau` | ars_nouveau:archwood_log | create:crushing (M-04 recycling) | create | M-04 | ACCEPT |
 | 4 |  | `ars_nouveau` | ars_nouveau Vitalic/Agronomic Sourcelinks cons | config tie — set Vitalic to draw f | survival | M-16 | ACCEPT |
 | 4 |  | `ars_nouveau` | any farm/mob surplus (crops, drops) | ars_nouveau sourcelinks (Agronomic | survival | M-02 | ACCEPT |
+| 4 |  | `ars_nouveau` | ars_nouveau:source_gem | create:mixing (require as catalyst | create | M-29 | ACCEPT |
 | 4 |  | `astikorcartsredux` | plow/reaper (iron-bearing implements) | create:pressing → iron sheets as c | create | M-05 | REJECT |
 | 4 |  | `beachparty` | beachparty cocktail buffs → combat role (pre-f | consumption before raids / emergen | survival | M-26 | REJECT |
 | 4 |  | `betterdungeons` | betterdungeons Spider Cave loot tables | loot-seed | economy | M-34 | ACCEPT |
 | 4 | ✓ | `betterdungeons` | dungeon danger output (farmed loot) | emergent trade to non-combat playe | economy | M-34 | ACCEPT |
 | 4 |  | `betteroceanmonuments` | ocean monument chest loot | loot-seed | economy | M-08 | ACCEPT |
 | 4 |  | `betteroceanmonuments` | monument chest loot (loot=yes) | loot-seed — inject Numismatics coi | economy | M-08 | ACCEPT |
-| 4 |  | `betteroceanmonuments` | monument chest loot tables | loot-seed | magic | M-02 | ACCEPT |
 | 4 |  | `betterstrongholds` | stronghold chest loot | loot-seed | magic | M-02 | ACCEPT |
-| 4 |  | `betterstrongholds` | betterstrongholds loot chests | loot-seed | economy | M-34 | ACCEPT |
+| 4 |  | `bits_n_bobs` | bits_n_bobs:brass_lamp | create:item_application | create | M-20 | REJECT |
 | 4 |  | `born_in_chaos_v1` | born_in_chaos_v1:pumpkin_staff / soul_saber (b | gated Create recipe (boss drop as  | create | M-15 | ACCEPT |
+| 4 |  | `born_in_chaos_v1` | born_in_chaos_v1 Pumpkinhead boss drops (Soul  | recipe gating (boss drop as key in | create | M-15 | ACCEPT |
+| 4 |  | `born_in_chaos_v1` | born_in_chaos_v1 mob drops (dark_metal, bones, | emergent trade | economy | M-34 | ACCEPT |
 | 4 |  | `bountiful` | bountiful objective pool | magic reagents as required items ( | magic | M-02 | ACCEPT |
 | 4 | ✓ | `bountiful` | bounty payout reward | numismatics (set reward to cog/spu | economy | M-08 | ACCEPT |
+| 4 |  | `bountiful` | bountiful decree objective pool | curating objectives toward Create- | create | M-29 | ACCEPT |
 | 4 |  | `brazil_legends` | brazil_legends:amber_shard / amber_pearl | occultism:spirit_fire | magic | M-11 | ACCEPT |
-| 4 |  | `brazil_legends` | brazil_legends:bottle_with_saci | recipe (occultism:ritual — summon/ | magic | M-11 | ACCEPT |
 | 4 |  | `byzantine` | byzantine schematic styles (Byzantine/Shogun/N | minecolonies hut construction | economy | M-28 | ACCEPT |
 | 4 |  | `cataclysm` | cataclysm:ancient_metal_ingot (processed throu | create:sequenced_assembly (derpack | create | M-06 | ACCEPT |
 | 4 |  | `cataclysm` | cataclysm:ignitium_ingot (Ignis boss drop) | recipe (ars_nouveau:imbuement) | magic | M-10 | ACCEPT |
 | 4 |  | `cbc_at` | cbc_at munitions (gunpowder/propellant chain) | tfmg:coking or create:mixing (chem | create | M-12 | REJECT |
-| 4 |  | `charta` | charta:card_table (tavern furniture) | create:cutting (sawmill step) | create | M-04 | ACCEPT |
+| 4 |  | `cbc_at` | cbc_at rifled-barrel / silencer upgrade tier | minecolonies research | economy | M-28 | ACCEPT |
+| 4 |  | `charta` | charta:empty_wine_glass / empty_beer_glass (gl | create:pressing or create:item_app | create | M-04 | REJECT |
 | 4 |  | `charta` | charta:card_table / dealer_table | M-33 service-for-hire — a player h | economy | M-33 | ACCEPT |
 | 4 |  | `charta` | charta card_table / dealer_table (generates in | loot-seed | economy | M-33 | REJECT |
+| 4 |  | `chefsdelight` | chefsdelight loot=yes (village cook structures | loot-seed (structure chests contai | economy | M-08 | ACCEPT |
+| 4 |  | `chefsdelight` | chefsdelight Cook/Chef villagers | config trade redirect | economy | M-33 | ACCEPT |
 | 4 |  | `cmpackagecouriers` | cmpackagecouriers:location_transmitter | create:mechanical_crafting | create | M-05 | REJECT |
+| 4 |  | `cold_sweat` | cold_sweat:boiler + cold_sweat:icebox | create:mechanical_crafting (gate o | create | M-05 | ACCEPT |
+| 4 |  | `cold_sweat` | cold_sweat insulation sewing (goat_fur, chamel | farmersdelight:cutting (butchering | create | M-12 | ACCEPT |
 | 4 |  | `comforts` | comforts:sleeping_bag_* / hammock_* | create:milling or farmersdelight:c | create | M-12 | REJECT |
 | 4 |  | `companions` | companions:crystallized_blood | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
+| 4 |  | `companions` | companions:voltaic_pillar_block / tesla_coil_b | create:crushing | create | M-04 | ACCEPT |
 | 4 |  | `companions` | companions boss drop — Relic Gold (Sacred Pont | numismatics mint (via create:*) | economy | M-08 | REJECT |
 | 4 |  | `companions` | companions:soul_gem (diamond→soul gem via Soul | ars_nouveau:imbuement | magic | M-02 | ACCEPT |
 | 4 |  | `cookingforblockheads` | Oven / Fridge / Sink (flagship kitchen applian | create:mechanical_crafting or crea | create | M-05 | ACCEPT |
 | 4 |  | `copperagebackport` | copper tools/armor | create:crushing | create | M-03 | ACCEPT |
 | 4 |  | `copycats` | copycats blank shapes (zinc-crafted) | create:item_application (applying  | create | M-20 | REJECT |
-| 4 |  | `copycats` | copycats:copycat_block (blank zinc shape) | create:crushing (recycle) | create | M-04 | ACCEPT |
 | 4 |  | `create_central_kitchen` | create_central_kitchen automated cooking outpu | minecolonies request system (colon | economy | M-28 | ACCEPT |
 | 4 |  | `create_compressed` | create_compressed:mechanism_block / cogwheel_b | aeronautics construction recipe | aeronautics | M-23 | ACCEPT |
+| 4 |  | `create_compressed` | create_compressed:wheat_flour_pile / dough_blo | bakery / farm_and_charm:crafting_b | survival | M-12 | ACCEPT |
 | 4 |  | `create_confectionery` | create_confectionery:hot_chocolate (warm comfo | cold_sweat integration — hot_choco | survival | M-12 | REJECT |
 | 4 |  | `create_confectionery` | create_confectionery effect candies (Speed/Sat | irons_spellbooks:alchemist_cauldro | magic | M-10 | REJECT |
+| 4 |  | `create_confectionery` | create_confectionery:bar_of_ruby_chocolate / s | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 4 |  | `create_connected` | create_connected:item_silo / inventory_bridge | logistics integration (config/desi | aeronautics | M-31 | ACCEPT |
 | 4 |  | `create_factory` | create_factory:cream_bucket / sweet_berries_ja | extradelight:vat or farm_and_charm | survival | M-12 | REJECT |
-| 4 |  | `create_ironworks` | create_ironworks:bronze_ingot / tin_ingot | ars_nouveau:imbuement or occultism | magic | M-10 | REJECT |
 | 4 |  | `create_ironworks` | create_ironworks:bronze_ingot / bronze_plate | aeronautics M-23 | aeronautics | M-23 | ACCEPT |
 | 4 |  | `create_jetpack` | create_jetpack:jetpack | create:sequenced_assembly (gating, | create | M-06 | ACCEPT |
+| 4 |  | `create_jetpack` | create_jetpack:netherite_jetpack | M-15 boss-drop gating | create | M-15 | ACCEPT |
 | 4 |  | `create_new_age` | create_new_age FE generation (generator_coil / | createaddition:charging | magic | M-17 | REJECT |
 | 4 |  | `create_new_age` | create_new_age:advanced_motor / generator_coil | create_new_age:energising + create | aeronautics | M-24 | ACCEPT |
 | 4 |  | `create_pattern_schematics` | create_pattern_schematics:empty_pattern_schema | `create:mechanical_crafting` (the  | create | M-05 | REJECT |
 | 4 |  | `create_train_parts` | create_train_parts:brass_sliding_window / trai | recipe — create:pressing (brass sh | create | M-20 | ACCEPT |
 | 4 |  | `createaddition` | `createaddition:electrum_ingot` / `electrum_wi | `ars_nouveau:enchanting_apparatus` | magic | M-10 | ACCEPT |
-| 4 | ✓ | `createbigcannons` | createbigcannons shells/munitions (big_cartrid | M-34 combat-route supply | economy | M-34 | ACCEPT |
+| 4 |  | `createaddition` | createaddition:bioethanol (refined crop fuel) | createaddition:liquid_burning → ae | aeronautics | M-13 | ACCEPT |
 | 4 | ✓ | `createblockchain` | createblockchain:currency_miner FE intake | feed it FE derived from scarce Cre | create | M-08 | ACCEPT |
 | 4 |  | `createfisheryindustry` | createfisheryindustry:fish_skin | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 4 |  | `createfood` | createfood finished dishes (pizza, cakes, milk | create:milling / create:mixing / f | survival | M-26 | ACCEPT |
 | 4 |  | `createlowheated` | createlowheated:basic_burner consuming solid f | Serene Seasons seasonal charcoal/w | survival | M-16 | REJECT |
-| 4 |  | `createlowheated` | createlowheated heat tier (lowheated) as a fue | config link to survival fuels (cha | survival | M-16 | REJECT |
-| 4 |  | `createlowheated` | createlowheated:basic_burner (fuel consumption | M-26 consumption | survival | M-26 | ACCEPT |
 | 4 |  | `createmetalwork` | createmetalwork:molten_<metal> fluids (molten  | numismatics mint (coin from proces | economy | M-08 | ACCEPT |
 | 4 |  | `createmetalwork` | createmetalwork:crushed_raw_materials/* (magic | create:crushing → create:mixing (m | magic | M-03 | ACCEPT |
 | 4 |  | `createmetalwork` | createmetalwork crushed_raw_materials/palladiu | ars_nouveau:imbuement or occultism | magic | M-10 | REJECT |
 | 4 |  | `createmetalwork` | createmetalwork:molten_steel (structural alloy | M-23 airframe/hull structural allo | aeronautics | M-23 | ACCEPT |
 | 4 |  | `createnuclear` | createnuclear:steel_block / c:ingots/steel (sc | numismatics mint | economy | M-08 | ACCEPT |
+| 4 |  | `createnuclear` | createnuclear:reactor_core / reactor_casing (e | create:sequenced_assembly (reactor | create | M-06 | ACCEPT |
 | 4 |  | `createnuclear` | createnuclear:steel (c:ingots/steel) | numismatics mint | economy | M-08 | ACCEPT |
 | 4 |  | `createnuclear` | createnuclear:steel as Aeronautics structural  | fabricated structural part → aeron | aeronautics | M-23 | ACCEPT |
 | 4 |  | `createnuclear` | createnuclear:steel_ingot (c:ingots/steel) | recipe (aeronautics structural ing | aeronautics | M-23 | ACCEPT |
 | 4 | ✓ | `createoreexcavation` | vein-table ore output (scarce/regional coin-gr | createoreexcavation:vein → create: | economy | M-08 | ACCEPT |
 | 4 |  | `createpickywheels` | biome-gated power requirement (river biome / o | survival world-rule — the requirem | survival |  | REJECT |
+| 4 |  | `ctov` | ctov village structures | loot-seed | economy | M-34 | ACCEPT |
 | 4 |  | `deeperdarker` | deeperdarker:warden_carapace / sculk_bone (mid | occultism:ritual | magic | M-02 | ACCEPT |
 | 4 |  | `deeperdarker` | deeperdarker:crystallized_amber | ars_nouveau:imbuement (amber as an | magic | M-10 | REJECT |
 | 4 |  | `deeperdarker` | deeperdarker:warden_carapace | recipe (boss-key input) — gate a c | create | M-15 | ACCEPT |
+| 4 |  | `direct_chute` | direct_chute:direct_chute | thematic: bulk-item vertical relay | aeronautics | M-31 | REJECT |
 | 4 |  | `dndesires` | any foraged/harvested pack crop or drop | dndesires:freezing / dndesires:see | survival | M-12 | ACCEPT |
+| 4 |  | `dndesires` | dndesires:cardboard_package_* | aeronautics cargo/logistics | aeronautics | M-31 | ACCEPT |
 | 4 |  | `domum_ornamentum` | DO ornamental blocks | bare sell link | economy | M-28 | ACCEPT |
 | 4 | ✓ | `drones` | drones:drill block | deploy/item_application of a Creat | create | M-20 | ACCEPT |
+| 4 |  | `drones` | drones:pocket_drone (equipped service drone) | aeronautics arm — drone as logisti | economy | M-33 | ACCEPT |
 | 4 |  | `dtterralith` | dtterralith amethyst_seed (biome: amethyst cav | ars_nouveau:imbuement (amethyst-at | magic | M-10 | ACCEPT |
 | 4 |  | `dungeons_arise_seven_seas` | galleon / fortress loot tables | loot-seed | economy | M-08 | ACCEPT |
-| 4 | ✓ | `dungeons_arise_seven_seas` | dungeons_arise_seven_seas structures (nautical | aeronautics ship-exploration frami | aeronautics |  | REJECT |
+| 4 |  | `dynamictreesplus` | dynamictreesplus:saguaro_fruit | recipe (farmersdelight:cooking) | survival | M-12 | REJECT |
 | 4 |  | `ecologics` | ecologics:coconut / c:foods/nut | extradelight:juicer or create:mill | economy | M-12 | ACCEPT |
 | 4 |  | `ecologics` | ecologics:coconut_husk (bowl substitute, bulk  | recipe (create:milling → fiber/str | create | M-12 | REJECT |
 | 4 |  | `ecologics` | ecologics:coconut / coconut_slice | farmersdelight:cooking | survival | M-12 | ACCEPT |
+| 4 |  | `endrem` | endrem:magical_eye / endrem:old_eye / remainin | any complex method | create | M-06 | REJECT |
 | 4 |  | `enhancedcelestials` | enhancedcelestials:space_moss_block | create:milling | create | M-12 | REJECT |
 | 4 |  | `enhancedcelestials` | enhancedcelestials:space_moss_block (worldgen  | create:milling | create | M-04 | REJECT |
 | 4 |  | `expandeddelight` | expandeddelight:chili_pepper / hot foods | config tie (Serene Seasons winter  | survival | M-16 | REJECT |
-| 4 |  | `exposure` | exposure:aged_photograph | exposure:photograph_aging | economy | M-35 | ACCEPT |
 | 4 |  | `farmersdelight` | farmersdelight:rice / cabbage / tomato / onion | create:milling → flour/meal interm | create | M-12 | ACCEPT |
+| 4 |  | `farmersdelight` | farmersdelight:straw (cutting byproduct) | create:mixing (straw + lye → biopl | create | M-32 | ACCEPT |
 | 4 |  | `formations` | formations structures (altars, cabins, ruins,  | loot-seed | economy | M-08 | REJECT |
 | 4 |  | `formationsnether` | formationsnether loot tables (boss-adjacent st | loot-seed | create | M-15 | REJECT |
 | 4 | ✓ | `friendsandfoes` | crab_claw / Wildfire / Illusioner drops | ars_nouveau:imbuement / occultism: | magic | M-02 | REJECT |
 | 4 |  | `galosphere` | palladium ingot → numismatics mint | create:* → numismatics | economy | M-08 | ACCEPT |
 | 4 | ✓ | `galosphere` | galosphere:palladium ore / raw palladium | create:crushing | create | M-03 | ACCEPT |
-| 4 |  | `gamediscs` | gamediscs:processor | create:pressing (pressed circuit b | create | M-12 | REJECT |
 | 4 |  | `gtmogs` | gtmogs vein definitions (regional scarce ores) | config | create | M-03 | REJECT |
+| 4 |  | `handcrafted` | handcrafted:*_chair / *_table / *_bench (finis | create:cutting | create | M-12 | ACCEPT |
 | 4 |  | `hpm` | hpm:pirate_cutter_item / hpm:raftitem (everyda | create:mechanical_crafting | create | M-05 | ACCEPT |
+| 4 |  | `hpm` | hpm ships (high-value, large items) | aeronautics transport as prerequis | economy | M-31 | ACCEPT |
+| 4 |  | `illagerinvasion` | illagerinvasion:illusionary_dust (Illusioner d | `ars_nouveau:imbuement` as a spell | magic | M-02 | ACCEPT |
 | 4 | ✓ | `immersive_armors` | divine/robe set finish | ars_nouveau:enchanting_apparatus ( | magic | M-10 | ACCEPT |
 | 4 |  | `immersive_armors` | immersive_armors:steampunk_* set (if present) | create:mechanical_crafting (brass/ | create | M-05 | ACCEPT |
+| 4 |  | `immersive_armors` | immersive_armors:steampunk set (if present — S | recipe (create:sequenced_assembly  | create | M-06 | ACCEPT |
 | 4 |  | `immersive_paintings` | immersive_paintings:painting (crafting mats) | create:mechanical_crafting | create | M-04 | REJECT |
 | 4 |  | `just_blahaj` | just_blahaj:blahaj (plush variants) | create:crushing to recover wool | create | M-04 | REJECT |
 | 4 | ✓ | `mcwfences` | mcwfences:*_metal_fence / *_metal_fence_gate v | create:crushing | create | M-04 | ACCEPT |
 | 4 |  | `mcwwindows` | mcwwindows curtains (wool-based) | create:milling | create | M-12 | REJECT |
-| 4 |  | `meadow` | meadow:alpine_salt | extradelight:evaporator | survival | M-12 | ACCEPT |
 | 4 |  | `meadow` | meadow:cheese_wheel / meadow:alpine_salt | extradelight:vat or extradelight:m | create | M-12 | ACCEPT |
 | 4 |  | `minecolonies_compatibility` | minecolonies_compatibility colonial-job output | emergent colony supply → Bountiful | economy | M-28 | ACCEPT |
 | 4 |  | `moblassos` | moblassos:golden_lasso / emerald_lasso craft | recipe (create:mechanical_crafting | create | M-05 | REJECT |
 | 4 |  | `modulargolems` | boss-tier metals (dragonsteel — Ice&Fire fire/ | modulargolems:golem_assemble | survival | M-15 | ACCEPT |
 | 4 |  | `modulargolems` | Ars Nouveau source_gem or Occultism otherstone | ars_nouveau:imbuement / occultism: | magic | M-10 | REJECT |
-| 4 |  | `modulargolems` | modulargolems golem body (boss/mid metal: Cata | modulargolems:golem_assemble gated | survival | M-15 | ACCEPT |
+| 4 |  | `modulargolems` | modulargolems constructed golem (autonomous wo | emergent service-for-hire | economy | M-33 | ACCEPT |
 | 4 |  | `more_slabs_stairs_and_walls` | stone/wood cut variants (847 blocks) | create:cutting | create | M-04 | ACCEPT |
 | 4 |  | `more_slabs_stairs_and_walls` | gravity/concrete-powder cuts | create:crushing | create | M-04 | ACCEPT |
 | 4 |  | `more_slabs_stairs_and_walls` | 847 cut-block variants (stone/log/leaves/concr | create:cutting (mechanical saw) | create | M-12 | ACCEPT |
 | 4 |  | `mowziesmobs` | mowziesmobs:sol_visage (Barako/Barakoa drop) | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 4 |  | `mowziesmobs` | mowziesmobs:ice_crystal (endgame, non-renewabl | occultism:spirit_fire → frost esse | magic | M-11 | REJECT |
 | 4 |  | `mowziesmobs` | mowziesmobs boss drops (ice_crystal / sol_visa | occultism:spirit_fire | magic | M-11 | ACCEPT |
-| 4 |  | `mowziesmobs` | mowziesmobs:sol_visage (Barako drop) | irons_spellbooks:alchemist_cauldro | magic | M-02 | ACCEPT |
 | 4 |  | `naturalist` | naturalist:antler | create:milling | create | M-12 | REJECT |
-| 4 |  | `naturalist` | naturalist:antler | recipe (occultism:spirit_fire — bo | magic | M-11 | ACCEPT |
 | 4 |  | `naturescompass` | naturescompass:naturescompass (the compass ite | create:mechanical_crafting (gate t | create | M-05 | REJECT |
 | 4 |  | `northstar` | northstar:astronomical_reading | colony research gate | economy | M-37 | ACCEPT |
 | 4 |  | `occultengineering` | occultengineering:phlogiport (wireless item lo | config/recipe tie — phlogiport add | aeronautics | M-29 | REJECT |
@@ -642,8 +674,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 4 |  | `occultism` | occultism:datura (crop) | create:milling | create | M-12 | REJECT |
 | 4 |  | `oceansdelight` | oceansdelight:fugu_slice (poison risk) | irons_spellbooks:alchemist_cauldro | magic | M-02 | ACCEPT |
 | 4 |  | `pantographsandwires` | pantographsandwires:coal_coke (c:item/dusts/co | tfmg:coking | create | M-13 | REJECT |
-| 4 |  | `quark` | quark:smithing_rune (decorative smithing upgra | ars_nouveau:enchanting_apparatus | magic | M-10 | REJECT |
 | 4 |  | `quark` | quark:ancient_wood (the underground Glimmering | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
+| 4 |  | `quark` | quark:abacus | numismatics economy layer | economy | M-33 | REJECT |
 | 4 |  | `railways` | railways locometal blocks (bulk structural bui | emergent logistics demand | economy | M-31 | ACCEPT |
 | 4 |  | `rottencreatures` | rottencreatures:frozen_rotten_flesh | occultism:spirit_fire | magic | M-02 | ACCEPT |
 | 4 |  | `rottencreatures` | rottencreatures:treasure_chest (pirate chest l | loot-seed | economy | M-34 | ACCEPT |
@@ -654,39 +686,53 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 4 |  | `simplehats` | simplehats hat-scraps | create:crushing | create | M-04 | REJECT |
 | 4 |  | `sky_whale_ship` | sky_whale_ship loot tables (onboard chests) | custom loot-table injection → aero | aeronautics | M-23 | ACCEPT |
 | 4 |  | `sky_whale_ship` | sky whale loot chests | loot-seed | aeronautics | M-15 | ACCEPT |
+| 4 |  | `sky_whale_ship` | sky-whale loot | loot-seed | economy | M-34 | ACCEPT |
 | 4 | ✓ | `smokeleafindustries` | hemp building blocks (hemp_planks/bricks) | create:crushing | create | M-04 | REJECT |
+| 4 |  | `smokeleafindustries` | smokeleafindustries refined extracts / gummies | consumption (effect items) | survival | M-26 | ACCEPT |
 | 4 |  | `snowyspirit` | snowyspirit:ginger (winter/Serene Seasons gate | worldgen/season-gating (M-16) | create | M-16 | ACCEPT |
 | 4 | ✓ | `snowyspirit` | snowyspirit sled | flavour/transport | aeronautics |  | REJECT |
 | 4 |  | `solmaiddream` | solmaiddream maid food-variety progression | config tie — the milestone thresho | survival | M-12 | REJECT |
+| 4 |  | `spawn` | spawn:date_log / date_planks (date palm wood s | create:cutting | create | M-12 | ACCEPT |
+| 4 |  | `spawn` | spawn:angler_fish (bioluminescent deep-sea mob | occultism:spirit_fire or occultism | magic | M-11 | ACCEPT |
 | 4 |  | `supplementaries` | supplementaries:jar (fluid storage) + faucet | create:filling / create:emptying | create | M-12 | REJECT |
 | 4 |  | `t_and_t` | t_and_t structures (conquest forts, outpost to | could be loot tables seeding scarc | aeronautics |  | REJECT |
-| 4 |  | `tacz` | tacz:gun_smith_table_crafting inputs (metal/co | create:pressing + tacz:gun_smith_t | create | M-05 | ACCEPT |
+| 4 |  | `t_and_t` | t_and_t conquerable forts | loot-seed | survival | M-34 | ACCEPT |
+| 4 |  | `tacz` | tacz guns/ammo (war materiel) | emergent trade between combat-spec | economy | M-34 | ACCEPT |
 | 4 |  | `tfmg` | tfmg:aluminum_ingot / aluminum alloys | aeronautics hull/airframe (lighter | aeronautics | M-23 | ACCEPT |
 | 4 |  | `tfmg` | tfmg biomass/plant-matter vat input | survival crop supply | survival | M-12 | REJECT |
+| 4 |  | `tfmg` | tfmg:plastic | create:mixing or tfmg:vat as cross | create | M-29 | ACCEPT |
 | 4 |  | `tide` | tide exotic catches (abyss_angler / void-domai | occultism:spirit_fire — transmute  | magic | M-11 | REJECT |
 | 4 |  | `trailandtales_delight` | lantern_fruit / pitcher_taro crops | create:milling | create | M-12 | ACCEPT |
 | 4 |  | `trailandtales_delight` | trailandtales_delight lantern_fruit / pitcher_ | create:milling | create | M-12 | ACCEPT |
 | 4 |  | `trailandtales_delight` | trailandtales_delight:curd_block → cheese_whee | create:pressing (milk → curd step  | create | M-12 | ACCEPT |
 | 4 |  | `trashcans` | trashcans:ultimate_trash_can | create:mechanical_crafting | create | M-05 | REJECT |
+| 4 |  | `travelersbackpack` | travelersbackpack (high-tier variants: dragon, | create:mechanical_crafting | create | M-05 | REJECT |
 | 4 |  | `underground_village` | Stoneholm chest loot | loot-seed | economy | M-08 | ACCEPT |
 | 4 |  | `underground_village` | underground_village structure chests | loot-seed (add Numismatics coin +  | economy | M-08 | ACCEPT |
+| 4 |  | `upgrade_aquatic` | upgrade_aquatic:driftwood_* / riverwood_* | create:cutting (or woodworks:sawmi | create | M-12 | ACCEPT |
 | 4 |  | `valarian_conquest` | valarian_conquest mercenary hire | config/mechanic | economy | M-33 | ACCEPT |
-| 4 |  | `vc_gliders` | vc_gliders:paraglider_netherite (top tier) | create:sequenced_assembly | create | M-06 | REJECT |
 | 4 |  | `vc_gliders` | vc_gliders:paraglider_diamond / _netherite | create:sequenced_assembly (multi-s | create | M-06 | REJECT |
 | 4 |  | `vinery` | vinery:apple_juice / grape_juice | create:mixing | create | M-12 | ACCEPT |
 | 4 |  | `vinery` | vinery:grape_juice / apple_mash | create:pressing | create | M-12 | ACCEPT |
+| 4 |  | `vinery` | vinery wines / ciders (effect-bearing consumab | vinery:wine_fermentation → consump | survival | M-26 | ACCEPT |
 | 4 |  | `woodworks` | woodworks wood-deco | create:cutting (sawmill unificatio | create | M-12 | REJECT |
+| 4 |  | `woodworks` | woodworks:*_chest / *_bookshelf (wood-typed de | create:crushing (lossy → plank/saw | create | M-04 | ACCEPT |
 | 3 | ✓ | `aeronautics` | levitite (anti-gravity lift reagent, scarce) | numismatics trade / loot-seed — le | economy | M-08 | ACCEPT |
 | 3 |  | `aeronautics` | aeronautics borehead bearing (flying drill con | create:crushing output → numismati | economy | M-08 | ACCEPT |
 | 3 |  | `aeronautics` | aeronautics:levitite_blend (create:mixing, zin | create:pressing → numismatics | economy | M-08 | ACCEPT |
+| 3 |  | `aeronautics` | rope coupling / docking connector (simulated:r | config/structure-tie | economy | M-31 | ACCEPT |
 | 3 |  | `aeronautics_dyeable_components` | dyed levitite (aeronautics_dyeable_components: | create:toolbox_dyeing or create:mi | create | M-20 | REJECT |
 | 3 |  | `alexsmobs` | alexsmobs:bear_dust (everyday — common bear dr | create:crushing | create | M-03 | ACCEPT |
 | 3 |  | `alexsmobs` | alexsmobs:bear_dust | recipe (create:mixing or ars_nouve | create | M-12 | ACCEPT |
+| 3 |  | `alexsmobs` | alexsmobs:banana (common drop, edible) | farmersdelight:cooking / extradeli | create | M-12 | ACCEPT |
 | 3 |  | `appleseed` | appleseed individual nutrient groups (Protein/ | ars_nouveau:imbuement | magic | M-10 | REJECT |
+| 3 |  | `appleseed` | diet-variety demand | config tuning (production-by-deman | create | M-12 | ACCEPT |
 | 3 |  | `appleseed` | appleseed diet-variety demand signal | emergent trade | economy | M-26 | REJECT |
 | 3 |  | `ars_nouveau` | crop surplus / mob death events (farm mods' or | ars_nouveau:agronomic_sourcelink / | survival | M-02 | ACCEPT |
-| 3 |  | `ars_nouveau` | ars_nouveau:source_gem | create:mixing (require as catalyst | create | M-29 | ACCEPT |
+| 3 |  | `ars_nouveau` | ars_nouveau:archwood_log | create:milling | create | M-12 | ACCEPT |
+| 3 |  | `ars_nouveau` | ars_nouveau:source_gem | create:pressing → numismatics mint | economy | M-08 | REJECT |
 | 3 | ✓ | `astikorcartsredux` | bulk crop harvest (reaper output) | numismatics or farmersdelight proc | create | M-12 | REJECT |
+| 3 |  | `astikorcartsredux` | reaper harvest output (bulk crops) | create:milling or farmersdelight:c | create | M-12 | REJECT |
 | 3 | ✓ | `bakery` | surplus baked goods | Ars agronomic/vitalic sourcelink | magic | M-02 | REJECT |
 | 3 |  | `bakery` | bakery:bread / baguette (wheat-based) | create:milling (wheat → flour as a | create | M-12 | ACCEPT |
 | 3 |  | `bakery` | bakery baked goods (cakes, cupcakes, speed+str | minecolonies food-supply chain | survival | M-16 | REJECT |
@@ -695,16 +741,13 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `beachparty` | beachparty:coconut_open / tropical fruit (melo | extradelight:juicer | create | M-12 | ACCEPT |
 | 3 | ✓ | `betterdungeons` | dungeon boss spawner / chest loot tables | loot-seed | create | M-15 | ACCEPT |
 | 3 |  | `betteroceanmonuments` | ocean monument chest loot | loot-seed | magic | M-02 | ACCEPT |
+| 3 |  | `betteroceanmonuments` | monument chest loot | loot-seed (datapack edit) | economy | M-34 | ACCEPT |
 | 3 |  | `betterstrongholds` | stronghold chest loot | loot-seed | economy | M-08 | ACCEPT |
-| 3 |  | `bits_n_bobs` | bits_n_bobs:brass_lamp | create:item_application | create | M-20 | REJECT |
 | 3 | ✓ | `bits_n_bobs` | bits_n_bobs:*_tiles (andesite/asurine/crimsite | create:crushing | create | M-04 | ACCEPT |
 | 3 |  | `born_in_chaos_v1` | born_in_chaos_v1:dark_metal (processed ingot) | loot-seed / numismatics sell | economy | M-08 | ACCEPT |
 | 3 |  | `born_in_chaos_v1` | born_in_chaos_v1:dark_metal_block (deco blocks | create:crushing | create | M-04 | REJECT |
-| 3 |  | `born_in_chaos_v1` | born_in_chaos_v1 Pumpkinhead boss drops (Soul  | recipe gating (boss drop as key in | create | M-15 | ACCEPT |
-| 3 |  | `born_in_chaos_v1` | born_in_chaos_v1 mob drops (dark_metal, bones, | emergent trade | economy | M-34 | ACCEPT |
 | 3 |  | `bountiful` | bounty objective pool seeded with Serene-Seaso | bountiful Decree (data-driven obje | survival | M-16 | ACCEPT |
 | 3 |  | `bountiful` | bountiful objectives (Create-processed goods,  | bountiful decree (objective pool t | create | M-08 | ACCEPT |
-| 3 |  | `bountiful` | bountiful decree objective pool | curating objectives toward Create- | create | M-29 | ACCEPT |
 | 3 |  | `brazil_legends` | brazil_legends:amber_shard | create:crushing (→ fine amber powd | create | M-03 | ACCEPT |
 | 3 |  | `brazil_legends` | brazil_legends:bottle_with_saci | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 3 | ✓ | `brazil_legends` | capelobo_claw / big_tongue / amber_shard | occultism:spirit_fire (or ars_nouv | magic | M-02 | ACCEPT |
@@ -714,25 +757,23 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `cataclysm` | cataclysm:witherite_ingot | create:crushing (input) | create | M-03 | ACCEPT |
 | 3 |  | `cataclysm` | cataclysm:witherite_ingot / cataclysm:ancient_ | create:crushing + create:sequenced | create | M-15 | ACCEPT |
 | 3 |  | `cataclysm` | cataclysm:cursium_ingot / cataclysm:void_core  | occultism:spirit_fire or ars_nouve | magic | M-02 | ACCEPT |
+| 3 |  | `cataclysm` | cataclysm:weapon_fusion (Mechanical Fusion Anv | create:mechanical_crafting input | create | M-20 | REJECT |
 | 3 |  | `cbc_at` | cbc_at heavy-autocannon / rocket pod tier | boss-drop gating (loot-seed) | survival | M-15 | ACCEPT |
-| 3 |  | `cbc_at` | cbc_at rifled-barrel / silencer upgrade tier | minecolonies research | economy | M-28 | ACCEPT |
+| 3 |  | `cbc_at` | cbc_at endgame barrel tiers (nethersteel/steel | M-30 regional-scarcity gate — neth | economy | M-30 | ACCEPT |
 | 3 |  | `charta` | charta:empty_wine_glass | vinery / alcohol_industry fill (li | create | M-12 | ACCEPT |
 | 3 |  | `charta` | charta:empty_wine_glass / empty_beer_glass | recipe (M-12 processing-chain pull | survival | M-12 | ACCEPT |
-| 3 |  | `charta` | charta:empty_wine_glass / empty_beer_glass (gl | create:pressing or create:item_app | create | M-04 | REJECT |
-| 3 |  | `chefsdelight` | chefsdelight loot=yes (village cook structures | loot-seed (structure chests contai | economy | M-08 | ACCEPT |
+| 3 |  | `charta` | charta card tables (social/gambling venue) | numismatics wagering mechanic | economy | M-08 | ACCEPT |
 | 3 |  | `chefsdelight` | chefsdelight feast-tier meals (Roast Chicken / | appleseed diet groups | survival | M-26 | ACCEPT |
-| 3 |  | `chefsdelight` | chefsdelight Cook/Chef villagers | config trade redirect | economy | M-33 | ACCEPT |
 | 3 |  | `cmpackagecouriers` | cmpackagecouriers:cardboard_plane (flying auto | recipe | aeronautics | M-24 | REJECT |
 | 3 |  | `cmpackagecouriers` | cmpackagecouriers remote delivery | emergent player-trade fulfilment | economy | M-29 | ACCEPT |
+| 3 |  | `cmpackagecouriers` | cmpackagecouriers:cardboard_plane (long-range  | M-31 logistics-required bulk good | economy | M-31 | ACCEPT |
 | 3 |  | `cmparallelpipes` | cmparallelpipes:pipe_wrench / pipe_wrench_gear | recipe (Create brass component upg | create | M-20 | REJECT |
 | 3 |  | `cmparallelpipes` | cmparallelpipes:pipe_wrench | create:item_application or craftin | create | M-05 | REJECT |
-| 3 |  | `cold_sweat` | cold_sweat:boiler + cold_sweat:icebox | create:mechanical_crafting (gate o | create | M-05 | ACCEPT |
-| 3 |  | `cold_sweat` | cold_sweat insulation sewing (goat_fur, chamel | farmersdelight:cutting (butchering | create | M-12 | ACCEPT |
 | 3 |  | `companions` | Crystallized Blood / soul gems | occultism:spirit_fire or ars_nouve | magic | M-11 | ACCEPT |
 | 3 |  | `companions` | companions:copper_coin / nether_coin / end_coi | numismatics exchange (bridge to pa | economy |  | REJECT |
 | 3 |  | `companions` | companions:relic_gold | boss-key gate on a Create sequence | create | M-15 | ACCEPT |
-| 3 |  | `companions` | companions:voltaic_pillar_block / tesla_coil_b | create:crushing | create | M-04 | ACCEPT |
 | 3 |  | `companions` | companions boss drop: Old Cloth + Relic Gold ( | loot-seed (already in loot=yes) | economy | M-34 | ACCEPT |
+| 3 |  | `companions` | companions:relic_gold (Sacred Pontiff boss dro | numismatics vendor | economy | M-34 | ACCEPT |
 | 3 |  | `cookingforblockheads` | cookingforblockheads:toaster (only registered  | create:milling (grain → flour for  | create | M-12 | REJECT |
 | 3 |  | `cookingforblockheads` | cookingforblockheads:cooking_table (the hub mu | minecolonies colony route | economy | M-28 | ACCEPT |
 | 3 |  | `copperagebackport` | Copper Golem logistics | thematic (aeronautics/logistics pi | aeronautics |  | REJECT |
@@ -743,9 +784,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `create_central_kitchen` | create_central_kitchen pie/sauce/drink fluids | createfisheryindustry:bait_trap (f | survival | M-12 | ACCEPT |
 | 3 |  | `create_central_kitchen` | create_central_kitchen automated dishes / feas | farmersdelight:cooking or create_c | economy | M-26 | ACCEPT |
 | 3 |  | `create_cheese` | create_cheese:cheese_curds | recipe (ars_nouveau:imbuement or o | magic | M-10 | REJECT |
-| 3 |  | `create_compressed` | create_compressed:wheat_flour_pile / dough_blo | bakery / farm_and_charm:crafting_b | survival | M-12 | ACCEPT |
 | 3 |  | `create_confectionery` | create_confectionery chocolate (bars/fluids) | extradelight:oven / extradelight:m | survival | M-12 | ACCEPT |
-| 3 |  | `create_confectionery` | create_confectionery:bar_of_ruby_chocolate / s | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 3 |  | `create_confectionery` | create_confectionery candy effects (Speed/Satu | M-26 consumption sink | economy | M-26 | ACCEPT |
 | 3 |  | `create_confectionery` | create_confectionery effect candies (Speed, Mi | create:mixing (seasonal sweetener  | survival | M-16 | ACCEPT |
 | 3 |  | `create_connected` | create_connected copycat blocks | create:crushing | create | M-04 | REJECT |
@@ -765,7 +804,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `create_integrated_farming` | fishing_net aquatic drops | create:milling | create | M-12 | REJECT |
 | 3 |  | `create_integrated_farming` | roost/net bulk outputs (eggs, feathers, fish,  | farm_and_charm:mincer + farmersdel | economy | M-28 | ACCEPT |
 | 3 |  | `create_ironworks` | create_ironworks:steel_ingot | create:sequenced_assembly | create | M-06 | REJECT |
-| 3 |  | `create_jetpack` | create_jetpack:netherite_jetpack | M-15 boss-drop gating | create | M-15 | ACCEPT |
 | 3 |  | `create_jetpack` | create_jetpack:jetpack | createaddition:charging | create | M-17 | REJECT |
 | 3 |  | `create_jetpack` | create_jetpack:jetpack (brass tier) | M-15 boss-key | create | M-15 | ACCEPT |
 | 3 |  | `create_ltab-3.9.2` | create_ltab structure loot tables | loot-seed (seed a boss-key fragmen | create | M-15 | ACCEPT |
@@ -783,7 +821,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `create_tweaked_controllers` | tweaked_lectern_controller craft (already uses | no new weave needed | create | M-05 | REJECT |
 | 3 |  | `create_tweaked_controllers` | create_tweaked_controllers:tweaked_lectern_con | create:mechanical_crafting (existi | create | M-24 | ACCEPT |
 | 3 |  | `createaddition` | FE-chargeable Iron's Spellbooks gear / magic-e | createaddition:charging (tesla coi | magic | M-17 | ACCEPT |
-| 3 |  | `createaddition` | createaddition:bioethanol (refined crop fuel) | createaddition:liquid_burning → ae | aeronautics | M-13 | ACCEPT |
 | 3 |  | `createaddition` | createaddition:seed_oil / bioethanol (liquid f | createaddition:liquid_burning (bur | survival | M-26 | ACCEPT |
 | 3 |  | `createadditionallogistics` | createadditionallogistics flexible shafts (omn | recipe | aeronautics | M-24 | ACCEPT |
 | 3 |  | `createbigcannons` | createbigcannons:steel_ingot (`c:ingots/steel` | recipe — steel as a structural air | aeronautics | M-23 | ACCEPT |
@@ -792,6 +829,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `createbigcannons` | createbigcannons:steel_ingot / cast_iron_ingot | GTMOGS regional ore-gen gate | economy | M-30 | ACCEPT |
 | 3 |  | `createfisheryindustry` | createfisheryindustry:harpoon (projectile weap | recipe (create:sequenced_assembly  | create | M-06 | REJECT |
 | 3 |  | `createfisheryindustry` | createfisheryindustry bait_trap loot output (f | loot-seed | survival | M-16 | ACCEPT |
+| 3 |  | `createfisheryindustry` | createfisheryindustry:fish_skin (mechanical pe | create:pressing / tanning → aerona | aeronautics | M-23 | REJECT |
 | 3 | ✓ | `createfisheryindustry` | seafood (chowder/steaks/soups) | farmersdelight:cooking (already wi | economy | M-28 | ACCEPT |
 | 3 |  | `createfood` | createfood plated feast blocks | minecolonies cook/tavern building | create | M-12 | REJECT |
 | 3 |  | `createfood` | createfood dishes as diet-group completers (gr | config tie (Diet-AppleSeed auto-de | survival | M-12 | REJECT |
@@ -805,34 +843,32 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `createnuclear` | createnuclear uranium dust / processed uranium | numismatics mint (high-value trade | economy | M-08 | ACCEPT |
 | 3 | ✓ | `createnuclear` | refined uranium / steel ingots (scarce regiona | create:* processing → numismatics  | economy | M-08 | ACCEPT |
 | 3 |  | `createnuclear` | createnuclear:enriched method | createnuclear:enriched (enrich sou | magic | M-10 | REJECT |
-| 3 |  | `createnuclear` | createnuclear:reactor_core / reactor_casing (e | create:sequenced_assembly (reactor | create | M-06 | ACCEPT |
 | 3 |  | `createnuclear` | createnuclear anti-radiation armor set | config (Cold Sweat / survival temp | survival |  | REJECT |
 | 3 |  | `createnuclear` | createnuclear:lead ingot | aeronautics hull ingredient | aeronautics | M-23 | ACCEPT |
 | 3 |  | `createnuclear` | createnuclear anti-radiation armor | survival/Cold-Sweat hazard — radia | survival | M-26 | ACCEPT |
 | 3 |  | `createoreexcavation` | createoreexcavation:diamond_drill / netherite_ | create:mechanical_crafting or boss | create | M-15 | ACCEPT |
 | 3 |  | `createpickywheels` | createpickywheels biome-gated water wheel (req | survival biome placement — buildin | survival | M-01 | REJECT |
 | 3 | ✓ | `createpickywheels` | biome/river/open-air gating of Create's starte | world dictates where power can be  | survival |  | REJECT |
+| 3 |  | `createpickywheels` | createpickywheels (biome-gated generators — ri | config/design weave — survival pre | survival | M-16 | ACCEPT |
 | 3 |  | `createtreadmill` | createtreadmill:maid_motor (Soul Orb / Photo c | recipe (ars_nouveau:imbuement or o | magic | M-10 | REJECT |
 | 3 |  | `createtreadmill` | createtreadmill:treadmill (kinetic block) | create:deploying / M-24 | aeronautics | M-24 | REJECT |
+| 3 |  | `createtreadmill` | createtreadmill:maid_motor (touhou_little_maid | create:mechanical_crafting or reci | create | M-05 | REJECT |
 | 3 |  | `createtreadmill` | createtreadmill:treadmill (player-powered SU s | service / player-labour | economy | M-33 | ACCEPT |
 | 3 |  | `ctov` | ctov structure loot (rare chests) | loot-seed | create | M-15 | REJECT |
-| 3 |  | `ctov` | ctov village structures | loot-seed | economy | M-34 | ACCEPT |
 | 3 | ✓ | `deeperdarker` | gloomslate / sculk_stone deco | create:crushing | create | M-04 | ACCEPT |
 | 3 |  | `deeperdarker` | deeperdarker:warden_carapace | create:crushing | create | M-04 | ACCEPT |
 | 3 |  | `deeperdarker` | deeperdarker:warden_carapace / reinforced_echo | create:pressing or create:mechanic | create | M-05 | ACCEPT |
 | 3 |  | `deeperdarker` | deeperdarker Otherside-only materials | regional scarcity (dimension-locke | economy | M-30 | ACCEPT |
-| 3 |  | `direct_chute` | direct_chute:direct_chute | thematic: bulk-item vertical relay | aeronautics | M-31 | REJECT |
 | 3 |  | `dndesires` | dndesires:cardboard_package_* (logistics packa | aeronautics ship logistics / M-13  | aeronautics | M-13 | REJECT |
 | 3 | ✓ | `dndesires` | rubber (raw/processed) | numismatics sell/price (as scarce  | economy | M-08 | REJECT |
 | 3 |  | `dndesires` | crop/drop inputs (any pack crop) | dndesires:freezing / dndesires:see | survival | M-12 | ACCEPT |
+| 3 |  | `dndesires` | dndesires:freezing_sail fan-processing | dndesires:freezing (route foreign  | survival | M-12 | ACCEPT |
 | 3 |  | `dndesires` | dndesires:cardboard_package_* | logistical use as Aeronautics ship | aeronautics |  | REJECT |
 | 3 |  | `dndesires` | dndesires:rubber (raw rubber / rubber sapling  | numismatics mint (M-08 chain) | economy | M-08 | ACCEPT |
 | 3 | ✓ | `dndesires` | cardboard packaging (cardboard_package_*) + bo | aeronautics ship/contraption loado | aeronautics | M-24 | REJECT |
 | 3 |  | `dndesires` | dndesires milkshake items (chocolate_milkshake | Serene Seasons seasonal-ingredient | survival | M-16 | ACCEPT |
-| 3 |  | `dndesires` | dndesires:cardboard_package_* | aeronautics cargo/logistics | aeronautics | M-31 | ACCEPT |
 | 3 |  | `domum_ornamentum` | domum_ornamentum:architectscutter | domum_ornamentum:architects_cutter | economy | M-28 | ACCEPT |
 | 3 |  | `drones` | drones:iron_rotor (iron-tier thruster componen | create:item_application or craftin | create | M-20 | ACCEPT |
-| 3 |  | `drones` | drones:pocket_drone (equipped service drone) | aeronautics arm — drone as logisti | economy | M-33 | ACCEPT |
 | 3 |  | `dtterralith` | dtterralith biome-specific seeds (dtterralith: | loot-seed | create | M-12 | REJECT |
 | 3 |  | `dtterralith` | dtterralith:amethyst_seed (amethyst-crystal-th | ars_nouveau:imbuement (the crystal | magic | M-10 | ACCEPT |
 | 3 |  | `dungeons-and-taverns-v4.4.4` | trial chamber key loot | loot-seed (seed a magic reagent —  | magic | M-02 | ACCEPT |
@@ -843,10 +879,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `dynamictrees` | dynamictrees:dendro_potion (growth accelerant) | create:milling (grind rare root/br | create | M-12 | REJECT |
 | 3 |  | `dynamictreesplus` | dynamictreesplus:mushroom_branch / cactus_bran | create:crushing | create | M-04 | REJECT |
 | 3 |  | `dynamictreesplus` | dynamictreesplus:brown_mushroom_cap / red_mush | farmersdelight:cutting or extradel | survival | M-12 | ACCEPT |
-| 3 |  | `dynamictreesplus` | dynamictreesplus:saguaro_fruit | recipe (farmersdelight:cooking) | survival | M-12 | REJECT |
 | 3 |  | `edf-remastered-5.0-beta4` | Ender Dragon encounter (loot=yes flag, confirm | loot-seed | magic | M-02 | ACCEPT |
 | 3 |  | `edf-remastered-5.0-beta4` | Ender Dragon encounter (loot=yes, boss behavio | loot-seed | economy | M-34 | ACCEPT |
-| 3 |  | `endrem` | endrem:magical_eye / endrem:old_eye / remainin | any complex method | create | M-06 | REJECT |
 | 3 |  | `endrem` | endrem:nether_eye | occultism:ritual | magic | M-11 | ACCEPT |
 | 3 | ✓ | `endrem` | endrem themed eyes (undead_eye, nether_eye, co | occultism:ritual — a matching occu | magic | M-11 | ACCEPT |
 | 3 |  | `endrem` | endrem:corrupted_eye | occultism:spirit_fire | magic | M-11 | ACCEPT |
@@ -859,12 +893,14 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `expandeddelight` | expandeddelight:salt_ore regional spawn | GTMOGS biome placement | economy | M-30 | ACCEPT |
 | 3 |  | `exposure` | exposure:aged_photograph | exposure:photograph_aging → supple | economy | M-33 | ACCEPT |
 | 3 |  | `extradelight` | extradelight:mortar (ground coffee/spices) | create:milling | create | M-12 | ACCEPT |
+| 3 | ✓ | `farm_and_charm` | farm_and_charm grains (barley / oat) | create:milling | create | M-12 | ACCEPT |
 | 3 |  | `farm_and_charm` | farm_and_charm:fertilized_farmland | create:deploying | create | M-20 | ACCEPT |
 | 3 |  | `farm_and_charm` | farm_and_charm:butter / farm_and_charm:barley | vinery:apple_fermenting or alcohol | survival | M-12 | ACCEPT |
 | 3 |  | `farm_and_charm` | farm_and_charm:barley / oat | vinery:apple_mashing or alcohol_in | economy | M-35 | ACCEPT |
+| 3 |  | `farmersdelight` | farmersdelight:cabbage / tomato / onion / rice | season-gated growth (Serene Season | survival | M-16 | ACCEPT |
 | 3 |  | `farmersdelight` | farmersdelight cooked dishes (beef_stew / bake | minecolonies:composting / colony p | economy | M-28 | ACCEPT |
-| 3 |  | `farmersdelight` | farmersdelight:straw (cutting byproduct) | create:mixing (straw + lye → biopl | create | M-32 | ACCEPT |
 | 3 |  | `fluid` | fluid:centrifugal_pump / fluid:smart_fluid_int | recipe (M-23/M-24 airframe/drivetr | aeronautics | M-23 | ACCEPT |
+| 3 |  | `formations` | formations structures | loot-seed | economy | M-34 | ACCEPT |
 | 3 |  | `formationsnether` | nether structure loot | loot-seed | create | M-15 | ACCEPT |
 | 3 |  | `formationsnether` | Nether structure loot tables | loot-seed | economy | M-34 | ACCEPT |
 | 3 |  | `friendsandfoes` | friendsandfoes Wildfire / Iceologer / Illusion | occultism:spirit_fire or ars_nouve | magic | M-02 | ACCEPT |
@@ -884,36 +920,43 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `grimoireofgaia` | grimoireofgaia dolls/deco blocks (doll_dryad,  | create:crushing recycling | create | M-04 | REJECT |
 | 3 |  | `grimoireofgaia` | grimoireofgaia boss busts (bust_valkyrie / bus | boss-drop gating on high-tier Crea | create | M-15 | ACCEPT |
 | 3 |  | `gtmogs` | gtmogs vein-config framework | any recipe method | create |  | REJECT |
-| 3 |  | `handcrafted` | handcrafted:*_chair / *_table / *_bench (finis | create:cutting | create | M-12 | ACCEPT |
+| 3 |  | `gtmogs` | gtmogs regional ore veins (the downstream scar | (conceptual — the weave lives in t | economy | M-30 | ACCEPT |
 | 3 |  | `handcrafted` | handcrafted:*_table / *_counter / *_cupboard ( | create:cutting (wood-cutting step  | create | M-12 | ACCEPT |
 | 3 |  | `hpm` | hpm:cuttermilitariseditem | recipe (create:sequenced_assembly) | create | M-06 | ACCEPT |
 | 3 |  | `hpm` | hpm ships (non-physics, non-Create-superglue v | n/a | aeronautics |  | REJECT |
 | 3 |  | `hpm` | hpm:cannonball / hpm:mortar_ball | createbigcannons or create:compact | create | M-12 | ACCEPT |
-| 3 |  | `hpm` | hpm ships (high-value, large items) | aeronautics transport as prerequis | economy | M-31 | ACCEPT |
 | 3 |  | `hpm` | hpm ship items as high-value finished vessels | M-34 combat-route supply | economy | M-34 | ACCEPT |
-| 3 |  | `illagerinvasion` | illagerinvasion:illusionary_dust (Illusioner d | `ars_nouveau:imbuement` as a spell | magic | M-02 | ACCEPT |
 | 3 |  | `illagerinvasion` | illagerinvasion:lost_candle | `create:haunting` (Create soul-fir | magic | M-19 | ACCEPT |
 | 3 |  | `illagerinvasion` | illagerinvasion:lost_candle / horn_of_sight (a | create:haunting (soul-fire transmu | create | M-19 | ACCEPT |
 | 3 |  | `illagerinvasion` | illagerinvasion:hallowed_gem (Invoker boss) | economy (scarce endgame trade good | economy | M-34 | ACCEPT |
 | 3 |  | `immersive_armors` | immersive_armors:bone_chestplate set (Bone tie | create:pressing / mechanical_craft | create | M-05 | REJECT |
 | 3 | ✓ | `immersive_armors` | heavy/divine/steampunk armor sets | create:pressing + create:mechanica | create | M-05 | ACCEPT |
-| 3 |  | `immersive_armors` | immersive_armors:steampunk set (if present — S | recipe (create:sequenced_assembly  | create | M-06 | ACCEPT |
+| 3 |  | `immersive_armors` | immersive_armors:divine set (magic/holy theme) | ars_nouveau:enchanting_apparatus ( | magic | M-10 | ACCEPT |
+| 3 |  | `immersive_armors` | immersive_armors:bone set | occultism:spirit_fire | magic | M-11 | REJECT |
 | 3 |  | `immersive_armors` | immersive_armors Heavy / Steampunk armor (iron | create:pressing / create:mechanica | create | M-05 | ACCEPT |
 | 3 |  | `immersive_paintings` | immersive_paintings:glow_painting | create_new_age:energising | create | M-17 | REJECT |
+| 3 |  | `immersive_paintings` | immersive_paintings:glow_painting | ars_nouveau:imbuement | magic | M-10 | REJECT |
+| 3 |  | `immersive_paintings` | immersive_paintings:painting (frame craft) | create:pressing / item_application | create | M-20 | REJECT |
+| 3 |  | `immersive_paintings` | immersive_paintings:painting / glow_painting | supplementaries:item_lore + player | economy | M-33 | ACCEPT |
+| 3 |  | `irons_spellbooks` | irons_spellbooks mithril ore / raw_mithril (c: | create:crushing | create | M-03 | ACCEPT |
 | 3 |  | `irons_spellbooks` | irons_spellbooks:arcane_essence or spell scrol | createaddition:charging | create | M-17 | REJECT |
 | 3 | ✓ | `irons_spellbooks` | apothecarist mob drop → spell-school reagent | ars_nouveau:imbuement or irons_spe | magic | M-02 | ACCEPT |
 | 3 |  | `jakes-build-tools-2.0.1.5` | minecraft:experience_flask_* | create:mixing (XP-bottle input) | create | M-12 | REJECT |
 | 3 |  | `jakes-build-tools-2.0.1.5` | hammer / chisel / trowel tool set | create:mechanical_crafting or crea | create | M-05 | REJECT |
+| 3 |  | `jakes-build-tools-2.0.1.5` | minecraft:hammer (3×3 mining tool) | create:sequenced_assembly | create | M-05 | REJECT |
 | 3 |  | `just_blahaj` | just_blahaj:glowhaj | ars_nouveau:imbuement or occultism | magic | M-10 | REJECT |
 | 3 |  | `just_blahaj` | just_blahaj plush variants | create:crushing | create | M-04 | REJECT |
 | 3 |  | `knightlib` | knightlib:great_essence / knightlib:homunculus | occultism:spirit_fire or ars_nouve | magic | M-02 | REJECT |
 | 3 |  | `kobolds` | kobolds redstone-item trades (engineer kobold) | create:crushing or create recipe | create | M-29 | REJECT |
+| 3 |  | `letsdocompat` | letsdocompat food-web tags (items/foods/leafy_ | extradelight:juicing or farmersdel | survival | M-12 | REJECT |
 | 3 |  | `mcwroofs` | mcwroofs:*_roof (stone/brick/andesite variants | recipe (create:crushing) | create | M-04 | ACCEPT |
 | 3 |  | `mcwstairs` | mcwstairs:*_railing / *_balcony (stone variant | create:crushing | create | M-04 | REJECT |
+| 3 |  | `meadow` | meadow:alpine_salt | M-30 (regional-scarcity gate — alp | economy | M-30 | ACCEPT |
 | 3 |  | `meadow` | meadow:cheese_wheel (finished) | minecolonies hut / colony food req | economy | M-28 | ACCEPT |
 | 3 |  | `meadow` | meadow:cheese_wheel (aged) | meadow:cheese + create_cheese:matu | create | M-35 | ACCEPT |
 | 3 |  | `meadow` | meadow:chambray_wool (felted textile) | create:mechanical_crafting or aero | aeronautics | M-23 | ACCEPT |
 | 3 |  | `midnightthoughts` | well-rested buff mechanic | config tie | survival | M-16 | REJECT |
+| 3 |  | `midnightthoughts` | midnightthoughts "well-rested" buff | farmersdelight/farm_and_charm food | survival |  | REJECT |
 | 3 |  | `minecolonies` | minecolonies:composting (hut composter) | minecolonies:composting → create:m | create | M-12 | ACCEPT |
 | 3 |  | `minecolonies` | MineColonies as alternate production route | M-28 colony-lock | economy | M-28 | ACCEPT |
 | 3 |  | `moblassos` | moblassos:golden_lasso | aeronautics logistics | aeronautics |  | REJECT |
@@ -922,10 +965,11 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `modulargolems` | modulargolems golem assembly (all tiers) | create:sequenced_assembly (already | create | M-06 | REJECT |
 | 3 |  | `modulargolems` | Cataclysm cursium ingot / boss-drop metals | modulargolems:golem_assemble | survival | M-15 | ACCEPT |
 | 3 |  | `modulargolems` | modulargolems:golem_assemble (arcane core) | recipe using ars_nouveau:source_ge | magic | M-10 | ACCEPT |
-| 3 |  | `modulargolems` | modulargolems constructed golem (autonomous wo | emergent service-for-hire | economy | M-33 | ACCEPT |
 | 3 |  | `mowziesmobs` | mowziesmobs ice_crystal (fragment via loot-see | ars_nouveau:imbuement (frost-attun | magic | M-02 | ACCEPT |
+| 3 |  | `mowziesmobs` | mowziesmobs:ice_crystal (Frostmaw) / sol_visag | ars_nouveau:imbuement (sun-aspect/ | magic | M-02 | ACCEPT |
 | 3 |  | `mowziesmobs` | mowziesmobs:earthrend_gauntlet / wrought drops | ars_nouveau:imbuement | magic | M-02 | ACCEPT |
 | 3 |  | `mushroomquest` | mushroomquest:resin_orb | ars_nouveau:imbuement | magic | M-10 | REJECT |
+| 3 |  | `mushroomquest` | mushroomquest rare/mythical caps (agarikon, an | farmersdelight:cooking or extradel | survival | M-12 | ACCEPT |
 | 3 |  | `mushroomquest` | rare/mythical mushroom caps | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 3 |  | `naturalist` | naturalist:venison / naturalist:bushmeat | farmersdelight:cutting + farmersde | survival | M-12 | ACCEPT |
 | 3 | ✓ | `naturalist` | raw venison / bushmeat | farmersdelight:cooking / create:cu | create | M-12 | ACCEPT |
@@ -938,12 +982,12 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `occultengineering` | occultengineering:spirit_solution (reserved oc | occultism:spirit_trade | economy | M-18 | ACCEPT |
 | 3 |  | `occultism` | occultism:iesnium_ingot (rare otherworld ore) | recipe (create:crushing) | create | M-03 | ACCEPT |
 | 3 |  | `occultism` | occultism:datura (crop) | recipe (ars_nouveau:imbuement) | magic | M-10 | ACCEPT |
+| 3 | ✓ | `occultism` | occultism:dimensional_mineshaft (passive ore l | config | create | M-18 | ACCEPT |
 | 3 |  | `pantographsandwires` | pantographsandwires:graphite (c:item/ingots/gr | create_new_age:energising | create | M-17 | ACCEPT |
 | 3 |  | `pantographsandwires` | pantographsandwires:coal_coke | tfmg:coking | aeronautics | M-13 | ACCEPT |
 | 3 |  | `pantographsandwires` | pantographsandwires:graphite (c:item/ingots/gr | create_new_age:energising | create | M-29 | ACCEPT |
 | 3 |  | `quark` | quark storage crates (apple_crate, carrot_crat | create:milling (mill a storage cra | create | M-12 | ACCEPT |
 | 3 |  | `quark` | quark:ancient_wood / ancient_leaves blocks (Gl | create:milling | create | M-04 | ACCEPT |
-| 3 |  | `quark` | quark:abacus | numismatics economy layer | economy | M-33 | REJECT |
 | 3 |  | `railways` | railways:locometal blocks (structural steel-ad | aeronautics airframe construction | aeronautics | M-23 | REJECT |
 | 3 |  | `railways` | railways:conductor_cap (incomplete variants) | create:sequenced_assembly | create | M-06 | REJECT |
 | 3 |  | `railways` | railways conductor + train logistics | service-for-hire | economy | M-33 | REJECT |
@@ -957,35 +1001,32 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `samurai_dynasty` | samurai_dynasty:ruby_ore / aquamarine_ore / on | create:crushing | create | M-03 | ACCEPT |
 | 3 |  | `samurai_dynasty` | samurai_dynasty:steel_ingot | tfmg hot_blast / unification | create | M-03 | REJECT |
 | 3 |  | `securitycraft` | securitycraft reinforced blocks | create:crushing | create | M-04 | REJECT |
+| 3 |  | `securitycraft` | securitycraft sentry / block_pocket_manager (e | create:sequenced_assembly (multi-s | create | M-06 | REJECT |
 | 3 |  | `securitycraft` | securitycraft reinforced blocks (block_reinfor | MineColonies stonemason/blacksmith | economy | M-28 | ACCEPT |
 | 3 |  | `securitycraft` | securitycraft loot tables (loot=yes) | loot-seed | economy | M-34 | REJECT |
+| 3 |  | `sereneseasons` | sereneseasons seasonal fertility gating (any m | ars_nouveau:imbuement or occultism | magic | M-16 | ACCEPT |
 | 3 |  | `simplehats` | rare hat grab-bags | loot-seed into boss loot tables | survival | M-34 | ACCEPT |
 | 3 |  | `simplehats` | simplehats rare hat (collectible cosmetic) | loot-seed into boss/dungeon tables | economy | M-34 | ACCEPT |
 | 3 |  | `sky_whale_ship` | sky whale loot chests | loot-seed | economy | M-08 | REJECT |
 | 3 |  | `sky_whale_ship` | sky_whale_ship loot chests | loot-seed | economy | M-08 | REJECT |
 | 3 |  | `sky_whale_ship` | sky-whale structures | loot-seed | magic | M-02 | ACCEPT |
-| 3 |  | `sky_whale_ship` | sky-whale loot | loot-seed | economy | M-34 | ACCEPT |
-| 3 |  | `smokeleafindustries` | smokeleafindustries refined extracts / gummies | consumption (effect items) | survival | M-26 | ACCEPT |
+| 3 |  | `smokeleafindustries` | smokeleafindustries:generator (FE power from b | createaddition:liquid_burning or c | create | M-05 | ACCEPT |
+| 3 |  | `smokeleafindustries` | smokeleafindustries refined extracts / gummies | colony supply / MineColonies provi | economy | M-28 | ACCEPT |
 | 3 |  | `snowyspirit` | snowyspirit:gingerbread_cookie / snowyspirit:e | recipe (farmersdelight:cooking or  | survival | M-12 | ACCEPT |
 | 3 |  | `snowyspirit` | snowyspirit:gingerbread blocks | create:crushing | create | M-04 | REJECT |
 | 3 |  | `snowyspirit` | snowyspirit:eggnog | vinery:wine_fermentation (or creat | create | M-12 | ACCEPT |
 | 3 | ✓ | `spawn` | clam/crab/anglerfish seafood drops | create:milling / farmersdelight:cu | create | M-12 | ACCEPT |
 | 3 |  | `spawn` | spawn date palm wood (date_log/date_planks) | create:crushing / sawmill | create | M-04 | REJECT |
-| 3 |  | `spawn` | spawn:date_log / date_planks (date palm wood s | create:cutting | create | M-12 | ACCEPT |
-| 3 |  | `spawn` | spawn:angler_fish (bioluminescent deep-sea mob | occultism:spirit_fire or occultism | magic | M-11 | ACCEPT |
 | 3 |  | `stylecolonies` | stylecolonies Steampunk style (requires Create | M-28 colony route | create | M-28 | ACCEPT |
 | 3 |  | `supplementaries` | supplementaries:flax crop (seasonal availabili | M-16 seasonal reagent — flax is a  | survival | M-16 | ACCEPT |
 | 3 |  | `t_and_t` | t_and_t sail ship structure loot | loot-seed (datapack) | aeronautics | M-15 | ACCEPT |
-| 3 |  | `t_and_t` | t_and_t conquerable forts | loot-seed | survival | M-34 | ACCEPT |
 | 3 |  | `t_and_t` | t_and_t conquerable outpost/fort | MineColonies integration (conquere | economy | M-28 | REJECT |
 | 3 |  | `tacz` | tacz:ammo (ammo boxes, cartridges) | create:pressing / create:mechanica | create | M-05 | ACCEPT |
 | 3 |  | `tacz` | tacz:ammo / tacz:modern_kinetic_gun | player-to-player trade | economy | M-34 | ACCEPT |
-| 3 |  | `tacz` | tacz guns/ammo (war materiel) | emergent trade between combat-spec | economy | M-34 | ACCEPT |
 | 3 |  | `terralith` | Terralith biomes (biome surface context) | worldgen/spawn gating | survival | M-16 | REJECT |
 | 3 |  | `terralith` | terralith biome-tags (65 c:tags) | GTMOGS regional ore-gen keyed to t | survival | M-30 | ACCEPT |
 | 3 |  | `tfmg` | tfmg:aluminum_ingot / plastic | numismatics sell | economy | M-08 | REJECT |
 | 3 |  | `tfmg` | tfmg:aluminum (ingot) | recipe → aeronautics control-surfa | aeronautics | M-24 | ACCEPT |
-| 3 |  | `tfmg` | tfmg:plastic | create:mixing or tfmg:vat as cross | create | M-29 | ACCEPT |
 | 3 | ✓ | `tidal-towns-1.3.4` | tidal-towns ocean village (coastal structure i | aeronautics — the village is a nat | aeronautics | M-31 | ACCEPT |
 | 3 |  | `tide` | tide:raw_fish (c:foods/raw_fish, the broad out | create:milling or farmersdelight:c | create | M-12 | ACCEPT |
 | 3 |  | `touhou_little_maid` | altar recipe-type (touhou_little_maid:altar_re | altar multiblock | magic | M-05 | ACCEPT |
@@ -997,35 +1038,33 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `trashcans` | trashcans:item_trash_can / ultimate_trash_can | recipe gating behind Create-proces | create | M-05 | REJECT |
 | 3 |  | `travelersbackpack` | travelersbackpack:blank_upgrade / tank_upgrade | create:pressing | create | M-20 | ACCEPT |
 | 3 | ✓ | `travelersbackpack` | backpack tank + hose (portable fluid buffer +  | passive transport/logistics role o | aeronautics |  | REJECT |
-| 3 |  | `travelersbackpack` | travelersbackpack (high-tier variants: dragon, | create:mechanical_crafting | create | M-05 | REJECT |
+| 3 |  | `trek-b0.6.1.1` | trek structure chest loot tables | loot-seed | economy | M-34 | ACCEPT |
 | 3 |  | `underground_village` | underground_village as a regional economy node | M-30 regional-scarcity gate — seat | economy | M-30 | ACCEPT |
 | 3 |  | `upgrade_aquatic` | upgrade_aquatic:*_coralstone deco family / dri | create:crushing (lossy recycling) | create | M-04 | ACCEPT |
 | 3 |  | `upgrade_aquatic` | coralstone deco | create:crushing | create | M-04 | REJECT |
 | 3 |  | `upgrade_aquatic` | upgrade_aquatic:driftwood_* / riverwood_* | create:crushing | create | M-04 | ACCEPT |
-| 3 |  | `upgrade_aquatic` | upgrade_aquatic:driftwood_* / riverwood_* | create:cutting (or woodworks:sawmi | create | M-12 | ACCEPT |
 | 3 |  | `upgrade_aquatic` | upgrade_aquatic raw fish (raw_pike, raw_perch, | farmersdelight:cutting or farmersd | survival | M-12 | ACCEPT |
 | 3 |  | `valarian_conquest` | valarian_conquest:*_shield / faction armor | armorsmith station gated on create | create | M-05 | REJECT |
 | 3 |  | `valarian_conquest` | valarian_conquest faction structures (keeps/ou | loot-seed | create | M-15 | ACCEPT |
 | 3 |  | `valarian_conquest` | faction loot (shields, armor, weapons, banners | loot-seed | economy | M-08 | ACCEPT |
 | 3 |  | `valarian_conquest` | valarian_conquest combat faction system → comb | emergent player trade | economy | M-34 | ACCEPT |
+| 3 |  | `valarian_conquest` | faction armor/shields/weapons (from structure  | loot-seed / M-34 combat-supply | economy | M-34 | ACCEPT |
 | 3 |  | `vc_gliders` | vc_gliders:nether_upgrade | create:haunting | create | M-19 | ACCEPT |
 | 3 | ✓ | `vc_gliders` | copper_upgrade / nether_upgrade | create:deploying / item_applicatio | create | M-20 | ACCEPT |
 | 3 | ✓ | `vc_gliders` | reinforced-paper feedstock | create:milling / a Create pulp→pap | create | M-12 | REJECT |
 | 3 |  | `vc_gliders` | vc_gliders reinforced paper (paper + leather/m | create:pressing | create | M-05 | ACCEPT |
 | 3 |  | `vc_gliders` | vc_gliders copper_upgrade / nether_upgrade | create:item_application | create | M-20 | REJECT |
 | 3 |  | `vinery` | vinery:chorus_wine | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
-| 3 |  | `vinery` | vinery wines / ciders (effect-bearing consumab | vinery:wine_fermentation → consump | survival | M-26 | ACCEPT |
 | 3 | ✓ | `vinery` | grapes / apples | create:milling or create:pressing  | create | M-12 | ACCEPT |
 | 3 |  | `woodworks` | woodworks:*_beehive variants | config tie — Woodworks beehives ar | create | M-12 | ACCEPT |
-| 3 |  | `woodworks` | woodworks:*_chest / *_bookshelf (wood-typed de | create:crushing (lossy → plank/saw | create | M-04 | ACCEPT |
 | 3 |  | `woodworks` | woodworks:*_bookshelf / chiseled_*_bookshelf | ars_nouveau:enchanting_apparatus ( | magic | M-10 | ACCEPT |
+| 3 |  | `woodworks` | woodworks:*_beehive variants | survival/farming | survival | M-26 | REJECT |
 | 2 |  | `aeronautics` | aeronautics levitite crystallization step (in- | M-22 lunar-event gating (crystalli | magic | M-22 | ACCEPT |
 | 2 |  | `aeronautics` | aeronautics:adjustable_burner (hot-air lift al | config tag-extension | aeronautics | M-13 | ACCEPT |
 | 2 | ✓ | `aeronautics` | adjustable hot-air burner (burns furnace fuel) | config-tie / fuel tag extension to | create | M-13 | ACCEPT |
 | 2 |  | `aeronautics` | aeronautics:levitite (zinc-gated bulk lift blo | create:mixing → economy (Numismati | economy | M-08 | ACCEPT |
 | 2 |  | `aeronautics` | aeronautics:adjustable_burner (hot-air lift) → | fuel-tag config tie | survival | M-26 | ACCEPT |
 | 2 |  | `aeronautics` | hot-air (adjustable) burner | config-tie (extend fuel tag to tfm | create | M-13 | ACCEPT |
-| 2 |  | `aeronautics` | rope coupling / docking connector (simulated:r | config/structure-tie | economy | M-31 | REJECT |
 | 2 |  | `aeronautics` | aeronautics docking connectors + rope coupling | config/map note — docking stations | economy | M-33 | ACCEPT |
 | 2 |  | `aeronautics_dyeable_components` | dyed levitite (16 color variants) | recipe (base levitite + dye) | economy | M-29 | REJECT |
 | 2 |  | `aeronautics_dyeable_components` | dyed levitite variants | aeronautics construction | aeronautics | M-23 | REJECT |
@@ -1033,6 +1072,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `aileron` | aileron Elytra overhaul (makes Elytra a balanc | config-tie (tuning Elytra stamina/ | create |  | REJECT |
 | 2 |  | `aileron` | aileron Elytra enchantments as premium aeronau | loot-seed into aeronautics-relevan | aeronautics |  | REJECT |
 | 2 |  | `aileron` | aileron Elytra enchantments | create:deploying / item_applicatio | create | M-20 | REJECT |
+| 2 |  | `aileron` | Aileron elytra enchantments | create_enchantment_industry:grindi | create | M-29 | REJECT |
+| 2 |  | `aileron` | aileron loot tables | loot-seed | economy | M-34 | ACCEPT |
 | 2 |  | `alcohol_industry` | alcohol_base fluid (intermediate) | create:mixing (as a solvent input) | create | M-12 | REJECT |
 | 2 |  | `alcohol_industry` | alcohol_industry:alcohol_base fluid | extradelight:vat / farmersdelight: | survival | M-12 | ACCEPT |
 | 2 |  | `alcohol_industry` | alcohol_industry:vodka / alcohol_base (solvent | ars_nouveau:imbuement or occultism | magic | M-10 | ACCEPT |
@@ -1045,19 +1086,16 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 | ✓ | `alexsmobs` | alexsmobs:leafcutter_anthill (passive leaf→res | create:* automation | create |  | REJECT |
 | 2 |  | `alexsmobs` | alexsmobs:void_worm_beak (rare/endgame boss dr | create:crushing → exotic powder /  | create | M-02 | REJECT |
 | 2 |  | `alexsmobs` | alexsmobs:bear_dust (common bear kill drop) | occultism:spirit_fire | magic | M-11 | ACCEPT |
-| 2 |  | `alexsmobs` | alexsmobs:banana (common drop, edible) | farmersdelight:cooking / extradeli | create | M-12 | REJECT |
 | 2 |  | `alexsmobs` | alexsmobs:void_worm_beak (boss drop, end-tier) | occultism:ritual (as boss-key ritu | magic | M-15 | ACCEPT |
 | 2 |  | `alexsmobs` | alexsmobs exotic drops (broad: banana, capsid, | farmersdelight:cutting / create:cr | create | M-12 | ACCEPT |
 | 2 |  | `alexsmobs` | alexsmobs:leafcutter_anthill (passive resource | minecolonies colony requests | economy | M-28 | REJECT |
 | 2 | ✓ | `alexsmobs` | alexsmobs boss-tier drop (void_worm_beak) | boss drop as gate item in a comple | create | M-15 | ACCEPT |
 | 2 | ✓ | `alexsmobs` | alexsmobs rare drops/tames | sell for coin | economy | M-08 | REJECT |
-| 2 |  | `appleseed` | diet-variety demand | config tuning (production-by-deman | create | M-12 | ACCEPT |
 | 2 |  | `appleseed` | appleseed diet-variety demand signal | numismatics vendor | economy | M-29 | ACCEPT |
 | 2 | ✓ | `appleseed` | diet-variety demand signal | config/tuning (no new recipe — the | create | M-26 | ACCEPT |
 | 2 |  | `ars_n_spells` | ars_n_spells unified mana (Ars source + Iron's | createaddition:charging — charge a | create | M-17 | REJECT |
 | 2 |  | `ars_n_spells` | ars_n_spells shared-mana surface | ars_nouveau:imbuement (the host me | magic | M-01 | REJECT |
 | 2 |  | `ars_nouveau` | foreign essences / lapis / amethyst | ars_nouveau:imbuement → source_gem | magic | M-01 | ACCEPT |
-| 2 |  | `ars_nouveau` | ars_nouveau:archwood_log | create:milling | create | M-12 | ACCEPT |
 | 2 |  | `ars_nouveau` | ars_nouveau:archwood logs/planks | create:milling → create:mixing | create | M-12 | ACCEPT |
 | 2 |  | `ars_nouveau` | foreign mob/boss drops (from any survival mod) | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 2 |  | `ars_nouveau` | ars_nouveau:source_gem | create_new_age:energising | create | M-17 | ACCEPT |
@@ -1069,22 +1107,22 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `ars_nouveau` | ars_nouveau Alchemical Sourcelink (consumes br | irons_spellbooks:alchemist_cauldro | magic | M-29 | ACCEPT |
 | 2 |  | `ars_nouveau` | ars_nouveau enchanting_apparatus (needs ring o | create:mechanical_crafting (pedest | create | M-05 | ACCEPT |
 | 2 |  | `ars_nouveau` | ars_nouveau:enchanting_apparatus | service-for-hire | economy | M-33 | ACCEPT |
-| 2 |  | `ars_nouveau` | ars_nouveau:source_gem | create:pressing → numismatics mint | economy | M-08 | REJECT |
 | 2 |  | `astikorcartsredux` | astikorcartsredux plow / reaper (iron-bearing  | recipe (require create:pressing ir | create | M-20 | ACCEPT |
 | 2 |  | `astikorcartsredux` | astikorcartsredux:oak_plow / reaper (iron-bear | create:pressing → iron sheet as a  | create | M-20 | ACCEPT |
 | 2 |  | `astikorcartsredux` | astikorcartsredux:oak_supply_cart | no method available | aeronautics |  | REJECT |
 | 2 |  | `astikorcartsredux` | astikorcartsredux supply cart (bulk hauling) | aeronautics logistics framing | aeronautics |  | REJECT |
 | 2 |  | `astikorcartsredux` | cart crafting (oak/iron implement parts) | create:pressing (iron sheets for p | create | M-05 | ACCEPT |
-| 2 |  | `astikorcartsredux` | reaper harvest output (bulk crops) | create:milling or farmersdelight:c | create | M-12 | REJECT |
 | 2 |  | `astikorcartsredux` | carts as pre-aeronautics bulk hauling | aeronautics supply context | aeronautics | M-31 | ACCEPT |
 | 2 |  | `bakery` | bakery:baguette / braided_bread / bread (wheat | create:milling — wheat → flour as  | create | M-12 | ACCEPT |
 | 2 |  | `bakery` | bakery surplus crops (strawberries, apples, be | vinery:apple_mashing / alcohol_ind | economy | M-35 | ACCEPT |
+| 2 |  | `beachparty` | beachparty:palm_planks (wood family) | create:cutting (sawmill) | create | M-04 | REJECT |
 | 2 |  | `beachparty` | mini_fridge ice output (beachparty:mini_fridge | mini_fridge → Create filling/mixin | create | M-32 | REJECT |
+| 2 |  | `beachparty` | beachparty:coconut (tropical biome crop) | beachparty:palm_bar_mixing | economy | M-30 | ACCEPT |
 | 2 |  | `bettermineshafts` | bettermineshafts structures (expanded mineshaf | loot-seed (inject a weave-relevant | economy | M-08 | ACCEPT |
 | 2 |  | `bettermineshafts` | bettermineshafts structures | loot-seed (inject a rare magic rea | magic | M-02 | ACCEPT |
 | 2 |  | `bettermineshafts` | bettermineshafts expanded mineshaft structures | loot-seed | create | M-15 | REJECT |
-| 2 |  | `betteroceanmonuments` | monument chest loot | loot-seed (datapack edit) | economy | M-34 | ACCEPT |
 | 2 |  | `betterstrongholds` | stronghold chest loot | loot-seed | create | M-15 | REJECT |
+| 2 |  | `betterstrongholds` | betterstrongholds loot tables | loot-seed | magic | M-15 | ACCEPT |
 | 2 |  | `bits_n_bobs` | bits_n_bobs:andesite_tiles / calcite_tiles / d | create:crushing | create | M-04 | ACCEPT |
 | 2 | ✓ | `bits_n_bobs` | bits_n_bobs:*_nixie_board (large display board | no existing method (would need a c | economy |  | REJECT |
 | 2 |  | `bits_n_bobs` | bits_n_bobs nixie boards / large displays | recipe (crafting) | economy | M-33 | REJECT |
@@ -1108,6 +1146,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `bountiful` | bounty board | config (objective = Create-process | create | M-29 | ACCEPT |
 | 2 |  | `bountiful` | bountiful:decree objective pool (item request) | config → pack-specific Create-proc | create | M-29 | ACCEPT |
 | 2 |  | `bountiful` | bountiful bounty objective pool | loot-seed / Decree targeting boss- | economy | M-34 | ACCEPT |
+| 2 |  | `bountiful` | bountiful objective Decree pool | Decree targeting boss drops | survival | M-34 | ACCEPT |
 | 2 |  | `brazil_legends` | brazil_legends:big_tongue | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 2 |  | `brazil_legends` | brazil_legends:bottle_with_saci | occultism:spirit_trade | magic | M-18 | REJECT |
 | 2 |  | `brazil_legends` | brazil_legends:amber_shard / amber_pearl | create:crushing | create | M-04 | REJECT |
@@ -1118,20 +1157,17 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `cataclysm` | cataclysm:cursium_ingot | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 2 |  | `cataclysm` | cataclysm boss loot tables | loot-seed magic reagent (ars sourc | magic | M-02 | ACCEPT |
 | 2 |  | `cataclysm` | cataclysm:ancient_metal_ingot | ars_nouveau:imbuement | magic | M-10 | REJECT |
-| 2 |  | `cataclysm` | cataclysm:weapon_fusion (Mechanical Fusion Anv | create:mechanical_crafting input | create | M-20 | REJECT |
 | 2 |  | `cataclysm` | cataclysm:witherite_ingot (Witherite = wither- | ars_nouveau:imbuement | magic | M-02 | REJECT |
 | 2 |  | `cbc_at` | cbc_at:bronze_heavy_autocannon_barrel / rocket | boss drop as required input (M-15) | create | M-15 | ACCEPT |
 | 2 |  | `cbc_at` | cbc_at AP/APDS munitions (high-tier shells) | create:sequenced_assembly (multi-s | create | M-06 | REJECT |
 | 2 |  | `cbc_at` | heavy autocannon/rocket-pod tier | KubeJS gate (boss drop as input) | create | M-15 | ACCEPT |
-| 2 |  | `cbc_at` | cbc_at endgame barrel tiers (nethersteel/steel | M-30 regional-scarcity gate — neth | economy | M-30 | ACCEPT |
 | 2 | ✓ | `charta` | bar furniture (card tables, stools, bar shelve | create:cutting (mechanical saw) | create | M-04 | ACCEPT |
-| 2 |  | `charta` | charta card tables (social/gambling venue) | numismatics wagering mechanic | economy | M-08 | REJECT |
+| 2 |  | `charta` | charta:card_table (gambling mechanic) | KubeJS event hook + numismatics co | economy | M-26 | ACCEPT |
 | 2 |  | `chefsdelight` | Cook/Chef villager trades (emerald ↔ FD meals) | KubeJS config re-mapping trades to | economy | M-08 | REJECT |
 | 2 |  | `chefsdelight` | chefsdelight Cook/Chef villager trades | the player-run economy reads: a co | economy | M-26 | ACCEPT |
 | 2 |  | `chefsdelight` | chefsdelight Cook/Chef professions (workstatio | minecolonies:composting or colony  | economy | M-28 | ACCEPT |
 | 2 |  | `cmpackagecouriers` | cmpackagecouriers:cardboard_plane | create:sequenced_assembly | create | M-06 | ACCEPT |
 | 2 |  | `cmpackagecouriers` | cmpackagecouriers:cardboard_plane (autonomous  | emergent player logistics | economy | M-29 | REJECT |
-| 2 |  | `cmpackagecouriers` | cmpackagecouriers:cardboard_plane (long-range  | M-31 logistics-required bulk good | economy | M-31 | ACCEPT |
 | 2 |  | `cmpackagepipebomb` | cmpackagepipebomb:pipebomb (crafted explosive  | createbigcannons:cartridge_assembl | create | M-29 | REJECT |
 | 2 |  | `cmparallelpipes` | cmparallelpipes:pipe_wrench_gear | create:mechanical_crafting | create | M-05 | REJECT |
 | 2 |  | `cold_sweat` | cold_sweat:goat_fur / cold_sweat:chameleon_mol | create:milling (→ insulation fiber | create | M-12 | ACCEPT |
@@ -1149,7 +1185,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `companions` | Tesla/Voltaic deco blocks | `create:crushing` | create | M-04 | REJECT |
 | 2 |  | `companions` | companions mob drops (antlion_fur, big_bread e | occultism:ritual or ars_nouveau:im | magic | M-02 | ACCEPT |
 | 2 |  | `companions` | companions:relic_gold (Sacred Pontiff boss dro | ars_nouveau:enchanting_apparatus o | magic | M-02 | ACCEPT |
-| 2 |  | `companions` | companions:relic_gold (Sacred Pontiff boss dro | numismatics vendor | economy | M-34 | ACCEPT |
 | 2 |  | `cookingforblockheads` | cookingforblockheads:toaster (the one register | create:* | create | M-05 | REJECT |
 | 2 |  | `cookingforblockheads` | cookingforblockheads Oven/Fridge/Sink (flagshi | recipe (crafting table gated on Cr | create | M-05 | ACCEPT |
 | 2 |  | `cookingforblockheads` | cookingforblockheads kitchen as diet-variety h | M-26 consumption (food eaten throu | survival | M-26 | REJECT |
@@ -1163,8 +1198,10 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `create_better_villagers` | Create-parts trade (Andesite/Brass/Copper/Mine | KubeJS villager-trade modification | economy | M-08 | ACCEPT |
 | 2 |  | `create_better_villagers` | Create-part villager trades | numismatics (price/denomination co | economy | M-08 | ACCEPT |
 | 2 |  | `create_central_kitchen` | create_central_kitchen blaze_stove (Blaze-powe | create:deploying / create:filling  | survival | M-26 | ACCEPT |
+| 2 |  | `create_central_kitchen` | Blaze Stove (blaze-powered cooking accelerator | Create:item_application or recipe | magic | M-10 | REJECT |
 | 2 |  | `create_cheese` | create_cheese:calendar_page_tier_3 (the 900-ti | recipe (create:sequenced_assembly) | create | M-06 | REJECT |
 | 2 |  | `create_cheese` | create_cheese:calendar_page_tier_3 (max matura | ars_nouveau:imbuement | magic | M-10 | REJECT |
+| 2 | ✓ | `create_cheese` | aged cheeses (cheddar/brie/gouda…) | create_cheese:maturing (the wait g | economy | M-35 | ACCEPT |
 | 2 |  | `create_cheese` | create_cheese aged cheeses (cheddar, brie, gou | create_cheese:maturing → player-tr | economy | M-35 | ACCEPT |
 | 2 |  | `create_cheese` | create_cheese aged cheeses | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 2 |  | `create_cheese` | create_cheese aged cheeses (high-effort, time- | minecolonies requests | economy | M-28 | ACCEPT |
@@ -1172,6 +1209,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `create_compressed` | create_compressed sheet_block (brass/iron/copp | M-23 structural alloy (compressed  | aeronautics | M-23 | ACCEPT |
 | 2 |  | `create_compressed` | create_compressed:crushed_<metal>_pile | create:splashing (bulk washing) +  | aeronautics | M-23 | REJECT |
 | 2 |  | `create_compressed` | create_compressed crushed-ore pile blocks (e.g | create:splashing (bulk washing) | create | M-03 | REJECT |
+| 2 |  | `create_compressed` | create_compressed crushed ore pile blocks (cru | aeronautics cargo hold design | aeronautics | M-31 | REJECT |
 | 2 |  | `create_confectionery` | create_confectionery:hot_chocolate (Regenerati | ars_nouveau:imbuement or occultism | magic | M-10 | REJECT |
 | 2 |  | `create_confectionery` | create_confectionery:gingerbread_block / caram | create:crushing | create | M-04 | REJECT |
 | 2 |  | `create_confectionery` | create_confectionery:restful_chocolate (phanto | ars_nouveau:imbuement | magic | M-10 | REJECT |
@@ -1198,9 +1236,11 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 | ✓ | `create_hypertube` | hypertube blocks (tube/entrance/accelerator) | create:sequenced_assembly (already | create | M-06 | ACCEPT |
 | 2 |  | `create_hypertube` | hypertube network (player/entity transit) | M-31 logistics-required bulk good | economy | M-31 | REJECT |
 | 2 |  | `create_integrated_farming` | fishing_net fish/aquatic drops | farmersdelight:cooking → finished  | economy | M-12 | ACCEPT |
+| 2 |  | `create_integrated_farming` | create_integrated_farming:lava_fishing_net cat | occultism:spirit_fire or ars_nouve | magic | M-11 | ACCEPT |
 | 2 |  | `create_integrated_farming` | lava_fishing_net drops (nether fish/fire-adjac | create:crushing or occultism:spiri | magic | M-11 | ACCEPT |
 | 2 |  | `create_integrated_farming` | create_integrated_farming lava_fishing_net dro | occultism:ritual | magic | M-11 | REJECT |
 | 2 |  | `create_integrated_farming` | roost output feathers | create:milling | create | M-12 | REJECT |
+| 2 |  | `create_integrated_farming` | create_integrated_farming:fishing_net aquatic  | farmersdelight:cooking | survival | M-12 | REJECT |
 | 2 |  | `create_integrated_farming` | roost/net products (feathers, eggs, raw poultr | farmersdelight:cooking + create:mi | economy | M-26 | ACCEPT |
 | 2 |  | `create_integrated_farming` | create_integrated_farming roost product stream | farmersdelight:cooking / extradeli | survival | M-26 | ACCEPT |
 | 2 |  | `create_ironworks` | create_ironworks:bronze_ingot / c:ingots/bronz | numismatics mint (M-08 extension — | economy | M-08 | ACCEPT |
@@ -1212,6 +1252,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `create_ironworks` | create_ironworks:steel_ingot (MineColonies bla | minecolonies hut / research | economy | M-28 | ACCEPT |
 | 2 |  | `create_ironworks` | create_ironworks:tin_ore | GTMOGS regional ore-gen | economy | M-30 | ACCEPT |
 | 2 |  | `create_jetpack` | create_jetpack:jetpack (brass tier) | create:mechanical_crafting | create | M-05 | REJECT |
+| 2 |  | `create_jetpack` | `create_jetpack:jetpack` fueled by backtank ai | aeronautics/colony supply chain | economy | M-28 | REJECT |
 | 2 |  | `create_jetpack` | create_jetpack:jetpack as aeronautics personal | MineColonies colony research unloc | economy | M-37 | ACCEPT |
 | 2 |  | `create_ltab-3.9.2` | structure loot tables | loot-seed — inject an aeronautics  | aeronautics | M-23 | ACCEPT |
 | 2 |  | `create_ltab-3.9.2` | structure loot tables | loot-seed | magic | M-02 | ACCEPT |
@@ -1240,12 +1281,16 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `createaddition` | iron's Spellbooks magic gear (FE-chargeable fo | createaddition:charging (tesla coi | magic | M-17 | ACCEPT |
 | 2 |  | `createaddition` | createaddition:electrum_ingot (alloy: gold + s | create:pressing → electrum plates  | aeronautics | M-23 | ACCEPT |
 | 2 |  | `createaddition` | createaddition:biomass / bioethanol | createaddition:liquid_burning → FE | aeronautics | M-13 | REJECT |
+| 2 |  | `createaddition` | createaddition:rolling (ingot→rod/wire) | createaddition:rolling | create | M-32 | REJECT |
+| 2 |  | `createaddition` | createaddition:biomass → compost path | minecolonies:composting | economy | M-28 | ACCEPT |
 | 2 |  | `createaddition` | createaddition:electrum_ingot (crafted from go | createaddition:rolling | create | M-29 | ACCEPT |
 | 2 |  | `createadditionallogistics` | flexible shaft / lazy cogwheel (kinetic infra  | create:mechanical_crafting | aeronautics | M-24 | REJECT |
+| 2 |  | `createadditionallogistics` | flexible shafts (omnidirectional kinetic routi | Aeronautics contraption build | aeronautics | M-23 | REJECT |
 | 2 |  | `createbigcannons` | createbigcannons loot tables (loot=yes) | loot-seed | economy | M-08 | REJECT |
 | 2 | ✓ | `createbigcannons` | cannon-grade steel / cast_iron / bronze (c:ing | numismatics mint as scarce fabrica | economy | M-08 | ACCEPT |
 | 2 |  | `createbigcannons` | createbigcannons:cast_iron_ingot (c:ingots/cas | create_ironworks cross-tag (shared | create | M-12 | REJECT |
 | 2 |  | `createbigcannons` | createbigcannons items | MineColonies | economy | M-28 | REJECT |
+| 2 |  | `createbigcannons` | createbigcannons loot (boss drops / structure  | loot-seed — seed cannon-grade comp | survival | M-02 | ACCEPT |
 | 2 |  | `createblockchain` | createblockchain coin output chain | M-08 deepening (FE traces to proce | create | M-08 | ACCEPT |
 | 2 |  | `createblockchain` | FE supply chain (coin trace back through scarc | existing Create-FE chain deepening | create | M-08 | ACCEPT |
 | 2 |  | `createblockchain` | Mining Core (worldgen geode, ~every 30 chunks) | regional scarcity of geodes | economy | M-30 | ACCEPT |
@@ -1254,8 +1299,10 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `createblockchain` | createblockchain:mining_core (geode worldgen,  | M-30 regional-scarcity gate | scarcity | M-30 | ACCEPT |
 | 2 |  | `createfisheryindustry` | createfisheryindustry seafood (high-protein pr | colony supply-request | economy | M-28 | ACCEPT |
 | 2 |  | `createfisheryindustry` | createfisheryindustry:harpoon / harpoon_gun | combat → boss encounter | survival | M-34 | REJECT |
-| 2 |  | `createfisheryindustry` | createfisheryindustry:fish_skin (mechanical pe | create:pressing / tanning → aerona | aeronautics | M-23 | ACCEPT |
+| 2 |  | `createfisheryindustry` | createfisheryindustry:seafood_chowder / cooked | M-26 consumption sink (high-nutrit | survival | M-26 | ACCEPT |
 | 2 |  | `createfisheryindustry` | createfisheryindustry:seafood_chowder / lobste | minecolonies colony provisioning ( | economy | M-28 | ACCEPT |
+| 2 |  | `createfisheryindustry` | createfisheryindustry:copper_diving_leggings | create:sequenced_assembly | aeronautics | M-24 | REJECT |
+| 2 |  | `createfood` | createfood dishes as magic reagents | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 2 |  | `createfood` | createfood dishes as cross-route input | KubeJS recipe (craft a magic meal  | magic | M-29 | ACCEPT |
 | 2 |  | `createfood` | createfood plated blocks (deco tables) | recipe | economy | M-33 | REJECT |
 | 2 |  | `createimmersivetacz` | createimmersivetacz:gun_barrel / firing_mechan | M-24 mechanical component → propul | aeronautics | M-24 | REJECT |
@@ -1297,7 +1344,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `createoreexcavation` | createoreexcavation fluid-extraction (extracti | tfmg:distillation (crude-oil vein  | create | M-32 | ACCEPT |
 | 2 |  | `createpickywheels` | biome-gated water-wheel (must sit in a River b | behavior constraint (no recipe rou | survival | M-16 | ACCEPT |
 | 2 |  | `createpickywheels` | windmill placement constraint (open air + Over | same behavioral constraint | survival | M-16 | REJECT |
-| 2 |  | `createpickywheels` | createpickywheels (biome-gated generators — ri | config/design weave — survival pre | survival | M-16 | REJECT |
 | 2 |  | `createpickywheels` | create water_wheel / windmill placement | config (biome/placement rules) | survival |  | REJECT |
 | 2 |  | `createpickywheels` | biome-gated water-wheel power | config / behavioral patch | survival | M-30 | ACCEPT |
 | 2 | ✓ | `createpickywheels` | water-wheel/windmill placement gated by River  | biome+worldgen config gating (no r | survival | M-30 | ACCEPT |
@@ -1305,10 +1351,12 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 | ✓ | `createtreadmill` | createtreadmill:maid_motor Soul Orb/Photo inta | create:haunting / occultism spirit | magic | M-19 | REJECT |
 | 2 |  | `createtreadmill` | createtreadmill:maid_motor Soul Orb intake | occultism:spirit_fire | magic | M-11 | REJECT |
 | 2 |  | `createtreadmill` | createtreadmill:treadmill (player-powered SU g | loot-seed | economy |  | REJECT |
-| 2 |  | `createtreadmill` | createtreadmill:maid_motor (touhou_little_maid | create:mechanical_crafting or reci | create | M-05 | REJECT |
+| 2 |  | `ctl` | ctl:htlb_block / ctl:ilb_block (train lamp blo | create:sequenced_assembly deepenin | aeronautics | M-24 | REJECT |
 | 2 |  | `ctov` | ctov pillager outpost loot | loot-seed | survival | M-02 | REJECT |
+| 2 |  | `ctov` | ctov village structures (trade hub) | loot-seed (Numismatics trade stall | economy | M-33 | REJECT |
 | 2 | ✓ | `deeperdarker` | soul_dust / soul_crystal / heart_of_the_deep | occultism:spirit_fire (or ritual) | magic | M-11 | ACCEPT |
 | 2 |  | `deeperdarker` | deeperdarker:soul_crystal (endgame, rare) | create:haunting | create | M-19 | REJECT |
+| 2 |  | `deeperdarker` | deeperdarker:warden_carapace / deeperdarker:sc | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 2 |  | `deeperdarker` | deeperdarker:sculk_bone | occultism:ritual (bone-type reagen | magic | M-11 | ACCEPT |
 | 2 |  | `deeperdarker` | deeperdarker:crystallized_amber | ars_nouveau:imbuement as an attune | magic | M-07 | ACCEPT |
 | 2 |  | `deeperdarker` | deeperdarker:soul_dust / soul_crystal | economy — M-34 combat-route supply | economy | M-34 | ACCEPT |
@@ -1322,7 +1370,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `dndesires` | dndesires:rubber (hydraulic press output) | create:mechanical_crafting (belt/g | create | M-06 | REJECT |
 | 2 |  | `dndesires` | dndesires:rubber (sap → hydraulic press) | dndesires:hydraulic_compacting → c | create | M-12 | ACCEPT |
 | 2 |  | `dndesires` | dndesires:cardboard_package_* | create sequenced logistics | aeronautics | M-24 | REJECT |
-| 2 |  | `dndesires` | dndesires:freezing_sail fan-processing | dndesires:freezing (route foreign  | survival | M-12 | ACCEPT |
 | 2 |  | `dndesires` | `dndesires:freezing` fan method (fan-frost pro | `dndesires:freezing` applied to se | survival | M-16 | ACCEPT |
 | 2 |  | `dndesires` | `dndesires:seething` / `dndesires:dragon_breat | those methods applied to magic dro | magic | M-10 | REJECT |
 | 2 | ✓ | `dndesires` | milkshake foods (chocolate/glowberry milkshake | dndesires:freezing / sanding / see | survival | M-12 | ACCEPT |
@@ -1335,6 +1382,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 | ✓ | `dndesires` | milkshake foods | native eat | survival | M-26 | REJECT |
 | 2 |  | `domum_ornamentum` | Create-produced stone (andesite/processed ston | domum_ornamentum:architects_cutter | create | M-04 | ACCEPT |
 | 2 |  | `domum_ornamentum` | domum_ornamentum framed/shingled/pillar blocks | minecolonies:composting or MineCol | economy | M-28 | ACCEPT |
+| 2 |  | `drones` | drones:drill (ability block) | createoreexcavation:drilling (the  | create | M-29 | ACCEPT |
 | 2 |  | `dtterralith` | dtterralith exotic leaves (maple, jacaranda) | farmersdelight:cutting or create:m | survival | M-12 | REJECT |
 | 2 |  | `dtterralith` | dtterralith:jacaranda_seed / amethyst_seed (de | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 2 |  | `dtterralith` | dtterralith exotic saplings (cedar, jacaranda, | dynamictrees:seed_conversion | survival | M-16 | ACCEPT |
@@ -1347,14 +1395,17 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `dungeons_arise_seven_seas` | naval structures (aesthetic / thematic) | aeronautics pillar — ships rhyme w | aeronautics |  | REJECT |
 | 2 |  | `dungeons_arise_seven_seas` | ship/fortress chest loot tables | numismatics coin seeding | economy | M-08 | ACCEPT |
 | 2 |  | `dungeons_arise_seven_seas` | dungeons_arise_seven_seas galleon loot (sunken | loot-seed → aeronautics structural | aeronautics | M-23 | ACCEPT |
+| 2 |  | `dungeons_arise_seven_seas` | dungeons_arise_seven_seas galleon captain spaw | loot-seed → boss-key component for | create | M-15 | REJECT |
 | 2 |  | `dungeons_arise_seven_seas` | ship/fortress loot chests | loot-seed — seed magic reagents (s | magic | M-02 | ACCEPT |
 | 2 |  | `dungeons_arise_seven_seas` | galleon / fortress loot tables | loot-seed | economy | M-34 | ACCEPT |
 | 2 |  | `dungeons_arise_seven_seas` | dungeons_arise_seven_seas ships | loot-seed (aeronautics blueprint o | aeronautics | M-15 | REJECT |
 | 2 |  | `dungeons_arise_seven_seas` | ship/galleon dungeon loot chests | loot-seed | economy | M-34 | ACCEPT |
+| 2 |  | `dynamictrees` | dynamictrees seed types (species seeds — oak/b | ars_nouveau:imbuement or occultism | magic | M-11 | REJECT |
 | 2 | ✓ | `dynamictreesplus` | saguaro_fruit / mushroom caps | create:milling or farmersdelight:c | create | M-12 | ACCEPT |
 | 2 |  | `dynamictreesplus` | dynamictreesplus:mushroom_branch | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 2 |  | `dynamictreesplus` | dynamictreesplus:cactus_branch | recipe (create:crushing) | create | M-04 | REJECT |
 | 2 |  | `dynamictreesplus` | dynamictreesplus:red_mushroom_cap / brown_mush | create:milling | create | M-12 | ACCEPT |
+| 2 |  | `dynamictreesplus` | dynamictreesplus mushroom items | occultism:spirit_fire | magic | M-11 | REJECT |
 | 2 |  | `dynamictreesplus` | dynamictreesplus:saguaro_fruit (seasonal deser | serene-seasons gate on spawn rate  | survival | M-16 | ACCEPT |
 | 2 |  | `ecologics` | ecologics:seashell (c:storage_blocks/seashell) | create:crushing | create | M-04 | REJECT |
 | 2 |  | `ecologics` | ecologics:coconut_woodset (planks/logs) | create:crushing | create | M-04 | REJECT |
@@ -1368,9 +1419,11 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `endrem` | endrem eyes | ars_nouveau:enchanting_apparatus ( | magic | M-10 | REJECT |
 | 2 |  | `endrem` | endrem:guardian_eye | occultism:ritual (elder guardian r | magic | M-11 | ACCEPT |
 | 2 |  | `endrem` | endrem:cold_eye / endrem:magical_eye | create:sequenced_assembly (derpack | create | M-06 | ACCEPT |
+| 2 |  | `endrem` | endrem:guardian_eye | ars_nouveau:enchanting_apparatus | magic | M-10 | ACCEPT |
 | 2 |  | `enhancedcelestials` | enhancedcelestials Blood Moon (world-state eve | ars_nouveau:summon_ritual gated by | magic | M-22 | ACCEPT |
 | 2 |  | `enhancedcelestials` | enhancedcelestials Harvest Moon (crop-growth b | create:milling seasonal crop yield | create | M-16 | ACCEPT |
 | 2 | ✓ | `enhancedcelestials` | meteor block | create:crushing | create | M-04 | ACCEPT |
+| 2 |  | `enhancedcelestials` | Blue Moon → Luck buff | loot-seed | economy | M-22 | REJECT |
 | 2 |  | `enhancedcelestials` | Blood Moon mob-drop windfall | emergent trade | economy | M-34 | REJECT |
 | 2 |  | `expandeddelight` | expandeddelight:cranberry / sweet_potato (seas | create:milling or farmersdelight:c | create | M-16 | REJECT |
 | 2 |  | `expandeddelight` | expandeddelight:salt_dust | create:mixing (brine/preservation) | create | M-12 | REJECT |
@@ -1388,6 +1441,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `exposure` | exposure:album / exposure:photograph | supplementaries:item_lore or suppl | economy | M-33 | ACCEPT |
 | 2 |  | `exposure` | exposure:photograph (developed print) | exposure:photograph_aging (the agi | economy | M-35 | ACCEPT |
 | 2 |  | `exposure` | exposure:photograph_aging (aged photos gain va | exposure:photograph_aging method | economy | M-35 | ACCEPT |
+| 2 |  | `exposure` | exposure photographs as documented map intelli | emergent player trade + supplement | economy | M-33 | ACCEPT |
 | 2 |  | `exposure` | exposure:camera / film (exploration capture) | supplementaries:weathered_map (map | economy | M-33 | ACCEPT |
 | 2 |  | `extradelight` | coffee beans (c:crops/coffee) | create:milling → extradelight:oven | create | M-12 | ACCEPT |
 | 2 |  | `extradelight` | extradelight:drying_rack outputs (dried herbs/ | ars_nouveau:imbuement (herb-infusi | magic | M-10 | REJECT |
@@ -1397,23 +1451,24 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 | ✓ | `extradelight` | extradelight feasts | consumption (food items) | survival | M-26 | REJECT |
 | 2 |  | `extradelight` | extradelight:coffee_beans / c:crops/coffee | create:milling | create | M-12 | REJECT |
 | 2 |  | `extradelight` | extradelight:drying_rack / evaporator outputs  | maturation aging | economy | M-35 | ACCEPT |
-| 2 | ✓ | `farm_and_charm` | farm_and_charm grains (barley / oat) | create:milling | create | M-12 | ACCEPT |
 | 2 |  | `farm_and_charm` | farm_and_charm:fertilized_farmland / fertilize | serene_seasons season-gating | survival | M-16 | REJECT |
 | 2 |  | `farm_and_charm` | farm_and_charm cooked dishes | appleseed diet demand | survival | M-12 | ACCEPT |
+| 2 |  | `farm_and_charm` | farm_and_charm:butter or farm_and_charm:cream  | create_factory mixing/pressing | create | M-12 | REJECT |
 | 2 |  | `farm_and_charm` | farm_and_charm:butter / farm_and_charm:eggs (h | minecolonies huts/requests | economy | M-28 | ACCEPT |
 | 2 |  | `farm_and_charm` | barley / oat grains | create:milling | create | M-12 | ACCEPT |
-| 2 |  | `farmersdelight` | farmersdelight:cabbage / tomato / onion / rice | season-gated growth (Serene Season | survival | M-16 | ACCEPT |
 | 2 |  | `farmersdelight` | farmersdelight:cabbage / tomato / onion crops | create:milling | create | M-12 | REJECT |
 | 2 |  | `farmersdelight` | farmersdelight:rice / cabbage / onion / tomato | serene_seasons gate + create:milli | survival | M-16 | ACCEPT |
 | 2 |  | `farmersdelight` | farmersdelight:cooking_pot (or farmersdelight: | minecolonies hut building recipe ( | economy | M-28 | ACCEPT |
 | 2 |  | `fluid` | fluid:honeycomb_mold (noted in item list) | create:filling | create | M-12 | REJECT |
 | 2 | ✓ | `formations` | scattered altars/ruins/pedestals (generated st | loot-seed into structure loot tabl | economy | M-08 | REJECT |
-| 2 |  | `formations` | formations structures | loot-seed | economy | M-34 | ACCEPT |
 | 2 |  | `formationsnether` | formationsnether structures | loot-seed | aeronautics | M-23 | REJECT |
 | 2 |  | `formationsnether` | Nether structure loot | loot-seed as regional-scarcity goo | economy | M-30 | REJECT |
+| 2 |  | `fxntstorage` | fxntstorage:backpack_flight_upgrade | no-motif (wearable personal flight | aeronautics |  | REJECT |
 | 2 |  | `fxntstorage` | fxntstorage:brass_backpack + brass_storage_box | create:sequenced_assembly (endgame | create | M-06 | ACCEPT |
 | 2 |  | `galosphere` | palladium (c:ingots/palladium) | numismatics mint (Create-processed | economy | M-08 | ACCEPT |
 | 2 |  | `galosphere` | galosphere:silver_bomb (4× silver + TNT) | loot-seed / combat | economy | M-34 | REJECT |
+| 2 |  | `galosphere` | galosphere:silver_ingot (palladium) | ars_nouveau:enchanting_apparatus | magic | M-10 | REJECT |
+| 2 |  | `galosphere` | galosphere:palladium_ore | create:crushing | create | M-03 | ACCEPT |
 | 2 |  | `gamediscs` | gamediscs:gaming_console | recipe (create:sequenced_assembly  | create | M-06 | REJECT |
 | 2 |  | `gamediscs` | gamediscs:gaming_console components (processor | create:mechanical_crafting | create | M-05 | REJECT |
 | 2 |  | `gamediscs` | gamediscs:game_disc_* (mob-kill drops) | loot-seed — skeleton kill gimmick  | survival | M-34 | REJECT |
@@ -1426,7 +1481,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `grimoireofgaia` | grimoireofgaia fragment drops | create:crushing | create | M-02 | REJECT |
 | 2 |  | `grimoireofgaia` | grimoireofgaia:pearl_block / creature pearls | create:crushing | create | M-03 | REJECT |
 | 2 |  | `grimoireofgaia` | grimoireofgaia:pearl_block / gem fragments | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
-| 2 |  | `gtmogs` | gtmogs regional ore veins (the downstream scar | (conceptual — the weave lives in t | economy | M-30 | ACCEPT |
 | 2 |  | `handcrafted` | handcrafted:*_counter / *_cupboard / *_shelf ( | create:cutting | create | M-12 | ACCEPT |
 | 2 |  | `hpm` | hpm:cuttermilitariseditem / hpm:hand_cannon | create:mechanical_crafting | create | M-05 | REJECT |
 | 2 |  | `hpm` | hpm:cannonball | recipe (create:compacting / create | create | M-24 | ACCEPT |
@@ -1438,26 +1492,21 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `hpm` | hpm:hand_cannon / war-cutter vessels | economy (M-34) | economy | M-34 | ACCEPT |
 | 2 |  | `illagerinvasion` | illagerinvasion:lost_candle / horn_of_sight | occultism:ritual as ritual ingredi | magic | M-11 | ACCEPT |
 | 2 |  | `illagerinvasion` | illagerinvasion:lost_candle (rare loot drop) | ars_nouveau:enchanting_apparatus a | magic | M-10 | REJECT |
+| 2 |  | `illagerinvasion` | illagerinvasion boss/raid drops (hallowed_gem, | player-to-player trade (emergent) | economy | M-34 | ACCEPT |
 | 2 |  | `illagerinvasion` | illagerinvasion:platinum_chunk as scarce regio | GTMOGS regional gate | economy | M-30 | REJECT |
 | 2 |  | `immersive_armors` | immersive_armors:steampunk_* (Steampunk set —  | create:sequenced_assembly | create | M-06 | ACCEPT |
 | 2 |  | `immersive_armors` | immersive_armors:bone_* (Bone set, pacifies sk | occultism:ritual | magic | M-11 | ACCEPT |
 | 2 |  | `immersive_armors` | immersive_armors:steampunk set (visual + tone) | create:mechanical_crafting (assemb | create | M-05 | ACCEPT |
-| 2 |  | `immersive_armors` | immersive_armors:divine set (magic/holy theme) | ars_nouveau:enchanting_apparatus ( | magic | M-10 | ACCEPT |
-| 2 |  | `immersive_armors` | immersive_armors:bone set | occultism:spirit_fire | magic | M-11 | REJECT |
 | 2 |  | `immersive_armors` | immersive_armors Divine armor (wither-skull ba | ars_nouveau:armor_upgrade — finish | magic | M-10 | ACCEPT |
 | 2 |  | `immersive_armors` | immersive_armors finished armor sets as trade  | emergent player trade | economy | M-34 | ACCEPT |
-| 2 |  | `immersive_paintings` | immersive_paintings:glow_painting | ars_nouveau:imbuement | magic | M-10 | REJECT |
-| 2 |  | `immersive_paintings` | immersive_paintings:painting (frame craft) | create:pressing / item_application | create | M-20 | REJECT |
-| 2 |  | `immersive_paintings` | immersive_paintings:painting / glow_painting | supplementaries:item_lore + player | economy | M-33 | REJECT |
 | 2 |  | `irons_lib` | irons_lib:transmog_table (armor cosmetic) | ars_nouveau:imbuement as reagent c | magic | M-10 | REJECT |
 | 2 | ✓ | `irons_spellbooks` | mithril ore / raw mithril | create:crushing | create | M-03 | ACCEPT |
-| 2 |  | `irons_spellbooks` | irons_spellbooks mithril ore / raw_mithril (c: | create:crushing | create | M-03 | ACCEPT |
 | 2 |  | `irons_spellbooks` | irons_spellbooks:affinity_ring_* (school-speci | create:sequenced_assembly | create | M-06 | REJECT |
 | 2 |  | `irons_spellbooks` | irons_spellbooks alchemist cauldron brew | createaddition:charging | create | M-17 | REJECT |
 | 2 |  | `irons_spellbooks` | irons_spellbooks mob drops (apothecarist compo | irons_spellbooks:alchemist_cauldro | magic | M-02 | ACCEPT |
 | 2 |  | `jakes-build-tools-2.0.1.5` | experience_flask items | create:mixing or create:sequenced_ | create | M-05 | REJECT |
-| 2 |  | `jakes-build-tools-2.0.1.5` | minecraft:hammer (3×3 mining tool) | create:sequenced_assembly | create | M-05 | REJECT |
-| 2 |  | `letsdocompat` | letsdocompat food-web tags (items/foods/leafy_ | extradelight:juicing or farmersdel | survival | M-12 | REJECT |
+| 2 | ✓ | `just_blahaj` | blahaj plush variants (wool+dye constructs) | create:crushing | create | M-04 | REJECT |
+| 2 |  | `kobolds` | kobolds pirate den (jungle pirate kobolds, cap | loot-seed | economy | M-34 | ACCEPT |
 | 2 |  | `mcwdoors` | wooden door variants | create:crushing | create | M-04 | REJECT |
 | 2 |  | `mcwstairs` | mcwstairs:*_stone/*_brick/*_blackstone variant | create:crushing | create | M-04 | ACCEPT |
 | 2 |  | `mcwstairs` | mcwstairs:*_wood variants | create:crushing | create | M-04 | REJECT |
@@ -1465,25 +1514,28 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `mcwstairs` | mcwstairs:*_bulk_stairs / *_balcony (stone/bri | create:crushing | create | M-04 | ACCEPT |
 | 2 |  | `mcwwindows` | mcwwindows:*_curtain (wool-based) | create:milling | create | M-04 | REJECT |
 | 2 |  | `mcwwindows` | mcwwindows:*_parapet / *_arrow_slit (stone var | create:crushing | create | M-04 | ACCEPT |
+| 2 |  | `meadow` | meadow:cheese_wheel | farmersdelight:cooking | survival | M-12 | ACCEPT |
 | 2 |  | `meadow` | meadow cheese_wheel | create:milling / farmersdelight:cu | create | M-12 | REJECT |
-| 2 |  | `meadow` | meadow:alpine_salt | M-30 (regional-scarcity gate — alp | economy | M-30 | ACCEPT |
 | 2 |  | `meadow` | meadow alpine crops (oats, lavender, yarrow) | Serene Seasons / seasonal-gated in | survival | M-16 | ACCEPT |
+| 2 |  | `meadow` | meadow:alpine_salt (via meadow:alpine_salt_ore | create:crushing | create | M-03 | ACCEPT |
 | 2 |  | `mffs` | mffs force-field zone (protects colony from ra | minecolonies colony research gate  | survival | M-15 | ACCEPT |
 | 2 |  | `mffs` | mffs:blank_card / biometric_identifier | create:item_application (deploy a  | create | M-20 | ACCEPT |
 | 2 | ✓ | `mffs` | mffs:projector / interdiction_matrix / focus_m | create:sequenced_assembly + create | create | M-05 | ACCEPT |
-| 2 |  | `midnightthoughts` | midnightthoughts "well-rested" buff | farmersdelight/farm_and_charm food | survival |  | REJECT |
 | 2 |  | `minecolonies` | minecolonies quarry ore output (stone/ore stre | create:crushing → ore-doubling byp | create | M-03 | REJECT |
 | 2 |  | `minecolonies` | minecolonies worker requests (huge inbound sur | minecolonies:composting | survival | M-26 | ACCEPT |
 | 2 |  | `minecolonies` | minecolonies colony output goods (raw ore, com | aeronautics/logistics bulk transpo | aeronautics | M-31 | ACCEPT |
+| 2 |  | `minecolonies` | minecolonies:ancienttome (research gate) | minecolonies University research | economy | M-37 | ACCEPT |
 | 2 |  | `minecolonies` | minecolonies colony request system (requests a | M-28 colony route | magic | M-28 | ACCEPT |
 | 2 |  | `minecolonies_compatibility` | minecolonies_compatibility Courier ↔ Create St | Create logistics | aeronautics |  | REJECT |
 | 2 |  | `minecolonies_compatibility` | minecolonies_compatibility research unlock (Gu | MineColonies research tree | economy | M-37 | ACCEPT |
+| 2 |  | `minecolonies_compatibility` | minecolonies_compatibility:tacz_dummy_gun (col | loot-seed / config tie | economy | M-34 | ACCEPT |
 | 2 |  | `minecolonies_compatibility` | minecolonies_compatibility Butcher worker job  | farmersdelight:cutting | survival | M-12 | ACCEPT |
 | 2 |  | `moblassos` | moblassos golden/diamond lasso | create:mechanical_crafting | create | M-05 | REJECT |
 | 2 |  | `moblassos` | moblassos (mob-transport capability) | no recipe method — utility synergy | aeronautics |  | REJECT |
 | 2 |  | `moblassos` | moblassos:hostile_lasso | create:mechanical_crafting | create | M-05 | REJECT |
 | 2 |  | `moblassos` | moblassos:golden_lasso (livestock transport) | minecolonies colony requests | economy | M-28 | ACCEPT |
 | 2 |  | `moblassos` | moblassos:golden_lasso (relocates farm animals | M-31 logistics-required bulk good  | aeronautics | M-31 | REJECT |
+| 2 |  | `moblassos` | emerald_lasso enables colony villager delivery | MineColonies functional synergy | economy | M-28 | REJECT |
 | 2 |  | `modulargolems` | golem body (boss-metal tier — dragonsteel, cur | modulargolems:golem_assemble consu | survival | M-02 | ACCEPT |
 | 2 |  | `modulargolems` | Occultism mod otherstone / spirit essence | modulargolems:golem_add_slot | magic | M-11 | REJECT |
 | 2 |  | `modulargolems` | modulargolems golem body parts | occultism:spirit_fire transmutatio | magic | M-11 | REJECT |
@@ -1496,17 +1548,17 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `more_slabs_stairs_and_walls` | wood/log cut variants | create:milling | create | M-12 | REJECT |
 | 2 |  | `more_slabs_stairs_and_walls` | stone/log/wood/concrete slab+stair+wall varian | create:cutting (mechanical saw) | create | M-12 | ACCEPT |
 | 2 |  | `more_slabs_stairs_and_walls` | more_slabs_stairs_and_walls | amethyst/basalt cuts as magic buil | magic | M-10 | REJECT |
+| 2 |  | `more_slabs_stairs_and_walls` | gravity-obeying cuts (concrete-powder stairs,  | create:crushing | create | M-04 | ACCEPT |
 | 2 |  | `mowziesmobs` | mowziesmobs:earthrend_gauntlet (Wroughtnaut dr | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 2 |  | `mowziesmobs` | mowziesmobs wrought-metal / earthrend_gauntlet | create:sequenced_assembly (as M-06 | create | M-15 | ACCEPT |
 | 2 | ✓ | `mowziesmobs` | boss artifacts (sol_visage, ice_crystal) | occultism:spirit_fire | magic | M-11 | ACCEPT |
 | 2 |  | `mowziesmobs` | mowziesmobs:captured_grottol (rare ore-eating  | occultism:spirit_fire | magic | M-11 | ACCEPT |
 | 2 |  | `mowziesmobs` | mowziesmobs boss drops (ice_crystal / sol_visa | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
-| 2 |  | `mowziesmobs` | mowziesmobs:ice_crystal (Frostmaw) / sol_visag | ars_nouveau:imbuement (sun-aspect/ | magic | M-02 | ACCEPT |
 | 2 |  | `mowziesmobs` | mowziesmobs:elokosa_paw (lunar moth boss parts | occultism:spirit_fire | magic | M-11 | ACCEPT |
 | 2 |  | `mushroomquest` | rare/mythical mushroom caps (e.g. agarikon, my | farmersdelight:cooking OR extradel | create | M-12 | ACCEPT |
-| 2 |  | `mushroomquest` | mushroomquest rare/mythical caps (agarikon, an | farmersdelight:cooking or extradel | survival | M-12 | ACCEPT |
 | 2 |  | `mushroomquest` | mushroomquest rare/mythical mushroom caps | farmersdelight:cooking / extradeli | economy | M-12 | ACCEPT |
 | 2 |  | `mushroomquest` | mushroomquest rare caps with seasonal/biome-sp | season-gated spawn (Serene Seasons | create | M-16 | ACCEPT |
+| 2 |  | `mushroomquest` | mushroomquest glowshrooms (light-emitting bloc | create:crushing | create | M-04 | REJECT |
 | 2 |  | `mushroomquest` | glowshrooms (blue/green/magenta varieties) | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 2 |  | `mushroomquest` | common/rare mushroom caps (bay bolete, agariko | farmersdelight:cooking / extradeli | create | M-12 | ACCEPT |
 | 2 |  | `mushroomquest` | rare/mythical mushroom caps (effect-bearing) | occultism:spirit_fire | magic | M-11 | ACCEPT |
@@ -1517,21 +1569,24 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `naturalist` | naturalist:antler | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 2 |  | `naturalist` | naturalist:glow_goop (firefly drop) | occultism:spirit_fire | magic | M-11 | ACCEPT |
 | 2 |  | `naturalist` | naturalist:bushmeat (raw) | farmersdelight:cutting | survival | M-12 | ACCEPT |
+| 2 |  | `naturalist` | naturalist:bushmeat / naturalist:venison | farmersdelight:cooking | create | M-12 | ACCEPT |
 | 2 |  | `netmusic` | netmusic:music_cd (craftable, loot=yes) | recipe — route cd_burner/computer  | create | M-05 | ACCEPT |
 | 2 |  | `netmusic` | netmusic:music_player_backpack | recipe — require a travelersbackpa | survival |  | REJECT |
 | 2 |  | `northstar` | northstar:astronomical_reading (a "read" of ce | ars_nouveau:enchanting_apparatus o | magic | M-22 | ACCEPT |
 | 2 | ✓ | `northstar` | northstar off-world hostile mob drops (loot=ye | occultism/ars infusion or ritual ( | magic | M-02 | REJECT |
 | 2 |  | `northstar` | northstar:advanced_circuit | northstar:engraving | magic | M-10 | ACCEPT |
+| 2 |  | `northstar` | northstar:advanced_circuit | MineColonies research gate | economy | M-37 | ACCEPT |
 | 2 |  | `northstar` | northstar:advanced_circuit | cross-route dependency into magic  | magic | M-29 | ACCEPT |
 | 2 |  | `northstar` | northstar titanium/tungsten (regional dimensio | GTMOGS region-gate consideration | economy | M-30 | REJECT |
 | 2 |  | `northstar` | northstar planet-stone/woods (argyre, calorian | create:crushing → deco recycle (M- | create | M-04 | REJECT |
 | 2 | ✓ | `numismatics` | numismatics coin tiers (spur..sun) themselves | any processing method to "mint/ref | create | M-08 | REJECT |
+| 2 |  | `numismatics` | numismatics:vendor / depositor | config | economy | M-33 | ACCEPT |
 | 2 |  | `occultengineering` | occultengineering:phlogiport (wireless item te | config/worldgen tie | aeronautics |  | REJECT |
 | 2 |  | `occultengineering` | occultengineering:phlogiport (address-based wi | spirit_trade / phlogiport deployme | aeronautics | M-18 | REJECT |
+| 2 |  | `occultengineering` | occultengineering:spirit_solution (reserved oc | occultism:ritual → require as cros | economy | M-29 | ACCEPT |
 | 2 |  | `occultengineering` | occultengineering:phlogiport (wireless telepor | M-33 service-for-hire | economy | M-33 | ACCEPT |
 | 2 |  | `occultengineering` | occultengineering:spirit_solution (reserved oc | create:mixing (already inbound) | create | M-19 | REJECT |
 | 2 |  | `occultism` | occultism:iesnium_ingot (rare otherworld metal | recipe (create:sequenced_assembly) | create | M-06 | ACCEPT |
-| 2 | ✓ | `occultism` | occultism:dimensional_mineshaft (passive ore l | config | create | M-18 | ACCEPT |
 | 2 |  | `occultism` | occultism:miner (dimensional mineshaft) | occultism:miner | economy | M-18 | ACCEPT |
 | 2 |  | `occultism` | occultism dimensional mineshaft ore output | occultism:miner → trade/bounty nod | economy | M-18 | ACCEPT |
 | 2 | ✓ | `oceansdelight` | raw guardian flesh / cut_tentacles | numismatics sell of the raw drop | economy | M-12 | REJECT |
@@ -1543,14 +1598,20 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `oceansdelight` | oceansdelight:fugu_slice / oceansdelight:elder | farmersdelight:cooking (already in | economy | M-26 | ACCEPT |
 | 2 |  | `oceansdelight` | oceansdelight:elder_guardian_roll / fugu_slice | M-12 farmersdelight:cooking proces | create | M-12 | ACCEPT |
 | 2 |  | `oceansdelight` | oceansdelight:elder_guardian_roll (rare presti | M-34 combat-route supply | economy | M-34 | REJECT |
+| 2 |  | `pantographsandwires` | pantographsandwires infrastructure blocks (mas | create:crushing | create | M-04 | REJECT |
 | 2 | ✓ | `pantographsandwires` | coal_coke (c:item/dusts/coal_coke) | tfmg:coking / create:mixing → aero | aeronautics | M-13 | REJECT |
+| 2 |  | `pantographsandwires` | pantographsandwires:graphite (c:item/ingots/gr | tfmg:winding or create:mixing | create | M-32 | REJECT |
 | 2 |  | `patchouli` | patchouli:guide_book (and the colored book var | recipe — patchouli:shapeless_book_ | support |  | REJECT |
 | 2 | ✓ | `quark` | crop/food storage_blocks (apple_crate, carrot/ | create:milling/compacting | create | M-12 | ACCEPT |
+| 2 |  | `quark` | quark:ancient_wood blocks (the underground Anc | create:cutting | create | M-12 | ACCEPT |
 | 2 |  | `quark` | quark:ancient_bookshelf / quark:bookshelf vari | ars_nouveau:enchanting_apparatus | magic | M-10 | ACCEPT |
+| 2 |  | `railways` | railways:brass_wrapped_locometal / locometal b | create:crushing (M-04) | create | M-04 | ACCEPT |
 | 2 |  | `rechiseled` | rechiseled:* (chiseling recipe groups — 3627 d | rechiseled+rechiseledcreate kineti | create | M-04 | ACCEPT |
 | 2 | ✓ | `rechiseled` | chiseling recipe groups (600+ deco variants) | rechiseledcreate Mechanical Chisel | create | M-20 | ACCEPT |
 | 2 |  | `rechiseled` | rechiseled high-detail stone variants (bricks, | MineColonies Builder hut request f | economy | M-28 | ACCEPT |
 | 2 |  | `rechiseledcreate` | chiseled Create-palette blocks (rechiseledcrea | create:crushing | create | M-04 | ACCEPT |
+| 2 |  | `recipe_integration` | recipe_integration cross-mod edges (create:mil | audit existing triggered recipes | create | M-12 | ACCEPT |
+| 2 |  | `recipe_integration` | recipe_integration c:tags for uninstalled mods | n/a | n/a |  | REJECT |
 | 2 |  | `ribbits` | ribbits:toadstool / occultism:spirit_fire | recipe (occultism:spirit_fire) | magic | M-11 | ACCEPT |
 | 2 |  | `ribbits` | toadstool blocks / mossy-oak woodset | create:crushing / create:milling | create | M-04 | REJECT |
 | 2 |  | `ribbits` | ribbits:maraca (music-session item) | supplementaries:item_lore or no me | economy | M-33 | REJECT |
@@ -1568,19 +1629,21 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `samurai_dynasty` | samurai_dynasty:steel_ingot | create:pressing + create:mechanica | create | M-05 | ACCEPT |
 | 2 |  | `samurai_dynasty` | samurai_dynasty:steel (ingot, c:ingots/steel) | create:crushing → tfmg:hot_blast | create | M-29 | ACCEPT |
 | 2 |  | `samurai_dynasty` | samurai_dynasty weapons/armor as boss-supply t | emergent PvPvE trade | economy | M-34 | ACCEPT |
-| 2 |  | `securitycraft` | securitycraft sentry / block_pocket_manager (e | create:sequenced_assembly (multi-s | create | M-06 | REJECT |
 | 2 | ✓ | `securitycraft` | sentry (automated turret / rotating machine) | create:mechanical_crafting or crea | create | M-05 | ACCEPT |
-| 2 |  | `sereneseasons` | sereneseasons seasonal fertility gating (any m | ars_nouveau:imbuement or occultism | magic | M-16 | ACCEPT |
+| 2 |  | `securitycraft` | securitycraft base-defense installation (reinf | service-for-hire player interactio | economy | M-33 | ACCEPT |
 | 2 |  | `sereneseasons` | sereneseasons:greenhouse_glass (crafting or co | create:mechanical_crafting | create | M-05 | REJECT |
 | 2 |  | `sereneseasons` | season-gated crop fertility | config tie | magic | M-16 | ACCEPT |
 | 2 |  | `sereneseasons` | out-of-season crop scarcity (sereneseasons fer | season-gated ingredient in Create/ | create | M-16 | ACCEPT |
 | 2 |  | `simplehats` | simplehats grab-bags (mob drops) | loot-seed (seed rare hat grab-bag  | survival | M-02 | ACCEPT |
 | 2 |  | `simplehats` | simplehats hat-scraps | ars_nouveau:imbuement | magic | M-10 | REJECT |
+| 2 |  | `simplehats` | simplehats rare hats | Numismatics bounty/trade — rare ha | economy | M-33 | REJECT |
 | 2 | ✓ | `sky_whale_ship` | whale-structure loot | loot-table → aeronautics destinati | aeronautics | M-15 | ACCEPT |
+| 2 |  | `sky_whale_ship` | sky-whale loot chests | loot-table seeding (no recipe meth | aeronautics | M-23 | ACCEPT |
 | 2 |  | `sky_whale_ship` | sky whale loot chests | loot-seed — seed a magic reagent ( | magic | M-02 | REJECT |
 | 2 |  | `sky_whale_ship` | sky whale loot tables | loot-seed | economy | M-34 | ACCEPT |
 | 2 |  | `sliceanddice` | sliceanddice:sprinkler (fluid distributor) + m | create:filling (pump a potion/flui | magic | M-10 | REJECT |
 | 2 |  | `sliceanddice` | sliceanddice:fertilizer_bucket | recipe (create:mixing — produce th | create | M-12 | REJECT |
+| 2 |  | `sliceanddice` | sliceanddice:sprinkler (fluid distributor mech | config tie / modded fluid | magic | M-16 | REJECT |
 | 2 |  | `sliceanddice` | sliceanddice:sprinkler (fluid dispenser over c | fluid pipe from TFMG/Create-Additi | create | M-12 | REJECT |
 | 2 |  | `sliceanddice` | sliceanddice:slicer (kinetic cutting machine) | Create kinetic power → slices any  | create | M-12 | REJECT |
 | 2 |  | `smokeleafindustries` | hemp plant / raw buds | create:milling | create | M-12 | ACCEPT |
@@ -1588,11 +1651,10 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 | ✓ | `smokeleafindustries` | generator burnable inputs | smokeleafindustries:generator acce | create | M-13 | REJECT |
 | 2 |  | `smokeleafindustries` | smokeleafindustries:*_extract (concentrated ef | ars_nouveau:imbuement or occultism | magic | M-10 | REJECT |
 | 2 |  | `smokeleafindustries` | smokeleafindustries generator FE output | createaddition:liquid_burning or c | create | M-13 | REJECT |
-| 2 |  | `smokeleafindustries` | smokeleafindustries:generator (FE power from b | createaddition:liquid_burning or c | create | M-05 | ACCEPT |
 | 2 |  | `smokeleafindustries` | smokeleafindustries strain seeds / crossbred s | serene seasons / seasonal availabi | survival | M-16 | REJECT |
-| 2 |  | `smokeleafindustries` | smokeleafindustries refined extracts / gummies | colony supply / MineColonies provi | economy | M-28 | ACCEPT |
 | 2 |  | `smokeleafindustries` | smokeleafindustries:*_gummy / *_extract (refin | M-26 consumption sink | survival | M-26 | ACCEPT |
 | 2 |  | `smokeleafindustries` | smokeleafindustries strain extracts | numismatics mint | economy | M-08 | REJECT |
+| 2 |  | `smokeleafindustries` | smokeleafindustries hemp building set | create:crushing (M-04 deco recycle | create | M-04 | REJECT |
 | 2 |  | `snowyspirit` | snowyspirit:ginger (c:crops/ginger, seasonal — | season-gated input → Create/magic | magic | M-16 | ACCEPT |
 | 2 |  | `snowyspirit` | snowyspirit:gingerbread_golem | occultism:ritual / bountiful bount | magic | M-02 | REJECT |
 | 2 | ✓ | `snowyspirit` | ginger (seasonal/winter-flavored crop) | season-gated input → Create/cookin | survival | M-16 | ACCEPT |
@@ -1604,6 +1666,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `spawn` | spawn:angler_fish drop (bioluminescent fluid / | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 2 |  | `spawn` | spawn:ant_pupa / ant colony byproducts | occultism:spirit_fire or ritual | magic | M-11 | REJECT |
 | 2 |  | `spawn` | spawn:clam variants | occultism:spirit_fire | magic | M-02 | REJECT |
+| 2 |  | `spawn` | spawn:crab (crab_boil_block output, food drop) | farmersdelight:cooking (already pa | survival | M-12 | ACCEPT |
 | 2 |  | `spawn` | spawn:angler_fish | create:haunting | magic | M-19 | ACCEPT |
 | 2 |  | `spawn` | spawn exotic seafood (angler_fish, sea_cow, se | occultism:spirit_fire or ars_nouve | magic | M-02 | REJECT |
 | 2 |  | `spawn` | spawn seafood drops (crab/clam bulk) | MineColonies provisioning (colony  | economy | M-28 | ACCEPT |
@@ -1614,17 +1677,21 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 | ✓ | `t_and_t` | conquerable fort/tower loot → boss-adjacent ra | loot-table injection | create | M-15 | REJECT |
 | 2 |  | `t_and_t` | t_and_t ocean sail-ship (loot=yes, aquatic str | loot-seed — seed Aeronautics-relev | aeronautics | M-23 | ACCEPT |
 | 2 |  | `t_and_t` | t_and_t sail-ship structure | loot-seed — seed aeronautics build | aeronautics | M-34 | REJECT |
+| 2 |  | `t_and_t` | t_and_t structure loot tables (loot=yes, 16 vi | loot-seed — seed regional scarce m | economy | M-30 | ACCEPT |
+| 2 |  | `tacz` | tacz:modern_kinetic_gun (vehicle-mounted thema | aeronautics construction | aeronautics | M-24 | REJECT |
 | 2 |  | `tacz` | gun/ammo recipe inputs (iron, metals, gunpowde | tacz:gun_smith_table_crafting (Kub | create | M-05 | ACCEPT |
 | 2 |  | `tacz` | tacz:m67 (grenade, explosive) | createbigcannons munition assembly | create | M-29 | REJECT |
 | 2 |  | `terralith` | terralith biome variety (loot=yes, 65 c:tags g | loot-seed (Terralith's structure/l | economy | M-08 | ACCEPT |
 | 2 |  | `terralith` | terralith rare-biome terrain (Skylands, Moonli | loot-seed | survival |  | REJECT |
 | 2 |  | `terralith` | terralith biome c:tags (65 registered) | seasonal reagent availability lock | survival | M-16 | ACCEPT |
+| 2 |  | `terralith` | Terralith biome expansion | regional scarcity (ore-gen keying) | economy | M-30 | REJECT |
 | 2 |  | `tfmg` | tfmg:aluminum_ingot | create:crushing (ore-doubling bypr | create | M-03 | REJECT |
 | 2 | ✓ | `tfmg` | diesel / gasoline / LPG fuels | aeronautics engine/fuel intake | aeronautics | M-13 | ACCEPT |
 | 2 | ✓ | `tfmg` | steel plate / structural steel | aeronautics airframe/hull construc | aeronautics | M-23 | ACCEPT |
 | 2 | ✓ | `tfmg` | refined steel + fuels | numismatics sell/price | economy | M-08 | ACCEPT |
 | 2 |  | `tfmg` | tfmg ore byproducts (sulfur, saltpeter) | `occultism:spirit_fire` or `ars_no | magic | M-10 | REJECT |
 | 2 |  | `tfmg` | tfmg:lithium_ingot | create_new_age:energising (lithium | create | M-17 | ACCEPT |
+| 2 |  | `tfmg` | tfmg:aluminum_ingot (Blast Furnace output) | aeronautics drivetrain / control r | aeronautics | M-24 | ACCEPT |
 | 2 | ✓ | `tfmg` | tfmg:steel / fuel cans | mint for coin / sellable | economy | M-30 | REJECT |
 | 2 |  | `tfmg` | tfmg:saltpeter dust | createbigcannons:big_cartridge_fil | create | M-29 | ACCEPT |
 | 2 |  | `tidal-towns-1.3.4` | tidal-towns ocean village structures | loot-seed (M-15 boss-key unlock —  | create | M-15 | ACCEPT |
@@ -1634,6 +1701,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `tide` | tide rare fish | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 2 |  | `tide` | tide fish | minecolonies (Cook/Fisher hut prov | economy | M-28 | ACCEPT |
 | 2 |  | `tide` | tide fish drops (Serene Seasons seasonal gate) | config/worldgen seasonal-spawn com | survival | M-16 | ACCEPT |
+| 2 | ✓ | `touhou_little_maid` | power-point bottles (fairy drops → bottles) | numismatics sell | economy | M-02 | REJECT |
 | 2 |  | `touhou_little_maid` | boss-drop or magic reagent (e.g. ars_nouveau:s | touhou_little_maid:altar_recipe_se | magic | M-05 | ACCEPT |
 | 2 |  | `touhou_little_maid` | Create components as altar inputs | touhou_little_maid:altar_recipe_se | create | M-05 | REJECT |
 | 2 |  | `touhou_little_maid` | touhou_little_maid altar recipe (consumes boss | touhou_little_maid:altar_recipe_se | magic | M-05 | ACCEPT |
@@ -1656,11 +1724,13 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `travelersbackpack` | travelersbackpack:backpack_upgrade (tank / sme | create:pressing → backpack_upgrade | create | M-05 | ACCEPT |
 | 2 |  | `trek-b0.6.1.1` | trek chest loot | loot-seed | survival |  | REJECT |
 | 2 |  | `trek-b0.6.1.1` | trek structures | loot-seed (seed northstar astronom | aeronautics | M-15 | REJECT |
-| 2 |  | `trek-b0.6.1.1` | trek structure chest loot tables | loot-seed | economy | M-34 | ACCEPT |
 | 2 |  | `underground_village` | Stoneholm chest loot | loot-table insertion of a coin/rea | economy |  | REJECT |
 | 2 | ✓ | `underground_village` | Stoneholm loot chests | loot-seed | magic | M-02 | REJECT |
 | 2 |  | `underground_village` | underground_village villager trades | config-tie (villager profession/tr | economy | M-33 | ACCEPT |
+| 2 | ✓ | `underground_village` | Stoneholm structure (loot chests + villager tr | loot-seed | economy | M-34 | ACCEPT |
+| 2 | ✓ | `underground_village` | Stoneholm villagers | loot-seed (trade-table edit) | economy | M-30 | REJECT |
 | 2 |  | `undergroundworlds` | undergroundworlds Ashan drop (blindness-arrow  | occultism:ritual | magic | M-02 | REJECT |
+| 2 |  | `undergroundworlds` | undergroundworlds:antidote_flask / desert_char | ars_nouveau:imbuement or occultism | magic | M-10 | REJECT |
 | 2 |  | `undergroundworlds` | undergroundworlds:desert_charm / antidote_flas | occultism:ritual — use as a ritual | magic | M-02 | REJECT |
 | 2 |  | `undergroundworlds` | temple/pyramid brick blocks (chiseled_temple_b | create:crushing | create | M-04 | ACCEPT |
 | 2 |  | `undergroundworlds` | undergroundworlds:blade_of_the_jungle / freezi | loot-seed | create | M-15 | REJECT |
@@ -1672,16 +1742,17 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 | ✓ | `upgrade_aquatic` | driftwood/riverwood planks | woodworks:sawmill (already wired,  | create | M-04 | REJECT |
 | 2 | ✓ | `upgrade_aquatic` | upgrade_aquatic raw fish (c:item/foods/raw_fis | farmersdelight:cooking | economy | M-12 | ACCEPT |
 | 2 |  | `upgrade_aquatic` | upgrade_aquatic:coralstone (deco building bloc | create:crushing (coralstone → cora | create | M-04 | REJECT |
+| 2 |  | `valarian_conquest` | valarian_conquest:*_citizenship (faction alleg | ars_nouveau:imbuement — imbuement  | magic | M-10 | REJECT |
 | 2 |  | `valarian_conquest` | valarian_conquest faction armor/gear (shield,  | create:crushing M-04 — faction gea | create | M-04 | ACCEPT |
 | 2 |  | `valarian_conquest` | valarian_conquest:*_citizenship + faction shie | native armorsmith station gated on | create | M-05 | REJECT |
 | 2 |  | `valarian_conquest` | faction citizen professions → MineColonies res | MineColonies huts / research | economy | M-28 | REJECT |
-| 2 |  | `valarian_conquest` | faction armor/shields/weapons (from structure  | loot-seed / M-34 combat-supply | economy | M-34 | ACCEPT |
 | 2 |  | `valarian_conquest` | mercenary hire (combat labor service) | emergent player trade | economy | M-33 | ACCEPT |
 | 2 |  | `valarian_conquest` | valarian_conquest faction loot (shields, armor | loot-seed | survival | M-34 | ACCEPT |
 | 2 | ✓ | `vc_gliders` | paraglider_diamond/_netherite (higher tiers) | create:pressing / mechanical_craft | create | M-05 | ACCEPT |
 | 2 | ✓ | `vc_gliders` | reinforced_paper (glider feedstock) | create:milling/pressing (paper-pul | create | M-12 | REJECT |
 | 2 | ✓ | `vc_gliders` | higher glider tiers (diamond/netherite) and/or | create:pressing / mechanical_craft | create | M-05 | ACCEPT |
 | 2 |  | `vc_gliders` | vc_gliders:copper_upgrade / nether_upgrade | create:pressing / mixing | create | M-05 | ACCEPT |
+| 2 |  | `vc_gliders` | vc_gliders endgame gliders | occultism spirit-fire or ars_nouve | magic | M-10 | REJECT |
 | 2 |  | `vinery` | vinery wines | farmersdelight:cooking | survival | M-12 | REJECT |
 | 2 |  | `vinery` | vinery wines (effect-bearing drinks, seasonal  | season-gated grape growth (Serene  | survival | M-16 | ACCEPT |
 | 2 |  | `vinery` | vinery:apple_mash (press output) | extradelight:vat or alcohol_indust | survival | M-12 | ACCEPT |
@@ -1689,7 +1760,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `vinery` | vinery grapes (climate-specific biomes — jungl | GTMOGS regional ore-gen + biome-mo | economy | M-30 | ACCEPT |
 | 2 |  | `woodworks` | woodworks:*_sawmill (method) | woodworks:sawmill recipe-type | create | M-12 | REJECT |
 | 2 | ✓ | `woodworks` | vanilla/modded logs+planks | woodworks:sawmill ↔ create:cutting | create | M-12 | ACCEPT |
-| 2 |  | `woodworks` | woodworks:*_beehive variants | survival/farming | survival | M-26 | REJECT |
 | 2 |  | `woodworks` | woodworks:*_beehive blocks | colony route — beehive blocks used | economy | M-28 | ACCEPT |
 | 2 |  | `zombiemoon` | (mob drops — vanilla rotten flesh / no unique  | `occultism:ritual` | magic | M-02 | REJECT |
 | 2 |  | `zombiemoon` | zombiemoon mob drops (vanilla rotten flesh etc | occultism:spirit_fire | magic | M-11 | ACCEPT |
@@ -1735,6 +1805,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `aeronautics` | aeronautics adjustable_burner (burns fuel) | TFMG diesel fuel tag extension | create | M-13 | ACCEPT |
 | 1 |  | `aeronautics` | aeronautics:levitite (endgame flying-machine c | create:sequenced_assembly as M-06  | create | M-06 | ACCEPT |
 | 1 |  | `aeronautics` | aeronautics borehead bearing (flying drill) →  | create:crushing (ore → crushed ore | create | M-03 | REJECT |
+| 1 |  | `aeronautics` | levitite_blend → levitite | recipe (existing create:mixing rec | economy | M-08 | ACCEPT |
+| 1 |  | `aeronautics` | offroad:tire / borehead bearing (land-vehicle  | create:sequenced_assembly | create | M-06 | REJECT |
+| 1 |  | `aeronautics` | aeronautics:aviators_goggles | recipe (ars_nouveau:enchanting_app | magic | M-10 | ACCEPT |
 | 1 |  | `aeronautics_dyeable_components` | colored levitite/tire | create:toolbox_dyeing | create |  | REJECT |
 | 1 |  | `aeronautics_dyeable_components` | aeronautics_dyeable_components:*_levitite (dye | recipe (create:toolbox_dyeing or c | create | M-04 | REJECT |
 | 1 |  | `aeronautics_dyeable_components` | aeronautics_dyeable_components:*_levitite | recipe (crafting, dye in offhand) | aeronautics |  | REJECT |
@@ -1749,6 +1822,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `aeronautics_dyeable_components` | `aeronautics_dyeable_components:*_levitite` | `create:mixing` (dye + levitite →  | create | M-04 | REJECT |
 | 1 | ✓ | `aeronautics_dyeable_components` | 16× dyed levitite + dyed tire variants | create:toolbox_dyeing / create:mix | create |  | REJECT |
 | 1 |  | `aeronautics_dyeable_components` | aeronautics_dyeable_components color variants | ars_nouveau:dye | magic |  | REJECT |
+| 1 |  | `aeronautics_dyeable_components` | 16× dyed levitite variants | create:toolbox_dyeing or vanilla c | create | M-04 | REJECT |
+| 1 |  | `aeronautics_dyeable_components` | dyed tires (4 sizes, 16 colors) | ars_nouveau:dye | magic | M-10 | REJECT |
+| 1 |  | `aeronautics_dyeable_components` | dyed levitite (color specialization) | supplementaries:confetti_dye or ec | economy | M-33 | REJECT |
 | 1 |  | `aileron` | vanilla elytra (enchant surface) | ars_nouveau:enchanting_apparatus | magic | M-10 | ACCEPT |
 | 1 |  | `aileron` | vanilla elytra (loot injection) | loot-seed | aeronautics |  | REJECT |
 | 1 |  | `aileron` |  |  |  |  | ACCEPT |
@@ -1760,12 +1836,12 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `aileron` | loot tables (loot=yes, Elytra-enchantment rewa | loot-seed | magic | M-10 | ACCEPT |
 | 1 |  | `aileron` | enchanting-apparatus route for Aileron enchant |  |  |  | REJECT |
 | 1 |  | `aileron` | Elytra as personal-flight peer to Aeronautics | behavior | aeronautics |  | n/a (anchor already aeronautics, no new weave needed) |
-| 1 |  | `aileron` | Aileron elytra enchantments | create_enchantment_industry:grindi | create | M-29 | REJECT |
 | 1 |  | `aileron` | Aileron elytra as personal-transport complemen | behavioral / emergent design | aeronautics | M-33 | REJECT |
-| 1 |  | `aileron` | aileron loot tables | loot-seed | economy | M-34 | ACCEPT |
 | 1 |  | `aileron` | aileron loot drops (loot=yes) | loot-seed | aeronautics | M-29 | REJECT |
 | 1 |  | `aileron` | Aileron enchants | bare "magic improves elytra" (no s | magic |  | REJECT |
 | 1 |  | `aileron` | worn-out enchanted Elytra | durability wear → repair service | economy | M-33 | REJECT |
+| 1 |  | `aileron` | aileron Elytra enchantments (in loot=yes table | loot-seed — seed aileron's Elytra  | survival | M-02 | ACCEPT |
+| 1 |  | `aileron` | aileron Elytra enchantments as Ars Nouveau enc | ars_nouveau:enchanting_apparatus ( | magic | M-20 | ACCEPT |
 | 1 |  | `alcohol_industry` | spirits/beer | extradelight:vat or extradelight:m | survival | M-12 | ACCEPT |
 | 1 |  | `alcohol_industry` |  | extradelight:vat (fermentation pre | survival | M-12 | ACCEPT |
 | 1 |  | `alcohol_industry` | whiskey/vodka (distilled alcohol) | tfmg:distillation | create | M-12 | REJECT |
@@ -1796,6 +1872,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `alcohol_industry` | alcohol_industry spirits (per-type inputs) | alcohol_industry:alcohol_boiling | economy | M-30 | REJECT |
 | 1 |  | `alcohol_industry` | seasonal crops (e.g. wheat/apple/agave, Serene | create:mixing → alcohol_industry:a | survival | M-16 | ACCEPT |
 | 1 |  | `alcohol_industry` | alcohol_industry:whiskey / vodka | emergent carry-and-consume | aeronautics | M-26 | REJECT |
+| 1 |  | `alcohol_industry` | alcohol_industry:beer/vodka/whiskey/tequila (r | vinery:wine_fermentation or extrad | economy | M-35 | ACCEPT |
 | 1 | ✓ | `alexsmobs` | alexsmobs:banana / banana_peel (meme content) | any method | any |  | REJECT |
 | 1 |  | `alexsmobs` | alexsmobs:void_worm_beak (endgame — void worm  | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 1 |  | `alexsmobs` | alexsmobs:void_worm (boss fight, rare) | occultism:ritual — void worm parts | magic | M-02 | ACCEPT |
@@ -1825,6 +1902,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `alexsmobs` | alexsmobs:transmutation_table (block-conversio | bare "use it in a magic recipe" | magic |  | REJECT |
 | 1 |  | `alexsmobs` | alexsmobs:leafcutter_ant_chamber (passive reso | create:mixing (leaf-mush → fertili | create | M-12 | ACCEPT |
 | 1 |  | `alexsmobs` | alexsmobs:leafcutter_ant_chamber (passive reso | minecolonies route | economy | M-28 | ACCEPT |
+| 1 |  | `alexsmobs` | alexsmobs:ambergris / void_worm_beak (rare dro | loot + emergent trade | economy | M-34 | ACCEPT |
+| 1 |  | `alexsmobs` | alexsmobs seasonal-spawn gate | Serene Seasons config | survival | M-16 | REJECT |
 | 1 |  | `almostunified` | almostunified priority list | config — adds/removes material uni | create |  | REJECT |
 | 1 |  | `appleseed` | appleseed nutrition demand | ars_nouveau:potion_flask or season | magic | M-16 | REJECT |
 | 1 | ✓ | `appleseed` | diet variety (DEMAND signal, 5 nutrient groups | config/tuning that makes multi-gro | create | M-12 | ACCEPT |
@@ -1840,6 +1919,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `appleseed` | diet variety demand (mechanic — auto-derives n | config/mechanic (no recipe; this i | create | M-26 | ACCEPT |
 | 1 |  | `appleseed` | diet variety demand | mechanic → emergent trade | economy | M-33 | ACCEPT |
 | 1 |  | `appleseed` | player diet state (balanced buffs from applese | config/MineColonies colony product | economy | M-28 | REJECT |
+| 1 |  | `appleseed` | diet-balance mechanic (balanced-diet buff dema | config/tuning (no recipe) | create | M-16 | REJECT |
+| 1 |  | `appleseed` | diet-balance as ongoing scarcity-renewing dema | config/gameplay (no recipe; the me | economy | M-26 | ACCEPT |
+| 1 |  | `appleseed` | seasonal crop scarcity (Serene Seasons + diet  | config-tie (Serene Seasons crop-fe | survival | M-16 | ACCEPT |
 | 1 |  | `ars_n_spells` | unified mana pool (Ars source ↔ Iron's mana) | ars_nouveau:imbuement | magic | M-01 | REJECT |
 | 1 |  | `ars_n_spells` | ars_n_spells two-tablet cross-cast ritual | occultism:ritual | magic | M-11 | REJECT |
 | 1 |  | `ars_n_spells` | cross-mod mana unification | create_new_age:energising | create | M-17 | REJECT |
@@ -1886,6 +1968,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `ars_nouveau` | ars_nouveau:source_gem (Alchemical sourcelink) | ars_nouveau:alchemical_sourcelink  | survival | M-26 | ACCEPT |
 | 1 |  | `ars_nouveau` | ars_nouveau spell scrolls (combat utility) | loot-seed | survival | M-34 | REJECT |
 | 1 |  | `ars_nouveau` | ars_nouveau boss drop (Arch-Illager / Guardian | loot-seed into ars_nouveau dungeon | economy | M-34 | ACCEPT |
+| 1 |  | `ars_nouveau` | ars_nouveau Vitalic/Agronomic Sourcelinks (mob | native Sourcelink mechanic | survival | M-26 | ACCEPT |
 | 1 |  | `astikorcartsredux` | astikorcartsredux:oak_supply_cart (hauling) | create:mechanical_crafting (brass  | create | M-05 | REJECT |
 | 1 | ✓ | `astikorcartsredux` | metal-bearing implements (plow blade, reaper) | create:pressing (iron sheets/plate | create | M-05 | ACCEPT |
 | 1 |  | `astikorcartsredux` | astikorcartsredux:oak_supply_cart (wooden cart | recipe | create | M-20 | REJECT |
@@ -1910,6 +1993,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `astikorcartsredux` | astikorcartsredux supply cart (bulk hauling) | config / emergent | aeronautics | M-31 | REJECT |
 | 1 |  | `astikorcartsredux` | reaper bulk harvest → Create milling chain | n/a (narrative only) | create | M-32 | REJECT |
 | 1 |  | `astikorcartsredux` | log → plank → cart via create:cutting | create:cutting | create |  | REJECT |
+| 1 |  | `astikorcartsredux` | astikorcartsredux:oak_supply_cart (bulk-haul c | config/gameplay (no recipe; the ca | economy | M-31 | ACCEPT |
+| 1 |  | `astikorcartsredux` | astikorcartsredux:oak_animal_cart (mob/player  | aeronautics thematic | aeronautics | M-31 | REJECT |
 | 1 |  | `bakery` | bakery:blank_cake | bakery:blank_cake_interaction | — |  | REJECT |
 | 1 |  | `bakery` | crops/fruit surplus | ars_nouveau:imbuement (Vitalic sou | magic | M-02 | REJECT |
 | 1 |  | `bakery` |  | extradelight:vat or extradelight:m | economy | M-12 | ACCEPT |
@@ -1940,13 +2025,15 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `bakery` | bakery:apple_jam / bakery:chocolate_jam (ferme | vinery:apple_fermenting or extrade | create | M-35 | ACCEPT |
 | 1 |  | `bakery` | bakery:bread / baguette (grain-group food) | config tie | survival | M-16 | REJECT |
 | 1 |  | `bakery` | bakery goods (dessert tier) | MineColonies baker's hut (colony r | create | M-28 | ACCEPT |
+| 1 |  | `bakery` | bakery:blank_cake (a perishable, placeable fin | MineColonies colony request | economy | M-28 | ACCEPT |
+| 1 |  | `bakery` | bakery luxury goods (tarts, gateaux — high-eff | diet-system demand | survival | M-26 | ACCEPT |
+| 1 |  | `bakery` | bakery loot tables (loot=yes) | loot-seed | survival | M-34 | REJECT |
 | 1 |  | `beachparty` | beachparty:cooked_mussel_meat / seafood items | farmersdelight:cooking or extradel | create | M-12 | ACCEPT |
 | 1 |  | `beachparty` | mini_fridge bulk-ice output | feed into create:mixing cold-proce | create | M-12 | REJECT |
 | 1 |  | `beachparty` | beachparty:mussel_meat / cooked_mussel_meat | farmersdelight:cooking → a seafood | survival | M-12 | REJECT |
 | 1 |  | `beachparty` | beachparty:message_in_a_bottle (exploration it | loot-seed — place a Numismatics co | economy | M-08 | REJECT |
 | 1 |  | `beachparty` | beachparty:palm_log / palm_planks | create:cutting | create | M-04 | REJECT |
 | 1 |  | `beachparty` | beachparty:coconut (open coconut) | ars_nouveau:crush | magic | M-10 | REJECT |
-| 1 |  | `beachparty` | beachparty:palm_planks (wood family) | create:cutting (sawmill) | create | M-04 | REJECT |
 | 1 |  | `beachparty` | beachparty cocktails | farmersdelight:cooking or extradel | survival | M-12 | REJECT |
 | 1 |  | `beachparty` | beachparty cocktails → irons_spellbooks:alchem | irons_spellbooks:alchemist_cauldro | magic | M-12 | REJECT |
 | 1 | ✓ | `beachparty` | beachparty:mini_fridge ice output (no-power ic | create:filling/cooling feedstock — | create | M-32 | REJECT |
@@ -1966,9 +2053,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `beachparty` | coconut / open_coconut | create:milling or extradelight:jui | create | M-12 | ACCEPT |
 | 1 |  | `beachparty` | palm wood | create:cutting | create | M-04 | ACCEPT |
 | 1 |  | `beachparty` | cocktails (luxury drink) | emergent trade | economy | M-33 | REJECT |
-| 1 |  | `beachparty` | beachparty:coconut (tropical biome crop) | beachparty:palm_bar_mixing | economy | M-30 | ACCEPT |
 | 1 |  | `beachparty` | beachparty:coconut | farmersdelight:cooking or extradel | survival | M-12 | ACCEPT |
 | 1 |  | `beachparty` | beachparty structure loot (loot=yes — beach st | loot-seed | economy | M-34 | REJECT |
+| 1 |  | `beachparty` | beachparty cocktails (coconut_cocktail, honey_ | M-35 maturation | economy | M-35 | ACCEPT |
 | 1 |  | `betterdungeons` | betterdungeons (no items) | any recipe method | any |  | REJECT |
 | 1 |  | `betterdungeons` | Spider Cave loot (silk, venom drops) | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 1 |  | `betterdungeons` | dungeon spawners (mob drops) | `occultism:spirit_fire` / `occulti | magic | M-11 | ACCEPT |
@@ -1982,6 +2069,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `betterdungeons` | Catacombs / Undead Fortress / Spider Cave loot | loot-seed | magic | M-02 | ACCEPT |
 | 1 |  | `betterdungeons` | dungeon structure (three biome-typed variants) | loot-seed (ore/reagent seed by bio | survival | M-30 | ACCEPT |
 | 1 |  | `betterdungeons` | betterdungeons loot tables | loot-seed | magic | M-10 | REJECT |
+| 1 |  | `betterdungeons` | betterdungeons loot tables (deepest Catacomb c | loot-seed | survival | M-34 | ACCEPT |
+| 1 |  | `betterdungeons` | betterdungeons structures (as bounty targets) | MineColonies bounty / quest system | economy | M-28 | REJECT |
 | 1 |  | `bettermineshafts` | bettermineshafts expanded shaft structure (lar | config tie | create |  | REJECT |
 | 1 |  | `bettermineshafts` | bettermineshafts deeper/more dangerous minesha | survival pressure (danger face) | survival |  | REJECT |
 | 1 |  | `bettermineshafts` | mineshaft loot tables (vanilla, used by Better | loot-seed | economy | M-08 | ACCEPT |
@@ -1998,6 +2087,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `betteroceanmonuments` | Better Ocean Monuments loot chests | loot-seed | magic | M-02 | ACCEPT |
 | 1 |  | `betteroceanmonuments` | Better Ocean Monuments loot chests | loot-seed | economy | M-34 | ACCEPT |
 | 1 |  | `betteroceanmonuments` | monument chest loot | loot-seed | survival | M-02 | ACCEPT |
+| 1 |  | `betteroceanmonuments` | no registry items/blocks | n/a | n/a |  | REJECT |
 | 1 |  | `betterstrongholds` | Better Strongholds dungeon chests (loot=yes, c | loot-seed (datapack edit) | economy | M-08 | ACCEPT |
 | 1 |  | `betterstrongholds` | Better Strongholds boss/hidden room chests | loot-seed | magic | M-02 | ACCEPT |
 | 1 |  | `betterstrongholds` | Better Strongholds chests | loot-seed | magic | M-15 | REJECT |
@@ -2007,9 +2097,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `betterstrongholds` | betterstrongholds loot tables (custom chests i | loot-seed → numismatics coin + mag | magic | M-08 | ACCEPT |
 | 1 |  | `betterstrongholds` | betterstrongholds loot tables | loot-seed | economy | M-15 | ACCEPT |
 | 1 |  | `betterstrongholds` | generic coin drop seeding | loot-seed | economy | M-08 | REJECT |
-| 1 |  | `betterstrongholds` | betterstrongholds loot tables | loot-seed | magic | M-15 | ACCEPT |
 | 1 |  | `betterstrongholds` | betterstrongholds loot tables (loot=yes, 15+ r | loot-seed | magic | M-34 | ACCEPT |
 | 1 |  | `betterstrongholds` | betterstrongholds loot tables | loot-seed — seed a companions mod  | survival | M-34 | ACCEPT |
+| 1 |  | `betterstrongholds` | betterstrongholds loot chests | loot-seed of everyday items | survival | M-26 | REJECT |
 | 1 |  | `bits_n_bobs` | bits_n_bobs:nixie_board / large_nixie_tube | aeronautics ship display | aeronautics |  | REJECT |
 | 1 |  | `bits_n_bobs` | bits_n_bobs:nixie_board (large signal display) | create:item_application | economy | M-20 | REJECT |
 | 1 |  | `bits_n_bobs` | bits_n_bobs nixie boards as a display surface | bare "it's decorative" |  |  | REJECT |
@@ -2017,6 +2107,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `bits_n_bobs` | nixie_board / large_nixie_tube | create:sequenced_assembly (display | create | M-06 | ACCEPT |
 | 1 |  | `bits_n_bobs` | bits_n_bobs:brass_lamp / chair variants | create:crushing | create | M-04 | REJECT |
 | 1 | ✓ | `bits_n_bobs` | bits_n_bobs chain drives / kinetic parts | create:item_application or deployi | aeronautics | M-24 | REJECT |
+| 1 |  | `bits_n_bobs` | bits_n_bobs:nixie_board / bits_n_bobs:large_ni | economy as market/scoreboard signa | economy | M-33 | ACCEPT |
 | 1 | ✓ | `blueprint` | blueprint:template_chest (its one item) | any recipe | any |  | REJECT |
 | 1 | ✓ | `born_in_chaos_v1` | boss drop (Pumpkin Staff / signature) | gated Create/tech recipe | create | M-15 | REJECT |
 | 1 |  | `born_in_chaos_v1` | born_in_chaos_v1:soul_saber / nightmare_scythe | recipe (occultism:spirit_fire or a | magic | M-02 | REJECT |
@@ -2042,6 +2133,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `born_in_chaos_v1` | born_in_chaos_v1:dark_metal (crafted ingot) | create:pressing | create | M-12 | ACCEPT |
 | 1 |  | `born_in_chaos_v1` | born_in_chaos_v1:dark_metal_deposit | loot-seed into structures (argilli | survival |  | REJECT |
 | 1 |  | `born_in_chaos_v1` | born_in_chaos_v1:pumpkinhead boss drops (Pumpk | create:sequenced_assembly or magic | create | M-15 | ACCEPT |
+| 1 |  | `born_in_chaos_v1` | born_in_chaos_v1:bagof_candy (seasonal boss lo | Serene Seasons / lunar gate + crea | create | M-16 | ACCEPT |
 | 1 |  | `bountiful` | bountiful:bounty (reward slot) → direct Ars so | bountiful reward | magic | M-01 | REJECT |
 | 1 |  | `bountiful` | bountiful objective pool | mob drops / boss drops as bounty o | organic | M-02 | ACCEPT |
 | 1 |  | `bountiful` | bountiful objective pool | magic reagents (source gems, essen | magic | M-10 | REJECT |
@@ -2077,7 +2169,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `bountiful` | bounty reward | config (reward = goods/rep, not co | economy | M-33 | ACCEPT |
 | 1 |  | `bountiful` | bountiful bounty objective pool | config/datapack Decree targeting p | survival | M-26 | ACCEPT |
 | 1 |  | `bountiful` | bountiful objective Decree pool | Decree targeting magic reagents (a | magic | M-29 | ACCEPT |
-| 1 |  | `bountiful` | bountiful objective Decree pool | Decree targeting boss drops | survival | M-34 | ACCEPT |
 | 1 |  | `bountiful` | bountiful reward → MineColonies building mater | Decree objectives requesting colon | economy | M-28 | ACCEPT |
 | 1 |  | `bountiful` | bounty Decree objective pool | config — objective requests Create | economy | M-26 | ACCEPT |
 | 1 |  | `bountiful` | Reputation → rare-bounty unlock | config — high-rep bounties request | economy | M-28 | ACCEPT |
@@ -2131,6 +2222,10 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `cataclysm` | cataclysm boss-drop ingots (loot=yes) | cataclysm:weapon_fusion | survival | M-34 | ACCEPT |
 | 1 |  | `cataclysm` | cataclysm ancient_metal_ingot | create:sequenced_assembly | create | M-06 | ACCEPT |
 | 1 |  | `cataclysm` | cataclysm:hallowed_gem (via loot drop, existin | loot-seed → player-run trade | economy | M-34 | ACCEPT |
+| 1 |  | `cataclysm` | cataclysm:void_core | ars_nouveau:imbuement (as pinnacle | magic | M-10 | ACCEPT |
+| 1 |  | `cataclysm` | cataclysm:ignitium_ingot | aeronautics engine component recip | aeronautics | M-24 | ACCEPT |
+| 1 |  | `cataclysm` | cataclysm dungeon structures | loot-seed | create | M-34 | ACCEPT |
+| 1 |  | `cataclysm` | cataclysm:amethyst_bless (Altar of Amethyst) | magic item → amethyst_bless blessi | magic | M-10 | REJECT |
 | 1 |  | `cbc_at` |  | boss-drop ingredient gate in creat | create | M-15 | ACCEPT |
 | 1 |  | `cbc_at` | cbc_at:ap_rocket_item / apds_item | occultism:spirit_fire (infuse a mu | magic | M-19 | ACCEPT |
 | 1 |  | `cbc_at` | cbc_at:bronze_rifled_barrel | tfmg:hot_blast or tfmg:industrial_ | create | M-05 | ACCEPT |
@@ -2157,6 +2252,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `cbc_at` | cbc_at assembled munitions (rockets/caseless) | create:sequenced_assembly cross-ro | magic | M-29 | ACCEPT |
 | 1 |  | `cbc_at` | cbc_at gunpowder/propellant consumption | M-26 consumption | economy | M-26 | REJECT |
 | 1 |  | `cbc_at` | cbc_at assembled autocannon (machine component | M-24 mechanical component → propul | aeronautics | M-24 | REJECT |
+| 1 |  | `cbc_at` | cbc_at:bronze_heavy_autocannon_barrel / cbc_at | KubeJS recipe gate (boss drop as r | survival | M-15 | ACCEPT |
+| 1 |  | `cbc_at` | cbc_at:bronze_heavy_autocannon_barrel (combat- | emergent player trade | economy | M-34 | ACCEPT |
+| 1 |  | `cbc_at` | cbc_at:ap_rocket_item (munitions as a consumpt | M-26 consumption (munitions are sp | survival | M-26 | ACCEPT |
 | 1 |  | `charta` | charta:oak_bar_stool, charta:oak_bar_shelf (wo | create:cutting or create:crushing | create | M-04 | ACCEPT |
 | 1 |  | `charta` | charta:card_table (multiplayer game table) + N | KubeJS event hook (wager = burn co | economy | M-08 | ACCEPT |
 | 1 |  | `charta` | charta empty_wine_glass / empty_beer_glass | alcohol_industry:alcohol_boiling → | create | M-12 | ACCEPT |
@@ -2164,7 +2262,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `charta` | charta:empty_beer_glass / empty_wine_glass | supplementaries / vinery fill → dr | survival | M-26 | ACCEPT |
 | 1 |  | `charta` | charta card_table / bar furniture | loot-seed | economy | M-34 | REJECT |
 | 1 |  | `charta` | charta:empty_beer_glass / empty_wine_glass | alcohol_industry:alcohol_boiling | create | M-12 | ACCEPT |
-| 1 |  | `charta` | charta:card_table (gambling mechanic) | KubeJS event hook + numismatics co | economy | M-26 | ACCEPT |
 | 1 |  | `charta` | charta:empty_wine_glass / empty_beer_glass | vinery:wine_fermentation / alcohol | economy | M-35 | ACCEPT |
 | 1 |  | `chefsdelight` |  | chefsdelight Cook/Chef villager bu | create | M-12 | ACCEPT |
 | 1 |  | `chefsdelight` | Chef/Cook workstation (Cooking Pot / Skillet) | minecolonies worker job | survival | M-05 | REJECT |
@@ -2198,6 +2295,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `cmpackagecouriers` | cmpackagecouriers:cardboard_plane (autonomous  | minecolonies colony requests | economy | M-28 | ACCEPT |
 | 1 |  | `cmpackagecouriers` | cmpackagecouriers:location_transmitter | create:mechanical_crafting or crea | create | M-06 | REJECT |
 | 1 |  | `cmpackagecouriers` | cmpackagecouriers:location_transmitter | create:deploying | create | M-20 | REJECT |
+| 1 |  | `cmpackagecouriers` | cmpackagecouriers:cardboard_plane craft | create:cutting + create:deploying  | create | M-20 | REJECT |
 | 1 |  | `cmpackagepipebomb` | cmpackagepipebomb:pipebomb | createbigcannons:cartridge_assembl | create |  | REJECT |
 | 1 |  | `cmpackagepipebomb` | cmpackagepipebomb:pipebomb (rigged Create pack | recipe (create:sequenced_assembly  | survival | M-06 | REJECT |
 | 1 |  | `cmpackagepipebomb` | cmpackagepipebomb:pipebomb / gunpowder trap | recipe | economy |  | REJECT |
@@ -2214,6 +2312,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `cmpackagepipebomb` | pipebomb (gunpowder/TNT + Create package deliv | createbigcannons:caseless_munition | create | M-29 | ACCEPT |
 | 1 |  | `cmpackagepipebomb` | pipebomb as a combat-supply good | emergent trade (the pvp trap econo | economy | M-34 | ACCEPT |
 | 1 |  | `cmpackagepipebomb` | cmpackagepipebomb:pipebomb (gunpowder base) | tfmg:vat_machine_recipe (chemical  | create | M-12 | REJECT |
+| 1 |  | `cmpackagepipebomb` | cmpackagepipebomb:pipebomb_rigged | createbigcannons:cartridge_assembl | create | M-34 | REJECT |
 | 1 |  | `cmparallelpipes` | pipe_wrench (Create fluid-logistics tool) | recipe (crafting) | aeronautics | M-24 | REJECT |
 | 1 |  | `cmparallelpipes` | pipe_wrench_gear (Create-brass gear sub-compon | create:item_application | economy | M-08 | REJECT |
 | 1 |  | `cmparallelpipes` | pipe_wrench (fluid-network control tool) | recipe | create | M-05 | REJECT |
@@ -2257,6 +2356,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `cold_sweat` | cold_sweat boiler/hearth fuel | TFMG diesel/gasoline as efficient  | create | M-26 | ACCEPT |
 | 1 |  | `cold_sweat` | cold_sweat insulating materials (goat_fur, cha | occultism:ritual or ars_nouveau:im | magic | M-02 | ACCEPT |
 | 1 |  | `cold_sweat` | cold_sweat loot (loot=yes, biome structures) | loot-seed | survival | M-34 | REJECT |
+| 1 |  | `cold_sweat` | cold_sweat:chameleon/hoglin/goat_fur armor set | farmersdelight:cutting | survival | M-12 | REJECT |
 | 1 |  | `comforts` | comforts:hammock_* | config tie / event gating (M-22 lu | magic | M-22 | ACCEPT |
 | 1 |  | `comforts` | comforts:sleeping_bag_* (cold-insulated varian | create:pressing (brass lining) + v | create | M-05 | REJECT |
 | 1 |  | `comforts` | comforts:sleeping_bag_* (colored wool items) | create:item_application (dyeing) | create | M-20 | REJECT |
@@ -2271,6 +2371,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `comforts` | comforts sleeping bags | loot-seed | survival | M-34 | REJECT |
 | 1 |  | `comforts` | comforts:hammock_* (inverse bed, day→night ski | loot-seed in structure chests (tid | survival | M-34 | REJECT |
 | 1 |  | `comforts` | comforts:sleeping_bag_* (16 dyed variants) | recipe (crafting) | survival |  | REJECT |
+| 1 |  | `comforts` | comforts:rope_and_nail | create:pressing (nail from a metal | create | M-05 | REJECT |
 | 1 |  | `companions` | voltaic pillar / tesla coil deco blocks | create:crushing | create | M-04 | REJECT |
 | 1 |  | `companions` | companions boss drop — relic_gold (Sacred Pont | boss-drop gate as Create recipe in | create | M-15 | ACCEPT |
 | 1 |  | `companions` | companions:crystallized_blood | createaddition:charging (FE/electr | create | M-17 | REJECT |
@@ -2285,6 +2386,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `companions` | Sacred Pontiff (boss) | loot-seed | economy | M-34 | ACCEPT |
 | 1 |  | `companions` | companion tesla deco blocks | create:crushing | create | M-04 | REJECT |
 | 1 |  | `companions` | companions:essence (Small/Great Essence, mob-d | ars_nouveau:imbuement | magic | M-02 | ACCEPT |
+| 1 |  | `companions` | companions:soul_furnace as method | M-19 Create haunting parallel — mo | magic | M-19 | ACCEPT |
 | 1 |  | `cookingforblockheads` | cookingforblockheads:cow_jar / cookingforblock | any method | create |  | REJECT |
 | 1 |  | `cookingforblockheads` | Toaster (cookingforblockheads:toaster recipe t | pull foreign breads/baked goods th | survival | M-12 | REJECT |
 | 1 |  | `cookingforblockheads` | cooking_table (assembled kitchen multiblock) | create:sequenced_assembly | create | M-06 | REJECT |
@@ -2327,6 +2429,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `copperagebackport` | copperagebackport copper blocks (bars, chains, | create:mechanical_crafting / M-05  | create | M-05 | REJECT |
 | 1 |  | `copperagebackport` | Copper Golem chest-to-chest hauling | config/behavior | economy |  | REJECT |
 | 1 |  | `copperagebackport` | copperagebackport copper blocks (oxidation sta | northstar:electrolysis | create | M-29 | REJECT |
+| 1 |  | `copperagebackport` | copperagebackport:copper_golem_statue | create:sequenced_assembly | create | M-06 | ACCEPT |
+| 1 |  | `copperagebackport` | copperagebackport:copper_golem_statue (item lo | config tie or behaviour hook | aeronautics | M-24 | REJECT |
+| 1 |  | `copperagebackport` | copperagebackport copper blocks (oxidation pal | create:deploying | create | M-20 | ACCEPT |
 | 1 |  | `copycats` | copycats:copycat_panel / copycat_slope / copyc | create:item_application (apply a m | magic | M-20 | REJECT |
 | 1 | ✓ | `copycats` | copycat_cogwheel / copycat_shaft / copycat_flu | aeronautics drivetrain recipe | aeronautics | M-24 | REJECT |
 | 1 |  | `copycats` | copycats:copycat_panel / copycats:copycat_slop | aeronautics construction recipe | aeronautics | M-23 | ACCEPT |
@@ -2359,7 +2464,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_central_kitchen` | create_central_kitchen Blaze Stove + Packager  | aeronautics ship build (ship has a | aeronautics |  | REJECT |
 | 1 |  | `create_central_kitchen` | create_central_kitchen Blaze Stove (Blaze as f | create:deploying / item_applicatio | create | M-26 | REJECT |
 | 1 |  | `create_central_kitchen` | automated feast output (dishes assembled via s | recipe gate | economy | M-26 | ACCEPT |
-| 1 |  | `create_central_kitchen` | Blaze Stove (blaze-powered cooking accelerator | Create:item_application or recipe | magic | M-10 | REJECT |
 | 1 |  | `create_central_kitchen` | sequenced-assembly sandwich/burger/pie chain | create:sequenced_assembly | economy | M-37 | REJECT |
 | 1 |  | `create_central_kitchen` | blaze_stove (powered Blaze cooking booster) | create:sequenced_assembly | create | M-06 | ACCEPT |
 | 1 |  | `create_central_kitchen` | create_central_kitchen automated feast output  | M-29 cross-route — sequenced-assem | create | M-29 | ACCEPT |
@@ -2367,6 +2471,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_central_kitchen` | create_central_kitchen sequenced-assembly sand | create:sequenced_assembly | create | M-06 | ACCEPT |
 | 1 |  | `create_central_kitchen` | create_central_kitchen sauce/drink/ice-cream f | create:filling | create | M-12 | ACCEPT |
 | 1 |  | `create_central_kitchen` | create_central_kitchen dish output → magic cat | ars_nouveau:imbuement | magic | M-10 | REJECT |
+| 1 |  | `create_central_kitchen` | automated feast dishes (sequenced-assembly san | colony food demand | economy | M-28 | ACCEPT |
+| 1 |  | `create_central_kitchen` | sauce/drink fluids (ice-cream, sauce, drink ou | createaddition:liquid_burning (nov | create | M-12 | REJECT |
 | 1 |  | `create_cheese` | create_cheese:cheese_cellar (maturing station, | create_cheese:maturing | magic | M-10 | ACCEPT |
 | 1 |  | `create_cheese` | create_cheese:cheese_curds | create:crushing | create | M-04 | REJECT |
 | 1 |  | `create_cheese` | create_cheese:calendar_page_tier_1/2/3 (maturi | create:sequenced_assembly | create | M-06 | REJECT |
@@ -2379,7 +2485,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 | ✓ | `create_cheese` | foreign perishable (other mods' raw foods) | create_cheese:maturing (tag-driven | create | M-12 | ACCEPT |
 | 1 | ✓ | `create_cheese` | create_cheese maturing station (tag-driven out | create_cheese:maturing accepting f | create | M-12 | ACCEPT |
 | 1 |  | `create_cheese` | create_cheese:calendar_page_tier_1/2/3 | create_cheese:maturing (as a gener | create | M-12 | ACCEPT |
-| 1 | ✓ | `create_cheese` | aged cheeses (cheddar/brie/gouda…) | create_cheese:maturing (the wait g | economy | M-35 | ACCEPT |
 | 1 |  | `create_cheese` | create_cheese:calendar_page_tier_1/2/3 | MineColonies colony research | economy | M-37 | REJECT |
 | 1 |  | `create_cheese` | create_cheese mature cheeses as bulk food | aeronautics supply logistics | aeronautics | M-31 | ACCEPT |
 | 1 |  | `create_cheese` | create_cheese calendar pages (tier I/II/III) | create:sequenced_assembly (multi-s | create | M-06 | REJECT |
@@ -2397,6 +2502,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_cheese` | aged high-tier cheeses (Tier III — 900-tick ma | minecolonies colony restaurant/tav | economy | M-28 | ACCEPT |
 | 1 |  | `create_cheese` | create_cheese:maturing as a service (mature my | player-run service | economy | M-33 | ACCEPT |
 | 1 |  | `create_cheese` | create_cheese:aged_cheese (tier II/III) | M-35 (maturing already in play) +  | economy | M-26 | ACCEPT |
+| 1 | ✓ | `create_cheese` | cheese_cellar accepting arbitrary tagged input | create_cheese:maturing as a shared | economy | M-36 | REJECT |
+| 1 | ✓ | `create_cheese` | cheese_curds_bucket / milk intermediate | meadow:cheese or farmersdelight:co | create | M-12 | REJECT |
 | 1 |  | `create_compressed` | create_compressed:crushed_*_pile blocks (compr | recipe (crafting-table or Create:c | economy | M-08 | ACCEPT |
 | 1 |  | `create_compressed` | create_compressed:dough_block / wheat_flour_pi | recipe (Create:milling or farmersd | survival | M-12 | REJECT |
 | 1 |  | `create_compressed` | create_compressed bulk-pile blocks (compressed | create:splashing / bulk washing | create | M-04 | REJECT |
@@ -2411,7 +2518,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_compressed` | create_compressed wheat_flour_pile / dough_blo | farmersdelight:cooking or create:m | survival | M-12 | ACCEPT |
 | 1 |  | `create_compressed` | create_compressed:crushed_<metal>_pile blocks  | create:splashing (bulk washing) | create | M-32 | REJECT |
 | 1 |  | `create_compressed` | create_compressed:iron_sheet_block / brass_she | aeronautics construction | aeronautics | M-23 | ACCEPT |
-| 1 |  | `create_compressed` | create_compressed crushed ore pile blocks (cru | aeronautics cargo hold design | aeronautics | M-31 | REJECT |
 | 1 |  | `create_confectionery` | create_confectionery:hot_chocolate (grants Reg | irons_spellbooks:alchemist_cauldro | magic | M-12 | ACCEPT |
 | 1 |  | `create_confectionery` | create_confectionery:gingerbread_block / candy | recipe (crafting) | aeronautics |  | REJECT |
 | 1 |  | `create_confectionery` | create_confectionery:candy_cane / candy_cane_b | seasonal crop gate (Serene Seasons | survival | M-16 | REJECT |
@@ -2438,6 +2544,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_confectionery` | create_confectionery: chocolate/caramel fluids | create_dragons_plus:ending (fan bu | magic | M-10 | ACCEPT |
 | 1 |  | `create_confectionery` | create_confectionery:restful_chocolate (repels | M-26 consumption sink — the effect | survival | M-26 | ACCEPT |
 | 1 |  | `create_confectionery` | create_confectionery hot_chocolate / cocoa but | irons_spellbooks:alchemist_cauldro | magic | M-12 | ACCEPT |
+| 1 |  | `create_confectionery` | create_confectionery:hot_chocolate / candy (ef | M-26 consumption sink → survival |  | M-26 | ACCEPT |
 | 1 |  | `create_connected` | create_connected:copycat_* family (slab/block/ | create:item_application (apply a f | create | M-20 | REJECT |
 | 1 |  | `create_connected` | create_connected:fan_*_catalyst blocks (blasti | create:haunting (the haunting cata | magic | M-19 | REJECT |
 | 1 |  | `create_connected` | create_connected:item_silo / inventory_bridge  | numismatics depositor integration  | economy | M-08 | REJECT |
@@ -2470,6 +2577,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_connected` | create_connected:copycat blocks (wear any text | KubeJS config — accept deco blocks | magic |  | REJECT |
 | 1 |  | `create_connected` | create_connected:copycat_* family | any foreign block as skin | survival | M-04 | REJECT |
 | 1 |  | `create_connected` | create_connected:fan_*_catalyst blocks | create fan-processing (blasting/ha | create | M-19 | REJECT |
+| 1 |  | `create_connected` | copycat_* blocks | create:crushing | create | M-04 | REJECT |
+| 1 |  | `create_connected` | fan_*_catalyst blocks (fan_blasting_catalyst,  | ars_nouveau:imbuement / occultism: | magic | M-10 | REJECT |
+| 1 |  | `create_connected` | control_chip | create:sequenced_assembly | create | M-06 | REJECT |
 | 1 |  | `create_dragons_plus` | create_dragons_plus:blaze_upgrade_smithing_tem | create:sequenced_assembly | create | M-06 | REJECT |
 | 1 |  | `create_dragons_plus` | create_dragons_plus dye fluids (bulk dyeing st | create:mixing → numismatics | economy | M-08 | REJECT |
 | 1 |  | `create_dragons_plus` | create_dragons_plus:dragon_breath_bucket | occultism:ritual | magic | M-11 | REJECT |
@@ -2503,6 +2613,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_dragons_plus` | create_dragons_plus:dragon_breath fluid (Bulk  | create:haunting | magic | M-19 | REJECT |
 | 1 |  | `create_dragons_plus` | create_dragons_plus:fan_ending station (bulk e | loot-seed — seed ender/magic drop  | magic |  | REJECT |
 | 1 |  | `create_dragons_plus` | create_dragons_plus:blaze_upgrade_smithing_tem | loot-seed — the blaze smithing tem | survival | M-34 | ACCEPT |
+| 1 |  | `create_dragons_plus` | create_dragons_plus:freezing method (powder sn | create_dragons_plus:freezing → lun | magic | M-22 | REJECT |
 | 1 |  | `create_enchantment_industry` | create_enchantment_industry:enchanting_templat | irons_spellbooks:alchemist_cauldro | magic | M-17 | REJECT |
 | 1 |  | `create_enchantment_industry` | create_enchantment_industry:printer (copies en | occultism:spirit_trade | magic | M-18 | REJECT |
 | 1 |  | `create_enchantment_industry` | create_enchantment_industry:blaze_enchanter (t | irons_spellbooks:alchemist_cauldro | magic | M-10 | REJECT |
@@ -2547,6 +2658,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_enchantment_industry` | liquid XP as aeronautics fuel alternative | createaddition:liquid_burning | aeronautics | M-13 | REJECT |
 | 1 |  | `create_enchantment_industry` | create_enchantment_industry enchanted-book out | ars_nouveau:enchanting_apparatus | magic | M-33 | ACCEPT |
 | 1 |  | `create_enchantment_industry` | create_enchantment_industry:experience_bucket | create:filling → aeronautics fuel/ | aeronautics | M-13 | REJECT |
+| 1 |  | `create_enchantment_industry` | enchanted books (produced by the Printer / Bla | occultism:ritual | magic | M-29 | ACCEPT |
+| 1 |  | `create_enchantment_industry` | super_experience_nugget (a dense XP item, mid- | create:pressing | create | M-06 | REJECT |
 | 1 |  | `create_factory` | create_factory:sweet_berries_jam / glow_berry_ | farm_and_charm:crafting_bowl or ex | survival | M-12 | REJECT |
 | 1 |  | `create_factory` | create_factory:honey_glazed_berries / honey_wa | vinery:apple_fermenting (or extrad | economy | M-12 | ACCEPT |
 | 1 |  | `create_factory` | create_factory:cream_bucket / sweet_berries_ja | ars_nouveau:imbuement | magic | M-10 | REJECT |
@@ -2554,6 +2667,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_factory` | create_factory cream_bucket fluid | create_cheese:maturing | create | M-35 | ACCEPT |
 | 1 |  | `create_factory` | create_factory:honey_roll / honey_waffle | ars_nouveau:imbuement (honey as a  | magic | M-29 | REJECT |
 | 1 |  | `create_factory` | create_factory:cream_bucket / honey-glazed ite | M-16 seasonal reagent — berry-depe | survival | M-16 | ACCEPT |
+| 1 |  | `create_factory` | create_factory:honey_waffle / caramel_roll / r | create:mixing/pressing/filling (al | survival | M-26 | ACCEPT |
+| 1 |  | `create_factory` | create_factory:cream_bucket / sweet_berries_ja | create:filling or create:mixing | create | M-32 | ACCEPT |
 | 1 |  | `create_hypertube` | hypertube_entrance (assembled via create:seque | create:mechanical_crafting | aeronautics | M-24 | REJECT |
 | 1 |  | `create_hypertube` | create_hypertube tube network (player/villager | theme/logistics | aeronautics |  | REJECT |
 | 1 |  | `create_hypertube` | create_hypertube:hypertube_entrance (entity-pr | recipe (adds economy material as c | economy |  | REJECT |
@@ -2574,14 +2689,15 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_hypertube` | create_hypertube:hypertube_accelerator in Aero | aeronautics construction recipe | aeronautics | M-24 | REJECT |
 | 1 |  | `create_hypertube` | hypertube as logistics-required bulk personnel | n/a (ambient use) | aeronautics | M-31 | REJECT |
 | 1 |  | `create_hypertube` | hypertube network (player transit infrastructu | config/worldgen tie — zone-gating  | economy | M-28 | REJECT |
+| 1 |  | `create_hypertube` | create_hypertube tube network (infrastructure) | M-33 service-for-hire (a player wh | economy | M-33 | ACCEPT |
+| 1 |  | `create_hypertube` | create_hypertube:hypertube_entrance (requires  | consumption sink (kinetic energy b | create | M-26 | ACCEPT |
+| 1 |  | `create_hypertube` | create_hypertube as a colony logistics seam | MineColonies courier/delivery rout | economy | M-28 | REJECT |
 | 1 |  | `create_integrated_farming` | create_integrated_farming fishing_net catch (f | create:milling or farmersdelight:c | economy | M-12 | ACCEPT |
-| 1 |  | `create_integrated_farming` | create_integrated_farming:lava_fishing_net cat | occultism:spirit_fire or ars_nouve | magic | M-11 | ACCEPT |
 | 1 |  | `create_integrated_farming` | create_integrated_farming roost products (feat | recipe (crafting-table or create:m | aeronautics |  | REJECT |
 | 1 |  | `create_integrated_farming` | fishing_net aquatic drops (fish, misc aquatic  | farmersdelight:cooking | survival | M-12 | REJECT |
 | 1 |  | `create_integrated_farming` | roost outputs (eggs/feathers/cooked poultry) | farmersdelight:cooking → create:mi | economy | M-12 | ACCEPT |
 | 1 |  | `create_integrated_farming` | create_integrated_farming:lava_fishing_net dro | create:crushing (byproduct route) | create | M-03 | REJECT |
 | 1 |  | `create_integrated_farming` | create_integrated_farming feathers | ars_nouveau:imbuement or occultism | magic | M-02 | ACCEPT |
-| 1 |  | `create_integrated_farming` | create_integrated_farming:fishing_net aquatic  | farmersdelight:cooking | survival | M-12 | REJECT |
 | 1 |  | `create_integrated_farming` | create_integrated_farming roost egg/feather ou | farmersdelight:cooking | survival | M-12 | REJECT |
 | 1 |  | `create_integrated_farming` | create_integrated_farming:fishing_net (lava va | create_dragons_plus:ending (bulk-e | magic | M-12 | REJECT |
 | 1 |  | `create_integrated_farming` | create_integrated_farming feather/egg output ( | occultism:ritual (feathers as reag | magic | M-29 | ACCEPT |
@@ -2597,6 +2713,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_integrated_farming` | create_integrated_farming:roost (machine block | create:sequenced_assembly (buildin | create | M-06 | REJECT |
 | 1 |  | `create_integrated_farming` | steady roost egg/feather/meat output | farmersdelight:cooking + create:mi | economy | M-26 | REJECT |
 | 1 |  | `create_integrated_farming` | roost products (feather bulk output) | M-31 logistics-required bulk good  | aeronautics | M-31 | ACCEPT |
+| 1 |  | `create_integrated_farming` | roost feather output | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 1 | ✓ | `create_ironworks` | tin (raw_tin / ingots/tin via the c:tags vocab | create:crushing/mixing processing  | economy | M-08 | ACCEPT |
 | 1 | ✓ | `create_ironworks` | bronze/steel plates (item/plates/bronze, item/ | Create assembly → Aeronautics hull | aeronautics | M-13 | REJECT |
 | 1 | ✓ | `create_ironworks` | steel_ingot | create:deploying / item_applicatio | create | M-20 | REJECT |
@@ -2636,6 +2753,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_ironworks` | create_ironworks:brass_hammer (3×3 AOE mining) | survival pressure | survival | M-26 | REJECT |
 | 1 |  | `create_ironworks` | create_ironworks scarcity (tin biome-modifiers |  | economy | M-30 | ACCEPT |
 | 1 |  | `create_ironworks` | create_ironworks dossier survival candidate (o |  |  | M-08 | ACCEPT |
+| 1 |  | `create_ironworks` | create_ironworks:steel_ingot | M-30 regional-scarcity gate (tin i | economy | M-30 | ACCEPT |
+| 1 |  | `create_ironworks` | create_ironworks:brass_hammer / brass_paxel | create:deploying (tool-application | create | M-20 | REJECT |
 | 1 | ✓ | `create_jetpack` | jetpack / netherite_jetpack as a flight unlock | boss-drop or MineColonies gating o | economy | M-15 | REJECT |
 | 1 | ✓ | `create_jetpack` | netherite_jetpack (the endgame variant) | create:item_application / deployin | create | M-20 | REJECT |
 | 1 |  | `create_jetpack` | create_jetpack:netherite_jetpack | create:deploying | create | M-20 | REJECT |
@@ -2647,7 +2766,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_jetpack` | create_jetpack progression gate | MineColonies research unlock | economy | M-37 | ACCEPT |
 | 1 |  | `create_jetpack` | cataclysm:ancient_metal_ingot (or deeperdarker | recipe | create | M-15 | ACCEPT |
 | 1 |  | `create_jetpack` | `create_jetpack:netherite_jetpack` upgrade | `create:sequenced_assembly` nether | survival | M-06 | ACCEPT |
-| 1 |  | `create_jetpack` | `create_jetpack:jetpack` fueled by backtank ai | aeronautics/colony supply chain | economy | M-28 | REJECT |
 | 1 |  | `create_jetpack` | create_jetpack:jetpack (brass/mid tier) | boss drop as unlock gate | survival | M-15 | ACCEPT |
 | 1 |  | `create_jetpack` | create_jetpack compressed-air consumption | consumption mechanic | survival | M-26 | ACCEPT |
 | 1 |  | `create_jetpack` | create_jetpack:jetpack loot | loot-seed | survival | M-34 | REJECT |
@@ -2683,6 +2801,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_mobile_packages` | create_mobile_packages:portable_stock_ticker ( | no new recipe needed — design tie: | economy | M-29 | REJECT |
 | 1 |  | `create_mobile_packages` | create_mobile_packages:portable_stock_ticker ( | create:mechanical_crafting (a prec | create | M-20 | ACCEPT |
 | 1 | ✓ | `create_mobile_packages` | create_mobile_packages (package delivery to pl | delivering bought/sold goods | economy | M-08 | REJECT |
+| 1 |  | `create_mobile_packages` | create_mobile_packages:drone_port / robo_bee | create:sequenced_assembly or creat | create | M-06 | ACCEPT |
 | 1 |  | `create_new_age` | create_new_age:energising | ars_nouveau:enchanting_apparatus p | magic | M-10 | REJECT |
 | 1 |  | `create_new_age` | create_new_age:copper_wire | create:crushing | create | M-04 | REJECT |
 | 1 |  | `create_new_age` | create_new_age:energising method (as a gate) | create_new_age:energising | aeronautics | M-05 | ACCEPT |
@@ -2750,6 +2869,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_sa` | create_sa loot=yes (gear drops from mobs?) | loot-seed | economy | M-34 | ACCEPT |
 | 1 |  | `create_sa` | create_sa:brass_drone_item | create:sequenced_assembly | economy | M-33 | ACCEPT |
 | 1 |  | `create_sa` | create_sa:brass_jetpack_chestplate (netherite  | create:sequenced_assembly | survival | M-15 | ACCEPT |
+| 1 | ✓ | `create_sa` | blaze (blazing_pickaxe / blazing_axe / blazing | ars_nouveau:imbuement / forbidden_ | magic | M-10 | REJECT |
+| 1 | ✓ | `create_sa` | brass_drone_item (owner-locked helper drone) + | create:* drivetrain (drone/drill a | aeronautics | M-24 | REJECT |
 | 1 |  | `create_train_parts` | create_train_parts:train_step_brass / train_sl | create:pressing (pressed brass she | create | M-20 | ACCEPT |
 | 1 |  | `create_train_parts` | create_train_parts:train_step_andesite / train | crafting table (andesite_alloy as  | create | M-20 | ACCEPT |
 | 1 |  | `create_train_parts` | create_train_parts:crossing | thematic (colony road planning) | aeronautics |  | REJECT |
@@ -2765,6 +2886,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_train_parts` | create_train_parts (loot=yes flag) | loot-seed | survival | M-02 | REJECT |
 | 1 |  | `create_train_parts` | create_train_parts:brass_sliding_window / bras | create:pressing (pressed copper/br | create | M-23 | ACCEPT |
 | 1 |  | `create_train_parts` | create_train_parts:train_slide_brass / train_s | create:crushing | create | M-04 | REJECT |
+| 1 |  | `create_train_parts` | create_train_parts:crossing (track intersectio | create:mechanical_crafting (steel/ | create | M-04 | ACCEPT |
+| 1 |  | `create_train_parts` | create_train_parts items (sliding windows, ste | MineColonies colony builder reques | economy | M-28 | ACCEPT |
+| 1 |  | `create_train_parts` | create_train_parts:arm_extender | Aeronautics — contraption arm on a | aeronautics | M-24 | ACCEPT |
 | 1 |  | `create_tweaked_controllers` | tweaked_linked_controller / tweaked_lectern_co | recipe (Create mechanical_crafting | create | M-24 | ACCEPT |
 | 1 |  | `create_tweaked_controllers` | create_tweaked_controllers items | recipe | magic |  | REJECT |
 | 1 |  | `create_tweaked_controllers` | create_tweaked_controllers:tweaked_lectern_con | recipe (create:mechanical_crafting | create | M-06 | ACCEPT |
@@ -2784,6 +2908,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_tweaked_controllers` | create_tweaked_controllers:tweaked_lectern_con | occultism:spirit_trade or ars_nouv | magic | M-29 | REJECT |
 | 1 |  | `create_tweaked_controllers` | create_tweaked_controllers (CC:Tweaked periphe | ComputerCraft scripted logistics a | economy | M-01 | REJECT |
 | 1 |  | `create_tweaked_controllers` | create_tweaked_controllers craft (uses Create  | create:sequenced_assembly (the pre | create | M-05 | REJECT |
+| 1 |  | `create_tweaked_controllers` | create_tweaked_controllers:tweaked_lectern_con | thematic adjacency — it is a Creat | economy | M-33 | REJECT |
+| 1 |  | `create_tweaked_controllers` | create_tweaked_controllers:tweaked_lectern_con | M-24 drivetrain gating — controlle | aeronautics | M-24 | ACCEPT |
 | 1 |  | `create_ultimate_factory` | create_ultimate_factory renewable blaze rod /  | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 1 |  | `create_ultimate_factory` | coal-block compacting to diamond pathway | recipe (create:compacting — alread | economy | M-08 | REJECT |
 | 1 |  | `create_ultimate_factory` | blaze-rod output (blaze powder compacting path | loot-seed / recipe into magic | magic | M-10 | REJECT |
@@ -2798,6 +2924,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `create_ultimate_factory` | create_ultimate_factory blaze-rod renewal | create:compacting (blaze-powder +  | survival | M-26 | ACCEPT |
 | 1 |  | `create_ultimate_factory` | create_ultimate_factory diamond-route (coal_bl | scarcity lens | scarcity | M-30 | REJECT |
 | 1 |  | `create_ultimate_factory` | the recipe datapack's renewable stone/strata r | create:compacting | create | M-32 | ACCEPT |
+| 1 |  | `create_ultimate_factory` | create_ultimate_factory renewable-diamond reci | create:compacting | create | M-30 | REJECT |
 | 1 | ✓ | `createaddition` | seed_oil / bioethanol (crop fuels) | createaddition:liquid_burning → Ae | aeronautics | M-13 | ACCEPT |
 | 1 |  | `createaddition` | createaddition:seed_oil / bioethanol (crop-oil | createaddition:liquid_burning + nu | economy | M-12 | REJECT |
 | 1 |  | `createaddition` | createaddition:biomass / biomass_pellet | create:compacting + numismatics | economy | M-08 | REJECT |
@@ -2820,9 +2947,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `createaddition` | createaddition electrum ingot | create:pressing → electrum plate | create | M-03 | REJECT |
 | 1 |  | `createaddition` | createaddition:seed_oil / bioethanol (crop → o | alcohol_industry:alcohol_boiling | create | M-12 | ACCEPT |
 | 1 |  | `createaddition` | createaddition:seed_oil as a Create-processabl | create:pressing → numismatics | economy | M-08 | REJECT |
-| 1 |  | `createaddition` | createaddition:rolling (ingot→rod/wire) | createaddition:rolling | create | M-32 | REJECT |
 | 1 |  | `createaddition` | createaddition rolling mill (create:rolling ro | recipe (gate aeronautics wiring be | aeronautics | M-24 | ACCEPT |
-| 1 |  | `createaddition` | createaddition:biomass → compost path | minecolonies:composting | economy | M-28 | ACCEPT |
 | 1 |  | `createaddition` | createaddition:biomass / biomass_pellet | create:compacting | create | M-12 | REJECT |
 | 1 |  | `createaddition` | createaddition:seed_oil | cross-route dependency — magic rit | magic | M-29 | ACCEPT |
 | 1 |  | `createaddition` | createaddition:biomass / biomass_pellet | tfmg:coking (treat biomass as a co | create | M-32 | ACCEPT |
@@ -2842,11 +2967,11 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `createadditionallogistics` | createadditionallogistics:flexible_shaft varia | create:mechanical_crafting | aeronautics | M-24 | REJECT |
 | 1 |  | `createadditionallogistics` | createadditionallogistics:andesite_encased_laz | create:crushing (crush-back → ande | create | M-04 | REJECT |
 | 1 |  | `createadditionallogistics` | createadditionallogistics:brass_encased_lazy_s | recipe as structural components re | aeronautics | M-23 | REJECT |
-| 1 |  | `createadditionallogistics` | flexible shafts (omnidirectional kinetic routi | Aeronautics contraption build | aeronautics | M-23 | REJECT |
 | 1 |  | `createadditionallogistics` | lazy shaft/cogwheel blocks (bulk infrastructur | minecolonies colony route | economy | M-28 | ACCEPT |
 | 1 |  | `createadditionallogistics` | flexible shaft components | create:deploying item_application | create | M-20 | REJECT |
 | 1 |  | `createadditionallogistics` | createadditionallogistics:brass_encased_flexib | aeronautics construction recipe | aeronautics | M-24 | ACCEPT |
 | 1 |  | `createadditionallogistics` | lazy shafts/cogs as bulk expendable | n/a (ambient consumption) | economy |  | REJECT |
+| 1 |  | `createadditionallogistics` | lazy shafts/cogwheels | aeronautics contraption builds | aeronautics | M-24 | REJECT |
 | 1 |  | `createaddoncompatibility` | c:ingots/plastic (unified via this mod) | aeronautics structural recipe (M-2 | aeronautics | M-23 | REJECT |
 | 1 | ✓ | `createbigcannons` | bronze/cast_iron/steel cannon parts (cast in f | aeronautics construction recipe | aeronautics | M-23 | ACCEPT |
 | 1 |  | `createbigcannons` | createbigcannons:nethersteel (nether-alloy, en | `occultism:spirit_fire` — netherst | magic | M-11 | REJECT |
@@ -2870,7 +2995,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `createbigcannons` | createbigcannons:cast_iron_ingot (c:ingots/cas | create:crushing | create | M-04 | REJECT |
 | 1 |  | `createbigcannons` | createbigcannons:steel_ingot / cast_iron_ingot | create:crushing → ore-doubling or  | create | M-06 | ACCEPT |
 | 1 |  | `createbigcannons` | createbigcannons:cannon blocks (barrel/chamber | aeronautics airframe/hull construc | aeronautics | M-23 | ACCEPT |
-| 1 |  | `createbigcannons` | createbigcannons loot (boss drops / structure  | loot-seed — seed cannon-grade comp | survival | M-02 | ACCEPT |
 | 1 |  | `createbigcannons` | createbigcannons:steel_ingot / cast_iron / net | create:crushing (ore-doubling path | create | M-03 | ACCEPT |
 | 1 |  | `createbigcannons` | createbigcannons:nethersteel (c:ingots/nethers | regional-scarcity (nethersteel = N | economy | M-30 | ACCEPT |
 | 1 |  | `createbigcannons` | createbigcannons:cannon_mount + barrel blocks | create:sequenced_assembly | create | M-06 | ACCEPT |
@@ -2895,6 +3019,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `createbigcannons` | createbigcannons cannon line (whole foundry ch | KubeJS boss-drop input on netherst | survival | M-15 | ACCEPT |
 | 1 |  | `createbigcannons` | createbigcannons:melting (CBC's own foundry-me | createbigcannons:melting | create | M-32 | ACCEPT |
 | 1 |  | `createbigcannons` | createbigcannons deco blocks (bronze_block, ca | create:crushing | create | M-04 | REJECT |
+| 1 |  | `createbigcannons` | createbigcannons munitions (shells/cartridges) | occultism:spirit_fire or ars_nouve | magic | M-10 | REJECT |
 | 1 |  | `createblockchain` | Mining Core (createblockchain:mining_core, wor | tfmg:industrial_blasting or create | create | M-08 | ACCEPT |
 | 1 |  | `createblockchain` | cryotheum coolant fluid | tfmg:distillation | create | M-08 | REJECT |
 | 1 |  | `createblockchain` | createblockchain:currency_miner (FE consumer) | createaddition:charging (FE tie) | create | M-17 | REJECT |
@@ -2917,6 +3042,10 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `createblockchain` | createblockchain:piggy_bank (loot in overworld | loot-seed | economy | M-34 | ACCEPT |
 | 1 |  | `createblockchain` | createblockchain:cryotheum_coolant | create:mixing or thermal specializ | create | M-12 | REJECT |
 | 1 |  | `createblockchain` | FE consumption of Currency Miner → bare "hook  | createaddition FE |  | M-17 | REJECT |
+| 1 |  | `createblockchain` | createblockchain:currency_miner | create:sequenced_assembly | create | M-06 | ACCEPT |
+| 1 |  | `createblockchain` | createblockchain miner FE | createaddition:liquid_burning | create | M-13 | ACCEPT |
+| 1 |  | `createblockchain` | createblockchain:cryotheum_coolant | create:mixing | create | M-32 | ACCEPT |
+| 1 |  | `createblockchain` | createblockchain:piggy_bank coins | loot-seed | survival | M-34 | ACCEPT |
 | 1 |  | `createfisheryindustry` | createfisheryindustry:fish_skin (peeler output | recipe (crafting) | magic |  | REJECT |
 | 1 |  | `createfisheryindustry` | createfisheryindustry catch (fish tags, shellf | irons_spellbooks:alchemist_cauldro | magic | M-12 | ACCEPT |
 | 1 |  | `createfisheryindustry` | createfisheryindustry:copper_diving_leggings | create_new_age:energising | create | M-17 | REJECT |
@@ -2935,7 +3064,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `createfisheryindustry` | createfisheryindustry:lobster/mussel (rare tra | occultism:spirit_fire or ritual | magic | M-11 | REJECT |
 | 1 |  | `createfisheryindustry` | createfisheryindustry:fish_skin bulk productio | aeronautics logistics transport | aeronautics | M-31 | ACCEPT |
 | 1 |  | `createfisheryindustry` | createfisheryindustry:fish_skin (leather-equiv | occultism:spirit_fire or ars_nouve | magic | M-11 | ACCEPT |
-| 1 |  | `createfisheryindustry` | createfisheryindustry:seafood_chowder / cooked | M-26 consumption sink (high-nutrit | survival | M-26 | ACCEPT |
 | 1 |  | `createfisheryindustry` | createfisheryindustry:bait_trap (automated sea | M-29 cross-route dependency (trap  | magic | M-29 | REJECT |
 | 1 | ✓ | `createfisheryindustry` | fish (raw cod/salmon) | createfisheryindustry:peeling + fa | create | M-12 | ACCEPT |
 | 1 | ✓ | `createfisheryindustry` | fish_skin | cross-route leather substitute inp | production | M-29 | ACCEPT |
@@ -2950,12 +3078,13 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `createfisheryindustry` | createfisheryindustry:fish_skin | farmersdelight:cutting / extradeli | economy | M-35 | ACCEPT |
 | 1 |  | `createfisheryindustry` | createfisheryindustry:seafood_chowder / cooked | farmersdelight:cooking | economy | M-26 | ACCEPT |
 | 1 |  | `createfisheryindustry` | createfisheryindustry:harpoon_gun (pneumatic h | create:sequenced_assembly | aeronautics | M-24 | ACCEPT |
-| 1 |  | `createfisheryindustry` | createfisheryindustry:copper_diving_leggings | create:sequenced_assembly | aeronautics | M-24 | REJECT |
+| 1 |  | `createfisheryindustry` | createfisheryindustry:fish_skin | create:mixing or farmersdelight:cu | magic | M-02 | ACCEPT |
+| 1 |  | `createfisheryindustry` | createfisheryindustry:bait_trap catch outputs  | createfisheryindustry:peeling + fa | economy | M-29 | ACCEPT |
+| 1 |  | `createfisheryindustry` | createfisheryindustry:harpoon / pneumatic harp | loot-seed or create:sequenced_asse | economy | M-34 | ACCEPT |
 | 1 | ✓ | `createfood` | foreign crops/meats/cheese (it consumes) | create:milling/mixing + farmersdel | create | M-12 | ACCEPT |
 | 1 |  | `createfood` | createfood:apple_pie_filling_block / jam_block | vinery:apple_fermenting or extrade | survival | M-12 | ACCEPT |
 | 1 |  | `createfood` | createfood:bacon_pizza / pastry range | create_dragons_plus:ending (Bulk E | create | M-12 | REJECT |
 | 1 |  | `createfood` | createfood:apple_jam / createfood:apple_juice  | season-gated crop input | survival | M-16 | ACCEPT |
-| 1 |  | `createfood` | createfood dishes as magic reagents | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 1 |  | `createfood` | createfood dough/pastry intermediates (c:foods | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 1 |  | `createfood` | createfood dishes as seasonal inputs | Serene Seasons gate on crop ingred | create | M-16 | ACCEPT |
 | 1 |  | `createfood` | createfood dishes (warm meals) | Cold Sweat config warmth-food bonu | survival |  | REJECT |
@@ -2973,6 +3102,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `createfood` | createfood:*_jam / *_juice (crop-derived inter | create:milling (seasonal crop inpu | survival | M-16 | ACCEPT |
 | 1 |  | `createfood` | createfood finished dishes (pizzas, pastries,  | create:pressing → numismatics mint | economy | M-08 | REJECT |
 | 1 |  | `createfood` | createfood raw meat/crop tags (c:foods/raw_*,  | farmersdelight:cooking / create:mi | create | M-12 | ACCEPT |
+| 1 |  | `createfood` | createfood placeable food blocks | create:crushing | create | M-04 | REJECT |
 | 1 |  | `createfurnitureseats` | n/a |  |  |  | REJECT |
 | 1 |  | `createimmersivetacz` | createimmersivetacz:gunpowder_bucket / nitropo | occultism:ritual or ars_nouveau:im | magic | M-10 | REJECT |
 | 1 |  | `createimmersivetacz` | createimmersivetacz:primer (andesite-alloy + s | create:crushing (hypothetical recy | create | M-04 | REJECT |
@@ -3006,6 +3136,10 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 | ✓ | `createimmersivetacz` | ammo as a consumed combat upkeep | spent-in-combat consumption sink | economy | M-26 | ACCEPT |
 | 1 | ✓ | `createimmersivetacz` | brass plates / andesite alloy / gunpowder | create:sequenced_assembly inbound | create | M-06 | ACCEPT |
 | 1 |  | `createimmersivetacz` | createimmersivetacz gun/ammo parts | Aeronautics armament integration | aeronautics | M-24 | REJECT |
+| 1 |  | `createimmersivetacz` | bulk ammo output (twelve_gauge_shell, 40mmhe_c | numismatics | economy | M-08 | REJECT |
+| 1 |  | `createimmersivetacz` | bulk ammo (twelve_gauge_shell / primers / casi | M-26 consumption | economy | M-26 | ACCEPT |
+| 1 |  | `createimmersivetacz` | gun_barrel / firing_mechanism (mid-tier Create | minecolonies colony | economy | M-28 | ACCEPT |
+| 1 |  | `createimmersivetacz` | nitropowder_bucket / gunpowder_bucket (Create  | createbigcannons recipe methods | create | M-29 | ACCEPT |
 | 1 |  | `createlowheated` | any solid fuel consumed by basic_burner | config tie / survival | survival | M-16 | REJECT |
 | 1 |  | `createlowheated` | createlowheated basic_burner (heat-output mach | config tie — ensure TFMG fuel-burn | create | M-13 | ACCEPT |
 | 1 |  | `createlowheated` | createlowheated:basic_burner | recipe (KubeJS gate) | economy | M-08 | REJECT |
@@ -3068,6 +3202,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `createmechanicalcompanion` | createmechanicalcompanion modules (optical_sen | create:sequenced_assembly already  | create | M-06 | REJECT |
 | 1 |  | `createmechanicalcompanion` | createmechanicalcompanion (combat companion →  | M-34 combat-route supply | economy | M-34 | REJECT |
 | 1 |  | `createmechanicalcompanion` | createmechanicalcompanion:booster_rocket (a mo | aeronautics tie — a rocket-equippe | aeronautics | M-01 | REJECT |
+| 1 |  | `createmechanicalcompanion` | createmechanicalcompanion:mechanical_wolf_link | occultism:spirit_trade | magic | M-18 | REJECT |
+| 1 |  | `createmechanicalcompanion` | createmechanicalcompanion:netherite_plates (en | boss-drop gate | survival | M-15 | REJECT |
 | 1 |  | `createmetalwork` | createmetalwork c:crushed_raw_materials/pallad | create:crushing → ars_nouveau:imbu | magic | M-10 | ACCEPT |
 | 1 |  | `createmetalwork` | createmetalwork:molten_steel_bucket (high-tier | createbigcannons:melting (CBC's ow | aeronautics |  | REJECT |
 | 1 |  | `createmetalwork` | createmetalwork:crushed_andesite (everyday byp | create:crushing recycle | create | M-04 | REJECT |
@@ -3097,6 +3233,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 | ✓ | `createmetalwork` | molten metals → player-pressed coin | create:* → numismatics mint | economy | M-08 | ACCEPT |
 | 1 |  | `createmetalwork` | createmetalwork crushed_raw_materials/* tags ( | create:crushing → magic mod proces | magic | M-29 | ACCEPT |
 | 1 |  | `createmetalwork` | createmetalwork:crushed_netherite_scrap | create:crushing → create:mixing (e | create | M-32 | ACCEPT |
+| 1 |  | `createmetalwork` | createmetalwork:molten_netherite / molten_stee | create:sequenced_assembly | aeronautics | M-23 | ACCEPT |
+| 1 |  | `createmetalwork` | createmetalwork:crushed_andesite / molten_ande | create:mixing → andesite alloy | create | M-32 | ACCEPT |
+| 1 |  | `createmetalwork` | createmetalwork:molten_brass (processed copper | create:mechanical_crafting | aeronautics | M-24 | REJECT |
 | 1 |  | `createnuclear` | createnuclear:uranium_ingot / c:raw_materials/ | create:crushing → create:mixing/pr | economy | M-08 | ACCEPT |
 | 1 |  | `createnuclear` | createnuclear steel (c:ingots/steel, a shared  | create:crushing (ore-doubling) → n | economy | M-08 | ACCEPT |
 | 1 | ✓ | `createnuclear` | reactor_core / multiblock fission (massive SU) | M-15 boss-key unlock (reactor buil | create | M-15 | REJECT |
@@ -3144,6 +3283,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `createnuclear` | createnuclear:reactor_core (2M+ SU endgame pow | M-13 fuel → propulsion | aeronautics | M-13 | REJECT |
 | 1 |  | `createnuclear` | createnuclear:lead (c:ingots/lead) | occultism:ritual (alchemical lead  | magic | M-11 | ACCEPT |
 | 1 |  | `createnuclear` | createnuclear steel | minecolonies colony research unloc | economy | M-28 | ACCEPT |
+| 1 |  | `createnuclear` | createnuclear:lead (c:ingots/lead) | recipe (KubeJS adds lead ingots as | magic | M-29 | ACCEPT |
+| 1 |  | `createnuclear` | anti_radiation armor (colored hazmat sets) | create:crushing | create | M-04 | REJECT |
+| 1 |  | `createnuclear` | createnuclear:enriched_soul_soil / enriching_f | recipe (occultism:spirit_fire take | magic | M-11 | ACCEPT |
 | 1 |  | `createoreexcavation` | createoreexcavation:vein_finder (mid-tier expl | ars_nouveau:imbuement to create a  | magic | M-10 | REJECT |
 | 1 |  | `createoreexcavation` | createoreexcavation:diamond_drill / netherite_ | create_new_age:energising (electri | create | M-17 | REJECT |
 | 1 | ✓ | `createoreexcavation` | Extractor infinite-fluid output (if a propulsi | createoreexcavation:extracting → A | aeronautics | M-13 | REJECT |
@@ -3203,6 +3345,10 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `createoreexcavation` | createoreexcavation:diamond_drill / netherite_ | gating behind a boss drop or MineC | economy | M-15 | ACCEPT |
 | 1 |  | `createoreexcavation` | createoreexcavation vein outputs | createoreexcavation:vein recipe da | magic | M-29 | ACCEPT |
 | 1 |  | `createoreexcavation` | createoreexcavation drill machines (SU consume | magic or survival routing | magic |  | REJECT |
+| 1 | ✓ | `createoreexcavation` | vein recipe-table (configurable per-chunk ore/ | worldgen/config (regional vein-tab | economy | M-30 | ACCEPT |
+| 1 | ✓ | `createoreexcavation` | drilling_machine multiblock (SU-powered) + dri | create:* (the machine's own build  | create | M-06 | REJECT |
+| 1 | ✓ | `createoreexcavation` | drill-head (drill → diamond_drill → netherite_ | M-38 tooling wear | production↔production | M-38 | REJECT |
+| 1 | ✓ | `createoreexcavation` | extracted infinite fluid (Extractor output) | create:mixing/draining | create | M-32 | REJECT |
 | 1 | ✓ | `createpickywheels` | river/open-air/biome gating of water wheels &  | biome-gated power (behavioral, no  | survival |  | ACCEPT |
 | 1 |  | `createpickywheels` | createpickywheels biome-gating behavior (water | survival world-pushes-back mechani | survival |  | REJECT |
 | 1 |  | `createpickywheels` |  | create:deploying (no recipe route  | survival |  | REJECT |
@@ -3218,6 +3364,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `createpickywheels` | power-placement constraint | no new method — behavior-only | survival | M-30 | REJECT |
 | 1 |  | `createpickywheels` | water wheel / windmill placement (behavioral g | config tie — biome/geography requi | survival | M-30 | ACCEPT |
 | 1 |  | `createpickywheels` | windmill/water-wheel power output | M-29 cross-route dependency (magic | magic | M-29 | REJECT |
+| 1 |  | `createpickywheels` | createpickywheels (windmill biome restriction  | economy / aeronautics |  | M-30 | REJECT |
 | 1 |  | `createshufflefilter` | createshufflefilter:shuffle_filter / weighted_ | any recipe-gate approach | any |  | REJECT |
 | 1 |  | `createshufflefilter` | shuffle_filter / weighted_shuffle_filter | recipe (crafting) | create | M-20 | REJECT |
 | 1 |  | `createshufflefilter` | weighted_shuffle_filter | recipe | economy |  | REJECT |
@@ -3225,6 +3372,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `createshufflefilter` | createshufflefilter:shuffle_filter / weighted_ | recipe (crafting) | create |  | REJECT |
 | 1 |  | `createshufflefilter` | createshufflefilter:shuffle_filter / weighted_ | create:deploying (Deployer randomi | aeronautics | M-24 | REJECT |
 | 1 |  | `createshufflefilter` | createshufflefilter:weighted_shuffle_filter | create:mechanical_crafting (gated  | create | M-05 | REJECT |
+| 1 |  | `createshufflefilter` | createshufflefilter:weighted_shuffle_filter | aeronautics build automation | aeronautics |  | REJECT |
 | 1 |  | `createtreadmill` | touhou_little_maid Soul Orb / Photo (Maid Moto | `occultism:spirit_fire` or `ars_no | magic | M-11 | REJECT |
 | 1 | ✓ | `createtreadmill` | treadmill SU output (player/maid effort → stre | feeds a Create network powering an | aeronautics | M-24 | REJECT |
 | 1 |  | `createtreadmill` | createtreadmill:treadmill (low-tier kinetic so | no coherent 2nd anchor routing | n/a |  | REJECT |
@@ -3245,14 +3393,12 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `ctl` | ctl:htlb_block / ilb_block (sequenced-assembly | aeronautics build recipe (lamps as | aeronautics | M-23 | REJECT |
 | 1 |  | `ctl` | ctl:htlb_block (head/tail lamp, auto-switches  | recipe (require a TFMG polarized c | create | M-05 | REJECT |
 | 1 |  | `ctl` | ctl:htlb_block / ctl:ilb_block (train lamps —  | create:sequenced_assembly — existi | create | M-06 | ACCEPT |
-| 1 |  | `ctl` | ctl:htlb_block / ctl:ilb_block (train lamp blo | create:sequenced_assembly deepenin | aeronautics | M-24 | REJECT |
 | 1 |  | `ctl` | ctl:htlb_block / ctl:ilb_block glow variants ( | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 1 |  | `ctl` | ctl:htlb_block / ctl:ilb_block | survival — danger signal | survival |  | REJECT |
 | 1 |  | `ctl` | ctl locometal deco palette | create:crushing | create | M-04 | REJECT |
 | 1 |  | `ctl` | ctl lamp set | any further weave attempt | magic |  | REJECT |
 | 1 |  | `ctov` | ctov as MineColonies colony seed point | design intent (discovered village  | economy |  | REJECT |
 | 1 |  | `ctov` | ctov chest loot | loot-seed | survival |  | REJECT |
-| 1 |  | `ctov` | ctov village structures (trade hub) | loot-seed (Numismatics trade stall | economy | M-33 | REJECT |
 | 1 |  | `ctov` | ctov village loot | loot-seed → economy |  | M-30 | REJECT |
 | 1 |  | `ctov` | ctov village/outpost loot | loot-seed | economy | M-29 | REJECT |
 | 1 |  | `ctov` | ctov → no recipe/processing weave |  |  |  | REJECT |
@@ -3264,7 +3410,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `deeperdarker` | deeperdarker:cobbled_gloomslate / deeperdarker | create:crushing | create | M-04 | ACCEPT |
 | 1 |  | `deeperdarker` |  | create:pressing (press carapace pl | create | M-05 | ACCEPT |
 | 1 |  | `deeperdarker` |  | create:crushing (yields amber dust | create | M-04 | ACCEPT |
-| 1 |  | `deeperdarker` | deeperdarker:warden_carapace / deeperdarker:sc | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 1 |  | `deeperdarker` | deeperdarker:crystallized_amber | create:crushing → dust byproduct | create | M-04 | ACCEPT |
 | 1 |  | `deeperdarker` | deeperdarker:sculk_transmitter | create:mechanical_crafting (gate o | create | M-05 | ACCEPT |
 | 1 |  | `deeperdarker` | deeperdarker:soul_elytra (upgraded Elytra) | create:sequenced_assembly (incompl | create | M-06 | REJECT |
@@ -3278,6 +3423,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `deeperdarker` | deeperdarker:reinforced_echo_shard | create:sequenced_assembly | create | M-06 | ACCEPT |
 | 1 |  | `deeperdarker` | deeperdarker:sculk_transmitter | craft (redstone device) | economy | M-29 | REJECT |
 | 1 |  | `deeperdarker` | deeperdarker:warden_carapace (Warden-tier drop | create:mechanical_crafting or crea | aeronautics | M-23 | ACCEPT |
+| 1 |  | `deeperdarker` | deeperdarker:heart_of_the_deep (rare Warden dr | create:sequenced_assembly | create | M-06 | ACCEPT |
+| 1 |  | `deeperdarker` | deeperdarker Otherside-exclusive materials (so | aeronautics logistics | economy | M-31 | ACCEPT |
+| 1 |  | `deeperdarker` | deeperdarker:crystallized_amber (a Otherside d | galosphere:preserved_transform_rec | create | M-32 | REJECT |
 | 1 |  | `direct_chute` | express-chute upgrade (spring mechanism) | create:mechanical_crafting deepeni | create |  | REJECT |
 | 1 |  | `direct_chute` | direct_chute block (zinc logistics pipe) | aeronautics ship-logistics role | aeronautics | M-23 | REJECT |
 | 1 |  | `direct_chute` | direct_chute:direct_chute | create:item_application (deploying | aeronautics | M-20 | REJECT |
@@ -3337,6 +3485,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `dndesires` | dndesires milkshake foods | diet consumption | survival | M-26 | REJECT |
 | 1 |  | `dndesires` | dndesires:cardboard_package_* | create:cutting (cardboard source) | economy | M-31 | ACCEPT |
 | 1 |  | `dndesires` | foreign crops/ores (pack items) | dndesires:sanding or dndesires:fre | create | M-12 | ACCEPT |
+| 1 |  | `dndesires` | dndesires:seething (Seething Blaze sail — heat | dndesires:seething on pack mob dro | survival | M-12 | ACCEPT |
+| 1 |  | `dndesires` | dndesires rubber (from Hydraulic Press + sap) | dndesires:hydraulic_compacting → r | create | M-29 | ACCEPT |
+| 1 |  | `dndesires` | dndesires:milkshakes (food items) | diet/survival food-variety | survival | M-26 | ACCEPT |
 | 1 |  | `domum_ornamentum` | domum_ornamentum:architectscutter consuming me | domum_ornamentum:architects_cutter | survival |  | REJECT |
 | 1 |  | `domum_ornamentum` | domum_ornamentum: output (framed/shingle varia | create:crushing | create | M-04 | ACCEPT |
 | 1 |  | `domum_ornamentum` | domum_ornamentum:architectscutter | minecolonies progression gate | economy | M-15 | REJECT |
@@ -3362,6 +3513,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `domum_ornamentum` | DO blocks as MineColonies research-gated build | minecolonies research unlock | economy | M-37 | ACCEPT |
 | 1 |  | `domum_ornamentum` | DO combinatorial outputs (texture-tinted frame | domum_ornamentum:architects_cutter | survival | M-04 | ACCEPT |
 | 1 |  | `domum_ornamentum` | domum_ornamentum:architects_cutter consuming C | domum_ornamentum:architects_cutter | create | M-04 | ACCEPT |
+| 1 | ✓ | `domum_ornamentum` | architects_cutter (consumes ARBITRARY full blo | minecolonies huts / colony build-r | economy | M-28 | ACCEPT |
+| 1 | ✓ | `domum_ornamentum` | Create/Galosphere/processed-stone blocks fed i | domum_ornamentum:architects_cutter | create | M-04 | REJECT |
 | 1 | ✓ | `drones` | rotors / ion_thruster / controller | create:sequenced_assembly + native | create | M-06 | ACCEPT |
 | 1 | ✓ | `drones` | iron_rotor / ion_thruster / controller | create:sequenced_assembly + Create | create | M-06 | ACCEPT |
 | 1 |  | `drones` | drones:ion_thruster / drones:iron_rotor | create:mechanical_crafting + creat | create | M-05 | ACCEPT |
@@ -3382,7 +3535,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `drones` | drones:pocket_drone (equipped personal automat | aeronautics logistics | aeronautics | M-29 | REJECT |
 | 1 |  | `drones` | drones:pocket_drone (personal automation tool) | MineColonies colony research | economy | M-37 | ACCEPT |
 | 1 |  | `drones` | drones:pocket_drone (equipped item) | colony MineColonies delivery/logis | economy | M-28 | ACCEPT |
-| 1 |  | `drones` | drones:drill (ability block) | createoreexcavation:drilling (the  | create | M-29 | ACCEPT |
 | 1 |  | `drones` | drones:pocket_drone | aeronautics logistics arm — a dron | aeronautics | M-31 | ACCEPT |
 | 1 |  | `drones` | drones:drill block (ability slot for the drone | create:mechanical_crafting | create | M-05 | ACCEPT |
 | 1 |  | `drones` | drones:pocket_drone (drill variant) | aeronautics logistics | economy | M-29 | ACCEPT |
@@ -3408,11 +3560,12 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `dungeons-and-taverns-v4.4.4` | dungeons-and-taverns-v4.4.4 structure loot | loot-seed — seed a Mowzie's or oth | survival | M-02 | ACCEPT |
 | 1 |  | `dungeons-and-taverns-v4.4.4` | tavern cartographer villager → exploration rew | service-for-hire framing (a player | economy | M-33 | ACCEPT |
 | 1 |  | `dungeons-and-taverns-v4.4.4` | dungeons-and-taverns tavern cartographer | villager trade | economy | M-37 | REJECT |
+| 1 |  | `dungeons-and-taverns-v4.4.4` | dungeon/tavern/trial-chamber structure loot (e | loot-seed | economy | M-34 | ACCEPT |
+| 1 |  | `dungeons-and-taverns-v4.4.4` | cartographer-in-tavern trade (maps to structur | villager-trade | economy | M-33 | REJECT |
 | 1 |  | `dungeons_arise_seven_seas` | ship structures (nautical aesthetic) | aeronautics thematic bridge | aeronautics |  | REJECT |
 | 1 |  | `dungeons_arise_seven_seas` | sunken ruins / galleon loot tables | loot-seed | magic | M-02 | ACCEPT |
 | 1 |  | `dungeons_arise_seven_seas` | galleon loot | loot-seed | aeronautics | M-23 | REJECT |
 | 1 |  | `dungeons_arise_seven_seas` | sunken-ruins loot | loot-seed | aeronautics | M-15 | ACCEPT |
-| 1 |  | `dungeons_arise_seven_seas` | dungeons_arise_seven_seas galleon captain spaw | loot-seed → boss-key component for | create | M-15 | REJECT |
 | 1 |  | `dungeons_arise_seven_seas` | ocean structure loot tables (galleons/fortress | loot-seed — add coin, Numismatics  | economy | M-08 | ACCEPT |
 | 1 |  | `dungeons_arise_seven_seas` | galleon loot | loot-seed | survival | M-15 | REJECT |
 | 1 |  | `dungeons_arise_seven_seas` | shipwreck/galleon loot tables | loot-seed | magic | M-02 | ACCEPT |
@@ -3441,11 +3594,11 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `dynamictrees` | dynamictrees:mega_seed (mega_seed recipe type) | dynamictrees:seed_conversion → cre | create | M-12 | ACCEPT |
 | 1 |  | `dynamictrees` | dynamic tree growth automating with Create dep |  |  |  | REJECT |
 | 1 |  | `dynamictrees` | log output → colony build material | MineColonies requests | economy | M-28 | ACCEPT |
-| 1 |  | `dynamictrees` | dynamictrees seed types (species seeds — oak/b | ars_nouveau:imbuement or occultism | magic | M-11 | REJECT |
 | 1 |  | `dynamictrees` | dynamictrees mega-seed variants (endgame large | create:sequenced_assembly | create | M-06 | REJECT |
 | 1 |  | `dynamictrees` | dynamictrees:dendro_potion (growth catalyst) | ars_nouveau:imbuement or create:mi | create | M-10 | REJECT |
 | 1 |  | `dynamictrees` | dynamictrees species seeds (e.g. dynamictrees: | create:milling | create | M-12 | REJECT |
 | 1 |  | `dynamictrees` | dynamictrees logs | create:milling | create | M-16 | REJECT |
+| 1 |  | `dynamictrees` | dynamictrees trees (do NOT run through Create  | create:deploying | create | M-20 | REJECT |
 | 1 |  | `dynamictreesplus` | dynamictreesplus:brown/red mushroom caps (bulk | farmersdelight:cutting / create:mi | survival | M-12 | REJECT |
 | 1 |  | `dynamictreesplus` | dynamictreesplus mushroom caps (brown/red) | farmersdelight:cooking or create:m | create | M-12 | REJECT |
 | 1 |  | `dynamictreesplus` | dynamictreesplus:red_mushroom_cap | occultism:spirit_fire | magic | M-11 | REJECT |
@@ -3454,7 +3607,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `dynamictreesplus` |  | create:milling — cactus branches m | create | M-12 | ACCEPT |
 | 1 |  | `dynamictreesplus` | dynamictreesplus:brown_mushroom_cap | occultism:spirit_fire (transmute l | magic | M-11 | ACCEPT |
 | 1 |  | `dynamictreesplus` | dynamictreesplus mushroom caps (brown/red, bul | farmersdelight:cooking | survival | M-12 | ACCEPT |
-| 1 |  | `dynamictreesplus` | dynamictreesplus mushroom items | occultism:spirit_fire | magic | M-11 | REJECT |
 | 1 |  | `dynamictreesplus` | dynamictreesplus:mushroom caps (brown/red) | create:milling | create | M-12 | ACCEPT |
 | 1 |  | `dynamictreesplus` | dynamictreesplus:saguaro_fruit | occultism:spirit_fire | magic | M-11 | REJECT |
 | 1 |  | `dynamictreesplus` | dynamictreesplus:saguaro_fruit | ars_nouveau:imbuement | magic | M-02 | REJECT |
@@ -3486,6 +3638,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `ecologics` | ecologics:azalea_log / coconut_log (woodsets) | create:milling | create | M-04 | REJECT |
 | 1 |  | `ecologics` | ecologics:coconut_log / azalea_log (woodsets) | create:milling (sawdust byproduct) | create | M-04 | ACCEPT |
 | 1 |  | `ecologics` | ecologics foods (c:item/foods/*) | create:mixing (food compound proce | create | M-12 | ACCEPT |
+| 1 |  | `ecologics` | ecologics c:tags item/foods/nut / item/foods/f | diet system (Diet-AppleSeed) | survival | M-26 | REJECT |
+| 1 |  | `ecologics` | ecologics azalea_flower (sheared from flowerin | ars_nouveau:dye or ars_nouveau:imb | magic | M-02 | REJECT |
 | 1 | ✓ | `edf-remastered-5.0-beta4` | harder Ender Dragon fight | boss drop as gate item for complex | create | M-15 | REJECT |
 | 1 |  | `edf-remastered-5.0-beta4` | Ender Dragon fight (hardened encounter) | loot-seed — seed a boss-key drop o | economy | M-08 | REJECT |
 | 1 |  | `edf-remastered-5.0-beta4` | (dragon loot table) | loot-seed | economy | M-08 | ACCEPT |
@@ -3515,6 +3669,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `endermoon` | Ender Moon event (Super Ender Moon all-mob sur | config/event-gating | survival | M-26 | REJECT |
 | 1 |  | `endermoon` | Ender Moon event (Super Ender Moon — all-mob s | event-gate | survival | M-34 | ACCEPT |
 | 1 |  | `endermoon` | Ender Moon event (enderman spawn surge) | loot-seed / event-trigger | economy | M-26 | REJECT |
+| 1 |  | `endermoon` | endermoon Super Ender Moon (all-mob surge) | loot-seed | survival | M-34 | ACCEPT |
 | 1 |  | `endrem` | all 16 eyes (bulk) | create:sequenced_assembly | create | M-06 | REJECT |
 | 1 | ✓ | `endrem` | a themed eye (e.g. undead_eye) | occultism:ritual / ars enchanting_ | magic | M-11 | ACCEPT |
 | 1 | ✓ | `endrem` | an eye | create:sequenced_assembly through  | create | M-06 | REJECT |
@@ -3532,7 +3687,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `endrem` | endrem:* (generic eye → Create sequenced assem | create:sequenced_assembly | create | M-06 | REJECT |
 | 1 | ✓ | `endrem` | hard-to-find themed eyes (undead/nether/corrup | occultism:ritual / ars_nouveau:enc | magic | M-11 | ACCEPT |
 | 1 | ✓ | `endrem` | 1-2 eyes | create:sequenced_assembly through  | create | M-06 | REJECT |
-| 1 |  | `endrem` | endrem:guardian_eye | ars_nouveau:enchanting_apparatus | magic | M-10 | ACCEPT |
 | 1 |  | `endrem` | endrem:ancient_portal_frame (gateway structure | loot-seed | survival | M-34 | ACCEPT |
 | 1 |  | `endrem` | endrem loot (loot=yes) | loot-seed (magic reagent in eye-so | magic | M-02 | ACCEPT |
 | 1 |  | `endrem` | `endrem:*_eye` (one or two rarest) | `create:sequenced_assembly` with a | create | M-06 | REJECT |
@@ -3545,6 +3699,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `endrem` | endrem eye collection as a whole | bare "gate the End with more loot" | — |  | REJECT |
 | 1 |  | `endrem` | endrem:ancient_portal_frame | create:mechanical_crafting (craft  | create | M-05 | REJECT |
 | 1 | ✓ | `endrem` | endrem boss-/structure-sourced eyes (the ~12 n | boss drop → emergent player trade | economy | M-34 | ACCEPT |
+| 1 |  | `endrem` | endrem:ancient_eye (one rarest eye) | create:sequenced_assembly | create | M-06 | ACCEPT |
+| 1 |  | `endrem` | endrem:nether_eye | create:haunting | create | M-19 | ACCEPT |
 | 1 | ✓ | `enhancedcelestials` | space_moss block-set | any method | magic |  | REJECT |
 | 1 |  | `enhancedcelestials` | world-state Blood/Blue/Harvest Moon (event-as- | occultism:ritual | magic | M-22 | ACCEPT |
 | 1 |  | `enhancedcelestials` | enhancedcelestials:space_moss_bug_spawn_egg | occultism:spirit_fire | magic | M-11 | REJECT |
@@ -3552,7 +3708,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `enhancedcelestials` | Harvest Moon growth-rate modifier | — | any |  | REJECT |
 | 1 |  | `enhancedcelestials` |  | farmersdelight:cutting or extradel | survival | M-12 | ACCEPT |
 | 1 |  | `enhancedcelestials` | Harvest Moon growth buff | (passive, no method) | create |  | REJECT |
-| 1 |  | `enhancedcelestials` | Blue Moon → Luck buff | loot-seed | economy | M-22 | REJECT |
 | 1 |  | `enhancedcelestials` | enhancedcelestials:meteor (lunar-fallen stone, | occultism:spirit_fire or ars_nouve | magic | M-22 | ACCEPT |
 | 1 |  | `enhancedcelestials` | enhancedcelestials:meteor block | create:crushing | create | M-03 | REJECT |
 | 1 |  | `enhancedcelestials` | meteor/moon events | bare sell | economy |  | REJECT |
@@ -3594,6 +3749,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `expandeddelight` | expandeddelight crops (asparagus, chili, peanu | farmersdelight:cooking already inb | create | M-12 | ACCEPT |
 | 1 |  | `expandeddelight` | expandeddelight:juicer outputs (fruit juices) | vinery:apple_fermenting or alcohol | economy | M-35 | REJECT |
 | 1 |  | `expandeddelight` | expandeddelight juicer output (apple_juice, cr | vinery:apple_mashing / alcohol_ind | economy | M-35 | REJECT |
+| 1 |  | `expandeddelight` | expandeddelight:salt (dust) | create:mixing / farmersdelight:coo | survival | M-26 | ACCEPT |
 | 1 |  | `exposure` | exposure:black_and_white_film (silver-halide c | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 1 |  | `exposure` | exposure:lightroom (block) + developed photogr | MineColonies quest/reward tie (pho | economy |  | REJECT |
 | 1 |  | `exposure` | exposure:photograph (printed photograph of a l | loot-seed (placing photographs as  | survival | M-02 | REJECT |
@@ -3611,9 +3767,10 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `exposure` | `exposure:photograph_copying` | player service | economy | M-33 | REJECT |
 | 1 |  | `exposure` | exposure film (black_and_white_film / color) a | create:mixing (silver dust + gelat | create | M-29 | ACCEPT |
 | 1 |  | `exposure` | film development automation | create:sequenced_assembly (already |  |  | REJECT |
-| 1 |  | `exposure` | exposure photographs as documented map intelli | emergent player trade + supplement | economy | M-33 | ACCEPT |
 | 1 |  | `exposure` | exposure (loot=yes) | loot-seed — seed exposure:black_an | survival | M-02 | ACCEPT |
 | 1 |  | `exposure` | exposure:camera_gold | ars_nouveau:imbuement (alchemical  | magic | M-29 | REJECT |
+| 1 |  | `exposure` | exposure:black_and_white_film (consumable per  | M-26 consumption sink (film is spe | survival | M-26 | ACCEPT |
+| 1 |  | `exposure` | exposure photographs as a KubeJS-gated progres | KubeJS custom recipe gate | create | M-15 | REJECT |
 | 1 |  | `extradelight` | grain crops (c:crops/wheat etc.) | create:milling → extradelight:oven | create | M-12 | ACCEPT |
 | 1 |  | `extradelight` | magic-mod herb/petal (ars_nouveau archwood lea | extradelight:mortar | magic | M-12 | ACCEPT |
 | 1 |  | `extradelight` | extradelight:evaporator output (salt, reduced  | `create:mixing` or `ars_nouveau:im | magic | M-10 | REJECT |
@@ -3639,6 +3796,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `extradelight` | extradelight:mortar recipe-type (grinds seeds/ | magic tie — grinding a magic-reage | magic | M-07 | ACCEPT |
 | 1 |  | `extradelight` | feast-tier cooked output (e.g. banquet items) | MineColonies colony provisioning ( | economy | M-28 | ACCEPT |
 | 1 |  | `extradelight` | snowyspirit:ginger / ginger crops (c:crops/gin | extradelight:mortar (grinding into | survival | M-16 | ACCEPT |
+| 1 |  | `extradelight` | extradelight:drying_rack (drying method) | seasonal reagent — season-specific | magic | M-16 | ACCEPT |
+| 1 |  | `extradelight` | extradelight:vat outputs (alcohol/fluid interm | tfmg:distillation → alcohol base | create | M-32 | REJECT |
 | 1 | ✓ | `farm_and_charm` | farm_and_charm:butter / dairy | occultism:spirit_fire or ars imbue | magic | M-11 | REJECT |
 | 1 |  | `farm_and_charm` | farm_and_charm:fertilized_farmland | any Create or magic method | create |  | REJECT |
 | 1 |  | `farm_and_charm` | farm_and_charm:barley (grain, seasonal) | create:milling → vinery fermentati | create | M-16 | REJECT |
@@ -3653,7 +3812,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `farm_and_charm` | farm_and_charm:chicken_coop (auto egg collecti | create:conveyor / mechanical arm | create | M-05 | REJECT |
 | 1 |  | `farm_and_charm` | farm_and_charm:nettle_tea / ribwort_tea | ars_nouveau:imbuement or irons_spe | magic | M-10 | REJECT |
 | 1 |  | `farm_and_charm` | farm_and_charm:mincer / roaster recipes | farmersdelight:cutting (cross-tag) | survival | M-12 | ACCEPT |
-| 1 |  | `farm_and_charm` | farm_and_charm:butter or farm_and_charm:cream  | create_factory mixing/pressing | create | M-12 | REJECT |
 | 1 |  | `farm_and_charm` | farm_and_charm:fertilized_farmland | create:mixing (bonemeal + compost) | create | M-12 | REJECT |
 | 1 |  | `farm_and_charm` | farm_and_charm:barley / farm_and_charm:oat (gr | farm_and_charm:drying + vinery:win | survival | M-35 | ACCEPT |
 | 1 |  | `farm_and_charm` | farm_and_charm:barley (grain straw byproduct) | create:haunting | magic | M-19 | REJECT |
@@ -3671,6 +3829,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `farm_and_charm` | farm_and_charm processed foods (bread, butter, | MineColonies composting / zero_was | create | M-32 | REJECT |
 | 1 |  | `farm_and_charm` | farm_and_charm:chicken_coop + farm_and_charm:f | MineColonies Farmer's hut config ( | economy | M-28 | ACCEPT |
 | 1 |  | `farm_and_charm` | farm_and_charm food output | M-26 food consumption | survival | M-26 | ACCEPT |
+| 1 |  | `farm_and_charm` | farm_and_charm seasonal crops (lettuce/corn/ba | serene seasons gate on farm_and_ch | survival | M-16 | ACCEPT |
 | 1 |  | `farmersdelight` | farmersdelight:straw (byproduct) | occultism:spirit_fire (burn as rit | magic | M-11 | REJECT |
 | 1 |  | `farmersdelight` | farmersdelight crops (c:crops/cabbage, c:crops | config tie (Serene Seasons crop-se | survival | M-16 | ACCEPT |
 | 1 |  | `farmersdelight` | farmersdelight:cooking_pot output (hearty soup | config (MineColonies colony cook/p | create | M-12 | ACCEPT |
@@ -3703,10 +3862,14 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `farmersdelight` | farmersdelight crops (cabbage/tomato/onion/ric | ars_nouveau:imbuement (Agronomic S | magic | M-12 | ACCEPT |
 | 1 |  | `farmersdelight` | farmersdelight:tomato (or cabbage/onion) | farmersdelight:cooking → ars_nouve | magic | M-16 | ACCEPT |
 | 1 |  | `farmersdelight` | farmersdelight:cabbage / rice / tomato (crops) | minecolonies cook/baker hut | economy | M-28 | ACCEPT |
+| 1 |  | `farmersdelight` | farmersdelight:cooking / cutting (the pack's f | farmersdelight:cooking | economy | M-28 | ACCEPT |
+| 1 |  | `farmersdelight` | farmersdelight diet-system foods (stews/pies c | diet-system demand | survival | M-26 | ACCEPT |
 | 1 |  | `fishingreal` | fishing-catch behavior (item→live mob) | any method | any |  | REJECT |
 | 1 |  | `fishingreal` | live fish entities spawned by reel-in | config tie (createfisheryindustry  | create | M-12 | REJECT |
 | 1 |  | `fishingreal` | fishing-catch entities (live fish spawned by r | createfisheryindustry:bait_trap or | create | M-12 | REJECT |
 | 1 |  | `fishingreal` | fishingreal (behavior — catches spawn live fis | config tie | survival |  | REJECT |
+| 1 |  | `fishingreal` | live-fish-entity spawns (fishingreal intercept | createfisheryindustry:bait_trap (t | create | M-12 | REJECT |
+| 1 |  | `fishingreal` | live-fish-entity spawn mechanic | naturalist:net (Naturalist's butte | survival | M-26 | REJECT |
 | 1 |  | `fluid` | fluid:neon_tube (decorative light) | create:toolbox_dyeing or crafting | create | M-20 | REJECT |
 | 1 |  | `fluid` | fluid:smart_fluid_interface | recipe (crafting / create:mechanic | aeronautics | M-23 | REJECT |
 | 1 |  | `fluid` | fluid:redstone_valve / fluid:redstone_triple_v | recipe (Create contraption control | create | M-20 | REJECT |
@@ -3724,6 +3887,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `fluid` | fluid:honeycomb_mold (exists in item list) | create:filling (honey fluid → mold | survival | M-12 | ACCEPT |
 | 1 |  | `fluid` | fluid:centrifugal_pump / smart_fluid_interface | conceptual use as ship-fuel-line i | aeronautics | M-31 | ACCEPT |
 | 1 |  | `fluid` | fluid:copper_tap / copper_sink (everyday coppe | any magic or survival routing | magic |  | REJECT |
+| 1 | ✓ | `fluid` | centrifugal_pump / smart_fluid_interface (long | M-13 fuel→propulsion (route refine | aeronautics | M-13 | ACCEPT |
+| 1 | ✓ | `fluid` | copper/brass fluid blocks (deco set: neon_tube | create:crushing | create | M-04 | REJECT |
 | 1 |  | `formations` | generated structures | loot-seed | magic | M-02 | ACCEPT |
 | 1 |  | `formations` | generated structures | loot-seed | survival | M-15 | REJECT |
 | 1 |  | `formations` | formations template_editor (the one item) | recipe | create |  | REJECT |
@@ -3732,6 +3897,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `formations` | structures palette (uses vanilla/modded blocks | create:crushing | create | M-04 | REJECT |
 | 1 |  | `formations` | formations structures (altars, cabins, ruins,  | loot-seed | survival | M-34 | REJECT |
 | 1 |  | `formations` | formations:template_editor (the authoring tool | recipe | create |  | REJECT |
+| 1 |  | `formations` | formations structures (stone-palette altars/ru | create:crushing | create | M-04 | REJECT |
 | 1 |  | `formationsnether` | formationsnether structure loot (Nether altar  | loot-table edit seeding a magic re | magic |  | REJECT |
 | 1 |  | `formationsnether` |  | loot-table datapack injection of o | magic | M-02 | ACCEPT |
 | 1 |  | `formationsnether` | formationsnether altar/sanctuary structures | loot-seed — seed a boss-unlock key | survival | M-15 | REJECT |
@@ -3741,6 +3907,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 | ✓ | `formationsnether` | structure loot tables | loot-seed (drop a magic reagent —  | magic | M-02 | ACCEPT |
 | 1 | ✓ | `formationsnether` | structure loot tables | loot-seed (seed a boss-key / progr | create | M-15 | ACCEPT |
 | 1 | ✓ | `formationsnether` | structure loot | loot-seed sellable/coin reward | economy | M-08 | REJECT |
+| 1 |  | `formationsnether` | formationsnether structure loot tables | loot-seed → drop boss-key componen | create | M-30 | ACCEPT |
+| 1 |  | `formationsnether` | formationsnether structure loot tables | loot-seed → rare boss-drop fragmen | economy | M-34 | ACCEPT |
+| 1 |  | `freefbible` | freefbible:freef_bible | supplementaries:antique_book | support/flavor |  | REJECT |
 | 1 | ✓ | `friendsandfoes` | copper_golem_head / copper buttons / lightning | create:crushing | create | M-04 | REJECT |
 | 1 | ✓ | `friendsandfoes` | copper_golem behavior | — | create |  | REJECT |
 | 1 |  | `friendsandfoes` |  | ars_nouveau:potion_flask (the claw | magic | M-10 | ACCEPT |
@@ -3761,11 +3930,11 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `friendsandfoes` | friendsandfoes:copper_golem_head (decorative d | ars_nouveau:imbuement | magic | M-02 | REJECT |
 | 1 |  | `friendsandfoes` | friendsandfoes:moobloom (floral cow) | create:milling | create | M-12 | REJECT |
 | 1 |  | `friendsandfoes` | friendsandfoes:copper_golem_head | occultism:ritual | magic | M-11 | REJECT |
+| 1 |  | `friendsandfoes` | friendsandfoes:buttercup (a floral variant fro | ars_nouveau:imbuement (as a floral | magic | M-10 | REJECT |
 | 1 |  | `fxntstorage` | fxntstorage:hardened_backpack / hardened_stora | recipe (adding a magic-attuned lin | magic | M-05 | REJECT |
 | 1 |  | `fxntstorage` | fxntstorage:brass_backpack (flight upgrade pat | recipe (crafting/create:mechanical | aeronautics | M-23 | ACCEPT |
 | 1 |  | `fxntstorage` | fxntstorage:hardened_backpack | recipe | aeronautics | M-23 | REJECT |
 | 1 |  | `fxntstorage` | fxntstorage:storage_controller (item-routing n | Create mechanical-crafting recipe  | create | M-05 | REJECT |
-| 1 |  | `fxntstorage` | fxntstorage:backpack_flight_upgrade | no-motif (wearable personal flight | aeronautics |  | REJECT |
 | 1 |  | `fxntstorage` | fxntstorage:backpack feeding consumable (auto- | farmersdelight:cooking / create:mi | survival | M-12 | REJECT |
 | 1 |  | `fxntstorage` | fxntstorage flight_upgrade (backpack flight mo | thematic aeronautics | aeronautics | M-23 | REJECT |
 | 1 |  | `fxntstorage` | fxntstorage storage_controller / smart_passer  | thematic aeronautics logistics | aeronautics |  | REJECT |
@@ -3786,6 +3955,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 | ✓ | `fxntstorage` | andesite/copper/brass/hardened storage boxes & | create:crushing | create | M-04 | REJECT |
 | 1 | ✓ | `fxntstorage` | backpack flight/fall-damage upgrade modules | deploy/aeronautics gating | aeronautics | M-31 | REJECT |
 | 1 |  | `fxntstorage` | fxntstorage:hardened_backpack / hardened_stora | M-29 cross-route dependency (requi | create | M-29 | ACCEPT |
+| 1 |  | `fxntstorage` | fxntstorage:hardened_backpack / hardened_stora | M-28 colony-cheaper-basics route | economy | M-28 | ACCEPT |
 | 1 |  | `galosphere` | galosphere:allurite_shard / lumiere_shard | create:haunting | create | M-19 | REJECT |
 | 1 |  | `galosphere` | galosphere:silver_ingot (=palladium) | create:crushing (ore-doubling) → n | create | M-08 | ACCEPT |
 | 1 |  | `galosphere` | galosphere:silver_ingot unified as c:ingots/si | any unification step | (invalid) |  | REJECT |
@@ -3800,10 +3970,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 | ✓ | `galosphere` | galosphere:palladium | GTMOGS regional ore-gen -> recipe  | economy | M-30 | ACCEPT |
 | 1 |  | `galosphere` | galosphere:silver_ingot (palladium) unificatio | any unification step | any |  | REJECT |
 | 1 |  | `galosphere` | galosphere:silver_ingot (palladium) | unification warning | — |  | REJECT |
-| 1 |  | `galosphere` | galosphere:silver_ingot (palladium) | ars_nouveau:enchanting_apparatus | magic | M-10 | REJECT |
 | 1 |  | `galosphere` | galosphere loot (loot=yes, cave biome drops) | loot-seed | economy | M-34 | REJECT |
 | 1 |  | `galosphere` | galosphere palladium ore (c:ores/palladium — s | create:crushing | create | M-03 | ACCEPT |
-| 1 |  | `galosphere` | galosphere:palladium_ore | create:crushing | create | M-03 | ACCEPT |
 | 1 |  | `galosphere` | galosphere:palladium_ingot (Create-processed) | create:pressing → numismatics mint | economy | M-08 | ACCEPT |
 | 1 |  | `galosphere` | amber items via preserved_transform cross-mod  | galosphere:preserved_transform_rec | magic |  | REJECT |
 | 1 |  | `galosphere` | galosphere:silver_bomb consumption | native galosphere recipe | economy |  | REJECT |
@@ -3814,6 +3982,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 | ✓ | `galosphere` | galosphere:silver_bomb (anti-undead AoE thrown | native consumption (thrown/spent) | economy | M-26 | REJECT |
 | 1 | ✓ | `galosphere` | galosphere:preserved_transform_recipe (amber p | time/aging adjacency | economy | M-35 | REJECT |
 | 1 | ✓ | `galosphere` | galosphere:allurite_shard / lumiere_shard | any new role | (any) | M-07 | REJECT |
+| 1 |  | `galosphere` | galosphere:allurite_bricks / lumiere blocks (d | create:crushing | create | M-04 | REJECT |
 | 1 | ✓ | `gamediscs` | console component parts (processor, redstone_c | create:mechanical_crafting / creat | create | M-12 | REJECT |
 | 1 | ✓ | `gamediscs` | game discs (dropped when a Bee/Slime/Frog/Rabb | lootjs mob-drop tweak | economy | M-02 | REJECT |
 | 1 |  | `gamediscs` | gamediscs:game_disc_* | loot-seed | survival |  | REJECT |
@@ -3821,6 +3990,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `gamediscs` | gamediscs:gaming_console | tacz:gun_smith_table_crafting or t | economy | M-33 | REJECT |
 | 1 |  | `gamediscs` | game_disc (disc drops from skeleton-kill) |  | economy | M-34 | REJECT |
 | 1 |  | `gamediscs` | gamediscs game discs (disc-from-skeleton-kill  | loot-seed | survival | M-34 | REJECT |
+| 1 |  | `gamediscs` | gamediscs:redstone_circuit (console component) | create:compacting (redstone + copp | create | M-12 | REJECT |
+| 1 |  | `gamediscs` | gamediscs:game_disc_pong / *_flappy_bird / etc | loot-seed | survival | M-34 | REJECT |
 | 1 |  | `gnkinetics` | gnkinetics:magnet_gear / gnkinetics:large_magn | create_new_age:energising (FE char | create | M-17 | REJECT |
 | 1 |  | `gnkinetics` | gnkinetics:chainable_cogwheel (compact power r | create:mechanical_crafting (as a s | create |  | REJECT |
 | 1 |  | `gnkinetics` | gnkinetics:large_industrial_gear / gnkinetics: | create:sequenced_assembly as inter | create | M-06 | ACCEPT |
@@ -3839,6 +4010,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `gnkinetics` | gnkinetics:creative_gear_motor as creative sho | boss-key unlock | survival | M-15 | REJECT |
 | 1 |  | `gnkinetics` | gnkinetics:large_industrial_gear / industrial_ | create:mechanical_crafting | create | M-05 | REJECT |
 | 1 |  | `gnkinetics` | gnkinetics gears as Create spine deepening | native Create spin (no weave neede |  | M-24 | REWORK note — the dossier's "leave — a deepening of the Create spine" conclusion was partially correct for magic/economy/survival, but M-24 into aeronautics is a genuine second anchor that was missed. The aeronautics arm IS the economy's logistics arm, so this also earns gnkinetics an economy-adjacent tag. The correct verdict is: gnkinetics gains aeronautics as a 2nd anchor via M-24 planetary/worm gear → drivetrain seams. |
+| 1 |  | `gnkinetics` | gnkinetics:worm_gear as a colony-locked specia | MineColonies blacksmith/mechanic h | economy | M-28 | ACCEPT |
+| 1 |  | `gnkinetics` | gnkinetics:chainable_cogwheel / gnkinetics:mag | M-32 byproduct→input (surplus kine | create | M-32 | REJECT |
 | 1 |  | `gravestone` | gravestone:obituary (the death log item) | loot-seed — seed gravestone:obitua | survival |  | REJECT |
 | 1 |  | `gravestone` | gravestone:gravestone (block, craftable) | recipe — could require a magic or  | create | M-05 | REJECT |
 | 1 |  | `gravestone` | gravestone:gravestone | create:haunting | create | M-19 | REJECT |
@@ -3875,6 +4048,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `grimoireofgaia` | rare mob-drop reagents (gorgon scale, minotaur | ars_nouveau:imbuement | magic | M-02 | ACCEPT |
 | 1 |  | `grimoireofgaia` | mini-boss drops (bust_valkyrie / bust_gorgon / | KubeJS recipe gating | create | M-15 | ACCEPT |
 | 1 |  | `grimoireofgaia` | mob-drop reagents (all types) | combat-specialist farming + player | economy | M-34 | ACCEPT |
+| 1 |  | `grimoireofgaia` | grimoireofgaia:c:nuggets/diamond and c:nuggets | create:crushing | create | M-03 | ACCEPT |
 | 1 |  | `gtmogs` | gtmogs:overworld_marker / the_nether_marker (p | loot-seed | economy | M-08 | REJECT |
 | 1 |  | `gtmogs` | gtmogs vein-indicator surface blocks (potentia | loot-seed | survival | M-16 | REJECT |
 | 1 |  | `gtmogs` | gtmogs regional-scarcity model | numismatics coin | economy | M-08 | REJECT |
@@ -3898,6 +4072,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `handcrafted` | handcrafted:*_fancy_bed/*_couch (high-quality  | minecolonies colony build requests | economy | M-28 | ACCEPT |
 | 1 |  | `handcrafted` | handcrafted:*_counter / *_cupboard (kitchen-se | minecolonies huts/colony requests | economy | M-28 | ACCEPT |
 | 1 |  | `handcrafted` | handcrafted furniture (metal-trim variants — i | create:mechanical_crafting | create | M-05 | REJECT |
+| 1 |  | `handcrafted` | handcrafted:*_chair / *_couch / *_desk (mid-ti | minecolonies:composting (carpenter | economy | M-28 | ACCEPT |
+| 1 |  | `handcrafted` | handcrafted:*_chair / any furniture block | create:crushing | create | M-04 | ACCEPT |
+| 1 |  | `handcrafted` | handcrafted:*_fancy_bed | ars_nouveau:enchanting_apparatus | magic | M-10 | REJECT |
 | 1 |  | `hpm` | hpm:hand_cannon / hpm:hand_mortar (handheld ra | loot-seed | survival | M-02 | REJECT |
 | 1 |  | `hpm` | hpm:cannonball / hpm:mortar_ball (cannon munit | create:pressing (iron sheet → ball | create | M-20 | REJECT |
 | 1 | ✓ | `hpm` | pirate_cutter / war-cutter / corvette_steamshi | create:mechanical_crafting / seque | create | M-06 | ACCEPT |
@@ -3920,6 +4097,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `hpm` | hpm:hand_cannon / hand_mortar (handheld naval  | M-24 mechanical component → propul | create | M-24 | REJECT |
 | 1 |  | `hpm` | hpm:cannonball (munition) | crafted munition → ship combat → c | economy | M-26 | ACCEPT |
 | 1 |  | `hpm` | hpm ships (hull/mast/upgrade components) | KubeJS recipe or create:mechanical | create | M-23 | ACCEPT |
+| 1 |  | `hpm` | hpm:hand_mortar munitions (mortar_ball) | createbigcannons:cartridge_assembl | create | M-29 | ACCEPT |
 | 1 |  | `illagerinvasion` | illagerinvasion:horn_of_sight | `occultism:spirit_trade` or ritual | magic | M-11 | REJECT |
 | 1 |  | `illagerinvasion` | illagerinvasion:horn_of_sight | recipe (ars_nouveau:enchanting_app | magic | M-02 | REJECT |
 | 1 |  | `illagerinvasion` | illagerinvasion:imbuing_table (copper multiblo | create:deploying copper upgrades o | create | M-20 | REJECT |
@@ -3928,7 +4106,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `illagerinvasion` | illagerinvasion:hallowed_gem | loot-seed (Illusioner Tower / raid | survival | M-34 | ACCEPT |
 | 1 |  | `illagerinvasion` | illagerinvasion:hallowed_gem | occultism:ritual (boss-key gate) | magic | M-15 | ACCEPT |
 | 1 |  | `illagerinvasion` | illagerinvasion:lost_candle / horn_of_sight | loot-seed | survival | M-34 | REJECT |
-| 1 |  | `illagerinvasion` | illagerinvasion boss/raid drops (hallowed_gem, | player-to-player trade (emergent) | economy | M-34 | ACCEPT |
 | 1 |  | `illagerinvasion` | illagerinvasion:imbuing_table enchantment-boos | service / native method | economy | M-33 | ACCEPT |
 | 1 |  | `illagerinvasion` | illagerinvasion:illusionary_dust (Illusioner d | ars_nouveau:imbuement or create:mi | create | M-02 | ACCEPT |
 | 1 |  | `illagerinvasion` | illagerinvasion:hallowed_gem | illagerinvasion:imbuing_table (nat | magic | M-05 | ACCEPT |
@@ -3959,10 +4136,13 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `immersive_armors` | immersive_armors wither set | boss drop (wither_skeleton_skull)  | create | M-15 | ACCEPT |
 | 1 |  | `immersive_armors` | finished armor sets (traded by armorsmith spec | emergent player trade | economy | M-34 | ACCEPT |
 | 1 |  | `immersive_armors` | immersive_armors:wither set (wither skull inpu | wither_skull = boss drop | survival | M-15 | ACCEPT |
+| 1 |  | `immersive_armors` | immersive_armors:prismarine armor set | create:splashing (wash raw prismar | create | M-12 | REJECT |
 | 1 | ✓ | `immersive_paintings` | painting/graffiti items (craft from vanilla ma | any Create/magic recipe | create |  | REJECT |
 | 1 |  | `immersive_paintings` | immersive_paintings:painting crafted via creat | create:mechanical_crafting or crea | create | M-05 | REJECT |
 | 1 |  | `immersive_paintings` | immersive_paintings:painting / glow_painting | thematic adjacency to Exposure:pho | survival |  | REJECT |
 | 1 |  | `inventoryprofilesnext` | inventoryprofilesnext (gear-set/locked-slot fu | no method — behavioral/UI synergy | aeronautics |  | REJECT |
+| 1 |  | `irons_lib` | irons_lib:transmog_table (armor reskin, no mat | ars_nouveau:enchanting_apparatus | magic | M-33 | REJECT |
+| 1 |  | `irons_lib` | irons_lib:player_statue (decorative multiblock | any processing | any |  | REJECT |
 | 1 |  | `irons_spellbooks` | mob-drops / apothecarist loot (irons_spellbook | occultism:spirit_fire | magic | M-02 | ACCEPT |
 | 1 |  | `irons_spellbooks` | mithril/pyrium ingot | create:sequenced_assembly | create | M-06 | REJECT |
 | 1 |  | `irons_spellbooks` | pyrium ingot | create_new_age:energising | create | M-17 | ACCEPT |
@@ -4006,6 +4186,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `irons_spellbooks` | irons_spellbooks:alchemist_cauldron_brew (the  | M-29 cross-route — a brew recipe r | create | M-29 | ACCEPT |
 | 1 |  | `irons_spellbooks` | irons_spellbooks scrolls (one-shot consumable  | M-26 consumption mechanic | survival | M-26 | ACCEPT |
 | 1 |  | `irons_spellbooks` | irons_spellbooks endgame spell gear (affinity  | MineColonies huts/research or colo | economy | M-28 | ACCEPT |
+| 1 |  | `irons_spellbooks` | irons_spellbooks alchemist_cauldron (brew outp | create:filling / create:emptying | create | M-12 | ACCEPT |
+| 1 |  | `irons_spellbooks` | irons_spellbooks:scroll (one-shot consumable) | ars_nouveau:spell_write (symmetry  | magic | M-29 | REJECT |
+| 1 |  | `irons_spellbooks` | irons_spellbooks:affinity_ring (school-specifi | create:deploying | create | M-20 | ACCEPT |
 | 1 |  | `jakes-build-tools-2.0.1.5` | tool set (hammer/chisel/trowel) | create:mechanical_crafting | create | M-05 | REJECT |
 | 1 |  | `jakes-build-tools-2.0.1.5` | experience_flask items (store/release XP) | create:haunting or create:enchanti | create | M-19 | REJECT |
 | 1 |  | `jakes-build-tools-2.0.1.5` | minecraft:experience_flask_1/2/3 (stored XP) | ars_nouveau:imbuement or occultism | magic | M-10 | ACCEPT |
@@ -4023,8 +4206,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `jakes-build-tools-2.0.1.5` | minecraft:foreman_hard_hat (reach-boost hat, s | create:mechanical_crafting (requir | create | M-05 | REJECT |
 | 1 |  | `jakes-build-tools-2.0.1.5` | jakes-build-tools as a whole (builder utility) | MineColonies tie — builder colonis | economy | M-28 | REJECT |
 | 1 |  | `jakes-build-tools-2.0.1.5` | experience_flask items (experience_flask_0..3) | create:filling / create_enchantmen | create | M-12 | REJECT |
+| 1 |  | `jakes-build-tools-2.0.1.5` | minecraft:experience_flask (XP storage tool) | create:experience_nugget | create | M-12 | REJECT |
 | 1 |  | `just_blahaj` | just_blahaj:glowhaj | create:haunting | create | M-19 | REJECT |
-| 1 |  | `just_blahaj` | blahaj plush variants (wool+dye constructs) | create:crushing | create | M-04 | REJECT |
 | 1 |  | `just_blahaj` | just_blahaj plush variants (31 items, loot=yes | loot-seed | survival | M-02 | REJECT |
 | 1 |  | `just_blahaj` | just_blahaj plushies (crafted items, all 31 va | colony request / M-28 — MineColoni | economy | M-28 | REJECT |
 | 1 |  | `knightlib` | knightlib:great_essence / small_essence | occultism:spirit_fire or ars_nouve | magic | M-11 | REJECT |
@@ -4049,7 +4232,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `kobolds` | kobolds iron tool drops (kobold_iron_axe, pick | create:crushing (M-04, crush back  | create | M-04 | ACCEPT |
 | 1 |  | `kobolds` | Kobold Pirate Den (structure, Captain + chest) | loot-seed (seed Aeronautics schema | aeronautics | M-34 | ACCEPT |
 | 1 |  | `kobolds` | kobolds Prospector enchantment (sold by kobold | economy |  | M-33 | ACCEPT |
-| 1 |  | `kobolds` | kobolds pirate den (jungle pirate kobolds, cap | loot-seed | economy | M-34 | ACCEPT |
 | 1 |  | `letsdocompat` | letsdocompat leafy_green tag (items/foods/leaf | extradelight:mortar or farmersdeli | survival | M-12 | REJECT |
 | 1 |  | `letsdocompat` | letsdocompat items/foods/leafy_green tag (stan | create:milling (milling leafy gree | create | M-12 | ACCEPT |
 | 1 |  | `letsdocompat` | letsdocompat thirst-compat registration API (c | config tie (tie pack's drink items | survival | M-16 | REJECT |
@@ -4118,7 +4300,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 | ✓ | `mcwwindows` | mosaic glass | regional dye scarcity | economy |  | REJECT |
 | 1 |  | `mcwwindows` | mcwwindows:*_parapet / *_arrow_slit (fortifica | loot-seed (seed into dungeon/fortr | survival | M-34 | REJECT |
 | 1 |  | `mcwwindows` | mcwwindows:black_curtain / wool curtain varian | ars_nouveau:dye / ars_nouveau:imbu | magic | M-10 | REJECT |
-| 1 |  | `meadow` | meadow:cheese_wheel | farmersdelight:cooking | survival | M-12 | ACCEPT |
+| 1 |  | `mcwwindows` | mcwwindows curtain rod (iron/wood) | ars_nouveau:imbuement | magic | M-10 | REJECT |
+| 1 |  | `mcwwindows` | mcwwindows blocks in general | any magic method | magic |  | REJECT |
 | 1 |  | `meadow` | meadow:alpine crops (oats, lavender, juniper) | extradelight:vat / drying_rack | survival | M-12 | ACCEPT |
 | 1 |  | `meadow` | meadow:cheese_wheel (luxury good) | create:sequenced_assembly | create | M-06 | REJECT |
 | 1 |  | `meadow` | meadow:amethyst_cheese_wheel | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
@@ -4142,12 +4325,13 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `meadow` | meadow:cheese_wheel (consumable dairy food) | farmersdelight:cooking or extradel | survival | M-26 | ACCEPT |
 | 1 |  | `meadow` | meadow alpine crops (lavender, yarrow) as seas | season-gated growth (Serene Season | magic | M-16 | ACCEPT |
 | 1 |  | `meadow` | "alpine salt as Create ore-doubling target" M- |  |  | M-03 | REJECT |
-| 1 |  | `meadow` | meadow:alpine_salt (via meadow:alpine_salt_ore | create:crushing | create | M-03 | ACCEPT |
 | 1 |  | `meadow` | meadow:alpine_salt | numismatics mint | economy | M-08 | REJECT |
 | 1 |  | `meadow` | meadow:lavender / yarrow / juniper (alpine her | ars_nouveau:imbuement or occultism | magic | M-10 | ACCEPT |
 | 1 |  | `meadow` | meadow:alpine dishes / cheese wheels | minecolonies colony food supply re | economy | M-28 | ACCEPT |
 | 1 |  | `meadow` | meadow cheese/dishes as trade goods (high effo | player-to-player trade | economy | M-26 | ACCEPT |
 | 1 |  | `meadow` | meadow:alpine_salt_ore (a worldgen ore in a sp | GTMOGS regional ore-gen (alpine bi | economy | M-30 | ACCEPT |
+| 1 |  | `meadow` | meadow:chambray_wool (felted textile) | create:mechanical_crafting | create | M-05 | ACCEPT |
+| 1 |  | `meadow` | meadow:cheese_wheel / alpine dishes | (emergent trade) | economy | M-26 | ACCEPT |
 | 1 |  | `mffs` | mffs biometric cards / access modules | create_new_age:energising (FE char | create | M-17 | REJECT |
 | 1 |  | `mffs` | mffs:force_field projection (base-defense util | loot-seed — seed biometric_card bl | survival | M-15 | REJECT |
 | 1 |  | `mffs` | mffs:blank_card / biometric_identifier | recipe (create:mechanical_crafting | create | M-05 | REJECT |
@@ -4194,7 +4378,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `minecolonies` | minecolonies:ancienttome (research gate) | boss-drop loot-seed | economy | M-15 | ACCEPT |
 | 1 |  | `minecolonies` | minecolonies University research (research gat | minecolonies research → locked Cre | create | M-37 | ACCEPT |
 | 1 |  | `minecolonies` | minecolonies colony foods (apple_pie, baked_sa | minecolonies:composting → create:m | economy | M-26 | ACCEPT |
-| 1 |  | `minecolonies` | minecolonies:ancienttome (research gate) | minecolonies University research | economy | M-37 | ACCEPT |
 | 1 |  | `minecolonies` | minecolonies quarry ore output | minecolonies:zero_waste → createme | create | M-32 | ACCEPT |
 | 1 |  | `minecolonies` | minecolonies colony food output (baked_salmon, | M-26 consumption | economy | M-26 | ACCEPT |
 | 1 |  | `minecolonies` | minecolonies:simplequarry / mediumquarry | M-31 logistics bulk | aeronautics | M-31 | ACCEPT |
@@ -4203,6 +4386,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `minecolonies` | minecolonies:ancienttome (colony research gate | loot-seed into adventure-structure | survival | M-15 | ACCEPT |
 | 1 |  | `minecolonies` | minecolonies:adventure_token (colony event rew | numismatics player economy | economy | M-08 | REJECT |
 | 1 |  | `minecolonies` | minecolonies:blockhutmysticalsite + blockhutne | MineColonies hut research (M-28 ro | magic | M-28 | ACCEPT |
+| 1 |  | `minecolonies` | minecolonies colony food/crop outputs (c:foods | farmersdelight:cooking / create:mi | survival | M-28 | ACCEPT |
+| 1 |  | `minecolonies` | minecolonies NPC colony combat output (guard/b | loot-seed | economy | M-34 | REJECT |
 | 1 |  | `minecolonies_compatibility` | colony Courier logistics ↔ Create Stock Link | minecolonies worker job (non-recip | create | M-05 | ACCEPT |
 | 1 |  | `minecolonies_compatibility` | minecolonies_compatibility TaCZ Gunner job | tacz:gun_smith_table_crafting | create |  | REJECT |
 | 1 |  | `minecolonies_compatibility` | colony courier / citizen_stock_keeper | config tie (courier job profile re | economy |  | REJECT |
@@ -4214,7 +4399,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `minecolonies_compatibility` | minecolonies_compatibility courier (Create Sto | Create package / stock-ticker → cm | aeronautics | M-18 | REJECT |
 | 1 |  | `minecolonies_compatibility` | Courier ↔ Create Stock Link bridge | colony-logistics route | economy | M-29 | ACCEPT |
 | 1 |  | `minecolonies_compatibility` | Butcher/Cook jobs processing FD/modded recipes | MineColonies colony demand | economy | M-28 | REJECT |
-| 1 |  | `minecolonies_compatibility` | minecolonies_compatibility:tacz_dummy_gun (col | loot-seed / config tie | economy | M-34 | ACCEPT |
 | 1 |  | `minecolonies_compatibility` | colony worker jobs (Orchardist/Fluid Manager) | M-37 research gate | economy | M-37 | ACCEPT |
 | 1 |  | `minecolonies_compatibility` | storage-network bridge (citizen_terminal/stock | M-29 cross-route | create | M-29 | ACCEPT |
 | 1 |  | `minecolonies_compatibility` | minecolonies_compatibility TaCZ gunner job | combat supply | economy | M-34 | ACCEPT |
@@ -4223,6 +4407,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `minecolonies_compatibility` | minecolonies_compatibility (Orchardist/modded- | M-16 seasonal reagent — the Orchar | survival | M-16 | ACCEPT |
 | 1 |  | `minecolonies_compatibility` | minecolonies_compatibility bridges (colony wor | extending the same pattern to incl | magic | M-29 | REJECT |
 | 1 |  | `minecolonies_compatibility` | citizen_terminal / citizen_grid (colony storag | requiring a Create-pressed compone | create | M-05 | ACCEPT |
+| 1 |  | `minecolonies_compatibility` | minecolonies_compatibility:citizen_terminal (s | colony logistics (MineColonies req | economy | M-28 | ACCEPT |
 | 1 |  | `minecolonies_tweaks` | c:crops/rice or c:crops/corn | farmersdelight:cooking or create:m | create | M-12 | REJECT |
 | 1 |  | `minecolonies_tweaks` | minecolonies_tweaks scroll items (inventoryscr | create:mechanical_crafting or reci | create | M-05 | REJECT |
 | 1 |  | `minecolonies_tweaks` | minecolonies_tweaks c:crops/c:foods tag surfac | (enables other weaves, not itself  | n/a |  | REJECT |
@@ -4253,9 +4438,10 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `moblassos` | moblassos:emerald_lasso (captures villagers) | emergent behavior — relocating vil | aeronautics |  | REJECT |
 | 1 |  | `moblassos` | moblassos lassos (crafted from gold/aqua/diamo | create:crushing recycle | create | M-04 | REJECT |
 | 1 |  | `moblassos` | moblassos:hostile_lasso | create:pressing (Create component) | create | M-29 | ACCEPT |
-| 1 |  | `moblassos` | emerald_lasso enables colony villager delivery | MineColonies functional synergy | economy | M-28 | REJECT |
 | 1 |  | `moblassos` | lassos enable livestock to airship | functional synergy | aeronautics |  | REJECT |
 | 1 |  | `moblassos` | moblassos:aqua_lasso (water-mob capture) | recipe (released aquatic mob → tid | survival | M-12 | REJECT |
+| 1 |  | `moblassos` | golden_lasso / diamond_lasso (mob-capture item | aeronautics logistics | aeronautics | M-31 | ACCEPT |
+| 1 |  | `moblassos` | hostile_lasso (captures monsters below 50% HP) | occultism:spirit_trade | magic | M-11 | ACCEPT |
 | 1 |  | `modonomicon` | modonomicon books | patchouli:shapeless_book_recipe | magic |  | REJECT |
 | 1 |  | `modonomicon` | modonomicon:modonomicon (guidebook) | patchouli:shapeless_book_recipe (a | support |  | REJECT |
 | 1 |  | `modonomicon` | modonomicon:modonomicon (book) | crafting-table recipe as a progres | create | M-37 | REJECT |
@@ -4295,6 +4481,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `modulargolems` | bosses → `modulargolems:golem_assemble` (comba | emergent trade | economy | M-34 | ACCEPT |
 | 1 |  | `modulargolems` | modulargolems golem assembly demand | colony-route | economy | M-28 | REJECT |
 | 1 |  | `modulargolems` | modulargolems via create:mixing (molten-metal  |  | create | M-29 | ACCEPT |
+| 1 |  | `modulargolems` | modulargolems golem parts (mass-produced via s | create:sequenced_assembly → aerona | aeronautics | M-24 | REJECT |
 | 1 |  | `more_slabs_stairs_and_walls` | more_slabs_stairs_and_walls:*concrete_powder_s | recipe (create:mixing) | create | M-12 | REJECT |
 | 1 |  | `more_slabs_stairs_and_walls` | the 847 slab/stair/wall cuts | create:cutting | create | M-04 | ACCEPT |
 | 1 |  | `more_slabs_stairs_and_walls` | concrete-powder / sand / gravel gravity cuts | create:crushing | create | M-04 | ACCEPT |
@@ -4311,10 +4498,10 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `more_slabs_stairs_and_walls` | cutting recipe count (847 types) |  |  |  | REJECT |
 | 1 |  | `more_slabs_stairs_and_walls` | more_slabs_stairs_and_walls stone variants | MineColonies request — colony buil | economy | M-28 | ACCEPT |
 | 1 |  | `more_slabs_stairs_and_walls` | any of the 847 block cuts (log/stone/concrete  | create:cutting | create | M-12 | ACCEPT |
-| 1 |  | `more_slabs_stairs_and_walls` | gravity-obeying cuts (concrete-powder stairs,  | create:crushing | create | M-04 | ACCEPT |
 | 1 |  | `more_slabs_stairs_and_walls` | 847 cuts as bulk construction blocks | aeronautics construction | aeronautics | M-23 | ACCEPT |
 | 1 |  | `more_slabs_stairs_and_walls` | MSSW log slabs as wood-processing byproduct | n/a (native craft) | create | M-32 | REJECT |
 | 1 |  | `more_slabs_stairs_and_walls` | more_slabs_stairs_and_walls bulk cut variants  | aeronautics ship-construction as b | aeronautics | M-23 | REJECT |
+| 1 |  | `more_slabs_stairs_and_walls` | the 847 slab/stair/wall block variants (stone/ | create:cutting | create | M-12 | ACCEPT |
 | 1 |  | `mowziesmobs` | mowziesmobs:elokosa_paw_full / elokosa_paw_cre | ars_nouveau:imbuement or occultism | magic | M-22 | ACCEPT |
 | 1 |  | `mowziesmobs` | mowziesmobs:sol_visage / earthrend_gauntlet | create:sequenced_assembly | create | M-15 | ACCEPT |
 | 1 |  | `mowziesmobs` | mowziesmobs:earthrend_gauntlet or wrought-helm | create:sequenced_assembly | create | M-05 | ACCEPT |
@@ -4334,6 +4521,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `mowziesmobs` | boss kills → Numismatics bounty (coin paid dir |  |  | M-08 | REJECT |
 | 1 |  | `mowziesmobs` | mowziesmobs:blowgun + dart | createaddition:charging | create | M-17 | REJECT |
 | 1 |  | `mowziesmobs` | mowziesmobs:captured_grottol (rare ore-eating  | create:crushing | create | M-32 | REJECT |
+| 1 |  | `mowziesmobs` | mowziesmobs boss kills | numismatics bounty (M-08) | economy | M-08 | REJECT |
 | 1 |  | `multipiston` | multipiston:multipistonblock | recipe requiring Create mechanical | create | M-05 | REJECT |
 | 1 |  | `mushroomquest` | rare/mythical mushroom caps (effect-bearing) | farmersdelight:cooking (cooking_po | economy | M-12 | ACCEPT |
 | 1 |  | `mushroomquest` | everyday mushroom (edible caps) | farmersdelight:cooking | survival | M-12 | ACCEPT |
@@ -4341,7 +4529,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `mushroomquest` |  | extradelight:mortar (grind into po | magic | M-10 | ACCEPT |
 | 1 |  | `mushroomquest` |  | create:milling | create | M-12 | ACCEPT |
 | 1 |  | `mushroomquest` | mushroomquest:resin_orb (special drop from for | create:mixing | create | M-12 | REJECT |
-| 1 |  | `mushroomquest` | mushroomquest glowshrooms (light-emitting bloc | create:crushing | create | M-04 | REJECT |
 | 1 |  | `mushroomquest` | mushroomquest foraging blocks (loot=yes, struc | loot-seed | create | M-02 | REJECT |
 | 1 |  | `mushroomquest` | foraged mushrooms (common/rare) | farmersdelight:cooking / extradeli | create | M-12 | ACCEPT |
 | 1 |  | `mushroomquest` | mushroomquest:agarikon / deadly_dapperling (my | occultism:spirit_fire | magic | M-11 | ACCEPT |
@@ -4367,6 +4554,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `mushroomquest` | mushroomquest seasonal mushroom types (biome-s | season-gated foraging window | survival | M-16 | ACCEPT |
 | 1 |  | `mushroomquest` | mushroomquest:miso_soup_block | extradelight:vat or farmersdelight | create | M-12 | REJECT |
 | 1 |  | `mushroomquest` | mushroomquest:glowshrooms (bioluminescent mush | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
+| 1 |  | `mushroomquest` | mushroomquest mushrooms | M-22 lunar reagent — "only harvest | magic | M-22 | ACCEPT |
 | 1 |  | `mutantszombies` | mutant zombie variants | loot-seed | magic | M-02 | ACCEPT |
 | 1 |  | `mutantszombies` | mutant zombie variants | loot-seed | create | M-15 | REJECT |
 | 1 |  | `mutantszombies` | custom drops if any (loot=no; dossier confirms |  |  | M-11 | REJECT |
@@ -4386,13 +4574,13 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `naturalist` | naturalist loot tables (loot=yes) | loot-seed | economy | M-08 | REJECT |
 | 1 |  | `naturalist` | naturalist:glow_goop (firefly catch) | ars_nouveau:imbuement or create:mi | create | M-02 | ACCEPT |
 | 1 |  | `naturalist` | naturalist:bushmeat / venison | minecolonies:composting / colony c | economy | M-28 | ACCEPT |
-| 1 |  | `naturalist` | naturalist:bushmeat / naturalist:venison | farmersdelight:cooking | create | M-12 | ACCEPT |
 | 1 | ✓ | `naturalist` | glow_goop | ars_nouveau:imbuement (light/sourc | magic | M-02 | REJECT |
 | 1 |  | `naturalist` | naturalist:glow_goop | create:mixing | create | M-32 | ACCEPT |
 | 1 |  | `naturalist` | naturalist:antler / naturalist:bushmeat | seasonal wildlife availability (Se | survival | M-16 | ACCEPT |
 | 1 |  | `naturalist` | naturalist bear / alligator / snake (neutral-h | emergent player trade | economy | M-34 | ACCEPT |
 | 1 |  | `naturalist` | naturalist:glow_goop | season-gated spawn → Ars imbuement | magic | M-16 | ACCEPT |
 | 1 |  | `naturalist` | naturalist:venison / bushmeat | diet system (pressure face) | economy | M-26 | ACCEPT |
+| 1 |  | `naturalist` | naturalist:glow_goop | create:splashing | create | M-04 | REJECT |
 | 1 |  | `naturescompass` | naturescompass (biome locator) | config tie — the compass enables f | survival | M-16 | REJECT |
 | 1 |  | `naturescompass` | naturescompass:naturescompass (biome-finder) | recipe (craft with regional-ore in | economy | M-30 | ACCEPT |
 | 1 |  | `naturescompass` | naturescompass item | recipe (vanilla crafting) | economy | M-30 | ACCEPT |
@@ -4405,6 +4593,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `netmusic` | netmusic:music_cd | touhou_little_maid:altar_recipe_se | survival |  | REJECT |
 | 1 |  | `netmusic` | netmusic:music_cd | touhou_little_maid:altar_recipe_se | magic | M-05 | ACCEPT |
 | 1 |  | `netmusic` | netmusic:music_player_backpack | travelersbackpack:backpack_upgrade | create | M-20 | REJECT |
+| 1 |  | `netmusic` | netmusic:music_cd | touhou_little_maid:altar_recipe_se | (already | M-33 | REJECT |
 | 1 |  | `northstar` | northstar:astronomical_reading | config or loot-seed (rare drop in  | survival | M-22 | REJECT |
 | 1 |  | `northstar` | northstar planet stone/woods (argyre_log, calo | create:cutting (mechanical saw for | create | M-12 | REJECT |
 | 1 |  | `northstar` | northstar:electrolysis_machine (splits fluids  | M-17 electric/FE charging (the ele | magic | M-17 | ACCEPT |
@@ -4415,7 +4604,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 | ✓ | `northstar` | foreign fluids/ingots | northstar:electrolysis / northstar | create | M-12 | ACCEPT |
 | 1 | ✓ | `northstar` | northstar:advanced_circuit / titanium plate | aeronautics control/airframe recip | aeronautics | M-23 | ACCEPT |
 | 1 |  | `northstar` | northstar:advanced_circuit | northstar:engraving as a locked ex | economy | M-08 | REJECT |
-| 1 |  | `northstar` | northstar:advanced_circuit | MineColonies research gate | economy | M-37 | ACCEPT |
 | 1 |  | `northstar` | northstar biofuel + brine | M-16 seasonal — biofuel yield high | survival | M-16 | REJECT |
 | 1 |  | `northstar` | northstar:advanced_circuit | create:sequenced_assembly (as a re | aeronautics | M-06 | ACCEPT |
 | 1 |  | `northstar` | northstar:tungsten_ingot | create:mechanical_crafting → aeron | aeronautics | M-23 | ACCEPT |
@@ -4430,18 +4618,20 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `northstar` | northstar off-world atmosphere / oxygen surviv | config/worldgen-gating | survival | M-30 | ACCEPT |
 | 1 |  | `northstar` | northstar:astronomical_reading | emergent trade | economy | M-33 | REJECT |
 | 1 |  | `northstar` | northstar:advanced_circuit / northstar:astrono | occultism:spirit_trade (M-18 spiri | magic | M-18 | REJECT |
+| 1 |  | `northstar` | northstar planet-biome ores (titanium/tungsten | occultism:miner (dimensional mines | magic | M-18 | ACCEPT |
+| 1 |  | `northstar` | northstar:astronomical_reading | ars_nouveau:imbuement or occultism | magic | M-10 | REJECT |
 | 1 |  | `numismatics` | numismatics:vendor / depositor | config tie | create | M-08 | REJECT |
 | 1 |  | `numismatics` | numismatics:blaze_banker / bank_terminal | loot-table seeding | survival |  | REJECT |
 | 1 |  | `numismatics` | numismatics:sun / crown (high-denomination coi | loot-seed | economy | M-08 | REJECT |
 | 1 |  | `numismatics` | numismatics:vendor + numismatics:depositor | MineColonies colony-trade integrat | economy | M-28 | ACCEPT |
 | 1 |  | `numismatics` | numismatics:blaze_banker | create:haunting | create | M-19 | REJECT |
 | 1 |  | `numismatics` | player-minted coins | create:pressing → numismatics mint | create | M-08 | ACCEPT |
-| 1 |  | `numismatics` | numismatics:vendor / depositor | config | economy | M-33 | ACCEPT |
 | 1 |  | `numismatics` | numismatics:blaze_banker (requires blaze inter | blaze mob route | survival | M-34 | ACCEPT |
 | 1 |  | `numismatics` | numismatics coins (minted regional metal → pla | create:pressing → numismatics mint | economy | M-08 | ACCEPT |
 | 1 | ✓ | `numismatics` | (it is the HUB, weaves point TO it, not from) | — | — | M-08 | REJECT |
 | 1 |  | `numismatics` | numismatics:cog / spur / crown (coins) | create:pressing (scarce regional m | create | M-08 | ACCEPT |
 | 1 |  | `numismatics` | numismatics vendor block | any player-traded good → M-26 cons | survival | M-26 | REJECT |
+| 1 |  | `numismatics` | numismatics coin (spur/cog/crown/sun) as input | any crafting method | create |  | REJECT |
 | 1 |  | `occultengineering` | occultengineering:spirit_solution | ars_nouveau:imbuement (arcane conv | magic | M-10 | REJECT |
 | 1 |  | `occultengineering` |  | numismatics mint | economy | M-08 | REJECT |
 | 1 |  | `occultengineering` | occultengineering:mechanical_pulverizer (mid-g | create:sequenced_assembly | create | M-06 | REJECT |
@@ -4457,13 +4647,13 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `occultengineering` | occultengineering:mechanical_pulverizer output | create:mixing → magic reagent | magic | M-29 | REJECT |
 | 1 |  | `occultengineering` | c:ingots/sterling_silver (occultengineering's  | create:crushing → numismatics mint | economy | M-08 | REJECT |
 | 1 |  | `occultengineering` | occultengineering:spirit_solution | ars_nouveau:imbuement (foreign ess | magic | M-01 | REJECT |
-| 1 |  | `occultengineering` | occultengineering:spirit_solution (reserved oc | occultism:ritual → require as cros | economy | M-29 | ACCEPT |
 | 1 |  | `occultengineering` | occultengineering sterling_silver (scarce Ag a | create:pressing → numismatics mint | economy | M-08 | REJECT |
 | 1 |  | `occultengineering` | occultengineering mechanical upgrades (afrit/e | M-29 cross-route | create | M-29 | ACCEPT |
 | 1 |  | `occultengineering` | occultengineering mechanical upgrades (afrit/d | create:sequenced_assembly | create | M-06 | ACCEPT |
 | 1 | ✓ | `occultengineering` | sterling_silver ingots/blocks (its c:tag mater | create:* processing → numismatics  | economy | M-08 | REJECT |
 | 1 | ✓ | `occultengineering` | spirit_solution (reserved occult intermediate) | occultism:ritual / occultengineeri | magic | M-11 | REJECT |
 | 1 |  | `occultengineering` | occultengineering:mechanical_pulverizer / phlo | occultism:miner → spirit_trade (M- | economy | M-33 | ACCEPT |
+| 1 |  | `occultengineering` | occultengineering:phlogiport (wireless logisti | logistics bulk-goods movement | economy | M-31 | REJECT |
 | 1 |  | `occultism` | occultism:afrit_essence / djinni_essence / fol | ars_nouveau:imbuement (spirit esse | magic | M-01 | ACCEPT |
 | 1 |  | `occultism` | occultism:iesnium_ingot | create:haunting (iesnium soul-fire | create | M-19 | ACCEPT |
 | 1 |  | `occultism` | mob drops (any c:tags mob drop) | occultism:spirit_fire → essences | magic | M-11 | ACCEPT |
@@ -4501,6 +4691,12 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `occultism` | spirit-traded otherworld goods | occultism:spirit_trade | economy | M-02 | ACCEPT |
 | 1 |  | `occultism` | raw ores (crushed in occultism crushing entity | occultism:crushing | create | M-03 | ACCEPT |
 | 1 |  | `occultism` | occultism:silver_ingot (c:ingots/silver, the p | recipe (cross-route requirement) | create | M-29 | ACCEPT |
+| 1 |  | `occultism` | occultism:spirit_trade (summoned trader spirit | occultism:spirit_trade → KubeJS cr | economy | M-29 | ACCEPT |
+| 1 |  | `occultism` | occultism mob/boss drops (datura, awakened fea | occultism:spirit_fire → arcane ess | magic | M-11 | ACCEPT |
+| 1 |  | `occultism` | occultism:iesnium_ingot (scarce otherworld ore | create:crushing (occultism:crushin | economy | M-08 | ACCEPT |
+| 1 |  | `occultism` | occultism:crushing (parallel ore-doubler, enti | occultism:crushing as an alternate | create | M-05 | ACCEPT |
+| 1 |  | `occultism` | occultism:silver_ingot (c:ingots/silver — real | ars_nouveau:imbuement or occultism | magic | M-01 | ACCEPT |
+| 1 |  | `occultism` | occultism:datura (crop, c:item/crops/datura) | farmersdelight:cooking or extradel | survival | M-12 | ACCEPT |
 | 1 | ✓ | `oceansdelight` | raw guardian/tentacle drops | create:cutting | create | M-12 | REJECT |
 | 1 |  | `oceansdelight` | guardian_eye (elder guardian loot — not an oce | occultism:spirit_fire | magic | M-02 | REJECT |
 | 1 |  | `oceansdelight` | cut_tentacles / guardian flesh (raw ocean drop | create:cutting (or farmersdelight: | economy | M-12 | ACCEPT |
@@ -4528,8 +4724,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `oceansdelight` | elder guardian drop → oceansdelight processing | M-16 seasonal reagent | survival | M-16 | REJECT |
 | 1 |  | `oceansdelight` | oceansdelight:guardian_soup block | M-33 service-for-hire — a coast-co | economy | M-33 | REJECT |
 | 1 |  | `oceansdelight` | oceansdelight:elder_guardian_roll / cooked dis | farmersdelight:cooking → diet dema | survival | M-26 | ACCEPT |
+| 1 |  | `oceansdelight` | oceansdelight:elder_guardian_slice / elder_gua | farmersdelight:cutting → farmersde | economy | M-34 | ACCEPT |
+| 1 |  | `oceansdelight` | oceansdelight:braised_sea_pickle | create:milling | create | M-12 | REJECT |
 | 1 |  | `openpartiesandclaims` | chunk-claim system | config tie / emergent design | economy | M-30 | REJECT |
-| 1 |  | `pantographsandwires` | pantographsandwires infrastructure blocks (mas | create:crushing | create | M-04 | REJECT |
 | 1 |  | `pantographsandwires` | pantographsandwires:graphite_block / graphite  | createaddition:rolling | create | M-12 | ACCEPT |
 | 1 |  | `pantographsandwires` | pantographsandwires overhead infrastructure bl | loot-seed | economy | M-08 | REJECT |
 | 1 |  | `pantographsandwires` | pantographsandwires:graphite (c:item/ingots/gr | create:mechanical_crafting → aeron | aeronautics | M-24 | ACCEPT |
@@ -4550,14 +4747,13 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `pantographsandwires` | pantographsandwires:graphite (c:item/ingots/gr | occultism:ritual or spirit_fire | magic | M-11 | ACCEPT |
 | 1 |  | `pantographsandwires` | pantographsandwires copper wires (c:item/wires | createaddition:charging | create | M-17 | REJECT |
 | 1 |  | `pantographsandwires` | pantographsandwires as aeronautics build cost  | existing anchor — it's already aer | aeronautics | M-23 | REJECT |
-| 1 |  | `pantographsandwires` | pantographsandwires:graphite (c:item/ingots/gr | tfmg:winding or create:mixing | create | M-32 | REJECT |
 | 1 |  | `pantographsandwires` | pantographsandwires overhead-line infrastructu | dndesires:seething or create:haunt | magic | M-19 | REJECT |
+| 1 |  | `patchouli` | patchouli:guide_book / colored book items (eve | patchouli:shapeless_book_recipe →  | create | M-37 | REJECT |
 | 1 |  | `quark` | quark:gunpowder_block (c:item/storage_blocks/g | create:crushing | create | M-04 | REJECT |
 | 1 | ✓ | `quark` | deco/building blocks (vertical slabs, andesite | create:crushing | create | M-04 | REJECT |
 | 1 | ✓ | `quark` | metal/stone deco blocks (vertical slabs, andes | create:crushing | create | M-04 | REJECT |
 | 1 | ✓ | `quark` | crop/material storage_blocks (apple_crate, gun | create:crushing / create:compactin | create | M-03 | REJECT |
 | 1 |  | `quark` | quark storage-block crop tags (c:block/storage | create:milling | create | M-12 | ACCEPT |
-| 1 |  | `quark` | quark:ancient_wood blocks (the underground Anc | create:cutting | create | M-12 | ACCEPT |
 | 1 | ✓ | `quark` | decorative/building blocks (andesite bricks, p | create:crushing recycle | create | M-04 | ACCEPT |
 | 1 | ✓ | `quark` | storage crates / storage_blocks (apple, carrot | cross-mod tag reference (already e | create | M-08 | REJECT |
 | 1 | ✓ | `quark` | blaze_rod / gunpowder storage blocks | create:milling / mixing as a bulk- | create | M-12 | REJECT |
@@ -4577,6 +4773,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `quark` | quark crop-crate blocks (apple_crate, carrot_c | create:crushing (crush a crate bac | create | M-04 | ACCEPT |
 | 1 |  | `quark` | quark:ancient_wood / Glimmering Weald biome bl | create:milling (Glimmering Weald l | create | M-32 | REJECT |
 | 1 |  | `quark` | quark storage blocks as compressed-material no | loot-seed | survival | M-34 | REJECT |
+| 1 |  | `quark` | quark:vertical_slabs / brick_variants (decorat | create:crushing (deco-recycle back | create | M-04 | ACCEPT |
 | 1 |  | `railways` | railways:conductor_cap (incomplete form — rail | create:sequenced_assembly | create | M-20 | ACCEPT |
 | 1 |  | `railways` | railways conductor cap (incomplete_conductor_c | create:sequenced_assembly | create | M-06 | REJECT |
 | 1 |  | `railways` | railways locometal blocks (structural metal ae | recipe (KubeJS) | create | M-23 | REJECT |
@@ -4587,7 +4784,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `railways` | railways:conductor (entity — remote-redstone o | aeronautics control surface recipe | aeronautics | M-24 | REJECT |
 | 1 |  | `railways` | railways:conductor entity / railways semaphore | config-tie / loot-seed | economy |  | REJECT |
 | 1 |  | `railways` | railways track gauge variety (narrow/wide trac | create:sequenced_assembly (already | aeronautics | M-24 | ACCEPT |
-| 1 |  | `railways` | railways:brass_wrapped_locometal / locometal b | create:crushing (M-04) | create | M-04 | ACCEPT |
 | 1 |  | `railways` | railways:black_conductor_cap (sequenced-assemb | create:sequenced_assembly | aeronautics | M-24 | REJECT |
 | 1 |  | `railways` | railways:benchcart / rail infrastructure | loot-seed (nether-fortress/structu | economy | M-15 | REJECT |
 | 1 |  | `railways` | railways regional ore demand (brass/copper/zin | GTMOGS regional ore | economy | M-30 | ACCEPT |
@@ -4601,6 +4797,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `railways` | railways:incomplete_conductor_cap (sequenced-a | create:sequenced_assembly | create | M-06 | REJECT |
 | 1 |  | `railways` | railways conductor cap (conductor entity) | minecolonies colony logistics | economy | M-28 | REJECT |
 | 1 |  | `railways` | railways:conductor entity (remote redstone/too | conceptual economy/logistics role  | economy | M-33 | REJECT |
+| 1 |  | `railways` | railways:benchcart / conductors as a logistics | service-for-hire | economy | M-33 | ACCEPT |
 | 1 | ✓ | `rechiseled` | chiseling-recipe groups (3627 decorative varia | rechiseledcreate Mechanical Chisel | create | M-04 | ACCEPT |
 | 1 |  | `rechiseled` | chiseled stone variants used as airship hull c | aeronautics (copycat/hull decorati | aeronautics | M-23 | REJECT |
 | 1 |  | `rechiseled` | rechiseled stone/brick variants | loot-seed | survival | M-34 | REJECT |
@@ -4621,10 +4818,10 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `rechiseledcreate` | rechiseledcreate:mechanical_chisel (kinetic ma | aeronautics — a mechanical chisel  | aeronautics |  | REJECT |
 | 1 |  | `rechiseledcreate` | rechiseledcreate (as a whole — the mod IS the  |  |  |  | ACCEPT |
 | 1 |  | `rechiseledcreate` | rechiseledcreate chiseled stone/window blocks  | M-33 service — a Create specialist | economy | M-33 | REJECT |
+| 1 |  | `rechiseledcreate` | rechiseledcreate window-pattern blocks (acacia | M-28 colony route (MineColonies bu | economy | M-28 | ACCEPT |
+| 1 |  | `rechiseledcreate` | rechiseledcreate blocks as a regional-scarcity | M-30 | economy | M-30 | REJECT |
 | 1 |  | `recipe_integration` | recipe_integration cross-mod bridge recipes (c | create:milling / create:pressing | create | M-03 | ACCEPT |
 | 1 |  | `recipe_integration` | recipe_integration inbound weaves (create:mill | audit action | create |  | REJECT |
-| 1 |  | `recipe_integration` | recipe_integration cross-mod edges (create:mil | audit existing triggered recipes | create | M-12 | ACCEPT |
-| 1 |  | `recipe_integration` | recipe_integration c:tags for uninstalled mods | n/a | n/a |  | REJECT |
 | 1 |  | `recipe_integration` | recipe_integration auto-bridges | conditional recipe datapack | cross-system |  | REJECT |
 | 1 |  | `ribbits` | ribbits:red_toadstool / ribbits:brown_toadstoo | ars_nouveau:imbuement or occultism | magic | M-11 | ACCEPT |
 | 1 |  | `ribbits` | ribbits:ribbit_sorcerer (sorcerer grants buffs | villager trade (magic buff source) | magic | M-02 | REJECT |
@@ -4643,6 +4840,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `ribbits` | ribbits:toadstool / brown_toadstool | farmersdelight:cooking (mushroom s | survival | M-12 | ACCEPT |
 | 1 |  | `ribbits` | Ribbit sorcerer buff trades | emergent demand | magic | M-33 | ACCEPT |
 | 1 |  | `ribbits` | Amethyst Shard trades (Ribbit merchant currenc | numismatics vendor config (amethys | economy | M-08 | REJECT |
+| 1 | ✓ | `ribbits` | amethyst_shard (the currency the merchants dem | ars_nouveau:enchanting_apparatus / | magic | M-07 | REJECT |
+| 1 | ✓ | `ribbits` | mossy_oak / toadstool woodset + giant_lilypad  | create:cutting / create:milling | create | M-04 | REJECT |
 | 1 |  | `rottencreatures` | frozen_rotten_flesh (Frostbitten zombie drop — | occultism:spirit_fire transmutatio | magic | M-11 | ACCEPT |
 | 1 |  | `rottencreatures` | corrupted_wart (swamp-zombie drop) | ars_nouveau:crush — grinding corru | magic | M-02 | ACCEPT |
 | 1 |  | `rottencreatures` | magma_rotten_flesh (Burned/magma zombie drop) | create:haunting — haunting magma f | create | M-19 | ACCEPT |
@@ -4670,6 +4869,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `rottencreatures` | rottencreatures:immortal (thunderstorm lich, s | event-gating — the Immortal's uniq | magic | M-22 | ACCEPT |
 | 1 |  | `rottencreatures` | rottencreatures:dead_beard (pirate captain, ra | loot-seed — the Dead Beard's treas | economy | M-34 | ACCEPT |
 | 1 |  | `rottencreatures` | rottencreatures:undead_miner (4 tier ranks, un | loot-seed — higher-ranked Undead M | create | M-03 | ACCEPT |
+| 1 |  | `rottencreatures` | rottencreatures: drops (frozen/magma flesh) | create:haunting | create | M-19 | ACCEPT |
 | 1 |  | `s_a_b` | s_a_b:lightsteelblock | create:sequenced_assembly | aeronautics | M-06 | REJECT |
 | 1 |  | `s_a_b` | s_a_b:blacksteelblock / colorsteelblock (16-co | recipe (create:crushing) | create | M-04 | ACCEPT |
 | 1 |  | `s_a_b` | s_a_b:lightsteelblock / steelblock (base tier) | recipe (survival fortification — b | survival |  | REJECT |
@@ -4694,6 +4894,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `s_a_b` | colored steel plates | create:deploying / item_applicatio | aeronautics | M-23 | ACCEPT |
 | 1 |  | `s_a_b` | s_a_b steel armor block variants (hardsteelblo | recipe crafting (consuming real st | survival | M-26 | ACCEPT |
 | 1 |  | `s_a_b` | s_a_b hardsteelblock / doublesteelblock (top-t | GTMOGS regional ore-gen (iron scar | economy | M-30 | ACCEPT |
+| 1 |  | `s_a_b` | s_a_b:lightsteelblock (basic tier) | minecolonies:composting/colony-req | economy | M-28 | ACCEPT |
+| 1 |  | `s_a_b` | s_a_b:hardsteelblock / doublesteelblock (high  | loot-seed (boss-drop key gates the | survival | M-15 | REJECT |
 | 1 |  | `sablecollisiondamage` | ship collision damage behavior | M-34 combat-route supply | economy | M-34 | REJECT |
 | 1 |  | `sablecollisiondamage` | sablecollisiondamage (collision damage on ship | thematic/behavior | survival | M-34 | REJECT |
 | 1 |  | `samurai_dynasty` | katana / samurai weapon set | create:deploying (item_application | create | M-20 | REJECT |
@@ -4771,9 +4973,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `securitycraft` | securitycraft:keycard_reader / securitycraft:l | create:pressing + minecolonies col | economy | M-28 | ACCEPT |
 | 1 |  | `securitycraft` | securitycraft reinforced blocks (via reinforci | create:mechanical_crafting compone | create | M-29 | ACCEPT |
 | 1 |  | `securitycraft` | securitycraft block-mines (diamond_mine, ancie | recipe crafting (mine construction | survival | M-26 | ACCEPT |
-| 1 |  | `securitycraft` | securitycraft base-defense installation (reinf | service-for-hire player interactio | economy | M-33 | ACCEPT |
 | 1 |  | `securitycraft` | securitycraft:crystal_quartz (unique optical m | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 1 |  | `securitycraft` | securitycraft dossier's M-08 coin candidate (" |  |  | M-08 | REJECT |
+| 1 |  | `securitycraft` | securitycraft:limited_use_keycard_recipe | M-38 tooling-wear angle | economy | M-38 | REJECT |
 | 1 |  | `sereneseasons` | season_sensor redstone output | Create automation gating | create | M-05 | REJECT |
 | 1 |  | `sereneseasons` | sereneseasons:calendar item | ars_nouveau:enchanting_apparatus a | magic | M-10 | REJECT |
 | 1 |  | `sereneseasons` | seasonal crop fertility window (per-crop ferti | `ars_nouveau:imbuement` — imbuemen | magic | M-10 | REJECT |
@@ -4799,6 +5001,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `sereneseasons` | season-gated crops (any seasonal fertility win | create:milling or farmersdelight:c | create | M-16 | ACCEPT |
 | 1 |  | `sereneseasons` | winter-scarce crop (e.g. pumpkin, wheat, off-s | ars_nouveau:imbuement | magic | M-16 | ACCEPT |
 | 1 |  | `sereneseasons` | sereneseasons:calendar | loot-seed | survival |  | REJECT |
+| 1 |  | `sereneseasons` | out-of-season crops (stunted growth; only gree | recipe (KubeJS makes greenhouse gl | create | M-12 | ACCEPT |
+| 1 |  | `sereneseasons` | seasonal scarcity (out-of-season produce scarc | config/gameplay (no recipe; season | economy | M-30 | ACCEPT |
 | 1 |  | `simplehats` | simplehats grab-bag scraps | occultism:spirit_trade | magic | M-18 | REJECT |
 | 1 |  | `simplehats` | simplehats:hatscraps (recycled hat scraps) | create:milling | create | M-04 | REJECT |
 | 1 |  | `simplehats` | duplicate hats → hat-scraps | simplehats:custom_hatscraps → ars_ | magic | M-10 | REJECT |
@@ -4814,10 +5018,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `simplehats` | hat dye (dye mechanic, cauldron) | recipe | create | M-04 | REJECT |
 | 1 |  | `simplehats` | hatscraps | simplehats:custom_hatscraps | economy | M-29 | REJECT |
 | 1 |  | `simplehats` | simplehats:custom_hatscraps (duplicate hats →  | M-26 consumption sink — the scrap- | survival | M-26 | ACCEPT |
-| 1 |  | `simplehats` | simplehats rare hats | Numismatics bounty/trade — rare ha | economy | M-33 | REJECT |
 | 1 |  | `simplehats` | simplehats hats | any Create / magic method | create |  | REJECT |
+| 1 |  | `simplehats` | simplehats:hat_scraps (recycled duplicate hats | create:crushing or crafting | create | M-04 | REJECT |
 | 1 |  | `sky_whale_ship` | sky_whale_ship loot chests | aeronautics (thematic destination  | create | M-15 | ACCEPT |
-| 1 |  | `sky_whale_ship` | sky-whale loot chests | loot-table seeding (no recipe meth | aeronautics | M-23 | ACCEPT |
 | 1 | ✓ | `sky_whale_ship` | whale-back loot chests | loot-table routing → aeronautics/C | aeronautics | M-05 | ACCEPT |
 | 1 |  | `sky_whale_ship` | sky_whale loot tables (chest loot on the whale | loot-table seeding (KubeJS global  | aeronautics | M-15 | ACCEPT |
 | 1 |  | `sky_whale_ship` | sky_whale loot (chests aboard) | loot-table targeting → aeronautics | aeronautics | M-05 | ACCEPT |
@@ -4832,7 +5035,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `sliceanddice` | sliceanddice:sprinkler (fluid-dispenser) | recipe (config fluid routing) | magic |  | REJECT |
 | 1 |  | `sliceanddice` | sliceanddice:sprinkler (fluid distributor — ac | config or recipe (pipe a magic-ali | magic | M-12 | ACCEPT |
 | 1 |  | `sliceanddice` | sliceanddice:sprinkler (fluid irrigation) | create:filling → exotic fluid feed | economy | M-12 | REJECT |
-| 1 |  | `sliceanddice` | sliceanddice:sprinkler (fluid distributor mech | config tie / modded fluid | magic | M-16 | REJECT |
 | 1 |  | `sliceanddice` | mushroomquest mushrooms | farmersdelight:cutting (through sl | economy | M-12 | REJECT |
 | 1 |  | `sliceanddice` | sliceanddice Slicer (automates all FD cutting  | create:mixing (heated) | economy | M-12 | ACCEPT |
 | 1 |  | `sliceanddice` | sliceanddice:fertilizer (fluid/bucket crop boo | create:filling (fill fertilizer bu | create | M-12 | REJECT |
@@ -4847,6 +5049,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `sliceanddice` | magic fluid (potion / enchant fluid via Create | sliceanddice sprinkler | magic | M-29 | ACCEPT |
 | 1 |  | `sliceanddice` | seasonal crop (Serene Seasons–restricted) | sliceanddice:slicer (kinetic FD cu | survival | M-16 | ACCEPT |
 | 1 |  | `sliceanddice` | sliceanddice slicer output (sliced food) | create:mixing → minecolonies kitch | economy | M-28 | REJECT |
+| 1 |  | `sliceanddice` | sliceanddice:slicer | create:mixing — run slicer output  | economy | M-28 | REJECT |
 | 1 |  | `smokeleafindustries` | strain seeds / buds | occultism:ritual / spirit_fire | magic | M-11 | REJECT |
 | 1 |  | `smokeleafindustries` | smokeleaf generator (FE output) | createaddition:charging bridge (FE | create | M-17 | ACCEPT |
 | 1 |  | `smokeleafindustries` | smokeleaf oil / extract (mid refined product) | create:mixing as a solvent/lubrica | create | M-12 | REJECT |
@@ -4875,7 +5078,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `smokeleafindustries` | smokeleafindustries dealer/stoner villager tra | trading_floor:trading_depot | economy | M-29 | ACCEPT |
 | 1 |  | `smokeleafindustries` | smokeleafindustries extracts/gummies (refined  | bountiful Decree objectives (as de | economy | M-34 | ACCEPT |
 | 1 |  | `smokeleafindustries` | smokeleafindustries:generator inputs | create:compacting biomass / tfmg b | create | M-32 | ACCEPT |
-| 1 |  | `smokeleafindustries` | smokeleafindustries hemp building set | create:crushing (M-04 deco recycle | create | M-04 | REJECT |
 | 1 |  | `smokeleafindustries` | smokeleafindustries:*_extract (hemp oil) | create:mixing | create | M-29 | REJECT |
 | 1 | ✓ | `smokeleafindustries` | generator burnable inputs (FE production) | createaddition:liquid_burning / FE | create | M-05 | ACCEPT |
 | 1 | ✓ | `smokeleafindustries` | effect-granting edibles (buds/gummies/joints) | consumption (eaten for effects) | economy | M-26 | ACCEPT |
@@ -4901,6 +5103,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `snowyspirit` | eggnog / gingerbread_cookie | farmersdelight:cooking or extradel | create | M-12 | ACCEPT |
 | 1 |  | `snowyspirit` | gingerbread building set (seasonal decoration) | emergent trade | economy | M-33 | REJECT |
 | 1 |  | `snowyspirit` | snowyspirit:gingerbread_golem (a mob) | occultism:spirit_fire | magic | M-11 | REJECT |
+| 1 |  | `snowyspirit` | snowyspirit:gingerbread_cookie / gingerbread g | create:mixing / extradelight:mixin | survival | M-16 | ACCEPT |
+| 1 |  | `snowyspirit` | snowyspirit:candy_cane_block / gingerbread dec | create:crushing | create | M-04 | REJECT |
 | 1 |  | `solmaiddream` | maid stat-growth mechanic (unique-food milesto | config — link milestone thresholds | create | M-12 | ACCEPT |
 | 1 |  | `solmaiddream` | solmaiddream companion maid (via touhou_little | no coherent mechanic route to econ |  |  | REJECT |
 | 1 |  | `solmaiddream` | solmaiddream:food_book (tracking mechanic) | config tie (magic foods tagged as  | magic | M-01 | REJECT |
@@ -4917,12 +5121,12 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 | ✓ | `solmaiddream` | maid food demand | touhou_little_maid companion side | magic |  | REJECT |
 | 1 |  | `solmaiddream` | unique exotic/craft foods (e.g. vinery wines,  | existing food pool (no new recipe  | survival | M-26 | REJECT |
 | 1 |  | `solmaiddream` | solmaiddream companion (grown maid → higher st | companions providing a combat-capa | economy | M-34 | REJECT |
+| 1 |  | `solmaiddream` | food diversity pool (seasonal foods per M-16 c | M-16 seasonal reagent (seasonal cr | survival | M-16 | REJECT |
 | 1 |  | `spawn` | spawn seafood drops (crab, anglerfish, seal, s | create:milling (crab shell → calci | create | M-12 | REJECT |
 | 1 |  | `spawn` | raw crab / clam (everyday aquatic catch) | create:milling (shell meal / chiti | create | M-12 | ACCEPT |
 | 1 |  | `spawn` | angler_fish (rare deep-ocean catch) | occultism:spirit_fire — angler bio | magic | M-11 | REJECT |
 | 1 | ✓ | `spawn` | clam/fish drops | createfisheryindustry mechanized h | aeronautics | M-12 | REJECT |
 | 1 |  | `spawn` | spawn:angler_fish (hostile aquatic mob drop, i | occultism:spirit_fire | magic | M-02 | REJECT |
-| 1 |  | `spawn` | spawn:crab (crab_boil_block output, food drop) | farmersdelight:cooking (already pa | survival | M-12 | ACCEPT |
 | 1 |  | `spawn` | spawn:date (date_bunch, palm crop) | vinery:apple_fermenting or extrade | economy | M-12 | ACCEPT |
 | 1 |  | `spawn` | spawn:clam_case_* (decorative shell blocks) | create:crushing | create | M-04 | REJECT |
 | 1 |  | `spawn` | spawn seafood drops | aeronautics (M-23/M-24) | aeronautics | M-23 | REJECT |
@@ -4947,6 +5151,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `spawn` | spawn:angler_fish (aquatic drop) | farmersdelight:cooking + create:mi | create | M-12 | ACCEPT |
 | 1 |  | `spawn` | spawn clam color variants (purple, red, white, | ars_nouveau:dye / ars_nouveau:imbu | magic | M-10 | ACCEPT |
 | 1 |  | `spawn` | spawn:angler_fish drop (bioluminescent organ / | ars_nouveau:imbuement | magic | M-07 | ACCEPT |
+| 1 |  | `spawn` | spawn:clam (regional coastal biome drop) | loot-seed into spawn's loot / biom | economy | M-30 | ACCEPT |
+| 1 |  | `spawn` | spawn:angler_fish | createfisheryindustry:bait_trap | aeronautics |  | REJECT |
 | 1 |  | `spyglass_improvements` | naturescompass-style scouting synergy | config tie | aeronautics |  | REJECT |
 | 1 |  | `steves_lava_chicken_music_disc` | steves_lava_chicken_music_disc:hyper_potions_l | loot-seed | economy | M-34 | REJECT |
 | 1 |  | `steves_lava_chicken_music_disc` | steves_lava_chicken_music_disc:hyper_potions_l | loot-seed (seed into a structure l | survival | M-34 | REJECT |
@@ -4978,6 +5184,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `supplementaries` | supplementaries:faucet (fluid transfer — meshe | aeronautics fluid-routing on ships | aeronautics | M-31 | REJECT |
 | 1 |  | `supplementaries` | supplementaries:safe (locked storage) | M-33 service-for-hire | economy | M-33 | REJECT |
 | 1 |  | `supplementaries` | supplementaries jars/safes as trade-storage in | config / placement use | economy | M-33 | REJECT |
+| 1 |  | `supplementaries` | supplementaries:flax / rope (c:crops/flax feed | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 1 |  | `t_and_t` | sail-ship / ocean structure loot | aeronautics destination | aeronautics | M-15 | REJECT |
 | 1 |  | `t_and_t` | t_and_t village variants (natural hub structur | MineColonies — conquerable forts/t | create |  | REJECT |
 | 1 |  | `t_and_t` |  | MineColonies — a conquered fort/to | create | M-15 | ACCEPT |
@@ -4996,13 +5203,12 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `t_and_t` | T&T conquerable forts | loot-seed | magic | M-02 | ACCEPT |
 | 1 |  | `t_and_t` | village villager trades | villager-trade config | economy | M-33 | ACCEPT |
 | 1 |  | `t_and_t` | t_and_t village variants as natural trade hubs | loot-seed | economy | M-34 | ACCEPT |
-| 1 |  | `t_and_t` | t_and_t structure loot tables (loot=yes, 16 vi | loot-seed — seed regional scarce m | economy | M-30 | ACCEPT |
 | 1 |  | `t_and_t` | t_and_t village variant buildings (16 biome-sp | config tie — designate t_and_t vil | economy | M-33 | ACCEPT |
 | 1 |  | `t_and_t` | t_and_t village structures | loot-seed (Numismatics bounty boar | economy | M-37 | REJECT |
 | 1 |  | `t_and_t` | t_and_t ocean sail-ships (ocean structures, ma | loot-seed — seed TFMG fuel caniste | aeronautics | M-26 | ACCEPT |
+| 1 |  | `t_and_t` | t_and_t village structures (multiple biomes) | config-tie (MineColonies colony ca | create | M-28 | REJECT |
 | 1 |  | `tacz` | tacz:m67 grenade (throwable explosive) | loot-seed (seed into structure/dun | survival | M-02 | ACCEPT |
 | 1 |  | `tacz` | tacz:m67 (grenade) | create:mixing (gunpowder + process | create | M-12 | REJECT |
-| 1 |  | `tacz` | tacz:modern_kinetic_gun (vehicle-mounted thema | aeronautics construction | aeronautics | M-24 | REJECT |
 | 1 |  | `tacz` | gun_smith_table_crafting inputs (iron/steel pa | tacz:gun_smith_table_crafting | create | M-05 | ACCEPT |
 | 1 |  | `tacz` | tacz:ammo (consumable, high-throughput) | create:sequenced_assembly (mass-pr | create | M-06 | ACCEPT |
 | 1 |  | `tacz` | gun_smith_table recipe inputs (iron, component | tacz:gun_smith_table_crafting with | create | M-05 | ACCEPT |
@@ -5031,6 +5237,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `tacz` | high-tier firearms (e.g. endgame rifles/LMGs) | recipe gating (boss drop as requir | create | M-15 | ACCEPT |
 | 1 |  | `tacz` | tacz:ammo/ammo_box as trade goods | emergent trade between combat-spec | economy | M-34 | ACCEPT |
 | 1 |  | `tacz` | tacz:ammo as aeronautics-mounted armament supp | conceptual link — airship carries  | aeronautics |  | REJECT |
+| 1 |  | `tacz` | tacz ammo (consumable) | consumption mechanic | economy | M-26 | ACCEPT |
+| 1 |  | `tacz` | tacz:gun_smith_table + metals | tacz:gun_smith_table_crafting | economy | M-30 | ACCEPT |
 | 1 |  | `terralith` | Terralith (data-only, no own items, no recipes | recipe | any |  | REJECT |
 | 1 |  | `terralith` | terralith:loot=yes (65 c:tags, structure chest | loot-seed (seed Create component o | create | M-15 | ACCEPT |
 | 1 |  | `terralith` | terralith structure loot tables | loot-seed boss-material fragments  | survival | M-02 | REJECT |
@@ -5039,7 +5247,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `terralith` | terralith biome set (65 c:tags) | loot-seed | economy | M-30 | ACCEPT |
 | 1 |  | `terralith` | terralith structures/biomes | loot-seed (trek/terralith loot tab | economy | M-34 | REJECT |
 | 1 |  | `terralith` | terralith biomes | config/biome-tag tie | survival | M-30 | REJECT |
-| 1 |  | `terralith` | Terralith biome expansion | regional scarcity (ore-gen keying) | economy | M-30 | REJECT |
+| 1 |  | `terralith` | terralith rare/fantastical biomes (Skylands, M | Aeronautics — these biomes only ac | aeronautics | M-31 | ACCEPT |
+| 1 |  | `terralith` | terralith biomes | M-16 seasonal reagent (biome-speci | create | M-16 | ACCEPT |
+| 1 |  | `terralith` | terralith biomes → pure "it's prettier terrain | none | n/a |  | REJECT |
 | 1 |  | `tfmg` | TFMG combustion engine as Create kinetic sourc | create:sequenced_assembly | create | M-06 | REJECT |
 | 1 |  | `tfmg` | tfmg:plastic (vat_machine_recipe output) | create:mixing or occultism:spirit_ | magic |  | REJECT |
 | 1 |  | `tfmg` | aluminum / constantan (TFMG lightweight metals | tfmg:casting → aeronautics drivetr | aeronautics | M-24 | ACCEPT |
@@ -5060,7 +5270,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `tfmg` | tfmg:concrete / asphalt (building materials) | create:crushing | create | M-04 | REJECT |
 | 1 |  | `tfmg` | tfmg:saltpeter / sulfur (industrial byproducts | createbigcannons:big_cartridge_fil | create | M-12 | ACCEPT |
 | 1 |  | `tfmg` | tfmg:steel_ingot → Aeronautics propeller/engin | create:mechanical_crafting | aeronautics | M-24 | ACCEPT |
-| 1 |  | `tfmg` | tfmg:aluminum_ingot (Blast Furnace output) | aeronautics drivetrain / control r | aeronautics | M-24 | ACCEPT |
 | 1 |  | `tfmg` | tfmg:diesel / tfmg:gasoline | numismatics sell (M-08 coin from p | economy | M-08 | REJECT |
 | 1 |  | `tfmg` | tfmg:plastic (vat-processed synthetic, c:ingot | create:sequenced_assembly (insulat | create | M-24 | ACCEPT |
 | 1 |  | `tfmg` | tfmg:combustion_engine / generators (FE source | createblockchain currency_miner FE | economy | M-08 | ACCEPT |
@@ -5086,6 +5295,10 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `tfmg` | tfmg:saltpeter + tfmg:sulfur (industrial chemi | recipe chain (saltpeter+sulfur+cha | survival | M-34 | ACCEPT |
 | 1 |  | `tfmg` | tfmg:lubricant (refinery output) | consumption in Create machine upke | create | M-26 | REJECT |
 | 1 |  | `tfmg` | tfmg building blocks (concrete, asphalt, rebar | create:crushing (M-04: industrial  | create | M-04 | REJECT |
+| 1 |  | `tfmg` | tfmg:constantan_ingot (FE-relevant alloy) | createaddition:charging / createad | create | M-17 | ACCEPT |
+| 1 |  | `tfmg` | tfmg:coal_coke_dust / tfmg:sulfur_dust / tfmg: | createbigcannons:big_cartridge_fil | economy | M-34 | ACCEPT |
+| 1 |  | `tfmg` | tfmg:steel_ingot | MineColonies blacksmith request | economy | M-28 | ACCEPT |
+| 1 |  | `tfmg` | tfmg flamethrower weaponry | survival combat | survival | M-34 | REJECT |
 | 1 | ✓ | `tidal-towns-1.3.4` |  |  |  |  | ? |
 | 1 |  | `tidal-towns-1.3.4` | tidal-towns structures (loot=no in dossier — v | loot-seed (the "loot=no" flag mean | — |  | NOTE — loot-seed is still valid here; "loot=no" means no *mod-custom* loot tables, not that the structures have no chests; the Phase-3 action targets vanilla chest types in the village layout |
 | 1 | ✓ | `tidal-towns-1.3.4` | deep-ocean village as a destination | aeronautics sea-travel/discovery t | aeronautics |  | REJECT |
@@ -5132,9 +5345,10 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `tide` | tide fish (biome-locked rare species — e.g. ti | create:crushing | create | M-12 | ACCEPT |
 | 1 |  | `tide` | tide:fishy_note (crate loot hint) | loot-seed | survival | M-34 | REJECT |
 | 1 |  | `tide` | tide fish → ars_nouveau:imbuement (as foreign  | ars_nouveau:imbuement | magic | M-10 | REJECT |
+| 1 |  | `tide` | tide rare/biome-locked fish (e.g. tide:abyss_a | loot-seed / regional biome gate | economy | M-30 | ACCEPT |
+| 1 |  | `tide` | tide:angler_fish (bioluminescent drop) | ars_nouveau:imbuement as a light r | magic | M-10 | REJECT |
 | 1 |  | `toomanypaintings` | toomanypaintings painting item | supplementaries:antique_book or su | economy |  | REJECT |
 | 1 |  | `touhou_little_maid` | touhou_little_maid:altar (altar recipe consumi | touhou_little_maid:altar_recipe_se | magic | M-05 | ACCEPT |
-| 1 |  | `touhou_little_maid` | power-point bottles (fairy drops → bottles) | numismatics sell | economy | M-02 | REJECT |
 | 1 |  | `touhou_little_maid` | deeperdarker:soul_dust or occultism essence (e | touhou_little_maid:altar_recipe_se | magic | M-05 | ACCEPT |
 | 1 |  | `touhou_little_maid` | mob-drop power-point bottle (fairy drops / vil | numismatics | economy | M-02 | REJECT |
 | 1 |  | `touhou_little_maid` | touhou_little_maid:camera item | create:item_application | create | M-20 | REJECT |
@@ -5184,6 +5398,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `touhou_little_maid` | colony maid-automation labor | minecolonies route | economy | M-33 | ACCEPT |
 | 1 |  | `touhou_little_maid` | touhou_little_maid:power_point_bottle (village | numismatics trade / loot distribut | economy | M-02 | ACCEPT |
 | 1 |  | `touhou_little_maid` | touhou_little_maid maid automation (farming/fi | maid-hire service (player-to-playe | economy | M-33 | REJECT |
+| 1 | ✓ | `touhou_little_maid` | maid companion entities (21 labor task-modes:  | emergent player-to-player labor (a | economy | M-33 | ACCEPT |
+| 1 | ✓ | `touhou_little_maid` | altar_recipe_serializers (altar multiblock: ri | touhou_little_maid:altar (route a  | magic | M-05 | ACCEPT |
 | 1 |  | `trading_floor` | Create-processed reagents (e.g. crushed samura | `trading_floor` depot → villager t | economy | M-08 | ACCEPT |
 | 1 |  | `trading_floor` | trading_floor:trading_depot | recipe (gate the depot's recipe be | create | M-05 | ACCEPT |
 | 1 |  | `trading_floor` | trading_floor:trading_depot | loot-seed | magic |  | REJECT |
@@ -5199,6 +5415,7 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `trading_floor` | trading_floor:trading_depot | loot-seed — the Depot block itself | survival | M-34 | REJECT |
 | 1 |  | `trading_floor` | trading_floor:trading_depot | create:deploying (applying a villa | create | M-20 | REJECT |
 | 1 |  | `trading_floor` | trading_floor automated emerald/book output | aeronautics cargo hold | aeronautics | M-31 | ACCEPT |
+| 1 | ✓ | `trading_floor` | trading_depot (the block) | recipe (crafting) | create | M-29 | REJECT |
 | 1 |  | `trailandtales_delight` | curd_block / cheese_wheel (milk-fermented inte | create:pressing | create | M-12 | REJECT |
 | 1 |  | `trailandtales_delight` | cooked_sniffer_egg / stuffed_sniffer_egg | occultism:spirit_fire | magic | M-11 | REJECT |
 | 1 |  | `trailandtales_delight` | trailandtales_delight:cherry_petal_tea / ancie | ars_nouveau:imbuement | magic | M-10 | REJECT |
@@ -5236,6 +5453,10 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `trailandtales_delight` | trailandtales_delight:curd_block → cheese_whee | create_cheese:maturing (aging the  | economy | M-35 | ACCEPT |
 | 1 |  | `trailandtales_delight` | trailandtales_delight:golden_lantern_fruit (ra | ars_nouveau:imbuement (imbuement o | magic | M-10 | ACCEPT |
 | 1 |  | `trailandtales_delight` | trailandtales_delight:cherry_cheese_pie / trai | config tie (bountiful Decree objec | economy | M-26 | ACCEPT |
+| 1 |  | `trailandtales_delight` | trailandtales_delight lantern_fruit + Serene S | farmersdelight:cooking (season-dep | create | M-16 | ACCEPT |
+| 1 |  | `trailandtales_delight` | trailandtales_delight:cheese_wheel / cheese sl | minecolonies requests/deliveries | economy | M-28 | ACCEPT |
+| 1 |  | `trailandtales_delight` | trailandtales_delight foods as diet-group comp | diet-appleseed-edition (auto-deriv | survival | M-26 | ACCEPT |
+| 1 |  | `trailandtales_delight` | trailandtales_delight:cooked_sniffer_egg / stu | occultism:spirit_fire or ars_nouve | magic | M-10 | REJECT |
 | 1 |  | `trashcans` | trashcans void mechanic | n/a | n/a |  | REJECT |
 | 1 |  | `trashcans` | trashcans (4 items, loot=yes) | loot-seed | any |  | REJECT |
 | 1 |  | `trashcans` | trashcans void blocks (item/fluid/energy sinks | recipe-gate (gating the ultimate_t | create | M-05 | REJECT |
@@ -5301,12 +5522,11 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `trek-b0.6.1.1` | trek loot (ships, fortresses) | loot-seed | aeronautics | M-34 | ACCEPT |
 | 1 | ✓ | `trek-b0.6.1.1` | structure chest loot tables | loot-seed | magic | M-34 | ACCEPT |
 | 1 | ✓ | `trek-b0.6.1.1` | structures | regional ore/material gating | scarcity | M-30 | REJECT |
+| 1 |  | `trek-b0.6.1.1` | trek structures (loot tables) | loot-seed | survival | M-16 | REJECT |
 | 1 |  | `underground_village` |  | create:crushing on the structure's | create | M-04 | ACCEPT |
 | 1 |  | `underground_village` | Stoneholm structure (discovered underground se | thematic — MineColonies expedition | aeronautics |  | REJECT |
 | 1 |  | `underground_village` | Stoneholm village | knightlib/kobolds thematic adjacen | survival |  | REJECT |
 | 1 |  | `underground_village` | underground_village chest loot | loot-seed — seed weave-relevant dr | survival | M-30 | ACCEPT |
-| 1 |  | `underground_village` | Stoneholm structure (loot chests + villager tr | loot-seed | economy | M-34 | ACCEPT |
-| 1 |  | `underground_village` | Stoneholm villagers | loot-seed (trade-table edit) | economy | M-30 | REJECT |
 | 1 |  | `underground_village` | underground_village Stoneholm villagers (disco | loot-seed into village chest struc | economy | M-34 | ACCEPT |
 | 1 |  | `underground_village` | underground_village loot (structure chests in  | loot-seed | create | M-15 | ACCEPT |
 | 1 |  | `underground_village` | underground_village structure (villager settle | minecolonies colony demand | economy | M-28 | REJECT |
@@ -5319,7 +5539,6 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `undergroundworlds` | temple_bricks / pyramid_bricks (block sets — c | create:crushing | create | M-04 | ACCEPT |
 | 1 | ✓ | `undergroundworlds` | undergroundworlds:quicksand | create:* | create |  | REJECT |
 | 1 |  | `undergroundworlds` | undergroundworlds:freezing_* tools (freeze-on- | create:haunting — soul-fire transm | create | M-19 | REJECT |
-| 1 |  | `undergroundworlds` | undergroundworlds:antidote_flask / desert_char | ars_nouveau:imbuement or occultism | magic | M-10 | REJECT |
 | 1 |  | `undergroundworlds` | undergroundworlds:icicle | dndesires:freezing or create_drago | create | M-12 | REJECT |
 | 1 |  | `undergroundworlds` | undergroundworlds:freezing_sword / freezing_pi | create:crushing | create | M-04 | REJECT |
 | 1 |  | `undergroundworlds` | undergroundworlds:freezing_* tools (freeze-on- | ars_nouveau:imbuement | magic | M-10 | REJECT |
@@ -5367,7 +5586,8 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `upgrade_aquatic` | upgrade_aquatic:driftwood / riverwood logs | create:cutting | create | M-12 | ACCEPT |
 | 1 |  | `upgrade_aquatic` | upgrade_aquatic:kelp (storage block) | create:milling → biomass feedstock | aeronautics | M-13 | ACCEPT |
 | 1 |  | `upgrade_aquatic` | upgrade_aquatic cooked luxury fish (cooked_lio | emergent trade | economy | M-26 | REJECT |
-| 1 |  | `valarian_conquest` | valarian_conquest:*_citizenship (faction alleg | ars_nouveau:imbuement — imbuement  | magic | M-10 | REJECT |
+| 1 |  | `upgrade_aquatic` | upgrade_aquatic raw/cooked fish (cooked_pike,  | farmersdelight:cutting | survival | M-12 | ACCEPT |
+| 1 |  | `upgrade_aquatic` | upgrade_aquatic jellyfish (flare jellyfish — b | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 1 |  | `valarian_conquest` | bandit boss / Ashan knight drop | M-15 boss-key gate for a Create ar | create | M-15 | REJECT |
 | 1 | ✓ | `valarian_conquest` |  | create:crushing | create | M-04 | REJECT |
 | 1 |  | `valarian_conquest` | valarian_conquest:ballista_arrow / faction sie | occultism:spirit_trade | magic | M-18 | REJECT |
@@ -5395,6 +5615,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `valarian_conquest` | valarian_conquest faction drops (shields, armo | loot-seed — faction structure ches | create | M-02 | REJECT |
 | 1 |  | `valarian_conquest` | valarian_conquest citizenship items / faction  | KubeJS colony-route lock (M-28) | economy | M-28 | ACCEPT |
 | 1 |  | `valarian_conquest` | valarian_conquest armorsmith / builder / barbe | KubeJS locked-exclusive gating | economy | M-37 | REJECT |
+| 1 |  | `valarian_conquest` | faction armor/shields/weapons (e.g. valarian_c | create:crushing | create | M-04 | REJECT |
+| 1 |  | `valarian_conquest` | armorsmith / builder / barber_surgeon crafting | recipe (KubeJS adds Create parts a | create | M-05 | ACCEPT |
+| 1 |  | `valarian_conquest` | recruited mercenaries/citizens (NPC labor) | config/gameplay (no recipe; struct | economy | M-33 | ACCEPT |
 | 1 |  | `vc_gliders` | vc_gliders:paraglider_gold | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 1 |  | `vc_gliders` | reinforced paper (paper + iron/leather) / high | create:pressing (sheets) + create: | create | M-05 | ACCEPT |
 | 1 |  | `vc_gliders` | vc_gliders nether_upgrade | create:haunting | create | M-19 | ACCEPT |
@@ -5409,9 +5632,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 | ✓ | `vc_gliders` | updraft/heat-source mechanic | M-13 fuel/propulsion | aeronautics | M-13 | REJECT |
 | 1 |  | `vc_gliders` | vc_gliders:nether_upgrade | loot-seed (Nether fortress / basti | survival | M-34 | ACCEPT |
 | 1 | ✓ | `vc_gliders` | paraglider higher tiers (diamond/netherite) +  | create:pressing / mechanical_craft | create | M-05 | ACCEPT |
-| 1 |  | `vc_gliders` | vc_gliders endgame gliders | occultism spirit-fire or ars_nouve | magic | M-10 | REJECT |
 | 1 |  | `vc_gliders` | vc_gliders as commodity | player trade | economy | M-34 | REJECT |
 | 1 |  | `vc_gliders` | vc_gliders (weather-risk mechanic — lightning  | config tie to Serene Seasons weath | survival | M-16 | REJECT |
+| 1 |  | `vc_gliders` | vc_gliders:reinforced_paper feedstock (paper + | create:milling | create | M-12 | REJECT |
 | 1 |  | `vinery` | vinery:cherry_wine / vinery:chorus_wine | ars_nouveau:imbuement | magic | M-10 | REJECT |
 | 1 |  | `vinery` | vinery grape/cherry seasonal crop (Serene Seas | create:milling → wine-fermentation | create | M-16 | ACCEPT |
 | 1 |  | `vinery` | vinery:apple_juice / grape_juice | farmersdelight:cooking or extradel | survival | M-12 | REJECT |
@@ -5432,6 +5655,9 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 | ✓ | `vinery` | grape/apple must → aged wine | vinery wine_fermentation + in-worl | economy | M-35 | ACCEPT |
 | 1 |  | `vinery` | vinery:wine_fermentation (barrel aging, time-g | vinery:wine_fermentation (the agin | economy | M-35 | ACCEPT |
 | 1 |  | `vinery` | seasonal grape varieties | Serene Seasons crop-availability g | survival | M-16 | ACCEPT |
+| 1 |  | `vinery` | grapes/apples (seasonal harvest) | config-tie (Serene Seasons crop-se | survival | M-16 | ACCEPT |
+| 1 |  | `vinery` | fruit (grapes, apples, cherries) | create:pressing | create | M-12 | ACCEPT |
+| 1 |  | `vinery` | vinery wine (effect-bearing named bottle) | ars_nouveau:imbuement or occultism | magic | M-29 | ACCEPT |
 | 1 |  | `woodworks` | woodworks:*_beehive | farmersdelight:cutting or extradel | economy | M-12 | REJECT |
 | 1 |  | `woodworks` | woodworks:*_bookshelf variants | recipe (create:cutting) | create | M-12 | REJECT |
 | 1 |  | `woodworks` | woodworks:*_beehive variants | config (allow bee population in mo | survival |  | REJECT |
@@ -5454,3 +5680,5 @@ _Built by `scripts/phase2-merge.py` over **37 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `zombiemoon` | zombie-mob pressure (harder undead) | loot-seed on its mobs | economy | M-34 | ACCEPT |
 | 1 |  | `zombiemoon` | zombiemoon — bare "sell rotten flesh" | ambient sell | economy |  | REJECT |
 | 1 |  | `zombiemoon` | zombiemoon combat difficulty pressure | survival | survival |  | acknowledged, already the 1-anchor; no new weave possible without custom drops. |
+| 1 |  | `zombiemoon` | zombiemoon Mutant Brute / Crawler / Spitter (t | danger-pressure as a driver | survival | M-34 | ACCEPT |
+| 1 |  | `zombiemoon` | zombiemoon harder undead (raises the gear bar) | emergent demand for better armor/w | create | M-26 | REJECT |
