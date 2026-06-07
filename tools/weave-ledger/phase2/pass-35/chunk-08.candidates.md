@@ -73,3 +73,19 @@ OK — connections sound: the dossier's M-12 (farmersdelight processing) and M-0
 ## knightlib   [anchors: support (1)]
 - LEAVE — utility library for Knight Quest (not in pack); its few content items (great_chalice, grails, homunculus, essences) are dormant without the dependent mod. Weaving dead/inert items creates phantom connections. If Knight Quest is ever added, knightlib:great_essence is a natural M-02 mob-drop/altar reagent candidate — flag for that future add, not now.
 
+## woodworks   [anchors: survival (1)]
+- from: woodworks wood deco blocks (boards, bookshelves, chests, ladders, beehives) | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: a demolished woodworks building yields plank fragments and sawdust via Create's crusher — a single tag-sweep rule for all woodworks wood blocks; lossy recycle ties the decoration palette to Create's material web
+- from: woodworks:*_sawmill (the Sawmill block itself) | via: create:mechanical_crafting / requires Create mechanical parts as recipe inputs | to: create | motif: M-05 | power: everyday | tone: ok | verdict: ACCEPT | hook: a Sawmill is a powered cutting machine — it's natural that crafting one requires a Create shaft or saw blade, tying the wood-processing tool to the tech spine before the first log is cut
+- from: woodworks specialty furniture (bookshelves, chiseled bookshelves, chests) | via: minecolonies colony building requirements (Library / Warehouse hut) | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: a colony's Library and storage huts commission proper woodworks furniture rather than bare vanilla wood — the colony player depends on a Sawmill specialist for higher-tier building upgrades, making woodworks a colony supply good
+- from: woodworks:*_beehive (wood beehive variants) | via: player trade | to: economy | motif: M-34 | power: everyday | tone: clash | verdict: REJECT | reason: beehives are decorative/functional vanilla expansions; routing them through M-34 (combat-route supply) makes no sense — they're not dangerous-mob products. Bare "sell the beehive" is M-09 retired. No valid economy anchor here via this path.
+REWORK: dossier M-12 candidate (overlap Sawmill with Create cutting) is correctly flagged WEAK — overlapping two woodcutting methods adds recipe confusion without creating an inter-system link; not worth pursuing. M-04 and M-28 are the cleaner 2nd-anchor routes. OK.
+
+## appleskin   [anchors: support (1)]
+- LEAVE — food HUD overlay (hunger/saturation tooltips and bar readouts); zero items, no material surface, client-side display only. Genuine zero-content QoL client mod. Pairs with diet/nutrition system as informational infrastructure, not a weave surface.
+
+## blueprint   [anchors: support (1)]
+- LEAVE — Team Abnormals shared framework library; zero blocks, one trivial item (blueprint:template_chest — a vanilla-style chest with no unique recipe surface), 13 shared c:tags. Genuine zero-content library dependency.
+
+## justenoughbreeding   [anchors: support (1)]
+- LEAVE — JEI/REI/EMI breeding-info category plugin; zero items, no material surface, purely informational recipe-viewer extension. Genuine zero-content QoL UI addon.
+

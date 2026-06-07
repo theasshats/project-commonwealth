@@ -70,6 +70,14 @@
 ## modernfix   [anchors: support/performance (1)]
 - LEAVE — JVM/loader-level performance mod (no items, no blocks, no loot, no recipe methods). Purely reduces boot time and RAM use; no game surface to weave.
 
+## dndesires   [anchors: create (1)]
+- from: farm crops / mob drops | via: dndesires:freezing fan / dndesires:seething fan (bulk food prep / preservation step) | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the farmstead's grain and meat pass through a Create fan on the way to the kitchen — industrial-scale food processing routes survival output through the tech spine's fan methods
+- from: dndesires:rubber (Hydraulic Press output: sap + water → raw rubber) | via: aeronautics engine/airframe recipe (rubber gasket as a required drivetrain component) | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: ACCEPT | hook: an airship engine needs rubber seals and flexible joints — the Hydraulic Press feeds the aeronautics drivetrain supply line with its industrial intermediate
+- from: dndesires:cardboard_package_* | via: aeronautics cargo-packaging (require packaging for bulk cargo manifest) | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: REJECT | reason: mechanism pending — no implemented cargo-packaging mechanic exists in the pack to make packaging mandatory for cargo transport; the idea is coherent but needs a Phase-3 mechanic first, not a recipe
+- from: dndesires milkshake foods | via: diet consumption | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: ambient food→diet loop; every food item is M-26 by default; not a dedicated weave — the survival link comes from being a food, not from a designed demand-gate
+- REWORK: dossier candidate "aeronautics via cardboard + bore blocks as logistics/ship parts — M-06/M-05, WEAK-MED" — the cardboard packaging angle is rejected (mechanism pending above); the bore block as a ship-hull structural piece could be M-23 but bore blocks are aesthetic/decorative industrial panels, not structural alloy — REJECT that sub-angle too. Dossier's "economy via rubber — M-08, WEAK" is correctly weak: rubber as a coin-minted-from-scarcity good requires it to be the scarce regional input routed through minting, but rubber is synthetically produced by the Press (not ore-scarce); REJECT. Dossier's survival/milkshake suggestion confirmed REJECT above.
+
+
 
 
 

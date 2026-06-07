@@ -219,3 +219,39 @@ Pure client UI library (search/filter + auto-complete API for JEI-family UIs). Z
 
 - LEAVE — zero-content client-UI library; no items, no loot, no mechanic. Nothing to weave.
 
+## irons_spellbooks   [anchors: magic/create (2)]
+
+Flagship magic pillar — 70+ spells, 9 magic schools, 328 items, own metals (mithril/pyrium ores), Alchemist Cauldron (brewing multiblock), arcane_essence as the Iron's magic currency (reserved in ledger §2 as bonded to source_gem via M-01). Already at 2 anchors (magic + Create via create:emptying/filling into the cauldron). The dossier flags three deepening candidates (M-01 currency bonding — reserved, mithril ore-doubling M-03, mob-drop reagents M-02/M-11).
+
+**Method-pull candidates:**
+
+- from: irons_spellbooks:mithril / pyrium ore | via: create:crushing → ore-doubling | to: create | motif: M-03 (Create ore-doubling) | power: mid | tone: ok — mithril and pyrium as regional magic metals that yield a byproduct through crushing is the standard ore-doubling pattern; it also ties the magic ore's supply into Create's industrial chain | verdict: ACCEPT | hook: Mithril ore through the Create crusher yields crushed mithril and a trace byproduct — the magic mine feeds the industrial processor.
+
+- from: irons_spellbooks mob drops (apothecarist spawn egg listed in item sample → apothecarist mob loot) | via: occultism:spirit_fire transmutation → occult reagent | to: magic (cross-magic weave) | motif: M-11 (ritual/transmutation sink) | power: mid | tone: ok — an apothecarist mob drop (the alchemist-class creature) transmuted in a spirit fire ritual to yield a cross-system magic reagent creates a cross-magic-school dependency between Iron's and Occultism | verdict: ACCEPT | hook: The apothecarist's reagent bag, burned in a spirit fire, yields an occultism essence — the two magic schools share a ritual.
+
+- from: irons_spellbooks:arcane_essence | via: ars_nouveau:imbuement → source_gem bonding (M-01 — this is the reserved role per ledger §2) | to: magic (M-01 established) | motif: M-01 | power: mid | tone: ok — this is the reserved M-01 cross-magic currency bond; already established in the ledger | verdict: ACCEPT | hook: Arcane essence mints into and out of source gems at the imbuement altar — the two magic currencies speak the same language.
+
+- from: irons_spellbooks spell scrolls (consumable one-shot casts) | via: loot-seed into dungeons_arise_seven_seas / cataclysm dungeon chests | to: survival/economy | motif: M-34 (combat-route supply — magic scrolls as combat goods sourced by exploration, sold to players who can't make them) | power: mid | tone: ok — spell scrolls in high-difficulty dungeon chests means the adventurer supplies the magic market; non-mage players buy scrolls, mage players craft them — both routes to the same consumable | verdict: ACCEPT | hook: A combat scroll found in a Cataclysm dungeon can be sold to a non-mage player — the fighter supplies the spellcaster's shop.
+
+- from: irons_spellbooks:alchemist_cauldron_brew (the brew method) | via: M-29 cross-route — a brew recipe requiring a Create New Age–produced electric solvent as one fluid input | to: create (cross-route) | motif: M-29 (cross-route dependency) | power: endgame | tone: ok — an advanced brew that requires an electrically-processed chemical as a fluid input (create_new_age distillate → cauldron fill) weaves the electric tier into the magic brewing chain | verdict: ACCEPT | hook: The most potent spell brews require a chemically refined solvent from the New Age line — magic and electricity meet at the cauldron.
+
+- from: irons_spellbooks economy angle | via: bare 'sellable' framing from dossier | verdict: REJECT | reason: "Economy via numismatics — spell gear as high-value sellables" is exactly the retired M-09 / bare-sell framing. The economy link should come from demand-gating (M-34 accepted above, M-28 colony) not ambient selling.
+
+**Existing connections review:**
+OK — connections sound at the 2-anchor level (magic + Create via cauldron fluids). Five ACCEPT candidates deepen: M-03 ore-doubling, M-11 mob-drop occult cross, M-01 currency bond (already established), M-34 combat supply scroll economy, M-29 electric-solvent cross-route.
+
+## rechiseledcreate   [anchors: create/decoration (2)]
+
+Create × Rechiseled bridge — Mechanical Chisel (kinetic Create block), 242 chiseled Create-style deco blocks, window variants. Already at 2 anchors (Create kinetic method + decoration palette). The dossier's own 2nd-anchor note says "leave — already the bridge." Power-reading: all items are deco blocks, everyday tier.
+
+**Method-pull candidates:**
+
+- from: rechiseledcreate chiseled window blocks (e.g. acacia_window_panes, asurine_cut_polished) | via: create:crushing → M-04 deco crush-back | to: create | motif: M-04 (Create recycles deco — lossy crush-back) | power: everyday | tone: ok — deco window and stone variants crushing back to raw/gravel + XP is the established M-04 pattern; rechiseledcreate's 242 blocks are all decorative, so they should follow the same recycling loop | verdict: ACCEPT | hook: Misplaced chiseled window blocks can be crushed back to raw material — the Create recycling loop applies to the architectural palette.
+
+- from: rechiseledcreate:mechanical_chisel (kinetic machine block) | via: aeronautics — a mechanical chisel mounted on a moving contraption for in-flight hull shaping | to: aeronautics | motif: no-motif | verdict: REJECT | reason: No-motif and forced — a kinetic chisel on an airship hull is a niche contraption build, not an economy or logistics connection. No accepted motif maps to "kinetic tool running on a vehicle."
+
+- from: rechiseledcreate (as a whole — the mod IS the Create-deco bridge) | there are no foreign materials it processes; it is itself the bridge. | verdict: neither ACCEPT nor REJECT — the mod's role is already fully expressed by its 2-anchor position as the Create↔deco bridge.
+
+**Existing connections review:**
+OK — connections sound. The M-04 ACCEPT above deepens rather than changes the anchors. The dossier correctly identifies this as the Rechiseled→Create bridge; no forced re-anchoring needed.
+

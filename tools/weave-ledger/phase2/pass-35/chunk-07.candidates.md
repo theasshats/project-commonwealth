@@ -141,5 +141,75 @@ Zero blocks, zero items, loot=no. Client-side render optimization only.
 
 Zero blocks, zero items, loot=no. Cross-platform library (ItsBlackGear).
 
-- LEAVE — genuine zero-content code library. Sanctioned support role; no weave possible or needed.
+- LEAVE — genuine zero-content code library (platform / ItsBlackGear). Sanctioned support role; no weave possible or needed.
 
+## mcwdoors   [anchors: support (decoration palette) (1)]
+
+**Method-pull pass:**
+- 246 blocks, 260 items, loot=yes. Crafted from planks/iron/glass. Dossier already flags M-04 (crushing metal variants) as the only coherent option, noted "WEAK, plus not necessity."
+- Probing further: the set includes "modern," "western," "mystic," "nether," "japanese" styles — wide aesthetic range but all functionally passive deco.
+- M-04 on iron/metal variants: iron door variants (the "modern" style and other iron-containing doors) crush back to iron nuggets + XP nugget. This is the natural M-04 application and is consistent with the pack-wide deco-metal crushing pass.
+- Economy angle: "bespoke door" as a trade good? Bare sellable, retired M-09. REJECT.
+- M-28 (colony route): gating specific door types as colony building materials is plausible in theory but MineColonies building schematics are not easily re-targeted to mod doors without deep config work. Thin.
+- M-29/magic angle: adding magic reagents to nether/mystic door recipes would violate the basic-component cost rule. REJECT.
+- Dossier's own judgment (decoration is a sanctioned support anchor; M-04 if doing the wholesale pass) confirmed.
+
+- from: iron/metal-containing door variants (modern-style and iron-framed) | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: an unused iron modern door crushes back to iron nuggets and scrap — keeps the entire deco-metal family in the same lossy recycling loop; to be done in the same wholesale M-04 deco pass as copycats and other metal deco.
+- from: any mcwdoors door variant | via: bare sell / economy counter | to: economy | motif: M-09 (retired) | power: everyday | tone: ok | verdict: REJECT | reason: bare sellable (retired M-09); no demand-gating; decoration is the ambient loop endpoint.
+- from: nether/mystic door variants | via: crafting requiring magic reagent | to: magic | motif: no-motif | power: everyday | tone: clash | verdict: REJECT | reason: gating a cosmetic door variant behind a magic reagent violates the basic-component cost rule (depth scales with power — a deco door is everyday, not endgame); no coherent motif.
+
+## vinery   [anchors: survival (1)]
+
+**Method-pull pass:**
+- 139 blocks, 168 items, loot=yes. Registered methods: vinery:apple_fermenting, vinery:apple_mashing, vinery:wine_fermentation. These are first-class method surfaces.
+- Dossier candidates: (a) economy — wines/ciders as luxury trade goods [labelled M-09, which is RETIRED]; (b) Create — route grapes/apples through create:milling or create:pressing [M-12].
+- The dossier's economy candidate invokes M-09. Under the player-run rework M-09 is retired. Does a real demand-gating framing work instead?
+  - M-26 (consumption): wines are effect-bearing consumables — they're *spent* against survival pressure (effects like haste, resistance). Every bottle consumed renews demand. This is M-26 — the consumption sink that closes the loop. "Wine is drunk, not stockpiled" is exactly what M-26 captures. ACCEPT.
+  - M-35 (maturation/aging): vinery:wine_fermentation and the in-world bottle aging mechanic (bottles sit for "years" to gain strength) are directly M-35 — "a good must sit under the right conditions to gain value." Vinery is literally listed in M-35's seed list ("vinery ferment"). This is a strong second anchor: a winemaker specialises in time-gated goods, creating a natural trade niche (you can't rush good wine). ACCEPT.
+  - M-12 (processing-chain pull): route grapes/apples through create:pressing or create:milling into juice/mash, then feed that into vinery:wine_fermentation. This adds a Create-processing step upstream of the fermentation chain, tying the winery to the Create spine. Red-team: does this make sense? A mechanical grape press (create:pressing) outputting juice that feeds the barrel is industrially coherent. Tone OK. M-12 is "processing-chain pull, if it makes sense" — it does here. ACCEPT.
+  - M-16 (seasonal reagent): grapevines grow by biome/climate; Serene Seasons would make certain grape varieties only cultivatable in summer, making seasonal supply a constraint. This is a natural M-16 link: seasonal grape availability feeds the winery and pressures supply. ACCEPT — and the dossier notes climate-keyed growth already.
+  - M-08: wine as a luxury item sold for player-minted coin? Bare sellable + M-08 framing = the coin is the settlement medium not the source of demand. The *demand* is M-26 (consumed) and M-35 (aging specialty). M-08 could frame the *transaction* (sold for coin), but the demand-gating is already captured by M-26/M-35. Don't double-count; skip M-08 for vinery.
+  - M-28 (colony route): a MineColonies Tavern or Inn could require wine as an upkeep/happiness item — colony workers consuming wine is a colony-demand sink. This is plausible but requires a Phase 3 config/KubeJS edit on the colony side.
+
+- from: vinery:wine_fermentation (barrel aging, time-gated) | via: vinery:wine_fermentation (the aging mechanic itself) | to: economy | motif: M-35 | power: mid | tone: ok | verdict: ACCEPT | hook: aged wine takes game-days to mature — the winemaker is naturally a time-specialist producing luxury goods nobody else can rush; a dedicated vintner trades finished wines other players can't stockpile fast.
+- from: vinery wine/cider (effect-bearing consumables) | via: consumption (drunk against survival pressure) | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: every bottle of Aegis Wine drunk renews demand — wines are spent against dangerous encounters and hunger pressure, so production can never outpace need; creates a steady repeat-purchase loop.
+- from: grapes / apples / cherry | via: create:pressing or create:milling → juice/mash as upstream input to vinery:wine_fermentation | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the mechanical press squeezes bulk grapes into juice before the barrel — a Create engineer running a press-and-ferment line can mass-produce wine input, tying the winery's throughput to the Create spine.
+- from: seasonal grape varieties | via: Serene Seasons crop-availability gate → vinery cultivation | to: survival | motif: M-16 | power: mid | tone: ok | verdict: ACCEPT | hook: certain grape cultivars only fruit in summer — the winery's seasonal supply naturally creates a "lay in stock before winter" pressure and a trade window when demand peaks and supply bottlenecks.
+- from: vinery wine as trade good | via: bare sell / economy counter | to: economy | motif: M-09 (retired) | power: everyday | tone: ok | verdict: REJECT | reason: "wines are sellable luxury goods" is the retired M-09 ambient endpoint; the real demand-gating is M-26 (consumption) + M-35 (aging specialty); don't add a bare-sell link when those two already anchor the economy connection.
+- REWORK: existing survival anchor is sound (food/drink + farming chain). The M-35/M-26/M-12/M-16 candidates above would bring vinery to a strong 3-system web (survival × economy × create).
+
+## ding   [anchors: support (client QoL) (1)]
+
+Zero items, zero blocks, zero loot. Client-side load-sound mod.
+
+- LEAVE — genuine zero-content client QoL mod (audio notification on world load). No material surface; sanctioned support role.
+
+## cubes_without_borders   [anchors: support (client QoL) (1)]
+
+Zero items, zero blocks, zero loot. Client-side borderless window option.
+
+- LEAVE — genuine zero-content client QoL mod (borderless fullscreen). No material surface; sanctioned support role.
+
+## betteroceanmonuments   [anchors: survival (1)]
+
+**Method-pull pass:**
+- 0 items, 0 blocks. Loot=yes — expands ocean monuments with new rooms, secrets, and chest loot.
+- The briefing is explicit: a structure mod with loot=yes is NOT a LEAVE candidate unless there is truly nothing to seed. Let me evaluate.
+- Ocean monument context: the vanilla monument is a mid-game aquatic dungeon. YUNG's overhaul adds more rooms and more chest loot. The existing loot tables are the only data hook.
+- M-02 (mob-drop reagent sink, via: loot-seed): seeding magic reagents into monument chests makes deep-sea exploration a route to magic ingredients. Guardian farms are already a known monument activity; turning the improved monument into a route to Ars/Occultism supply is thematically coherent (ocean = ancient/mystical).
+- M-08 (via: loot-seed, raw scarcity metal): seeding a rare deep-sea metal fragment (e.g. a raw ore or processing material that's scarce by region — think copper/zinc byproducts in ocean floor chests) gives explorers a reason to raid the monument beyond vanilla prismarine. The player still has to mint/process it.
+- M-15 (boss-key via: loot-seed): the Elder Guardian is the monument's boss. Could its loot table (via YUNG's expansion chests) hold a boss-key item for a mid-tier recipe? M-15 requires a genuinely rare source — the Elder Guardian is mid-tier boss territory, rare per-world. ACCEPT — a boss-key fragment in the deepest monument vault room is coherent.
+- Red-team M-15 for betteroceanmonuments: YUNG's overhaul is specifically chosen for its loot, so the monument's "secret room" is a natural place for a boss-key item. The Elder Guardian already has a boss-fight precedent. Unlike Trek structures (common, weighted spawn), ocean monuments spawn once per ocean biome — genuinely limited. The key concern is whether YUNG's overhaul's specific rooms are distinct enough to hold a single high-tier item versus Trek's broad spread. ACCEPT at medium confidence.
+
+- from: betteroceanmonuments chest loot | via: loot-seed (add magic reagents as monument rewards) | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: the monument's inner sanctum holds a condensed spirit-fire material — a guardian-farming diver can supply the magic specialist with rare oceanic reagents, putting the sea dungeon on the magic supply chain.
+- from: betteroceanmonuments deepest-room loot | via: loot-seed (boss-key fragment) | to: create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Elder Guardian's vault holds a crystallised pressure-conduit fragment gating a high-tier Create hydraulic recipe — clearing the monument once is the price of entry to that tech tier.
+- from: betteroceanmonuments chest loot | via: loot-seed (raw scarcity metal shard) | to: economy | motif: M-08 | power: everyday | tone: ok | verdict: ACCEPT | hook: deep-sea chests hold a fragment of a region-scarce ore — explorers who risk the monument bring back raw material that the coin-minter processes into currency; ocean raids feed the supply of mintable metal.
+- OK — survival anchor is sound (aquatic exploration, world-feel).
+
+## bettermodsbutton   [anchors: support (client UI) (1)]
+
+Zero items, zero blocks, zero loot. Client-side pause-menu mods button.
+
+- LEAVE — genuine zero-content client UI mod (pause-screen mods button). No material surface; sanctioned support role.
+
+== CHUNK COMPLETE ==
