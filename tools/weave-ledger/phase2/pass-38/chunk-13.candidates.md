@@ -344,6 +344,42 @@ Candidate C — Create (explicit note in dossier: LEAVE — no natural Create ro
 - from: power-point bottles as ongoing maid upkeep consumable | via: consumption mechanic (upkeep demand) | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: maids need power-points to function — a fairy-farm specialist sells bottles to maid-owners; ongoing consumption creates persistent demand
 - from: TLM altar / maid via Create routing | via: any Create method | to: create | motif: — | power: — | tone: clash | verdict: REJECT | reason: the altar is the deliberate non-Create path; forcing Create into TLM contradicts its design intent (noted explicitly in dossier)
 
+## appleskin   [anchors: support/QoL (1)]
+
+Zero items, zero recipe types, zero loot. Food-stat HUD overlay. Zero content surface.
+
+- LEAVE — pure client HUD/informational mod; no items, blocks, recipes, or loot; no weave surface. Pairs with the food/diet system but generates no content to route.
+
+## domum_ornamentum   [anchors: decoration/support, MineColonies (1)]
+
+Power-read: Architect's Cutter (registered recipe-type: architectscutter) takes any full block + 1-2 support blocks → ornamental variant (timberframe, shingle, pillar, brick). Everyday–mid tier (construction tool). 100 blocks / 118 items — large deco palette. loot=yes (structures with DO blocks have loot). Primarily a MineColonies dependency.
+
+Method-pull: The architectscutter method accepts arbitrary blocks as material inputs — any mod's stone/wood/metal block can produce an ornamental variant. This is the strongest method-pull surface: route Create-processed or magic-adjacent blocks *through* the Architect's Cutter.
+
+Candidate A — Create via architectscutter consuming Create material outputs, M-04 (light, but cutter is its own method):
+- Create-produced stone (andesite alloy, Create's brass-cased stone cosmetics, processed deepslate) run through the Architect's Cutter → framed/shingled deco variants.
+- Theme-fit: a Create industrial produces processed stone; DO's cutter shapes it into architectural pieces for colony buildings. Very natural for a colony builder.
+- Power-read: everyday–mid (construction material).
+- Motif: M-04 (Create recycles deco — technically the cutter is the DO method, not Create's, but the *material* flows FROM Create into DO's method). Actually M-12 is closer: the Architect's Cutter is a processing-chain pull (a foreign material run through DO's method into a finished good). M-04 requires Create's own crushing method; this is DO's own cutter. Correct motif: M-12 (processing-chain pull — Create-output → DO's native method → architectural piece).
+- Red-team: Does this add a meaningful cross-system link? The Architect's Cutter is already a MineColonies-adjacent tool. Routing Create stone through it ties Create production to the colony deco chain, making Create's processed materials useful for colony building. Yes — this is a real link.
+- ACCEPT
+
+Candidate B — MineColonies / M-28 (colony route):
+- DO IS the MineColonies decoration backbone. Every MineColonies colony builder uses it. It's already the colony-production decoration tool.
+- The M-28 weave here would be: DO's cutter is the colony-exclusive deco method (only accessible through colony progression / Architect's Cutter recipe, which may be gated behind colony research).
+- If the Architect's Cutter recipe is gated behind a MineColonies research step, DO becomes a colony-locked decoration route — making colony progression the prerequisite for high-end architectural blocks.
+- ACCEPT — this is a natural M-28 if the cutter is gated behind colony research
+
+Candidate C — survival / loot-seed (loot=yes, DO blocks appear in MineColonies/village structures):
+- DO's loot tables are likely MineColonies building loot — exploring abandoned colony buildings yields DO architectural blocks. This is already the natural use case.
+- A loot-seed here would mean placing a weave-relevant item (a key, coin, magic reagent) in DO-structure loot — but DO doesn't own freestanding worldgen structures; its loot is attached to MineColonies building schematics.
+- This is a MineColonies weave, not a DO weave. REJECT — not DO's to weave.
+
+- from: Create-processed stone (andesite alloy, deepslate bricks, processed stone) | via: domum_ornamentum:architects_cutter | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the Architect's Cutter takes Create-processed stone and shapes it into colonial-grade architectural pieces — Create's industrial output becomes the colony's building material
+- from: Architect's Cutter gated behind MineColonies research | via: minecolonies research (colony progression gate) | to: economy | motif: M-28 | power: everyday-mid | tone: ok | verdict: ACCEPT | hook: the Architect's Cutter is a colony-unlocked tool — you need a colony to access the most detailed architectural vocabulary, making colony progression the prerequisite for endgame construction
+- from: DO structure loot seeding | via: loot-seed | to: economy | motif: M-08 | power: everyday | tone: ok | verdict: REJECT | reason: DO doesn't own independent worldgen structures; its loot is MineColonies schematic loot — the weave belongs to MineColonies, not DO
+
+
 
 
 

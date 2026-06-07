@@ -247,3 +247,26 @@ Power-read: mid-to-endgame. TFMG diesel/gasoline are the Aeronautics fuel (M-13)
 
 REWORK: no existing connections; mod at 1 anchor. Two accepted candidates (M-26 fuel consumption, M-16 seasonal heat tier) give it survival anchors alongside Create.
 
+## betterdungeons   [anchors: survival (1)]
+
+Zero blocks, zero items, 1 biome-modifier (structure injection), loot=yes. Pure worldgen — injects Catacombs, Undead Fortress, Spider Cave structures with spawners and chest loot. No items of its own, but loot tables are datapack-editable. The briefing explicitly states: "A boss/structure feeding coin (M-08/M-14), magic reagents (M-02), or a progression key (M-15) is a REAL candidate — do NOT LEAVE a loot-bearing structure mod."
+
+**Candidate 1 — dungeon loot seeded with magic reagents (M-02)**
+Power-read: mid. Adding Ars Nouveau source gems, Occultism silver dust, or Iron's Spellbooks arcane essence to dungeon chest loot seeds the magic progression path behind exploration risk. Theme: finding rare arcane components in dark tombs and spider caves is exactly the right tone for each of those magic mods. Red-team: is this too easy an early magic supply? Gate it to the deeper dungeon tiers (Undead Fortress or Spider Cave, not the shallow Catacombs) and keep quantities low — 1-3 items per chest. The loot is randomized and rare; it supplements, not replaces, the production route.
+- from: betterdungeons loot tables (Undead Fortress / Spider Cave tier) | via: loot-seed (datapack edit) | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: The darkest vaults of Undead Fortresses yield a handful of arcane essence and source shards — exploration risk gates early magic materials, making adventuring the alternative acquisition path for magic reagents
+
+**Candidate 2 — dungeon loot seeded with progression keys / boss-adjacent items (M-15)**
+Power-read: mid-to-endgame. A rare dungeon drop could be a "key" item that unlocks a complex recipe (M-15 boss-key unlock). Not every key has to come from a boss — a buried relic from the Catacombs could gate a mid-tier Create or colony recipe. Red-team: M-15 says the key "must stay thematically sensible" — an ancient tomb relic gating a mid-tier tech recipe is slightly tonally thin (why does a zombie tomb contain a machine blueprint?). More coherent: the relic gates a magic recipe or an Occultism ritual, not a tech recipe. Accepting the magic gating flavor.
+- from: betterdungeons loot tables (Catacombs boss chest / Undead Fortress chest) | via: loot-seed (datapack, rare drop) | to: magic | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: A sealed sarcophagus in the Catacombs holds a forbidden tome that is the required input for a high-tier Occultism ritual — dungeons become progression gates for the magic specialist
+
+**Candidate 3 — dungeon loot seeded with Numismatics coins (M-08 — NPC faucet, REJECT)**
+Power-read: economy/coin. Seeding Numismatics coins into dungeon loot is an NPC coin faucet (coins from nowhere, not player-minted). This is exactly what the player-run ruling prohibits.
+- from: betterdungeons loot tables | via: loot-seed with numismatics:cog or other coins | to: economy | motif: M-08 | power: everyday | tone: ok | verdict: REJECT | reason: coins in dungeon loot are an NPC coin faucet — currency from outside the player economy; prohibited by the player-run ruling (#163/#240); M-14 is cut; coins must be player-minted, not looted
+
+**Candidate 4 — dungeons as M-34 combat-route supply nodes (economy demand)**
+Power-read: mid-to-endgame. A combat specialist clears dungeons and trades the looted materials (magical reagents from candidate 1, progression keys from candidate 2) to non-combat players. The dungeon becomes the supply-side of the combat-route. This is M-34 (combat-route supply): danger-content → loot → combat specialist trades to non-combat players.
+- from: betterdungeons dungeon content (mob loot + chest loot) | via: combat specialist clearing + player-to-player trade | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: Only the combat specialist dares the Undead Fortress; they trade out the arcane relics and reagents they loot to the magic specialists who can't survive the dungeon — danger gates supply, supply feeds trade
+
+REWORK: no existing connections; mod at 1 anchor. Three accepted loot-seed and M-34 candidates add magic and economy anchors. The YUNG dungeon structures become meaningful exploration nodes, not just atmospheric decoration.
+
+== CHUNK COMPLETE ==
