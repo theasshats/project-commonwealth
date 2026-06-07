@@ -11,3 +11,10 @@
 - from: wine consumption | via: — | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: M-26 ambient use — wine is always consumed as a survival food/drink; this is the loop's background function, not a weave candidate (demand is already implicit)
 - REWORK: dossier 2nd-anchor candidate lists M-09 (economy via Numismatics luxury-good sell) — M-09 is retired; replace with M-35 (aging specialist) + M-12 (Create processing upstream stage); those two give vinery Create + aeronautics without a bare sell link.
 - OK — survival anchor is sound.
+
+## s_a_b   [anchors: Create, aeronautics (2)]
+- from: hardsteelblock / doublesteelblock | via: aeronautics structural recipe | to: aeronautics | motif: M-23 | power: endgame | tone: ok | verdict: ACCEPT | hook: hard steel armor panels are required ingredients for higher-tier Aeronautics hull/frame blocks — the armored-hull supply chain now demands a Create steel specialist
+- from: hardsteelblock | via: create:sequenced_assembly | to: create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: a hardened steel armor panel is forged in stages (compacted steel → plate → pressed faces → sequenced weld) making it a flagship multi-step build, not a single craft
+- from: colored steelblock (16 variants) | via: bare deco use | to: — | motif: no-motif | power: everyday | tone: — | verdict: REJECT | reason: color variants are deco fills; no method wants colored steel blocks specifically; forcing a weave edge on deco variants is a defect
+- REWORK: aeronautics anchor is currently thematic (players *may* use these blocks on ships) rather than mechanically gated; M-23 would harden it to load-bearing — flag for Phase 3 to gate a hull recipe on s_a_b hard steel blocks so the anchor is enforced, not aspirational.
+- OK — Create anchor (compacting/mixing inbound) is mechanically sound.

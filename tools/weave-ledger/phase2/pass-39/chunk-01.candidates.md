@@ -11,3 +11,12 @@
 ## fusion   [anchors: support/library (1)]
 - LEAVE — pure client rendering library (connected textures); zero items, zero methods, zero loot. No content surface to weave; sanctioned support role.
 
+## fishingreal   [anchors: survival (1)]
+- LEAVE — behavior-only fishing tweak; zero items, zero blocks, zero loot of its own. Its sole function is remapping fish-item catches to live mob entities. The weaving belongs to the fish-content and cooking mods that sit beneath it (createfisheryindustry, farmersdelight, etc.), not here. No content surface to route through any method.
+
+## nochatreports   [anchors: support/privacy (1)]
+- LEAVE — networking/privacy utility; zero items, zero methods, zero loot. Pure support role (chat-signing interception); no content surface whatsoever.
+
+## biolith   [anchors: support/worldgen-library (1)]
+- LEAVE — worldgen API/biome-placement library; zero items, zero blocks, zero loot. Operates on biome registry data only; the content to weave lives in the mods that depend on it. Sanctioned support role.
+

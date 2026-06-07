@@ -12,3 +12,15 @@ REWORK: OK — existing connections sound. Magic anchor is the mod's identity; C
 - from: irons_spellbooks endgame school scroll (e.g. blood/eldritch master spell) | via: KubeJS recipe gate | to: Create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: To build an Arcane-tier Create machine the engineer must seek out a master scroll — the wizard's pinnacle knowledge gates the technologist's most advanced fabrication; forces a magic-Create trade
 - from: irons_spellbooks:alchemist_cauldron_brew + snowyspirit ginger (c:crops/ginger, cold-season only) | via: irons_spellbooks:alchemist_cauldron_brew | to: survival | motif: M-16 | power: mid | tone: ok | verdict: ACCEPT | hook: A winter brew requiring ginger only harvestable in cold season — players must stock up before frost or trade with a cold-biome grower; scarcity feeds the brew demand
 - from: irons_spellbooks pyrium ingot | via: create:crushing | to: Create | motif: M-03 | power: mid | tone: ok | verdict: REJECT | reason: pyrium is forge-crafted (mithril + nether star component), not mined ore — it's a refined product; ore-doubling via M-03 applies to raw ores, not alloys; forcing crushing on a finished metal is category mismatch
+
+## playeranimator   [anchors: support/library (1)]
+- LEAVE — pure animation API (0 blocks, 0 items, loot=no); no gameplay surface. Genuine zero-content code library; routed by dependent mods, not weaveable directly.
+
+## mousetweaks   [anchors: support/QoL (1)]
+- LEAVE — client input-handling tweak (0 blocks, 0 items, loot=no); no gameplay surface, no materials. Genuine zero-content behavior mod.
+
+## blueprint   [anchors: support/library (1)]
+- LEAVE — Team Abnormals shared code library; one incidental chest item (blueprint:template_chest) with no loop function. The 13 c:tags are framework scaffolding for dependent mods, not weaveable materials. Genuine zero-content library.
+
+## imfast   [anchors: support/QoL-fix (1)]
+- LEAVE — server-side anti-cheat movement patch (0 blocks, 0 items, loot=no). Functionally enables aeronautics at speed but is a behavioral fix, not a wireable resource. Nothing to route through any method.

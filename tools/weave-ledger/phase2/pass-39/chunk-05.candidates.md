@@ -18,3 +18,21 @@ REWORK: the dossier's existing candidate cites M-09 (retired) — retire that en
 
 - LEAVE — pure config-format library (zero blocks, zero items, no gameplay surface; Darkhax config serialisation dependency only). No content to weave.
 
+## vc_gliders   [anchors: aeronautics (1)]
+
+Power read: tiered hand gliders iron→netherite, early-to-mid flight (pre-Elytra). Iron glider is everyday; diamond/netherite are mid. The reinforced paper intermediate and smithing-table upgrades are the recipe surface. Dossier already has two candidates (Create pressing/mech-craft for tiers; milling for feedstock) — assess + look for new angles.
+
+- from: vc_gliders:paraglider_iron / _gold (lower tiers) | via: create:pressing (reinforced paper from pulped leather strip + iron sheet) | to: create | motif: M-05 | power: everyday-mid | tone: ok — gliders are exploration gear; routing reinforced paper through Create pressing ties early flight to the Create tech spine naturally | verdict: ACCEPT | hook: a pressed iron-reinforced paper wing panel is the component that makes a basic glider — your first flight needs the workshop
+
+- from: vc_gliders:paraglider_diamond / _netherite (upper tiers) | via: create:mechanical_crafting | to: create | motif: M-06 | power: mid-endgame | tone: ok — upper-tier gliders are multi-part precision items; mechanical_crafting's shaped grid makes the endgame tier feel earned | verdict: ACCEPT | hook: the diamond glider's aerodynamic frame is too precise for a crafting table — the mechanical crafter's pattern lay-up is the only way
+
+- from: vc_gliders:copper_upgrade / nether_upgrade | via: create:deploying / item_application | to: create | motif: M-20 | power: mid | tone: ok — deploying an upgrade module onto an existing glider (the deploy-application pattern) is the light-weight single-step sibling of M-06; one step, not a chain | verdict: ACCEPT | hook: bolt the copper wind-deflector onto the glider frame at the deployer — the workshop upgrades what you built
+
+- from: vc_gliders:paraglider_* (any tier) | via: create:milling of feedstock paper/pulp chain | to: create | motif: M-12 | power: everyday | tone: clash | verdict: REJECT | reason: milling paper pulp to make reinforced paper is a stretch — paper doesn't mill in vanilla/Create; the feedstock chain is better addressed by pressing (accepted above). Routing paper through a mill for glider paper is forced and the two-step doesn't add interesting depth
+
+- from: vc_gliders:copper_upgrade (nether variant) | via: ars_nouveau:imbuement or occultism:spirit_fire | to: magic | motif: M-10 | power: mid | tone: clash | verdict: REJECT | reason: gliders are a vanilla-aesthetic, physics-themed exploration mod — no arcane lore justifies infusing a copper wind strut with magic; thematic clash overrides the mechanical possibility
+
+## cubes_without_borders   [anchors: support/client QoL (1)]
+
+- LEAVE — client-only display mod (borderless fullscreen). Zero blocks, zero items, no world surface; a pure windowing convenience. Sanctioned support role; no weave possible.
+

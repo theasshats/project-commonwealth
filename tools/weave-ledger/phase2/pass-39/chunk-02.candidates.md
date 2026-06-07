@@ -29,4 +29,11 @@ No items, no methods, no loot — purely visual particle/sound emission on damag
 
 LEAVE — zero content surface: a cosmetic combat-feedback mod with no items, no methods, no loot tables, and no material in/out. No route through any method palette entry is coherent.
 
+## companion   [anchors: support/QoL (1)]
+
+A behavior-only pet-safety mod (Snownee). Zero blocks, zero items, zero loot. Teleports pets through portals and makes them retreat when low on health. No material surface.
+
+LEAVE — genuine zero-content code library/behavior mod. No items, no methods, no loot tables. The only thing it does is fire teleport/retreat logic on entities; nothing to route through any method.
+
+
 
