@@ -82,6 +82,19 @@ OK — M-12 (chocolate food chain), M-10 (ruby chocolate imbuement), M-26 (effec
 
 - NEW | from: create_confectionery chocolate bars / effect candies (multi-step Create-processed luxury foods) | via: minecolonies requests/deliveries (Cook hut or Tavern hut requests confectionery restockables) | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: a growing colony wants morale — the Cook hut stocking chocolate bars and Speed candies for colony workers is a standing bulk order that ties the confectionery specialist to the settlement-builder, pulling on the full cocoa→Create chain to keep a colony fed and productive.
 
+## betterpingdisplay
+LEAVE — client UI, numerical ping display; 0 items/blocks. Nothing to weave.
+
+## mushroomquest   [anchors: survival (1); candidates for Create + magic + economy]
+OK — M-12 (cooking), M-11 (deadly caps spirit_fire), M-16 (seasonal spawn), M-34 (rare foraged trade), M-10 (mortar grind→cauldron brew) all covered. Two gaps:
+
+- NEW | from: mushroomquest biome-specific mythical/rare caps (32 biome-modifiers mean specific caps only spawn in specific biomes — Mushroom Island agarikon, Deep Dark rare varieties, etc.) | via: GTMOGS regional placement / biome-modifier config — treat specific biome-locked caps as regional specialties | to: economy | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: the forager who lives on the Mushroom Island has the only source of agarikon for hundreds of blocks — biome-gated mushrooms are already regional specialties by worldgen; naming them as M-30 regional goods makes the forager a trade specialist rather than just a flavor-picker, and the rarity is already implemented, not invented.
+
+- NEW | from: mushroomquest:resin_orb (special drop from foraging stumps — an amber-like resin material, not a food) | via: create:mixing (process resin into a wood-varnish or amber-fluid intermediate) | to: create | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: the resin that seeps from foraging stumps is exactly what a Create alchemist routes through a mixer to get a varnish compound — M-12 covers "useful intermediates," not just food; a resin→lacquer/coating fluid is thematically sensible and gives the resin_orb a processing destination it currently lacks (the existing M-12 REJECT on resin_orb used "not clearly a food input" as the reason — the resolution is that M-12 explicitly covers non-food useful intermediates).
+
+## bettermodsbutton
+LEAVE — client UI (pause-screen Mods button); 0 items/blocks. Nothing to weave.
+
 ## aeronautics   [anchors: aeronautics + Create (2)]
 OK — M-10 (levitite magic), M-13 (fuel), M-22 (lunar levitite), M-31 (docking logistics), M-33 (docking trading-post), M-08 (levitite→coin), M-24 (propeller drivetrain), M-10 (goggles enchanting) all covered. One structural gap:
 
