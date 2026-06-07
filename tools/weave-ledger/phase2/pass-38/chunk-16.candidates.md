@@ -42,3 +42,12 @@
 ## do_a_barrel_roll   [anchors: support/client-QoL (1)]
 - LEAVE — pure client-side camera/movement behavior (elytra roll/pitch/yaw). No items, blocks, or recipe types. Touches elytra, not Create Aeronautics ships; no material surface to route.
 
+## yet_another_config_lib_v3   [anchors: support/library (1)]
+- LEAVE — genuine zero-content config-screen API library. No items, blocks, or recipe types. Sanctioned support role.
+
+## mutantszombies   [anchors: survival (1)]
+- LEAVE — hostile-mob-only mod confirmed loot=no (no special drops, only spawn eggs). Extra zombie variants add survival/danger pressure but have zero material surface for a second-anchor weave. A loot-seed for drops is not possible since no loot tables exist. Forcing danger-pressure as a second anchor beyond its existing survival tie would be circular (it already anchors there).
+
+## crash_assistant   [anchors: support/client-utility (1)]
+- LEAVE — genuine zero-content crash-diagnostic utility (client-side only). No items, blocks, or recipe types. Sanctioned support role.
+

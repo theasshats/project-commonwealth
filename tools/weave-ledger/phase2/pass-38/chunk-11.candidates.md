@@ -156,6 +156,23 @@ REWORK: dossier's "economy via numismatics" (M-09) candidate is retired — reje
 
 OK — 2-anchor connections (survival + create) are both sound and deep. The missing edge is M-26 and M-35, not M-09.
 
+## chefsdelight   [anchors: survival, economy (2)]
+
+Already 2 anchors. Dossier notes M-09 as optional deepening for numismatics integration. Economy anchor is via villager-trade (emerald-based), which is NPC-mediated. Under the player-run ruling, NPC coin faucets (M-14/M-21) are cut — does a Cook/Chef villager constitute an NPC coin source?
+
+**Existing connections review — REWORK flagged:** The "economy" anchor via villager trades is the Cook/Chef villager buying/selling with emeralds. This is a vanilla emerald trade — NOT a Numismatics faucet (M-14/M-21 were villager→Numismatics coin). The emerald trade is a separate currency entirely. However, the dossier classifies it as an "economy" anchor. Under the pack's player-run model, the economy is Numismatics/Trading Floor — NPC villager trade is a soft support, not the player-run economy. The "economy" anchor label is generous; it's more accurately a survival-support (cheap early food source) than a player-economy anchor. This is a REWORK candidate.
+
+REWORK: "economy (villager trades)" anchor is weak under the player-run ruling — villager emerald trades are NPC-mediated commerce, not the Numismatics player economy. The anchor is better described as "survival (food access)" (Cook/Chef = early food source) with no true 2nd-system anchor yet. The dossier's 2-anchor claim inflates economy to include NPC vendors.
+
+- from: chefsdelight Cook/Chef villager (sells FD meals for emeralds) | via: M-33 service-for-hire | to: economy | motif: M-33 | power: everyday | tone: ok | verdict: ACCEPT | hook: A player who builds a Cooking Pot in their settlement and levels up a Chef villager becomes a cooking-service provider — other players bring ingredients, the chef NPC converts them, and the settlement earns emerald-equivalent income for the labor. It's a service node (cook-for-hire) even in a player economy context, since the mechanic is player-hosted infrastructure.
+
+- from: chefsdelight Cook/Chef villages (loot structures with FD food chests) | via: loot-seed | to: survival | motif: M-34 | power: everyday | tone: ok | verdict: REJECT | reason: The mod's loot=yes but is village-structure loot (FD meals/ingredients), not a boss/danger source — M-34 (combat-route supply) requires danger/boss context. FD food in a village chest is ambient survival support, not a combat-route output. No accepted motif fits loot-seeding a friendly NPC village.
+
+- from: chefsdelight (existing economy anchor via NPC trades) | via: re-anchor as M-33 service | to: economy | motif: M-33 | power: everyday | tone: ok | verdict: ACCEPT | hook: The Cook/Chef villager model naturally reads as a service: a player establishes the cooking post (workstation), villager performs the labor, other players benefit — M-33 (labor/service) is the correct economy motif for NPC-assisted production rather than M-21 (cut) or a bare sell link.
+
+OK — 2-anchor structure is defensible if the economy anchor is re-expressed as M-33 (service-for-hire) rather than a bare "villager trade = economy" label.
+
+
 
 
 

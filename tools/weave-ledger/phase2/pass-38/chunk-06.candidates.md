@@ -137,6 +137,32 @@ LEAVE — client-side cosmetic animation overrides; 0 blocks, 0 items, no recipe
 ## glitchcore   [anchors: support/library (1)]
 LEAVE — Glitchfiend loader-abstraction library backing Serene Seasons / Biomes O' Plenty / TerraBlender; 0 blocks, 0 items, no recipe types, loot=no. No content surface to weave. The seasonal/biome weaves belong to the content mods that use this library. Genuine zero-surface case.
 
+## more_slabs_stairs_and_walls   [anchors: support/decoration-palette (1)]
+Existing connections: 1 anchor (decoration palette support role). One anchor is the floor; a second is the goal.
+
+Power-read: 847 blocks — all slab/stair/wall variants for vanilla blocks that lack them. The items are everyday-tier construction materials (no processing depth of their own, derived from vanilla blocks via crafting grid/stonecutter). Stonecutter origin makes `create:cutting` (the mechanical saw) a natural automation pathway.
+
+Candidates:
+
+- from: more_slabs_stairs_and_walls cuts (all 847 variants) | via: create:cutting | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: The mechanical saw cuts every parent block (logs, stone, basalt, concrete, etc.) directly into the corresponding MSSW slab/stair/wall variant — a blanket recipe batch that makes bulk architectural automation possible on the Create spine; builders automate their palette instead of hand-crafting hundreds.
+
+  Red-team: Is this forced? create:cutting is designed for stonecutter-equivalent operations; MSSW blocks ARE stonecutter-derived. This is the most natural possible Create connection (existing method → identical function). "Packs commonly add saw/cutting recipes so the variants automate" per the dossier confirms it's established practice. The 847-recipe scope sounds large but it's one batch KubeJS registration pattern, not 847 individual decisions. Everyday tier — light single step, correct per cost model. Not a new system, but a strong Create second anchor. M-12 (processing-chain pull from a raw block into a finished cut) fits.
+
+- from: more_slabs_stairs_and_walls gravity cuts (concrete powder slab, sand/gravel variants) | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: Leftover sand/gravel/concrete-powder slabs and stairs crush back to their parent material at a lossy ratio — the standard M-04 deco recycle loop; a builder who over-cuts doesn't waste material permanently.
+
+  Red-team: Does M-04 fit gravity-block variants? M-04 is "deco crushes back to raw" — sand slabs crushing to sand is the direct analog. Lossy (you don't get full sand back), which is the anti-arbitrage rule. The concrete-powder variants are interesting: crushing a concrete-powder slab could yield concrete powder + possibly a bit of gravel, which is the parent material. Coherent. Everyday tier.
+
+- from: more_slabs_stairs_and_walls amethyst cuts (amethyst_block slab/stairs/wall) | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: REJECT | reason: Amethyst cuts are decorative blocks; imbuement of a decorative stone slab into an arcane material is a forced stretch. Amethyst's magic weaves belong to the main amethyst supply chain, not to MSSW's variant of the block. Tone mismatch between "wall block" and "magical infusion input." Reject.
+
+- from: more_slabs_stairs_and_walls basalt cuts | via: dndesires:sanding | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: dndesires:sanding is a specialized method for a different purpose; routing generic basalt cuts through it is arbitrary. The create:cutting route above already covers the Create angle comprehensively. Redundant.
+
+REWORK: Dossier already identifies create:cutting (M-12) and create:crushing (M-04) as candidates, rating the first STRONG. Both ACCEPT stands. No rework of existing entries needed — the dossier analysis is correct.
+
+OK — decoration palette anchor is clear. New links: Create via M-12 (cutting) + M-04 (crushing recycle).
+
+Summary: 2 ACCEPT (M-12 create:cutting, M-04 crushing recycle), 2 REJECT.
+
+
 
 
 

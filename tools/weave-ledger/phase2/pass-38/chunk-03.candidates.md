@@ -46,6 +46,15 @@
 ## steves_lava_chicken_music_disc   [anchors: support/flavor (1)]
 - LEAVE — single meme music disc; the loot=yes surface is one item with no resource role in the loop; forcing any recipe or economy edge onto a joke disc is noise that fails the "would a player nod at this?" test
 
+## tacz   [anchors: survival/combat-flavor (1)]
+- from: tacz:gun_smith_table_crafting inputs (metal casings, mechanisms) | via: create:pressing (metal sheets → casings) + create:mechanical_crafting (fire mechanism) as required gun_smith_table ingredients | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: every gun starts as Create-pressed sheet metal and a machined firing mechanism — the armorer depends on the factory
+- from: tacz endgame gun/rifle | via: create:sequenced_assembly (multi-stage barrel blank → receiver → assembled gun) | to: create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: the finest rifle in the pack takes a full assembly line — a sequenced_assembly keystone that earns its depth
+- from: tacz:ammo (consumable) | via: tacz:gun_smith_table_crafting ammo recipe + consumption on fire | to: economy | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: ammo disappears every fight — the demand never zeros out, so the armorer always has buyers
+- from: tacz guns / ammo as traded war materiel | via: emergent player trade + numismatics vendor | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: a combat specialist builds the guns the colony needs and the merchant sells — war materiel is the pack's most reliable traded good
+- from: tacz high-tier gun barrel material | via: GTMOGS regional ore (scarce alloy) → tacz:gun_smith_table_crafting | to: economy | motif: M-30 | power: endgame | tone: ok | verdict: ACCEPT | hook: only one region has the high-grade steel for precision barrels — everyone else buys from the miner who settled there
+- from: tacz airship-mounted weapons | via: aeronautics integration | to: aeronautics | motif: no-motif | power: mid | tone: clash | verdict: REJECT | reason: TACZ doesn't natively integrate with Create Aeronautics turrets; aeronauticscompat covers other turret mods; this is flavor-only adjacency with no method to compose; no-motif → reject-for-review
+
+
 
 
 
