@@ -158,3 +158,33 @@ REWORK: No existing connections to flag (1-anchor, but should become 3 after Can
 OK — existing Create + aeronautics dual anchor is sound. Candidates A + B deepen the aeronautics connection with endgame-tier materials. The economic coin angle is deferred to the 0.9 update review.
 
 REWORK: The "aeronautics" anchor deserves a stronger explicit connection than "rockets = off-world logistics" — the dossier labels it correctly but the weave needs the explicit airframe/circuit recipes (Candidates A+B) to make it real rather than just narrative.
+
+## travelersbackpack   [anchors: survival (1)]
+
+**Power-read:** Base leather backpacks are everyday tier (early-game carry capacity). The netherite/dragon variant is endgame (cosmetic but requires those materials). The tank/upgrade modules are mid-tier (fluid tanks, crafting/smelting upgrades). The backpack_upgrade recipe-type means there is an authored upgrade path. The mod has no inbound method-weaves today.
+
+**Candidate A — Create-component gated upgrade modules (M-05/M-20), ACCEPT**
+- from: travelersbackpack:blank_upgrade (→ crafting_upgrade / blast_furnace_upgrade / tank_upgrade) | via: create:item_application or crafting recipe using Create parts (copper coil / andesite casing) | to: create | motif: M-20 | power: mid | tone: ok — a "workshop upgrade" slot in a backpack needing a Create-machined component is a single light step (M-20's "light single-step" tier), not a deep chain; it ties the upgrade path to the Create spine without gating the base backpack itself | verdict: ACCEPT | hook: slot a copper coil into the blank upgrade to get a crafting table in your pack — the factory makes the pack smart
+
+**Candidate B — tank upgrade filled with TFMG/Northstar fuels as Aeronautics portable fuel (M-13-adjacent), REJECT**
+- from: travelersbackpack:backpack_tank | via: fluid hose fills with tfmg:diesel → aeronautics engine | to: aeronautics | motif: M-13 | power: mid | tone: ok | verdict: REJECT | reason: the backpack tank can hold any fluid, including diesel, but this is a player-use interaction (backpack hose → engine fluid slot), not a recipe weave. It's a "of course you can do this" emergent behavior, not a designed connection; no Phase-3 recipe action required. Already works by default.
+
+**Candidate C — themed mob-drop backpacks as Numismatics sell-goods (M-09), REJECT**
+- from: travelersbackpack:dragon / netherite backpack | via: numismatics sell/price | to: economy | motif: M-09 | power: endgame | tone: clash | verdict: REJECT | reason: the themed variants are cosmetically differentiated but functionally identical backpacks; pricing rare-drop backpacks as trade goods would make the pack economy sell cosmetic inventory items rather than production outputs, which weakens the "production specialisation → trade" loop. Backpacks aren't a production output from a pillar; they're player-crafted items.
+
+REWORK: No existing connections to flag (1-anchor). Candidate A establishes a Create second anchor at the mid-tier upgrade level.
+
+## enhancedcelestials   [anchors: survival (1)]
+
+**Power-read:** Lunar events (Blood Moon, Harvest Moon, Blue Moon) are passive world-state toggles — no items gated behind them by default. The meteor block is everyday-harvestable (falls from sky, worldgen). Space moss is ambient decorative. The Harvest Moon crop-growth acceleration is a global buff freely available. The mod's power is atmospheric/survival pressure (Blood Moon danger, Harvest Moon yield boost) rather than material outputs.
+
+**Candidate A — meteor block via create:crushing as fallen-star ore-equivalent (M-04), ACCEPT**
+- from: enhancedcelestials:meteor | via: create:crushing | to: create | motif: M-04 | power: mid | tone: ok — a meteor is a fallen rock from space; crushing it for iron/nickel + an XP-nugget byproduct is the same logic as M-04 (deco block → raw material + XP); the "fallen star" as a minor Create feedstock is coherent without being a dominant scarcity bypass (meteors are occasional, not farmable) | verdict: ACCEPT | hook: drag a meteor chunk to the crushing wheel — the space rock yields iron and nickel dust, the sky provides its own ore drop
+
+**Candidate B — lunar event as magic ritual gate (M-22), ACCEPT**
+- from: enhancedcelestials Blood Moon / Blue Moon event state | via: event-as-gate → occultism:ritual or ars_nouveau:summon_ritual | to: magic | motif: M-22 | power: mid | tone: ok — a Blood Moon is precisely the kind of lunar event that should gate certain dangerous/powerful rituals; occultism's summoning rituals and Ars Nouveau moon-linked spells are thematically exact | verdict: ACCEPT | hook: the Blood Moon is the only time the Summoning Ritual for a Greater Spirit will work — danger and magic share the same night
+
+**Candidate C — Harvest Moon as seasonal crop-yield driver (M-16-adjacent), REJECT**
+- from: enhancedcelestials Harvest Moon buff | via: season/event-gated input | to: create/magic | motif: M-16 | power: everyday | tone: ok | verdict: REJECT | reason: the Harvest Moon is a passive global growth buff, not a recipe-gated material or seasonal ingredient — there is nothing to "route through a method." The buff already rewards crop farming automatically; making it a recipe gate would punish players who farm outside that window. M-16 requires an item that is *only obtainable* in the seasonal window, not a timing buff. Not a valid M-16 seam.
+
+REWORK: No existing connections to flag (1-anchor). Candidates A and B establish Create (meteor crushing) and magic (lunar ritual gate) second anchors.
