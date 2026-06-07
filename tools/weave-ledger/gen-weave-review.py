@@ -5,11 +5,15 @@ This integrates the pre-1.0 mod-review sweep (docs/MOD-REVIEW.md) with the weave
 ledger's candidate corpus, and is RE-RUNNABLE: as more convergence passes land
 (targeting ~50), re-run this and the doc refreshes with the latest CANDIDATES.md.
 
-Inputs (all in this dir unless noted):
-  phase2/CANDIDATES.md   — the master candidate accumulator (regenerated each pass)
-  review-map.json        — modid -> {slug, milestone}; the schedule mapping
-  review-dx.json         — modid -> my DX note (hand-maintained; persists across passes)
-  review-preamble.md     — static intro (thunderdome framing, synthesis); hand-maintained
+The candidate corpus lives on the **`claude/weaving-plan`** branch (NOT vendored here — we reference
+that branch, we don't merge it). By default this reads it via `git show <ref>:<path>`; override with
+--ref / --candidates, or point --candidates at a local checkout of the weaving-plan branch.
+
+Inputs:
+  CANDIDATES.md          — master candidate accumulator, read from the weaving-plan branch by default
+  review-map.json        — modid -> {slug, milestone}; the schedule mapping (this dir)
+  review-dx.json         — modid -> my DX note (hand-maintained; persists across passes) (this dir)
+  review-preamble.md     — static intro (thunderdome framing, synthesis); hand-maintained (this dir)
 
 Output:
   ../../docs/WEAVE-REVIEW.md
@@ -20,24 +24,36 @@ so new mods from later passes can't slip through unreviewed.
 
 Usage:  python3 tools/weave-ledger/gen-weave-review.py [--threshold N] [--per-mod K]
 """
-import json, re, os, argparse, datetime
+import json, re, os, argparse, datetime, subprocess, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
-CAND = os.path.join(HERE, "phase2", "CANDIDATES.md")
 MAP  = os.path.join(HERE, "review-map.json")
 DX   = os.path.join(HERE, "review-dx.json")
 PRE  = os.path.join(HERE, "review-preamble.md")
 OUT  = os.path.join(ROOT, "docs", "WEAVE-REVIEW.md")
+# The corpus is NOT vendored here — it lives on the weaving-plan branch (referenced, not merged).
+WEAVE_REF  = "origin/claude/weaving-plan"
+WEAVE_PATH = "tools/weave-ledger/phase2/CANDIDATES.md"
+
+def read_candidates_text(candidates_arg, ref):
+    """Read CANDIDATES.md: from a local path if given, else from the weaving-plan branch via git."""
+    if candidates_arg:
+        return open(candidates_arg).read()
+    try:
+        return subprocess.check_output(["git", "show", f"{ref}:{WEAVE_PATH}"], cwd=ROOT, text=True)
+    except subprocess.CalledProcessError:
+        sys.exit(f"ERROR: couldn't read {ref}:{WEAVE_PATH}. Fetch the branch "
+                 f"(`git fetch origin claude/weaving-plan`) or pass --candidates <path>.")
 
 MS = {11:'v0.7.0 — Create spine',12:'v0.8.0 — Stabilization I',13:'v0.9.0 — Economy & logistics',
  14:'v0.10.0 — Stabilization II',15:'v0.11.0 — Magic',16:'v0.12.0 — Stabilization III',
  17:'v0.13.0 — Survival',18:'v0.14.0 — Stabilization IV',19:'v0.15.0 — Polish & site',
  20:'v1.0.0 — Release'}
 
-def parse_candidates(path):
+def parse_candidates(text):
     rows=[]; unique=None
-    for line in open(path):
+    for line in text.splitlines():
         m=re.match(r'\*\*(\d+) unique', line.strip())
         if m: unique=int(m.group(1))
         if not line.startswith('| '): continue
@@ -53,9 +69,11 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument('--threshold', type=int, default=2, help='min passes (times) to include')
     ap.add_argument('--per-mod', type=int, default=6, help='max ACCEPT rows shown per mod')
+    ap.add_argument('--ref', default=WEAVE_REF, help='git ref of the weaving-plan branch to read the corpus from')
+    ap.add_argument('--candidates', default=None, help='local path to CANDIDATES.md (overrides --ref)')
     a=ap.parse_args()
 
-    rows, unique = parse_candidates(CAND)
+    rows, unique = parse_candidates(read_candidates_text(a.candidates, a.ref))
     rmap=json.load(open(MAP)); dx=json.load(open(DX))
     pre=open(PRE).read() if os.path.exists(PRE) else ""
 
