@@ -21,5 +21,20 @@ REWORK: OK — connections sound. The authored weave (focus_matrix via M-05, pro
 - from: c:ingots/tin (regional) | via: GTMOGS ore-gen region-lock | to: economy | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: tin's 3 biome-modifiers make it region-bound; whoever mines that biome controls the tin supply → coin stock and bronze alloy; anchors tin to the scarcity foundation and forces specialization without extra recipes
 REWORK: no existing connections to rework — this is a 1-anchor mod. The Create anchor is solid (whole mod routes through create:mixing/crushing/pressing/etc.); the missing 2nd anchor is economy/aeronautics, addressed above.
 
+## moblassos   [anchors: survival (1)]
+- from: moblassos:emerald_lasso (villager transport) | via: colony setup (no recipe) | to: economy | motif: M-28 | power: mid | tone: ok | verdict: REJECT | reason: the lasso transports villagers to MineColonies, which is thematically plausible, but the connection is a behavior/utility link with no method to route through — M-28 is a colony-production route motif (a basic is cheaper/faster via colony, or a part is colony-locked); "carries villagers" doesn't compose that motif, it's just incidental QoL
+- from: moblassos:hostile_lasso (capture <50% HP hostile) | via: loot-seed / combat supply | to: survival | motif: M-34 | power: mid | tone: ok | verdict: REJECT | reason: a lasso that captures weakened monsters could feed a combat-supply chain but it ships no loot tables and the "supply" is the mob itself, not a tradeable drop — M-34 needs a boss/danger output that gets traded; this is transport, not a supply chain
+- LEAVE — item-utility mod with no material flows; all its items are mob-transport containers. No method in the palette can route through a lasso item meaningfully. The aeronautics "carry livestock aboard a ship" synergy is real in play but not a Phase-3 authoring target (no method, no recipe). One anchor is the honest assessment.
+
+## createfisheryindustry   [anchors: Create, survival (2)]
+REWORK: The dossier's only economy candidate is M-09 (luxury good → coin) which is **retired**. Strip it; re-examine.
+
+- from: createfisheryindustry:fish_skin (mechanical peeler output) | via: create:pressing / tanning → aeronautics upholstery/soft-goods recipe | to: aeronautics | motif: M-23 | power: everyday | tone: ok | verdict: ACCEPT | hook: fish_skin is an industrial leather substitute; routing it as a soft-goods material for airship interior/balloon fabric gives the fishery a logistics-arm customer and makes fish_skin a traded commodity, not just a food byproduct
+- from: seafood (chowder/steaks/soups) | via: farmersdelight:cooking (already wired) → colony cook hut | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: automated seafood output (bait trap → peeler → cook) feeds MineColonies kitchen requests, making a fishing specialist the colony food supplier — cheaper/faster colony feeding routes through the industrial fishery
+- from: createfisheryindustry bait_trap output (fish/critters) | via: ars_nouveau:vitalic or agronomic sourcelink | to: magic | motif: M-02 | power: everyday | tone: ok | verdict: REJECT | reason: sourcelinks consume mob-death/baby events, not fish items directly; routing raw fish into Ars Source requires an imbuement or different method, and fish aren't thematically an arcane reagent — tone clash for imbuement; reject
+- from: createfisheryindustry:lobster/mussel (rare trap outputs) | via: occultism:spirit_fire or ritual | to: magic | motif: M-11 | power: mid | tone: ok | verdict: REJECT | reason: crustaceans as occult reagents feel strained — the M-11 motif is for drops that carry a thematic soul/spirit charge (ender_residue, void worm parts), not seafood; tone clash; reject
+- from: createfisheryindustry:fish_skin bulk production | via: aeronautics logistics transport | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: fish_skin produced at coastal/river fishery rigs needs aeronautics shipping to inland tailors and colony builders — a bulk industrial material that makes the logistics arm earn its keep
+
+
 
 
