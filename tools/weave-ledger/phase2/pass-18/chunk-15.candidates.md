@@ -91,6 +91,17 @@ Power-read: 0 blocks, 0 items, loot=no; 3 c:tags (including items/foods/leafy_gr
 
 - LEAVE — this mod IS the food-web weave layer; it has no items of its own to give a 2nd anchor. Its function is M-12-style processing-chain unification across the food mods, which it delivers by existing. A support-glue mod with no craftable content beyond tag bridging; any 2nd anchor would require forcing an edge onto another mod's items, which is that mod's edge to carry.
 
+## createimmersivetacz   [anchors: Create (1)]
+Power-read: 2 blocks, 14 items, loot=no; uses create:cutting, create:filling, create:mechanical_crafting, create:mixing, create:sequenced_assembly (already 5 inbound Create types). Outputs: TACZ guns + bulk ammo (12_gauge_shell, various casings). The ammo pipeline is already Create-deep (sequenced_assembly for complete rounds). Gunpowder fluid is a Create fluid — joinable.
+
+- from: createimmersivetacz:twelve_gauge_shell (bulk ammo) | via: numismatics vendor | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: Mass-produced ammo is the consumable currency of PvPvE conflict — an arms dealer vendor prices shells and rounds in cogs, creating a specialist trade where factory players supply fighters. The logistics loop (make ammo → sell → resupply) is exactly the emergent economy the pack targets.
+- from: createimmersivetacz:gun_barrel / firing_mechanism | via: numismatics vendor | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: Finished guns are high-value processed goods — a gunsmith vendor sells completed TACZ firearms for crowns; the Create-fabricated parts chain pays out in the economy pillar. Combat specialization → coin income.
+- from: createimmersivetacz:nitropowder_bucket | via: tfmg:coking / tfmg:distillation | to: Create | motif: M-12 | power: mid | tone: ok | verdict: REJECT | reason: Nitropowder fluid is already produced within createimmersivetacz's own Create-method chain (mixing). Routing it further through TFMG distillation would add depth to a component that should stay as an intermediate, not be processed again. Over-chaining a basic intermediate; the Create anchor is already solid (5 inbound recipe types). Reject — don't add another process step to a fluid that's already mid-chain.
+- from: createimmersivetacz ammo as bounty-target | via: bountiful board | to: economy | motif: M-14 | power: mid | tone: ok | verdict: REJECT | reason: "Turn in ammo for coin" inverts the ammo economy — ammo is a consumable to be spent, not a bounty collectible. The bounty board calling for ammo would mean hoarding instead of using it, which undercuts the arms-dealer vendor loop. Theme/design conflict → reject.
+
+REWORK: Create (1) is the correct single anchor currently. New edges: economy via M-09 (ammo + guns as vendor goods) take createimmersivetacz to Create + economy (2 anchors). Solid.
+
+
 
 
 
