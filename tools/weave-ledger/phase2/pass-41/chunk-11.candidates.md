@@ -47,3 +47,7 @@
 ## towntalk   [anchors: support (MineColonies flavor) (1)]
 - LEAVE — audio-only colonist voice lines; no items/methods; its anchor is MineColonies' anchor
 
+## farm_and_charm   [anchors: survival (1)]
+- NEW | from: exotic mob meats (alexsmobs/mowziesmobs combat drops tagged c:meats) | via: farm_and_charm:mincer accepting foreign meats by tag → ground meat for farmhouse recipes | to: survival | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: the fighter who drops a rare Mowzie mob brings its meat to the farmstead mincer — combat-route output feeds the food-production chain; the two specialists need each other's work
+- NEW | from: farm_and_charm dried grains (barley/oat preserved via farm_and_charm:drying during harvest season) | via: farm_and_charm:drying → stored as out-of-season supply held by a preservation specialist | to: economy | motif: M-35 | power: everyday | tone: ok | verdict: ACCEPT | hook: the drying rack turns peak-harvest grain into off-season commodity — the farmstead that dries summer barley becomes the winter supplier everyone trades with; the maturation axis is time-hoarding, not just aging
+

@@ -43,3 +43,10 @@ Existing consensus covers: M-02 magic loot-seed into village chests (14), M-08 c
 - NEW | from: ctov village structure (discovered settlement) | via: loot-seed (MineColonies recruitment scroll / colony blueprint in a rare ctov chest — a player finds a village and discovers it marks a valid colony site) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: finding a ctov village and discovering a MineColonies scroll inside is the story of "someone was building a colony here" — it turns a worldgen structure into a colony-founding moment, connecting the exploration layer directly to the MineColonies production route without any forced recipe.
 - CHALLENGE | from: ctov village structures as colony-adjacent settlements | via: minecolonies colony route | to: economy | motif: M-28 | verdict: REJECT | hook: the 2-reject row that tried to make ctov structures *mechanically equivalent* to MineColonies colonies was correctly killed — there is no code link between ctov NPC villages and MineColonies colony management. The NEW row above (loot-seeded recruitment scroll) is the viable form of this idea: a found scroll, not a structure equivalence.
 
+## geckolib
+LEAVE — zero items/blocks/loot; animation/rendering API with no player-facing surface. Animates many of the pack's mobs and magic entities but has no weave-addressable material or method.
+
+## just_blahaj
+OK — existing rows sufficient. All proposed weaves (crushing, haunting, magic infusion) were correctly rejected for tone clash. The mod's vibe is deliberately wholesome/cozy; forcing any craft or machine edge onto it is the failure mode the dossier names. LEAVE.
+
+== CHUNK COMPLETE ==
