@@ -61,6 +61,51 @@ New candidates:
 - from: Byzantine as generic "more buildings → more materials → more trade" | via: bare economy link | verdict: REJECT | reason: this would be a vague "builds things, needs stuff" non-weave. The M-28 above captures it precisely (colony route demanding colony-exclusive or specialist-produced blocks). Don't double-count with a bare economy claim.
 - from: Byzantine schematic style → magic/Create unlock | motif: M-15 boss-key unlock | verdict: REJECT | reason: a building style isn't gated behind a boss drop — that would be arbitrary and punishing for purely decorative content. M-15 is for high-tier tech recipes, not architecture skins.
 
+## mushroomquest   [anchors: survival (1)]
+- from: mushroomquest rare/mythical caps (agarikon, artist_conk, bay_bolete class) | via: farmersdelight:cooking / extradelight:oven or mixing_bowl | to: create | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: foraged rare fungi run through Farmer's Delight cooking or ExtraDelight's oven become specialty prepared dishes (mushroom soups, sauteed caps) — the foraging production route feeds the food-processing chain with unusual and biome-specific ingredients a farm alone can't produce
+- from: mushroomquest deadly caps (fly agaric type) | via: occultism:spirit_fire or ars_nouveau:imbuement | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: a mushroom that's literally poisonous is exactly the kind of organic matter Occultism's spirit fire transmutes into reagents — a foraged toxic cap becomes a ritual component; the forager supplies the alchemist
+- from: mushroomquest glowshrooms (blue/green/magenta light-emitting blocks) | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: bioluminescent glowshrooms carry a natural arcane resonance — imbuement refines a glowshroom cluster into a light-essence component (illumination glyph ingredient or wand focus catalyst); the forest forager and the Ars specialist trade
+- from: mushroomquest mushroom drops as "sellable luxury goods" | via: bare sell | motif: M-09 | verdict: REJECT | reason: M-09 retired. Rare mushroom drops reaching trade is the ambient endpoint; the demand-gating is correctly expressed as M-12 (cooking demand) and M-11 (magic reagent demand) above.
+- from: mushroomquest seasonal mushroom types (biome-specific spawn via 32 biome-modifiers) | via: season-gated foraging window | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: certain mushrooms only appear in season-appropriate biomes and foraging blocks — a Serene Seasons winter limits which caps are available, making mushroom-based reagents and dishes themselves seasonal; the forager's output varies by season, driving repeating demand cycles
+- from: mushroomquest:miso_soup_block | via: extradelight:vat or farmersdelight:cooking | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: miso_soup_block is a placed decoration/food block, not a crafting intermediate. Running it through a processing chain would be forced (it's a finished food block, not a raw material). The M-12 anchor is already covered by the rare-caps route above at mid tier; adding a separate everyday cooking path here is duplication with diminishing coherence.
+
+## zombiemoon   [anchors: survival (1)]
+- Dossier is clear: no unique drops, no items, no blocks, loot=no. The mobs use vanilla rotten-flesh-style drops (no reagent hook). The only possible weave direction is if the tougher zombies drop a unique reagent — but the jar shows 0 items and the dossier confirms no unique drops.
+- from: zombiemoon mutant zombie mobs → unique drop (hypothetical) | via: occultism:spirit_fire | to: magic | motif: M-02 | power: mid | tone: ok | verdict: REJECT | reason: jar-confirmed 0 items and loot=no — there is no unique drop to give a use. This would require adding a custom drop (KubeJS), which is authoring, not proposing a weave against existing content. If a future update adds drops, revisit.
+- from: zombiemoon combat difficulty pressure | via: survival | to: survival | verdict: acknowledged, already the 1-anchor; no new weave possible without custom drops.
+- LEAVE — no material surface (0 items/blocks/loot). The survival-pressure anchor is correct and the sole weave; the briefing's "don't force edges onto organic content if nothing is coherent" rule applies. Needs a custom drop to become weaveable.
+
+## gnkinetics   [anchors: create (1)]
+- Dossier says leave (it IS Create). Let me stress-test: 33 blocks, 31 items — planetary/ring/worm gears, chainable cogwheels, industrial gears. These are all kinetic components that plug into Create contraptions. Is there a thematic hook into another pillar?
+- from: gnkinetics:industrial_gear / gnkinetics:planetary_gear | via: aeronautics drivetrain recipes | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: ACCEPT | hook: a planetary gear set providing the torque ratios needed for a variable-pitch propeller bearing makes engineering sense — gnKinetics' advanced gear types as a required drivetrain component for higher-tier Aeronautics propellers/engines slots naturally into M-24; the gear specialist and the airship builder are two roles
+- from: gnkinetics:worm_gear | via: aeronautics control-surface recipe | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: ACCEPT | hook: worm gears provide self-locking rotation ideal for rudder/aileron actuation — seeding worm gears as a control-surface ingredient for Aeronautics steering blocks creates demand for the kinetics specialist's output on every ship build
+- from: gnkinetics parts → magic/ritual | via: occultism:ritual | to: magic | motif: M-11 | verdict: REJECT | reason: cogwheels and gears have no thematic overlap with Occultism's organic/spirit reagent palette. A "transmute a gear into a spirit" edge would be tone-clash (industrial cogs ≠ spirit components). Fails red-team.
+- from: gnkinetics:creative_gear_motor as creative shortcut | via: boss-key unlock | to: survival | motif: M-15 | verdict: REJECT | reason: a creative power source gated behind a boss drop is a QoL-suppressor rather than a depth-adder; creative-mode items gated behind progression feel punishing rather than meaningful. Not a valid M-15 application.
+- from: gnkinetics parts → coin via sell | motif: M-09 | verdict: REJECT | reason: M-09 retired.
+
+## clumps   [anchors: support/performance (1)]
+- LEAVE — server-performance mod that merges XP orbs; zero items, zero blocks, zero recipe types, no loot. Genuine zero-surface support mod. No weave possible.
+
+## bcc   [anchors: support/modpack-ops (1)]
+- LEAVE — connection-handshake utility (compares pack name/version, shows match/mismatch on server list); zero items, zero blocks, no loot. Genuine zero-surface operational support mod. No weave possible.
+
+## rolling_down_in_the_deep   [anchors: support/client-QoL (1)]
+- LEAVE — client-side camera/movement extension for underwater diving; zero items, zero blocks, zero recipe types, no loot. Genuine zero-surface client feel mod. No weave possible.
+
+## ohthetreesyoullgrow   [anchors: support/worldgen-library (1)]
+- LEAVE — tree-generation library for Oh The Biomes You'll Go; improved sapling growth algorithm + tree framework. Zero player-facing items/blocks, zero recipe types, no loot. Genuine zero-surface worldgen library.
+
+## moogs_structures   [anchors: support/library (1)]
+- LEAVE — data-driven structure-generation framework library for Moog's structure mods; zero items, zero blocks, zero recipe types, no loot. Genuine zero-surface library. (Note: if a Moog's content mod — e.g. Moog's Voyager Structures — is in the pack, THAT mod's dossier is the weave surface, not this library.)
+
+
+
+
+
+
+
+
+
 
 
 

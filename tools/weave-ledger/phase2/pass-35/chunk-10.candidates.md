@@ -82,9 +82,21 @@ LEAVE — zero items, zero blocks, zero recipe methods; a KubeJS scripting libra
 - from: dtterralith tree seeds | via: ars_nouveau:imbuement | to: magic | motif: M-16 | power: mid | tone: ok | verdict: REJECT | reason: the seeds are trees, not crops, and Serene Seasons fertility doesn't gate tree growth (only crops); linking them to M-16 seasonal reagent is a stretch — trees aren't seasonally locked in the same way; theme clash between "deciduous tree seed" and "seasonal magic reagent"; REJECT
 - NOTE: dossier already recommends LEAVE; these ACCEPT rows challenge that by noting the seeds/logs ARE distinct items with a real regional-scarcity identity. The LEAVE recommendation was for "worldgen compatibility layer" but the mod does register 33 unique seeds and 104 leaf blocks — there IS content surface. The M-12/M-30 candidates are valid for a wholesale Terralith-biome woodworking pass.
 
+## immersive_paintings   [anchors: decoration palette / support (1)]
+- from: immersive_paintings:painting / glow_painting (crafted canvas) | via: create:mechanical_crafting | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: the painting items are crafted from vanilla materials (sticks + wool/canvas) — there's no metal/stone to crush back, and the deco-recycle M-04 motif applies to block families that contain the material, not to a crafted canvas placeholder; routing the painting frame through Create is busywork — the frame IS vanilla and the "painting" itself is a client-side image, not a material; REJECT as forced
+- from: immersive_paintings:glow_painting | via: create_new_age:energising | to: create | motif: M-17 | power: mid | tone: ok | verdict: REJECT | reason: glow paintings emit light by design (baked-in glow effect from the mod); charging them via Create's electric method would be thematically interesting but the glow is already always-on — "charging" a permanently-glowing canvas has no gameplay payoff and would be a purely cosmetic recipe with no loop function; REJECT
+LEAVE — pure decorative player-expression mod; four items, all canvases; no material graph; the dossier's LEAVE is correct. No coherent non-forced 2nd anchor.
 
+## notenoughanimations   [anchors: support (client visual) (1)]
+LEAVE — zero items, zero blocks, zero recipe methods; cosmetic client-side animation overrides; genuine zero-surface support LEAVE.
 
+## dragonlib   [anchors: support (library/API) (1)]
+LEAVE — developer library/API mod (architectury abstraction layer); zero player-facing content; one dev/test artifact block that is not player-reachable; genuine code-library LEAVE.
 
+## nochatreports   [anchors: support (privacy/QoL) (1)]
+LEAVE — zero items, zero blocks; chat-signing/reporting protocol interceptor; no content surface; genuine support-role LEAVE.
+
+== CHUNK COMPLETE ==
 
 
 

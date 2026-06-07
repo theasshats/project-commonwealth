@@ -117,3 +117,78 @@ Full electricity + nuclear depth layer for Create — Energiser recipe-type, coi
 **Existing connections review:**
 REWORK: Single anchor (Create) for a mod that adds a full electricity/nuclear tier is under-represented. The 5 ACCEPT candidates (M-30 Thorium regional scarcity, M-11 Corium occult transmutation, M-17 FE charging for magic, M-24 circuits for aeronautics control, M-03 ore-doubling) collectively give it Create / magic / economy / aeronautics — a 4-pillar contribution. Priority: M-30 Thorium scarcity and M-24 aeronautics circuits are the highest-value loop-advancing edges.
 
+## extradelight   [anchors: survival/create (2)]
+
+Massive FD expansion — 16 registered recipe-types, 1447 items, 826 blocks. Already at 2 anchors (survival deep-cuisine + Create via create:mixing inbound). The dossier's 2nd-anchor candidates include an M-12 deepening (grain→flour via Create milling) and a now-retired M-09 luxury→coin. The dossier's M-09 suggestion is invalid (retired). Let me re-examine for live motifs.
+
+**Method-pull candidates:**
+
+- from: extradelight crops (coffee, garlic, citrus, ginger, hazelnut) | via: create:milling → ground coffee / garlic powder / citrus zest | to: create | motif: M-12 (processing-chain pull) | power: everyday | tone: ok — grinding coffee beans and spices in a Create millstone before they're usable in the Oven/Mortar chain is both physically realistic and makes Create the upstream gateway for the kitchen | verdict: ACCEPT | hook: The extradelight kitchen's finest dishes start with Create-milled spices — the millstone is the first step in a feast.
+
+- from: extradelight:evaporator (reduces fluids to salts/syrups) | via: create:mixing (mix evaporated salt/syrup into Create processing as a solvent/catalyst) | to: create | motif: M-12 (processing-chain pull — intermediates as feedstocks) | power: mid | tone: ok — industrial salt from the evaporator as a Create processing solvent (e.g. brine for ore processing) is a genuine industrial chain | verdict: ACCEPT | hook: Evaporator-refined brine feeds Create's ore-processing line as an industrial solvent — the kitchen and the factory share a product.
+
+- from: extradelight feasts (high-saturation colony provisioning food) | via: minecolonies colony requests | to: economy | motif: M-28 (colony route) | power: mid | tone: ok — colonies need food; the feast-tier output from extradelight provisioned to a colony kitchen feeds the colony-route economy leg | verdict: ACCEPT | hook: The colony kitchen requests feast-grade meals; the extradelight cook supplies them — culinary effort becomes colonial infrastructure.
+
+- from: extradelight:drying_rack (dehydrates produce) | via: seasonal link — M-16 seasonal reagent (harvest-season crops dried for winter use) | to: survival (seasons) | motif: M-16 | power: everyday | tone: ok — drying summer/autumn crops for winter use is the exact seasonal preservation mechanic; the drying rack becomes a Serene Seasons survival tool | verdict: ACCEPT | hook: Before winter hits, the drying rack runs overtime — harvest-season produce preserved here feeds players through the cold months.
+
+- from: extradelight:mortar recipe-type (grinds seeds/flowers) | via: magic tie — grinding a magic-reagent flower (galosphere lumiere) to a fine powder used as an attunement catalyst | to: magic | motif: M-07 (attunement catalyst — galosphere shards gate conversions) | power: mid | tone: ok — but the reagent-ownership table reserves lumiere_shard for M-07; the mortar *grinding* lumiere shards to a fine dust that's then used as an attunement intermediate is using the existing reserved reagent through a new processing step, not re-assigning it | verdict: ACCEPT | hook: Galosphere lumiere ground in the mortar yields a fine attunement dust that catalysts the imbuement altar — the kitchen grinding tool doubles as a magical lab instrument.
+
+- from: extradelight (food as luxury / high-value goods) | via: bare 'sellable to NPC' | to: economy | motif: M-09 (RETIRED) | verdict: REJECT | reason: M-09 is retired — "luxury good → coin" via NPC is not a valid weave. Economy link only counts when it gates demand (M-28 colony above is the correct framing).
+
+**Existing connections review:**
+OK — connections sound at the 2-anchor level; the 5 ACCEPT candidates above deepen rather than contradict the existing anchors. The M-09 reference in the dossier's 2nd-anchor note should be flagged as retired/invalid.
+
+## moreoverlays   [anchors: support/client-QoL (1)]
+
+Pure client HUD overlays (light-level/spawn-X, chunk grid, JEI search highlight). Zero items, zero blocks, zero loot, no world interaction. No material surface.
+
+- LEAVE — pure client QoL overlay (no items, no loot, no world mechanic); zero weave surface.
+
+## exposure   [anchors: create/survival (2)]
+
+Process-focused film camera — develop film via Create sequenced assembly, print at Lightroom, photograph aging M-35 is already named in the ledger (exposure:photograph_aging is listed in M-35's method set). The dossier's own 2nd-anchor note suggests an M-09 economy link (invalid, retired). Let me re-examine.
+
+**Method-pull candidates:**
+
+- from: exposure:photograph_aging (method: exposure:photograph_aging — M-35 maturation/aging) | via: exposure:photograph_aging as a maturation step | to: economy | motif: M-35 (maturation/aging — "aged photograph" as a higher-value artisanal good) | power: mid | tone: ok — an aged photograph (the exposure:aged_photograph item from the AUTO digest) gains character over time and commands a premium as a collector good / trade keepsake; M-35 is explicitly listed with `exposure:photograph_aging` as one of its methods | verdict: ACCEPT | hook: Photographs left to age in a frame develop a sepia patina and become collector items — the aging specialist's niche is the archive trade.
+
+- from: exposure:camera / film (exploration capture) | via: supplementaries:weathered_map (map art + weathering) | to: economy | motif: M-33 (service-for-hire) | power: mid | tone: ok — a photography service (player photographs landscapes, structures, colonies for others) is a real player-economy service; the aged photograph becomes a valuable commissioned keepsake | verdict: ACCEPT | hook: A player with a good camera and the darkroom setup offers commissioned photography — expedition portraits, colony documentation, a real craft service.
+
+- from: exposure (loot=yes) | via: loot-seed — seed exposure:black_and_white_film rolls into structure loot tables (dungeon caches, ship holds) | to: survival | motif: M-02 (mob-drop reagent, generalized — rare item in exploration loot rewards exploration) | power: everyday | tone: ok — finding old film canisters in dungeon chests or ship holds is thematically consistent (exploration reward for the photographer) | verdict: ACCEPT | hook: Rummaging through a dungeon cache turns up an old film canister — the explorer and the photographer overlap.
+
+- from: exposure:black_and_white_film (requires specific chemistry development) | via: create:mixing (silver nitrate solution as film developer chemical, mixed in Create) | to: create | motif: M-12 (processing-chain pull) | power: mid | tone: ok — film developing chemistry (silver halide, fixer solution) routed through Create's mixing basin as a photographic-chemistry intermediate is realistic and ties the darkroom into the Create spine | verdict: ACCEPT | hook: Developing film needs a chemical solution mixed in the Create basin — the darkroom is downstream of the industrial chemistry line.
+
+- from: exposure dossier's M-09 suggestion (luxury good → coin) | verdict: REJECT | reason: M-09 is retired. Economy link only through active motifs (M-35 accepted above as maturation, M-33 as service).
+
+**Existing connections review:**
+OK — connections sound (Create development + survival hobby). The M-09 reference in the dossier's 2nd-anchor note is invalid (retired); M-35 is the correct economy path.
+
+## inventoryprofilesnext   [anchors: support/client-QoL (1)]
+
+Pure client-side inventory management — sort, dump, refill, lock slots. Zero items, zero blocks, no world mechanic. No material surface. The CLAUDE.md calls out IPN specifically for the overlay_new.png fix (#3 v0.6.0) but that's a client rendering fix, not a weave surface.
+
+- LEAVE — pure client QoL (inventory sorting/locking); no items, no world interaction, no material surface. Nothing to weave.
+
+## dungeons_arise_seven_seas   [anchors: survival (1)]
+
+Ocean-exploration mod — jigsaw-placed galleons, floating fortresses, sunken ruins with loot chests. Zero registered items or blocks (all loot is from vanilla + pack tables). loot=yes flag is the key surface. Dossier's own note says "leave — no real 2nd pillar except loot-table editing elsewhere." Let me test harder: this is a loot-bearing structure mod, and the briefing explicitly says "do NOT LEAVE a loot-bearing structure mod just because it has no recipes."
+
+**Method-pull candidates:**
+
+- from: dungeons_arise_seven_seas galleon/ship-dungeon loot chests | via: loot-seed — seed Numismatics coin or coin precursor materials (scarce regional metal → player-minted) into shipwreck chests | to: economy | motif: M-08 (player-minted currency — finding raw precious metal in a shipwreck that a player then mints into coin) | power: mid | tone: ok — a wrecked galleon holding silver bars or palladium ingots that become the raw material for Numismatics coin is thematically perfect (maritime treasure → mint) | verdict: ACCEPT | hook: A sunken galleon's hold yields silver bars that find their way to the mint — maritime exploration feeds the economy's currency supply.
+
+- from: dungeons_arise_seven_seas floating fortresses / sunken ruins | via: loot-seed — seed irons_spellbooks scrolls or ars_nouveau magic tomes as rare dungeon rewards | to: magic | motif: M-02 (mob-drop reagent sink, applied as dungeon-loot — rare magic scrolls as ocean-dungeon finds) | power: mid | tone: ok — underwater ruins and pirate ships as repositories of lost magic knowledge (spell scrolls, ancient tomes) is a classic fantasy trope and tonally consistent with both irons_spellbooks and ars_nouveau | verdict: ACCEPT | hook: The flooded library of a sunken fortress holds spell scrolls predating the surface civilizations — ocean exploration is a pathway to magic knowledge.
+
+- from: dungeons_arise_seven_seas ship structures | via: aeronautics aesthetic — naval vessels as thematic precursors to airships (the world's seafarers once sailed ocean ships; now players build airships) | to: aeronautics | motif: no-motif | verdict: REJECT | reason: The connection is purely aesthetic/thematic — static ship structures have no mechanical interaction with Aeronautics vessels or logistics. No accepted motif maps to "these static ships look like the airship predecessor." Forced.
+
+- from: dungeons_arise_seven_seas loot | via: loot-seed — seed aeronautics blueprint/schematic fragments (M-23/M-24 structural alloy recipes as crafting knowledge) in ship chests | to: aeronautics | motif: M-15 (boss-key unlock applied via loot-seed: the dungeon chest as the "boss"-equivalent gate for a recipe) | power: mid | tone: ok — nautical structures holding the maritime engineering secrets that translate into airship construction (a schematic or alloy recipe fragment) is thematically rich; the ocean explorer unlocks an aeronautics recipe | verdict: ACCEPT | hook: A ship captain's logbook recovered from a sunken galleon contains structural notes that unlock an aeronautics alloy recipe — the seas led to the skies.
+
+**Existing connections review:**
+REWORK: Single anchor (survival/exploration) for a loot-bearing structure mod is the floor. Three ACCEPT candidates (M-08 coin precursors in maritime loot, M-02 magic scrolls in dungeon chests, M-15 aeronautics recipe fragments) lift it meaningfully. The dossier was too quick to "leave" given the explicit briefing instruction against LEAVEing loot-bearing mods.
+
+## moonlight   [anchors: support/library (1)]
+
+Shared library for MehVahdJukaar mods — dynamic registration, custom villager AI/data-driven trades, map markers, virtual fluids. The dossier records 1 block (spawn_box — internal), 2 items (placeable_item, spawn_box — internal), loot=no. The data-driven-trade API is exercised by Supplementaries/Amendments but not by moonlight itself.
+
+- LEAVE — code library for MehVahdJukaar mods; its own items are internal helpers, no material content, no loot. The data-driven-trade API belongs to the dependent mods (Supplementaries etc.), not moonlight itself. Zero independent weave surface.
+

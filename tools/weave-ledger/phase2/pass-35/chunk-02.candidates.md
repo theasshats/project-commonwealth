@@ -90,9 +90,17 @@
 ## fzzy_config   [anchors: support/library (1)]
 - LEAVE — Kotlin config-engine API (TOML serialization, GUI generation, config sync); zero items/blocks/loot. Genuine zero-surface library; nothing to route.
 
+## northstar   [anchors: Create, aeronautics (2)]
+- REWORK: dossier lists an economy candidate as M-09 (luxury/sellable advanced_circuit). M-09 is retired — reject the bare sell link; economy link should be reframed.
+- from: northstar:titanium_ingot / tungsten_ingot | via: create:pressing → numismatics mint | to: economy | motif: M-08 | power: endgame | tone: ok | verdict: ACCEPT | hook: off-world metals (titanium, tungsten) are genuinely region-locked — only reachable via rocket; a player who masters the rocket supply chain presses a scarce-metal coin denomination nobody else can mint; the mint is itself the specialization
+- from: northstar:advanced_circuit | via: create:sequenced_assembly (cross-route input) | to: Create | motif: M-29 | power: endgame | tone: ok | verdict: ACCEPT | hook: advanced circuits are required inputs for top-tier Create machines or MineColonies tech research — a Create-purist building the highest-level device must source circuits from a Northstar specialist, forcing cross-route trade even between two Create players
+- from: northstar:martian_steel_ingot | via: create:sequenced_assembly (airframe material) | to: aeronautics | motif: M-23 | power: endgame | tone: ok | verdict: ACCEPT | hook: martian steel is the load-bearing metal for off-world or high-tier airframes — a ship that can survive space-to-atmosphere flight requires hull plating only a rocket-capable crew can fabricate; deep-tier M-23
+- from: northstar:biofuel | via: createaddition:liquid_burning → aeronautics engine | to: aeronautics | motif: M-13 | power: mid | tone: ok | verdict: ACCEPT | hook: Northstar biofuel is a processed liquid fuel (distinct from TFMG diesel); routing it through Create Addition's liquid_burning into aeronautics engines gives off-world agriculture (moon/Mars crops) a propulsion application — a second fuel route that off-world specialists control
+- from: northstar off-world atmosphere / oxygen survival requirement | via: config/worldgen-gating | to: survival | motif: M-30 | power: endgame | tone: ok | verdict: ACCEPT | hook: each planet's atmosphere forces cold/breathable-air survival gear (Cold Sweat + oxygen integration) — going to Mars or the Moon is a survival challenge, not just a logistics hop; the pressure pillar extends off-world
+- from: northstar:astronomical_reading | via: emergent trade | to: economy | motif: M-33 | power: mid | tone: ok | verdict: REJECT | reason: an "astronomical reading" as a service is conceptually interesting (an astronomer sells navigation data) but astronomical_reading is an item, not a labor service, and nothing implements a "reading sold to pilots" trade mechanic — bare sell link is M-09 territory; reject until a delivery method is defined
+- from: northstar planet stone/woods | via: create:cutting (exotic woodset) | to: Create | motif: M-04 | power: mid | tone: ok | verdict: REJECT | reason: exotic planet planks/stone crushed back to raw is a generic M-04 pass that adds almost no loop value for an endgame space mod — the interesting link is the metals/circuits, not the deco stone; low signal, don't clutter
 
-
-
+== CHUNK COMPLETE ==
 
 
 

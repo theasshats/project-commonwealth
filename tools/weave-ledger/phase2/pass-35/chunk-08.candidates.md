@@ -35,3 +35,32 @@ REWORK: dossier candidates are correctly read; the M-05 candidate is sound and t
 - from: createnuclear steel | via: minecolonies colony research unlock | to: economy | motif: M-28 | power: endgame | tone: ok | verdict: ACCEPT | hook: advanced MineColonies research (blast-furnace tier or higher-tier colony buildings) requiring reactor-grade steel puts the colony player in dependency on the nuclear specialist — the colony route cheaper for basics but bottlenecked on tech-spine steel for its highest-tier outputs
 REWORK: the dossier's M-08 candidate is sound (refined uranium/steel → coin); the M-09 label appended after it is an error in the dossier (M-09 is retired — "trade good" framing should be M-30 regional scarcity). The economy candidate should be split: coin-minting is M-08, regional-gate is M-30, colony dependency is M-28. Current dossier conflates them — flag for dossier correction.
 
+## create_ultimate_factory   [anchors: create (1)]
+- LEAVE — pure recipe datapack with zero items/blocks of its own; all 30 recipes author onto Create's existing methods for vanilla renewability. No independent material surface to route to a 2nd anchor. The use of create:haunting is internal to its vanilla-renewability scope, not an open reagent surface.
+- (design concern, not a weave candidate) Several renewable outputs — notably diamond from coal-block+lava — could erode M-30 regional-scarcity gates on diamond-dependent recipes; flag for balance review during Phase 3 recipe authoring rather than weaving around it here.
+
+## architectury   [anchors: support (1)]
+- LEAVE — cross-platform modding API providing events/networking/registry abstractions; zero items, zero loot, no recipe types, no material surface. Genuine zero-content library.
+
+## jeed   [anchors: client-UI support (1)]
+- LEAVE — JEI effects-documentation addon; its two "recipe types" (jeed:effect_provider, jeed:potion_provider) are display-only viewer categories, not craftable methods. Zero items, no material surface. Genuine zero-content client UI library.
+
+## dataanchor   [anchors: support (1)]
+- LEAVE — developer utility library for entity/chunk/player data attachment and networking; zero items, zero loot, no methods, no material surface. Genuine zero-content code library.
+
+## naturalist   [anchors: survival (1)]
+- from: naturalist:venison + naturalist:bushmeat (raw wildlife meat) | via: farmersdelight:cutting → cooking chain | to: create | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: wild venison and boar bushmeat go straight from the hunt to the kitchen via Farmer's Delight's cutting board, producing premium cuts and cooked dishes that contribute to the diet-variety demand loop — big-game hunting as a food-production specialization
+- from: naturalist:antler (deer drop, bone-analog) | via: ars_nouveau:imbuement (nature/growth ritual input) | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: a deer's primal growth-symbol feeds Ars Nouveau growth or earth-themed spells as an imbuement reagent — hunting has a purpose beyond meat, and a nature-magic specialist buys antlers from hunters
+- from: naturalist:glow_goop (firefly bioluminescence extract) | via: ars_nouveau:imbuement (light spell reagent) | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: bioluminescent firefly essence is a living-light reagent for illumination and spectral spells; capturing fireflies with the net and extracting glow_goop feeds magic in a way that requires the naturalist skill (passive mob, capture mechanic) rather than combat
+- from: naturalist:antler / naturalist:bushmeat | via: seasonal wildlife availability (Serene Seasons config tie) | to: survival | motif: M-16 | power: mid | tone: ok | verdict: ACCEPT | hook: deer spawn abundantly in spring/summer but scarce in winter (seasonal biome behavior); the antler supply that feeds magic rituals has a seasonal rhythm, creating demand peaks and trade pressure around the growing season — via: config-tie (biome-season spawn rate)
+- from: naturalist bear / alligator / snake (neutral-hostile) drops | via: emergent player trade | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: large predators are dangerous enough that only prepared combat players farm them reliably; the bushmeat, bear fat, and hide analogs they drop become goods that non-combat players must buy — a natural combat-supply role distinct from hunting docile deer
+- from: naturalist:shellstone / froglass deco blocks | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: shellstone brick variants crush back to gravel/sand + XP nugget — a light tag-sweep rule that ties the deco set into the Create recycling web without requiring per-block authoring
+- from: naturalist venison/bushmeat as food items | via: player economy (ambient food sale) | to: economy | motif: M-09 | power: mid | tone: n/a | verdict: REJECT | reason: M-09 is retired — "food is sellable" is the ambient loop endpoint; the real demand-gating is M-12 (food processing chain) and M-34 (combat-route supply of dangerous-animal drops), which are already captured above
+OK — connections sound: the dossier's M-12 (farmersdelight processing) and M-04 (deco recycle) are both correctly identified and the M-02 opportunity for antler is noted but deferred to magic-mod appetite. This pass adds the glow_goop→magic and seasonal-antler lines that the dossier left open.
+
+## createaddoncompatibility   [anchors: support (1)]
+- LEAVE — unification-rules-only compat layer (Almost Unified priorities for Create addon duplicates); zero items/blocks; the single tfmg:distillation recipe is plumbing to unify plastic ingot, not an independent weave surface. Genuine support/compat role.
+
+## bagus_lib   [anchors: support (1)]
+- LEAVE — shared code library for baguchi's mods; zero items, zero loot, no methods, no material surface. Genuine zero-content library.
+

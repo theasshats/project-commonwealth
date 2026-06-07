@@ -139,6 +139,97 @@ The dossier's conclusion (leave — no coherent 2nd anchor) holds after deeper e
 ## zeta   [anchors: support/library (1)]
 - LEAVE — mod-framework library; 0 blocks, 0 items, no recipe methods, no loot. Genuine zero-content code library (Quark's module-system backbone). Nothing to weave.
 
+## createbigcannons   [anchors: Create, aeronautics (2)]
+
+Already at ≥2 anchors. Reviewing existing connections and seeking further weaves.
+
+Power-read: 139 blocks, 213 items, loot=yes, 20 c:tags (steel/bronze/cast_iron/nethersteel ingots/nuggets/blocks), and 19 registered recipe-types (cartridge_assembly, melting, fuzing, tracer, deployer variants). Deep Create-machine + artillery with Aeronautics ship-mounting. The mod *provides* steel/bronze/cast_iron/nethersteel (c:ingots/*) — it is a metals supplier for cross-mod use.
+
+Existing connection review:
+- Create anchor: SOUND — deep Create multi-machine build chain (compacting/cutting/mechanical_crafting/milling/mixing/sequenced_assembly all used). The foundry melting + cast workflow is proper Create-depth gating.
+- Aeronautics anchor: SOUND — cannons mount on Aeronautics ships for PvPvE naval/aerial combat; the mod's stated purpose.
+- Dossier noted economy (M-09 luxury good → coin) as a candidate — **M-09 is RETIRED**. This should be flagged for rework to a valid motif.
+
+REWORK: The dossier's economy candidate cites M-09 ("munitions as sellable war-good / cannon-grade steel as trade metal"). M-09 is retired. The actual valid economy linkage here is M-34 (combat-route supply) — a munitions specialist farms/produces shells/cartridges and trades them to non-combat/non-industrial players who can't run the foundry. Shells are a genuine expendable (M-26 consumption) consumed in combat, so demand never zeroes. **Flag: rework economy candidate from M-09 to M-34 + M-26.**
+
+New candidates:
+
+- **M-34 combat-route supply: createbigcannons shells/cartridges as traded war-goods — a munitions-specialist economy role.** Shells are deeply manufactured (cast → assemble → fuze → fill) and consumed in every engagement. A combat player who can't run a cannon foundry buys from the munitions specialist. This is the standard M-34 pattern (supplier side of the boss/danger dual-role). Power: mid-to-endgame (steel/nethersteel). Tone: completely coherent in a PvPvE pack — the navy needs ammunition. ACCEPT.
+
+- **M-26 consumption: shells are pure expendables — M-26 closes the demand loop.** Every fired shell is gone; munitions factories run forever. This is the consumption-sink reading of the same flow — it's the *reason* M-34's trade demand never zeroes. This is a motif observation rather than a separate weave from M-34; they compose together. Accept as a companion note to M-34 rather than a separate entry.
+
+- **M-30 regional-scarcity gate: nethersteel requires Nether-side materials (nether, presumably nether resources). Steel requires iron + coking coal/carbon. If the pack makes carbon/coking coal a regional scarcity, cannon-grade steel is region-gated.** This is a GTMOGS/worldgen configuration question, not a new recipe weave on CBC items. It's a design observation about scarcity layering — valid but not a ledger weave candidate (no recipe to author). Reject as design note.
+
+- **M-29 cross-route dependency: cannon barrels require TFMG steel or CBC steel shared with Aeronautics hull construction (M-23).** Both Aeronautics hull plates (M-23) and cannon barrels want c:ingots/steel. If steel is scarce, the shipwright and the gunsmith compete — that tension is M-29 (cross-route dependency creating trade). No new recipe needed; the shared c:ingots/steel tag already creates this if steel is scarce. This is an observation about the existing shared-tag situation, not a new recipe. Useful framing but not an actionable Phase-3 recipe weave. Reject as design observation.
+
+- from: createbigcannons:shells/cartridges (finished munitions) | via: emergent trade / crafted by munitions specialist | to: economy | motif: M-34 | power: mid-endgame | tone: ok | verdict: ACCEPT | hook: running the cannon foundry is its own specialization — other players buy shells from the one who mastered it
+- from: createbigcannons shells as pure expendables (fired = gone) | via: consumption mechanic | to: survival→economy | motif: M-26 | power: mid-endgame | tone: ok | verdict: ACCEPT | hook: every engagement consumes shells — the munitions economy never zeros because the guns keep firing
+- from: nethersteel/steel demand vs. Aeronautics hull steel | via: shared c:ingots/steel tag | to: economy | motif: M-29 | verdict: REJECT | reason: cross-route tension is real but emerges from existing shared tags + scarcity config, not a new recipe weave to author; design observation not a Phase-3 action
+- from: cannon-grade steel as region-gated by coking coal | via: GTMOGS worldgen config | to: scarcity→economy | motif: M-30 | verdict: REJECT | reason: valid scarcity-design observation but requires worldgen config, not a recipe weave; no Phase-3 action on CBC items
+
+REWORK:
+- REWORK: dossier economy candidate (shells/steel as "sellable" per M-09) — M-09 is **retired**. Replace with M-34 (munitions specialist trades shells to non-producers) + M-26 (shell consumption keeps demand live). The correct economy weaves are now accepted above.
+
+## underground_village   [anchors: survival (1)]
+
+Power-read: 0 blocks, 0 items, loot=yes (chests in generated village + inhabiting villagers with trades). Structure/worldgen mod — value is the discoverable place + the villagers' trades + chest loot.
+
+Method-pull: The mod's content surface is loot-bearing (village chests) + trade-bearing (villagers). This is explicitly the `via: loot-seed` delivery mechanism per the briefing.
+
+- **Loot-seed: seed weave-relevant drops into Stoneholm chest loot (M-02 mob-drop reagent via loot-seed, or M-08 coin seeding, or M-15 boss-key via dungeon find).** A subterranean village that has been there for ages underground would logically hold: rare regional metals (palladium?), magic reagent shards, or a piece of a boss-key progression item. The loot-seed delivery is the Phase-3 action (a datapack edit to add drops to the Stoneholm loot tables). Tone: a hidden underground civilization hoarding rare materials is very coherent. Power: mid-tier findable loot.
+
+  - Sub-candidate A: **seed magic reagents (source_gem fragments, allurite/lumiere shards — but shards are reserved M-07 catalysts; seed in small quantities as a discoverable source, not a production path).** M-02 (mob-drop reagent sink as loot-seed equivalent). Tone: okay. Red-team: shards are M-07 reserved; seeding them in loot is a *discovery* path, not a production shortcut. The reservation says don't give them a new *connective* role; loot-seeding them as discoverable quantities is fine if it's flavor quantity, not a bypass. But the reservation is about not double-spending the reagent — seeding doesn't create a new reagent role, just a place to find them. Accept carefully.
+  
+  - Sub-candidate B: **seed a coin or currency item in Stoneholm chests (M-08 minted coin as found treasure).** A buried village might have an old coin stash — a non-inflationary amount. This is a lore-coherent discovery moment. However: if coins are player-minted (M-08 intent), finding them pre-minted in loot partly short-circuits the minting specialization. Small amounts as flavor are fine but this edges toward diluting M-08. Reject on M-08 integrity grounds.
+
+  - Sub-candidate C: **seed a boss-key precursor or map (M-15 boss-key via loot-seed) — e.g. a partial map to a boss structure, or a crafting component of a boss-key recipe.** Underground villagers might have records of a dangerous entity nearby. This is a progression-narrative hook. Tone: coherent exploration. Red-team: this works only if a boss-key recipe uses a specific "stoneholm inscription" or similar — that's inventing new items. Reject unless a specific boss needs a found-item input.
+
+  - Sub-candidate D: **seed economy-relevant goods (spice/reagent/rare tool) in Stoneholm chests that feed the pack's trade web — M-29 cross-route dependency (discovery of a rare material forces trade).** This is a valid design but the specific item would need to be picked from the pack's existing scarce materials. A light formulation: seed galosphere palladium chunks or a scarce regional material so the underground village is a *secondary acquisition point* for a regional resource, not just a structure find. This is within M-30 (regional scarcity gate) framing. Accept.
+
+- **Villager-trade retuning: seat Numismatics-priced or pack-specific trades in Stoneholm villagers.** The dossier cites M-09 (villager → Numismatics trade) — **M-09 is retired and M-21 (trade-seam to economy) is cut** as NPC coin faucets. Valid alternatives: villagers trading *goods for goods* (barter), or creating a demand-gate (M-28 colony route — the village acts as an alternate colony-supply node for basics). The villager-trade seating that fits the player-run economy is one where the villager provides a *service* (M-33 service-for-hire — underground smith/enchanter working for player materials) rather than selling for coin. ACCEPT via M-33.
+
+REWORK:
+- REWORK: dossier 2nd-anchor candidate cites M-09 (villager → Numismatics trade) — **M-09 is retired**. The valid economy linkage is M-33 (service-for-hire: underground smiths/enchanters provide labor for player materials) not coin-sale.
+
+- from: underground_village chest loot | via: loot-seed | to: survival+economy | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: the hidden underground village hoards small quantities of rare reagents — a discovery path to magic materials for the explorer who finds it first
+- from: underground_village chest loot (regional scarce material — e.g. palladium chunks) | via: loot-seed | to: scarcity/economy | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: Stoneholm holds a cache of the regional ore — underground settlements make scarce-material hunting a structural-exploration goal, not just a mining run
+- from: Stoneholm villager trades (coin-for-goods via M-09 / M-21) | via: villager trade | to: economy | motif: M-09/M-21 | verdict: REJECT | reason: M-09 retired; M-21 cut — NPC coin faucets contradict the player-run economy ruling
+- from: Stoneholm villagers as service providers (smith/enchanter) | via: M-33 service-for-hire | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: the underground smith works on your materials — they bring labor, you bring ore; no coin changes hands with an NPC
+- from: Stoneholm chest loot (pre-minted coin stash) | via: loot-seed | to: economy | motif: M-08 | verdict: REJECT | reason: pre-minted coins in loot short-circuit M-08's player-minting specialization; even small quantities erode the player-mint model
+
+## jeresources   [anchors: support/client-UI (1)]
+- LEAVE — display-only JEI addon; 0 items, 0 methods, no loot. Documents loot/worldgen data for players but has no content surface to weave. Genuinely zero-surface support role.
+
+## immersive_armors   [anchors: survival (1)]
+
+Power-read: 0 blocks, 41 items (armor pieces for ~10 sets), no methods, no loot, vanilla recipes. Mid-game combat gear with set bonuses. Sets of interest: Bone (cheap, skeleton drops), Heavy (iron block gated), Divine (wool gated — oddly cheap for a full-block attack), Prismarine (prismarine shard), Steampunk (not in item sample — verify), Wither (wither skeleton skull).
+
+Method-pull:
+
+- **M-05 native-method gating via create:pressing / create:mechanical_crafting — gate the metal-intensive sets (Heavy, Steampunk) on Create-pressed plates.** The Heavy set uses iron blocks as the keystone material; pressing an iron plate for each piece before assembly is the correct Create tie. The Steampunk set has no explicit item sample showing it, but the vibe makes a Create mechanical_crafting recipe extremely coherent ("steam-punk armor assembled on a mechanical table"). Power: mid (Heavy) to mid-high (Steampunk). Tone: Heavy armor requiring a forge press is totally sensible; Steampunk gear assembled via cogs/levers in a mechanical_crafting recipe is a strong thematic fit. Red-team: forcing every set into Create would be over-engineering basics (Bone = just bone drops, shouldn't need a forge). Scope: only the metal/tech-adjacent sets (Heavy, Steampunk), not the organic/wilderness sets (Bone, Prismarine, Slime). ACCEPT for Heavy + Steampunk.
+
+- **M-10 arcane infusion pull via ars_nouveau:enchanting_apparatus / armor_upgrade — route the Divine or Robe set through an arcane finish step.** The Divine set "fully blocks one attack per minute" — that's a magical property, not a metallurgical one. Running the Divine chestplate through the Ars enchanting_apparatus as a final refinement step (arcane infusion giving it the divine protection property) makes the magic anchor coherent. The Robe set (wool/magic aesthetic) similarly fits ars_nouveau:armor_upgrade. Power: mid (Divine set is accessible via wool but the set bonus is powerful — one free-block per minute warrants a magic craft). Tone: "divine armor is blessed through an arcane altar" is an obvious player nod. Red-team: is this over-engineering a wool set? The Divine effect is strong enough to warrant an arcane gate. ACCEPT.
+
+- **M-15 boss-key unlock: gate the Wither set on wither skeleton skulls + Create-processed nethersteel (M-15 boss drop as input).** The Wither set naturally keys off wither skeleton skulls (dangerous boss/mob farming) and CBC's nethersteel (scarce Nether metal). A recipe requiring a wither skull + nethersteel plate would place the Wither set at the top of the combat tree. Power: endgame. Tone: "wither armor is forged from the material of the wither itself" is an easy player nod. Red-team: wither skulls are already used by vanilla for brewing + beacons, so this competes; but a scarce Nether armor is a valid use of a rare drop alongside those other uses. ACCEPT.
+
+- **M-34 combat-route supply: finished armor sets as traded goods** — a combat-specialist armorsmith produces and trades themed sets to non-combat players. M-34 is the supplier-side of the boss/combat route. The sets are mid-game gear consumed by attrition (players die and lose them). Power: mid. Tone: an armorsmith trading themed sets is completely natural economy behavior. ACCEPT.
+
+- **Economy as "sellable" (M-09 retired).** Dossier notes "finished themed sets as sellable smith goods — M-09 [WEAK]." M-09 is retired. The correct framing is M-34 (combat-supply / armorsmith specialist), now accepted above.
+
+REWORK:
+- REWORK: dossier economy candidate cites M-09 — **M-09 is retired**. The valid economy linkage is M-34 (armorsmith trades to non-combat players), now accepted.
+
+- from: immersive_armors:heavy_chestplate/boots/leggings/helmet (Heavy set) | via: create:pressing (iron plate component) | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: heavy plate armor starts at the pressing bench — forge the iron sheets first, then assemble the set
+- from: immersive_armors Steampunk set | via: create:mechanical_crafting | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: steampunk gear is assembled on the mechanical crafting table from brass fittings and gears — you can't make it at a workbench
+- from: immersive_armors:divine_chestplate/set | via: ars_nouveau:enchanting_apparatus | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: the divine set's once-per-minute block is a magical blessing, not steel craftsmanship — the final piece passes through the arcane apparatus
+- from: immersive_armors wither set | via: boss drop (wither_skeleton_skull) + createbigcannons:nethersteel_plate input | to: survival (boss) + Create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: the wither armor is forged from the skull of the wither and nether-steel — you earn it in the Nether, not the crafting table
+- from: finished armor sets (traded by armorsmith specialist) | via: emergent player trade | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: running the pressing bench and the magic apparatus for themed armor sets is a craft specialty — other players buy from the one who mastered it
+- from: armor sets as "sellable luxury" | via: n/a | to: economy | motif: M-09 | verdict: REJECT | reason: M-09 retired — bare sell-to-NPC framing; replaced by M-34 accepted above
+
+
+
+
+
 
 
 

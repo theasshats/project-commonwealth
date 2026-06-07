@@ -138,6 +138,48 @@ Dossier proposes M-08 (tin → coin) as the economy link and survival/worldgen a
 - from: create_ironworks:steel_plate (c:plates/steel tag) | via: aeronautics hull recipe (M-23 structural alloy) | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: steel plate is explicitly the pack's structural alloy candidate — requiring it in Aeronautics airframe and hull recipes (alongside iron beams) makes mid-tier ships depend on the Create ironworks supply chain; ship-builders must trade for or produce steel, tying the aeronautics build milestone to the metallurgy tier
 - from: create_ironworks:brass_hammer (3×3 AOE mining) | via: survival pressure | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: the hammer being consumed by use (durability) is M-26 tooling wear, but that's ambient Minecraft durability behavior — not a authored weave. M-38 (tooling wear) is MECHANISM-PENDING; don't propose it. Reject.
 
+## owo   [anchors: support/library (1)]
+
+Zero content surface (0 blocks, 0 items, pure UI/config library).
+
+LEAVE — pure code library (UI/config framework); genuine zero-content surface. No items, methods, or loot to weave.
+
+## valarian_conquest   [anchors: survival (1)]
+
+Dossier proposes M-09 (economy, retired) and M-05 (weak — Create gating of faction gear). Need real second-anchor candidates.
+
+- from: valarian_conquest faction armor / shields / weapons (loot=yes, 319 items) | via: loot-seed (faction structures: Outpost, Keep) | to: survival | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: faction soldiers garrison structures; raiding an enemy Keep drops faction gear that is the pack's mid-tier martial upgrade path — combat specialists clear keeps and trade gear to non-combat players, completing the danger→supply chain
+- from: valarian_conquest:armorsmith workstation (native station) | via: create:mechanical_crafting / M-05 native-method gating | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: faction armor is forged at the armorsmith station; requiring Create brass fittings and iron sheets as inputs ties the medieval martial tier to the Create spine — a blacksmith player runs the armorsmith, and their operation depends on Create metalworking output
+- from: valarian_conquest mercenaries (recruitable combat NPCs) | via: M-33 service-for-hire | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: mercenaries are labor — hiring a mercenary guard to escort a trade run or defend a colony is paying for *work*, not buying a good; payment is emergent (coin or goods); the mercenary-hire loop is a player-economy labor transaction without any NPC faucet
+- from: valarian_conquest citizenship items (gate faction allegiance) | via: create:pressing / minting → Numismatics | to: economy | motif: M-08 | power: mid | tone: ok | verdict: REJECT | reason: citizenship is faction allegiance, not a minted coin; pressing a faction badge isn't the same as minting currency. The connection is a cosmetic recipe flavor at best, not a demand-gate. M-08 should stay on real coin-metal chains, not on faction-badge crafting.
+- from: valarian_conquest faction structures (Outpost/Keep buildings) | via: loot-seed — seed weave-relevant items (Numismatics coin, magic reagents) into Keep chests | to: economy | motif: M-08 | power: mid | tone: ok | verdict: REJECT | reason: seeding Numismatics coin into Keep loot would make coin available from an NPC-controlled structure — functionally an NPC faucet (the coin comes from the structure, not from player minting). This recreates the M-14 cut. Reject.
+
+## foodeffecttooltips   [anchors: support/client-QoL (1)]
+
+Zero content surface (0 blocks, 0 items, tooltip-only client mod).
+
+LEAVE — pure client tooltip-rendering UI; no items, methods, or loot. Sanctioned QoL support role.
+
+## fogoverrides   [anchors: support/client-QoL (1)]
+
+Zero content surface (0 blocks, 0 items, config-only visual mod).
+
+LEAVE — pure client fog-config visual mod; no items, methods, or materials. Sanctioned support role.
+
+## gamediscs   [anchors: survival/flavor (1)]
+
+Dossier says Leave (novelty toy, no resource role). 13 items (console + discs + components), no loot tables, no registered recipe types.
+
+- from: gamediscs:processor / gamediscs:redstone_circuit (console components) | via: create:mechanical_crafting or create:sequenced_assembly | to: Create | motif: M-05 | power: everyday | tone: ok | verdict: ACCEPT | hook: a working Gaming Console should need actual fabricated electronics — a processor made in a mechanical press from copper/gold ingots, a redstone_circuit requiring sequenced assembly; the console is a Create-built curiosity, and the "why do I bother making this?" answer becomes "it took real engineering to get here"
+- from: gamediscs:game_disc_* (mob-drop items — killed by specific predator) | via: survival/mob pressure | to: survival | motif: M-02 | power: everyday | tone: ok | verdict: REJECT | reason: the disc-from-skeleton-kill quirk is atmospheric novelty, not a meaningful mob-drop reagent sink. M-02 is for drops that gain a *functional use as magic/economy inputs* — a game disc is a toy, not a reagent. Forcing it into the magic economy would be tonally wrong and trivially bypassed (just kill a slime near a skeleton). Reject.
+- from: gamediscs:gaming_console (assembled from components) | via: create:mechanical_crafting | to: Create | motif: M-05 | power: everyday | tone: ok | verdict: ACCEPT | hook: same as processor candidate above — the whole console is the gating point; it requires a Create mechanical-crafting assembly step, making it a small Create build milestone; the console earns its place as a curiosity that proves you have a working factory (it's a Create showcase item, not just a crafting table drop)
+
+Note: the two ACCEPT entries above overlap — processor-gating and console-gating are the same M-05 move expressed at different granularity. They should be treated as one weave (gate console + key components on Create mechanical_crafting), not two separate candidates.
+
+== CHUNK COMPLETE ==
+
+
+
 
 
 

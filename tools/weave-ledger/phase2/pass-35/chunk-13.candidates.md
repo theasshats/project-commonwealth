@@ -32,9 +32,35 @@
 - from: farm_and_charm processed foods (bread, butter, pasta) | via: MineColonies composting / zero_waste | to: create | motif: M-32 | power: everyday | tone: ok | verdict: REJECT | reason: farm waste → compost is ambient and too low-signal; M-32 (byproduct→input) is better served by more distinctive process chains; not worth adding here when M-12/M-16/M-28 already cover the meaningful weaves
 - REWORK: dossier candidate "economy via numismatics — M-09" is correctly retired. The M-28 colony provisioning and M-12 Create milling are the demand-gating replacements that actually advance the loop. No other existing connections to rework (mod had 0 inbound weaves before this pass).
 
+## bakery   [anchors: survival (1)]
+- from: bakery:flour (wheat-ground) | via: create:milling | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: baking-grade flour flows from a Create Millstone — the artisan kitchen draws its staple input from the tech spine, not just a crafting table
+- from: bakery high-satiation baked goods (cakes, tarts, pies) | via: minecolonies colony food-request / tavern hut provisioning | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: a colony's tavern demands artisan baked goods — the bakery becomes a specialized supplier whose cakes keep the settlement fed and growing
+- from: bakery fruit-based goods (strawberry cake, apple pie, glowberry tart) | via: Serene Seasons season gate on fruit inputs | to: survival | motif: M-16 | power: mid | tone: ok | verdict: ACCEPT | hook: fruit-season opens the luxury-cake window; off-season the bakery can only make breads — seasons throttle the premium food tier, creating temporal demand spikes
+- from: bakery deco blocks (cake_stand, bread_crate, bakery_counter) | via: minecolonies colony hut furnishing | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: REJECT | reason: double-counting M-28 via a furnishing route when food-provisioning is the cleaner, more impactful M-28 link; deco-as-colony-demand is too diffuse to be a tight weave
+- from: bakery:bread / bakery:baguette | via: create:milling (as bread-crumb crush-back) | to: create | motif: M-04 | power: everyday | tone: clash | verdict: REJECT | reason: bread crushing back to crumbs is a real culinary step but M-04 is for deco/metal blocks, not food; the tone is wrong and there's no M-04-style "recycle" value here; food already has consumption via M-26
+- REWORK: dossier candidate "economy via numismatics — M-09" is retired; replaced by M-28 colony provisioning above. "Create via create:milling — M-12" in dossier is ACCEPT (confirmed). "magic via Ars Vitalic/Agronomic Sourcelink" — WEAK in dossier, remains rejected (better owned by grain/crop mods).
+
 ## endermoon   [anchors: survival (1)]
 - from: Ender Moon spawn surge → ender pearl flood | via: lunar event gating (M-22) | to: magic | motif: M-22 | power: mid | tone: ok | verdict: REJECT | reason: endermoon has 0 items, 0 loot, no recipe method — it is a spawn-rate plugin for enhancedcelestials. Any M-22 weave (Ender Moon night → ender pearl → Occultism/Ars ritual input) must be authored against `enhancedcelestials` or vanilla ender pearls, not against endermoon itself. Recording here to flag: the M-22 ender-pearl link is real but belongs on enhancedcelestials's dossier as the event-system owner.
 - LEAVE — zero content surface; all lunar-event weave potential sits on the parent enhancedcelestials mod.
+
+## dynamictrees   [anchors: survival (1)]
+- from: dynamictrees:dendro_potion | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: clash | verdict: REJECT | reason: dendro_potion is a DT-internal growth catalyst — forcing it into arcane infusion makes it a magic ingredient for its own effect, which is circular and contrived; the potion already has a clear functional identity and doesn't need a magic repurposing
+- from: dynamictrees:branch (loose branch item) | via: create:milling | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: DT branches are just loose log fragments; milling them is functionally the same as milling any vanilla log — no distinct weave value added; DT's output already joins the vanilla wood chain downstream
+- LEAVE — DT outputs ordinary logs/wood that flow into Create/cooking chains automatically; its seed-conversion recipes are sapling-swap utilities only. No unique material warrants a dedicated weave. The dossier's leave verdict is confirmed.
+
+## ritchiesprojectilelib   [anchors: support/library (1)]
+- LEAVE — pure projectile/ballistics API library (0 items, 0 blocks, 0 loot, no recipe methods); hard dependency of Create Big Cannons, no independent content surface. Indirectly serves the aeronautics/Create combat arm via Big Cannons, but there is nothing to weave here.
+
+## resourcefullib   [anchors: support/library (1)]
+- LEAVE — pure utility/API code library (0 items, 0 blocks, 0 loot, no recipe methods); transitively pulled as a dependency of Resourceful-family mods. No game surface whatsoever.
+
+## better_climbing   [anchors: support/QoL (1)]
+- LEAVE — client-side climbing-physics tweak (no items, no blocks, no loot, no recipe methods). Pure movement feel improvement; nothing to route or weave.
+
+
+
+
 
 
 

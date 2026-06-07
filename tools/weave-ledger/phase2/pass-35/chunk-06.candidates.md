@@ -92,3 +92,36 @@ Client-side chat-UI cosmetic, no items, no blocks.
 
 - LEAVE — zero-content client UI mod; no material surface; pure quality-of-life for the multiplayer experience
 
+## kobolds   [anchors: economy, survival (2)]
+
+Kobolds has underground civilization mobs with emerald trading, unique structures, boss-tier Kobold Captains, and a loot=yes table. Already anchored at economy + survival (2). The dossier notes the mod is already well-connected; the one optional candidate is kobold_skull as a magic reagent sink.
+
+Power-read: kobold_skull is a mid-tier mob drop (kill a kobold, rare variant). Kobold Captains are Pirate-Den boss-tier (endgame-adjacent). The Prospector enchantment is a distinctive specialty item (loot/trade output). Kobold iron tools are everyday-tier common drops.
+
+- from: kobolds:kobold_skull | via: occultism:spirit_fire (transmute the skull of an arcane kobold enchanter into a spirit essence) | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: kobold enchanters are half-magical beings — their skull transmutes in spirit fire into a minor magic essence; the kobold farmer (mob-kill specialist) supplies a raw material to the magic specialist, threading the underground creatures into the magic production web
+- from: kobolds:kobold_skull (skelebold variant — kobold wither skull) | via: occultism:ritual (use the wither-skull variant as a ritual sacrifice component) | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: the rare Skelebold wither-skull is a exotic mob drop with obvious ritual resonance — a magic specialist trades for wither-skulls to fuel higher-tier rituals, giving Kobold-hunters a repeating demand stream
+- from: kobolds Prospector enchantment (exploration/mining buff) | via: ars_nouveau:enchanting_apparatus or create:sequenced_assembly | to: create | motif: M-29 | power: mid | tone: clash | verdict: REJECT | reason: the Prospector enchant is a kobold-exclusive trade good, not a craftable component — routing it through Create assembly would collapse the enchanter kobold's monopoly on it; the strength of the mob-trade economy is that players must go find kobolds, not craft around them; tone clash with the exploration intent
+- from: kobolds iron tool drops (kobold_iron_axe, pickaxe, sword) | via: create:crushing (M-04, crush back to raw iron + gravel) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: kobold iron weapons are everyday loot; running them through the crushing wheel converts junk drops into refined material — a small but logical Create recycle for the exploration/combat player's inventory clutter
+- from: Kobold Pirate Den (structure, Captain + chest) | via: loot-seed (seed Aeronautics schematic blueprint or rare map item into the Pirate Den chest) | to: aeronautics | motif: M-34 | power: endgame | tone: ok | verdict: ACCEPT | hook: kobold pirates are island-hopping sailors; their Pirate Den might hold a recovered airship schematic or a navigation chart — combat with the kobold captain becomes the way to unlock an Aeronautics build blueprint; danger feeds logistics
+
+OK — existing economy + survival anchors are sound. New links: M-11/M-02 (skull reagents → magic), M-04 (iron tools → Create recycle), M-34 loot-seed (pirate den → aeronautics). The M-29 Prospector enchant REJECT preserves the kobold trading economy's value.
+
+## terrablender   [anchors: support/library (1)]
+
+Biome-region injection API. Zero items, zero blocks, zero loot tables.
+
+- LEAVE — genuine zero-content worldgen library/API; all player-facing biome content belongs to the dependent mods; nothing to route
+
+## createlowheated   [anchors: create (1)]
+
+A single-block Create balance tweak (Basic Burner + "lowheated" heat tier). One block, one item, loot=yes. Currently Create(1) with dossier recommending leave.
+
+Power-read: the Basic Burner is an everyday-tier block (early Create progression). It consumes solid furnace fuel and emits low heat. Its loot table is likely the block's own drop. The mod injects a heat condition into Create basin recipes — fundamentally a resource-management modifier for the entire Create heating stack.
+
+- from: createlowheated:basic_burner (actively consumes furnace fuel for Create basin heating) | via: M-26 consumption mechanic (solid fuel is now a *recurring operational cost* for all Create heated-processing, not a passive resource) | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: the Basic Burner makes coal and charcoal a *running expense* of the Create spine — a survival-layer fuel demand that never zeroes out; the woodcutter / coal miner becomes a steady supplier to every Create operation; fuel scarcity becomes a real pressure on the production loop
+- from: createlowheated "lowheated" heat tier (new recipe tier between heated and superheated) | via: create:mixing / create:compacting (basin recipes that use the lowheated tier) | to: survival | motif: M-32 | power: mid | tone: ok | verdict: ACCEPT | hook: lowheated processing of organic byproducts (fat rendering, early-stage food processing, low-heat chemical steps) produces usable intermediates from waste — the byproduct→input circularity works because the lowheated tier handles reactions too gentle for the standard heated basin
+- from: createlowheated basic_burner (consumes charcoal specifically) | via: config tie (tie charcoal source to Serene Seasons winter availability — felling trees is harder in winter; charcoal becomes a seasonal bottleneck) | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: REJECT | reason: this is a config-level tuning choice (season-gating charcoal production), not a weave against an existing pack method; it depends on external seasonal mechanics that aren't intrinsic to createlowheated itself; overfitting for a small balance-tweak mod
+- from: createlowheated fuel consumption | via: tfmg:coking (coal coked into coke for cleaner/higher-value burner fuel) | to: create | motif: M-32 | power: mid | tone: ok | verdict: ACCEPT | hook: coal coked to coke in a TFMG coking oven burns hotter and longer in the Basic Burner — the industrial fuel-processing chain feeds directly into Create's heating; a Create specialist who invests in the coking step gets more heat per resource, making coking a worthwhile production step rather than an isolated TFMG feature
+
+REWORK: dossier recommends LEAVE ("single-block balance tweak with no tradeable/magic surface"). That's too conservative. The Basic Burner creates a *real fuel demand* across all Create heated processing — that IS a survival-pressure connection (M-26) of genuine weight. The whole pack's Create spine now has an ongoing resource cost, which is a loop-feeding outcome. The LEAVE call should be revised to recognize this passive but load-bearing survival tie.
+

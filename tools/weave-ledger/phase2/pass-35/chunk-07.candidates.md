@@ -82,7 +82,7 @@ Zero items, zero blocks, zero loot. Client-side sign text UI.
 
 Zero blocks, zero items, loot=no. Multi-loader abstraction library (BlayTheNinth). The 5 c:tags (nuggets/gold, nuggets/iron) are scaffolding, not new content.
 
-- LEAVE — genuine zero-content code library. Sanctioned support role; no weave possible or needed.
+- LEAVE — genuine zero-content code library (balm loader-abstraction library). Sanctioned support role; no weave possible or needed.
 
 ## aileron   [anchors: aeronautics (1)]
 
@@ -120,4 +120,26 @@ Zero blocks, zero items, loot=no. Client-side render optimization only.
 - from: Trek structure chest loot | via: loot-seed (seed raw regional scarcity metals, not minted coin) | to: economy | motif: M-08 | power: everyday | tone: ok | verdict: ACCEPT | hook: a buried strongroom holds a shard of the region's scarce ore — explorers scout ahead and bring back raw metal that the colony mints; exploration feeds the currency supply chain without bypassing the mint step.
 - from: Trek structure chest loot | via: loot-seed (boss-key material) | to: create | motif: M-15 | power: endgame | tone: ok | verdict: REJECT | reason: Trek structures spawn frequently (150+ types, weighted common) — not rare enough to hold boss-key items; M-15 requires a genuinely rare/hard-to-reach source to function as a gate.
 - from: Trek structures | via: exploration danger driving gear demand | to: survival (inherent) | motif: (survival anchor is already established) | verdict: OK — existing survival anchor is sound (exploration / world variety).
+
+## modulargolems   [anchors: create (1)]
+
+**Method-pull pass:**
+- Registered methods: modulargolems:golem_add_slot, modulargolems:golem_assemble, modulargolems:golem_replace_part. Already uses create:crushing, create:mechanical_crafting, create:sequenced_assembly.
+- 308 items (golem parts, upgrade templates, boss-metal variants); 1 block (golem_workbench); loot=yes.
+- Existing Create anchor is well-grounded (golem assembly is Create-gated). Current 1-anchor state.
+- M-02 (mob-drop reagent sink): the dossier's own strongest candidate. Dragonsteel (Ice&Fire), cursium (Cataclysm), and Mowzie's Mobs metals are already in the item sample — these are boss-drop metals that feed the golem assembly. Gating the best golem bodies (dragonsteel/cursium) behind those boss metals makes combat progression a prerequisite for top-tier automatons. This is exactly M-02's "an isolated mob/boss drop is given a use as a magic/economy input" — except here the consuming method is golem_assemble, and the beneficiary system is survival (combat/danger pressure feeds into a Create-adjacent construct route). Actually this lands at survival↔Create intersection: the boss (survival/danger) feeds the golem (Create automation). I'll tag this Create+survival because the boss-drop metals gate the Create-assembled product.
+- M-10/M-11 (magic route): routing an Ars source gem or Occultism material into a golem-core upgrade. The dossier flags this as weak. Let me red-team: golemancy is industrially themed; adding a magic-reagent upgrade slot isn't incoherent (a "spirit core" upgrade powered by source) — Golem Scribes in Ars Nouveau already exist thematically. However, the golem_replace_part method and the upgrade-slot mechanic are specific to modulargolems' own workbench, not an Ars ritual or Occultism spirit method. A weave here would require *authoring* a recipe that accepts a magic material in golem_assemble / golem_add_slot. That's coherent, but is it the strongest use of a magic reagent? Weak compared to M-02.
+- M-15 (boss-key unlock): the golem workbench assembly itself could be gated behind a specific boss drop (e.g. require a Cataclysm component in the sequenced_assembly chain to unlock endgame golem variants). This is already partially implied by the boss-metal bodies — the highest-tier bodies ARE boss-metal gated. The formal M-15 framing would be: a specific boss drop is a *required input* to the golem_assemble recipe for the top tier. Red-team: modulargolems items already use create:sequenced_assembly, and the boss metals are already cross-mod inputs. This is M-15 applied to an already-existing design pattern — a strong ACCEPT.
+- M-28 (colony route): could a MineColonies research unlock a cheaper golem assembly path? Plausible but no direct method hook — would require a config or KubeJS recipe edit on the colony side.
+
+- from: Cataclysm/Ice&Fire/Mowzie's boss-metal parts (cursium, dragonsteel, etc.) | via: modulargolems:golem_assemble / create:sequenced_assembly | to: survival | motif: M-02 | power: endgame | tone: ok | verdict: ACCEPT | hook: a dragonsteel golem requires smelting the Ice&Fire boss's signature metal — the combat specialist who farms that boss becomes the supplier for the Create engineer who builds top-tier automatons; danger directly gates automation power.
+- from: Cataclysm/boss drop | via: modulargolems:golem_assemble (boss drop as required ingredient for endgame golem body, explicit M-15 lock) | to: survival | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: the endgame golem body requires a fragment of the Harbinger's core — you need a fighter before you can field the most powerful constructs; boss progression gates the automation ceiling.
+- from: Ars source gem / Occultism otherstone | via: modulargolems:golem_add_slot (magic upgrade slot) | to: magic | motif: M-10 | power: mid | tone: ok | verdict: REJECT | reason: the tone is thematically coherent but the method is the golem's own workbench — forcing a magic-reagent slot onto an industrial construct is a somewhat arbitrary edge; M-02/M-15 already give the mod strong multi-system links via the more natural boss-metal path. Don't add a magic tie just to hit two anchors when the survival ties are stronger.
+- REWORK: none needed — existing Create anchor is sound and the accepted candidates above add survival as a clean second anchor.
+
+## platform   [anchors: support (library/API) (1)]
+
+Zero blocks, zero items, loot=no. Cross-platform library (ItsBlackGear).
+
+- LEAVE — genuine zero-content code library. Sanctioned support role; no weave possible or needed.
 
