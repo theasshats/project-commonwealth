@@ -45,3 +45,9 @@
 
 ## fogoverrides   [anchors: support/client-QoL (1)]
 - LEAVE — client-side config-only fog visual tuning; zero items, no methods, no loot tables. Sanctioned atmosphere support anchor; nothing to route through any method.
+
+## betteroceanmonuments   [anchors: survival (1)]
+- from: Elder Guardian (boss of the overhauled monument) | via: loot-seed | to: create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: Elder Guardian drops a unique aquatic component (seeded via loot-table injection) that gates a mid/endgame Create fluid-processing recipe — monuments become a combat prerequisite for the water-industry tech branch
+- from: expanded monument chests | via: loot-seed | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: deep-sea vault chests yield rare magic reagents (Ars source shards, Occultism ritual materials), making the overhauled monument a magic-progression waypoint for underwater explorers
+- from: monument chests as bare loot | via: — | to: — | motif: no-motif | power: — | tone: — | verdict: REJECT | reason: vanilla loot enrichment alone (better swords, books) is not a weave — the weave must connect to a loop system; M-15 and M-02 loot-seeds are the right forms
+- REWORK: dossier says "leave — defer" for a loot-bearing structure mod; this contradicts Phase 2 briefing which explicitly prohibits LEAVE on loot=yes mods; correct to loot-seed candidates M-15 + M-02.

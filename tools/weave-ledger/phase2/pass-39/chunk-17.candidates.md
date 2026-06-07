@@ -14,6 +14,12 @@
 - from: farm_and_charm ground meat / dried goods | via: farm_and_charm:drying → create:mixing | to: create | motif: M-12 | power: mid | tone: ok | verdict: REJECT | reason: drying-rack output as a mixing intermediate is plausible but the chain is short and survives well inside the food-mod web already; adding a Create mixing step would be busywork (a second M-12 edge on top of the grain milling one). One clear M-12 weave is sufficient for an everyday food mod.
 - from: farm_and_charm:butter / animal surplus | via: economy (sell/trade to other players) | motif: M-09 | verdict: REJECT | reason: M-09 is retired — bare sell links are the ambient endpoint of the loop, not a weave. The M-28 colony-route edge above is the real economy anchor.
 
+## bundle_recipe   [anchors: support/QoL (1)]
+- LEAVE — datapack-only; re-enables vanilla bundle crafting with vanilla leather/string. Zero new items or blocks; no foreign material surface to route through any method.
+
+## knightlib   [anchors: support/library (1)]
+- LEAVE — shared library for Knight Quest; the bundled content items (great_chalice, grails, essences, homunculus) are inert without Knight Quest, which is not in this pack. Dossier explicitly flags "do not weave dead items." No weave surface.
+
 ## pantographsandwires   [anchors: create, aeronautics (2)]
 - OK — connections sound. Deep Create integration (6 inbound recipe types including sequenced_assembly); aeronautics anchor is genuine (pantographs are the electric-train overhead-line system). Coal_coke/graphite tags noted as potential shared-material nodes for other mods but no coherent new motif weave arises (both pantographs and TFMG produce coal_coke; no mod in the palette consumes it distinctively). No REWORK.
 

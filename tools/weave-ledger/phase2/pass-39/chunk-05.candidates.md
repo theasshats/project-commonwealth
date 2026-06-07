@@ -104,3 +104,17 @@ OK — existing Create + survival connections are sound (mechanical_crafting alr
 
 - LEAVE — redstone-dust performance rewrite. Zero items/blocks; transparent behavior patch. Sanctioned performance/support role. No weave possible.
 
+## create_hypertube   [anchors: create, aeronautics (2)]
+
+Already at 2 anchors (Create + aeronautics/logistics; crafted via create:sequenced_assembly). Evaluate for new links and existing quality.
+
+Power read: hypertube + entrance + accelerator are mid-tier infrastructure — sequenced_assembly gating is already the right depth for a transit node. The mod moves players/entities, not items; no material processing. The dossier says "no coherent further weave — leave."
+
+- from: create_hypertube:hypertube_entrance (requiring kinetic power input) | via: create:sequenced_assembly (already made-by) | to: create | motif: M-06 | power: mid | tone: ok — the entrance is already built via sequenced_assembly which IS M-06 territory; the connection is established | verdict: REJECT | reason: this weave already exists (sequenced_assembly is the made-by method in the dossier); re-proposing it is not a new link
+
+- from: hypertube network (player transit) | via: aeronautics/logistics role | to: economy | motif: M-33 | power: mid | tone: ok — a player running a hypertube transit corridor for other players IS a service-for-hire; other players pay for faster cross-base travel | verdict: ACCEPT | hook: the transit engineer builds and maintains the tube corridor; other players pay in goods for fast-travel passes between districts
+
+- from: hypertube infrastructure | via: create structural alloy inputs for tube blocks | to: create | motif: M-23 | power: mid | tone: clash-adjacent | verdict: REJECT | reason: M-23 is for Aeronautics airframe/hull structural build materials — tube blocks are ground infrastructure, not vessel construction. Applying M-23 here would dilute the motif. The Create link is already established through sequenced_assembly.
+
+OK — existing Create + aeronautics connections are sound. One new economy-arm link (M-33 transit service) is coherent and new.
+

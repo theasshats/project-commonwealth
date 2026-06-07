@@ -80,4 +80,18 @@ REWORK: OK — survival anchor is correct. The dossier's M-12 candidate (fish �
 
 REWORK: The dossier marks it as "support (decoration palette — MineColonies styles)" with 1 anchor and no weave candidates — that understates it. The Steampunk style already creates a real Create-block demand at build time (documented in the dossier's "consumes" note). The weave is real; it just needs to be named. Both ACCEPT candidates above are latent links that already exist in the blueprint data and simply need to be surfaced.
 
+## oceansdelight   [anchors: survival (1)]
+
+**Method-pull:** Already woven into FD cooking/cutting (inbound). Its outputs are distinctive seafood dishes with status effects — `fugu_slice` (poison-risk delicacy), `elder_guardian_roll`, `guardian_soup`, `cooked_stuffed_cod`, etc. The guardian/elder-guardian sourcing gives these dishes a combat-supply flavor (M-34). The fugu's poison-risk is a survival-pressure mechanic.
+
+- from: oceansdelight guardian/elder-guardian dishes (elder_guardian_roll, bowl_of_guardian_soup) | via: farmersdelight:cooking (already) → consumption as demanded end-product | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: elder guardian drops are dangerous-to-farm (ocean monument = hostile territory) and its prepared dishes are the highest-effort ocean foods — the combat-supply loop: a fighter farms elder guardians, sells the raw drops to a coast cook who prepares the dish and sells to inland players; the cooked dish is the trade good that requires both roles
+
+- from: oceansdelight:fugu_slice | via: occultism:spirit_fire or ars_nouveau:imbuement | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: fugu is a real-world poison delicacy — routing it through occultism spirit_fire (transmuting a poison-risk food into a toxin essence or a venom reagent) is thematically coherent; poison + arcane = an obvious synthesis; the delicacy's risk is its magic value; one step turns the dangerous dish into a reagent only a cook+magic specialist pairing can produce
+
+- from: oceansdelight:cut_tentacles | via: create:milling | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: milling tentacles into a paste/powder is plausible but weak — the existing FD cutting-board route already handles tentacle → prepared ingredient; adding a Create milling step would be a redundant lower-value route. The economy and magic weaves above are the stronger 2nd anchors. Records as rejected.
+
+- from: oceansdelight dishes as "luxury seafood" | via: bare sell link | to: economy | verdict: REJECT | reason: M-09 retired — "sellable delicacy → coin" is ambient endpoint, not a weave. The M-34 candidate above is the correct economy framing (combat-supply route with two player roles). Records as rejected.
+
+REWORK: dossier's 2nd-anchor candidates both cite M-09 (retired) and M-12. M-12 is noted above as rejected (redundant). The real economy angle is M-34 (accepted above). The magic angle via M-11 (fugu → toxin reagent) is new and strong.
+
 

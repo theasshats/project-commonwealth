@@ -71,6 +71,11 @@ Method-pull candidates:
 
 LEAVE — client-side render overlay with zero items, blocks, loot, or gameplay material surface. Pure visual build-assist; nothing to weave.
 
+## jeresources   [anchors: support/client-UI (1)]
+
+LEAVE — JEI addon that surfaces mob-drop, dungeon-loot, and worldgen-distribution data; display-only with no material surface, no items, no processing. Genuinely useful for the scarcity design (players see where regional ores live) but it's documentation infrastructure, not a loop node. Nothing to weave.
+
+
 
 
 
