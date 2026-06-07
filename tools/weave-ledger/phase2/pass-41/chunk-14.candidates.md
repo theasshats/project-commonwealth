@@ -99,4 +99,27 @@ Existing rows: M-08 loot-seed ACCEPT (2A/1R) and M-02 loot-seed ACCEPT (2A/1R). 
 
 LEAVE — no owned loot table, no items, no methods. The two existing ACCEPT rows are grounded on an incorrect reading of the dossier and should be resolved to REJECT.
 
+## create_mobile_packages   [anchors: Create + aeronautics (2)]
 
+Already 2 anchors, extensively covered: M-05/M-20 (robo_bee fabrication), M-31 (logistics bulk supply), M-33 (drone operator service), M-37 (colony aerial-logistics research), M-28 (colony courier integration), M-29 (cross-route dependency). One genuinely absent angle:
+
+- NEW | from: create_mobile_packages:mobile_packager (bundles 9 inventory stacks into a single addressed package on-the-go) | via: create:mechanical_crafting (the mobile packager is a precision consolidation instrument — assembled from Create electron tubes + brass casing on the mechanical crafter) | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: the mobile packager is the difference between hand-carrying goods and running a serious logistics operation — building one requires the Create fabrication line, tying trade-infrastructure to the Create spine and making it a mid-tier investment, not a free tool.
+
+OK — all other major angles are covered. The mobile_packager fabrication route is the one unaddressed item.
+
+## friendsandfoes   [anchors: survival (1) → target Create/magic]
+
+Existing rows cover: M-02 (crab_claw → magic, strong consensus), M-04 (copper deco crushing, contested), M-34 (Wildfire/Illusioner combat supply). The mod is deliberately vanilla-like. Genuinely missing angles:
+
+- NEW | from: friendsandfoes:crab_claw | via: ars_nouveau:potion_flask (the claw already brews a reach-extension potion in vanilla brewing; converting it to an Ars potion_flask recipe routes the claw into the magic potion system via Ars's own method rather than vanilla brewing, adding the Ars system as a consumer without requiring imbuement) | to: magic | motif: M-10 | power: everyday | tone: ok | verdict: ACCEPT | hook: the claw is already a brewing ingredient — ars_nouveau:potion_flask is the narrowest viable bridge from vanilla-brew to the Ars magic system; it extends the claw's use without the imbuement complexity, and one existing ACCEPT row in prior passes confirms this angle.
+
+- NEW | from: friendsandfoes copper buttons / weathered lightning rods (full oxidation series) | via: create:splashing (water-splashing oxidized copper advances the weathering stage or de-waxes waxed variants — standard Create copper-oxidation control extended to these copper deco pieces) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: Create's water-splashing mechanic controls copper weathering on pipes and sheets — extending it to Friends & Foes copper buttons and lightning rods is the obvious Create-palette expansion; a player running an oxidation line for copper age-control processes the decorative set as naturally as the structural copper.
+
+- CHALLENGE | from: friendsandfoes:copper_golem_head (decorative drop) | via: create:pressing or boss-key gate | to: create | motif: M-15 | verdict: REJECT | hook: the copper golem is not a boss — it's a gentle utility mob (presses copper buttons, oxidizes naturally); its head drop is a flavor trophy, not a boss-key. Using it as a locked gate item (M-15) imposes combat scarcity on a non-combat mob's drop, which contradicts M-15's "meaningful fight" requirement and the golem's vanilla-faithful whimsical character. The 1 REJECT row is correct; no ACCEPT should survive.
+
+OK — crab_claw potion_flask and copper splashing are the two genuine gaps. The copper deco M-04 crushing rows (highly contested, 9R/8A) are close enough to leave to human judgment; the splashing alternative (create:splashing) is a cleaner single-step that the existing rows missed entirely.
+
+## moreoverlays   [anchors: support (1)]
+LEAVE — client-side HUD overlay mod, zero items/blocks/recipe-types. No rows existed; none are needed.
+
+== CHUNK COMPLETE ==
