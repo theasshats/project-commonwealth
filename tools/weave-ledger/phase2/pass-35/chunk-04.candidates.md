@@ -83,6 +83,43 @@ REWORK: OK — connections sound. Create + aeronautics anchors are correct. The 
 ## doubledoors   [anchors: support/QoL (1)]
 - LEAVE — zero items, zero loot, no recipe methods, pure door-interaction behaviour. No content surface to weave.
 
+## more_slabs_stairs_and_walls   [anchors: support/decoration (1)]
+
+Power-read: 847 blocks, 847 items, loot=yes. Pure deco completeness — slab/stair/wall cuts of vanilla blocks that lack them. Crafted via grid or stonecutter. The stonecutter affinity makes them natural candidates for create:cutting (the mechanical saw is Create's stonecutter analogue).
+
+Method-pull:
+
+- **create:cutting — give MSSW variants mechanical-saw recipes for bulk production and automation (M-12 processing-chain pull / M-04 adjacent).** Players building at scale want to automate the production of these cuts; a mechanical saw recipe (Create's cutting bench) is the standard pattern for decorative-cut blocks. This is 847 items but the pattern is uniform — one batch of KubeJS cutting recipes covers all variants by category. Tone: absolutely natural. Red-team: does this over-privilege a deco mod by giving it a Create anchor? No — it earns the anchor by making the decoration *producible at factory scale*. Power: everyday (building material). ACCEPT.
+
+- **create:crushing — gravity-bearing cuts (concrete_powder/sand/gravel variants) crush back to base material + xp nugget (M-04).** A gravity-physics slab of sand/gravel that breaks on fall damage should crush back to its constituent. This is a small but coherent recycling edge. Red-team: 847 items is large, but only the ~dozen gravity variants need this; the rest are stone/wood. Scoped to gravity variants only. ACCEPT.
+
+- **M-32 byproduct → input: MSSW log cuts (log slab/stair) from wood-processing chain.** Log slabs could be a *byproduct* of the woodcutting method (slabs from plank cuts), feeding into the pack's wood-processing loop. But MSSW log cuts are independently craftable from whole logs; the chain already closes. Not a strong method-routing weave. Reject as not adding cross-system depth.
+
+- from: more_slabs_stairs_and_walls cuts (all block types) | via: create:cutting | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: any decoration-cutter block you can make at a stonecutter can be made in bulk with a mechanical saw — the builder's decoration supply chain runs through the Create spine
+- from: more_slabs_stairs_and_walls gravity-type cuts (sand/gravel/concrete_powder slabs-stairs-walls) | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: a gravel-slab wall that breaks apart crushes back to gravel and a dust of XP — nothing wasted in the forge
+- from: MSSW log slabs as wood-processing byproduct | via: n/a (native craft) | to: Create | motif: M-32 | verdict: REJECT | reason: MSSW log cuts are independently craftable and don't sit downstream of a processing chain; no cross-system byproduct routing
+
+## create_hypertube   [anchors: Create, aeronautics (2)]
+
+Already at ≥2 anchors. Uses create:sequenced_assembly (inbound weave confirmed). Reviewing existing connections.
+
+Power-read: 4 blocks, 6 items, loot=yes. Uses create:sequenced_assembly — so hypertube_entrance is already assembled through the Create spine. The transport mechanic moves players/entities through a kinetic tube network.
+
+New candidate scan:
+
+- **M-24 mechanical component → aeronautics control: hypertube_accelerator as a required precision component in Aeronautics point-to-point boarding infrastructure.** Airships need boarding tubes (players boarding/disembarking at speed). A recipe requiring the accelerator in an Aeronautics docking or boarding module would cross the two. Tone: "ship docking uses hypertube accelerators to launch/receive passengers" — conceptually coherent in a Satisfactory-flavoured industrial pack. Power: mid (brass-sequenced-assembly). Red-team: the accelerator is a ground-network component; forcing it into a ship recipe conflates two distinct transport types. The tube network and the airship are complementary, not the same thing — they're both transport but the scale/context is different. The weave is possible but feels thin. Reject on tone grounds.
+
+- **M-05 native-method gating: hypertube_entrance is already via create:sequenced_assembly — this is established.** No new edge; the inbound weave is correct. 
+
+- **M-31 logistics-required: the hypertube is by definition the bulk-personnel logistics tool that justifies a specialist.** But the motif requires a *recipe* tying the good to logistics demand; "you need fast travel" is ambient. Not a method-routing. Reject.
+
+REWORK: OK — connections sound. Create + aeronautics anchors correct; sequenced_assembly inbound weave is the right production method for a precision transit device.
+
+- from: create_hypertube:hypertube_accelerator in Aeronautics boarding/docking recipe | via: aeronautics construction recipe | to: aeronautics | motif: M-24 | power: mid | tone: clash | verdict: REJECT | reason: accelerator is a ground tube-network part; grafting it into a ship docking recipe conflates two transport scales — the connection is thin and forced; better to leave the two as complementary distinct transport layers
+- from: hypertube as logistics-required bulk personnel mover | via: n/a (ambient use) | to: aeronautics | motif: M-31 | verdict: REJECT | reason: ambient usage framing, not a method-routing; no recipe connects tube items to an aeronautics demand gate
+
+
+
 
 
 

@@ -53,6 +53,28 @@
 ## libipn   [anchors: support/library (1)]
 - LEAVE — GUI/config/logging library for IPN; no items/blocks/loot. Genuine zero-surface dependency; nothing to route.
 
+## createpickywheels   [anchors: Create (1)]
+- from: water-wheel biome-gate (river biome required) | via: config/worldgen-gating | to: survival | motif: M-30 | power: everyday | tone: ok | verdict: ACCEPT | hook: the river-biome requirement for water wheels turns river-adjacent settlement into a scarce early-power node — players must settle near rivers or trade for wheel-generated power/output, directly linking Create power generation to regional geography (the scarcity foundation)
+- from: windmill biome-gate (Overworld + open air required) | via: config/worldgen-gating | to: survival | motif: M-30 | power: everyday | tone: ok | verdict: ACCEPT | hook: the open-air/Overworld windmill requirement makes Nether/underground bases power-disadvantaged — above-ground exposure is a survival tradeoff (you get power but you're visible); real Create specialization emerges from geography
+- from: power-placement constraint | via: no new method — behavior-only | to: survival | motif: M-30 | power: everyday | tone: ok | verdict: REJECT (duplicate) | reason: the two biome-gate entries above already capture this; a third overlapping entry adds nothing — the behavior is the same mechanic, not a third weave point
+
+## packetfixer   [anchors: support/compat (1)]
+- LEAVE — pure network packet-size fix; zero items/blocks/loot. Genuine zero-surface infra mod; nothing to route.
+
+## ribbits   [anchors: survival (1)]
+- from: Ribbit merchant Amethyst-Shard trade economy | via: KubeJS trade bridge | to: economy | motif: M-08 | power: everyday | tone: ok | verdict: ACCEPT | hook: Amethyst Shards (a regionally-scarce gem) are the Ribbit economy's currency; a KubeJS bridge minting a Ribbit-denomination Numismatics coin from Amethyst Shards (player-processed: crushed → minted) turns the swamp village into a genuine regional market node — the scarcity of amethyst geodes makes the Ribbit market a travel-incentive, not a freebie
+- from: ribbits:toadstool / ribbits:mossy_oak_planks woodset | via: create:cutting (sawmill) | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: generic wood-cutting for any exotic planks is a low-signal weave; mossy oak is a deco-flavor wood with no unique properties that Make a second Create link interesting — the anchor value is trivially low
+- from: Ribbit sorcerer buff trades | via: emergent demand | to: magic | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: the Ribbit sorcerer NPC grants player buffs in exchange for Amethyst Shards; a magic specialist who cultivates shard supply and trades them to sorcerers offers a service route — the sorcerer as a magic-adjacent service provider the magic pillar can integrate (or the Ribbit sorcerer trades a magic reagent that feeds Ars/Occultism)
+- from: ribbits:toadstool (mushroom blocks) | via: ars_nouveau:imbuement or farmersdelight:cooking | to: magic/survival | motif: M-10 | power: everyday | tone: ok | verdict: REJECT | reason: toadstool-as-reagent is thematically appealing but would invent a new reagent role for a deco block without a reagent-ownership assignment — register a DECISIONS.md escalation if this is wanted; don't author it here
+
+## create_pattern_schematics   [anchors: Create (1)]
+- from: create_pattern_schematics:pattern_schematic (repeating build tool) | via: aeronautics build workflow | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: pattern schematics riding a gantry/contraption auto-extend ship hulls and rail corridors — the repeating-schematic tool is exactly how a player constructs a large Aeronautics airframe efficiently; it's a build-enabler for the aeronautics tier, granting it a second anchor in the logistics arm
+- from: create_pattern_schematics:empty_pattern_schematic | via: create:mechanical_crafting | to: Create | motif: M-05 | power: mid | tone: ok | verdict: REJECT | reason: the schematic items already route through vanilla crafting; adding a mechanical_crafting gate on an M-05 logic requires a machine the schematic's use-case doesn't justify — it's a paper+quill tool, not a product that earns a multi-step gate
+
+
+
+
+
 
 
 

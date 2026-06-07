@@ -140,3 +140,60 @@ Client volumetric cloud renderer. Zero items, zero blocks, no recipe types, no l
 
 - LEAVE — zero-content client visual mod; nothing to weave.
 
+## sliceanddice   [anchors: Create, survival (2)]
+
+Already 2 anchors. The dossier correctly identifies it as a Create×survival M-12 processing-chain bridge by design. Items: slicer, sprinkler, fertilizer, wet_air. The sprinkler is the most interesting handle — it can pipe any fluid over crops.
+
+Power-read: The Slicer is a kinetic automation block (mid-tier Create machine); the Sprinkler is also mid-tier. The fertilizer bucket is more everyday. These are all in the "production infrastructure" band — automation of food processing, not endgame.
+
+**Candidate 1 — Sprinkler + magic fluid (Ars Nouveau source fluid or potion fluid) as crop accelerant / enchanted-harvest (M-10 / M-29)**
+The Sprinkler pipes any fluid over a crop area. If the pack has liquid magic (Ars source fluid, Occultism spirit fire in fluid form, or potions as fluids via Create), the sprinkler is a cross-route dependency bridge: route magic fluid through the Sprinkler to get enchanted crop yield, requiring a Create machine (slicer) AND a magic production route (source generation). Red-team: Ars Nouveau source fluid is not a standard Minecraft fluid you can bucket; it's a source gem–based energy form, not a bucketable liquid. Occultism doesn't output pipeable fluids either. There's no obvious liquid magic in this pack that the sprinkler would accept. The method requires a pipeable Forge fluid. The concept is evocative but the material join doesn't exist cleanly. Could be done if a mod provides a pipeable magic fluid (e.g. Create Enchantment Industry enchant fluids or a potion fluid from Vinery/Extra Delight). Worth flagging as a concept but the specific material-join is uncertain.
+
+- from: magic fluid (potion / enchant fluid via Create Enchantment Industry) | via: sliceanddice sprinkler | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: a Create farmer who wants boosted crop yields must source enchanted fluid from a magic specialist and route it through the Sprinkler — a real cross-route dependency that makes the farm's output quality depend on the magic player's output. Delivery: recipe/config tie confirming the sprinkler accepts potion fluids from the pack's installed potion-fluid sources.
+
+**Candidate 2 — Slicer + seasonal ingredient automation (M-16)**
+The Slicer auto-runs all FD cutting recipes. Serene Seasons makes some crops seasonal. If a winter-only or summer-only crop has a cutting recipe, the Slicer becomes a bottleneck that concentrates seasonal processing — the farm runs hot in harvest season and the Slicer queue matters. This is not a new recipe weave but a framing note: the M-16 seasonal reagent motif gains teeth specifically because the Slicer can be the automation step, making seasonal processing lines a real build goal. Red-team: this is already implicit in M-16 + sliceanddice coexisting in the pack. No new weave is needed — it's ambient. But it is worth noting as a REWORK flag if sliceanddice's existing anchor doesn't capture this.
+
+- from: seasonal crop (Serene Seasons–restricted) | via: sliceanddice:slicer (kinetic FD cutting) | to: survival | motif: M-16 | power: mid | tone: ok | verdict: ACCEPT | hook: a seasonal harvest line — the Slicer processes the limited-season crop at scale, making the Create food chain explicitly seasonal and tying the survival-pressure season driver into the Create production spine.
+
+**Candidate 3 — Slicer automation → MineColonies cooking supply (M-28)**
+The Slicer's output (sliced vegetables, meats) feeds cooking. MineColonies cooks/farmers request food; a Slicer-based line could pre-process ingredients for colony kitchens. Red-team: this is ambient loop (Create output → colony input) already covered by M-28 in general. Not a specifically sliceanddice weave.
+
+- from: sliceanddice slicer output (sliced food) | via: create:mixing → minecolonies kitchen | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: REJECT | reason: ambient Create→colony edge; not specifically a sliceanddice weave; covered by M-28 at the pack level.
+
+**Existing connections review:**
+- OK — Create + survival anchors are well-grounded and the mod is the design's FD×Create bridge as intended.
+- No REWORK on existing connections.
+
+## mru   [anchors: support/library (1)]
+
+Mineblock's Repeated Utilities — shared library. Zero blocks, zero items, no recipe types, no loot.
+
+- LEAVE — genuine zero-content library; nothing to weave.
+
+## notenoughcrashes   [anchors: support/stability (1)]
+
+Crash-recovery utility. Zero blocks, zero items, no recipe types, no loot.
+
+- LEAVE — zero-content stability/UX mod; nothing to weave.
+
+## midnightthoughts   [anchors: survival (1)]
+
+Sleep/rest overhaul granting well-rested buffs. Zero blocks, zero items, no recipe types, no loot. Purely event/effect driven.
+
+Power-read: The well-rested mechanic confers status buffs from sleeping. No items to route. The question is whether the well-rested buff state creates any material demand (e.g. bedding materials, sleeping aids) or a cross-system join.
+
+**Candidate 1 — well-rested buff → demand for bedding materials / sleep-aid consumables (M-26)**
+If rest quality depends on bed quality or consumable sleep aids, that creates production demand. However: midnightthoughts is purely event-driven; it grants buffs based on sleep timing, no special bed block or consumable is required. There is no material hook.
+
+- from: midnightthoughts well-rested buff | via: sleep event | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: no material hook — the mod is purely event-driven; well-rested requires no crafted item; no production demand is created.
+
+**Candidate 2 — well-rested buff state × Cold Sweat temperature comfort (config tie / M-26)**
+Cold Sweat penalizes players who are cold/hot. A well-rested player might resist temperature debuffs better — thematic but requires a config bridge between two mods that don't natively interact. This is a config-tie delivery (M-26 consumption side). Red-team: this would be a custom KubeJS event integration (if well-rested → apply a Cold Sweat resistance attribute). No existing method bridges this; it would be a new system effect. It fits no existing motif cleanly (no method in the palette handles it). Mark no-motif.
+
+- from: midnightthoughts well-rested state | via: config/KubeJS event bridge | to: survival | motif: no-motif | verdict: REJECT | reason: no-motif; the cross-mod attribute bridge would need a Gate-0 motif before authoring; thematic but mechanically ungrounded in existing methods.
+
+The dossier's LEAVE verdict is correct. No items, no loot, no method to route through.
+
+- LEAVE — purely event/effect-driven rest mod; no items, no loot, no method handle; a second anchor would require inventing a new mechanic.
+

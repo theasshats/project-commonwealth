@@ -80,6 +80,30 @@ Existing connections sound for 2 pillars. Looking for a third weave now:
 
 OK — existing Create connection is sound (milling/mixing/filling per made-by). The survival anchor is the core food pillar — sound.
 
+## chefsdelight   [anchors: survival, economy (2)]
+
+Already at 2 anchors (survival + economy via villager trades). Dossier suggests routing its trades onto Numismatics coins — that's M-21 (CUT). The existing villager-trade economy anchor is NPC-based, which is cut per #163/#240. Check this carefully.
+
+REWORK: The dossier claims "economy via villager trades" as the economy anchor. Villager trades paying emeralds are NPC economy, which M-21 cuts. The economy anchor here is **weak/misclassified** — the Cook/Chef villager selling FD meals for emeralds is exactly the NPC coin faucet the rework eliminated. This anchor needs reconsidering.
+
+- REWORK: chefsdelight's "economy" anchor rests on emerald-trade villagers — the same NPC faucet M-21 cuts. The economy anchor should be challenged: it should either be reframed as M-33 service-for-hire (the Cook villager provides a labor service: cooking for players who lack the kitchen, with player-emergent payment), or dropped until the trades are re-scoped to non-coin goods. Flag for Gate 2 review.
+
+- from: chefsdelight Cook/Chef villager professions | via: M-33 service-for-hire framing | to: economy | motif: M-33 | power: everyday | tone: ok | verdict: ACCEPT | hook: the Cook village is a specialist labor node — players who lack a kitchen can contract the village cook to process raw ingredients; payment is emergent (emeralds as a proxy, or Numismatics once the economy pillar is built); the work is done, not a product sold — fits service-labor framing
+- from: chefsdelight village cook structures (new village buildings) | via: loot-seed | to: survival | motif: M-34 | power: everyday | tone: ok | verdict: REJECT | reason: the cook structures are village variants, not dungeon/boss loot tables; loot-seeding here would put weave-relevant drops in a cooking-stall which is tonally wrong and mechanically unnecessary. The survival anchor comes from the FD food content the mod surfaces, which is already sound.
+- from: chefsdelight (recruitable cook NPCs near a colony) | via: minecolonies huts | to: economy | motif: M-28 | power: mid | tone: ok | verdict: REJECT | reason: MineColonies has its own Cook hut and restaurant — chefsdelight's professions are vanilla villager mechanics, not colony workers. Conflating them would require custom wiring that doesn't exist. M-28 is better authored via cookingforblockheads (which the colony Cook hut actually uses). Reject the collision.
+
+## supplementaries   [anchors: Create, survival (2)]
+
+Already at 2 anchors and deeply cross-woven. Dossier says Leave (no further edges needed). Checking existing connections and one potential new link.
+
+REWORK: Existing connections are sound — haunting/mixing/splashing ties it to Create; FD cutting/flax crop/ash/soap ties it to survival. No weak or arbitrary existing edges. OK — connections sound.
+
+- from: supplementaries:flax (c:crops/flax → rope/string) | via: ars_nouveau:imbuement (Agronomic Sourcelink passive Source from flax growth) | to: magic | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: flax is a crop; the Agronomic Sourcelink harvests Source from *any* crop growth in radius — a flax farm is simultaneously a rope factory and a passive Source generator; a fiber specialist supplies both the textile trade and the arcane economy without a recipe change
+- from: supplementaries:faucet (fluid transfer — meshes with Create piping) | via: aeronautics fluid-routing on ships | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: REJECT | reason: the faucet is a useful fluid utility but it's a passive gravity-fed pipe, not a bulk cargo mover. Linking it to aeronautics as a "logistics bulk good" is a stretch — M-31 requires goods heavy enough to *need* the logistics arm; a faucet is just decoration/QoL. Tone: plausible but the weight isn't there.
+- from: supplementaries:safe (locked storage) | via: M-33 service-for-hire | to: economy | motif: M-33 | power: everyday | tone: ok | verdict: REJECT | reason: a safe as a player-economy tool is real (locked chests for market stalls) but this is ambient decoration behavior — the connection isn't a weave, it's just "players use safes to store traded goods." No method-routing exists to call this a candidate. The mod is already at 2 anchors and sound; forcing an economy edge isn't needed.
+
+
+
 
 
 

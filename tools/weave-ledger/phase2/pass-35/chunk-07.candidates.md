@@ -76,5 +76,11 @@ Zero items, zero blocks, zero loot. Library (Darkhax). One notable data feature:
 
 Zero items, zero blocks, zero loot. Client-side sign text UI.
 
-- LEAVE — genuine zero-content client UI mod. No material surface; sanctioned support role.
+- LEAVE — genuine zero-content client UI mod (sign large-text helper). No material surface; sanctioned support role.
+
+## balm   [anchors: support (library) (1)]
+
+Zero blocks, zero items, loot=no. Multi-loader abstraction library (BlayTheNinth). The 5 c:tags (nuggets/gold, nuggets/iron) are scaffolding, not new content.
+
+- LEAVE — genuine zero-content code library. Sanctioned support role; no weave possible or needed.
 

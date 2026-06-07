@@ -61,3 +61,38 @@ Rich boss/dungeon mod — eight large bosses, 300+ items, unique processing meth
 **Existing connections review:**
 REWORK: Single-anchor (survival) for a flagship 300-item boss mod with explicit CLAUDE.md callout as the boss-drop gate mechanism is clearly under-woven. The 8 ACCEPT candidates above (M-15 Create keystone, M-11 occult transmutation, M-10 Ars fire infusion, M-34 combat supply, M-12 food chain, M-20 fusion upgrade, M-02 loot seed, M-04 deco crush) all advance the loop. Priority is M-15 + M-06 (Create spine gating) and M-11 (magic web).
 
+## citadel   [anchors: support/library (1)]
+
+Pure library/API — animation framework, spawn-rate tooling for Alex's Mobs family. Minimal player-facing content (citadel:citadel_book, citadel:lectern are dev/util). The dossier records loot=yes, but that is a jar artifact (lectern item has a vanilla-inherited loot entry at most). Zero material surface.
+
+- LEAVE — genuine code library (animation/spawn API for Alex's Mobs); zero material surface, no item processing, no loot tables of substance. No coherent weave possible.
+
+## yungsapi   [anchors: support/library (1)]
+
+Pure API library — jigsaw manager, structure utilities, JSON adapters, item/block randomizers. The dossier records 0 blocks, 0 items, loot=no. Genuinely nothing to weave.
+
+- LEAVE — zero-content code library (YUNG's structure-mod API); no items, no loot, nothing to route through any method.
+
+## xaerominimap   [anchors: support/client-QoL (1)]
+
+Client-side minimap HUD with waypoints and entity radar. Zero items, zero loot, no blocks, no materials, no world interaction. Pure client rendering.
+
+- LEAVE — pure client UI / navigation aid; no material surface, no items, no mechanic to route through. Nothing to weave.
+
+## createmechanicalcompanion   [anchors: create (1)]
+
+Craftable clockwork wolf companion, built via deep Create sequenced assembly (netherite plates, precision casing, optical sensor, quantum drive). Combat/utility modules. One anchor (Create). Dossier argues leave. Let me power-read the items and test harder.
+
+**Method-pull candidates:**
+
+- from: createmechanicalcompanion:mechanical_wolf_link (the summoning item, worn as Curios head slot) | via: ars_nouveau:imbuement (source gem attunement on the wolf link to unlock a magic combat module slot) | to: magic | motif: M-29 (cross-route dependency — a Create-built item requiring a magic input to unlock a capability) | power: endgame | tone: ok — a brass-and-netherite wolf gaining a magic-infused combat sense (arcane optical sensor) is tonally coherent for a pack where Create and magic coexist; it doesn't feel forced because the wolf already has an "optical sensor" mechanic | verdict: ACCEPT | hook: The mechanical wolf's arcane tracking module is awakened at an imbuement altar — the engineer and the arcanist both contribute to the ultimate companion.
+
+- from: createmechanicalcompanion:optical_sensor / quantum_drive (exotic Create components) | via: create_new_age:energising | to: create (depth) | motif: M-17 (FE charging bridge) | power: endgame | tone: ok — the quantum drive and optical sensor sound like high-tech electronics; routing them through the Energiser for their final charge step is mechanically sensible | verdict: ACCEPT | hook: The quantum drive component must be energised at the Create New Age Energiser before it can power the wolf's locomotion system.
+
+- from: createmechanicalcompanion (combat companion → survival pressure overlap) | via: M-34 combat-route supply | to: economy | motif: M-34 | power: endgame | tone: clash — the companion is personal gear, not a trade good; it's owner-locked (dossier: "owner-locked unbreakable helpers") so it can't be traded between players as a commodity. The M-34 angle would require the wolf modules to be separable trade goods. | verdict: REJECT | reason: Owner-locked, non-tradeable item — no economy trade surface. M-34 requires the fighter to supply goods to others; a personal companion doesn't fulfill that.
+
+- from: createmechanicalcompanion:booster_rocket (a module item in the item sample) | via: aeronautics tie — a rocket-equipped wolf as personal propulsion | to: aeronautics | motif: no-motif | power: endgame | tone: ok | verdict: REJECT | reason: No-motif — personal rocket propulsion for a wolf companion doesn't map to any accepted M-01..M-38 motif. The aeronautics pillar is about logistics/vehicles (ships, trains, drones for cargo), not personal pet boosters. Forced edge.
+
+**Existing connections review:**
+REWORK: Single anchor (Create) is correct but the dossier's "leave, nothing to weave" is too conservative — the optical-sensor / quantum-drive items are clearly designed as high-tech electronics and the M-17 Energiser path + M-29 imbuement magic-module are both coherent. The mod has two genuine ACCEPT candidates to lift it to 3 anchors.
+
