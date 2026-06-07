@@ -76,6 +76,22 @@ One missing angle: **MineColonies demand for photographs as colony records / que
 
 OK — M-35 aged_photograph and M-33 service rows are well-supported. The silver chemistry M-29 above is the key missing precision.
 
+## illagerinvasion   [anchors: survival (1); strong 2nd-anchor candidates in magic + economy]
+
+Well-covered mods: hallowed_gem M-02 (25 ACCEPTs), illusionary_dust M-11 (20 ACCEPTs), lost_candle M-19 (4 ACCEPTs), M-33 imbuing-table service (5 ACCEPTs), M-34 combat-supply (solid), M-15 boss-key (split but directionally ACCEPT). What's NOT covered or underexplored:
+
+1. The **platinum_chunk M-03 row** (27 counts, split 20A/7R) is the noisiest. The REJECT argument is: platinum_chunk is a mob-drop, not a mined ore — M-03 is ore-doubling, which is for ores. That REJECT is correct and should be formalized as a CHALLENGE.
+
+2. The **M-28 colony-research angle** (1 ACCEPT) — a colony guard-hall research unlocking a cheaper imbuing-table substitute — is genuinely good (it's the "boss fork vs colony fork" pattern the design describes) and underexplored. No other pass articulated it cleanly as the *high-tier fork* for enchantment-upgrading. This deserves a NEW.
+
+3. The **lost_candle M-19 soul-fire angle** is accepted but the power tier hasn't been argued: lost_candle is an *everyday* atmospheric drop (not rare/endgame). The hook says "a candle taken from a dead illager, soul-fired" — that's fine for an everyday step, which M-19 is (not a complex chain). Power: everyday. That distinction is missing from the prior rows.
+
+- CHALLENGE | from: illagerinvasion:platinum_chunk | via: create:crushing | to: create | motif: M-03 | verdict: REJECT | hook: M-03 is ore-doubling (ore → crushed + byproduct); platinum_chunk is a mob-drop, not a mined ore — applying ore-doubling to a mob-drop is a motif mismatch; the correct framing if platinum is to enter the Create spine is M-02 (mob-drop reagent given a Create use), not M-03
+- NEW | from: illagerinvasion boss/raid drops (hallowed_gem, illusionary_dust) | via: minecolonies guard-hall barracks research | to: economy | motif: M-28 | power: endgame | tone: ok | verdict: ACCEPT | hook: a colony that trains enough guards earns a research unlock for an in-colony enchantment-upgrading ritual — the colony route to the same endgame (over-cap enchants) that the boss-drop route provides via the Imbuing Table; two paths to one ceiling, neither self-sufficient without their respective specialist
+
+OK — core magic and combat-supply rows are strong. The CHALLENGE resolves the platinum_chunk motif confusion; the NEW adds the missing high-tier-fork articulation for the colony route.
+
+
 
 
 

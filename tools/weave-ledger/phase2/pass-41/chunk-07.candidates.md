@@ -30,3 +30,22 @@ One gap: the **colony route (M-28)**. One row proposed "colony Builder hut place
 
 - NEW | from: mcwdoors:*_barn_door / *_cottage_door (wood families used in colony stable/cottage schematics) | via: minecolonies colony Builder request | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: a MineColonies Builder hut constructing a Stable schematic requests 40 barn doors — the colony pull makes a door-crafter a necessary supplier, not just a decorator
 
+## configuration   [anchors: support/library (1)]
+
+LEAVE — pure config-screen library; 0 blocks, 0 items, no gameplay surface. No weave possible.
+
+## mcwwindows   [anchors: support/decoration (1)]
+
+Existing rows: stone parapet/arrow-slit → create:crushing (M-04) converged as ACCEPT (19 vs 12 but split narrows on mosaic glass, which correctly rejects). The M-29 polished-stone input angle got 1 ACCEPT. The curtain/wool angles consistently reject on tone. The M-20 sandpaper-polishing angle got 1 ACCEPT.
+
+Gaps to probe:
+
+1. The **M-29 sandpaper-polishing inbound** angle (require a Create-polished stone intermediate as input for fancy stone window variants) is the same as proposed for mcwstairs above. It has only 1 ACCEPT and the question is whether it's well-grounded. Red-team: a player wants to craft an andesite window — does it feel natural that it requires a machine-polished stone slab? For a decorative block that's otherwise vanilla-table-crafted, this is over-engineering everyday content. The existing ACCEPT was from a single pass; the 0 REJECT is not convergence, it's sparse. Proposing a CHALLENGE.
+
+2. **Curtain rod** (mcwwindows:acacia_curtain_rod — an iron/wood item) has never been cleanly addressed. The rods are pure deco. They contain iron in the rod form. Could iron curtain rods crush back to iron nuggets (M-04)? Red-team: the iron rod is a small item, crushing it adds negligible material return and is recipe noise. Reject — too thin.
+
+3. The M-28 colony angle for mcwwindows has never been proposed. A Builder hut constructing window frames for colony buildings could request arrow-slit variants for a Fortress schematic. Same logic as mcwdoors M-28 above, equally valid.
+
+- NEW | from: mcwwindows:*_arrow_slit / *_parapet (fortification window variants used in colony Fortress/Guard-tower schematics) | via: minecolonies colony Builder request | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: building a colony Guard Tower requires arrow-slit windows — the window-maker becomes a colony supplier, not just a decorator
+- CHALLENGE | from: mcwwindows stone window/parapet variants (andesite) | via: create:sandpaper_polishing (polished-stone intermediate as recipe input) | to: create | motif: M-29 | verdict: REJECT | hook: gating an everyday decorative window on a Create-processed intermediate violates the basic-component cost rule; the single existing ACCEPT is not convergence — the block is everyday decoration that should craft from vanilla stone, not from a machine-lapped slab
+

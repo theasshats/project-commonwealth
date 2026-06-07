@@ -39,13 +39,21 @@ Existing rows: M-05 gate-via-Create REJECT (majority correct); M-30 recipe-requi
 
 ## beachparty   [anchors: survival (1)]
 
-Existing rows cover: coconut→Create milling/juicing (M-12, ACCEPT majority); cocktails→consumption sink (M-26, ACCEPT majority); palm biome regional scarcity (M-30, ACCEPT); Palm Bar as player service (M-33, ACCEPT); summer-gated melon cocktail (M-16, ACCEPT 1); cocktail maturation via vinery/vat (M-35, ACCEPT 1/REJECT 1). Palm wood M-04/M-12 REJECT (correct — generic wood). Mini-fridge ice REJECT (correct — free/trivial ice).
+Existing rows cover: coconut→Create milling/juicing (M-12, ACCEPT majority); cocktails→consumption sink (M-26, ACCEPT majority); palm biome regional scarcity (M-30, ACCEPT); Palm Bar as player service (M-33, ACCEPT); summer-gated melon cocktail (M-16, ACCEPT 1); cocktail maturation via vinery/vat (M-35, ACCEPT 1/REJECT 1). Palm wood M-04/M-12 REJECT (correct). Mini-fridge ice REJECT (correct).
 
-The existing rows already establish beachparty's two anchors (survival primary + Create via M-12 coconut/M-30 biome/M-33 service). What's missing:
+Existing rows already cover two anchors (survival + Create/economy via M-12/M-30/M-33). What's missing is a logistics angle and a cleaner maturation framing:
 
-- NEW | from: beachparty cocktails (coconut_cocktail / honey_cocktail / melon_cocktail — finished drink fluids) | via: create:filling (bottle the cocktail batch into casks for bulk economy distribution, the same way vinery wine is cask-filled) | to: economy | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: bulk cocktail output fills Create casks that a logistics specialist ships by cardboard-plane courier — the beach bar's production needs the aeronautics arm to reach inland buyers, giving the logistics route a frivolous-but-real cargo.
-- NEW | from: beachparty:coconut_open + tropical fruit (melon/cocoa) | via: vinery:apple_fermenting or alcohol_industry:alcohol_boiling (ferment coconut water / tropical juice into a hard beach-liquor base before palm_bar_mixing) | to: economy | motif: M-35 | power: mid | tone: ok | verdict: ACCEPT | hook: a premium cocktail requires a fermented tropical base — the beach specialist needs the winery's aging method, so the bar and the brewer depend on each other; maturation adds a second tier above the default coconut_cocktail.
-- CHALLENGE | from: beachparty:message_in_a_bottle (exploration item) | via: loot-seed — place a Numismatics coin or magic scroll inside | to: economy | motif: M-08 | verdict: REJECT | hook: M-08 requires a scarce regional metal → Create-processed → player-pressed into coin; message-in-a-bottle is a random-float flavor object with no metal-processing story; seeding coin into it is arbitrary and defeats the player-run minting rationale. The existing REJECT (×1) is correct.
+- NEW | from: beachparty cocktails (coconut_cocktail / honey_cocktail / melon_cocktail — finished buff drinks, liquid form) | via: create:filling (fill Create casks/barrels for bulk distribution) | to: economy | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: casks of cocktail bulk-filled on a contraption ride the cardboard-plane courier to inland buyers — the beach bar's output needs logistics to reach non-coastal players, giving the aeronautics arm a concrete low-tier cargo.
+- NEW | from: beachparty:coconut_open (raw tropical fruit, harvested from beach biome palms) | via: vinery:apple_fermenting or alcohol_industry:alcohol_boiling (ferment coconut water / tropical juice into a fermented base before palm_bar_mixing premium recipes) | to: economy | motif: M-35 | power: mid | tone: ok | verdict: ACCEPT | hook: a premium tier of cocktail requires a fermented tropical base the plain coconut doesn't provide — beach specialist needs the brewer's maturation step, so bar and winery specialize against each other.
+- CHALLENGE | from: beachparty:message_in_a_bottle | via: loot-seed (coin/scroll inside) | to: economy | motif: M-08 | verdict: REJECT | hook: M-08 requires scarce-metal → Create-processed → player-pressed coin; a flavor-float item seeding coin is arbitrary and breaks the player-minting rationale — the existing REJECT is correct.
+
+## modonomicon   [anchors: support (1)]
+
+Existing rows: all REJECT except one ACCEPT (M-37 book as MineColonies research-unlock ingredient). Majority correctly finds it documentation with no recipe surface.
+
+- CHALLENGE | from: modonomicon:modonomicon (book item as a crafted research-unlock ingredient) | via: recipe | to: economy | motif: M-37 | verdict: REJECT | hook: M-37 is a research/knowledge gate — the motif's mechanic is that a recipe is unlocked by MineColonies research or Ars spell-knowledge, not that a guidebook item is a physical crafting ingredient. Forcing the book object into a recipe makes documentation an arbitrary reagent, which misapplies the motif. Correct disposition is LEAVE.
+
+## createfood   [anchors: survival, Create (2)]
 
 
 

@@ -19,4 +19,14 @@ LEAVE — pure performance mod, zero items/blocks/recipe-types. No rows existed;
 ## lionfishapi   [anchors: support (1)]
 LEAVE — pure code library (animation/entity API), zero content surface. No rows existed; none are needed.
 
+## inventoryprofilesnext   [anchors: support (1)]
+LEAVE — client-only inventory QoL, zero items/blocks/recipe-types. The one existing REJECT (no-motif behavioral UI) is correct and exhausts the space.
+
+## midnightthoughts   [anchors: survival (1)]
+LEAVE — confirmed. Nine distinct approaches were rejected across prior passes, all hitting the same wall: the mod ships no items or tags, so no method-pull is possible and any link would require inventing new content (authoring, not weaving). The survival anchor is its only anchor. OK — existing rows sufficient (and exhaustively negative).
+
+## createshufflefilter   [anchors: Create (1)]
+LEAVE — confirmed. Ten prior REJECT rows exhaust every plausible angle (M-06, M-20, M-24, M-05, M-10, M-08, aeronautics framing). The two filter items are pure builder utility with no cross-system surface; forcing a second anchor is arbitrary. Dossier's own assessment ("leave") stands.
+
+
 
