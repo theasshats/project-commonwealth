@@ -234,3 +234,28 @@ Concrete candidates:
 
 REWORK: Dossier M-04 (copper deco crush) confirmed as acceptable (thin but coherent). Dossier M-02 (hostile drops → magic) is the strongest path and is confirmed via crab_claw specifically. The "leave acceptable" caveat in the dossier was overly cautious — there are two solid weaves here.
 
+## simplehats   [anchors: support (cosmetic QoL, 1)]
+
+One anchor (support/cosmetic). Zero blocks, 351 items (hat catalogue), loot=no, registered methods: simplehats:custom_hatscraps, simplehats:custom_hatvariants. Internal economy: hats ↔ scraps ↔ bags (mob drop). No foreign-material join keys.
+
+Method-pull:
+The dossier flags M-09 (luxury good → coin) — that's retired. Blind pass:
+- The cosmetic economy is closed: hats drop from mobs → player collects → scraps → new bags. No material leaves or enters from other mods.
+- custom_hatscraps / custom_hatvariants are internal recipe types only.
+- Rare hats as trade goods: this is the ambient endpoint (sell rare cosmetics), not a demand-gating weave. Reject bare sell.
+- Loot-seed: rare hats seeded into boss/dungeon loot tables. That's not simplehats doing weaving — that's a loot-table authoring action on a boss/structure mod. The weave lives on the loot-bearing mod, not here.
+- M-33 service-for-hire: a hat-dyeing or hat-variant service (player pays another to cycle a hat variant) — but this is so lightweight it's ambient social interaction, not a structured mechanic.
+- Could argue M-26 consumption: hats are cosmetic and don't degrade (no durability), so no consumption sink.
+- The grab-bag system (hats drop off hostile mobs) could be tied to M-34 (combat-route supply): killing mobs is the source of grab-bags. But the drops already are mob drops, and no new cross-system contact is added — this is the ambient use of mobs.
+
+- from: simplehats grab-bags (hostile mob drops) | via: loot-seed into boss/structure loot tables | to: economy | motif: M-33 | power: everyday | tone: ok | verdict: REJECT | reason: M-33 is service-for-hire (labor); seeding hats into loot is a loot-table action, not a service mechanic. And hats being in boss chests is atmospheric, not a system-level weave. No demand gating.
+- from: simplehats rare hat (collectible) | via: player trade (vanity economy) | to: economy | motif: M-34 | power: everyday | tone: ok | verdict: REJECT | reason: M-34 is combat-route supply (boss drops traded to non-combat players). Hats as cosmetics are ambient collectibles — there's no combat-specialization requirement; any player kills hostile mobs. Bare "sellable" logic.
+
+LEAVE — cosmetic mod with a closed internal economy (hats/scraps/bags). No cross-system material routing is coherent. The only possible economy link is the ambient sell endpoint (retired M-09); no demand-gating weave survives.
+
+## dragonlib   [anchors: support (library/API) (1)]
+
+1 block (dragonlib:dragon — dev artifact), 1 item, no loot, no recipe types. MrJulsen's architectury-based API library. The dragon block/item is a test artifact, not content.
+
+LEAVE — genuine zero-content code library (the lone dragon item is a dev/test artifact, not a player-facing material). Sanctioned dependency support role.
+

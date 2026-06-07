@@ -98,3 +98,8 @@
 ## jeed   [anchors: support/client-UI (1)]
 - LEAVE — JEI display addon (effect documentation categories); zero items, zero blocks, zero loot. Its two "recipe-types" (effect_provider, potion_provider) are JEI display providers, not craftable methods — nothing to route through. Pure client-side documentation layer.
 
+## citadel   [anchors: support/library (1)]
+- LEAVE — animation and spawn-rate library for sbom_xela mods (Alex's Mobs etc.); zero gameplay items (debug/icon/effect items are tooling), zero methods, loot=yes but the loot is Alex's Mobs loot via the dependent mod not citadel itself. The genuine zero-surface library case: all content weight belongs to its dependent mods. Auto-pulled as a dep; never wired directly.
+
+== CHUNK COMPLETE ==
+

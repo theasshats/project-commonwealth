@@ -17,6 +17,8 @@
 ## doubledoors   [anchors: support/QoL (1)]
 - LEAVE — behavioral interaction mod only (syncs adjacent matching doors on open); zero items, blocks, or methods. No weave surface.
 
+== CHUNK COMPLETE ==
+
 ## immersive_paintings   [anchors: support/deco (1)]
 - LEAVE — pure decorative-expression mod (custom-image canvases). Four items, all cosmetic; no material with a coherent system routing. The Exposure compat (photos→paintings) is a downstream link handled by external compat code, not a weave this mod's own methods enable. Forcing a Create frame recipe or economy edge would be busywork.
 
