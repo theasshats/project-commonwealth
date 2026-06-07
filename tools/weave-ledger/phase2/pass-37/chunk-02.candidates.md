@@ -97,6 +97,15 @@ New candidate — scarcity foundation:
 
 - LEAVE — client-side tooltip renderer only; reads container NBT to show contents. Zero blocks, zero items. Pure informational overlay.
 
+## createmechanicalcompanion   [anchors: create (1)]
+
+- from: createmechanicalcompanion:optical_sensor (endgame component) | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: endgame | tone: ok | verdict: ACCEPT | hook: the optical sensor detects and tracks mob targets — attuning it through Ars arcane infusion gives it magical mob-sensing (detection of magical/warded enemies that a purely mechanical sensor can't see); the clockwork-wolf perceives the arcane world because its eye was enchanted, not just wired. Sensible endgame depth; fits M-10's "foreign material refined/attuned into a magic-enhanced component" pattern.
+
+- from: createmechanicalcompanion:mechanical_wolf_link (personal companion summoner) | via: occultism:spirit_trade | to: magic | motif: M-18 | power: endgame | tone: ok | verdict: REJECT | reason: spirit-trade acquires scarce materials via Occultism dimensional miners — the wolf link is a personal craftable, not a material being acquired through spirit logistics. M-18 is about Occultism providing acquisition/logistics of scarce goods, not about imbuing a personal companion. The pairing is a motif-category mismatch; REJECT on motif grounds.
+
+- from: createmechanicalcompanion:netherite_plates (endgame material input) | via: boss-drop gate | to: survival | motif: M-15 | power: endgame | tone: ok | verdict: REJECT | reason: netherite plates already gate naturally behind the vanilla netherite progression chain (ancient debris → netherite ingot → plate via Create compacting); adding a boss drop on top of that is a double-gate that punishes the Create builder without thematic justification. The wolf already has deep cost. REJECT — over-gating.
+
+
 
 
 
