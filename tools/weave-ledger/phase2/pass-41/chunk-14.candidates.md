@@ -79,6 +79,16 @@ OK — existing rows are generally sound; the M-35 aging step and M-08 trade-rem
 ## bagus_lib   [anchors: support (1)]
 LEAVE — pure shared code library (baguchi's mod suite), zero content surface. No rows existed; none are needed.
 
+## copycats   [anchors: Create (2 via Create dependency)]
+
+Existing rows are extensive. The dossier says LEAVE — it already lives inside the Create pillar (zinc-built, Create-dependent). Two challenges to contested existing rows:
+
+- CHALLENGE | from: copycats:copycat_catwalk | via: aeronautics construction recipe | to: aeronautics | motif: M-23 | verdict: REJECT | hook: the 3 ACCEPT rows for copycat_catwalk under M-23 (structural) are incorrect — M-23 requires a *load-bearing structural alloy* (metal plate/beam/alloy) as the airframe ingredient; a catwalk is a decorative walkway surface, not a structural hull component. Cosmetic cladding that adopts any texture is the opposite of a structurally distinct material. The catwalk's value on a ship is purely aesthetic (deck plating look) — it does not carry M-23's "makes airframes cost real fabricated material" logic. All 3 M-23 ACCEPTs should resolve to REJECT.
+
+- CHALLENGE | from: copycats:copycat_block (blank zinc shape) | via: create:crushing (recycle to zinc) | to: create | motif: M-04 | verdict: REJECT | hook: the existing rows are split 3A/3R — the REJECT side is stronger. A copycat block is a runtime skin-container (it adopts whatever block is applied to it); crushing it is ambiguous — does it return the zinc of the blank, or the material of the applied skin? The native unmake path (remove applied block first) already returns materials; adding a crush recipe creates a double-spend ambiguity and incentivizes skipping the de-skin step. M-04 is cleanest for fixed-material deco blocks; copycat's dynamic-skin nature makes the recycle path incoherent.
+
+OK — copycats is correctly identified as LEAVE for a second hard anchor beyond Create. The two CHALLENGE rows are the only contributions.
+
 ## bettermineshafts   [anchors: survival (1)]
 
 Existing rows: M-08 loot-seed ACCEPT (2A/1R) and M-02 loot-seed ACCEPT (2A/1R). However the dossier clearly states `loot=no` and notes the mod uses vanilla mineshaft loot tables (it only expands the *structure*, not the loot tables). This is the critical issue the existing rows fail to resolve cleanly:

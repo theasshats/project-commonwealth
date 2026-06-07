@@ -141,11 +141,21 @@ Existing rows well-cover: M-12 (fan-sail processing of foreign crops/drops as su
 
 - NEW | from: dndesires:rubber (hydraulic_compacting output — sap + water → raw rubber via Hydraulic Press) | via: create:mixing (rubber dissolved into a sealing compound mixed with resin and linseed oil → an aeronautics hull sealant fluid used in ship pressurization recipes) | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: a Create mixing basin combines rubber with resin to produce the hull sealant fluid an Aeronautics pressurized compartment needs; rubber becomes a supply-chain node between the hydraulic press and the shipyard, regional if the rubber-tree biome is distant
 
-CHALLENGE | from: dndesires:haunting_sail | via: create:haunting (bulk haunting as M-19 bridge) | to: magic | motif: M-19 | verdict: WEAK | hook: the accepted M-19 rows for dndesires claim the haunting_sail is a bulk version of create:haunting (so it's the M-19 bridge); but the methods-palette confirms the mod registers `dndesires:dragon_breathing`, `dndesires:freezing`, `dndesires:hydraulic_compacting`, `dndesires:sanding`, `dndesires:seething` — *not* a `dndesires:haunting` recipe type; the haunting_sail is a block that uses Create's own `create:haunting` fan mechanic natively, so any KubeJS recipe using it would be authored as `create:haunting`, not a dndesires method; the weave is real (bulk haunting for magic drops is valid M-19) but it belongs attributed to `create:haunting` as the method, not to dndesires as the anchor; correcting attribution doesn't kill the weave — it just means the M-19 credit goes to Create, not dndesires
+CHALLENGE | from: dndesires:haunting_sail | via: create:haunting (bulk haunting as M-19 bridge) | to: magic | motif: M-19 | verdict: REJECT | hook: the accepted M-19 rows for dndesires claim the haunting_sail is a bulk version of create:haunting (so it's the M-19 bridge); but the methods-palette confirms the mod registers `dndesires:dragon_breathing`, `dndesires:freezing`, `dndesires:hydraulic_compacting`, `dndesires:sanding`, `dndesires:seething` — *not* a `dndesires:haunting` recipe type; the haunting_sail is a block that uses Create's own `create:haunting` fan mechanic natively, so any KubeJS recipe using it would be authored as `create:haunting`, not a dndesires method; the weave is real (bulk haunting for magic drops is valid M-19) but it belongs attributed to `create:haunting` as the method, not to dndesires as the anchor; correcting attribution doesn't kill the weave — it just means the M-19 credit goes to Create, not dndesires
 
+## aeronautics_dyeable_components   [anchors: aeronautics (1)]
 
+All passes consistently find no second-anchor surface: the mod is a cosmetic dye-permutation of base aeronautics blocks with no recipe types of its own. Every Create/magic/economy edge was rejected correctly. One angle no pass tried: the colony request angle (a colony shipwright requesting dyed levitite for a color-coded fleet) — this got 1 ACCEPT in the existing rows and deserves a more careful framing.
 
+- NEW | from: aeronautics_dyeable_components:*_levitite (16 dye-color variants, consumes vanilla dyes in crafting) | via: minecolonies hut request (colony shipwright or Warehouse hut requests a set of matching dyed levitite for the colony's fleet livery — the colony specifies its color, and the aeronautics specialist produces to order) | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: the colony commissioning a matched fleet in its faction colors is the clearest demand-gate for cosmetic variants — colony demand makes color matching a real production task, not ambient decoration; the shipyard specialist who stocks all 16 colors earns a colony contract, and the dye supply chain (regional dye flowers) ties to scarcity
 
+## xaerominimap   [anchors: support/QoL (1)]
+
+Pure client-side navigation UI. No content surface.
+
+LEAVE — client navigation UI; zero items, zero methods; no weave surface.
+
+== CHUNK COMPLETE ==
 
 
 
