@@ -134,3 +134,7 @@ Power read: biome/event-gated zombie variants, each dropping themed kill-loot â€
 
 - from: rottencreatures mob heads | via: bare 'decorative sellable' | to: economy | motif: M-09 (retired) | power: everyday | tone: n/a | verdict: REJECT | reason: mob heads are decorative; "they're sellable" is the retired M-09 ambient endpoint, not a demand-gating weave. No mechanism gates demand for them.
 
+## ding   [anchors: support/client-QoL (1)]
+
+- LEAVE â€” client-side audio notification (world-load ding). Zero items/blocks, no gameplay surface. Sanctioned support role; no weave possible.
+

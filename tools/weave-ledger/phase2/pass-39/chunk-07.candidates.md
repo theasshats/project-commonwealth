@@ -60,3 +60,6 @@
 
 ## structurize   [anchors: support/library-MineColonies-build-engine (1)]
 - LEAVE — MineColonies blueprint/schematic engine; its 14 items are workflow tools (build-tool scepter, scan-tool, shape-tool, caliper, placeholder substitution blocks) with no method pull and no material role. Forcing a recipe edge on schematic-operation tools would be contrived. No loot tables. Its weave is MineColonies' weave. Sanctioned support anchor; no weave needed.
+
+## moreoverlays   [anchors: support/QoL-client (1)]
+- LEAVE — client-side HUD overlay (light-level marker, chunk grid, JEI-search dim); zero items, no methods, no loot tables. Sanctioned support anchor; nothing to route through any method.

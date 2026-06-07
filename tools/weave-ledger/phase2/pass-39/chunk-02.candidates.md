@@ -127,6 +127,19 @@ Power-read: The whales are endgame-adjacent exploration destinations (reaching o
 
 - from: sky_whale_ship structures (ambient biome presence) | via: aeronautics flight | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: REJECT | reason: M-31 is "bulk goods require aeronautics logistics to move at scale" — not about destinations. The aeronautics link is better captured by the M-15 loot-seed above (reaching them requires a ship). M-31 doesn't fit an exploration-destination mod.
 
+## mcwstairs   [anchors: support/decoration (1)]
+
+Macaw's Stairs — 224 stair/railing/balcony/platform variants (per wood + stone material). Pure decoration, no mechanics, no methods, no loot drops (loot=yes in digest but that's likely ambient drop-as-block). Vanilla-table crafted only.
+
+Power-read: everyday decoration blocks. Any Create crush weave would be M-04 (lossy deco→raw). The dossier notes this is weak and should wait for a wholesale deco-family pass.
+
+- from: mcwstairs stone/brick family variants (andesite, blackstone, brick, cobblestone railings/balconies) | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: M-04 (deco→raw+gravel lossy) is already documented as WEAK in the dossier and appropriate only as part of a wholesale deco-family pass. Doing it for one deco mod in isolation is low-value — the M-04 pattern applies to the whole family (mcwstairs, mcwroofs, mcwdoors, etc.) together or not at all. REJECT pending a coordinated deco-crush pass.
+
+- from: mcwstairs wooden railing/balcony variants (all wood types) | via: create:cutting | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: create:cutting already handles wood/plank→slab/stair conversions natively; adding Macaw's variants to the cutting table is a cosmetic recipe extension (makes the custom shapes cuttable), not a cross-system weave. No new system anchor; purely within the same decoration+Create orbit. No motif, no weave.
+
+LEAVE — pending a coordinated wholesale deco-crush pass (M-04). No single-mod accept here.
+
+
 
 
 

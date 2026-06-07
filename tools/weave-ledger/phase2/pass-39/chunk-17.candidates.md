@@ -14,6 +14,10 @@
 - from: farm_and_charm ground meat / dried goods | via: farm_and_charm:drying → create:mixing | to: create | motif: M-12 | power: mid | tone: ok | verdict: REJECT | reason: drying-rack output as a mixing intermediate is plausible but the chain is short and survives well inside the food-mod web already; adding a Create mixing step would be busywork (a second M-12 edge on top of the grain milling one). One clear M-12 weave is sufficient for an everyday food mod.
 - from: farm_and_charm:butter / animal surplus | via: economy (sell/trade to other players) | motif: M-09 | verdict: REJECT | reason: M-09 is retired — bare sell links are the ambient endpoint of the loop, not a weave. The M-28 colony-route edge above is the real economy anchor.
 
+## mcwfences   [anchors: support/deco (1)]
+- from: wooden fence/gate variants (picket/stockade/horse/wired) | via: create:cutting | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: a Create saw cuts planks into Macaw's fence variants at scale — mass-producing fencing for colony enclosures or farm borders becomes a Create production task, not a hand-craft grind. Same family-pass logic as mcwdoors; tag-routed by wood type.
+- from: metal fence variants | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: same as mcwdoors — the lossy recycle edge is valid but weak in isolation; only worth adding as part of a wholesale Macaw's-family crush pass.
+
 ## ichunutil   [anchors: support/library (1)]
 - LEAVE — zero-content shared-class library for iChun's mods; 0 items, 0 blocks, no gameplay mechanics. No weave surface.
 
