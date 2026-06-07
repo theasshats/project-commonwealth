@@ -93,6 +93,36 @@ OK — Create anchor connections sound (deep multi-step fuel chain is appropriat
 
 Summary: 6 ACCEPT (M-06 depth-note, M-23 aeronautics steel hull, M-29 lead-ritual cross-route, M-30 regional scarcity, M-05 hazmat gear, M-17 FE magic charge), 0 REJECT. [Note: M-06 is a within-Create depth note rather than a new system anchor; net new anchors: aeronautics, economy, magic, survival.]
 
+## railways   [anchors: create, aeronautics (2)]
+Existing connections: 2 anchors (Create + aeronautics/transport). Two anchors meets the target. Review for REWORK.
+
+Power-read: railways is mid-to-endgame Create content — track variants, locometal building stock, conductor entity. Uses create:mechanical_crafting and create:sequenced_assembly (confirmed inbound). 617 blocks, 1015 items — substantial content. loot=yes (conductor caps, locometal deco in loot?).
+
+REWORK candidates (existing connections):
+- Create anchor: sound. create:mechanical_crafting + create:sequenced_assembly are deep, appropriate for train construction. No rework needed.
+- Aeronautics anchor: labeled as "transport pillar" — accurate framing. Trains are the logistics arm alongside airships. The economy side of this (trains as the bulk-goods movement method) could be sharpened.
+
+New candidates:
+
+- from: railways:locometal (conductor/boiler building stock) | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: Used locometal panels/boiler sections crush back to metal scraps + an XP nugget — the standard Create deco-recycle loop; a bulk train builder doesn't stockpile obsolete panels forever.
+
+  Red-team: 617 blocks is a huge catalogue; adding a blanket crushing recipe for deco stock is established M-04 practice. The locometal variants (brass/copper/iron wrapped) would return their respective raw metal at a lossy ratio. Tone: industrial recycling of train parts — coherent. Not deep, but closes the resource loop.
+
+- from: railways bulk goods trains | via: aeronautics/trains as the transport method | to: economy | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: A loaded benchcart or cargo train is the bulk-goods distribution method — ore, processed metals, food — between regions; scale logistics requires rail infrastructure, making the railway builder the server's freight specialist whose service others pay for.
+
+  Red-team: M-31 (logistics-required bulk good) is about goods that require the logistics arm to move at scale. Railways are explicitly the ground transport arm alongside aeronautics. The "railway builder as freight specialist" is exactly the service-for-hire + logistics weave. M-31 delivery is via train contraptions, not a recipe. Tone ok.
+
+- from: railways conductor entity + semaphores | via: minecolonies colony builder | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: A colony's Transport post or Courier hut employs a player-run conductor (the railway specialist who builds and operates the freight network), making train operation a player labor service the settlement economy pays for.
+
+  Red-team: M-33 (service-for-hire labor) fits the conductor role — operating a cargo train is skilled work, not a product. The framing is a bit loose (MineColonies doesn't have a direct "train conductor" job), but the colony-to-logistics coupling is real: a colony that needs bulk raw goods routed to it is exactly the M-33 / M-31 demand scenario. The conductors could be player-operated for colony supply contracts. Tone ok but delivery is emergent/config rather than a specific method — still a valid Phase-3 design note.
+
+- from: railways locometal (c: iron/brass/copper plates) | via: aeronautics hull recipes | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: REJECT | reason: railways locometal is a thematic deco material (boiler casing, smokebox), not a structural hull alloy. Routing it into Aeronautics airframe recipes creates a tone mismatch (train boiler casing as airship hull) and conflicts with the more coherent M-23 candidate (createnuclear steel). The aeronautics anchor for railways is better served by M-31 (logistics) than hull-material supply. Reject to avoid confusion.
+
+OK — connections sound on the core Create/aeronautics anchors. New links add economy via M-31 logistics + M-33 service, and M-04 deco-recycle within Create. No fundamental rework needed.
+
+Summary: 3 ACCEPT (M-04 locometal crush, M-31 logistics bulk goods, M-33 freight service), 1 REJECT.
+
+
 
 
 

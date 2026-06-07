@@ -50,6 +50,15 @@ OK — connections sound. existing magic + create anchors are appropriate. The f
 ## better_lib   [anchors: support/library (1)]
 - LEAVE — genuine zero-content library (config handling, messaging API for dependent mods). No items, no recipes, no loot. Nothing to route.
 
+## vc_gliders   [anchors: aeronautics (1)]
+- from: vc_gliders:paraglider_diamond / _netherite (high-tier gliders) | via: create:mechanical_crafting | to: create | motif: M-05 | power: mid-endgame | tone: ok | verdict: ACCEPT | hook: High-tier gliders (diamond, netherite) are mid-to-endgame personal flight; routing their construction through create:mechanical_crafting with Create brass/electron-tube components makes personal flight a Create output — you need access to a Create machine shop to build your best glider. The lower tiers (iron, gold) stay vanilla-craft for early access. Depth scales with tier.
+- from: vc_gliders reinforced paper (the core intermediate) | via: create:milling | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: Reinforced paper is an everyday early-game glider input; gating paper processing through a Create mill is the kind of basic-component-behind-complex-recipe the briefing explicitly warns against. A player on day two shouldn't need a millstone to make paper reinforced. The M-05 link on the high tiers is the right depth — don't also gate the feedstock. REJECT.
+- from: vc_gliders:paraglider_iron / _gold (low tiers) | via: survival (exposure, weather risk) | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: Gliders have durability and the mod already implements weather-risk (lightning in rain, heat-updraft on fire). Each glider is a consumption sink — worn out in use, lost on death, replaced regularly. M-26 (consumption sink): the demand for gliders never zeros out because they deplete under pressure, which creates ongoing production demand from the aeronautics/Create side. This also bridges aeronautics into survival pressure.
+- from: vc_gliders copper_upgrade / nether_upgrade | via: create:item_application | to: create | motif: M-20 | power: mid | tone: ok | verdict: ACCEPT | hook: The glider upgrade items are designed to be applied to base gliders. Routing the application through create:deploying / item_application (M-20, the light single-step deploy-upgrade) is coherent: a deployer arm applies the copper thermal coating or nether-resistant layer to the base glider frame on a belt. Not a full sequenced assembly — a single application step, which fits the "everyday upgrade" power level.
+
+REWORK: the dossier's 2nd-anchor candidates (M-05 via pressing for tiers, M-12 via reinforced paper milling) identify the right motif (M-05) but conflate tier depth. Splitting: M-05 mechanical_crafting for high tiers (ACCEPT), M-12 milling for reinforced paper (REJECT — basic component gate), and separately noting M-20 item_application for upgrades and M-26 consumption sink for all gliders is a cleaner decomposition.
+
+
 
 
 

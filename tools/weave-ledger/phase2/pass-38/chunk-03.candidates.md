@@ -37,6 +37,10 @@
 - from: valarian_conquest faction gear (citizen professions) | via: minecolonies hut worker integration (M-28 colony route) | to: create | motif: M-28 | power: mid | tone: clash | verdict: REJECT | reason: recruited citizens in Valarian Conquest take vanilla professions, not MineColonies hut assignments — the two colony systems don't interoperate at the recipe level; behavioral adjacency without a method-routing to compose
 - from: valarian_conquest economy via numismatics coin | via: vendor pricing | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: M-09 RETIRED — bare "sell faction goods for coin" is the ambient endpoint of the loop, not a weave; the economy link is already captured via M-34 loot-seed above
 
+## gamediscs   [anchors: survival/novelty (1)]
+- from: gamediscs:processor | via: create:mechanical_crafting (precision_mechanism as processor component) | to: create | motif: M-05 | power: everyday | tone: ok | verdict: REJECT | reason: the output is a purely cosmetic toy — gating a joke item behind Create engineering effort advances nothing in the loop; a forced edge whose output never drives demand, consumption, or scarcity. Loop test fails: this doesn't advance scarcity→pressure→production→economy in any direction.
+
+
 
 
 

@@ -110,6 +110,20 @@ Runtime block generator — outputs into host mods' namespaces (Create, Macaw's,
 
 - LEAVE — cross-mod deco palette generator; its outputs live under host-mod namespaces; no own content to weave from.
 
+## betteranimationscollection   [anchors: support/visual (1)]
+
+Client-side model/animation replacer. No items, no blocks, no loot. Zero content surface.
+
+- LEAVE — pure client visual mod (animated mob models); registers no items, no blocks, no loot; zero content surface to weave.
+
+## trashslot   [anchors: support/QoL (1)]
+
+Client UI inventory trash slot. No items, no blocks, no loot. Zero content surface.
+
+- LEAVE — pure client QoL UI (inventory trash slot); registers no items, no blocks, no loot; zero content surface to weave.
+
+
+
 
 
 

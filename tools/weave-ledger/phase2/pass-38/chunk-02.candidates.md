@@ -70,3 +70,25 @@
 - from: finished automated feasts/dishes | via: minecolonies request / restaurant hut | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: mass-automated cooking output is exactly what feeds a colony's diet/restaurant demand in bulk — the automated kitchen specialist provisions colonies (M-28), a real demand-gate rather than the dossier's bare-sell idea.
 - REWORK: existing dossier optional-3rd "automated dish/feast as sellable luxury good [M-09]" — M-09 RETIRED; replace with the M-28 colony-provisioning demand-gate above. Bare sell is not a weave.
 - REWORK: existing Create + survival anchors — OK, connections sound. It is definitionally the Create-automation-of-survival-food bridge (Packager/Mechanical-Arm support for foreign cooking blocks + Blaze Stove booster); both anchors are load-bearing and coherent, no rework needed.
+
+## create_factory   [anchors: Create, survival (2)]
+- from: cream / jam / nectar / spread fluids | via: create:filling / extradelight / create_central_kitchen consumption | to: survival/create | motif: M-32 | power: mid | tone: ok | verdict: ACCEPT | hook: its dessert fluids (cream, jams, nectar) are intermediates other kitchens want — feed them into ExtraDelight/Central Kitchen recipes as a byproduct->input link (M-32), so the dessert factory is upstream of the wider food web, not a closed loop.
+- from: confectionery sweets/waffles (Create-assembled, optional Confectionery chocolate) | via: minecolonies request | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: finished sweets are a colony diet-variety / sugars-group good the restaurant hut demands — a confectioner specialist provisions a colony (M-28), gating demand instead of the dossier's bare sell.
+- REWORK: existing dossier 2nd-anchor "assembled sweets as sellable luxury goods [M-09]" — M-09 RETIRED; replace with the M-28 colony demand-gate above. Bare numismatics sell is not a weave.
+- REWORK: existing Create + survival anchors — OK, connections sound. Desserts assembled via create:mixing/pressing/filling (inbound weaves present); the Create+food identity is coherent and well-costed (everyday sweets, light chains).
+
+## cmpackagecouriers   [anchors: Create, aeronautics (2)]
+- from: heavy/bulk trade goods (Create packages of any item) | via: cardboard_plane autonomous delivery (aeronautics/logistics) | to: economy | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: the courier plane is precisely the move-method that lets a producer ship bulk goods to a distant buyer/outpost — give the logistics arm its distribution role (M-31 logistics-required bulk good), the economy-side weave the dossier left on the table as "light adjacency."
+- from: Create package + remote portable_stock_ticker | via: cross-region trade fulfilment | to: economy | motif: M-30 | power: mid | tone: ok | verdict: REJECT | reason: cross-region delivery touches regional scarcity, but M-30 gates a GOOD's input by ore-gen region; the courier is the transport, not a region-locked input. The genuine weave is M-31 (above) — the bulk-move role — so recording M-30 only as considered-and-rejected to avoid mis-tagging transport as a scarcity gate.
+- REWORK: existing Create + aeronautics anchors — OK, connections sound. Built via create:cutting + create:deploying (inbound weaves) and it IS the logistics/aeronautics arm moving Create packages; both anchors load-bearing. Balance lens (SYSTEMS §5): cross-dimension autonomous flight is exactly the "cheap frictionless logistics" that can erase regional scarcity — flag for the v0.9.0 economy tuning pass that its range/cost stay meaningful, but that is a balance note, not a rework.
+
+## patchouli   [anchors: support (library/docs) (1)]
+- LEAVE — data-driven guide-book framework; its only items are book covers/guide books and its one recipe (patchouli:shapeless_book_recipe) just crafts a guide book. No foreign-material sink, no content surface to route. Genuine docs/library support role.
+
+## justenoughbreeding   [anchors: support (QoL/client recipe-viewer) (1)]
+- LEAVE — JEI/REI/EMI plugin showing mob breeding requirements; 0 items/blocks, client-side informational category only. No material flow to weave.
+
+## fogoverrides   [anchors: support (client/QoL) (1)]
+- LEAVE — config-only per-biome/dimension fog tuning; 0 items/blocks, cosmetic atmosphere only. Sanctioned support anchor with no content surface to weave.
+
+== CHUNK COMPLETE ==

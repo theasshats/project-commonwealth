@@ -103,3 +103,84 @@ terrain overhaul: it enriches survival without needing an explicit weave link.
   because bettermineshafts uses vanilla's tables unmodified. Survival anchor is earned through
   the enriched underground environment; a second anchor requires a material hook this mod
   simply does not provide.
+
+## cbc_at   [anchors: create, aeronautics (2)]
+
+Dossier confirms: Create Big Cannons Advanced Technologies addon — twin/heavy autocannons, rocket
+pods, barrel attachments, munitions. Already at 2 anchors (Create + aeronautics). Registers 10
+recipe-types covering munition assembly and fuzing. Loot=yes (255 items, 207 blocks). Consumes
+bronze, cast iron, steel, nethersteel, gunpowder/propellant; outputs assembled weapon blocks and
+loaded munitions.
+
+REWORK check on existing connections: the dossier's anchors (Create, aeronautics) are sound —
+every barrel/breech is machined via create:cutting / CBC munition assembly, and the weapons are
+ship/contraption artillery. The connections are genuinely earned, not arbitrary.
+
+Existing connections: OK — connections sound. The Create-machined artillery arming Aeronautics
+ships is exactly the right loop (Create as producer, aeronautics as consumer/user).
+
+Now: propose new/better links to add a 3rd anchor or deepen the existing 2.
+
+**Candidate A — survival/danger pressure anchor via combat-route supply (M-34)**
+- Autocannon/rocket munitions are consumed in PvPvE combat. The combat specialist farms raw
+  materials (bronze, propellant, metals) and manufactures munitions to sell to non-combat ship
+  operators who can't or won't maintain a full munitions line. This is M-34: boss/danger output
+  farmed and traded — here the "danger" is ship-to-ship PvPvE and the traded good is ordnance.
+- Power-read: autocannon cartridges are mid-tier (bronze + propellant, relatively accessible);
+  rocket munitions are endgame (nethersteel, AP fuzing, multi-step assembly chain). Depth is
+  already earned by the multi-step `cbc_at:rocket_assembly → cbc_at:rocket_munition_fuzing`
+  pipeline. Scaled correctly.
+- Theme-fit: a munitions manufacturer selling to ship captains who run cargo or patrol routes is
+  exactly the kind of labor-specialization the pack targets. The "combat-route supply" link is
+  obvious to any player — of course the munitions maker sells to the ship operator.
+- Red-team: is this just "munitions are sellable" (retired M-09)? No — M-34 is specifically the
+  supplier side of a boss/danger ecosystem: combat specialist produces and the non-combat player
+  buys because they *can't* safely maintain a munitions line and run a ship at the same time. The
+  demand is gated on the danger that PvPvE creates, which is the loop's pressure face. Not ambient
+  sellable.
+- ACCEPT | from: cbc_at munitions (autocannon cartridges, rockets) | via: cbc_at munition
+  assembly chain | to: economy (trade, combat supply) | motif: M-34 | power: mid (cartridges) /
+  endgame (AP rockets) | tone: ok | hook: the munitions specialist sells loaded racks to ship
+  captains who'd rather fly than reload.
+
+**Candidate B — boss-key unlock for heavy autocannon / rocket tier (M-15)**
+- The dossier already flags this: "gate the heavy-autocannon/rocket tier behind a boss-drop or
+  MineColonies unlock (M-05 native-method gating)." This is really M-15: a boss drop as the gate
+  item for a complex Create/tech recipe.
+- Power-read: heavy autocannon barrels and rocket pods are endgame ship weaponry — depth via
+  multiple machining steps is already present. Adding a boss-drop input gate (e.g. requiring a
+  Cataclysm-boss alloy or a Wither skull byproduct) makes the first heavy-ship armament a
+  milestone event, not a grind. Appropriate depth.
+- Theme-fit: unlocking high-caliber naval artillery by defeating a powerful world boss makes
+  narrative sense — the material for a cannon that punches through ship hulls should come from
+  something dangerous. No tone clash.
+- Red-team: does this over-gate a weapon mod whose job is to arm ships? The lighter autocannons
+  (bronze, cast iron) remain freely craftable; only the heavy/nethersteel tier gets the boss gate.
+  The progression curve stays intact — early ships arm easily, capital-ship armament is locked.
+- ACCEPT | from: boss-drop (e.g. Cataclysm endgame drop) | via: cbc_at:ha_munition_assembly or
+  heavy barrel recipe (boss drop as input) | to: survival (boss route) → aeronautics (ship
+  armament) | motif: M-15 | power: endgame | tone: ok | hook: the nethersteel rocket pod needs
+  the alloy only a world-boss yields — capital-ship weapons are a boss-hunting milestone.
+
+**Candidate C — MineColonies unlock for mid-tier barrel attachments (M-28)**
+- Barrel attachments (silencer, muzzle brake, rifled barrel, fume extractor) are mid-tier
+  upgrades that modify weapon behavior. These could be colony-unlocked: a MineColonies Blacksmith
+  or Fletcher hut researches the attachment blueprints, making the attachment a "colony-exclusive"
+  upgrade path (the non-boss route to mid-tier ship weapon customization).
+- Power-read: attachments are mid-tier — they modify existing weapons rather than being weapons
+  themselves. A light colony-research gate (not deep) fits the cost model.
+- Theme-fit: a blacksmith colony specializing in gun attachments is coherent — it's the
+  "colony-manufactures what the individual can't" narrative. Plausible.
+- Red-team: MineColonies is already the "cheaper basics + locked exclusives" route; routing
+  weapon attachments through it doesn't feel forced. The attachment IS a manufactured specialty
+  part, and a colony with a gunsmith hut is thematically sensible. However, MineColonies huts
+  don't natively handle gun attachments — this would require a KubeJS colony-route gate (lock
+  the crafting table recipe and expose it via colony). That's Phase-3 authoring, which is fine
+  to propose here.
+- ACCEPT | from: mid-tier barrel attachments (silencer, muzzle brake, rifled barrel) | via:
+  MineColonies research / hut gate (KubeJS lock) | to: economy (colony route, M-28) → aeronautics
+  | motif: M-28 | power: mid | tone: ok | hook: the colony blacksmith's blueprint library is the
+  only place that knows how to fit a rifled barrel — you buy the attachment or you trade with
+  the settlement.
+
+Summary for cbc_at: 3 candidates accepted, 0 rejected, existing connections sound (OK).

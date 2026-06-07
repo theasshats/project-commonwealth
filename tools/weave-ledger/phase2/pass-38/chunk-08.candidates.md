@@ -88,3 +88,21 @@ Pure config-screen library. Zero blocks, items, biome modifiers, loot. No player
 Zero blocks, zero items, zero loot. Pure informational HUD overlay. No material surface.
 - LEAVE — client-only informational overlay; zero items/blocks/loot; no weaving surface exists.
 
+## netmusic   [anchors: support/QoL-flavor (1)]
+
+4 blocks, 6 items, loot=yes (though loot=yes on a flavor mod likely means it can spawn in world). Already routes music_cd through `touhou_little_maid:altar_recipe_serializers`. Primary surface: music players, CD burner, computer, megaphone. The dossier flags LEAVE — let's verify by power-reading if any edge exists.
+
+Power-read: the items are cosmetic audio devices. The music_cd is NBT-encoded cosmetic content. The loot=yes flag is interesting — if netmusic items appear in loot tables they could be a discovery reward. But the loot surface is probably just that the mod is "loot-capable" by architecture, not that it seeds tables with music gear.
+
+Red-team against any weave: the mod's content is fully cosmetic audio. A "jukebox plays ambience in your Create factory" link is cultural (a player would understand it) but it's not a loop-advancing weave — it doesn't advance scarcity→pressure→production→economy. There's no material to route. The TLM altar connection already gives it a second-mod touch point, making it arguably 2-mod connected even if not 2-system connected. However, the altar touch is also cosmetic (the music_cd being crafted through TLM is still a flavor item).
+
+Candidate: could the music_cd be a trade good — a specialized craftsman burns custom CDs for other players, a service-for-hire moment? That's M-33 (service-for-hire labor) — the CD burner requires knowing how to set up the computer/URL, which is player skill. Red-team: this is vanishingly thin as a loop mechanism; any player can make any CD with the same steps, so there's no specialization pressure. The "knowledge" is trivial. REJECT.
+- from: netmusic:music_cd | via: player-operated CD burner + custom URL knowledge | to: economy | motif: M-33 | power: everyday | tone: ok | verdict: REJECT | reason: CD burning requires no meaningful specialist skill or material gatekeeping; any player can replicate it with the same trivial steps — no real specialization pressure, no loop advancement
+
+LEAVE — flavor/audio mod; the TLM altar already connects it to one method; all remaining surfaces are cosmetic audio with no loop-relevant material to route. Any forced edge would be invented noise.
+
+## mysterious_mountain_lib   [anchors: support/library (1)]
+
+Zero blocks, zero items, zero biome modifiers, zero loot. Pure code library (base classes, FoodInfo compat, registry helpers) for MMF-Group mods.
+- LEAVE — genuine zero-content code library; no blocks/items/loot; not even a thin player-facing surface exists.
+
