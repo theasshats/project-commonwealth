@@ -30,3 +30,12 @@ OK — existing rows sufficient; mod already has ≥2 anchors (Create kinetic me
 
 ## owo   [anchors: support/library (1)]
 - LEAVE — declarative GUI/config library; 0 items, 0 methods, no player-facing content
+
+## quark   [anchors: support/decoration (1)]
+- NEW | from: quark:apple_crate / quark:leather_block / quark:blaze_rod_block (compressed c:storage_blocks/* commodity bales) | via: aeronautics cargo (storage crates as the standard bulk-cargo unit for airship trade runs) | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: Quark storage crates are the natural compression format for bulk goods — a chest full of apple_crates or leather_blocks is the cargo a trader loads onto an airship hold; the crate form makes bulk agricultural and craft goods logistics-viable, tying Quark's storage system to the aeronautics distribution arm without inventing a recipe
+
+## copycats   [anchors: Create (2)]
+OK — existing rows sufficient; mod already has ≥2 anchors (Create zinc consumption + decoration palette); M-04 deco-recycle and M-23 hull cladding ACCEPTs cover the real weave surfaces; no further motif survives red-team
+
+## citadel   [anchors: support/library (1)]
+- LEAVE — animation/spawn-handling library for Alex's Mobs; 0 gameplay items, 0 methods; the loot=yes is likely a debug/guide item, not a structure drop worth seeding

@@ -128,6 +128,18 @@ Also missing: the Grottol (ore-eating mob that drops diamonds) has an M-32 (bypr
 - NEW | from: mowziesmobs:elokosa_paw_crescent | via: ars_nouveau:imbuement (crescent as waning-moon catalyst) | to: magic | motif: M-22 | power: mid | tone: ok | verdict: ACCEPT | hook: the crescent paw is the Ars catalyst for a waning-moon imbuement — the moth-spirit's waning phase channels diminishment magic; distinct paw, distinct method, same M-22 motif covering both Ars and Occultism.
 - CHALLENGE | from: mowziesmobs:earthrend_gauntlet | via: create:sequenced_assembly (boss drop as M-06 keystone) | to: create | motif: M-06 | verdict: REJECT | hook: the earthrend gauntlet is already a finished unbreakable weapon — using it *as a component input* in a sequenced assembly chain destroys a rare artifact to make something else; the correct motif is M-15 (boss drop as a gate key/prerequisite, not consumed), not M-06 (which requires the item to be an *intermediate* in the chain); several accepted M-06 rows for this artifact are motif-mislabeled.
 
+## born_in_chaos_v1   [anchors: survival (1)]
+
+Existing rows: Accepted: M-03 dark_metal_deposit → create:crushing (25×), M-11 bundle_of_bones → occultism:spirit_fire (25×), M-15 boss drops as Create gate (5×), M-34 combat-supply economy (5×), M-08 dark_metal coin (split, 3× accept), M-16 bagof_candy seasonal (2× accept), M-19 dark_metal → create:haunting (1×). Rejected: M-10 dark_metal → Ars imbuement (3× reject), M-04 deco stone crushing, M-15 boss weapon as gate (split).
+
+Missing angle: The M-16 bagof_candy seasonal (Oct 25–Nov 5) rows accept it as a season-gated Ars imbuement catalyst, but none of the rows articulate the *consumption sink* (M-26) aspect: candy used as fuel/reagent in a limited seasonal window creates a stockpile-or-miss demand dynamic that feeds the economy. A player who stockpiles candy during the event window can trade it year-round as a seasonal reagent — this is the M-35 (maturation/aging) adjacent or M-26 (consumption sink) read, not just M-16.
+
+Also: The M-08 dark_metal coin split (3A/1R) deserves a cleaner verdict. Dark metal is fought-for, regional-adjacent (spawns via 50 biome-modifiers on specific hostile biomes), and Create-processable — exactly the M-08 profile. The single REJECT was "flooding the mint" concern; but dark metal drops at 9–16% from specific mobs (not trivially renewable), so the flooding concern is overstated. The ACCEPT verdict is correct.
+
+- NEW | from: born_in_chaos_v1:bagof_candy | via: extradelight:evaporator or create:mixing (candy dissolved into a seasonal sweetness concentrate) | to: create | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: candy stockpiled during the haunting window is the only off-season source of the festive sweetness concentrate — the seasonal combat event creates a year-round consumption sink where demand persists after the source stops; stockpilers become seasonal traders.
+- CHALLENGE | from: born_in_chaos_v1:dark_metal (processed ingot) | via: numismatics mint | to: economy | motif: M-08 | verdict: REJECT | hook: the existing M-08 REJECT argues flooding concern, but dark metal's drop rate (~9–16% from specific hostile mobs, not trivially farmable) and biome-modifier spawn distribution make it genuinely scarce and regional — the REJECT is overcautious; this is a clean M-08 candidate; recommend overturning the single reject.
+
+
 
 
 

@@ -147,6 +147,27 @@ Red-team: Existing M-06 ACCEPT (4v1, sequenced assembly for reactor frame compon
 
 Withdraw the new M-05 proposal — the M-06 ACCEPT already covers it more precisely.
 
+One gap that no existing row covers: **colony route for reactor fuel**. The reactor consumes uranium fuel on an ongoing basis. A MineColonies colony could provide processed uranium (cheaper basic fuel cells via the colony route) while a Create-specialist builds the self-sufficient refinery. This is a M-28 (colony route) angle — colony produces cheaper fuel, Create-specialist produces optimal fuel.
+
+- NEW | from: createnuclear uranium fuel cells / processed uranium | via: minecolonies:composting or colony request system | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: a colony's smelter hut can process raw uranium into basic fuel pellets at lower personal cost than the full Create refinery chain — the reactor specialist trades with the settlement builder for fuel supply rather than running both routes solo
+
+Red-team: Does MineColonies have uranium-processing capability? It has composting and zero-waste methods, and a smelter hut for basic ore processing. Uranium ore → basic fuel processing via the smelter is plausible at the colony route cost model (cheaper basics, not the advanced pressed/crushed Create chain). The cross-route dependency (colony fuel vs. Create-refined fuel with different yield ratios) creates the trade incentive. Survives.
+
+## occultengineering   [anchors: Create, magic (2)]
+Already 2-anchor. Existing rows: M-08 ACCEPT (sterling_silver → numismatics mint, 23v3 dominant), M-11 REJECT (spirit_solution already reserved — correctly killed), M-18 ACCEPT (spirit_solution via spirit_trade as logistics good, 3v1), M-29 ACCEPT (spirit_solution as cross-route ingredient in Create recipe, 2v0), M-33 ACCEPT (phlogiport as service-for-hire logistics, 2v0).
+
+The sterling_silver M-08 ACCEPT (23v3) is the clear economy anchor. The M-33 (phlogiport service) and M-29 (spirit_solution cross-route) are two distinct economy-adjacent weaves.
+
+One gap: no existing row covers **MineColonies as a cheaper route to occult automation**. occultengineering's mechanical_pulverizer and mechanical_chamber are Create-built occult automation stations. MineColonies has no direct path into Occultism processing — but a colony-built crushing/mixing setup could produce the base reagents (chalk components, Demon's Dream fruit farming from a colony gardener) cheaper than manual gathering. This is M-28 (colony route).
+
+- NEW | from: occultengineering mechanical_chamber inputs (Occultism Demon's Dream fruit / ritual reagents) | via: minecolonies gardener/farmer hut (farming Demon's Dream as a colony crop) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: a colony's gardener can cultivate Demon's Dream fruit for the occult engineer — the settlement builder grows the magic herb cheaper than the specialist forages it, so the occult automation line depends on the colony's farm output
+
+Red-team: Does Demon's Dream (Occultism's key plant) actually grow in farmland that a MineColonies farmer can tend? Occultism's Demon's Dream is a plant cultivatable in the world — if it's treated as a standard crop, the colony farmer can tend it. This is a soft cross-route dependency (magic specialist depends on colony farmer for reagent supply). Survives as a design note even if the delivery (colony farmer AI for exotic plants) needs verification in Phase 3.
+
+Also: the phlogiport M-33 ACCEPT deserves a second look. M-33 is "service-for-hire (labor)" — a player runs phlogiports as a remote-delivery service, charging for the item-teleport. This is coherent: an occult engineer installs phlogiport addresses across the server and offers "send me your items, I'll teleport them to the destination" as a paid service. The economy is player-run, so this works. OK — no new challenge needed.
+
+
+
 
 
 

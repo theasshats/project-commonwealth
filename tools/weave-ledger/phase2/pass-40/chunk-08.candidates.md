@@ -61,6 +61,22 @@ LEAVE — client-side weather particle rendering; no items, no mechanics, no mat
 ## creativecore   [anchors: support (1)]
 LEAVE — dev library (GUI/packet/event API) with no items, no recipe types, no game mechanics. Nothing to route.
 
+## cmpackagecouriers   [anchors: Create, aeronautics (2)]
+- CHALLENGE | from: cmpackagecouriers:cardboard_plane (autonomous courier) | via: M-31 logistics-required bulk good | to: economy | motif: M-31 | verdict: REJECT | hook: M-31 is "a good so bulky/heavy/perishable that trading it at scale *requires* the aeronautics arm" — it applies to goods being *moved*, not to the logistics *tool itself*. The cardboard_plane IS the logistics method; it doesn't need logistics to be traded, it *provides* it. The 4-vote ACCEPT rows on M-31 misapply the motif: the cardboard_plane is an M-13/M-23/M-24 sibling (the logistics method), not an M-31 cargo good.
+- NEW | from: cmpackagecouriers:portable_stock_ticker (remote order placement from field) | via: emergent player-economy behavior (a courier player accepts orders via ticker while clients are away from base) | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: the portable_stock_ticker makes a courier player the *intermediary* for remote inventory requests — they operate the delivery service while others work at their own bases; this is service-for-hire labor (M-33) with the ticker as the service interface, more precisely framed than the existing M-33 ACCEPT rows which mention the concept but don't name the ticker as the mechanism.
+
+## followersteleporttoo   [anchors: support (1)]
+LEAVE — behavior tweak (pets follow owner on teleport); no items, no mechanics to route. Sanctioned QoL support role.
+
+## configuration   [anchors: support (1)]
+LEAVE — config-screen library; no items, no player-facing mechanics, no recipe surface.
+
+## death-count-1.0   [anchors: support (1)]
+LEAVE — vanilla scoreboard datapack tracking death count in tab list; no items, no game mechanics, purely cosmetic.
+
+== CHUNK COMPLETE ==
+
+
 
 
 

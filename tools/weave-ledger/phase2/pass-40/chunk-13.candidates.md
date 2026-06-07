@@ -55,6 +55,11 @@ LEAVE — Serilum shared code library; zero items, blocks, loot, or recipe types
 ## toomanypaintings
 LEAVE — decorative painting mod with a placement GUI; zero items, blocks, loot, or recipe types. The one existing row (Supplementaries item_lore on a painting) was correctly rejected as no-motif narrative. No content surface exists to route through any method.
 
+## gnkinetics   [anchors: create, aeronautics (2)]
+- NEW | from: gnkinetics:planetary_gear / gnkinetics:worm_gear (precision high-ratio gear components) | via: modulargolems:golem_assemble (require a planetary gear as a mechanical-golem torso component — a golem powered by gnkinetics gear-ratio precision rather than magic; M-29 cross-route: Create-made precision gear required inside an Occultism-adjacent golem assembly) | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: the mechanical golem's locomotion assembly demands precision gearing that only a Create kinetics specialist can supply — the golem master must trade with the gear-smith; modulargolems:golem_assemble is in the methods palette and the cross-route dependency is mechanically grounded
+- NEW | from: gnkinetics:worm_gear (specialty slow-ratio gear — harder to machine than a standard cog) | via: M-28 colony route (MineColonies Blacksmith/Mechanic hut produces worm gears faster and cheaper than hand-fabrication — colony-cheaper variant of a Create-expensive component) | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: worm gears are tricky precision work; a colony smith churns them out for the airship builder who can't be bothered to run a full fabrication line — the colony cheaper-basics route applies cleanly to a specialist component
+
+
 
 
 

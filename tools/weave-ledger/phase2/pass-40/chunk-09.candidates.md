@@ -128,3 +128,18 @@ Existing rows: all REJECT except M-33 painting-as-service (2/3 ACCEPT). The M-33
 
 CHALLENGE | from: immersive_paintings:painting / glow_painting | via: supplementaries:item_lore + player trade | to: economy | motif: M-33 | verdict: REJECT — the M-33 service-for-hire motif requires a specialist performing work *on another player's material* (enchant-for-hire, repair, cargo runs). A painter creates their own painting from an arbitrary image; they're not working on someone else's material. The correct framing is "artist sells paintings as commissioned luxury goods" but that is M-09 (ambient sell, retired). No M-33 gate. The mod is correctly decoration-palette support. LEAVE confirmed — no weave surface; forcing one is per-guardrail a defect.
 
+## irons_spellbooks   [anchors: magic, Create (2)]
+Existing strong ACCEPTs: M-01 (arcane_essence ↔ source_gem currency bond), M-03 (mithril ore-doubling), M-02 (apothecarist drops → reagent sink), M-30 (mithril regional scarcity), M-37 (spell school knowledge → MineColonies research gate), M-26 (scrolls consumed on cast), M-34 (scroll trade to non-mage players), M-29 (cross-route brew requiring CNA electric solvent), M-33 (enchant-for-hire spellcasting service). The mod has dense coverage.
+
+What's missing or worth challenging:
+
+1. **M-16 seasonal brew** — one row (winter brew requiring snowyspirit ginger, 1 ACCEPT) is a genuine candidate not well-explored: a cold-season-only brew reagent (ginger, only harvestable in winter/cold biome) making certain alchemist_cauldron brews seasonal. This is the right kind of weave — it gives the alchemist a seasonal constraint that feeds the survivalist/farmer. Existing row is correct; should survive Gate 2.
+
+2. **M-22 lunar brew** — not yet tried. A alchemist_cauldron brew requiring a lunar-event reagent (blood moon → a specific ore or mob drop only available during the moon event from Enhanced Celestials). This is a genuine gap: M-22 is "material available only during a moon event feeds a method." A blood-moon mob drop (vanilla zombie/skeleton variant) → alchemist_cauldron_brew as a blood-school brew catalyst (Iron's has a Blood magic school) is coherent in theme and mechanism.
+
+3. **M-20 affinity ring upgrade** — 1 ACCEPT (create:deploying applies a school gem). Tone and depth are sound (a blank ring + school gem applied by deployer). This is a good everyday-tier weave.
+
+NEW | from: blood-moon mob drop (Enhanced Celestials blood-moon variant spawn) | via: irons_spellbooks:alchemist_cauldron_brew | to: magic | motif: M-22 | power: mid | tone: ok | verdict: ACCEPT | hook: the Blood school's signature brew requires a component only droppable from mobs that spawn on a blood moon — the alchemist marks the calendar and waits for the crimson night; magic and celestial cycles lock together.
+
+NEW | from: irons_spellbooks:affinity_ring (blank base ring) | via: create:deploying / item_application | to: create | motif: M-20 | power: mid | tone: ok | verdict: ACCEPT | hook: a Create deployer applies the school-attuned gem to a blank affinity ring — school attunement comes off an assembly line rather than a workbench; the engineer produces what the mage wears, and the method is exactly the "apply upgrade to base" pattern M-20 defines.
+
