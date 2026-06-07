@@ -37,6 +37,24 @@ New links to assess:
 ## createthreadedtrains   [anchors: support (1)]
 - LEAVE — server-side performance mod that parallelises Create's railway calculations; registers zero blocks, items, or recipe types. No content surface. Indirectly makes the logistics/aeronautics arm more scalable but is purely infrastructure.
 
+## createbigcannons   [anchors: create, aeronautics (2)]
+OK — connections sound. CBC is correctly double-anchored: all cannon parts are built through Create machine chains (compacting/cutting/mechanical_crafting/milling/mixing/sequenced_assembly), and the finished guns mount on Aeronautics ships for naval/air combat. No weak or arbitrary existing edges.
+
+New links to assess:
+
+- from: createbigcannons:steel_ingot / bronze_ingot (c:ingots/steel, c:ingots/bronze) | via: M-30 regional-scarcity gate — cannon-grade steel/bronze sourced from GTMOGS regional ore-gen; a steel-scarce region cannot self-supply cannon barrels and must trade | to: economy | motif: M-30 | power: mid | tone: ok — "the cannon foundry needs steel, steel is region-locked" is an intuitive scarcity driver | via: GTMOGS ore-gen → CBC recipe input | verdict: ACCEPT | hook: the foundry player buys pig iron and bronze from the mining specialist; neither can make everything without the other
+- from: createbigcannons:big_cartridge / autocannon_cartridge (munitions) | via: M-26 consumption sink — shells are consumed each shot and never accumulate; cannon use generates continuous demand for a munitions producer | to: economy | motif: M-26 | power: everyday-to-mid | tone: ok — ammunition is literally a perishable in-use good | via: CBC assembly pipeline | verdict: ACCEPT | hook: every cannon fired is a shell consumed; the munitions workshop earns a recurring trade, not a one-time sale
+- from: createbigcannons cannon line (whole foundry chain) | via: M-15 boss-key unlock — a boss drop gates the nethersteel-tier cannon barrel (built_up_nethersteel_cannon_barrel) to enforce the "big guns behind dangerous content" progression | to: survival (boss-drop production route) | motif: M-15 | power: endgame | tone: ok — nethersteel is already positioned as CBC's top-tier metal; gating its barrel behind a boss maintains the depth curve | via: KubeJS boss-drop input on nethersteel barrel recipe | verdict: ACCEPT | hook: the nethersteel barrel can't be cast until the crew defeats the boss that yields nethersteel ore; the endgame cannon tier is earned
+- from: createbigcannons finished shells / cannon-grade bronze blocks | via: M-34 combat-route supply — a "war-goods" trade: a combat/crafting specialist produces and sells munitions and cannon parts to aeronautics players who build warships but don't run a foundry | to: economy | motif: M-34 | power: mid | tone: ok | via: emergent trade | verdict: ACCEPT | hook: the ship captain outfits her vessel by buying shells from the munitions crafter; the loop closes between the foundry and the fleet
+- from: createbigcannons:melting (CBC's own foundry-melt method) | via: M-32 byproduct→input — melting scrap metal (damaged cannon parts, leftover moulds) yields molten metal that feeds back into casting fresh parts (industrial circularity) | to: create | motif: M-32 | power: everyday | tone: ok — remelting scrap is obviously coherent in an industrial-foundry setting | via: createbigcannons:melting | verdict: ACCEPT | hook: the cannon workshop recycles broken barrel moulds through the foundry; waste metal becomes tomorrow's cartridge sheet
+- from: createbigcannons deco blocks (bronze_block, cast_iron_block, steel_block) | via: M-04 Create recycles deco — crush decorative metal blocks back to raw ingots + XP nugget | to: create | motif: M-04 | power: everyday | tone: ok — standard M-04 application | via: create:crushing | verdict: REJECT | reason: the metal-block→ingots recovery is already covered by c:ingots/steel/bronze tags and the Create ore-doubling web; adding a duplicate M-04 edge here adds no new cross-system link and would be redundant. The accepted M-32 (melt scrap) is the more appropriate circularity edge for CBC.
+- REWORK: dossier's "economy via numismatics — finished shells/munitions as sellable war-good" is M-09 framing (retired). Replace with M-34 (combat-route supply) and M-26 (consumption sink) as proposed above — same trade intuition, correct motifs.
+
+## lithium   [anchors: support (1)]
+- LEAVE — general-purpose server/world-tick optimization (physics, mob AI, block ticking); registers zero blocks, items, or recipe types. No content surface — pure tick-rate optimization.
+
+
+
 
 
 

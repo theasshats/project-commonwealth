@@ -32,6 +32,24 @@ The existing Create + survival anchors are sound: Create:mixing/filling → Alco
 
 REWORK: OK — existing Create + survival connections are coherent method-routings.
 
+## mffs   [anchors: Create, survival (2)]
+
+Already a gold-standard 2-anchor weave per dossier: focus_matrix gated on create:electron_tube (M-05), projector/interdiction_matrix are create:sequenced_assembly chains through derpack:incomplete_* (M-06), mid-tier machines use TFMG steel. Authored in 60-mffs.js.
+
+**Candidate A — M-34 combat-route supply (survival/danger ↔ economy)**
+MFFS projectors and interdiction matrices are endgame base-defense equipment. A combat specialist who can farm boss drops (gating the high-tier machines, M-15 already in place) could produce finished force-field arrays and trade them to settlement/colony players who lack the combat capability. The demand driver: colony-builders and economy-specialists need perimeter defense but won't grind the boss route.
+- from: mffs:projector / mffs:interdiction_matrix (built via Create sequenced-assembly + boss-drop gate) | via: emergent boss-route → trade | to: economy | motif: M-34 | power: endgame | tone: ok — a combat specialist sells force fields to colony-builders who need perimeter defense is immediately legible | verdict: ACCEPT | hook: you can build the projector yourself if you have the boss keys; or you buy a finished unit from the fighter who farms them.
+
+**Candidate B — M-30 regional scarcity gate (scarcity ↔ economy)**
+MFFS machines consume steel (c:ingots/steel — Create-routed). Steel requires iron + coal, both of which are region-locked by GTMOGS ore-gen. A player in an iron-poor region can't self-supply mffs machines; they must trade for the steel intermediate, then for the finished assembly. This is already partially realized by M-05/M-06 routing through Create, but the scarcity dimension (steel region-locking meaning force-field arrays are region-scarce) is worth naming explicitly.
+Red-team: this is less a weave candidate than an implicit consequence of M-30 being on steel. The steel scarcity is already there; MFFS just inherits it. No new edge to author — it's an ambient dependency.
+- from: mffs:projector | via: regional steel scarcity (inherited) | to: economy | motif: M-30 | power: endgame | tone: ok | verdict: REJECT | reason: M-30 is already ambient on any Create-steel-requiring machine; no new specific authoring needed here beyond the existing Create routing. Recording for completeness.
+
+**Existing connections review:**
+The M-05 / M-06 weaves are the reference examples of native-method gating + sequenced-assembly keystone. No REWORK needed — these are the gold-standard.
+
+REWORK: OK — existing Create (M-05/M-06) + survival connections are the authored reference weaves; sound.
+
 ## revelationary   [anchors: support/library (1)]
 
 Pure progression-gating library — no items, no recipe types, no loot, no blocks. Gates block/item discovery behind advancements. The dossier notes it acts as infrastructure for mods like Occultism's otherworld block disguises.

@@ -55,3 +55,32 @@ Pure client performance mod — throttles FPS/volume/rendering when the window i
 
 - LEAVE — genuine zero-content client performance library. No items, no loot, no methods, no player-facing behavior beyond FPS management. No weave is coherent here; forcing one would be a defect edge.
 
+## mcwfences   [anchors: support/decoration (1)]
+
+180 fence/wall/gate deco variants. Sanctioned decoration palette support role. Has loot=yes (structure loot), 180 blocks/items. Metal fence variants are the only realistic processing candidate.
+
+**Method-pull analysis:**
+M-04 (Create recycles deco) is the canonical deco-crush route: metal deco → create:crushing → raw/nuggets + xp nugget (lossy). The dossier already identifies this. The question is whether it earns a true 2nd anchor.
+
+**Candidate 1: metal fence variants → create:crushing → nuggets/raw metal + xp nugget (M-04 deco-through-Create)**
+- from: mcwfences metal fence variants (iron, steel-style) | via: create:crushing | to: create | motif: M-04 | power: everyday (fences are a building-tier material, not endgame) | tone: ok — crushing salvaged metal fencing back to raw is sensible scrap-loop behavior | verdict: ACCEPT | hook: a crashed or dismantled base leaves metal fences that a Create player crushes into scrap — the salvage loop makes the deco palette part of the resource web rather than a dead-end aesthetic choice.
+
+**Candidate 2: wood fence variants contributing to M-04 bulk deco-crush pass**
+- from: mcwfences wooden fences | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: wooden fences crushing to planks/sticks is a 1:1 or near-1:1 round trip — the briefing prohibits 1:1 round-trip swaps for non-genuinely-equivalent materials. Wood fences to planks is essentially lossless reclamation, not a meaningful Create processing step. The M-04 metal variant above is the correct scope; wooden is too close to free reclamation.
+
+**Candidate 3: aeronautics structural material (mcwfences iron fencing as airframe decoration rated component)**
+- from: mcwfences:bastion_metal_fence (or acorn_metal_fence) | via: aeronautics build recipe | to: aeronautics | motif: M-23 | power: everyday | tone: clash — metal fencing as a structural airframe component is a stretch; fence blocks are not load-bearing structural elements in any conventional reading. A fence on a ship is decoration, not engineering. | verdict: REJECT | reason: theme clash — M-23 targets load-bearing structural metals (plates, beams, alloys), not decorative fencing. Forcing fences into airframe construction ignores the natural semantic of a fence as perimeter dressing.
+
+OK — the metal-fence → create:crushing (M-04) link is sound and gives mcwfences a thin Create production anchor; the decoration role stays primary. A wholesale deco-family pass (all Macaw's mods) in Phase 3 should author the full crush set together.
+
+## bettermineshafts   [anchors: survival (1)]
+
+YUNG's mineshaft overhaul: larger branching structures, side-rooms, more dangerous ore caverns. No own blocks/items, and loot=no (uses vanilla mineshaft loot tables — not its own loot files, so loot-seed doesn't apply here). Structure-only overhaul.
+
+**Method-pull analysis:**
+The PHASE2-BRIEFING says "a mod with a loot table or any item/block is not 'no content' — reach for a loot-seed or processing candidate before LEAVE." Here loot=no — YUNG's mines use vanilla mineshaft loot tables, so this mod owns no loot surface to seed. No items, no blocks, no methods. The dossier recommends LEAVE and that is correct.
+
+The indirect loop connection (bigger mineshafts → more dangerous spelunking → pressure → demand for lighting/equipment → Create production) is real but not a weave — that's the ambient gameplay effect of any overworld-structure mod. Nothing is missing from the system loop here that a weave could fix.
+
+- LEAVE — structure-geometry overhaul only. No own items, no loot tables (uses vanilla mineshaft loot — not a seedable surface), no methods. The mod earns its keep as survival pressure/exploration flavor, but has no material join key for a 2nd anchor weave.
+

@@ -65,3 +65,37 @@ edge. A second anchor would have to be invented, not routed through a method.
 LEAVE — genuine zero-content: no items, no blocks, no loot, no methods. Client input-handling tweak with no
 material surface. QoL anchor is complete.
 
+## dynamictreesplus   [anchors: survival (1)]
+
+- from: dynamictreesplus:saguaro_fruit (ambient forage drop, everyday) | via: create:milling | to: create |
+  motif: M-12 | power: everyday | tone: ok (milling a cactus fruit for a dye or food intermediate is the same
+  move Create does with wheat→flour; desert flora → industrial pigment is coherent) | verdict: ACCEPT |
+  hook: saguaro fruit milled yields a red/orange dye intermediate or a dry powder used in cooking, giving the
+  procedural desert cactus a manufacturing purpose rather than only decoration.
+
+- from: dynamictreesplus:brown_mushroom_cap / red_mushroom_cap (bulk forage block output) | via: create:milling |
+  to: create | motif: M-12 | power: everyday | tone: ok (mushroom → spore powder / ferment base is standard
+  alchemical logic; Create mills organic matter routinely) | verdict: ACCEPT |
+  hook: mushroom cap blocks milled yield mushroom powder — a cooking/fermentation feedstock for FarmersDelight or
+  ExtraDelight recipes, making mega-mushroom farming a Create-linked production loop.
+
+- from: dynamictreesplus:saguaro_fruit | via: extradelight:juicer or farmersdelight:cooking | to: survival |
+  motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: dynamictreesplus already anchors to
+  survival; this is an intra-system edge that doesn't advance the loop to a second anchor. M-12 only earns its
+  keep here if it crosses to Create or magic; the same juicer/cooking link applied within survival doesn't weave
+  a new anchor.
+
+- from: dynamictreesplus:saguaro_fruit | via: occultism:spirit_fire | to: magic | motif: M-11 | power: mid |
+  tone: clash — cactus fruit transmuted into a spirit essence via soul-fire reads as arbitrary; there's nothing
+  about Sonoran desert flora that maps to Occultism's demonic/spirit register | verdict: REJECT |
+  reason: theme clash; no sensible player-facing hook. The milling path to Create is the coherent second anchor.
+
+## create_central_kitchen   [anchors: create, survival (2)]
+
+REWORK: OK — connections sound. The bridge from Create automation to FarmersDelight/ExtraDelight cooking blocks
+is the definition of this mod's purpose; Create + survival is the correct 2-anchor pair. No items registered,
+so no new method-routing is available from this mod's side. Optional 3rd (economy): the sequenced-assembly
+feast/sandwich pipeline could be acknowledged as feeding the M-26 consumption loop (finished dishes consumed
+by survival pressure), but that is the ambient endpoint of all food production and earns no new anchor per
+the economy-is-player-run ruling. Leave at 2.
+

@@ -42,6 +42,19 @@ LEAVE — pure config-screen API library. No items, no blocks, no recipe types, 
 
 LEAVE — server-side movement-validation mixin. Zero items, zero blocks, zero recipe types. A behavioral patch (raises vanilla anti-cheat speed threshold) that enables aeronautics/vehicles to run at speed. No content surface; nothing to weave. Not "leaving" for convenience — the mod is genuinely zero-surface and correctly classified as support.
 
+## rechiseledcreate   [anchors: create, decoration (2)]
+
+Power-read: 242 blocks + 242 items — chiseled variants of Create decorative stone and wood window types; the Mechanical Chisel is a new kinetic block. It already has 2 anchors (Create-kinetic method + decoration palette). The dossier correctly flags it as already ≥2. Let me look for a third connection now.
+
+Method-pull on the output: the 242 chiseled blocks are fine architectural finishes — andesite cut polished, asurine cut bricks, wood window patterns. Could these feed an economy/service angle? A player specializing in the Mechanical Chisel (requires Create power) producing premium building material to trade would be an M-33 service-for-hire candidate. But the chisel process is a 1:1 transformation with no value added beyond shape — not a true service-for-hire in the M-33 sense (the "service" would be trivial given how cheap it is to set up a Mechanical Chisel once). No strong 3rd anchor.
+
+- from: rechiseledcreate chiseled stone/window blocks (produced via Mechanical Chisel) | via: M-33 service — a Create specialist running the Mechanical Chisel produces premium decorative blocks for trade, since they require Create power others may not have set up | to: economy | motif: M-33 | power: everyday | tone: ok | verdict: REJECT | reason: the Mechanical Chisel's barrier is trivially low — anyone with basic Create automation can run it; M-33 service-for-hire requires a meaningful specialization lock (e.g. enchanting-for-hire, a complex Create chain). 1:1 block-reshape at low cost is not a real economy service, just reshaping vanilla deco. A weak "economy" anchor here would dilute M-33.
+
+- from: chiseled Create stone variants | via: create:crushing — chisel output is a polished/shaped stone that could crush back to stone dust + XP nugget; a lossy recycle loop | to: create | motif: M-04 | power: everyday | tone: ok — it IS a Create deco block family, M-04 is the canonical method for this | verdict: REJECT | reason: rechiseledcreate IS already anchored in Create as its primary pillar (the Mechanical Chisel block is a Create kinetic block); M-04 is the inbound weave for the dossier's existing Rechiseled blocks — applying it here too would be redundant self-wiring within the same Create anchor. The two-anchor state is sound; no new anchor is forced.
+
+OK — connections sound. Dossier's "already ≥2 (Create kinetic method + decoration)" is correct. The mod IS the bridge providing Rechiseled its Create pillar. No coherent 3rd system anchor that doesn't reduce to trivially weak. Decoration/Create at depth 2 is the appropriate end state.
+
+
 
 
 

@@ -32,5 +32,38 @@
 - from: aileron Elytra enchantments | via: ars_nouveau:enchanting_apparatus | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: applying a flight-stabilization or momentum enchantment through the Enchanting Apparatus ties Ars magic into personal aviation, giving magic players a distinct flight-upgrade path; contingent on Aileron's enchants being datapack-accessible as enchantment targets
 - from: aileron Elytra enchantments | via: create:deploying + M-20 | to: create | motif: M-20 | power: mid | tone: clash | verdict: REJECT | reason: tone clash — a Create deployer physically stamping a new flight-physics override onto an Elytra reads as incoherent; flight-physics enchants belong in a magic context, not an industrial press
 
+## geckolib   [anchors: support/library (1)]
+
+- LEAVE — Pure animation/rendering engine; zero blocks, zero items, no loot. Genuine zero-content library dependency; the weaving happens in the many mods that animate on it (Ars Nouveau, Cataclysm, Alex's Mobs), not in geckolib itself.
+
+## blood_n_particles_datapack   [anchors: support/cosmetic (1)]
+
+- LEAVE — Cosmetic combat-particle system only; the 184 registered "items" are particle-effect holders (minecraft:blood1..blood15 etc.), not usable items or materials. No method exists to route anything through; zero gameplay surface. Genuine zero-content cosmetic mod; LEAVE is correct.
+
+## sable   [anchors: support/library (1)]
+
+- LEAVE — Physics engine library (Rapier sub-levels backend) for Create Aeronautics; zero blocks, zero items, no loot, no gameplay surface. All weaving happens in Aeronautics and dependent mods that build on this platform. Genuine zero-content library; LEAVE is correct.
+
+## illagerinvasion   [anchors: survival (1)]
+
+- from: illagerinvasion:hallowed_gem (Invoker boss drop) | via: ars_nouveau:imbuement | to: magic | motif: M-02 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Invoker's hallowed gem is literally "hallowed" — feeding it into the Enchanting Apparatus or imbuement ritual as a rare arcane catalyst makes the Invoker the gatekeeper to a tier of magic no other boss provides
+- from: illagerinvasion:illusionary_dust (Illusioner drop) | via: occultism:spirit_fire | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: illusionary dust from the Illusioner transmutes through spirit-fire into an occult essence — the trickster mob's remains fuel the spirit world, a thematically coherent mob→occult bridge
+- from: illagerinvasion:platinum_chunk (drop) | via: create:crushing | to: create | motif: M-03 | power: mid | tone: ok | verdict: ACCEPT | hook: platinum chunk drops feed directly into the Create ore-processing chain — crush to powder, smelt to ingot — weaving the Illager loot into the metal economy as a mid-tier ore equivalent
+- from: illagerinvasion:hallowed_gem | via: illagerinvasion:imbuing_table (native method) | to: magic | motif: M-05 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Imbuing Table itself already gates over-cap enchantments behind a Hallowed Gem; reinforcing that by making the gem also a gate for Ars/Iron's high-tier recipes through its own machine (native-method gating) deepens the Invoker boss as the key to the enchantment economy
+- from: illagerinvasion:platinum_chunk | via: occultism:crystallize | to: magic | motif: M-11 | power: mid | tone: ok | verdict: REJECT | reason: platinum is a metal material, not a spirit/organic reagent — crystallizing a metal chunk through Occultism is a tone mismatch; the Create ore-doubling path (M-03) is the coherent one for this material
+- from: illagerinvasion:lost_candle | via: create:haunting | to: magic | motif: M-19 | power: mid | tone: ok | verdict: ACCEPT | hook: a candle "lost" in battle passes through Create's soul-fire haunting to become a spirit reagent — the battlefield relic transfigured into occult fuel; coherent flavor bridging combat loot into the soul/magic chain
+- REWORK: the dossier's economy candidate framing (platinum_chunk → Numismatics / M-08 player-minted currency) is worth keeping as a supporting note but is secondary — the primary weave is the magic/Create chain; the economy contribution emerges from the M-34 pattern where boss drops (combat specialist role) are traded to non-combat players, not from a direct coin-mint step; flag as M-34 combat-route supply rather than bare M-08
+
+## entity_texture_features   [anchors: support/client-rendering (1)]
+
+- LEAVE — Client texture-feature engine (OptiFine random/emissive textures); zero items, zero blocks, no loot. Pure rendering dependency for ETF-aware resourcepacks. Genuine zero-content support role.
+
+## formations   [anchors: survival (1)]
+
+- from: formations structures (altars, ruins, cabins) | via: loot-seed | to: survival/economy | motif: M-34 | power: everyday | tone: ok | verdict: ACCEPT | hook: seeding formation-structure chests with reagents, coin components, or magic materials makes scattered ruins a tangible survival reward — the explorer specialist finds things the crafter needs, feeding the combat-route supply loop
+- from: formations:template_editor (the authoring tool item) | via: recipe | to: create | motif: no-motif | power: everyday | tone: clash | verdict: REJECT | reason: the template_editor is a dev/author-facing world-editing tool, not a player-facing crafting component; gating or routing it through Create has no player-legible meaning
+- from: formations stone altar structures | via: loot-seed | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: seeding formations' altar ruins with scattered magic reagents (source gems, essence shards) makes overworld exploration the supplier for early magic — organic loot→magic pipeline rather than a purely crafted progression
+- REWORK: dossier says "none — leave" but the briefing explicitly warns against LEAVEing a loot-bearing structure mod; formations has loot=no per the jar digest but its structure set generates with placed loot-block equivalents (chest + barrel placements); if its structures carry any placed chest blocks the loot-seed route applies. However jar digest shows loot=no, meaning it registers no loot tables of its own — the LEAVE is defensible if structures genuinely spawn empty (vanilla-palette blocks only, no loot chests). Accept the loot-seed candidates above as conditional on confirming the structure templates include chests; if they don't, revert to LEAVE.
+
 
 

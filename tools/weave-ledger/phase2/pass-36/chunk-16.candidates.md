@@ -12,5 +12,14 @@
 - from: lowheated heat tier | via: M-29 cross-route dependency | to: magic | motif: M-29 | power: mid | tone: ok | verdict: REJECT | reason: Ars/Occultism use their own heat sources (arcane fire, spirit fire); piggybacking the lowheated tier into magic rituals would require authoring new heat-conditioned ritual steps — too much cross-mod mechanical coupling for a behavioral tweak mod; scope exceeds the mod's nature.
 OK — the M-26 fuel-consumption link is the clean second anchor. The mod already sits in Create; fuel burning binds it to survival's resource chain, advancing the loop (production demands survival output). No existing connections to rework (mod has 1 anchor; M-26 is the proposed addition).
 
+## jakes-build-tools-2.0.1.5   [anchors: support/QoL (1)]
+- from: experience_flask items (experience_flask_0..3) | via: create:filling / create_enchantment_industry:grinding | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: XP-flask items are build-tool consumables for storing/releasing XP on construction sites; routing them through Create's enchantment-industry grinder would be a forced thematic import — the XP flasks exist to help builders, not as a Create feedstock. The cost model says everyday items get one light step; but there's no coherent "whose machine wants a builder's XP flask?" answer. No-motif for the core toolset itself.
+- from: hammer / chisel / trowel tools | via: M-05 native-method gating | to: create | motif: M-05 | power: everyday | tone: clash | verdict: REJECT | reason: These are builder utilities (datapack-registered, vanilla namespace), not progression-gated tech items. Requiring Create parts to craft a hammer would be punishing for a basic building tool and tonal mismatch — the dossier notes this explicitly as "forced edge." Everyday builder items should not be gated behind a crafting spine.
+- LEAVE — no coherent 2nd anchor; QoL builder tools with no machine or processing surface. The experience_flasks have no home in the methods palette as inputs. Force-fitting Create gating onto basic construction utilities is a defect.
+
+
+
+
+
 
 

@@ -49,3 +49,26 @@ Player Animation Library — client animation API. Zero blocks, zero items, no r
 
 - LEAVE — pure animation API library (0 blocks, 0 items, no recipe types); zero content surface; shipped as a silent dependency of animation-driven mods
 
+## createblockchain   [anchors: economy + Create (2)]
+
+Currency Miner block fed FE mints Numismatics coins; Mining Cores from geodes gate the rate; piggy banks seed loot coins in chests. Already has 2 anchors (economy + Create via mechanical_crafting/mixing).
+
+**Existing connections review:** The economy anchor (it *is* a coin faucet — M-08 adjacent) and the Create anchor (built via `create:mechanical_crafting` + `create:mixing`) are sound. The Mining Core geode worldgen scarcity is a genuine gate. The FE input creates a meaningful dependency on Create's electrical sub-system (via createaddition). Let me check if the existing connections are weak or arbitrary — they aren't: the coin faucet directly implements the player-minted-currency concept and the Create dependency is mechanical.
+
+**REWORK check:** The dossier flags this as "the money FAUCET for Numismatics." M-08 requires coins to trace back to regional scarcity. Currently the FE source is unconstrained — any FE supply feeds the miner. The dossier's own 2nd-anchor deepening note is: "feed the miner FE that itself comes from scarce processed metal, so coins trace back to regional scarcity rather than free FE." This is correct as a REWORK flag — the existing economy anchor is real but weakened because the FE supply has no scarcity gating; without that, the coin faucet rate is only Mining Core-gated, not ore-scarcity-gated at the energy level.
+
+**Method-pull for new links:** Can we add a third anchor? The mod already sits at economy + Create. Looking for survival or magic links:
+- The cryotheum_coolant_bucket is thematically a cold/ice substance — could route through `create_dragons_plus:freezing` or `northstar:freezing` as a coolant source. But cryotheum is a minor support item for the miner, not a flagship material, so a freezing-method link would be thin/forced.
+- Mining Cores from geodes: geodes are worldgen, so there's a scarcity/regional gate here (M-30 regional scarcity gate concept). But Mining Cores are already the gate for the miner itself; a separate M-30 weave would be redundant.
+- Piggy banks seeding loot coins in chests: this is a loot-seed mechanism that puts coins into structures — a form of M-08 distribution but already covered by the economy anchor.
+
+**Red-team on deepening:** The FE→scarcity-trace suggestion (making FE itself come from scarce metal) is a deepening of M-08, not a new anchor. It's valid but it belongs to the authoring layer.
+
+**Verdict:** OK on existing economy + Create anchors (both real); REWORK on the FE supply — flag that without ore-scarcity-traced FE the M-08 coin chain is incomplete (Mining Core gate alone is insufficient to root coins in regional scarcity; the FE supply should trace back to a scarce processed metal); no strong new 3rd anchor found.
+
+- REWORK: FE supply to the Currency Miner is currently unconstrained — any FE source mints coins; this weakens M-08 because coins don't trace back to regional ore scarcity (only Mining Cores gate it, not the energy input); a Phase-3 config or recipe tightening should prefer a scarce-metal-sourced FE route (e.g. via createaddition generator fueled by a region-locked ore product) to close the M-08 loop properly
+- OK — economy + Create anchors are both mechanically real and sound; no forced or lore-clashing connections
+- from: createblockchain:mining_core (geode drop) | via: loot-seed (geode worldgen placement) | to: scarcity | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: the Mining Core only comes from geodes ~every 30 chunks — its regional rarity naturally zones where heavy coin minting is possible, tying the money supply to the geographic map
+- from: createblockchain:currency_miner (FE→coin chain) | via: createaddition:charging / FE from scarce ore product | to: scarcity→economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: coins are only as common as the energy to mint them — if that FE traces back to a region-locked processed metal, the money supply has geographic roots
+- from: createblockchain:piggy_bank | via: loot-seed (overworld chests) | to: economy | motif: M-08 | power: everyday | tone: ok | verdict: REJECT | reason: piggy banks seeding random coins into world chests is an NPC-adjacent faucet (coins appear "from nowhere" rather than from player minting effort); this weakens M-08's player-minted-currency framing; the ambient chest loot is flavour, not a weave node
+
