@@ -13,6 +13,20 @@ OK — existing rows sufficient for the core Create (M-12 milling/pressing/mixin
 
 - CHALLENGE | from: trailandtales_delight crops / produce | via: sereneseasons fertility window | to: survival | motif: M-16 | verdict: REJECT | hook: existing M-16 REJECT is correct — the crops grow year-round (FD crops aren't season-gated by default); the Sniffer crops in particular have no season dependency; seeding a false seasonal restriction onto them would be arbitrary config with no design payoff.
 
+## prickle
+LEAVE — pure JSON config-format library; 0 items/blocks/loot. No content surface to weave.
+
+## formations   [anchors: survival (1)]
+The existing M-02 (loot-seed magic reagent) ACCEPT rows are the converged consensus. One structural challenge the existing rows miss:
+
+- CHALLENGE | from: formations generated structures | via: loot-seed | to: magic | motif: M-02 | verdict: REJECT | hook: the dossier records loot=no — formations uses vanilla block palettes and structure_templates without owned loot tables; there are no chests or drops to seed. The multiple M-02 ACCEPT rows assume loot tables exist but they don't. Any loot-seed weave would require the pack to first author datapack-side loot tables for these structures, which is a pack-authoring prerequisite, not a formations weave. Flag for Gate review before committing any loot-seed Phase-3 action against this mod.
+
+## fusion
+LEAVE — rendering library (connected textures); 0 items/blocks, no recipe surface. Nothing to weave.
+
+## immersivearmorhud
+LEAVE — client HUD overlay; 0 items/blocks. Nothing to weave.
+
 ## createblockchain   [anchors: economy + Create (2)]
 OK — M-08 (FE→coins, geode-scarce Mining Core), M-30 (regional geode scarcity) are well-covered with multiple converging ACCEPT rows. One gap in the accepted set:
 

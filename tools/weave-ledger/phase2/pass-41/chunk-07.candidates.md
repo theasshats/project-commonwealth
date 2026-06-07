@@ -49,3 +49,19 @@ Gaps to probe:
 - NEW | from: mcwwindows:*_arrow_slit / *_parapet (fortification window variants used in colony Fortress/Guard-tower schematics) | via: minecolonies colony Builder request | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: building a colony Guard Tower requires arrow-slit windows — the window-maker becomes a colony supplier, not just a decorator
 - CHALLENGE | from: mcwwindows stone window/parapet variants (andesite) | via: create:sandpaper_polishing (polished-stone intermediate as recipe input) | to: create | motif: M-29 | verdict: REJECT | hook: gating an everyday decorative window on a Create-processed intermediate violates the basic-component cost rule; the single existing ACCEPT is not convergence — the block is everyday decoration that should craft from vanilla stone, not from a machine-lapped slab
 
+## gnkinetics   [anchors: create, aeronautics (2)]
+
+Existing rows heavily converge: M-24 (planetary/worm/ring gear → Aeronautics drivetrain) has 18+8+8 ACCEPTs. M-28 (worm gear via colony blacksmith) has 2 ACCEPTs. M-29 (precision gear → golem assembly) has 1 ACCEPT. The dossier's own "leave" recommendation was superseded by the M-24 convergence. The mod now sits at 2 anchors (Create + aeronautics).
+
+Does gnkinetics have a plausible third anchor or a deeper weave? The dossier is explicit: its parts are pure mechanism with no magic/survival/economy thematic surface. Let me push on the one gap the existing rows show:
+
+**The M-17 / magnet-gear angle** was rejected for good reason (electromagnetic magnetism ≠ FE charging, tone works but the mechanism is wrong). No new angle there.
+
+**Service-for-hire (M-33)**: A kinetics specialist who designs efficient gear-ratio contraptions sells *the gear-ratio knowledge as a service* — configuring another player's factory, not selling the gears. This is emergent play, not a recipe action. No Phase-3 author action. Pass.
+
+**M-32 byproduct → input**: gnkinetics produces no waste stream. Correctly rejected everywhere.
+
+One angle genuinely not explored: gnkinetics **shaftless variants** (shaftless_brass_gear, shaftless_industrial_gear) enable Create contraptions to transmit rotation through non-standard paths. In the aeronautics context, shaftless gears allow rotation to cross ship structural members without a visible shaft — a design-relevant distinction for hull construction. This is a *use-context nuance* on M-24, not a new anchor.
+
+OK — existing rows sufficient. (gnkinetics sits at 2 anchors via M-24; no third anchor reachable without forcing.)
+

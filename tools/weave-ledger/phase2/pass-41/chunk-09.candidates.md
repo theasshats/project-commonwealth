@@ -55,5 +55,14 @@ Existing rows: all REJECT except one ACCEPT (M-37 book as MineColonies research-
 
 ## createfood   [anchors: survival, Create (2)]
 
+Existing rows cover: M-16 seasonal crop gate (ACCEPT ×12, strongest signal); M-28 colony cook demand (ACCEPT ×9); M-26 consumption sink (ACCEPT ×6); M-29 cross-route (Ars potion flask needs a dish) (ACCEPT ×2); M-35 aging/maturation cheesecake (ACCEPT ×1); M-12 coconut/extradelight (ACCEPT). Various REJECT: magic imbuement of food (M-10, correct REJECT), bare sellable (M-09, correct REJECT).
+
+The existing rows already strongly cover the two anchors plus solid 3rd-pillar candidates. What's missing:
+
+- NEW | from: createfood finished dishes (high-tier multi-step outputs — apple_cheesecake, bacon_pizza, complex pies) | via: create:filling → aeronautics ship galley / logistics crates (bulk-fill a ship's food storage with finished dishes for long-range crew provisioning) | to: economy | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: an aeronautics ship running long routes needs provisioned food for the crew — bulk-filled createfood dishes are the cargo the cook sends with the airship; logistics and the kitchen become mutually dependent.
+- CHALLENGE | from: createfood:apple_jam_block / jam concentrates | via: ars_nouveau:imbuement (magic-reagent role) | to: magic | motif: M-10 | verdict: REJECT | hook: the existing ACCEPT (×1) for jam→imbuement is weak and contested: M-10 guards against gating basic components behind infusion; apple jam is an everyday food output (not an endgame reagent) — the culinary-to-arcane tonal jump requires a much stronger thematic case than "concentrated fruit." The broader set of M-10 food REJECT rows reflects this correctly. OK to leave as REJECT.
+- NEW | from: createfood:apple_milkshake / fruit drinks / hot_chocolate (warm/cold drink variants) | via: config tie to Cold Sweat warmth-food bonus (warm drinks raise core temp, cold drinks cool in summer) | to: survival | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | hook: no numbered motif exists for a config-temperature-food link; the effect is emergent and not a recipe weave. Record as no-motif reject per briefing rules — flag for Gate-0 if a "thermal-food" motif is ever desired.
+
+
 
 

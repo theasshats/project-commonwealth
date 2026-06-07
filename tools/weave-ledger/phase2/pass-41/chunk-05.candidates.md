@@ -21,3 +21,17 @@ OK — existing rows sufficient. All four prior candidates are correctly REJECT:
 
 ## createfurnitureseats
 OK — existing rows sufficient. Content-free compat glue (0 blocks / 0 items / 0 c:tags / no recipe-types) that registers foreign furniture as rideable Create/Sable seats. It already leans aeronautics (sittable furniture on Aeronautics ships) on top of its support role, so it meets the two-anchor target through behavior, not materials. There is nothing to route — both prior rejects are sound; forcing an economy/magic edge would be noise.
+
+## handcrafted
+CHALLENGE | from: handcrafted furniture (deco supply at scale) | via: M-31 logistics-required bulk | to: aeronautics | motif: M-31 | verdict: REJECT | hook: M-31's bar is heavy/bulky/perishable enough that trading at scale *requires* the aeronautics arm — furniture is light, stackable as items, and trades fine by hand, cart, or train. Bulk furnishing a remote colony is convenient by air, not gated to it; this doesn't meet the M-31 threshold and overstates the logistics tie. The colony-furnishing demand is already captured at M-28, which is the correct motif.
+NEW | from: handcrafted dishes / plates / cups (cosmetic tableware) | via: farmersdelight:food_serving (plate a finished FD/ExtraDelight feast onto a handcrafted dish as the serving vessel) | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: a tavern dishes a stew onto a real plate — letting handcrafted tableware act as the serving vessel for the cooking layer gives the deco palette a light, sensible foothold in the food chain beyond the already-covered jam jar.
+
+## trashslot
+LEAVE — client-only QoL UI (inventory trash slot; 0 blocks / 0 items / 0 c:tags / no recipe-types). Deletes items; no material surface to weave.
+
+## bits_n_bobs
+NEW | from: bits_n_bobs:chain_pulley / chain_rope (kinetic chain transmission) | via: aeronautics winch/rigging recipe (M-23 structural-rigging routing — the alternative to the contested M-24 drivetrain row) | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: a chain pulley is a hoist, not an engine — its natural airship role is cargo-winch and rigging (raising/lowering loads and anchors) rather than the propeller drivetrain. Routing it as a rigging component sidesteps the M-24 reviewers' objection (a chain drive isn't a rotor/bearing) while keeping the obviously-right aeronautics link.
+CHALLENGE | from: bits_n_bobs:large_nixie_tube / nixie_board | via: economy — player-to-player price display at a Trading Floor stall | to: economy | motif: M-33 | verdict: REJECT | hook: a price-display board is build-flavor sitting *near* the economy, not a demand-gating weave — placing a nixie board over a stall consumes nothing and gates no production. M-33 is service-for-hire (labour performed on another player's materials); a static display is not labour. The board's real anchor is Create fabrication (already accepted at M-05 mechanical_crafting); the economy-signage framing should be dropped as ambient.
+
+## libipn
+LEAVE — GUI/config/logging library for Inventory Profiles Next (0 blocks / 0 items / no recipe-types). Pure code dependency, nothing to route.

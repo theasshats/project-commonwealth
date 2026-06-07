@@ -91,6 +91,16 @@ Well-covered mods: hallowed_gem M-02 (25 ACCEPTs), illusionary_dust M-11 (20 ACC
 
 OK — core magic and combat-supply rows are strong. The CHALLENGE resolves the platinum_chunk motif confusion; the NEW adds the missing high-tier-fork articulation for the colony route.
 
+## alcohol_industry   [anchors: Create, survival (2)]
+
+Well-covered: M-28 colony-tavern demand (multiple ACCEPTs), M-35 aging (multiple ACCEPTs), M-26 consumption (ACCEPT), M-16 seasonal crop input (ACCEPT), M-31 logistics-bulk (1 ACCEPT). One angle not clearly argued: the Iron's Spellbooks alchemist_cauldron as a magic *consumer* of distilled spirits creates a genuine M-29 (cross-route dependency) — not just "spirits are a processing solvent" (M-12) but "a magic specialist *requires* a distilled spirit as a reagent they can't produce themselves, so the distillery player and the magic player are forced to trade." The distinction matters for motif accuracy.
+
+- NEW | from: alcohol_industry:alcohol_base or high-proof spirit (vodka) | via: irons_spellbooks:alchemist_cauldron_brew | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: Iron's Spellbooks alchemist cauldron brews potions from reagents — if a recipe requires a distilled spirit as the solvent base, the magic specialist cannot brew that tier without sourcing from the Create distillery; the two routes are forced to intersect (neither makes everything alone)
+- CHALLENGE | from: alcohol_industry:alcohol_base (fluid intermediate) | via: tfmg:distillation (parallel refining step) | to: create | motif: M-29 | verdict: REJECT | hook: TFMG distillation processes petroleum/industrial fractions (diesel, gasoline, lubricant) — its column is designed for hydrocarbons, not grain mash; routing potable spirits through an industrial petroleum still is a tone and chemistry mismatch that a player would find absurd, not intuitive; the M-12 alcohol_base→Create-mixing→boiler chain already covers the Create integration cleanly
+
+OK — M-28, M-35, M-26, M-16, M-31 rows are well-founded. The NEW above adds the missing M-29 magic-route dependency that distinguishes a forced trade from ambient processability.
+
+
 
 
 

@@ -20,3 +20,30 @@
 - NEW | from: northstar planet-dimension ores (titanium/tungsten, off-world locked) | via: occultism:miner dispatched to a northstar dimension — a summoned spirit mines where mortals need air | to: magic | motif: M-18 | power: endgame | tone: ok | verdict: ACCEPT | hook: a Djinni sent to mine Martian ore needs no breath — occultism's dimensional miner is the magic route to space metals, trading spirit-ritual skill for the rocketeer's transport monopoly
 - CHALLENGE | from: northstar:astronomical_reading | via: ars_nouveau:enchanting_apparatus or occultism:ritual (M-22 celestial reagent) | to: magic | motif: M-22 | verdict: REJECT | hook: two ACCEPT rows exist for astronomical_reading as a lunar/celestial catalyst, but the reading is navigation data generated at a crafting table, not a material available only during a lunar event — M-22 is for items obtainable only during a specific moon phase/event; the reading is obtainable any clear night, which does not satisfy the "only during event" requirement; the correct motif is M-37 (research/knowledge gate), not M-22
 
+## resourcefulconfig   [anchors: support (1)]
+- LEAVE — zero-surface config library; no items, methods, or loot to route; its weave is the dependent mods' weave
+
+## sablecollisiondamage   [anchors: support (aeronautics physics addon) (1)]
+- LEAVE — pure behavior patch; no items/methods/loot; existing REJECT rows correctly dismiss all proposals
+
+## structurize   [anchors: support (MineColonies build engine) (1)]
+- LEAVE — required dependency for MineColonies with 10 items that are builder-tools, not materials; its weave is MineColonies' weave
+
+## ohthetreesyoullgrow   [anchors: support (worldgen library) (1)]
+- LEAVE — zero items/methods; tree-growth framework with no player-facing material surface
+
+## kiwi   [anchors: support (library/API) (1)]
+- LEAVE — developer library with no gameplay content; zero items/methods
+
+## bundle_recipe   [anchors: support (QoL/vanilla-parity) (1)]
+- LEAVE — re-enables a vanilla crafting recipe; the bundle is vanilla, no foreign material or method surface
+
+## immersive_paintings   [anchors: decoration palette / support (1)]
+- LEAVE — pure decorative-expression mod; zero material surface (4 items that are canvas-display objects, no fluids/essences/ores); every previous weave attempt correctly rejected; forcing an edge would be busywork
+
+## jade   [anchors: support (client UI) (1)]
+- LEAVE — display-only HUD overlay; no items, no methods, no material surface; nothing to route
+
+## towntalk   [anchors: support (MineColonies flavor) (1)]
+- LEAVE — audio-only colonist voice lines; no items/methods; its anchor is MineColonies' anchor
+
