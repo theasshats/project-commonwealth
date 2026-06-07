@@ -73,3 +73,18 @@ Power-read: everyday. Create's splashing method uses water; oxidized copper deox
 
 REWORK: no existing connections to flag (mod currently at 1 anchor).
 
+## freefbible   [anchors: support/curated-flavor (1)]
+
+Single inert readable item. No mechanics, no loot, no recipe types. Pure novelty/joke item added by the pack maintainers as a friend-group easter egg.
+- LEAVE — single inert readable item with no mechanics, no loot, and no material surface; forcing any recipe edge would be noise on a gag item.
+
+## configuration   [anchors: support/library (1)]
+
+Pure config-screen library. Zero blocks, items, biome modifiers, loot. No player-facing content whatsoever.
+- LEAVE — genuine zero-content code library (config-screen framework); no items/blocks/loot; weaving is impossible.
+
+## jade   [anchors: client-only UI / support (1)]
+
+Zero blocks, zero items, zero loot. Pure informational HUD overlay. No material surface.
+- LEAVE — client-only informational overlay; zero items/blocks/loot; no weaving surface exists.
+

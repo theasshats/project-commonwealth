@@ -43,3 +43,6 @@ OK — connections at survival + create are sound. New candidates: M-28 (economy
 - from: trailandtales_delight items | via: farmersdelight:cooking / cutting (existing made-by methods) | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: REJECT | reason: M-16 is a seasonal-reagent motif specifically for items obtainable only in a given Serene Season. The Lantern Fruit grows from sniffer seeds (archaeology mechanic) not a seasonal gate; cherry blossoms have a seasonal visual feel but aren't mechanically season-locked. Without a verified season-gate in the mod, M-16 doesn't apply. REJECT — the survival anchor comes from the diet-variety / food pressure loop, not from a seasonal gate.
 REWORK: dossier "2nd-anchor candidates" lists M-09 (retired) and M-12 (partially valid). M-09 must be dropped; the correct economy link is M-28 (colony provisioning). M-12 via create:milling (lantern fruit pulp) is the correct Create link. M-35 (cheese maturation) is the strongest new addition.
 
+## ohthetreesyoullgrow   [anchors: support/library (1)]
+LEAVE — genuine zero-content worldgen library; provides sapling-growth algorithms and tree-structure framework for dependent mods. Zero items, zero blocks, loot=no. No weave is possible or coherent.
+

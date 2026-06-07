@@ -30,6 +30,14 @@
 - from: createaddition:rolling → c:rods/wires | via: aeronautics construction recipe (wiring/control surface ingredient) | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: ACCEPT | hook: a ship's electrical control surfaces need rolled copper wire — the electrical specialist becomes the aeronaut's supply chain for wiring
 - from: createaddition:seed_oil / bioethanol | via: createaddition:liquid_burning as aeronautics generator fuel | to: aeronautics | motif: M-13 | power: everyday | tone: ok | verdict: REJECT | reason: M-13 (fuel → propulsion) is already reserved for TFMG diesel/gasoline/lubricant per reagent-ownership; bio-oil as aeronautics fuel would conflict with the defined propulsion-fuel hierarchy — better left as an FE-generation fuel (survival weave) rather than competing with M-13's reserved fuels
 
+## valarian_conquest   [anchors: survival (1)]
+- from: valarian_conquest faction armor / weapons / shields | via: loot-seed into faction keep/outpost loot tables | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: raiding a faction stronghold yields processed war gear the fighter sells to settlers who can't fight — combat is a supply route, not just adventure
+- from: valarian_conquest:armorsmith station | via: create:pressing or create:mechanical_crafting as gated input to armorsmith recipes | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: guild-quality plate armor still needs machine-pressed metal sheets — the armorsmith can't work without the tech player's output
+- from: valarian_conquest citizen/mercenary hire | via: emergent player-to-player labor market (M-33 service) | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: a mercenary specialist escorts caravans or guards a colony for coin — protection is a hired service like any other trade
+- from: valarian_conquest faction gear (citizen professions) | via: minecolonies hut worker integration (M-28 colony route) | to: create | motif: M-28 | power: mid | tone: clash | verdict: REJECT | reason: recruited citizens in Valarian Conquest take vanilla professions, not MineColonies hut assignments — the two colony systems don't interoperate at the recipe level; behavioral adjacency without a method-routing to compose
+- from: valarian_conquest economy via numismatics coin | via: vendor pricing | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: M-09 RETIRED — bare "sell faction goods for coin" is the ambient endpoint of the loop, not a weave; the economy link is already captured via M-34 loot-seed above
+
+
 
 
 

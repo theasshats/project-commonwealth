@@ -86,6 +86,33 @@ Pure behavior patch — no items, no blocks, no loot. Genuine zero-content mod.
 
 - LEAVE — pure QoL behavior mod (pet teleport fix); registers no items, no blocks, no loot; zero content surface.
 
+## tidal-towns-1.3.4   [anchors: survival/exploration (1)]
+
+Structure-only worldgen datapack; loot=no (digest), no registered items/blocks. Built from vanilla blocks — no namespace to weave through. The dossier already says leave, and the jar confirms 0 blocks, 0 items, no loot.
+
+One genuine surface: being a floating ocean settlement, it's a natural *destination* for aeronautics sea travel. However it registers no loot tables to seed, and the villages themselves are vanilla-inhabitant NPCs with vanilla trade tables — no custom content to hook. A thematic note is worth logging for the design record, but the delivery would require authoring custom loot/structure templates, which is a build task not a weave.
+
+- from: tidal-towns ocean village structures (exploration destination) | via: loot-seed | to: aeronautics | motif: M-15 | power: mid | tone: ok | verdict: REJECT | reason: The mod registers no loot tables (digest loot=no) and uses vanilla blocks throughout. A loot-seed weave here requires authoring a new structure loot table from scratch — that is structure authoring, not a recipe/loot seeding weave against an existing table. No surface to weave against without first creating content this mod doesn't ship.
+
+- LEAVE — structure datapack using vanilla blocks only, loot=no; no item/block namespace and no custom loot table to seed; weaving would require authoring structure content this mod doesn't provide.
+
+## lithostitched   [anchors: support/library (1)]
+
+Pure worldgen library/API. No items, no blocks, no loot. Zero gameplay content surface.
+
+- LEAVE — worldgen library (biome injectors / density functions); registers no items, no blocks, no loot; zero content surface to weave.
+
+## everycomp   [anchors: support/decoration (1)]
+
+Runtime block generator — outputs into host mods' namespaces (Create, Macaw's, Blockus). Registers no items under its own namespace worth weaving. Content belongs to the host mods. The dossier's assessment is correct.
+
+- from: everycomp-generated wood-variant blocks | via: woodworks:sawmill / create:cutting | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: Any sawmill/cutting-board route is attributed to the HOST mod (Create, Woodworks, Macaw's), not to everycomp. Everycomp's generated blocks already inherit the host's recipes; giving everycomp a separate weave edge would double-count what the host already owns. Weaving belongs on the host mods.
+
+- LEAVE — cross-mod deco palette generator; its outputs live under host-mod namespaces; no own content to weave from.
+
+
+
+
 
 
 

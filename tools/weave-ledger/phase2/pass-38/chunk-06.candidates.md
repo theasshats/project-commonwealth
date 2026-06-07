@@ -54,6 +54,46 @@ REWORK: Dossier notes "leave is acceptable" — but loot=yes is a real surface, 
 
 Summary: 2 ACCEPT (M-10 apparatus enchant, M-34 loot-seed), 1 REJECT.
 
+## createnuclear   [anchors: create (1)]
+Existing connections: 1 anchor (Create — power addon, uses create:compacting/crushing/mixing/pressing/mechanical_crafting/splashing). One anchor is the floor; needs a second.
+
+Power-read: createnuclear is endgame. The reactor outputs >2M SU (the single largest power source in the pack), requires a multiblock build with reactor_core/casing/frame/cooler/controller, and the fuel chain runs through multiple Create processing stages (crush → mix → press → enrich). The steel (c:ingots/steel) and lead byproducts are mid-tier shared metals. The anti-radiation armor set is mid-tier protective gear. The loot=yes entry likely covers ore gen drops.
+
+Candidates:
+
+- from: createnuclear:uranium (ore→raw→dust→enriched fuel) | via: create:crushing → createnuclear:enriched → reactor | to: create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: The uranium fuel cycle — crush ore, mix, press, enrich through the campfire/fire stage, load reactor — is a multi-step sequenced processing chain that is exactly the GregTech-style depth target for endgame. A sequenced-assembly approach wrapping the fuel rod as a `derpack:incomplete_*` part is coherent.
+
+  Red-team: Is this an additional weave or just documenting what already exists? The dossier shows the Create processing chain is already an inbound weave (the made-by methods). The M-06 candidate here is about explicitly modeling the fuel-rod as a sequenced-assembly keystone, deepening the existing chain rather than adding a new one. Endgame power gates behind multi-step process — fits M-06. Not a new pillar but deepens Create anchor meaningfully.
+
+  Revised: This is a depth play within the existing Create anchor, not a second anchor. Valuable as a weave note (endgame Create chain depth), but doesn't open a new system. File as Create-depth enhancement; not the 2nd anchor we need.
+
+- from: createnuclear:steel_ingot (c:ingots/steel) | via: create:mechanical_crafting / aeronautics hull recipes | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: Nuclear steel — a fabricated structural alloy — becomes a required ingredient in Aeronautics' highest-tier hull/airframe recipes, making the reactor's byproduct essential for endgame ship construction. The player with a reactor is the server's steel supplier for fleet-grade airframes.
+
+  Red-team: Is steel a meaningful structural material for Aeronautics? M-23 (structural alloy → airframe) is established for exactly this — fabricated metal plates as hull material that scales by ship tier. Steel is the right material for the highest-tier frames (it's harder and scarcer than iron). The reactor makes steel as a byproduct of its own operation, so the two systems are already operationally coupled; the weave formalizes it. Tone: industrial-to-industrial, coherent. The Create spine produces power AND the hull material — the reactor player becomes a supplier to the aeronautics player. Strong cross-system link.
+
+- from: createnuclear:lead_ingot (c:ingots/lead) | via: create:pressing → radiation shielding for magic rituals | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: Lead shielding is pressed from nuclear lead and used as a catalyst/protective component in Occultism's higher-tier rituals (e.g., ritual containment chalk or a spirit-binding circle that requires a shielded component), forcing the magic specialist to source lead from the nuclear tech player.
+
+  Red-team: Is lead shielding in Occultism rituals thematically coherent? Lead's historical association with alchemy and anti-magical containment is real (alchemists used lead for transmutation; ceremonial circles used heavy metals as binding agents). The idea that a high-tier occult ritual needs physical shielding from its own radiation/energy output is a coherent fiction. M-29 (cross-route dependency) is exactly the motif — a tech byproduct becomes required input for a magic method, forcing the two routes to interact. The specific Occultism method (ritual or spirit_fire) can consume a pressed lead plate as a ritual ingredient. Not a forced edge. Tone ok.
+
+- from: createnuclear uranium / reactor | via: regional scarcity (GTMOGS ore-gen) | to: economy | motif: M-30 | power: endgame | tone: ok | verdict: ACCEPT | hook: Uranium is region-locked by GTMOGS ore generation — only certain biomes/regions bear uranium veins — so the reactor is anchored to a specific settlement location, making its steel/power output a regional specialty that must be traded or physically moved by the aeronautics/logistics arm.
+
+  Red-team: Is this a real weave or just "uranium is scarce by default"? M-30 (regional-scarcity gate) specifically requires that the good's key input be region-locked, forcing trade. Uranium's ore distribution being regional means the reactor can only be built where uranium exists — that's M-30's logic applied cleanly. The delivery is via GTMOGS ore-gen config, not a recipe. Tone ok.
+
+- from: createnuclear anti-radiation armor | via: create:mechanical_crafting | to: survival | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: The anti-radiation suit (helmet/chest/legs/boots) is gated on Create parts as core inputs — pressed/machined components via mechanical_crafting — so the hazmat layer that lets players safely approach the reactor is itself a mid-tier Create manufacturing goal.
+
+  Red-team: Does the anti-rad armor already use create:mechanical_crafting or create:item_application? The dossier lists create:item_application in the made-by methods, so there's already some Create-gating on the armor. M-05 (native-method gating with Create parts as inputs) would deepen this — make the core suit components require Create-processed parts. Not inventing a new link, refining an existing one to be explicit. Tone: hazmat suit from a nuclear-powered tech civilization — coherent.
+
+- from: createnuclear reactor output (SU) | via: createaddition:charging | to: magic | motif: M-17 | power: endgame | tone: ok | verdict: ACCEPT | hook: The reactor's massive SU is converted to FE via Create Addition, then routed to charge Ars Nouveau wands/foci or Iron's Spellbooks spell focuses — the nuclear plant powers the server's arcane infrastructure, coupling the reactor player with the magic specialist as a power customer.
+
+  Red-team: Is the SU→FE→magic charging chain mechanically sound? createaddition:charging is established (M-17). The reactor outputs enormous SU to Create's kinetic network; Create Addition converts SU to FE; then a charging station charges magic foci/wands. The chain exists in the methods palette. M-17 is "only when it makes sense" — a nuclear reactor as the power source for high-tier magic foci is exactly when it makes sense (endgame power for endgame magic tools). Tone: electric-magic bridge, coherent. ACCEPT.
+
+REWORK: Dossier proposes M-09 ("uranium/steel mint into coin") as the economy candidate. M-09 is retired. The M-08 candidate (player mints coin from processed scarce metal) is partially valid but "steel coin" is a stretch — steel isn't a currency metal in the loop. M-30 (regional scarcity gate) is the correct economy anchor — it grounds the reactor to a specific territory and forces trade via the logistics arm. Flag dossier's M-09 economy candidate as superseded by M-30 + M-23.
+
+OK — Create anchor connections sound (deep multi-step fuel chain is appropriately endgame). New links add aeronautics (M-23 steel hull), economy (M-30 regional scarcity), magic (M-17 power bridge, M-29 lead-ritual cross-route), survival (M-05 hazmat gear depth).
+
+Summary: 6 ACCEPT (M-06 depth-note, M-23 aeronautics steel hull, M-29 lead-ritual cross-route, M-30 regional scarcity, M-05 hazmat gear, M-17 FE magic charge), 0 REJECT. [Note: M-06 is a within-Create depth note rather than a new system anchor; net new anchors: aeronautics, economy, magic, survival.]
+
+
 
 
 

@@ -35,6 +35,23 @@ OK — the aeronautics anchor is sound. ACCEPT the create (M-05 mechanical_craft
 
 REWORK: existing "economy via numismatics" candidate in dossier is flagged as WEAK and leans on bare-sellable language. Replace: the mechanism is loot-seed of M-34 (combat-route supply: combat specialist farms Nether ruins, sells rare finds to non-fighters) and M-02 (mob-drop/structure reagent sink: magic items seeded into altar loot). Both are via loot-seed, not recipe — this is the correct delivery for a structure mod.
 
+## irons_spellbooks   [anchors: magic, create (2)]
+- from: irons_spellbooks mithril ore / c:ores/mithril | via: create:crushing | to: create | motif: M-03 | power: mid | tone: ok | verdict: ACCEPT | hook: Mithril is mined below Y=38 and is the mod's primary metal — running mithril ore through a Create crushing wheel yields doubled ingots + a byproduct (dust), making the Create ore-doubling a real incentive and pulling the magic-metal supply line through the tech spine. A smelter gets mithril from their Create network; a mage gets metal from a tech player.
+- from: irons_spellbooks mob drops (apothecarist loot, end-zombie drops) | via: occultism:spirit_fire or occultism:ritual | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: The apothecarist (Iron's own alchemist mob) and the new end-zombies introduced by edf-remastered drop organic material; routing those drops through Occultism spirit-fire transmutation makes the inter-magic web denser — an Occultism player can transmute Iron's mob-drops into essences. The magic circle uses the waste of one magic school to feed another.
+- from: irons_spellbooks:arcane_essence | via: ars_nouveau:imbuement | to: magic | motif: M-01 | power: mid | tone: ok | verdict: ACCEPT | hook: arcane_essence is already reserved in the ledger as the Iron's-side magic currency bonded to source via M-01. This is a deepening of the existing web-spine (33-magic-web-spine.js), not a new link — the ledger explicitly records this as a planned connection. Confirming that the imbuement bridge (arcane_essence ↔ source_gem) is the correct delivery method.
+- from: irons_spellbooks:pyrium ingot (c:ingots/pyrium) | via: create:crushing (from pyrium ore if present) or create:mixing | to: create | motif: M-03 / M-29 | power: endgame | tone: ok | verdict: ACCEPT | hook: Pyrium is the mid-high-tier magic metal; pulling it through a Create process (crushing its ore, or an alloy-mix recipe if it's a smelted alloy) places it in the tech spine and creates cross-route dependency — a Create player needs to support a magic player's pyrium supply. Exact delivery depends on whether pyrium has an ore or is always crafted — if alloy, route through create:mixing (M-29 cross-route dependency).
+- from: irons_spellbooks loot=yes (structure chests, apothecarist drops) | via: loot-seed | to: economy | motif: M-34 | power: mid | tone: ok | verdict: REJECT | reason: Iron's already anchors to magic and Create (2 anchors); adding a third via loot-seed to economy is depth-stacking on an already-connected mod. The combat-route supply motif would apply but the mod's loot is primarily scrolls/gear, not a scarce commodity that specifically requires a combat specialist to obtain and then sell. A magic player self-farms their own scrolls. REJECT — the mod's 2-anchor state is already good; the four candidates above (M-03, M-11, M-01, M-03/M-29) are the depth adds.
+
+OK — connections sound. existing magic + create anchors are appropriate. The four ACCEPT candidates above deepen depth within those anchors (ore-doubling, mob-transmutation, currency bonding, metal cross-route) without forcing a third anchor that doesn't belong.
+
+## alternate_current   [anchors: support/performance (1)]
+- LEAVE — pure server-side redstone-propagation performance rewrite; no items, no recipes, no loot, no gameplay content. Nothing to route.
+
+## better_lib   [anchors: support/library (1)]
+- LEAVE — genuine zero-content library (config handling, messaging API for dependent mods). No items, no recipes, no loot. Nothing to route.
+
+
+
 
 
 
