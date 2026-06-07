@@ -6,12 +6,18 @@ LEAVE — pure client audio simulation; 0 items/blocks, no recipe surface, no lo
 ## jeresources
 LEAVE — JEI addon, display-only; 0 items/blocks. Surfaces existing loot/worldgen data but adds no connective material surface. Nothing to weave.
 
-## trailandtales_delight   [anchors: survival (1); candidates target Create + economy]
+## trailandtales_delight   [anchors: survival (1); candidates target Create + economy (2nd anchor)]
 OK — existing rows sufficient for the core Create (M-12 milling/pressing/mixing, M-35 cheese maturation) and economy (M-28 colony demand, M-16 seasonal) surface. Two gaps worth noting:
 
 - NEW | from: trailandtales_delight:cheese_wheel (bulk specialty food, heavy per-unit) | via: aeronautics/train logistics (M-31 bulk-good transport) | to: economy | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: a colony stocked on cheese wheels is a standing bulk order — train or airship cargo run from the dairy farm to the settlement, making the logistics arm earn its keep on food distribution, not just ore.
 
 - CHALLENGE | from: trailandtales_delight crops / produce | via: sereneseasons fertility window | to: survival | motif: M-16 | verdict: REJECT | hook: existing M-16 REJECT is correct — the crops grow year-round (FD crops aren't season-gated by default); the Sniffer crops in particular have no season dependency; seeding a false seasonal restriction onto them would be arbitrary config with no design payoff.
+
+## createblockchain   [anchors: economy + Create (2)]
+OK — M-08 (FE→coins, geode-scarce Mining Core), M-30 (regional geode scarcity) are well-covered with multiple converging ACCEPT rows. One gap in the accepted set:
+
+- NEW | from: createblockchain:cryotheum_coolant_bucket (consumable thermal fluid the Currency Miner requires to run) | via: tfmg:vat_machine_recipe or create:mixing (chemical processing of a cold-fluid compound) | to: create | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: the minter needs coolant the refinery makes — the currency specialist depends on the TFMG chemist for sustained minting throughput, forcing a cross-route dependency between the two tech producers (nobody mints alone).
+
 
 
 

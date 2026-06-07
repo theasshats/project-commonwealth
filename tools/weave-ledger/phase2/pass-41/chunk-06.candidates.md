@@ -63,6 +63,20 @@ The one genuinely underexplored angle: the **Sprinkler's fluid-intake creates a 
 
 OK — sliceanddice is correctly 2-anchor; no new anchor-adding row survives the red-team. The CHALLENGE above resolves the split Sprinkler-M-29 debate.
 
+## exposure   [anchors: Create, survival (2)]
+
+Existing rows: M-35 aged_photograph (7 ACCEPTs — solid), M-33 photography-service / album trade (several ACCEPTs), M-29 occultism-silver→create:mixing→film (1 ACCEPT). The M-29 silver row is the most mechanically grounded new link but no prior pass articulated the galosphere-gotcha constraint correctly.
+
+Per CLAUDE.md: galosphere `silver_ingot` is actually palladium. The pack's *real silver* is occultism. So the film-emulsion chain (B&W photography needs silver halide) becomes: `occultism:silver` → `create:crushing`/`create:milling` → silver dust → `create:mixing` → photographic emulsion → `exposure:black_and_white_film`. This is a genuine M-29 cross-route dependency: a Create photographer *must* source occultism silver from the magic specialist, since galosphere silver is the wrong metal. That's the purest "nobody self-sufficient" edge.
+
+One missing angle: **MineColonies demand for photographs as colony records / quest items** — not explored in any prior row under M-28. A colony archivist hut requesting developed photographs as progression items would add an economy anchor. However, MineColonies' archivist hut is not a confirmed stock building (it's not in the standard MineColonies hut set), so this is speculative. Reject as no confirmed mechanic.
+
+- NEW | from: occultism:silver_ore / silver dust (the pack's real silver, per CLAUDE.md gotcha — galosphere silver_ingot is palladium, NOT silver) | via: create:milling → create:mixing → exposure:black_and_white_film | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: B&W photography needs silver halide — the pack's only true silver is Occultism's; a Create photographer must source it from the magic specialist, making the darkroom a forced cross-route trade not just a hobby
+- CHALLENGE | from: exposure:black_and_white_film (silver halide chemistry implied) | via: create:mixing with galosphere silver | to: create | motif: M-29 | verdict: REJECT | hook: galosphere silver_ingot is palladium (CLAUDE.md gotcha) — any row that routes galosphere silver into film emulsion is wrong-metal and would silently produce a mis-tagged recipe; only occultism holds the real silver
+
+OK — M-35 aged_photograph and M-33 service rows are well-supported. The silver chemistry M-29 above is the key missing precision.
+
+
 
 
 
