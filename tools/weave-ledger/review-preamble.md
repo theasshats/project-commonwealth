@@ -24,6 +24,16 @@ flags) — then the top consensus-**ACCEPT** weaves, each as `motif ×N → pill
 where `×N` = how many independent passes proposed it (confidence). Motif definitions live in
 `docs/WEAVE-LEDGER.md` §1 **on the `claude/weaving-plan` branch**.
 
+## Sell is not an anchor (the economy is player-driven)
+
+A flat vendor-sell — "this item is sellable for coin" — is the **ambient endpoint** of the loop, not a
+weave: every product is needed by *someone*, so "X sells" is trivially true and adds no player-to-player
+interdependence. The ledger **retired/cut** these NPC/ambient coin-faucet motifs — **M-09** (luxury→coin),
+**M-14** (bounty→coin), **M-21** (trade-seam) — per #163/#240. This doc **does not count them as
+anchors**: they're struck through and excluded from the anchor tally. A mod only earns an economy anchor
+through *demand-gating* — a recipe, colony, ritual, or build that **consumes** the good (M-08 player-mint,
+M-12 processing-intermediate, M-28 colony demand, M-26 consumption), not a sell price.
+
 ## The signal: consensus, not volume
 
 Of the full corpus, the actionable set is the high-`times` ACCEPTs — a weave proposed once is noise; one

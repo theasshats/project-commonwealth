@@ -127,7 +127,7 @@
  "modulargolems": "M-10/M-15 golem assembly consuming boss-metals + magic reagents \u2014 a great cross-pillar sink (magic+survival+Create). Already has 30-modular-golems.js; extend.",
  "more_slabs_stairs_and_walls": "847 blocks \u2014 M-04/M-12 cut-variant crushing, **tag-batched only** (never per-variant). The #113 island-prune already eyed this; one tag recipe closes it.",
  "mowziesmobs": "ice_crystal (M-15/M-06 \u00d717) + elokosa_paw (M-22 lunar). Top boss/lunar feedstock; the M-22 moon-gated imbuement is a standout. Author with survival+magic.",
- "mushroomquest": "M-12/M-11/M-09 mushroom caps \u2014 food + magic + sell. Triple-anchor; decent. Author survival-side.",
+ "mushroomquest": "Real anchors are **two, not three** \u2014 M-12 (cook) + M-11 (transmute caps to magic reagents). The M-09 'rare caps \u2192 sell' is RETIRED (player-driven economy \u2260 vendor sell), so drop it. Decent food+magic story, but it's a 59-item island (CONNECTIVITY) and everyday mushrooms overlap dynamictreesplus + delight. Cut-review filed (#255); to make it economy-relevant, gate a real *consumer* of rare caps, not a sell price.",
  "mutantszombies": "Thin (M-11/M-14 generic drops). Note #168 dup-mob trim may target it. Sequence after curation.",
  "naturalist": "M-02 antler/glow_goop\u2192imbuement + M-12 venison cutting. **#168 overlaps Alex's Mobs** \u2014 resolve the dup-trim before authoring so we don't weave a cut mob.",
  "naturescompass": "0 accepts \u2014 search QoL. Leave.",

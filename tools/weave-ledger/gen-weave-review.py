@@ -51,6 +51,11 @@ MS = {11:'v0.7.0 — Create spine',12:'v0.8.0 — Stabilization I',13:'v0.9.0 �
  17:'v0.13.0 — Survival',18:'v0.14.0 — Stabilization IV',19:'v0.15.0 — Polish & site',
  20:'v1.0.0 — Release'}
 
+# Motifs the ledger RETIRED/CUT as NPC/ambient coin faucets — the economy is player-driven, so a flat
+# vendor-sell / bounty-coin / trade-seam is NOT a real anchor. These never count toward the anchor tally
+# and are shown struck-through. (M-09 retired, M-14 + M-21 cut — docs/WEAVE-LEDGER.md, #163/#240.)
+RETIRED = {'M-09', 'M-14', 'M-21'}
+
 def parse_candidates(text):
     rows=[]; unique=None
     for line in text.splitlines():
@@ -113,15 +118,22 @@ def main():
             cs=sorted(bymod[mid], key=lambda r:-r['times'])
             acc=[c for c in cs if 'ACCEPT' in c['consensus'].upper()]
             rej=[c for c in cs if 'REJECT' in c['consensus'].upper()]
-            motifs=sorted({c['motif'] for c in acc if c['motif'] and c['motif']!='—'})
+            # Real anchors exclude RETIRED/CUT motifs (player-driven economy: sell/bounty isn't a weave).
+            real=[c for c in acc if c['motif'] not in RETIRED]
+            real_motifs=sorted({c['motif'] for c in real if c['motif'] and c['motif']!='—'})
+            ret_motifs=sorted({c['motif'] for c in acc if c['motif'] in RETIRED})
             slug=rmap.get(mid,{}).get('slug','?')
-            out.append("### `%s`  (%s) — %dA / %dR · motifs: %s" %
-                (mid, slug, len(acc), len(rej), ", ".join(motifs) or "—"))
+            motif_str = ", ".join(real_motifs) or "—"
+            if ret_motifs:
+                motif_str += " · ~~%s~~ (retired, not an anchor)" % ", ".join(ret_motifs)
+            out.append("### `%s`  (%s) — %d real-anchor accepts / %dR · motifs: %s" %
+                (mid, slug, len(real), len(rej), motif_str))
             note=dx.get(mid)
             out.append("**DX:** %s" % (note if note else "_no DX note yet — add to `review-dx.json`._"))
             for c in acc[:a.per_mod]:
-                out.append("- `%s` ×%d → %s · %s · *via* %s" %
-                    (c['motif'], c['times'], c['pillar'], c['frm'][:75], c['via'][:55]))
+                strike = c['motif'] in RETIRED
+                line = "- `%s` ×%d → %s · %s · *via* %s" % (c['motif'], c['times'], c['pillar'], c['frm'][:75], c['via'][:55])
+                out.append(("- ~~%s~~ _(retired motif — ambient, not a weave)_" % line[2:]) if strike else line)
             out.append("")
 
     open(OUT,"w").write("\n".join(out)+"\n")
