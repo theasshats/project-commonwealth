@@ -18,13 +18,14 @@ Unlike mods (which land in `mods/`), a gun pack must land in that folder.
 
 **We commit the gun-pack zip directly into the repo `tacz/` folder.** The packwiz *metafile* approach
 (a `tacz/*.pw.toml` pointing at the mod-mirror release) was tried first and **did not deliver
-reliably** — packwiz-installer / some `.mrpack` launchers don't place files under non-standard paths
-like `tacz/`, so the zip silently never arrived. Committing it makes delivery deterministic:
+reliably** — packwiz-installer doesn't place files under non-standard paths like `tacz/`, so the zip
+silently never arrived. Committing it makes delivery deterministic:
 
-- `tacz/Create_Armorer-v1.2.0.1.zip` is a normal committed file. `packwiz refresh` indexes it, so
-  the `.mrpack` carries it as an **override** → `.minecraft/tacz/`.
-- For the Prism builds, `scripts/build-prism-skeleton.sh` and `scripts/build-server.sh` include
-  `tacz` in their copy loop, so the zip is copied into `.minecraft/tacz/` directly.
+- `tacz/Create_Armorer-v1.2.0.1.zip` is a normal committed file that `packwiz refresh` indexes, so
+  packwiz-installer pulls it on update like any other tracked file.
+- For built instances, `tacz` is listed in `scripts/instance-dirs.txt` (`tacz both`) — the single
+  source of truth all three builders read (`build-prism-skeleton.sh`, `build-server.sh`, and the
+  editor) — so the zip is copied into `.minecraft/tacz/` directly.
 - CC BY-NC-ND 4.0 permits **verbatim** redistribution: commit the zip **unmodified**, keep
   attribution (Koei), non-commercial only.
 
@@ -178,6 +179,5 @@ the override rewrites every tab icon to the component form, clearing the error.
 > blocker. If the hotfix tweaked any schema field, TaCZ skips just the affected entry (lenient
 > parser) rather than crashing — confirm by playtest.
 
-> **Verification items:** confirm packwiz indexes a metafile under `tacz/` and that the `.mrpack`
-> export carries it; if not, fall back to committing the zip into a repo `tacz/` folder and adding
-> `tacz` to the copy loop in `scripts/build-prism-skeleton.sh`.
+> **Verification items:** confirm `tacz/` is indexed in `index.toml` and that the committed zip is
+> copied into `.minecraft/tacz/` by all three builders (it's in `scripts/instance-dirs.txt`).

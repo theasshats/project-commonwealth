@@ -15,7 +15,7 @@
 
 **Status:** ✅ done & on `main` · 🟦 in review (open PR) · 🚧 in progress · ⏳ queued · 💤 not started
 
-**Current release:** **v0.5.2** (Magic Web). MC **1.21.1** / NeoForge **21.1.228**.
+**Current release:** **v0.6.0** (Foundation). MC **1.21.1** / NeoForge **21.1.233**.
 
 ## Where the work lives
 
@@ -23,8 +23,9 @@
 `pr-checks.yml`, the **recipe overhaul (#62, v0.4.6)**, the **curation/spawn-gating pass (#88, v0.5.0)**,
 the **GTMOGS ore-gen rework (#82, v0.5.1)**, and the **magic web (#75, v0.5.2)**.
 
-**The only open PR is #80** — Derpack Arcana, the code-bridge mod (skeleton in `mods-src/`), a draft
-until its P1 "Attunement Font" is ready. Everything else is now issue work, not stacked PRs.
+**No stacked feature PRs remain.** The custom mods (Derpack Arcana #80, Kill Feed #196) moved to their
+own repos (`derpack-org/derpack-arcana`, `derpack-org/derpack-killfeed`) — those prototype PRs are
+superseded; see `docs/CUSTOM-MODS.md`. Everything else is now issue work, not stacked PRs.
 
 | Release | Shipped |
 |---|---|

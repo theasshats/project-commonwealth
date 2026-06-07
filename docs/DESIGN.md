@@ -39,7 +39,7 @@ Under all of it sits **scarcity** (regional ore-gen) — the foundation; and two
 
 **Production has an ecological cost** (adopted in principle — *Eco*'s signature idea): industry damages the shared world, feeding back into scarcity and pressure. The *how* is unsolved (an infinite world and the TPS budget make it hard) and may scope down to "your colony/claim degrades its surroundings" — tracked in #222 and `docs/SYSTEMS.md` §3a.
 
-**Freshness without wipes.** Curated content updates keep the world fresh; we don't do seasonal world resets (high-effort, and they destroy the build investment that's half the fun for a friend group). The detailed per-branch weaving (recipes #17, loot #18) happens phase by phase; this section is the *why* behind all of it.
+**Freshness without wipes.** Curated content updates keep the world fresh; we don't do seasonal world resets (high-effort, and they destroy the build investment that's half the fun for a small co-op group). The detailed per-branch weaving (recipes #17, loot #18) happens phase by phase; this section is the *why* behind all of it.
 
 ---
 
@@ -103,7 +103,7 @@ Net effect: the collaborator's friction dropped from "I'll just edit my own fold
 
 The build only ships manifests, not jars. Releases attach one small artifact: a Prism installer zip (manifests + a launcher script, ~5 MB). The user's launcher fetches actual mod jars from each mod's authoritative source — Modrinth or CurseForge — at install time.
 
-We previously also attached a `.mrpack` (manifests in Modrinth's format), but dropped it (issue #73): packwiz's `mr export` bundles the entire `overrides/` tree — `config/`, `kubejs/`, `resourcepacks/`, `shaderpacks/` — so the "manifest-only" file had quietly bloated to ~200 MB, headed for the same 2 GiB asset cap that killed the bundled zip below. Nobody on the friend-group server used it, and the installer is the recommended path anyway, so the export step came out of `build.yml`.
+We previously also attached a `.mrpack` (manifests in Modrinth's format), but dropped it (issue #73): packwiz's `mr export` bundles the entire `overrides/` tree — `config/`, `kubejs/`, `resourcepacks/`, `shaderpacks/` — so the "manifest-only" file had quietly bloated to ~200 MB, headed for the same 2 GiB asset cap that killed the bundled zip below. Nobody on the co-op server used it, and the installer is the recommended path anyway, so the export step came out of `build.yml`.
 
 Earlier in the project we also shipped a "bundled" Prism zip with all jars baked in. It worked, but we dropped it for two reasons:
 
