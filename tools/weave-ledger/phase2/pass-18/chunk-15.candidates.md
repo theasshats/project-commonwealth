@@ -86,6 +86,12 @@ REWORK check: Create + aeronautics is correct and the inbound recipe depth is su
 
 OK — connections sound. Two anchors well-justified; the coal_coke and graphite tags are available for other mods to pull (notably TFMG and createaddition's fuel chain), but no outgoing edge from pantographsandwires is needed.
 
+## letsdocompat   [anchors: survival (1)]
+Power-read: 0 blocks, 0 items, loot=no; 3 c:tags (including items/foods/leafy_green). Pure cross-mod food-recipe compat bridge for the Let's Do / Farm&Charm / FD cluster.
+
+- LEAVE — this mod IS the food-web weave layer; it has no items of its own to give a 2nd anchor. Its function is M-12-style processing-chain unification across the food mods, which it delivers by existing. A support-glue mod with no craftable content beyond tag bridging; any 2nd anchor would require forcing an edge onto another mod's items, which is that mod's edge to carry.
+
+
 
 
 

@@ -163,6 +163,32 @@ Red-team Candidate 5: M-14 is "bounty board consumes mob drops and pays coin." T
 
 - from: mushroomquest Mushroom Island structure loot | via: loot-seed (add rare sellable cap or trade-token to chest tables) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: the Mushroom Island's hidden structures hold mythical spores that only the expedition trader brings home — supply the market or spend them yourself.
 
+Summary for mushroomquest: 4 ACCEPTED (M-12 cooking, M-09 rare-cap sell, M-11 deadly-cap spirit_fire, M-09 loot-seed), 2 REJECTED (M-02 tech-loot in stumps — tone clash; the initial duplicate of loot-seed). Gains survival→production (M-12), survival→economy (M-09 ×2), survival→magic (M-11). Strong multi-anchor mod.
+
+## minecolonies   [anchors: survival, create (2)]
+
+Power-read: NPC settlement mod, the pack's designated progression on-ramp. Everyday through endgame — quarries produce ore streams (mid), University research gates high-tier craft. Colony food outputs are everyday items. Already 2-pillar (survival + create) with authored M-05 weave (quarries gated on andesite/brass/cogwheels). The design explicitly says complex Create tech is gated behind colony research — this is load-bearing.
+
+Existing connection check: survival (settlement/food/farming) + create (quarries via 98-minecolonies.js, M-05 gating). Both are correct and well-motivated. OK — connections sound.
+
+Candidate 1 — colony food outputs (apple_pie, baked_salmon, bread/soup/vegetable c:tags) → Numismatics trade goods (M-09, survival+create→economy)
+- from: minecolonies colony-produced foods (minecolonies:apple_pie, minecolonies:baked_salmon, c:foods/* outputs) | via: numismatics sell / Trading Floor stall | to: economy | motif: M-09 | power: everyday | tone: ok — the colony cook produces food at scale; selling colony-surplus food to the wider server market is the emergent economy play. The dossier explicitly notes this: "economy is a possible 3rd via M-09." | verdict: ACCEPT | hook: a colony with a busy kitchen generates more food than its citizens need — the colony cook's surplus feeds the trade economy directly.
+
+Red-team: is this "emergent" (not needing a recipe) or a real weave? M-09 is realized via a numismatics price/sell setup — it's a config/data action (set a sell price for colony foods at a Trading Floor stall), not just "players naturally trade." This is a valid Phase-3 action: seeding a price entry for colony foods in the economy pillar. Survives.
+
+Candidate 2 — minecolonies:ancienttome (research gate item) → boss-key unlock (M-15, survival/danger→create)
+- from: minecolonies:ancienttome (rare drop from raiders, loot=yes) | via: native recipe gating — ancienttome is already a University research gate | to: create | motif: M-15 | power: endgame | tone: ok — the ancient tome is the colony's high-tier research unlock item; it drops from raiders, tying colony progression to combat pressure (danger → colony growth → Create tech). This is already the design intent but surfacing it explicitly as an M-15 boss-key weave documents the loop edge: combat drops → colony unlock → Create tech. | verdict: ACCEPT | hook: raider camps drop ancient tomes — the colony can't unlock its highest-tier research, and thus the most complex Create machines, without pushing back against the dangers that surround it.
+
+Red-team: is the ancient tome already working this way, or is this aspirational? Per SYSTEMS.md, boss/colony gating is design intent with the recipe/gating work future (tracked #219/#220). This candidate is correct to surface it as a Phase-2 proposal (the weave is "as designed in SYSTEMS.md, not yet authored in KubeJS") — it advances the loop intentionally. Survives as a documentation/implementation candidate.
+
+Candidate 3 — minecolonies quarry outputs (ore stream) → Create crushing/processing → economy coin (M-08 via M-03)
+- from: minecolonies quarry ore outputs | via: create:crushing → numismatics mint | to: economy | motif: M-08 | power: mid | tone: ok — quarry ore → Create ore-doubling → mint into coin is the M-08 chain; MineColonies quarries already produce ore at scale, making it a natural feeder for the coin-minting supply line | verdict: ACCEPT | hook: the colony quarry doesn't just supply the factory — its crushed ore feeds the mint, making the settlement the pack's primary coin source.
+
+Red-team: is this different from "any ore goes through Create crushing → coin"? Yes — the specific link here is that MineColonies quarries are the pack's designated large-scale ore supply (they're a whole production route), so the ore→coin chain has a natural colony feeder. The weave is: colony player runs quarries → ore stream → Create crushing player → minting. Three players, three roles. Survives.
+
+REWORK: none on existing anchors. Three new ACCEPTED candidates add economy as a 3rd anchor: M-09 food trade, M-15 ancienttome documenting the danger→colony→tech loop, M-08 quarry→mint. All three advance the loop.
+
+
 
 
 
