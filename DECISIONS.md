@@ -28,6 +28,30 @@ theme/balance · **[PLAN]** plan-doc change · **[GITHUB]** issue action · **[N
   economy/magic) thanks to #179.
 - **Next:** yield is still climbing (not saturated) — more passes would add more, or **proceed to Gate 2**
   (sort `CANDIDATES` by `times_suggested`; the **126 ≥5+ACCEPT** rows are the short-list) → Phase 2.5 issues.
+- **[NOTE] LEAVE tally written** — `tools/weave-ledger/phase2/LEAVE-TALLY.txt`: per-mod count of how many of
+  the 19 passes returned LEAVE, with a `*` on the 69 *contested* mods (LEAVE'd by some, ACCEPTed by others).
+  200 mods are clean-LEAVE (never an accept) = the pure support/library set.
+
+- **[G0] New-motif candidates surfaced by passes 16–18 — NO VERDICT YET (parked for Gate-0).** Agents flag
+  `no-motif` rather than invent IDs; the recurring themes (136 flag lines) sort into these. No IDs assigned
+  until approved. **Genuinely new / unadjudicated:**
+  - **Power-transfer → propulsion** — raw **stress-units / FE-grid power → an Aeronautics engine/vehicle
+    drive**. Real gap: M-13 is *fluid fuel → engine*, M-17 is *FE charging an item* — neither covers SU/FE
+    *grid power* driving propulsion. Method: `createaddition`/`create_new_age` energy → aeronautics
+    drivetrain. Seam: Create↔logistics. Surfaced ~5× (create_new_age, createnuclear, createtreadmill); also
+    in the early GATE2-REVIEW ("reactor SU → aeronautics; M-13 covers fluid, not SU").
+  - **Palette / deco-production bridge** — a Create-processed material run **forward through the Architect's
+    Cutter / a palette method into framed/ornamental deco** (distinct from M-04's *lossy crushing-recycle* —
+    this is *forward* production). Method: `create:cutting` / `domum_ornamentum` cutter. Seam: block/deco↔
+    Create. ~8× (domum_ornamentum, mcwfences). May instead be an M-12 extension.
+  - **Collectible / art → economy** — paintings / hats / photos / map-art as sellable trade goods. Likely an
+    **M-09 sub-case** (luxury→coin) rather than its own motif; logged for the call. ~5× (charta, exposure,
+    toomanypaintings-class).
+  **Recurring but already-ruled (here for context, not re-asking):** **behavioral / location-or-biome-gated
+  machine** = your **HELD** call (~29×, widest gap — createpickywheels/createtreadmill/solclassic/
+  createlowheated; still awaiting your action); **logistics-carrier / cardboard → aeronautics** = the one you
+  **REJECTED** (~24×, keeps resurfacing); **villager/NPC trade** = the existing **provisional M-21** (~8×).
+  All sit in the considered-set as `no-motif` rejects — nothing lost.
 
 ## Status — #179 done (aeronautics GROUNDED) + docs reworked
 
