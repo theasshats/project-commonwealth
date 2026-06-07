@@ -1,5 +1,12 @@
 # Phase 2 — next-session runbook (read with CLAUDE.md + READINESS-REVIEW.md)
 
+> **LATEST — passes 35–39 ran blind + merged.** Now **40 passes (pass-00…39)**: **7,032 total → 6,124 live +
+> 908 dead-motif quarantined**; live **Gate-2 core (≥5+ACCEPT) = 433**, ≥2 = 1,892, ~198 mods. Over the 5-pass
+> batch `new` held **~236/pass** (volume NOT saturating — mostly singletons), but **live-core gains
+> decelerated 29→19→16→22→13** — the *valuable* signal is tapering. **Recommended next: Phase 2.5 triage**
+> (`TRIAGE-PLAN.md`) on the live core, or context-fed refine; further *blind* passes are low-value. Runner
+> below still works (next blind would be `--pass 40`).
+
 Branch: `claude/weaving-plan` (do NOT rename, do NOT open a PR). Keep your own context light; do NOT read the
 chunk candidate files; rely on agent summaries + merge output. **Any pass fan-out is gated — confirm the
 maintainer's GO + free usage first.**
