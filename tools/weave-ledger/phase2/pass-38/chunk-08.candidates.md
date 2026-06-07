@@ -227,3 +227,23 @@ Power-read: mid-to-endgame. The Extractor pulls infinite fluid reservoirs (per t
 
 REWORK: no existing connections; mod is at 1 anchor. Three accepted candidates above add economy (M-30 scarcity gate), Create (M-03 crushing), and aeronautics (M-13 fuel chain) — a four-system web through a single Create-spine mod.
 
+## createlowheated   [anchors: Create (1)]
+
+1 block (basic_burner), 1 item (basic_burner), loot=yes. Reworks Create heating — removes passive heaters, adds a solid-fuel Basic Burner, and introduces a "lowheated" heat tier. Consumes furnace fuel. No foreign recipe types registered; injects a heat condition into basin recipes.
+
+Power-read: the basic_burner is an everyday early Create block — it's how you heat a basin now. The lowheated tier is a recipe heat condition, not an item. No tradeable output. The mechanic is "fuel-in → heat-out," which is a M-26 consumption mechanic (fuel is spent as upkeep), not a new recipe edge.
+
+**Candidate 1 — solid fuel consumption as ongoing demand (M-26)**
+The basic_burner consumes any solid furnace fuel — coal, charcoal, wood, etc. This makes Create heating an active fuel sink. Charcoal production (a Create + survival loop: wood → create:milling/pressing → charcoal alternative, or vanilla smelting) now has a continuous demand from every heated basin in a base. This is M-26 (consumption sink) — the fuel demand never zeroes out as long as the base runs heated basins.
+- from: coal / charcoal (solid fuel) | via: createlowheated:basic_burner consumption | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: Every heated Create basin now burns real fuel — a coal mine or charcoal kiln becomes a logistics bottleneck for any automated base, threading survival resource pressure into the Create production spine
+
+**Candidate 2 — lowheated tier enabling seasonal reagents (M-16 bridge)**
+Power-read: the lowheated heat condition can be used by any basin recipe added via KubeJS. If a seasonal reagent (M-16) — e.g. an autumnal crop distilled at low heat in a basin — gets a lowheated recipe, createlowheated becomes the heat-tier bridge enabling seasonal Create processing. Red-team: this is a design note rather than a direct recipe — it says "assign the lowheated tier to seasonal basin recipes," making createlowheated the enabling mechanism. The delivery is a recipe-authoring decision; the motif is M-16.
+- from: seasonal crop (sereneseasons fertility modifier) | via: create:mixing (lowheated tier) → createlowheated:basic_burner | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: A cold-season distillation of winter herbs runs at "low heat" in a Create basin — the createlowheated tier lets seasonal recipes require a burner without the full heat of a furnace, making the heat tier part of the seasonal recipe vocabulary
+
+**Candidate 3 — aeronautics/TFMG fuel as a "better" burner fuel (M-13 adjacent)**
+Power-read: mid-to-endgame. TFMG diesel/gasoline are the Aeronautics fuel (M-13). Could the basic_burner accept liquid fuel (via a fluid fill input) for higher-efficiency low-heat output? Red-team: the basic_burner consumes solid fuel only per the mechanic description; there's no fluid intake. This would require the mod to support a liquid-fuel mode that it doesn't. REJECT — the mechanic doesn't support it.
+- from: tfmg:diesel or gasoline | via: createlowheated:basic_burner (liquid mode) | to: aeronautics | motif: M-13 | power: mid | tone: ok | verdict: REJECT | reason: basic_burner consumes solid furnace fuel only; no liquid fuel intake mode exists; this would require mod capability that isn't present
+
+REWORK: no existing connections; mod at 1 anchor. Two accepted candidates (M-26 fuel consumption, M-16 seasonal heat tier) give it survival anchors alongside Create.
+
