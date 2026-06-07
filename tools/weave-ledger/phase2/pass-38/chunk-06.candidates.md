@@ -252,6 +252,30 @@ Summary: 4 ACCEPT (M-12 cooking-chain from roost, M-12 fishery processing, M-12 
 ## cubes_without_borders   [anchors: support/client-QoL (1)]
 LEAVE — client-only Video Settings option (borderless fullscreen); 0 blocks, 0 items, no recipe types, loot=no. Display/windowing feature with no gameplay surface. Genuine zero-surface case.
 
+## aeronautics_dyeable_components   [anchors: aeronautics (1)]
+Existing connections: 1 anchor (aeronautics — cosmetic dye variants for Aeronautics levitite/tires). One anchor is the floor; a second is the goal.
+
+Power-read: 16 blocks + 80 items — all cosmetic color variants of levitite and four tire sizes. The crafting method is trivially simple (tire + dye, or dye in offhand during levitite catalysis). No unique recipe type. No loot. Everyday tier — paint shop functionality.
+
+Candidates:
+
+- from: aeronautics_dyeable_components dyed levitite (16 variants) | via: create:milling | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: Dyed levitite panels are crushed back to base levitite dust + a pigment residue (an XP nugget equivalent) — the standard deco-recycle loop; a ship-painter who recolors their hull doesn't permanently lose levitite to a color change.
+
+  Red-team: Is crushing dyed levitite coherent? M-04 is "deco crushes back to raw + XP nugget; lossy." Dyed levitite is functionally identical to base levitite with a color; crushing it to recover most of the base material (minus some pigment residue) is the same logic as crushing any dye-applied block. Not forced — the recycle loop prevents permanent material sink for cosmetic choices. Everyday tier.
+
+- from: aeronautics_dyeable_components dyed tires | via: create:toolbox_dyeing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: create:toolbox_dyeing re-dyes color-dyeable items in a toolbox — this is already effectively what the dyed-tire crafting recipe does (tire + dye). Routing it through toolbox_dyeing instead is redundant with the existing craft mechanic. Not a new weave.
+
+- from: aeronautics_dyeable_components (cosmetic ship paint system) | via: create:deploying / item_application | to: aeronautics | motif: M-20 | power: everyday | tone: ok | verdict: ACCEPT | hook: Dyed levitite is applied by a Create Deployer to an airship hull block as a cosmetic upgrade — the ship painter automates hull recoloring via a deployer arm, making the paint shop a Create-supported automated operation.
+
+  Red-team: Is deploy-applying a dyed levitite to a hull coherent? M-20 (deploy-application upgrade) is the light single-step application motif. The dossier notes "dyed levitite made by holding a dye in offhand while catalysing levitite" — this is a held-item mechanic, not a block interaction. Whether a Deployer can replicate the offhand mechanic depends on how it's implemented. If levitite + dye works in an item_application recipe, M-20 applies. If it's strictly an offhand-interaction mechanic, this fails at authoring. Flag as BALANCE-PENDING / mechanic-dependent. Still ACCEPT on concept.
+
+- from: aeronautics_dyeable_components (16 dye colors requiring vanilla dyes) | via: ars_nouveau:dye method | to: magic | motif: M-10 | power: everyday | tone: clash | verdict: REJECT | reason: Routing Aeronautics color cosmetics through arcane dye methods is a tone mismatch — the magic system is for reagents and transformations, not for painting tires. The connection would feel arbitrary to a player. The dye step is cosmetic, not a meaningful arcane integration. Reject.
+
+REWORK: Dossier identifies "decoration palette is sanctioned support role" and advises leave. But 16 blocks + 80 items with a dye mechanic does have a small Create recycling/application surface. The M-04 (recycle) and M-20 (deploy application) candidates are light but coherent. REWORK: don't dismiss with LEAVE — the two ACCEPT candidates are valid, if modest. Flag dossier's "leave" recommendation as overly conservative.
+
+Summary: 2 ACCEPT (M-04 levitite crush-recycle, M-20 deployer application), 2 REJECT.
+
+
 
 
 
