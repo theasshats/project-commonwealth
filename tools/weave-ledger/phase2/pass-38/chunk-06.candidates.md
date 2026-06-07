@@ -301,6 +301,39 @@ Summary: 2 ACCEPT (M-08 coin-seed, M-15 magic progression key), 1 REJECT.
 ## dynamic_fps   [anchors: support/performance (1)]
 LEAVE — client FPS throttling and resource saving when unfocused/minimized; 0 blocks, 0 items, no recipe types, loot=no. Pure runtime optimization; no gameplay material surface. Genuine zero-surface case.
 
+## create_train_parts   [anchors: aeronautics (1)]
+Existing connections: 1 anchor (aeronautics — Create-train detailing/fittings). One anchor is the floor; a second is the goal.
+
+Power-read: 16 blocks + 15 items — interactive sliding windows, train steps/slides, track crossings, arm extender. Everyday-to-mid tier deco/functional fittings. No unique recipe type; crafted from vanilla materials (andesite/brass/copper/glass) using vanilla crafting. loot=yes (possibly train-related loot, or chest content near tracks).
+
+Candidates:
+
+- from: create_train_parts brass/copper sliding windows and steps | via: create:mechanical_crafting | to: create | motif: M-05 | power: everyday | tone: ok | verdict: ACCEPT | hook: Train sliding windows and stepped boarding blocks are assembled from pressed brass/copper sheets in a mechanical crafter — the train fitter's parts are built on the Create spine, not by hand, tying the railway decoration layer explicitly into Create production.
+
+  Red-team: Do the brass/copper variants of create_train_parts naturally call for Create mechanical crafting? The dossier lists "(none / vanilla only)" as made-by methods — currently the parts use vanilla crafting. Adding mechanical_crafting as the method for the brass/copper variants is a design decision, not documenting existing behavior. M-05 (native-method gating with Create parts as inputs) is for a mod's flagship item gated on its own machine; here we'd be adding Create as the method for already-existing items. Better classified as M-12 (processing-chain pull — run brass sheets through mechanical_crafting to produce the higher-tier train fittings). Everyday tier for the basic variants, appropriate.
+
+  Revised: | motif: M-12 | verdict: ACCEPT | hook: Brass and copper train windows/steps require Create-pressed sheets as inputs rather than raw ingots — the finer train fittings sit downstream of the Create metalworking chain, making the railway detailer a customer of the Create smith.
+
+- from: create_train_parts:crossing (track intersection block) | via: create:mechanical_crafting | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: REJECT | reason: M-24 (mechanical component → propulsion/control) is for drivetrain parts feeding Aeronautics engines and control surfaces. A track crossing is a passive infrastructure block, not a mechanical propulsion component. Forcing it into M-24 is a category mismatch. Reject.
+
+- from: create_train_parts:train_sliding_window | via: create:deploying | to: create | motif: M-20 | power: everyday | tone: ok | verdict: ACCEPT | hook: The sliding window is applied by a Create Deployer to an assembled train car block — the window installer is a contraption step, not hand-placed; this makes train-car fitting a Create automation milestone.
+
+  Red-team: Is deploying a sliding window onto a train car coherent? M-20 (deploy-application upgrade — deploying applies a part to a base to upgrade it) fits train-fitting well: the train car body is the base, the window is the applied component. The sliding window is interactive (it opens/closes), which makes the "upgrade" meaningful — not just cosmetic. Everyday tier; one light step. Tone: industrial train-building with a deployer arm — coherent. ACCEPT.
+
+- from: create_train_parts loot (loot=yes) | via: loot-seed | to: economy | motif: M-34 | power: everyday | tone: ok | verdict: REJECT | reason: create_train_parts has loot=yes but this is likely recipe output metadata or minimal chest loot near tracks. The mod is a crafted-parts set, not a dangerous dungeon. M-34 (combat-route supply) requires a combat/danger source. A train-parts mod is not a danger source. No coherent loot-seed economy link without forcing. Reject.
+
+- from: create_train_parts (train fittings as colony infrastructure parts) | via: minecolonies builder supply | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: A MineColonies Town Hall or Engineer's hut requests train crossing blocks and sliding windows as infrastructure components for a connected settlement — the railway fitter supplies colony building needs, making the Create-rail specialist a colony infrastructure provider.
+
+  Red-team: Does MineColonies have a builder that would request railway fittings? MineColonies builders request construction blocks for building blueprints. If a colony blueprint includes a train station or rail infrastructure, the builder would request crossing blocks. This is plausible given the pack's colony + railway synergy. M-28 (colony route as demand) fits — the colony creates demand for the fitter's output. Not forced if the colony has any rail-infrastructure buildings. Tone ok.
+
+REWORK: Dossier suggests adding Create mechanical_crafting for brass/copper variants as a WEAK candidate ("gilding," low value), which undersells it. The M-12 candidate I've captured is genuinely the cleaner Create second anchor. Flag dossier's "weak" assessment as too conservative.
+
+OK — aeronautics anchor is sound (train-fitting lives in the transport pillar). New links: Create (M-12 pressed-sheet chain for quality fittings, M-20 deployer application), economy via M-28 (colony infrastructure demand).
+
+Summary: 3 ACCEPT (M-12 pressed-sheet chain, M-20 deployer application, M-28 colony infrastructure), 2 REJECT.
+
+== CHUNK COMPLETE ==
+
 
 
 
