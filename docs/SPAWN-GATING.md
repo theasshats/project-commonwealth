@@ -25,24 +25,89 @@ spawns in code (no per-mob config toggle, no datapack `add_spawns` to override),
 so an In Control! `deny` is the cleanest kill switch. The spawn **egg** still
 works (admin/testing); only natural spawning is blocked.
 
-### Rotten Creatures — structures only (Task C)
+### Heavy-AI mob spawn throttle (perf — #98 / #83)
+A `/spark profiler` of the integrated-server tick (settled, pre-generated world)
+showed the **lows/TPS spikes are mob-AI pathfinding**, not render and not
+Create/MineColonies. The mods most present in the spike capture were **Born in
+Chaos** (`born_in_chaos_v1`), **Mowzie's Mobs** (`mowziesmobs`), and **Grimoire
+of Gaia** (`grimoireofgaia`). First-pass mitigation: three `mod`-scoped rules
+using In Control!'s `random` condition (fraction of spawn attempts the deny rule
+fires on) to **throttle, not remove** their natural spawns — keeping the content
+while cutting the standing population that pathfinds each tick:
+
+| Mod | `random` | Effect |
+|---|---|---|
+| `born_in_chaos_v1` | 0.6 | ~60% of natural spawns denied (the bulk undead spawner — biggest lever) |
+| `grimoireofgaia` | 0.5 | ~50% denied (the kobold rule above still fully denies kobolds) |
+| `mowziesmobs` | 0.5 | ~50% denied (rare elites; secondary, throttles standing count) |
+
+Spawn **eggs** and structure/boss mechanics are unaffected (only natural spawn
+attempts roll against `random`). These numbers are a **deliberate first pass** —
+tune against a fresh TPS profile after playtest; if the lows persist, the next
+levers are a global mob-cap trim and Cold Sweat / Accessories per-tick cost
+(both showed in the *baseline* tick, not the spikes). Server-perf axis tracked
+under #83 (and the TPS routine #147), distinct from the now-solved client-render
+goal in #98.
+
+### Rotten Creatures — per-mob placement (Task C; tuned in #106)
 Rotten Creatures spawns are **code-driven** (`CommonConfig` weights + per-mob
 `can_*_spawn_on` biome tags) — there are no `add_spawns` biome modifiers to
-override — so In Control! is the right tool. Two rules: an `allow` for the seven
+override — so In Control! is the right tool. The first pass gated all seven
 naturally-spawning mobs (`burned`, `frostbitten`, `glacial_hunter`, `swampy`,
-`undead_miner`, `mummy`, `dead_beard`) when inside a structure in the allowlist,
-then a blanket `deny` for the same seven everywhere else. Summoned adds
+`undead_miner`, `mummy`, `dead_beard`) to one shared structure allowlist; #106
+**split that per mob** (zagwar's placement call) so each undead spawns where it
+fits thematically rather than in any dungeon. Each mob now gets its own
+`allow` rule(s) followed by its own blanket `deny`. Summoned adds
 (`zombie_lackey`, `skeleton_lackey`, `hunter_wolf`, scarabs, `immortal`) are
-**not** in the lists, so necromancer/parent-mob mechanics still work.
+**not** in any rule, so necromancer/parent-mob mechanics still work (`immortal`
+keeps its default summon behavior).
 
-> ⚠️ **Playtest / maintainer call — the structure allowlist is a vanilla
-> starter set.** It currently lists thematic vanilla structures (mineshaft,
-> stronghold, ancient_city, desert_pyramid, swamp_hut, ocean ruins, ruined
-> portals). The pack ships several structure mods (dungeons-and-taverns,
-> yungs-better-*, when-dungeons-arise, …) whose structures should probably be
-> added. Discover their registry IDs in-game (`/locate structure`, or In
-> Control!'s log warns on unknown structure names) and extend the two `mobs`
-> rules' `structures` arrays. Unknown IDs are ignored (logged), not fatal.
+> **Per-mob placement (issue #106).** Structure IDs were read straight from each
+> mod jar's `data/<ns>/worldgen/structure/`, so they're exact (`/locate
+> structure <id>` works); unknown IDs are ignored (logged), not fatal, so the
+> lists are safe to over-cover. Biome conditions use `biometags` with NeoForge
+> convention tags so the same rule covers vanilla **and** Terralith biomes.
+>
+> - **Undead Miner** — structures only: `minecraft:mineshaft`,
+>   `mineshaft_mesa`, `betterdungeons:small_dungeon`, `betterdungeons:zombie_dungeon`,
+>   `nova_structures:badlands_miner_outpost`; **plus** inhabited
+>   `underground_village:underground_village` but **only where dark**
+>   (`maxlight: 7`) — it haunts the unlit tunnels, not the lit village.
+> - **Frostbitten & Glacial Hunter** — cold biomes (`biometags` `c:is_snowy` +
+>   `c:is_cold`, covering Terralith cold biomes) plus the snowy
+>   `nova_structures:stray_fort`.
+> - **Swampy** — swamp biomes (`biometags` `c:is_swamp`, covering Terralith
+>   swamps) plus `minecraft:ruined_portal_swamp`, `nova_structures:jungle_ruins`,
+>   `nova_structures:toxic_lair`.
+> - **Burned** — every ruined-portal variant **except** the underwater one
+>   (`ruined_portal`, `_desert`, `_jungle`, `_swamp`, `_mountain`, `_nether`),
+>   plus `minecraft:fortress`, `betterdungeons:zombie_dungeon`,
+>   `betterdungeons:small_nether_dungeon`.
+> - **Mummy** — `minecraft:desert_pyramid` plus `nova_structures:undead_crypt`,
+>   `remnant_graveyard`, `remnant_birch_graveyard`, `creeping_crypt`,
+>   `desert_ruins`. (The Ancient Mummy variant rolls from the mod's own spawn
+>   config — these rules don't touch its chance.)
+> - **Dead Beard** — `minecraft:ocean_ruin_warm`, `ocean_ruin_cold`,
+>   `ruined_portal_ocean`, `nova_structures:conduit_ruin`; **plus** the WDA Seven
+>   Seas pirate ships (`dungeons_arise_seven_seas:pirate_junk`,
+>   `corsair_corvette`, `unicorn_galleon`, `victory_frigate`, `small_yacht`) at an
+>   even lower chance — a second allow rule gated with `random: 0.25`, so only ~¼
+>   of spawn attempts aboard a ship pass (the rest fall through to the deny). (Its
+>   base rare spawn weight is the mod's own, unchanged.)
+> - **Immortal** — not gated; keeps its default (summon) behavior.
+>
+> ⚠️ **In Control! filters, it does not force spawns.** An `allow` rule only
+> permits a spawn attempt the game *already makes* there; it cannot add the mob
+> to a biome/structure the mod never registered it for. So the biome rules above
+> work only as far as each mob's `rottencreatures:can_<mob>_spawn_on` biome tag
+> reaches. **Playtest check:** if Frostbitten/Glacial Hunter don't appear in
+> cold **Terralith** biomes (or Swampy in Terralith swamps), the real fix is a
+> KubeJS biome-tag override adding those biome IDs to the mob's
+> `can_<mob>_spawn_on` tag — left as a follow-up rather than shipping guessed
+> Terralith IDs into a datapack (a bad biome ID there is a load error, unlike a
+> harmless unknown In Control! ID). Also confirm with `/locate structure` that
+> the modded structures generate and that each undead spawns in its own set
+> (and nowhere else).
 
 ### Mutants and Zombies — moon-gated, NOT via In Control! (Task C)
 **Route chosen — and why it is *not* an In Control! deny:** M&Z must be off

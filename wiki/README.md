@@ -10,3 +10,4 @@ in the wiki issue. Until then, add pages here as Markdown and link them from thi
 ## Pages
 
 - `prospecting.md` — finding ores under the GregTech-style vein system.
+- `inventory-profiles-next.md` — what Inventory Profiles Next does by default (sorting, auto-refill, locked slots) and how to turn pieces off.

@@ -1,0 +1,25 @@
+# sodium-neoforge-0.8.12-alpha.4+mc1.21.1
+
+## mod metadata (id / version / deps)
+license = "Polyform-Shield-1.0.0"
+modId = "sodium"
+version = "0.8.12-alpha.4+mc1.21.1"
+displayName = "Sodium"
+modId = "minecraft"
+versionRange = "1.21.1"
+modId = "neoforge"
+versionRange = "[21.1.82,)"
+modId = "embeddium"
+versionRange = "[0.0.1,)"
+
+## blocks
+
+
+## items
+
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+

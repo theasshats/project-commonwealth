@@ -2,7 +2,8 @@
 
 **North star (CLAUDE.md):** if you drew a line from every item to what it's *used for*, the whole pack
 should look like **one or two cohesive webs — not many disconnected clusters/branches**. This doc turns
-that into a number you can re-check.
+that into a number you can re-check. The web *is* the trade loop made visible — an island is a cluster
+disconnected from the production/distribution loop in `docs/SYSTEMS.md` (the structural model).
 
 ## How to measure it
 
@@ -42,7 +43,7 @@ number honest:
 > release target. Target a coverage number and it gets gamed (bridge-recipes-for-the-metric — Goodhart's
 > law), and a high giant-% can still hide lifeless threads. The right question is "is this island
 > *intentional* (cosmetic — fine) or a *real gap*?", not "are we at N%." The deep *taste*-weave behind the
-> number is `docs/WEAVING-STRATEGY.md`; the cadence that uses this tool is `docs/RELEASE-CADENCE.md`.
+> number is `docs/WEAVING-STRATEGY.md`; the cadence that uses this tool is `docs/archive/RELEASE-CADENCE.md`.
 
 ## Beyond connected components (the four sharper lenses)
 

@@ -1,0 +1,22 @@
+# moonlight-neoforge-1.21.1-3.0.14
+
+## mod metadata (id / version / deps)
+license = "Supplementaries Team License v.1.5"
+modId = "moonlight"
+version = "1.21.1-3.0.14"
+displayName = "Moonlight Lib"
+modId = "minecraft"
+versionRange = "[1.21.1]"
+
+## blocks
+moonlight:spawn_box
+
+## items
+moonlight:placeable_item
+moonlight:spawn_box
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+item/hidden_from_recipe_viewers :: {"replace": false, "values": ["moonlight:placeable_item"]}

@@ -1,0 +1,11 @@
+# Every Compat (Wood Good) "hazardous" disabler — exclude wood types from compat generation.
+#
+# Domum Ornamentum (a MineColonies build-materials mod) registers "cactus" / "cactus_extra"
+# as wood types. Every Compat then auto-generates wood variants for them (Farmer's Delight
+# cutting board, Supplementaries sign posts, etc.), but its runtime texture derivation for
+# cactus comes out broken/missing — this is the "cactus board" missing texture (#165).
+#
+# Blacklisting the wood types drops those auto-generated compat blocks. This does NOT touch
+# Domum Ornamentum's own blocks — MineColonies cactus build materials are unaffected.
+[woodtype]
+blacklist = ["domum_ornamentum:cactus", "domum_ornamentum:cactus_extra"]

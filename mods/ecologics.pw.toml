@@ -1,13 +1,13 @@
 name = "Ecologics"
-filename = "ecologics-1.21.1-2.3.3.jar"
+filename = "ecologics-1.21.1-2.3.6.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/NCKpPR0Z/versions/oXOFlN4S/ecologics-1.21.1-2.3.3.jar"
+url = "https://cdn.modrinth.com/data/NCKpPR0Z/versions/ml3dpcRE/ecologics-1.21.1-2.3.6.jar"
 hash-format = "sha512"
-hash = "29c26030cb706d4720f5dd14a7d05c40f2cc53401a8ae6f2f5051b034ad1676bae7a8c18ceaed1f8496fe6296201e923ee7b92bd0386382ab2f514dfc150dd4f"
+hash = "2531acfb397d3d2a30a9fff0ae882f3b5c3c6801e766f565bbc23302b02317ed8911147b8a31e8605316c20d572bbb9f34227eb4b0c4e768589c08a27d123126"
 
 [update]
 [update.modrinth]
 mod-id = "NCKpPR0Z"
-version = "oXOFlN4S"
+version = "ml3dpcRE"

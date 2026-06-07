@@ -3,6 +3,88 @@
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme", a short lead paragraph, then sections (see CLAUDE.md). -->
 
+## 0.6.0 — Foundation
+
+This release concentrates on performance and maintenance: a new renderer, a full pass of mod updates,
+spawn tuning, and a set of fixes and removals.
+
+### Performance
+
+Sodium has been added. It replaces the default terrain renderer, which carried out its work on the
+CPU rather than the graphics card and was the primary cause of low frame rates at an established
+base. In testing, frame rates approximately doubled. Sodium could not be used previously because it
+left all world textures invisible alongside Create: Aeronautics; a compatibility layer now reconciles
+the two, so Sodium runs together with Aeronautics and its airships. Sodium is client-side only and
+has no effect on the server. Shaders remain unsupported with Aeronautics.
+
+Natural spawn rates have been reduced for several of the more demanding creature mods — Born in
+Chaos, Mowzie's Mobs, and Grimoire of Gaia. These mobs were appearing often enough to take up a
+noticeable share of server tick time. They still spawn, only less frequently. This is an initial
+adjustment and will be revised with further play.
+
+Chunky, a chunk pre-generation tool, has been added. Running `/chunky radius <n>` followed by
+`/chunky start` on the server generates the surrounding area in advance, so chunks are saved before
+players reach them and live world generation does not stall a session.
+
+### Updates
+
+Approximately a month of mod updates has been applied across the pack. NeoForge has been raised to
+21.1.233 to meet the requirements of the updated mods. Update your launcher's loader version to
+21.1.233 before playing.
+
+Configured has been added. It provides in-game configuration screens for mods that support it,
+reachable from the mod list, so per-mod settings can be changed without editing config files by hand.
+
+### Fixes
+
+The locked-slot indicators from Inventory Profiles Next no longer appear as stray arrows on the
+hotbar. Slot locking continues to function normally.
+
+Cactus is no longer offered as a building material in the cases where it produced broken decoration
+blocks.
+
+Iron's Spellbooks spellbooks now fit the dedicated spellbook accessory slot.
+
+### Recovered content
+
+A number of recipes and block drops that several mods intended to ship were being discarded at load
+because of malformed files, with no visible sign beyond a missing recipe or an empty drop. Each was
+checked against the mod's own files and restored.
+
+Recipes: the Farm and Charm mincer now processes the ores and logs from Create: TFMG, Occultism,
+Iron's Spells, Let's Do Vinery, and Create that it was meant to; Create: Compressed's crushed-pile
+washing, dough, and polished rose quartz work again; and the cherry-sapling cutting recipe works.
+Crushed raw silver smelts, blasts, and washes into Occultism silver. Create: Compressed's compressed
+crushed uranium pile, which previously had no use here, now washes into Create: Nuclear uranium powder.
+
+Block drops: the Create treadmill, the komainu, kawauso, and tanuki statues, the Stoneholm cleric
+chest, and the Trail and Tales pottery cooking pot and lantern fruits now drop correctly. Smokeleaf
+Industries houses can generate in plains again.
+
+### Spawns and content
+
+Rotten Creatures spawning has been tuned per mob so each undead appears where it fits. The Undead
+Miner is limited to mineshafts and mining dungeons; Frostbitten and the Glacial Hunter to cold biomes
+and snowy forts; Swampy to swamps; the Mummy to deserts, pyramids, and crypts; Burned to ruined
+portals and Nether structures; and Dead Beard to ocean ruins, with a smaller chance aboard the When
+Dungeons Arise pirate ships. Spawns draw on the relevant vanilla structures together with those from
+YUNG's Better Dungeons and Dungeons and Taverns.
+
+### Food and diet
+
+The two Spice of Life diet mods have been replaced by Diet – AppleSeed Edition, a single nutrition
+system that tracks five food groups and grants small benefits for eating a varied diet. It reads each
+food's groups from its recipe automatically, so it covers the whole pack without per-item setup. The
+separate Touhou Little Maid diet addon is unrelated and stays.
+
+### Removed
+
+Bosses of Mass Destruction has been removed, along with its library dependency. Its four
+structure-bosses overlapped L_Ender's Cataclysm, which remains as the pack's endgame boss mod.
+
+Umapyoi and five unused library mods were also removed. Nothing that depended on any of these remains
+in the pack.
+
 ## 0.5.4 — Guns crafted through Create
 
 Guns, ammunition, and attachments are now built through their Create recipes, not assembled at the

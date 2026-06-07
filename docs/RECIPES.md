@@ -16,11 +16,19 @@ When weighing any recipe change, decide in this order:
    is worth a higher cost.
 3. **Cost-comparability is OPTIONAL.** Don't pare a coherent, well-themed recipe just to match the
    original count. Only rein in costs that "get out of hand."
-4. **Multi-pillar weaving is the goal.** The pack's five systems are Create / magic / economy /
-   aeronautics / survival; *ideally a mod anchors to two or more of them.* So **decoration or flavor
-   that now needs Create is great** (it weaves that mod into the Create pillar) — as long as it's
-   thematically coherent and not too expensive. The old "leave decoration vanilla" instinct only
-   applies when a Create gate would *invert progression* (e.g. starter-tier copper) or break theme.
+4. **Multi-system weaving is the goal.** The pack's systems (Create / magic — production; survival —
+   pressure; economy — distribution & trade, incl. logistics/aeronautics) form one causal loop — see
+   `docs/SYSTEMS.md`; *ideally a mod anchors to two or more of them.* So **decoration or flavor that now
+   needs Create is great** (it weaves that mod into
+   the Create pillar) — as long as it's thematically coherent and not too expensive. The old "leave
+   decoration vanilla" instinct only applies when a Create gate would *invert progression* (e.g.
+   starter-tier copper) or break theme.
+   - **Cost model (from `docs/SYSTEMS.md` §3):** basics ~**3×** the naive cost (enough to make the
+     cheaper MineColonies route worth using); **higher tiers gain depth through more *steps*** —
+     GregTech-style multi-stage chains (like `60-mffs.js`) — **not** through simply multiplying
+     ingredient counts. This sits *under* the balance-first rule above: depth never makes a power item
+     cheaper. **Locked exclusives** (an output only one route can make) and **boss/colony gating** are
+     implemented in **KubeJS**, with the lock list defined incrementally per pillar (#219/#220).
 5. **`60-mffs.js` is the gold standard.** Its `sequenced_assembly` chain (staged on the Mechanical
    Crafters through a registered `derpack:incomplete_*` transitional item) is what "truly woven in"
    looks like. Use it as the model for powerful/endgame machines; reach for that depth wherever an
