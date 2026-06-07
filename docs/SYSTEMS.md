@@ -131,6 +131,21 @@ using and no one route is self-sufficient.
    make**. A Create master still *must* trade with a colony player or a magic specialist for their
    exclusives, and vice-versa.
 
+**The cost model (settled).** Two dials, applied differently by tier:
+
+- **Basics: ~3× cost.** Roughly triple the vanilla/naive cost for basic items — enough to make the
+  cheaper MineColonies route worth using, without being punishing.
+- **Higher tiers: more *steps*, not just more cost (GregTech-style).** Depth comes from **longer
+  multi-step processing chains**, the way GregTech gates advancement behind stages — not from simply
+  multiplying ingredient counts. A high-tier item should *take more process*, which is also where the
+  Create spine, the colony route, and boss/colony gating naturally hang off.
+
+> **Mechanism: KubeJS.** Both the **locking** of exclusives and the **progression gating** (Create tech
+> behind colony progress / boss drops; the high-tier fork) are implemented in **KubeJS**, not a
+> dedicated mod. The **lock list is defined incrementally** — each update's pillar work decides what that
+> pillar locks, rather than authoring one big list upfront. (And each **mod-update pass** (#161) should
+> include a refine step: re-check the updated content against this model.)
+
 > **Locked exclusives are the load-bearing wall, because our specialization is *soft*.** Eco enforces
 > specialization with a hard skill-point cap — you *cannot* learn everything. Derpack's interdependence
 > is softer: scarcity + time make self-sufficiency *expensive*, but nothing stops a dedicated player (or
@@ -138,6 +153,11 @@ using and no one route is self-sufficient.
 > outputs are the closest thing to Eco's hard wall — the one mechanic that keeps interdependence from
 > decaying as players scale. So they're not just one trade incentive among several; they're *the*
 > anti-erosion device, and should be defended as such when tuning recipes.
+>
+> **Ruling: soft for now.** We accept soft specialization for the time being — it suits a ~10-person
+> co-op group. **Revisit closer to release** if playtesting shows the loop erodes in practice (players
+> going self-sufficient and trade drying up); if so, the lever to harden is the lock list, not a new
+> mechanic.
 
 **The high-tier fork.** Top-end items require *either* a **boss drop** *or* a **MineColonies-crafted
 part** — two routes to the same goods. Worked example: a **high-tier Aeronautics controller** needs a
@@ -270,13 +290,14 @@ obvious: a healthy mod is usually *something you produce that pressure demands a
   damage must follow their *settled/claimed footprint*, not a global commons; and **(b) TPS** — it must
   be event-driven and locality-bounded, never a global world-scan. May end up scoped down to "your
   colony/claim degrades its surroundings." Likely custom KubeJS/datapack; no drop-in mod exists.
-- **Dynamic pricing + player-minted currency — the economy's hard problem (unsolved).** A real economy
-  needs **dynamic prices** (supply/demand, not flat vendors) and, Eco-style, **players minting their own
-  currencies**. We have *some levers* in the current mods (Numismatics for Create-minted coinage,
-  Trading Floor for stalls/orders), but a refined, well-made version is genuinely tricky — *how* players
-  mint and others come to trust/accept a currency is a social-mechanic design problem MC doesn't hand
-  us. **Needs a dedicated design pass** (what's possible with current mods vs. what needs custom work).
-  (No formal governance/laws layer is planned — a deliberate divergence for a small PvPvE group.)
+- **Dynamic pricing + player-minted currency — the economy's hard problem (DEFERRED to v0.9.0).** A real
+  economy needs **dynamic prices** (supply/demand, not flat vendors) and, Eco-style, **players minting
+  their own currencies** — *how* players mint and others come to trust/accept a currency is a
+  social-mechanic problem MC doesn't hand us. We have *some levers* now (Numismatics for Create-minted
+  coinage, Trading Floor for stalls/orders) but **the tooling is an unknown**: what's achievable with
+  current mods vs. what needs custom work will be **determined when the Economy pillar (v0.9.0) is
+  built**, not now. (No formal governance/laws layer is planned — a deliberate divergence for a small
+  PvPvE group.)
 - **Diet — settled (keep all five).** Diet – AppleSeed Edition is in the modlist (replacing SoL) and
   runs on its **default five groups** (no pruning config) — see "Food." Only optional per-category buff/
   decay tuning remains, and it's usable as-is.
@@ -284,9 +305,17 @@ obvious: a healthy mod is usually *something you produce that pressure demands a
   enrich the Survival face (storms, exposure), but it's **another TPS hit** (weather sim + effects), so
   it competes against the perf budget the same way ecology does. Park it as a *nice-to-have* pending a
   perf-cost assessment, not a planned add.
-- **Implementation gap.** The recipe-difficulty rebalance, the MineColonies locked-outputs / cheaper-
-  basics tuning, and boss/colony high-tier gating are all **design intent** — the issues/work to build
-  them aren't scoped yet.
+
+### Settled this pass (recipe/gating spine)
+
+- **Recipe cost — settled (§3).** Basics ~**3×**; higher tiers gain depth through **more steps**
+  (GregTech-style chains), not multiplied cost.
+- **Locking + gating mechanism — settled: KubeJS (§3).** Both locked exclusives and progression gating
+  (colony/boss, the high-tier fork) are KubeJS. No dedicated mod.
+- **Lock list — incremental.** Defined per-pillar as each update is built, not authored upfront; the
+  mod-update pass (#161) carries a "refine updated content against this model" step.
+- **Soft specialization — accepted for now (§3), revisit near release** via playtest; the hardening
+  lever, if needed, is the lock list.
 
 ---
 
