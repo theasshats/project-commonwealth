@@ -67,9 +67,10 @@ sign-off), because it propagates globally. Reusing an approved motif does not ne
 _Motif rules: **compose, don't invent**; a motif carries its **anti-arbitrage rule** (M-01/M-07
 round-trips lose value; M-04 is lossy). **Never gate a *basic / everyday component* behind a complex
 recipe** — recipe depth scales with the item's power (everyday = one light step; flagship = deep chain;
-§7). New motifs enter via Gate 0 — log the request in `DECISIONS.md`. **M-01–M-24 are Gate-0 accepted**
-except **M-21 (provisional — explore only, leans no)**. Caveats: M-09/M-14 player-run-currency review
-(0.9); M-10 no basic components; M-12 covers useful *intermediates*; M-17 only when it makes sense; M-20 is
+§7). New motifs enter via Gate 0 — log the request in `DECISIONS.md`. **M-01–M-38 are Gate-0 accepted**,
+except the three killed by the player-run rework (**M-09 retired; M-14 + M-21 cut** — see the note below) and
+the four **MECHANISM-PENDING** (M-25/M-36/M-38 + dynamic pricing). Caveats:
+M-10 no basic components; M-12 covers useful *intermediates*; M-17 only when it makes sense; M-20 is
 the light tier of M-06; M-22 spans every moon; **M-23/M-24 are the aeronautics build + drivetrain seams
 (with M-13 fuel) — they deliberately add depth to airship construction, scale with ship tier.**_
 

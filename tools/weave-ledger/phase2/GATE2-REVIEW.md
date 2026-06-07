@@ -1,5 +1,10 @@
 # Phase 2 — Gate 2 review (consolidated candidate list)
 
+> ⚠ **SUPERSEDED — kept for history.** This is the consolidated read of the **original 9-chunk** Phase-2 run
+> (~98 accepts). Phase 2 has since run **35 passes → 5,850 candidates** (4,984 live after dead-motif
+> quarantine). For the current Gate-2 set use `CANDIDATES.{md,tsv}`, `CONVERGENCE.md`, and
+> `READINESS-REVIEW.md` — the numbers and per-chunk detail below are a historical snapshot.
+
 > The opportunity-mapping output across all 9 chunks, consolidated for your **Gate 2** sign-off. Full
 > per-mod detail (accepts + rejects + reasons) is in `chunk-NN.candidates.md`. Nothing here is authored —
 > approving a candidate sends it to **Phase 2.5** (a milestone-attached GitHub issue), where authoring

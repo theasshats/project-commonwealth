@@ -35,6 +35,12 @@ def _load_cut_ns():
 
 CUT = _load_cut_ns()
 
+# Motifs killed by the player-run-economy rework (#163/#240): M-09 retired (luxury->coin),
+# M-14 cut (bounty->coin), M-21 cut (villager trade-seam) — NPC coin faucets that over-represent the
+# pre-rework passes (0-23). NOT deleted (some M-09 rows are salvageable by RE-TAG per TRIAGE-PLAN);
+# quarantined to CANDIDATES-dead-motifs.tsv so the live corpus + motif/pillar stats read clean.
+DEAD_MOTIFS = {'M-09', 'M-14', 'M-21'}
+
 
 def norm_from(s):
     s = s.strip().lower()
@@ -125,7 +131,10 @@ def write_convergence(passes_n, rows):
           'unique-candidate growth since the previous pass-count; when it flattens, the search has saturated.',
           '> Tracking starts here (post cut-mod exclusion); earlier ad-hoc snapshots are in `DECISIONS.md`.',
           '> **⚠ The library-freeze was retired at pass 16+** — every pass now covers all ~351 dossiers (≈160 '
-          'were skipped before), so expect `new` to **re-open** (jump) before it settles again.', '',
+          'were skipped before), so expect `new` to **re-open** (jump) before it settles again.',
+          '> **`unique` / `Gate-2 core` here count ALL discovered candidates, incl. the historically-'
+          'proposed dead motifs** (M-09 retired, M-14/M-21 cut — #163/#240); the **live** working corpus in '
+          '`CANDIDATES.md` excludes them (-> `CANDIDATES-dead-motifs.tsv`), so it is smaller.', '',
           '| passes | unique | ≥2 | ≥5 | Gate-2 core (≥5+ACCEPT) | opus | new |',
           '|--:|--:|--:|--:|--:|--:|--:|']
     prev = None
@@ -164,27 +173,44 @@ def main():
                      dict(c['verdicts']), c['hook']))
     rows.sort(key=lambda r: (-r[0], r[2]))
 
+    # Partition off the dead-motif debt (#163/#240): kept in a sidecar (not deleted, so the maintainer can
+    # mine it for the few rows worth RE-TAGging per TRIAGE-PLAN) but out of the live working corpus.
+    live = [r for r in rows if r[6] not in DEAD_MOTIFS]
+    dead = [r for r in rows if r[6] in DEAD_MOTIFS]
+    nomotif = sum(1 for r in live if not r[6])             # untagged rows — data-quality bucket
+
+    HEADER = 'times_suggested\tfrom_opus\tmod\tfrom\tvia\tto_pillar\tmotif\tconsensus\tverdicts\thook\n'
     with open(os.path.join(PH, 'CANDIDATES.tsv'), 'w', encoding='utf-8') as t:
-        t.write('times_suggested\tfrom_opus\tmod\tfrom\tvia\tto_pillar\tmotif\tconsensus\tverdicts\thook\n')
-        for r in rows:
+        t.write(HEADER)
+        for r in live:
+            t.write('\t'.join(str(x) for x in r) + '\n')
+    # Quarantine sidecar: the retired/cut economy motifs, same columns, sorted by times_suggested.
+    with open(os.path.join(PH, 'CANDIDATES-dead-motifs.tsv'), 'w', encoding='utf-8') as t:
+        t.write(HEADER)
+        for r in dead:
             t.write('\t'.join(str(x) for x in r) + '\n')
 
     md = ['# Phase 2.x — master candidate table (convergence accumulator)', '',
           f'_Built by `scripts/phase2-merge.py` over **{len(passes)} pass(es)**: '
           f'{", ".join(sorted(passes))}. `times` = how many independent passes proposed this candidate '
           f'(confidence); `opus` = an Opus run also proposed it. Re-run after every pass._', '',
-          f'**{len(rows)} unique candidates** (deduped on mod + item + pillar + motif).'
+          f'**{len(live)} live candidates** (deduped on mod + item + pillar + motif).'
           + (f' _Excludes {len(excluded)} candidate(s) for {len(set(m for m,_,_,_ in excluded))} cut mod(s) '
-             f'(build-dossiers `CUT_NS`)._' if excluded else ''), '',
+             f'(build-dossiers `CUT_NS`)._' if excluded else '')
+          + (f' _Quarantines {len(dead)} dead-motif row(s) (M-09 retired, M-14/M-21 cut, #163/#240) to '
+             f'`CANDIDATES-dead-motifs.tsv`._' if dead else ''), '',
           '| times | opus | mod | from → | via (method) | pillar | motif | consensus |',
           '|--:|:--:|---|---|---|---|---|---|']
-    for n, opus, mod, frm, via, pillar, motif, consensus, verdicts, hook in rows:
+    for n, opus, mod, frm, via, pillar, motif, consensus, verdicts, hook in live:
         md.append(f'| {n} | {"✓" if opus else ""} | `{mod}` | {frm[:46]} | {via[:34]} | {pillar} | {motif} | {consensus} |')
     open(os.path.join(PH, 'CANDIDATES.md'), 'w', encoding='utf-8').write('\n'.join(md) + '\n')
-    write_convergence(len(passes), rows)
-    print(f'passes: {len(passes)} | unique candidates: {len(rows)} | with opus: {sum(1 for r in rows if r[1])}')
-    print(f'  multi-pass (>=2): {sum(1 for r in rows if r[0] >= 2)} | >=5: {sum(1 for r in rows if r[0] >= 5)} '
-          f'| Gate-2 core (>=5+ACCEPT): {sum(1 for r in rows if r[0] >= 5 and r[7] == "ACCEPT")}  -> CANDIDATES + CONVERGENCE')
+    write_convergence(len(passes), rows)        # convergence stays on the FULL set (historical discovery curve)
+    print(f'passes: {len(passes)} | total unique: {len(rows)} | live: {len(live)} | '
+          f'dead-motif quarantined: {len(dead)} | with opus: {sum(1 for r in live if r[1])}')
+    print(f'  live multi-pass (>=2): {sum(1 for r in live if r[0] >= 2)} | >=5: {sum(1 for r in live if r[0] >= 5)} '
+          f'| Gate-2 core (>=5+ACCEPT): {sum(1 for r in live if r[0] >= 5 and r[7] == "ACCEPT")}  -> CANDIDATES + CONVERGENCE')
+    if nomotif:
+        print(f'  ! {nomotif} live candidate(s) have NO motif tag — data-quality; spot-check their source lines')
     if excluded:
         print(f'  excluded {len(excluded)} candidate(s) for {len(set(m for m,_,_,_ in excluded))} cut mod(s): '
               f'{", ".join(sorted(set(m for m,_,_,_ in excluded)))}')

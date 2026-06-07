@@ -134,4 +134,13 @@ merge-time warning + a spot-check of the source lines.
    what's missing / challenge weak rows) — blind has stopped paying off.
 4. Refresh `NEXT-SESSION.md` / `PROGRESS.md` / `GATE2-REVIEW.md` so the next session isn't misdirected.
 
-_All gated: no passes dispatched and no stale-doc rewrites made until the maintainer picks the order._
+## Applied (this session — "just the fixes", no passes)
+- **`phase2-merge.py`** now quarantines the dead motifs (M-09/M-14/M-21) to `CANDIDATES-dead-motifs.tsv` and
+  warns on untagged rows. Re-run result: **5,850 total → 4,984 live + 866 quarantined**; live Gate-2 core
+  **408 → 334**. `CONVERGENCE.md` still counts the full discovery set (note added) so it reads larger.
+- **Docs refreshed:** `RUN-5-PASSES-PROMPT.md` (context-fed + M-01..M-38 + next pass numbers), `NEXT-SESSION.md`
+  (35-pass state + the two gated options), `PROGRESS.md` (35-pass reality; pass-00 table marked historical),
+  `GATE2-REVIEW.md` (superseded banner), `docs/WEAVE-LEDGER.md` (Gate-0 line M-01..M-24 → M-01..M-38).
+
+_Still gated: no passes dispatched. The numbers above this section are the **pre-cleanup** diagnostic snapshot
+that justified the filter; the live working corpus is now 4,984._

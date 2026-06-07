@@ -1,73 +1,52 @@
-# Phase 2 — next-session runbook (read with CLAUDE.md + the task's READ-FIRST list)
+# Phase 2 — next-session runbook (read with CLAUDE.md + READINESS-REVIEW.md)
 
-Branch: `claude/weaving-plan` (do NOT rename, do NOT open a PR). Commit per chunk; keep your own context light;
-do NOT read candidate files; don't expand on agent summaries. **Confirm the user has free usage before each big
-fan, and confirm the user's GO** — passes are **set up but not to be run yet** (see "Gating" below).
+Branch: `claude/weaving-plan` (do NOT rename, do NOT open a PR). Keep your own context light; do NOT read the
+chunk candidate files; rely on agent summaries + merge output. **Any pass fan-out is gated — confirm the
+maintainer's GO + free usage first.**
 
-## State at handoff
-- **19 passes done (pass-00 … pass-18).** Convergence: `CANDIDATES.{md,tsv}` + `CONVERGENCE.md` —
-  **~2839 unique candidates** (cut mods excluded), **831 at ≥2-pass, 174 at ≥5, 126 Gate-2 core (≥5+ACCEPT),
-  307 opus-corroborated**. Passes 16/17/18 (first post-unfreeze) added **+848** → **NOT saturated**; keep
-  running **blind**. The ready-to-paste session prompt for the next 5 passes is `RUN-5-PASSES-PROMPT.md`.
-- **The library-FREEZE was RETIRED** (maintainer call: *"I don't think I said to freeze"* + *"unfreeze
-  everything"*). It skipped ~160 "zero-content" mods to save tokens, but its content test trusted the digest's
-  block/item count, which **false-zeroes code-registered & mechanic-only content** (Aeronautics parts — now GROUNDED via #179 — diet/
-  AppleSeed, sleep/`midnightthoughts`, `fishingreal`) — so real content mods were silently skipped and their
-  weaves missed, re-introducing the exclusion the *"review everything"* rule had removed. `LIBRARY-FREEZE.txt`
-  and `phase2-freeze.py` are deleted; `phase2-chunks.py` now chunks **ALL ~351 dossiers every pass** (full
-  coverage). Only CUT mods (no dossier) are absent.
-- **Candidate merge is cut-aware** (`phase2-merge.py` reads `build-dossiers.py` `CUT_NS`) — BOMD (confirmed
-  intentional cut), solclassic, solonion, umapyoi are excluded automatically.
+## State at handoff (post readiness-review)
+- **35 passes done (pass-00 … pass-34).** The merge now splits the corpus: **5,850 total → 4,984 live +
+  866 dead-motif quarantined** (`scripts/phase2-merge.py` moves the retired/cut economy motifs M-09/M-14/M-21
+  to `CANDIDATES-dead-motifs.tsv` — #163/#240, kept for mining, out of the working set). Live working corpus:
+  `CANDIDATES.{md,tsv}`. Live **Gate-2 core (≥5 + ACCEPT) = 334**, ≥2 = 1,539, over **198 mods**.
+  `CONVERGENCE.md` tracks the full discovery set (so its `unique`/core counts are larger than the live corpus).
+- **Read `READINESS-REVIEW.md` first.** Findings: blind passes are **diverging** (68% of the corpus is
+  singletons; `new` is *rising*, not flattening), and the over-representation is the **dead economy motifs**,
+  not a live skew. So **do NOT run more *blind* passes.** If running passes, use **`--mode context-fed`**
+  (refine: agents read the accumulated rows for their mods and propose only what's missing / challenge weak rows).
 
-## Gating — set up, do NOT run yet
-1. **#179 (aeronautics digest gap) — ✅ DONE** (commit f85fc1d). The bundle is parsed into the digest
-   (141 blocks / 18 items + recipes/loot) and `dossiers/aeronautics.md` is **GROUNDED** with jar-confirmed
-   make-chains; the `aeronautics_bundled` stub was removed. Aeronautics is now covered like everything else —
-   the gap no longer blocks the passes.
-2. **Do NOT run `build-dossiers.py` to "refresh" first** — it re-surfaces the general dossier↔by-mod #131
-   drift (~90 stale dossiers + a palette delta) that the #179 instance saw and reverted. That's a separate
-   **on-box clean regen** (#131), not a blocker; the current dossiers are usable as-is.
-3. **Confirm the maintainer's GO + free usage** before dispatching any fan.
+## The two live options (maintainer picks; both gated on GO + free usage)
+1. **Context-fed refine passes** — see "Running a pass" below. Use `RUN-5-PASSES-PROMPT.md` (refreshed to
+   context-fed + M-01..M-38).
+2. **Proceed to Phase 2.5 triage** — mapping is rich enough; consolidate per-mod via `TRIAGE-PLAN.md`
+   (KEEP/CUT/MERGE/DEFER slates). Also a gated fan-out.
 
-## THE PLAN — run full passes once ungated
-
-### 1. Generate a full-coverage pass (no freeze — covers every dossier)
+## Running a pass (option 1)
 ```
-python3 scripts/phase2-chunks.py --pass 19 --seed 19 --size 20   # -> ~351 mods / ~18 chunks, all dossiers
+python3 scripts/phase2-chunks.py --pass 35 --seed 35 --size 20 --mode context-fed   # ~18 chunks, all dossiers
 ```
-(Use `--mode context-fed` for later refine passes once blind passes stop adding new candidates.)
+Dispatch one agent per chunk (Opus on `MANIFEST.json`'s `opus_chunk`, the rest Sonnet) — identical briefing,
+`PHASE2-BRIEFING.md` (current: motifs M-01..M-38, the player-run-economy rules, the context-fed section).
+Commit per chunk (a chunk is done when its `pass-35/chunk-MM.candidates.md` ends with `== CHUNK COMPLETE ==`;
+resumable — re-dispatch only chunks missing the marker). Then `python3 scripts/phase2-merge.py` and commit.
+Judge saturation by **non-economy** core growth (per `ECONOMY-DEEMPHASIS.md`), not raw `new`.
 
-### 2. Dispatch the chunk agents
-One Opus agent on `MANIFEST.json`'s `opus_chunk`, the rest Sonnet — **identical** prompt (never tell the Opus
-agent it's the comparison). Same briefing as below. Commit per chunk; resumable (a chunk is done when its
-`chunk-NN.candidates.md` ends with `== CHUNK COMPLETE ==`).
-
-> Phase 2 weave mapping, Derpack X. READ FIRST and follow exactly: tools/weave-ledger/phase2/PHASE2-BRIEFING.md.
-> Pass dir: tools/weave-ledger/phase2/pass-16 (mode=blind). Chunk: chunk-MM. Read your chunk list
-> pass-16/chunk-MM.txt; each mod's dossier tools/mod-data/dossiers/<ns>.md; docs/WEAVE-LEDGER.md (motifs
-> M-01..M-38 + reagent ownership); tools/weave-ledger/methods-palette.md. For EVERY mod do BOTH: propose
-> new/better cross-pillar links (method-pull, power-read, theme/red-team, motif) AND, if it already has
-> connections, flag REWORK on weak/arbitrary ones. AUTHOR NOTHING. Record ACCEPT/REJECT with reasons; LEAVE only
-> for a genuine zero-content code library. INDEPENDENT blind sample — do NOT read other passes or CANDIDATES.md.
-> Write INCREMENTALLY to pass-16/chunk-MM.candidates.md, one mod at a time; end with exactly: == CHUNK COMPLETE ==.
-> Then return a short per-mod summary.
-
-### 3. Merge + commit
-```
-python3 scripts/phase2-merge.py        # rebuilds CANDIDATES.{md,tsv}; excludes cut mods; re-run after every pass
-```
-Keep running full passes until even a fresh pass (eventually `--mode context-fed`) adds little new — saturation.
-Then **Gate 2** (sort CANDIDATES by `times_suggested`) → **Phase 2.5** issue filing (fold into pillar issues
-#136/#137/#143/#92/#91; economy + logistics/aeronautics items onto **v0.9.0**, magic onto v0.11.0, survival
-onto v0.13.0 — per `docs/ROADMAP.md`).
+## Do NOT
+- **Do NOT run `scripts/build-dossiers.py`** to "refresh" — it re-surfaces the #131 dossier↔digest drift (an
+  on-box clean regen, not a blocker here); current dossiers are usable as-is.
+- **Do NOT re-introduce a skip list / library-freeze** (retired — full coverage every pass; only CUT mods, with
+  no dossier, are absent).
+- **Do NOT open a PR or rename the branch.**
 
 ## Carry-over decisions (DECISIONS.md has detail — surface, don't bulk-dump)
-- **Freeze retired** — review everything, every pass (above). Don't re-introduce a skip list.
-- **BOMD cut** (confirmed intentional) — merge already excludes it + the other cut mods.
-- **Held Gate-0:** the "behavioral-constraint" motif (createpickywheels) — maintainer will rule later; stays
+- **Economy is player-run** (#163/#240): M-09 retired, M-14/M-21 cut (now auto-quarantined by the merge);
+  a bare "sellable" link is the ambient endpoint of the loop, not a weave.
+- **MECHANISM-PENDING** M-25 / M-36 / M-38 → build issues #222 / #238 / #239 (+ dynamic pricing #240), not
+  Phase-3 weaves.
+- **New aeronautics motifs live:** M-23 (structural alloy → airframe/hull), M-24 (mechanical component →
+  propulsion/control).
+- **Held Gate-0:** the createpickywheels "behavioral-constraint" motif — maintainer rules later; stays
   LEAVE/no-motif until then.
-- **Provisional:** M-21 trade-seam and the M-09/M-14 player-run-currency caveats are HOLD — surface, don't author.
-- **New motifs live:** M-23 (structural alloy → airframe/hull) + M-24 (mechanical component → propulsion/control).
-- **Open issues:** #178 (companions coins vs Numismatics). chefsdelight emerald reprice → fold into #136.
-- **Token note:** context-fed agents cost ~1.8× blind (they ingest the full CANDIDATES table). Use blind to
-  saturate, context-fed sparingly to refine.
+- **Cut mods** (BOMD, solclassic, solonion, umapyoi) — merge excludes them automatically.
+- **Open issues:** #178 (companions coins vs Numismatics); chefsdelight emerald reprice → fold into #136.
+- **Stale-doc note:** `PROGRESS.md` / `GATE2-REVIEW.md` carry historical pass-00 / 9-chunk data, banner-marked.
