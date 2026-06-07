@@ -100,9 +100,7 @@ OK — M-10 (levitite magic), M-13 (fuel), M-22 (lunar levitite), M-31 (docking 
 
 - NEW | from: aeronautics:end_stone_powder (Create-crushed End Stone, required for levitite_blend) | via: recipe — Ender Dragon defeat gates End dimension access, which gates end_stone_powder, which gates levitite — the lift material's scarcity traces to a boss kill | to: survival | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: you can't build your first airship until someone kills the Ender Dragon — the End boss unlocks the lift material the whole aeronautics tier hangs on, making the dragon fight a pack-wide milestone that gates the logistics arm (clean, thematically sensible, already implicit in levitite's recipe but never stated as a weave).
 
-
-
-
+== CHUNK COMPLETE ==
 
 
 
