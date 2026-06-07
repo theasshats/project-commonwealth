@@ -32,5 +32,27 @@ Already-proposed connections in dossier are good starting points. Cataclysm has 
 
 REWORK: Dossier candidate "economy via numismatics — boss-material ingots or trophy drops as high-value sellable scarcity (M-08 coin-from-processed-scarcity)" is mis-motif. Boss drops are not regional ores; M-08 specifically anchors to regional scarce ores processed through Create → mint. The correct frame is M-34 (combat-route supply) — flagging REWORK on that dossier suggestion. The accepted M-34 above supersedes it.
 
+## mcwwindows   [anchors: support/decoration palette (1)]
+
+328 blocks, 326 items, loot=yes. No registered recipe methods; crafted from vanilla glass/planks/wool/stone. Pure decoration palette anchor — the sanctioned support role. Goal: find any coherent 2nd anchor.
+
+**Method-pull pass:**
+- The stone-variant parapets/arrow slits are stone/blackstone-derivative blocks. `create:crushing` → M-04 (deco-block → raw/gravel + xp nugget, lossy). Power-check: these are everyday deco blocks, so one light step is appropriate; M-04's lossy rule fits. Tone-check: "crush a decorative parapet back to gravel" — players expect deco blocks to be crushable; this is coherent.
+- Wool curtains → `create:milling`? Milling cloth into fibers is possible but no specific milling-wool recipe exists in palette as a weave; and the wool input isn't novel (vanilla wool already has paths). Weak.
+- Mosaic glass variants: `create:crushing` would yield glass panes/shards — M-04. But glass crushing is already a vanilla-adjacent Create behavior; the Macaw's-specific mosaic glass isn't special enough to warrant a dedicated weave. Marginal.
+- Arrow slits are functional defensive blocks (reduce mob line-of-sight). These could feed a M-33 service angle (build a fortified structure for another player) but that is too abstract for a recipe weave — it's emergent gameplay.
+- Colony/MineColonies: Macaw's window blocks as a construction material for colony buildings (M-28 colony route)? MineColonies colony buildings use whatever blocks are available in the world; the mod doesn't consume specific deco items as building inputs. REJECT as not mechanical.
+- The dossier notes this is "decoration palette (sanctioned support anchor); only weave as part of a wholesale deco-family pass." That's the right read.
+
+**Candidates:**
+
+- from: mcwwindows stone parapet / arrow-slit blocks | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: Stone parapets crushed back to gravel and a trace of XP — the engineer recycles the builder's offcuts, and nothing is wasted. One light step, lossy, appropriate to everyday deco.
+
+- from: mcwwindows mosaic glass blocks | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: Mosaic glass crushing duplicates already-available glass->glass-pane paths in Create; no unique byproduct or novel material join. Not worth an authored recipe — marginal value, just noise in the recipe graph.
+
+- from: mcwwindows:*_curtain (wool-based) | via: create:milling | to: create | motif: M-12 | power: everyday | tone: clash | verdict: REJECT | reason: Milling curtains back to fibers is thematically backwards and doesn't produce a useful intermediate not already available from wool directly. Tone clash (milling a curtain is absurd). REJECT.
+
+OK — the single M-04 stone-parapet crush is the right scale. A deco mod earning one light Create recycling hook is appropriate; forcing more is over-engineering it.
+
 
 

@@ -33,5 +33,27 @@ Summary: 3 ACCEPT (M-12 milling, M-28 colony demand, M-16 seasonal), 2 REJECT.
 ## voicechat   [anchors: support (1)]
 LEAVE — proximity voice communication infrastructure; 0 blocks, 0 items, no recipe types, loot=no. Pure communication layer with no gameplay material surface. Genuine zero-surface case.
 
+## aileron   [anchors: aeronautics (1)]
+Existing connections: 1 anchor (aeronautics — Elytra flight rebalance). One anchor is the floor; needs a second.
+
+Power-read: aileron adds Elytra enchantments (loot=yes) and reworks flight physics. The enchantments are mid tier — they're refinements to an existing item, not a new endgame unlock. No item namespace (0 blocks, 0 items under aileron:) — the content surface is the Elytra enchants (loot) and behavior changes.
+
+Candidates:
+
+- from: aileron Elytra enchantments | via: ars_nouveau:enchanting_apparatus | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: Aileron's flight enchantments (higher durability, glide-speed, pull) are imbued through the Enchanting Apparatus using source — a magic-route unlock to the premium personal-flight tier that requires a mage's setup to access.
+
+  Red-team: Are aileron's enchants accessible to the apparatus? The dossier notes enchants are "datapack-exposed" as a condition; if they're standard Minecraft enchantments registered under vanilla's enchantment system, the apparatus can target them via an imbuement recipe. If they're a closed system, this fails at authoring — flag as BALANCE-PENDING. The thematic pairing is coherent: flight magic imbued through arcane apparatus feels right; it's not a forced edge. M-10 (arcane infusion pull) fits: a foreign enchantment pulled into the magic route. Only mid-depth treatment (one apparatus recipe per enchant), appropriate for the tier.
+
+- from: aileron Elytra enchantments (loot=yes) | via: loot-seed | to: survival | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: Aileron's premium Elytra enchant books seed into end-structure / stronghold loot — rare endgame exploration drops that reward adventuring into dangerous space, giving the combat specialist a tradeable commodity (the flight-enchanted Elytra) that the aerial logistics player wants.
+
+  Red-team: Does this feel forced? The Elytra already drops from End Ships; aileron's enchantments extending that loot tier is thematically tight. The combat/exploration specialist farms the enchantment books; the aeronautics player buys them. M-34 (combat-route supply) is the right motif. Tone ok. This is a loot-seed delivery, not a recipe — valid per briefing.
+
+- from: aileron Elytra enchantments | via: irons_spellbooks:alchemist_cauldron_brew | to: magic | motif: M-10 | power: mid | tone: clash | verdict: REJECT | reason: Iron's cauldron brews potions, not enchantments; routing Elytra enchantments through a potion-brewing mechanic is a category mismatch. The apparatus route (above) covers the magic angle more coherently.
+
+REWORK: Dossier notes "leave is acceptable" — but loot=yes is a real surface, and the two ACCEPT candidates above (apparatus enchantment, loot-seed) are coherent without forcing. Flag dossier's dismissal of the apparatus link as overly conservative.
+
+Summary: 2 ACCEPT (M-10 apparatus enchant, M-34 loot-seed), 1 REJECT.
+
+
 
 

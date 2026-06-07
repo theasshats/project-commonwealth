@@ -25,3 +25,6 @@ LEAVE from method-pull — no content surface; existing 2-anchor classification 
 ## kambrik   [anchors: library/API support (1)]
 LEAVE — Kotlin dev-framework library; zero items, blocks, biome-modifiers, or methods. No gameplay surface whatsoever. Pure dependency for Kotlin-based mods.
 
+## accessories   [anchors: support (1)]
+LEAVE — accessory-slot API; zero items, blocks, or methods of its own. All wearable content that weaves lives in dependent mods (Travelers Backpack, Ars Nouveau accessories, etc.), not here. No surface to route.
+

@@ -17,6 +17,15 @@
 ## better_climbing   [anchors: support/QoL (1)]
 - LEAVE — zero items, zero blocks, zero loot; pure client-side movement physics tweak; nothing to weave
 
+## creativecore   [anchors: support/library (1)]
+- LEAVE — genuine zero-content code library (GUI API, event/packet systems); no items, no blocks, no loot; nothing to weave
+
+## numismatics   [anchors: economy, create (2)]
+- REWORK: OK — connections sound. Economy (keystone) and Create (addon dependency, coin blocks crafted via Create) are both load-bearing and correctly framed. Numismatics IS the hub other mods weave TO (M-08 player-minted currency); it doesn't need outgoing weaves of its own. No new anchors proposed — adding a third would dilute its role as the settlement-medium node. The dossier's note about M-09 being the natural 2nd-anchor candidate is now moot since M-09 was retired; the framing should stay as-is.
+- from: numismatics vendor block | via: config-based pricing on combat drops (M-34 combat-route supply) | to: economy | motif: M-34 | power: mid | tone: ok | verdict: REJECT | reason: the economy link is already the mod's primary anchor; a "combat drops priced at vendors" edge is the ambient endpoint of the loop (every product sells), which is exactly what the retire of M-09 ruled out as a weave; the weave belongs on the combat-drop mod, not here
+
+
+
 
 
 

@@ -14,4 +14,21 @@ REWORK: only 1 anchor (create); the survival flavor noted in the dossier is real
 
 OK — the aeronautics anchor is sound. ACCEPT the create (M-05 mechanical_crafting) 2nd-anchor.
 
+## comforts   [anchors: survival (1)]
+- from: comforts:sleeping_bag_* (wool-based, 16 colors) | via: create:item_application (dye application) or create:pressing (compressing wool) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: The items are vanilla QoL (portable sleep); routing wool through Create pressing to make sleeping bags is a forced detour on a basic everyday item — the brief says basics get a one-light-step at most, and compressing wool into a sleeping bag yields no meaningful narrative. A player would reasonably ask "why do I need a Create machine to roll up a sleeping bag?" — the answer is weak. Tone clash: cozy-survival meet industrial-forge is mild but the pairing produces no sensible hook. REJECT.
+- from: comforts:sleeping_bag_* | via: farmersdelight:cutting | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: Cutting a sleeping bag for fiber/wool recovery could work thematically but is a 1:1 round-trip (wool in → wool out) with no net gain; the briefing flags 1:1 swaps for genuinely equivalent materials only. REJECT.
+- LEAVE — the mod earns its place as a survival/exploration QoL include; it fits one anchor (survival-flavor, travel camping) but offers no coherent 2nd anchor without forcing an arbitrary edge. The dossier's own assessment ("a forced economy/Create edge would be noise") is correct.
+
+## searchables   [anchors: support/library (1)]
+- LEAVE — genuine zero-content UI library (search/filter API for JEI-family screens; no items, no recipes, no loot). Nothing to route.
+
+## modelfix   [anchors: support/bugfix (1)]
+- LEAVE — pure client-side rendering patch; no items, no recipes, no loot, no gameplay content. Nothing to route.
+
+## xaerominimap   [anchors: support/navigation (1)]
+- LEAVE — client-side map/waypoint UI; no items, no recipes, no loot, no game mechanics. Nothing to route.
+
+
+
+
 

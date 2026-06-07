@@ -44,6 +44,23 @@ Pure crash-recovery utility. Zero items, blocks, loot. Genuine zero-content code
 
 - LEAVE — pure stability/crash-recovery mod; registers no items, no blocks, no loot; zero content surface.
 
+## naturalist   [anchors: survival (1)]
+
+Rich content surface: venison, bushmeat, antler, glow_goop, shellstone/froglass deco, loot=yes. The dossier has M-09 (retired), M-04, and M-12 candidates, and notes antler as a potential M-02 reagent.
+
+- from: naturalist:venison / naturalist:bushmeat (raw meat drops) | via: farmersdelight:cutting + farmersdelight:cooking | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Venison and bushmeat routed through FD cutting board (butchery step) then cooking pot slots Naturalist's hunting into the broader food-processing chain — a hunter supplies raw cuts to a cook who produces diet-variety foods, separating the hunting and cooking specializations.
+
+- from: naturalist:antler (bone-analog drop) | via: ars_nouveau:imbuement or occultism:spirit_fire | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: A deer antler is a natural arcane material — imbuement converts it into a verdant/earth-elemental reagent, giving the woodland hunter a trade good the magic specialist can't self-source without hunting.
+
+- from: naturalist:glow_goop (firefly drop; bioluminescent material) | via: ars_nouveau:imbuement or occultism:ritual | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: Firefly glow_goop is the canonical "captured light" material — imbuement into a light-affinity source shard or as a ritual fuel for summoning light-aligned spirits ties ambient firefly hunting to the magic production route.
+
+- from: naturalist shellstone / froglass deco blocks | via: create:crushing (lossy recycle) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: Shellstone and froglass are decorative blocks; crushing them back to sand/gravel + an XP nugget (lossy, value-destructive) gives the deco set a Create outlet and keeps the material from being a dead end if you overbuild.
+
+- from: naturalist:venison / bushmeat (cooked) | via: numismatics sell as luxury meat | to: economy | motif: M-09 (RETIRED) | power: everyday | tone: — | verdict: REJECT | reason: M-09 retired. Meat's demand is the ambient diet-pressure loop (M-26 consumption via eating); bare "sell venison for coin" is not a demand-gating weave. A cook buying raw cuts from a hunter is the player-economy form, but that's emergent trade, not a motif edge to author.
+
+REWORK: dossier lists M-04 as WEAK for shellstone deco recycle — upgrading to ACCEPT above; the deco set is real registered blocks (not vanilla-only) so M-04 applies cleanly. The M-02 antler note ("leave unless a magic mod wants it") is promoted to ACCEPT with imbuement routing.
+
+
 
 
 
