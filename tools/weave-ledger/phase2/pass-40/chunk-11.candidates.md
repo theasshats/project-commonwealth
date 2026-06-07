@@ -119,6 +119,21 @@ What's genuinely missing: the village is a *coastal settlement* in deep ocean. T
 
 OK — existing rows are the main substance. The M-31 ACCEPT (aeronautics cargo stop) and M-08 ACCEPT (coin loot) cover the two real weaves. The M-15 contested row (hull blueprint gate) is worth preserving as a proposal even if delivery is uncertain.
 
+## create_dragons_plus   [anchors: Create (1)]
+Existing rows are extremely extensive (50+ rows). Key ACCEPTs that stand: M-10 ACCEPT (ending fan → Ars imbuement pairing, 9v0), M-16 ACCEPT (freezing fan → Serene Seasons powder-snow gate, 8v1), M-07 ACCEPT (allurite/lumiere shards cold-hardened via bulk-freeze → attuned catalyst variant, 1v0), M-29 ACCEPT (dragon_breath as cross-route dependency forcing tech + End, 2v0), M-15 ACCEPT (Dragon Head catalyst as boss-key gate, dragon must be killed first, multiple rows).
+
+The dossier says "its ending/freezing methods are weave-TARGETS other mods route through, not edges this mod needs." Many of the 180+ rows across all passes treat create_dragons_plus as a *target method* platform, not a mod that itself needs a second anchor. The 2nd anchor question is moot — the mod is already Create-anchored and its methods serve as the connective tissue.
+
+One gap in the existing rows that no pass has picked up: the **levitite_fragile_fluid_tank** has 1 ACCEPT (M-23 airship lift component, 1v0) and 1 ACCEPT (M-24 aeronautics drivetrain, 1v0). Both have single-vote support. The levitite tank stores a *levitation fluid* — this is directly named "levitite" (lift/levitation). For aeronautics airship construction, a tank containing a buoyancy fluid is a structural part, not a mechanical drive component. M-23 (structural alloy → airframe) is the better motif than M-24 (drivetrain/control), and the 1v0 M-23 ACCEPT is correct.
+
+- CHALLENGE | from: create_dragons_plus:levitite_fragile_fluid_tank | via: aeronautics ship-construction recipe | to: aeronautics | motif: M-24 | verdict: REJECT | hook: M-24 is mechanical propulsion components (rotors, engines, control surfaces); a buoyancy-fluid storage tank is a *structural/lift* component (M-23 territory) — the M-24 ACCEPT on this item misroutes the motif; the M-23 ACCEPT (1v0) is the correct framing and should supersede it
+
+The **bulk-dyeing** rows are all correctly REJECTed (cosmetic, not loop-advancing). The **blaze_upgrade_smithing_template** is an interesting item — from Nether content (Blaze mob drop pathway) upgrading armor — but existing M-02 and M-34 ACCEPTs (1v0 each) cover it. The M-05/M-06 REJECTs on it are correct.
+
+OK — no new proposals needed beyond the M-24 CHALLENGE above. The mod is a Create-anchored method platform; its second-anchor question is fully resolved by the fan methods being used by other mods.
+
+
+
 
 
 

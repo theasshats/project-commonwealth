@@ -60,6 +60,12 @@ Existing rows: M-15 loot-seed → aeronautics progression items (17x ACCEPT, dom
 - NEW | from: sky_whale_ship loot chests (hostile-whale variant) | via: worldgen/spawn event gating — during an Ender Moon or Enhanced Celestials blood moon, the hostile whale's mob density and rare loot roll weight are both boosted (config: spawn_weight modifier or KubeJS loot global_modifier keyed on moon phase) | to: survival | motif: M-22 | power: endgame | tone: ok | verdict: ACCEPT | hook: the hostile sky whale is always dangerous — but on the Ender Moon night, the things aboard are worse and the cache inside is richer; the aeronautics crew times their raid to the lunar calendar, and the moon becomes the reason to launch tonight specifically
 - CHALLENGE | from: sky_whale_ship loot chests | via: loot-seed | to: aeronautics | motif: M-23 | verdict: REJECT | hook: M-23 is defined as "a fabricated structural alloy is a required *build ingredient* for Aeronautics airframes" — a recipe-authoring motif where the alloy appears in a construction recipe; applying M-23 to loot-table seeding misclassifies it; a loot drop of structural alloy is correctly M-15 (structure/boss loot unlocks the next tech tier) or M-34 (combat-route supply); the 4 ACCEPT rows for M-23-loot-seed should be re-motifed to M-15
 
+## moonlight   [anchors: support/library]
+
+LEAVE — shared library/API for MehVahdJukaar mods; 1 internal spawn_box block, no player-facing items, no recipe methods, loot=no. No content surface for any weave. No existing candidates, none warranted.
+
+== CHUNK COMPLETE ==
+
 
 
 

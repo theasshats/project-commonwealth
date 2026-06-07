@@ -98,3 +98,19 @@ Existing rows are extensive: M-28 colony tavern demand (ACCEPT), M-35 aging/matu
 - NEW | from: alcohol_industry:whiskey / tequila (premium bottled spirits, region-input-gated) | via: aeronautics cargo logistics — bulk spirits must be crated and shipped to distant colonies/taverns at scale | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: a crate of aged whiskey is too heavy and too valuable to carry on foot across a 10-player map — it goes by airship; the distillery needs the logistics arm and the aeronautics player needs cargo; spirits become the luxury bulk good that gives the cargo route its first recurring run
 - CHALLENGE | from: alcohol_industry:alcohol_base (fluid) | via: create:mixing (as a solvent input) | to: create | motif: M-12 | verdict: REJECT | hook: the existing M-12 row proposing alcohol_base as a Create:mixing *further input* is circular — alcohol_base is *already assembled by* create:mixing (inbound weave); making it a further Create:mixing input would create a self-referential loop; all existing REJECT tags on this row are correct and the ACCEPT variant (1 vote) is a category error
 
+## numismatics   [anchors: economy, Create (2)]
+
+Existing rows: M-05 vendor/depositor → create:mechanical_crafting (split 2A/1R, reasonable), M-33 vendor as service-for-hire storefront (2A, ACCEPT), M-08 coins from Create:pressing (multiple ACCEPT rows), M-28 colony-trade integration (1A). The mod is the economy hub — the design correctly says weaves point TO it, not FROM it. What's genuinely missing: no row examines the blaze_banker specifically as a demand-creating *threat/maintenance item* (the blaze-banker must be fueled by blaze rods, creating a survival/danger consumption dependency).
+
+- NEW | from: numismatics:blaze_banker (requires blaze rods to operate / smelt fees) | via: create:filling or crafting — blaze_banker consumes blaze rods as a fee-processing fuel, creating continuous combat-route demand | to: survival | motif: M-26 | power: mid | tone: ok | verdict: ACCEPT | hook: the bank isn't free to run — the blaze_banker block needs blaze rods to process transactions and keep the bank "hot"; a Nether-adjacent blaze farmer becomes the financial sector's unwilling business partner; the bank demands combat supply to stay liquid
+- CHALLENGE | from: numismatics coin tiers (spur..sun) | via: any processing method to "mint/refine" coins | to: create | motif: M-08 | verdict: REJECT | hook: the existing 2-vote split row is correctly REJECTed — coins are the terminus of value, not a feedstock; the reagent-ownership table explicitly reserves numismatics:* to the economy pillar as the settlement medium; using coins as a processing *input* to another method would destroy the scarcity/value logic of the whole currency system
+
+## dragonlib   [anchors: support/library (1)]
+
+LEAVE — code-sharing library; zero items (the `dragonlib:dragon` block is a dev artifact), zero methods, no content surface. Required dep of MrJulsen's mods; no weave applicable.
+
+## mru   [anchors: support/library (1)]
+
+LEAVE — Mineblock's utility library; zero items, zero methods, no content surface. Pulled as a dep; no weave applicable.
+
+== CHUNK COMPLETE ==

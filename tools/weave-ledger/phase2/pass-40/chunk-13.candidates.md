@@ -41,6 +41,11 @@ LEAVE — crash-recovery utility; zero items, blocks, loot, or recipe types. No 
 ## cmparallelpipes   [anchors: create (1)]
 LEAVE — Create fluid-pipe QoL tool (Pipe Wrench); 2 items, no blocks, no loot, no registered recipe types. All proposed weaves correctly rejected across blind passes. The wrench is a pure-utility interaction item with no material that can be routed into a second pillar without forcing a contrived edge.
 
+## underground_village   [anchors: survival (1)]
+- NEW | from: underground_village Stoneholm library/chest loot | via: loot-seed (seed a MineColonies research-tome or blueprint scroll into the deepest Stoneholm chest — a document that fast-tracks one colony research tier when recovered and used) | to: economy | motif: M-37 | power: mid | tone: ok | verdict: ACCEPT | hook: the Stoneholm's lost settlers left records; whoever recovers them gains a colony research head-start — knowledge, not coin, is the treasure, and it flows into the MineColonies research gate (M-37) as a discovered unlock rather than a purchased one
+- NEW | from: underground_village Stoneholm structure blocks (stone bricks, cobblestone, deepslate brick) dismantled by a raiding player | via: create:crushing (M-04 — deco recycles to crushed stone/gravel + XP nugget) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: stripping a Stoneholm ruin through the millstone is productive salvage — the underground village is not just a loot box but a stone supply cache; exploration has a material dividend through the Create spine
+
+
 
 
 
