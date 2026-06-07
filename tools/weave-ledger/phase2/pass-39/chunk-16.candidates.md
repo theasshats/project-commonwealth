@@ -259,3 +259,26 @@ LEAVE — cosmetic mod with a closed internal economy (hats/scraps/bags). No cro
 
 LEAVE — genuine zero-content code library (the lone dragon item is a dev/test artifact, not a player-facing material). Sanctioned dependency support role.
 
+## mcwwindows   [anchors: support (decoration palette) (1)]
+
+One anchor (support/deco). 328 blocks (window/shutter/blind/curtain/parapet/arrow-slit/mosaic variants), 326 items, loot=yes. No registered recipe types; vanilla-table crafted. Consumes glass/planks/wool/stone; outputs deco. Dossier flags M-04 (stone parapet crush) as the only candidate.
+
+Method-pull:
+- Stone parapet/arrow-slit: these are building-defense blocks with a castle/fortress aesthetic. create:crushing → raw stone + gravel + XP nugget. M-04 lossy recycle. Power: everyday deco block.
+- Mosaic glass (colored dyed-glass panels): could feed a Create:pressing or crafting step to make ornamental panes used as a decorative aeronautics interior component — but no registered aeronautics method takes mosaic glass.
+- Wool curtains: meadow:felting adjacent (both are textile/soft furnishing), but felting takes raw wool, not finished curtains. No route.
+- Arrow slits: have a defensive/military aesthetic that overlaps with the fortification side of survival (defense pressure). No material route.
+- Loot=yes: windows appear in structure loot (e.g. villages, mansions). Could seed specific window types into illager tower loot (illagerinvasion) for atmosphere — but that's a loot-seed on illagerinvasion's structure, not a weave FROM mcwwindows.
+- Create gate: gating the most ornate windows (mosaic, gothic stone) on a Create sandpaper_polishing or mechanical_crafting step would make decorative precision glasswork a Create-tier output. M-05 or M-20 (deploy-application upgrade on base glass). Mid-tier deco doesn't warrant a deep chain, but a single polish step is coherent.
+
+Concrete candidates:
+
+- from: mcwwindows:*_parapet / *_arrow_slit (stone military deco) | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: Fortification blocks (stone parapets, arrow slits) crush back to raw stone + gravel in the Create mill — builders who tear down or repurpose defensive structures recoup materials through the Create economy.
+- from: mcwwindows:*_mosaic_glass (ornate colored glass) | via: create:sandpaper_polishing | to: create | motif: M-20 | power: mid | tone: ok | verdict: ACCEPT | hook: Mosaic glass panels are polished panes of colored glass run through the Create sandpaper step — decorative precision glasswork becomes a Create-crafted product, giving a builder who invests in the Create spine a superior window palette.
+- from: mcwwindows:*_curtain (wool curtain blocks) | via: meadow:felting | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: Meadow felting takes raw wool → felt, not finished curtain blocks → felt. The direction is wrong (curtains are already processed), and reverse-processing (curtain → wool) is not a registered felting operation. No valid route.
+- from: mcwwindows various | via: loot-seed into structure chests | to: survival/economy | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: Window variants in loot chests are atmospheric but create no cross-system demand gating. No motif fits.
+
+REWORK: Dossier M-04 candidate (stone parapet crush) confirmed. Added M-20 mosaic glass as a mid-tier Create-polished deco candidate, which is thematically tight (precision glasswork = craftsperson's Create output).
+
+== CHUNK COMPLETE ==
+
