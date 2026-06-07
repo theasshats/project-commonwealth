@@ -22,7 +22,7 @@ flow:
    SCARCITY  ──drives──▶  PRESSURE  ──creates demand──▶  PRODUCTION  ──feeds──▶  DISTRIBUTION
   (foundation)        (Survival + Danger)               (the makers)            (the movers)
         ▲                                                                              │
-        └──────────────────────  players face scarcity again  ◀──────────────────────┘
+        └────────────  goods are consumed & appetite grows; scarcity renews  ◀─────────┘
 ```
 
 - **Scarcity** is the axiom — the premise everything else rests on.
@@ -123,7 +123,33 @@ The two systems that move things between players, closing the gaps that exclusiv
 
 ---
 
-## 5. What this means for mod fit (curation)
+## 5. Closing the loop — distribution relieves scarcity, it doesn't end it
+
+The return arrow is the load-bearing part, and it's easy to get wrong: if distribution *solved* scarcity
+the loop would run once and stop (everyone self-sufficient, no more trade). It doesn't, for three
+reasons:
+
+- **Trade redistributes scarcity; it never creates the missing resource.** Moving goods between regions
+  doesn't put ore where there is none — a region still *lacks what it lacks*, so the dependency persists.
+  Distribution makes scarcity **survivable**, not **solved**: you keep needing to buy what you can't
+  make, which is exactly what keeps the trade loop turning.
+- **Consumption draws goods back down.** Goods don't accumulate forever — they're *spent* against
+  pressure: eaten, worn out, lost on death, burned as fuel (airships, machines), sunk into builds and
+  colony upkeep. Finite regional inputs keep getting consumed, so the demand never zeroes out.
+- **Growth renews scarcity one tier up.** As players scale (bigger colonies, fleets, high-tier gear)
+  their appetite grows and pushes them into farther, **more dangerous and scarcer** frontiers — new
+  scarcity *and* new danger-pressure. The loop re-opens at a higher tier rather than closing.
+
+**The balance constraint this implies (the aeronautics lens).** Distribution must **relieve scarcity
+locally without erasing it globally.** The failure mode is cheap, frictionless logistics — especially
+aeronautics — making *everything* reachable by *everyone*: that collapses regional specialization, makes
+players self-sufficient, and breaks the loop. So the connectors are tuned to *bridge* distance at a
+cost, never to *annihilate* it. Keep travel and trade meaningful; if the map stops mattering, the whole
+machine stops.
+
+---
+
+## 6. What this means for mod fit (curation)
 
 Every mod still has to anchor *somewhere in this loop* — the `docs/CURATION.md` rubric, restated against
 the loop instead of "five systems":
