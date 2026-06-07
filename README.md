@@ -152,7 +152,7 @@ If the editor doesn't work for you (no Windows machine, can't install Java, what
 ## Player website
 
 The player-facing site lives in its **own repo** now —
-[`derpack-org/derpack-x-site`](https://github.com/derpack-org/derpack-x-site)
+[`derpack-org/derpack-site`](https://github.com/derpack-org/derpack-site)
 (split out of this repo's former `site/` directory). It's served at
 **`derpack-x.ishimura.xyz`** (and `modpack.ishimura.xyz`): how to join, what's in
 the pack, rules, FAQ, a live server-status badge, and a download button that
