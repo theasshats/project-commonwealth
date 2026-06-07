@@ -269,3 +269,28 @@ identity. No hook.
   loot-seed escape does not apply (lootr wraps other mods' tables; it owns none). The trophy item
   is cosmetic with no plausible method-pull. This is a genuine support/QoL role with no second-
   anchor surface.
+
+## towntalk   [anchors: support/curated-flavor (1)]
+
+Dossier confirms: MineColonies addon adding colonist voice lines — contextual audio barks from
+colonists for immersion. Zero items, zero blocks, zero loot, no recipe-types. Requires MineColonies.
+
+Power-read: pure audio flavor. No material, no method, no mechanic that any other mod touches. The
+value is in atmosphere — colonists feel alive — but that atmosphere carries no weave surface.
+
+Red-team: could voice lines be part of an M-33 service-for-hire economy link (e.g. "colonist
+announcements as a service")? This is a meta-joke, not a loop connection. The voice lines are
+cosmetic audio that happens automatically; they don't represent labor any player buys or sells.
+
+Could towntalk influence MineColonies colony happiness/morale, which in turn feeds production
+efficiency? If it did, it would create a survival → economy → production feedback loop. But per
+the dossier it is purely cosmetic audio; it affects no gameplay stat.
+
+The mod's weave is entirely inherited from MineColonies — the colony system is already the
+economy/production anchor. Towntalk simply makes colonists sound like they inhabit that system.
+
+- LEAVE — audio immersion flavor with zero content surface. No items, methods, or loot; no
+  gameplay stat it modifies. Genuine zero-surface support role for MineColonies whose weave is
+  MineColonies' own.
+
+== CHUNK COMPLETE ==
