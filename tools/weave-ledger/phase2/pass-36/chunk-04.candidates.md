@@ -274,3 +274,21 @@ Client UI mod: adds search/filter to the vanilla Key-Bindings screen. No items, 
 
 - LEAVE — genuine zero-content client UI utility. Keybind search is a QoL improvement for the player managing many mods' controls; zero material surface, no weave possible.
 
+## mcwwindows   [anchors: support/decoration (1)]
+
+328 window/shutter/blind/curtain/parapet/arrow-slit variants. 328 blocks, 326 items, loot=yes. No recipe types. Sanctioned decoration palette.
+
+**Method-pull analysis:**
+Same Macaw's deco family as mcwfences and mcwdoors. Stone parapet/arrow-slit variants are M-04 crushing candidates; curtains (wool-based) open a possible M-12 processing hook.
+
+**Candidate 1: stone parapet/arrow-slit variants → create:crushing → gravel/raw stone + xp nugget (M-04)**
+- from: mcwwindows stone parapet variants (andesite_parapet, blackstone_gothic, etc.) | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok — stone deco crushing back to gravel/raw is a sensible salvage mechanic | verdict: ACCEPT | hook: a player dismantling castle-style fortifications crushes stone parapets into gravel aggregate in a Create crusher — deco palette feeds the material loop.
+
+**Candidate 2: wool curtains as Ars Nouveau imbuement target (dye-infusion → arcane curtain)**
+- from: mcwwindows:black_curtain / wool curtain variants | via: ars_nouveau:dye / ars_nouveau:imbuement | to: magic | motif: M-10 (arcane infusion pull — foreign material refined/attuned into a magic context) | power: everyday | tone: clash — curtains as magical items is a significant aesthetic leap. A curtain is a domestic textile; making it "arcane" via imbuement feels forced and comedic rather than coherent. The magic pillar's imbuement is for items with real magical function (foci, reagents, wands), not home textiles. | verdict: REJECT | reason: theme clash — domestic curtains as arcane items doesn't survive red-team. The tonal gap between "wool curtain" and "imbuement target" is too large. M-10 applies to items with natural magical adjacency.
+
+**Candidate 3: mosaic glass panels → create:mixing (colored glass fusion from dyed glass + sand) as intermediate**
+- from: mcwwindows mosaic glass | via: create:mixing | to: create | motif: M-12 (processing chain — Create mixing produces the colored glass intermediate for mosaic panes) | power: everyday | tone: ok | verdict: REJECT | reason: this gates a basic deco material behind Create mixing, which violates "never gate a basic/everyday component behind a complex recipe." Mosaic glass is deco; adding a Create prerequisite to all colored glass deco blocks punishes builders and is not depth, just friction.
+
+OK — single accepted link: stone parapet → create:crushing (M-04). Part of the wholesale Macaw's deco-family M-04 pass.
+

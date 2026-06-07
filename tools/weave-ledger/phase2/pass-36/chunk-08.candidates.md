@@ -342,3 +342,23 @@ Large ocean/river expansion: pike, perch, lionfish, jellyfish, hostile thrashers
 - from: upgrade_aquatic cooked luxury fish (cooked_lionfish, cooked_pike dishes) | via: emergent trade | to: economy | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: "seafood dishes are sold at market" is ambient sellable (retired M-09 territory) without a specific demand-gate; the diet system creates demand organically, which is sufficient; no additional economy motif applies beyond M-26 consumption already captured in the diet arc
 - REWORK: existing survival anchor is correct; the inbound woodworks:sawmill weave is real and sound; no weak or arbitrary connections. OK — connections sound for the established weave.
 
+## endermoon   [anchors: survival (1)]
+
+Enhanced Celestials add-on: an Ender Moon lunar event that greatly raises enderman spawn weight; Super Ender Moon raises all-mob spawns. 0 blocks, 0 items, 0 biome-modifiers, loot=no. Pure spawn-rate modifier.
+
+**Method-pull:** The mod itself has no items or blocks. Its only content is a lunar event registered into Enhanced Celestials. Its *indirect* output is a mass of endermen during Ender Moon nights, which increases ender pearl drops dramatically.
+
+**The dossier says "leave — any weave belongs on the ender-pearl drop or the parent enhancedcelestials event system, not here."** Let me verify this is correct and not too hasty:
+
+**Candidate — M-22 (Lunar/celestial reagent) applied to endermoon:**
+- M-22: "a material/effect available only during a moon event feeds a method." This is precisely the Ender Moon's value — the lunar event creates a time-gated surplus of ender pearls (and possibly enderman drops if any mods add unique enderman loot).
+- If the Ender Moon night produces a mass surge of ender pearls, and those pearls are a reagent in Ars Nouveau (ender pearl is a known Ars ingredient for portal-related spells/items), then the Ender Moon is a M-22 reagent-surge event.
+- But the weave is on the *ender pearl's* use in a magic recipe, not on endermoon itself. endermoon is the *trigger* that makes the pearl abundant; the pearl itself is a vanilla item.
+- The mod has no items of its own to anchor. M-22 would be: "during Ender Moon, farm endermen for ender pearls which feed Ars Nouveau imbuement." That weave's natural home is the ender pearl drop → magic method connection, not on endermoon specifically.
+- Red-team: Is there value in tagging endermoon with a M-22 link anyway, to mark the event as a designed surge window for magic material collection? Yes — it documents the *intent* that Ender Moon nights are the prime time for ender pearl collection for magic purposes. But the actual weave (ender pearl → magic) is authored on the magic side, not here.
+
+**Verdict:** LEAVE — no items/blocks of its own; the M-22 connection is real but belongs to the ender-pearl drop and the magic mod consuming it, not to endermoon as a weave node; endermoon is the *event trigger* and the signal to players, not the material node.
+
+- LEAVE — spawn-rate event mod (0 blocks, 0 items, no loot); the M-22 lunar-reagent link applies to the *ender pearl's* use in magic methods (authoring belongs on the magic side); endermoon is the event trigger that makes Ender Moon nights the designed surge window for ender pearl collection — document this as a design note, not a weave on this mod itself
+
+== CHUNK COMPLETE ==
