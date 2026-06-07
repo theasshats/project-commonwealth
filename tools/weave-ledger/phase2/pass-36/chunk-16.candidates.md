@@ -57,6 +57,16 @@ REWORK: dossier's economy candidate cites M-09 (retired) — that row should be 
 - from: ribbits toadstool/mossy-oak blocks | via: create:cutting (sawmill equivalent) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: mossy oak planks are thematically a swamp wood set — routing them through Create's woodcutter would give them a sawmill cut, which is generic and barely advances the loop. The woodset is narrow (14 blocks, one biome flavor) and a Create woodcutting entry is cosmetic, not weave-relevant. The M-04 "recycles deco" motif is meant for converting deco *back* to raw material, not just adding sawmill recipes for flavor wood. Weak — reject.
 - from: Amethyst Shard trades (Ribbit merchant currency) | via: numismatics vendor config (amethyst shards ↔ coins, or swamp goods priced in coins) | to: economy | motif: M-08 | power: everyday | tone: ok | verdict: REJECT | reason: amethyst shards as Ribbit currency is their internal system; bridging shards to Numismatics coins would create an NPC-coin-faucet-adjacent path (players farm amethysts → trade to Ribbits → get goods → sell goods for coin). This is M-09-adjacent (luxury good → coin via NPC intermediary) which is retired because it's an NPC coin source. The cleaner path is M-33 (service/goods from Ribbits are a trade-economy node, not a coin-minting route). REJECT.
 
+## fxntstorage   [anchors: create, survival (2)]
+- from: fxntstorage:backpack_flight_upgrade | via: M-24 mechanical component → propulsion/control | to: aeronautics | motif: M-24 | power: mid | tone: clash | verdict: REJECT | reason: the backpack flight upgrade is a personal worn jetpack-style item, not a ship propulsion component — routing it through aeronautics' drivetrain motif (M-24 is for propellers/engines/control surfaces on ships) would be a tonal mismatch; personal flight ≠ ship propulsion. The dossier flags the aeronautics link as "a worn gadget, not a wireable resource — leave." Confirmed reject.
+- from: fxntstorage:hardened_backpack / hardened_storage_box | via: M-29 cross-route dependency (requires a MineColonies-crafted hardened plate as input) | to: create (deepening) | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: the Hardened tier is the top backpack/box tier; requiring a colony-crafted hardened plate (from a MineColonies blacksmith) as an input to the mechanical_crafting recipe for the Hardened Backpack forces a tech specialist to buy from a colony player — exactly the cross-route dependency that keeps specialization necessary. This advances the loop (Create production requires colony route input → forces trade). M-29 fits: one production route's recipe requires input from a different route. Delivery: via KubeJS recipe tweak on the existing create:mechanical_crafting recipe for hardened_backpack.
+OK — existing Create + survival connections are sound. M-29 hardened-backpack cross-route adds depth without forcing an arbitrary edge. No existing connections need REWORK.
+
+## sounds   [anchors: support/polish (1)]
+- LEAVE — client-only audio overhaul; 0 blocks, 0 items; no recipe or processing surface. Pure cosmetic polish with no weave surface.
+
+
+
 
 
 

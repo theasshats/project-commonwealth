@@ -120,6 +120,36 @@ Power-read: 30 blocks, 68 items. Underground biomes (jungle, desert, spider cave
 
 REWORK: Dossier's M-04 candidate for temple bricks is directionally right and this pass ACCEPTs it. The M-11 magic candidate (spirit_fire / imbuement) is also directionally right; this pass refines it to M-02 (mob-drop reagent for spider_fang) + M-10 (charm upgrade via Ars apparatus). The dossier's Create candidate was marked [WEAK] — it ACCEPTs here because it's the standard method for any dungeon-block set and requires no invention.
 
+## minecolonies_compatibility   [anchors: survival, create (2)]
+
+Power-read: 3 blocks, 7 items. Integration bridge — colony workers accept modded crops (IE cloche/fertilizer, BotanyPots), courier pulls from Create Stock Link / storage networks, butcher handles carcasses, cook uses Farmer's Delight. Already ≥2 anchors (survival + Create bridge). The key bridge items: citizen_terminal, citizen_grid, citizen_stock_keeper, common_network_storage.
+
+Method-pull for a 3rd anchor: The Courier ↔ Create Stock Link bridge is precisely what M-28 (colony route) enables for production routing. The colony-storage bridge already IS the M-28 mechanism. Is there an economy angle? The colony worker accepting modded crops from IE cloche means the colony route can produce modded ingredients cheaper — that's exactly the "cheaper basics via colony" model. But this is already captured by its Create + survival anchors (the Create Stock Link bridge IS the Create anchor; the farming bridge IS the survival anchor). Is there a magic angle? The colony compatibility bridge does NOT extend to Ars Nouveau or Occultism workers — that's a gap worth flagging.
+
+- from: minecolonies_compatibility bridges (colony workers using modded crop methods) | via: extending the same pattern to include ars_nouveau and occultism colony-worker support — a Magic Scholar hut worker using Ars_nouveau:imbuement, or a Caster colonist performing ritual/spirit_fire | to: magic | motif: M-29 | power: mid | tone: ok — if the compatibility bridge extended to magic workers, the colony route would feed magic production, making colony investment relevant for magic players too (cross-route dependency between colony and magic) | verdict: REJECT | reason: this is authoring new content on minecolonies_compatibility that doesn't exist — the mod's scope is IE/storage/farming compat, and Ars/Occultism integration would require the mod itself to implement it. Phase 2 can't propose a feature change to an upstream mod. The candidate is a design observation, not a routable weave against existing methods.
+
+- from: citizen_terminal / citizen_grid (colony storage-network bridge items) | via: requiring a Create-pressed component in their crafting recipe (e.g. a brass ingot plate or zinc mesh from Create) so the storage bridge has a Create cost | to: create | motif: M-05 | power: mid | tone: ok — the storage terminal items currently use vanilla or basic crafting; requiring a Create-fabricated part gates the colony-network bridge behind Create progress | verdict: ACCEPT | hook: the colony network storage terminal calls for a Create-pressed zinc mesh in its recipe — you need basic Create automation before your colony talks to your storage system, tying colony and Create infrastructure together
+
+OK — core 2-anchor state (survival + Create) is sound. The M-28 colony route is already what this mod IS mechanically. The M-05 recipe gate on citizen_terminal items is a new candidate.
+
+## kubejs_create   [anchors: support/tooling (1)]
+
+LEAVE — scripting bridge library. Exposes Create's processing recipe types to KubeJS scripts. No items, no blocks, no recipe types of its own, no in-world effects. The tool that builds Create-recipe weaves, not a weave target itself. Genuine zero-content-surface support mod.
+
+## accessories_compat_layer   [anchors: support/compat (1)]
+
+LEAVE — mixin compat shim that translates Curios/Trinkets API calls into the Accessories slot system. No items, no blocks, no gameplay mechanics. Pure API translation; the wearables that weave live in the host mods. Genuine zero-content library.
+
+## jade   [anchors: support/client-UI (1)]
+
+LEAVE — "what-am-I-looking-at" client HUD overlay. No items, no blocks, no recipe types, no in-world interaction. Display-only informational tooltip. Genuine zero-content support mod in sanctioned support role.
+
+## bigsignwriter   [anchors: support/client-UI (1)]
+
+LEAVE — client-side sign-editing GUI enhancement for large-letter text. No items, no blocks, no recipe types. Pure UI utility for sign decoration. Genuine zero-content support mod.
+
+
+
 
 
 

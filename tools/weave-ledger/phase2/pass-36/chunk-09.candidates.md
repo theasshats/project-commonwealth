@@ -140,6 +140,22 @@ LEAVE — Death-recovery utility. The gravestone block and obituary items are fu
 
 - from: betterstrongholds structural loot (trapped room / hidden room chests) | via: loot-seed | to: Create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: Seed a boss-key component (M-15 — a required ingredient for a complex Create recipe, e.g. a high-tier sequenced-assembly unlock) into the stronghold's deepest chest. The stronghold becomes the single-source gate for that component — a player *must* venture down to progress the tech tree. This advances the loop (danger → production) and is the canonical M-15 use. Delivery: via loot-seed. Endgame.
 
+## gnkinetics   [anchors: Create (1)]
+
+33 blocks, 31 items, loot=yes. Create Gears n' Kinetics — pure Create kinetic addon. Single anchor — Create. Dossier flagged "leave — second pillar would be forced." Re-evaluating with fresh eyes.
+
+The dossier's conclusion is correct but let's verify against the motif palette:
+
+- from: gnkinetics:planetary_gear / ring_gear (gear-ratio/torque mechanics) | via: aeronautics drivetrain | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: ACCEPT | hook: Planetary and ring gears are exactly the kind of drivetrain component an Aeronautics engine/propulsion system needs for variable gear ratios — a prop-drive that can shift speed/torque. Seeding gnkinetics gears as required components in mid-to-high-tier Aeronautics propeller or engine recipes (M-24 mechanical component → propulsion/control) earns them a genuine aeronautics anchor. The pairing is mechanically coherent — a player would say "of course a variable-pitch prop needs a planetary gearset." Mid tier.
+
+- from: gnkinetics:worm_gear (non-back-drivable — common in control surfaces) | via: aeronautics control surface (rudder/aileron) recipe | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: ACCEPT | hook: Worm gears are the canonical "actuator/control" gear (self-locking, high reduction) — seeding one into a rudder/aileron recipe is precisely what M-24 covers (control surfaces as well as propulsion). Gives the worm gear a dedicated role distinct from the planetary.
+
+- from: gnkinetics:large_industrial_gear / industrial_gear | via: create:mechanical_crafting | to: Create | motif: M-05 | power: mid | tone: ok | verdict: REJECT | reason: M-05 requires the mod's OWN machine as the gating method. gnkinetics doesn't register its own recipe types — it uses standard Create methods. Forcing M-05 here would mean "crafting gnkinetics parts requires gnkinetics parts," which is circular and not a real cross-system gate. Not a valid M-05 application.
+
+- from: gnkinetics gears as Create spine deepening | via: native Create spin (no weave needed) | verdict: REWORK note — the dossier's "leave — a deepening of the Create spine" conclusion was partially correct for magic/economy/survival, but M-24 into aeronautics is a genuine second anchor that was missed. The aeronautics arm IS the economy's logistics arm, so this also earns gnkinetics an economy-adjacent tag. The correct verdict is: gnkinetics gains aeronautics as a 2nd anchor via M-24 planetary/worm gear → drivetrain seams.
+
+
+
 
 
 

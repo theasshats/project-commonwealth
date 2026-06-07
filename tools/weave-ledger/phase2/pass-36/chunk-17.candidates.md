@@ -105,3 +105,7 @@ REWORK: OK — connections sound. Steel armor blocks are constructed via create:
 - from: s_a_b:hardsteelblock / doublesteelblock (top-tier plating) | via: create:sequenced_assembly (multi-step armor plate fabrication: press → compact → apply heat treatment) | to: create/aeronautics | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: the hardest armor plating earns its protection through a multi-step Create chain — compacting + hot-blast + deploy-layer — so the most fortified warship hull is a real manufacturing investment, not just a material swap; naval/military construction becomes a Create depth tier
 - from: s_a_b steel plating (bulk volume needed for large ships) | via: aeronautics/trains as transport requirement | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: REJECT | reason: M-31 (logistics-required bulk good) is about goods heavy/bulky enough that trading them at scale REQUIRES the logistics arm. Steel plate blocks are heavy but not uniquely so — any building material could claim this. The link is true-ish but generic; not a tight enough mechanism to qualify as a distinct weave edge. The mod's Create+aeronautics anchors already cover the loop role.
 
+## invtweaksemuforipn   [anchors: client-QoL/compat (1)]
+
+- LEAVE — genuine zero-content client compat shim. InvTweaks keybind emulation layer over IPN; no items, no blocks, no methods, no loot. Nothing to weave.
+

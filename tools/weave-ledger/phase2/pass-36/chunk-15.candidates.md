@@ -173,3 +173,77 @@ Could the modonomicon book be used as a recipe ingredient (M-37 research/knowled
 
 REWORK: OK — no existing connections; support-role only.
 
+## exposure   [anchors: Create, survival (2)]
+
+Already 2-anchor: film develops via create:sequenced_assembly (made-by line), stands automated by deployers. 8 blocks, 43 items, loot=yes. Recipe types: exposure:component_transferring, exposure:film_developing, exposure:photograph_aging, exposure:photograph_copying.
+
+Power-read: camera bodies are mid-tier crafted items; film is everyday (consumable); printed photographs are everyday-to-mid creative output; camera_gold is the prestige endgame variant.
+
+The dossier's 2nd-anchor candidate was M-09 (luxury→coin) — retired; reject it.
+
+**Candidate A — M-35 maturation / aging (survival ↔ economy)**
+exposure:photograph_aging is a native method type — photographs age over time or via the aging process. An aged photograph has higher visual/loot appeal. This is a textbook M-35: a good that must sit to gain value (the aging specialist). An aged photograph of a rare biome or boss kill (location-stamped) could be a trade good that only the photographer with the right location access can produce — the "aged photograph of the Nether fortress" commands a premium.
+- from: exposure:photograph (fresh) | via: exposure:photograph_aging | to: economy | motif: M-35 | power: mid | tone: ok — aged photographs as art-market trade goods is legible and charming, not forced | verdict: ACCEPT | hook: a fresh photo is a memento; an aged one is a collectible — the photographer sits on their prints for weeks and trades the cured set for real coin.
+
+**Candidate B — M-33 service-for-hire (economy)**
+Photography as a commissioned service: a player who invests in a camera + lightroom setup can take portraits or document other players' builds for trade. No recipe to author — the mechanic is emergent (the photographer charges for their time/materials), but naming it as an explicit design intent strengthens the economy anchor.
+Red-team: "emergent service" is hard to enforce mechanically; it's purely social. This is not a recipe edge; it's a social-layer weave. Without a formal contract or bounty mechanic, it's ambient.
+- from: exposure:camera service | via: emergent player-to-player commission | to: economy | motif: M-33 | power: mid | tone: ok conceptually | verdict: REJECT | reason: M-33 is valid for service-for-hire, but without a game mechanic anchoring the commission (no bounty board entry, no formal contract), this is purely ambient social behavior — not authoring-level weave. The M-35 aging path above is the concrete recipe edge; this is documentation of emergent behavior at best.
+
+**Candidate C — M-29 cross-route dependency (Create ↔ magic)**
+The camera body (exposure:camera) requires glass and gold in vanilla crafting. A weave: the gold body (camera_gold — the prestige variant) gated on an Ars Nouveau imbuement (e.g. requires a source-gem infused lens to upgrade the optics) — making the top-tier camera need magic-side input, threading Create (film automation) with magic (lens enhancement). This creates a cross-route dependency where the full photography rig requires both the Create specialist (for film development automation) and the magic specialist (for the gold lens).
+Red-team: is the gold camera really endgame enough to justify a deep cross-route gate? Power-read: it's the prestige variant, so yes — it's the high end. But does "better camera" warrant magic investment? The thematic fit is strained — alchemy improving optics is plausible (alchemical glass) but not immediately intuitive for Ars Nouveau specifically. It's a stretch.
+- from: exposure:camera_gold | via: ars_nouveau:imbuement (alchemical lens enhancement) | to: magic | motif: M-29 | power: endgame | tone: weak-clash — magic-enhanced camera optics is creative but not immediately legible to a player unfamiliar with the pack's design intent; it reads as arbitrary | verdict: REJECT | reason: theme stretch — alchemy improving camera optics requires a "this is the kind of world we're in" explanation; the connection is clever but not immediately sensible. Reserve magic cross-routes for items where the thematic link is immediate (e.g. magic-imbued weapons, not photography gear).
+
+**Existing connections review:**
+create:sequenced_assembly for film development is a real, grounded method-routing. survival anchor (photography as self-expression hobby) is valid but thin — it's more of a decorative survival flavor than a pressure/demand driver. That thinness is worth noting.
+
+REWORK: The survival anchor is accurate but the weakest of the two. If Phase 3 wants to strengthen it, a seasonal photography mechanic (certain biomes only accessible in certain seasons → rare photographs only producible in-season) via M-16 would be the natural tightener. Not a current-connection REWORK — just flagging the survival anchor could deepen.
+
+## sliceanddice   [anchors: Create, survival (2)]
+
+Already 2-anchor: the Slicer automates FD cutting recipes kinetically; the Sprinkler + Fertilizer push water/fluids onto crops. Made-by: create:filling, create:mixing. 4 blocks, 3 items, loot=yes.
+
+The dossier says LEAVE (already 2-pillar, IS a M-12 bridge by design). This is correct — the mod's entire purpose is being the Create↔FD automation glue. It has no loose materials of its own beyond the Slicer/Sprinkler/Fertilizer blocks (which are machine blocks, not tradeable commodities).
+
+**Quick method-pull check:** Slicer produces the same outputs as FD cutting (food byproducts). Sprinkler distributes fluids — in principle, a modded fluid (e.g. tfmg:lubricant or an Ars fluid) could be piped in for a special effect. But any such fluid effect depends on the fluid mod's config/API, not a recipe. There's nothing to author here.
+
+- from: sliceanddice:sprinkler | via: piping tfmg/magic fluids for special crop effects | to: Create/magic | motif: M-12 | power: everyday | tone: weak — the Sprinkler would need custom fluid-effect support from TFMG/Ars to be meaningful; without that, piping any non-water/non-lava fluid does nothing | verdict: REJECT | reason: no existing mod-side support for special Sprinkler fluid effects beyond water/lava; would require custom authoring with no method to route through. Already a M-12 bridge by design — forcing an extra edge is adding noise.
+
+REWORK: OK — existing connections are sound (M-12 processing-chain automation between Create and FD; correct dual anchor).
+
+## moreculling   [anchors: support/performance (1)]
+
+Pure render-culling performance mod. Zero items, zero blocks, zero recipe types, zero loot. Depends on Sodium.
+
+- LEAVE — pure performance optimization with no content surface; nothing to weave.
+
+REWORK: OK — no existing connections; support-role (performance) only.
+
+## openpartiesandclaims   [anchors: support/server-protection (1)]
+
+Chunk-claim + player-party protection (Xaero). Zero items, zero blocks, zero recipe types, zero loot. Pure protection/social framework.
+
+The party system does underpin the pack's cooperative premise — claimed territory is what gives regional scarcity its teeth (you can't outrun your footprint if your claim is your base). But that's a config interaction, not a weave edge.
+
+- LEAVE — zero content surface (protection/social framework only); no items, no methods, no loot. Underpins the pack's territory premise but is not a recipe weave node.
+
+REWORK: OK — no existing connections; support-role only.
+
+## curios   [anchors: library/support (1)]
+
+Accessory-slot API. Zero items, zero blocks, zero recipe types, zero loot. It HOSTS foreign trinkets (Ars Nouveau rings, Iron's Spellbooks accessories) in its slots but has no content of its own.
+
+- LEAVE — pure equipment-slot framework; no items, no methods, no loot. Its weave value is entirely through dependent mods' accessories, not through curios itself.
+
+REWORK: OK — no existing connections; support-role (magic pillar enabler) only.
+
+## attributefix   [anchors: library/support (1)]
+
+Attribute-cap bugfix library. Zero items, zero blocks, zero recipe types, zero loot. Raises vanilla attribute caps so high-power mod gear (magic/combat) works as intended.
+
+- LEAVE — pure compatibility patch with no content surface; nothing to route.
+
+REWORK: OK — no existing connections; support-role only.
+
+== CHUNK COMPLETE ==

@@ -169,3 +169,24 @@ The dossier is correct: appleseed's real 2nd anchor is a DEMAND pull that shows 
 
 - LEAVE — the diet system is a demand driver, not a weave node. Its 2nd anchor is structurally embedded in how it amplifies other mods' weaves (it makes FD/ExtraDelight/cooking production economically necessary). No independent recipe- or method-pull weave from appleseed itself reaches a 2nd system anchor without forcing an edge that doesn't exist in either mod.
 
+## touhou_little_maid   [anchors: survival (1)]
+
+Touhou-themed maid companions with 21 task automations (farming, fishing, combat, ranching) + Altar multiblock (ritual-style crafting using power-point bottles as currency). Has registered recipe type: touhou_little_maid:altar_recipe_serializers. 16 blocks, 85 items, loot=yes.
+
+**Method-pull analysis:**
+The Altar multiblock is a native ritual-style method (analogous to Ars imbuement or Occultism ritual) — it accepts arbitrary item inputs plus power-point bottles and outputs gated content. This is exactly the M-05 (native-method gating) surface: gate a maid/upgrade behind Create-produced parts as altar inputs. The maids themselves are automation labor (M-33 service-for-hire analogue — they perform work on farms/fisheries for the player).
+
+**Candidate 1: Altar recipe gated on a Create-produced mechanical component**
+- from: Create mechanical component (e.g., brass mechanism, precision mechanism) | via: touhou_little_maid:altar_recipe_serializers | to: create | motif: M-05 (native-method gating — flagship item built in its own method, gated on Create parts) | power: mid (a specialized maid type is mid-tier; power-point bottles are the native currency) | tone: ok — a shrine altar that requires a precisely machined brass gear as an offering to summon a combat maid reads as "industrial-magical fusion"; the shrine demands order-level precision from the outside world. The Touhou/anime aesthetic is quirky but the mechanical-offering-at-shrine trope is established in the mod's design | verdict: ACCEPT | hook: summoning a hunting maid at the altar costs not just power points but a brass mechanism from the Create workshop — the shrine demands manufactured precision, making the magic summoning route dependent on Create production.
+
+**Candidate 2: boss drop / occult material as altar recipe input for high-tier maid upgrade**
+- from: boss signature drop (per M-15) or Occultism essence | via: touhou_little_maid:altar_recipe_serializers | to: magic | motif: M-15 (boss-key unlock) / M-11 (ritual/transmutation sink) | power: endgame (high-tier maid needing boss material is endgame) | tone: ok — boss drops as altar offerings to summon a powerful combat maid is thematically coherent; the maid is a danmaku combat specialist, so she's gated by combat achievement | verdict: ACCEPT | hook: the most powerful combat maid — the one who fires danmaku patterns — is unlocked at the shrine only after the player has defeated a boss and brought its signature drop as a tribute offering.
+
+**Candidate 3: power-point bottles as mob-drop reagent / economy trade good**
+- from: touhou_little_maid:power_point_bottle (village loot / maid fairy drops) | via: numismatics trade / loot distribution | to: economy | motif: M-02 (mob-drop reagent sink — fairy drops yield the currency; player economy via distribution) | power: everyday | tone: ok — power bottles are consumable altar currency; players who farm maid-fairy mobs become power-bottle suppliers for players who want maids | verdict: ACCEPT | hook: players who haven't built an altar still collect power-point bottles from maid fairies — a natural supply-and-demand trade: bottle farmers supply shrine-users who are advancing the altar progression.
+
+**Candidate 4: maid farming/fishing labor as service-for-hire labor**
+- from: touhou_little_maid maid automation (farming/fishing/shearing tasks) | via: maid-hire service (player-to-player) | to: economy | motif: M-33 (service-for-hire labor) | power: mid | tone: ok — lending a maid to another player's farm for a session is a labor-rental service | verdict: REJECT | reason: "lending" maid entities to other players is not mechanically supported; maids are bonded to their owner. M-33 requires the specialist to perform work on another player's materials, which maid AI doesn't support cross-player. The connection requires mechanics that don't exist. Leave this as flavor.
+
+OK — survival anchor is sound. Three accepted links: Create-gate (M-05), boss-key magic (M-15/M-11), and power-bottle mob-drop economy (M-02).
+

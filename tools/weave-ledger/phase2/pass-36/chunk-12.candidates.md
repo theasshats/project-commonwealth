@@ -262,3 +262,8 @@ effect documentation, not process materials. Client-UI support role; nothing to 
 LEAVE — genuine zero-content: no items, no blocks, no loot, no methods. Client tooltip renderer only. QoL
 support role is complete.
 
+## betteranimationscollection   [anchors: support/visual (1)]
+
+LEAVE — genuine zero-content: no items, no blocks, no loot, no methods. Client model/animation replacement;
+no material surface. Visual polish support role.
+
