@@ -5,80 +5,110 @@
   },
 
   {
-    "mob": [
-      "rottencreatures:burned",
-      "rottencreatures:frostbitten",
-      "rottencreatures:glacial_hunter",
-      "rottencreatures:swampy",
-      "rottencreatures:undead_miner",
-      "rottencreatures:mummy",
-      "rottencreatures:dead_beard"
-    ],
+    "mob": ["rottencreatures:undead_miner"],
     "structure": [
       "minecraft:mineshaft",
       "minecraft:mineshaft_mesa",
-      "minecraft:stronghold",
-      "minecraft:ancient_city",
-      "minecraft:desert_pyramid",
-      "minecraft:swamp_hut",
-      "minecraft:ocean_ruin_cold",
-      "minecraft:ocean_ruin_warm",
-      "minecraft:ruined_portal",
-      "minecraft:ruined_portal_desert",
-      "minecraft:ruined_portal_swamp",
-      "minecraft:ruined_portal_mountain",
-      "minecraft:ruined_portal_ocean",
-
       "betterdungeons:small_dungeon",
       "betterdungeons:zombie_dungeon",
-      "betterdungeons:skeleton_dungeon",
-      "betterdungeons:spider_dungeon",
-      "betterdungeons:small_nether_dungeon",
-
-      "nova_structures:undead_crypt",
-      "nova_structures:creeping_crypt",
-      "nova_structures:remnant_graveyard",
-      "nova_structures:remnant_birch_graveyard",
-      "nova_structures:desert_ruins",
-      "nova_structures:jungle_ruins",
-      "nova_structures:wild_ruin",
-      "nova_structures:ruin_town",
-      "nova_structures:conduit_ruin",
-      "nova_structures:toxic_lair",
-      "nova_structures:bunker",
-      "nova_structures:deepslate_camp",
-      "nova_structures:badlands_miner_outpost",
-      "nova_structures:stray_fort",
-      "nova_structures:lone_citadel",
-      "nova_structures:illager_hideout",
-      "nova_structures:illager_manor",
-
-      "cataclysm:abandoned_spire",
-      "cataclysm:abandoned_temple",
-      "cataclysm:abandoned_village",
-      "cataclysm:cursed_pyramid",
-      "cataclysm:ruined_citadel",
-      "cataclysm:sunken_city",
-      "cataclysm:frosted_prison",
-
-      "dungeons_arise_seven_seas:pirate_junk",
-      "dungeons_arise_seven_seas:corsair_corvette",
-      "dungeons_arise_seven_seas:unicorn_galleon",
-      "dungeons_arise_seven_seas:victory_frigate",
-      "dungeons_arise_seven_seas:small_yacht"
+      "nova_structures:badlands_miner_outpost"
     ],
     "result": "allow"
   },
   {
-    "mob": [
-      "rottencreatures:burned",
-      "rottencreatures:frostbitten",
-      "rottencreatures:glacial_hunter",
-      "rottencreatures:swampy",
-      "rottencreatures:undead_miner",
-      "rottencreatures:mummy",
-      "rottencreatures:dead_beard"
+    "mob": ["rottencreatures:undead_miner"],
+    "structure": ["underground_village:underground_village"],
+    "maxlight": 7,
+    "result": "allow"
+  },
+  {
+    "mob": ["rottencreatures:undead_miner"],
+    "result": "deny"
+  },
+
+  {
+    "mob": ["rottencreatures:frostbitten", "rottencreatures:glacial_hunter"],
+    "biometags": ["c:is_snowy", "c:is_cold"],
+    "result": "allow"
+  },
+  {
+    "mob": ["rottencreatures:frostbitten", "rottencreatures:glacial_hunter"],
+    "structure": ["nova_structures:stray_fort"],
+    "result": "allow"
+  },
+  {
+    "mob": ["rottencreatures:frostbitten", "rottencreatures:glacial_hunter"],
+    "result": "deny"
+  },
+
+  {
+    "mob": ["rottencreatures:swampy"],
+    "biometags": ["c:is_swamp"],
+    "result": "allow"
+  },
+  {
+    "mob": ["rottencreatures:swampy"],
+    "structure": [
+      "minecraft:ruined_portal_swamp",
+      "nova_structures:jungle_ruins",
+      "nova_structures:toxic_lair"
     ],
+    "result": "allow"
+  },
+  {
+    "mob": ["rottencreatures:swampy"],
+    "result": "deny"
+  },
+
+  {
+    "mob": ["rottencreatures:burned"],
+    "structure": [
+      "minecraft:ruined_portal",
+      "minecraft:ruined_portal_desert",
+      "minecraft:ruined_portal_jungle",
+      "minecraft:ruined_portal_swamp",
+      "minecraft:ruined_portal_mountain",
+      "minecraft:ruined_portal_nether",
+      "minecraft:fortress",
+      "betterdungeons:zombie_dungeon",
+      "betterdungeons:small_nether_dungeon"
+    ],
+    "result": "allow"
+  },
+  {
+    "mob": ["rottencreatures:burned"],
+    "result": "deny"
+  },
+
+  {
+    "mob": ["rottencreatures:mummy"],
+    "structure": [
+      "minecraft:desert_pyramid",
+      "nova_structures:undead_crypt",
+      "nova_structures:remnant_graveyard",
+      "nova_structures:remnant_birch_graveyard",
+      "nova_structures:creeping_crypt",
+      "nova_structures:desert_ruins"
+    ],
+    "result": "allow"
+  },
+  {
+    "mob": ["rottencreatures:mummy"],
+    "result": "deny"
+  },
+
+  {
+    "mob": ["rottencreatures:dead_beard"],
+    "structure": [
+      "minecraft:ocean_ruin_warm",
+      "minecraft:ocean_ruin_cold",
+      "minecraft:ruined_portal_ocean",
+      "nova_structures:conduit_ruin"
+    ],
+    "result": "allow"
+  },
+  {
+    "mob": ["rottencreatures:dead_beard"],
     "result": "deny"
   },
 

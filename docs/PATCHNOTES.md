@@ -63,9 +63,11 @@ Industries houses can generate in plains again.
 
 ### Spawns and content
 
-Rotten Creatures now spawn within dungeon, crypt, and ruin structures rather than across the open
-world. This covers the relevant vanilla structures together with those from YUNG's Better Dungeons,
-Dungeons and Taverns, L_Ender's Cataclysm, and the When Dungeons Arise Seven Seas set.
+Rotten Creatures spawning has been tuned per mob so each undead appears where it fits. The Undead
+Miner is limited to mineshafts and mining dungeons; Frostbitten and the Glacial Hunter to cold biomes
+and snowy forts; Swampy to swamps; the Mummy to deserts, pyramids, and crypts; Burned to ruined
+portals and Nether structures; and Dead Beard to ocean ruins. Spawns draw on the relevant vanilla
+structures together with those from YUNG's Better Dungeons and Dungeons and Taverns.
 
 ### Removed
 
