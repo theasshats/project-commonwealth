@@ -182,3 +182,30 @@ Existing connections: 2 anchors (Create + survival). Dossier proposes M-09 (econ
 
 REWORK: dossier M-09 candidate — correctly retired; the replacement is M-35 (maturation), which the dossier didn't identify. The Create + survival anchors are sound; M-35 adds the economy dimension properly.
 
+## mowziesmobs   [anchors: survival (1)]
+
+Existing connections: 1 anchor (survival). Dossier identifies three candidates: M-05/M-06 Create gating, M-11/M-02 magic, M-08 economy bounty (weak).
+
+**Method-pull analysis:**
+- Boss drops: `mowziesmobs:ice_crystal` (Frostmaw), `mowziesmobs:sol_visage` (Barako), `mowziesmobs:earthrend_gauntlet` / wrought helm (Wroughtnaut). These are artifact-grade items — the canonical boss-key gate material per CLAUDE.md and SYSTEMS.md §3.
+- `mowziesmobs:earthrend_gauntlet` / wrought metal: a heavy dense artifact → could gate a high-tier Create sequenced_assembly (M-15 boss-key unlock: "boss drop as a keystone in a complex Create/tech recipe"). Mid-to-endgame. Thematic: a dense wrought-metal artifact from the earth-wroughtnaut becomes a component in a heavy Create machine frame. Coherent.
+- `mowziesmobs:ice_crystal` (grants ice attacks): magic-adjacent — cold/ice essence. `ars_nouveau:imbuement` could use it as an arcane catalyst for ice-type spells/runes (M-02 mob-drop reagent sink / M-10 arcane infusion pull). Power: mid. Thematic: ice crystal from a glacier giant as a magic catalyst — very coherent.
+- `mowziesmobs:sol_visage` (sun powers): solar/fire essence. `occultism:ritual` or `ars_nouveau:imbuement` wanting a solar-attuned artifact as a catalyst. M-02/M-10. Power: endgame. Thematic: the sun god's mask as a ritual reagent — coherent, high-cost.
+- `mowziesmobs:elokosa_paw` — a moon-phase-sensitive wolf-mob drop (Elokosa howler). The paw could be a M-22 lunar reagent — available when the Elokosa spawns (which may be moon-dependent) and consumed in a lunar-gated magic recipe. Power: mid. Thematic: werewolf paw as a lunar reagent is the classic trope — excellent tone fit.
+- Economy bounty (M-34 combat-route supply): players who farm Mowzie bosses supply the rare drops to non-combat players via trade. M-34 (combat-route supply) — the supply side of the boss dual-role. The drops are not minted into coin (M-08 would be wrong); they're traded goods that a fighter produces for a crafter/mage who needs them. Coherent as M-34.
+- Loot=yes and biome modifier: Mowzie structures (Barakoa villages, Frostmaw lair) contain loot tables. Could seed magic reagents or Create-relevant materials into those loot tables to reward exploration with cross-system goods. Via: loot-seed. M-30 or M-34 flavor.
+
+- from: mowziesmobs:earthrend_gauntlet / wrought metal boss material | via: create:sequenced_assembly (as keystone component in endgame machine frame) | to: Create | motif: M-15 | power: endgame | tone: ok — a dense artifact from a metal-armored earth giant becoming a foundational component in a Create-forged machine frame is thematically excellent | verdict: ACCEPT | hook: the Wroughtnaut's gauntlet, melted down through Create sequences, yields a structural component no smithy can fabricate; you must fight for what you build.
+
+- from: mowziesmobs:ice_crystal | via: ars_nouveau:imbuement | to: magic | motif: M-02 | power: mid | tone: ok — Frostmaw's crystallized ice as an arcane catalyst for frost-type imbuement is a perfect thematic fit | verdict: ACCEPT | hook: the Frostmaw's drop is the only source of an ice-essence needed for cold-aligned magic; defeat the glacier giant or buy the crystal from someone who did.
+
+- from: mowziesmobs:elokosa_paw | via: magic ritual / ars_nouveau:imbuement | to: magic | motif: M-22 | power: mid | tone: ok — a howler-wolf paw as a lunar reagent is the archetypal trope; if the Elokosa spawns on specific moon phases it doubles down | verdict: ACCEPT | hook: the howler paw, gathered during the crescent moon, feeds a lunar imbuement ritual; the moon cycles dictate when you can cast this spell.
+
+- from: mowziesmobs:sol_visage (solar boss mask) | via: occultism:ritual | to: magic | motif: M-02 | power: endgame | tone: ok — the sun god's mask as a ritual sacrificial component for an occult solar ritual is tonally coherent in Occultism's dark-magic aesthetic | verdict: ACCEPT | hook: the Sol Visage, burned in Occultism's spirit fire, powers a high ritual no mundane offering can fuel.
+
+- from: mowziesmobs boss drops | via: player trade / combat specialization | to: economy | motif: M-34 | power: mid-endgame | tone: ok — the combat specialist farms Mowzie bosses and sells the drops to non-combat players who need them for their Create/magic work | verdict: ACCEPT | hook: the fighter who downed the Wroughtnaut trades its gauntlet; the mage who needs ice crystal buys from the explorer — neither can cover both roles alone.
+
+- from: mowziesmobs structures (Barakoa villages) | via: loot-seed | to: survival/economy | motif: M-34 | power: everyday | tone: ok — seeding Create component blueprints or magic-reagent primers into Barakoa loot rewards dungeon exploration with cross-system goods | verdict: ACCEPT | hook: clearing the Barakoa village yields not just loot but a rare schematic or magic primer that feeds production; exploration pays forward.
+
+- from: mowziesmobs boss kills | via: numismatics bounty (M-08) | to: economy | motif: M-08 | power: mid | tone: clash — M-08 is player-minted currency from processed ore, not NPC bounty payouts; a bounty board paying coin for boss kills would be M-14 (cut as NPC faucet) | verdict: REJECT | reason: dossier misframes as M-08; the NPC-bounty read is M-14 (cut); player-to-player drop trade is M-34 (accepted above).
+
