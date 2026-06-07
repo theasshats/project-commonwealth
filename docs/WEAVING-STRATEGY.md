@@ -7,8 +7,10 @@
 ## The goal
 
 Derpack X's identity is *"one or two cohesive webs, not many clusters"* — every mod tied into ≥2 of the
-five systems (Create / magic / economy / aeronautics / survival). The pack is broad on purpose; what
-makes it **AAA rather than kitchen-sink** is the **weave**: the sense that the mods *belong together* and
+five systems (Create / magic / economy / aeronautics / survival), which form one causal loop (the
+*Eco*-style scarcity → pressure → production → distribution; canonical model in `docs/SYSTEMS.md`). The
+pack is broad on purpose; what makes it **AAA rather than kitchen-sink** is the **weave**: the sense that
+the mods *belong together* and
 feed each other. The stated ambition is to reach that **with minimal manual effort** — i.e. accomplish
 the weave **primarily with LLM tools**.
 

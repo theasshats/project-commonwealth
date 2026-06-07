@@ -2,7 +2,8 @@
 
 **North star (CLAUDE.md):** if you drew a line from every item to what it's *used for*, the whole pack
 should look like **one or two cohesive webs — not many disconnected clusters/branches**. This doc turns
-that into a number you can re-check.
+that into a number you can re-check. The web *is* the trade loop made visible — an island is a cluster
+disconnected from the production/distribution loop in `docs/SYSTEMS.md` (the structural model).
 
 ## How to measure it
 

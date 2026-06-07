@@ -6,17 +6,24 @@ CI digest will nail those. This is a planning artifact, not a final decision lis
 
 ## The goal (the yardstick)
 **A cooperative PvPvE Create pack for a small crew (~10), scarcity-driven, where every mod earns its
-place by anchoring to one of five systems — or it's cut:**
-- **Create spine** — the tech core; things made through Create (incl. **Create Aeronautics**).
-- **Magic web** — Ars / Iron's / Occultism, bridged.
-- **Economy** — Numismatics + Trading Floor + bounties (scarce regional ores → goods → trade). *In the
-  spirit of Eco, but emergent and optional — not a forced economy.*
-- **Aeronautics & logistics** — ships, trains, drones; the flight/transport ladder.
-- **Survival & seasons** — Serene Seasons × Spice of Life × Cold Sweat.
+place by anchoring to one of five systems — or it's cut.** The five form one causal loop (the *Eco*-style
+**scarcity → pressure → production → distribution**; canonical model in `docs/SYSTEMS.md`):
+- **Create spine** — the tech core; things made through Create (incl. **Create Aeronautics**). *Producer.*
+- **Magic web** — Ars / Iron's / Occultism, bridged; its own locked exclusives. *Producer.*
+- **Economy** — Numismatics + Trading Floor + bounties (scarce regional ores → goods → trade). *Connector
+  (moves value). In the spirit of Eco: emergent in mechanism (not a forced economy) but **load-bearing**
+  by design — the necessary consequence of production exclusivity, no longer "optional flavor."*
+- **Aeronautics & logistics** — ships, trains, drones; the flight/transport ladder. *Connector (moves
+  matter); the system that most threatens scarcity, so it carries its own balance lens.*
+- **Survival** — Cold Sweat × diet variety (Diet) × the hostile world. *Pressure.* (Serene **seasons** is
+  a driver feeding scarcity + survival, not its own system.)
 
-Progression on-ramps: complex Create tech unlocks via **MineColonies or boss drops**. Guns = TaCZ +
-Create Big Cannons. Friend-group, pre-alpha. Joke mods allowed *only if* they anchor to a system.
-The test for every row below: **what does this anchor to — and if nothing, why is it here?**
+Under it: **scarcity** (regional ore-gen) is the foundation, and **MineColonies** (cheaper basics +
+locked exclusives, across tech *and* magic) and **boss drops** (high-tier components) are cross-cutting
+production routes that keep the producers non-overlapping. Progression on-ramps: complex tech unlocks via
+**MineColonies or boss drops** (KubeJS-gated). Guns = TaCZ + Create Big Cannons. Public, pre-alpha. Joke
+mods allowed *only if* they anchor to a system. The test for every row below: **what does this anchor to
+— and if nothing, why is it here?**
 
 ## On-track check — ✅ mostly
 | Goal | State |
@@ -99,7 +106,7 @@ costs, or nerf the loot source:
    goal instead **weaves it into the tech tree**. (Recipe/progression wiring tracked separately.)
 2. **Breadth is fine when it's anchored.** Food (Farmer's Delight + ~10 addons), decoration (5×
    Macaw's + Supplementaries + …), structures (Yung's ×5 + more), mobs (~16) are all large — and
-   that's OK, because each anchors to a system (food → Survival & seasons; decoration → the
+   that's OK, because each anchors to a system (food → Survival + the Diet demand; decoration → the
    settlement/build palette; mobs → Economy via drops/bounties, or boss→keystone gating). The job
    isn't to shrink to a "focused Create pack" — it's to ensure every cluster anchors, and cut the
    bits that don't (curation in #83).

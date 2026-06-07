@@ -11,7 +11,9 @@ off those two.
 
 | Doc | Purpose |
 |---|---|
-| [`DESIGN.md`](DESIGN.md) | **The why** behind the architecture — the canonical "five systems" rationale. If a decision feels weird, look here first. |
+| [`DESIGN.md`](DESIGN.md) | **The why** behind the architecture — the "five systems" rationale and all the architectural decisions. If a decision feels weird, look here first. |
+| [`SYSTEMS.md`](SYSTEMS.md) | **The canonical structural model** — the five systems as one causal loop (scarcity → pressure → production → distribution; *Eco*-inspired). How the parts interlock: producers, connectors, pressure, the recipe/gating spine, the ecological cost. |
+| [`CURATION.md`](CURATION.md) | **The curation rubric** — the charter every keep/cut pass scores mods against (the 8 gates). |
 | [`RECIPES.md`](RECIPES.md) | The "Made through Create" recipe convention **and the live triage ledger** — the most-referenced doc; the source of truth for recipe changes. |
 | [`CONNECTIVITY.md`](CONNECTIVITY.md) | The "one web, not many clusters" connectivity metric — turns the north-star web goal into a number you can re-check (`tools/recipe-graph/`). |
 | [`ORE-GENERATION.md`](ORE-GENERATION.md) | The GTMOGS mix-vein ore-gen model (GTNH-style regional veins) and its config. |
@@ -54,11 +56,13 @@ priorities. See [`archive/`](archive/):
 
 ## Conventions
 
-**The canonical split — don't duplicate the "five systems" preamble.** Three docs open with a version of
+**The canonical split — don't duplicate the "five systems" preamble.** Several docs open with a version of
 the five-systems framing; they are **not** interchangeable:
-- `DESIGN.md` is **canonical** (the *why*) — cite it; don't re-argue it elsewhere.
+- `SYSTEMS.md` is **canonical for the structure** (the *how it interlocks* — the loop). The model itself.
+- `DESIGN.md` is **canonical for the rationale** (the *why*) — cite it; don't re-argue it elsewhere.
 - `ROADMAP.md` is the **plan** (the *when / in what order*).
 - `MODLIST-AUDIT.md` is a **snapshot audit** (a planning artifact, not a decision).
+- `CURATION.md` is the **keep/cut charter** (the gates a mod must pass).
 
 **`EDITING.md` ↔ `../mods/README.md`.** `EDITING.md` is the **task walkthrough** (add a mod, change a
 config, ship an update, with the editor + packwiz CLI fallback); `mods/README.md` is the **manifest reference**

@@ -3,7 +3,8 @@
 > **Status: accepted** — the canonical cadence. `docs/ROADMAP.md`, `CLAUDE.md`, and `docs/CONNECTIVITY.md`
 > have been reconciled to match: the thunderdome runs on the **odd** feature versions, perf-pruning on the
 > **evens**, and the roadmap is expanded to 0.6 → 0.15 → 1.0. Pairs with the recurring passes: the curation
-> rubric (#157), the mod-conflict catalog (#160), and the mod-update pass (#161).
+> rubric (`docs/CURATION.md`, #157), the mod-conflict catalog (#160), and the mod-update pass (#161). The
+> structural model the pillars build out is `docs/SYSTEMS.md` (the *Eco*-style production/trade loop).
 
 ## The model
 

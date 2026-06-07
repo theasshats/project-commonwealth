@@ -2,9 +2,11 @@
 
 > Living roadmap for the build-out. **Goal:** a cooperative PvPvE Create pack for a small crew (~10)
 > where every mod earns its place by anchoring to one of **five systems — Create, magic, economy,
-> aeronautics, survival** — or it's cut; scarcity drives emergent (not forced) trade, and complex
-> tech unlocks via MineColonies or boss drops. See `docs/DESIGN.md` ("the goal — five systems") and
-> `docs/RECIPES.md` (the recipe convention + triage ledger, merged with #62).
+> aeronautics, survival** — or it's cut. The five form one causal loop (**scarcity → pressure →
+> production → distribution**, inspired by *Eco*): scarcity + locked exclusives drive an emergent but
+> **load-bearing** trade economy, and complex tech unlocks via MineColonies or boss drops. See
+> `docs/SYSTEMS.md` (**the canonical structural model**), `docs/DESIGN.md` (the why), and `docs/RECIPES.md`
+> (the recipe convention + triage ledger, merged with #62).
 >
 > **Standing caveat:** the dev sandbox is **headless** — everything is authored + structurally
 > validated (JSON valid, JS syntax OK); **an in-game playtest is required before any of it merges**
@@ -115,27 +117,28 @@ Open issues are organized into GitHub **milestones** on an **odd/even release ca
 - Boot-log correctness: #119 dropped recipes · #120 mangled loot tables · #121 remaining ERROR noise.
 - Perf baseline (server's up): #147 spark TPS routine + target · #151 Create contraption guardrails.
 - Modlist hygiene (chartered by the #157 rubric — initial keep/cut cleanup, not a feature thunderdome): #157 define the rubric (`docs/CURATION.md`) · #83 umbrella · #106 structure allowlist · #108 spawn-gating review. _Done in #166: #60 umapyoi cut. Moved out: #107 Ender Moon (kept → flavor at v0.11.0), #110 textures (→ v1.0.0 living tracker)._
+- Design charter: #218 ratify the structural model (`docs/SYSTEMS.md` — the Eco-style production/trade loop) + reconcile the docs to it; #157 curation rubric (`docs/CURATION.md`). _Done in #166: both landed + ratified; SoL → Diet (AppleSeed) food swap._
 - Server's up: #98 pre-gen test world · #3 purple-arrows repro · #38 inventory-sort verify + close.
 
-**`v0.7.0 — Create spine` · odd / feature** — *Goal: the recipe graph reads as one connected web — no functional-duplicate parts, materials unified, Create addons cohere, complex tech gated via MineColonies/boss. Everything builds on this, so it goes first.*
-#103 duplicate parts (steel-plate family) · #101 limestones · #102 carbon/graphene · #113 connectivity islands · #132 Create-addon cohesion · #145 kinetic power tier ladder · #92 MineColonies/boss gating · #112 guns through sequenced assembly · #87 Create Stuff'N Additions · #17 recipes tracker (zagwar) · #105 prune merged branches (recurring hygiene sweep).
-**Closes with the thunderdome** — the Create-related set reviewed by feature merit.
+**`v0.7.0 — Create spine` · odd / feature** — *Goal: the recipe graph reads as one connected web — no functional-duplicate parts, materials unified, Create addons cohere; **the recipe/gating spine is built** — cost model applied (~3× basics, GregTech-style step-depth for tiers) and the KubeJS locking + progression-gating mechanism stood up with the Create-spine lock list. Everything builds on this, so it goes first.*
+#219 recipe cost model (3× basics + step-depth) · #220 KubeJS locking + gating mechanism + first lock list · #103 duplicate parts (steel-plate family) · #101 limestones · #102 carbon/graphene · #113 connectivity islands · #132 Create-addon cohesion · #145 kinetic power tier ladder · #92 MineColonies/boss gating · #112 guns through sequenced assembly · #87 Create Stuff'N Additions · #17 recipes tracker (zagwar) · #105 prune merged branches (recurring hygiene sweep).
+**Closes with the thunderdome** — the Create-related set reviewed by feature merit. _(Per `docs/SYSTEMS.md`, each feature pillar refines its content against the model and sets its locks as it's built.)_
 
 **`v0.8.0 — Stabilization I` · even** — *Goal: profile, balance, and bug-fix everything 0.7 added; no new mods.* Spark the Create-spine feature dump (#147 routine), run the mod-conflict catalog (#160), perf-prune by the #157 perf gate, clear any boot-log regressions.
 
-**`v0.9.0 — Economy` · odd / feature** — *Goal: the trade loop is playable end-to-end — coins valued, vendors price, bounties pay, mob/structure inputs wired.* The thinnest-integrated pillar; highest leverage.
-#129 mob drops in the connectivity tool (enabler) · #138 pick the shop/transaction mechanism · #136 coin tiers + price sheet · #137 Bountiful bounty pools · #150 faucet/sink integrity audit · #139 regional export specialization · #90 Numismatics + Trading Floor + Bountiful + wire inputs · #18 loot pass (feeds the economy) · #94 modlist audit (un-anchored mods + new dup clusters).
+**`v0.9.0 — Economy` · odd / feature** — *Goal: the **load-bearing** trade loop is playable end-to-end — coins valued, vendors price, bounties pay, mob/structure inputs wired — and the dynamic-pricing / player-minted-currency question is resolved (what current mods can do vs. custom work).* The thinnest-integrated pillar; highest leverage — and where the economy stops being optional flavor.
+#221 economy tooling: dynamic pricing + player-minted currency (reality-check + design) · #129 mob drops in the connectivity tool (enabler) · #138 pick the shop/transaction mechanism · #136 coin tiers + price sheet · #137 Bountiful bounty pools · #150 faucet/sink integrity audit · #139 regional export specialization · #90 Numismatics + Trading Floor + Bountiful + wire inputs · #18 loot pass (feeds the economy) · #94 modlist audit (un-anchored mods + new dup clusters).
 **Closes with the thunderdome.**
 
 **`v0.10.0 — Stabilization II` · even** — *Goal: profile, balance, and bug-fix everything 0.9 added; no new mods.*
 
-**`v0.11.0 — Survival & Magic` · odd / feature** — *Goal: the survival interlock (seasons × temperature × food) works in play and the magic web is balanced.*
-Survival: #91 interlock (umbrella over #124/#99) + cull the SoL forks · #124 altitude-driven cold · #99 midnight-thoughts anchor · #152 author Cold Sweat world config · #155 death-penalty + gravestone tuning. Magic (the #80 Arcana satellites): #122 post-merge balance · #123 flagship depth · #118 Soul-Reaping intent · #146 gate Ars/Iron's/Occultism behind Create. Flavor: #107 Ender Moon weave (kept; earn its place via a pillar tie).
+**`v0.11.0 — Survival & Magic` · odd / feature** — *Goal: the survival interlock (temperature × diet × seasons-driven scarcity) works in play and the magic web is balanced **with its own locked exclusives** (so a magic specialist is a needed trade partner).*
+Survival: #91 interlock (umbrella over #124/#99) · #124 altitude-driven cold · #99 midnight-thoughts anchor · #152 author Cold Sweat world config · #155 death-penalty + gravestone tuning. _(Diet — AppleSeed replaced the SoL forks in v0.6.0; tune its groups/buffs here.)_ Magic (the #80 Arcana satellites): #122 post-merge balance · #123 flagship depth · #118 Soul-Reaping intent · #146 gate Ars/Iron's/Occultism behind Create + define magic's locked exclusives (per #220). Flavor: #107 Ender Moon weave (kept; earn its place via a pillar tie).
 **Closes with the thunderdome.**
 
 **`v0.12.0 — Stabilization III` · even** — *Goal: profile, balance, and bug-fix everything 0.11 added; no new mods.*
 
-**`v0.13.0 — Aeronautics & logistics` · odd / feature** — *Goal: airships/flight earn their payoff and the transport/logistics ladder is woven; flight interactions documented.* Reached late on purpose — the aeronautics addon ecosystem is young and growing weekly, so later = riper, more stable choices.
+**`v0.13.0 — Aeronautics & logistics` · odd / feature** — *Goal: airships/flight earn their payoff and the transport/logistics ladder is woven; flight interactions documented — **balanced against the scarcity lens** (logistics must relieve regional scarcity without erasing it; keep distance meaningful — `docs/SYSTEMS.md` §5).* Reached late on purpose — the aeronautics addon ecosystem is young and growing weekly, so later = riper, more stable choices.
 #84 Create + Aeronautics harder · #43 flight-system interactions · #144 airship assembly/docking infra · #143 ship power/fuel economy · #142 audit Create machinery on ships · #141 transport/logistics ladder · #140 airship combat balance (Big Cannons) · #125 Touhou-maids weave.
 **Closes with the thunderdome.**
 

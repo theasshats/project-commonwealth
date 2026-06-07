@@ -88,8 +88,9 @@ in `pack.toml` → merge to `main` → tag `vX.Y.Z`.
 
 ## 7 · The five-systems yardstick (why an issue matters)
 Every mod/feature anchors to ≥1 of **Create · magic · economy · aeronautics · survival** (target: **2**) —
-which is also why the pillar milestones are shaped the way they are. A one-pillar mod is a candidate for a
-*second* weave; a no-pillar mod is a **cut** candidate (curation). See `CLAUDE.md` + `docs/DESIGN.md`.
+the five being one causal loop (`docs/SYSTEMS.md`) — which is also why the pillar milestones are shaped the
+way they are. A one-pillar mod is a candidate for a *second* weave; a no-pillar mod is a **cut** candidate
+(curation, `docs/CURATION.md`). See `CLAUDE.md` + `docs/DESIGN.md` + `docs/SYSTEMS.md`.
 
 ## 8 · After triage — update the docs
 Refresh `docs/ROADMAP.md` (milestones + needed-for-release + recently-merged) so the next session
