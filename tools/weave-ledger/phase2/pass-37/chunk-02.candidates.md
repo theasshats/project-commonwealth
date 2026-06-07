@@ -60,6 +60,28 @@ Note: the dossier lists M-09 (luxury→coin) as a candidate — M-09 is retired;
 
 - LEAVE — client-side render overlay only; zero blocks, zero items, zero loot. Pure visual build-assistant with no in-game material surface.
 
+## handcrafted   [anchors: support/decoration (1)]
+
+- from: handcrafted:*_chair / *_table / *_bench (wood furniture, everyday tier) | via: create:cutting (mechanical saw cutting dressed planks into furniture blanks) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: a Create mechanical saw mass-produces furniture components from logs — the furniture workshop runs on clockwork, not a hand-saw, and the output scales to furnish a whole colony rather than one cottage.
+
+- from: handcrafted:*_chair / *_couch / *_desk (mid-tier furniture) | via: minecolonies:composting (carpenter hut request) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: a MineColonies Carpenter produces basic handcrafted furniture on request, cheaper and faster than solo crafting — making the colony the preferred source for bulk interior furnishing and giving a furniture trade lane without forcing a player to solo-craft 64 chairs.
+
+- from: handcrafted:*_chair / any furniture block | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: salvage a mis-placed or surplus chair back to planks and an XP nugget through a crusher — the Create recycling loop covers deco, consistent with M-04's lossy-recycle pattern.
+
+- from: handcrafted:berry_jam_jar | via: farmersdelight:cooking or extradelight:vat | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: handcrafted:berry_jam_jar is a deco-food item that already sits in survival (food). Routing it through cooking adds a recipe step but doesn't advance to a second pillar — survival is already its anchor, and this is a depth move within one pillar, not a cross-system bridge. No new anchor gained.
+
+- from: handcrafted:*_fancy_bed | via: ars_nouveau:enchanting_apparatus | to: magic | motif: M-10 | power: mid | tone: clash | verdict: REJECT | reason: enchanting a decorative bed via arcane infusion is a tone mismatch — handcrafted's rustic/cozy vibe clashes with arcane apparatus ritual. Magic-attuned bedding is contrived; there is no player nod ("of course a four-poster gets enchanted"). The deco palette should keep its mundane, material-only construction feel.
+
+## bettermodsbutton   [anchors: support/UI (1)]
+
+- LEAVE — client UI only; zero blocks, zero items, zero loot. Pause-screen button, no gameplay content.
+
+## moreculling   [anchors: support/performance (1)]
+
+- LEAVE — render-culling performance optimization; zero blocks, zero items. No player-facing content.
+
+
+
 
 
 
