@@ -3,6 +3,10 @@
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme", a short lead paragraph, then sections (see CLAUDE.md). -->
 
+## 0.6.1 — TBD
+
+_Draft placeholder — replace with real notes before release._
+
 ## 0.6.0 — Foundation
 
 This release concentrates on performance and maintenance: a new renderer, a full pass of mod updates,
