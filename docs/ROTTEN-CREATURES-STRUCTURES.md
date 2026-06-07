@@ -1,10 +1,27 @@
 # Rotten Creatures spawn structures — review sheet (issue #106)
 
-Rotten Creatures are gated to **structures only** via In Control!
-(`config/incontrol/spawn.json`): the seven natural mobs (`burned`,
-`frostbitten`, `glacial_hunter`, `swampy`, `undead_miner`, `mummy`,
-`dead_beard`) `allow` inside any structure on the allowlist, then a blanket
-`deny` everywhere else. See `docs/SPAWN-GATING.md` for the rule mechanics.
+> **Resolved — per-mob placement (zagwar, 2026-06-06).** The shared allowlist
+> below was the review draft; zagwar's call **split it per mob** (open question
+> #4). `config/incontrol/spawn.json` now carries one rule set per mob, not the
+> single shared list. The Current/Decide columns further down are the **review
+> snapshot** that informed this; the live mapping is:
+>
+> | Mob | Where it spawns now |
+> |-----|---------------------|
+> | **Undead Miner** | `minecraft:mineshaft`, `mineshaft_mesa`, `betterdungeons:small_dungeon`, `betterdungeons:zombie_dungeon`, `nova_structures:badlands_miner_outpost`; **+** `underground_village:underground_village` only where dark (`maxlight: 7`) |
+> | **Frostbitten / Glacial Hunter** | cold biomes (`c:is_snowy` + `c:is_cold`, incl. Terralith) **+** `nova_structures:stray_fort` |
+> | **Swampy** | swamp biomes (`c:is_swamp`, incl. Terralith) **+** `minecraft:ruined_portal_swamp`, `nova_structures:jungle_ruins`, `toxic_lair` |
+> | **Burned** | all ruined-portal variants **except** ocean (`ruined_portal`, `_desert`, `_jungle`, `_swamp`, `_mountain`, `_nether`) **+** `minecraft:fortress`, `betterdungeons:zombie_dungeon`, `small_nether_dungeon` |
+> | **Mummy** | `minecraft:desert_pyramid` **+** `nova_structures:undead_crypt`, `remnant_graveyard`, `remnant_birch_graveyard`, `creeping_crypt`, `desert_ruins` |
+> | **Dead Beard** | `minecraft:ocean_ruin_warm`, `ocean_ruin_cold`, `ruined_portal_ocean`, `nova_structures:conduit_ruin`; **+** WDA Seven Seas pirate ships (`pirate_junk`, `corsair_corvette`, `unicorn_galleon`, `victory_frigate`, `small_yacht`) at an even lower chance (`random: 0.25`) |
+> | **Immortal** | not gated (keeps default summon behavior) |
+>
+> Net effect vs. the draft: Cataclysm arenas, the illager/citadel/town DnT
+> structures, and the broad shared vanilla set were **dropped** in favour of
+> these tighter per-mob themes; the WDA Seven Seas pirate ships are kept for Dead
+> Beard but at an even lower chance (`random: 0.25`). See `docs/SPAWN-GATING.md`
+> for the rule mechanics and the In-Control!-can't-force-spawns caveat on the
+> Terralith-biome additions.
 
 This sheet lists every structure the pack can generate — **vanilla and from each
 structure mod** — with a one-line description and its **current** allowlist
@@ -167,7 +184,7 @@ villagers); listed for completeness.
    entirely to leave its arenas to their own mobs?
 3. **Surface mob camps** (`skeleton_camp_*`, `illager_camp`, `deepslate_camp`) —
    `deepslate_camp` is currently in; the surface camps are out. Right call?
-4. **Per-mob theming** — currently all seven Rotten Creatures share one
-   allowlist. Worth splitting (e.g. `dead_beard` → pirate ships only,
-   `mummy` → desert pyramid/ruins, `frostbitten`/`glacial_hunter` → snowy/frozen
-   structures)? That would need separate In Control! rules per mob.
+4. ~~**Per-mob theming**~~ — **Resolved (zagwar):** split per mob. See the
+   resolution table at the top; `spawn.json` now has one rule set per mob.
+   `dead_beard` gets ocean ruins + conduit ruin, plus the pirate ships at an
+   even lower chance (`random: 0.25`); Cataclysm arenas dropped entirely.

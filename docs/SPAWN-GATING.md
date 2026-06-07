@@ -49,47 +49,65 @@ levers are a global mob-cap trim and Cold Sweat / Accessories per-tick cost
 under #83 (and the TPS routine #147), distinct from the now-solved client-render
 goal in #98.
 
-### Rotten Creatures — structures only (Task C)
+### Rotten Creatures — per-mob placement (Task C; tuned in #106)
 Rotten Creatures spawns are **code-driven** (`CommonConfig` weights + per-mob
 `can_*_spawn_on` biome tags) — there are no `add_spawns` biome modifiers to
-override — so In Control! is the right tool. Two rules: an `allow` for the seven
+override — so In Control! is the right tool. The first pass gated all seven
 naturally-spawning mobs (`burned`, `frostbitten`, `glacial_hunter`, `swampy`,
-`undead_miner`, `mummy`, `dead_beard`) when inside a structure in the allowlist,
-then a blanket `deny` for the same seven everywhere else. Summoned adds
+`undead_miner`, `mummy`, `dead_beard`) to one shared structure allowlist; #106
+**split that per mob** (zagwar's placement call) so each undead spawns where it
+fits thematically rather than in any dungeon. Each mob now gets its own
+`allow` rule(s) followed by its own blanket `deny`. Summoned adds
 (`zombie_lackey`, `skeleton_lackey`, `hunter_wolf`, scarabs, `immortal`) are
-**not** in the lists, so necromancer/parent-mob mechanics still work.
+**not** in any rule, so necromancer/parent-mob mechanics still work (`immortal`
+keeps its default summon behavior).
 
-> **Structure allowlist — vanilla + modded (issue #106).** Beyond the thematic
-> vanilla structures (mineshaft, stronghold, ancient_city, desert_pyramid,
-> swamp_hut, ocean ruins, ruined portals) the allowlist now also covers
-> dungeon/ruin/abandoned structures from the pack's structure mods, picked to
-> match the vanilla set's undead-friendly theme (no inhabited villages):
+> **Per-mob placement (issue #106).** Structure IDs were read straight from each
+> mod jar's `data/<ns>/worldgen/structure/`, so they're exact (`/locate
+> structure <id>` works); unknown IDs are ignored (logged), not fatal, so the
+> lists are safe to over-cover. Biome conditions use `biometags` with NeoForge
+> convention tags so the same rule covers vanilla **and** Terralith biomes.
 >
-> - **YUNG's Better Dungeons** (`betterdungeons`): `small_dungeon`,
->   `zombie_dungeon`, `skeleton_dungeon`, `spider_dungeon`,
->   `small_nether_dungeon`. (Better Mineshafts/Strongholds overwrite the vanilla
->   `minecraft:mineshaft`/`stronghold` IDs already in the list — no new IDs.)
-> - **Dungeons and Taverns** (`nova_structures`): the crypts, graveyards, ruins,
->   and abandoned/illager dungeons (`undead_crypt`, `creeping_crypt`,
->   `remnant_graveyard`, `remnant_birch_graveyard`, `desert_ruins`,
->   `jungle_ruins`, `wild_ruin`, `ruin_town`, `conduit_ruin`, `toxic_lair`,
->   `bunker`, `deepslate_camp`, `badlands_miner_outpost`, `stray_fort`,
->   `lone_citadel`, `illager_hideout`, `illager_manor`). Taverns, wells,
->   firewatch towers, and inhabited villages are deliberately left out.
-> - **L_Ender's Cataclysm** (`cataclysm`): the abandoned/cursed/ruined sites
->   (`abandoned_spire`, `abandoned_temple`, `abandoned_village`,
->   `cursed_pyramid`, `ruined_citadel`, `sunken_city`, `frosted_prison`).
-> - **When Dungeons Arise: Seven Seas** (`dungeons_arise_seven_seas`): the pirate
->   ships (`pirate_junk`, `corsair_corvette`, `unicorn_galleon`,
->   `victory_frigate`, `small_yacht`) — fitting for `dead_beard`.
+> - **Undead Miner** — structures only: `minecraft:mineshaft`,
+>   `mineshaft_mesa`, `betterdungeons:small_dungeon`, `betterdungeons:zombie_dungeon`,
+>   `nova_structures:badlands_miner_outpost`; **plus** inhabited
+>   `underground_village:underground_village` but **only where dark**
+>   (`maxlight: 7`) — it haunts the unlit tunnels, not the lit village.
+> - **Frostbitten & Glacial Hunter** — cold biomes (`biometags` `c:is_snowy` +
+>   `c:is_cold`, covering Terralith cold biomes) plus the snowy
+>   `nova_structures:stray_fort`.
+> - **Swampy** — swamp biomes (`biometags` `c:is_swamp`, covering Terralith
+>   swamps) plus `minecraft:ruined_portal_swamp`, `nova_structures:jungle_ruins`,
+>   `nova_structures:toxic_lair`.
+> - **Burned** — every ruined-portal variant **except** the underwater one
+>   (`ruined_portal`, `_desert`, `_jungle`, `_swamp`, `_mountain`, `_nether`),
+>   plus `minecraft:fortress`, `betterdungeons:zombie_dungeon`,
+>   `betterdungeons:small_nether_dungeon`.
+> - **Mummy** — `minecraft:desert_pyramid` plus `nova_structures:undead_crypt`,
+>   `remnant_graveyard`, `remnant_birch_graveyard`, `creeping_crypt`,
+>   `desert_ruins`. (The Ancient Mummy variant rolls from the mod's own spawn
+>   config — these rules don't touch its chance.)
+> - **Dead Beard** — `minecraft:ocean_ruin_warm`, `ocean_ruin_cold`,
+>   `ruined_portal_ocean`, `nova_structures:conduit_ruin`; **plus** the WDA Seven
+>   Seas pirate ships (`dungeons_arise_seven_seas:pirate_junk`,
+>   `corsair_corvette`, `unicorn_galleon`, `victory_frigate`, `small_yacht`) at an
+>   even lower chance — a second allow rule gated with `random: 0.25`, so only ~¼
+>   of spawn attempts aboard a ship pass (the rest fall through to the deny). (Its
+>   base rare spawn weight is the mod's own, unchanged.)
+> - **Immortal** — not gated; keeps its default (summon) behavior.
 >
-> IDs were read straight from each mod jar's `data/<ns>/worldgen/structure/`,
-> so they're exact, not guessed. Only the `allow` rule carries the `structure`
-> list; the trailing `deny` is a blanket everywhere-else rule (no `structure`
-> key). Unknown IDs are ignored (logged), not fatal, so the list is safe to
-> over-cover. **Still playtest-gated:** confirm in-game with `/locate structure`
-> that the modded structures generate and that Rotten Creatures actually spawn
-> inside them (and nowhere else).
+> ⚠️ **In Control! filters, it does not force spawns.** An `allow` rule only
+> permits a spawn attempt the game *already makes* there; it cannot add the mob
+> to a biome/structure the mod never registered it for. So the biome rules above
+> work only as far as each mob's `rottencreatures:can_<mob>_spawn_on` biome tag
+> reaches. **Playtest check:** if Frostbitten/Glacial Hunter don't appear in
+> cold **Terralith** biomes (or Swampy in Terralith swamps), the real fix is a
+> KubeJS biome-tag override adding those biome IDs to the mob's
+> `can_<mob>_spawn_on` tag — left as a follow-up rather than shipping guessed
+> Terralith IDs into a datapack (a bad biome ID there is a load error, unlike a
+> harmless unknown In Control! ID). Also confirm with `/locate structure` that
+> the modded structures generate and that each undead spawns in its own set
+> (and nowhere else).
 
 ### Mutants and Zombies — moon-gated, NOT via In Control! (Task C)
 **Route chosen — and why it is *not* an In Control! deny:** M&Z must be off
