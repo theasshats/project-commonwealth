@@ -74,7 +74,20 @@ Existing rows: all M-04 (stone/brick crush-recycle), all split 50/50 or REJECT-m
 
 The 600-block M-04 pass is the wrong framing — it's not about the count, it's about whether a *specific small subset* of high-tier or modded-stone roof blocks has real recycling value. That subset exists: terracotta/deepslate roof variants are expensive to obtain; a crush-recycle path for those specifically is non-trivial. But this is still low-value for the pack's purposes — the dossier is right. However, one genuinely untried angle: mcwroofs provides roof-geometry blocks that could serve as MineColonies colony building material, creating a demand-gate that earns a second anchor.
 
-- NEW | from: mcwroofs stone/brick/terracotta roof variants (a curated subset — e.g. deepslate roof, andesite roof) | via: MineColonies builder hut requests (colony town-hall or house tier-up requests specific roof blocks for architectural upgrades) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: the colony architect's tier-3 town hall specification calls for proper cut-stone roof tiles — not stairs stacked sideways — and the builder submits the request to whoever has the Macaw's Roofs stock
+- NEW | from: mcwroofs stone/brick/terracotta roof variants (a curated subset — e.g. deepslate roof, andesite roof) | via: MineColonies builder hut requests (colony town-hall or house tier-up requests specific roof blocks for architectural upgrades) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: the colony architect's tier-3 town hall spec calls for proper cut-stone roof tiles — not stairs stacked sideways — and the builder submits the request to whoever has the Macaw's Roofs stock
+
+## letmefeedyou   [anchors: support (QoL) (1)]
+
+One prior REJECT (M-33 framing). Behavior-only mod; no items, no loot, no material surface.
+
+LEAVE — multiplayer convenience behavior; nothing to weave.
+
+## galosphere   [anchors: survival (1)]
+
+Existing rows cover M-03, M-04, M-07, M-08, M-30 very thoroughly. M-10 (amber preservation as arcane infusion) and M-19 (haunting) correctly rejected. M-35 (amber preservation as aging) correctly rejected (preservation stops time, doesn't add value-via-time). One genuine gap: the cross-route dependency angle using `galosphere:preserved_transform_recipe` as a *catalyst vessel* that bridges the magic pillar. Galosphere's amber preservation can lock an organic item "in time" — a preserved magic reagent that doesn't decay. No existing row captures this as M-29 (cross-route dependency: magic route requires galosphere preservation as a step, not just as a catalyst):
+
+- NEW | from: galosphere:preserved_transform_recipe (amber preservation — locks an organic item permanently) | via: galosphere:preserved_transform_recipe → ars_nouveau:imbuement or occultism:ritual (a preserved exotic organic as a required stable-reagent input in a magic recipe that would otherwise need a fresh/perishable item) | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: amber preservation lets the magic specialist stockpile a perishable organic reagent indefinitely — the preserved specimen is the only form stable enough to survive the imbuement furnace; the cave-biome explorer and the arcane researcher need each other
+
 
 
 
