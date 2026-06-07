@@ -53,5 +53,16 @@ What has NOT been proposed: a direct CHALLENGE to the surviving ACCEPT rows and 
 
 LEAVE (2nd anchor) — zero items/blocks/methods; the behavioral biome-gate is real survival flavor but no motif covers a placement-constraint-only connection; the correct verdict is Create (1 anchor, well-placed).
 
+## sliceanddice   [anchors: Create, survival (2)]
+
+Dossier: already 2-anchor (Create + survival). The prior rows mostly argue about the Sprinkler-fluid angle (split/noisy), the fertilizer M-26 sink (1 ACCEPT), and season-gated inputs (M-16, 1 ACCEPT each). The mod is well-placed at 2 anchors.
+
+The one genuinely underexplored angle: the **Sprinkler's fluid-intake creates a real cross-route dependency** when the fluid required is magic-sourced. The 2 prior proposals under M-29 (magic fluid through Create sprinkler → crop boost) are split because they're vague about *which* magic fluid and why a player would find it sensible. The sharpest version: Create Enchantment Industry produces an `enchanted_liquid` fluid — a Create-native enchantment fluid that a Create player already knows. Routing that through a Sprinkler to accelerate crops is a Create↔Create linkage (no magic gating needed), not a useful 2nd anchor. The genuine M-29 case would be Ars Nouveau's `source` fluid (if it exposes a piped form) — but there's no confirmed piped Ars source fluid in the methods palette. Reject cleanly.
+
+- CHALLENGE | from: magic fluid (Ars/Occultism) | via: sliceanddice:sprinkler | to: magic | motif: M-29 | verdict: REJECT | hook: the Sprinkler's M-29 frame requires Ars Nouveau to expose a pipeable source fluid — nothing in the methods palette confirms that; without a confirmed fluid type the weave is hypothetical and risks authoring a non-functional recipe
+
+OK — sliceanddice is correctly 2-anchor; no new anchor-adding row survives the red-team. The CHALLENGE above resolves the split Sprinkler-M-29 debate.
+
+
 
 

@@ -32,9 +32,11 @@ LEAVE — pure code library (loot/worldgen/datagen helpers); 0 items/blocks/meth
 
 ## naturescompass   [anchors: support (1)]
 
-Existing rows: M-05 gate-via-Create REJECT (majority correct); M-30 recipe-requires-regional-ore ACCEPT (2, but weakly framed).
+Existing rows: M-05 gate-via-Create REJECT (majority correct); M-30 recipe-requires-regional-ore ACCEPT (2, but weakly framed as bare utility labelling).
 
-- CHALLENGE | from: naturescompass:naturescompass (bare "biome compass helps find regional ore biomes") | via: recipe (vanilla, no change) | to: economy | motif: M-30 | verdict: REJECT | hook: the accepted M-30 rows don't propose an actual recipe change — they label an existing tool "useful near regional scarcity" without routing any region-locked material through its crafting. M-30 requires the *good's key input* to be region-locked; the bare navigator-utility framing doesn't satisfy that.
-- NEW | from: naturescompass:naturescompass | via: recipe (add one region-specific ore/gem shard — e.g. a GTMOGS c:gems/amethyst_shard or a regional flint variant — as a crafting ingredient) | to: economy | motif: M-30 | power: everyday | tone: ok | verdict: ACCEPT | hook: the biome-finder itself consumes a piece of the terrain it reads — a player in the desert uses desert-quartz in their compass, someone in snow-lands needs a frozen-ore shard; the tool that maps scarcity is shaped by it.
+- CHALLENGE | from: naturescompass:naturescompass (bare "biome compass helps find regional ore biomes") | via: recipe (vanilla, no change) | to: economy | motif: M-30 | verdict: REJECT | hook: the accepted M-30 rows label an existing tool "useful near regional scarcity" without routing any region-locked material through its crafting — M-30 requires the good's key input to be region-locked in its recipe, not merely useful for finding regions.
+- NEW | from: naturescompass:naturescompass | via: recipe (add one GTMOGS region-specific ore/gem — e.g. a biome-restricted mineral shard — as a crafting input alongside vanilla compass materials) | to: economy | motif: M-30 | power: everyday | tone: ok | verdict: ACCEPT | hook: the biome-finder is shaped by the scarcity it navigates — crafting a compass requires a fragment of the very ore-type whose biome you want to find, so the tool that maps regional scarcity is itself a product of it.
+
+## beachparty   [anchors: survival (1)]
 
 
