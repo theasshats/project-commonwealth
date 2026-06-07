@@ -25,3 +25,21 @@ LEAVE — biome placement framework, no items/blocks; no surface to weave.
 - NEW | from: illagerinvasion drops (hallowed_gem, illusionary_dust) as raid outputs | via: minecolonies colony guard-hall or barracks research unlock (a colony's guard training researches access to a cheaper Imbuing Table substitute, trading the boss-drop fork vs. colony-labor fork) | to: economy | motif: M-28 | power: endgame | tone: ok | verdict: ACCEPT | hook: a settlement that trains enough guards earns the right to run its own enchantment-upgrading ritual — the colony route to what normally costs an Invoker kill, mirroring the §3 high-tier fork
 
 ## drones   [anchors: aeronautics (1)]
+- NEW | from: drones:controller (assembly controller, the drone brain) | via: create:sequenced_assembly requiring an irons_spellbooks:arcane_essence (or ars_nouveau:source_gem fragment) as a mid-sequence input | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: a drone's guidance circuit needs a whisper of arcane attunement to track its owner — the Create engineer must buy that essence from a magic specialist, making personal flight a cross-route achievement
+
+## opacpvp   [anchors: support (PvP rules/QoL) (1)]
+LEAVE — PvP toggle behavior, zero items/blocks/methods; no surface to weave.
+
+## bettermodsbutton   [anchors: support (client UI) (1)]
+LEAVE — pause-menu UI button, zero items/blocks/methods; no surface to weave.
+
+## smartbrainlib   [anchors: support (library/API) (1)]
+LEAVE — mob AI framework, zero items/blocks/methods; no surface to weave.
+
+## kleeslabs   [anchors: support (QoL) (1)]
+LEAVE — slab-breaking behavior, zero items/blocks/methods; no surface to weave.
+
+## blueprint   [anchors: support (library/API) (1)]
+LEAVE — Team Abnormals API framework; the single template_chest item is too trivial to anchor a pillar and the existing 1-vote REJECT confirms this. No surface to weave.
+
+## copperagebackport   [anchors: survival (1)]

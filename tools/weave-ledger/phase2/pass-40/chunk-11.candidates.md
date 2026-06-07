@@ -33,5 +33,22 @@ The M-34 ACCEPT (row at times_suggested=2) has a structural weakness: the dossie
 
 OK — the M-11 ACCEPT (spirit_fire on vanilla rotten flesh) is borderline weak for the same reason (not a distinct drop), but it's a very minor Ask and has survived multiple rounds. No new proposals: the mod has zero items and truly zero material surface beyond the harder mob behaviors. One survived ACCEPT (M-34) should become REJECT per above; no new weaves are possible without custom loot-table seeding, which would be a pack-design action, not a mod weave.
 
+## rottencreatures   [anchors: survival (1)]
+Existing rows well-cover the main material surface: M-11 ACCEPT (frozen_rotten_flesh + magma_rotten_flesh → spirit_fire), M-10 ACCEPT (corrupted_wart → ars imbuement), M-02 ACCEPT (corrupted_wart → ars crush), M-19 ACCEPT (magma_rotten_flesh → create:haunting), M-34 ACCEPT (Dead Beard treasure_chest + boss drops → economy/trade), M-02 ACCEPT (frozen_rotten_flesh → spirit_fire). The M-19 REJECT on frozen_rotten_flesh (ice/cold vs. soul-fire tone clash) is correctly rejected.
+
+One gap: the `rottencreatures:mummy_head` / `rottencreatures:immortal_head` / other mob heads are decorative trophies — existing rows REJECT M-04 crushing for these (correctly). But the **Immortal (storm-lich / lightning zombie)** and **Dead Beard (pirate captain)** are explicitly boss-tier. The existing M-34 ACCEPT covers their drops for combat-economy supply, but there is no M-15 row (boss-key unlock) for these despite both qualifying. The existing M-15 REJECTs are for proposals that assumed a *guaranteed boss mob* wasn't present — but the dossier confirms Dead Beard and Immortal are named boss-tier spawns with the `treasure_chest` as a unique drop.
+
+- NEW | from: rottencreatures:treasure_chest (Dead Beard pirate captain unique drop) | via: loot-seed + recipe (KubeJS gate) | to: create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: Dead Beard's treasure chest holds a rare schematics fragment or iron-casting blueprint that gates a mid-tier Create ship-cannon or hull recipe — the pirate boss becomes the nautical-tech unlock
+
+Red-team: Does the treasure_chest reliably drop? The dossier lists it as a block (rottencreatures:treasure_chest) that Dead Beard drops or spawns near — it's distinct enough from vanilla loot. The pirate-captain-unlocks-ship-tech pairing is thematically tight (nautical boss → nautical tech). Survives the red-team.
+
+One more gap: the **Swampy zombie** (swamp biome spawn, no distinct unique drop beyond the head) is uncovered. The head is decorative only — existing row correctly REJECTs M-04 crushing of heads. No new proposal warranted there.
+
+Also: the `rottencreatures:corrupted_wart` already has M-10 (imbuement) and M-02 (crush) and M-11 (spirit_fire) ACCEPTs. That's three magic anchors on a single mid-rarity drop — this is over-woven. A subtler issue not yet flagged:
+
+- CHALLENGE | from: rottencreatures:corrupted_wart | via: ars_nouveau:imbuement (M-10) + occultism:spirit_fire (M-11) + ars_nouveau:crush (M-02) | to: magic | motif: M-10 | verdict: REJECT | hook: three separate magic-sink ACCEPTs on one mid-rarity drop is redundant — pick the strongest single route (M-11 spirit_fire is most distinct and thematically resonant for undead plant matter); the M-10 imbuement ACCEPT and M-02 crush ACCEPT both land in magic and are functionally interchangeable, leaving the same weave counted three times
+
+
+
 
 
