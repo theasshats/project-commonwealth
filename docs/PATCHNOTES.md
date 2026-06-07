@@ -3,6 +3,18 @@
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme", a short lead paragraph, then sections (see CLAUDE.md). -->
 
+## 0.6.1 — GC tuning
+
+A small follow-up to the 0.6.0 renderer work, focused on frame pacing. The client instance's garbage
+collector now targets a 50 ms maximum pause (down from 200 ms), so the brief periodic collection hitches
+are shorter and less noticeable on high-refresh displays. The change ships in the installer, so a fresh
+install or reinstall picks it up; existing instances keep their current Java args until reinstalled (the
+flags are listed in `docs/PRISM-SETUP.md` if you want to apply them by hand).
+
+The dedicated-server launch script switched to Generational ZGC with a 32 GB fixed heap — sub-millisecond
+pauses for the server's high allocation rate. This affects the server only; it has no bearing on the
+client install.
+
 ## 0.6.0 — Foundation
 
 This release concentrates on performance and maintenance: a new renderer, a full pass of mod updates,
