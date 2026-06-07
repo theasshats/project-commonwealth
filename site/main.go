@@ -68,7 +68,7 @@ func loadConfig() config {
 	return config{
 		listenAddr: envOr("LISTEN_ADDR", ":8080"),
 		mcAddr:     envOr("MC_ADDR", "mc.ishimura.xyz:25565"),
-		githubRepo: envOr("GITHUB_REPO", "Xela112233/Derpack-X"),
+		githubRepo: envOr("GITHUB_REPO", "derpack-org/Derpack-X"),
 	}
 }
 
