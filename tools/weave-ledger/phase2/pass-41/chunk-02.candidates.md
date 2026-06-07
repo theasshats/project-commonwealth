@@ -75,6 +75,13 @@ OK — M-29 (cross-cast enchanting apparatus dual-reagent) and M-37 (MineColonie
 
 - NEW | from: ars_n_spells cross-casting ritual (requires two-tablet inscription, one from each magic system) | via: service mechanic — the ritual inherently requires input from both magic specialists; neither can perform it alone | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: cross-casting is a collaboration, not a solo craft — the Ars specialist and the Iron's specialist must both contribute their tablets and be present, making every cross-cast a player-economy service event that neither can shortcut (and neither can sell a cross-cast capability, only the cross-cast product).
 
+## create_confectionery   [anchors: Create + survival (2)]
+OK — M-12 (chocolate food chain), M-10 (ruby chocolate imbuement), M-26 (effect candy consumption), M-16 (seasonal candy), M-04 (deco crush) well-covered. Two gaps:
+
+- NEW | from: create_confectionery:hot_chocolate (grants Regeneration; a warm comfort drink) | via: config-tie (Cold Sweat warming-items config tag — add hot_chocolate to the warming-consumables list) | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: the chocolate factory's most premium output is also your cold-weather field ration — Cold Sweat's warming mechanics make hot chocolate a practical consumable in winter biomes, not just a luxury, so demand for the whole confectionery chain spikes when the temperature drops (the existing M-12 REJECT for this angle used the wrong motif; M-26 is correct: it's a consumption sink driven by Cold Sweat survival pressure, not a processing-chain pull).
+
+- NEW | from: create_confectionery chocolate bars / effect candies (multi-step Create-processed luxury foods) | via: minecolonies requests/deliveries (Cook hut or Tavern hut requests confectionery restockables) | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: a growing colony wants morale — the Cook hut stocking chocolate bars and Speed candies for colony workers is a standing bulk order that ties the confectionery specialist to the settlement-builder, pulling on the full cocoa→Create chain to keep a colony fed and productive.
+
 ## aeronautics   [anchors: aeronautics + Create (2)]
 OK — M-10 (levitite magic), M-13 (fuel), M-22 (lunar levitite), M-31 (docking logistics), M-33 (docking trading-post), M-08 (levitite→coin), M-24 (propeller drivetrain), M-10 (goggles enchanting) all covered. One structural gap:
 
