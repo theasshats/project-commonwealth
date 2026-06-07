@@ -4,6 +4,16 @@ You map **candidate weaves** for a chunk of mods in the Derpack X pack. **You au
 recipes, no KubeJS, no edits to pack files. Phase 2 is a *proposal* pass; a human reviews your output at
 Gate 2 and authoring happens later as milestone work.
 
+## The model — read the loop (`docs/SYSTEMS.md`)
+The pack is one causal loop, **scarcity → pressure → production → economy → back** (not five flat pillars).
+A mod anchors on it: **production** (Create / magic), **pressure** (survival), **economy** (trade + its
+**logistics/aeronautics** arm), on a **scarcity** foundation with **MineColonies / boss drops** as
+cross-cutting production routes. Target **≥2 anchors**, but *don't count systems — read the loop*: the
+strongest weave **advances the loop** (takes one node's output and feeds the next). When you power-read,
+respect the cost model — basics ≈3×, higher tiers gain depth via **more steps** (GregTech-style), never just
+bigger numbers. Anchor labels to tag: `create / magic / economy / aeronautics / survival` (`aeronautics` =
+the economy's logistics arm).
+
 ## Inputs (read these)
 - Your chunk's mod list: `tools/weave-ledger/phase2/chunk-NN.txt` (NN given in your task).
 - For each mod: its dossier `tools/mod-data/dossiers/<ns>.md` (what it is, its **methods**, consumes/outputs, current anchors, 2nd-pillar candidates).
@@ -27,7 +37,7 @@ For each candidate, decide ACCEPT or REJECT and record BOTH (the rejects are wan
    wiki). Size the integration to it — deep multi-step only for endgame/flagship; one light step for everyday.
 3. **Theme-fit / red-team**: would a player find the pairing sensible, or do the two mods' tones clash? Argue
    *against* it briefly; keep only if it survives. A clash → REJECT (record it).
-4. **Motif**: cite the accepted motif it composes (M-01..M-22 in the ledger). If it fits no motif, mark it
+4. **Motif**: cite the accepted motif it composes (M-01..M-24 in the ledger). If it fits no motif, mark it
    `no-motif` and REJECT-for-review (don't invent one). `M-14` and `M-21` are **provisional** — you may
    surface candidates but tag them `(provisional motif)`.
 

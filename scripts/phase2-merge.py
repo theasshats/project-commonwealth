@@ -15,7 +15,7 @@ Pass layout it understands:
 Output: CANDIDATES.tsv (machine) + CANDIDATES.md (rendered, sorted by times_suggested desc).
 Run after every pass. Pure stdlib.
 """
-import glob, os, re, json
+import glob, os, re, json, csv
 from collections import defaultdict
 
 PH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'tools', 'weave-ledger', 'phase2')
@@ -98,6 +98,42 @@ def collect():
     return runs
 
 
+def write_convergence(passes_n, rows):
+    """Upsert one row per distinct pass-count into the convergence log (the saturation curve). Idempotent:
+    re-running the merge at the same pass-count overwrites that row; a new pass appends. `new` = unique-count
+    growth vs the previous pass-count — watch it flatten to spot saturation."""
+    COLS = ['passes', 'unique', 'ge2', 'ge5', 'gate2_core', 'opus']
+    tsv = os.path.join(PH, 'CONVERGENCE.tsv')
+    hist = {}
+    if os.path.exists(tsv):
+        for r in csv.DictReader(open(tsv), delimiter='\t'):
+            hist[int(r['passes'])] = {c: int(r[c]) for c in COLS}
+    hist[passes_n] = dict(passes=passes_n, unique=len(rows),
+                          ge2=sum(1 for r in rows if r[0] >= 2),
+                          ge5=sum(1 for r in rows if r[0] >= 5),
+                          gate2_core=sum(1 for r in rows if r[0] >= 5 and r[7] == 'ACCEPT'),
+                          opus=sum(1 for r in rows if r[1]))
+    ordered = [hist[k] for k in sorted(hist)]
+    with open(tsv, 'w', encoding='utf-8') as t:
+        t.write('\t'.join(COLS) + '\n')
+        for r in ordered:
+            t.write('\t'.join(str(r[c]) for c in COLS) + '\n')
+    md = ['# Phase 2.x — convergence log (the saturation curve)', '',
+          '> One row per distinct pass-count, upserted by `scripts/phase2-merge.py` on each merge. `new` = '
+          'unique-candidate growth since the previous pass-count; when it flattens, the search has saturated.',
+          '> Tracking starts here (post cut-mod exclusion); earlier ad-hoc snapshots are in `DECISIONS.md`.',
+          '> **⚠ The library-freeze was retired at pass 16+** — every pass now covers all ~351 dossiers (≈160 '
+          'were skipped before), so expect `new` to **re-open** (jump) before it settles again.', '',
+          '| passes | unique | ≥2 | ≥5 | Gate-2 core (≥5+ACCEPT) | opus | new |',
+          '|--:|--:|--:|--:|--:|--:|--:|']
+    prev = None
+    for r in ordered:
+        new = '' if prev is None else f"{r['unique'] - prev:+d}"
+        md.append(f"| {r['passes']} | {r['unique']} | {r['ge2']} | {r['ge5']} | {r['gate2_core']} | {r['opus']} | {new} |")
+        prev = r['unique']
+    open(os.path.join(PH, 'CONVERGENCE.md'), 'w', encoding='utf-8').write('\n'.join(md) + '\n')
+
+
 def main():
     cand = defaultdict(lambda: {'passes': set(), 'opus': False, 'verdicts': defaultdict(int),
                                 'from': '', 'via': '', 'to': '', 'motif': '', 'hook': ''})
@@ -143,8 +179,10 @@ def main():
     for n, opus, mod, frm, via, pillar, motif, consensus, verdicts, hook in rows:
         md.append(f'| {n} | {"✓" if opus else ""} | `{mod}` | {frm[:46]} | {via[:34]} | {pillar} | {motif} | {consensus} |')
     open(os.path.join(PH, 'CANDIDATES.md'), 'w', encoding='utf-8').write('\n'.join(md) + '\n')
+    write_convergence(len(passes), rows)
     print(f'passes: {len(passes)} | unique candidates: {len(rows)} | with opus: {sum(1 for r in rows if r[1])}')
-    print(f'  multi-pass (>=2): {sum(1 for r in rows if r[0] >= 2)}  -> CANDIDATES.md/.tsv')
+    print(f'  multi-pass (>=2): {sum(1 for r in rows if r[0] >= 2)} | >=5: {sum(1 for r in rows if r[0] >= 5)} '
+          f'| Gate-2 core (>=5+ACCEPT): {sum(1 for r in rows if r[0] >= 5 and r[7] == "ACCEPT")}  -> CANDIDATES + CONVERGENCE')
     if excluded:
         print(f'  excluded {len(excluded)} candidate(s) for {len(set(m for m,_,_,_ in excluded))} cut mod(s): '
               f'{", ".join(sorted(set(m for m,_,_,_ in excluded)))}')
