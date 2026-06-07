@@ -29,13 +29,14 @@ See `docs/ROADMAP.md` ("Milestones — the road to 1.0") for the per-version sch
 
 ## The rubric — a mod survives only if it passes every gate (or is explicitly exempted)
 
-1. **System anchor (the north star).** It feeds the system loop (`docs/SYSTEMS.md`) at one of its named
-   pillars — **Create, magic, economy, aeronautics/logistics, survival** (or a cross-cutting production
-   route: MineColonies, boss drops; or the scarcity foundation / pressure layer) — *or* a sanctioned
-   support role: **library/API, performance, QoL, decoration palette, or curated friend-group flavor**.
-   Anchors to nothing → **cut**. (`docs/DESIGN.md` + `docs/SYSTEMS.md`; the "if none, why is it here?"
-   test. The goal is *two* anchors — one is the floor, so a one-pillar mod is a candidate for a second
-   weave, not a cut.)
+1. **System anchor (the north star).** It feeds the system loop (`docs/SYSTEMS.md`) at one of its
+   systems — **Create** or **magic** (production), **survival** (pressure), or the **economy**
+   (distribution & trade, including its **logistics/aeronautics** arm) — or a cross-cutting production
+   route (MineColonies, boss drops) or the scarcity foundation — *or* a sanctioned support role:
+   **library/API, performance, QoL, decoration palette, or curated friend-group flavor**. Anchors to
+   nothing → **cut**. (`docs/DESIGN.md` + `docs/SYSTEMS.md`; the "if none, why is it here?" test. The
+   goal is *two* anchors — one is the floor, so a one-system mod is a candidate for a second weave, not a
+   cut.)
 2. **Not an orphan.** A dependency-only library must still have an installed dependent (#100).
    Content-free **and** undepended-on → cut.
 3. **No redundant mechanic.** If it overlaps another mod's mechanic it must be the **canonical pick** or

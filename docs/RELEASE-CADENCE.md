@@ -77,14 +77,14 @@ per-release deliverable here.
 ## Pillar-weave review (between pillars)
 
 The thunderdome reviews **mods against each other** *within* a feature version. The **weave review**
-reviews **pillars against each other** — the seams *between* the five systems, which no single pillar
+reviews **systems against each other** — the loop seams *between* the systems, which no single pillar
 version owns. At this stage it checks the seams **connect and function** (structural); the *deep* taste
 weaving is the open weaving-strategy question (`docs/WEAVING-STRATEGY.md`).
 
-- **Incremental** — as each pillar lands (its odd version), it's wired into the pillars already built,
+- **Incremental** — as each system lands (its odd version), it's wired into the systems already built,
   and the following even stabilization checks those seams didn't break.
-- **Comprehensive at 0.15** — the last feature version includes a full pillar-weave review: does the
-  whole five-system machine actually interlock before the 1.0 freeze? Close the gaps and contradictions.
+- **Comprehensive at 0.15** — the last feature version includes a full weave review: does the whole
+  loop actually interlock before the 1.0 freeze? Close the gaps and contradictions.
 
 Seams to check (examples): Create ↔ economy (coins minted from Create-processed scarce metals, #136),
 Create ↔ magic (magic gated behind Create components, #146), Create ↔ aeronautics (ships powered and
@@ -101,21 +101,21 @@ never stacks. Extends past 0.11 — the version count is whatever the pillars ne
 | **0.6.0** | even | Stabilization (Foundation) | CI, boot-log, perf baseline, modlist hygiene — decks cleared. *(already even-aligned)* |
 | **0.7.0** | odd | **Feature** | **Create spine** — recipe-web cohesion, addon integration, complex-tech gating. *Everything builds on this, so it goes first.* |
 | **0.8.0** | even | Stabilization I | Profile + balance + bug-fix everything 0.7 added. |
-| **0.9.0** | odd | **Feature** | **Economy** — player-minted coins, vendors/pricing, bounties, wired mob/structure inputs. |
+| **0.9.0** | odd | **Feature** | **Economy & logistics** — player-minted coins, vendors/pricing, bounties, wired inputs, **plus the logistics/aeronautics movement arm** (airship payoff + transport ladder). The economy *is* the distribution stage; aeronautics is its physical arm, so they build together. |
 | **0.10.0** | even | Stabilization II | Profile + balance + bug-fix everything 0.9 added. |
-| **0.11.0** | odd | **Feature** | **Survival & Magic** — the seasons × temperature × food interlock, and the balanced magic web. |
+| **0.11.0** | odd | **Feature** | **Magic** — the magic web bridged into one progression, balanced, with its own locked exclusives. |
 | **0.12.0** | even | Stabilization III | Profile + balance + bug-fix everything 0.11 added. |
-| **0.13.0** | odd | **Feature** | **Aeronautics & logistics** — the airship payoff + the transport/logistics ladder. |
+| **0.13.0** | odd | **Feature** | **Survival** — the seasons × temperature × diet interlock; the world pushing back, tuned. |
 | **0.14.0** | even | Stabilization IV | Profile + balance + bug-fix everything 0.13 added. |
-| **0.15.0** | odd | **Feature — LAST CALL + weave review** | **Polish & site** — wiki, onboarding, QoL, claims, the open decisions — **plus the comprehensive pillar-weave review** (all five systems reviewed *between* each other). Final additions/integrations; then feature freeze. |
+| **0.15.0** | odd | **Feature — LAST CALL + weave review** | **Polish & site** — wiki, onboarding, QoL, claims, the open decisions — **plus the comprehensive weave review** (all systems reviewed *between* each other — the loop seams). Final additions/integrations; then feature freeze. |
 | **1.0.0** | even | **Release (perf patch)** | Feature-frozen. Final performance + RAM tuning, ore-gen finalized, renamed, CI required → ship the public build. |
 
-**Migration note.** This expands the milestone set to one pillar per odd version. From the current
-scheme: **Economy** 0.8 → 0.9, **Survival & Magic** 0.9 → 0.11, **Aeronautics & logistics** 0.10 → 0.13,
-**Polish & site** 0.11 → 0.15; **0.6 Foundation** and **1.0 Release** stay; and **four new even
-stabilization milestones** (0.8, 0.10, 0.12, 0.14) are created. Trade-off: more release ceremony, but
-every pillar gets its own profile/balance pass before the next piles on. The order of pillars across the
-odd slots is adjustable. (Milestones are re-organised in the GitHub UI; the automated tooling here can
+**Milestone shape.** One system per odd version, each followed by its even stabilization. The feature
+pillars are **Create (0.7) → Economy & logistics (0.9) → Magic (0.11) → Survival (0.13) → Polish + weave
+(0.15)** — note **aeronautics folds into the Economy pillar** (it's the economy's logistics arm, not a
+separate system — `docs/SYSTEMS.md`), and **Survival and Magic are split into their own pillars** (they
+were briefly combined). **0.15 stays the last feature** version. (Milestones are re-organised in the
+GitHub UI or via the milestone-restructure script shipped with this change; the automated MCP tooling can
 set an issue's milestone but can't create or rename one.)
 
 ## Why one pillar per release (not mixed)
@@ -160,6 +160,6 @@ per `docs/DESIGN.md`: **1.1 odd** (feature / thunderdome) → **1.2 even** (perf
 
 ---
 
-_Refs: `docs/DESIGN.md` (the five-system goal + content-update model), `docs/WEAVING-STRATEGY.md` (the
+_Refs: `docs/SYSTEMS.md` (the systems loop), `docs/DESIGN.md` (the goal + content-update model), `docs/WEAVING-STRATEGY.md` (the
 taste-weaving question), `docs/MODLIST-AUDIT.md` (path forward), #157 (curation rubric), #160 (conflict
 catalog), #161 (mod-update pass), #147 (spark routine)._

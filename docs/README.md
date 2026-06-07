@@ -11,8 +11,8 @@ off those two.
 
 | Doc | Purpose |
 |---|---|
-| [`DESIGN.md`](DESIGN.md) | **The why** behind the architecture — the "five systems" rationale and all the architectural decisions. If a decision feels weird, look here first. |
-| [`SYSTEMS.md`](SYSTEMS.md) | **The canonical structural model** — the five systems as one causal loop (scarcity → pressure → production → distribution; *Eco*-inspired). How the parts interlock: producers, connectors, pressure, the recipe/gating spine, the ecological cost. |
+| [`DESIGN.md`](DESIGN.md) | **The why** behind the architecture — the systems-loop rationale and all the architectural decisions. If a decision feels weird, look here first. |
+| [`SYSTEMS.md`](SYSTEMS.md) | **The canonical structural model** — the systems as one causal loop (scarcity → pressure → production → economy; *Eco*-inspired). How the parts interlock: production (Create/magic), the economy (trade + logistics/aeronautics), pressure (survival), the recipe/gating spine, the ecological cost. The old flat "five systems" framing is retired here. |
 | [`CURATION.md`](CURATION.md) | **The curation rubric** — the charter every keep/cut pass scores mods against (the 8 gates). |
 | [`RECIPES.md`](RECIPES.md) | The "Made through Create" recipe convention **and the live triage ledger** — the most-referenced doc; the source of truth for recipe changes. |
 | [`CONNECTIVITY.md`](CONNECTIVITY.md) | The "one web, not many clusters" connectivity metric — turns the north-star web goal into a number you can re-check (`tools/recipe-graph/`). |
@@ -56,8 +56,8 @@ priorities. See [`archive/`](archive/):
 
 ## Conventions
 
-**The canonical split — don't duplicate the "five systems" preamble.** Several docs open with a version of
-the five-systems framing; they are **not** interchangeable:
+**The canonical split — don't duplicate the systems preamble.** Several docs open with a version of
+the systems-loop framing; they are **not** interchangeable:
 - `SYSTEMS.md` is **canonical for the structure** (the *how it interlocks* — the loop). The model itself.
 - `DESIGN.md` is **canonical for the rationale** (the *why*) — cite it; don't re-argue it elsewhere.
 - `ROADMAP.md` is the **plan** (the *when / in what order*).

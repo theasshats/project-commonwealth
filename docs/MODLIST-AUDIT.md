@@ -6,17 +6,18 @@ CI digest will nail those. This is a planning artifact, not a final decision lis
 
 ## The goal (the yardstick)
 **A cooperative PvPvE Create pack for a small crew (~10), scarcity-driven, where every mod earns its
-place by anchoring to one of five systems — or it's cut.** The five form one causal loop (the *Eco*-style
-**scarcity → pressure → production → distribution**; canonical model in `docs/SYSTEMS.md`):
-- **Create spine** — the tech core; things made through Create (incl. **Create Aeronautics**). *Producer.*
+place by anchoring to one of the systems — or it's cut.** The systems form one causal loop (the *Eco*-style
+**scarcity → pressure → production → economy**; canonical model in `docs/SYSTEMS.md`; the old flat "five
+systems" framing is retired):
+- **Survival** — Cold Sweat × diet variety (Diet) × the hostile world. *Pressure — generates demand.*
+  (Serene **seasons** is a driver feeding scarcity + survival, not its own system.)
+- **Create spine** — the tech core; things made through Create. *Producer.*
 - **Magic web** — Ars / Iron's / Occultism, bridged; its own locked exclusives. *Producer.*
-- **Economy** — Numismatics + Trading Floor + bounties (scarce regional ores → goods → trade). *Connector
-  (moves value). In the spirit of Eco: emergent in mechanism (not a forced economy) but **load-bearing**
-  by design — the necessary consequence of production exclusivity, no longer "optional flavor."*
-- **Aeronautics & logistics** — ships, trains, drones; the flight/transport ladder. *Connector (moves
-  matter); the system that most threatens scarcity, so it carries its own balance lens.*
-- **Survival** — Cold Sweat × diet variety (Diet) × the hostile world. *Pressure.* (Serene **seasons** is
-  a driver feeding scarcity + survival, not its own system.)
+- **Economy** — the distribution stage: moves **value** (Numismatics + Trading Floor + bounties — trade)
+  *and* **matter** (its **logistics/aeronautics** arm: Create Aeronautics ships/trains/drones, the
+  flagship). *Emergent in mechanism (not a forced economy) but **load-bearing** by design — the necessary
+  consequence of production exclusivity, no longer "optional flavor." Its logistics arm is the part that
+  most threatens scarcity, so it carries a balance lens.*
 
 Under it: **scarcity** (regional ore-gen) is the foundation, and **MineColonies** (cheaper basics +
 locked exclusives, across tech *and* magic) and **boss drops** (high-tier components) are cross-cutting
@@ -35,12 +36,12 @@ mods allowed *only if* they anchor to a system. The test for every row below: **
 | Create Aeronautics core | ✅ present (+ aeronautics-compatability) |
 | Joke-mod audit | 🟡 this doc + #45 / #60 |
 
-**What the modlist reveals, re-framed under the five-system goal:** the pack is **much broader than
+**What the modlist reveals, re-framed under the systems loop:** the pack is **much broader than
 just "Create"** (heavy food / structure / magic / colony content) and runs **several systems in
 parallel** (magic, economy, colonies). Under the old "everything routes through Create" framing those
-read as drift; under the five-system goal they're **fine — they're the other pillars** — *provided
-each mod anchors to one*. So the work isn't subordinating them to Create; it's (a) cutting what
-anchors to nothing and (b) building the **economy** pillar so the content sprawl gains purpose (§D).
+read as drift; under the loop they're **fine — they're the other systems** — *provided each mod anchors
+to one*. So the work isn't subordinating them to Create; it's (a) cutting what anchors to nothing and
+(b) building the **economy** so the content sprawl gains purpose (§D).
 
 ## A. Fit flags
 
@@ -97,7 +98,7 @@ costs, or nerf the loot source:
   gear/valuables that bypass mine-and-sell. **Loot pass (#18):** strip free metal/diamond gear;
   optionally seed Numismatics coins as rare loot.
 
-## D. The two big design calls — decided (per the five-system goal)
+## D. The two big design calls — decided (per the systems loop)
 1. **MineColonies = a progression on-ramp, woven in (not a rival economy to disable).** `minecolonies`
    (+ `structurize`, `domum-ornamentum`, `stylecolonies`, `ct-overhaul-village`, `multi-piston`,
    `towntalk`, `blockui`) stays first-class: it's one of the unlock paths for **complex Create tech**

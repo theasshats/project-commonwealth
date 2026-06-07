@@ -1,10 +1,12 @@
 # The systems — how Derpack X interlocks
 
 > **Status: accepted** (ratified by Xela112233 + zagwar, v0.6.0). This is the **canonical structural
-> model** for the pack — the successor to, and reconciliation of, the older flat "five systems / five
-> pillars" framing in `docs/DESIGN.md`. The structure is a *causal loop*, not a list of peers; the five
-> named pillars (Create, Magic, Economy, Aeronautics, Survival) survive as the loop's recognizable parts
-> and as the milestone organization, but the loop is the truth and the count falls out of it.
+> model** for the pack — it **replaces the old flat "five systems / five pillars" framing** (that phrasing
+> is retired). The structure is a *causal loop*, not a list of peers:
+> **scarcity → pressure → production → economy**, and back. The systems a mod can anchor to are
+> **Create** and **Magic** (production), **Survival** (pressure), and **Economy** (distribution & trade) —
+> with **logistics/aeronautics** as the Economy's physical movement arm, **scarcity** the foundation, and
+> **MineColonies + boss drops** the cross-cutting production routes. Don't count systems; read the loop.
 >
 > **Much of the production/trade interlock below is design *intent*, not yet implemented** — the recipe
 > cost model, locked exclusives, and boss/colony gating are targets the per-pillar feature work builds
@@ -28,23 +30,24 @@ governance) is called out inline and in **Open / unsettled**.
 
 ## The core loop
 
-The pack isn't five parallel things. It's one loop, and naming the parts is secondary to seeing the
-flow:
+The pack isn't a list of parallel systems. It's one loop, and naming the parts is secondary to seeing
+the flow:
 
 ```
-   SCARCITY  ──drives──▶  PRESSURE  ──creates demand──▶  PRODUCTION  ──feeds──▶  DISTRIBUTION
-  (foundation)        (Survival + Danger)               (the makers)            (the movers)
-       ▲ ▲                                                    │                         │
-       │ └──── production damages the world; scarcity worsens ◀┘                        │
-       └─────────────  goods are consumed & appetite grows; scarcity renews  ◀──────────┘
+   SCARCITY  ──drives──▶  PRESSURE  ──creates demand──▶  PRODUCTION  ──feeds──▶  ECONOMY
+  (foundation)        (Survival + Danger)               (the makers)         (trade + logistics)
+       ▲ ▲                                                    │                       │
+       │ └──── production damages the world; scarcity worsens ◀┘                      │
+       └────────────  goods are consumed & appetite grows; scarcity renews  ◀─────────┘
 ```
 
 - **Scarcity** is the axiom — the premise everything else rests on.
 - **Pressure** turns scarcity into moment-to-moment *demand* (you need things).
 - **Production** makes the things — but no single route can make *everything*, by design — **and it has
   an ecological cost: industry damages the shared world, feeding back into scarcity and pressure** (§3a).
-- **Distribution** moves value and matter between players, so the gaps in any one player's production
-  get filled by trade.
+- **Economy** is the distribution stage: it moves **value** (trade — Numismatics/Trading Floor) **and
+  matter** (its **logistics/aeronautics** arm), so the gaps in any one player's production get filled by
+  trade. *(Distribution isn't a separate system — it **is** the economy.)*
 
 The whole point: **nobody is self-sufficient**, so specialization and trade *emerge* from the mechanics
 rather than being forced by an economy mod. (~10 players, ~3 needed to cover all production.) Unlike
@@ -87,9 +90,9 @@ make things nobody needs and the trade loop never turns. It has **two faces**:
 
 Scarcity is itself the deepest pressure — it underlies both faces.
 
-> **Bosses sit in two places at once** (like aeronautics straddles production and distribution): they're
-> a *pressure* (the danger that drives demand and gear progression) **and** a *production route* (their
-> high-tier drops — §3). That dual role is intentional, not a contradiction.
+> **Bosses sit in two places at once** (like aeronautics is both a Create build *and* the economy's
+> logistics arm): they're a *pressure* (the danger that drives demand and gear progression) **and** a
+> *production route* (their high-tier drops — §3). That dual role is intentional, not a contradiction.
 
 ### Food: the diet system (replacing Spice of Life)
 
@@ -214,27 +217,33 @@ constraints above are the design problem to crack before it's built, and it may 
 
 ---
 
-## 4. Distribution — the movers
+## 4. Economy — distribution & trade (it moves value *and* matter)
 
-The two systems that move things between players, closing the gaps that exclusivity opens:
+The distribution stage **is** the economy: the one system that moves things between players, closing the
+gaps that exclusivity opens. It has two arms:
 
-- **Economy — moves *value*.** Numismatics + Trading Floor + bounties. **No longer "optional flavor":**
-  it's the *necessary consequence* of production exclusivity. Because no route makes everything and base
-  crafting is hard, players must exchange — economy is the layer that exchange runs on. Scarcity →
+- **Trade — moves *value*.** Numismatics + Trading Floor + bounties. **No longer "optional flavor":** it's
+  the *necessary consequence* of production exclusivity. Because no route makes everything and base
+  crafting is hard, players must exchange — the economy is the layer that exchange runs on. Scarcity →
   pressure → exclusive production → **trade**. *(The hard part — dynamic pricing and Eco-style
   player-minted currencies — is unsolved; see "Open / unsettled.")*
-- **Aeronautics & logistics — moves *matter & reach*.** Create Aeronautics ships, trains, drones. A
-  **producer⇄connector hybrid**: it's *built and powered through Create* (a producer output), but it
-  *functions* as the distribution network for matter. It's also the system that most **threatens the
-  scarcity foundation** — cheap flight collapses the distance that makes regions specialize — so it
-  carries its own dedicated balance lens (keep travel meaningful, don't let logistics erase regional
-  scarcity).
+- **Logistics / aeronautics — moves *matter & reach*.** Create Aeronautics ships, trains, drones: the
+  economy's **physical movement arm**. It's *built and powered through Create* (so it doubles as a Create
+  build) but its *role in the loop* is distribution — it's how goods physically get to where they're
+  traded and used. It's also the part that most **threatens the scarcity foundation** — cheap flight
+  collapses the distance that makes regions specialize — so it carries its own **balance lens** (keep
+  travel meaningful; don't let logistics erase regional scarcity — §5).
+
+> **Why aeronautics folds in here.** It used to be framed as a co-equal "connector" beside the economy;
+> it's cleaner as the economy's logistics arm — distribution of *matter* serving the same trade loop as
+> distribution of *value*. It keeps its own **build milestone** (flagship content; folded into the
+> Economy pillar — v0.9.0), but it isn't a separate top-level system.
 
 ---
 
-## 5. Closing the loop — distribution relieves scarcity, it doesn't end it
+## 5. Closing the loop — the economy relieves scarcity, it doesn't end it
 
-The return arrow is the load-bearing part, and it's easy to get wrong: if distribution *solved* scarcity
+The return arrow is the load-bearing part, and it's easy to get wrong: if the economy *solved* scarcity
 the loop would run once and stop (everyone self-sufficient, no more trade). It doesn't, for three
 reasons:
 
@@ -249,10 +258,10 @@ reasons:
   their appetite grows and pushes them into farther, **more dangerous and scarcer** frontiers — new
   scarcity *and* new danger-pressure. The loop re-opens at a higher tier rather than closing.
 
-**The balance constraint this implies (the aeronautics lens).** Distribution must **relieve scarcity
+**The balance constraint this implies (the logistics lens).** The economy must **relieve scarcity
 locally without erasing it globally.** The failure mode is cheap, frictionless logistics — especially
 aeronautics — making *everything* reachable by *everyone*: that collapses regional specialization, makes
-players self-sufficient, and breaks the loop. So the connectors are tuned to *bridge* distance at a
+players self-sufficient, and breaks the loop. So the logistics arm is tuned to *bridge* distance at a
 cost, never to *annihilate* it. Keep travel and trade meaningful; if the map stops mattering, the whole
 machine stops.
 
@@ -261,31 +270,32 @@ machine stops.
 ## 6. What this means for mod fit (curation)
 
 Every mod still has to anchor *somewhere in this loop* — the `docs/CURATION.md` rubric, restated against
-the loop instead of "five systems":
+the loop. A mod anchors to one of the four systems (or a sanctioned support role):
 
-- a **pressure** source — environmental (survival/seasons/scarcity) or danger (hostile mobs, bosses,
+- **Survival** (pressure) — environmental (Cold Sweat / diet / seasons) or danger (hostile mobs, bosses,
   perilous exploration), or
-- a **producer**, a producer's **exclusive output**, or an **alternate route** into one (Create /
-  MineColonies / Magic / boss drops), or
-- a **connector** (economy or aeronautics/logistics), or
+- **Create** or **Magic** (production) — a producer, a producer's **exclusive output**, or an **alternate
+  route** into one (the MineColonies or boss-drop routes), or
+- **Economy** (distribution & trade) — a trade/currency/bounty mechanic, **or logistics/aeronautics** (the
+  movement arm), or
 - a sanctioned **support role** (library/API, performance, QoL, decoration palette, curated flavor).
 
 Anchors to **nothing** → cut. The target is still **two** anchors — and the loop makes the natural pair
-obvious: a healthy mod is usually *something you produce that pressure demands and a connector moves.*
+obvious: a healthy mod is usually *something you produce that pressure demands and the economy moves.*
 
 ---
 
 ## Open / unsettled
 
-- **Naming & count.** Whether DESIGN leads with this loop or keeps "five systems" as familiar branding
-  layered on top is undecided. The distinct parts here are: scarcity (foundation), Survival (pressure),
-  four producers (Create / MineColonies / Magic / bosses), two connectors (economy / aeronautics) — so
-  it's *not* a clean five, and forcing the count back to five would hide the structure. (Pressure
-  itself has two faces — Survival and Danger — and bosses double as a producer, so the parts don't
-  partition cleanly.)
+- **Naming & count — settled: drop the "five systems" framing.** The pack is the **loop**, not a flat
+  count. A mod anchors to one of four systems — **Create, Magic** (production), **Survival** (pressure),
+  **Economy** (distribution & trade) — with **scarcity** the foundation, **MineColonies + boss drops** the
+  cross-cutting production routes, and **logistics/aeronautics** the economy's movement arm. (Pressure has
+  two faces — Survival and Danger — and bosses double as a production route, so the parts deliberately
+  don't partition into a tidy number; that's why the loop, not the count, is the framing.)
 - **Bosses — settled as dual-role.** They're *both* a pressure (the dangerous world — §2) and a
-  high-tier production route (§3), the same way aeronautics straddles production and distribution. Not a
-  contradiction; the loop allows a thing to occupy two slots.
+  high-tier production route (§3), the same way aeronautics is both a Create build and the economy's
+  logistics arm. Not a contradiction; the loop allows a thing to occupy two slots.
 - **Ecological / production-consequence pressure — ADOPTED in principle, *how* unsolved (§3a).** Eco's
   signature mechanic (industry damages the shared world) is **in** as a goal, but two hard blockers stand
   in the way and need cracking before it's built: **(a) an infinite world** — players just move on, so

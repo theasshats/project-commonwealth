@@ -16,9 +16,10 @@ When weighing any recipe change, decide in this order:
    is worth a higher cost.
 3. **Cost-comparability is OPTIONAL.** Don't pare a coherent, well-themed recipe just to match the
    original count. Only rein in costs that "get out of hand."
-4. **Multi-pillar weaving is the goal.** The pack's five systems (Create / magic / economy /
-   aeronautics / survival) form one causal loop — see `docs/SYSTEMS.md`; *ideally a mod anchors to two
-   or more of them.* So **decoration or flavor that now needs Create is great** (it weaves that mod into
+4. **Multi-system weaving is the goal.** The pack's systems (Create / magic — production; survival —
+   pressure; economy — distribution & trade, incl. logistics/aeronautics) form one causal loop — see
+   `docs/SYSTEMS.md`; *ideally a mod anchors to two or more of them.* So **decoration or flavor that now
+   needs Create is great** (it weaves that mod into
    the Create pillar) — as long as it's thematically coherent and not too expensive. The old "leave
    decoration vanilla" instinct only applies when a Create gate would *invert progression* (e.g.
    starter-tier copper) or break theme.

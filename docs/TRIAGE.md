@@ -86,11 +86,13 @@ The `needed-for-release`-tagged set is the `v1.0.0 — Release` milestone, delib
 CI-required (#79), ore-gen tuned + playtested (#81/#116/#58), RAM tuned (#48). Tag flow: bump `version`
 in `pack.toml` → merge to `main` → tag `vX.Y.Z`.
 
-## 7 · The five-systems yardstick (why an issue matters)
-Every mod/feature anchors to ≥1 of **Create · magic · economy · aeronautics · survival** (target: **2**) —
-the five being one causal loop (`docs/SYSTEMS.md`) — which is also why the pillar milestones are shaped the
-way they are. A one-pillar mod is a candidate for a *second* weave; a no-pillar mod is a **cut** candidate
-(curation, `docs/CURATION.md`). See `CLAUDE.md` + `docs/DESIGN.md` + `docs/SYSTEMS.md`.
+## 7 · The systems-loop yardstick (why an issue matters)
+Every mod/feature anchors to ≥1 system — **Create · magic** (production) · **survival** (pressure) ·
+**economy** (distribution & trade, incl. logistics/aeronautics) — the systems being one causal loop
+(`docs/SYSTEMS.md`; the old "five systems" framing is retired), which is also why the pillar milestones
+are shaped the way they are. Target: **2**. A one-system mod is a candidate for a *second* weave; a
+no-system mod is a **cut** candidate (curation, `docs/CURATION.md`). See `CLAUDE.md` + `docs/DESIGN.md` +
+`docs/SYSTEMS.md`.
 
 ## 8 · After triage — update the docs
 Refresh `docs/ROADMAP.md` (milestones + needed-for-release + recently-merged) so the next session

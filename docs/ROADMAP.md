@@ -1,12 +1,13 @@
 # Derpack X — Roadmap (multi-phase)
 
 > Living roadmap for the build-out. **Goal:** a cooperative PvPvE Create pack for a small crew (~10)
-> where every mod earns its place by anchoring to one of **five systems — Create, magic, economy,
-> aeronautics, survival** — or it's cut. The five form one causal loop (**scarcity → pressure →
-> production → distribution**, inspired by *Eco*): scarcity + locked exclusives drive an emergent but
-> **load-bearing** trade economy, and complex tech unlocks via MineColonies or boss drops. See
-> `docs/SYSTEMS.md` (**the canonical structural model**), `docs/DESIGN.md` (the why), and `docs/RECIPES.md`
-> (the recipe convention + triage ledger, merged with #62).
+> where every mod earns its place by anchoring to one of the systems — **Create** or **magic**
+> (production), **survival** (pressure), or the **economy** (distribution & trade, incl.
+> logistics/aeronautics) — or it's cut. They form one causal loop (**scarcity → pressure → production →
+> economy**, inspired by *Eco*): scarcity + locked exclusives drive an emergent but **load-bearing** trade
+> economy, and complex tech unlocks via MineColonies or boss drops. (The old flat "five systems" framing
+> is retired — see `docs/SYSTEMS.md`, **the canonical structural model**.) Also: `docs/DESIGN.md` (the
+> why) and `docs/RECIPES.md` (the recipe convention + triage ledger, merged with #62).
 >
 > **Standing caveat:** the dev sandbox is **headless** — everything is authored + structurally
 > validated (JSON valid, JS syntax OK); **an in-game playtest is required before any of it merges**
@@ -69,8 +70,8 @@ coins. Feeds the economy pillar (#90). Not started.
 
 ### Phase 5 — Economy (Numismatics) 💤 #90
 Coin values, vendors + pricing, Trading Floor, **Bountiful** bounties, and **wiring the inputs** (mob
-drops / structure loot → sellables + bounties). The five systems' highest-leverage,
-thinnest-in-integration pillar. **#129** (mob drops in the connectivity tool) is the enabler.
+drops / structure loot → sellables + bounties). The loop's highest-leverage,
+thinnest-in-integration system. **#129** (mob drops in the connectivity tool) is the enabler.
 
 ### Phase 6 — Curation & de-dup ✅ #88 on `main` (v0.5.0) — follow-ups open
 The mob/boss + duplicate-mechanic pass landed (arphex/creeper-overhaul/mutant-monsters cuts, In Control!
@@ -100,7 +101,7 @@ post-release polish or ongoing curation.
 - [x] **Create recipe spine landed** — #62 (v0.4.6). Follow-ups: #101/#102/#103/#113.
 - [ ] **Pack renamed** — #78 (decide the name with zagwar before players have instances named "Derpack X").
 - [ ] **CI required on `main`** — #79 (turn on the `pr-checks.yml` ruleset; Phase 8).
-- [x] **Design/goal docs merged** — PR #61; the five-systems direction is canon.
+- [x] **Design/goal docs merged** — PR #61; the systems-loop direction is canon (`docs/SYSTEMS.md`).
 - [x] **Release artifacts sane** — `.mrpack` dropped (#73); Prism installer is the single ~5 MB artifact.
 
 **Explicit non-goals** (keep off the release path): a server-pack artifact, NeoForge auto-bump,
@@ -126,27 +127,27 @@ Open issues are organized into GitHub **milestones** on an **odd/even release ca
 
 **`v0.8.0 — Stabilization I` · even** — *Goal: profile, balance, and bug-fix everything 0.7 added; no new mods.* Spark the Create-spine feature dump (#147 routine), run the mod-conflict catalog (#160), perf-prune by the #157 perf gate, clear any boot-log regressions.
 
-**`v0.9.0 — Economy` · odd / feature** — *Goal: the **load-bearing** trade loop is playable end-to-end — coins valued, vendors price, bounties pay, mob/structure inputs wired — and the dynamic-pricing / player-minted-currency question is resolved (what current mods can do vs. custom work).* The thinnest-integrated pillar; highest leverage — and where the economy stops being optional flavor.
-#221 economy tooling: dynamic pricing + player-minted currency (reality-check + design) · #129 mob drops in the connectivity tool (enabler) · #138 pick the shop/transaction mechanism · #136 coin tiers + price sheet · #137 Bountiful bounty pools · #150 faucet/sink integrity audit · #139 regional export specialization · #90 Numismatics + Trading Floor + Bountiful + wire inputs · #18 loot pass (feeds the economy) · #94 modlist audit (un-anchored mods + new dup clusters).
+**`v0.9.0 — Economy & logistics` · odd / feature** — *Goal: the **load-bearing** economy is playable end-to-end — coins valued, vendors price, bounties pay, mob/structure inputs wired, the dynamic-pricing / player-minted-currency question resolved — **and its logistics/aeronautics movement arm is woven** (airship payoff + transport ladder), balanced against the scarcity lens (logistics must relieve regional scarcity without erasing it — `docs/SYSTEMS.md` §5).* The economy *is* the distribution stage and aeronautics is its physical arm, so they build together. The highest-leverage pillar — where the economy stops being optional flavor.
+Economy: #221 economy tooling (dynamic pricing + player-minted currency) · #129 mob drops in the connectivity tool (enabler) · #138 shop/transaction mechanism · #136 coin tiers + price sheet · #137 Bountiful bounty pools · #150 faucet/sink integrity audit · #139 regional export specialization · #90 Numismatics + Trading Floor + Bountiful + wire inputs · #18 loot pass · #94 modlist audit (un-anchored mods + new dup clusters). Logistics/aeronautics: #84 Create + Aeronautics harder · #43 flight-system interactions · #144 airship assembly/docking infra · #143 ship power/fuel economy · #142 audit Create machinery on ships · #141 transport/logistics ladder · #140 airship combat balance (Big Cannons) · #125 Touhou-maids weave.
 **Closes with the thunderdome.**
 
 **`v0.10.0 — Stabilization II` · even** — *Goal: profile, balance, and bug-fix everything 0.9 added; no new mods.*
 
-**`v0.11.0 — Survival & Magic` · odd / feature** — *Goal: the survival interlock (temperature × diet × seasons-driven scarcity) works in play and the magic web is balanced **with its own locked exclusives** (so a magic specialist is a needed trade partner).*
-Survival: #91 interlock (umbrella over #124/#99) · #124 altitude-driven cold · #99 midnight-thoughts anchor · #152 author Cold Sweat world config · #155 death-penalty + gravestone tuning. _(Diet — AppleSeed replaced the SoL forks in v0.6.0; tune its groups/buffs here.)_ Magic (the #80 Arcana satellites): #122 post-merge balance · #123 flagship depth · #118 Soul-Reaping intent · #146 gate Ars/Iron's/Occultism behind Create + define magic's locked exclusives (per #220). Flavor: #107 Ender Moon weave (kept; earn its place via a pillar tie).
+**`v0.11.0 — Magic` · odd / feature** — *Goal: the magic web is balanced and bridged into one progression, **with its own locked exclusives** (so a magic specialist is a needed trade partner — reachable also via the MineColonies route, mirroring Create).*
+Magic (the #80 Arcana satellites): #122 post-merge balance · #123 flagship depth · #118 Soul-Reaping intent · #146 gate Ars/Iron's/Occultism behind Create + define magic's locked exclusives (per #220).
 **Closes with the thunderdome.**
 
 **`v0.12.0 — Stabilization III` · even** — *Goal: profile, balance, and bug-fix everything 0.11 added; no new mods.*
 
-**`v0.13.0 — Aeronautics & logistics` · odd / feature** — *Goal: airships/flight earn their payoff and the transport/logistics ladder is woven; flight interactions documented — **balanced against the scarcity lens** (logistics must relieve regional scarcity without erasing it; keep distance meaningful — `docs/SYSTEMS.md` §5).* Reached late on purpose — the aeronautics addon ecosystem is young and growing weekly, so later = riper, more stable choices.
-#84 Create + Aeronautics harder · #43 flight-system interactions · #144 airship assembly/docking infra · #143 ship power/fuel economy · #142 audit Create machinery on ships · #141 transport/logistics ladder · #140 airship combat balance (Big Cannons) · #125 Touhou-maids weave.
+**`v0.13.0 — Survival` · odd / feature** — *Goal: the survival interlock (temperature × diet × seasons-driven scarcity) works in play — the world pushing back is real and tuned.*
+Survival: #91 interlock (umbrella over #124/#99) · #124 altitude-driven cold · #99 midnight-thoughts anchor · #152 author Cold Sweat world config · #155 death-penalty + gravestone tuning. _(Diet — AppleSeed replaced the SoL forks in v0.6.0; tune its groups/buffs here.)_ Flavor: #107 Ender Moon weave (kept; earn its place via a system tie).
 **Closes with the thunderdome.**
 
 **`v0.14.0 — Stabilization IV` · even** — *Goal: profile, balance, and bug-fix everything 0.13 added; no new mods.*
 
-**`v0.15.0 — Polish & site + weave review` · odd / feature — LAST CALL** — *Goal: wiki, onboarding, QoL, claims, and the open decisions settled — plus the comprehensive pillar-weave review (all five systems checked against each other) before the freeze.*
+**`v0.15.0 — Polish & site + weave review` · odd / feature — LAST CALL** — *Goal: wiki, onboarding, QoL, claims, and the open decisions settled — plus the comprehensive weave review (all systems checked against each other — the loop seams) before the freeze.*
 #115 player wiki · #148 in-game onboarding quest/guide · #153 JEI recipe-viewer cleanup pass · #77 in-site issue submission · #134 map server to new Cloudflare address · #70 WEB_DIR bind-mount · #13 Create: Harmonics eval · #25 open-parties-and-claims · #1 shaders decision · #2 far-field render distance.
-**Last call for major additions/integrations**; closes with the final thunderdome + the full pillar-weave review (the seams *between* the five systems), then feature freeze.
+**Last call for major additions/integrations**; closes with the final thunderdome + the full weave review (the loop seams *between* the systems), then feature freeze.
 
 **`v1.0.0 — Release` · even / perf patch [NFR]** — *Goal: feature-frozen — final performance + RAM tuning, ore-gen finalized, renamed, CI required → ship the public build.*
 #149 v1.0.0 readiness checklist (meta-tracker) · #79 require CI on `main` · #81 early-game ore bootstrap · #116 ore-gen tuning · #58 ore-gen review (refocus onto GTMOGS or fold into #116) · #78 rename the pack (zagwar) · #48 GC/RAM (spark; server's up) · #110 custom-item textures (living tracker, needed-for-release).
