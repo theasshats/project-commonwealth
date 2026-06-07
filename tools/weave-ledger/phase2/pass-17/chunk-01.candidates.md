@@ -188,3 +188,20 @@ REWORK: No existing connections to flag (1-anchor). Candidate A establishes a Cr
 - from: enhancedcelestials Harvest Moon buff | via: season/event-gated input | to: create/magic | motif: M-16 | power: everyday | tone: ok | verdict: REJECT | reason: the Harvest Moon is a passive global growth buff, not a recipe-gated material or seasonal ingredient — there is nothing to "route through a method." The buff already rewards crop farming automatically; making it a recipe gate would punish players who farm outside that window. M-16 requires an item that is *only obtainable* in the seasonal window, not a timing buff. Not a valid M-16 seam.
 
 REWORK: No existing connections to flag (1-anchor). Candidates A and B establish Create (meteor crushing) and magic (lunar ritual gate) second anchors.
+
+## hpm   [anchors: aeronautics (1)]
+
+**Power-read:** The base raft/swashbuckler are everyday tier (wood + basic iron). The pirate cutter and war cutter are mid-tier (storage + combat, requiring hull/mast sub-components). The corvette steamship (WIP) is endgame by intent. Cannonball/mortar_ball are everyday combat consumables. The dossier flags a curation concern — overlap with Create Aeronautics (physics ships) and Create Big Cannons (artillery); this is a real issue but it's a thunderdome curation call, not a weave call.
+
+**Candidate A — ship hulls/masts gated on Create mechanical components (M-05/M-23), ACCEPT**
+- from: hpm:largehull / hpm:smallhull / hpm:largemast (ship sub-components) | via: crafting recipe using create:pressed iron sheet / create:mechanical_crafting for the steamship drive | to: create | motif: M-23 | power: mid/endgame | tone: ok — gating the war cutter and especially the corvette steamship hull on Create-fabricated structural parts is thematically coherent (a warship needs engineered metal, not just raw planks) and scales depth with ship tier per M-23's rule | verdict: ACCEPT | hook: the war cutter's hull plates are pressed iron — the shipyard runs on the factory's output
+
+**Candidate B — Numismatics sell price for ships as high-value trade goods (M-08/M-09), ACCEPT**
+- from: hpm:cutteritem / hpm:cuttermilitariseditem | via: numismatics sell/price | to: economy | motif: M-09 | power: mid | tone: ok — a shipwright who builds and sells sailing vessels is an obvious economic specialisation; a finished cutter or war-cutter as a Numismatics-priced "vessel" trade good is coherent with the pack's player-economy loop; the high material cost makes it genuinely scarce | verdict: ACCEPT | hook: the shipwright sells rigged cutters at the Trading Floor — the navy is a trade profession, not just a playstyle
+
+**Candidate C — curation flag: overlap with Create Aeronautics + Create Big Cannons, REJECT (curation, not weave)**
+- from: hpm ships (non-physics, non-Create-superglue vessels) | via: n/a | to: aeronautics | motif: no-motif | power: n/a | tone: clash | verdict: REJECT | reason: hpm ships are bespoke boat-entities, not Aeronautics-physics superglue contraptions; the two coexist but occupy different roles (wooden sailing vessels vs. Create-built physics ships). The overlap with Create Big Cannons (mounted artillery vs. handheld cannon) is a curation/thunderdome question about whether both belong. This is not a recipe-weave issue; flag for thunderdome review in the appropriate odd-version curation pass.
+
+REWORK: No existing connections to flag (1-anchor). Candidates A and B establish Create (fabricated hulls) and economy (shipwright trade) second anchors.
+
+== CHUNK COMPLETE ==
