@@ -37,6 +37,17 @@ Existing rows are extensive. Well-accepted: M-12 (alpine salt → create:milling
 
 CHALLENGE | from: meadow:chambray_wool (felted textile) | via: create:mechanical_crafting or aeronautics envelope recipe | to: aeronautics | motif: M-23 | verdict: WEAK | hook: existing M-23 rows for chambray_wool score 3 ACCEPTs but the anti-arbitrage check finds a problem: aeronautics envelope/gasbag recipes aren't confirmed to exist as open recipe types in the palette (no `aeronautics:*gasbag*` method appears in the methods-palette); authoring this as a gasbag recipe is a datapack invention, not a method-routing through an existing slot; the weave should be reformulated as feeding a known aeronautics construction recipe or deferred until the aeronautics recipe surface is confirmed
 
+## ars_nouveau   [anchors: magic (1)]
+
+This is a deep, well-mapped mod. Accepted rows cover: M-01 (source_gem hub), M-02 (vitalic/agronomic sourcelinks as organic→magic sink), M-10 (foreign material → imbuement), M-11 (drygmy mob-drop → ritual), M-17 (FE charging), M-18 (drygmy logistics), M-19 (archwood haunting), M-29 (source_gem cross-route), M-33 (enchant-for-hire), M-37 (spell knowledge gate). One gap: the `ars_nouveau:summon_ritual` method's lunar-gate angle (M-22) appears once with 1 ACCEPT and is underdeveloped. Another: `ars_nouveau:alakarkinos_conversion` (converts blocks into archwood-adjacent budding forms) as a method other mods' materials could route through.
+
+- NEW | from: ars_nouveau:summon_ritual (Wilden Chimera / Guardian summon) | via: worldgen/spawn event gating — KubeJS gate the summon_ritual activation so the ritual only completes under the Enhanced Celestials blood moon or Ender Moon event | to: survival | motif: M-22 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Wilden Guardian doesn't answer on an ordinary night — the mage must wait for the right celestial event to open the summoning circle; lunar timing becomes a required progression gate, threading the moon-event mods into the magic pillar's boss unlocks
+
+- NEW | from: ars_nouveau:mage_bloom (growable magic crop) | via: ars_nouveau:imbuement (mage_bloom as a catalyst input in an imbuement recipe — consuming blooms to power a specific high-tier imbuement tier) | to: magic | motif: M-16 | power: mid | tone: ok | verdict: ACCEPT | hook: mage_bloom only blooms in spring/summer (Serene Seasons fertility window) — stocking the imbuement pantry before the bloom passes is the seasonal-reagent constraint that ties the magic web's most common station to the seasons driver; the magic specialist plans around seasons
+
+CHALLENGE | from: ars_nouveau archwood logs | via: create:milling → arcane sawdust/resin | to: create | motif: M-12 | verdict: WEAK | hook: archwood milling rows score 4–12 ACCEPTs but the hook is thin: "mill archwood into arcane sawdust" produces a material that has no confirmed consuming recipe — the sawdust is invented at proposal time, not an existing Create or Ars recipe slot; M-12 requires a route INTO "a finished good or useful intermediate" that feeds other recipes, and a speculative sawdust intermediate without a destination fails the method-routing test. Either commit to what the sawdust does (an Ars imbuement input, an M-10 route) or defer.
+
+
 
 
 

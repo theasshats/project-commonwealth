@@ -20,4 +20,22 @@ Existing rows cover: M-28 colony seafood provisioning (strong), M-26 diet/consum
 
 ## grimoireofgaia   [anchors: survival (1)]
 
+Existing rows cover: M-11/M-02 spirit-fire/ritual (strong consensus 18 ACCEPT), M-10 Ars imbuement of mob-drop fragments (7-10 ACCEPT), M-15 boss busts as gate items for high-tier Create/tech recipes (strong), M-34 combat-specialist trade of busts/rings. These are the obvious high-signal weaves. What is missing: (a) a nuance on the **book_of_memory** specifically — it appears in one M-15 ACCEPT but without power-tier reasoning; (b) the **ring artifacts** have conflicted rows (M-17 FE-charging one ACCEPT; M-06 sequenced rejected; M-10 rejected) — no clean mid-power route has been established; (c) the **biome-modifier breadth** (75 biome modifiers governing spawns by biome/difficulty) creates a **M-30 regional scarcity** reading for specific creature drops that no existing row captures at that precision.
+
+- NEW | from: grimoireofgaia:book_of_memory (the rare proof-of-bestiary item, loot=yes) | via: KubeJS recipe gating — the book_of_memory is a required non-consumed input (like a key-unlock) to craft a high-tier occultism familiar-focus or ars_nouveau tier-4 spellbook upgrade, consumed once per player progression unlock | to: magic | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: a mage who has studied the full Gaia bestiary holds its memory in one book — that knowledge (not just the materials) unlocks the apex spellbook tier; the combat-knowledge gating reads as natural mage-progression, not forced
+
+- NEW | from: grimoireofgaia mob spawns governed by biome-modifier tags (75 biome modifiers mean certain creatures — sphinx, vampire, mermaid — only spawn in specific biomes) | via: config/worldgen — designate these per-biome exclusive creature drops (mermaid pearl → ocean biomes only; sphinx riddle-token → desert only) as M-30 regionally-scarce reagents that feed the magic web | to: economy | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: a mermaid pearl only comes from ocean-biome spawns; a desert settlement's magic specialist must trade for it or fund an expedition — the biome-gating already exists, the weave just names the drops as regional-scarcity inputs to the magic economy
+
+- CHALLENGE | from: grimoireofgaia:ring_of_haste / ring_of_speed | via: create_new_age:energising | to: create | motif: M-17 | verdict: REJECT | hook: M-17 (FE charging bridge) is for charging tools/foci that need an energy-state to function — the Gaia rings are mob-dropped finished equipment with passive on-hit effects; they are not inert items waiting for a charge to activate, so the energiser has no coherent "unlock the function" role here; the one ACCEPT row is thematically evocative but mechanically arbitrary
+
+## revelationary   [anchors: support (1)]
+
+LEAVE — zero-surface library (no items, no blocks, no loot, no recipe-types; pure advancement-gated block-visibility API). No content to route through any method; the gating it enables belongs to the host mods that use it.
+
+## toomanypaintings   [anchors: support/decoration (1)]
+
+LEAVE — pure decoration palette (no items, no blocks, no loot, no recipe-types registered; painting-selection GUI only). No material to route; the sole prior proposal (Supplementaries lore-text on paintings) was correctly rejected as no-motif cosmetic narrative.
+
+## hpm   [anchors: aeronautics (1)]
+
 

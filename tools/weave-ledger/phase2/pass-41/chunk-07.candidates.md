@@ -65,3 +65,17 @@ One angle genuinely not explored: gnkinetics **shaftless variants** (shaftless_b
 
 OK — existing rows sufficient. (gnkinetics sits at 2 anchors via M-24; no third anchor reachable without forcing.)
 
+## irons_spellbooks   [anchors: magic, create (2)]
+
+Existing rows are extremely dense — nearly every plausible surface has been explored across 50+ rows. The mod already sits at 2 anchors (magic + Create via the alchemist cauldron's emptying/filling inbound). Let me audit the converged ACCEPTs and look for anything missing or challenged:
+
+Converged ACCEPTs: M-01 (arcane_essence ↔ source_gem), M-03 (mithril ore-doubling), M-02 (apothecarist drops as reagents), M-11 (apothecarist drops via spirit_fire), M-12 (cauldron fluid I/O via create:filling), M-16 (seasonal brew needing cold-only ginger), M-19 (pyrium via haunting), M-26 (scrolls as consumables), M-28 (endgame gear colony-locked), M-29 (cross-route brew needing electric solvent), M-30 (mithril regional scarcity), M-34 (boss drops traded to non-combat players), M-35 (aged brews?), M-37 (spell-school research gate via MineColonies).
+
+One nuance missing: the **M-22 lunar reagent** applied specifically to Iron's Spellbooks' school-specific brews. M-22 is accepted and bridges to blood/eldritch schools. A Blood Moon is thematically the perfect catalyst for an Iron's *blood-school* brew — requiring the brew to be initiated only under a Blood Moon (event-as-precondition on the alchemist_cauldron_brew) adds a temporal scarcity the existing M-16 ginger row doesn't cover (that's seasonal, not lunar). No existing row proposes M-22 specifically for Iron's cauldron brews.
+
+- NEW | from: irons_spellbooks:alchemist_cauldron_brew (blood-school brew requiring active Blood Moon as event-precondition) | via: event-gating on irons_spellbooks:alchemist_cauldron_brew (KubeJS recipe condition) | to: magic | motif: M-22 | power: mid | tone: ok | verdict: ACCEPT | hook: the blood-school's most potent brews only complete under a Blood Moon — a lunar rarity that forces the specialist to stock ingredients and wait for the right night, or trade with someone who did
+
+Also: **M-20 (deploy-application upgrade)** for affinity rings got 1 ACCEPT. This is plausible — a blank affinity ring upgraded with a school gem via create:deploying is a light single-step Create touch. Red-team: Iron's already has its own Arcane Anvil upgrade path; adding a create:deploying step is additive friction on an already-gated item. The 1-ACCEPT vs 0-explicit-REJECT in that row is sparse. Challenging it as weak.
+
+- CHALLENGE | from: irons_spellbooks:affinity_ring (school-specific magic gear) | via: create:deploying | to: create | motif: M-20 | verdict: REJECT | hook: the Arcane Anvil is Iron's native upgrade machine; adding create:deploying as a *second* upgrade gate for the same item doubles the friction without advancing the loop — M-20 is the "light sibling of M-06" but should apply where no native upgrade path exists, not as a parallel gate on an already-deep item
+
