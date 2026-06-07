@@ -1562,6 +1562,11 @@ hash = "4e6f715b75614b417e8b7eff6c0d12f5d1f63e68c78910820a624b7a33eff3b4"
 metafile = true
 
 [[files]]
+file = "mods/diet-appleseed-edition.pw.toml"
+hash = "dff73d5018a8ebbbb52326d7678c179db5819c7847e11cef508453318c644d40"
+metafile = true
+
+[[files]]
 file = "mods/ding.pw.toml"
 hash = "61d30cc51c53f8adf52a88ef0cc6bd79e4c912b1dea596d0aa15781e37e90d2d"
 metafile = true
@@ -1714,11 +1719,6 @@ metafile = true
 [[files]]
 file = "mods/food-effect-tooltips-forge.pw.toml"
 hash = "a71713076503c473ca3216c71285b2641ca250f80933d713a9f42edd03f5da17"
-metafile = true
-
-[[files]]
-file = "mods/foodvariations.pw.toml"
-hash = "1e7a9d95a8f4160be40bea4fd6645bb66b544436729001bf37c1bfbb4c58e5a9"
 metafile = true
 
 [[files]]
@@ -2479,11 +2479,6 @@ metafile = true
 [[files]]
 file = "mods/spice-of-life-maids-dream.pw.toml"
 hash = "24c474f45222a5a5f4e3add5793f65f470b6009ae73f89a2b8637c65f6d25c9b"
-metafile = true
-
-[[files]]
-file = "mods/spice-of-life-onion.pw.toml"
-hash = "b802428a3e46ef2f3d30bed528b2c74b78e8c3f20dfb904c93385989ed4b816a"
 metafile = true
 
 [[files]]

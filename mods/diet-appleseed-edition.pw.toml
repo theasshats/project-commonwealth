@@ -1,0 +1,13 @@
+name = "Diet - AppleSeed Edition"
+filename = "appleseed-2.0.3-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/uwTJPjNt/versions/zktNOzae/appleseed-2.0.3-1.21.1.jar"
+hash-format = "sha512"
+hash = "3b5e7cc46634afa96982ee2d8837270dc419b4c970c8348f1c96cbd3c1fdbe425218ccbbeef4a40afcd6965ffc0d3de569ce1d500d5df270587d5c48d34c8d5e"
+
+[update]
+[update.modrinth]
+mod-id = "uwTJPjNt"
+version = "zktNOzae"

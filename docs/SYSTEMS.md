@@ -98,16 +98,18 @@ Modrinth, 1.21.1/NeoForge) — the maintained successor of the classic Diet mod.
 
 - **It auto-derives nutrition from recipe ingredients**, so it covers the entire sprawling modlist
   *without* hand-tagging every food — decisive for a ~200-mod pack.
-- **Groups are data-driven and prunable** (`disabled_groups.json`): the default five (Grains,
-  Vegetables, Protein, Fruits, Sugars) can be cut to the **three** we want.
+- **Groups are prunable** (`disabled_groups.json`): the default five (Grains, Vegetables, Protein,
+  Fruits, Sugars) can be cut down. The auto-calc maps foods onto these *fixed* preset groups, so
+  reaching **three** means **disabling two**, not renaming into arbitrary custom labels (custom groups
+  exist but require hand-tagging foods, which forfeits the auto-calc that makes this scale).
 - A balanced diet grants buffs / an imbalanced one withholds them — the diet-variety *demand* that pulls
   on farming, ranching/hunting, and cooking production.
 
-**The three categories** map cleanly onto production specializations (proposed, tunable): **Protein**
-(hunting / ranching / fishing), **Plants** (farming — grains + vegetables + fruit folded together), and
-**Prepared** (cooked / processed — Farmer's Delight, Create cooking). That makes the diet system pull on
-three different producers, reinforcing specialization. *(Exact group split is a config decision — see
-"Open / unsettled.")*
+**The three categories** (proposed, tunable): keep **Protein**, **Grains**, and **Vegetables**; disable
+**Fruits** and **Sugars**. That still pulls on the two big production specializations — ranching/hunting/
+fishing (protein) and farming (grains + veg) — while keeping the whole-modlist auto-calc. (Trade-off:
+we give up a distinct "prepared/cooking" axis to keep auto-calc; revisit if hand-tagging a Prepared
+group is ever worth it. Exact split + per-category buffs is a config pass — see "Open / unsettled.")
 
 ---
 
@@ -256,9 +258,10 @@ obvious: a healthy mod is usually *something you produce that pressure demands a
   damages the shared world) is **in**. *Implementation* is the open part: no good 1.21.1/NeoForge
   pollution mod exists, so it's likely custom KubeJS/datapack work, and the scope (how punishing,
   visible, reversible; what it feeds — scarcity, Cold Sweat, crops) needs designing.
-- **Diet system — group split.** Diet – AppleSeed Edition replaces Spice of Life (§ "Food"). Open: the
-  exact **three categories** (proposed Protein / Plants / Prepared) and which of AppleSeed's five
-  defaults to disable or merge, plus per-category buffs and decay tuning.
+- **Diet system — config not yet written.** Diet – AppleSeed Edition is now *in the modlist* (replacing
+  SoL), but the **three-category config is not yet shipped**: proposed = keep Protein/Grains/Vegetables,
+  disable Fruits/Sugars via `disabled_groups.json`. The exact datapack path/format and per-category
+  buffs/decay need verifying in-game before the config lands.
 - **Dynamic pricing / price discovery.** Eco's economy feels alive because players set and compete on
   prices (supply/demand). Confirm the economy layer (Numismatics + Trading Floor) supports *dynamic*
   pricing rather than flat fixed-price vendors — a fixed-price economy is much flatter than the Eco
