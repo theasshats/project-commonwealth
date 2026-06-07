@@ -71,9 +71,7 @@ LEAVE — decorative painting mod with a placement GUI; zero items, blocks, loot
 - NEW | from: ars_nouveau:imbuement-infused stone or occultism-processed stone block (a magic-flavored block produced via a magic method) | via: domum_ornamentum:architects_cutter (the cutter accepts any full block as main/support material — feed the arcane stone in to get magic-themed framed/shingled colony blocks) | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: the colony mage's tower uses framed arcane-stone pillars cut from imbuement-processed blocks — magic production has a direct physical expression in colony architecture without any extra recipe authoring; the cutter's open-input mechanic makes this a zero-cost weave
 - CHALLENGE | from: Create-produced stone/metal blocks (andesite, brass-casing cosmetics) | via: domum_ornamentum:architects_cutter | to: create | motif: M-04 | verdict: REJECT | hook: many existing M-04 ACCEPT rows route Create-processed stone through the architects_cutter and label it M-04 (deco recycles); M-04 is specifically the *crushing/recycling* motif ("deco crushes back to raw material + XP nugget"); the cutter producing framed variants is *fabrication*, not recycling — the correct motif for Create-stone → DO ornamentals is M-12 (processing-chain pull, a processed intermediate becomes a further-processed good), not M-04; these rows should be re-motifed to M-12
 
-
-
-
+== CHUNK COMPLETE ==
 
 
 

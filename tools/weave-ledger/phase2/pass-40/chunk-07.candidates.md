@@ -112,4 +112,6 @@ Rows have a contested split: M-04 furniture-through-Create (7 ACCEPT, 12 REJECT)
 - NEW | from: charta:card_table (interactive gambling venue, generates in villages) | via: M-33 service-for-hire — a player-run tavern hosts card matches for Numismatics entry fee (emergent, no recipe needed; the table is the venue, the coin exchange is player-to-player) | to: economy | motif: M-33 | power: everyday | tone: ok | verdict: ACCEPT | hook: a player sets up a card table, charges a Numismatics coin to sit — no NPC involved, no recipe, just the infrastructure for player-to-player leisure commerce; the tavern-keeper is a service specialist the same way a cargo pilot is; this is the most coherent second anchor for charta and requires no authoring beyond the table placement
 - NEW | from: charta:empty_wine_glass / empty_beer_glass | via: create:filling (pipe vinery wine or alcohol_industry beer into the glass via a Create fluid pipe) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the bar shelf's glass is empty until the Create brewery runs — the fluid pipe fills the glass from the vat and a server's tavern becomes a live Create processing output; simple single-step, correctly sized for everyday decor that doubles as a Create end-product display
 
+== CHUNK COMPLETE ==
+
 
