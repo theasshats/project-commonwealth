@@ -40,6 +40,28 @@ New candidate — economy anchor via combat-supply:
 New candidate — economy anchor via colony route:
 - from: minecolonies_compatibility:citizen_terminal (storage-network bridge) | via: colony logistics (MineColonies request system ↔ Create Stock Link) | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: the storage terminal makes colony-produced goods flow into the pack's shared logistics without a player manually shuttling items — a colony-native logistics arm that feeds the economy distribution stage.
 
+## oceansdelight   [anchors: survival (1)]
+
+Note: the dossier lists M-09 (luxury→coin) as a candidate — M-09 is retired; those rows are invalid. Proposing genuine economy + Create links below.
+
+- from: oceansdelight:elder_guardian_slice / elder_guardian_roll (boss-mob seafood) | via: farmersdelight:cutting → farmersdelight:cooking | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: elder guardian farming is dangerous — a coastal combat specialist harvests the kills and processes them into premium dishes that inland players can't obtain without the fight; the ocean kitchen is a specialist supply node feeding the trade loop.
+
+- from: oceansdelight:cut_tentacles / guardian raw drops | via: create:cutting (rotary slicing) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: a Create mechanical saw processes raw guardian tentacles and fish into uniform cuts for the cooking chain — the automated ocean-food factory is a Create production line, not just hand-prep.
+
+- from: oceansdelight:fugu_slice (poisonous pufferfish dish) | via: occultism:spirit_fire or ars_nouveau:imbuement | to: magic | motif: M-11 | power: mid | tone: clash | verdict: REJECT | reason: fugu is a culinary poison-risk food; transmuting it into a magic essence is thematically jarring (a delicate culinary tradition → spirit-fire fuel). The tone clash is real — kitchen food does not feel like occult reagent. The FD/cooking vibe sits firmly in survival, not magic.
+
+- from: oceansdelight:braised_sea_pickle | via: create:milling | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: sea pickles are already a vanilla food/dye item; milling them into a processed intermediate is a weak pull — the milling output would be redundant with existing kelp/farm processing chains and adds no meaningful loop advancement. The value is too thin for a weave entry.
+
+## better_lib   [anchors: support/library (1)]
+
+- LEAVE — zero blocks, zero items, zero loot; shared config/messaging library. No player-facing content and no gameplay methods to route through.
+
+## buildguide   [anchors: support/QoL (1)]
+
+- LEAVE — client-side render overlay only; zero blocks, zero items, zero loot. Pure visual build-assistant with no in-game material surface.
+
+
+
 
 
 

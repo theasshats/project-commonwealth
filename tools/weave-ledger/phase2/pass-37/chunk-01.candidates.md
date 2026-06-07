@@ -72,3 +72,21 @@
 
 ## towntalk   [anchors: support (curated flavor; MineColonies immersion) (1)]
 - LEAVE — cosmetic audio layer (0 blocks/0 items/0 recipes/loot=no): plays colonist voice barks in MineColonies. No items or methods; rides on MineColonies (which carries the real colony/economy/Create weaves). Genuine zero-surface flavor support, no independent edge.
+
+## geckolib   [anchors: support (library) (1)]
+- LEAVE — pure animation/rendering API (bernie-g): 0 blocks/0 items/0 recipes/loot=no. Provides 3D keyframe animation to dependent mobs/magic/Create entities; no gameplay or material of its own. Genuine zero-surface library (hard dep of Ars/Cataclysm/Alex's Mobs etc.); nothing to method-pull.
+
+## multipiston   [anchors: support — MineColonies/Structurize dependency (1)]
+- LEAVE — colony infrastructure block (1 block, but consumes/produces nothing: it translocates world blocks for Structurize/MineColonies builders). No item/fluid processing, never surfaced to players as standalone content. Rides the MineColonies tie (which carries the colony weave). No material sink → no coherent cross-system edge; reserve-LEAVE for a behavior-only dependency block.
+
+## create_cheese   [anchors: Create, survival (2)]
+- REWORK: none — connections sound. The dairy chain is expressed entirely through Create methods (curds via create:mixing/compacting per digest; maturing via its own create_cheese:maturing) and the food output is survival-pressure (diet variety). Both anchors intrinsic and correctly costed (mid-tier artisanal food, gated by a maturing wait, not a number-inflated recipe). The tag-driven cellar outputs are a clean extension surface, not a mis-cost.
+- from: aged cheeses (output of the maturing wait — Calendar-Page-gated tiers I/II/III) | via: create_cheese:maturing (the time-axis value-add; an aging specialist) | to: economy | motif: M-35 | power: mid | tone: ok | verdict: ACCEPT | hook: "Good cheese has to *sit* in the cellar — so a fromager who runs the maturing tiers produces aged wheels nobody who wants them now can rush, value added by the wait."
+  - rationale: M-35 (maturation/aging) is the accepted value-*adding* time axis and `create_cheese:maturing` is literally one of M-35's named host methods in the ledger. The aging wait creates a genuine aging specialist (player-run economy via demand-gating by time, not a vendor sale). Overrides the dossier's M-09 "sellable luxury" suggestion, which is retired — M-35 is the correct, accepted re-expression. Mid-tier. Takes the mod from 2 to 3 anchors cleanly.
+- from: cheese_cellar accepting arbitrary tagged inputs (a generic "age-an-item" station) | via: create_cheese:maturing as a shared host for other mods' perishables | to: economy | motif: M-36 | power: mid | tone: ok | verdict: REJECT | reason: routing *other* perishables through the cellar to make them spoil/age would lean toward M-36 (perishability), which is MECHANISM-PENDING (#238) — no spoilage mechanic exists; do not author it as a weave. The cellar-as-shared-aging-host is, however, the strongest practical hook for M-35-style value-add on other foods (vinery must, extradelight goods) once those are woven — flag for the economy pillar, but the only *accepted* edge here is the cheese M-35 above.
+- from: cheese_curds_bucket / milk intermediate | via: meadow:cheese or farmersdelight:cooking | to: survival/Create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: would overlap/compete with Meadow's own cheese method and adds a redundant processing path for an everyday intermediate; the maturing chain is already the distinctive method. Not worth a second food-processing edge that muddies which mod owns cheese. Logged as considered-rejected.
+
+## cubes_without_borders   [anchors: support (client QoL) (1)]
+- LEAVE — client-only windowing QoL (0 blocks/0 items/0 recipes/loot=no): adds a Borderless fullscreen Video Setting. Pure display feature, irrelevant on the server, no material or world effect. Genuine zero-surface support mod.
+
+== CHUNK COMPLETE ==

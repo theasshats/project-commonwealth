@@ -151,3 +151,34 @@ Existing connections: 1 anchor (survival). Dossier says "leave" — evaluating.
 
 LEAVE — no coherent second anchor that survives the everyday-component guardrail. One light survival-touch mod; the loop doesn't need it wired deeper.
 
+## mffs   [anchors: Create, survival (2)]
+
+Existing connections: 2 anchors, already the gold-standard authored weave (60-mffs.js: M-05 focus_matrix on electron_tube; M-06 projector/interdiction_matrix as sequenced_assembly chains through derpack:incomplete_* parts; TFMG steel mid-tier). Dossier confirms "no new edge needed."
+
+**Reviewing existing connections:**
+- M-05 (focus_matrix ← electron_tube): correct application — the focus is a flagship mid-tier component gated on Create precision. Sound.
+- M-06 (projector/interdiction_matrix sequenced_assembly through incomplete_* parts): correct application — the endgame defense system is a multi-stage chain. Sound.
+- TFMG steel mid-tier: sound — uses the industrial steel route for mid-tier machines.
+- Survival anchor: base-defense / PvE protection. Coherent — MFFS is the "no one can take your base" security layer; danger pressure drives demand for it.
+
+No new weave needed. Could M-33 (service-for-hire) apply — a player who owns MFFS equipment and offers to build/configure force fields for others? Thematically yes, but it's ambient player behavior, not a recipe weave.
+
+OK — connections sound. M-05 + M-06 authoring is the reference implementation; no additions needed.
+
+## alcohol_industry   [anchors: Create, survival (2)]
+
+Existing connections: 2 anchors (Create + survival). Dossier proposes M-09 (economy via luxury → coin), which is retired.
+
+**Method-pull analysis:**
+- Finished liquors (beer, vodka, whiskey, tequila) are buff foods. They satisfy diet diversity (if tagged correctly) — deepens survival. Already anchored survival via consumable buffs.
+- `alcohol_industry:alcohol_boiling` method: the Alcohol Boiler is a heat-processing block. What other materials could route through it? The boiler processes an Alcohol Base fluid into specific spirits — it's a conversion method. Could a magic reagent be produced by boiling a specific herbal infusion? Not a stretch — mead-with-magic-herbs → a usable potion? M-12 (processing-chain pull: herbal input → boiler → magic-adjacent output). However, this is highly speculative with no concrete herb→spirit established.
+- Maturation angle: spirits improve with age? `alcohol_industry` doesn't have a maturation mechanic, but `alcohol_industry:alcohol_boiling` produces a raw spirit that could then mature via `vinery`/M-35 aging. This is a cross-mod processing chain — M-32 (byproduct → input: raw spirit → aging step → matured spirit). Mid-tier; the aged product has higher value. Coherent.
+- Economy via M-35 maturation: spirits that must age to reach full value create a maturation-specialist role. An alcohol_industry player produces raw spirits and either sells them raw or matures them via the vinery/extradelight drying rack. This is an economy connection (maturation → sellable trade good) via M-35.
+- M-26 consumption: spirits are consumed against the survival/buff layer continuously — ambient loop-closing, no weave.
+
+- from: alcohol_industry:beer/vodka/whiskey/tequila (raw spirits) | via: vinery:wine_fermentation or extradelight:evaporator (aging/maturation post-step) | to: economy | motif: M-35 | power: mid | tone: ok — spirits that improve with age create a maturation-specialist role; the distiller produces raw output, the cellar-keeper ages it, the trader sells it | verdict: ACCEPT | hook: raw spirits from the boiler go into barrels or evaporator vats to mature; only aged bottles command a premium on the trading floor.
+
+- from: alcohol_industry:alcohol_base | via: ars_nouveau:imbuement (herbal-spirits → arcane extract) | to: magic | motif: M-10 | power: mid | tone: clash — forcing arcane infusion of a distilled alcohol base is thematically strained; Ars's reagent language is gems/essences/nature-materials, not industrial spirits | verdict: REJECT | reason: thematic mismatch; alcohol-as-magic-catalyst has no lore grounding in Ars Nouveau; forced.
+
+REWORK: dossier M-09 candidate — correctly retired; the replacement is M-35 (maturation), which the dossier didn't identify. The Create + survival anchors are sound; M-35 adds the economy dimension properly.
+
