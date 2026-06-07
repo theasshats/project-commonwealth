@@ -27,3 +27,6 @@ REWORK: OK — connections sound. Already at 2 anchors (Create material ladder +
 ## balm   [anchors: support/library (1)]
 - LEAVE — genuine zero-surface multi-loader abstraction library (0 blocks, 0 items, 0 recipe-types, loot=no). The iron/gold nugget c:tags it registers are scaffolding — already universally covered by vanilla/other mods; not a unique material surface. Nothing to route.
 
+## immersivearmorhud   [anchors: support/client-UI (1)]
+- LEAVE — purely client-side HUD overlay (0 blocks, 0 items, 0 recipe-types, loot=no); display-only armor readout. No materials, no processing surface, no loot tables. Nothing to route.
+
