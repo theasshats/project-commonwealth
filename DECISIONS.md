@@ -47,10 +47,12 @@ dossier work to v0.6.0. **Nothing here changes an authored weave** — it's catc
   `solmaiddream`), so it is **routed to the on-box clean regen (#131)**, not hand-cleaned here. **A full
   `build-dossiers.py` regen is DEFERRED** until that clean digest — running it against the additive digest
   would spawn ~100 stale-mod skeletons + namespace duplicates.
-- **[NOTE] Candidate accumulator needs a v0.6.0 pass before Gate 2 / Phase 2.5.** `CANDIDATES.{md,tsv}`
-  predate v0.6.0 and reference cut mods — **BOMD ~28 rows (now cut)**, solonion ~16, umapyoi ~8. Drop
-  candidates for non-installed mods before filing issues. Not hand-edited (2053-row accumulator) — it's a
-  filter step at the Gate-2 read.
+- **[NOTE] Candidate accumulator made cut-aware (BOMD confirmed intentional cut).** `phase2-merge.py` now
+  excludes cut-mod candidates, sourcing the cut set from `build-dossiers.py` `CUT_NS` (one source of truth)
+  so re-runs stay clean. Re-merged → **62 candidates for 4 cut mods dropped** (`bosses_of_mass_destruction`
+  [BOMD — maintainer-confirmed intentional cut], `solclassic`, `solonion`, `umapyoi`), **2053 → 1991 unique**
+  (556 at ≥2-pass). The other cut libs (cerbons_api/coroutil/midnightlib/titanium) had no candidate rows.
+  *Undo:* drop the `CUT` skip in `phase2-merge.py` and re-merge.
 
 ## Status — Phase 2: 16 passes; THREE full passes; freeze now 3-sample-confident
 

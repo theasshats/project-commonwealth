@@ -2,7 +2,7 @@
 
 _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass-02, pass-03, pass-04, pass-05, pass-06, pass-07, pass-08, pass-09, pass-10, pass-11, pass-12, pass-13, pass-14, pass-15. `times` = how many independent passes proposed this candidate (confidence); `opus` = an Opus run also proposed it. Re-run after every pass._
 
-**2053 unique candidates** (deduped on mod + item + pillar + motif).
+**1991 unique candidates** (deduped on mod + item + pillar + motif). _Excludes 62 candidate(s) for 4 cut mod(s) (build-dossiers `CUT_NS`)._
 
 | times | opus | mod | from → | via (method) | pillar | motif | consensus |
 |--:|:--:|---|---|---|---|---|---|
@@ -21,7 +21,6 @@ _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass
 | 13 |  | `sereneseasons` | out-of-season produce (scarce) | numismatics sell | economy | M-09 | REJECT |
 | 13 | ✓ | `tfmg` | tfmg:diesel / tfmg:gasoline / tfmg:lpg (TFMG d | TFMG combustion engine → Aeronauti | aeronautics | M-13 | ACCEPT |
 | 13 | ✓ | `underground_village` | Stoneholm villager trades (loot=yes, villagers | numismatics villager-trade seating | economy | M-21 | ACCEPT |
-| 12 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:ancient_anima | ars_nouveau:imbuement (highest-tie | magic | M-10 | ACCEPT |
 | 12 |  | `create_new_age` | create_new_age:energising (method: the Energis | create_new_age:energising of a mag | magic | M-17 | ACCEPT |
 | 12 |  | `createimmersivetacz` | createimmersivetacz:twelve_gauge_shell / creat | numismatics sell/trade | economy | M-09 | ACCEPT |
 | 12 |  | `dynamictreesplus` | dynamictreesplus:saguaro_fruit | numismatics sell | economy | M-09 | REJECT |
@@ -55,11 +54,9 @@ _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass
 | 9 |  | `rottencreatures` | rottencreatures:magma_rotten_flesh (magma-vari | occultism:spirit_fire | magic | M-11 | ACCEPT |
 | 9 |  | `rottencreatures` | rottencreatures:corrupted_wart | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 9 | ✓ | `smokeleafindustries` | refined extracts / gummies (finished consumabl | numismatics sell / dealer-trade br | economy | M-09 | ACCEPT |
-| 9 |  | `solonion` | solonion:golden_lunchbox (top-tier food contai | create:mechanical_crafting | create | M-05 | ACCEPT |
 | 9 |  | `tide` | tide raw fish output (c:foods/raw_fish, bulk s | farmersdelight:cutting → create:mi | create | M-12 | ACCEPT |
 | 9 |  | `trailandtales_delight` | trailandtales_delight:lantern_fruit (tagged it | create:milling | create | M-12 | ACCEPT |
 | 8 | ✓ | `alexsmobs` | alexsmobs:ambergris | numismatics vendor/price | economy | M-09 | ACCEPT |
-| 8 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:obsidian_heart (Nig | create:sequenced_assembly (as requ | create | M-15 | ACCEPT |
 | 8 |  | `mowziesmobs` | mowziesmobs (boss kills) | bountiful bounty → numismatics | economy | M-14 | REJECT |
 | 8 |  | `sereneseasons` | season_sensor redstone output | create:deploying / contraption log | create | M-16 | ACCEPT |
 | 8 |  | `spawn` | spawn seafood (general) | createfisheryindustry:bait_trap —  | create | M-12 | ACCEPT |
@@ -79,7 +76,6 @@ _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass
 | 6 | ✓ | `bakery` | bakery finished goods (cakes, tarts, jams, bre | numismatics sell | economy | M-09 | ACCEPT |
 | 6 |  | `bakery` | bakery:strawberry_cake / chocolate_gateau / li | numismatics sell — high-effort mul | economy | M-09 | ACCEPT |
 | 6 | ✓ | `betterdungeons` | dungeon chest loot | loot-table seeding of magic reagen | magic | M-02 | ACCEPT |
-| 6 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:void_thorns (from V | occultism:ritual (high-tier summon | magic | M-11 | ACCEPT |
 | 6 |  | `cold_sweat` | cold_sweat:filled_waterskin (hot/cold) | create:filling (already exists as  | create | M-12 | REJECT |
 | 6 |  | `createaddition` | createaddition:seed_oil / bioethanol (crop-der | createaddition:liquid_burning → nu | economy | M-09 | REJECT |
 | 6 |  | `endrem` | endrem:corrupted_eye | create:sequenced_assembly (derpack | create | M-06 | ACCEPT |
@@ -90,7 +86,6 @@ _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass
 | 6 |  | `sereneseasons` | sereneseasons:season_sensor (redstone output k | Create redstone logic (gearshifts, | create | M-16 | ACCEPT |
 | 6 |  | `smokeleafindustries` | smokeleafindustries:generator FE output | createaddition:charging (FE↔kineti | create | M-17 | ACCEPT |
 | 6 |  | `smokeleafindustries` | raw hemp / buds | create:milling | create | M-12 | REJECT |
-| 6 |  | `solonion` | solonion:lunchbox | create:pressing / milling | create | M-05 | REJECT |
 | 6 |  | `spawn` | spawn:clam (various colour variants, obtained  | numismatics sell | economy | M-09 | ACCEPT |
 | 6 |  | `t_and_t` | t_and_t villager variants (16 biome-specific v | numismatics — village settlements  | economy | M-21 | ACCEPT |
 | 6 |  | `tide` | tide:abyss_angler / void-fish | occultism:spirit_fire or ars_nouve | magic | M-02 | REJECT |
@@ -101,7 +96,6 @@ _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass
 | 5 |  | `alexsmobs` | alexsmobs:ambergris (rare ocean-mob drop — spe | occultism:spirit_fire → spirit-rea | magic | M-11 | ACCEPT |
 | 5 | ✓ | `bakery` | bakery wheat → flour path | create:milling | create | M-12 | ACCEPT |
 | 5 |  | `betterdungeons` | betterdungeons loot tables | loot-table seeding of Ars/Occultis | magic | M-02 | ACCEPT |
-| 5 | ✓ | `bosses_of_mass_destruction` | boss reagents (any) | numismatics sell or bountiful boun | economy | M-14 | REJECT |
 | 5 |  | `copperagebackport` | Copper Golem (minecraft:copper_golem_statue, l | thematic adjacency to Create logis | aeronautics |  | REJECT |
 | 5 |  | `create_ironworks` | create_ironworks:steel_ingot / steel plate (it | M-23 structural alloy → aeronautic | aeronautics | M-23 | ACCEPT |
 | 5 |  | `create_ironworks` | create_ironworks:steel_plate / steel_ingot (fa | aeronautics airframe/hull recipe ( | aeronautics | M-23 | ACCEPT |
@@ -114,7 +108,6 @@ _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass
 | 5 |  | `friendsandfoes` | friendsandfoes copper deco (copper buttons / l | create:crushing | create | M-04 | REJECT |
 | 5 |  | `samurai_dynasty` | samurai_dynasty:akaname_tongue / Yokai drops ( | occultism:spirit_fire or ritual | magic | M-02 | ACCEPT |
 | 5 |  | `sky_whale_ship` | sky_whale_ship loot chests | numismatics coin drop | economy | M-09 | REJECT |
-| 5 | ✓ | `solonion` | golden_lunchbox (the tier-3 best food containe | create:mechanical_crafting | create | M-05 | ACCEPT |
 | 5 | ✓ | `tfmg` | tfmg:steel (blast-furnace output) | aeronautics hull/airframe construc | aeronautics | M-23 | ACCEPT |
 | 5 | ✓ | `tfmg` | tfmg:steel / tfmg:aluminum ingot (processed sc | numismatics sell / M-08 coin from  | economy | M-08 | ACCEPT |
 | 5 | ✓ | `tide` | tide rare/biome-locked fish (abyss_angler, voi | numismatics sell | economy | M-09 | ACCEPT |
@@ -129,7 +122,6 @@ _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass
 | 4 |  | `ars_nouveau` | ars_nouveau:source_gem (magic currency) | numismatics vendor price | economy | M-09 | REJECT |
 | 4 |  | `bakery` | bakery baked goods (surplus production) | ars_nouveau:imbuement (Vitalic sou | magic | M-10 | REJECT |
 | 4 |  | `bits_n_bobs` | bits_n_bobs tile/chair deco blocks | create:crushing → crushed stone +  | create | M-04 | ACCEPT |
-| 4 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:obsidian_heart | create:sequenced_assembly (+ upstr | create | M-06 | ACCEPT |
 | 4 |  | `bountiful` | bountiful:bounty (payout reward slot) | numismatics coin as the default bo | economy | M-14 | ACCEPT |
 | 4 | ✓ | `bountiful` | bounty reward payout | bountiful board → numismatics (set | economy | M-14 | ACCEPT |
 | 4 |  | `bountiful` | bountiful objective pool (configurable) | Create-processed goods as required | create | M-12 | ACCEPT |
@@ -196,9 +188,6 @@ _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `betterdungeons` | betterdungeons loot tables (datapack-overridab | numismatics coin seeding | economy | M-08 | ACCEPT |
 | 3 |  | `betterdungeons` | betterdungeons loot tables | bountiful:bountyboard decree targe | economy | M-14 | ACCEPT |
 | 3 |  | `betterdungeons` | dungeon chest loot tables | loot-table seeding (datapack edit, | economy | M-14 | ACCEPT |
-| 3 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:blazing_eye | ars_nouveau:imbuement | magic | M-10 | REJECT |
-| 3 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:blazing_eye (Nether | occultism:ritual | magic | M-11 | ACCEPT |
-| 3 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction boss drops (any) | numismatics sell / bountiful bount | economy | M-14 | ACCEPT |
 | 3 |  | `bountiful` | bountiful objective pool | farm/harvest outputs from Serene S | survival | M-16 | ACCEPT |
 | 3 |  | `brazil_legends` | brazil_legends:big_tongue (Cuca/folklore drop) | occultism:ritual | magic | M-11 | REJECT |
 | 3 | ✓ | `brazil_legends` | amber_shard / amber_pearl | numismatics sell | economy | M-09 | ACCEPT |
@@ -296,7 +285,6 @@ _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass
 | 3 |  | `travelersbackpack` | travelersbackpack themed mob-variant packs (dr | numismatics sell | economy | M-09 | REJECT |
 | 3 | ✓ | `travelersbackpack` | backpack tank + hose (portable fluid buffer +  | passive transport/logistics role o | aeronautics |  | REJECT |
 | 3 |  | `travelersbackpack` | travelersbackpack upgrade modules (tank_upgrad | travelersbackpack:backpack_upgrade | create | M-06 | ACCEPT |
-| 3 |  | `umapyoi` | umapyoi:crystal_gold / crystal_rainbow | numismatics sell/price | economy | M-09 | ACCEPT |
 | 3 |  | `undergroundworlds` | undergroundworlds temple/pyramid bricks (theme | create:crushing → crushed stone +  | create | M-04 | ACCEPT |
 | 3 |  | `valarian_conquest` | valarian_conquest:*_citizenship + mercenary hi | numismatics coin gate | economy | M-09 | ACCEPT |
 | 3 |  | `valarian_conquest` | valarian_conquest:armorsmith / builder station | create:mechanical_crafting — gate  | create | M-05 | REJECT |
@@ -333,10 +321,6 @@ _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `betterstrongholds` | betterstrongholds boss-adjacent (pre-End gate  | loot-seed | economy | M-14 | REJECT |
 | 2 |  | `born_in_chaos_v1` | born_in_chaos_v1:dark_metal_deposit | recipe (create:crushing) | create | M-03 | ACCEPT |
 | 2 |  | `born_in_chaos_v1` | born_in_chaos_v1:bundle_of_bones | recipe (occultism:spirit_fire) | magic | M-11 | ACCEPT |
-| 2 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:ancient_anima | bountiful bounty (premium objectiv | economy | M-14 | ACCEPT |
-| 2 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:void_thorns (Void B | bountiful bounty board → numismati | economy | M-14 | ACCEPT |
-| 2 | ✓ | `bosses_of_mass_destruction` | obsidian_heart / blazing_eye | create:sequenced_assembly (boss dr | create | M-15 | ACCEPT |
-| 2 | ✓ | `bosses_of_mass_destruction` | ancient_anima / void_thorns | ars_nouveau:imbuement | magic | M-10 | ACCEPT |
 | 2 |  | `bountiful` | bountiful:decree (objective pool) configured t | bountiful objective → numismatics  | create | M-14 | ACCEPT |
 | 2 |  | `bountiful` | bountiful:decree configured to demand magic re | bountiful objective → numismatics  | magic | M-14 | ACCEPT |
 | 2 |  | `bountiful` | bountiful objective pool | magic reagents as required items ( | magic | M-02 | ACCEPT |
@@ -538,9 +522,6 @@ _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass
 | 2 | ✓ | `smokeleafindustries` | its FE machine network | createaddition:charging / FE↔kinet | create | M-17 | ACCEPT |
 | 2 | ✓ | `smokeleafindustries` | generator burnable inputs | smokeleafindustries:generator acce | create | M-13 | REJECT |
 | 2 |  | `snowyspirit` | snowyspirit:ginger (c:crops/ginger) | recipe (create:milling) | create | M-12 | ACCEPT |
-| 2 |  | `solclassic` | solclassic food-variety penalty system (ambien | numismatics — food-variety pressur | economy | M-09 | REJECT |
-| 2 |  | `solonion` | lunchbox (mid-tier container) | create:mechanical_crafting | create | M-05 | REJECT |
-| 2 |  | `solonion` | solonion:golden_lunchbox | create:sequenced_assembly | create | M-06 | ACCEPT |
 | 2 |  | `spawn` | clam meat / crab claw (mid seafood drops) | numismatics sell as exotic caught  | economy | M-09 | ACCEPT |
 | 2 |  | `spawn` | spawn:crab / crab drops (cooked crab, crab cla | farmersdelight:cooking + create:mi | create | M-12 | ACCEPT |
 | 2 |  | `spawn` | spawn:ant_pupa / ant colony byproducts | occultism:spirit_fire or ritual | magic | M-11 | REJECT |
@@ -567,7 +548,6 @@ _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass
 | 2 |  | `travelersbackpack` | netherite / dragon backpack (top-tier variants | create:sequenced_assembly | create | M-06 | ACCEPT |
 | 2 |  | `trek-b0.6.1.1` | trek structures (ship holds, pyramid chests, f | loot-seed | economy | M-08 | ACCEPT |
 | 2 |  | `trek-b0.6.1.1` | trek structures | loot-seed | create | M-15 | REJECT |
-| 2 |  | `umapyoi` | umapyoi:crystal_silver (lower-tier output) | recipe (numismatics sell) | economy | M-09 | REJECT |
 | 2 |  | `underground_village` | Stoneholm villager trades | bountiful board | economy | M-14 | ACCEPT |
 | 2 |  | `underground_village` | Stoneholm chest loot | loot-table insertion of a coin/rea | economy |  | REJECT |
 | 2 |  | `undergroundworlds` | undergroundworlds:desert_charm / antidote_flas | numismatics sell | economy | M-09 | REJECT |
@@ -683,21 +663,6 @@ _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `born_in_chaos_v1` | born_in_chaos_v1:pumpkin_staff / soul_saber (b | gated Create recipe (boss drop as  | create | M-15 | REJECT |
 | 1 |  | `born_in_chaos_v1` | born_in_chaos_v1:bagof_candy (seasonal drop, O | season-gated input → ars_nouveau:i | magic | M-16 | ACCEPT |
 | 1 |  | `born_in_chaos_v1` | born_in_chaos_v1:black_argillite (deco stone) | create:crushing | create | M-04 | REJECT |
-| 1 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:blazing_eye | create:sequenced_assembly or boss- | create | M-06 | ACCEPT |
-| 1 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:obsidian_heart | ars_nouveau:imbuement | magic | M-10 | REJECT |
-| 1 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:brimstone_nectar /  | numismatics sell | economy | M-09 | REJECT |
-| 1 |  | `bosses_of_mass_destruction` | all boss drops | numismatics bounty (M-14) | economy | M-14 | REJECT |
-| 1 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:ancient_anima | create:sequenced_assembly | create | M-06 | ACCEPT |
-| 1 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:obsidian_heart | numismatics (bounty board / premiu | economy | M-14 | REJECT |
-| 1 |  | `bosses_of_mass_destruction` | boss drops (any of the four) | bountiful decree as premium epic-t | economy | M-02 | ACCEPT |
-| 1 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:brimstone_nectar /  | occultism:spirit_fire or ars_nouve | magic | M-11 | REJECT |
-| 1 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:blazing_eye (Nether | create:mechanical_crafting (gated  | create | M-15 | ACCEPT |
-| 1 |  | `bosses_of_mass_destruction` |  | occultism:spirit_fire | magic | M-11 | ACCEPT |
-| 1 |  | `bosses_of_mass_destruction` |  | create:crushing | create | M-04 | ACCEPT |
-| 1 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:ancient_anima | create:haunting (haunting of a bla | create | M-19 | REJECT |
-| 1 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:crystal_fruit / bri | numismatics sell | economy | M-09 | REJECT |
-| 1 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:blazing_eye | create:haunting (soul-fire transmu | create | M-19 | REJECT |
-| 1 |  | `bosses_of_mass_destruction` | bosses_of_mass_destruction:void_thorns | recipe (crafting table with Ars so | magic | M-10 | REJECT |
 | 1 |  | `bountiful` | bountiful:decree configured to demand Farmer's | bountiful objective → numismatics  | survival | M-14 | ACCEPT |
 | 1 |  | `bountiful` | bountiful:bounty (reward slot) → direct Ars so | bountiful reward | magic | M-01 | REJECT |
 | 1 | ✓ | `bountiful` | mob-kill bounty objectives (Decrees pointed at | bountiful board consumes kills → p | organic/combat | M-14 | ACCEPT |
@@ -1800,31 +1765,10 @@ _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass
 | 1 |  | `snowyspirit` | snowyspirit:eggnog / candy_cane / gingerbread_ | numismatics sell | economy | M-09 | ACCEPT |
 | 1 |  | `snowyspirit` | snowyspirit:ginger (c:crops/ginger, seasonal — | season-gated input → Create/magic | magic | M-16 | ACCEPT |
 | 1 |  | `snowyspirit` | snowyspirit sled | flavour/transport | aeronautics |  | REJECT |
-| 1 |  | `solclassic` | varied cooked meals (broad food roster) | numismatics sell/price | economy | M-09 | ACCEPT |
-| 1 |  | `solclassic` | systemic food-variety demand (diminishing-retu | numismatics sell/price | economy | M-09 | ACCEPT |
-| 1 |  | `solclassic` | solclassic:basket / wicker_basket | create:mechanical_crafting | create | M-05 | REJECT |
-| 1 |  | `solclassic` | (systemic food-variety pressure) | numismatics sell | economy | M-09 | REJECT |
-| 1 |  | `solclassic` | solclassic:basket / wicker_basket | crafting table / numismatics | economy | M-09 | REJECT |
-| 1 |  | `solclassic` | solclassic food-discipline loop | any magic/Create method | create |  | REJECT |
-| 1 |  | `solclassic` | food variety demand (systemic) | numismatics sell/price (M-09) | economy | M-09 | ACCEPT |
-| 1 |  | `solclassic` | solclassic:basket or solclassic:wicker_basket | create:pressing (leather/weave) or | create | M-20 | REJECT |
-| 1 |  | `solclassic` | solclassic:basket / wicker_basket (multi-food  | recipe (M-05 or M-12 — basket craf | create | M-12 | ACCEPT |
-| 1 |  | `solclassic` | solclassic:food_history_book | recipe (no obvious second-pillar h | — |  | REJECT |
 | 1 |  | `solmaiddream` | solmaiddream food_book (the one item) | recipe — trivial craft (book + any | survival |  | REJECT |
 | 1 |  | `solmaiddream` | maid stat-growth mechanic (unique-food milesto | config — link milestone thresholds | create | M-12 | ACCEPT |
 | 1 |  | `solmaiddream` | solmaiddream maid food-variety progression | config tie — the milestone thresho | survival | M-12 | REJECT |
 | 1 |  | `solmaiddream` | solmaiddream companion maid (via touhou_little | no coherent mechanic route to econ |  |  | REJECT |
-| 1 |  | `solonion` | lunchbag→lunchbox upgrade | solonion:upgrade_food_container (e | create | M-20 | REJECT |
-| 1 |  | `solonion` | lunchbox food diversity score | numismatics economy incentive | economy | M-09 | REJECT |
-| 1 |  | `solonion` | solonion:lunchbox (upgrade path) | create:sequenced_assembly | create | M-06 | REJECT |
-| 1 | ✓ | `solonion` | food diversity metric | numismatics | economy |  | REJECT |
-| 1 |  | `solonion` | solonion lunchbox tier upgrades (lunchbag → lu | create:deploying / item_applicatio | create | M-20 | REJECT |
-| 1 | ✓ | `solonion` | per-player diversity score | any | — |  | REJECT |
-| 1 |  | `solonion` |  | create:pressing (a single pressed- | create | M-20 | ACCEPT |
-| 1 |  | `solonion` | solonion:lunchbox upgrade chain | numismatics sell | economy | M-09 | REJECT |
-| 1 |  | `solonion` | solonion:lunchbox→golden_lunchbox upgrade | recipe → create:deploying (M-20 li | create | M-20 | REJECT |
-| 1 |  | `solonion` | food-diversity milestone benefit | config tie | magic |  | REJECT |
-| 1 |  | `solonion` | solonion:food diversity metric (milestone buff | config tie to Serene Seasons crops | survival | M-16 | REJECT |
 | 1 |  | `spawn` | spawn seafood drops (crab, anglerfish, seal, s | create:milling (crab shell → calci | create | M-12 | REJECT |
 | 1 |  | `spawn` | raw crab / clam (everyday aquatic catch) | create:milling (shell meal / chiti | create | M-12 | ACCEPT |
 | 1 |  | `spawn` | angler_fish (rare deep-ocean catch) | occultism:spirit_fire — angler bio | magic | M-11 | REJECT |
@@ -1976,12 +1920,6 @@ _Built by `scripts/phase2-merge.py` over **16 pass(es)**: pass-00, pass-01, pass
 | 1 | ✓ | `trek-b0.6.1.1` | chest loot | loot-table seeding (NOT a method-r | magic | M-02 | REJECT |
 | 1 |  | `trek-b0.6.1.1` | trek structures | loot-seed | magic | M-02 | ACCEPT |
 | 1 |  | `trek-b0.6.1.1` | trek structure chest loot | loot-seed — seed valarian_conquest | survival | M-01 | REJECT |
-| 1 |  | `umapyoi` | umapyoi:blank_uma_soul (ticket feedstock step) | create:mixing | create | M-12 | ACCEPT |
-| 1 |  | `umapyoi` | umapyoi:crystal_silver | ars_nouveau:imbuement | magic | M-10 | REJECT |
-| 1 |  | `umapyoi` | umapyoi:crystal_rainbow | occultism:spirit_trade | magic | M-11 | REJECT |
-| 1 |  | `umapyoi` | uma souls / blank_uma_soul (dungeon loot) | recipe (create:mixing — deepens ex | create | M-05 | ACCEPT |
-| 1 |  | `umapyoi` | umapyoi:horseshoe_gold (item present in jar) | loot-seed | economy | M-14 | REJECT |
-| 1 |  | `umapyoi` | umapyoi tickets / crystal upgrading | create:mixing (deepen existing inb | create | M-05 | ACCEPT |
 | 1 |  | `underground_village` |  | bountiful:decree configured to tar | economy | M-14 | ACCEPT |
 | 1 |  | `underground_village` |  | create:crushing on the structure's | create | M-04 | ACCEPT |
 | 1 |  | `underground_village` | Stoneholm structure (discovered underground se | thematic — MineColonies expedition | aeronautics |  | REJECT |

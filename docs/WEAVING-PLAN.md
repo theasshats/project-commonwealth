@@ -21,7 +21,7 @@
 >
 > **Where execution stands (read the status banners in §5):** Phase 0 (scaffolding) and Phase 1 (per-mod
 > dossiers) are **done** — ~351 `VERIFIED` dossiers, Gate 1 passed. Phase 2 (opportunity mapping) has run
-> as **16 convergence passes → ~2053 candidates** and is at/near saturation; **Gate 2 (the maintainer
+> as **16 convergence passes → ~1991 candidates** (after excluding cut mods) and is at/near saturation; **Gate 2 (the maintainer
 > approve/reject) is the immediate next step**, then Phase 2.5 files milestone issues. Phase 3 (authoring)
 > onward is milestone work on the odd feature versions. The motif vocabulary grew from the 12 seeds to
 > **M-01…M-24** (all Gate-0 accepted bar M-21).
@@ -415,8 +415,9 @@ A single Phase-2 pass under-produces (the first 9-chunk run found ~98 accepts �
 So Phase 2 is re-run as **many independent passes**, accumulating *every* candidate into one master table
 that **counts how many passes proposed each** — turning "did we find it?" into a **confidence** signal.
 
-**Where it stands:** **16 passes** (pass-00…pass-15) → **~2053 unique candidates** (deduped on
-mod + item + pillar + motif), **576 at ≥2-pass agreement, 231 opus-corroborated**. Passes 13/14/15 were
+**Where it stands:** **16 passes** (pass-00…pass-15) → **~1991 unique candidates** (deduped on
+mod + item + pillar + motif, after the merge excludes cut mods), **556 at ≥2-pass agreement, 225
+opus-corroborated**. Passes 13/14/15 were
 **full passes** (every dossier). The convergence table is `tools/weave-ledger/phase2/CANDIDATES.{md,tsv}`.
 
 1. **Randomize the chunking per pass** (`scripts/phase2-chunks.py --pass N --seed N`) so each pass sees
@@ -446,12 +447,13 @@ agent the accumulated rows for its mods and ask only for **what's missing**. **S
 context-fed pass adds almost nothing). End state: high-`times` rows are the confident, multiply-rediscovered
 weaves; `1`-count rows are speculative.
 
-> **⚠ v0.6.0 reconcile before Gate 2 / Phase 2.5.** The candidate accumulator was built before the v0.6.0
-> modlist landed, so it references **cut mods** — notably **BOMD (`bosses_of_mass_destruction`, ~28 rows,
-> now cut)**, plus solonion/umapyoi rows. The candidate set must be **re-validated against the current
-> manifest** (drop candidates for non-installed mods) before issues are filed. The **aeronautics** pillar
-> also still needs the #131/#179 digest of its code-registered parts before its outbound weaves are fully
-> reviewable.
+> **⚠ v0.6.0 reconcile.** The accumulator was built before the v0.6.0 modlist landed, so it referenced
+> **cut mods**. `phase2-merge.py` now **excludes cut mods automatically** (sourcing `build-dossiers.py`
+> `CUT_NS`), so the re-merge already dropped **62 candidates for 4 cut mods** — `bosses_of_mass_destruction`
+> (**BOMD, confirmed intentional cut**), `solclassic`, `solonion`, `umapyoi`. A broader manifest
+> re-validation is still good practice before Phase-2.5 issue-filing (the additive digest hides subtler
+> version/slug cases), and the **aeronautics** pillar still needs the #131/#179 digest of its
+> code-registered parts before its outbound weaves are fully reviewable.
 
 ### Phase 2.5 — Issue authoring & handoff (the instance's last step)  ⏳ NEXT
 - **Do:** turn each **accepted** integration into a **GitHub issue attached to the right milestone** (its

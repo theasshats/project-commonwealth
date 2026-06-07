@@ -21,6 +21,21 @@ from collections import defaultdict
 PH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'tools', 'weave-ledger', 'phase2')
 
 
+def _load_cut_ns():
+    """Cut mods (no manifest, but still in the pass files / the additive digest) are excluded from the
+    merged table so the Gate-2 read never proposes weaves for content that isn't shipped. Single source of
+    truth = build-dossiers.py CUT_NS, loaded by path (the hyphenated filename isn't importable normally)."""
+    import importlib.util
+    p = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'build-dossiers.py')
+    spec = importlib.util.spec_from_file_location('build_dossiers', p)
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return set(m.CUT_NS)
+
+
+CUT = _load_cut_ns()
+
+
 def norm_from(s):
     s = s.strip().lower()
     m = re.search(r'[a-z0-9_]+:[a-z0-9_/]+', s)          # prefer a mod:item id
@@ -87,10 +102,14 @@ def main():
     cand = defaultdict(lambda: {'passes': set(), 'opus': False, 'verdicts': defaultdict(int),
                                 'from': '', 'via': '', 'to': '', 'motif': '', 'hook': ''})
     passes = set()
+    excluded = set()        # unique (mod,item,pillar,motif) dropped for being cut from the pack
     for pid, is_opus, path in collect():
         passes.add(pid)
         for mod, frm, via, to, motif, verdict, hook in parse_file(path):
             if not mod or verdict == 'LEAVE':
+                continue
+            if mod in CUT:                                  # mod was cut from the pack — drop its candidates
+                excluded.add((mod, norm_from(frm), norm_pillar(to), motif))
                 continue
             key = (mod, norm_from(frm), norm_pillar(to), motif)
             c = cand[key]
@@ -116,7 +135,9 @@ def main():
           f'_Built by `scripts/phase2-merge.py` over **{len(passes)} pass(es)**: '
           f'{", ".join(sorted(passes))}. `times` = how many independent passes proposed this candidate '
           f'(confidence); `opus` = an Opus run also proposed it. Re-run after every pass._', '',
-          f'**{len(rows)} unique candidates** (deduped on mod + item + pillar + motif).', '',
+          f'**{len(rows)} unique candidates** (deduped on mod + item + pillar + motif).'
+          + (f' _Excludes {len(excluded)} candidate(s) for {len(set(m for m,_,_,_ in excluded))} cut mod(s) '
+             f'(build-dossiers `CUT_NS`)._' if excluded else ''), '',
           '| times | opus | mod | from → | via (method) | pillar | motif | consensus |',
           '|--:|:--:|---|---|---|---|---|---|']
     for n, opus, mod, frm, via, pillar, motif, consensus, verdicts, hook in rows:
@@ -124,6 +145,9 @@ def main():
     open(os.path.join(PH, 'CANDIDATES.md'), 'w', encoding='utf-8').write('\n'.join(md) + '\n')
     print(f'passes: {len(passes)} | unique candidates: {len(rows)} | with opus: {sum(1 for r in rows if r[1])}')
     print(f'  multi-pass (>=2): {sum(1 for r in rows if r[0] >= 2)}  -> CANDIDATES.md/.tsv')
+    if excluded:
+        print(f'  excluded {len(excluded)} candidate(s) for {len(set(m for m,_,_,_ in excluded))} cut mod(s): '
+              f'{", ".join(sorted(set(m for m,_,_,_ in excluded)))}')
 
 
 if __name__ == '__main__':
