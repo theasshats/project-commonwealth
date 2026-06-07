@@ -10,6 +10,27 @@ theme/balance · **[PLAN]** plan-doc change · **[GITHUB]** issue action · **[N
 
 ---
 
+## Status — #179 done (aeronautics GROUNDED) + docs reworked
+
+- **[NOTE] #179 (aeronautics digest gap) closed by another instance** (commit f85fc1d, rebased under my
+  work — don't redo the parse). The maintainer's `tools/mod-data/raw-aeronautics/` extraction was parsed into
+  the digest: `create-aeronautics-bundled` now scans **141 blocks / 18 items** (aeronautics/simulated/offroad)
+  + recipes + loot, and `dossiers/aeronautics.md` is **GROUNDED** with jar-confirmed make-chains (levitite
+  blend = `create:mixing`, Physics Assembler, propeller/gyro bearings, hot-air burner, engine assembly). The
+  obsolete `aeronautics_bundled.md` stub was removed.
+- **[PLAN] Reworked my docs to match:** WEAVING-PLAN (§4.1/§5/§9/§15 — aeronautics is no longer a hand-authored
+  blind spot; the gap is closed), NEXT-SESSION (gating: #179 done, run on GO), AERONAUTICS-DATA-GAP (RESOLVED
+  banner). The freeze-retirement note's Aeronautics false-zero example is annotated "now grounded."
+- **[NOTE] Keyed the bundle to `aeronautics` (the open decision #179 left).** It ships 3 namespaces with
+  `simulated` dominant, so `build-dossiers.py` would auto-key its skeleton to `simulated.md`. Added
+  `PRIMARY_NS_OVERRIDE = {'aeronautics_bundled': 'aeronautics'}` so a regen updates the curated
+  `aeronautics.md` instead (verified: parses to `aeronautics`; offroad/simulated as also-ships). *Undo:* drop
+  the override.
+- **[NOTE] Do NOT run `build-dossiers.py` on this branch.** The #179 instance ran it and it surfaced ~90 drift
+  dossiers + 9 modified + a palette delta (the general dossier↔by-mod #131 staleness — justenoughbreeding,
+  railways rename, …); they reverted it. That's an **on-box clean regen** (#131), kept out of here. (They also
+  excluded `aeronautics_dyeable_components` — it scans as its own jar.)
+
 ## Status — library-freeze RETIRED ("I don't think I said to freeze")
 
 - **[NOTE] Freeze retired — review EVERYTHING, every pass.** The maintainer flagged that **freezing was never
@@ -23,11 +44,10 @@ theme/balance · **[PLAN]** plan-doc change · **[GITHUB]** issue action · **[N
   - **Deleted** `LIBRARY-FREEZE.txt` + `scripts/phase2-freeze.py`; **stripped** the freeze-skip from
     `phase2-chunks.py` so every pass covers **all ~351 dossiers** (verified: 351 mods → 36 chunks). Updated
     the plan (§5/§9) + the runbook (`NEXT-SESSION.md`). *Undo:* re-add a skip list (don't — it's the bug).
-- **[NOTE] Set up for full passes — NOT run yet (gated on #179).** Tooling is ready
-  (`python3 scripts/phase2-chunks.py --pass 16 --seed 16` → 36 full-coverage chunks). **Holding the run for
-  #179** (aeronautics registry dump — nearly done): Aeronautics' parts are code-registered, so the digest
-  under-captures them; once #179 lands, regen the digest + dossiers so aeronautics is covered like everything
-  else, then run the full passes on the maintainer's GO.
+- **[NOTE] Set up for full passes — NOT run yet (awaiting the maintainer's GO; #179 now done).** Tooling is
+  ready (`python3 scripts/phase2-chunks.py --pass 16 --seed 16` → 36 full-coverage chunks). The #179
+  aeronautics gap that was blocking is **closed** (see the top status); do NOT run `build-dossiers.py` to
+  refresh (it re-surfaces the #131 dossier drift) — the dossiers are usable as-is. Run the passes on the GO.
 
 ## Status — main merged (v0.6.0 loop model) + plan reframed + dossier reconcile
 

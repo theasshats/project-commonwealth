@@ -323,9 +323,10 @@ status:     VERIFIED                    ← or UNVERIFIED (blocks use as a weave
 
 The `methods` block is the heart of the card. Its **recipe-types are auto-filled from the digest**; the
 **non-recipe mechanics** are what the web sweep adds. `consumes / outputs` is the join key for
-opportunity-finding (§6). A handful of code-registered mods (Create **Aeronautics**, Diet **AppleSeed**)
-register near-zero items the scanner can see, so their cards are **hand-authored** and grounded against
-[`SYSTEMS.md`](SYSTEMS.md) + the wiki, flagged as such (the scanner blind spot, #131 — not stale data).
+opportunity-finding (§6). Some mods register content in **code**, near-invisible to the scanner: **Diet
+AppleSeed** (a contentless mechanic) stays **hand-authored** against [`SYSTEMS.md`](SYSTEMS.md); **Create
+Aeronautics** was too, until **#179** parsed its registry dump into the digest — its card is now `GROUNDED`
+(141 blocks / 18 items + jar-confirmed make-chains). The additive-digest / scanner blind spot is #131.
 
 ### 4.2 Motif registry & reagent-ownership
 
@@ -453,8 +454,9 @@ weaves; `1`-count rows are speculative.
 > `CUT_NS`), so the re-merge already dropped **62 candidates for 4 cut mods** — `bosses_of_mass_destruction`
 > (**BOMD, confirmed intentional cut**), `solclassic`, `solonion`, `umapyoi`. A broader manifest
 > re-validation is still good practice before Phase-2.5 issue-filing (the additive digest hides subtler
-> version/slug cases), and the **aeronautics** pillar still needs the #131/#179 digest of its
-> code-registered parts before its outbound weaves are fully reviewable.
+> version/slug cases). **The aeronautics pillar is now reviewable** — **#179** parsed its code-registered
+> parts into the digest (`aeronautics.md` is `GROUNDED`), closing the blind spot that had it weave only
+> *into* aeronautics.
 
 ### Phase 2.5 — Issue authoring & handoff (the instance's last step)  ⏳ NEXT
 - **Do:** turn each **accepted** integration into a **GitHub issue attached to the right milestone** (its
@@ -638,8 +640,9 @@ The digest and recipe-graph do the heavy lifting; the genuinely new pieces are s
 **Digest extension:** the dossier is a *new layer beside* the digest that *consumes* it. The digest stays
 the verbatim-jar ground truth; the dossier is the interpreted layer on top. #161 regenerates the digest on
 updates, so the dossier generator just re-runs after it. **Known gap:** the digest is **additive** (never
-deletes uninstalled mods — #131) and **scanner-blind to code-registered content** (Aeronautics, AppleSeed),
-so the dossier layer is reconciled against the **manifest** and the worst gaps are hand-authored.
+deletes uninstalled mods — #131) and **scanner-blind to code-registered content** (the AppleSeed mechanic;
+Aeronautics until **#179** parsed its registry dump in), so the dossier layer is reconciled against the
+**manifest** and the residual gaps are hand-authored.
 
 ---
 
@@ -755,7 +758,7 @@ how to undo each):
 1. **Ledger home → separate.** `docs/WEAVE-LEDGER.md` + `tools/weave-ledger/`, **not** folded into
    `RECIPES.md` (it spans the whole loop, not just recipes).
 2. **Dossier depth → scaffold all from the digest, deep-sweep the worklist + hubs.** Done — ~351 `VERIFIED`
-   dossiers; code-registered/zero-content content mods (Aeronautics, AppleSeed) hand-authored.
+   dossiers; the AppleSeed mechanic hand-authored; Aeronautics now digest-`GROUNDED` via #179.
 3. **`check.py` enforcement → advisory now, required at 0.15.**
 4. **Coordinator model → the autonomous instance + the `DECISIONS.md` queue.** Approved ("decisions are
    good"): proceed on best judgment, log every reserved gate-call, ratify/override later.
@@ -763,8 +766,8 @@ how to undo each):
    explore only)**; the behavioral-constraint motif is **held**. The registry keeps growing through Gate 0.
 
 **Carry-over (not yet decided):** M-09/M-14 player-run-currency caveats (revisit in the **v0.9.0** economy
-update); M-21 trade-seam (maintainer leans no — surface, don't author); the aeronautics digest gap
-(#131/#179) before its outbound weaves are fully reviewable.
+update); M-21 trade-seam (maintainer leans no — surface, don't author). _(The aeronautics digest gap is
+now **closed** — #179 grounded it.)_
 
 ---
 

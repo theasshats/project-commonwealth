@@ -1,5 +1,16 @@
 # Aeronautics data gap — context + recovery (read before acting on the registry dump)
 
+> **✅ RESOLVED — #179 (commit f85fc1d).** The maintainer extracted the registry/lang dump to
+> `tools/mod-data/raw-aeronautics/`, and an instance parsed it into the digest:
+> `by-mod/create-aeronautics-bundled-…txt` now has **141 blocks / 18 items** across aeronautics/simulated/
+> offroad + 125 recipe & 137 loot lines, and `dossiers/aeronautics.md` is **GROUNDED** (real counts +
+> jar-confirmed make-chains: levitite blend = `create:mixing`(zinc nugget + end-stone powder + water),
+> Physics Assembler, propeller/gyro bearings, hot-air burner, engine assembly). The obsolete
+> `aeronautics_bundled.md` stub was removed; the bundle is keyed to `aeronautics` in `build-dossiers.py`
+> (`PRIMARY_NS_OVERRIDE`) so a regen keeps that curated doc rather than spawning a `simulated.md`. Only two
+> **code-only** steps remain JEI-pending (levitite crystallization; pearlescent/alloy tier). The text below
+> is kept for history. (The general dossier↔by-mod #131 drift is separate — an on-box regen, not this.)
+
 ## The problem (one line)
 Create Aeronautics registers its blocks/items in **Java code**, so `scripts/extract-mod-data.sh` (a static
 jar scanner) captures them as **0 blocks / 0 items**. The aeronautics PILLAR — the whole airship/vehicle layer

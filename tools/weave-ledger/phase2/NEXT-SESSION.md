@@ -9,7 +9,7 @@ fan, and confirm the user's GO** — passes are **set up but not to be run yet**
   **~1991 unique candidates** (after the merge excludes cut mods), **556 at ≥2-pass, 225 opus-corroborated**.
 - **The library-FREEZE was RETIRED** (maintainer call: *"I don't think I said to freeze"* + *"unfreeze
   everything"*). It skipped ~160 "zero-content" mods to save tokens, but its content test trusted the digest's
-  block/item count, which **false-zeroes code-registered & mechanic-only content** (Aeronautics parts, diet/
+  block/item count, which **false-zeroes code-registered & mechanic-only content** (Aeronautics parts — now GROUNDED via #179 — diet/
   AppleSeed, sleep/`midnightthoughts`, `fishingreal`) — so real content mods were silently skipped and their
   weaves missed, re-introducing the exclusion the *"review everything"* rule had removed. `LIBRARY-FREEZE.txt`
   and `phase2-freeze.py` are deleted; `phase2-chunks.py` now chunks **ALL ~351 dossiers every pass** (full
@@ -18,12 +18,14 @@ fan, and confirm the user's GO** — passes are **set up but not to be run yet**
   intentional cut), solclassic, solonion, umapyoi are excluded automatically.
 
 ## Gating — set up, do NOT run yet
-1. **Wait for #179 (aeronautics registry dump / digest gap) — nearly done.** Create Aeronautics registers its
-   parts in code, so the scanner saw `aeronautics`/`sable`/`aeronautics_bundled` as ~0 items and the pillar's
-   own content was never properly reviewable. #179 fills that. **When it lands:** regen the digest + dossiers
-   (`scripts/extract-mod-data.sh` on the box → `scripts/build-dossiers.py`) so the aeronautics parts get real
-   cards, THEN run the full passes — so aeronautics is finally covered like everything else.
-2. **Confirm the user's GO + free usage** before dispatching any fan.
+1. **#179 (aeronautics digest gap) — ✅ DONE** (commit f85fc1d). The bundle is parsed into the digest
+   (141 blocks / 18 items + recipes/loot) and `dossiers/aeronautics.md` is **GROUNDED** with jar-confirmed
+   make-chains; the `aeronautics_bundled` stub was removed. Aeronautics is now covered like everything else —
+   the gap no longer blocks the passes.
+2. **Do NOT run `build-dossiers.py` to "refresh" first** — it re-surfaces the general dossier↔by-mod #131
+   drift (~90 stale dossiers + a palette delta) that the #179 instance saw and reverted. That's a separate
+   **on-box clean regen** (#131), not a blocker; the current dossiers are usable as-is.
+3. **Confirm the maintainer's GO + free usage** before dispatching any fan.
 
 ## THE PLAN — run full passes once ungated
 
