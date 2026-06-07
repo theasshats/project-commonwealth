@@ -25,7 +25,7 @@ locked, a colony makes it cheaper, you hire a specialist, it ages like wine, etc
 #239 tool wear, #240 player-run economy, #222 industry-damages-the-world) so they're tracked separately.
 
 ## Where it's at right now
-- **Phase 2 (mapping): done.** The big proposal list exists (`CANDIDATES.tsv`) plus the updated connection
+- **Phase 2 (mapping): in work.** The big proposal list exists (`CANDIDATES.tsv`) plus the updated connection
   vocabulary (`docs/WEAVE-LEDGER.md`, motifs M-01…M-38).
 - **Phase 2.5 (triage): not started — this is the next step, and it needs human eyes.** The raw list is too
   big and noisy to act on. The plan is to go **mod by mod**, boil each down to a short "here are the 2-3
