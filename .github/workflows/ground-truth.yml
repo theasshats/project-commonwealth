@@ -8,22 +8,56 @@ name: Ground-truth digest
 # Only the facts digest is committed. Full configs / recipe dumps are the mod
 # authors' content (licensing-sensitive) and are intentionally NOT produced here.
 #
-# Manual trigger. (workflow_dispatch only surfaces in the Actions tab once this
-# file is on the default branch.)
+# Trigger (#131): the digest goes stale the moment the modlist changes, so it
+# auto-regenerates whenever mods/** or pack.toml move — on push to main AND on
+# PRs (committed back to the PR branch, so recipe-design sessions read a digest
+# that's fresh on the branch where the mod was added). Drafts included on
+# purpose: agents work on draft PRs, so the digest must stay current there.
+# workflow_dispatch is kept for a forced refresh; a weekly cron is a backstop.
+#
+# No loop: the triggers watch mods/** / pack.toml only — never tools/mod-data/**
+# — so the digest's own commit-back can't re-trigger this. (That commit DOES feed
+# recipe-web.yml, which watches tools/mod-data/recipes/** — intended chain.) PR
+# pushes use GITHUB_TOKEN, which doesn't re-fire pull_request.
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'mods/**'
+      - 'pack.toml'
+  pull_request:
+    types: [opened, reopened, synchronize]
+    paths:
+      - 'mods/**'
+      - 'pack.toml'
+  schedule:
+    - cron: '0 6 * * 1'  # Mondays 06:00 UTC — weekly backstop
   workflow_dispatch:
 
 permissions:
   contents: write
 
+# Serialize per-branch so a regen can't race another push to the same PR branch.
+concurrency:
+  group: ground-truth-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
 jobs:
   digest:
     runs-on: ubuntu-latest
+    # Forks can't push back and lack secrets — skip them (same guard as the other
+    # commit-back PR workflows). Same-repo PRs and all non-PR events run.
+    if: >-
+      github.event_name != 'pull_request' ||
+      github.event.pull_request.head.repo.full_name == github.repository
     steps:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          # On a PR, check out the PR branch itself (not the detached merge ref)
+          # so the refreshed digest commits back to the branch where work happens.
+          ref: ${{ github.head_ref || github.ref }}
 
       - name: Set up Java (for packwiz-installer-bootstrap)
         uses: actions/setup-java@v4
