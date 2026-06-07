@@ -292,3 +292,18 @@ Same Macaw's deco family as mcwfences and mcwdoors. Stone parapet/arrow-slit var
 
 OK — single accepted link: stone parapet → create:crushing (M-04). Part of the wholesale Macaw's deco-family M-04 pass.
 
+## midnightthoughts   [anchors: survival/rest (1)]
+
+Sleep/rest overhaul: well-rested buff system from sleeping, penalizes sleep-skipping. No items, no loot, no recipe types. Pure effect/event-driven mechanic.
+
+**Method-pull analysis:**
+The well-rested buff is a persistent status effect tied to sleep timing. No material surface. The only possible weave angle is whether the well-rested buff interacts with another system's mechanic — but that requires a mod-to-mod config hook that doesn't exist in either system.
+
+**Candidate 1: well-rested buff as a prerequisite for increased MineColonies worker output**
+- from: midnightthoughts well-rested status | via: config tie / KubeJS event | to: economy (colony route) | motif: M-28 | power: everyday | tone: ok in concept | verdict: REJECT | reason: MineColonies worker AI doesn't read the player's well-rested buff state — worker productivity is driven by in-colony food supply, not player status effects. This connection requires a mechanical bridge that doesn't exist.
+
+**Candidate 2: well-rested buff as a lunar/seasonal cycling anchor (M-22)**
+- from: player sleep schedule tied to moon phase (Midnight Thoughts respects MC day/night) | via: config/behavioral | to: survival | motif: M-22 (lunar/celestial reagent — a material/effect tied to moon events) | power: everyday | tone: ok conceptually | verdict: REJECT | reason: the well-rested buff is triggered by sleeping, not by moon phase specifically. Moon-phase-specific sleep bonuses would need a separate mechanic; Midnight Thoughts doesn't implement moon-phase differentiation. This is a theme association, not a method-pull.
+
+- LEAVE — behavior-only rest/sleep mechanic. No items, no loot, no recipe types; no material surface for method-pull. The well-rested buff is a survival pressure enhancement with no join key to a second system. Forcing an edge (e.g., "well-rested buff → colony productivity") requires mechanical bridges that don't exist in either mod. Leave as survival support.
+
