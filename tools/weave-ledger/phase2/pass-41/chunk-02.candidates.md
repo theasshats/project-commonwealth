@@ -70,6 +70,11 @@ Note: this deepens an existing M-04 ACCEPT row rather than adding a new motif �
 
 - NEW | from: railways high-tier track components (high-speed track gauges / brass_wrapped_locometal_boiler — multi-step fabricated) | via: tfmg:hot_blast or tfmg:casting — TFMG steel/cast_iron required for high-speed rail boiler components | to: create | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: a high-speed railway line needs boilers that a basic forge can't make — the rail engineer depends on the industrial tier for heat-resistant components, tying the transport spine to the refinery and forcing the two Create-specialists to cooperate.
 
+## ars_n_spells   [anchors: magic (1)]
+OK — M-29 (cross-cast enchanting apparatus dual-reagent) and M-37 (MineColonies research gate) are the correct accepted rows. One additional angle:
+
+- NEW | from: ars_n_spells cross-casting ritual (requires two-tablet inscription, one from each magic system) | via: service mechanic — the ritual inherently requires input from both magic specialists; neither can perform it alone | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: cross-casting is a collaboration, not a solo craft — the Ars specialist and the Iron's specialist must both contribute their tablets and be present, making every cross-cast a player-economy service event that neither can shortcut (and neither can sell a cross-cast capability, only the cross-cast product).
+
 ## aeronautics   [anchors: aeronautics + Create (2)]
 OK — M-10 (levitite magic), M-13 (fuel), M-22 (lunar levitite), M-31 (docking logistics), M-33 (docking trading-post), M-08 (levitite→coin), M-24 (propeller drivetrain), M-10 (goggles enchanting) all covered. One structural gap:
 
