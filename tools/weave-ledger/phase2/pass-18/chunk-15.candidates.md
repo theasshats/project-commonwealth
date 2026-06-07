@@ -75,6 +75,18 @@ Power-read: 138 blocks, 301 items, loot=yes. Boss-drop materials (ancient_metal_
 
 REWORK: survival (1) is correct but thin — cataclysm is the pack's endgame pressure spike. The existing connection is sound; new edges add Create (M-15, M-06), magic (M-11, M-10), economy (M-08) — net 4 pillars, well above the target.
 
+## pantographsandwires   [anchors: Create, aeronautics (2)]
+Power-read: 101 blocks, 94 items, loot=yes; heavy Create inbound weave (6 recipe types incl. sequenced_assembly). Produces coal_coke (c:item/dusts/coal_coke) and graphite (c:item/ingots/graphite) as tagged intermediate materials. Overhead catenary infrastructure for electric trains.
+
+REWORK check: Create + aeronautics is correct and the inbound recipe depth is substantial. No rework needed; connections are sound.
+
+- from: pantographsandwires:coal_coke | via: tfmg:coking / create:mixing | to: Create | motif: M-13 | power: mid | tone: ok | verdict: REJECT | reason: Coal coke is already an intermediate in pantographsandwires' own recipe chain (makes graphite/catenary parts) — using it as a fuel (M-13 aeronautics propulsion) is tempting since coke is a real-world locomotive fuel, but the mod already has Create + aeronautics at 2 anchors, and adding a fuel route for coke doesn't advance the loop further (coke fueling trains is implicit in the train infra already). Low incremental value; don't add edge.
+- from: pantographsandwires:graphite | via: create_new_age:energising | to: Create | motif: M-17 | power: mid | tone: ok | verdict: REJECT | reason: Graphite has an electric/conductive vibe and c:ingots/graphite is a shared tag — an energy-charging role is plausible. However M-17 (FE charging bridge) specifically applies to charging tools/foci, and graphite-as-conductor is a materials tag, not a chargeable item. The motif doesn't fit cleanly; this would be a no-motif edge. Reject-for-review.
+- from: pantographsandwires graphite blocks | via: create_enchantment_industry:grinding | to: Create | motif: M-03 | power: mid | tone: ok | verdict: REJECT | reason: Graphite-ore-grinding is not a scarcity-ore-doubling situation — pantographsandwires makes graphite through its own industrial chain (coal_coke + pressing). M-03 is for raw ore → crushed doubling; this would be a downstream product, not an ore. Motif misfit → reject.
+
+OK — connections sound. Two anchors well-justified; the coal_coke and graphite tags are available for other mods to pull (notably TFMG and createaddition's fuel chain), but no outgoing edge from pantographsandwires is needed.
+
+
 
 
 

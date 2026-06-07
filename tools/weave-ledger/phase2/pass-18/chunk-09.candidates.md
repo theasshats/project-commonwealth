@@ -97,4 +97,27 @@ the economy candidate.
   is a reach — the tone difference between confectionery and arcane infusion is too large; players would
   not find "pour glow-berry jam into the imbuement chamber" coherent
 
+## create_new_age   [anchors: create (1)]
+REWORK: examining whether 1-anchor status is correct; also assessing the dossier's 3 candidates.
+- from: create_new_age:thorium_ore (scarce biome-specific ore, 2 biome-modifiers) | via: create:crushing
+  (ore-doubling byproduct — thorium dust; feeds the reactor fuel chain with a Create processing step) |
+  to: create | motif: M-03 | power: mid | tone: ok | verdict: ACCEPT | hook: the reactor's fuel supply
+  passes through the crushing wheel before it ever sees the fuel acceptor — mining alone is not enough
+- from: create_new_age:energising (the Energiser recipe-type, which charges items with Create electricity)
+  | via: energising an Ars Nouveau focus/wand component, making an arcane-electric focus that bridges the
+  Create FE tier into magic gear | to: magic | motif: M-17 | power: endgame | tone: ok | verdict: ACCEPT
+  | hook: the Energiser floods a charged essence into a spell focus — electricity has a place in magic when
+  the voltage is high enough
+- from: create_new_age:energising — gating an Aeronautics motor/advanced propulsion control unit through
+  the Energiser (requires Create electricity to manufacture) | to: aeronautics | motif: M-24 | power:
+  endgame | tone: ok | verdict: ACCEPT | hook: the advanced ship engine is more than a spinning shaft —
+  it needs a charged winding from the Energiser before it will turn
+- from: create_new_age processed reactor outputs (solid_corium) | via: numismatics sell / bounty economy
+  (rare nuclear waste as a high-value hazardous-material contract) | to: economy | motif: M-08 | power:
+  endgame | tone: ok | verdict: REJECT | reason: M-08 specifies scarce regional metal → Create-processed →
+  minted coin; corium is a reactor byproduct (not a mineable ore), and "sell nuclear waste as a luxury
+  good" has a tone problem; the economy anchor belongs more naturally on the ore (thorium) via M-08 if
+  thorium is treated as the regional scarcity rather than the waste product; keep as a candidate to revisit
+  but not a clean M-08 fit
+
 
