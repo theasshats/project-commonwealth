@@ -277,3 +277,23 @@ Four giant flying whale structures drifting across the sky with loot chests and 
 - from: sky_whale_ship onboard loot | via: emergent trade | to: economy | motif: M-34 | power: mid | tone: ok | verdict: REJECT | reason: without a specific seeded item creating genuine demand-gating, "rare whale loot is tradeable" is ambient sellable-goods territory (retired M-09); the economy link only works if the loot-seeded item (above, M-15) creates a specific demand; that demand is covered by the ACCEPT above
 - from: sky_whale_ship hostile mobs | via: loot-seed → magic reagent | to: magic | motif: M-02 | power: mid | tone: ok | verdict: REJECT | reason: no existing sky_whale_ship drop to route through magic; seeding a foreign magic item into whale-mob loot is authoring new content in the wrong direction for M-02; any magic connection belongs on the loot-seeded progression item (M-15 candidate) rather than a separate mob-drop edge
 
+## createaddoncompatibility   [anchors: support/compat (1)]
+
+Content-free compat layer that unifies duplicate items/fluids across Create addons via Almost Unified (plastic, kerosene, lubricant, copycats, gearboxes). 0 blocks, 0 items, 5 c:tags, one inbound weave via `tfmg:distillation` for TFMG plastic. Pure unification glue.
+
+**Method-pull:** The mod has no items or blocks of its own — it re-tags foreign items (c:ingots/plastic etc.) so other mods' recipes resolve to one canonical item. It does register `item/ingots/plastic` as a unified tag.
+
+**But: it uses `tfmg:distillation` to slot TFMG plastic into the chain.** That's already an inbound weave connecting it to the Create spine's industrial processing. The key tag `c:ingots/plastic` could be a weave node if plastic is used in a second system.
+
+**Candidate — plastic as a magic/aeronautics material (M-10/M-23):**
+- `c:ingots/plastic` (now canonical via this mod) is an industrial polymer that could serve as a Create-processed structural material.
+- M-23: structural alloy → airframe — plastic sheets as a mid-tier airframe component (lighter than metal for small craft) is coherent industrially.
+- Power: mid (requires TFMG distillation to make plastic). Tone: ok — a plastic composite panel in an aeronautics airframe is industrially credible.
+- Red-team: is this a weave on `createaddoncompatibility` or on TFMG/the plastic-producing mod? The tag `c:ingots/plastic` is unified *by* this mod, so the weave touches it. But the underlying material is TFMG's — the connection really belongs on TFMG, not this compat shim. This mod's role is unification; the weave belongs on the material source.
+- Verdict: REJECT — the weave belongs on the plastic-producing mod (TFMG or pneumaticcraft), not the compat shim; this mod's only contribution is tag unification, which is support not a content node.
+
+**REWORK check:** The existing support anchor is correct. The inbound `tfmg:distillation` weave is real and appropriate. No weak or arbitrary connections.
+
+- OK — support/compat anchor is correct and the inbound tfmg:distillation weave (TFMG plastic unified into c:ingots/plastic) is sound; no weak or arbitrary connections to REWORK
+- from: c:ingots/plastic (unified via this mod) | via: aeronautics structural recipe (M-23) | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: REJECT | reason: the weave belongs on the plastic-producing mod (TFMG/pneumaticcraft), not the compat shim; createaddoncompatibility only unifies the tag — it's not the content node that earns the aeronautics anchor
+

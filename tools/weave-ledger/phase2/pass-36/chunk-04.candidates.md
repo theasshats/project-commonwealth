@@ -222,3 +222,49 @@ This is the richest method surface in the chunk. The dossier already identifies 
 
 OK — five accepted links across Create (M-03/M-29), magic depth (M-11), and economy/logistics (M-18). Occultism is the pack's highest-density method surface.
 
+## charta   [anchors: survival (1)]
+
+Card-game social mod: multiplayer card tables (Crazy Eights, Solitaire, Fun), bar/casino furniture in every wood type, wine/beer glasses. 51 blocks, 54 items, loot=yes. No recipe types.
+
+**Method-pull analysis:**
+The surface here is the card-table social mechanics + bar furniture. The economy angle is obvious (wagering) but Charta has no built-in betting mechanic. The loot=yes likely covers village/tavern structures where card tables generate.
+
+**Candidate 1: card table as Numismatics economy node (wagering with minted coin)**
+- from: charta:card_table (gambling mechanic) | via: KubeJS event hook + numismatics coin | to: economy | motif: M-26 (consumption sink — coins wagered are spent against pressure, consumed in the social economy) | power: everyday | tone: ok — a card game played for Numismatics coin stakes is a natural economy sink; it's a legitimate consumption mechanism (coin is wagered and changes hands among players, exactly the player-run economy model) | verdict: ACCEPT | hook: card games at a charta table become a venue for player-economy currency circulation — an entertainment consumption sink that keeps minted coin moving. Note: this requires a KubeJS betting hook (no native mechanic) and works only if the server culture uses it; it's a social enablement weave, not a mechanical force. M-26 is correct because coin is consumed/transferred (not generated from nothing).
+
+**Candidate 2: bar furniture (glasses, shelves) → create:cutting for wood component / deco-press**
+- from: charta bar furniture (bar shelf, bar stool, game chair) | via: create:cutting | to: create | motif: M-04 (Create recycles deco) | power: everyday | tone: ok but weak | verdict: REJECT | reason: bar furniture crushing back to planks via create:cutting is the most generic deco recycle and adds no cross-system meaning. M-04 is better used for metal deco with metal recovery; wood furniture to planks is effectively lossless trivia. The weave adds no cross-system interest — charta bar furniture is decoration, not a processed material.
+
+**Candidate 3: charta card table generating in tavern/village structures → loot-seed for trade goods**
+- from: charta card tables (in village/tavern structures, loot=yes) | via: loot-seed | to: economy | motif: M-33 (service venue — card tables as a meeting place where economic services happen) | power: everyday | tone: ok | verdict: REJECT | reason: loot tables in card-table-containing structures don't make the card TABLE itself a weave node. Seeding trade goods into tavern chests is a loot-seed on the structure mod, not on charta. This is a delivery confusion; the weave would be on a tavern/structure mod, not charta.
+
+**Candidate 4: wine glasses as vessels for vinery / alcohol_industry outputs**
+- from: charta:empty_wine_glass / empty_beer_glass | via: vinery:wine_fermentation / alcohol_industry:alcohol_boiling | to: survival/economy | motif: M-35 (maturation/aging — wine ages in bottles, served in wine glasses) | power: everyday | tone: ok — wine glasses as serving vessels for aged wine is coherent (the glass is the final container for the aged product) | verdict: ACCEPT | hook: a player running a tavern fills charta wine glasses with vinery-fermented wine — the glass is the serving step after the aging chain, connecting bar furniture to the food/drink production web. Requires a recipe linking empty_wine_glass + wine to a served_wine variant (via a Fill or item_application recipe); thematically clean.
+- Motif: M-35 (maturation/aging — glass as the serving vessel step at the end of the wine-aging chain)
+
+OK — survival anchor is thin (social decoration). Two accepted links: economy coin sink via card wagering (M-26), and wine-glass→vinery serving vessel (M-35). These together push charta into survival+economy territory coherently.
+
+## mcwdoors   [anchors: support/decoration (1)]
+
+250 door/gate variants in every wood + metal type. Sanctioned decoration palette support role. 246 blocks, 260 items, loot=yes. No recipe types.
+
+**Method-pull analysis:**
+Mirrors mcwfences: decoration palette with metal variants as the M-04 Create-crushing candidate. The dossier already identifies this.
+
+**Candidate 1: metal/iron door variants → create:crushing → iron nuggets/raw + xp nugget (M-04)**
+- from: mcwdoors iron/metal door variants (modern_door, industrial styles) | via: create:crushing | to: create | motif: M-04 | power: everyday (doors are basic building-tier materials) | tone: ok — crushing a deconstructed iron door back to iron nuggets in a Create crusher is a sensible salvage loop | verdict: ACCEPT | hook: a builder who tears down a fortification or upgrades a base can crush the old iron doors into scrap via Create, closing the metal recycling loop.
+
+**Candidate 2: glass door variants → create:crushing → glass shards or sand (M-04)**
+- from: mcwdoors glass door variants (glass_door, barn_glass_door) | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok — crushed glass yielding sand or glass shards is coherent with Create's material loop | verdict: REJECT | reason: glass doors to sand via crushing is a near-1:1 round trip (glass = sand; crushing it back to sand is lossless reclamation). The M-04 motif is for *lossy* recycling — the lossy element (xp nugget) is the Create reward. Sand→glass→crush→sand with only an xp nugget gain is a trivial loop that doesn't add cross-system meaning. Restrict to metal variants only.
+
+**Candidate 3: wooden door variants as Create-cutting outputs (M-12 — reverse: Create cutting produces exotic wood doors)**
+- from: exotic wood logs | via: create:cutting → wooden door blanks → crafted into mcwdoors wooden doors | to: create | motif: M-12 | power: everyday | tone: ok — but | verdict: REJECT | reason: this routes Create cutting into wooden door blanks as an intermediate, but mcwdoors wooden doors are already craftable directly on the vanilla table from planks. Adding Create as a prerequisite step for basic doors would be gating basics behind a complex recipe (explicitly forbidden in the briefing guardrails: "never gate a basic/everyday component behind a complex recipe").
+
+OK — single accepted link: metal door variants → create:crushing (M-04). Same as mcwfences; Phase-3 should batch the whole Macaw's deco family under one wholesale M-04 authoring pass.
+
+## terrablender   [anchors: support/library (1)]
+
+Worldgen library: biome-region API that lets biome mods inject biomes into vanilla terrain without clashing. No items, no loot, no blocks, no recipe types.
+
+- LEAVE — genuine zero-content code library. Biome-region registration API only; no player-facing content and no method surface. Required dependency for biome mods; no weave possible.
+

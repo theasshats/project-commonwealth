@@ -168,7 +168,27 @@ New candidates:
 
 - from: trading_floor:trading_depot (enabling automated villager trait farms) | via: MineColonies villager hall as the supply source | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: A MineColonies colony with a Tavern/market keeps a population of specialist villagers — pairing the Trading Depot directly adjacent to the colony's villager housing makes the colony the organic supply node for automated trade. Colony builder → villager supply → Trade Depot → Create belt output. M-28 (colony route) feeds the economy arm. The colony player's settlement becomes the logistics hub.
 
+## smokeleafindustries   [anchors: survival (1)]
 
+62 blocks, 243 items, loot=yes. Cannabis/hemp tech mod — 25 crop strains, 12 recipe types (its own machine chain), FE power, hemp building blocks, effect-granting consumables. Single anchor — survival. Strong internal loop; the island-risk is explicit in the dossier. Target: 2nd anchor.
+
+Candidates:
+
+- from: smokeleafindustries hemp crop (raw hemp, hemp fiber) | via: create:milling or create:compacting | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Raw hemp run through a Create millstone produces fiber/pulp at scale — a Create farm automation feeds smokeleafindustries' processing chain without needing the mod's own manual grinder for early volume. Hemp as a Create-milled crop is the lowest-friction weave: the player would naturally say "of course I'm milling hemp in bulk." Everyday tier, one step. Bridges the mod's crop output into the Create spine.
+
+- from: smokeleafindustries:generator (burns inputs → FE) | via: createaddition:charging bridge (FE↔kinetic) | to: Create | motif: M-17 | power: mid | tone: ok | verdict: ACCEPT | hook: The smokeleaf generator produces FE that Create Addition can convert to kinetic rotation — the hemp operation becomes a power source for Create machines or vice-versa. A dedicated hemp-fueled generator feeding a Create belt network is a coherent specialization: the "hemp farmer" also runs a side power plant. M-17 (FE charging bridge). Mid tier (requires both Create Addition and the smokeleaf generator).
+
+- from: smokeleafindustries refined extract/oil | via: smokeleafindustries:liquifier → createaddition:liquid_burning | to: Create | motif: M-13 | power: mid | tone: ok | verdict: ACCEPT | hook: Smokeleaf liquid extract is a plant-oil; routing it through Create Addition's liquid burning (as an alternate fuel in a boiler or liquid burner) makes the hemp refinery a Create-compatible fuel source. A smoky bio-fuel feeding airship engines is coherent thematically (M-13: refined fuel → propulsion). Mid tier; the distillate must first pass through the smokeleaf chain, which is itself a multi-step process — the depth is already there.
+
+- from: smokeleafindustries strain gummies/buds (effect-granting consumables, diet-adjacent) | via: Diet-AppleSeed auto-classification | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: Smokeleaf edibles (gummies, buds) grant status effects — they're consumption-sink items naturally: once eaten, they're gone, creating recurring demand. M-26 (consumption sink) applies without any recipe change — the mechanic is already in-game. Naming the arc keeps the diet/survival accounting honest. The hemp farmer's products have a survival-demand loop.
+
+- from: smokeleafindustries extract/oil as a magic solvent/catalyst | via: ars_nouveau:imbuement or occultism:spirit_fire | to: magic | motif: M-10 | power: mid | tone: clash | verdict: REJECT | reason: Plant extract as arcane catalyst is possible in many fantasy settings, but smokeleafindustries' vibe is deliberately industrial-humorous (named strains like "AK47", "Banana Kush") — routing that into a serious arcane imbuement ritual creates a theme clash. A player would find it odd and a bit immersion-breaking to use "Blue Cookies extract" in an Ars Nouveau enchanting apparatus. Tone clash.
+
+- from: smokeleafindustries dealer/stoner villager trades | via: Numismatics coin demand gate | to: economy | motif: M-08 | power: mid | tone: ok | verdict: REJECT | reason: The dealer/stoner villagers trade *to/from NPCs* — seeding Numismatics coin into those trades would create an NPC coin faucet (villager pays out coin), which is exactly M-14 (CUT) territory. Even framed as the player spending coin, the mechanic's implementation would run through NPC trade which risks the faucet direction. Flag as ambiguous: if the player *spends* coin to buy from the dealer NPC (demand sink, not faucet), that could work — but it requires careful implementation and risks M-14 misuse. REJECT pending clarification on trade direction.
+
+- from: smokeleafindustries hemp building blocks (hemp_planks, hemp_bricks — full deco set) | via: create:cutting (saw) | to: Create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Hemp planks and bricks cut into slabs/stairs/walls via a Create mechanical saw — the hemp building set joins the Create bulk-lumber pipeline. Everyday tier (just needs saw recipes). One step; the builder who automates hemp gets a full deco set from the farm output.
+
+== CHUNK COMPLETE ==
 
 
 
