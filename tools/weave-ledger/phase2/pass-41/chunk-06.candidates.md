@@ -136,6 +136,23 @@ Well-covered: M-08 coin-seed (14 ACCEPTs), M-02 magic-reagent seed (6 ACCEPTs), 
 - NEW | from: T&T ocean sail-ship cargo hold loot | via: loot-seed (treated canvas or structural sail-material as aeronautics construction input) | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: a salvaged sail-ship's hold contains treated canvas and maritime iron straps — structural materials for early Aeronautics airframes; the ocean dungeon feeds the aeronautics build-out, making seafaring exploration a prerequisite for the first proper ship
 - CHALLENGE | from: T&T ocean sail-ship loot | via: loot-seed | to: create | motif: M-15 | verdict: REJECT | hook: M-15 requires a boss drop (unique hostile-with-a-drop) as the gate item; T&T's sail-ship is a static worldgen structure with loot chests, not a boss encounter; seeding a boss-key component into a non-boss chest misapplies M-15 — the aeronautics structural-material frame (M-23, above) is the correct vehicle for the sail-ship's maritime theme
 
+## naturalist   [anchors: survival (1)]
+
+Well-covered: M-02 antler (15 ACCEPTs), M-12 venison/bushmeat (13 ACCEPTs), M-10 glow_goop (12 ACCEPTs), M-11 antler spirit-fire (4 ACCEPTs), M-16 seasonal wildlife (1 ACCEPT). What's underexplored:
+
+1. **bear-fur (if naturalist registers bear drops) → cold_sweat sewing-table insulation**: this is a pure M-02 mob-drop-given-a-use, but it's also the load-bearing *cross-mod join key* the cold_sweat dossier describes. No prior row argued it as a CREATE→survival M-12 processing chain (farmersdelight:cutting the bear carcass → yields bear_fur → sewing table). That's a different framing than the single existing "bear_fur → insulation" row, which proposes it as M-26.
+
+2. **Diet-system (appleseed) demand for venison/bushmeat protein**: the dossier's existing rows include M-26 "diet keeps demand from zeroing" (1 ACCEPT) but the connection to the *appleseed nutrition system* as the specific demand-driver (protein group = venison/bushmeat) is the missing precision. M-26 is the right motif; the hook is "the diet system demands protein daily and wild-game hunting is the protein specialist's route."
+
+3. **glow_goop as a season-gated reagent** (fireflies only spawn in warm months/biomes under Serene Seasons config): this is a real M-16 candidate — the *availability* of glow_goop is season-gated (fireflies suppress in winter), so the magic specialist planning imbuement stock must gather it in summer. 1 prior row hits this with ACCEPT. The missing piece: this makes glow_goop a *seasonal scarcity* item, not just a mob drop — the magic demand for it continues year-round while supply is summer-only, which is exactly M-16's intent. Sharper articulation needed.
+
+- NEW | from: naturalist:venison / bushmeat (wild-game protein) | via: farmersdelight:cooking or create:mixing (heated) | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: the Diet–AppleSeed Edition system demands protein daily — venison and bushmeat are the hunter's protein output; wild-game demand never zeros because every player needs the protein group every day, making the hunter's role a continuous supply position not a one-time craft
+- NEW | from: naturalist:glow_goop (firefly drop — fireflies suppress in winter biomes under Serene Seasons config) | via: naturalist:net (summer capture only) → ars_nouveau:imbuement | to: magic | motif: M-16 | power: mid | tone: ok | verdict: ACCEPT | hook: glow_goop is functionally season-gated — fireflies don't spawn in winter; a magic specialist must harvest it in summer and stockpile or go without the light-imbuement reagent in cold months; the seasonal scarcity is the supply constraint that gives the firefly-hunter a time-sensitive role
+- CHALLENGE | from: naturalist:glow_goop | via: loot-seed into naturalist loot tables | to: magic | motif: M-02 | verdict: REJECT | hook: glow_goop already drops *directly from fireflies* on death — it IS a native mob-drop, not something that needs loot-table injection; the M-02 action for glow_goop is giving it a magic *consumer* (ars_nouveau:imbuement), not seeding it into a loot table; the loot-seed framing misdescribes the delivery mechanism for this specific material
+
+OK — antler M-02, venison M-12, and glow_goop M-10 are the core accepted rows. The two NEWs above add the protein-demand M-26 hook (missing diet-system precision) and the season-gated M-16 framing (sharper than the existing single row).
+
+
 
 
 
