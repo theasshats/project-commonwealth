@@ -54,6 +54,13 @@ OK — M-13 (fuels), M-23 (steel/aluminum airframe), M-24 (combustion engine dri
 
 - NEW | from: tfmg:lithium (c:ingots/lithium, ore-gen regionalized; gates the TFMG accumulator / voltage grid — the FE storage tier) | via: GTMOGS regional ore-gen config | to: economy | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: lithium is the battery metal — whoever settles above a lithium vein controls FE storage, making the TFMG electric tier a regional specialty that others must trade for rather than simply build.
 
+## createmechanicalcompanion   [anchors: Create (1); candidates for survival + aeronautics]
+OK — M-15 (boss-gate wolf link), M-24 (booster rocket aeronautics), M-20 (optical sensor deploy-upgrade), M-06 (netherite plates sequenced) all covered. One gap in the loot-table surface that the existing rows missed:
+
+- NEW | from: createmechanicalcompanion Illager Workshop structure (loot=yes — 6 chest types including illager_workshop_create_items containing mechanical_wolf_motherboard + optical_sensor) | via: loot-seed — seed a rare magic reagent (Ars source_gem, Occultism soul gem, or an Iron's scroll) into the Illager Workshop bedroom/roof chest loot | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: the Illager Engineer has clearly been experimenting — finding a looted magic reagent in their workshop is a discovery that ties exploration-danger to the magic spine; the workshop structure already generates, so no authoring of structure data is needed, only a loot-table datapack entry.
+
+- CHALLENGE | from: createmechanicalcompanion:illager_engineer_spawn_egg | via: loot-seed | to: survival | motif: M-34 | verdict: REJECT | hook: the spawn egg is a creative item; the right frame for M-34 is the Illager Workshop structure loot (loot=yes, confirmed above) — not the spawn egg itself, which doesn't drop from anything. The correct Phase-3 action is seeding the workshop chest loot, not tagging the spawn egg.
+
 ## aeronautics   [anchors: aeronautics + Create (2)]
 OK — M-10 (levitite magic), M-13 (fuel), M-22 (lunar levitite), M-31 (docking logistics), M-33 (docking trading-post), M-08 (levitite→coin), M-24 (propeller drivetrain), M-10 (goggles enchanting) all covered. One structural gap:
 
