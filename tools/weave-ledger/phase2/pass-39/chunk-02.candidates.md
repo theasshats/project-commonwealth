@@ -95,6 +95,27 @@ Power-read: the structure mod's primary value is loot in dungeons, boss-style va
 
 - from: dungeons-and-taverns trial_key / ominous_trial_key | via: ars_nouveau:enchanting_apparatus | to: magic | motif: M-10 | power: mid | tone: clash | verdict: REJECT | reason: trial keys are vanilla progression items (open trial vaults); making them an Ars infusion input is a tone clash (arcane infusion of a vault opener with no thematic link to source/magic) and would gate a vanilla-progression item behind a magic-specialist step, violating the basic-components guardrail relative to its role as a structure key.
 
+## miningspeedtooltips   [anchors: support/client-UI (1)]
+
+A display-only tooltip mod — reads tool mining-speed attributes and shows them on hover. No items, no blocks, no methods, no loot. Zero content surface beyond a rendering hook.
+
+LEAVE — genuine zero-content UI-display tweak. No items, no methods, no loot tables. Adding "tooltip info" to tools is a rendering concern, not a material or method, so no weave is possible or sensible.
+
+## aeronauticscompat   [anchors: aeronautics (1)]
+
+A behavior-patcher (mixin/runtime) that fixes third-party mods to behave on Sable physics-simulated ships. No items, no blocks, no loot, no methods. Pure compat glue; required per CLAUDE.md.
+
+LEAVE — genuine zero-content code library / compat patcher. No items, no methods, no loot. Its entire value is runtime behavior patches; nothing to route through any method palette entry. (Noted as REQUIRED — do not cut.)
+
+## betterbiomereblend   [anchors: support/performance (1)]
+
+Client-only biome-color-blending performance and visual mod. No items, no blocks, no loot, no methods. Pure rendering/perf optimization (OKLab 3D blending).
+
+LEAVE — genuine zero-content performance mod. No items, no methods, no loot tables. Rendering pipeline improvement; nothing to route.
+
+
+
+
 
 
 

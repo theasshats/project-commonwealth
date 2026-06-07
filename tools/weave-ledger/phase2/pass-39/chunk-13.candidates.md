@@ -14,6 +14,11 @@
 ## edf-remastered-5.0-beta4   [anchors: survival/boss-difficulty (1)]
 - LEAVE — pure Ender Dragon behavioral overhaul (more HP, phases, AI). loot=yes in manifest but the dossier confirms it adds NO new drops or rewards; vanilla dragon loot is unchanged. No new material surface exists; a loot-seed would be inventing content this mod doesn't provide. The mod earns its place as danger-pressure amplification — that's its anchor and it needs no weave.
 
+## tacz   [anchors: support (1)]
+- from: tacz gun/ammo recipes (gun_smith_table_crafting inputs) | via: recipe — gate gun bodies + ammo cartridges behind Create-pressed iron sheets, brass casings, and precision-mechanism parts (M-05 native-method gating; high-tier guns via M-06 sequenced-assembly chain) | to: create | motif: M-05 | power: mid (basic guns) / endgame (elite rifles via sequenced assembly) | tone: ok — industrial Create forge producing firearms is internally consistent; PvPvE pack arms production off the Create spine fits the design perfectly | verdict: ACCEPT | hook: the gun_smith_table runs on Create-pressed metal; ore scarcity gates your firepower
+- from: tacz:ammo (consumable) | via: combat-route supply — ammo is spent every engagement; an arms-maker specialist (who mastered Create-gated gun production) supplies others who can't or won't climb that chain (M-34 combat-route supply) | to: economy | motif: M-34 | power: mid-to-endgame (ongoing ammo burn) | tone: ok — PvPvE arms market is natural; the distinction from M-09 is that this is a specialist-to-non-specialist supply trade, not a bare sell link | verdict: ACCEPT | hook: the arms maker feeds the fighters who feed the market — nobody has to fight AND forge
+- from: tacz weapons on aeronautics vehicles | via: no implementing method (TACZ↔Aeronautics native integration absent; aeronauticscompat covers other turret mods, not TACZ) | to: aeronautics | motif: no-motif | power: n/a | tone: clash (speculation only) | verdict: REJECT | reason: no implementing method exists; this is flavour with no route
+
 ## ctl   [anchors: create, aeronautics (2)]
 OK — connections sound. sequenced_assembly inbound (Create) is solid; aeronautics anchor is the mod's core purpose. No rework needed.
 - LEAVE — no coherent 3rd anchor; train-lamp blocks don't connect to magic/survival/economy without forcing. The mod is well-placed at 2.

@@ -54,3 +54,23 @@ Zero blocks, zero items, zero loot, no recipe types. Pure multi-loader abstracti
 
 LEAVE — genuine zero-content code library; no items, methods, or loot to weave. Sanctioned dependency support role.
 
+## cookingforblockheads   [anchors: survival (1)]
+
+One anchor — needs a second. Core purpose: modular kitchen multiblock that surfaces available food recipes from connected storage. Has 140 blocks (the appliances in 16 colors), 148 items, loot=yes. Registered method: cookingforblockheads:toaster. Downstream sink for food mods, not a source.
+
+Method-pull:
+- The Oven and Fridge are mid-tier kitchen appliances — gating their upgraded variants on Create brass/copper sheets is a M-05 native-method gating weave. Power: mid (oven/fridge are quality-of-life but not basic; the basic cooking table is everyday).
+- Toaster (cookingforblockheads:toaster): consumes bread → toast. Toast is an everyday food output. Could feed extradelight/farmersdelight chains, but that's just a food recipe using its own method — no cross-system contact unless toast feeds a magic ritual (far-fetched).
+- The Cooking Table itself is a recipe aggregator for ALL food mods. This makes it the natural "kitchen infrastructure" node — gating it on Create parts (M-05) turns it from a free convenience into a significant craft milestone for the food cluster.
+- Loot=yes means it has loot table entries — could seed a rare kitchen appliance into a structure chest, giving explorers a reason to raid for kitchen gear. Not a weave, but worth noting.
+- Colony request: a MineColonies Cook/Restaurant hut would logically request a Cooking Table or Oven as equipment — M-28. That makes the kitchen an infrastructure good the colony player provides, not a free vanilla drop.
+
+Concrete candidates:
+
+- from: cookingforblockheads:oven / fridge (mid-tier kitchen appliances) | via: KubeJS recipe gate (Create brass/copper sheets as inputs) | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: Upgrading the kitchen from a plain counter to a real Oven or Fridge needs fabricated Create brass fittings — the food specialist must trade with or also be a Create tier player to unlock batch cooking infrastructure.
+- from: cookingforblockheads:cooking_table (the recipe-hub block) | via: KubeJS recipe gate (Create andesite casing / copper cog) | to: create | motif: M-05 | power: everyday | tone: ok | verdict: REJECT | reason: The Cooking Table is the central QoL hub that lets players navigate a ~200-mod food catalogue — gating it on Create parts risks making the QoL paywall too early. Everyday-tier rule: don't gate a basic convenience. The Oven is mid-tier and the right place to put the Create input floor, not the Table.
+- from: cookingforblockheads:fridge (cold storage) | via: minecolonies requests | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: The MineColonies Restaurant/Cook hut requests a Fridge as kitchen infrastructure — colony-builders commission it from the food-kitchen specialist, creating a colony supply route for appliances.
+- from: cookingforblockheads:toaster output (toast) | via: extradelight/farmersdelight cooking further chain | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: Toast as an intermediate ingredient is plausible (bread → toast → something richer), but the toaster already lives in survival; this doesn't add a second anchor, just deepens the first. No cross-system contact.
+
+REWORK: dossier's economy-via-numismatics candidate was already flagged WEAK and is correctly rejected (bare sell link). The M-05 Create-gating candidate in the dossier is sound; this pass confirms it and narrows to the Oven/Fridge level rather than the Cooking Table.
+

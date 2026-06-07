@@ -80,3 +80,27 @@ Power read: purely a well-rested buff from sleeping; no items, no blocks, no mat
 
 - LEAVE — pure client-side InvTweaks keybind emulation shim over IPN. Zero items/blocks, no world content, no material surface. Sanctioned support role.
 
+## fxntstorage   [anchors: create, survival (2)]
+
+Already at 2 anchors (Create-tier-gated via create:mechanical_crafting, survival/QoL). Evaluate for new links and existing connection quality.
+
+Power read: andesite→copper→brass→hardened tier ladder matches Create's material progression. Backpack flight upgrade is mid-tier; storage controller/network is mid-endgame. Items are functional containers, not processing machines.
+
+- from: fxntstorage:backpack_flight_upgrade | via: aeronautics thematic link (flight gear) | to: aeronautics | motif: M-23 | power: mid | tone: clash | verdict: REJECT | reason: M-23 is for structural build materials (airframe/hull). A worn personal flight gadget in a storage backpack is not an airframe component. The "flight" name is coincidental — this is personal mobility, not vessel construction. Thematic forcing.
+
+- from: fxntstorage:hardened_backpack / hardened_storage_box | via: MineColonies request/supply system | to: economy | motif: M-28 | power: mid-endgame | tone: ok — the hardened tier is a bulk-logistics container; a MineColonies colony stockpile hut requesting hardened storage boxes to hold colonial goods is a colony-route demand tie | verdict: ACCEPT | hook: the colony warehouse foreman orders hardened storage boxes from your workshop — the colonial supply chain needs containers to hold what it makes
+
+- from: fxntstorage:storage_controller (item-routing network) | via: aeronautics package integration (cardboard plane picks from storage network) | to: aeronautics | motif: M-31 | power: mid-endgame | tone: ok — a storage controller networked to a cmpackagecouriers courier dispatch point enables the logistics arm to pull items from a warehouse and ship them; the controller is the "warehouse" node the logistics arm moves goods from | verdict: ACCEPT | hook: the courier plane doesn't carry items by hand — it pulls from the storage network and flies them cross-map
+
+- from: fxntstorage backpack tiers | via: create:pressing for andesite/copper sheets into box panels | to: create | motif: M-05 | power: everyday-mid | tone: ok | verdict: REJECT | reason: already woven via create:mechanical_crafting (made-by in dossier); adding a pressed-sheet input step would be double-gating the same item. The connection is already there; adding more steps here is gratuitous depth, not GregTech-style meaningful stages.
+
+OK — existing Create + survival connections are sound (mechanical_crafting already the made-by method). Two new links (economy/colony M-28, aeronautics/logistics M-31) are new and coherent.
+
+## tipsmod   [anchors: support/QoL-client (1)]
+
+- LEAVE — loading-screen tip rotator. Zero items/blocks, no gameplay surface. Sanctioned support/pack-authoring role. No weave possible.
+
+## alternate_current   [anchors: support/performance (1)]
+
+- LEAVE — redstone-dust performance rewrite. Zero items/blocks; transparent behavior patch. Sanctioned performance/support role. No weave possible.
+

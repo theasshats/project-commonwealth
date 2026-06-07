@@ -68,4 +68,16 @@ REWORK: OK — survival anchor is correct. The dossier's M-12 candidate (fish �
 
 - LEAVE — genuine zero-content library: 0 blocks, 0 items, no loot, no recipes. Shared loot/worldgen/datagen utilities for dependent mods (Alex's Caves etc.). No player-facing surface to weave.
 
+## stylecolonies   [anchors: support / decoration palette (1)]
+
+**Method-pull:** Ships only MineColonies blueprint packs (style folders). 0 blocks, 0 items, no loot, no registered methods. However: the Steampunk style blueprint references Create blocks as build materials during colony construction. This is not a recipe weave, but it is a real consumption hook — constructing a Steampunk-style colony hut spends Create blocks, coupling the colony builder to the Create production web.
+
+- from: Steampunk colony blueprints | via: MineColonies blueprint block-consumption (Build Tool constructs the building by consuming the declared block list) | to: Create | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: building a Steampunk-style colony consumes Create-processed blocks (brass gears, copper pipes, steel panels as blueprint callouts) — the colony builder must either produce them via Create or trade for them; this is exactly the MineColonies-as-cheaper-route / colony-locked-output loop; it's already partially in place (the style exists), making the tie explicit is the weave
+
+- from: stylecolonies High Magic / Fairy Tale style blueprints | via: MineColonies blueprint block-consumption | to: magic | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: High Magic or FairyTale style colony buildings call for magic-adjacent blocks (Ars Nouveau source/arcane blocks, Quark crystal/agate blocks) in their blueprints — the colony builder sources them from the magic specialist, threading magic output into colony construction demand; makes the MineColonies route genuinely cross-system
+
+- from: stylecolonies generic styles | via: MineColonies blueprint mechanics | to: economy | motif: M-33 | power: everyday | tone: ok | verdict: REJECT | reason: a construction service is emergent player behavior (player A builds player B's colony for coin) — that's real and likely to happen, but it's not a packable weave; the delivery would be "emergence," not a recipe or config action, and M-33 requires a mechanic to hang on. Records as rejected.
+
+REWORK: The dossier marks it as "support (decoration palette — MineColonies styles)" with 1 anchor and no weave candidates — that understates it. The Steampunk style already creates a real Create-block demand at build time (documented in the dossier's "consumes" note). The weave is real; it just needs to be named. Both ACCEPT candidates above are latent links that already exist in the blueprint data and simply need to be surfaced.
+
 

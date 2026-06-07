@@ -42,3 +42,6 @@
 
 ## mru   [anchors: support/library (1)]
 - LEAVE — genuine zero-surface code-sharing library; no items, no methods, no loot tables. Sanctioned support anchor; no weave possible or needed.
+
+## fogoverrides   [anchors: support/client-QoL (1)]
+- LEAVE — client-side config-only fog visual tuning; zero items, no methods, no loot tables. Sanctioned atmosphere support anchor; nothing to route through any method.

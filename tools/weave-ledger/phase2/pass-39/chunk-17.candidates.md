@@ -14,6 +14,9 @@
 - from: farm_and_charm ground meat / dried goods | via: farm_and_charm:drying → create:mixing | to: create | motif: M-12 | power: mid | tone: ok | verdict: REJECT | reason: drying-rack output as a mixing intermediate is plausible but the chain is short and survives well inside the food-mod web already; adding a Create mixing step would be busywork (a second M-12 edge on top of the grain milling one). One clear M-12 weave is sufficient for an everyday food mod.
 - from: farm_and_charm:butter / animal surplus | via: economy (sell/trade to other players) | motif: M-09 | verdict: REJECT | reason: M-09 is retired — bare sell links are the ambient endpoint of the loop, not a weave. The M-28 colony-route edge above is the real economy anchor.
 
+## pantographsandwires   [anchors: create, aeronautics (2)]
+- OK — connections sound. Deep Create integration (6 inbound recipe types including sequenced_assembly); aeronautics anchor is genuine (pantographs are the electric-train overhead-line system). Coal_coke/graphite tags noted as potential shared-material nodes for other mods but no coherent new motif weave arises (both pantographs and TFMG produce coal_coke; no mod in the palette consumes it distinctively). No REWORK.
+
 ## sliceanddice   [anchors: create, survival (2)]
 - OK — connections sound. The Slicer is a kinetic Create block running farmersdelight:cutting; cooking-pot recipes become create:mixing. Both anchors are mechanically load-bearing. No new weave needed; no REWORK on existing connections.
 

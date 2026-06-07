@@ -57,6 +57,22 @@ Method-pull candidates:
 - from: mushroomquest effect mushrooms as brew ingredients | via: irons_spellbooks:alchemist_cauldron_brew | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: effect-bearing mushroom caps (poison, healing, hallucination analogs) brewed in Iron's Alchemist Cauldron into spell-potions or buff-flasks makes the mushroom forager a supplier to the Iron's magic pillar — a cross-route dependency where a survival find feeds a magic production method. Scale: mid-tier mushrooms (not every common one), one brewing step. via: irons_spellbooks:alchemist_cauldron_brew. Motif M-10 (arcane infusion pull — foreign material refined into magic reagent through native magic method).
 - from: mushroomquest loot tables (Mushroom Island structures) | via: loot-seed | to: economy | motif: M-08 | power: mid | tone: ok | verdict: REJECT | reason: seeding coin into mushroom-island structure loot is weaker here than for trek (which spans all biomes); the Mushroom Island is already a vanilla special biome destination, so coin there could work, but the better economy weave for mushroomquest is the reagent supply chain (accepted above) rather than stashing coins in chests. The loot-seed economy link adds little over the direct magic-supply weave. REJECT (weaker than accepted links; economy gets no new structural benefit).
 
+## copperagebackport   [anchors: survival (1)]
+
+Power-read: 70 blocks, 81 items, 3 c:tags (item/nuggets/copper), loot=yes. Copper deco/tool/armor set with oxidation, Copper Golem item-sorter, shelves/lanterns/chains. Vanilla copper backport; everyday copper is the key material (Create staple). Dossier flags M-04 (crushing recycle) and a weak Copper Golem logistics link.
+
+Method-pull candidates:
+- from: copperagebackport copper deco blocks (copper bars, lanterns, chains, shelves — all oxidation stages) | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: copper deco blocks crush back to copper nuggets/raw copper + an XP nugget — lossily, per M-04's anti-arbitrage rule — so the whole copper deco palette connects to the Create copper economy; a player who overbuilt copper lanterns can reclaim material. One light step (single crushing recipe); everyday tier correct. via: create:crushing.
+- from: copperagebackport copper tools/armor (copper_axe, copper_boots, etc.) | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: worn/discarded copper tools crush back to copper nuggets (lossy), consistent with M-04's deco-recycle role extended to tools — keeps the copper material loop inside Create's crushing economy rather than letting copper gear be disposable trash. Same method, same motif, different item class. via: create:crushing.
+- from: copperagebackport:copper_golem_statue logistics role | via: config/behavioral tie | to: aeronautics/logistics | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: the Copper Golem's chest-to-chest hauling is a low-tech sorting analog that overlaps Create's logistics niche but doesn't advance the loop — it's parallel to, not feeding into, the aeronautics/logistics arm. No motif connects a vanilla-style item-sorter to the aeronautics pillar without forcing the link. REJECT (no-motif; would be redundant with Create's native logistics).
+- from: copperagebackport:minecraft:copper_chest (oxidized/weathered variants) | via: create:item_application | to: create | motif: M-20 | power: mid | tone: ok | verdict: REJECT | reason: applying wax (honeycomb) to a copper chest via Create's item_application to lock its oxidation state is M-20 (deploy-application upgrade), but this is a vanilla/Create-adjacent operation that doesn't cross into a new system — it's entirely within the copper-oxidation mechanics, not a meaningful pillar link. REJECT (system doesn't advance; no new pillar touch).
+
+## buildguide   [anchors: support/QoL (1)]
+
+LEAVE — client-side render overlay with zero items, blocks, loot, or gameplay material surface. Pure visual build-assist; nothing to weave.
+
+
+
 
 
 
