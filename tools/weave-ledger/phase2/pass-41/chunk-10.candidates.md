@@ -80,4 +80,12 @@ LEAVE — client-side compat shim (emulates InvTweaks keybinds on top of IPN); n
 
 ## createimmersivetacz   [anchors: create (1)]
 
+Existing rows cover: M-26 ammo-consumption demand (6 ACCEPT, strong), M-34 combat-supply arms-dealer trade (4 ACCEPT), M-28 colony barracks ammo-supply, M-31 bulk ammo aeronautics logistics. The M-26 + M-34 pairing is the core weave — ammo is spent by combat players who buy from the Create-specialist arms factory. What is genuinely missing: (a) a **M-29 cross-route** where the ammo pipeline specifically requires a **magic reagent** as an ingredient (the M-29 ACCEPT via nitropowder → CBC has 2 accepts but it's just Create→Create, not a cross-route across pillars); (b) **no power-tier nuance** has been applied to the four weapon types (pistol/rifle/shotgun/grenade) — some should be mid-tier, some endgame, and the ACCEPT rows don't distinguish. The M-08 ACCEPT (player-minted currency via ammo) is correctly flagged as a framing of M-08 but its mechanism is underdeveloped.
+
+- NEW | from: createimmersivetacz:nitropowder_bucket (high-energy fluid explosive, Create-produced) | via: createbigcannons:big_cartridge_filling (filling a Big Cannon cartridge with nitropowder as the propellant charge — nitropowder is chemically what a cannon charge is; the CBC cartridge_filling_deployer IS the method that consumes the fluid) | to: create | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: TACZ's nitropowder fluid is the propellant for Big Cannon cartridges — the arms factory and the artillery crew share a propellant supply line; the gun-smith and the cannon-crew are cross-dependent specialists, not parallel silos
+
+- NEW | from: createimmersivetacz ammo pipeline (twelve_gauge_shell / primers / casings, bulk consumables) | via: MineColonies barracks/guard request (colony guard huts request a configured ammo-type as a resupply good) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: the colony's barracks guards consume shells on patrol and raid-defense — the colony route makes the arms factory the settlement's military supplier, a recurring demand that the M-26 consumption row captures individually but M-28 captures as an institutional buyer; this is the colony-demand specificity that no existing M-28 row for this mod articulates
+
+## sereneseasons   [anchors: survival (1)]
+
 

@@ -86,7 +86,41 @@ LEAVE — multiplayer convenience behavior; nothing to weave.
 
 Existing rows cover M-03, M-04, M-07, M-08, M-30 very thoroughly. M-10 (amber preservation as arcane infusion) and M-19 (haunting) correctly rejected. M-35 (amber preservation as aging) correctly rejected (preservation stops time, doesn't add value-via-time). One genuine gap: the cross-route dependency angle using `galosphere:preserved_transform_recipe` as a *catalyst vessel* that bridges the magic pillar. Galosphere's amber preservation can lock an organic item "in time" — a preserved magic reagent that doesn't decay. No existing row captures this as M-29 (cross-route dependency: magic route requires galosphere preservation as a step, not just as a catalyst):
 
-- NEW | from: galosphere:preserved_transform_recipe (amber preservation — locks an organic item permanently) | via: galosphere:preserved_transform_recipe → ars_nouveau:imbuement or occultism:ritual (a preserved exotic organic as a required stable-reagent input in a magic recipe that would otherwise need a fresh/perishable item) | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: amber preservation lets the magic specialist stockpile a perishable organic reagent indefinitely — the preserved specimen is the only form stable enough to survive the imbuement furnace; the cave-biome explorer and the arcane researcher need each other
+- NEW | from: galosphere:preserved_transform_recipe (amber preservation — locks an organic item permanently) | via: galosphere:preserved_transform_recipe → ars_nouveau:imbuement or occultism:ritual (a preserved exotic organic as a required stable-reagent input in a magic recipe that would otherwise need a fresh item) | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: amber preservation lets the magic specialist stockpile a perishable organic reagent indefinitely — the preserved specimen is the only form stable enough to survive the imbuement furnace; the cave-biome explorer and the arcane researcher need each other
+
+## rechiseledcreate   [anchors: create, decoration (2)]
+
+Already ≥2. Existing rows: M-04 (crush-recycle, mixed), M-23 (structural glazing for aeronautics, accepted 1×), M-28 (colony window requests, accepted 1×). The M-33 (chisel-as-service) was rejected as "barrier too low" — but that rejection deserves scrutiny:
+
+- CHALLENGE | from: rechiseledcreate chiseled Create-palette blocks produced via Mechanical Chisel | via: service-for-hire (M-33) — Create specialist running the Mechanical Chisel sells premium chiseled variants | to: economy | motif: M-33 | verdict: REJECT | hook: the existing rejection ("the Mechanical Chisel's barrier is trivially low — anyone with basic Create automation can run it") is directionally right but slightly overstated. The real issue is that M-33 (service-for-hire) requires *knowledge or access that isn't tradeable*, not just time — a chisel run is genuinely automated at any Create tier, so the specialist's barrier isn't knowledge or scarce skill, it's capital (a powered contraption). Capital is tradeable (you can just build one), so M-33 doesn't hold. The rejection is correct; the reason is "capital, not knowledge" rather than "trivial automation."
+
+OK — existing rows sufficient for core weaves (M-28 colony requests is the only new-pillar edge worth authoring; it's already accepted).
+
+## shulkerboxtooltip   [anchors: support (1)]
+
+No prior rows. Client-only tooltip UI, zero items/blocks.
+
+LEAVE — client QoL UI; no content surface.
+
+## timm   [anchors: support (1)]
+
+No prior rows. Client-only biome-title overlay, zero items/blocks.
+
+LEAVE — client UI mod; no content surface.
+
+## multipiston   [anchors: support (1)]
+
+One prior REJECT. MineColonies/Structurize internal utility block; not player-facing content. The loot=yes is almost certainly the block's own drop, not a chest loot table.
+
+LEAVE — colony tooling dependency; no player-facing weave surface.
+
+## moblassos   [anchors: survival (1)]
+
+Existing rows cover M-28 (colony herder/villager transport), M-29 (cross-route hostile_lasso recipe), M-11 (spirit_trade), M-31 (livestock logistics). Two gaps: M-37 (research gate) is absent, and the M-29 framing for the hostile_lasso (Create pressing + arcane imbuement for the binding cord) is the most novel weave in the mod's row set — worth reinforcing as the cleaner framing over the spirit_fire/ritual approaches.
+
+- NEW | from: moblassos:diamond_lasso (any-mob capture, endgame tier — consumes diamond + precision materials) | via: MineColonies research gate (a Blacksmith or University research unlocks the diamond lasso recipe, so the capture-any-mob capability is a colony knowledge milestone, not just a crafting unlock) | to: economy | motif: M-37 | power: endgame | tone: ok | verdict: ACCEPT | hook: the diamond lasso's "capture anything" ability is too powerful to gate only on materials — it's the kind of unlock that should come from having built a real colony research base, not just mining enough diamonds
+- CHALLENGE | from: moblassos:hostile_lasso (spirit_fire/ritual rows that treat the filled lasso as a live ritual offering) | via: occultism:spirit_fire or occultism:ritual | to: magic | motif: M-11 | verdict: REJECT | hook: the M-11 framing assumes a filled hostile_lasso is a valid recipe input to occultism:spirit_fire — but occultism:spirit_fire consumes items on a fire block, not container-NBT entities; a filled_lasso is an item holding an entity reference, and the ritual/spirit_fire method would consume the lasso item but the mob inside it wouldn't be released or "offered." The M-29 framing (lasso recipe itself requires an arcane binding cord from Create+magic) is the coherent cross-route weave, not a live-mob offering at a spirit fire.
+
 
 
 
