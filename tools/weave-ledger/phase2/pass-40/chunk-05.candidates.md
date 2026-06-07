@@ -53,3 +53,15 @@ OK — existing rows sufficient; mod already has ≥2 anchors (Create zinc consu
 
 ## just_blahaj   [anchors: decoration/flavor (1)]
 OK — existing rows sufficient; unanimous REJECTs on every attempted weave are correct; LEAVE confirmed; pure wholesome decoration flavor with no material surface; forcing any edge is the failure mode the briefing warns against
+
+## bagus_lib   [anchors: support/library (1)]
+- LEAVE — shared code library for baguchi's mods; 0 items, 0 methods, no content
+
+## trailandtales_delight   [anchors: survival (1)]
+- NEW | from: trailandtales_delight:sniffer_eggshell (byproduct block left after cooking the sniffer egg) | via: create:milling → calcium powder / shell dust (a soil-amendment intermediate usable in Create farming or Ars Nouveau potion brewing) | to: create | motif: M-32 | power: everyday | tone: ok | verdict: ACCEPT | hook: the sniffer_eggshell left on the ground after feasting isn't waste — run it through a millstone for calcium dust that feeds the Create growing-medium chain or acts as a mineral reagent; the cooking chain produces a byproduct that becomes another process's feedstock, closing the loop on the sniffer-egg feast
+- NEW | from: trailandtales_delight:pitcher_taro / trailandtales_delight:baked_pitcher_pod (starchy archaeological crop and its baked form) | via: create:milling → taro starch powder → irons_spellbooks:alchemist_cauldron_brew (starch as a potion-thickening reagent) | to: magic | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: pitcher taro is a dense starch — mill it into taro flour, then use that flour as a thickening binder in Iron's Spellbooks alchemist cauldron brews; the sniffer-crop's starchy output feeds the magic potion chain through a Create processing step, giving pitcher_taro a second anchor the lantern-fruit rows don't cover
+
+## jade   [anchors: support/client-UI (1)]
+- LEAVE — look-at information HUD overlay; 0 items, 0 methods, no material surface
+
+== CHUNK COMPLETE ==
