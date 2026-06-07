@@ -80,6 +80,25 @@ Note: the dossier lists M-09 (luxury→coin) as a candidate — M-09 is retired;
 
 - LEAVE — render-culling performance optimization; zero blocks, zero items. No player-facing content.
 
+## create_ultimate_factory   [anchors: create (1)]
+
+REWORK — CONCERN on the existing Create anchor content: the renewable-diamond recipe (coal-block + lava → diamond via create:compacting) may directly undermine M-30 (regional-scarcity gate). Diamond is a key scarce material in the scarcity foundation; if it is infinitely renewable at scale via a basic Create machine, regional specialization for diamond-tier goods collapses. Recommend reviewing this specific recipe for removal or gating it behind a very deep chain / boss drop (M-15) to preserve M-30 for diamond. The rest of the renewable loops (stone types, deepslate, calcite) are low-stakes and fine. This is a REWORK flag on existing content, not a new weave proposal.
+
+New candidate — scarcity foundation:
+- from: create_ultimate_factory renewable-diamond recipe | via: create:compacting | to: create | motif: M-30 | power: endgame | tone: ok | verdict: REJECT | reason: the mechanic exists but is directionally wrong for the pack — making diamond renewable undercuts the scarcity-foundation axiom. This is a removal/tuning note, not an accept. Flag for recipe audit: disable or deep-gate the diamond recipe specifically.
+
+- from: create_ultimate_factory (no items of its own) | via: n/a | to: n/a | motif: n/a | power: n/a | tone: n/a | verdict: LEAVE (no 2nd anchor) | reason: pure recipe datapack with no items of its own; it deepens the Create pillar but offers no cross-system surface. A 2nd anchor cannot be routed through a mod with no material outputs.
+
+## accessories_compat_layer   [anchors: support (1)]
+
+- LEAVE — pure API/compat shim (mixin bridge over Curios + Trinkets → Accessories). Zero blocks, zero items, zero loot. No player-facing content; the wearables themselves live in the host mods.
+
+## shulkerboxtooltip   [anchors: support/QoL (1)]
+
+- LEAVE — client-side tooltip renderer only; reads container NBT to show contents. Zero blocks, zero items. Pure informational overlay.
+
+
+
 
 
 
