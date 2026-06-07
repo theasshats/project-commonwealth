@@ -62,6 +62,20 @@ Power-read: 6 blocks, 7 items, loot=yes. Tiers: wood_rotor (basic, everyday-chea
 
 OK — aeronautics (1 anchor) is correct. New edges: Create via M-05 (iron_rotor + controller) and M-06 (ion_thruster) takes drones to Create + aeronautics (2 anchors).
 
+## cataclysm   [anchors: survival (1)]
+Power-read: 138 blocks, 301 items, loot=yes. Boss-drop materials (ancient_metal_ingot, Witherite, Ignitium, Cursium, Void Core) are true endgame — gated behind 8 distinct boss encounters. The weapon_fusion method (Mechanical Fusion Anvil) is a registered native recipe type. CLAUDE.md explicitly names cataclysm bosses as the canonical boss-drop tech gate.
+
+- from: cataclysm:ancient_metal_ingot | via: create:crushing + create:pressing | to: Create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: Ancient metal — forged in pre-civilization fires — demands industrial treatment: crushed to shards, pressed to sheets. Reaching that recipe means defeating the Ancient Remnant; boss kill unlocks the processing chain, and the chain unlocks late-tier Create components. The DESIGN's on-ramp: combat → tech.
+- from: cataclysm:witherite_ingot | via: create:sequenced_assembly | to: Create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: Witherite — harvested from the Netherite Monstrosity — is too unstable for a bench recipe. Only sequenced assembly, with precise timing and interlocking steps, can shape it into a usable alloy component. The hardest boss feeds the deepest Create chain.
+- from: cataclysm:cursium_ingot / cataclysm:void_core | via: occultism:spirit_fire | to: magic | motif: M-11 | power: endgame | tone: ok | verdict: ACCEPT | hook: Cursium is the residue of souls bound in dark ritual; passing it through occultism's spirit fire is transmutation, not smelting — and the result is a high-tier necromantic reagent unavailable any other way. Two endgame pillars intersect at the darkest material in the pack.
+- from: cataclysm:ignitium_ingot | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: endgame | tone: ok | verdict: ACCEPT | hook: Ignis's volcanic metal holds latent fire-arcana; soaking it in an imbuement ritual draws out the elemental charge and produces a fire-magic reagent that no mundane process can extract. Boss material → arcane infusion → magic fuel.
+- from: cataclysm:ancient_metal_ingot / boss trophy drops | via: numismatics vendor | to: economy | motif: M-08 | power: endgame | tone: ok | verdict: ACCEPT | hook: The rarest metals in the world command the highest prices; a Numismatics vendor priced in crowns/suns reflects true scarcity — boss fighters become the pack's most specialized suppliers.
+- from: cataclysm:amethyst_crab_meat (blessed) | via: farmersdelight:cooking | to: survival | motif: M-12 | power: mid | tone: ok | verdict: REJECT | reason: Blessed Amethyst Crab Meat is obtainable only at the non-craftable Altar of Amethyst inside the Sunken City — cooking it is thematically fine, but the item is purpose-built as a status-effect consumable for a specific boss encounter (Leviathan Darkness immunity). Routing it into general cooking is trivially coherent but doesn't advance the loop; its role is already survival (boss prep). No meaningful new pillar connection; skip this for focus.
+- from: cataclysm:azure_seastone blocks | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: Seastone is a dungeon build-palette block; crushing it to rubble/gravel is technically M-04 (deco→Create recycles), but seastone is deep in a biome-specific dungeon — a player who has ancient_metal_ingot will not be recycling seastone bricks. Low value / wrong depth for the tier. The M-15/M-06 boss-ingot edges are the right endgame Create connections.
+
+REWORK: survival (1) is correct but thin — cataclysm is the pack's endgame pressure spike. The existing connection is sound; new edges add Create (M-15, M-06), magic (M-11, M-10), economy (M-08) — net 4 pillars, well above the target.
+
+
 
 
 

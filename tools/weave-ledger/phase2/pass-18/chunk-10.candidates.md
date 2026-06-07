@@ -118,6 +118,28 @@ OK — connections sound. Create + aeronautics anchors are well-grounded; drone 
 - from: robo_bee range/speed upgrade | via: create:deploying (M-20 deploy-application) | to: create | motif: M-20 | power: mid | tone: ok | verdict: ACCEPT | hook: drop the upgraded bee into a deployer with a signal-amp component to extend its delivery range — standard Create upgrade logic applied to drone logistics
 - from: bee_port dispatching coin parcels to remote trade partners | via: numismatics package payload | to: economy | motif: no-motif | power: mid | tone: ok | verdict: REJECT | reason: no-motif — this is the logistical *use* of the system (coins as package payload), not a recipe seam; no delivery mechanism (recipe/loot-seed/config) creates the cross-system link
 
+## bcc   [anchors: support/modpack-ops (1)]
+<!-- power-read: 0 blocks, 0 items, loot=no. Version-handshake utility — compares pack name+version on server join. No content. -->
+LEAVE — operational modpack utility with zero content surface. Serves server-client version coherence; no items, no blocks, no loot, no recipe methods. Correct role: distribution support.
+
+## architectury   [anchors: support/library (1)]
+<!-- power-read: 0 blocks, 0 items, loot=no. Cross-platform modding API providing event hooks and registry abstractions. No gameplay content. Pulled transitively as a hard dependency. -->
+LEAVE — pure code API library with zero content surface. No items, no blocks, no loot, no recipe methods. Genuine library LEAVE (not forced).
+
+## direct_chute   [anchors: Create (1)]
+<!-- power-read: 1 block + 1 item (direct_chute:direct_chute), loot=yes. A zinc-based slot-less item conduit that passes items between stacked containers instantly, stackable, zinc-encaseable. Everyday Create QoL block — crafted from zinc (already Create-native). loot=yes — but loot here probably means the block drops itself when broken, not a dungeon chest table. -->
+<!-- method-pull for 2nd anchor: -->
+<!-- candidate 1 (aeronautics/M-23 or M-24): the direct_chute as a logistics component for on-ship item routing — an airship with a compact item-throughput column uses direct_chutes to route cargo between decks. This is a *use* of the block, not a recipe seam. No cross-system recipe. no-motif. REJECT. -->
+<!-- candidate 2 (economy): if the direct_chute is used to build automated shop-dispatch systems on a trading ship, it gains an economy use. But again this is operational use. REJECT. -->
+<!-- candidate 3 (Create depth/M-06 or M-20): a zinc + direct_chute → "express delivery chute" via a Create mechanical-crafting step that adds a spring mechanism. This would be depth within Create, not a 2nd pillar. No second system added. REJECT — one-pillar deepening doesn't add a second anchor. -->
+<!-- candidate 4 (survival/scarcity): zinc is a Create ore (scarce per the scarcity model). The direct_chute is a zinc consumer, so it feeds the zinc demand loop. But this is implicit in it being a Create block — it's not a new cross-system weave. -->
+<!-- The dossier correctly assessed: no viable 2nd anchor without forcing. -->
+LEAVE — single Create logistics block with no second-system surface. The zinc-based chute deepens Create's internal logistics but does not advance the loop to a new pillar. loot=yes appears to be block-drops-itself, not a seeded chest table. No motif applies without contrivance.
+
+- from: direct_chute as on-ship cargo routing component | via: aeronautics operational use | to: aeronautics | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: no-motif — operational use of a block aboard a ship is not a recipe seam; adds no cross-system connection
+- from: express-chute upgrade (spring mechanism) | via: create:mechanical_crafting deepening | to: create | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: depth within one pillar only; no second anchor added; not a cross-system link
+
+
 
 
 
