@@ -7,9 +7,9 @@ and whether an Opus run did (`from_opus`). This is the confidence signal: a weav
 8/10 independent instances is robust; one proposed once is speculative.
 
 Pass layout it understands:
-  tools/weave-ledger/phase2/chunk-NN.candidates.md          <- pass-00 (the original Phase 2), flat
-  tools/weave-ledger/phase2/chunk-NN.candidates.opus.md     <- pass-00 Opus overlay (by .opus suffix)
-  tools/weave-ledger/phase2/pass-PP/chunk-NN.candidates.md  <- pass PP (>=1)
+  tools/weave-ledger/phase2/pass-PP/chunk-NN.candidates.md       <- pass PP (every pass, 00..NN)
+  tools/weave-ledger/phase2/pass-00/chunk-NN.candidates.opus.md  <- pass-00's Opus overlay (legacy .opus suffix)
+  (pass-00 was the original flat Phase-2; its files now live in pass-00/ like every other pass.)
   tools/weave-ledger/phase2/pass-PP/MANIFEST.json           <- {"opus_chunk": NN, "seed": S}  (which chunk was Opus)
 
 Output: CANDIDATES.tsv (machine) + CANDIDATES.md (rendered, sorted by times_suggested desc).
@@ -83,11 +83,9 @@ def parse_file(path):
 def collect():
     # (pass_id, is_opus, path) for every candidate file
     runs = []
-    for f in sorted(glob.glob(os.path.join(PH, 'chunk-*.candidates.md'))):
-        runs.append(('pass-00', False, f))
-    for f in sorted(glob.glob(os.path.join(PH, 'chunk-*.candidates.opus.md'))):
-        runs.append(('pass-00', True, f))
     for d in sorted(glob.glob(os.path.join(PH, 'pass-*'))):
+        if not os.path.isdir(d):
+            continue
         man = os.path.join(d, 'MANIFEST.json')
         opus_chunk = json.load(open(man)).get('opus_chunk') if os.path.exists(man) else None
         pid = os.path.basename(d)
@@ -95,6 +93,10 @@ def collect():
             n = re.search(r'chunk-(\d+)', os.path.basename(f))
             is_opus = bool(opus_chunk) and n and int(n.group(1)) == int(opus_chunk)
             runs.append((pid, is_opus, f))
+        # pass-00's Opus overlay uses the legacy `.candidates.opus.md` suffix (no MANIFEST opus_chunk);
+        # the `chunk-*.candidates.md` glob above does NOT match it, so collect it explicitly.
+        for f in sorted(glob.glob(os.path.join(d, 'chunk-*.candidates.opus.md'))):
+            runs.append((pid, True, f))
     return runs
 
 
