@@ -107,7 +107,8 @@ it introduces **no new claim system**, it *reads* the two that already exist. It
 
 - **Pro:** the only path that satisfies *all* of #260 cleanly and respects the existing claim systems.
   `docs/CUSTOM-MODS.md` already sanctions custom mods as a project (their own repo under `derpack-org`,
-  pulled in via the mod-mirror packwiz pattern).
+  pulled in via the mod-mirror packwiz pattern). **Full technical design: [`GOVERNANCE-MOD-SPEC.md`](GOVERNANCE-MOD-SPEC.md)**
+  (data model, law-precedence resolver, Numismatics minting bridge, MVP phasing).
 - **Con:** the largest effort — genuine multi-week mod development. The web sandbox **cannot compile or
   run NeoForge**, so work here is source-only; it's built/playtested on the box. Almost certainly cannot
   *fully* land inside a single v0.9.0 release — a long-lived `claude/governance` project, not a patch.

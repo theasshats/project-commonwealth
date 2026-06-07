@@ -36,6 +36,7 @@ off those two.
 | [`TRIAGE.md`](TRIAGE.md) | Issue-triage playbook (re-label / milestone / assign / close / sequence). |
 | [`WEAVING-STRATEGY.md`](WEAVING-STRATEGY.md) | Weave-the-web thinking — **DRAFT**, not settled. |
 | [`GOVERNANCE.md`](GOVERNANCE.md) | Player-governance scoping (#260) — municipalities→empires, cascading laws, entity minting. **SCOPING, not accepted** — survey + 3 implementation paths. (Governance reopened in `SYSTEMS.md`.) |
+| [`GOVERNANCE-MOD-SPEC.md`](GOVERNANCE-MOD-SPEC.md) | Path B technical spec for #260 — the custom NeoForge governance mod (data model, law-precedence resolver, Numismatics minting bridge, claim-mod integration, MVP phasing). **DRAFT, not accepted.** |
 
 ## Player-facing copy
 
