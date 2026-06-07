@@ -60,4 +60,15 @@ LEAVE — UI/rendering/data-sync library (GregTech lineage). The two registered 
 ## jade   [anchors: support/client UI (1)]
 LEAVE — client "what-am-I-looking-at" HUD tooltip. Zero items, blocks, loot, material flows. Pure informational overlay; nothing to route through any method.
 
+## fluid   [anchors: Create, aeronautics (2)]
+OK — connections sound. Create:Fluid's parts are built through Create (compacting/deploying/mechanical_crafting/mixing) and its centrifugal pump + smart interfaces are fluid logistics tooling — the plumbing backbone for both base infrastructure and ship fluid systems. Both anchors are tight and load-bearing.
+- from: fluid:centrifugal_pump | via: aeronautics structural recipe (fuel-line / coolant circuit on ship) | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: REJECT | reason: fluid:centrifugal_pump is a fluid-movement block, not a mechanical drivetrain component (rotor, bearing, engine block, gearset) — M-24 specifically covers *drivetrain/control* components feeding Aeronautics propulsion/control surfaces. Using a pump in a coolant loop on a ship is plausible behavior but not a recipe weave, and it's already captured under the existing aeronautics anchor. Not a new weave.
+- from: fluid:smart_fluid_interface | via: Create fluid networks on trains/ships | to: aeronautics | motif: no-motif | power: mid | tone: ok | verdict: REJECT | reason: while smart fluid interfaces improve ship plumbing, this is behavioral integration, not a recipe-routing weave, and there's no established motif for "fluid logistics block enables ship operation." No-motif → reject; the aeronautics anchor already covers this mod's role.
+
+## blockui   [anchors: support/library (1)]
+LEAVE — XML-based UI framework library, dependency of MineColonies/Structurize. Zero player-facing items or content. Pure developer GUI infrastructure; nothing to weave.
+
+## justenoughbreeding   [anchors: support/QoL (1)]
+LEAVE — JEI plugin adding breeding-info categories (what items each mob needs to breed). Zero items, blocks, loot, material flows. Pure recipe-viewer data display; nothing to route through any method.
+
 

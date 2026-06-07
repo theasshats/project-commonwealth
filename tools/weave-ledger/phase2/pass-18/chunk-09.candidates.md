@@ -71,4 +71,30 @@ No new candidates.
   config review (e.g. disable the trash cans entirely in favor of Create's own overflow mechanisms, or
   rate-limit them) before the economy pillar lands.
 
+## farmersdelight   [anchors: survival, create (2)]
+REWORK: OK — connections sound. The Create anchor is established (made-by: create:filling/milling/mixing —
+flour milling, rice milling, etc.). The dossier's M-09 (luxury good → coin) and M-12 (processing-chain
+deepening) candidates are both valid candidates to surface; assess below.
+- from: farmersdelight high-tier cooked dishes (beef stew, pie, hearty stew, gleaming salad) | via: numismatics sell/price table at a Trade Post | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: a meal that takes multiple ingredients and a cooking pot is worth something at the market — the kitchen feeds the economy, not just the player
+- from: farmersdelight:straw / farmersdelight:rice (crop side-products) | via: create:milling or create:crushing (extends existing grain→flour chain to new side-products) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: the Create anchor is already established via the made-by inbound weaves (create:milling/filling/mixing are already in use); deepening the existing grain chain is maintenance, not a new pillar connection — the anchor is already counted; this would be an authoring refinement (add more crop routes), not a new weave
+
+## balm   [anchors: support/library (1)]
+- LEAVE — BlayTheNinth multi-loader abstraction library; 0 blocks, 0 items, no recipe methods. Ships two
+  iron/gold nugget c:tags as scaffolding (already universal) and 1 internal biome-modifier. Genuine
+  zero-content library. No weave possible.
+
+## create_factory   [anchors: create, survival (2)]
+REWORK: OK — connections sound. Already at 2 anchors (Create dessert chain + survival/food). Assess
+the economy candidate.
+- from: create_factory sweets (waffles, caramel rolls, honey-glazed berries — assembled through
+  create:mixing/pressing/filling) | via: numismatics sell/price table at a Trade Post or Bakery colonist |
+  to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: a machine-made candy apple
+  or waffle is a finished good — it sells for more than raw ingredients, and an airship bakery run is a
+  legitimate trade loop
+- from: create_factory jam/nectar fluids (sweet_berries_jam, cream, glow_berry_spread) | via:
+  ars_nouveau:imbuement (sweet/bioluminescent essence — glow berries contain natural light magic) |
+  to: magic | motif: M-10 | power: mid | tone: clash | verdict: REJECT | reason: jam as an arcane reagent
+  is a reach — the tone difference between confectionery and arcane infusion is too large; players would
+  not find "pour glow-berry jam into the imbuement chamber" coherent
+
 

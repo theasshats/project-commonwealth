@@ -136,6 +136,34 @@ LEAVE — Create-internal storage/QoL; no foreign material or coherent 2nd-pilla
 
 LEAVE — genuine zero-content privacy/networking mod. No items, no methods, no material surface. Nothing to weave.
 
+## mushroomquest   [anchors: survival (1)]
+
+Power-read: 137 edible real-world mushrooms across common/rare/mythical tiers. Common caps = everyday foraged food (drop from breaking stumps/trunks, low effort). Rare and mythical caps = low-volume, biome-specific, higher-tier drops with strong status effects (healing or deadly). The mod has loot tables (loot=yes), structures (Mushroom Island biome), and 352 items. This is a content-rich foraging/survival mod with strong cooking and alchemy surfaces.
+
+Candidate 1 — common mushrooms → Farmer's Delight / ExtraDelight cooking-pot/oven → prepared dishes (M-12, survival→production)
+- from: mushroomquest mushroom caps (everyday foraged) | via: farmersdelight:cooking / extradelight:oven | to: create | motif: M-12 | power: everyday | tone: ok — foraging → cooking is the most natural loop; mushrooms become soups, stews, and side dishes via FD/ExtraDelight recipes, feeding the diet system (appleseed five-group demand). Sliceanddice's Slicer can automate the cutting step at scale. | verdict: ACCEPT | hook: foraged caps into a Farmer's Delight pot — every mushroom variety unlocks a new dish, and diet balance demands you cook them all.
+
+Candidate 2 — rare/mythical mushroom caps → Numismatics luxury good / sell (M-09, survival→economy)
+- from: mushroomquest rare/mythical caps (mid-tier foraged) | via: numismatics sell | to: economy | motif: M-09 | power: mid | tone: ok — rare foraged goods (low-volume, biome-specific) fit the luxury-good sell pattern; a forager specialist can supply the market with caps other players can't easily find. M-09 is food/consumable-class items → coin, and rare mushrooms are consumable (eat them or use as ingredients). | verdict: ACCEPT | hook: agarikon and golden chanterelles aren't just food — they're tradeable rarities; the forager's specialty becomes the pack's boutique ingredient market.
+
+Red-team Candidate 2: M-09 says "high-effort consumable (wine, cheese, processed crop)." Raw foraging caps are low-effort (break a stump), not processed. However, the motif's parenthetical is illustrative, not restrictive — the motif is "luxury good → coin," and a biome-rare, effect-bearing mushroom qualifies as a luxury by scarcity even if the harvest step is simple. The effort is in finding the biome and the rare drop tier, not in processing. Survives.
+
+Candidate 3 — deadly/mythical caps → Occultism spirit_fire transmutation → magic reagent (M-11, survival→magic)
+- from: mushroomquest deadly mushroom caps (death_cap, destroying_angel — rare/mythical tier) | via: occultism:spirit_fire | to: magic | motif: M-11 | power: mid | tone: ok — poisonous/deadly caps transmuted through spirit fire into a dark reagent is exactly the "organic drop → magic ingredient" pattern; death caps already have a poison-effect identity that maps to occult use. | verdict: ACCEPT | hook: the death cap isn't wasted — toss it in a spirit flame and it becomes a potent occult reagent; the forager and the occultist have a trade to make.
+
+Red-team Candidate 3: is this thematically forced? Death-cap → spirit fire → dark reagent is actually one of the cleanest theme fits in the chunk. The deadly mushroom's toxin becomes arcane material — it's coherent lore-wise and advances survival→magic, a clean loop edge. The reagent should not be source_gem (reserved); it could be a natural reagent for Occultism rituals (otherstone, demon_blood_shard etc.) or create a new named cap-dust reagent — but note the motif says "transmuted INTO an essence through ritual/spirit method," so the output is a foreign magic-system ingredient, not a repurposed cap. Survives.
+
+Candidate 4 — foraging blocks (stumps/trunks) → loot-seed: drop Create parts or magic catalysts (M-02/M-15)
+- from: mushroomquest foraging blocks (loot=yes, structures) | via: loot-seed | to: create / magic | motif: M-02 | power: everyday | tone: clash — stumps dropping Create cogwheels or magic reagents is tonally wrong; these are nature-foraging blocks, not mob loot or dungeon chests. Forcing Create parts into forest stumps has no "of course" hook. | verdict: REJECT | reason: tone clash; the loot-seed motif is for structure/dungeon mods; foraging blocks are organic-nature content and adding tech/magic loot to them would feel jarring, not emergent.
+
+Candidate 5 — Mushroom Island biome structures → loot-seed: rare reagent or map (M-14 bounty / loot-seed)
+- from: mushroomquest Mushroom Island structures (loot=yes) | via: loot-seed | to: economy | motif: M-14 | power: mid | tone: ok — seeding a bounty-relevant rare drop (coin, a premium ingredient, a trade-good token) into Mushroom Island structure chests makes the biome a worthwhile expedition target; economy: you explore to find the loot you sell | verdict: ACCEPT | hook: the Mushroom Island is worth sailing to — its structure chests carry rare trade goods that only foragers bring back.
+
+Red-team Candidate 5: M-14 is "bounty board consumes mob drops and pays coin." The loot-seed path here is seeding coin or a trade-good into structure chests, which is closer to "exploration reward → economy" than strict M-14 (which is combat→economy via bounty board). More accurately this is a loot-seed candidate with an economy anchor: the structure yields a rare item that feeds the economy (sell or use as reagent). The underlying motif might be better read as M-08 (scarce material from exploration → economy) or simply loot-seed as a delivery mechanism. Let me re-examine: the briefing says "seed weave-relevant drops into this mod's loot tables" with examples of M-08/M-14/M-02/M-15. For a structure/loot-bearing mod, the motif tagged should match the dropped item's role. Seeding a rare coin or a magic reagent into the Mushroom Island chest is a real candidate. I'll keep as ACCEPT but update the motif: the dropped item is a "scarce exploration find → economy," closest to M-09 (luxury good → coin) if the drop is a sellable rare, or M-15 (boss-key) if it's a recipe gate. Given this is a structure mod with biome loot, M-09 via loot-seed is the cleanest fit.
+
+- from: mushroomquest Mushroom Island structure loot | via: loot-seed (add rare sellable cap or trade-token to chest tables) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: the Mushroom Island's hidden structures hold mythical spores that only the expedition trader brings home — supply the market or spend them yourself.
+
+
 
 
 

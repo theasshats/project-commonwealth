@@ -51,6 +51,18 @@ REWORK check: Create + aeronautics is a strong, coherent pairing for a train-sys
 
 OK — connections sound. Create + aeronautics (transport arm) is the right 2-anchor fit; no new edges needed.
 
+## drones   [anchors: aeronautics (1)]
+Power-read: 6 blocks, 7 items, loot=yes. Tiers: wood_rotor (basic, everyday-cheap) → iron_rotor (mid) → ion_thruster (endgame — power dense). Controller and frame are mid-tier support structures. The pocket_drone is equipped-item form; abilities come from which blocks you embed. Strong Create-recipe weave opportunity.
+
+- from: drones:ion_thruster | via: create:sequenced_assembly | to: Create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: The ion thruster isn't a simple craft — it's a multi-stage precision assembly: brass casing stamped, precision parts inserted in sequence, charged in the rolling mill. A Create sequenced-assembly keystone gates the best drone tier behind the full Create spine.
+- from: drones:iron_rotor | via: create:mechanical_crafting | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: Iron rotors are manufactured, not smithed — they require precise tolerances that only a mechanical crafter can hold. Mid-tier drone flight is gated on reaching Create's mechanical crafter tier.
+- from: drones:controller | via: create:mechanical_crafting | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: The assembly controller is the brain of the drone operation; it takes brass internals and precision components only the Create mechanical crafter can produce, tying drone automation to the tech spine.
+- from: drones:pocket_drone (fully assembled, drill variant) | via: numismatics vendor | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: A drone is player-built from assembled blocks, not a processed scarce good — pricing it as a vendor trade good is awkward (you'd have to pre-build and sell pocket drones, which conflicts with how the mod works: the assembly is personal, not factory-produced). The economy angle is mechanically incoherent given the block-assembly model. Reject.
+- from: drones:wood_rotor | via: create:mechanical_crafting | to: Create | motif: M-05 | power: everyday | tone: ok | verdict: REJECT | reason: Wood rotors are the entry tier — per the cost model guardrail, basics should NOT be gated behind complex recipes. Wood rotor = everyday → one light step at most, not a mechanical crafter requirement. Accept iron/ion tiers (above) but not wood. Gate depth scales with power.
+
+OK — aeronautics (1 anchor) is correct. New edges: Create via M-05 (iron_rotor + controller) and M-06 (ion_thruster) takes drones to Create + aeronautics (2 anchors).
+
+
 
 
 

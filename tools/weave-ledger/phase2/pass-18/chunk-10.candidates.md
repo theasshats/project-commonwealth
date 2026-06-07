@@ -96,6 +96,29 @@ OK — connections sound. magic + Create anchors are well-grounded. Deepening ca
 - from: mob drop (ender pearl / rotten flesh) → Iron's school essence | via: occultism:spirit_fire | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: spirit fire is the bridge between mundane kills and arcane ingredients; ender pearl → eldritch-school essence is a natural transmutation
 - from: createaddition FE charging Arcane Anvil | via: createaddition:charging | to: create | motif: M-17 | power: mid | tone: clash | verdict: REJECT | reason: the Arcane Anvil runs on XP + reagents, not FE; forcing electric charging would require rewriting the machine's power model — arbitrary and tone-clashing with the scholarly-arcane vibe
 
+## pingwheel   [anchors: support/QoL (1)]
+<!-- power-read: 0 blocks, 0 items, loot=no. Multiplayer ping-marker system — keybind drops a world/entity marker visible to the team. Pure client/server coordination UI. -->
+LEAVE — zero-content multiplayer coordination utility. No items, no blocks, no loot, no recipe methods. Its value is entirely social/coordination and cannot be routed through any system motif. Correct role: co-op QoL.
+
+## jeresources   [anchors: support/UI (1)]
+<!-- power-read: 0 blocks, 0 items, loot=no. JEI addon displaying mob-drop tables, dungeon/chest loot, plant drops, and ore-distribution graphs. Documentation layer only — surfaces existing data. -->
+<!-- The dossier notes it's useful for the pack's scarcity design (players can see regional ore distribution). That's UX, not a weave. -->
+LEAVE — client-only UI documentation addon. No items, no blocks, no loot tables of its own. Surfaces existing world data; no material or method surface to route through any motif. Correct role: transparency support for the scarcity system.
+
+## create_mobile_packages   [anchors: Create, aeronautics (2)]
+<!-- power-read: 2 blocks (bee_port, drone_port — mid-tier logistics infrastructure), 4 items (bee_port, drone_port, mobile_packager, robo_bee). loot=no. The robo_bee is the courier drone; the ports are dispatch/receive hubs. These are logistics nodes built from Create parts — mid-tier once Create logistics is established. -->
+<!-- existing connection check: Create + aeronautics/logistics are the correct anchors. The robo_bee is an airborne logistics device, firmly aeronautics. Both anchors are well-grounded. -->
+<!-- method-pull for depth: -->
+<!-- candidate 1 (economy/M-08 or M-14): the bee_port could accept/dispatch coin packages — a Numismatics coin parcel that pays a remote trading partner. The port is infrastructure; the coin is the payload. Motif M-08 applies if we route a coin-containing package as a trade fulfilment mechanism — but this is the *use* of the system, not a recipe seam. The ledger wants recipe/loot-seed/config hooks, not logistical use-cases. no-motif as a recipe. REJECT. -->
+<!-- candidate 2 (aeronautics depth/M-24): robo_bee as a mechanical drone — its rotor/propulsion mechanism could require a mechanical component from Create (e.g. a small rotary engine, fan, or bearing). Motif M-24 (mechanical component → propulsion). The robo_bee is already crafted from Create parts (the dossier says it consumes Create parts). But if the recipe doesn't specifically require a mechanical drivetrain component, we could deepen: require a Create:mechanical_crafting step to assemble the bee's rotor assembly. Power: mid (robo_bee is mid-tier). Depth-scales-with-power: a drone prop should need real mechanical work. ACCEPT — but specify it's a recipe deepening, not a new system; the aeronautics anchor already exists. -->
+<!-- candidate 3 (Create/M-20 deploy-application): upgrade a robo_bee's range/speed by deploying a signal amplifier onto it. M-20 (deploy-application upgrade). Plausible. Power: mid. Tone: ok — a Create-style "apply upgrade via deployer" is thematically consistent with the mod's Create-native vibe. But: the second anchor is already aeronautics; this is depth within existing anchors, not a new pillar. Still a valid deepening candidate. ACCEPT for the deepening angle; acknowledge it doesn't add a 3rd pillar. -->
+OK — connections sound. Create + aeronautics anchors are well-grounded; drone logistics is the correct slot. Deepening candidates below add recipe depth within existing anchors rather than a new pillar.
+
+- from: create_mobile_packages:robo_bee propulsion assembly | via: create:mechanical_crafting | to: aeronautics (deepening) | motif: M-24 | power: mid | tone: ok | verdict: ACCEPT | hook: the robo_bee's rotor needs a proper mechanical assembly — it's a tiny Create-built drone, and its drivetrain should feel like one
+- from: robo_bee range/speed upgrade | via: create:deploying (M-20 deploy-application) | to: create | motif: M-20 | power: mid | tone: ok | verdict: ACCEPT | hook: drop the upgraded bee into a deployer with a signal-amp component to extend its delivery range — standard Create upgrade logic applied to drone logistics
+- from: bee_port dispatching coin parcels to remote trade partners | via: numismatics package payload | to: economy | motif: no-motif | power: mid | tone: ok | verdict: REJECT | reason: no-motif — this is the logistical *use* of the system (coins as package payload), not a recipe seam; no delivery mechanism (recipe/loot-seed/config) creates the cross-system link
+
+
 
 
 
