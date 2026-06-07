@@ -148,4 +148,14 @@ LEAVE — HUD mod showing food restoration/saturation/exhaustion values on toolt
 
 LEAVE — config API library (SuperMartijn642's shared config framework); 0 blocks, 0 items, no recipe-types, no material outputs. Genuine zero-surface library; sanctioned support role.
 
+## solmaiddream   [anchors: survival (1)]
+
+Power-read: solmaiddream is a Touhou Little Maid add-on that applies the Spice-of-Life variety idea to maids — feeding a maid more unique foods grows her stats at milestones. The only item is the food_book (inspects a maid's diet history). 0 blocks, 0 recipe-types. The mechanic purely rides on whatever food pool the pack provides. Hard dependency: touhou_little_maid.
+
+- from: unique exotic/craft foods (e.g. vinery wines, create_cheese aged cheeses, beachparty cocktails) fed to maids | via: existing food pool (no new recipe needed) | to: survival | motif: M-26 | power: everyday | tone: ok — the consumption-sink angle: feeding maids unique foods consumes food items that are already produced by the pack's food chain, creating ongoing demand for variety. Red-team: is this a weave or just ambient gameplay? M-26 (consumption sink) applies when demand never zeroes out because items are spent against pressure — feeding maids diverse foods is an ongoing demand sink that pulls on all of the pack's food production chains. But does this add a second anchor beyond survival? The demand is internal to the survival face. | verdict: REJECT | reason: no second-anchor — the food consumption from maid-feeding is already part of the survival pressure loop; this is an amplifier of the existing survival anchor, not a bridge to a different system. The maid's stat growth is entirely within the survival/companion space.
+- from: solmaiddream companion (grown maid → higher stats) | via: companions providing a combat-capable ally | to: survival/economy | motif: M-34 | power: mid | tone: ok — a high-stat maid (fed a diverse diet) is a combat companion; the player who invests in maid nutrition gets a fighting partner, trading their food investment for combat capability. Red-team: is this a recipe weave or just a gameplay loop? M-34 is "boss/danger output farmed by combat specialist and traded" — a grown maid is not tradeable and doesn't produce tradeable boss drops. The maid's combat utility accrues to the owner alone. | verdict: REJECT | reason: no cross-player trade dimension; the maid's combat capability is not a tradeable good and doesn't produce exchangeable outputs; M-34 requires the combat output to enter the player economy
+
+LEAVE — niche companion-food flavor addon; its only content is a stat-growth mechanic entirely within the survival/companion space; no coherent second anchor survives red-team. (The food_book item has no recipe surface to route.) The survival anchor is its single sound home.
+
+== CHUNK COMPLETE ==
 

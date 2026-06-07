@@ -268,3 +268,9 @@ Worldgen library: biome-region API that lets biome mods inject biomes into vanil
 
 - LEAVE — genuine zero-content code library. Biome-region registration API only; no player-facing content and no method surface. Required dependency for biome mods; no weave possible.
 
+## controlling   [anchors: support/client-UI (1)]
+
+Client UI mod: adds search/filter to the vanilla Key-Bindings screen. No items, no loot, no blocks, no recipe types. Pure UI enhancement.
+
+- LEAVE — genuine zero-content client UI utility. Keybind search is a QoL improvement for the player managing many mods' controls; zero material surface, no weave possible.
+

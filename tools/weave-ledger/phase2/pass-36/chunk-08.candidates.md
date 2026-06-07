@@ -297,3 +297,48 @@ Content-free compat layer that unifies duplicate items/fluids across Create addo
 - OK — support/compat anchor is correct and the inbound tfmg:distillation weave (TFMG plastic unified into c:ingots/plastic) is sound; no weak or arbitrary connections to REWORK
 - from: c:ingots/plastic (unified via this mod) | via: aeronautics structural recipe (M-23) | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: REJECT | reason: the weave belongs on the plastic-producing mod (TFMG/pneumaticcraft), not the compat shim; createaddoncompatibility only unifies the tag — it's not the content node that earns the aeronautics anchor
 
+## upgrade_aquatic   [anchors: survival (1)]
+
+Large ocean/river expansion: pike, perch, lionfish, jellyfish, hostile thrashers, coralstone deco, driftwood/riverwood woods, aquatic foods. 319 blocks, 379 items, 20 biome-modifiers, 26 c:tags, loot=yes. Already uses `woodworks:sawmill` (inbound weave established).
+
+**This is a rich content mod with clear method-pull candidates.**
+
+**Candidate 1 — Processing-chain pull on fish foods (M-12):**
+- upgrade_aquatic outputs multiple tagged foods: `c:item/foods/raw_fish`, `raw_pike`, `raw_perch`, `raw_lionfish`, and cooked variants. Farmersdelight's `farmersdelight:cooking` and `farmersdelight:cutting` are prime pull methods.
+- Running raw pike/perch through `farmersdelight:cutting` produces filleted fish portions; cooking those in `farmersdelight:cooking` produces finished dishes. This is exactly M-12 (processing-chain pull: raw crop/material runs through another mod's processing method into a finished good).
+- Power: everyday (common fish catches). One or two steps. Proportionate.
+- Tone: fishing → culinary processing → diet-variety food. Perfect loop fit: the diet system (Diet-AppleSeed) demands food variety, which drives the fishing/aquatic supply chain, which routes through Farmersdelight's kitchen, which produces the diet variety. Complete loop arc.
+- Red-team: is the connection real or just "fish + cooking = obvious"? It's real — Farmersdelight's cutting board and cooking method exist precisely for this kind of processing; the tags (`c:item/foods/raw_fish`) are already present making the recipe straightforward.
+- Verdict: ACCEPT M-12 — strong, loop-advancing, everyday power, natural tone.
+
+**Candidate 2 — Driftwood/riverwood through create:cutting / woodworks:sawmill (M-12):**
+- Driftwood/riverwood are distinct wood sets. Already routes through woodworks:sawmill (the established inbound weave). Extending through `create:cutting` (the industrial parallel) gives the full two-route pattern.
+- Power: everyday. Tone: ok.
+- Red-team: is this just duplicating the woodworks:sawmill weave? The woodworks:sawmill connection is established; adding create:cutting as a second route is a genuine second path, not a duplicate (Sawmill = artisanal, Create saw = industrial). It deepens the wood web without forcing anything.
+- Verdict: ACCEPT M-12 — second wood-cutting route completes the "two paths to driftwood shapes" pattern, consistent with the broader wood-deco web.
+
+**Candidate 3 — Coralstone crushing for Create (M-04):**
+- coralstone blocks are a decorative family. Crushing them back → raw mineral + XP nugget (M-04 lossy deco recycle). Proportionate for an everyday deco palette.
+- Verdict: ACCEPT M-04 — standard deco-recycle, coherent, everyday.
+
+**Candidate 4 — Jellyfish/thrasher drop as magic reagent (M-02):**
+- Jellyfish and thrashers are aquatic mobs with unique behaviors. Their drops (if any) could be magic reagents. The dossier doesn't list unique drops for these creatures beyond general loot table (loot=yes). Jellyfish carry a bioluminescent/aetheric vibe — a `jellyfish_sting` or `luminescent_gel` could feed Ars Nouveau imbuement (M-10) or Occultism ritual (M-11).
+- Power: everyday/mid (aquatic mob drops, farmable with a boat).
+- Tone: bioluminescent jellyfish gel as a magic reagent — it fits (it's the kind of "strange aquatic organic" that magic systems love). An alchemist farming jellyfish for glowing components is coherent.
+- Red-team: the dossier doesn't explicitly list jellyfish drops as unique items — if they just drop vanilla items (slime balls, etc.), the weave routes a vanilla drop through magic, which isn't a weave on upgrade_aquatic specifically. Need to flag this uncertainty.
+- Verdict: ACCEPT M-02 with caveat — if upgrade_aquatic gives jellyfish/thrashers unique drops (probable given loot=yes and custom mobs), those drops are strong magic-reagent candidates via M-02; if they use only vanilla drops, the weave belongs on the vanilla drop not on this mod; flag for Phase-3 verification.
+
+**Candidate 5 — Kelp storage block as bulk good for aeronautics/economy (M-31):**
+- `c:block/storage_blocks/kelp` is a high-density kelp storage block. Kelp is a biomass fuel. Processing kelp blocks through `create:compacting` or `create:milling` could produce a biofuel feedstock for Aeronautics engines (M-13 fuel chain) or a bulk commodity that requires logistics to move at scale (M-31).
+- Power: everyday (kelp is renewable ocean resource). Tone: ok — kelp-derived biofuel for airship engines is coherent in an ocean-rich world.
+- M-13: refined fuel powers an Aeronautics engine. Kelp → dried kelp → compacted kelp block → create:milling → biomass → fuel chain.
+- Verdict: ACCEPT M-13 via create:milling — kelp biomass as an aeronautics fuel feedstock (via the existing Create processing chain); gives upgrade_aquatic its aeronautics anchor, which is also its economy anchor (logistics arm).
+
+- from: upgrade_aquatic raw fish (raw_pike, raw_perch, raw_lionfish) | via: farmersdelight:cutting + farmersdelight:cooking | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the pike goes from hook to filleting board to pan in Farmer's Delight — aquatic variety feeds the diet system's protein and food groups, making coastal fishing a production specialty
+- from: upgrade_aquatic:driftwood / riverwood logs | via: create:cutting | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Create's industrial saw cuts driftwood planks and board shapes at scale — the second route alongside the Woodworks Sawmill; artisanal vs. industrial, same output web
+- from: upgrade_aquatic:*_coralstone blocks | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: a mis-placed coralstone wall crushes back to mineral powder and an XP nugget — the standard Create deco-recycle contract applied to the ocean palette
+- from: upgrade_aquatic jellyfish / thrasher drops | via: ars_nouveau:imbuement or occultism:spirit_fire | to: magic | motif: M-02 | power: everyday | tone: ok | verdict: ACCEPT | hook: bioluminescent jellyfish gel and thrasher venom are exactly the strange organic reagents an arcane lab hunts for — aquatic exploration feeds the magic production route (verify unique drops exist in Phase 3)
+- from: upgrade_aquatic:kelp (storage block) | via: create:milling → biomass feedstock | to: aeronautics | motif: M-13 | power: everyday | tone: ok | verdict: ACCEPT | hook: mass-harvested ocean kelp, milled to biomass and refined into a biofuel slurry, feeds the Create Aeronautics engine's combustion chamber — coastal bases with kelp farms supply the fleet
+- from: upgrade_aquatic cooked luxury fish (cooked_lionfish, cooked_pike dishes) | via: emergent trade | to: economy | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: "seafood dishes are sold at market" is ambient sellable (retired M-09 territory) without a specific demand-gate; the diet system creates demand organically, which is sufficient; no additional economy motif applies beyond M-26 consumption already captured in the diet arc
+- REWORK: existing survival anchor is correct; the inbound woodworks:sawmill weave is real and sound; no weak or arbitrary connections. OK — connections sound for the established weave.
+
