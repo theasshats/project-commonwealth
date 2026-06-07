@@ -139,3 +139,35 @@ Let me look for what's genuinely missing from the accepted M-22 picture:
 
 - CHALLENGE | from: Harvest Moon crop-growth buff (global accelerator) | via: any method | to: any | motif: M-16 | verdict: REJECT | hook: M-16 requires a *material* that only exists / only grows in a given season; the Harvest Moon is a passive global growth-rate modifier that produces the *same materials faster*, not a distinct season-locked material — no new item to route through any method means no M-16 weave; the ACCEPT rows (9 votes) are applying the motif too loosely
 
+## ichunutil   [anchors: support/library (1)]
+
+LEAVE — pure shared-class library; 0 blocks, 0 items, no gameplay surface. No weave possible.
+
+## knightlib   [anchors: support/library (1)]
+
+Existing rows (3 total, all REJECTs) correctly identify that knightlib's content (great_chalice, grails, essence, homunculus) is inert without Knight Quest, which is not in the pack.
+
+One angle to probe: the dossier notes `loot=yes` and the jar contains 1 block + 6 items. These items *are physically present* in the jar and *could* appear in loot tables or be crafted — but without Knight Quest their crafting/lore context is undefined, and weaving inert items risks player confusion (a homunculus showing up with no quest context). The briefing says "don't weave dead items." The existing REJECTs are correct.
+
+LEAVE — dependent mod (Knight Quest) absent; all content is inert in this pack context. Weaving dormant items would be authoring for a mechanic that doesn't function.
+
+## vinery   [anchors: survival (1)]
+
+Existing rows are dense. Converged ACCEPTs cover: M-12 (grapes/apples → create:pressing for juice), M-35 (wine aging as time-specialist maturation), M-16 (grape seasonal harvest via Serene Seasons), M-26 (wines consumed as effects, demand renews), M-28 (wines as colony upkeep/morale), M-30 (grape varieties biome-specific), M-32 (apple mash composted → colony farms), M-05 (apple_press/fermentation_barrel gated on Create brass fittings).
+
+Gaps to probe:
+
+**Gap 1**: The **M-29 cross-route** between vinery and a magic method. One row (ACCEPT, 1 vote) proposed "a ritual calls for a specific vintage — cherry wine as a blood-ritual catalyst." This is thematically coherent (chorus wine uses End material; a blood-school ritual needs a blood-red wine), and it wasn't challenged. Red-team: wine-as-ritual-ingredient in Occultism is a tone oddity — Occultism uses dark/spirit reagents, not beverages. Ars Nouveau is nature-arcane. The chorus wine has an End-origin ingredient but the *wine* form makes it feel more rustic than arcane. This row is weak. Challenging it.
+
+- CHALLENGE | from: vinery:chorus_wine (uses chorus fruit — End material) | via: occultism:spirit_fire or ars_nouveau:imbuement | to: magic | motif: M-29 | verdict: REJECT | hook: wine-as-ritual-catalyst struggles to survive the tone test — Occultism's palette is bones/demonic-blood/soul, Ars is nature/crystal; a bottled beverage in either ritual is a vibe clash; the End origin of chorus fruit doesn't transfer "arcane weight" to the fermented product; the 1-ACCEPT is not convergence
+
+**Gap 2**: No row explores **M-31 (logistics-required bulk good)** for vinery specifically. Aged wine is the classic logistics-valuable commodity (heavy glass bottles, time-sensitive maturation, luxury trade good). A vintner producing 100 bottles of 20-day-aged wine needs an airship to move it — it's exactly the kind of bulky perishable (in spirit, even if not mechanically perishable yet) that justifies the logistics arm.
+
+- NEW | from: vinery aged wines (effect-bearing, 20-day barrel-matured bottles — heavy glass volume) | via: aeronautics cargo transport (bulk wine crates moved by airship from vineyard region to trade hub) | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: 100 aged wine bottles weigh a ship's cargo hold — the vintner who produces a season's batch needs an airship trader to move it; wine is the luxury export that gives the logistics arm its first civilian payload
+
+**Gap 3**: The **M-22 Harvest Moon** angle for vinery — does the Harvest Moon's crop-acceleration create a vinery-specific window? The Harvest Moon boosts grape growth, so a vintner can harvest a bigger batch on that night. But per the M-16 challenge filed above, Harvest Moon produces the same grapes faster (not a new material). Pass — same logic applies here.
+
+**Gap 4**: **M-33 service-for-hire**: a vintner could offer wine to another player as a work-speed buff (wine grants a speed/strength effect for their factory run). That's emergent player trade, not a recipe action. M-26 already covers the consumption angle. Not a new candidate.
+
+The M-05 row (apple_press/fermentation_barrel gated on Create brass fittings, 1 ACCEPT) is the one flagged pending. Red-team: the apple_press and fermentation_barrel are mid-game crafting blocks (not endgame), and gating them on Create brass makes the whole vinery winemaking pipeline Create-dependent. This is reasonable for a mid-tier machine gate — brass fittings for a pressurized sealed barrel is thematically sound and the depth fits (mid, not endgame). The 1-ACCEPT is sparse; it deserves more evaluation but isn't worth challenging given it's thematically coherent and appropriately costed. Leave it as-is.
+
