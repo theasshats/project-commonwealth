@@ -18,3 +18,9 @@
 - from: colored steelblock (16 variants) | via: bare deco use | to: — | motif: no-motif | power: everyday | tone: — | verdict: REJECT | reason: color variants are deco fills; no method wants colored steel blocks specifically; forcing a weave edge on deco variants is a defect
 - REWORK: aeronautics anchor is currently thematic (players *may* use these blocks on ships) rather than mechanically gated; M-23 would harden it to load-bearing — flag for Phase 3 to gate a hull recipe on s_a_b hard steel blocks so the anchor is enforced, not aspirational.
 - OK — Create anchor (compacting/mixing inbound) is mechanically sound.
+
+## underground_village   [anchors: survival (1)]
+- from: underground village chests (loot=yes) | via: loot-seed | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: buried Stoneholm chests yield rare magic reagents (Ars source gems, Occultism ritual fragments) — underground explorers find starting catalysts, not just vanilla loot
+- from: Stoneholm villager trades | via: loot-seed / trade-table edit | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: Stoneholm merchants offer colony-exclusive goods only accessible via MineColonies production, seating underground villages as economy waypoints that reward regional exploration over self-sufficiency
+- from: underground village as economy node | via: M-09 (retired) Numismatics sell | to: economy | motif: M-09 (retired) | power: — | tone: — | verdict: REJECT | reason: M-09 retired; bare "villagers sell things for coin" is an NPC coin faucet (M-21 cut too); redirect to M-33 service framing (villagers require specific goods to trade, not just give coin)
+- REWORK: dossier 2nd-anchor candidate cites M-09 (Numismatics trade = NPC faucet) — retired; replace with M-02 loot-seed + M-33 service-for-hire (villagers need goods, don't hand out coin).

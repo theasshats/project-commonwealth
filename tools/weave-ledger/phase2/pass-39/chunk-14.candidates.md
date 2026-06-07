@@ -32,4 +32,8 @@ REWORK: existing anchor (survival) is sound — the lunar events are legitimate 
 
 REWORK: dossier's 2nd-anchor candidate cited M-09 ("luxury good → coin") which is **retired**. The correct framing for the village-trade-hub economy link is M-08 (coin seeded as loot from dangerous structures) and M-34 (combat/exploration-route supply → economy). Both are proposed as ACCEPT above.
 
+## inventoryprofilesnext   [anchors: client-only QoL / support (1)]
+
+- LEAVE — zero content surface: no items, no recipes, no loot tables. Client-side inventory sorting and slot-locking UI only. Already handled in CLAUDE.md as a texture-override case (the IPN arrow fix). No weave is possible or desirable.
+
 

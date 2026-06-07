@@ -20,6 +20,17 @@ REWORK: existing dossier candidate "economy via power-point bottles as sellable/
 - from: create_tweaked_controllers gamepad-mapped contraptions | via: config tie | to: survival | motif: no-motif | verdict: REJECT | reason: "gamepad control of farms reduces survival labor" is ambient QoL, not a system connection. No motif fits; no method to route through.
 OK — aeronautics anchor is sound (controller for Create vehicles/contraptions). The Create anchor via M-05 above is the one addition needed.
 
+## createtreadmill   [anchors: create (1)]
+- from: createtreadmill:treadmill (player-run kinetic source) | via: create:mechanical_crafting | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: running a treadmill spends player stamina/food for SU — food consumed to power machines is a direct consumption-sink edge (M-26); eating to run the mill feeds the food economy loop. Player effort = hunger cost = diet demand, tying the treadmill into the survival pillar's hunger-pressure face.
+- from: createtreadmill:maid_motor (consumes touhou_little_maid Soul Orb/Photo) | via: touhou_little_maid:altar_recipe_serializers | to: magic | motif: M-11 | power: mid | tone: ok | verdict: REJECT | reason: the Soul Orb/Photo is a touhou_little_maid item, not a magic-pillar reagent — routing it through the altar would just be a craft within TLM's own system. M-11 is for transmuting an organic/foreign drop into an essence through a spirit/ritual method. The Soul Orb isn't foreign to a magic pillar; it's TLM flavor. Weak cross-system logic; the join is already the TLM↔Create bridge handled by the Maid Motor's design.
+- from: createtreadmill:treadmill | via: aeronautics | to: aeronautics | motif: M-24 | power: everyday | tone: clash | verdict: REJECT | reason: a hamster-wheel treadmill as an airship drivetrain component is a tone clash — the treadmill is whimsical/low-tier, not an aeronautical engine part. M-24 calls for mechanical components that fit the propulsion/control vocabulary; a player-powered treadmill doesn't fit the aeronautics tier or theme.
+OK — Create anchor is sound. The survival M-26 consumption link above completes the 2nd anchor (hunger cost of running the treadmill = food-demand edge).
+
+## packetfixer   [anchors: support/compat (1)]
+- LEAVE — pure network packet-size fix; no items, blocks, loot, or methods. Genuine zero-content compatibility mod; sanctioned support role. Nothing to route.
+
+
+
 
 
 

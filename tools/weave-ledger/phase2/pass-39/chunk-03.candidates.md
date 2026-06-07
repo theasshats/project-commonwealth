@@ -44,3 +44,12 @@
 
 ## immersivearmorhud   [anchors: support/client-UI (1)]
 - LEAVE — client-only HUD overlay: 0 blocks, 0 items, 0 c:tags, loot=no, purely visual armor-durability readout. Genuine zero-content support mod; no material surface to method-pull, no coherent 2nd anchor.
+
+## incontrol   [anchors: support/server-util (1)]
+- LEAVE — JSON rule engine (0 blocks, 0 items, loot=no). No routable material; it is the *tooling* that can enforce scarcity/regionality (e.g. region-gating mob drops that feed M-02/M-30) but is not itself a weave node. Enabling infrastructure for other mods' weaves, not a node to anchor. (It is in fact the likely *delivery mechanism* for spawn/loot-side weaves authored elsewhere, but as a mod it has zero content surface.)
+
+## do_a_barrel_roll   [anchors: support/client-QoL (1)]
+- LEAVE — client-side elytra-flight camera overhaul: 0 blocks, 0 items, loot=no. Thematically "flight" but touches vanilla elytra feel, not Create Aeronautics ships/items — nothing to route. Genuine zero-content QoL mod; forcing an aeronautics edge would be the exact "why is this convertible to that?" defect the guardrails warn against.
+
+## lootr   [anchors: support/QoL (1)]
+- LEAVE — per-player loot-instancing mechanic: ships only reskinned container blocks (lootr_chest/barrel/shulker) with no material join key; reads existing vanilla/modded loot tables, adds no loot of its own. No surface to method-pull. (Its own container blocks are functional copies of vanilla chests — a crush-back or recipe weave on them would be arbitrary noise.) Genuine support role.

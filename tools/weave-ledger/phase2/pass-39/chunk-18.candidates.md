@@ -31,5 +31,12 @@ Candidates examined:
 
 - LEAVE — genuine zero-content compat patch (behavior bridge between two installed mods); no content surface of its own.
 
+## kotlinforforge-5.11.0-all   [anchors: support — library/API (1)]
+
+Power-read: Zero blocks, zero items, loot=no. A Kotlin language adapter (KotlinLanguageProvider) for NeoForge. Entirely developer-facing infrastructure. No player surface.
+
+- LEAVE — genuine zero-content code library (language runtime adapter); nothing to weave by definition.
+
+
 
 

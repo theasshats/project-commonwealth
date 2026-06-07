@@ -36,6 +36,17 @@ Additional checks (method-pull):
 
 LEAVE — genuine zero-content developer library (data-attachment + networking API); no items, no blocks, no loot, no gameplay behavior. Nothing to weave.
 
+## gnkinetics   [anchors: create (1)]
+
+Power-read: 33 blocks, 31 items — pure kinetic extension parts (planetary, ring, worm gears; chainable cogwheels; cog cranks; creative gear motor). All crafted from Create stock (andesite/brass). Loot=yes but only as a kinetics-part source. The dossier correctly identifies this as a Create deepener.
+
+Method-pull candidates:
+- from: gnkinetics:planetary_gear / gnkinetics:worm_gear | via: create:mechanical_crafting | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: ACCEPT | hook: a planetary gear or worm gear — the high-ratio, torque-specific kinetics part — is a required mechanical component in Aeronautics propeller/drive-shaft assembly; it makes airship drivetrains demand specialized gear-cutting (a Create specialty), not just raw metals. The worm gear's self-locking property makes it a natural rudder/control-surface lock. Depth scales appropriately: these are mid-tier Create parts, not entry-level. via: create:mechanical_crafting (Aeronautics drivetrain recipe).
+- from: gnkinetics:industrial_gear / gnkinetics:large_industrial_gear | via: create:mechanical_crafting | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: REJECT | reason: M-23 is the structural alloy / airframe motif, not the drivetrain motif. A gear is not a structural alloy — it's a drivetrain component (M-24 covers this correctly). Routing it as M-23 mis-classifies the material. The M-24 accept above already covers the same gear type. REJECT (wrong motif; M-24 already handles this).
+- from: gnkinetics:magnet_gear / gnkinetics:large_magnet_gear | via: create:mechanical_crafting | to: magic | motif: no-motif | power: mid | tone: clash | verdict: REJECT | reason: the magnet coupling across gaps is a physics/kinetics mechanic, not thematically connected to magic; routing it into magic is tone-forced. No motif fits. REJECT (no-motif, tone clash).
+- from: gnkinetics:creative_gear_motor | via: n/a | to: any | power: creative | tone: n/a | verdict: REJECT | reason: creative-mode content; not weave-eligible (it's a dev/creative cheat block, not a survival material). REJECT.
+
+
 
 
 

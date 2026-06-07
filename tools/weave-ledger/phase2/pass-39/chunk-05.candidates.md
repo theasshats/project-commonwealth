@@ -36,3 +36,17 @@ Power read: tiered hand gliders iron→netherite, early-to-mid flight (pre-Elytr
 
 - LEAVE — client-only display mod (borderless fullscreen). Zero blocks, zero items, no world surface; a pure windowing convenience. Sanctioned support role; no weave possible.
 
+## rechiseled   [anchors: support/decoration palette (1)]
+
+Existing connection note: dossier correctly identifies rechiseledcreate (the companion mod in pack) as the Create bridge via the Mechanical Chisel. That companion provides the M-04 deco-recycling edge and the kinetic method link. Since rechiseled's chiseling is 1:1 reversible (no resource cost beyond the source block), no further recipe weave makes sense. The 3627-block palette is the surface, but it all routes through rechiseledcreate's Mechanical Chisel.
+
+- from: rechiseled decorative block variants (any material) | via: rechiseledcreate Mechanical Chisel (already in pack) | to: create | motif: M-04 | power: everyday | tone: ok — chiseled deco blocks recycling through the Mechanical Chisel is the canonical companion weave; already established by rechiseledcreate's presence | verdict: ACCEPT | hook: the Mechanical Chisel on the Create line reshapes your stone variants batch by batch — decoration is now a factory output, not a hand-crafted accent
+
+- from: rechiseled decorative blocks | via: create:crushing (deco-recycling back to raw) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: rechiseled blocks are 1:1 reversible by design (the chiseling screen restores the original block at no cost) — adding a lossy crushing path is redundant and contradicts the mod's design; rechiseledcreate's Mechanical Chisel is the correct route for automation, not crushing
+
+OK — connections sound via rechiseledcreate (the companion mod that is the explicit M-04 / Create bridge). No further first-class weave needed on rechiseled itself; adding more here would be redundant layering on top of the companion.
+
+## entity_texture_features   [anchors: support/client-rendering (1)]
+
+- LEAVE — pure client rendering/resource-pack engine (ETF). Zero blocks, zero items, no world content; OptiFine-format random/emissive texture support only. Sanctioned support role; no weave possible.
+

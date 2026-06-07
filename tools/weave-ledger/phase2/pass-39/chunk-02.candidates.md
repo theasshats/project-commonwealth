@@ -35,5 +35,24 @@ A behavior-only pet-safety mod (Snownee). Zero blocks, zero items, zero loot. Te
 
 LEAVE — genuine zero-content code library/behavior mod. No items, no methods, no loot tables. The only thing it does is fire teleport/retreat logic on entities; nothing to route through any method.
 
+## create_sa   [anchors: create/aeronautics (2)]
+
+Create Stuff & Additions — jetpacks, exoskeletons, drones, blazing tools, portable drill. Made via create:sequenced_assembly / mechanical_crafting. Items: brass/andesite gear, blazing weapons.
+
+Existing anchors REWORK check:
+REWORK: Create anchor — OK. Deep inbound Create weaves (compacting, crushing, filling, haunting, mechanical_crafting, mixing, sequenced_assembly) — the gear is genuinely built through Create machinery. Sound.
+REWORK: Aeronautics anchor — OK. Jetpacks are personal flight, drones are transport/helper units — both are the personal-mobility face of the aeronautics pillar. Not arbitrary.
+
+New candidates via method-pull:
+
+- from: create_sa:blazing_pickaxe / blazing tools (blaze-fire-enhanced) | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: Blazing tools already carry fire magic — attuning them through an Ars imbuement (feeding source into the blaze-infused metal) to unlock an enchant-level effect (flame/lava immunity) is a natural cross-route dependency: Create's mid-tier blazing tools gain a magic-specialist upgrade step. Bridges Create→magic without duplicating either route.
+
+- from: create_sa:brass_drone_item | via: aeronautics logistics arm | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: Drones are owner-locked airborne helpers — framing them as a player-run logistics-service item (a drone specialist deploys them to carry goods/scout for other players) plugs into the economy's service-for-hire axis. The drone is the tool; the service is the weave. Fits M-33 (labor/service, payment emergent).
+
+- from: create_sa:brass_jetpack_chestplate / netherite variant | via: create:sequenced_assembly | to: aeronautics | motif: M-06 | power: endgame | tone: ok | verdict: REJECT | reason: jetpacks already anchor aeronautics AND are already made via create:sequenced_assembly — the dossier's "made-by methods" confirms sequenced_assembly is an existing inbound connection. REWORK not needed (it's correct), but proposing a new sequenced_assembly edge here would duplicate an existing live weave.
+
+- from: create_sa:brass_exoskeleton_chestplate (strength/haste aura) | via: create_new_age:energising | to: create | motif: M-17 | power: mid | tone: ok | verdict: ACCEPT | hook: The exoskeleton's aura is mechanical muscle — charging it through Create New Age's energising station (FE charge → boosted aura duration/intensity) threads the electric tier into the wearable-tech line, making Create's electrical sub-system a required upgrade step for the exo's best performance.
+
+
 
 
