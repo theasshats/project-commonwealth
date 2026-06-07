@@ -1,0 +1,7 @@
+{
+  "pass": 40,
+  "seed": 40,
+  "opus_chunk": 4,
+  "n_chunks": 18,
+  "mode": "context-fed"
+}
