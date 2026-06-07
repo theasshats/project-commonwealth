@@ -105,6 +105,15 @@ New candidate — scarcity foundation:
 
 - from: createmechanicalcompanion:netherite_plates (endgame material input) | via: boss-drop gate | to: survival | motif: M-15 | power: endgame | tone: ok | verdict: REJECT | reason: netherite plates already gate naturally behind the vanilla netherite progression chain (ancient debris → netherite ingot → plate via Create compacting); adding a boss drop on top of that is a double-gate that punishes the Create builder without thematic justification. The wolf already has deep cost. REJECT — over-gating.
 
+## gamediscs   [anchors: survival/novelty (1)]
+
+- from: gamediscs:processor (console component, everyday craft) | via: create:pressing (copper plate → pressed circuit board → processor) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the gaming console's processor is stamped out on a Create mechanical press from copper plates — the retro arcade runs on clockwork fabrication; you need a Create factory to mass-produce game consoles. One light step; fits everyday-tier depth rule.
+
+- from: gamediscs:redstone_circuit (console component) | via: create:compacting (redstone + copper dust → circuit board) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: the processor candidate (above) already anchors gamediscs to Create — adding a second Create component route on the same console is redundant depth within the same new anchor. One clear ACCEPT is sufficient; a second step on the same item cluster doesn't open a new system link. REJECT as duplicate-anchor move rather than new cross-system bridge.
+
+- from: gamediscs:game_disc_pong / *_flappy_bird / etc. (collectible discs, mob-kill drops) | via: loot-seed | to: survival | motif: M-34 | power: everyday | tone: ok | verdict: REJECT | reason: the disc-drop mechanic (skeleton kills bee/slime/frog/rabbit → disc) is already its entire loop and lives firmly in survival (mob engagement). Seeding more discs into loot tables doesn't advance the loop to a second pillar — it just gives more of the same novelty within survival. M-34 requires a genuine combat-specialist supply chain; this is cosmetic mob-kill flavor. REJECT — no loop advancement.
+
+
 
 
 
