@@ -195,3 +195,20 @@ Zero blocks, zero items, zero loot, no recipe types. Version-handshake compatibi
 
 LEAVE — genuine zero-content modpack-ops utility. Sanctioned support role. No gameplay surface.
 
+## accelerateddecay   [anchors: support (performance) (1)]
+
+Zero blocks, zero items, zero loot, no recipe types. Performance mod replacing per-tick leaf decay with a time-based sweep. No player-facing content.
+
+LEAVE — genuine zero-content performance mod. Sanctioned support role.
+
+## sablecollisiondamage   [anchors: support (aeronautics physics addon) (1)]
+
+Zero blocks, zero items, zero loot, no recipe types. Hooks Sable physics to deal collision damage on ship-entity or ship-terrain contact. Behavior addon on the aeronautics system.
+
+Method-pull:
+- No material surface. However: collision damage from ships is a PvPvE mechanic. Could argue this feeds combat-route supply (M-34: combat specialists — ram ships — supply drops). But the drops come from the *entities hit*, not from this mod.
+- No items of its own to route anywhere.
+- The aeronautics anchor is correct (it serves the aeronautics/economy logistics arm's PvPvE role). No second anchor possible without items.
+
+LEAVE — zero-content physics behavior addon; serves the aeronautics system but has no material surface to weave. Sanctioned support role.
+

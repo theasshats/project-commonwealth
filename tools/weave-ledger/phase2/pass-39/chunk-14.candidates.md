@@ -154,4 +154,28 @@ REWORK: Dossier marks it as "support (QoL/anti-grief)" which understates it for 
 
 - LEAVE — genuine zero-content library: 0 blocks, 0 items, no loot. In-game config-screen framework for dependent mods. No player-facing game surface to weave.
 
+## deeperdarker   [anchors: survival (1)]
+
+**Method-pull:** Extremely rich content surface: 149 blocks, 348 items, loot=yes, 2 registered methods, already inbound on create:crushing + farmersdelight:cutting. Its reagents (soul_dust, soul_crystal, sculk_bone, heart_of_the_deep, warden_carapace, reinforced_echo_shard) are thematically pure "soul/sculk" materials that have no downstream use yet — ideal magic reagent sink.
+
+- from: deeperdarker:soul_dust / deeperdarker:soul_crystal | via: occultism:spirit_fire | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: soul_dust and soul_crystal are literally named soul materials from a dimension of Warden-horror and shadow — occultism:spirit_fire transmuting them into a spirit essence or summoning reagent is thematically inevitable; the Otherside feeds the magic web, and the dangerous dimension has a downstream use beyond gear
+
+- from: deeperdarker:heart_of_the_deep (rare Warden drop, portal key) | via: ars_nouveau:imbuement or KubeJS boss-key recipe | to: magic | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Heart of the Deep is already a boss-key (it opens the Otherside portal) — seating it as a gate item for a high-tier Create or magic recipe (e.g. a top-tier Ars Nouveau source nexus, or a Create sequenced_assembly keystone) is M-15 exactly; the rarest drop in the deepest dungeon unlocks the highest-tier recipe; the Warden becomes a dual pressure-source and production gatekeeper
+
+- from: deeperdarker:warden_carapace / deeperdarker:sculk_bone | via: create:mechanical_crafting | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: warden carapace and sculk bone are tough organic endgame materials — using them as components in a Create mechanical_crafting recipe for a high-tier Create machine part (a hardened casing, resonant component) ties the dangerous Otherside to Create progression; the deep-dark has a reason to reach beyond gear crafting
+
+- from: deeperdarker gloomslate / sculk_stone block families | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: gloomslate and sculk-stone are large decorative block families from a deep dimension; crushing them back to gravel/dust + xp-nugget is the standard Create deco-recycle; already partly wired (create:crushing inbound), this makes the connection explicit for the full block palette
+
+- from: deeperdarker:soul_elytra / deeperdarker:sonorous_staff | via: aeronautics | motif: M-23 | power: endgame | tone: clash | verdict: REJECT | reason: the Soul Elytra is a vanilla Elytra upgrade (Soul Dust + Sculk Bone + Soul Crystal), not an Aeronautics airframe material; retrofitting it into aeronautics construction would be lore-clashing — elytras are personal gliders, not airship structural components. The M-05 (Create components) and M-11 (magic transmute) routes are the clean anchors.
+
+- from: deeperdarker:crystallized_amber | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: crystallized amber is a naturally preserved resin from the Otherside; imbuing it as an arcane catalyst or a magic-crafting ingredient (Ars Nouveau crafting apparatus) is thematically coherent — amber as a magic conduit is real-world folklore; it's not a basic component, making infusion appropriate depth
+
+- from: deeperdarker items as "luxury Otherside goods" | via: bare sell link | to: economy | verdict: REJECT | reason: M-09 retired. Records as rejected.
+
+REWORK: dossier's existing connections are sound but the magic anchor is not yet in-pack (correctly noted as "not yet tied to a 2nd pillar"). The M-11 (soul_dust → spirit_fire) is the primary 2nd anchor; M-15 (heart_of_the_deep as boss-key) adds a Create/endgame dimension. The dossier's M-09 economy candidate is retired; no economy weave is compelling here (the M-34 combat-supply pattern could apply — Otherside materials are dangerous to get — but that's ambient, not mechanic-packable).
+
+## cristellib   [anchors: support / library (1)]
+
+- LEAVE — genuine zero-content library: 0 blocks, 0 items, no loot. Structure-config/runtime-datapack framework for structure mods (Towns & Towers, etc.). No player-facing surface.
+
 
