@@ -113,6 +113,19 @@ New candidate — scarcity foundation:
 
 - from: gamediscs:game_disc_pong / *_flappy_bird / etc. (collectible discs, mob-kill drops) | via: loot-seed | to: survival | motif: M-34 | power: everyday | tone: ok | verdict: REJECT | reason: the disc-drop mechanic (skeleton kills bee/slime/frog/rabbit → disc) is already its entire loop and lives firmly in survival (mob engagement). Seeding more discs into loot tables doesn't advance the loop to a second pillar — it just gives more of the same novelty within survival. M-34 requires a genuine combat-specialist supply chain; this is cosmetic mob-kill flavor. REJECT — no loop advancement.
 
+## dtterralith   [anchors: survival/worldgen (1)]
+
+- from: dtterralith:maple_seed / cedar_seed / larch_seed (biome-specific tree seeds) | via: Serene Seasons seasonal availability (these species are native to autumn/cold biomes) | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: REJECT | reason: dtterralith is a worldgen compat layer — it replaces static trees with dynamic species in Terralith biomes, but adds no harvesting gating mechanic of its own. The seeds don't natively have seasonal gating; that would require KubeJS to impose it externally on Dynamic Trees' germination. The mod itself has no recipe hook to seat M-16 against; it's a worldgen swap, not a farming method. The logs/saplings it produces already reach the Create/cooking webs via vanilla wood. LEAVE.
+
+- LEAVE — worldgen compatibility bridge outputting standard log/plank materials that already flow into Create and Farmer's Delight via vanilla wood tags. No bespoke items with cross-system value that aren't covered by vanilla wood routes; no new method to route through.
+
+## ritchiesprojectilelib   [anchors: support/library (1)]
+
+- LEAVE — projectile/ballistics API library (dependency of Create Big Cannons); zero blocks, zero items, zero loot. No player-facing content. Correctly filed as support.
+
+== CHUNK COMPLETE ==
+
+
 
 
 

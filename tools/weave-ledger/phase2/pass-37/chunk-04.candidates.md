@@ -209,3 +209,55 @@ Existing connections: 1 anchor (survival). Dossier identifies three candidates: 
 
 - from: mowziesmobs boss kills | via: numismatics bounty (M-08) | to: economy | motif: M-08 | power: mid | tone: clash — M-08 is player-minted currency from processed ore, not NPC bounty payouts; a bounty board paying coin for boss kills would be M-14 (cut as NPC faucet) | verdict: REJECT | reason: dossier misframes as M-08; the NPC-bounty read is M-14 (cut); player-to-player drop trade is M-34 (accepted above).
 
+## create_mobile_packages   [anchors: Create, aeronautics (2)]
+
+Existing connections: 2 anchors (Create + aeronautics/logistics). Dossier correctly identifies these and notes "leave" for economy-adjacency since it's infrastructure.
+
+**Reviewing existing connections:**
+- Create anchor: uses Create parts to build Bee/Drone Ports and Robo Bee couriers; extends Create's Logistics network. Sound.
+- Aeronautics/logistics anchor: airborne drone delivery is the economy's physical movement arm. Sound — this is the most direct embodiment of the logistics pillar (matter movement).
+- Dossier economy-adjacency note: the mod carries goods between players but doesn't itself do currency/trade. The infrastructure role is appropriate.
+
+Can a 3rd touch be meaningful? M-31 (logistics-required bulk good) — the mod IS the logistics mechanism, so it can't also be the bulk good. M-33 (service-for-hire: a player offers courier-drone delivery as a paid service) — plausible in the ~10-player context; this is ambient player behavior, not a recipe.
+- Could the robo_bee or bee_port itself be gated behind Create precision components to add depth to the logistics arm? M-05/M-06: the bee_port or robo_bee recipe gated on sequenced_assembly or Create mechanical_crafting. This would add depth to aeronautics construction (making the logistics arm cost real fabrication, per M-23/M-24 spirit). Power: mid for the port, everyday for the robo_bee.
+
+- from: create_mobile_packages:drone_port / robo_bee | via: create:sequenced_assembly or create:mechanical_crafting (gate port construction on precision components) | to: Create | motif: M-06 | power: mid | tone: ok — an airborne drone port needs precision engineering; routing it through Create sequenced assembly deepens the logistics arm's cost appropriately | verdict: ACCEPT | hook: building a drone port is not trivial wood-craft; the sequencer builds each port in stages from precision-fabricated components — deploying a logistics network is itself a Create project.
+
+OK — existing Create + aeronautics connections sound. The M-06 depth-add for port construction is a genuine improvement to the logistics arm's fabrication cost.
+
+## companion   [anchors: support/QoL (1)]
+
+LEAVE — behavior-only pet-safety mod; zero items, blocks, loot, no content surface. Sanctioned support role.
+
+## cataclysm   [anchors: survival (1)]
+
+Existing connections: 1 anchor (survival). Dossier identifies three candidates: Create M-05/M-06, magic M-02/M-11, economy M-08. Large boss mod — rich candidate surface.
+
+**Method-pull analysis:**
+- Boss materials: `cataclysm:ancient_metal_ingot`, `cataclysm:witherite_ingot`, `cataclysm:ignitium_ingot`, `cataclysm:cursium_ingot`, `cataclysm:void_core` — a full set of exotic metals/materials, each from a different boss.
+- `cataclysm:ancient_metal_ingot` → Create processing: crushing/pressing/rolling into ancient metal sheets (M-03 ore-doubling analog). Then ancient metal sheets as a sequenced_assembly keystone for high-tier Create machines (M-15 boss-key unlock). This is EXACTLY the CLAUDE.md-named mechanism: "complex Create tech unlocks via boss drops." Power: endgame. Thematic: ancient war-metal from a relic boss becomes the substrate for a precision Create machine. Strong.
+- `cataclysm:witherite_ingot` (Netherite Monstrosity drop) → occultism:ritual or ars_nouveau:imbuement as a dark-metal reagent. The Witherite is a shadow-infused metal from the Nether boss — perfect for a dark-ritual sink (M-11 ritual/transmutation sink or M-02 mob-drop reagent sink). Power: mid-endgame.
+- `cataclysm:ignitium_ingot` (Ignis drop — fire boss) → Could feed as a Create fuel? No — it's a metal, not a fuel. Could gate an Aeronautics heat-engine component (M-24 mechanical component → propulsion)? An Ignitium-plated heat engine? Mid-endgame, coherent with the fire boss. M-24.
+- `cataclysm:void_core` (Harbinger drop) → Ars_nouveau:imbuement as an ultimate arcane catalyst? The void core is an endgame boss drop; making it the pinnacle magic reagent (M-10 arcane infusion pull) is very strong thematically. Endgame.
+- `cataclysm:amethyst_bless` method: the Altar of Amethyst blesses Amethyst Crab Meat. This is already a boss-site mechanic. Could a Create item be "blessed" at the altar? Thematically forced for Create, but for magic — could an Ars gem be blessed at the altar for an extra enchant? Stretch.
+- `cataclysm:weapon_fusion` (Mechanical Fusion Anvil): fuses tools/armor. Could a Create-made component be fusioned into a weapon here (M-20 deploy-application upgrade analog)? M-20 is deploying-based; weapon_fusion is Cataclysm's own method. Not a standard motif fit, but a method-routing: Create → Cataclysm's anvil → enhanced gear. No motif for this specific cross (Create parts into a foreign fusion method). REJECT — no-motif.
+- Loot=yes: eight dungeon bosses each with unique structures. Loot-seeding Create technical schematics or magic primer items into boss chests rewards endgame exploration with cross-system goods. M-34 (combat-route supply via loot-seed).
+- Economy: boss materials are naturally traded goods (M-34 combat-route supply — fighters sell boss drops to crafters). The `ancient_metal_ingot` and `void_core` especially have high trade value without needing a coin peg.
+- Aeronautics: `cataclysm:ignitium_ingot` as a heat-resistant lining for Aeronautics engine components? M-24 (mechanical component → propulsion). An Ignitium-lined boiler/heat-exchanger as an Aeronautics engine part, gated on defeating the fire boss. Endgame; strong thematic fit (fire boss → fire engine part).
+
+- from: cataclysm:ancient_metal_ingot | via: create:crushing → create:pressing (sheets) → create:sequenced_assembly (keystone component) | to: Create | motif: M-15 | power: endgame | tone: ok — ancient war-metal processed through Create becomes a structural keystone no ordinary forge can produce; you must defeat the Ancient Remnant to build the highest-tier machines | verdict: ACCEPT | hook: the boss is the gate; only the ancient metal, run through Create's full processing chain, unlocks the high-tier machine recipe.
+
+- from: cataclysm:witherite_ingot | via: occultism:ritual (as dark-metal offering) | to: magic | motif: M-11 | power: mid-endgame | tone: ok — Witherite is shadow-infused metal from a Nether boss; burning it in a spirit-fire ritual as a dark offering is tonally perfect for Occultism | verdict: ACCEPT | hook: the Netherite Monstrosity's shadow metal fuels Occultism's darkest rituals; combat specialist and magic specialist are interdependent.
+
+- from: cataclysm:void_core | via: ars_nouveau:imbuement (as pinnacle arcane catalyst) | to: magic | motif: M-10 | power: endgame | tone: ok — the Void Core, drawn from the Harbinger, is the arcane equivalent of endgame power; the most complex Ars imbuement consumes it | verdict: ACCEPT | hook: the Void Core is the one reagent no magic formula can substitute; only the team that downed the Harbinger can unlock those spells.
+
+- from: cataclysm:ignitium_ingot | via: aeronautics engine component recipe (ignitium-lined boiler/heat exchanger) | to: aeronautics | motif: M-24 | power: endgame | tone: ok — a fire-boss metal as a heat-resistant lining for an Aeronautics high-power engine component; the hottest engines need the fire boss's material | verdict: ACCEPT | hook: the ignitium-lined boiler is what separates a fast ship from the fastest; you fight the fire boss to fly faster.
+
+- from: cataclysm boss drops | via: player trade | to: economy | motif: M-34 | power: endgame | tone: ok — combat specialists farm the eight Cataclysm bosses and trade the materials to crafters and mages who need them; no one can do everything | verdict: ACCEPT | hook: the raider sells ancient metal to the engineer, witherite to the occultist, void cores to the archmage; specialization is enforced by who is willing to fight.
+
+- from: cataclysm dungeon structures | via: loot-seed | to: economy/Create | motif: M-34 | power: mid | tone: ok — seeding boss-dungeon chests with Create schematics or magic primers rewards exploration with cross-system progression materials | verdict: ACCEPT | hook: clearing the Cataclysm dungeon yields not just the boss drop but a schematic for the machine that needs it.
+
+- from: cataclysm:weapon_fusion (Mechanical Fusion Anvil) | via: Create-component → weapon_fusion | to: Create | motif: no-motif | power: mid | tone: ok — a Create precision component fused onto a weapon is thematically fine but no established motif covers "Create parts into a foreign fusion method" (M-20 is deploying, not fusion) | verdict: REJECT | reason: no-motif; would need a Gate 0 decision for a new routing motif before this can be authored.
+
+- from: cataclysm:amethyst_bless (Altar of Amethyst) | via: magic item → amethyst_bless blessing | to: magic | motif: M-10 | power: endgame | tone: clash — the altar is world-unique (only in the Sunken City) and designed for a specific boss fight mechanic; co-opting it for general magic item blessing feels like it would cheapen the boss-site context and conflict with the intended scarcity | verdict: REJECT | reason: thematic conflict with the intended boss-fight scarcity mechanic; the altar is not a general infusion station.
+
