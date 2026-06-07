@@ -123,3 +123,31 @@ Existing connections: 1 anchor (Create). Dossier says "support role — leave." 
 
 REWORK: dossier says "leave — support role." The ending method does open a real second anchor (magic) when used as an M-10 intermediate step. Not a forced leave; upgrade to 2-anchor via the accepted M-10 edge.
 
+## do_a_barrel_roll   [anchors: support/client QoL (1)]
+
+LEAVE — pure client elytra-camera behavior mod; zero items, blocks, loot, or content surface. Sanctioned support role; nothing to route through any method, and its elytra connection is control feel, not Create Aeronautics ships content.
+
+## blockui   [anchors: support/library (1)]
+
+LEAVE — XML UI framework library; zero content surface. Hard dependency of MineColonies pulled automatically; a genuine zero-surface code library with no items/blocks/loot.
+
+## jeed   [anchors: support/client UI (1)]
+
+LEAVE — JEI display provider (effect documentation); its two "recipe-types" are JEI viewer categories, not craftable methods. Zero items, blocks, no loot. Sanctioned support role with no content to weave.
+
+## comforts   [anchors: survival (1)]
+
+Existing connections: 1 anchor (survival). Dossier says "leave" — evaluating.
+
+**Method-pull analysis:**
+- Sleeping bags: wool + string. No novel material; no foreign import/export. The output is a QoL tool (portable sleep), not a production input.
+- Hammocks: same material profile.
+- `comforts:rope_and_nail` — a unique item component. Could be a crafting intermediate gated on Create (a nail = pressed metal, M-05)? Power: everyday. But a rope-and-nail is trivial — gating it behind Create pressing for a sleeping bag component would be disproportionate depth for a basic QoL item. The briefing's hard guardrail: "never gate a basic/everyday component behind a complex recipe."
+- Dyed sleeping bags: 16 colors of wool → 16 bags. `create_dragons_plus:bulk_dyeing` could re-dye bags (fun but not a weave). No coherent second anchor.
+- Loot=yes (comforts loot tables): sleeping bags might appear in structure loot. As a survivability aid in dungeon chests, they slightly feed the exploration-reward loop but add no cross-system connection.
+- Thematic: comforts is survival-flavor QoL at the most basic level. A forced Create edge on a sleeping bag is noise.
+
+- from: comforts:rope_and_nail | via: create:pressing (nail from a metal sheet pressed component) | to: Create | motif: M-05 | power: everyday | tone: clash — pressing metal to make a nail-sized component then using it in a sleeping bag recipe is disproportionate; the guardrail prohibits gating everyday basics behind complex recipes | verdict: REJECT | reason: hard guardrail — everyday QoL item; depth does not scale with power here; the nail is trivially basic.
+
+LEAVE — no coherent second anchor that survives the everyday-component guardrail. One light survival-touch mod; the loop doesn't need it wired deeper.
+
