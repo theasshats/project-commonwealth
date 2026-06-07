@@ -99,3 +99,33 @@ OK — connections sound on existing 2-anchor set; M-06 deepening on the endgame
 
 - LEAVE — a conditional datapack-as-mod that auto-generates ~3,700 cross-mod recipes; it IS the connective layer, not a content node. It has no items of its own and its 82 c:tags mostly reference uninstalled mods (Aether, Mekanism, MI, GT) and are inert in this pack. Note for Phase 3 / audit: verify which of its recipes actually fire against the Derpack-X modlist and assess whether any duplicate or conflict with weaves authored manually — but that is an audit task, not a weave proposal.
 
+
+## dtterralith   [anchors: survival/worldgen-compat (1)]
+
+- LEAVE — a worldgen compatibility layer (Terralith × Dynamic Trees); registers Dynamic Trees species for Terralith biomes, inherits Dynamic Trees mechanics. Its output is ordinary logs/saplings that already flow downstream via vanilla wood → Create milling / cooking webs. No bespoke material to route; no standalone processing; no loot table that a weave would seed. The compat bridge is its purpose — nothing to add on top.
+
+
+## letmefeedyou   [anchors: support/QoL (1)]
+
+- LEAVE — behavior-only multiplayer QoL mod (player-to-player food feeding). No items, no blocks, no methods, no loot tables. Nothing to route through any method.
+
+
+## multipiston   [anchors: support/MineColonies-dependency (1)]
+
+- LEAVE — a MineColonies/Structurize dependency block (super-piston for colony builders); pulled in automatically, not surfaced to players as standalone content. Moves world blocks but does not consume/produce items or fluids. One block/item with no processing surface and no loot table; nothing to route.
+
+
+## bettermodsbutton   [anchors: support/client-UI (1)]
+
+- LEAVE — client-side pause-screen Mods button; pure UI, no items, no blocks, no game content. Nothing to weave.
+
+
+## create_enchantment_industry   [anchors: Create (1)]
+
+- from: create_enchantment_industry liquid XP (experience_bucket fluid) | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: Liquid XP is a storable, pipeable fluid that an Ars imbuement apparatus could consume as a ritual power source — the arcane-industrial flavor is coherent (enchanting is already arcane-adjacent), and gating an Ars imbuement tier on a liquid-XP infeed bridges the Create enchantment spine to the magic pillar; the Create player with a mob farm becomes the XP supplier the magic player needs
+- from: create_enchantment_industry:blaze_enchanter (automated enchanting) | via: create_enchantment_industry:grinding (mechanical grindstone) → ars_nouveau:enchanting_apparatus | to: magic | motif: M-29 | power: endgame | tone: ok | verdict: ACCEPT | hook: an endgame hyper-enchanted piece of magic gear (Iron's or Ars) requiring both a Create-enchanted base (blaze_enchanter output) AND an Ars enchanting_apparatus step forces cross-route dependency — neither the Create specialist nor the magic specialist can fully self-enchant the top tier alone (M-29). Power-calibrated: only for the highest-tier magic weapon/focus, not for everyday enchanting.
+- from: create_enchantment_industry:printer (book/schedule copying, fuelled by liquid XP + liquid ink) | via: minecolonies research | to: economy | motif: M-37 | power: mid | tone: ok | verdict: ACCEPT | hook: MineColonies research unlocks are book-gated; a printer that copies written books (including research codices) at liquid-XP cost creates a research-reproduction service — the Create-enchantment specialist runs the printing press to supply colony research books, making knowledge a distributable good and tying the production spine to the economy's research-gate axis (M-37 research/knowledge gate)
+- from: create_enchantment_industry liquid XP | via: bare sell | to: economy | motif: M-09 (retired) | verdict: REJECT | reason: M-09 retired. "Liquid XP is sellable" is ambient; the demand-gating framing (M-37 / M-10 above) is the correct weave.
+- from: create_enchantment_industry:experience_cake (XP-bearing food) | via: farmersdelight:cooking | to: survival | motif: M-12 | verdict: REJECT | reason: farmersdelight:cutting is already an inbound weave (auto-digest), and the experience_cake is a novelty food item, not a survival pressure driver. Cross-system food routing here adds no new system anchor — the mod is already using farmersdelight methods; this would deepen Create→survival at a trivially low-value item, not a real weave.
+
+== CHUNK COMPLETE ==
