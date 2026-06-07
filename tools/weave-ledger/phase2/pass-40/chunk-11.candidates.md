@@ -48,6 +48,21 @@ Also: the `rottencreatures:corrupted_wart` already has M-10 (imbuement) and M-02
 
 - CHALLENGE | from: rottencreatures:corrupted_wart | via: ars_nouveau:imbuement (M-10) + occultism:spirit_fire (M-11) + ars_nouveau:crush (M-02) | to: magic | motif: M-10 | verdict: REJECT | hook: three separate magic-sink ACCEPTs on one mid-rarity drop is redundant — pick the strongest single route (M-11 spirit_fire is most distinct and thematically resonant for undead plant matter); the M-10 imbuement ACCEPT and M-02 crush ACCEPT both land in magic and are functionally interchangeable, leaving the same weave counted three times
 
+## expandeddelight   [anchors: survival (1)]
+Existing rows comprehensively cover: M-03 ACCEPT (salt_ore → create:crushing), M-12 ACCEPT (cinnamon → create:milling), M-35 ACCEPT (cheese_wheel aging), M-30 ACCEPT (salt_ore regional biome placement), M-16 ACCEPT (seasonal crops → magic/cooking). Contested: M-29 ACCEPT (salt as ritual/purification in occultism — 2v0), M-16 ACCEPT (chili/cranberry as seasonal crops, 2v0 each).
+
+One missing angle: the `expandeddelight:juicer` machine is the mod's own registered recipe type (`expandeddelight:juicing`). Existing rows never route a foreign material *through the juicer* — they route expandeddelight's own crops through other mods' methods. The juicer could serve as a processing step for other mods' fruit/crop outputs (alexsmobs exotic fruits? farm_and_charm crops?) creating a cross-mod M-12 pull *into* expandeddelight's machine rather than only out of it.
+
+- NEW | from: c:crops (any modded fruit/berry — alexsmobs, alexscaves exotic flora, or farm_and_charm berries if present) | via: expandeddelight:juicing | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the Juicer is the pack's dedicated fruit-processing station — routing foreign berries/fruits through it ties the food web into one machine rather than several scattered crafting recipes, and makes the juicer a hub rather than a single-mod dead-end
+
+Red-team: Is this a real weave or just using the juicer as intended? The juicer already handles vanilla fruits. If modded fruits use c:crops tags, they slot in with zero authoring — that's ambient, not a weave. The value here is explicitly *seeding foreign crops into the juicing method* via a KubeJS recipe addition, which is an authored M-12 edge. Survives.
+
+Also: The M-29 ACCEPT (salt as occultism ritual ingredient) at 2v0 deserves scrutiny. Occultism rituals use chalk for circle-drawing — salt is a folkloric purification agent but doesn't slot into Occultism's specific chalk-based mechanic. The existing REJECT at 1v1 on the earlier row flagged this. The 2v0 ACCEPT row specifies "Create-processed salt dust → occultism ritual" which would require authoring a ritual recipe that demands salt — that's a forced cross-mod linkage with no precedent in Occultism's design.
+
+- CHALLENGE | from: expandeddelight:salt (c:dusts/salt) | via: occultism:ritual | to: magic | motif: M-29 | verdict: REJECT | hook: Occultism rituals use chalk (drawn circles) not salt for purification; inserting a food-mod byproduct as a ritual reagent has no mechanical support in Occultism's recipe schema and forces a thematic seam that players would find puzzling — the M-29 cross-route dependency requires a *genuine* recipe gate, not a retrofitted folk-magic nod
+
+
+
 
 
 

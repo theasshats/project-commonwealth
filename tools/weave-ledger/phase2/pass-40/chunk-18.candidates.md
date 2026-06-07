@@ -1,0 +1,10 @@
+# Phase 2 candidates — chunk-18 (context-fed)
+
+## createimmersivetacz   [anchors: create (1)]
+
+Existing rows cover: M-26 ammo-consumption (multiple ACCEPTs), M-34 combat-route supply, M-31 bulk logistics, M-28 colony/barracks supply, M-30 brass regional-scarcity, M-32 TFMG byproduct feed, M-15 boss-key gate on firing mechanism, M-29 cross-route (CBC nitropowder). No rows on M-37 research gate or the M-06/CBC integration's correct motif framing.
+
+- NEW | from: createimmersivetacz gun factory (full ammo pipeline) | via: minecolonies:research (colony Blacksmith + Barracks research tree) | to: economy | motif: M-37 | power: mid | tone: ok | verdict: ACCEPT | hook: the colony's Barracks research tier unlocks blueprint access to the Create-ammo factory schematics — you can't mass-produce TACZ rounds without the colony having researched advanced metallurgy, so the arms-dealer role requires colony investment, not just Create parts
+- NEW | from: createimmersivetacz:nitropowder_bucket (fluid) | via: createbigcannons:big_cartridge_filling | to: create | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: CBC's cartridge-filling deployer wants a propellant charge fluid — TACZ's nitropowder IS that fluid; the two ordnance mods share a propellant standard, so the CBC gunner and the TACZ arms-dealer must cooperate on the chemistry supply
+- CHALLENGE | from: createimmersivetacz:twelve_gauge_shell / bulk ammo | via: emergent trade / M-34 combat-route supply | to: economy | motif: M-34 | verdict: REJECT | hook: the M-34 and M-26 rows for ammo consumption are effectively the same connection stated twice from demand-side vs. supply-side; the pack needs one canonical statement (M-26 for consumption-sink, M-34 for the trade angle) — the duplicate rows dilute signal without adding a distinct weave
+
