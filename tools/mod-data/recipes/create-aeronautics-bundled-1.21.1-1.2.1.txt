@@ -1,0 +1,125 @@
+aeronautics:adjustable_burner | minecraft:crafting_shaped | aeronautics:adjustable_burner aeronautics:burner_fire create:andesite_alloy create:iron_sheet minecraft:crafting_shaped minecraft:redstone
+aeronautics:andesite_propeller | minecraft:crafting_shaped | aeronautics:andesite_propeller create:propeller create:shaft minecraft:crafting_shaped minecraft:wooden_slabs
+aeronautics:andesite_propeller_from_andesite | minecraft:crafting_shapeless | aeronautics:andesite_propeller aeronautics:wooden_propeller minecraft:crafting_shapeless
+aeronautics:aviators_goggles | minecraft:crafting_shapeless | aeronautics:aviators_goggles c:leathers create:goggles minecraft:crafting_shapeless
+aeronautics:black_envelope | minecraft:crafting_shaped | aeronautics:black_envelope minecraft:black_wool minecraft:crafting_shaped minecraft:stick
+aeronautics:blue_envelope | minecraft:crafting_shaped | aeronautics:blue_envelope minecraft:blue_wool minecraft:crafting_shaped minecraft:stick
+aeronautics:brown_envelope | minecraft:crafting_shaped | aeronautics:brown_envelope minecraft:brown_wool minecraft:crafting_shaped minecraft:stick
+aeronautics:crushing/end_stone_powder | create:crushing | aeronautics:end_stone_powder create:crushing minecraft:end_stone
+aeronautics:cyan_envelope | minecraft:crafting_shaped | aeronautics:cyan_envelope minecraft:crafting_shaped minecraft:cyan_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_black | create:deploying | aeronautics:black_envelope create:deploying minecraft:black_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_blue | create:deploying | aeronautics:blue_envelope create:deploying minecraft:blue_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_brown | create:deploying | aeronautics:brown_envelope create:deploying minecraft:brown_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_cyan | create:deploying | aeronautics:cyan_envelope create:deploying minecraft:cyan_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_gray | create:deploying | aeronautics:gray_envelope create:deploying minecraft:gray_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_green | create:deploying | aeronautics:green_envelope create:deploying minecraft:green_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_light_blue | create:deploying | aeronautics:light_blue_envelope create:deploying minecraft:light_blue_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_light_gray | create:deploying | aeronautics:light_gray_envelope create:deploying minecraft:light_gray_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_lime | create:deploying | aeronautics:lime_envelope create:deploying minecraft:lime_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_magenta | create:deploying | aeronautics:magenta_envelope create:deploying minecraft:magenta_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_orange | create:deploying | aeronautics:orange_envelope create:deploying minecraft:orange_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_pink | create:deploying | aeronautics:pink_envelope create:deploying minecraft:pink_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_purple | create:deploying | aeronautics:purple_envelope create:deploying minecraft:purple_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_red | create:deploying | aeronautics:red_envelope create:deploying minecraft:red_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_white | create:deploying | aeronautics:white_envelope create:deploying minecraft:stick minecraft:white_wool
+aeronautics:deploying/deploying_envelope_yellow | create:deploying | aeronautics:yellow_envelope create:deploying minecraft:stick minecraft:yellow_wool
+aeronautics:gray_envelope | minecraft:crafting_shaped | aeronautics:gray_envelope minecraft:crafting_shaped minecraft:gray_wool minecraft:stick
+aeronautics:green_envelope | minecraft:crafting_shaped | aeronautics:green_envelope minecraft:crafting_shaped minecraft:green_wool minecraft:stick
+aeronautics:gyroscopic_propeller_bearing | minecraft:crafting_shaped | aeronautics:gyroscopic_propeller_bearing create:brass_casing minecraft:crafting_shaped minecraft:wooden_slabs simulated:gyroscopic_mechanism
+aeronautics:light_blue_envelope | minecraft:crafting_shaped | aeronautics:light_blue_envelope minecraft:crafting_shaped minecraft:light_blue_wool minecraft:stick
+aeronautics:light_gray_envelope | minecraft:crafting_shaped | aeronautics:light_gray_envelope minecraft:crafting_shaped minecraft:light_gray_wool minecraft:stick
+aeronautics:lime_envelope | minecraft:crafting_shaped | aeronautics:lime_envelope minecraft:crafting_shaped minecraft:lime_wool minecraft:stick
+aeronautics:magenta_envelope | minecraft:crafting_shaped | aeronautics:magenta_envelope minecraft:crafting_shaped minecraft:magenta_wool minecraft:stick
+aeronautics:mechanical_crafting/mounted_potato_cannon | create:mechanical_crafting | aeronautics:mounted_potato_cannon create:cogwheel create:copper_sheet create:fluid_pipe create:mechanical_crafting minecraft:dried_kelp_block minecraft:redstone
+aeronautics:mixing/levitite_blend | create:mixing | aeronautics:end_stone_powder aeronautics:levitite_blend c:water create:mixing create:zinc_nugget neoforge:tag
+aeronautics:orange_envelope | minecraft:crafting_shaped | aeronautics:orange_envelope minecraft:crafting_shaped minecraft:orange_wool minecraft:stick
+aeronautics:pink_envelope | minecraft:crafting_shaped | aeronautics:pink_envelope minecraft:crafting_shaped minecraft:pink_wool minecraft:stick
+aeronautics:propeller_bearing | minecraft:crafting_shaped | aeronautics:propeller_bearing create:brass_casing create:iron_sheet minecraft:crafting_shaped minecraft:wooden_slabs
+aeronautics:purple_envelope | minecraft:crafting_shaped | aeronautics:purple_envelope minecraft:crafting_shaped minecraft:purple_wool minecraft:stick
+aeronautics:red_envelope | minecraft:crafting_shaped | aeronautics:red_envelope minecraft:crafting_shaped minecraft:red_wool minecraft:stick
+aeronautics:smart_propeller | minecraft:crafting_shaped | aeronautics:smart_propeller create:brass_casing create:propeller minecraft:crafting_shaped simulated:gyroscopic_mechanism
+aeronautics:splashing/envelope_washing | create:splashing | aeronautics:shaftless_envelope aeronautics:white_envelope create:splashing
+aeronautics:steam_vent | minecraft:crafting_shaped | aeronautics:steam_vent c:plates/gold minecraft:copper_block minecraft:crafting_shaped
+aeronautics:white_envelope | minecraft:crafting_shaped | aeronautics:white_envelope minecraft:crafting_shaped minecraft:stick minecraft:white_wool
+aeronautics:wooden_propeller_from_andesite | minecraft:crafting_shapeless | aeronautics:andesite_propeller aeronautics:wooden_propeller minecraft:crafting_shapeless
+aeronautics:yellow_envelope | minecraft:crafting_shaped | aeronautics:yellow_envelope minecraft:crafting_shaped minecraft:stick minecraft:yellow_wool
+create:white_sail | minecraft:crafting_shapeless | create:white_sail minecraft:crafting_shapeless simulated:white_symmetric_sail
+offroad:borehead_bearing | minecraft:crafting_shaped | create:gearbox create:industrial_iron_block minecraft:crafting_shaped minecraft:wooden_slabs offroad:borehead_bearing
+offroad:large_tire | minecraft:crafting_shaped | create:belt_connector create:shaft minecraft:crafting_shaped offroad:large_tire
+offroad:monstrous_tire | minecraft:crafting_shaped | create:shaft minecraft:crafting_shaped minecraft:dried_kelp_block offroad:monstrous_tire
+offroad:rockcutting_wheel | minecraft:crafting_shaped | create:crushing_wheel create:industrial_iron_block create:iron_sheet minecraft:crafting_shaped offroad:rockcutting_wheel
+offroad:small_tire | minecraft:crafting_shapeless | create:shaft minecraft:crafting_shapeless minecraft:dried_kelp offroad:small_tire
+offroad:tire | minecraft:crafting_shaped | create:shaft minecraft:crafting_shaped minecraft:dried_kelp offroad:tire
+offroad:wheel_mount | minecraft:crafting_shaped | create:andesite_casing create:iron_sheet minecraft:crafting_shaped offroad:wheel_mount simulated:spring
+simulated:altitude_sensor | minecraft:crafting_shaped | create:andesite_casing create:iron_sheet minecraft:crafting_shaped minecraft:paper simulated:altitude_sensor
+simulated:analog_transmission | minecraft:crafting_shapeless | create:brass_casing create:cogwheel create:electron_tube create:shaft minecraft:crafting_shapeless simulated:analog_transmission
+simulated:auger_cog_from_auger_shaft | minecraft:crafting_shapeless | minecraft:crafting_shapeless simulated:auger_cog simulated:auger_shaft
+simulated:auger_shaft | minecraft:crafting_shapeless | create:chute create:iron_sheet create:shaft minecraft:crafting_shapeless simulated:auger_shaft
+simulated:auger_shaft_from_auger_cogwheel | minecraft:crafting_shapeless | minecraft:crafting_shapeless simulated:auger_cog simulated:auger_shaft
+simulated:black_handle | minecraft:crafting_shapeless | minecraft:black_dye minecraft:crafting_shapeless simulated:black_handle simulated:iron_handle
+simulated:blue_handle | minecraft:crafting_shapeless | minecraft:blue_dye minecraft:crafting_shapeless simulated:blue_handle simulated:iron_handle
+simulated:brown_handle | minecraft:crafting_shapeless | minecraft:brown_dye minecraft:crafting_shapeless simulated:brown_handle simulated:iron_handle
+simulated:contraption_diagram | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:paper simulated:contraption_diagram simulated:physics_assembler
+simulated:copper_handle | minecraft:crafting_shapeless | create:copper_nugget minecraft:crafting_shapeless simulated:copper_handle simulated:iron_handle
+simulated:crafting/black_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/black minecraft:crafting_shapeless simulated:black_nameplate simulated:nameplate_items
+simulated:crafting/blue_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/blue minecraft:crafting_shapeless simulated:blue_nameplate simulated:nameplate_items
+simulated:crafting/brown_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/brown minecraft:crafting_shapeless simulated:brown_nameplate simulated:nameplate_items
+simulated:crafting/cyan_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/cyan minecraft:crafting_shapeless simulated:cyan_nameplate simulated:nameplate_items
+simulated:crafting/gray_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/gray minecraft:crafting_shapeless simulated:gray_nameplate simulated:nameplate_items
+simulated:crafting/green_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/green minecraft:crafting_shapeless simulated:green_nameplate simulated:nameplate_items
+simulated:crafting/light_blue_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/light_blue minecraft:crafting_shapeless simulated:light_blue_nameplate simulated:nameplate_items
+simulated:crafting/light_gray_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/light_gray minecraft:crafting_shapeless simulated:light_gray_nameplate simulated:nameplate_items
+simulated:crafting/lime_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/lime minecraft:crafting_shapeless simulated:lime_nameplate simulated:nameplate_items
+simulated:crafting/magenta_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/magenta minecraft:crafting_shapeless simulated:magenta_nameplate simulated:nameplate_items
+simulated:crafting/orange_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/orange minecraft:crafting_shapeless simulated:nameplate_items simulated:orange_nameplate
+simulated:crafting/pink_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/pink minecraft:crafting_shapeless simulated:nameplate_items simulated:pink_nameplate
+simulated:crafting/portable_engine_dyeing | simulated:portable_engine_dyeing | simulated:portable_engine_dyeing
+simulated:crafting/purple_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/purple minecraft:crafting_shapeless simulated:nameplate_items simulated:purple_nameplate
+simulated:crafting/red_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/red minecraft:crafting_shapeless simulated:nameplate_items simulated:red_nameplate
+simulated:crafting/white_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/white minecraft:crafting_shapeless simulated:nameplate_items simulated:white_nameplate
+simulated:crafting/yellow_nameplate_from_other_nameplate | minecraft:crafting_shapeless | c:dyes/yellow minecraft:crafting_shapeless simulated:nameplate_items simulated:yellow_nameplate
+simulated:cyan_handle | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:cyan_dye simulated:cyan_handle simulated:iron_handle
+simulated:directional_gearshift | minecraft:crafting_shapeless | create:andesite_casing create:cogwheel create:shaft minecraft:crafting_shapeless minecraft:redstone_torch simulated:directional_gearshift
+simulated:directional_linked_receiver | minecraft:crafting_shaped | create:brass_casing create:iron_sheet create:transmitter minecraft:crafting_shaped simulated:directional_linked_receiver
+simulated:filling/honey_glue | create:filling | create:filling create:honey create:iron_sheet neoforge:single simulated:honey_glue
+simulated:gimbal_sensor | minecraft:crafting_shaped | create:brass_casing minecraft:compass minecraft:crafting_shaped simulated:gimbal_sensor simulated:gyroscopic_mechanism
+simulated:gray_handle | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:gray_dye simulated:gray_handle simulated:iron_handle
+simulated:green_handle | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:green_dye simulated:green_handle simulated:iron_handle
+simulated:handle_undye | minecraft:crafting_shapeless | minecraft:crafting_shapeless simulated:handle_variants simulated:iron_handle
+simulated:iron_handle | minecraft:crafting_shaped | create:andesite_alloy minecraft:crafting_shaped minecraft:iron_nugget simulated:iron_handle
+simulated:laser_pointer | minecraft:crafting_shaped | create:andesite_casing minecraft:crafting_shaped minecraft:redstone_torch simulated:laser_point_lens simulated:laser_pointer
+simulated:laser_sensor | minecraft:crafting_shaped | create:andesite_casing minecraft:crafting_shaped minecraft:tinted_glass simulated:laser_point_lens simulated:laser_sensor
+simulated:light_blue_handle | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:light_blue_dye simulated:iron_handle simulated:light_blue_handle
+simulated:light_gray_handle | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:light_gray_dye simulated:iron_handle simulated:light_gray_handle
+simulated:lime_handle | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:lime_dye simulated:iron_handle simulated:lime_handle
+simulated:magenta_handle | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:magenta_dye simulated:iron_handle simulated:magenta_handle
+simulated:mechanical_crafting/docking_connector | create:mechanical_crafting | create:brass_casing create:brass_sheet create:chute create:electron_tube create:iron_sheet create:mechanical_crafting minecraft:piston simulated:docking_connector
+simulated:mechanical_crafting/linked_typewriter | create:mechanical_crafting | create:golden_sheet create:mechanical_crafting create:precision_mechanism create:transmitter minecraft:buttons simulated:linked_typewriter
+simulated:mechanical_crafting/plunger_launcher | create:mechanical_crafting | create:andesite_alloy create:fluid_pipe create:mechanical_crafting create:precision_mechanism minecraft:copper_ingot minecraft:slime_ball simulated:plunger_launcher simulated:rope_coupling
+simulated:modulating_linked_receiver | minecraft:crafting_shaped | create:brass_casing create:golden_sheet create:transmitter minecraft:crafting_shaped simulated:modulating_linked_receiver
+simulated:navigation_table | minecraft:crafting_shaped | create:brass_casing create:brass_sheet create:precision_mechanism minecraft:crafting_shaped simulated:navigation_table
+simulated:optical_sensor | minecraft:crafting_shaped | create:brass_casing create:electron_tube minecraft:amethyst_shard minecraft:crafting_shaped simulated:optical_sensor
+simulated:orange_handle | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:orange_dye simulated:iron_handle simulated:orange_handle
+simulated:physics_assembler | minecraft:crafting_shaped | create:andesite_alloy create:andesite_casing minecraft:crafting_shaped minecraft:lever simulated:physics_assembler
+simulated:pink_handle | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:pink_dye simulated:iron_handle simulated:pink_handle
+simulated:purple_handle | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:purple_dye simulated:iron_handle simulated:purple_handle
+simulated:red_handle | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:red_dye simulated:iron_handle simulated:red_handle
+simulated:red_portable_engine | minecraft:crafting_shaped | create:iron_sheet minecraft:blast_furnace minecraft:crafting_shaped simulated:engine_assembly simulated:red_portable_engine
+simulated:redstone_accumulator | minecraft:crafting_shaped | c:dusts/redstone c:stones create:brass_sheet create:polished_rose_quartz minecraft:crafting_shaped minecraft:redstone_torch simulated:redstone_accumulator
+simulated:redstone_inductor | minecraft:crafting_shaped | c:dusts/redstone c:stones create:brass_sheet create:copper_sheet minecraft:crafting_shaped minecraft:redstone_torch simulated:redstone_inductor
+simulated:redstone_magnet | minecraft:crafting_shapeless | create:copper_sheet create:industrial_iron_block minecraft:crafting_shapeless minecraft:redstone simulated:redstone_magnet
+simulated:rope_connector | minecraft:crafting_shaped | create:industrial_iron_block create:iron_sheet minecraft:crafting_shaped simulated:rope_connector
+simulated:rope_coupling | minecraft:crafting_shaped | c:nuggets/iron c:strings minecraft:crafting_shaped simulated:rope_coupling
+simulated:rope_winch | minecraft:crafting_shaped | create:industrial_iron_block create:iron_sheet create:shaft minecraft:crafting_shaped simulated:rope_winch
+simulated:sequenced_assembly/engine_assembly | create:sequenced_assembly | create:cutting create:industrial_iron_block create:iron_sheet create:pressing create:sequenced_assembly minecraft:iron_bars minecraft:iron_helmet minecraft:iron_nugget simulated:engine_assembly simulated:incomplete_engine_assembly
+simulated:sequenced_assembly/gyroscopic_mechanism | create:sequenced_assembly | create:andesite_alloy create:brass_nugget create:cogwheel create:crushed_raw_iron create:deploying create:iron_sheet create:sequenced_assembly create:shaft minecraft:compass simulated:gyroscopic_mechanism simulated:incomplete_gyroscopic_mechanism
+simulated:spring | minecraft:crafting_shaped | create:iron_sheet minecraft:crafting_shaped minecraft:iron_nugget simulated:spring
+simulated:steering_wheel | minecraft:crafting_shaped | create:andesite_casing create:large_cogwheel create:shaft minecraft:crafting_shaped simulated:steering_wheel
+simulated:swivel_bearing | minecraft:crafting_shaped | create:cogwheel create:industrial_iron_block minecraft:crafting_shaped minecraft:wooden_slabs simulated:swivel_bearing
+simulated:throttle_lever | minecraft:crafting_shaped | create:brass_casing minecraft:crafting_shaped minecraft:stick simulated:throttle_lever
+simulated:torsion_spring | minecraft:crafting_shaped | create:andesite_casing create:shaft minecraft:crafting_shaped simulated:spring simulated:torsion_spring
+simulated:velocity_sensor | minecraft:crafting_shaped | create:andesite_casing create:propeller minecraft:barrel minecraft:crafting_shaped simulated:velocity_sensor
+simulated:white_handle | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:white_dye simulated:iron_handle simulated:white_handle
+simulated:white_nameplate | minecraft:crafting_shapeless | create:andesite_alloy minecraft:crafting_shapeless minecraft:paper minecraft:stick simulated:white_nameplate
+simulated:white_symmetric_sail | minecraft:crafting_shapeless | create:white_sail minecraft:crafting_shapeless simulated:white_symmetric_sail
+simulated:yellow_handle | minecraft:crafting_shapeless | minecraft:crafting_shapeless minecraft:yellow_dye simulated:iron_handle simulated:yellow_handle

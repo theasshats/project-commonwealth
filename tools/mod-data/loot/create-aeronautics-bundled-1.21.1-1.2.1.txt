@@ -1,0 +1,137 @@
+aeronautics:blocks/adjustable_burner | minecraft:block | aeronautics:adjustable_burner aeronautics:blocks/adjustable_burner minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/andesite_propeller | minecraft:block | aeronautics:andesite_propeller aeronautics:blocks/andesite_propeller minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/black_envelope | minecraft:block | aeronautics:black_envelope aeronautics:blocks/black_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/black_envelope_encased_shaft | minecraft:block | aeronautics:black_envelope aeronautics:blocks/black_envelope_encased_shaft create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/blue_envelope | minecraft:block | aeronautics:blocks/blue_envelope aeronautics:blue_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/blue_envelope_encased_shaft | minecraft:block | aeronautics:blocks/blue_envelope_encased_shaft aeronautics:blue_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/brown_envelope | minecraft:block | aeronautics:blocks/brown_envelope aeronautics:brown_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/brown_envelope_encased_shaft | minecraft:block | aeronautics:blocks/brown_envelope_encased_shaft aeronautics:brown_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/cyan_envelope | minecraft:block | aeronautics:blocks/cyan_envelope aeronautics:cyan_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/cyan_envelope_encased_shaft | minecraft:block | aeronautics:blocks/cyan_envelope_encased_shaft aeronautics:cyan_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/gray_envelope | minecraft:block | aeronautics:blocks/gray_envelope aeronautics:gray_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/gray_envelope_encased_shaft | minecraft:block | aeronautics:blocks/gray_envelope_encased_shaft aeronautics:gray_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/green_envelope | minecraft:block | aeronautics:blocks/green_envelope aeronautics:green_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/green_envelope_encased_shaft | minecraft:block | aeronautics:blocks/green_envelope_encased_shaft aeronautics:green_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/gyroscopic_propeller_bearing | minecraft:block | aeronautics:blocks/gyroscopic_propeller_bearing aeronautics:gyroscopic_propeller_bearing minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/light_blue_envelope | minecraft:block | aeronautics:blocks/light_blue_envelope aeronautics:light_blue_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/light_blue_envelope_encased_shaft | minecraft:block | aeronautics:blocks/light_blue_envelope_encased_shaft aeronautics:light_blue_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/light_gray_envelope | minecraft:block | aeronautics:blocks/light_gray_envelope aeronautics:light_gray_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/light_gray_envelope_encased_shaft | minecraft:block | aeronautics:blocks/light_gray_envelope_encased_shaft aeronautics:light_gray_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/lime_envelope | minecraft:block | aeronautics:blocks/lime_envelope aeronautics:lime_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/lime_envelope_encased_shaft | minecraft:block | aeronautics:blocks/lime_envelope_encased_shaft aeronautics:lime_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/magenta_envelope | minecraft:block | aeronautics:blocks/magenta_envelope aeronautics:magenta_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/magenta_envelope_encased_shaft | minecraft:block | aeronautics:blocks/magenta_envelope_encased_shaft aeronautics:magenta_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/mounted_potato_cannon | minecraft:block | aeronautics:blocks/mounted_potato_cannon aeronautics:mounted_potato_cannon minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/orange_envelope | minecraft:block | aeronautics:blocks/orange_envelope aeronautics:orange_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/orange_envelope_encased_shaft | minecraft:block | aeronautics:blocks/orange_envelope_encased_shaft aeronautics:orange_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/pink_envelope | minecraft:block | aeronautics:blocks/pink_envelope aeronautics:pink_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/pink_envelope_encased_shaft | minecraft:block | aeronautics:blocks/pink_envelope_encased_shaft aeronautics:pink_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/propeller_bearing | minecraft:block | aeronautics:blocks/propeller_bearing aeronautics:propeller_bearing minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/purple_envelope | minecraft:block | aeronautics:blocks/purple_envelope aeronautics:purple_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/purple_envelope_encased_shaft | minecraft:block | aeronautics:blocks/purple_envelope_encased_shaft aeronautics:purple_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/red_envelope | minecraft:block | aeronautics:blocks/red_envelope aeronautics:red_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/red_envelope_encased_shaft | minecraft:block | aeronautics:blocks/red_envelope_encased_shaft aeronautics:red_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/smart_propeller | minecraft:block | aeronautics:blocks/smart_propeller aeronautics:smart_propeller minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/steam_vent | minecraft:block | aeronautics:blocks/steam_vent aeronautics:steam_vent minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/white_envelope | minecraft:block | aeronautics:blocks/white_envelope aeronautics:white_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/white_envelope_encased_shaft | minecraft:block | aeronautics:blocks/white_envelope_encased_shaft aeronautics:white_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/wooden_propeller | minecraft:block | aeronautics:blocks/wooden_propeller aeronautics:wooden_propeller minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/yellow_envelope | minecraft:block | aeronautics:blocks/yellow_envelope aeronautics:yellow_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/yellow_envelope_encased_shaft | minecraft:block | aeronautics:blocks/yellow_envelope_encased_shaft aeronautics:yellow_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+offroad:blocks/borehead_bearing | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion offroad:blocks/borehead_bearing offroad:borehead_bearing
+offroad:blocks/rockcutting_wheel | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion offroad:blocks/rockcutting_wheel offroad:rockcutting_wheel
+offroad:blocks/wheel_mount | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion offroad:blocks/wheel_mount offroad:wheel_mount
+simulated:blocks/altitude_sensor | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:altitude_sensor simulated:blocks/altitude_sensor
+simulated:blocks/analog_transmission | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:analog_transmission simulated:blocks/analog_transmission
+simulated:blocks/auger_cog | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:auger_cog simulated:blocks/auger_cog
+simulated:blocks/auger_shaft | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:auger_shaft simulated:blocks/auger_shaft
+simulated:blocks/black_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:black_handle simulated:blocks/black_handle
+simulated:blocks/black_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:black_nameplate simulated:blocks/black_nameplate
+simulated:blocks/black_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:black_portable_engine simulated:blocks/black_portable_engine
+simulated:blocks/black_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/black_symmetric_sail simulated:white_symmetric_sail
+simulated:blocks/blue_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/blue_handle simulated:blue_handle
+simulated:blocks/blue_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/blue_nameplate simulated:blue_nameplate
+simulated:blocks/blue_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/blue_portable_engine simulated:blue_portable_engine
+simulated:blocks/blue_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/blue_symmetric_sail simulated:white_symmetric_sail
+simulated:blocks/brown_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/brown_handle simulated:brown_handle
+simulated:blocks/brown_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/brown_nameplate simulated:brown_nameplate
+simulated:blocks/brown_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/brown_portable_engine simulated:brown_portable_engine
+simulated:blocks/brown_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/brown_symmetric_sail simulated:white_symmetric_sail
+simulated:blocks/copper_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/copper_handle simulated:copper_handle
+simulated:blocks/cyan_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/cyan_handle simulated:cyan_handle
+simulated:blocks/cyan_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/cyan_nameplate simulated:cyan_nameplate
+simulated:blocks/cyan_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/cyan_portable_engine simulated:cyan_portable_engine
+simulated:blocks/cyan_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/cyan_symmetric_sail simulated:white_symmetric_sail
+simulated:blocks/directional_gearshift | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/directional_gearshift simulated:directional_gearshift
+simulated:blocks/directional_linked_receiver | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/directional_linked_receiver simulated:directional_linked_receiver
+simulated:blocks/docking_connector | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/docking_connector simulated:docking_connector
+simulated:blocks/gimbal_sensor | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/gimbal_sensor simulated:gimbal_sensor
+simulated:blocks/gray_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/gray_handle simulated:gray_handle
+simulated:blocks/gray_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/gray_nameplate simulated:gray_nameplate
+simulated:blocks/gray_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/gray_portable_engine simulated:gray_portable_engine
+simulated:blocks/gray_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/gray_symmetric_sail simulated:white_symmetric_sail
+simulated:blocks/green_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/green_handle simulated:green_handle
+simulated:blocks/green_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/green_nameplate simulated:green_nameplate
+simulated:blocks/green_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/green_portable_engine simulated:green_portable_engine
+simulated:blocks/green_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/green_symmetric_sail simulated:white_symmetric_sail
+simulated:blocks/iron_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/iron_handle simulated:iron_handle
+simulated:blocks/laser_pointer | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/laser_pointer simulated:laser_pointer
+simulated:blocks/laser_sensor | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/laser_sensor simulated:laser_sensor
+simulated:blocks/light_blue_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/light_blue_handle simulated:light_blue_handle
+simulated:blocks/light_blue_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/light_blue_nameplate simulated:light_blue_nameplate
+simulated:blocks/light_blue_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/light_blue_portable_engine simulated:light_blue_portable_engine
+simulated:blocks/light_blue_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/light_blue_symmetric_sail simulated:white_symmetric_sail
+simulated:blocks/light_gray_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/light_gray_handle simulated:light_gray_handle
+simulated:blocks/light_gray_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/light_gray_nameplate simulated:light_gray_nameplate
+simulated:blocks/light_gray_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/light_gray_portable_engine simulated:light_gray_portable_engine
+simulated:blocks/light_gray_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/light_gray_symmetric_sail simulated:white_symmetric_sail
+simulated:blocks/lime_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/lime_handle simulated:lime_handle
+simulated:blocks/lime_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/lime_nameplate simulated:lime_nameplate
+simulated:blocks/lime_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/lime_portable_engine simulated:lime_portable_engine
+simulated:blocks/lime_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/lime_symmetric_sail simulated:white_symmetric_sail
+simulated:blocks/linked_typewriter | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/linked_typewriter simulated:linked_typewriter
+simulated:blocks/magenta_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/magenta_handle simulated:magenta_handle
+simulated:blocks/magenta_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/magenta_nameplate simulated:magenta_nameplate
+simulated:blocks/magenta_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/magenta_portable_engine simulated:magenta_portable_engine
+simulated:blocks/magenta_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/magenta_symmetric_sail simulated:white_symmetric_sail
+simulated:blocks/merging_glue | minecraft:block | minecraft:air minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/merging_glue
+simulated:blocks/modulating_linked_receiver | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/modulating_linked_receiver simulated:modulating_linked_receiver
+simulated:blocks/navigation_table | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/navigation_table simulated:navigation_table
+simulated:blocks/optical_sensor | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/optical_sensor simulated:optical_sensor
+simulated:blocks/orange_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/orange_handle simulated:orange_handle
+simulated:blocks/orange_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/orange_nameplate simulated:orange_nameplate
+simulated:blocks/orange_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/orange_portable_engine simulated:orange_portable_engine
+simulated:blocks/orange_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/orange_symmetric_sail simulated:white_symmetric_sail
+simulated:blocks/physics_assembler | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/physics_assembler simulated:physics_assembler
+simulated:blocks/pink_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/pink_handle simulated:pink_handle
+simulated:blocks/pink_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/pink_nameplate simulated:pink_nameplate
+simulated:blocks/pink_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/pink_portable_engine simulated:pink_portable_engine
+simulated:blocks/pink_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/pink_symmetric_sail simulated:white_symmetric_sail
+simulated:blocks/purple_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/purple_handle simulated:purple_handle
+simulated:blocks/purple_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/purple_nameplate simulated:purple_nameplate
+simulated:blocks/purple_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/purple_portable_engine simulated:purple_portable_engine
+simulated:blocks/purple_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/purple_symmetric_sail simulated:white_symmetric_sail
+simulated:blocks/red_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/red_handle simulated:red_handle
+simulated:blocks/red_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/red_nameplate simulated:red_nameplate
+simulated:blocks/red_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/red_portable_engine simulated:red_portable_engine
+simulated:blocks/red_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/red_symmetric_sail simulated:white_symmetric_sail
+simulated:blocks/redstone_accumulator | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/redstone_accumulator simulated:redstone_accumulator
+simulated:blocks/redstone_inductor | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/redstone_inductor simulated:redstone_inductor
+simulated:blocks/redstone_magnet | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/redstone_magnet simulated:redstone_magnet
+simulated:blocks/rope_connector | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/rope_connector simulated:rope_connector
+simulated:blocks/rope_winch | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/rope_winch simulated:rope_winch
+simulated:blocks/spring | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/spring simulated:spring
+simulated:blocks/steering_wheel | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/steering_wheel simulated:steering_wheel
+simulated:blocks/swivel_bearing | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/swivel_bearing simulated:swivel_bearing
+simulated:blocks/swivel_bearing_link_block | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/swivel_bearing_link_block simulated:swivel_bearing
+simulated:blocks/throttle_lever | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/throttle_lever simulated:throttle_lever
+simulated:blocks/torsion_spring | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/torsion_spring simulated:torsion_spring
+simulated:blocks/velocity_sensor | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/velocity_sensor simulated:velocity_sensor
+simulated:blocks/white_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/white_handle simulated:white_handle
+simulated:blocks/white_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/white_nameplate simulated:white_nameplate
+simulated:blocks/white_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/white_portable_engine simulated:white_portable_engine
+simulated:blocks/white_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/white_symmetric_sail simulated:white_symmetric_sail
+simulated:blocks/yellow_handle | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/yellow_handle simulated:yellow_handle
+simulated:blocks/yellow_nameplate | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/yellow_nameplate simulated:yellow_nameplate
+simulated:blocks/yellow_portable_engine | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/yellow_portable_engine simulated:yellow_portable_engine
+simulated:blocks/yellow_symmetric_sail | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion simulated:blocks/yellow_symmetric_sail simulated:white_symmetric_sail
