@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): outputs a large catalogue of mob-drop reagents (ambergris, bear_dust, ender_residue, soul-related drops, banana, etc.) — prime feedstock for Create crushing/mixing, Occultism rituals, and magic infusions. bison_upgrade consumes hide/fur to upgrade saddlebags.
 
 anchors:    survival (1) — fauna/biome content and survival gameplay. (Drops give it reach into every crafting web.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - magic via Occultism spirit_fire / ritual or Ars imbuement — funnel exotic drops (ender_residue, void_worm parts, ambergris) as ritual/infusion reagents; M-02 mob-drop reagent sink + M-11. [STRONG]
   - Create via create:crushing/mixing — process mob drops (bones, dust, shells) into intermediates so fauna feeds the tech spine; M-03/M-02. [MED]
   - economy via Numismatics — rare drops/tames as bounty or sale goods; M-08 coin-from-scarcity. [MED]

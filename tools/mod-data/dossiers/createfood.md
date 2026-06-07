@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes raw meats/fish/crops/dough/cheese (carries 2424 c:tags incl. c:foods/raw_* & cooked_* and doughs); outputs finished dishes + plated deco blocks via create:milling/mixing/pressing/compacting/deploying + farmersdelight:cooking/cutting. Join key: it is itself a giant M-12 consumer of foreign crops/meats/cheese/fish.
 
 anchors:    survival, Create (2)  — food/nutrition (survival) produced through Create + FD processing (Create).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics — finished dishes are the archetypal high-effort processed goods → sellable; a baker/cook specialization mints coin from food. [STRONG] (M-09 luxury good → coin; #136-aligned)
   - survival depth (Spice of Life / Cold Sweat) — its variety feeds the diet-variety + warm-meal survival loops; mostly already-survival, a deepening not a new pillar. [MED]
 

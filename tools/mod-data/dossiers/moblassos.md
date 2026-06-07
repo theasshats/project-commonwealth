@@ -14,9 +14,9 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes nothing processable; its value is mob-transport — relocating animals/villagers to colonies, farms, or onto Aeronautics ships. Not a crafting input/output node.
 
 anchors:    survival (1)  — animal-husbandry/transport QoL; eases stocking farms (loose fit; mostly a convenience tool)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - aeronautics: carrying livestock/villagers aboard Create Aeronautics ships or to remote MineColonies — a logistics enabler, not a recipe weave [WEAK — utility synergy, no method to route through]
-  - none — leave (item-utility mod; no material flows through it, no coherent 2nd-pillar method edge)
+  - none — leave (item-utility mod; no material flows through it, no coherent 2nd-anchor method edge)
 
 how-packs-integrate (SWEEP): shipped as pure QoL for moving mobs; no recipe wiring beyond its own craft. https://modrinth.com/mod/mob-lassos
 sources (SWEEP): https://modrinth.com/mod/mob-lassos  https://www.curseforge.com/minecraft/mc-mods/mob-lassos

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes vanilla/modded saplings + bucket-of-dirt to mint species seeds; outputs ordinary logs/sticks/saplings on harvest (vanilla item economy). No foreign-material method beyond sapling conversion.
 
 anchors:    survival (world flavor / wood-gathering rework) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. It feeds the vanilla log economy (so Create milling/farmersdelight already process its output downstream), but DT's own seed-conversion isn't a foreign-material sink and DT trees are notoriously awkward for Create automated harvesters — forcing a Create edge would be contrived.
 
 how-packs-integrate (SWEEP): shipped as world flavor; addons (Dynamic Trees Plus, +Terralith here) extend species coverage. Output logs flow into normal wood recipes; rarely given bespoke wiring. https://modrinth.com/mod/dynamictrees

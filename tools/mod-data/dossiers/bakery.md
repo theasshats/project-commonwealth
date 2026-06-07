@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES: wheat/flour, fruit/berries, milk, sugar, chocolate, eggs — routed through farm_and_charm:crafting_bowl/pot_cooking/stove (existing inbound weave). OUTPUTS: high-tier processed foods (cakes, tarts, cupcakes, jams, breads) — luxury edibles that are natural sell-goods, plus placeable food deco.
 
 anchors:    survival (1)  — food/satiety pillar; already woven INTO Farm & Charm's processing methods (jar-grounded made-by), so it lives downstream of that cooking chain.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics sell — finished cakes/tarts are high-effort consumables, ideal luxury sell-goods (or MineColonies food supply). [STRONG, M-09]
   - Create via create:milling — feed wheat→flour through Create milling as an alt to the crafting_bowl, tying the bake chain to the tech spine. [MED, M-12]
   - magic via Ars Vitalic/Agronomic Sourcelink — surplus crops/baked goods as passive Source feedstock (weak; better owned by farm mods). [WEAK, M-02]

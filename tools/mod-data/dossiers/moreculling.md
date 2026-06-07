@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none.
 
 anchors:    support — performance (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role
 
 how-packs-integrate (SWEEP): Paired with Sodium for FPS; no integration. https://modrinth.com/mod/moreculling

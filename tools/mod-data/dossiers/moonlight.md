@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none directly (its data-driven-trade / virtual-fluid APIs are exercised by the mods that depend on it).
 
 anchors:    support — library/API (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role
 
 how-packs-integrate (SWEEP): Installed automatically as a dependency for MehVahdJukaar mods; no direct integration. https://modrinth.com/mod/moonlight

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes = any item or mob-kill you set as an objective (the sink); outputs = configurable reward items — default gold ingots/nuggets, but explicitly settable to a server's common currency.
 
 anchors:    economy (1) — the canonical bounty/quest economy loop (sellable goods → reward).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy→already; the obvious weave is to make the reward Numismatics money: set bounty payout to numismatics:cog/spur instead of gold (M-08/M-09 coin-from-goods). This binds Bountiful firmly into the economy pillar and gives Numismatics a faucet. [STRONG]
   - survival via objective pools — point Decrees at the pack's farm/fish/hunt outputs so bounties reward engaging with Serene Seasons / food loops, not just vanilla kills. [MED]
   - any pillar as a sink — bounties can REQUEST Create-processed goods, magic reagents, or aeronautics cargo, turning surplus from any pillar into coin (a universal demand node). [MED, motif M-02 mob-drop / M-09 luxury→coin depending on objective]

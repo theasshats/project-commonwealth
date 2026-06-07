@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — pure API translation; the wearables that weave live in the host mods (Curios/Trinkets users).
 
 anchors:    support (1) — library/compat shim. No standalone gameplay content.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (compat layer; nothing to weave)
 
 how-packs-integrate (SWEEP): paired with the Accessories mod so any Curios/Trinkets-targeting mod funnels into one unified accessory slot screen; ships as a silent dependency.

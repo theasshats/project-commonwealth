@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES/MOVES Create packages (create:package contents — any item); built via create:cutting + create:deploying (cardboard). OUTPUTS delivery automation, not material.
 
 anchors:    Create, aeronautics (2) — Create-package logistics delivered by an autonomous flying courier (transport/logistics pillar).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 (Create + aeronautics/logistics); no extra edge needed. Light economy adjacency (remote trade fulfilment) exists but leave unless trade tooling wants it.
 
 how-packs-integrate (SWEEP): used in Create logistics-heavy packs to bridge bases/outposts without trains; relies on Create packages + chunkloading. [https://modrinth.com/mod/create-more-package-couriers]

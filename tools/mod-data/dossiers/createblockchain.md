@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes Forge Energy + Mining Cores (worldgen) + coolant; outputs numismatics:* coins (cog/spur/bevel/…). Join keys: FE (from createaddition), numismatics currency, geode worldgen.
 
 anchors:    economy, Create (2)  — it is the money FAUCET for Numismatics (economy) and runs on Create-side FE built via mechanical_crafting/mixing (Create).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Already ≥2 pillars (economy + Create). The cleanest *deepening* is M-08-adjacent: feed the miner FE that itself comes from scarce processed metal, so coins trace back to regional scarcity rather than free FE. [MED] — refinement of existing economy edge, not a new pillar.
 
 how-packs-integrate (SWEEP): added specifically to give Numismatics a non-creative money source — the FE→coin faucet — usually rate-limited by config + geode scarcity. https://modrinth.com/mod/create-blockchain

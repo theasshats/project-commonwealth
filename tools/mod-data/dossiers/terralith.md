@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — adds no items; defines the biome surface that OTHER mods' biome-modifiers/structures/spawns key off of (the terrain other content lands on)
 
 anchors:    survival (1)  — world variety / the world the crew explores
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. Worldgen overhaul with no items/methods to route through; it is a support-flavored survival anchor. Its real weave is indirect (regional ore scarcity + other mods' biome-spawned content riding on its biomes), not a recipe edge.
 
 how-packs-integrate (SWEEP): near-universal Overworld base in Create/exploration packs; vanilla-compatible (no new blocks) so it layers under everything. Pairs with Stardust Labs' Incendium/Nullscape and structure packs. https://modrinth.com/datapack/terralith

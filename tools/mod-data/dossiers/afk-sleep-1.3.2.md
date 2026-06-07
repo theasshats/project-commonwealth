@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — pure server behavior, no items in/out.
 
 anchors:    support (1) — QoL (multiplayer sleep). No gameplay content.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (sleep QoL; nothing to weave)
 
 how-packs-integrate (SWEEP): dropped in on ~10-player co-op servers so a couple of AFK members don't keep everyone in the dark; no recipe wiring.

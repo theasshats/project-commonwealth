@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none of its own; it gates WHICH foreign items a Deployer places (so it can scatter any mod's blocks/items randomly onto a contraption) — a builder tool, not a material processor.
 
 anchors:    Create (1) — purely extends Create filter/Deployer behavior.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave (a one-item builder QoL utility; no coherent 2nd pillar without forcing it).
 
 how-packs-integrate (SWEEP): dropped in for automated decoration/terrain builds where varied random placement is wanted; no special wiring. https://modrinth.com/mod/create-shuffle-filter

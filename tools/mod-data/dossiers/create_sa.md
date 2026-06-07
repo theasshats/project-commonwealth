@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes Create mats (brass/andesite/copper, precision mechanisms) + blaze for the blazing line; outputs wearable gear only — no item processing. Made via create:sequenced_assembly / mechanical_crafting (inbound Create weave already present).
 
 anchors:    Create, aeronautics (2)  — gear built through Create methods; jetpacks/drones are personal flight & transport (aeronautics pillar).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Already ≥2 pillars; no new edge needed. (Blazing tools could route blaze through a magic infusion, but Create+aeronautics is sufficient — leave.)
 
 how-packs-integrate (SWEEP): standard Create-progression gear; jetpacks/exoskeletons sit as a mid/late personal-mobility tier alongside aeronautics. https://www.curseforge.com/minecraft/mc-mods/create-stuff-additions

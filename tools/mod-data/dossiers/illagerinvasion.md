@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES copper (table structure) + an enchanted book + Hallowed Gem per imbue; OUTPUTS mob-drop reagents — hallowed_gem, illusionary_dust, platinum_chunk, horn_of_sight, lost_candle — plus the over-cap enchantment service itself (an enchantment-economy sink).
 
 anchors:    survival (1) — raid/boss combat and a difficulty layer (the world pushing back). (The Imbuing Table's enchant-boosting + arcane drops give it a strong latent magic foot.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - magic via its own Imbuing Table (native-method gating) — Hallowed Gem (Invoker drop) is already a magic reagent gating over-cap enchantments; tie that into the Ars/Iron's enchant economy or feed hallowed_gem/illusionary_dust through ars_nouveau:imbuement / occultism rituals as arcane inputs; M-02 mob-drop reagent sink + M-05/M-11. [STRONG]
   - economy via numismatics — Invoker boss drops (hallowed_gem) / platinum_chunk as high-value bounty or sale scarcity; M-08. [MED]
   - Create via create:crushing — platinum_chunk into a processed metal intermediate, folding the drop into the spine; M-03/M-02. [WEAK]

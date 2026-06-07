@@ -15,7 +15,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): self-contained cosmetic economy (hats ↔ scraps ↔ bags); no foreign-material join keys — it neither feeds nor consumes other mods' methods.
 
 anchors:    support (1) — cosmetic QoL/flavour (a sanctioned support role; curated friend-group flair).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via Numismatics — rare hats are a natural cosmetic trade good / bounty reward, giving the coin economy a vanity sink; M-09 luxury-good→coin. [MED]
   - (no method-routing weave — its mechanics are closed; the economy hook is via loot/trade tables, not a process.)
 

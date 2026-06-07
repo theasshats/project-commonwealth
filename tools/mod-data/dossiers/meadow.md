@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES milk/dairy, wool (felting), alpine logs (woodcutting), crops + salt (cooking/cheese); OUTPUTS cheese wheels/slices, felt textiles, cooked alpine dishes, alpine salt, decorative limestone/woodsets — its salt + cheese + crops are foreign inputs farmersdelight/extradelight/create cooking chains can pull.
 
 anchors:    survival (1)  — food/cheese/crops + cold alpine biome flavor feed the survival/seasons pillar
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy: cheese wheels + alpine dishes as cured luxury goods → Numismatics bounties/trade [M-09 luxury good→coin] [STRONG — cheese is a natural high-value sell]
   - Create: route alpine_salt / milk through create:milling/mixing (or cheese mass via create heat) so dairy/salt bridges the Create cooking web [M-12 processing-chain pull] [MED]
 

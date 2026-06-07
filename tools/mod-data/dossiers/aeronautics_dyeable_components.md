@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes base levitite/tires + a vanilla dye → colored variant. No new processing; pure cosmetic permutation of aeronautics parts.
 
 anchors:    aeronautics (1) — decoration palette for Create Aeronautics ships/vehicles.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - decoration palette is itself a sanctioned support role; the dye step already leans on vanilla dyes (could route dye via Create mixing for color, but that's gilding) [WEAK]
   - none — leave (cosmetic skin layer; forcing a Create/economy edge would be a non-edge)
 

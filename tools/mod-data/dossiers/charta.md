@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES wood/glass for furniture crafting (vanilla). OUTPUTS social-play activity + tavern decoration; no processed material.
 
 anchors:    survival (1) — social/lounge activity + bar decoration palette (friend-group flavor). Borderline pure-deco.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via charta card matches as a gambling/social sink for numismatics coins — wagering at a card_table is the natural fit, but Charta has no built-in betting hook, so this needs KubeJS/external wiring.   [WEAK]
   - Create via create:cutting / pressing weaving the bar furniture + glasses (M-04 deco-through-Create) to earn a second pillar for the tavern set.   [WEAK]
 

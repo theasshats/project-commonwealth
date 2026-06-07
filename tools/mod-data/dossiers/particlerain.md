@@ -13,7 +13,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — no items or materials.
 
 anchors:    support (client / atmosphere) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (could pair thematically with Serene Seasons weather, but that's flavor, not a method edge)
 
 how-packs-integrate (SWEEP): shipped as optional client ambience; tuned via in-game config. https://modrinth.com/mod/particle-rain

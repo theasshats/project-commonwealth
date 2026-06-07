@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes the food items/crops of the bridged mods and re-emits them through each other's stations/recipes (the join key it literally exists to create); aligns c:foods tags pack-wide.
 
 anchors:    survival (1)  — pure food-web connective tissue; directly serves the "one web, not clusters" goal for the cooking/farming cluster.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (it IS the weaving/glue layer for food; nothing of its own to give a 2nd pillar). Its existence already does M-12-style processing-chain unification across the food mods.
 
 how-packs-integrate (SWEEP): added to any pack running multiple Let's Do + Farm&Charm + Farmer's Delight mods so their recipes/tags mesh instead of duplicating. [https://modrinth.com/mod/lets-do-addon-compat]

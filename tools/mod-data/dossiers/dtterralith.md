@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): outputs ordinary logs/saplings on harvest (vanilla item economy, downstream of Create milling/farmersdelight); no foreign-material method of its own.
 
 anchors:    survival (worldgen flavor — Terralith × Dynamic Trees) (1)  [support: compat bridge]
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave (worldgen compatibility layer; its log output already reaches Create/cooking webs as vanilla wood — no bespoke edge warranted)
 
 how-packs-integrate (SWEEP): auto-loaded alongside Terralith + Dynamic Trees so the two coexist; no recipe wiring expected. https://www.curseforge.com/minecraft/mc-mods/dynamic-trees-terralith

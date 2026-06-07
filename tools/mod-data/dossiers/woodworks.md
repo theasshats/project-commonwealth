@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes vanilla + modded logs/planks → wood decoration; the `woodworks:sawmill` recipe type is a connective method other mods' woods could route through (parallel to create:cutting).
 
 anchors:    survival (1) — decoration/building palette (curated friend-group flavor + wood deco).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:crushing — wood-deco blocks crush back to plank/sawdust + XP nugget (lossy), tying the palette into the Create web   [MED · M-04]
   - Create via create:cutting — overlap its Sawmill outputs with Create's saw so wood deco reads as one cutting web (cosmetic recipe-weave, earns a 2nd pillar)   [WEAK · M-12]
 

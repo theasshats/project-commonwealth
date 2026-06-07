@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — operates on dropped-item entities generically, no recipe I/O.
 
 anchors:    support (QoL / perf) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (generic drop-merge; nothing mod-specific to route).
 
 how-packs-integrate (SWEEP): dropped in to cut lag from high-throughput Create/farm drops on servers; tune the cap/blacklist via config. https://modrinth.com/mod/staaaaaaaaaaaack

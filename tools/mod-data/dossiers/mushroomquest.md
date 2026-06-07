@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): outputs a large pool of edible/ingredient mushrooms (effect-bearing) — strong feedstock for cooking/brewing methods; consumes nothing exotic itself (vanilla-style harvest).
 
 anchors:    survival (1)   — foraged food with positive/negative effects; seasonal/biome foraging feeds the survival pillar
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create/survival via farmersdelight:cooking / extradelight:* — run mushrooms through cooking-pot/oven into prepared dishes, folding the fungi into the food-processing chain   [STRONG, M-12]
   - economy via Numismatics shopkeeper — sell rare/mythical mushrooms (and effect tinctures) as luxury foraged goods, a low-floor trade output   [MED, M-09]
   - magic via occultism:spirit_fire / ars imbuement — transmute deadly/mythical caps into reagents, sinking the rare drops into the magic spine   [WEAK, M-11/M-10]

@@ -95,7 +95,7 @@ Format:
 W-### | from: <mod/material> → to: <pillar/mod> | hook: <why a player says "of course">
       | motif: M-## | method: <recipe-type the weave routes through>
       | status: <state> | confidence: COHERENT, BALANCE-PENDING
-      | pillars-added: <mod> gains <pillar> (now N) | sources: [digest][url]
+      | anchors-added: <mod> gains <system> (now N) | sources: [digest][url]
 ```
 
 _No weaves authored yet — Phase 0/1 build the understanding layer (dossiers) first; authoring is Phase 3._

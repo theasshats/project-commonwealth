@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes foreign crop/farm recipes (immersiveengineering:cloche/fertilizer, botanypots:block_derived_crop) to grow modded produce via colony jobs; outputs the citizen storage-terminal blocks. The join key is "colony workers now accept modded crops/storage."
 
 anchors:    survival (extends colony farming/jobs), Create (Courier ↔ Create Stock Link storage bridge) (2)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 (it is itself a bridge mod) — its whole job is wiring MineColonies into Create/IE/storage; no new edge to force.
 
 how-packs-integrate (SWEEP): paired with MineColonies in heavy tech/colony packs so workers interoperate with the pack's storage/farming/combat mods rather than living in a silo. (https://www.curseforge.com/minecraft/mc-mods/minecolonies-compatibility)

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — client camera/movement; no material graph.
 
 anchors:    support (client / movement QoL)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (clientside feel mod)
 
 how-packs-integrate (SWEEP): drop-in alongside Do a Barrel Roll for nicer diving; no wiring (client-only). https://modrinth.com/mod/rolling-down-in-the-deep

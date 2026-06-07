@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): reinforcing accepts a broad set of vanilla/modded blocks as input (the join key — any pack block can become a reinforced variant); otherwise self-contained — its devices emit redstone rather than items, so it mostly anchors via its own crafted gear, not by feeding other mods' methods.
 
 anchors:    support (1) — QoL/anti-grief base-defense utility (relevant to the PvPvE crew, but a utility role, not a content pillar).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via Numismatics — make high-tier security gear (reinforcing, scanners) a sink for traded/scarce metals so base-defense costs feed trade; M-08 coin-from-scarcity. [WEAK]
   - Create via create:crushing/mechanical_crafting — gate reinforcing or sentry components behind Create-made parts so defense ties to the tech spine; M-05 native-method gating. [WEAK]
 

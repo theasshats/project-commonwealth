@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): structures are built from existing block palettes (vanilla + whatever mods provide); it places blocks, doesn't process materials. No method other mods feed into.
 
 anchors:    survival (1)  — exploration/atmosphere worldgen (the world to discover).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave (cosmetic scatter-structure worldgen with no items; a forced recipe/economy edge wouldn't be coherent — loot-table tie-ins belong to whatever it generates, not to Formations itself)
 
 how-packs-integrate (SWEEP): added for ambient overworld variety; ships as-is, optionally with datapack-tuned structure sets. https://modrinth.com/mod/formations

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — pure behavior patch, no items in/out.
 
 anchors:    aeronautics (1) — support glue for the aeronautics pillar. REQUIRED per CLAUDE.md (not optional).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (compat patcher; nothing to weave)
 
 how-packs-integrate (SWEEP): mandatory companion to Create Aeronautics in any pack that runs other mods on ships; keep it in — removing it breaks ridden/audio/turret behavior on contraptions.

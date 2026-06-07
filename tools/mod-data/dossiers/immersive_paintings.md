@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes vanilla crafting mats (the painting item is the join surface); outputs decorative canvas blocks only — no fluids/essences/ores to route.
 
 anchors:    decoration palette / curated friend-group flavor (support — 1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. Pure decorative-expression mod; no material with a coherent Create/magic/economy routing. Forcing an edge (e.g. crafting frames via create) would be busywork, not a "of course" hook.
 
 how-packs-integrate (SWEEP): shipped as a flavor/decoration mod for galleries and personalized builds; commonly paired with photo mods (Exposure has an explicit compat addon). https://modrinth.com/mod/immersive-paintings

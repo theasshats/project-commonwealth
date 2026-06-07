@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes wool/string (vanilla) → sleeping bags/hammocks. No foreign-material join surface of note.
 
 anchors:    survival (1)  — sleep/travel QoL; counts as survival-flavor support
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. A small vanilla-recipe QoL/deco mod; a forced economy/Create edge on dyed sleeping bags would be noise.
 
 how-packs-integrate (SWEEP): a standard exploration QoL include; needs no wiring — players just craft them. https://modrinth.com/mod/comforts https://github.com/illusivesoulworks/comforts

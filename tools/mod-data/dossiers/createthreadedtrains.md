@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — no material; affects only tick scheduling of the existing train network.
 
 anchors:    support (performance) — a pure perf/QoL anchor; needs no weave. (Indirectly serves the aeronautics/logistics pillar by making big train networks viable.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (performance mod; no items to route).
 
 how-packs-integrate (SWEEP): added to Create packs with heavy rail logistics to keep TPS healthy; flagged as potentially fragile against deep train-modifying addons. https://modrinth.com/mod/create-threaded-trains

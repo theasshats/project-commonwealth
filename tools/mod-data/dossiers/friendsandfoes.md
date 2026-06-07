@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): outputs mob drops — crab_claw (→ reach potion via vanilla brewing), copper_golem_head, hostile-mob loot; consumes nothing as a processing method (no machines). Join key is purely its drops feeding OTHER mods' methods.
 
 anchors:    survival (1)  — creature/exploration content (the world to inhabit and fight).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:crushing — its copper-themed deco (copper buttons / lightning rods / copper golem head) recycles to copper nuggets/scrap, tying the copper set to Create's metal economy. [M-04 recycles deco] [WEAK]
   - magic via mob-drop reagent → ars/occultism — route crab_claw / Wildfire / Illusioner drops into the magic web as reagents (e.g. an imbuement or spirit-fire input) so combat loot feeds spellcraft. [M-02 mob-drop reagent sink] [WEAK]
   - (these are honest-but-thin; the mod is deliberately vanilla-like, so consider 'leave' acceptable — don't force)

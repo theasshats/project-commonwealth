@@ -15,7 +15,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none via methods; its "outputs" are the structures and their loot tables (a hook point for custom loot and for seeding villager trades / economy goods).
 
 anchors:    survival (1) — exploration/worldgen content (a sanctioned curated-flavour/world role); makes the overworld denser and gives reasons to travel.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via villagers/Numismatics — its 16 village variants are natural trade hubs; wire structure villagers or chest loot toward the Numismatics economy so settlements anchor trade; M-09 luxury-good→coin (loot/trade routing, not a process). [MED]
   - (no method-routing weave — it's worldgen, not a machine; the economy hook is via loot/trade tables.)
 

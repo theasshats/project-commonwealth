@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes raw/crushed ores across a large modded roster — provides c:crushed_raw_materials/* for adamantite, mythril, orichalcum, palladium, osmium, platinum, runite, quicksilver, lead, nickel, andesite, etc.; outputs molten_<metal> fluids and ingots via create:crushing→mixing→compacting (inbound). Join keys: c:crushed_raw_materials/* tags = a doubling on-ramp for nearly every metal in the pack.
 
 anchors:    Create (1)  — a Create ore-doubling / molten-processing layer; squarely the Create spine (M-03).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics — because it ups the yield of scarce regional metals through Create, those processed metals become the natural mint feedstock; pairs with createblockchain to turn refined scarcity into coin. [STRONG] (M-08 coin from processed scarcity; #136)
   - magic via create:crushing of magic-mod ores — it already tags crushed forms for many modded metals; routing magic-mod metal ores (e.g. occultism/galosphere) through its crush+melt yields the magic side a Create doubling. [MED] (M-03 ore-doubling reward)
 

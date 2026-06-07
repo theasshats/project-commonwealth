@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes foreign food intermediates (FarmersDelight/ExtraDelight/farm_and_charm crops + cooked goods, Blazes); outputs finished dishes, sauce/drink/ice-cream fluids — it is itself the automation bridge for survival-food methods.
 
 anchors:    Create, survival (2)  — bridges Create automation to the survival/food pillar (FarmersDelight et al.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 (Create + survival). Optional 3rd: economy via numismatics — a finished automated dish/feast is a sellable luxury good [M-09, WEAK] — leave to economy pass.
 
 how-packs-integrate (SWEEP): the standard Create↔FarmersDelight bridge in kitchen packs; pairs with create_factory/extradelight/farmersdelight so cooking blocks run on contraptions. https://modrinth.com/mod/create-central-kitchen

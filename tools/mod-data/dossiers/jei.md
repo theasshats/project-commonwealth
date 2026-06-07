@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none.
 
 anchors:    client-only UI (support — 1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role. (Load-bearing for a Create pack: EMI was dropped because it couldn't render Create processing recipes; do not swap.)
 
 how-packs-integrate (SWEEP): the default recipe viewer; mods register JEI plugins so their machines/recipes are browseable. https://modrinth.com/mod/jei

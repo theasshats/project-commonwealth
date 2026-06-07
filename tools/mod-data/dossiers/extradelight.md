@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): its many stations ACCEPT crops/fruits/dairy/meats from ANY mod via c:tags (coffee, garlic, citrus, hazelnut, corn, cucumber…) → meals, doughs, jams, dried goods, reduced fluids. Already fed BY create:mixing + farmersdelight cooking/cutting + butchercraft grinder (existing inbound weaves). Outputs the richest cooked-food/feast set in the pack — a downstream sink for nearly any edible material.
 
 anchors:    survival, Create (2)  — the pack's deep-cuisine survival layer; already partially Create-woven (made-by: create:mixing — fluids/ingredients mixed via Create).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already at 2 pillars. Deepen Create via create:milling/crushing/pressing — route grain→flour, coffee/sugar grinding, and Vat/Evaporator fluid-reduction through Create equivalents so the bakery reads as Create's downstream rather than a parallel kitchen. [M-12 processing-chain pull] [STRONG]
   - economy via numismatics — feasts and high-tier dishes as MineColonies provisioning / sellable luxury goods (cooking effort → coin). [M-09 luxury good→coin] [MED]
 

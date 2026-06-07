@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes Create parts + a Robo Bee item to operate; moves packaged items across the network. No new material — it's a delivery layer over Create packages.
 
 anchors:    Create, aeronautics (2)  — airborne courier logistics = the logistics/transport pillar
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 (Create + aeronautics/logistics). Possible economy adjacency (delivering bought/sold goods to players) but it's infrastructure, not a coin sink — leave.
 
 how-packs-integrate (SWEEP): pairs with Create's stock keeper / package frogports for player-to-player and base-to-base delivery; QoL logistics layer. https://modrinth.com/mod/create-mobile-packages

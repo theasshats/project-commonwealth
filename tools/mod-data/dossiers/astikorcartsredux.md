@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES: wood/planks per wood type to craft each cart variant; seeds loaded into the seed-drill; a draft mount (horse/etc.) to pull. OUTPUTS: bulk crop harvest (reaper) and tilled+sown rows (plow+drill) — a manual-labor farming throughput tool, not an automated machine.
 
 anchors:    survival (1)  — agrarian field-work + hauling; loosely transport but not aeronautics (no ships/trains/logistics network).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:crushing — gate the metal-bearing implements (plow blade / reaper) on Create-processed iron sheets, tying the farm tool tier to the tech spine. [WEAK, M-05]
   - none strong — leave. Carts are vanilla-style transport flavor; forcing an economy/Create edge would be a contrived edge. Survival anchor stands on its own; a 2nd pillar is optional here.
 

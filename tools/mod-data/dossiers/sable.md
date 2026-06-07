@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — it moves arbitrary blocks as physics bodies; no recipe/material graph. Other mods (compat patches) provide tags/behaviors so foreign blocks ride correctly.
 
 anchors:    support (library / physics backend) — underpins the aeronautics pillar but adds no content
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (engine library; the weaving happens in the mods that build ON it)
 
 how-packs-integrate (SWEEP): required backend for Create Aeronautics / Create: Simulated-style physics; pulled as a dependency, never wired directly. https://modrinth.com/mod/sable

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — compat behavior only.
 
 anchors:    support (compat patch) — serves the aeronautics pillar
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (compat glue between two installed mods)
 
 how-packs-integrate (SWEEP): installed only when both Create: Stuff 'N Additions and Sable/Aeronautics are present, to fix on-ship gadget behavior. https://www.curseforge.com/minecraft/mc-mods/create-stuff-n-additions-x-sable-aeronautics

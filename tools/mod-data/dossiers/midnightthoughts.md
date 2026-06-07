@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — ships no items/tags; only applies vanilla-style effects to the player.
 
 anchors:    survival (rest/sleep loop) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave (a rest-buff mechanic with no items to route; pairs thematically with Cold Sweat/Serene Seasons survival but offers no material join key for a 2nd pillar)
 
 how-packs-integrate (SWEEP): survival/immersion packs run it for the well-rested incentive alongside hardcore-sleep or temperature mods. (https://modrinth.com/mod/midnight-thoughts)

@@ -138,7 +138,7 @@ nothing with a suggestion should be frozen; fix aeronautics").**
 - **Aeronautics gap fixed as far as possible here** — created a hand-authored `aeronautics` dossier (content ns
   is `aeronautics:`, not `aeronautics_bundled:`). Only `aeronautics:levitite_blend_bucket` is digest-grounded;
   the rest of Create Aeronautics' parts are code-registered and the scan missed them. Dossier seeds levitite +
-  the sweep-known parts with OUTBOUND 2nd-pillar candidates (levitite → economy/magic) so the pillar is finally
+  the sweep-known parts with OUTBOUND 2nd-anchor candidates (levitite → economy/magic) so the pillar is finally
   reviewable, banner-flagged PARTIAL. **Still needs a real digest regen on the box (#131) for exact part ids.**
 
 **[NOTE] Exclusion ABOLISHED — review EVERYTHING (maintainer call).** Passes 00–12 were not exhaustive on two

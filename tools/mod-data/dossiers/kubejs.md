@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a directly — it is the tool that wires other mods' consumes/outputs together.
 
 anchors:    support (modpack tooling) (1)  — the scripting backbone; enables weaving rather than being woven.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (it is the weaving tool, not a weave target).
 
 how-packs-integrate (SWEEP): the standard 1.21.1 recipe/script toolkit; every curated pack uses it to retune recipes. [https://modrinth.com/mod/kubejs]

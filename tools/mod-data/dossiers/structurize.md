@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none directly — it's the framework MineColonies builders use to consume the player's block inventory while constructing; no recipes of its own.
 
 anchors:    support (library — MineColonies build engine) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (required dependency for MineColonies; its weave is MineColonies' weave).
 
 how-packs-integrate (SWEEP): never added alone — shipped because MineColonies/StyleColonies require it. https://minecolonies.com/wiki/dependencies/structurize/

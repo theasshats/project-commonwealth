@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES — milk, sniffer eggs, torchflower/pitcher/cherry plant matter, sugar/grains; tagged item/foods/berry (lantern fruit). OUTPUTS — prepared meals, cakes/pies (sliceable blocks), drinks, cheese; foods feed Spice of Life variety + any food-value/seasonal consumers.
 
 anchors:    survival (1)  — food/cooking diversity (Spice of Life variety, hunger management)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via luxury-food→coin — multi-step dishes (cherry cheese pie, ancient coffee) are high-effort processed goods, natural Numismatics sell-goods / colony deliverables. [MED] (M-09 luxury good→coin)
   - Create via milling/processing — already lands in the farmersdelight processing web; Create milling/crushing of its crops or pressing for the cheese/drink chain would add the Create pillar (the pack's standard cooking↔Create weave). [MED] (M-12 processing-chain pull)
 

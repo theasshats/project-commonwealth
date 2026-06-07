@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): no material processing — transmog edits NBT/appearance, statues store a skin. Nothing foreign to route through.
 
 anchors:    library/API (support — 1); incidentally feeds magic as Iron's Spellbooks' dependency
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. Support library; the transmog table / statue are cosmetic blocks with no routable material. Don't weave a library.
 
 how-packs-integrate (SWEEP): pulled automatically as a hard dependency of Iron's Spells 'n Spellbooks; never added for its own sake. https://modrinth.com/mod/irons-lib

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none.
 
 anchors:    support (client rendering/resourcepack) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (client texture engine; no game content).
 
 how-packs-integrate (SWEEP): bundled so OptiFine-format resourcepacks (random/emissive mobs) work on NeoForge; paired with EMF for models. https://modrinth.com/mod/entitytexturefeatures

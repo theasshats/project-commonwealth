@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes/feeds nothing material itself; its OUTPUT is the c: tag set — the join key that lets the pack's food/Create/economy recipes target unified crop tags instead of per-mod ids.
 
 anchors:    support (QoL + tag harmonization for the survival/food web) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (a tag/QoL helper; it ENABLES food-web weaves by unifying c:crops/c:foods tags rather than being a node — analogous to lootjs for loot)
 
 how-packs-integrate (SWEEP): shipped alongside MineColonies in colony/farming packs for the scrolls and for the crop/food tag unification that lets modded produce slot into shared recipes. (https://www.curseforge.com/minecraft/mc-mods/minecolonies-tweaks)

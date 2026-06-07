@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — no items or world interaction.
 
 anchors:    support (QoL) (1)  — pet-handling convenience; sanctioned anchor needing no weave.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (behavior tweak; no content to weave)
 
 how-packs-integrate (SWEEP): drop-in via Collective lib; packs add it for pet/companion QoL and ship defaults. https://modrinth.com/mod/followers-teleport-too

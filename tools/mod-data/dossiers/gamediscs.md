@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES its own component parts to craft the console; OUTPUTS purely cosmetic playables (no material/resource feedstock).
 
 anchors:    survival (1) — curated friend-group novelty/flavor (a downtime toy); no resource role.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. Pure novelty toy with cosmetic outputs; forcing a recipe weave onto an arcade gadget would be a contrived edge. (At most, its component parts — processor/redstone_circuit — could be Create-craftable flavor, M-12, but WEAK and not worth it.)
 
 how-packs-integrate (SWEEP): Dropped in as a downtime/easter-egg toy; rarely wired into progression — the disc-from-skeleton-kill gimmick is the whole loop. https://modrinth.com/mod/game-discs

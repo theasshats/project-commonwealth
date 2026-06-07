@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): moves/gates any Create-compatible fluid (water, lava, honey, modded fluids); its parts are made THROUGH Create (compacting/deploying/mechanical_crafting/mixing) — copper/brass-tier infra. No new fluids of its own.
 
 anchors:    Create, aeronautics (2)  — Create-spine fluid tooling, and fluid logistics/transport (the centrifugal pump + interfaces = better fluid routing for bases/ships).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already at 2 pillars (Create + logistics); no forced third needed. (Decor neon-tube/sink set is a flavor bonus, not a separate pillar.)
 
 how-packs-integrate (SWEEP): used in Create packs to replace pump-spam with longer-range fluid lines and tidy plumbing decor; recipes already route through Create machines. https://modrinth.com/mod/create-fluid

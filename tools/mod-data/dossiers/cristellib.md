@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — operates on structure config data, not items.
 
 anchors:    support (library) — sanctioned support role; needs no weave. (Its deps t_and_t / expanded_ecosphere are the structure mods it backs.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role.
 
 how-packs-integrate (SWEEP): pulled in automatically as a dependency of structure/worldgen mods; packs may use its configs to tune structure spawn rates. https://modrinth.com/mod/cristel-lib

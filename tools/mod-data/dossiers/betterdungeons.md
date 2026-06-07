@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES: nothing (no recipes). OUTPUTS: explorable danger-content + chest loot (datapack-overridable loot tables) — a content sink that consumes adventuring effort and a place to seed/find foreign mod items.
 
 anchors:    survival (1)  — exploration/danger content (world pushing back); structures + loot only.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics bounty / loot — seed coins or sellable rarities into its loot tables, or use the dungeons as bounty targets (loot tables are datapack-editable). [MED, M-08-adjacent]
   - magic via loot-seeded reagents — drop Ars/Occultism/boss reagents in dungeon chests to gate magic progression behind exploration. [MED, M-02]
   - (no method to route a material THROUGH — it has none; weaves here are loot-table seeding, not recipe routing.)

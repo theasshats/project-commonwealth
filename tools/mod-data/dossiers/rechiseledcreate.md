@@ -13,7 +13,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes Create decorative blocks (asurine, andesite, etc.) and its own variants; outputs the chiseled variant 1:1. The join: it pulls Rechiseled's chiseling system THROUGH Create kinetics — the canonical deco→Create weave.
 
 anchors:    Create, support/decoration (2)  — depends on create + rechiseled; the Mechanical Chisel makes it a genuine Create-powered method, and it is itself a decoration palette.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — already ≥2 (Create kinetic method + decoration). This mod IS the bridge that earns Rechiseled its Create pillar.
 
 how-packs-integrate (SWEEP): added alongside Rechiseled in Create packs to give the whole chisel palette a kinetic, automatable Mechanical Chisel. https://modrinth.com/mod/rechiseled-create

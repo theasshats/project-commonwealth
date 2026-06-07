@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): outputs cap/stem blocks, mushroom items, saguaro_fruit, cactus pieces — all bulk organic feedstock; could accept dynamictrees fertilizer/bonemeal as growth input.
 
 anchors:    survival (worldgen/foraging) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:milling/crushing — run saguaro_fruit / mushroom caps through milling for a dye or food intermediate, the way Create mills crops; classic "raw forage → processed good" [MED, M-12]
   - economy via numismatics — saguaro_fruit or mushroom blocks as a cheap regional sell-good [WEAK, M-09]
   (note: weave the Plus-namespace OUTPUTS; the parent dynamictrees dossier owns the seed/sapling methods.)

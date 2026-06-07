@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes copper ingots/nuggets (tagged item/nuggets/copper) into a wide copper deco/tool/armor tree; outputs an oxidation palette + Copper Golem item-sorting. Join key: copper is a Create staple — its blocks are crushing-recycle candidates, and the Copper Golem overlaps Create's logistics niche.
 
 anchors:    survival (1)  — vanilla-style copper expansion (build + tools); ships some ids under the `minecraft:` namespace
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:crushing — copper deco/tools crush back to copper nuggets/raw + an XP nugget, folding the whole copper set into the Create copper economy. [M-04 recycles deco / M-03 ore-doubling spirit] [MED]
   - aeronautics/logistics via Copper Golem — the golem's chest-to-chest hauling sits beside Create's logistics; thematically a low-tech sorter that complements (or feeds into) Create item transport. [WEAK]
 

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes #c:ingots/steel (Create-routed in this pack) plus, via the authored weave, create:electron_tube / precision_mechanism / tfmg:steel_casing+mechanism; outputs force-field projection (no item output). Energy is its own Fortron, not FE.
 
 anchors:    Create (machines built via Create methods, 60-mffs.js), survival (PvE base-defense for the friend group) (2)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 — the GOLD-STANDARD Create weave is authored here: focus_matrix gated on create:electron_tube (M-05); projector + interdiction_matrix are create:sequenced_assembly chains through derpack:incomplete_* parts (M-06); mid-tier machines use TFMG steel. No new edge needed.
 
 how-packs-integrate (SWEEP): tech packs ship it as endgame base-protection; here it is the reference example for routing a mod's flagship machines through Create native-method gating + sequenced assembly. (https://modrinth.com/mod/mffs)

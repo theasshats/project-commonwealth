@@ -13,7 +13,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): OUTPUTS food meat (venison, bushmeat, cooked variants) + reagent-ish drops (antler bone-analog, glow_goop light material, snail shell). net CONSUMES insect entities. No foreign inputs.
 
 anchors:    survival (1)  — food meat + ambient fauna; froglass/shellstone are vanilla-style deco.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics sale of cooked venison/bushmeat as a butcher trade good — meat is a renewable luxury-food sink. [MED] M-09
   - Create via create:crushing of shellstone/froglass deco → sand/cobble + xp nugget (lossy recycle), giving the deco set a second home. [WEAK] M-04
   - Create via create:cutting/farmersdelight cooking of raw meat → fed into the food processing chain. [MED] M-12

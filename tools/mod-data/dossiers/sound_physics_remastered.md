@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — audio rendering only.
 
 anchors:    support (client/immersion) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (client audio; nothing to weave)
 
 how-packs-integrate (SWEEP): shipped as a client immersion mod, no recipe wiring. https://modrinth.com/mod/sound-physics-remastered

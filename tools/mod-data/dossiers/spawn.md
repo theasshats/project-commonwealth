@@ -15,7 +15,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): OUTBOUND — its mob/crop drops already FEED farmersdelight:cooking + farmersdelight:cutting (existing inbound weave) and provide c:rods/wooden; casting_net_clam consumes a net interaction to yield clams. INBOUND join keys: its seafood/critter drops are raw material any cooking/processing method can accept.
 
 anchors:    survival (1) — fauna/biome flavour that feeds the food layer via Farmer's Delight (cooking/cutting). The FD bridge is real but it's still essentially a one-pillar critter mod.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - survival/food via Create milling / FD cutting — push clam/crab/fish drops deeper into the processing web (seafood dishes, meal-feast chains); M-12 processing-chain pull. [MED]
   - economy via Numismatics — sell seafood/clam-pearl variants and exotic catches as trade goods, giving fishing an economic payoff; M-09 luxury-good→coin. [MED]
   - aeronautics via createfisheryindustry — if mechanized fishing is wanted, its fish/clams are natural inputs to Create-driven aquatic harvesting/logistics; M-12. [WEAK]

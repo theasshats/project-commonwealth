@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes raw tin/iron/copper + crushed metals & coal (via Create) → tin/bronze/steel ingots, plates, tools, armor. Exposes a full c:tags metal vocabulary (ingots/plates/nuggets/storage for tin/bronze/steel) — a join key any metal-consuming mod or coin-mint can pull.
 
 anchors:    Create (1)  — a Create-processed metal tier (ore→alloy→gear), with worldgen ore
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics — Tin is a fresh scarce/regional metal: crush → process → mint into coin (the pack's scarcity-economy seam) [M-08, STRONG]
   - survival/worldgen — Tin ore as a regional-scarcity resource that pushes trade/specialization (its bias is set in the 3 biome-modifiers) [M-08 feeds this; ties to the scarcity north-star, MED]
 

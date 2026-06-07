@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none.
 
 anchors:    support (library) (1)  — sanctioned support role; needs no weave.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (dependency library; nothing to weave).
 
 how-packs-integrate (SWEEP): Pulled only as a dependency (opacpvp needs it); never wired directly. https://modrinth.com/mod/necronomicon

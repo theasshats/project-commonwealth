@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES Create metals/casting outputs (bronze, cast iron, steel, nethersteel barrels — built via create:cutting and CBC's own *_munition_assembly types) and gunpowder/propellant for munitions. OUTPUTS assembled autocannon/rocket weapon blocks + loaded munitions for ship/contraption armament.
 
 anchors:    Create, aeronautics (2) — entirely Create-machined artillery (cutting/casting + sequenced munition assembly) that arms Aeronautics ships/contraptions; core PvPvE combat for the aeronautics pillar.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 (Create + aeronautics). Deepening only: gate the heavy-autocannon/rocket tier behind a boss-drop or MineColonies unlock (M-05 native-method gating) to fit the pack's scarcity/progression curve — design choice, not a missing pillar.
 
 how-packs-integrate (SWEEP): added to Create+Aeronautics combat packs to expand CBC's cannon roster for ship-to-ship warfare; munitions craft through CBC's assembly chain. [https://modrinth.com/mod/create-big-cannons-advanced-technologies]

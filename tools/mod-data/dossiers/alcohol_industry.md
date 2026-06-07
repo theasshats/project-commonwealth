@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes Alcohol Base fluid (+ flavor ingredients) → bottled/bucketed beer/vodka/whiskey/tequila with status effects; the base already pulls fermentable inputs through Create mixing.
 
 anchors:    Create, survival (2) — Create-driven processing chain feeding drinkable consumables (food/buff layer).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 (Create + survival). For a 3rd: economy via Numismatics — finished liquors as a sellable luxury good (M-09 luxury→coin); bottled spirits are a natural trade commodity. [STRONG]
 
 how-packs-integrate (SWEEP): wired as a Create production line whose outputs feed taverns/trade or effect-buffs; recipes lean on Create mixing/filling so it sits inside the Create web.

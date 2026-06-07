@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — no survival material.
 
 anchors:    support (library/API) — dependency for sbom_xela mobs.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role.
 
 how-packs-integrate (SWEEP): auto-pulled as a dependency; never wired directly. [https://www.curseforge.com/minecraft/mc-mods/citadel]

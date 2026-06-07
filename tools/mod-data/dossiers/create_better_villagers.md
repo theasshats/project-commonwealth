@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): villagers consume emeralds (+ raw materials for Miner) and output Create components/sheets/raw parts as trades. Join key: it is a direct *Create-parts source via the trade economy* — a ready bridge between villager trading and the Create spine.
 
 anchors:    Create, economy (2)  — supplies Create parts AND does it through the (vanilla emerald) trade economy
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already 2-pillar (Create + economy). Optional deepen: re-denominate its trades from emeralds into Numismatics coins so it feeds the *pack's* economy pillar rather than vanilla emeralds. [M-08 coin from processed scarcity] [MED — config/recipe, not required]
 
 how-packs-integrate (SWEEP): used in Create packs to make villagers a sanctioned Create-parts source and seed an early trade loop; commonly tuned alongside Numismatics-based economies. https://modrinth.com/mod/create-better-villagers

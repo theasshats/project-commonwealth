@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes vanilla base blocks (logs, stone, concrete, etc.) to craft cuts; outputs slabs/stairs/walls. Stonecutter-shaped → naturally fits Create cutting (saw).
 
 anchors:    support — decoration palette (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:cutting — give the 847 cuts mechanical-saw recipes so they're producible on the Create spine (bulk building automation), earning the deco set a second pillar   [STRONG, M-12]
   - Create via create:crushing — crushing the gravity/stone cuts back to sand/gravel/cobble closes the recycle loop   [WEAK, M-04]
 

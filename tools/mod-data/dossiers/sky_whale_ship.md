@@ -15,7 +15,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — it neither consumes nor outputs materials via methods; its only "output" is loot-table rewards on the structures (a place to point custom loot at).
 
 anchors:    survival (1) — adventure/exploration content (a sanctioned curated-flavour role; the world giving players a destination).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - aeronautics via thematic + loot — sky whales are a natural endpoint for Create Aeronautics airships (fly up to board/raid them); wire their loot to drop aeronautics/Create progression items so reaching them rewards ship-tech. Loot-table routing, not a process; M-05 native-method gating (loosely). [MED]
   - economy via Numismatics — make whale-loot a source of tradable rarities / bounty targets; M-09. [WEAK]
 

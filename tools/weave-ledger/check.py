@@ -13,7 +13,7 @@ Checks (hard = exit nonzero):
   - every kubejs bridge recipe file is referenced by >=1 weave          [advisory: un-ledgered edges]
 Coverage (advisory):
   - dossiers: total / VERIFIED / UNVERIFIED / still-skeleton
-  - mods at <2 pillars (the weave worklist), parsed from the `anchors:` line
+  - mods at <2 anchors (the weave worklist), parsed from the `anchors:` line
 """
 import os, re, sys, glob, json
 
@@ -23,6 +23,7 @@ LEDGER = os.path.join(HERE, 'weaves.json')
 KUBEJS = os.path.join(ROOT, 'kubejs', 'server_scripts', 'recipes')
 DOSSIERS = os.path.join(ROOT, 'tools', 'mod-data', 'dossiers')
 PALETTE = os.path.join(HERE, 'methods-palette.md')
+# the loop's anchorable systems (anchor labels in dossiers); `aeronautics` = the economy's logistics arm
 PILLARS = ('create', 'magic', 'economy', 'aeronautics', 'survival')
 
 errs, warns = [], []
@@ -111,9 +112,9 @@ def coverage():
     print(f'  dossiers: {total} total · {verified} VERIFIED · {skeleton} still-skeleton · '
           f'{total - skeleton} touched')
     if total - skeleton:
-        print(f'  anchoring: {multi} at >=2 pillars (coverage met — NOT "done"; existing connections '
+        print(f'  anchoring: {multi} at >=2 anchors (coverage met — NOT "done"; existing connections '
               f'still need a taste/balance audit, WEAVING-PLAN §6) · {support} support-role · '
-              f'{len(low_pillar)} CONTENT mods at <2 pillars (coverage worklist)')
+              f'{len(low_pillar)} CONTENT mods at <2 anchors (coverage worklist)')
         for name, n in low_pillar[:60]:
             print(f'      [{n}] {name}')
         if len(low_pillar) > 60:

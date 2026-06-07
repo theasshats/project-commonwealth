@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none craftable; "outputs" are a discoverable structure populated with vanilla villagers (i.e. trade access + loot) and any chests therein.
 
 anchors:    survival (1) — exploration/worldgen content (a place the world hands you).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics trade — Stoneholm villagers are a natural place to seat Numismatics-priced trades/bounties, making underground settlements an economy node   [MED · M-09]
   - (no method to route material through — it owns no recipe type; the weave is location/trade-seating, not a processing edge)
 

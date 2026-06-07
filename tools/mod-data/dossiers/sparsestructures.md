@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — operates on the structure placement registry, not items.
 
 anchors:    support (QoL / worldgen-tuning) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (pure worldgen-config; no items to route).
 
 how-packs-integrate (SWEEP): dropped in to thin out structure density (pairs with structure-adding mods like Towns and Towers / dungeon mods); tune via config. https://modrinth.com/mod/sparsestructures

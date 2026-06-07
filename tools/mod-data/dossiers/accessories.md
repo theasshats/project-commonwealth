@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none directly — host mods register their wearables into its slots.
 
 anchors:    support (1) — library/API. No standalone gameplay content.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (slot API; the wearables that weave live in other mods)
 
 how-packs-integrate (SWEEP): included as the accessory backbone; paired with accessories_compat_layer so Curios/Trinkets mods funnel into one slot set.

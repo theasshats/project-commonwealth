@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes vanilla/foreign bait crops, gems (amethyst/diamond/lapis/prismarine), and ingots (copper/gold/iron) to craft bobbers/rods/bait; outputs raw + cooked fish (c:foods/raw_fish, c:foods/cooked_fish) — a large new food + cooking-input stream. Already feeds farmersdelight:cutting (filleting).
 
 anchors:    survival (1)  — a food + seasonal-collection sink; the world (biomes/seasons) gates what you catch.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via Numismatics: fish are the canonical "sellable goods" (search says catches can be sold to villagers) — rare/biome-locked fish make natural bounty/trade stock [STRONG] (M-09)
   - Create via farmersdelight/create milling: route raw fish through cutting/cooking into delight dishes, or crush fish trophies/byproducts to fishmeal fertilizer [MED] (M-12)
   - magic via Ars/Occultism: exotic fish (abyss_angler, void catches) as ritual/imbuement reagents [WEAK] (M-02)

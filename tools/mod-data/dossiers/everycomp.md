@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes (depends on) create + mcwdoors + mcwtrpdoors + blockus + moonlight to know which block-shapes and woods to combine; outputs the missing wood-variant blocks (and their crafting/sawmill recipes) into those host namespaces.
 
 anchors:    support (decoration palette + cross-mod compat) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (it's a generator, not a content set of its own). Its outputs already ride the host mods' recipes (incl. Create/Macaw wood shapes), so any weaving belongs on those host mods, not here.
 
 how-packs-integrate (SWEEP): standard "one universal wood-compat mod" — added so every mod's wood blocks exist in every wood; nothing to configure, it's automatic. https://modrinth.com/mod/every-compat

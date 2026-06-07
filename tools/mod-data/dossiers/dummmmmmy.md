@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): "consumes" worn armor/heads cosmetically to set its type; no material processing or output to route.
 
 anchors:    support (QoL / combat-testing) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave (a damage-test prop; its only value is measuring hits — magic/combat tie is just its use-case, not a weave; forcing an edge would be contrived)
 
 how-packs-integrate (SWEEP): handy in magic/combat-heavy packs to sanity-check spell/weapon numbers; left as a craftable utility, no progression wiring. https://modrinth.com/mod/mmmmmmmmmmmm

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES nothing foreign (a tool item). Acts on create fluid pipes; outputs denser plumbing, not material. Declares 1 c:tag (likely a tool tag).
 
 anchors:    Create (1) — Create fluid-logistics QoL; tightly bound to Create's pipe system.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. A single utility tool for Create plumbing; no second-pillar weave is coherent. Supports the Create spine.
 
 how-packs-integrate (SWEEP): dropped into Create packs that build compact fluid systems; the wrench is crafted and used, no further wiring. [https://modrinth.com/mod/create-more-parallel-pipes]

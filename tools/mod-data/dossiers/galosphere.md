@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): OUTPUTS allurite_shard + lumiere_shard (the pack's RESERVED M-07 attunement catalysts — already gating magic conversions in 33/80/97) and palladium (c:ingots/palladium, NOT silver — Galosphere renamed silver→palladium but kept legacy item id; never unify as c:ingots/silver). CONSUMES vanilla leather/TNT into its sterling/bomb recipes; preserved_transform takes "preservable" items into amber.
 
 anchors:    survival (1) — new cave biomes/worldgen + a scarce regional metal (palladium); the underground pushing back. (Lamps/brick/amethyst sets are a strong deco-palette bonus; its shards already reach magic via M-07.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - magic — already established: allurite_shard/lumiere_shard are the reserved M-07 attunement catalysts riding host magic methods (a worldgen consumable that gates conversions so they aren't free arbitrage). This is its real second pillar. [STRONG, M-07]
   - economy via numismatics — palladium (scarce, regional per CLAUDE.md) is a natural coin-from-processed-scarcity good once Create-refined; M-08. [MED]
   - Create via create:crushing — palladium ore → crushed for ore-doubling, folding the metal into the tech spine (M-03); deco bricks crush-recycle (M-04). [MED]

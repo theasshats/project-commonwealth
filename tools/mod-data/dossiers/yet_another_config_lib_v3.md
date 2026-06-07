@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — no items in/out.
 
 anchors:    support (1) — library/API (config-screen generation; dependency of other mods).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (config-UI library; nothing to weave)
 
 how-packs-integrate (SWEEP): pulled in as a hard dependency of mods that use it for their settings screens; never configured directly. https://modrinth.com/mod/yacl

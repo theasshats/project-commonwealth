@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — documentation only; doesn't process materials.
 
 anchors:    client-only UI (support — 1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role. (Its recipe-types are JEI categories; not a weave surface despite appearing in methods-palette.)
 
 how-packs-integrate (SWEEP): added with JEI so modded status effects are documented in-viewer; part of the pack's recipe-overhaul stack (JEI+JER+JEED, CLAUDE.md). https://modrinth.com/mod/just-enough-effect-descriptions-jeed

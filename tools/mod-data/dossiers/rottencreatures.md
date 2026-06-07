@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): OUTPUTS mob-kill drops (frozen_rotten_flesh, magma_rotten_flesh, corrupted_wart) + decorative mob heads — these are exactly the reagent-style drops a Create haunting / Occultism spirit_fire / Ars crush method could consume. No machine of its own.
 
 anchors:    survival (1)  — combat-difficulty / hostile-mob variety; the world pushing back at night & in biomes
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - magic: route themed drops (frozen/magma rotten flesh, corrupted_wart) through occultism:spirit_fire / ars_nouveau:crush as transmutation reagents — turns kill-loot into an arcane input [M-02 mob-drop reagent sink / M-11 ritual sink] [STRONG]
   - Create: drops via create:haunting/crushing into byproducts (e.g. flesh→something), giving the bestiary a Create sink [M-02 mob-drop reagent sink] [MED]
 

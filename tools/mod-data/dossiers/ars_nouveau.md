@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES (as Source via sourcelinks): any crop/sapling growth, any burnable fuel, any mob death/baby, any brewed potion → a huge non-recipe sink for foreign organic/farm/mob output. CONSUMES (imbuement): lapis/amethyst → source_gem (the magic currency). OUTPUTS: source_gem (M-01 hub reagent), spell scrolls, enchanted gear, archwood lumber, mob-drop loot via drygmy.
 
 anchors:    magic (1)  — the spine of the magic pillar; not yet wired to Create/economy/survival.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - magic↔survival via Vitalic/Agronomic Sourcelink — farm/mob mods' surplus (crops, drops, babies) already feed Source generation natively; lean on it as the organic→magic sink. [STRONG, M-02]
   - magic-internal hub via imbuement — foreign essences mint into/out of source_gem; this IS the M-01 spine, reserved here. [STRONG, M-01/M-10]
   - economy via numismatics — source_gem or spell scrolls as a sellable arcane good. [WEAK, M-09] (prefer leaving economy to dedicated arcane-currency weaves)

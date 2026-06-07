@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): worker requests pull ANY pack item via the request system (huge inbound surface); outputs colony food (apple_pie, baked_salmon, c:foods/* breads/soups/vegetables) and raw mined ore. Composter consumes organics → compost; quarries output stone/ore streams.
 
 anchors:    survival (settlement + food/farming), Create (quarries built from Create parts via 98-minecolonies.js) (2)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 — Create weave authored (M-05 native-method gating: quarries on andesite/brass casings + cogwheel/precision_mechanism, sceptergold stamp preserved). Deeper Create tech is gated BEHIND colony research per design (the on-ramp), not a new edge to add here.
   - (economy is a possible 3rd via M-09: colony-produced food/goods as sellable trade goods, but emergent — leave to the economy pillar)
 

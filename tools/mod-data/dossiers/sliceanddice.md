@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes whole-food inputs to slice (anything with an FD cutting recipe — vegetables, meats, logs) and tools to drive it; Sprinkler consumes piped water/lava/modded fluids; outputs the same products as the hand cutting-board/cooking-pot, now automatable.
 
 anchors:    Create, survival (2) — it is the automation glue between the Create spine and the Farmer's Delight food layer.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave (already 2-pillar; it IS a motif M-12 processing-chain bridge by design — no extra weave needed).
 
 how-packs-integrate (SWEEP): standard pairing in any Create + Farmer's Delight pack to let kitchens scale on shafts/belts; near-zero config, install-and-go. https://modrinth.com/mod/slice-and-dice

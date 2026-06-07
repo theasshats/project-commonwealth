@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes whatever food ingredients are stocked in connected storage and crafts vanilla/modded food recipes; Toaster consumes bread. Join key: it aggregates and surfaces the OUTPUT of every food mod (Farmer's Delight, Vinery, Meadow…), so it is naturally a downstream sink for the survival/food cluster rather than a source.
 
 anchors:    survival (1)  — food/cooking convenience
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:* part gating — the Oven/Fridge/Sink are flagship appliance blocks; gating the upgraded appliances on Create brass/copper sheets (M-05) earns the kitchen a Create tie without touching its food logic. [M-05 native-method gating] [MED]
   - economy via numismatics — none strong: it sells nothing new (it cooks others' foods); leave economy to the food mods it aggregates. [WEAK]
 

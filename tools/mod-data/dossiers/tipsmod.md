@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a
 
 anchors:    support (QoL/client / pack-authoring) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (could carry pack-specific onboarding/progression tips, but that's content authoring, not a pillar weave)
 
 how-packs-integrate (SWEEP): packs ship a tips.json with onboarding/lore/progression hints; otherwise zero-config. https://www.curseforge.com/minecraft/mc-mods/tips

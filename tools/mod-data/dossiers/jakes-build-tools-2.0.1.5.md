@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes vanilla mats to craft; the experience_flask items store/release XP. No foreign-material processing surface to route through.
 
 anchors:    QoL / building tools (support — 1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. Build-assist tools; nothing to refine/process. Could *cosmetically* recipe-weave the tools through create (M-05 native-gating), but they're consumable builder utilities, not progression items — a forced edge.
 
 how-packs-integrate (SWEEP): dropped in as a builder convenience pack alongside other building/decoration mods; tools crafted from vanilla materials, no progression gating. https://modrinth.com/datapack/jakes-build-tools

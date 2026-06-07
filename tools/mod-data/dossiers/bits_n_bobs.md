@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes Create stones/brass to craft its blocks (already routes through Create). Its many deco tiles (andesite/asurine/crimsite/etc.) are crushable feedstock — outputs would be the matching crushed/cobble via Create milling/crushing.
 
 anchors:    Create, survival (2) — kinetic + display machinery on the Create spine; broad decoration palette for builds. (Already at the 2-pillar goal.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 pillars; no new edge needed. If reinforcing: M-04 Create recycles deco — its tile/chair blocks crushable back to crushed-stone/planks via create:crushing, tightening the deco→Create loop. [MED]
 
 how-packs-integrate (SWEEP): added as a Create-aesthetic expansion; chain drives used in real builds, the rest as decoration. Sits inside the Create cluster by construction. https://modrinth.com/mod/create-bits-n-bobs

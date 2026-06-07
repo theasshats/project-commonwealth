@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — no items in/out; mobs use vanilla rotten-flesh-style drops (no unique reagent to weave).
 
 anchors:    survival (1) — the world pushing back (harder undead). Curated friend-group difficulty flavor.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave (no unique drop or method to route through; forcing a drop-reagent here would be an invented edge)
 
 how-packs-integrate (SWEEP): shipped purely for combat difficulty/variety; never recipe-wired. https://modrinth.com/mod/mutants-and-zombies

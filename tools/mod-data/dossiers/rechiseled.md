@@ -13,7 +13,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes a base block (1:1, reversible) and outputs its decorative variant; no foreign material sink. The chiseling-recipe groups are the join surface the Create companion (rechiseledcreate) hooks into.
 
 anchors:    support (decoration palette) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via Mechanical Chisel — the rechiseledcreate companion (already in pack) adds a kinetic Mechanical Chisel that runs these chiseling recipes on Create power, routing this whole palette through the Create spine. [STRONG, M-04]  (decoration palette already counts as a valid support anchor.)
 
 how-packs-integrate (SWEEP): shipped as a connecting-textures decoration base; in Create packs paired with rechiseledcreate for the Mechanical Chisel. https://modrinth.com/mod/rechiseled

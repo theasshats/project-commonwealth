@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES — fluids into tanks (water/lava/potions, any bucketable fluid); craft inputs are mostly themed leathers/wools/mob drops + the upgrade ingredients. OUTPUTS — stored items/fluids on demand; no processing output. Tanks make it a portable fluid buffer.
 
 anchors:    survival (1)  — exploration logistics / carry capacity + portable fluid + respawn point
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - aeronautics via portable logistics — carry capacity + a fluid buffer + respawn is core to long-range Aeronautics expeditions; thematically a transport/logistics fit, but it's a passive item, not a routable method. [WEAK]
   - Create via recipe-weaving the packs/upgrades — its 30+ variants and upgrade modules are an easy place to thread a Create-pressed/sequenced component for a second pillar (deco-style weave). [WEAK] (M-06 sequenced-assembly keystone)
   - Otherwise lean support (QoL/storage); don't force an edge.

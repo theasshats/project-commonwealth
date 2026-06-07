@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes arbitrary blocks as drone body/ability parts — drill/lodestone/beacon and any cosmetic blocks (modded blocks usable as body); rotors/controller are metal-crafted. Join surface: the drill/thrusters are natural Create-material sinks, and the "ability block" slots can pull in foreign functional blocks.
 
 anchors:    aeronautics (drone flight / logistics + auto-mining transport) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via gating the rotors/ion_thruster + controller behind Create-machine fabrication (brass/precision parts, sequenced assembly for the ion thruster) so the better drone tiers are a Create build [M-06 sequenced-assembly keystone / M-05 native-method gating, MED] — strongest coherent weave; ties the tech-spine to flight.
   - economy via pocket_drone / drill-drone as a sellable crafted good (Numismatics) [M-09 luxury good→coin, WEAK]
   - leave-able if a Create-recipe weave is undesired; aeronautics anchor already coherent.

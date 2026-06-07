@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none.
 
 anchors:    support (client UI/QoL) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (client chat helper; no game content). Friend-group flavor.
 
 how-packs-integrate (SWEEP): drop-in client convenience; nothing to wire. https://modrinth.com/mod/emoji-type

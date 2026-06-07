@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — gating API. No items in/out.
 
 anchors:    support (1) — progression-gating library/API. No standalone gameplay content of its own.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (library; nothing to weave). Mechanically a hook for native-method gating (M-05) when a dependent mod uses it.
 
 how-packs-integrate (SWEEP): pulled in as a dependency of mods that hide worldgen blocks until unlocked (Occultism-style); driven by their datapacks, not configured directly.

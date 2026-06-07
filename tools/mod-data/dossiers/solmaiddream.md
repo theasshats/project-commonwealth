@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes nothing itself; rides on whatever foods the pack feeds maids (every food mod feeds it). Pure stat-growth layer for companions.
 
 anchors:    survival (1) — extends the Spice-of-Life food-variety theme; also leans on the magic/companion side via Touhou Little Maid (its hard dep), but that pillar isn't directly fed by this addon's mechanic.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave (tiny flavour addon; its only hook is the food pool it already shares with the SoL pillar; forcing a second edge would be artificial).
 
 how-packs-integrate (SWEEP): niche addon added only in packs already running Touhou Little Maid + a Spice of Life variant, to make maids benefit from varied feeding; config-tunable milestones. https://modrinth.com/mod/spice-of-life-maids-dream

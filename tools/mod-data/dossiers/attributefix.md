@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — pure compatibility patch.
 
 anchors:    support (library/fix) (1)  — enables magic/combat gear to scale; no weave needed.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role.
 
 how-packs-integrate (SWEEP): Dropped in any pack with attribute-heavy gear (magic, RPG, combat) to stop cap clamping. https://modrinth.com/mod/attributefix

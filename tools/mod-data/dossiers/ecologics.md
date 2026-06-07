@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): OUTPUTS food/fruit/nut/soup items + 2 woodsets + seashell storage blocks; no machine of its own — its fruits/nuts/woods are inputs other methods consume (milling, cooking, juicing).
 
 anchors:    survival (1)  — foods/fruits + biome flavor feed the survival/seasons pillar
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - survival+economy: coconut/nut/fruit → farmersdelight/extradelight cooking or create milling/juicing into sellable tropical dishes [M-12 processing-chain pull] [MED]
   - Create: coconut woodset + coconut_husk via create:milling/cutting into a deco/byproduct chain [M-04 recycles deco] [WEAK — vanilla-style woods, low priority]
 

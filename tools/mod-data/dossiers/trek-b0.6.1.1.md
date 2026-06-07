@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — adds no items; provides explorable structures + their (configurable) chest loot
 
 anchors:    survival (1)  — exploration / structure variety
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. Structure datapack with no items/methods; weave it only indirectly via loot-table edits (a place to seed magic reagents / Create components as exploration rewards — a data tweak, not a mod edge). Don't force.
 
 how-packs-integrate (SWEEP): stacked with other structure packs (Tidal Towns, YUNG's) for exploration density; loot tables sometimes edited to fit pack progression. https://modrinth.com/datapack/trek

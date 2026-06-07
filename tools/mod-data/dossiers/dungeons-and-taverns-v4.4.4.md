@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): feeds loot/vaults via vanilla trial keys; outputs exploration loot. No material-processing join.
 
 anchors:    survival (exploration / structures) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via the in-tavern cartographer trade loop and structure loot as trade/bounty fodder — but it's vanilla villager trading (emeralds), not Numismatics, so any tie-in would need a separate loot/bounty edit elsewhere [M-09 luxury good→coin, WEAK]
   - none compelling — practically leave; it's an exploration/structure datapack and its loot already seeds whatever sinks exist downstream.
 

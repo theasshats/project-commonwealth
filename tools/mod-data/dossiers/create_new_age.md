@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): energising consumes rotation+FE + an input item → "energised" outputs (an electrified crafting method foreign items can be routed through); reactors consume Thorium → heat + Corium; motors/coils convert FE↔rotation. FE and Create-heat are the join keys to any energy-using mod.
 
 anchors:    Create (1)  — adds the electricity/nuclear depth layer to the Create spine; ore worldgen present
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create-depth via energising/sequenced_assembly — an endgame item (e.g. a magic or aeronautics keystone) gated through the Energiser is the cleanest weave [M-06/M-05, MED]
   - survival/worldgen — Thorium as a scarce regional ore (its 2 biome-modifiers) feeding the scarcity economy, parallel to Ironworks tin [M-08 adjacency, MED]
   - economy via numismatics — energised/processed reactor outputs as high-tier sellables [M-08, WEAK]

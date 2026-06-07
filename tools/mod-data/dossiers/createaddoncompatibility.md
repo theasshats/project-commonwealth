@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none material of its own; it RE-TAGS foreign items (c:ingots/plastic etc.) so other mods' recipes resolve to a single canonical item. Pure tag/priority glue.
 
 anchors:    support (library/compat) — counts as a valid anchor; needs no weave. (Indirectly serves Create by keeping the addon ecosystem coherent.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role. (Caution mirrors CLAUDE.md's almost-unified warnings: verify it never mis-merges a renamed-id metal like galosphere palladium.)
 
 how-packs-integrate (SWEEP): included whenever multiple Create plastic/copycat/gearbox addons coexist, to prevent duplicate-item clutter; priorities tuned in config/almostunified/unify.json. https://modrinth.com/mod/createaddoncompatibility

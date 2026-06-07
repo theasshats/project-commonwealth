@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): operates on the vanilla Elytra item (no new craftables here); no foreign-material processing to join against.
 
 anchors:    aeronautics (1) — personal-flight transport, adjacent to the aeronautics pillar.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - magic via Ars/Iron's enchanting (Enchanting Apparatus / reactive_enchantment) applying Aileron's Elytra enchants — only if its enchants are datapack-exposed; M-10-adjacent. [WEAK]
   - none — leave is acceptable (it's a behavior overhaul with no item surface to weave; aeronautics anchor stands on its own)
 

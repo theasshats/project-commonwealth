@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — no items or world interaction.
 
 anchors:    support (client/QoL) (1)  — cosmetic atmosphere tuning; sanctioned anchor needing no weave.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (visual config; no content to weave)
 
 how-packs-integrate (SWEEP): config-shipped to set biome/dimension mood (e.g. denser nether/cave fog); curated packs ship a tuned config and otherwise leave it. https://modrinth.com/mod/fogoverrides

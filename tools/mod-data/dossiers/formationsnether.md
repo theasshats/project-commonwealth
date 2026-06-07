@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): builds from existing palettes; outputs are its structure loot (vanilla + modded items via loot tables). Place-only worldgen, no processing method.
 
 anchors:    survival (1)  — Nether exploration content (the world to discover).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics — its structure loot is the natural hook: drop a sellable/bounty reward (or a magic reagent) into its loot tables so exploring its ruins feeds the trade web. [M-08 coin from processed scarcity, loose] [WEAK]
   - (otherwise leave — the mod registers no items; any weave is really a loot-table edit, not a recipe on this mod)
 

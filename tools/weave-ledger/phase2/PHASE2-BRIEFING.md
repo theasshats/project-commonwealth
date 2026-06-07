@@ -16,14 +16,14 @@ the economy's logistics arm).
 
 ## Inputs (read these)
 - Your chunk's mod list: `tools/weave-ledger/phase2/chunk-NN.txt` (NN given in your task).
-- For each mod: its dossier `tools/mod-data/dossiers/<ns>.md` (what it is, its **methods**, consumes/outputs, current anchors, 2nd-pillar candidates).
+- For each mod: its dossier `tools/mod-data/dossiers/<ns>.md` (what it is, its **methods**, consumes/outputs, current anchors, 2nd-anchor candidates).
 - The motif registry + reagent-ownership: `docs/WEAVE-LEDGER.md`.
 - The methods you can route THROUGH: `tools/weave-ledger/methods-palette.md`.
 
 ## What to produce, per mod
-Your chunk is a random mix — it may hold any mod (a 1-pillar mod, an already-well-connected mod, even a
+Your chunk is a random mix — it may hold any mod (a 1-anchor mod, an already-well-connected mod, even a
 library). **Nothing is excluded** and there is no separate "audit chunk": for **every** mod, do BOTH (a)
-propose new/better cross-pillar links, and (b) if it already has connections, flag any that are weak/arbitrary
+propose new/better cross-system links, and (b) if it already has connections, flag any that are weak/arbitrary
 (REWORK). Reviewing well-connected mods alongside the rest is deliberate — it surfaces new links/methods the
 isolated view misses. If a mod genuinely has no content surface (a pure code library), write `LEAVE — <reason>`
 and move on. The core move is **method-pull**
@@ -68,13 +68,13 @@ Append to `tools/weave-ledger/phase2/chunk-NN.candidates.md` (NN = your chunk nu
 
 ```
 # Phase 2 candidates — chunk-NN
-## <ns>   [anchors: <pillars> (N)]
-- from: <material> | via: <method> | to: <pillar> | motif: M-## | power: everyday|mid|endgame | tone: ok|clash | verdict: ACCEPT | hook: <one line a player would nod at>
+## <ns>   [anchors: <systems> (N)]
+- from: <material> | via: <method> | to: <system> | motif: M-## | power: everyday|mid|endgame | tone: ok|clash | verdict: ACCEPT | hook: <one line a player would nod at>
 - from: <…> | … | verdict: REJECT | reason: <red-team/theme/balance/no-motif reason>
-- LEAVE — <reason>                       (use when no coherent 2nd pillar; don't force)
+- LEAVE — <reason>                       (use when no coherent 2nd anchor; don't force)
 ## <next ns> …
 ```
-For a mod that **already has connections** (≥2 pillars): in addition to any new links you find, list `REWORK:`
+For a mod that **already has connections** (≥2 anchors): in addition to any new links you find, list `REWORK:`
 items on its *existing* connections (arbitrary / lore-clashing / mis-costed), or `OK — connections sound`.
 
 When EVERY mod in your chunk is done, write a final line exactly: `== CHUNK COMPLETE ==`

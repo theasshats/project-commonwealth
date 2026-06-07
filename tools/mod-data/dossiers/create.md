@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): crushing accepts ANY ore/deco→doubled raw + experience_nugget byproduct (M-03/M-04); milling/cutting/pressing/mixing/compacting accept raw materials, foods, fluids; deploying/filling/emptying interface foreign items with fluids; sequenced_assembly chains multi-stage `incomplete_*` parts (M-06). Outputs brass, andesite alloy, zinc, sheets/plates, processed intermediates. Join key: nearly EVERY foreign material can be routed through one of these — the universal pull-target for 2nd pillars.
 
 anchors:    Create (1)  — but it IS pillar #1; the design north star. (Aeronautics/trains add a logistics dimension, but treated as the Create spine.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - N/A as a *recipient* — Create is the hub other mods weave INTO, not a mod that needs a 2nd pillar. It is the method library (M-03..M-06, M-08, M-12 all ride Create methods). Leave; do not author edges that consume Create itself.
 
 how-packs-integrate (SWEEP): the foundational mod every other pillar threads through; packs build progression as chains of Create processing and gate complex tech behind Create parts. https://modrinth.com/mod/create https://create.fandom.com/wiki/

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes vanilla/modded fishing-loot items; outputs the matching live mob entities. Join key is only the loot table it reads, not a method other mods feed.
 
 anchors:    survival (1)  — immersive fishing flavor; the world's catch becomes tangible creatures.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave (a behavior tweak with no items of its own; weaving belongs to the fish-content/cooking mods it sits beneath, e.g. createfisheryindustry/farmersdelight, not here)
 
 how-packs-integrate (SWEEP): paired with fishing-content packs (Aquaculture, fish-mobs) for immersion; configured via datapack to map catches to entities. https://modrinth.com/mod/fishing-real

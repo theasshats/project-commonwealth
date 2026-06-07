@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — pure information tool; produces no materials.
 
 anchors:    support (QoL) (1)  — sanctioned exploration utility; needs no weave.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (a finder utility; nothing material to route).
 
 how-packs-integrate (SWEEP): Ships as-is; commonly paired with regional/scarcity worldgen so players can hunt specific biomes. https://modrinth.com/mod/natures-compass

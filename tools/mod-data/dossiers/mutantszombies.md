@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — no item drops or crafted outputs; nothing to consume or feed.
 
 anchors:    survival (1)   — extra hostile spawns that raise the night-threat baseline
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave (vanilla-style mob mod with no drops/items; no material to route — forcing an edge would be the failure mode)
 
 how-packs-integrate (SWEEP): Dropped in for difficulty/variety; no recipe or system wiring. https://modrinth.com/mod/mutants-and-zombies

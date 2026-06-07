@@ -15,7 +15,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): gun_smith_table_crafting CONSUMES metals/components (iron, logs, gunpowder-tier mats — join key for pack metals) to OUTPUT guns/ammo/attachments. Mostly closed within its own crafting tree, but the metal/gunpowder inputs are where the pack's ore-scarcity and Create-made parts could plug in.
 
 anchors:    support (1) — combat/PvPvE flavour for the crew (a sanctioned curated-flavour role); not yet wired to a content pillar.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via gun_smith_table_crafting inputs — gate gun/ammo recipes behind Create-pressed sheets, casings, or mechanical-crafted parts so firearms ride the Create spine and respect ore scarcity; M-05 native-method gating + M-06 sequenced-assembly keystone for high-tier guns. [STRONG]
   - economy via Numismatics — guns/ammo as scarce, traded war materiel (ammo as a consumable coin-sink) for the PvPvE economy; M-08 coin-from-scarcity / M-09. [STRONG]
   - aeronautics — mountable/vehicle-mounted weapons thematically suit airships, but TACZ doesn't natively integrate with Create Aeronautics turrets (aeronauticscompat covers other turret mods); flavour-only. [WEAK]

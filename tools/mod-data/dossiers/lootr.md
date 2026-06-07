@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — operates on existing structure loot tables; ships only its own reskinned container blocks, no material join key.
 
 anchors:    support (QoL — multiplayer loot fairness) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (a loot-fairness mechanic for the ~10-player crew; no material to route, no coherent second pillar)
 
 how-packs-integrate (SWEEP): standard drop-in for multiplayer/exploration packs so structure chests aren't first-come-first-served; pairs with LootJS-style loot edits. (https://www.curseforge.com/minecraft/mc-mods/lootr)

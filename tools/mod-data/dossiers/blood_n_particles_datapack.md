@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — emits particles only; nothing to consume or feed.
 
 anchors:    support (curated friend-group flavor / cosmetic) — sanctioned support role, no weave needed.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. Cosmetic only; no item or method exists to route through anything.
 
 how-packs-integrate (SWEEP): dropped in for combat feel; never wired into gameplay. https://www.curseforge.com/minecraft/mc-mods/blood-n-particles-mod

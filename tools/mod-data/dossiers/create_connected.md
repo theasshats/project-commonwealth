@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes Create parts (cogs/shafts/brass) + any block as copycat material; outputs kinetic/logic/logistics blocks. Copycat = a universal "skin" sink that can wear any pack block (incl. foreign deco) but mints no new material.
 
 anchors:    Create (1)  — pure Create-internal QoL/expansion
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (Create-spine QoL; its value is convenience parts + copycat skinning, not a foreign-material weave). Leave.
 
 how-packs-integrate (SWEEP): a near-default Create QoL add-on; toggled per-feature, no wiring needed. https://modrinth.com/mod/create-connected

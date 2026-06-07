@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — display layer, no items in/out. (Mostly client-side; needs server presence for accurate saturation/exhaustion values.)
 
 anchors:    support (1) — client UI/QoL. No gameplay content. (Reads food values, pairs naturally with the survival food layer.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (HUD mod; nothing to weave)
 
 how-packs-integrate (SWEEP): standard inclusion in any food/cooking-heavy pack so players can read Spice-of-Life / farmersdelight nutrition values; no config wiring.

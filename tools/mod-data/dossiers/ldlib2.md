@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — registers no real items; nothing to route.
 
 anchors:    support (library/API) (1)  — required dependency for dependent tech mods; no content of its own.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (library, nothing to weave).
 
 how-packs-integrate (SWEEP): pulled purely as a required dependency; never recipe-targeted. [https://modrinth.com/mod/ldlib]

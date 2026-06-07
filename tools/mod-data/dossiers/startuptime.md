@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — reads the clock, writes a log line.
 
 anchors:    support (perf / diagnostic) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (boot-time logger; nothing to route).
 
 how-packs-integrate (SWEEP): dropped in by packmakers to watch boot-time regressions as the modlist grows. https://modrinth.com/mod/startup-time

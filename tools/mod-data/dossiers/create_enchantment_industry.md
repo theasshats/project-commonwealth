@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes XP (mob farms), Enchanted Books, blaze parts, liquid ink; outputs liquid XP, enchanted gear, super-XP blocks, experience_cake. Liquid XP is a fluid foreign mods/methods could pull as an enchant/ritual fuel.
 
 anchors:    Create (1)  — XP/enchant automation on the Create spine (also uses farmersdelight:cutting)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - magic via the enchanting/XP economy — liquid XP + automated enchanting is the natural bridge to the magic pillar (Ars/Iron's spell gear, Occultism rituals that cost XP); route a magic-side cost or upgrade to consume create's liquid XP [M-05 native-gating, MED]
   - magic via Forbidden Arcanus / Ars — feed liquid XP or enchanted output into an arcane infusion step [M-10, WEAK]
 

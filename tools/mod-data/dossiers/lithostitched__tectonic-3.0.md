@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — shapes the world surface, not the recipe graph.
 
 anchors:    support (curated worldgen flavor) (1)  — sets the world's look/scale; feeds the explore/build feel, not a recipe pillar.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave (worldgen-only; no items/methods to weave). Thematic adjacency to the pack's "scarce, regional ores" survival design (bigger continents/mountains spread resources out), but nothing to recipe-route — do not force an edge.
 
 how-packs-integrate (SWEEP): dropped in as a terrain overhaul for exploration packs; configured via datapack, not recipes; pairs with biome mods. [https://modrinth.com/datapack/tectonic]

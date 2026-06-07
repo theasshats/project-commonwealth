@@ -34,7 +34,7 @@ drop transmuted in Occultism's Spirit Fire, a crop run through a fermentation/co
 and **consumes/outputs** (what foreign material this mod's methods could accept or feed — the join key for
 finding weaves).
 
-## Motif vocabulary — use these IDs in `2nd-pillar candidates` (prefer method-routings)
+## Motif vocabulary — use these IDs in `2nd-anchor candidates` (prefer method-routings)
 M-01 Arcane currency (Ars source) · M-02 Mob-drop reagent sink · M-03 Create ore-doubling (crushing) ·
 M-04 Create recycles deco (crushing) · M-05 Native-method gating · M-06 Sequenced-assembly keystone ·
 M-07 Attunement catalyst (Galosphere shards) · M-08 Coin from processed scarcity · M-09 Luxury good→coin ·
@@ -52,7 +52,7 @@ Methods you can route through: `tools/weave-ledger/methods-palette.md`.
   or a **source URL** you put in `sources`. If the web yields nothing reliable, leave the judgment fields
   brief/`TODO` and set `status: UNVERIFIED`. **Do not invent contents or mechanics.**
 - **Fast-path obvious support mods** (libraries, APIs, perf, client UI, pure deco): one-line + `vibe` +
-  `anchors: support (library/perf/QoL/client)` + `2nd-pillar candidates: none — support role` + a Modrinth
+  `anchors: support (library/perf/QoL/client)` + `2nd-anchor candidates: none — support role` + a Modrinth
   URL → `status: VERIFIED`. Don't over-research these. Spend your effort on **content** mods (blocks,
   items, mobs, food, magic, tech, machines).
 
@@ -61,8 +61,8 @@ Methods you can route through: `tools/weave-ledger/methods-palette.md`.
 - `vibe` — theme/aesthetic (arcane-scholarly, rustic-agrarian, industrial, eldritch, whimsical…).
 - `signature` — the 3–6 items/blocks a player actually cares about (pick real ids from the facts below the line).
 - `non-recipe mechanics` / `consumes / outputs` — see "methods are resources" above.
-- `anchors` — which pillar(s) it ALREADY feeds + the count, e.g. `magic (1)` or `survival, economy (2)`.
-- `2nd-pillar candidates` — for mods at <2 pillars, the most coherent ways to add a pillar, **as a
+- `anchors` — which loop system(s) it ALREADY feeds + the count, e.g. `magic (1)` or `survival, economy (2)`.
+- `2nd-anchor candidates` — for mods at <2 anchors, the most coherent ways to add an anchor, **as a
   method-routing where possible**, each tagged STRONG/MED/WEAK and citing a motif. If nothing is coherent
   (e.g. a vanilla-style mob mod), write `none — leave` (do NOT force an edge — forced edges are the failure
   mode we're avoiding).
@@ -74,4 +74,4 @@ Methods you can route through: `tools/weave-ledger/methods-palette.md`.
 Terse. A dossier is a card, not an essay. No emoji. Keep each filled field to 1–2 lines. Replace the
 `TODO`/placeholder lines; keep the field labels. Edit **only above** the `AUTO-DIGEST-FACTS` line.
 
-When done, return a compact summary: one line per mod — `ns: anchors(N) | 2nd-pillar candidate or 'leave' | status`.
+When done, return a compact summary: one line per mod — `ns: anchors(N) | 2nd-anchor candidate or 'leave' | status`.

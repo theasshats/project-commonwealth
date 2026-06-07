@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): the eyes are loot/boss-drop *sinks-in-waiting* — themed reagents (nether/undead/guardian/corrupted) begging for a crafting gate; outputs portal activation (a one-time progression event, not bulk material).
 
 anchors:    survival (exploration/progression gate to the End) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - magic via occultism:ritual / ars enchanting_apparatus — let a hard-to-find eye be *ritually transmuted* from a matching themed drop (e.g. undead_eye from a wither/undead reagent) so a stuck player has a craft path; turns isolated eyes into a magic-method sink [MED, M-11 / M-02]
   - Create via create:sequenced_assembly — make one or two eyes assemble through a derpack:incomplete_* chain instead of pure RNG loot, tying End access to the Create spine [WEAK, M-06] (caution: don't trivialize the exploration intent — keep at most a couple of eyes craftable)
   (theme alignment is strong; weight is the risk — the whole point is exploration, so any craft route must stay costly.)

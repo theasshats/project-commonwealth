@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — structural only.
 
 anchors:    survival (1) — underground exploration/world-feel.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. No items, no methods; nothing to weave. (Indirectly serves the pack's scarce-ore mining loop, but offers no hook.)
 
 how-packs-integrate (SWEEP): standard YUNG's-suite worldgen polish; not re-wired. https://modrinth.com/mod/yungs-better-mineshafts

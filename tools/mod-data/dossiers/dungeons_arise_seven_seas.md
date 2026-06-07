@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): outputs exploration loot (vanilla + pack tables); no material-processing join.
 
 anchors:    survival (ocean exploration / structures) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. The ship/naval theme rhymes with the aeronautics pillar aesthetically, but these are static structures (no functional vessels), so an aeronautics edge would be purely thematic. Any real second pillar would come from editing its loot tables into the economy elsewhere, not from the mod itself.
 
 how-packs-integrate (SWEEP): added for ocean content variety alongside When Dungeons Arise; loot tables are the only wiring surface. https://modrinth.com/mod/when-dungeons-arise-seven-seas

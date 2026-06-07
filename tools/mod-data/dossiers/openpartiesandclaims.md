@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — protection/social framework, no materials.
 
 anchors:    support (server protection/QoL) (1)  — sanctioned support role; needs no weave. (Underpins the pack's coop-PvPvE territory premise.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (no items/methods to route).
 
 how-packs-integrate (SWEEP): Standard server-protection backbone; tuned via config to gate claim sizes/permissions, often paired with a team mod. https://modrinth.com/mod/open-parties-and-claims

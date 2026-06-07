@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes berries, honey, milk/cream, sugar, and (if present) Confectionery chocolate; outputs cream/jam/nectar fluids and finished sweets. Its jam/cream fluids are inputs other food mods could pull from.
 
 anchors:    Create, survival (2)  — dessert food chain expressed through Create methods
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics sell — assembled sweets/waffles are sellable luxury goods [M-09, MED]
   - (already ≥2; M-09 is an economy-pass bonus)
 

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes metal ingots/blocks (vanilla + modded — dragonsteel, cursium, etc.) and upgrade items; outputs assembled golem entities. Already pulls modded boss-tier metals.
 
 anchors:    Create (1)   — recipes use create:crushing, create:mechanical_crafting, create:sequenced_assembly; Create mixing applies metal to parts (golem-assembly is Create-gated)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - survival via golem_assemble — gate the best golem bodies behind boss/mob-drop metals (Cataclysm/Ice&Fire, Mowzie's), making constructs a combat-progression reward   [MED, M-02]
   - magic via golem_assemble — route an Ars/Occultism material (source gem / otherstone) into a golem-core upgrade, tying golemancy to the magic spine   [WEAK, M-10/M-11]
 

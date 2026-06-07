@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — behavioral patch.
 
 anchors:    support (QoL/compat) (1)  — enables the aeronautics/vehicle pillar to run at speed without anti-cheat kicks; no weave needed.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (functionally serves aeronautics, but as a fix, not a wireable resource).
 
 how-packs-integrate (SWEEP): Dropped into the server mods folder of packs with fast movement/vehicles (Create Aeronautics, ships); never wired by recipes. https://modrinth.com/mod/im-fast

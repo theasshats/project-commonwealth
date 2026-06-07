@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): operates on the two magic systems' mana/spell data; no foreign-material I/O of its own. Join surface is "Ars source ↔ Iron's mana," not items.
 
 anchors:    magic (1) — pure connective tissue between the two spell mods (a magic-internal weave).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave (it IS a weave already, but an internal magic↔magic one; it has no item surface to route a 2nd pillar through, and forcing one would be artificial)
 
 how-packs-integrate (SWEEP): included whenever both Ars Nouveau and Iron's Spellbooks ship together, so players run one mana economy instead of two parallel ones; mode chosen in config.

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — visual-only.
 
 anchors:    support (client UI/visual) (1)  — sanctioned support role; needs no weave.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (cosmetic, nothing to route).
 
 how-packs-integrate (SWEEP): Dropped in as client polish; no config/wiring. https://modrinth.com/mod/not-enough-animations

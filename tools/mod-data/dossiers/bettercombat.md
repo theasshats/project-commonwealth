@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES: weapon items/tags (vanilla + modded) as the things it re-skins with movesets — a framework foreign weapons plug into, not a material processor. OUTPUTS: none (combat behavior only).
 
 anchors:    support (combat framework / gameplay-feel) (1)  — underpins how magic/combat weapons play; not a content pillar itself.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (it's a behavior framework, not a material to weave; routing a resource through it makes no sense).
 
 how-packs-integrate (SWEEP): RPG/combat packs install it and ship JSON movesets for modded weapons (often alongside Better Combat addon packs). https://modrinth.com/mod/better-combat

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes Create kinetics parts (shafts, cogs) + dye + encasing (andesite/brass); outputs drop-in kinetic + seat blocks. No item processing; create:splashing only used to wash dye off (inbound).
 
 anchors:    Create, aeronautics (2)  — kinetics infrastructure (Create) + seats wired to Stock Keepers/train logistics (transport pillar).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Already ≥2 pillars (also carries a performance support-role). No new edge needed — leave.
 
 how-packs-integrate (SWEEP): added in large Create builds for shaft lag relief and for seat-based train Stock Keeper setups; no special wiring. https://modrinth.com/mod/create-additional-logistics

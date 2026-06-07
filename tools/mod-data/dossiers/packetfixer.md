@@ -13,7 +13,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — no items or materials.
 
 anchors:    support (compat/perf) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role
 
 how-packs-integrate (SWEEP): shipped silently to prevent packet-overflow disconnects in heavy packs. https://modrinth.com/mod/packet-fixer

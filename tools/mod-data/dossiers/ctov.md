@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — purely generates structures; no material in/out.
 
 anchors:    survival (1) — pure exploration/world content (settlements to find, villager trade hubs); curated worldgen flavor (a sanctioned support role).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. No registered items/methods to route; its only seam is custom structure loot, which is a pack-side loot-table choice, not a mod-to-mod weave. (Could host other mods' items as found loot, but that's a curation knob, not an edge.)
 
 how-packs-integrate (SWEEP): added as a drop-in village overhaul; biome-tag based so it needs no per-worldgen-mod patching. Packs sometimes inject custom items into its loot tables. https://modrinth.com/mod/ct-overhaul-village

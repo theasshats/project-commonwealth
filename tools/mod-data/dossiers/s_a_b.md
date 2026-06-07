@@ -14,8 +14,8 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES steel (and Create processing — create:compacting/mixing already used) to make armored blocks; OUTPUTS plating used as ship/vehicle/fort armor. A material sink for steel, not a processing node.
 
 anchors:    Create, aeronautics (2)  — built THROUGH Create (compacting/mixing) and exists to armor Big-Cannons / Aeronautics ships & vehicles
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
-  - already ≥2 pillars (Create + aeronautics) — no 2nd-pillar weave needed; deepen via Create steel chain if desired [M-06 sequenced-assembly keystone] [optional]
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
+  - already ≥2 pillars (Create + aeronautics) — no 2nd-anchor weave needed; deepen via Create steel chain if desired [M-06 sequenced-assembly keystone] [optional]
 
 how-packs-integrate (SWEEP): a Create: Big Cannons companion — armored hull/wall material for combat builds, crafted off the Create steel chain. https://www.curseforge.com/minecraft/mc-mods/steel-armor-blocks
 sources (SWEEP): https://www.curseforge.com/minecraft/mc-mods/steel-armor-blocks

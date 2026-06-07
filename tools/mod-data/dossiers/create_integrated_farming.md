@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes live poultry (and a feed/upkeep item) → passive product output; Fishing Net consumes bait/water access → fish/aquatic drops. These are organic-product *sources* feeding the food/economy chain (FarmersDelight cooking, etc.).
 
 anchors:    Create, survival (2)  — automated farming/husbandry feeding the food pillar via Create contraptions
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics — steady roost/net products are a low-tier bulk trade good [M-09, WEAK]
   - (already ≥2 (Create+survival); economy edge is optional/weak — likely leave)
 

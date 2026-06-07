@@ -13,7 +13,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): outputs many crop/food/material storage-blocks under c:block(item)/storage_blocks/* (apple, carrot, potato, beetroot, gunpowder, leather, blaze_rod, sugar_cane…) — a broad shared-material surface other mods (Create, economy) could reference. Consumes nothing foreign.
 
 anchors:    support (decoration palette / building / QoL) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:crushing — its decorative/building blocks (vertical slabs, polished/brick variants) and crate blocks are clean targets for deco-recycling/compacting edges. [WEAK, M-04]  (decoration palette already counts as a valid support anchor, so a Create weave is a bonus, not required.)
 
 how-packs-integrate (SWEEP): shipped as a near-universal vanilla-plus/building base with selected features trimmed via config. https://modrinth.com/mod/quark

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): a trade NODE — its merchants SINK Amethyst Shards and emit swamp goods; OUTPUTS toadstool/mossy-oak deco woodset blocks. No processing machine; its blocks are deco inputs (milling/cutting), its trade keys to a currency loop.
 
 anchors:    survival (1)  — a friendly biome mob + swamp-village flavor (cozy world-population content)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy: Ribbit merchants already run an Amethyst-Shard trade economy — bridge it to Numismatics (shard↔coin, or sell swamp goods) so it joins the trade pillar [M-08 coin from processed scarcity] [MED — needs a KubeJS trade/currency bridge]
   - Create: toadstool/mossy-oak woodset through create:cutting/milling into a deco byproduct chain [M-04 recycles deco] [WEAK — generic woods]
 

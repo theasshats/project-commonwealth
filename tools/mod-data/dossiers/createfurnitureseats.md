@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — it tags/registers foreign furniture blocks as seats; consumes/produces nothing.
 
 anchors:    support (compat) + aeronautics — counts as a valid support anchor AND specifically extends Create-Aeronautics (sittable furniture on ships), so it leans the transport pillar.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role; already touches aeronautics. No item to route; forcing an economy/magic edge would be meaningless.
 
 how-packs-integrate (SWEEP): dropped in whenever furniture mods + Create/Aeronautics coexist so decorated interiors are rideable on moving builds. https://www.curseforge.com/minecraft/mc-mods/lets-do-furniture-another-furniture-handcrafted-create-sable-aeronautics

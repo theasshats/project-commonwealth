@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): no item inputs/outputs. It *shapes* the pack's spawn tables and loot — a design tool that can enforce scarcity/regionality (the pack's economy premise), but it isn't itself a routable material.
 
 anchors:    server-util / QoL (support — 1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. Config-only utility; it can *support* the scarcity/economy design (e.g. region-gating mob drops that feed M-02/M-08) but has no item or method to weave. Treat as enabling infrastructure, not a node.
 
 how-packs-integrate (SWEEP): used by pack authors to tune/restrict spawns and loot for balance and theme; configured via JSON, never crafted. https://www.curseforge.com/minecraft/mc-mods/in-control

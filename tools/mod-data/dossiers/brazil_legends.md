@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): OUTPUTS isolated mob drops (capelobo_claw, big_tongue, amber_shard/pearl, saci-in-a-bottle) — prime reagent-sink candidates. CONSUMES nothing foreign (vanilla-only recipes).
 
 anchors:    survival (1)  — folklore mobs as world-threat/adventure content; drops currently dead-end in their own gear.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - magic via occultism:spirit_fire / ars_nouveau:imbuement — transmute capelobo_claw / big_tongue / amber_shard into a magic essence (M-02 mob-drop reagent sink / M-11 ritual sink).   [MED]
   - economy via numismatics sell — amber_shard / amber_pearl as a sellable luxury curio (M-09).   [WEAK]
 

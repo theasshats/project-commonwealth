@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none.
 
 anchors:    support (library / UI API) — sanctioned support role, no weave needed. Hard dependency of MineColonies (an aeronautics/logistics-and-colony pillar mod).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role.
 
 how-packs-integrate (SWEEP): pulled automatically as a MineColonies/Structurize dependency. https://www.curseforge.com/minecraft/mc-mods/blockui

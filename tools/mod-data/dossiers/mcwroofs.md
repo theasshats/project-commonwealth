@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes vanilla planks / brick / stone / terracotta / concrete; outputs deco. Stone/brick variants could feed Create crushing back to gravel (M-04).
 
 anchors:    support (decoration palette) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:crushing — stone/brick roof variants crush back to raw/gravel + xp nugget (M-04, lossy)   [WEAK]
   - (decoration is a sanctioned support anchor; 600 blocks make an exhaustive crush pass low-value — leave unless a wholesale deco sweep)
 

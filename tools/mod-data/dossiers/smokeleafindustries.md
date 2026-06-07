@@ -16,7 +16,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   ENERGY NOTE: brings its own FE network — a potential bridge to Create via createaddition (FE↔kinetic) without retheming.
 
 anchors:    survival (1) — a flavour farm/consumable layer (strains as food-adjacent effect items); leans rustic-agrarian on the crop side but isn't yet wired to the pack's pillars.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via Numismatics — its own dealer/stoner trades already prove a sell-loop; turn refined extracts/gummies into Numismatics bounty goods so the strain farm funds the coin economy; M-09 luxury-good→coin. [STRONG]
   - Create via createaddition FE↔kinetic — power the smokeleaf machines from Create rotational generation (or vice-versa) so the tech farm joins the Create spine instead of being an isolated FE island; M-05 native-method gating. [MED]
   - Create via create:milling/crushing — route raw buds/hemp through Create processing as an alternate to its own grinder, weaving the recipe graph; M-03/M-12. [MED]

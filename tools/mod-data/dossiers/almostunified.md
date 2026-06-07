@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): operates ON the recipe graph itself — no item I/O. Its "join key" is the c: material tags; it decides which mod's ingot/ore wins for shared materials.
 
 anchors:    support (1) — library/recipe-graph plumbing. Structurally load-bearing for "one cohesive web" (it merges duplicate material clusters).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role. (It's the connectivity tool itself, not a content node to weave.)
   - ⚠ GOTCHA (CLAUDE.md): never unify galosphere:*silver* as c:ingots/silver — galosphere "silver" is actually PALLADIUM; real silver is occultism. Watch its priority_override on auto-updates.
 

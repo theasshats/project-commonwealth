@@ -15,7 +15,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   outputs join key: c:foods/* cooked dishes, c:crops/*, straw, dough — consumable by downstream Delight addons.
 
 anchors:    survival, Create (2)  — core food/seasonal-eating loop; already woven into Create (its recipes use create:milling/mixing/filling per made-by line — flour milling, etc.).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already at 2 pillars. Strongest further weave: economy via numismatics — high-tier cooked dishes (stews/pies) as sellable goods/MineColonies provisioning, turning the kitchen into a trade output. [M-09 luxury good→coin] [MED]
   - deepen Create via create:milling/cutting — keep routing grain→flour and ingredient prep through Create so the kitchen reads as Create's downstream. [M-12 processing-chain pull] [STRONG, partly existing]
 

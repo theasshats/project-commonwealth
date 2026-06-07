@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes any FE source + metal ingots (gold/copper/iron/zinc/electrum → rods/wires via rolling) and oily crops/seeds (→ seed oil → bioethanol fuel); outputs FE, kinetic SU, rods/wires/spools, electrum, and charged items. Join keys: FE-chargeable foreign items (tesla coil / charging), seed/crop oils, c:rods & c:wires tags.
 
 anchors:    Create (1)  — the canonical Create electricity/FE spine addon; deepens Create with an energy layer.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - magic via createaddition:charging / tesla_coil — FE-charge magic gear that holds a charge (e.g. Iron's Spellbooks gear, magic batteries) so the electrical layer feeds the magic pillar. [MED] (M-05 native-method gating: route a magic recharge through Create FE)
   - survival/economy via liquid_burning of crop oils — seed_oil/bioethanol made from farmed seeds ties the energy loop to agriculture; the oils are a sellable processed good. [WEAK] (M-12 processing-chain pull)
 

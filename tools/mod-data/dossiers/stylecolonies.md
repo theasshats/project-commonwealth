@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): indirectly — its blueprints call for build materials (incl. Create blocks in the Steampunk style), but it defines no recipes.
 
 anchors:    support (decoration palette — MineColonies styles) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (pure blueprint content for MineColonies; the Steampunk style already pulls Create blocks at build time, which is its natural tie).
 
 how-packs-integrate (SWEEP): added alongside MineColonies to widen the style picker; no recipe wiring. https://www.curseforge.com/minecraft/mc-mods/stylecolonies

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES vanilla materials (bone, prismarine shard, slime, wither skeleton skull, iron block, wool, wood, emerald) via vanilla crafting; OUTPUTS armor pieces with set bonuses — gear, not a feedstock.
 
 anchors:    survival (1) — mid-game combat gear / armor progression (the survival loadout). 
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:pressing / mechanical_crafting — gate the higher sets (Heavy/Divine/Steampunk) on Create-pressed plates or assembly, so endgame armor pulls from the tech spine instead of pure vanilla mats; M-05 native-method gating. The Steampunk set especially invites a Create tie. [MED]
   - magic via ars_nouveau:enchanting_apparatus / armor_upgrade — finish a set (Divine/Robe) through an arcane armor-upgrade so it crosses into the magic web; M-10 arcane infusion pull. [MED]
   - economy via numismatics — finished themed sets as sellable smith goods; M-09. [WEAK — armor sells thinly, players keep it]

@@ -15,7 +15,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): ginger crop outputs the food/build chain (c:crops/ginger, c:foods/cookie, c:foods/candy, c:foods/vegetable tags are the join keys); sled is a transport item; otherwise self-contained decoration.
 
 anchors:    survival (1) — a seasonal/decoration flavour mod that fits the Serene Seasons winter loop and feeds the food roster (ginger, gingerbread cookies, eggnog, candy). Curated friend-group flavour is itself a sanctioned support role.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - survival/food via the ginger chain + Farmer's Delight/Create milling — route ginger (c:crops/ginger) through a cutting/milling method into spice/cookie ingredients so it joins the food-processing web; M-12 processing-chain pull. [MED]
   - aeronautics/transport via the sled — thematically a winter traversal piece, but it doesn't tie to Create Aeronautics ships; only a weak flavour overlap. [WEAK]
   - economy via gingerbread/candy decor as seasonal trade goods; M-09 luxury-good→coin. [WEAK]

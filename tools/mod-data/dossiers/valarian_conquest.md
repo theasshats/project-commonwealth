@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): OUTPUTS recruitable NPC labor (citizens that hold professions) + faction loot (shields, armor, banners, weapons); citizenship items gate allegiance. Faction crafting stations are native methods that could be gated on foreign inputs.
 
 anchors:    survival (1) — combat/exploration + NPC content (world made warlike). Note: recruited citizens taking professions is a colony/labor adjacency.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics — seat faction quartermaster/citizen trades and mercenary hire on Numismatics coins; faction allegiance + recruiting reads as an economy node   [MED · M-09]
   - Create via M-05 (armorsmith/builder station gating) — gate faction gear crafted at its own stations on Create parts, tying martial gear to the tech spine   [WEAK · M-05]
 

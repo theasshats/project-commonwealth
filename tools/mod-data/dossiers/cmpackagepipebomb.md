@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES TNT/gunpowder to rig (vanilla); rides create:package delivery. OUTPUTS an explosive trap, not material.
 
 anchors:    Create (1) — explosive payload delivered through Create's package logistics; PvPvE flavor.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. Tiny novelty/PvP gag; no coherent second-pillar weave. Curated friend-group flavor.
 
 how-packs-integrate (SWEEP): niche prank addon for Create-package packs; no real wiring. [https://modrinth.com/mod/create-more-pipe-bombs-in-packages]

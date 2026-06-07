@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes mithril/pyrium, magic foci, scrolls; outputs spell scrolls, potions/brews (alchemist cauldron fluids), enchanted/affinity gear. Routable surfaces: mithril/pyrium metals (Create crushing), arcane_essence (Iron's magic currency), the alchemist-cauldron fluid I/O.
 
 anchors:    magic, Create (2) — magic spellcasting spine + alchemist cauldron already uses create:emptying/filling
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 pillars; further weaving is depth, not a required 2nd. Natural deepeners: bond arcane_essence ↔ ars_nouveau:source_gem via M-01 (RESERVED — arcane_essence is the Iron's-side currency, see ledger §2); mithril/pyrium ore-doubling via create:crushing [M-03]; mob-drop reagents (apothecarist etc.) as scroll/brew inputs [M-02/M-11].
 
 how-packs-integrate (SWEEP): a flagship magic pillar — packs gate spell gear behind progression and cross-link its currency (arcane_essence) and metals to other magic/tech mods. https://modrinth.com/mod/irons-spells-n-spellbooks , https://iron.wiki/progression/

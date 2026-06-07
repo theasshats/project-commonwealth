@@ -19,7 +19,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
     - CONSUMES vanilla Elytra + its own boss mats via weapon_fusion; vanilla amethyst-themed crab meat via amethyst_bless. Recipes are vanilla/self only (no foreign-mod inputs yet).
 
 anchors:    survival (1) — endgame combat/dungeon-adventure content; the world pushing back hard. (Decorative seastone/blackstone sets are a deco palette bonus.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via routing boss-material ingots (Witherite/Ignitium/ancient_metal) through create:crushing/pressing for sheets/processing, gating advanced Create tech behind boss kills (M-05 native-method gating + M-03/M-06: boss mats become a sequenced-assembly keystone). Cataclysm bosses are the canonical "complex Create tech unlocks via boss drops" lever named in CLAUDE.md.   [STRONG]
   - magic via occultism:spirit_fire / ars imbuement transmuting boss drops (Witherite/Cursium) into a magic reagent — mob-drop reagent sink (M-02 / M-11).   [MED]
   - economy via numismatics — boss-material ingots or trophy drops as high-value sellable scarcity (M-08 coin-from-processed-scarcity).   [MED]

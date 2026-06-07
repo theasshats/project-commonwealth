@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes solid furnace fuel (coal/charcoal/etc.); outputs heat for Create basins. No item recipes of its own. Join key: any burnable fuel item.
 
 anchors:    Create (1)  — a Create heating-mechanic mod; deepens the Create pillar (makes heat a managed resource).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. It's a single-block balance tweak with no tradeable/magic surface; support-tier within Create.
 
 how-packs-integrate (SWEEP): added to make Create heat a deliberate fuel cost (anti-AFK/anti-free-heat) — a survival/realism tuning choice; recipes opt into the lowheated tier. https://modrinth.com/mod/create-low-heated

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes the standard Create crushed/sheet/flour intermediates (and metal blocks for cross-mod metals); outputs their 1:9 compressed block forms (and back, via bulk washing). Already uses create:crushing/milling/mixing/splashing/sandpaper_polishing.
 
 anchors:    Create (1)  — QoL/storage layer for the Create spine itself
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (Create-internal storage/QoL; covers Create's own intermediates, doesn't introduce foreign material to weave). Leave.
 
 how-packs-integrate (SWEEP): drop-in storage-compression for any Create pack; nothing to wire — it follows Create's own item set. https://modrinth.com/mod/create-compressed

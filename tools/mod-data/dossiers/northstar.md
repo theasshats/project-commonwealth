@@ -13,7 +13,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES water/brine/fluids (electrolysis, freezing) and base metals; OUTPUTS scarce metals (titanium, tungsten, martian_steel), advanced_circuit, biofuel/oxygen, planet building stone + woods. Its three machines can ACCEPT foreign fluids/ingots as new join keys.
 
 anchors:    Create, aeronautics (2)  — heavily Create-woven (crushing/mixing/pressing/sequenced_assembly etc. inbound) AND its rockets ARE the transport/off-world logistics pillar.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - (already ≥2 pillars; not required) economy via numismatics minting from Create-processed titanium/tungsten — regional space metals as a scarce coin source. [MED] M-08
   - economy via numismatics sale of astronomical_reading / advanced_circuit as high-tech trade goods for specialists. [WEAK] M-09
 

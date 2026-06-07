@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes milk/curds (via Create mixing+compacting) and a Calendar Page; the maturing method ACCEPTS arbitrary tagged inputs and OUTPUTs aged goods → a generic "age-an-item" station other mods could route a perishable through.
 
 anchors:    Create, survival (2)  — food/dairy chain expressed entirely through Create methods
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics sell — aged cheese is the textbook high-effort luxury trade good (gated behind the maturing wait) [M-09, STRONG]
   - (already ≥2; M-09 would make it a 3-pillar anchor — strong fit for the economy pass)
 

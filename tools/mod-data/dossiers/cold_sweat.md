@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes insulating materials at the sewing table (wool/leather/fur, incl. its goat_fur, chameleon_molt, hoglin hide) → insulated armor; hearth/boiler burn fuel for climate output; waterskins fill at water/fire. Join key: ANY warm/cold fur or hide from other mob mods is candidate insulation filler; its `create:filling` inbound edge (waterskins) already exists.
 
 anchors:    survival (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:filling / fuel — Hearth & boiler are fuel-burning climate machines; gating the Hearth (or a higher-tier emitter) on Create brass/casing, or piping Create steam/lava as its fuel, ties seasons-survival to the tech spine. [M-05 native-method gating] [MED]
   - economy via numismatics — insulated cold-climate gear (chameleon/hoglin/fur armor) as a sellable survival good for crews heading to harsh biomes. [M-09 luxury good→coin] [WEAK]
 

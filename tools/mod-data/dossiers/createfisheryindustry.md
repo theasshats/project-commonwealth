@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes raw fish (provides c:foods/raw_cod & raw_salmon), bait, zinc plates; outputs fish skin (leather-like), steaks, mussels/lobster, soups, plus its tools. Also wired through farmersdelight:cooking/cutting (inbound). Join keys: raw/cooked fish tags, fish_skin as a leather substitute, c:plates/zinc.
 
 anchors:    Create, survival (2)  — kinetic fishing/processing machines (Create) feeding food + diving survival gear (survival).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics — seafood dishes (chowder/soups/steaks) are high-effort processed foods → sellable trade goods; supports a "fisher" specialization. [MED] (M-09 luxury good → coin)
   - (Already ≥2 pillars; economy would be a third weave.)
 

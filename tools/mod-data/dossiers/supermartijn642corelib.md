@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — no items/blocks/methods.
 
 anchors:    support (1) — library/API dependency; no weave needed.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role.
 
 how-packs-integrate (SWEEP): pulled automatically as a dependency of SuperMartijn642's mods; install-and-forget. https://modrinth.com/mod/supermartijn642s-core-lib

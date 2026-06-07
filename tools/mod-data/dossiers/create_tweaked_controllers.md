@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none material — it emits redstone-link signals to control Create contraptions; no item processing.
 
 anchors:    aeronautics (1)  — control surface for Create contraptions/vehicles (transport/logistics pillar).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. QoL control device; its craft already routes through Create parts (precision mechanism, electron tubes). No coherent magic/economy/survival edge.
 
 how-packs-integrate (SWEEP): bundled in Create/aeronautics-heavy packs for driving vehicles and machines; no recipe wiring beyond its Create-part craft. https://www.curseforge.com/minecraft/mc-mods/create-tweaked-controllers

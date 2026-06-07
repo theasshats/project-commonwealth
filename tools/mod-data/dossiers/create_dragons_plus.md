@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): the ending/freezing methods ACCEPT arbitrary tagged items + a catalyst (dragon breath / powder snow) → transformed outputs — generic "fan-process material X" stations. Bulk dyeing consumes any dye fluid. Uses create:mixing/filling/emptying upstream for the dye/breath fluids.
 
 anchors:    Create (1)  — Create fan-processing methods + library; support spine for its add-on family
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (library/QoL for the Create add-on family). Its `ending`/`freezing` fan methods are weave-*targets* other mods route through, not edges this mod needs. Leave.
 
 how-packs-integrate (SWEEP): installed implicitly as the dependency of Central Kitchen / Enchantment Industry / Integrated Farming; fan-catalyst methods are reused by those add-ons. https://modrinth.com/mod/create-dragons-plus

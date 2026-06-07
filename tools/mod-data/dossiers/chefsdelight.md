@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): emerald-based villager trades. OUTPUTS Farmer's Delight food into the village economy (a trade source for cooked meals); CONSUMES emeralds (vanilla trade currency).
 
 anchors:    survival, economy (2) — adds food (FD meals) to the survival/food pillar AND a villager-trade source to the economy pillar.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 (survival + economy via villager trades). Optional deepening: route its trades onto numismatics coins instead of emeralds so the cook economy joins the pack's real currency (M-09 luxury-good→coin); needs config/KubeJS, not in-mod.   [MED]
 
 how-packs-integrate (SWEEP): paired with Farmer's Delight to populate villages with cooks who sell meals; a soft early-game food source. [https://modrinth.com/mod/chefs-delight]

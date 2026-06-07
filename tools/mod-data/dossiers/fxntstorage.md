@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES Create tiers as a material ladder — andesite alloy / copper / brass / hardened sheets gate the box/backpack tiers (already uses create:mechanical_crafting). OUTPUTS wearable storage + upgrade modules; no foreign feedstock produced.
 
 anchors:    Create, survival (2) — Create-tier-gated tech-styled storage (already woven via create:mechanical_crafting made-by), and inventory/QoL for the survival loop.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already at 2 pillars (Create + survival) — no forced second weave needed. (A flight/fall-damage backpack upgrade thematically touches aeronautics, but it is a worn gadget, not a wireable resource — leave.)
 
 how-packs-integrate (SWEEP): Create packs adopt it as the Create-flavored storage/backpack tier, with box/backpack recipes climbing the andesite→brass material ladder. https://modrinth.com/mod/create-storage-neo-forge

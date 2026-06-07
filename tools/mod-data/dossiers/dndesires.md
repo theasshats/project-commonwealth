@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): its fan sails + press accept arbitrary belt-fed items/fluids as processing inputs — a strong foreign-material sink (any pack item can get a sanding/freezing/seething recipe routed onto it); outputs rubber, processed intermediates, palette blocks, packaging, and milkshakes. Already inbound-woven: uses create:mixing, mechanical_crafting, item_application, filling, emptying.
 
 anchors:    Create (new processing methods + parts) (1, deep)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - survival via the milkshake foods feeding the Spice-of-Life/seasons loop, and via routing crops/drops through its freezing/seething/sanding fan recipes as a prep step [M-12 processing-chain pull, MED] — coherent: it's already a food+processing producer.
   - aeronautics via its cardboard packaging + bore blocks as Create logistics/drilling parts tied into transport/ship loadouts [M-06/M-05, WEAK-MED] — secondary.
   - economy via rubber / processed intermediates as a tradeable scarcity good once gated [M-08 coin from processed scarcity, WEAK].

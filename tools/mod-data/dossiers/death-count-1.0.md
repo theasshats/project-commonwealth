@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — purely reads the death scoreboard.
 
 anchors:    support (friend-group QoL/flavor) — sanctioned support role; needs no weave. (Light survival flavor — a shared death tally for a ~10-player crew — but a cosmetic, not a system.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (a scoreboard cosmetic; nothing to route).
 
 how-packs-integrate (SWEEP): dropped into multiplayer packs as a social/bragging-rights tab-list stat. https://modrinth.com/datapack/death-count

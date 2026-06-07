@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — pure deco/fitting blocks; consumes vanilla mats (andesite/brass/copper/glass) to craft, outputs nothing.
 
 anchors:    aeronautics (1)  — Create-train detailing (rides contraptions/trains; transport pillar).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via crafting through Create parts/sheets — windows/steps are already Create-train furniture; routing the brass/copper variants through pressed sheets makes the Create tie explicit. [WEAK] (M-04-adjacent; deco, low value)
   - Otherwise leave: support-tier deco for the transport pillar; forcing a 2nd edge adds nothing.
 

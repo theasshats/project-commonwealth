@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): Soul Furnace ACCEPTS mob-drops/foods/gems (rotten flesh, bread, diamond) → soul-state reagents; altars ACCEPT Crystallized Blood. Outputs its own coins (copper/nether/end), soul gems, essences. Join key: its mob-drop→reagent loop and self-contained coins are the weave surface.
 
 anchors:    survival (1)  — organic/mob content; its in-mod coins are NOT the pack's Numismatics economy
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - magic via occultism:spirit_fire / ars imbuement — Crystallized Blood, soul gems and essences are natural magic reagents; route them into the Occultism/Ars web so the Soul-Furnace economy isn't a private island. [M-11 ritual/transmutation sink, M-02 mob-drop reagent sink] [STRONG]
   - economy via numismatics — Relic Gold / soul gems (boss & high-effort drops) priced as sellable trade goods; optionally bridge its copper/nether/end coins to Numismatics so two coin systems don't compete. [M-09 luxury good→coin] [MED]
   - Create via create:crushing — Tesla/voltaic deco blocks recycle back to copper/metal scrap so the electrical set ties to the spine. [M-04 recycles deco] [WEAK]

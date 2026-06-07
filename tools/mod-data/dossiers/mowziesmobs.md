@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): outputs boss-drop artifacts (ice_crystal, sol_visage, wrought helm/axe) — premium gating reagents; the Grottol/ore behavior emits gems. Consumes nothing foreign (vanilla recipes only).
 
 anchors:    survival (1)   — set-piece bosses + ambient threats are world-pushback combat content
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via native-method gating — require a Mowzie's boss drop (ice_crystal / wrought-metal) as a keystone in a high-tier Create sequenced_assembly, matching the pack's "Create tech unlocks via boss drops" design   [STRONG, M-05/M-06]
   - magic via occultism:spirit_fire / ars imbuement — transmute boss artifacts into magic catalysts, sinking the drops into the magic spine   [MED, M-11/M-02]
   - economy via Numismatics bounty — pay coin bounties for Mowzie's boss kills / sell their rare drops   [WEAK, M-08]

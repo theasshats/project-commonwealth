@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES (palm_bar_mixing): open coconut, ice, honey-bottle, fruit (melon/cocoa) → cocktails; (mini_fridge): water/fluid → ice. OUTPUTS: ice/packed ice/snow (cheap cold-block source), tropical cocktail drinks, palm lumber + beach deco/furniture.
 
 anchors:    survival (1)  — food/drink (cocktail buffs) + a beach biome/palm flora; mostly decoration-and-flavor.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics sell — cocktails are a finished luxury drink, a natural sell-good / tavern stock. [MED, M-09]
   - Create via mini_fridge ice → create cooling/freezing chains — the fridge is a no-power ice source other mods' cold recipes could pull from (e.g. as bulk ice feedstock). [WEAK]
   - none compelling beyond the above — palm wood + furniture is decoration-palette support; do not force a Create recipe-weave just for deco.

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — displays content only; does not consume or produce materials.
 
 anchors:    support — QoL/documentation (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (guidebook framework; books are flavor, not a material sink)
 
 how-packs-integrate (SWEEP): Bundled as a guide-book backend; packs ship a Modonomicon book to document progression. https://modrinth.com/mod/modonomicon

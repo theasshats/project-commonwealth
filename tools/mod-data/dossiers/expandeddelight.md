@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): juicing ACCEPTS fruit/crop items → juice; casks ACCEPT milk → cheese. Cooks/cuts through Farmer's Delight (made-by: farmersdelight:cooking/cutting — existing inbound weave). Outputs salt + cinnamon dusts that other food mods can pull as seasoning, plus new c:crops.
 
 anchors:    survival (1)  — food/crops/seasonal-eating content; rides the Delight cooking web (its recipes already use farmersdelight cooking/cutting, but that's a food-mod tie, not a 2nd pillar).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:crushing / create:milling — route its salt_ore (and rock-salt) through Create crushing for salt, and grind cinnamon/coffee-style reagents in a Millstone, anchoring the new crops to the spine. [M-03 ore-doubling / M-12 processing-chain pull] [STRONG]
   - economy via numismatics — aged cheese wheels & salt as a tradeable/regional luxury (scarcity-driven): cheese aging is time-gated, a natural sellable. [M-09 luxury good→coin] [MED]
 

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes brass (plates/sheets), andesite alloy (1 per primer), gunpowder/nitropowder fluid; outputs TACZ guns + bulk ammo. Join keys: brass plates, andesite alloy, gunpowder. Bridges Create ↔ TACZ.
 
 anchors:    Create (1)  — pure Create-spine: turns TACZ gun/ammo crafting into automatable Create chains (depth via sequenced_assembly). Also the firearms half of the pack's PvPvE combat.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics — mass-produced ammo (shells/rounds) is a consumable trade good; an "arms dealer" specialization sells rounds for coin. [MED] (M-09 luxury/processed good → coin)
   - magic — none coherent; leave. (Combat is not a pillar, so the gun side stays single-pillar unless ammo→coin is taken.)
 

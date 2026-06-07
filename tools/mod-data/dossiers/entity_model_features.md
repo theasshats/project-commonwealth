@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none.
 
 anchors:    support (client rendering/resourcepack) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (client model engine; no game content).
 
 how-packs-integrate (SWEEP): bundled with ETF so OptiFine-format custom-model resourcepacks work on NeoForge. https://modrinth.com/mod/entity-model-features

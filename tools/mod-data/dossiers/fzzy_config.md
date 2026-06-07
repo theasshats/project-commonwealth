@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — configuration API.
 
 anchors:    support (library) (1)  — config backend for dependent mods; no weave needed.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role.
 
 how-packs-integrate (SWEEP): Pulled in as a hard dependency of mods that build their config on it; never wired by recipes. https://modrinth.com/mod/fzzy-config

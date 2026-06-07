@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — no items in/out.
 
 anchors:    support (1) — friend-group QoL (voice comms). Core to a ~10-person co-op pack's social layer.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (comms infrastructure; nothing to weave)
 
 how-packs-integrate (SWEEP): shipped as-is for proximity chat; needs server-side setup but no recipe wiring. https://modrinth.com/plugin/simple-voice-chat

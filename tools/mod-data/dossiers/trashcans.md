@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES — any item, any fluid, any FE energy (void sink). OUTPUTS — none (deletes). Useful as the overflow drain on Create/automation lines.
 
 anchors:    support (automation QoL) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role. It's a sink for Create/tech automation overflow, but voiding is anti-economy/anti-scarcity by nature, so no pillar weave (and arguably worth a balance note in a scarcity pack — don't make it trivialize byproduct value).
 
 how-packs-integrate (SWEEP): dropped in for factory overflow handling alongside Create/tech; some scarcity packs gate or omit it so byproducts retain value. https://modrinth.com/mod/trash-cans

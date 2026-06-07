@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — no items; only renders textures supplied by resource packs.
 
 anchors:    support (client/library) (1)  — rendering library/visual polish; sanctioned anchor needing no weave.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (texture library; no content to weave)
 
 how-packs-integrate (SWEEP): bundled as a dependency for decoration mods (Supplementaries et al.) so their connected textures render; drop-in, no config. https://modrinth.com/mod/fusion-connected-textures

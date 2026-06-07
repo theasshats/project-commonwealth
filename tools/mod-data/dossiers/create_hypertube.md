@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes Create parts (cogs/brass/copper) to craft tube blocks; "moves" players/entities rather than items — a transport network, no material throughput.
 
 anchors:    Create, aeronautics (2)  — kinetic-powered entity/player transport = the logistics/transport pillar
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 (Create + aeronautics/logistics). No coherent further weave — leave.
 
 how-packs-integrate (SWEEP): drop-in fast-travel for Create packs; complements trains/airships for short-hop personnel transport. https://modrinth.com/mod/hypertube

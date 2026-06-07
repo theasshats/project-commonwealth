@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes a Create Copper Backtank + brass (and Netherite for the upgrade) to craft; in use it consumes compressed air. Personal-mobility gear, no material throughput.
 
 anchors:    Create, aeronautics (2)  — Create-air-fuelled personal flight = the aeronautics/mobility pillar
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 (Create + aeronautics). No coherent further weave — leave. (Could be a boss-drop/MineColonies-gated unlock per the progression north-star, but that's a gating call, not a pillar.)
 
 how-packs-integrate (SWEEP): standard early-flight reward in Create packs; gated behind the brass/backtank tier. https://modrinth.com/mod/create-jetpack

@@ -13,7 +13,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none material — only produces the guide-book items themselves; no foreign-material sink.
 
 anchors:    support (library / docs) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role
 
 how-packs-integrate (SWEEP): shipped as a dependency (Ars Nouveau, Occultism, etc. use it for their guides) and/or packdevs add a custom pack guidebook. https://modrinth.com/mod/patchouli

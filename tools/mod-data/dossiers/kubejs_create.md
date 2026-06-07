@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a directly — enables wiring foreign materials into Create methods via script.
 
 anchors:    support (modpack tooling) (1)  — enables Create-recipe weaving; a tool, not a weave target.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (Create-scripting bridge, nothing to weave).
 
 how-packs-integrate (SWEEP): standard companion to KubeJS in any Create pack that scripts Create recipes. [https://kubejs.com/wiki/addons/create]

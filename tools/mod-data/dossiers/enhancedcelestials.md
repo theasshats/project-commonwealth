@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): no processing methods; outputs are the meteor / space_moss blocks (harvestable). Harvest Moon's growth buff effectively *accelerates any crop* — a global modifier other survival/food mods ride for free.
 
 anchors:    survival (the world pushing back — seasonal night events) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:crushing — make enhancedcelestials:meteor a crushable "fallen-star" rock yielding iron/nickel + an xp-nugget byproduct, so meteors become a minor Create feedstock rather than pure deco [MED, M-04]
   - magic via ars/occultism — gate a celestial-attunement step on a Blood/Blue Moon being active (event-as-catalyst), e.g. a ritual only completable under a given moon [WEAK, M-07-adjacent; event-gating, not item-gating]
 

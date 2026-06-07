@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): no item throughput — it OUTPUTS discoverable structures + loot into the world; loot tables are the natural injection point for pack-defined rewards.
 
 anchors:    Create, survival (2)  — Create-themed worldgen the player explores; structures/loot push the survival/exploration pillar
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 (Create theme + survival/worldgen). Optional: economy/magic via loot-table seeding — make a scarce coin/reagent a structure reward [M-02-adjacent, WEAK] — but it's a loot edit, not a method weave; leave.
 
 how-packs-integrate (SWEEP): adventure-flavour worldgen for Create packs; packs sometimes edit its loot tables to seed progression items. https://modrinth.com/datapack/create-let-the-adventure-begin

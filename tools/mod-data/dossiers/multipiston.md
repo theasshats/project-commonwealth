@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none (moves world blocks; does not consume/produce items or fluids).
 
 anchors:    support — MineColonies/Structurize dependency (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (a colony dependency block; not a material sink, no coherent weave)
 
 how-packs-integrate (SWEEP): Pulled in automatically with MineColonies; not surfaced to players as standalone content. https://www.minecolonies.com/wiki/dependencies/multipiston/

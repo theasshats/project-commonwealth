@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — pure library.
 
 anchors:    support (library) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (library dependency; nothing to weave)
 
 how-packs-integrate (SWEEP): pulled automatically as a dependency of Serilum's tweak mods; never configured directly. https://modrinth.com/mod/collective

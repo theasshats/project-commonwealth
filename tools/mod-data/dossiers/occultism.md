@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   NOTE: occultism:silver_ingot is the pack's REAL silver (c:ingots/silver) — do NOT unify galosphere's "silver" (=palladium) onto it (per CLAUDE.md gotcha).
 
 anchors:    magic (1)  — flagship summoning pillar; also touches Create (create dep, crushing ore-doubling) but its core identity is magic.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via occultism:spirit_trade — a summoned merchant spirit is a natural otherworld-goods market; ties demon labor to the coin/trade pillar. [STRONG] M-09 / M-02
   - magic↔organic: route foreign mob/boss drops through occultism:spirit_fire or :ritual to mint essences — the canonical transmutation sink. [STRONG] M-11
   - Create: occultism:crushing as a parallel ore-doubling path; occultengineering already bridges its rituals to Create machines (see that dossier). [STRONG] M-03 / M-05

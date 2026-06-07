@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): OUTPUTS a large catalogue of mob-drop reagents — material nuggets/fragments (incl. c:nuggets/diamond, c:nuggets/emerald), shields, rings, dolls/busts — a rich progression-reward feedstock. CONSUMES (existing inbound weaves): a drop is bottled via create:emptying and a food/ingredient is processed via farmersdelight:cutting.
 
 anchors:    survival (1) — endgame-leaning combat/difficulty content (the world pushing back). (Dolls/busts/garden deco are a decoration-palette bonus; nugget/fragment drops give it reach into many crafting webs.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - magic via occultism:spirit_fire / ritual or ars_nouveau:imbuement — funnel its many mob-drop fragments/reagents as ritual/infusion inputs so the bestiary feeds the magic web; M-02 mob-drop reagent sink + M-11. [STRONG]
   - economy via numismatics — boss busts / rare artifact rings as high-value bounty or sale goods (kill-the-mini-boss → coin); M-08/M-02. [MED]
   - Create via create:crushing — process its metal nuggets/fragments into intermediates (already has a create:emptying touch), tying drops to the tech spine; M-03/M-02. [MED]

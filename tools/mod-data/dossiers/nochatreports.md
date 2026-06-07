@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — networking/privacy utility, no materials.
 
 anchors:    support (privacy/QoL) (1)  — sanctioned support role; needs no weave.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (no items/methods to route).
 
 how-packs-integrate (SWEEP): Shipped as-is on friend-group servers to opt out of chat reporting; no config wiring. https://modrinth.com/mod/no-chat-reports

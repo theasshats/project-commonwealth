@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none.
 
 anchors:    support (curated friend-group flavor) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave (a single joke music disc; forcing a coin/recipe edge would be noise).
 
 how-packs-integrate (SWEEP): dropped in as a one-off easter egg; no wiring. https://modrinth.com/mod/steves-lava-chicken-music-disc

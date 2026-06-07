@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes arbitrary full blocks as main/support material (vanilla and modded — any mod's stone/wood/metal block can become a timberframe/shingle/pillar); outputs the matching DO ornamental variant. Strong join surface: feed Create/Galosphere/other palette blocks in to get framed/shingled versions out.
 
 anchors:    decoration palette (support) ; tied to MineColonies progression (1 content + support)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via the Architect's Cutter consuming Create/Create-adjacent blocks as the main/support material so Create-made stone (andesite/brass casings cosmetics, processed stone) round-trips into framed deco [M-04 Create recycles deco, WEAK-MED] — but the cutter is its own method, not Create's, so this is a thematic palette-bridge, not a Create-machine routing.
   - (DO is primarily a MineColonies support dependency; treat as support-anchored, weave only opportunistically)
 

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none of its own; it HOSTS foreign items as equippable accessories (the slots magic mods' rings/amulets plug into) — relevant as infrastructure, not a material join key.
 
 anchors:    support (library) — sanctioned support role; needs no weave. (Quietly underpins the magic pillar by giving Ars/Iron's their accessory slots.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (it carries no items to route; its weave value is letting OTHER mods' accessories exist).
 
 how-packs-integrate (SWEEP): a required dependency for any mod using accessory slots; packs may add slot counts/config but otherwise it's invisible plumbing. https://modrinth.com/mod/curios

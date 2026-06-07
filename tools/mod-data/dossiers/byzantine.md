@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES the vanilla/Domum Ornamentum building materials MineColonies' Builder requests per schematic. OUTPUTS finished colony buildings, not items.
 
 anchors:    survival (1) — MineColonies colony content (settlement/progression backbone). Decoration-palette support role for the colony pillar.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. A pure style/schematic pack; its "weave" is entirely through MineColonies. No coherent second-pillar routing of its own (don't force one). Curated colony flavor.
 
 how-packs-integrate (SWEEP): added alongside MineColonies as an extra architectural style option; players pick it in the Town Hall. [https://www.curseforge.com/minecraft/mc-mods/byzantine-styles-pack-for-minecolonies]

@@ -14,8 +14,8 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES planks/logs/wool/stone per variant via vanilla crafting; OUTPUTS decorative + lightly-functional furniture blocks (no material feedstock for other mods).
 
 anchors:    support (decoration palette) (1) — a sanctioned deco/flavor anchor; the homestead-furnishing layer for builds and MineColonies-style interiors.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
-  - Create via create:cutting / mechanical_crafting — route some furniture through Create wood-cutting/assembly (or a sequenced step) so the decoration tier earns a Create tie (recipe-weaving deco IS sanctioned per CLAUDE.md as a 2nd-pillar grant); M-12 processing-chain pull. [MED]
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
+  - Create via create:cutting / mechanical_crafting — route some furniture through Create wood-cutting/assembly (or a sequenced step) so the decoration tier earns a Create tie (recipe-weaving deco IS sanctioned per CLAUDE.md as a 2nd-anchor grant); M-12 processing-chain pull. [MED]
   - economy via numismatics — finished furniture sets as sellable luxury build-goods (or supplied to colonists); M-09 luxury-good→coin. [WEAK — deco sells thinly]
   - (decoration palette already counts as its valid support anchor; a 2nd pillar is a plus, not required.)
 

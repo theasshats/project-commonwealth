@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes Create mats + its own steel/bronze/cast_iron/nethersteel (provides c:ingots/{steel,bronze,cast_iron,nethersteel}), gunpowder/propellant, and metal for casting; outputs cannon blocks, shells, cartridges, fuzes. Join keys: shared c:ingots/steel & bronze tags (cross-mod metal), gunpowder, foundry melting feedstock.
 
 anchors:    Create, aeronautics (2)  — deep Create-machine build chain + cannons mounted on contraptions/Aeronautics ships (combat-logistics pillar). Also the pack's PvPvE combat backbone.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics — finished shells/munitions as a sellable war-good, or cannon-grade steel as a traded scarcity metal. [MED] (M-09 luxury/processed good → coin; specialization driver for a "munitions" trade)
   - (Already ≥2 pillars; economy is an optional third weave, not required.)
 

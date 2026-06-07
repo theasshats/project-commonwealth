@@ -18,11 +18,19 @@ methods (FIRST-CLASS — what this mod can DO; resources other mods pull THROUGH
   non-recipe mechanics: physics-simulated contraption assembly via the Physics Assembler (needs Sable); lift = levitite (resists gravity, 10 kpg; End Stone substitutes at 2 kpg) OR hot-air (adjustable burner heats an envelope, volume = lift); thrust = propeller bearing + sail blocks; the levitite BLEND → levitite step is an IN-WORLD CRYSTALLIZATION (code recipe, not JSON).
   consumes / outputs [jar]: levitite_blend = create:mixing(create:zinc_nugget + aeronautics:end_stone_powder + #c:water); gyroscopic propeller bearing = brass_casing + wooden_slabs + simulated:gyroscopic_mechanism (confirms the one wiki recipe); propeller bearing = brass_casing + iron_sheet + wooden_slabs; adjustable (hot-air) burner = andesite_alloy + iron_sheet + redstone; Physics Assembler = andesite_alloy + andesite_casing + lever; portable engine ← create:sequenced_assembly engine_assembly (industrial iron block + iron sheet/bars/helmet); gyroscopic_mechanism ← create:sequenced_assembly (andesite_alloy + cogwheel + crushed_raw_iron + shaft + compass, via deploying/cutting/pressing); Honey Glue uses #c:honey [wiki].
 
+<<<<<<< HEAD
 anchors:    aeronautics (1) — the pillar spine; Create is a de-facto 2nd and now jar-proven (zinc / brass_casing / andesite_alloy / sequenced-assembly all run through Create's mixing/deploying/cutting/pressing). Now jar-grounded for OUTBOUND weaves.
-2nd-pillar candidates (the links the pillar was never reviewed for — name delivery + motif):
+2nd-anchor candidates (the links the pillar was never reviewed for — name delivery + motif):
   - levitite → economy: zinc-gated bulk material (blend = create:mixing of zinc nugget + end-stone powder) every builder needs; a mass-production specialist becomes the server's lift supplier (M-08 mint-adjacent / M-09 sell). via: recipe/numismatics. [STRONG — jar-grounded scarcity: zinc + end stone]
   - levitite blend crystallization → magic: the in-world catalysis step (blend → levitite) is CODE, not JSON — it could be made to REQUIRE an Occultism/Ars catalyst adjacent (KubeJS) for a clean aeronautics↔magic seam (M-10/M-22). via: config/KubeJS. [explore — needs source check; NOT visible in the recipe JSON]
   - hot-air (adjustable) burner → survival/fuel: burns furnace fuel; a farm/charcoal specialist supplies the fleet. M-13: extend the burner's fuel tag to TFMG diesel (tag JSON, no KubeJS). via: config-tie. [wiki + jar: burner = andesite_alloy + iron_sheet + redstone]
+=======
+anchors:    aeronautics (1) — the pillar spine; Create is a de-facto 2nd (zinc/brass/gyro-mechanism/casing all Create). Now reviewable for OUTBOUND weaves.
+2nd-anchor candidates (the links the pillar was never reviewed for — name delivery + motif):
+  - levitite → economy: zinc-gated bulk material every builder needs; a mass-production specialist becomes the server's lift supplier (M-08 mint-adjacent / M-09 sell). via: recipe/numismatics. [STRONG — wiki-grounded scarcity]
+  - levitite blend crystallization → magic: the in-world catalysis step could REQUIRE an Occultism/Ars catalyst placed adjacent (KubeJS) — a clean aeronautics↔magic seam (M-10/M-22). via: config/KubeJS. [explore — needs source confirm]
+  - hot-air burner → survival/fuel: burns coal/charcoal; a farm/charcoal specialist supplies the fleet. Also M-13: extend the burner's fuel tag to TFMG diesel (tag JSON, no KubeJS). via: config-tie. [wiki-grounded]
+>>>>>>> a82b961 (weave: reframe ALL weave-workstream docs to the loop model)
   - borehead bearing (flying drill) → Create+economy: most Create-integrated use; extracted ore feeds the economy (M-08). via: recipe. [inferred]
   - rope/docking connector → economy logistics: docking stations at Numismatics trading posts make airships a real cargo layer. via: config. [inferred]
   - dyeable tires (small/large/monstrous, addon) → economy: dyed variants as cosmetic NPC trade goods (M-09). via: trade. [inferred, low tier]

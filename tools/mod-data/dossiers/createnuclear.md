@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes uranium (raw→processed via Create crushing/mixing/pressing → fuel) and outputs SU + lead/steel ingots; the enriched method accepts items to "enrich" (e.g. enriched_soul_soil). Steel (c:ingots/steel) is a shared alloy other Create addons want.
 
 anchors:    Create (1) — pure Create-spine power addon; uses create:compacting/crushing/mixing/pressing/mechanical_crafting to refine fuel and feeds SU back to Create.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics mint — refined uranium / steel are scarce regional metals that mint into coin (M-08: coin from processed scarcity); reactor-grade fuel is a natural high-value trade good (M-09).   [MED]
   - survival via radiation-as-hazard — the radiation/hazmat layer already pushes the world back; could tie its anti-rad gear to the seasons/Cold-Sweat survival pillar, but that is thematic not a method-routing.   [WEAK]
 

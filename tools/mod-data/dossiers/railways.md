@@ -13,7 +13,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes brass/copper/iron/zinc ingots+nuggets+plates (c: tags) crafted via create:mechanical_crafting + create:sequenced_assembly (already inbound). Outputs trackwork, locometal building stock, conductor caps; no standalone processing method foreign mats would feed.
 
 anchors:    Create, aeronautics (2)  — Create train extension (2 inbound Create recipe types); the rail/logistics transport pillar.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — already ≥2 pillars (Create + aeronautics/transport). No coherent magic/economy/survival routing without forcing.
 
 how-packs-integrate (SWEEP): a near-default Create-pack train layer; recipes go through Create's crafter/assembly. https://modrinth.com/mod/create-steam-n-rails

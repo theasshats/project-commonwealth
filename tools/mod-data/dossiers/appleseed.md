@@ -17,7 +17,7 @@ methods (FIRST-CLASS — what this mod can DO; resources other mods pull THROUGH
   consumes / outputs: consumes nothing craftable; its "output" is DEMAND — it makes diverse food continuously worth producing, so it pulls on farming / ranching+hunting / cooking production (the join key, but inverted: it FEEDS demand rather than accepting a material).
 
 anchors:    survival (1) — it is the pressure-side diet mechanic (SYSTEMS.md §2, "Food: the diet system"). The natural 2nd is production-by-demand, not a recipe edge.
-2nd-pillar candidates (a demand-driver, so frame as "what production does the diet pull on" — not a forced recipe):
+2nd-anchor candidates (a demand-driver, so frame as "what production does the diet pull on" — not a forced recipe):
   - production (Create/farming/cooking): diet variety creates ongoing demand for diverse crops, meats and cooked dishes → pulls Farmer's Delight / ExtraDelight / vinery / farming mods. This is the loop in miniature: pressure (diet) → production (food) → economy (food trade). via: config/tuning, not a new recipe. [STRONG — the mod's whole point; matches SYSTEMS.md]
   - economy: a balanced diet being valuable makes high-nutrient / multi-group foods sellable trade goods (M-09), so the cook/farmer specialist supplies others. via: numismatics price/sell. [MED — the Eco "varied nutrition has value" parallel, SYSTEMS.md]
   - magic: none obvious — leave (don't force).

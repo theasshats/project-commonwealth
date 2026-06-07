@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes zinc (Create's metal) to craft the blank shapes and ANY block as the applied skin; outputs disguised decorative shapes. Join key: it is fundamentally a Create-zinc sink and a universal skin for other mods' blocks.
 
 anchors:    Create (2)  — Create decoration addon; depends on create and is built from Create's zinc → already two-pillar-adjacent via Create. Treat as Create-anchored deco.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. It already lives inside the Create pillar (zinc-built, Create-dependent decoration); a second hard pillar would be a forced edge. Its value is *extending* the Create build vocabulary, which is its anchor.
 
 how-packs-integrate (SWEEP): a default include in Create build/decoration packs; needs no recipe wiring beyond Create itself (zinc is already a Create resource). https://modrinth.com/mod/copycats https://create.fandom.com/wiki/Copycat_Block

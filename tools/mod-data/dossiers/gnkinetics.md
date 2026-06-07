@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES standard Create stock (andesite/brass, cogwheels, shafts) to craft its parts; OUTPUTS kinetic components that plug straight into Create contraptions — no foreign feedstock.
 
 anchors:    Create (1) — directly extends the Create kinetic toolbox (its sole reason to exist; counts as the tech-spine pillar, support-augment role).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. It IS Create; a second pillar would be forced. Its parts are pure mechanism with no thematic hook into magic/economy/survival, and it is best read as a deepening of the Create spine rather than a bridge.
 
 how-packs-integrate (SWEEP): Create packs add it for richer power-transmission options (gear ratios, compact routing); recipes stay inside Create's own material ladder. https://modrinth.com/mod/gears-n-kinetics

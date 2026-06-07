@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes cocoa beans, milk, sugar (+ berries/marshmallow); outputs chocolate fluids, bars, candies and chocolate-brick building blocks. Chocolate fluids could be an input other food mods pull from.
 
 anchors:    Create, survival (2)  — cocoa→chocolate food chain through Create methods; candies also feed the food/effects side of survival
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics sell — multi-step processed chocolate/candy is a clean luxury-good seller [M-09, MED]
   - (already ≥2 (Create+survival); M-09 would be a 3rd-pillar economy bonus)
 

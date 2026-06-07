@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — no items in or out; it only alters an existing boss's behavior.
 
 anchors:    survival (endgame boss difficulty) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. It adds no items and doesn't touch the dragon's drop table, so there's no material to route through any method; a forced edge would be inventing content the mod doesn't have.
 
 how-packs-integrate (SWEEP): dropped in as a difficulty-spike for the vanilla endgame; pairs with End-progression mods (e.g. End Remastered) to make reaching AND beating the End harder. https://modrinth.com/datapack/edf-remastered

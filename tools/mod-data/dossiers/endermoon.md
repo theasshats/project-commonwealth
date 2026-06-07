@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none of its own; indirectly multiplies enderman drops (ender pearls) by making them mass-spawn — a passive supply tap.
 
 anchors:    survival (the world pushing back — spawn-surge event) (1); depends on enhancedcelestials.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. It's a spawn-weight event with no items of its own; any weave belongs on the ender-pearl drop or the parent enhancedcelestials event system, not here.
 
 how-packs-integrate (SWEEP): added on top of Enhanced Celestials as an extra event for atmosphere / farmable enderman nights; config-tuned frequency. https://modrinth.com/mod/ender-moon

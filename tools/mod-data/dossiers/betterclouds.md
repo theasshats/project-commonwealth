@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — rendering.
 
 anchors:    support (client/visual) (1)  — sky aesthetics; no weave. (Note: pack uses Sodium and warns shaders break Aeronautics ships — this is cloud-render only, distinct from that caveat.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role.
 
 how-packs-integrate (SWEEP): Added purely for sky visuals; client-side, no wiring. https://modrinth.com/mod/better-clouds

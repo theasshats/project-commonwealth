@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes vanilla mats (gravel, nuggets, cobble, lava, bonemeal, coal blocks, blaze powder); outputs vanilla/Create resources (strata stones, diamond, deepslate, calcite, blaze rods) through create:compacting/crushing/mixing/splashing.
 
 anchors:    Create (1)  — it IS Create-spine content; every recipe routes through a Create machine.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. It's a recipe datapack with no items of its own to route; it deepens the Create pillar rather than bridging pillars. Support-tier (recipe content).
 
 how-packs-integrate (SWEEP): used as-is to enable renewable resource loops; packs may trim recipes that conflict with intended scarcity. https://modrinth.com/mod/create-ultimate-factory

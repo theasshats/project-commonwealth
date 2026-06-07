@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — operates on whatever is already in a crafting grid.
 
 anchors:    support (QoL) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (crafting-grid QoL; nothing to weave)
 
 how-packs-integrate (SWEEP): standard crafting-QoL include; pulled in with Balm, no configuration. https://modrinth.com/mod/crafting-tweaks

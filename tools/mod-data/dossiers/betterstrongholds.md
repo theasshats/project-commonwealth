@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): outputs = vanilla loot in dungeon chests; consumes nothing. Loot tables are the only data hook (could be edited to seed pack-specific drops, but that's a datapack edit, not a method).
 
 anchors:    survival (1) — exploration/world-feel; world content the player ventures into.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. Pure structure mod with no registry items or methods; nothing to route through Create/magic/economy. A loot-table tweak (seed a Numismatic coin or magic reagent) is possible but is a datapack edit, not a mod weave — defer.
 
 how-packs-integrate (SWEEP): dropped in as a worldgen polish mod alongside the rest of the YUNG's suite; rarely re-wired. https://modrinth.com/mod/yungs-better-strongholds

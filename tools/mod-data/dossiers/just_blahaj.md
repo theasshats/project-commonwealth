@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes vanilla wool/dye to craft; outputs only decorative plush blocks — no material to route into another method.
 
 anchors:    decoration palette / curated friend-group flavor (support — 1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. Pure flavor decoration; the 31 plush variants are an aesthetic set, not a material with any Create/economy/magic routing. Forcing an edge here is the failure mode.
 
 how-packs-integrate (SWEEP): included as friend-group flavor / cozy decoration; crafted from cheap vanilla mats, no gating. https://modrinth.com/mod/blahaj

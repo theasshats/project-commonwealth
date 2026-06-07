@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — surfaces existing loot/worldgen data; no processing.
 
 anchors:    client-only UI (support — 1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role. (Useful for the pack's scarcity design — players can see where regional ores spawn — but it's documentation, not a node.)
 
 how-packs-integrate (SWEEP): paired with JEI for loot/worldgen/trade transparency; part of the pack's recipe-overhaul stack (JEI+JER+JEED, CLAUDE.md). https://modrinth.com/mod/just-enough-resources-jer

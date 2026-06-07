@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): outputs = vanilla loot in monument chests; consumes nothing. Loot tables are the only data hook.
 
 anchors:    survival (1) — aquatic exploration/world-feel.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. No registry items or methods; a loot-table seed (coin/reagent) is a datapack edit, not a mod weave — defer.
 
 how-packs-integrate (SWEEP): standard YUNG's-suite worldgen polish; not re-wired. https://modrinth.com/mod/yungs-better-ocean-monuments

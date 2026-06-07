@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES grapes, apples, cherries, generic fruit/sugar in ingredient slots, glass bottles; OUTPUTS grape_juice, apple_juice, apple_cider, applesauce, apple_mash, and dozens of effect-bearing wines — all high-value finished consumables (luxury trade goods).
 
 anchors:    survival (1)  — food/drink chain feeding Spice-of-Life variety; its own fermentation machines are self-contained (not yet Create- or economy-wired).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy: wines/ciders priced as luxury trade goods at the Numismatics counter — finished, effect-bearing consumables are the textbook sellable. [STRONG] (M-09 luxury good→coin)
   - Create: route grapes/apples through create:milling or create:pressing into juice as an alt to the grapevine_pot, or feed Vinery juices/wines back into farmersdelight/create cooking. [MED] (M-12 processing-chain pull)
 

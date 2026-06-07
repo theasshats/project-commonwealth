@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes Create mats — netherite plates, precision/regenerative casing, optical sensor, quantum drive — built via create:sequenced_assembly / mechanical_crafting / sandpaper_polishing (inbound). Outputs the companion + modules. No material processing.
 
 anchors:    Create (1)  — a Create-gated craftable mob; its build chain is deep Create (sequenced assembly), so it deepens the Create pillar.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. It's a personal combat companion; combat isn't a pillar and there's no tradeable/magic/transport surface to route. Forcing an edge would be artificial.
 
 how-packs-integrate (SWEEP): a flavor reward at brass/netherite tier — an exploration/combat buddy gated behind Create progression; no cross-mod wiring expected. https://modrinth.com/mod/create-mechanical-companion

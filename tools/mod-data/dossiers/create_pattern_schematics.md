@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes only the schematic items + the blocks the Schematicannon places; no resource conversion. Pure tooling.
 
 anchors:    Create (1)  — Create-internal build-automation QoL
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (build tooling for the Create spine; no foreign material to weave). Leave.
 
 how-packs-integrate (SWEEP): drop-in companion to Create's schematics/Schematicannon; nothing to wire. https://modrinth.com/mod/create-pattern-schematics

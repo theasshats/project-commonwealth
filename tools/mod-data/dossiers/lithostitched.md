@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — registers no items; nothing to route (it shapes worldgen, not the recipe graph).
 
 anchors:    support (library/API) (1)  — worldgen-compat dependency; underpins terrain/biome mods (Tectonic).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (worldgen library, nothing to weave).
 
 how-packs-integrate (SWEEP): pulled as a required dependency of worldgen mods/datapacks; never recipe-targeted. [https://modrinth.com/mod/lithostitched]

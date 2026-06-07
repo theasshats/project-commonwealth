@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): OUTPUTS gems/ingots tagged c:gems/jade, c:ingots/steel, c:ores/jade, plus Yokai drops; CONSUMES its own ores into gear. ⚠ tags own silver as c:* silver — see Galosphere/occultism silver caveat in CLAUDE.md before any unification. Its steel/jade overlap with other mods' c:tags (join keys).
 
 anchors:    survival (1)  — exploration/combat content: ores, themed mobs/bosses, weapons & armor
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create: route jade/ruby/onyx/aquamarine ores through create:crushing for ore-doubling, and steel/silver through the Create metal web — folds its ore tier into the tech spine [M-03 Create ore-doubling] [STRONG]
   - magic: Yokai drops (akaname_tongue, mob reagents) as occultism:spirit_fire / ars imbuement inputs, or gate weapon upgrades behind an arcane infusion [M-02 mob-drop reagent sink / M-10 arcane infusion pull] [MED]
 

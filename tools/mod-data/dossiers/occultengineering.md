@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   NOTE: occultengineering:spirit_solution is the RESERVED occult intermediate (reagent-ownership table) — reuse it; don't invent a new occult reagent.
 
 anchors:    Create, magic (2)  — by construction the weave between the two; inbound from create:* AND occultism:ritual/spirit_fire. Already the model M-05/M-11 mod.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - (already ≥2 pillars; not required) economy via numismatics minting of sterling_silver (its c:tag material) once Create-processed — a scarce occult alloy as coin stock. [WEAK] M-08
 
 how-packs-integrate (SWEEP): The canonical glue mod when Occultism + Create coexist — packs install it specifically to automate the occult tree through Create. https://modrinth.com/mod/occult-engineering

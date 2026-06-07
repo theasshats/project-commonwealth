@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): mostly self-contained dungeon loot; OUTPUTS a mob-drop reagent (spider_fang) and themed charms/weapons that other mods' methods could consume; temple-brick deco lines could feed crushing.
 
 anchors:    survival (1) — exploration/worldgen + combat-loot content.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - magic via occultism:spirit_fire / ars_nouveau:imbuement — transmute spider_fang (and other drops) into a magic reagent, giving the dungeon mobs a use   [MED · M-02/M-11]
   - Create via create:crushing — temple/pyramid brick deco crushes back to raw + XP nugget (lossy), tying the building set to the Create web   [WEAK · M-04]
 

@@ -14,8 +14,8 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes player/maid effort (and a touhou_little_maid Soul Orb / Photo for the Maid Motor) → OUTPUTS SU into a Create network. The Soul Orb/Photo intake is the cross-mod join key (touhou_little_maid).
 
 anchors:    Create (1) — both blocks are Create kinetic sources. (Soft cross-tie to touhou_little_maid, which is the pack's maid-flavor mod, not a pillar.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
-  - none — leave (it already bridges Create↔touhou_little_maid via the Soul Orb/Photo intake, but TLM is curated friend-group flavor, not one of the five pillars; no clean 2nd-pillar routing without forcing it).
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
+  - none — leave (it already bridges Create↔touhou_little_maid via the Soul Orb/Photo intake, but TLM is curated friend-group flavor, not one of the loop's systems; no clean 2nd-anchor routing without forcing it).
 
 how-packs-integrate (SWEEP): used as a low-tier/novelty SU source and, in maid packs, as a way to put maids to work generating power. https://modrinth.com/mod/createtreadmill
 sources (SWEEP): https://modrinth.com/mod/createtreadmill  https://www.curseforge.com/minecraft/mc-mods/create-treadmill

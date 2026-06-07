@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): OUTPUTS raw/cooked fish foods (c:item/foods/raw_fish, cooked_pike, cooked_perch, cooked_lionfish, pie, berry), prismarine rods, kelp storage blocks, and wood/coral deco — all material another mod's cooking/cutting/crushing method can consume.
 
 anchors:    survival (1) — food + aquatic worldgen/decoration (and curated flavor).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - survival/economy via farmersdelight:cooking / create:milling — run its raw fish through a cooking/processing chain into finished (sellable) dishes, joining the food web   [STRONG · M-12]
   - economy via numismatics sell — cooked-fish dishes / luxury seafood as priced trade goods   [MED · M-09]
   - Create via create:cutting/crushing — driftwood/riverwood and coralstone deco overlap Create's saw + crushing recycling   [WEAK · M-04/M-12]

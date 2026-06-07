@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes paper + tier metals (iron/gold/diamond/netherite scrap) → gliders; upgrades consume copper and nether materials. Page notes Create + Curios compatibility.
 
 anchors:    aeronautics (1) — personal flight/traversal gear (movement tier ladder).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:pressing/mechanical_crafting — gate the higher glider tiers (or reinforced paper) on Create sheets/parts so flight gear is built through the tech spine   [MED · M-05]
   - survival via create:milling — route reinforced-paper feedstock through a Create paper/pulp chain, bonding the glider to a processing web   [WEAK · M-12]
 

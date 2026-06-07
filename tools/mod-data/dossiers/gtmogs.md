@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a as recipes — but it DEFINES where every ore in the pack spawns and how scarce/regional it is. It is the upstream knob that makes "ores scarce and regional" (CLAUDE.md) true, feeding raw material into every downstream processing/economy chain.
 
 anchors:    survival, economy (2) — it is the worldgen substrate of the pack's scarcity model: regional/depth-gated veins (survival exploration) that produce the scarce metals the emergent trade economy is built on. (Also implicitly feeds Create, since those ores are what the spine processes.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 pillars and it is a framework, not a content mod — no weave to author. The "weave" is downstream: its scarce regional ores are the feedstock M-03 (create:crushing ore-doubling) and M-08 (coin-from-processed-scarcity) route through. It enables those motifs rather than needing one.
 
 how-packs-integrate (SWEEP): A modpack tool — packs (this one included) write KubeJS vein definitions per region/dimension to make specific metals scarce and location-bound, the literal mechanism behind Derpack's "scarce, regional ores" north star. Misconfiguration is fatal (a vein layer keyed `target` not `targets` crashes world creation — CLAUDE.md). https://modrinth.com/mod/gtmogs

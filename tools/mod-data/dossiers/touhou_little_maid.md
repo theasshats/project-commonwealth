@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES — power-point bottles (its currency) + vanilla mats in default altar recipes (a maid = lapis + diamond + gold + redstone + iron + coal; broom = hay + sticks + ender eye; camera = quartz + obsidian). OUTPUTS — maids, brooms, cameras, decorative/utility items. Altar recipe-type can ACCEPT arbitrary modded item inputs and gate on power points (KubeJS-addable).
 
 anchors:    survival (1)  — companion automation / labor (farming, fishing, mob defense); curated friend-group flavor
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - magic via the Altar recipe-type — the altar is a non-Create ritual-style crafting method that consumes a soul/offering currency; route a magic reagent or boss-drop through an altar recipe to gate a maid/upgrade. Reads as an arcane summoning rite, fits the magic pillar's ritual vocabulary. [MED] (M-05 native-method gating, M-11 ritual/transmutation sink analogue)
   - economy via power-point bottles as a sink — make power points buyable/sellable so maids tie into Numismatics trade. [WEAK] (M-02 mob-drop reagent sink: fairy-drop bottles)
   - Create note: leave — no natural Create routing without a forced edge; the altar is deliberately the non-Create path.

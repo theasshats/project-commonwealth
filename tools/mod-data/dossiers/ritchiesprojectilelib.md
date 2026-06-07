@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — API. No items in/out.
 
 anchors:    support (1) — library/API. No standalone gameplay content.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (library; nothing to weave). Indirectly serves Create/aeronautics via Big Cannons.
 
 how-packs-integrate (SWEEP): pulled in as a hard dependency of Create Big Cannons / projectile mods; never configured directly.

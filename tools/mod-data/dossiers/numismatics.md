@@ -13,7 +13,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): ACCEPTS literally any item as a priced sale good (the universal economy join key — every sellable mod good routes here); OUTPUTS/CONSUMES coins (spur..sun). This is THE coin sink — reagent-ownership reserves numismatics:* to the economy pillar (M-08/M-09).
 
 anchors:    economy, Create (2)  — IS the economy pillar's keystone, and a Create addon (depends on create; coins/blocks are Create-styled and crafted via Create).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - (already ≥2 pillars; it is the HUB other mods weave TO, not from) — the weaving direction is foreign goods → numismatics vendor/price (M-08 coin-from-processed-scarcity, M-09 luxury-good→coin). Leave as the destination, don't add an outgoing edge.
 
 how-packs-integrate (SWEEP): Installed as the trade backbone; packs set sell prices on scarce/processed/luxury goods so specialization produces coin income (the emergent-economy spine). https://modrinth.com/mod/numismatics

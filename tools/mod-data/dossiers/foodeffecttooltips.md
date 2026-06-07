@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — no items or world interaction.
 
 anchors:    support (client/QoL) (1)  — UI clarity; sanctioned anchor needing no weave.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (tooltip UI; no content to weave)
 
 how-packs-integrate (SWEEP): pairs with food-heavy packs (Farmer's/Extra Delight, Spice of Life) so players can read buff foods; drop-in, no config needed. https://modrinth.com/mod/foodeffecttooltips

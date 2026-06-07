@@ -63,7 +63,7 @@ counts, run ONE more full pass (`--full`) so the now-visible parts get woven, th
 >    `aeronautics:` IDs (non-empty).
 > 2. Rebuild dossiers: `python3 scripts/build-dossiers.py`. Confirm `tools/mod-data/dossiers/aeronautics.md`
 >    AUTO-DIGEST-FACTS now shows real counts. NOTE: build-dossiers may regenerate aeronautics.md from the jar
->    and could clobber the hand-authored sweep — preserve the wiki-grounded "2nd-pillar candidates" + "open gaps"
+>    and could clobber the hand-authored sweep — preserve the wiki-grounded "2nd-anchor candidates" + "open gaps"
 >    notes (levitite→economy/magic, burner→M-13, etc.) by re-folding them above the AUTO mark. Also delete the
 >    now-redundant `aeronautics_bundled.md` stub if the real `aeronautics.md` supersedes it.
 > 3. Reconcile the levitite-blend / Physics Assembler / propeller-bearing / levitite-alloy recipes from the new

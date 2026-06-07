@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — instrumentation only.
 
 anchors:    support (performance) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (profiler; nothing to weave)
 
 how-packs-integrate (SWEEP): installed server-side for TPS profiling; no gameplay wiring. https://modrinth.com/mod/spark

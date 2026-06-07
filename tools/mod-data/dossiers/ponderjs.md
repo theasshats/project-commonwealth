@@ -13,7 +13,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — no items or materials.
 
 anchors:    support (Create tooling / docs) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (it documents the Create spine rather than feeding a pillar)
 
 how-packs-integrate (SWEEP): added with KubeJS so packdevs can write Ponder scenes for custom recipes/weaves. https://www.curseforge.com/minecraft/mc-mods/ponder

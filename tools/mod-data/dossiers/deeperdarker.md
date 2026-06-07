@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): OUTPUTS distinctive reagents (soul_dust, soul_crystal, sculk_bone, heart_of_the_deep, warden_carapace, echo shards) — strong join keys for magic. Already CONSUMES foreign methods as inbound weaves: create:crushing + farmersdelight:cutting. Stone/wood block families crush back cleanly (M-04).
 
 anchors:    survival (1) — a hostile exploration dimension + gear tier (the world pushing back); not yet tied to a 2nd pillar in-pack.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - magic via occultism:spirit_fire / ars imbuement — soul_dust / soul_crystal / heart_of_the_deep are thematically pure "soul" reagents; transmute them into occult essences or imbue into a source reagent so the Otherside feeds the magic web (M-11 ritual/transmutation sink, or M-02 mob-drop reagent sink).   [STRONG]
   - Create via create:crushing — gloomslate/sculk-stone deco crushes to gravel + experience_nugget; lossy recycle that pulls the block sets into the Create spine (M-04). Already partly wired (create:crushing inbound).   [MED]
   - economy via numismatics — Otherside-only soul materials are scarce, dangerous-to-get goods → sellable for coin (M-09 luxury good → coin); secondary to the magic routing.   [WEAK]

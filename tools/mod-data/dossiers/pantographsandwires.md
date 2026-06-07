@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes copper (c:item/wires/copper), iron/all-metal rods, coal_coke, graphite via its `combine_wire` + Create processing (already wired through create:milling/mixing/compacting/deploying/mechanical_crafting/sequenced_assembly). Outputs overhead-line deco/infra blocks + coke/graphite material tags any other mod could pull.
 
 anchors:    Create, aeronautics (2)  — built ON Create machines (6 inbound recipe types incl. sequenced_assembly); serves rail/train transport (aeronautics pillar = trains/logistics).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — already ≥2 pillars (Create + aeronautics). Its coal_coke/graphite tags are a natural shared-material node if other mods want them, but no new edge needed.
 
 how-packs-integrate (SWEEP): paired with Create + Steam'n'Rails as the "modern electric train" layer; recipes route through Create machines. https://www.curseforge.com/minecraft/mc-mods/create-pantographs-and-wires

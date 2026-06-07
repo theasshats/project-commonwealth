@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): mincer ACCEPTS meats → ground meat/patties; pot/roaster/stove ACCEPT crops+meat+dairy via c:tags (cabbage/corn/onion/tomato shared with Farmer's Delight) → meals; drying ACCEPTS perishables. Outputs grains (barley/oat), butter, flour, eggs, bread. No inbound foreign-method weave yet (made-by: vanilla only) — a clean target.
 
 anchors:    survival (1)  — food/crops + animal-husbandry survival content.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:milling — route its grains (barley/oat) → flour through a Create Millstone instead of (or alongside) the in-mod path, tying its bread chain to the spine. [M-12 processing-chain pull] [STRONG]
   - economy via numismatics — animal-husbandry surplus (meat/eggs/butter) and grain as bulk sellable/MineColonies provisioning goods; husbandry's "feed for more drops" loop is a natural production-for-trade engine. [M-09 luxury good→coin] [MED]
 

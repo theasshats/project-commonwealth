@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes Emeralds (trade currency), Gold Tools (captain trades); outputs potions, the Prospector enchantment, redstone goods, kobold skulls — drops/trade goods that are economy- and Create-adjacent (redstone).
 
 anchors:    economy, survival (2)  — emerald trade economy + an underground-creature/structure survival layer
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already ≥2 pillars (economy + survival); no forced edge needed.
   - (optional flavor) magic via M-02: kobold_skull as a mob-drop reagent for a transmutation sink (Occultism spirit_fire) — only if a skull sink is wanted; WEAK.
 

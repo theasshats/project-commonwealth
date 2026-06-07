@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — no items/blocks/methods; operates on worldgen registration only.
 
 anchors:    support (1) — worldgen library/API dependency; no weave needed.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role.
 
 how-packs-integrate (SWEEP): required dependency for any biome-adding mod on modern MC; pulled automatically, never configured directly. https://modrinth.com/mod/terrablender

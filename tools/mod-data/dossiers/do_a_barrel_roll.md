@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — control/camera behavior; nothing to route material through.
 
 anchors:    support (client QoL) (1)  [thematically flight, but no aeronautics content/items]
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (pure client flight-feel; touches elytra not Create Aeronautics ships, nothing to weave)
 
 how-packs-integrate (SWEEP): added purely for elytra movement feel; no recipe/progression wiring. https://modrinth.com/mod/do-a-barrel-roll

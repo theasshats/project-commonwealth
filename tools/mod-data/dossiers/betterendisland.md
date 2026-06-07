@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — purely cosmetic/structural; nothing to consume or output.
 
 anchors:    survival (1) — end-game exploration/world-feel.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. No items, no methods, no loot; nothing to weave.
 
 how-packs-integrate (SWEEP): dropped in with the YUNG's suite as End polish; never re-wired. https://modrinth.com/mod/yungs-better-end-island

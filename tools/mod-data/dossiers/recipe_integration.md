@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): by design it CREATES cross-mod join edges — it bridges foreign materials (modded ores/dusts/plates) into Create/IE/Mekanism/Ars processing. Note: it also declares many c:tags for mods NOT installed here (aether, mekanism, MI, GT…) which simply stay dormant.
 
 anchors:    support (library / recipe-bridge) — but functionally it ADVANCES the pack's "one web" goal by adding inbound weaves
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role; it is the connective layer, not a content node. (Audit which of its recipes fire given THIS modlist; most of its 82 c:tags reference uninstalled mods and are inert.)
 
 how-packs-integrate (SWEEP): dropped in to auto-cross-link installed tech/magic mods' recipes; complements Almost Unified (which merges duplicate items) by adding processing paths instead. https://modrinth.com/mod/recipe-integration

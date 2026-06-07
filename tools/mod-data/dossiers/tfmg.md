@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES — iron/raw ores, coal (→ coke), crude oil + distillates, bauxite (→ aluminum), nickel/lead/lithium ores, sulfur/saltpeter, biomass/plant matter into the vat; OUTPUTS — steel, cast iron, aluminum, constantan, lead, nickel, lithium, plastic, sulfur, saltpeter, fuels, concrete/asphalt. Shares c:ingots/* and c:dusts/* tags so foreign metals can flow in/out of its casting + blasting chains.
 
 anchors:    Create (1)  — pure Create-addon tech; deep processing chains and a power grid bolted onto Create
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - aeronautics via fuels/engines — its diesel/gasoline/LPG and combustion engines are the natural propulsion + refined-fuel supply for Create Aeronautics ships/planes; route ship fuel through TFMG distillation. [STRONG] (M-06 sequenced-assembly keystone for engines; M-03 ore-doubling already shared)
   - economy via steel/fuel as luxury good — refined steel and fuel cans are high-effort processed scarcity, natural Numismatics sell-goods / bounty rewards. [MED] (M-08 coin from processed scarcity, M-09 luxury good→coin)
   - survival via flamethrowers/napalm weaponry vs. the world — weak; combat flavor, not a structural weave. [WEAK]

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — adds no items; provides explorable structures + villager population (loot/trade riders are vanilla)
 
 anchors:    survival (1)  — exploration / structure variety on the seas
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave. Structure datapack with no items/methods to weave; its value is exploration content (and a base for Aeronautics sea travel), not a recipe edge.
 
 how-packs-integrate (SWEEP): dropped in as exploration/structure content; pairs with other structure packs (Trek, YUNG's). Vanilla-block so it never conflicts on blocks; only structure-spacing config matters. https://modrinth.com/datapack/tidal-towns

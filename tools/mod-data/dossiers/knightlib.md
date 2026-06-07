@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a as a library; the content items are produced/consumed by Knight Quest's systems, not exposed as a routable method here.
 
 anchors:    support (library/API) (1)  — utility lib for the author's mods (Knight Quest); content is inert without that dependent.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (no Knight Quest in this pack means the chalice/grail content is unused; do not weave dead items).
   - (note) if Knight Quest were ever added, knightlib:great_essence would be the natural mob-drop/altar reagent to weave (M-02); not applicable today.
 

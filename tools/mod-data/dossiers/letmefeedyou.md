@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): n/a — uses existing food items, registers none of its own.
 
 anchors:    support (QoL) (1)  — co-op convenience; fits the friend-group survival vibe but registers no content.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (behavior-only QoL, nothing to weave).
 
 how-packs-integrate (SWEEP): dropped into co-op/SMP packs as-is; no recipes. [https://modrinth.com/mod/let-me-feed-you]

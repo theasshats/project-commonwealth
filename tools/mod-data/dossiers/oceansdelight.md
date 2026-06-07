@@ -13,7 +13,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES ocean drops (guardian/elder-guardian flesh, squid tentacles, cod/salmon/pufferfish) via FD methods; OUTPUTS prepared seafood foods. Naturally accepts fish from any fishing mod.
 
 anchors:    survival (1)  — food; already cross-woven into Farmer's Delight (cooking/cutting). Strong organic tie, but FD is also survival, so still 1 pillar.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via numismatics sale of finished seafood dishes (fugu_slice, elder_guardian_roll) as high-effort luxury trade goods → coast specialists sell to inland. [STRONG] M-09
   - economy/Create via numismatics or create:cutting on raw guardian/tentacle drops to extend the M-12 processing chain into a sellable good. [MED] M-12
 

@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — pure behavior patch on existing Create generators; no material in/out.
 
 anchors:    Create (1) — a Create-internal balance mod; touches only Create's own machines.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - survival via biome-gated power — the river/biome/open-air requirements make the *world* dictate where power can be built, which is exactly the survival pillar's "world pushes back"; no recipe, but a genuine survival flavor on the Create spine.   [MED]
 
 how-packs-integrate (SWEEP): added by packs that want early Create power to require thought/geography rather than a single windmill anywhere; config tunes the biome lists. https://modrinth.com/mod/create-picky-wheels

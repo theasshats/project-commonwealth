@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): CONSUMES wood/iron + a ship "item" to place each vessel (and a hull/mast/upgrade component set — largehull/smallhull, largemast/small_mast, swashbucklerupgrade); cannonball is a crafted munition. OUTPUTS transport vessels + naval weapons; no material feedstock for other mods.
 
 anchors:    aeronautics (1) — water transport/vehicles (the logistics/transport pillar); naval combat is a survival-flavored bonus.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:mechanical_crafting / sequenced_assembly — build the cutter/steamship hulls and cannons from Create parts (brass, mechanical components) so the fleet is gated on the tech spine; M-05 native-method gating + M-06. Steamship especially wants a Create-engine tie. [STRONG]
   - economy via numismatics — finished ships as high-value sellable/tradeable goods (a shipwright's trade); M-08/M-09. [MED]
   - NOTE: overlaps the pack's Create Aeronautics (ships) + Create Big Cannons (artillery); de-dup/role-split is a curation question, not a weave — flag for thunderdome.

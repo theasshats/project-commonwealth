@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes film + a flash/light source; outputs developed photographs/albums. Already accepts Create automation (sequenced_assembly develops film; deployers tend stands) — that's the existing inbound weave.
 
 anchors:    Create, survival (2)  — film develops via Create's sequenced assembly (made-by: create:sequenced_assembly) + deployer-tended stands; otherwise a self-expression/keepsake survival hobby.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already at 2 pillars (Create automation + survival hobby). Optional flavor third: economy via numismatics — printed photographs as sellable mementos/map-art trade goods. [M-09 luxury good→coin] [WEAK]
 
 how-packs-integrate (SWEEP): Create packs lean on its Sequenced-Assembly film development to make photography an automatable side-line; otherwise added for screenshots/keepsakes. https://modrinth.com/mod/exposure

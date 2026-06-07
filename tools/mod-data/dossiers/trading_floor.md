@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes whatever a villager trade demands (emeralds, raw goods, books) delivered by Create automation; outputs trade results (emeralds, enchanted books, etc.) onto belts. It is a join point between any sellable item and Create transport.
 
 anchors:    Create, economy (2)  — hard Create dependency (it is a Create depot variant) and its whole purpose is automated trade.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - already at 2 pillars — none needed. (Natural keystone for M-08: feed Create-processed scarce goods into the depot to mint emeralds/Numismatic value.)
 
 how-packs-integrate (SWEEP): standard Create-economy bridge — packs gate it behind Create and pair it with a villager hall to automate emerald/enchant farms; often the link between a Create production line and the trade economy. https://modrinth.com/mod/create-trading-floor

@@ -15,7 +15,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes nothing physically — it is an ambient world rule; its "join key" is the per-crop fertility list (any modded crop can be slotted into seasonal windows) and the season_sensor redstone output, which Create/automation can read to time seasonal farms.
 
 anchors:    survival (1) — a core survival pillar mod (Serene Seasons × Cold Sweat × Spice of Life is the pack's survival triad).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via season_sensor redstone — feed the sensor's season-change signal into Create logic (gearshifts/contraptions) so automated farms switch crops or open greenhouse shutters by season; M-05 native-method gating. [MED]
   - economy via seasonal scarcity — out-of-season produce becomes a scarce, trade-worthy good for Numismatics bounties when crews can't all grow everything year-round; M-09 luxury-good→coin. [WEAK]
 

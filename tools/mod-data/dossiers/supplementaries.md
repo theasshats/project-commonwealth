@@ -15,7 +15,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): INBOUND (existing) — its recipes already PULL THROUGH create:haunting, create:mixing, create:splashing and farmersdelight:cutting (ash, soap, etc.), and provide jeed effect/potion data. OUTBOUND join keys: flax (c:crops/flax, c:storage_blocks/flax), feather/flint/soap storage blocks, ash (c:dusts/ash), candy (c:foods/candy) — materials other mods' methods can accept. Faucet/jar are fluid-handling nodes that mesh with Create piping.
 
 anchors:    Create, survival (2) — already woven INTO the Create spine (haunting/mixing/splashing recipes) and into the food/farm layer (Farmer's Delight cutting, flax crop, ash/soap), on top of being a core decoration palette (sanctioned support role).
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — leave (already ≥2 pillars and deeply cross-woven; it is a connector mod by nature — adding more edges is unnecessary).
   - (latent, not needed) economy: jars/safes and decorative flags suit shop/builds; M-09 — but no action required.
 

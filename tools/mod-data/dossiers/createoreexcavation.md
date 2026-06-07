@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): consumes SU (kinetic input) + a drill-head item (drill/diamond_drill/netherite_drill tiers); OUTPUTS raw ores/fluids — the `vein` recipe table is the join key: ANY mod's ore can be added as a vein output (e.g. createnuclear uranium, regional scarce metals), making it a faucet that feeds the whole ore economy.
 
 anchors:    Create (1) — fully a Create-spine automation mod (SU-powered, made via create:crushing/cutting/milling/mechanical_crafting); the veins are its sole content.
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - economy via vein-table scarcity — because veins are configurable and regional, gating scarce coin-grade metals behind drilling makes infinite-but-slow ore a sink that feeds the numismatics mint (M-08: coin from processed scarcity). Pack-design lever, not a recipe edge.   [MED]
   - (no clean magic/aeronautics/survival routing — leave at the economy lever)
 

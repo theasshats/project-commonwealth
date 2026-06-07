@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): outputs = combat drops (dark_metal, bundle_of_bones, candy, boss-only Pumpkin Staff/Soul Saber) — these are the join key. Consumes = vanilla bench crafting only; nothing native to route foreign material through.
 
 anchors:    survival (1) — the world pushing back; danger, seasonal threat, exploration loot. (Argillite blocks add a decoration palette — a support sub-role, not a 2nd pillar.)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - Create via create:crushing on dark_metal_deposit / dark_metal — M-03 ore-doubling: route its ore through Create crushing to a nugget/dust, making dark-metal gear an outcome of the Create spine rather than a pure bench recipe. [STRONG]
   - economy via Bountiful/Numismatics — M-02 mob-drop reagent sink: make Dark Metal / bundle_of_bones / boss drops valid bounty turn-ins or sellable goods, converting the danger loop into coin. [MED]
   - magic via Occultism spirit_fire / Ars imbuement — M-11/M-10: its "soul"/cursed drops are thematically apt transmutation reagents (e.g. bundle_of_bones → a necromantic intermediate); coherent flavor fit, needs a recipe authored. [MED]

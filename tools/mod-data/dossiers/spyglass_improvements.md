@@ -14,7 +14,7 @@ methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THR
   consumes / outputs (SWEEP): none — pure client input/render behavior, no item I/O.
 
 anchors:    support (QoL / client) (1)
-2nd-pillar candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-12 where one fits):
+2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
   - none — support role (client-only zoom tweak; nothing to route).
 
 how-packs-integrate (SWEEP): dropped in for better scouting/sightlines; no wiring needed beyond the Curios dep already present. https://modrinth.com/mod/spyglass-improvements
