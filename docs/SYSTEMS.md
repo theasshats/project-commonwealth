@@ -32,13 +32,15 @@ flow:
 ```
    SCARCITY  ──drives──▶  PRESSURE  ──creates demand──▶  PRODUCTION  ──feeds──▶  DISTRIBUTION
   (foundation)        (Survival + Danger)               (the makers)            (the movers)
-        ▲                                                                              │
-        └────────────  goods are consumed & appetite grows; scarcity renews  ◀─────────┘
+       ▲ ▲                                                    │                         │
+       │ └──── production damages the world; scarcity worsens ◀┘                        │
+       └─────────────  goods are consumed & appetite grows; scarcity renews  ◀──────────┘
 ```
 
 - **Scarcity** is the axiom — the premise everything else rests on.
 - **Pressure** turns scarcity into moment-to-moment *demand* (you need things).
-- **Production** makes the things — but no single route can make *everything*, by design.
+- **Production** makes the things — but no single route can make *everything*, by design — **and it has
+  an ecological cost: industry damages the shared world, feeding back into scarcity and pressure** (§3a).
 - **Distribution** moves value and matter between players, so the gaps in any one player's production
   get filled by trade.
 
@@ -70,9 +72,10 @@ So "seasons" shows up as an *input* to scarcity and to survival, not as a standa
 Pressure's job is to **generate demand** — it's *why* anyone bothers to produce. No pressure → producers
 make things nobody needs and the trade loop never turns. It has **two faces**:
 
-- **Survival (environmental).** Temperature (Cold Sweat), hunger and **diet variety (Spice of Life — a
+- **Survival (environmental).** Temperature (Cold Sweat), hunger and **diet variety (a Diet-style
+  three-category nutrition system — replacing Spice of Life; see "Food: the diet system" below — a
   direct Eco parallel: Eco rewards varied nutrition with skill points; here diet variety is its own
-  ongoing demand, which pulls on farming/cooking production)**, the
+  ongoing demand that pulls on farming/ranching/cooking production)**, the
   climate. *(Renamed from "Survival & seasons" → **Survival**, since seasons is now a driver, not a
   co-headline.)* Seasons feeds this — winter is cold pressure.
 - **Danger (the hostile world).** The world is **dangerous to exist in and dangerous to explore** —
@@ -85,6 +88,26 @@ Scarcity is itself the deepest pressure — it underlies both faces.
 > **Bosses sit in two places at once** (like aeronautics straddles production and distribution): they're
 > a *pressure* (the danger that drives demand and gear progression) **and** a *production route* (their
 > high-tier drops — §3). That dual role is intentional, not a contradiction.
+
+### Food: the diet system (replacing Spice of Life)
+
+Diet variety is the food face of survival pressure. The pack moves **off Spice of Life** (currently two
+overlapping diet mechanics — SoL: Classic Edition + SoL: Onion — which is itself redundant) onto a
+**three-category** nutrition model. Chosen mod: **Diet – AppleSeed Edition** (`diet-appleseed-edition`,
+Modrinth, 1.21.1/NeoForge) — the maintained successor of the classic Diet mod. Why it fits:
+
+- **It auto-derives nutrition from recipe ingredients**, so it covers the entire sprawling modlist
+  *without* hand-tagging every food — decisive for a ~200-mod pack.
+- **Groups are data-driven and prunable** (`disabled_groups.json`): the default five (Grains,
+  Vegetables, Protein, Fruits, Sugars) can be cut to the **three** we want.
+- A balanced diet grants buffs / an imbalanced one withholds them — the diet-variety *demand* that pulls
+  on farming, ranching/hunting, and cooking production.
+
+**The three categories** map cleanly onto production specializations (proposed, tunable): **Protein**
+(hunting / ranching / fishing), **Plants** (farming — grains + vegetables + fruit folded together), and
+**Prepared** (cooked / processed — Farmer's Delight, Create cooking). That makes the diet system pull on
+three different producers, reinforcing specialization. *(Exact group split is a config decision — see
+"Open / unsettled.")*
 
 ---
 
@@ -127,6 +150,34 @@ design intent — the recipe/gating work to realize it is future.)
 **MineColonies is a first-class production route, not a rival to disable.** It's the cheap-basics +
 locked-exclusives node that the trade web hangs on. Earlier framing treated it as "a rival economy" — it
 is the opposite: the thing that *makes* the economy turn.
+
+### 3a. Production has an ecological cost (adopted — Eco's signature mechanic)
+
+> **Decision: adopted.** Production damages the shared world. This is the one big Eco idea the loop was
+> missing, and it's in.
+
+The pure extract-and-build loop has no downside for the world; Eco's core insight is that **industry
+should cost the commons.** So Create-scale production carries an **ecological footprint** that feeds back
+into the loop's left side:
+
+- **It worsens scarcity.** Heavy extraction degrades the local environment, so over-mining a region
+  doesn't just deplete *your* stock (§5) — it makes the *shared* resource situation worse, turning
+  scarcity from a static map fact into a **dynamic** one the players themselves drive.
+- **It feeds pressure.** Industrial output can push the survival layer — e.g. pollution raising local
+  temperature into Cold Sweat's range, fouling water/crops — so the more you industrialize, the harder
+  the world pushes back.
+- **It creates a real Create-vs-world tension** and a *collective* cost: one player's mega-factory is
+  everyone's problem, which is itself another pull toward specialization and restraint (and a natural
+  hook for the economy — clean-up, remediation, or "green" production as tradeable value).
+
+This closes the loop tightly: **PRODUCTION → SCARCITY/PRESSURE** is now a direct edge, not only the
+indirect consumption edge.
+
+**Implementation is open** (it's the heaviest lift in the doc): few 1.21.1/NeoForge mods model pollution,
+so this is likely **custom KubeJS/datapack** work (e.g. a per-chunk extraction/pollution counter that
+nudges Serene Seasons/Cold Sweat or local mob/crop behavior) rather than a drop-in mod. Scope — how
+punishing, how visible, how reversible — is to be designed. Tracked as design intent; the mechanic is
+adopted, the *how* is not yet built.
 
 ---
 
@@ -201,17 +252,13 @@ obvious: a healthy mod is usually *something you produce that pressure demands a
 - **Bosses — settled as dual-role.** They're *both* a pressure (the dangerous world — §2) and a
   high-tier production route (§3), the same way aeronautics straddles production and distribution. Not a
   contradiction; the loop allows a thing to occupy two slots.
-- **Ecological / production-consequence pressure (the big Eco idea we *don't* have — decision needed).**
-  Eco's signature mechanic is that **your production damages the shared world** — pollution,
-  deforestation, CO2, tailings — so over-industrialization is a *collective* cost and the economy is in
-  tension with the ecology. Derpack's pressure is entirely **external** (climate, mobs, scarcity); none
-  is **self-inflicted by industry**. The closest the loop gets is "consumption draws down *your own*
-  stock" (§5), not damage to the *shared* world. Adding a production-consequence pressure — Create-scale
-  extraction degrading the local biome, industry feeding the Cold Sweat temperature layer, mining
-  aggravating regional scarcity — would close the loop far more tightly (scarcity becomes *dynamic*,
-  worsened by the producers themselves) and create a real Create-vs-world tension. **Caveat:** it's the
-  heaviest lift here and may not suit a fantasy-industrial Create pack. **Open decision — adopt, scope
-  down, or reject.**
+- **Ecological / production-consequence pressure — ADOPTED (§3a).** Eco's signature mechanic (industry
+  damages the shared world) is **in**. *Implementation* is the open part: no good 1.21.1/NeoForge
+  pollution mod exists, so it's likely custom KubeJS/datapack work, and the scope (how punishing,
+  visible, reversible; what it feeds — scarcity, Cold Sweat, crops) needs designing.
+- **Diet system — group split.** Diet – AppleSeed Edition replaces Spice of Life (§ "Food"). Open: the
+  exact **three categories** (proposed Protein / Plants / Prepared) and which of AppleSeed's five
+  defaults to disable or merge, plus per-category buffs and decay tuning.
 - **Dynamic pricing / price discovery.** Eco's economy feels alive because players set and compete on
   prices (supply/demand). Confirm the economy layer (Numismatics + Trading Floor) supports *dynamic*
   pricing rather than flat fixed-price vendors — a fixed-price economy is much flatter than the Eco
