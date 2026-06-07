@@ -1,0 +1,273 @@
+# LEAVE tally — mods marked LEAVE, by how many independent agent-instances said so
+# 269 mods got >=1 LEAVE (across 280 chunk files / 19 passes).
+# Format:  LEAVEs / total-reviews   mod   [* = also has an ACCEPTed candidate somewhere = contested]
+
+ 19 / 20   ars_n_spells
+ 18 / 19   betterendisland
+ 18 / 19   create_ultimate_factory
+ 18 / 19   direct_chute
+ 17 / 19   createlowheated   *
+ 17 / 19   createshufflefilter
+ 17 / 19   edf-remastered-5.0-beta4   *
+ 17 / 19   formations   *
+ 17 / 19   letsdocompat
+ 17 / 19   midnightthoughts
+ 17 / 19   terralith   *
+ 16 / 19   bettermineshafts   *
+ 16 / 19   mutantszombies   *
+ 15 / 19   createmechanicalcompanion   *
+ 15 / 19   createpickywheels   *
+ 15 / 19   tidal-towns-1.3.4   *
+ 15 / 19   trek-b0.6.1.1   *
+ 14 / 20   aileron   *
+ 14 / 19   betteroceanmonuments   *
+ 14 / 19   betterstrongholds   *
+ 14 / 19   dungeons_arise_seven_seas   *
+ 12 / 19   endermoon   *
+ 11 / 19   formationsnether   *
+ 11 / 16   solclassic
+ 11 / 19   underground_village   *
+ 10 / 19   dungeons-and-taverns-v4.4.4   *
+  9 / 19   aeronautics_dyeable_components   *
+  7 / 19   t_and_t   *
+  6 /  6   accelerateddecay
+  6 /  6   attributefix
+  6 /  6   bagus_lib
+  6 /  6   balm
+  6 /  6   better_lib
+  6 /  6   betteranimationscollection
+  6 /  6   betterclouds
+  6 / 19   betterdungeons   *
+  6 /  6   bettermodsbutton
+  6 /  6   citadel
+  6 /  6   cmpackagepipebomb
+  6 /  6   collective
+  6 /  6   create_pattern_schematics
+  6 /  6   do_a_barrel_roll
+  6 /  6   doubledoors
+  6 /  6   followersteleporttoo
+  6 /  6   kiwi
+  6 /  6   lootr
+  6 /  6   modonomicon
+  6 /  6   notenoughcrashes
+  6 /  6   prickle
+  6 /  6   revelationary
+  6 /  6   rolling_down_in_the_deep
+  6 /  6   startuptime
+  6 /  6   steves_lava_chicken_music_disc
+  6 /  6   supermartijn642configlib
+  6 /  6   toomanypaintings
+  6 /  6   txnilib
+  6 /  6   voicechat
+  5 / 19   astikorcartsredux   *
+  5 /  6   azurelib
+  5 /  6   bettercombat
+  5 /  6   betterpingdisplay
+  5 /  6   biolith
+  5 /  6   blockui
+  5 /  5   blood_n_particles_datapack
+  5 /  6   bookshelf
+  5 /  6   buildguide
+  5 /  6   bundle_recipe
+  5 /  6   byzantine
+  5 /  6   configuration
+  5 /  6   controlling
+  5 /  6   corgilib
+  5 /  6   crash_assistant
+  5 /  6   createtreadmill
+  5 /  6   cubes_without_borders
+  5 /  6   death-count-1.0
+  5 /  6   ding
+  5 /  6   dummmmmmy
+  5 /  6   dynamic_fps
+  5 /  6   entity_texture_features
+  5 /  6   freefbible
+  5 / 19   friendsandfoes   *
+  5 /  6   fzzy_config
+  5 /  6   ichunutil
+  5 /  6   imfast
+  5 /  6   immersivearmorhud
+  5 /  6   jakes-build-tools-2.0.1.5   *
+  5 /  6   jamlib
+  5 /  6   jeed
+  5 /  6   just_blahaj
+  5 /  6   kleeslabs
+  5 /  6   kubejs_create
+  5 /  6   letmefeedyou
+  5 /  6   lionfishapi
+  5 /  6   lithostitched
+  5 /  6   lootjs
+  5 /  6   modelfix
+  5 /  6   moonlight
+  5 /  6   moreculling
+  5 /  6   mousetweaks
+  5 /  6   multipiston
+  5 /  6   mysterious_mountain_lib
+  5 /  6   necronomicon
+  5 /  6   opacpvp
+  5 /  6   openpartiesandclaims
+  5 /  6   owo
+  5 /  6   patchouli
+  5 /  6   pingwheel
+  5 /  6   playeranimator
+  5 /  6   polymorph
+  5 /  6   recipe_integration
+  5 /  6   rhino
+  5 /  6   rightclickharvest
+  5 /  6   ritchiesprojectilelib
+  5 /  6   sable_sa_compat
+  5 /  6   sablecollisiondamage
+  5 /  6   shulkerboxtooltip
+  5 /  6   smartbrainlib
+  5 /  6   sounds
+  5 /  6   sparsestructures
+  5 /  6   spyglass_improvements
+  5 /  6   structurize
+  5 /  6   stylecolonies
+  5 /  6   supermartijn642corelib
+  5 /  6   terrablender
+  5 /  6   timm
+  5 /  6   towntalk
+  5 /  6   wits
+  5 /  6   xaerominimap
+  5 /  6   yet_another_config_lib_v3
+  5 /  6   zombiemoon
+  4 /  6   accessories
+  4 /  6   accessories_compat_layer
+  4 / 16   aeronautics_bundled
+  4 /  6   afk-sleep-1.3.2
+  4 /  6   almostunified
+  4 /  6   alternate_current
+  4 /  6   appleskin
+  4 /  6   architectury
+  4 /  6   bcc
+  4 /  6   betterbiomereblend
+  4 /  6   bigsignwriter
+  4 /  6   blueprint
+  4 /  6   chat_heads
+  4 /  6   cloth_config
+  4 /  6   cmparallelpipes
+  4 /  6   craftingtweaks
+  4 / 19   create
+  4 /  6   createaddoncompatibility
+  4 /  6   createfurnitureseats
+  4 /  6   creativecore
+  4 /  6   cristellib
+  4 /  6   ctov   *
+  4 /  6   curios
+  4 /  6   dataanchor
+  4 /  6   detect-afk-1.2.2
+  4 /  6   durabilitytooltip
+  4 /  6   everycomp
+  4 /  6   ferritecore
+  4 /  6   fishingreal
+  4 /  6   fogoverrides
+  4 /  6   fusion
+  4 /  6   gamediscs
+  4 /  6   geckolib
+  4 /  6   glitchcore
+  4 /  6   gravestone
+  4 /  6   immersive_paintings
+  4 /  6   incontrol
+  4 /  6   inventoryprofilesnext
+  4 /  6   invtweaksemuforipn
+  4 /  6   irons_lib
+  4 /  6   jade
+  4 /  6   jeresources
+  4 /  6   justenoughbreeding
+  4 /  6   kambrik
+  4 /  6   kotlinforforge-5.11.0-all
+  4 /  6   kubejs
+  4 /  6   l2library
+  4 /  6   lithostitched__tectonic-3.0
+  4 /  6   moogs_structures
+  4 /  6   mru
+  4 /  6   naturescompass   *
+  4 /  6   netmusic   *
+  4 /  6   nochatreports
+  4 /  6   notenoughanimations
+  4 /  6   packetfixer
+  4 /  6   platform
+  4 /  6   ponderjs
+  4 /  6   puzzleslib
+  4 /  6   resourcefulconfig
+  4 /  6   resourcefullib
+  4 /  6   solmaiddream   *
+  4 /  6   sound_physics_remastered
+  4 /  6   spark
+  4 /  6   tipsmod
+  4 /  6   trashcans   *
+  4 /  6   trashslot
+  4 /  6   xaeroworldmap
+  4 /  6   yungsapi
+  3 /  6   aeronauticscompat
+  3 /  6   better_climbing
+  3 /  3   cerbons_api
+  3 /  6   clumps
+  3 /  6   comforts   *
+  3 /  6   companion
+  3 / 19   copperagebackport   *
+  3 /  6   copycats   *
+  3 /  3   coroutil
+  3 /  6   create_tweaked_controllers   *
+  3 /  6   dragonlib
+  3 /  6   dtterralith   *
+  3 /  6   dynamictrees   *
+  3 /  6   emojitype
+  3 / 19   endrem   *
+  3 /  6   entity_model_features
+  3 /  6   foodeffecttooltips
+  3 /  6   jei
+  3 /  6   knightlib
+  3 /  6   ldlib2
+  3 /  6   libipn
+  3 /  6   lithium
+  3 /  3   midnightlib
+  3 /  6   miningspeedtooltips
+  3 /  6   moblassos
+  3 /  6   modernfix
+  3 /  6   moreoverlays
+  3 /  6   ohthetreesyoullgrow
+  3 /  6   particlerain
+  3 /  6   sable
+  3 /  6   searchables
+  3 / 16   solonion
+  3 /  6   staaaaaaaaaaaack
+  3 /  6   zeta
+  2 /  6   create_compressed   *
+  2 /  6   create_dragons_plus   *
+  2 / 19   createnuclear   *
+  2 /  6   createthreadedtrains
+  2 / 19   dndesires   *
+  2 /  6   gnkinetics   *
+  2 /  6   gtmogs
+  2 / 19   mushroomquest   *
+  2 / 19   numismatics   *
+  2 /  3   titanium
+  1 / 20   alexsmobs   *
+  1 / 19   brazil_legends   *
+  1 / 19   cmpackagecouriers   *
+  1 / 19   cold_sweat   *
+  1 /  6   create_hypertube
+  1 / 19   create_ironworks   *
+  1 /  6   create_ltab-3.9.2   *
+  1 /  6   create_mobile_packages   *
+  1 / 19   createaddition   *
+  1 / 19   createoreexcavation   *
+  1 / 20   deeperdarker   *
+  1 / 19   enhancedcelestials   *
+  1 / 20   farm_and_charm   *
+  1 / 19   immersive_armors   *
+  1 /  6   mcwdoors   *
+  1 /  6   mcwroofs   *
+  1 /  6   minecolonies_tweaks   *
+  1 / 20   oceansdelight   *
+  1 /  6   ribbits   *
+  1 / 19   samurai_dynasty   *
+  1 / 19   spawn   *
+  1 / 19   tfmg   *
+  1 / 20   tide   *
+  1 / 19   travelersbackpack   *
+  1 / 20   undergroundworlds   *
+  1 / 19   valarian_conquest   *
+  1 / 19   vc_gliders   *
