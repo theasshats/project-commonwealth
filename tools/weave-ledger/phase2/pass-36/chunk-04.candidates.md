@@ -307,3 +307,30 @@ The well-rested buff is a persistent status effect tied to sleep timing. No mate
 
 - LEAVE — behavior-only rest/sleep mechanic. No items, no loot, no recipe types; no material surface for method-pull. The well-rested buff is a survival pressure enhancement with no join key to a second system. Forcing an edge (e.g., "well-rested buff → colony productivity") requires mechanical bridges that don't exist in either mod. Leave as survival support.
 
+## spawn   [anchors: survival (1)]
+
+Ambient fauna + new biomes: clams (color variants, casting-net catch), crabs, anglerfish, seals, sea cows, date-palm wood set, ant biome, Seagrass Meadow biome; EveryComp bundles cross-mod block variants. 165 blocks, 296 items, 34 biome-modifiers, 8 c:tags, loot=yes. Registered recipe type: spawn:casting_net_clam. Existing inbound weaves: farmersdelight:cooking, farmersdelight:cutting.
+
+**Method-pull analysis:**
+Spawn already has the FD cooking/cutting connection (survival→food production) established. The question is whether those connections are the right ones, and what 2nd anchors are available.
+
+**Candidate 1: clam drops → Create crushing → clam powder / shell fragments (M-12 processing-chain pull)**
+- from: spawn clam drops (clam meat / clam shell) | via: create:crushing | to: create | motif: M-12 (processing-chain pull — raw seafood/shell processed into a useful intermediate) | power: everyday (clams are common coastal catch) | tone: ok — crushing clamshells into shell grit (a calcium analogue) or grinding clam meat into seafood paste is coherent as an industrial seafood processing step | verdict: ACCEPT | hook: the coastal fishing specialist runs clams through a Create mill to produce clamshell aggregate — a building material or fertilizer intermediate — making the seafood harvest economically deeper than just cooking.
+
+**Candidate 2: clam color variants as magic dye reagents / Ars imbuement input**
+- from: spawn clam color variants (purple, red, white, yellow clamshells) | via: ars_nouveau:dye / ars_nouveau:imbuement | to: magic | motif: M-10 (arcane infusion pull — chromatic shell fragments as pigment for magic work) | power: everyday | tone: ok — colored shells as natural dye sources for magical pigments is coherent with the alchemical tradition of shell-derived pigments (Tyrian purple from murex shells is a real historical parallel) | verdict: ACCEPT | hook: gathering rare-colored clams (specific color variants that spawn in specific biomes) yields shell fragments that feed Ars Nouveau's dye/imbuement system — regional seafood specialization gains a magic-pillar outlet.
+
+**Candidate 3: date palm wood → aeronautics structural material (M-23 structural alloy analogue)**
+- from: spawn:date_log / date_planks | via: aeronautics construction recipe | to: aeronautics | motif: M-23 | power: everyday | tone: clash — date palm wood as an airframe structural material is a stretch; M-23 is for load-bearing metals (plates, beams, alloys). Wood planks (even exotic date palm) are not structural alloy equivalents. This would trivialize M-23 by treating any exotic wood as an airframe material. | verdict: REJECT | reason: theme clash with M-23 — date palm is exotic deco wood, not a structural engineering material. M-23's intent is fabricated metal plates/alloys, not wood.
+
+**Candidate 4: anglerfish bioluminescence → magic catalyst (M-07 attunement catalyst)**
+- from: spawn:angler_fish drop (bioluminescent organ / drop) | via: ars_nouveau:imbuement | to: magic | motif: M-07 (attunement catalyst — a worldgen consumable gates a magic conversion) | power: mid (anglerfish are deep-ocean; finding them requires exploration) | tone: ok — bioluminescent deep-sea fish providing a light-based magic catalyst is thematically coherent; anglerfish are universally associated with alien/otherworldly appearance | verdict: ACCEPT | hook: the anglerfish's lure is a self-lighting organ from the deep ocean — the Ars Nouveau mage uses it as an attunement catalyst for a light-infusion recipe, making deep-sea fishing a magic-relevant profession.
+
+**Candidate 5: spawn seafood as logistics-required bulk good for aeronautics (M-31)**
+- from: spawn crab/clam/fish bulk haul | via: aeronautics cargo (ship-based fishing and bulk delivery) | to: aeronautics | motif: M-31 (logistics-required bulk good) | power: mid | tone: ok — bulk seafood that needs delivery from coastal/ocean biomes to inland players | verdict: REJECT | reason: same issue as chefsdelight candidate 2 — food is not bulk-heavy enough to require airship logistics without M-36 perishability being in play (MECHANISM-PENDING). Without perishability, seafood is no more logistics-demanding than any other carried item.
+
+**Existing anchor review:**
+OK — the farmersdelight:cooking / farmersdelight:cutting inbound weaves are sound (survival→food production). New links: clam→Create crushing (M-12), color-clam→magic dye (M-10), anglerfish→magic attunement catalyst (M-07). These give spawn survival+create+magic, well-woven.
+
+== CHUNK COMPLETE ==
+
