@@ -31,6 +31,25 @@ Existing rows cover: M-12 create:pressing (dominant ACCEPT), M-35 maturation/agi
 - NEW | from: vinery:fermentation_barrel (the barrel block itself, placed in world) | via: create:crushing (lossy — a broken-down barrel yields oak planks, iron bands, and a glass bottle) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: a surplus fermentation barrel crushed in the wheel yields its component materials back — the same M-04 deco-recycle logic that applies to any wood-and-metal container; light single step, no depth needed for an everyday block
 - CHALLENGE | from: vinery:chorus_wine | via: ars_nouveau:imbuement | to: magic | motif: M-10 | verdict: REJECT | hook: the 2 ACCEPT rows for chorus_wine via imbuement rely on "End-origin = arcane affinity" as the lore bridge, but Ars Nouveau's imbuement chamber works with crystalline/mineral inputs (lapis, amethyst, essences), not fermented beverages; the tone clash is real and the existing M-11 row (chorus_wine → occultism spirit_fire) is the coherent route for void-adjacent liquids — keep M-11, reject M-10 for wines specifically
 
+## endermoon   [anchors: survival (1)]
+
+Existing rows strongly converge on M-22 (ACCEPT: 10–14 times) as the ender pearl supply tap gating a downstream ars/occultism method. The dossier says "leave — no items of its own; any weave belongs on the ender pearl or the parent celestials event." The M-22 acceptance is correctly attributed to *the event* gating *another mod's recipe*; endermoon's own content surface is zero.
+
+OK — existing rows sufficient. The M-22 ender-pearl-supply-→-ritual ACCEPT is the correct and complete statement for this mod. The dossier's own "leave" recommendation aligns with the existing row set: endermoon contributes the *event*, the weave is authored against the ender pearl or Enhanced Celestials' event hook, not this mod's items. No new proposals; no challenges to file.
+
+## ding   [anchors: support/client-QoL]
+
+LEAVE — pure client-side audio cue with 0 items, 0 blocks, 0 methods. No content surface for any weave. No existing candidates, none warranted.
+
+## ars_nouveau   [anchors: magic (1)]
+
+Existing rows are extremely thorough across M-01, M-02, M-10, M-11, M-12, M-16, M-17, M-18, M-26, M-29, M-33, M-37. Two genuine gaps: (1) M-22 lunar reagent applied to Ars' own summoning rituals, not yet proposed. (2) The `ars_nouveau:budding_conversion` method — not a single existing row touches it as an inbound route for foreign biome-locked materials.
+
+- NEW | from: ars_nouveau:summon_ritual (specifically the Wilden Chimera / Guardian summon) | via: worldgen/spawn-event gating — the summon_ritual recipe's final step (the ritual circle activation) only yields the boss when triggered during an Enhanced Celestials full moon or Ender Moon night | to: magic | motif: M-22 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Wilden Guardian is already a twilight-tier threat — timing its summoning to the right moon is a ritual constraint a player would find completely natural; M-22 explicitly spans all moon events and this is the most powerful summon in Ars
+- NEW | from: northstar:argyre_log / calorian_log (biome-locked exotic timber from Northstar) | via: ars_nouveau:budding_conversion (the budding_conversion method can convert non-magic blocks into archwood-adjacent budding forms by spending Source) | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: Northstar's biome-locked exotic logs, once saturated with Source via the budding conversion ritual, slowly bud magical growths — the explorer who finds argyre wood and hands it to the mage unlocks a Source-generation node unavailable from common archwood; biome-gated material becomes a magic infrastructure upgrade, tying exploration scarcity into the magic pillar
+- CHALLENGE | from: ars_nouveau:archwood_log | via: ars_nouveau:volcanic_sourcelink (archwood burns for bonus Source) | to: survival | motif: M-26 | verdict: REJECT | hook: this is correctly rejected in the existing set — the volcanic sourcelink consuming archwood is native Ars behavior, not a cross-system weave; it stays within magic and doesn't advance the loop; the reject is the right call and should be held firm against the 1 ACCEPT row that slipped through
+
+
 
 
 

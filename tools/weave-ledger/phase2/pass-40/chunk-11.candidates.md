@@ -89,6 +89,23 @@ One missing angle not in existing rows: dtterralith's `loot=yes` in the jar-grou
 
 Red-team: Is seeding leaf-loot-tables a real loot-seed (the mod ships loot=yes so the tables exist)? The loot tables in dtterralith are almost certainly seed drops from Dynamic Trees leaf-decay — not custom drops. Adding an Ars reagent to a Dynamic Trees leaf-loot table is a datapack edit to a generated loot table, which is authoring. Thematically the amethyst_seed biome / jacaranda biome have a clear material identity. The pairing is plausible and advances the loop (biome → magic reagent supply). Survives.
 
+## dungeons_arise_seven_seas   [anchors: survival (1)]
+Existing rows cover the main surfaces: M-08 ACCEPT (galleon/fortress loot → numismatics coin, 7v0 dominant), M-02 ACCEPT (magic reagents in naval chests, 4v0 + 2v0 variants), M-34 ACCEPT (combat specialist farms galleons, trades nautical rarities). M-15 REJECT (no guaranteed boss mob, no droppable blueprint item). The no-motif aeronautics row (thematic "ships rhyme with airships") correctly REJECTed.
+
+One gap: the existing M-34 ACCEPT rows don't clarify *what specific item* the combat specialist farms and trades. For M-34 to be a real weave rather than ambient ("raiders sell stuff"), the loot-seed needs to drop something *distinctive* that non-combat players specifically want. The existing M-02 ACCEPT (magic reagents) + M-08 ACCEPT (coin) cover two of the three things worth having. What's missing is a **survival/gear-tier exclusive** — a combat-route item from the naval dungeon that feeds a tech gate (M-15) or craft chain.
+
+- NEW | from: dungeons_arise_seven_seas galleon captain chest (flagship galleon structure, explorable interior) | via: loot-seed (a rare nautical-grade iron alloy: a single `createbigcannons:cast_iron_cannon_end` or `createbigcannons:steel_ingot` seeded at low probability as "salvaged cannon part") | to: create | motif: M-15 | power: mid | tone: ok | verdict: ACCEPT | hook: boarding a galleon at sea and cracking the captain's strongbox is how you get salvaged cannon-grade steel without running the CBC foundry yourself — ocean exploration becomes an alternative sourcing route for the artillery tech chain
+
+Red-team: Does this dilute the CBC foundry as the primary source? At a low drop rate (1 ingot per flagship chest, rare spawn), this is flavor/exploration reward not a replacement route — you still need the foundry for mass production. The pairing (nautical dungeon → naval cannon parts salvaged from the wreck) is tight. Survives.
+
+Also: The M-31 ACCEPT row (structures as aeronautics waypoints, "cargo stop" framing) exists at 2v0 for tidal-towns but NOT for dungeons_arise_seven_seas. A boardable galleon is actually a stronger aeronautics destination than a static village — it's a combat-raiding target that an airship crew would specifically fly to.
+
+- NEW | from: dungeons_arise_seven_seas galleon / floating fortress structures | via: worldgen placement (existing) | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: galleons and sea-fortresses are exactly the kind of high-value objectives that justify an aeronautics raid-run — the bulk cargo (salvaged metals, coin, reagents) recovered there needs a ship to haul; the structure gives the logistics arm a *destination*, making sea routes purposeful
+
+Red-team: M-31 is "logistics-required bulk good" — a structure isn't a good. But the framing is that the *recoverable loot is the bulk good* that justifies the aeronautics haul. The structures serve as the destinations that give aeronautics routes economic purpose. This is the same framing the tidal-towns M-31 ACCEPT uses (2v0). Survives.
+
+
+
 
 
 

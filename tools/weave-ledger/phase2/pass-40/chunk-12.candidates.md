@@ -76,3 +76,17 @@ Existing rows are extensive: M-12 fish_skin → leather substitute (pressing/cut
 - NEW | from: createfisheryindustry:copper_diving_leggings (underwater survival gear, backtank-extended) | via: recipe — require cold_sweat insulation material as a crafting component (fish_skin panels as insulating lining for cold-water diving) | to: survival | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: copper diving leggings built for deep cold ocean work need fish_skin insulation lining — the fishery's own byproduct feeds its own gear; a cross-route dependency where the cold_sweat survival system shapes what the industrial fisher builds
 - CHALLENGE | from: createfisheryindustry:fish_skin (leather-equivalent byproduct of peeling) | via: occultism:spirit_fire or ars_nouveau:imbuement | to: magic | motif: M-11 | verdict: REJECT | hook: the 2-vote ACCEPT row for fish_skin→spirit_fire is tonally weak and the dossier's own 2nd-anchor candidates don't propose magic — the mod's vibe is "industrial cannery," not arcane; fish skin as a spirit-fire transmutation has no lore grounding in Occultism (spirit_fire wants soul-charged drops, not mundane leather substitutes); the accepted M-12/M-32 rows already give fish_skin a cleaner productive role; REJECT to avoid forcing an arcane edge onto a maritime-industrial material
 
+## jeresources   [anchors: support/UI (1)]
+
+LEAVE — JEI addon for loot/worldgen documentation; zero items, zero methods. Its value to the pack's scarcity design is transparency (players can see regional ore distribution), which is a sanctioned support role, not a weave node.
+
+## freefbible   [anchors: support/flavor (1)]
+
+LEAVE — single inert readable book item with no mechanics; the existing REJECT of the antique_book approach is correct. A forced recipe edge would be noise.
+
+## netmusic   [anchors: support/flavor (1)]
+
+Existing rows: M-05 music_cd/computer → Create brass crafting components (split ACCEPT/REJECT), multiple REJECTs for TLM altar, backpack upgrade, spirit_trade, etc. The single existing ACCEPT (M-05, Create brass inputs) is the only remotely coherent angle. The dossier correctly concludes "leave" is acceptable.
+
+- CHALLENGE | from: netmusic:music_cd (craftable, loot=yes) | via: recipe — route cd_burner/computer through Create brass components as crafting inputs | to: create | motif: M-05 | verdict: REJECT | hook: the 2-vote M-05 row is thematically appealing ("a network-capable music computer needs precision gears") but M-05 (native-method gating) requires the mod's *flagship item* to be built *in its own machine* gated on Create parts — the cd_burner/computer already uses vanilla crafting; what's described is just adding Create materials to an existing vanilla recipe, which is a cost-model adjustment, not an M-05 native-method gate; the correct framing would be a simple recipe ingredient swap (Create brass in the cd_burner recipe), which has no motif and is too thin to justify a weave slot
+

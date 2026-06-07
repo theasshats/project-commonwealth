@@ -74,6 +74,26 @@ Also missing: The M-37 (research gate) angle. Golems are automation-tier content
 - NEW | from: modulargolems golem assembly (high-tier) | via: minecolonies research gate (University) | to: economy | motif: M-37 | power: endgame | tone: ok | verdict: ACCEPT | hook: unlocking top-tier golem body templates via MineColonies University research makes colony-building a prerequisite for the automation tier — you built the town so the town teaches you to build better servants; the knowledge isn't tradeable, only the golems it produces.
 - CHALLENGE | from: ars_nouveau:source_gem | via: modulargolems:golem_assemble or golem_replace_part | to: magic | motif: M-10 | verdict: REJECT | hook: source_gem is the reserved universal magic currency (reagent-ownership); using it as a per-part golem-core input risks depleting the magic economy's medium — prefer spirit_solution (already reserved as the occult intermediate, above) so the golem-magic seam doesn't double-spend the currency slot.
 
+## sparsestructures   [anchors: support (1)]
+
+Zero items, zero blocks, config-only worldgen tuning. No rows in CANDIDATES.tsv. Dossier: leave.
+
+LEAVE — config-only worldgen mod with no item/block/method surface; structure spacing is infrastructure, not weavable content.
+
+## deeperdarker   [anchors: survival (1)]
+
+Existing rows: very rich. Accepted: M-11 soul_dust/soul_crystal → occultism spirit_fire (38×), M-04 gloomslate/sculk_stone crushing (21×+13×), M-10 heart_of_the_deep → Ars imbuement (11×), M-02 heart_of_the_deep as mob-drop reagent (11×), M-15 heart_of_the_deep as boss-key for Create/magic recipe, M-04/M-02 warden_carapace, M-34 Otherside combat-supply economy, M-07 crystallized_amber as attunement catalyst (2×).
+
+What's missing or worth a sharper angle:
+
+The M-07 crystallized_amber candidate (2×) is underdeveloped. Amber sits between reagent and catalyst — it's not the *material* being converted (M-10/M-11) but an *anti-arbitrage catalyst* that gates a conversion. The existing rows propose it as M-07 (attunement catalyst) or M-10 (imbuement). The cleaner pick: amber as the *catalyst in an M-01 Ars source conversion* — a dimension-locked catalyst that prevents free source-gem arbitrage out of the Otherside. This is a sharper motif-routing than the generic M-10 read.
+
+Missing altogether: An M-31 (logistics-required bulk good) angle. Gloomslate and sculk-stone blocks are generated in enormous quantities in the Otherside — a builder who wants them at scale needs to haul bulk across a dimension portal. Dimension-portal logistics at scale is *exactly* the aeronautics/logistics arm's role.
+
+- NEW | from: deeperdarker:crystallized_amber | via: ars_nouveau:imbuement (as anti-arbitrage catalyst in source conversion, not the reactant) | to: magic | motif: M-07 | power: mid | tone: ok | verdict: ACCEPT | hook: amber is the Otherside's attunement key — it gates a source-conversion so that Otherside magic stays Otherside-locked; pure dimension-lock enforced by the same motif as galosphere's shards, not a raw M-10 imbuement input.
+- NEW | from: deeperdarker gloomslate / sculk_stone (bulk dimension-locked building material) | via: aeronautics/logistics (dimension portal + cargo ship) | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: moving gloomslate out of the Otherside at build scale requires an organized expedition — airship cargo runs to a portal staging area is the only way to ship a full palace's worth of sculk-stone; the bulk need makes logistics matter.
+
+
 
 
 
