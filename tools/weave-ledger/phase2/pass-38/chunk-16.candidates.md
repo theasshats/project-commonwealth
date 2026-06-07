@@ -62,3 +62,16 @@
 ## supermartijn642corelib   [anchors: support/library (1)]
 - LEAVE — genuine zero-content code library (GUI/block-entity/packet scaffolding for SuperMartijn642 mods). No player-facing content. Sanctioned support role.
 
+## rechiseled   [anchors: decoration palette / support (1)]
+- from: rechiseled decorative block variants | via: create:crushing (lossy — block → raw stone/wood gravel + XP nugget) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: "the Crushing Wheel can break down decorative tiles into raw rubble — builders don't waste quarried stone, they just recycle it"
+- from: rechiseled chiseling mechanic | via: rechiseledcreate Mechanical Chisel (companion already in pack; runs chiseling recipes on Create rotational power) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: "a kinetic Mechanical Chisel powered by Create turns raw stone blocks into decorative tiles automatically — the build supply chain runs through the factory floor"
+- from: rechiseled decorative blocks as colony building-material substitutes | via: minecolonies hut upgrade block-tags | to: create (colony route) | motif: M-28 | power: mid | tone: ok | verdict: REJECT | reason: MineColonies hut upgrades require specific tagged blocks; whether rechiseled variants qualify depends on block-tag inheritance which needs in-game verification — speculative, not a "of course" hook; skip for now
+- from: rechiseled decorative variants as aeronautics hull aesthetic blocks | via: ambient building / aeronautics hull construction | to: aeronautics | motif: M-23 | power: everyday | tone: ok | verdict: REJECT | reason: M-23 requires a structural load-bearing alloy/plate as a build ingredient; rechiseled blocks are cosmetic cladding, not structural inputs — wrong motif; don't gate airframes behind deco blocks
+- OK — existing decoration-palette anchor is sound. rechiseledcreate delivers the Create anchor (M-04). Both ACCEPTed edges above formalize that tie.
+
+## wits   [anchors: support/QoL (1)]
+- LEAVE — pure server-command debug utility (structure identification). No items, blocks, or recipe types. Sanctioned support role.
+
+## jeresources   [anchors: support/client-UI (1)]
+- LEAVE — display-only JEI addon (mob-drop/loot/ore-gen viewer). No items, blocks, or recipe types. Sanctioned support role (documentation layer for the pack's scarcity design, not a content node).
+

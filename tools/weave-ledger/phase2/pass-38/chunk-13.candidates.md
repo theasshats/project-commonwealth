@@ -268,6 +268,44 @@ Candidate C — economy via loot-seed (loot=yes, generates in villages/dungeons)
 - from: charta dungeon/village loot tables | via: loot-seed (Numismatics coin seeded into loot) | to: economy | motif: M-08 | power: everyday | tone: ok | verdict: ACCEPT | hook: an abandoned dungeon tavern has some coin in its till — found coin enters the player economy as a modest loot reward, not an NPC faucet
 - from: charta bar furniture / card tables | via: create:cutting | to: create | motif: M-04 | power: everyday | tone: clash | verdict: REJECT | reason: bar-furniture tone is social/tavern; cutting a bar stool to planks in a sawmill is a forced industrial edge with no loop value — M-04 is for deco that naturally comes from a machine, not for social furniture
 
+## geckolib   [anchors: support/library (1)]
+
+Zero items, zero recipe types, zero loot. Animation engine for entity/block/item/armor animation. Zero content surface.
+
+- LEAVE — pure animation/rendering library; no items, blocks, recipes, or loot; no content to weave. Hard dependency for many mobs/magic/Create entities in the pack.
+
+## dynamictrees   [anchors: survival (1)]
+
+Power-read: Seeds (everyday — acacia_seed, birch_seed, etc.), mega saplings (mid — require a dirt_bucket + conversion), dendro_potion (mid — growth accelerant), dynamictrees:branch (structural). Has registered recipe-types: mega_seed, seed_conversion (sapling ↔ dynamic seed). loot=yes — trees drop logs/sticks/seeds on harvest (the whole-tree fell mechanic).
+
+Method-pull: dynamictrees:mega_seed converts vanilla sapling → mega dynamic seed (with dirt_bucket). dynamictrees:seed_conversion converts vanilla saplings ↔ dynamic seeds.
+
+Candidate A — Create via create:milling, M-12 (processing-chain pull):
+- Dynamic Trees produces logs at scale (whole-tree felling = bulk log output). Logs → create:milling → sawdust/planks byproduct chain. This is already ambient (logs flow into Create's milling regardless of source). But DT produces *more* logs per fell, which makes the Create milling node more efficient. Not a new cross-system link — just a throughput boost on an existing vanilla→Create path.
+- The dossier explicitly notes this: "DT trees are notoriously awkward for Create automated harvesters — forcing a Create edge would be contrived."
+- REJECT — logs to Create milling is ambient; the forced-Create-harvester problem makes this a non-starter
+
+Candidate B — survival / Serene Seasons + M-16:
+- Dynamic tree growth depends on biome/light/rainfall — it's inherently season-sensitive (deciduous trees may lose leaves in winter, growth rate tied to rain). If Serene Seasons affects rainfall/growth, DT is already connected to the seasonal layer indirectly.
+- A direct M-16 weave would seed a seasonally-exclusive reagent into DT's loot (e.g., spring blossom drops from cherry branches in spring only). DT has cherry_branch/cherry_leaves blocks — spring blossoms are thematically right.
+- Power-read: everyday (seasonal loot from common tree species). One light loot-seed step.
+- Theme-fit: cherry blossoms in spring from a living dynamic cherry tree is extremely natural.
+- Motif: M-16 (seasonal reagent).
+- Delivery: loot-seed (seeding a spring-exclusive blossom drop into DT's cherry_leaves/branch loot, conditioned on Serene Seasons spring).
+- ACCEPT
+
+Candidate C — Create / colony via M-28 (colony route):
+- A MineColonies lumberjack hut automating DT tree harvest makes the colony route relevant to bulk wood supply. DT trees are compatible with colony tree-cutting. This makes the colony the faster/cheaper bulk-wood provider vs. a manually operated Create harvester (M-28).
+- Power-read: everyday (wood is a basic).
+- Theme-fit: a colony lumberjack efficiently working DT trees while a Create player struggles with automated harvesting is a real specialization pressure. Natural.
+- Motif: M-28 (colony route — cheaper/faster via MineColonies).
+- ACCEPT
+
+- from: dynamictrees:cherry_leaves / cherry_branch seasonal loot | via: loot-seed (spring-only cherry blossom drop, conditioned on Serene Seasons) | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: a living cherry tree sheds its blossoms only in spring — that seasonal material feeds a recipe or magic ritual that needs the fleeting ingredient
+- from: DT tree harvest via MineColonies lumberjack | via: colony hut (cheaper/faster bulk-wood route) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: the colony lumberjack efficiently fell whole DT trees while a Create harvester struggles with their irregular branch geometry — bulk wood supply becomes the colony specialist's edge
+- from: DT logs bulk output | via: create:milling | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: DT logs flowing to Create milling is ambient (any log source does this); the Create automated-harvester incompatibility makes a DT↔Create coupling contrived; no new cross-system edge
+
+
 
 
 
