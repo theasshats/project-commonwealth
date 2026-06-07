@@ -80,19 +80,17 @@ if [[ "${mod_count}" -eq 0 ]]; then
 fi
 echo "==> ${mod_count} server-side mod jars bundled"
 
-# Aikar's flags launcher
+# Generational ZGC launcher — 32 GB fixed heap (Java 21).
+# ZGC (sub-millisecond pauses) suits the server's high allocation rate better than
+# G1 at this heap size; the G1-specific tuning flags don't apply under ZGC and are
+# dropped. A fixed Xms=Xmx + AlwaysPreTouch commits the heap up front.
 cat > "${STAGING}/run.sh" <<'EOF'
 #!/usr/bin/env bash
 set -e
-java -Xms12G -Xmx12G \
-    -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 \
-    -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC \
-    -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 \
-    -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 \
-    -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 \
-    -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 \
-    -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 \
-    -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true \
+java -Xms32G -Xmx32G \
+    -XX:+UseZGC -XX:+ZGenerational \
+    -XX:+AlwaysPreTouch -XX:+ParallelRefProcEnabled \
+    -XX:+DisableExplicitGC -XX:+PerfDisableSharedMem \
     @user_jvm_args.txt @libraries/net/neoforged/neoforge/*/unix_args.txt \
     "$@"
 EOF
@@ -110,7 +108,9 @@ Mods are already in ./mods/. To finish setup:
 
 3. Start: ./run.sh nogui
 
-Tune memory in run.sh if 12G is wrong for your box.
+The launcher uses Generational ZGC with a 32 GB fixed heap (needs Java 21).
+Tune Xms/Xmx in run.sh if 32G is wrong for your box; ZGC wants a large fixed heap,
+so don't drop it far without reverting to G1GC.
 EOF
 
 (cd dist/staging && zip -qr "../${INSTANCE_NAME}.zip" "${INSTANCE_NAME}")

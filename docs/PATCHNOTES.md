@@ -26,6 +26,12 @@ Chunky, a chunk pre-generation tool, has been added. Running `/chunky radius <n>
 `/chunky start` on the server generates the surrounding area in advance, so chunks are saved before
 players reach them and live world generation does not stall a session.
 
+Memory and garbage-collection settings were tuned. The client instance ships with G1GC at 8 GB minimum /
+12 GB maximum and a 50 ms collection-pause target, so the brief periodic GC hitches are shorter and less
+noticeable on high-refresh displays. The setup guide adds a system-RAM-to-heap table and an optional
+Generational ZGC configuration for machines with 24 GB or more (`docs/PRISM-SETUP.md`). These ship in the
+installer, so a fresh install or reinstall picks them up.
+
 ### Updates
 
 Approximately a month of mod updates has been applied across the pack. NeoForge has been raised to
