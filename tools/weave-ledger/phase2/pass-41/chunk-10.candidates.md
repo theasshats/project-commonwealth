@@ -48,4 +48,12 @@ Existing rows cover: M-06/M-05 Create hull/mast/cannon gating via mechanical_cra
 
 ## extradelight   [anchors: survival, create (2)]
 
+Existing rows cover: M-12 Create milling/pressing upstream of kitchen stations (strong, 14-15 ACCEPT), M-28 feast colony provisioning (strong), M-16 seasonal crop gating (M-35 drying-rack aging for both economy and survival), M-07 mortar grinding Galosphere lumiere as attunement catalyst. The existing rows are genuinely comprehensive. One gap that is not covered: the **extradelight:mortar** method — which grinds seeds/flowers — has one ACCEPT for grinding magic-reagent flowers but no row using it to grind a **magic-reagent crop that has a defined ownership in the reagent table** (specifically, a mod whose flowers/petals need fine-powder form for imbuement but the powder form is not natively registered). Also: no row captures the **extradelight:vat** as a **M-13 fuel-intermediate producer** (reducing plant oils/fats to a combustible concentrate that feeds TFMG or Aeronautics).
+
+- NEW | from: extradelight:mortar (grinds seeds/coffee/flowers) | via: extradelight:mortar — route galosphere:lumiere_shard through the mortar as a first-grinding step to yield galosphere:lumiere_dust (a finer catalyst form, before the actual imbuement altar step) | to: magic | motif: M-07 | power: mid | tone: ok | verdict: ACCEPT | hook: grinding the lumiere crystal to dust in the kitchen mortar before it reaches the altar is a coherent preparation step — the culinary mortar is a multi-purpose grinder; this is a tighter version of the existing M-07 accept, pinning the delivery method to extradelight:mortar specifically rather than leaving it as a vague "attunement dust" note
+
+- NEW | from: extradelight:evaporator output (rendered fat / concentrated plant oil from citrus/coconut/lard reduction) | via: extradelight:evaporator → tfmg:distillation or createaddition:liquid_burning (the concentrated oil is a low-grade combustible — not a clean fuel but a valid feedstock for the fuel-processing chain) | to: aeronautics | motif: M-13 | power: mid | tone: ok | verdict: ACCEPT | hook: rendered fat from the evaporator is a low-grade biofuel — it feeds the TFMG distillation column that produces actual engine diesel, making the kitchen's waste-stream a fuel-chain input; cooking and flight share a supply line
+
+## modulargolems   [anchors: create (1)]
+
 
