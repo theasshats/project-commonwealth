@@ -151,6 +151,15 @@ Power-read: niche flavor addon — the mechanic (maid diet tracking) is entirely
 
 LEAVE — the mod's only content hook is the food pool of the wider pack (which it rides as a passenger); forcing a second anchor would be artificial. Stays at 1 anchor (survival flavor); the maid's diet mechanic is its own closed loop. Dossier assessment correct.
 
+## everycomp   [anchors: support/decoration (1)]
+
+Every Compat ("Wood Good") — auto-generates all wood-type variants of blocks from supported mods (doors, signs, furniture) with auto-recipes. Runtime generator; its outputs ride host-mod namespaces. 0 blocks/items of its own; 1 creative-tab placeholder item.
+
+Power-read: a generator mod — its content is entirely derived from host mods (create, mcwdoors, mcwtrpdoors, blockus, moonlight). Any weave would belong on the host mods, not on everycomp itself. The dossier is correct.
+
+LEAVE — support/generator role: its outputs are host-mod content auto-stamped across wood types. Any weave targets the host mods (Create's wood shapes, Macaw's door shapes) directly; everycomp has no first-class items or methods of its own to route through.
+
+
 
 
 

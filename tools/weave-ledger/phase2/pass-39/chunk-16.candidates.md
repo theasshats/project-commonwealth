@@ -99,3 +99,37 @@ Concrete candidates:
 
 REWORK: dossier M-09 is retired (correct). Dossier M-04 (shellstone crush) is the weakest link but passes thematic coherence; accepted above. Dossier M-12 (meat processing) confirmed and extended to farmersdelight:cutting specifically.
 
+## illagerinvasion   [anchors: survival (1)]
+
+One anchor — needs a second. Strong latent magic foot per dossier. Content: 2 blocks (imbuing_table, magic_fire), 24 items, loot=yes. Key drops: hallowed_gem (Invoker boss), illusionary_dust, platinum_chunk, horn_of_sight, lost_candle. The Imbuing Table is a native method (over-cap enchanting using hallowed_gem). Dossier flags M-02+M-05/M-11 (magic), M-08 (economy), M-03/M-02 (Create crushing).
+
+Method-pull:
+- hallowed_gem: boss drop, endgame, from the Invoker. Reserved for boss-key logic (M-15). Could gate a complex Create/magic recipe.
+- illusionary_dust: mid-tier magic material. Ars imbuement or occultism ritual as input — M-10/M-11.
+- platinum_chunk: an ore-analog metal drop. Create:crushing fits — a new metal that can be processed through the Create spine for a unique alloy. M-03 (ore doubling) or M-02 (mob-drop reagent sink).
+- horn_of_sight: a utility tool with perception/magic flavor. Ars:enchanting_apparatus could consume it as an input for a sight-based enchant. M-02.
+- lost_candle: haunted/spectral flavor. create:haunting (Create's soul-fire method) could transform it — lost_candle fed through haunting gives a soul-infused output. M-19 soul/haunting seam.
+- The Imbuing Table (native method, over-cap enchanting): tie it to the enchantment economy by making it require an Ars source_gem or Iron's arcane_essence as the arcane fuel (M-01 or M-29 cross-route dependency — magic specialist must supply the enchant booster).
+- platinum_chunk as a regional-scarcity metal: only obtainable by fighting Invokers, so supply is raid-gated → M-30 regional scarcity angle (combat, not geology, but same loop effect: can't self-supply → trade).
+
+Concrete candidates:
+
+- from: illagerinvasion:hallowed_gem (Invoker boss drop) | via: KubeJS gated recipe (boss-key input for endgame Create/magic item) | to: magic | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: The Hallowed Gem unlocks the Imbuing Table's highest tier and gates an endgame magic item — combat against the Invoker boss is the required path, making the illager raider a first-class antagonist in the magic production route.
+- from: illagerinvasion:illusionary_dust | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: Illusionary Dust (drop from the Illusioner) feeds the imbuement apparatus as an arcane scattering agent — illager combat produces magic supply (the raider's magic leaks into the spell craft system).
+- from: illagerinvasion:platinum_chunk | via: create:crushing → create:mixing (alloy step) | to: create | motif: M-03 | power: mid | tone: ok | verdict: ACCEPT | hook: Platinum chunks crushed in the Create mill yield platinum dust, which can be mixed into a conductive alloy — a mid-tier metal from raiding that feeds the Create processing chain rather than sitting as a dead drop.
+- from: illagerinvasion:lost_candle | via: create:haunting | to: create | motif: M-19 | power: mid | tone: ok | verdict: ACCEPT | hook: A lost candle passed through Create's haunting (soul-fire) transmutes into a soul-charged wax — the dark spirit of the lost candle is exactly what Create's haunting seam is for; organic/spectral → soul-material bridges Create to the occult.
+- from: illagerinvasion:horn_of_sight | via: ars_nouveau:enchanting_apparatus | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: The Horn of Sight as an arcane lens component in the enchanting apparatus — a combat trophy repurposed as a magic instrument (the see-through glyph / scrying recipe wants it).
+- from: illagerinvasion imbuing_table | via: ars_nouveau:source_gem as required fuel input | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: The Imbuing Table's over-cap enchanting consumes a source gem as arcane power fuel — the illager enchantment system borrows from Ars Nouveau's source economy, making magic specialists a supplier to the Imbuing Table's users (cross-route dependency).
+- from: illagerinvasion:platinum_chunk (raid-gated supply) | via: regional-combat gating | to: economy | motif: M-30 | power: mid | tone: ok | verdict: REJECT | reason: M-30 is specifically about *geological* regional ore-gen scarcity (GTMOGS); combat-gated supply is better expressed as M-34 (combat-route supply) or M-15 (boss key). Re-express rather than misfit M-30.
+- from: illagerinvasion:platinum_chunk | via: M-34 combat-route supply | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: Platinum chunks only drop from Invoker raids — a combat specialist farms and trades them to Create players who want the alloy but lack the raid capacity; the combat route supplies the tech spine.
+
+REWORK: dossier M-08 candidate (hallowed_gem as coin/bounty) — M-08 is player-minted currency (scarce metal → pressed into coin). platinum_chunk as a coin-metal pressed via Numismatics fits M-08 better than hallowed_gem (which is a boss-key, not a currency metal). Adding:
+
+- from: illagerinvasion:platinum_chunk | via: create:pressing → numismatics mint | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: Platinum chunks, once crushed and refined, are pressed into a Numismatics platinum denomination — a rare raid-sourced coinage metal that only a combat-specialist can supply, making the currency itself regionally scarce and combat-gated.
+
+## kiwi   [anchors: support (library/API) (1)]
+
+Zero blocks, zero items, zero loot, no recipe types. Pure developer library (Snownee annotation/registration framework). No player-facing surface.
+
+LEAVE — genuine zero-content code library. Sanctioned dependency support role.
+

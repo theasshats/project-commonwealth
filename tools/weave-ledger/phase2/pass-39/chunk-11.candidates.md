@@ -70,6 +70,10 @@ REWORK: dossier's "economy via luxury-food→coin [M-09]" is retired. Replaced b
 - from: occultism spirit essences (foliot/djinni/afrit/marid) | via: ars_nouveau:imbuement | to: magic | motif: M-01 | power: mid | tone: ok | verdict: REJECT | reason: M-01's arcane currency (source_gem ↔ irons arcane_essence) is the reserved hub for inter-magic currency exchange. Adding occultism essences as another hub currency risks three-way fragmentation (Ars, Iron's, Occultism all with their own currency). The motif as written routes source_gem ↔ irons essence; a three-way exchange would need a Gate-0 motif extension. Flag to DECISIONS.md rather than accept here.
 REWORK: dossier's "economy via spirit_trade [M-09/M-02 STRONG]" — M-09 is retired; spirit_trade is a player-facing acquisition route (summoned merchant), not a bare sell link. Rework: M-18 (spirit trade as a logistics/acquisition channel providing otherwise-unavailable goods) is the correct motif. Already covered in the M-18 miner entry above — spirit_trade is the same mechanic: magic acquires goods the economy moves. Sound anchor.
 
+## chat_heads   [anchors: support/QoL (1)]
+- LEAVE — client-side chat UI cosmetic, no items, blocks, loot, or gameplay hooks. Zero content surface. Pure QoL mod; sanctioned support role.
+
+
 
 
 
