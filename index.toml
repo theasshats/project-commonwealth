@@ -34,7 +34,7 @@ hash = "abe2744c46c81c28ef0bee5cc5cbf63c6982ee589f54ec06c9b31d258f841051"
 
 [[files]]
 file = "config/incontrol/spawn.json"
-hash = "f86d64f6cd5e307b89b28beed48b84ff3dd7b9f800152c6e699d5b419b8ed3c6"
+hash = "dcf4991884b3238d5b4386b189acf7f8159f61faaaee3720b79c07ba66faebbc"
 
 [[files]]
 file = "config/mixinhelper.json"

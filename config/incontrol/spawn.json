@@ -109,6 +109,18 @@
   },
   {
     "mob": ["rottencreatures:dead_beard"],
+    "structure": [
+      "dungeons_arise_seven_seas:pirate_junk",
+      "dungeons_arise_seven_seas:corsair_corvette",
+      "dungeons_arise_seven_seas:unicorn_galleon",
+      "dungeons_arise_seven_seas:victory_frigate",
+      "dungeons_arise_seven_seas:small_yacht"
+    ],
+    "random": 0.25,
+    "result": "allow"
+  },
+  {
+    "mob": ["rottencreatures:dead_beard"],
     "result": "deny"
   },
 

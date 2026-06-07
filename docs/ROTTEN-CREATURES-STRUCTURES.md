@@ -13,12 +13,13 @@
 > | **Swampy** | swamp biomes (`c:is_swamp`, incl. Terralith) **+** `minecraft:ruined_portal_swamp`, `nova_structures:jungle_ruins`, `toxic_lair` |
 > | **Burned** | all ruined-portal variants **except** ocean (`ruined_portal`, `_desert`, `_jungle`, `_swamp`, `_mountain`, `_nether`) **+** `minecraft:fortress`, `betterdungeons:zombie_dungeon`, `small_nether_dungeon` |
 > | **Mummy** | `minecraft:desert_pyramid` **+** `nova_structures:undead_crypt`, `remnant_graveyard`, `remnant_birch_graveyard`, `creeping_crypt`, `desert_ruins` |
-> | **Dead Beard** | `minecraft:ocean_ruin_warm`, `ocean_ruin_cold`, `ruined_portal_ocean`, `nova_structures:conduit_ruin` |
+> | **Dead Beard** | `minecraft:ocean_ruin_warm`, `ocean_ruin_cold`, `ruined_portal_ocean`, `nova_structures:conduit_ruin`; **+** WDA Seven Seas pirate ships (`pirate_junk`, `corsair_corvette`, `unicorn_galleon`, `victory_frigate`, `small_yacht`) at an even lower chance (`random: 0.25`) |
 > | **Immortal** | not gated (keeps default summon behavior) |
 >
-> Net effect vs. the draft: Cataclysm arenas, the WDA Seven Seas pirate ships,
-> the illager/citadel/town DnT structures, and the broad shared vanilla set were
-> **dropped** in favour of these tighter per-mob themes. See `docs/SPAWN-GATING.md`
+> Net effect vs. the draft: Cataclysm arenas, the illager/citadel/town DnT
+> structures, and the broad shared vanilla set were **dropped** in favour of
+> these tighter per-mob themes; the WDA Seven Seas pirate ships are kept for Dead
+> Beard but at an even lower chance (`random: 0.25`). See `docs/SPAWN-GATING.md`
 > for the rule mechanics and the In-Control!-can't-force-spawns caveat on the
 > Terralith-biome additions.
 
@@ -185,5 +186,5 @@ villagers); listed for completeness.
    `deepslate_camp` is currently in; the surface camps are out. Right call?
 4. ~~**Per-mob theming**~~ — **Resolved (zagwar):** split per mob. See the
    resolution table at the top; `spawn.json` now has one rule set per mob.
-   Pirate ships were dropped for `dead_beard` (ocean ruins + conduit ruin
-   instead); Cataclysm arenas dropped entirely.
+   `dead_beard` gets ocean ruins + conduit ruin, plus the pirate ships at an
+   even lower chance (`random: 0.25`); Cataclysm arenas dropped entirely.

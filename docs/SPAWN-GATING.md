@@ -88,8 +88,12 @@ keeps its default summon behavior).
 >   `desert_ruins`. (The Ancient Mummy variant rolls from the mod's own spawn
 >   config — these rules don't touch its chance.)
 > - **Dead Beard** — `minecraft:ocean_ruin_warm`, `ocean_ruin_cold`,
->   `ruined_portal_ocean`, `nova_structures:conduit_ruin`. (Its rare spawn weight
->   is the mod's own, unchanged.)
+>   `ruined_portal_ocean`, `nova_structures:conduit_ruin`; **plus** the WDA Seven
+>   Seas pirate ships (`dungeons_arise_seven_seas:pirate_junk`,
+>   `corsair_corvette`, `unicorn_galleon`, `victory_frigate`, `small_yacht`) at an
+>   even lower chance — a second allow rule gated with `random: 0.25`, so only ~¼
+>   of spawn attempts aboard a ship pass (the rest fall through to the deny). (Its
+>   base rare spawn weight is the mod's own, unchanged.)
 > - **Immortal** — not gated; keeps its default (summon) behavior.
 >
 > ⚠️ **In Control! filters, it does not force spawns.** An `allow` rule only
