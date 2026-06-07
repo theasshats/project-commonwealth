@@ -106,3 +106,14 @@ LEAVE — flavor/audio mod; the TLM altar already connects it to one method; all
 Zero blocks, zero items, zero biome modifiers, zero loot. Pure code library (base classes, FoodInfo compat, registry helpers) for MMF-Group mods.
 - LEAVE — genuine zero-content code library; no blocks/items/loot; not even a thin player-facing surface exists.
 
+## create_pattern_schematics   [anchors: Create (1)]
+
+Zero blocks, 3 items (pattern_schematic, empty_pattern_schematic, pattern_schematic_and_quill), no loot, no registered recipe types. Pure Create build-automation tooling — tiles a schematic infinitely. The dossier correctly flags LEAVE.
+
+Power-read: the pattern schematic items are build-automation tools, not production goods. They consume no foreign materials and produce nothing tradeable. Red-team for any weave: these are specialist design tools for large-scale contraption builders. Could they be an economy service? A player who builds a pattern schematic library for hire (M-33 service-for-hire) is a stretch — the schematic itself holds no material value, and the knowledge of how to set one up is trivial.
+
+Could the items be gated behind Create progression (M-05 native-method gating)? They're already Create-internal tools. Making them require a boss drop to craft (M-15) would be a tone clash — they're workflow tools, not power gear. REJECT any forced edge.
+- from: create_pattern_schematics:pattern_schematic | via: any | to: any | motif: no-motif | power: mid | tone: clash | verdict: REJECT | reason: build-automation workflow tool with no tradeable output or material surface; any gate/weave would be arbitrary friction on a workflow item
+
+LEAVE — Create-internal build tooling with no foreign material surface, no loot, and no loop-advancing potential; the dossier's LEAVE is confirmed.
+

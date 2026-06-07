@@ -107,6 +107,57 @@ Any new link?
 - OK — Aeronautics anchor: catenary wires + pantographs are literally the rail-electrification infrastructure for the logistics network. Sound.
 - from: pantographsandwires:coal_coke (tag: c:item/dusts/coal_coke) | via: TFMG coking chain / engine fuel | to: aeronautics | motif: M-13 | power: mid | tone: ok | verdict: REJECT | reason: coal_coke is a shared c: tag also produced by TFMG's primary coking method; the weave is on the tag, not specific to pantographsandwires — attributing it here would double-count the coal_coke route already anchored in TFMG
 
+## terralith   [anchors: survival (1)]
+
+Method-pull: data-only worldgen (no items, no recipe types, loot=yes). Has 65 c:tags (biome tags used by other mods to spawn/grow in Terralith biomes). loot=yes means it has loot tables — but as a worldgen-only pack, these are likely structure/chest loot tables for vanilla structures placed in its biomes, not new structure loot of its own.
+
+Can it anchor a 2nd system?
+- loot=yes but no items of its own: Terralith's loot tables are almost certainly vanilla structure overrides or placement-modifiers, not new loot of its own (its signature says "no items/blocks of its own"). The loot-seed delivery mechanism (from the briefing) requires a structure/dungeon mod *with its own loot tables to seed*. Terralith provides terrain+biomes for other mods' loot tables to land on, but it doesn't own loot tables that we can seed with weave-relevant drops.
+- Scarcity foundation: Terralith is the terrain that makes regional scarcity geographically real — biome placement shapes where ores appear (via GTMOGS biome-modifiers). That's a critical loop-support role but it's the *foundation* layer, not a 2nd-anchor weave.
+- Economy (M-30 regional scarcity): Terralith's biome diversity is what makes M-30 (regional-scarcity gate) work — different biomes = different ores available. But M-30 is the *GTMOGS* weave riding on the terrain; attributing it to Terralith double-counts.
+- Survival link to magic (M-16 seasonal reagent): Terralith adds unique biomes where seasonal reagents could grow exclusively — but no items of its own to place.
+- No method-routing possible with zero items/recipe-types.
+
+Red-team: The briefing says "don't LEAVE a loot-bearing structure mod just because it has no recipes." Terralith is not a structure mod — it's a terrain generator. Its loot=yes flag is incidental (vanilla structure loot tables overlaid on new terrain, not new Terralith-specific structures with seeded loot). No loot-seed candidate is coherent here.
+
+- LEAVE — pure data worldgen overhaul; no items, no recipe types, no new structures with seeded loot to route. Anchors the scarcity foundation (terrain = the geography of scarcity) but that's the loop's substrate, not a weave edge. Support-flavored survival anchor.
+
+## brazil_legends   [anchors: survival (1)]
+
+Power-read: Saci (trickster), Capelobo (werewolf-like), Headless Mule (fire), Cuca (witch). Drops: capelobo_claw (mid — from a dangerous mob), big_tongue (mid, from Cuca?), amber_shard/amber_pearl (mid — gem-like), bottle_with_saci (unique, trickster-capture). Boss-grade? The mobs are difficulty content, putting drops in mid-to-endgame range for survival. Weapons (bloodmoon_sickle) and spell books also drop.
+
+Candidate A — magic / occultism:spirit_fire or ars_nouveau:imbuement, M-02 + M-11:
+- Capelobo_claw, big_tongue, amber_shard → magic reagent via spirit_fire transmutation or imbuement.
+- Theme-fit: Brazilian folklore creatures with supernatural powers. Their claws/tongues/amber transmuting into occult essences reads as "dark folklore energy → arcane reagent." Fits occultism's spirit-working vocabulary. Ars Nouveau's imbuement is a stretch (Ars is more school-magic than folklore-occult) but occultism:spirit_fire is exactly right.
+- Power-read: capelobo_claw is mid (requires hunting a dangerous creature); amber_shard is mid (a gemlike folklore material). One-step spirit_fire transmutation is appropriate for mid.
+- Red-team: are these drops usable in occultism/Ars at all? They have no c:tags, so they'd need named-item inputs in recipes — fine for KubeJS. The tone is coherent (folklore dark magic → occultism).
+- Motif: M-02 (mob-drop reagent sink) + M-11 (ritual/transmutation sink). Both apply; lead with M-11 since spirit_fire is the delivery.
+- ACCEPT
+
+Candidate B — magic / amber_shard as an attunement catalyst, M-07:
+- Amber is a real-world magical/preserving material (Baltic amber, folk magic). Using amber_shard as a catalyst in an arcane conversion (not consumed freely) could gate a conversion sensibly.
+- Red-team: galosphere already owns the attunement-catalyst slot (allurite/lumiere, M-07). A second catalyst from a different mod risks fragmenting the catalyst role. Unless amber serves a *different* gate (a different conversion), this overlaps M-07's established owner.
+- Verdict: REJECT unless a specific distinct conversion needs a second catalyst type — don't propose it as a general attunement catalyst.
+- REJECT — reagent-ownership: galosphere:allurite/lumiere_shard already hold the M-07 catalyst slot; adding a second standalone catalyst from brazil_legends without a specific distinct gate would dilute the ownership
+
+Candidate C — economy (amber_pearl as luxury trade good, M-09):
+- REJECT — M-09 retired. Amber pearl as a sellable is ambient.
+
+Candidate D — economy / boss-drop → combat supply, M-34:
+- The bloodmoon_sickle is a weapon drop from a dangerous mob. A combat specialist farming these and trading them to non-combat players is M-34.
+- Power-read: a weapon drop from a specific dangerous mob is mid-tier; combat specialists farming it is coherent in a ~10-player group.
+- Theme-fit: fine — one player hunts the Headless Mule for the sickle and sells it.
+- Red-team: is the bloodmoon_sickle sufficiently unique/powerful that a player would seek it from a combat specialist rather than farming it themselves? If the mob is truly difficult (requires preparation), yes.
+- Motif: M-34 (combat-route supply).
+- ACCEPT — conditional on bloodmoon_sickle being genuinely difficult to obtain solo
+
+- from: brazil_legends:capelobo_claw / big_tongue / amber_shard | via: occultism:spirit_fire | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: a werewolf's claw and a witch's tongue carry dark folklore energy — spirit-fire transmutes them into occult essence just as it does with other haunted drops
+- from: brazil_legends:amber_shard | via: ars_nouveau:imbuement (as a ritual catalyst) | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: amber is a preservation medium in real-world folklore — feeding it into an imbuement to fix/stabilize a magical process reads naturally; secondary to the spirit_fire route
+- from: brazil_legends:amber_shard as standalone attunement catalyst | via: M-07 catalyst slot | to: magic | motif: M-07 | power: mid | tone: ok | verdict: REJECT | reason: galosphere already owns the M-07 catalyst slot (allurite/lumiere); adding a second general catalyst fragments reagent-ownership without a specific distinct gate justifying a second catalyst type
+- from: brazil_legends:bloodmoon_sickle (weapon drop) | via: combat-specialist trade | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: the Saci hunts are perilous enough that a combat specialist corners the market on bloodmoon sickles and trades them to the rest of the group
+- from: brazil_legends:amber_pearl / amber as luxury | via: bare sell | to: economy | motif: M-09 | power: — | tone: — | verdict: REJECT | reason: M-09 retired; ambient sell is not a demand-gate
+
+
 
 
 

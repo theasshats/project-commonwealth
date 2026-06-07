@@ -24,3 +24,9 @@
 - from: kobolds:kobold_wither_skull (exceptionally rare variant — pirate/captain kobold) | via: the gated machine's recipe (kobold_wither_skull as input) | to: create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: "the wither-crowned skull of a kobold captain keys a complex Create recipe — you can't build the high-tier part without raiding the pirate den"
 - from: kobolds emerald trading (NPC kobold enchanter selling Prospector enchantment) | via: villager/NPC trade | to: economy | motif: no-motif (M-21 is cut; emerald NPC trades are not player-run) | power: mid | tone: ok | verdict: REJECT | reason: M-21 (NPC trade-seam to economy) is cut (#163/#240); NPC emerald trading isn't a player-run economy weave — this is the ambient interaction that the existing economy anchor incorrectly represents
 
+## cmpackagepipebomb   [anchors: create (1)]
+- LEAVE — novelty PvP trap gag riding Create's package system; no material surface for a second-system hook. "Gunpowder/TNT consumption" is already ambient M-26 in the vanilla-combat loop; there's no coherent new edge to add here. Forcing danger-pressure or survival anchor onto a package-bomb prank would be arbitrary.
+
+## bookshelf   [anchors: support/library (1)]
+- LEAVE — genuine zero-content code library (Darkhax utility framework). No items, blocks, or recipe types. Sanctioned support role; no weave possible.
+

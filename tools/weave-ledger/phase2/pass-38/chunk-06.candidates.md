@@ -122,6 +122,18 @@ OK — connections sound on the core Create/aeronautics anchors. New links add e
 
 Summary: 3 ACCEPT (M-04 locometal crush, M-31 logistics bulk goods, M-33 freight service), 1 REJECT.
 
+## necronomicon   [anchors: support/library (1)]
+LEAVE — pure code library (Necronomicon API by ElocinDev; registry/config/worldgen helpers for opacpvp); 0 blocks, 0 items, no recipe types, loot=no. No content surface to weave. Genuine zero-surface case.
+
+## modernfix   [anchors: support/performance (1)]
+LEAVE — pure JVM/loader performance patch; 0 blocks, 0 items, no recipe types, loot=no. No content surface to weave. Genuine zero-surface case.
+
+## sable   [anchors: support/physics-backend (1)]
+LEAVE — Rapier physics engine library backing Aeronautics ships; 0 blocks, 0 items, no recipe types, loot=no. The weaving surface lives in the mods that build ON sable (Aeronautics itself). No content to weave here. Genuine zero-surface case.
+
+
+
+
 
 
 

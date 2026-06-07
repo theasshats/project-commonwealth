@@ -58,6 +58,18 @@ OK — connections sound. existing magic + create anchors are appropriate. The f
 
 REWORK: the dossier's 2nd-anchor candidates (M-05 via pressing for tiers, M-12 via reinforced paper milling) identify the right motif (M-05) but conflate tier depth. Splitting: M-05 mechanical_crafting for high tiers (ACCEPT), M-12 milling for reinforced paper (REJECT — basic component gate), and separately noting M-20 item_application for upgrades and M-26 consumption sink for all gliders is a cleaner decomposition.
 
+## mffs   [anchors: create, survival (2)]
+- REWORK check on existing connections: mffs is the reference implementation for M-05 (native-method gating via electron tube) + M-06 (sequenced-assembly keystone for projector/interdiction_matrix). Both connections are sound and load-bearing — the mod was explicitly built to be the gold-standard weave example.
+- from: mffs:biometric_identifier (access cards) | via: create:item_copying | to: create | motif: M-20 | power: mid | tone: ok | verdict: REJECT | reason: create:item_copying could make sense for duplicating biometric/access cards (a blank card → stamped copy), and the deployer could apply a card to the identifier. However, create:item_copying is intended for maps/books, not access-security cards — the semantic fit is weak and the method is already used for specific vanilla items. The gameplay hook ("copy my keycard on a Create machine") is amusing but forced — the mod's access system has its own card-crafting mechanic, and duplicating security cards through a Create copier undermines the security flavor. REJECT — tone mismatch.
+- from: mffs force fields (energy-consuming, base-defense) | via: create_new_age:energising or createaddition:charging | to: create | motif: M-17 | power: endgame | tone: ok | verdict: REJECT | reason: MFFS uses Fortron, its own energy type — not FE. M-17 (electric/FE charging bridge) specifically threads Create's FE electricity into a tool/focus/reagent. Fortron is not FE and cannot be fed from createaddition:charging or create_new_age:energising. The energy systems are incompatible at the fundamental level. REJECT — energy system mismatch.
+
+OK — connections sound. M-05 + M-06 are the authored weave already, and those are the correct, deep connections for this mod. No new weave needed; the two above are both REJECT.
+
+## lionfishapi   [anchors: support/library (1)]
+- LEAVE — genuine zero-content animation/entity API (dependency for L_Ender's mods, no player-facing items/blocks). Nothing to route.
+
+
+
 
 
 

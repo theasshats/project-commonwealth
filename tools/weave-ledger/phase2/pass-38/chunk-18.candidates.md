@@ -184,3 +184,53 @@ Now: propose new/better links to add a 3rd anchor or deepen the existing 2.
   the settlement.
 
 Summary for cbc_at: 3 candidates accepted, 0 rejected, existing connections sound (OK).
+
+## mcwstairs   [anchors: support/decoration-palette (1)]
+
+Dossier confirms: Macaw's Stairs, ~224 stair/railing/balcony/platform blocks in wood and stone
+variants. Vanilla-table crafted, no behavior, no recipe-types registered. Loot=yes (per item count)
+— 224 items exist but these are purely the placeable blocks; no structure loot. Consumes planks,
+stone, brick, blackstone.
+
+Power-read: pure decoration palette. The dossier already flags the one plausible weave candidate:
+stone/brick variants crushing back via M-04 (Create recycles deco). This is the "deco family
+wholesale pass" candidate the dossier notes should only happen as part of a broader deco-family
+action, not one-offs.
+
+**Candidate A — Create:crushing recycling of stone/brick stair variants (M-04)**
+- Stone, brick, blackstone, andesite, granite, diorite railing/stair/balcony blocks crushed back
+  to raw/gravel + create:experience_nugget (lossy, consistent with M-04's anti-arbitrage rule).
+  Wood variants could crush to planks/sawdust (also M-04, or M-12 if woodchip is a useful
+  intermediate). This is the standard "deco recycling" pass that all Macaw's mods share.
+- Power-read: everyday/low. These are basic stair blocks, not endgame content. One light step
+  (crushing) is the right depth.
+- Theme-fit: crushing a stone balcony to get rubble/gravel back is sensible and expected — the
+  same logic applies to any stone deco block in the pack. No tone clash.
+- Red-team: is this worth doing given the dossier flags it as WEAK and says "only as part of a
+  wholesale deco-family pass"? The weakness is in isolation — if every Macaw's mod gets this
+  treatment together it becomes a coherent system rather than a one-off. As a lone stair-mod
+  entry it's minor but not incoherent. The risk is recipe-table noise: 224 blocks × crushing
+  recipes is a large Phase-3 authoring surface — manageable if handled as a tag-based rule
+  (`mcwstairs:*_stone_*` → crushed_stone + xp_nugget), not 224 individual recipes.
+- Red-team counter: does this add a meaningful second anchor? Create recycling of deco blocks is a
+  genuine Create↔deco link. It anchors mcwstairs in the Create production web (even as decoration,
+  recycled material is back in the resource loop). The briefing explicitly says "weaving its
+  craftables into a second system (through Create even as decoration) is a *plus*." This qualifies.
+- ACCEPT | from: mcwstairs stone/brick/andesite/blackstone stair-family blocks | via:
+  create:crushing | to: create (M-04, lossy recycle) | motif: M-04 | power: everyday | tone: ok |
+  hook: mis-placed stone balconies crush back to gravel — no waste in a Create workshop.
+
+**Candidate B — wood stair variants as Create fuel / boiler feed (M-26)**
+- Wooden railing/balcony blocks could be tagged as fuel (Create boilers accept wood tags). This
+  links the deco palette to the survival/production loop as a consumption sink.
+- Power-read: everyday; wood is basic. This is a one-config/tag change.
+- Theme-fit: burning railing scraps in a boiler is thematically fine — wood is wood. No clash.
+- Red-team: does this actually create meaningful demand-pull? A fuel sink works as M-26 (consumption
+  draws goods back down) only if the fuel has a meaningful scarcity context. Wood is renewable and
+  abundant — there's no scarcity that burning mcwstairs railings helps to gate. The demand this
+  creates is trivially fulfilled by tree farming. It doesn't advance the loop.
+- REJECT | reason: wood is trivially renewable; a wood-fuel sink on decoration blocks creates no
+  meaningful demand-pull. M-26 consumption works when the consumed good is scarce or produced at
+  cost; abundant wood doesn't qualify. No loop advancement.
+
+Summary for mcwstairs: 1 accepted (M-04 crush recycle), 1 rejected (fuel sink).

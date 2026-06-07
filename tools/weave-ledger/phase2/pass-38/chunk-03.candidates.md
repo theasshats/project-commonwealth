@@ -40,6 +40,14 @@
 ## gamediscs   [anchors: survival/novelty (1)]
 - from: gamediscs:processor | via: create:mechanical_crafting (precision_mechanism as processor component) | to: create | motif: M-05 | power: everyday | tone: ok | verdict: REJECT | reason: the output is a purely cosmetic toy — gating a joke item behind Create engineering effort advances nothing in the loop; a forced edge whose output never drives demand, consumption, or scarcity. Loop test fails: this doesn't advance scarcity→pressure→production→economy in any direction.
 
+## betterpingdisplay   [anchors: support/client-UI (1)]
+- LEAVE — genuine zero-content client UI mod; no items, no blocks, no loot; nothing to weave
+
+## steves_lava_chicken_music_disc   [anchors: support/flavor (1)]
+- LEAVE — single meme music disc; the loot=yes surface is one item with no resource role in the loop; forcing any recipe or economy edge onto a joke disc is noise that fails the "would a player nod at this?" test
+
+
+
 
 
 
