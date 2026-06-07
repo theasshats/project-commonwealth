@@ -308,8 +308,14 @@ obvious: a healthy mod is usually *something you produce that pressure demands a
   social-mechanic problem MC doesn't hand us. We have *some levers* now (Numismatics for Create-minted
   coinage, Trading Floor for stalls/orders) but **the tooling is an unknown**: what's achievable with
   current mods vs. what needs custom work will be **determined when the Economy pillar (v0.9.0) is
-  built**, not now. (No formal governance/laws layer is planned — a deliberate divergence for a small
-  PvPvE group.)
+  built**, not now.
+- **Formal governance/laws layer — REOPENED (under consideration, v0.9.0).** Earlier this was ruled out
+  ("no formal governance — a deliberate divergence from Eco for a small PvPvE group"); that was
+  *unsettled*, and #260 reopens it. A player-driven hierarchical governance system (municipalities →
+  counties/kingdoms/empires, cascading laws, entity-minted currency, layered on MineColonies/claims) is
+  now a candidate Economy-pillar project, with a Survival second weave. **Scoped in `docs/GOVERNANCE.md`**
+  (survey + implementation paths). Not yet accepted as a committed feature; the *whether* and the *how*
+  are open. This supersedes the earlier "no governance" divergence — that framing is retired.
 - **Diet — settled (keep all five).** Diet – AppleSeed Edition is in the modlist (replacing SoL) and
   runs on its **default five groups** (no pruning config) — see "Food." Only optional per-category buff/
   decay tuning remains, and it's usable as-is.

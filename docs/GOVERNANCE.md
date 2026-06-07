@@ -3,27 +3,18 @@
 > **Status: SCOPING, not accepted.** This doc captures the survey + implementation options for a
 > player-driven hierarchical governance system (municipalities → counties/kingdoms/empires, cascading
 > laws, entity minting), milestoned **v0.9.0 — Economy & logistics** (#260). It is a *speculative
-> project*, not a committed feature. Nothing here is built. **Read the "Design-stance conflict" section
-> first** — #260 reverses a settled ruling in `docs/SYSTEMS.md`, and that reversal needs ratifying before
-> any code.
+> project*, not a committed feature. Nothing here is built. The *whether* and the *how* are both open.
 
 ---
 
-## ⚠️ Design-stance conflict — resolve before building
+## Design-stance note — governance is now on the table
 
-`docs/SYSTEMS.md` ("Open / unsettled", line ~312) currently states, as a *settled* ruling:
-
-> "(No formal governance/laws layer is planned — a deliberate divergence for a small PvPvE group.)"
-
-It frames this as an intentional divergence from Eco (which *does* have formal governance). Issue #260
-proposes exactly the formal governance/laws layer that ruling rules out. That's a legitimate pivot —
-but it is a **documented reversal, not a gap-fill.** If governance is pursued:
-
-- `SYSTEMS.md`'s "Dynamic pricing + player-minted currency" note and the Eco-divergence framing must be
-  updated, or the canonical structural model contradicts itself.
-- The reversal is a **maintainer call** (Xela112233 + zagwar), not something to build past silently.
-
-**Action item before Path A/B/C work starts:** ratify the reversal and reconcile `SYSTEMS.md`.
+An earlier `docs/SYSTEMS.md` line ruled out a formal governance layer ("a deliberate divergence from Eco
+for a small PvPvE group"). The maintainers have since clarified that line was **unsettled, not a settled
+ruling** — so it's **reopened**, and `SYSTEMS.md` has been updated to match (its "Formal governance/laws
+layer — REOPENED" note in the "Open / unsettled" section). Governance is therefore a legitimate candidate
+Economy-pillar project; what remains open is **whether** to commit to it and **which** implementation path
+to take — not whether it's *allowed*.
 
 ---
 
@@ -133,8 +124,8 @@ it introduces **no new claim system**, it *reads* the two that already exist. It
 
 ## Recommendation
 
-1. **Ratify the design reversal first** (see top) — #260 overturns a settled `SYSTEMS.md` ruling; reconcile
-   the docs before building past it.
+1. **Design stance: clear.** Governance is reopened and on the table (see above) — `SYSTEMS.md` reconciled.
+   What's left to decide is *whether to commit* and *which path*, not whether it's allowed.
 2. **Spike PoliticsMod + ForgeTowns on the box** (one playtest session) to see empirically how far an
    existing mod gets and how badly its claims collide with MineColonies/OPAC. That result decides Path A
    vs B far better than more desk research.
