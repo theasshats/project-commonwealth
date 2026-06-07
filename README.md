@@ -35,7 +35,7 @@ There are two ways to make changes, in order of how often they're used:
 1. **Derpack Editor** (recommended) — local desktop app, GUI, runs from the repo.
 2. **packwiz CLI directly** — fallback for things the editor doesn't cover yet, or when you can't run it.
 
-(The pack used to also expose browser-button GitHub Actions for add/remove/update/hash; those were retired once the editor covered them — see [issue #127](https://github.com/Xela112233/Derpack-X/issues/127).)
+(The pack used to also expose browser-button GitHub Actions for add/remove/update/hash; those were retired once the editor covered them — see [issue #127](https://github.com/derpack-org/Derpack-X/issues/127).)
 
 The workflow we follow: each contributor works on a **version-named branch**, edits via the editor, opens a **pull request to main**. Every PR runs automated merge-gating checks (packwiz index freshness, manifest lint, KubeJS/config parse, Go build & vet) — see [`docs/CI-CHECKS.md`](docs/CI-CHECKS.md). Releases are cut from main.
 
@@ -142,7 +142,7 @@ The build runs fresh each time — no caching, ~30s — then attaches the Prism 
 
 If the editor doesn't work for you (no Windows machine, can't install Java, whatever), every operation can be done with `packwiz` directly from the repo root — `packwiz mr add <slug>` / `packwiz cf add <slug>`, `packwiz update <slug>` (or `--all`), `packwiz pin`/`unpin`, `packwiz refresh`. See [`docs/EDITING.md`](docs/EDITING.md#fallbacks) and [`mods/README.md`](mods/README.md).
 
-(The browser-button GitHub Actions that used to sit here — Add mod(s) / Remove mod / Update mods / Compute hash — were retired; the editor replaced them, [#127](https://github.com/Xela112233/Derpack-X/issues/127).)
+(The browser-button GitHub Actions that used to sit here — Add mod(s) / Remove mod / Update mods / Compute hash — were retired; the editor replaced them, [#127](https://github.com/derpack-org/Derpack-X/issues/127).)
 
 ---
 
