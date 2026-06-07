@@ -62,6 +62,22 @@ Candidates:
 
 - from: more_slabs_stairs_and_walls bulk cut variants (for airship hull builds) | via: aeronautics ship-construction as build material | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: REJECT | reason: M-23 requires a *structural alloy / load-bearing material* (metal plate/beam), not decorative cut stone. Stone slabs don't thematically read as hull material on an airship; the connection is forced. A player would ask "why does my ship need basalt stairs?" — fails the nod test.
 
+## rhino   [anchors: support (library/engine) (1)]
+
+LEAVE — Verified pure JavaScript runtime (Mozilla Rhino fork) for KubeJS. 0 blocks, 0 items, no loot, no methods. Indirectly enables all KubeJS recipe weaving but has zero direct content surface. Nothing to weave.
+
+## fzzy_config   [anchors: support (library) (1)]
+
+LEAVE — Verified config-serialization library (Kotlin TOML backend). 0 blocks, 0 items, no loot, no methods. Pure developer infrastructure. Nothing to route or weave.
+
+## aeronauticscompat   [anchors: aeronautics (1)]
+
+LEAVE — Verified pure behavior-patch / mixin glue with 0 blocks, 0 items, no loot, no processing methods. Required (CLAUDE.md) for the aeronautics pillar, but has no content surface to weave. Its single anchor is correctly labeled aeronautics.
+
+
+
+
+
 
 
 

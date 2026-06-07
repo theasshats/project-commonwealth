@@ -99,3 +99,27 @@ feast/sandwich pipeline could be acknowledged as feeding the M-26 consumption lo
 by survival pressure), but that is the ambient endpoint of all food production and earns no new anchor per
 the economy-is-player-run ruling. Leave at 2.
 
+## create_compressed   [anchors: create (1)]
+
+- from: create_compressed:crushed_<metal>_pile blocks (9× compressed crushed ore, everyday) |
+  via: create:splashing (bulk washing) | to: create | motif: M-03 | power: everyday | tone: ok | verdict: REJECT |
+  reason: same-anchor intra-Create move; does not advance the loop to a second pillar. The mod already uses
+  splashing/crushing/milling internally — adding another Create recipe edge earns no new anchor.
+
+- from: create_compressed:dough_block / wheat_flour_pile (compressed food intermediate) | via: farmersdelight:cooking
+  or extradelight:oven | to: survival | motif: M-12 | power: everyday | tone: ok (a compressed flour block fed
+  into a cooking station as batch input is exactly the kitchen-automation logic; perfectly coherent) |
+  verdict: ACCEPT |
+  hook: bulk compressed flour/dough blocks can be consumed by FarmersDelight/ExtraDelight cooking methods in
+  large-scale runs, making create_compressed part of the Create-to-survival food pipeline and earning a survival
+  anchor to match its Create one.
+
+- from: create_compressed:mechanism_block / cogwheel_block / shaft_bundle (compressed Create mechanical parts) |
+  via: aeronautics build recipes (structural component input) | to: aeronautics | motif: M-23 | power: mid |
+  tone: ok (compressed mechanical components as airframe material is intuitive — you'd use the dense block form
+  for ship hulls) | verdict: REJECT | reason: aeronautics structural recipes (M-23) should call for
+  create_ironworks steel or fabricated alloy plates, not compressed cog-blocks — the compressed forms are
+  storage/automation conveniences, not structural material. Theme is marginal and the substitution is
+  conceptually wrong (you build a ship hull from plates, not compressed cogwheels). No-motif fit for this
+  specific routing.
+

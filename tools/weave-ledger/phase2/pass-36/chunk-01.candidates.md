@@ -53,6 +53,19 @@ New links to assess:
 ## lithium   [anchors: support (1)]
 - LEAVE — general-purpose server/world-tick optimization (physics, mob AI, block ticking); registers zero blocks, items, or recipe types. No content surface — pure tick-rate optimization.
 
+## mru   [anchors: support (1)]
+- LEAVE — shared code library (MRU: Mineblock's Repeated Utilities) providing rendering helpers and config APIs; registers zero blocks, items, or recipe types. No content surface.
+
+## cmparallelpipes   [anchors: create (1)]
+- from: cmparallelpipes:pipe_wrench | via: M-05 native-method gating — the wrench is a Create fluid-network tool; it could be gated behind Create brass/gilded parts to place it at the mid-tier where dense parallel fluid runs become relevant | to: create | motif: M-05 | power: mid | tone: ok — a precision plumbing tool made from precision Create parts is coherent | via: create:mechanical_crafting (or crafting-table with Create parts) | verdict: REJECT | reason: the wrench is a utility QoL item (pipe-locking), not a "flagship" production item; gating a QoL tool behind M-05 depth would be frustrating rather than rewarding. The dossier rightly notes "one utility tool for Create plumbing; no second-pillar weave is coherent." Power-read: everyday convenience item — M-05 depth is for flagship/endgame only.
+- from: cmparallelpipes pipe_wrench_gear (a component item) | via: M-29 cross-route dependency — pipe_wrench_gear requires an input from another production route (e.g. a magic-infused gear or a colony-machined component) | to: magic or economy | motif: M-29 | power: everyday | tone: clash — a plumbing QoL gear demanding a magic reagent is thematically incoherent; players would find the pairing arbitrary | verdict: REJECT | reason: theme clash. The wrench's purpose is pipe connection convenience, not a nexus between production routes. Forcing a cross-route dependency on a mundane tool is a defect.
+- LEAVE — after exhausting candidates: the pipe wrench is a single-purpose Create fluid utility item; no coherent second-anchor weave survives red-team. Remains a Create-support piece.
+
+## xaerominimap   [anchors: support (1)]
+- LEAVE — client-side minimap/waypoint HUD; registers zero blocks, items, or recipe types. No gameplay content surface — pure navigation UI.
+
+
+
 
 
 

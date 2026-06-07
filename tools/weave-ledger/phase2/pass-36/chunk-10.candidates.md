@@ -65,5 +65,18 @@
 - from: formations stone altar structures | via: loot-seed | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: seeding formations' altar ruins with scattered magic reagents (source gems, essence shards) makes overworld exploration the supplier for early magic — organic loot→magic pipeline rather than a purely crafted progression
 - REWORK: dossier says "none — leave" but the briefing explicitly warns against LEAVEing a loot-bearing structure mod; formations has loot=no per the jar digest but its structure set generates with placed loot-block equivalents (chest + barrel placements); if its structures carry any placed chest blocks the loot-seed route applies. However jar digest shows loot=no, meaning it registers no loot tables of its own — the LEAVE is defensible if structures genuinely spawn empty (vanilla-palette blocks only, no loot chests). Accept the loot-seed candidates above as conditional on confirming the structure templates include chests; if they don't, revert to LEAVE.
 
+## fishingreal   [anchors: survival (1)]
+
+- from: fishingreal (behavior — catches spawn live fish entities) | via: config tie | to: survival | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: purely a behavior layer on top of fishing; it changes the output of catches into live mobs but adds no items and no material for any method to consume — the weaving surface belongs to the fishing-content mods (createfisheryindustry, farmersdelight) that sit beneath it
+- LEAVE — A behavior-only fishing tweak (item catch → live entity spawn); no items registered, no loot, no method surface. The weaving happens in the content mods it modifies (createfisheryindustry, etc.), not here.
+
+## dungeons-and-taverns-v4.4.4   [anchors: survival (1)]
+
+- from: dungeons-and-taverns structures (100+ structures: taverns, towers, illager hideouts, trial chambers) | via: loot-seed | to: survival | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: seeding Dungeons & Taverns loot tables with boss-route reagents or combat-supply components makes the dungeon-crawler role a meaningful supplier — the combat specialist who clears illager hideouts brings back materials the crafter can't self-supply
+- from: dungeons-and-taverns trial vault loot (expanded Trial Chambers, trial_key gated) | via: loot-seed | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: seeding exclusive magic reagents into the expanded trial vaults (behind trial_key) makes dungeon completion the gateway to a tier of magic locked behind genuine danger — exploration as a production route feeding the magic system
+- from: dungeons-and-taverns tavern cartographer trade | via: loot-seed | to: economy | motif: M-33 | power: everyday | tone: ok | verdict: ACCEPT | hook: the tavern's cartographer sells structure maps — that's a service (information as a traded good): seeding these maps with coordinates of scarcity-relevant resource structures (ore regions, colony sites) makes the tavern cartographer a genuine economy service node, not just a vanilla flavor piece
+- from: dungeons-and-taverns tavern cartographer | via: villager trade | to: economy | motif: M-37 | power: mid | tone: ok | verdict: REJECT | reason: the cartographer sells information (maps) but the progression unlock here would be route-knowledge, not a recipe gate — M-37 is research gating a recipe, not map-buying; no clean motif fits; the M-33 service reading above is the correct framing
+- REWORK: dossier flags M-09 as its only economy candidate then correctly dismisses it; the loot-seed + M-34/M-02/M-33 candidates above are the proper routes — all three accepted above, none requiring M-09 or M-14/M-21
+
 
 

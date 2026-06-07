@@ -39,6 +39,23 @@
 - from: mcwroofs:* | via: create:mechanical_crafting | to: create | motif: M-05 | power: mid | tone: clash | verdict: REJECT | reason: locking roof blocks behind Create mechanical crafting makes no sense architecturally — a sloped roof piece is an everyday building material, not a precision-manufactured component. Depth must scale with power; a decorative roof block is everyday, so a complex recipe gate would violate the "never gate basics behind complex recipes" rule.
 - REWORK: dossier flags the M-04 crush candidate as WEAK because of the 605-block count. This is a valid scope concern, not a concept weakness — the concept is sound (M-04 is established for exactly this). The resolution is to scope to stone/brick/terracotta/concrete variants in Phase 3, not to drop the candidate. Flag as SCOPE-LIMITED, not rejected.
 
+## aeronautics_dyeable_components   [anchors: aeronautics (1)]
+- from: dyed levitite / dyed tires | via: create:toolbox_dyeing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: M-04 is deco-recycles-back-to-raw (lossy crush/cut), which doesn't apply here — dyed parts aren't recycled into raw levitite, they're just recolored. The motif doesn't fit; forcing it is arbitrary.
+- from: dyed levitite / dyed tires | via: create:mixing | to: create | motif: M-20 | power: everyday | tone: ok | verdict: REJECT | reason: M-20 (deploy-application upgrade) applies a woven part to upgrade a base — a dye-color swap is a cosmetic reskin, not an upgrade. Motif doesn't fit; cosmetics are the sanctioned support role here, not a weave candidate.
+- from: aeronautics_dyeable_components color variants | via: ars_nouveau:dye | to: magic | motif: no-motif | power: everyday | tone: clash | verdict: REJECT | reason: routing a dye-coloring step through an Ars dye method is purely cosmetic and the magic-paint-shop framing is a tone clash (no arcane reason to dye a tire in a magic ritual). No motif for cosmetic dye routing exists and no new motif should be invented.
+- LEAVE — cosmetic skin layer on Aeronautics; the single aeronautics anchor is the correct and complete anchor for this mod. Dye steps (offhand dye + craft) are already the mod's own native mechanism. No coherent 2nd anchor — forcing one would be a defect.
+
+## create_sa   [anchors: Create, aeronautics (2)]
+- OK — connections sound. Create (made via sequenced_assembly/mechanical_crafting from Create mats) + aeronautics (jetpacks, drones = personal flight arm) is a correct ≥2 anchor pair.
+- from: create_sa:brass_drone_item | via: create:sequenced_assembly | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: drones as a service-for-hire mechanic — a Create-specialist operates owner-locked drones as a logistics/delivery service for other players (carrying goods, scouting routes), without selling the drones themselves; payment is emergent. Red-team: drones are owner-locked per the dossier, so they can't literally be traded; the weave is the labor/service, not the drone as a good. This is a coherent M-33 (service-for-hire) link, adding an economy anchor.
+- from: create_sa:brass_jetpack_chestplate (netherite variant) | via: create:sequenced_assembly | to: survival | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: the netherite-tier jetpack ("lava-swim" perk) is a natural candidate for a boss-key gate — requiring a Mowzie's or Cataclysm boss drop as a sequenced_assembly keystone, so endgame personal flight demands combat progression. Red-team: sequenced_assembly already uses Create mats; adding a boss-drop input follows established M-15 / M-06 patterns and is tonally coherent (you're embedding a fearsome artifact into powered armor). Survives. Adds survival anchor (danger/boss route).
+
+## wits   [anchors: support/QoL (1)]
+- LEAVE — server-side debug command (/wits); 0 items, 0 blocks, no loot; nothing to route.
+
+
+
+
 
 
 

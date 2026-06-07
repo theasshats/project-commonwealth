@@ -54,6 +54,21 @@ Method-pull on the output: the 242 chiseled blocks are fine architectural finish
 
 OK — connections sound. Dossier's "already ≥2 (Create kinetic method + decoration)" is correct. The mod IS the bridge providing Rechiseled its Create pillar. No coherent 3rd system anchor that doesn't reduce to trivially weak. Decoration/Create at depth 2 is the appropriate end state.
 
+## railways   [anchors: create, aeronautics (2)]
+
+Power-read: 1015 items, 617 blocks — narrow/wide gauge and monorail track variants, locometal building stock, conductor entity, semaphores. Already consuming create:mechanical_crafting + create:sequenced_assembly (inbound). The conductor (a colonist-style entity that can operate remote redstone) and the semaphore/nixie-tube signaling are the distinctive gameplay features above track variants. Existing 2 anchors are sound.
+
+Method-pull for a 3rd anchor: locometal is a distinctive material (branded railway-aesthetic steel blocks); conductors perform remote redstone control / carry toolboxes. Is there an economy link? Conductor as a logistics-operator (M-33 service) is thematic — a conductor player running freight trains between regions is an aeronautics/logistics service. But conductors are NPC-adjacent entities, not player characters providing service. The freight-train role is already what aeronautics/economy covers at the system level.
+
+- from: railways locometal structural blocks (decorative steel aesthetic, produced with Create metals) | via: loot-seed or recipe — include locometal blocks as a required build material in Aeronautics airframe/rail-car construction | to: aeronautics | motif: M-23 | power: mid | tone: ok — locometal is literally railway-locomotive metal plating; requiring it in a train-car or aeronautics railcar body is directly coherent | verdict: ACCEPT | hook: building a proper steam locomotive or railcar shell calls for locometal plating — the aesthetic of the railway bleeds naturally into the aeronautics construction supply line
+
+- from: railways:conductor entity (remote redstone/toolbox carrier) | via: conceptual economy/logistics role — conductors automate freight routing between trade outposts | to: economy | motif: M-33 | power: mid | tone: clash — M-33 is player-performed labor; the conductor is an NPC-adjacent automation entity, not a player providing a service to another player. The economy link is structurally indirect (it's automation, not labor). | verdict: REJECT | reason: M-33 requires *player* specialist labor; a deployed conductor entity doesn't constitute player-run service. The logistics role is already captured by the aeronautics anchor. Forcing economy here blurs the conductor's automation role.
+
+- from: railways track-types (narrow/wide gauge, monorail) | via: M-31 bulk-goods logistics — different gauges as specialized logistics routes for different cargo volumes, making logistics planning a depth layer | to: economy | motif: M-31 | power: mid | tone: ok — the multi-gauge system naturally supports bulk-cargo routing decisions | verdict: REJECT | reason: M-31 (logistics-required bulk good) applies to the *goods* being moved, not to the track-type itself. The track variety adds build depth, not a new system anchor. Railways' aeronautics anchor already represents its logistics-arm role; M-31 needs a specific routable material, not the transport infrastructure.
+
+OK — connections sound on the core two anchors (Create + aeronautics). The locometal → M-23 candidate is a genuine new addition the dossier missed.
+
+
 
 
 

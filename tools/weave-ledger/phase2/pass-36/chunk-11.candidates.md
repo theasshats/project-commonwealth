@@ -56,4 +56,12 @@ However: the briefing also says to reach for a loot-seed candidate before LEAVE 
 
 LEAVE not applied because there's a survival anchor. Mob is 1-anchor survival; no coherent 2nd anchor found that survives red-team.
 
+## betterpingdisplay   [anchors: support/client-UI (1)]
+
+LEAVE — client UI mod showing numerical ping in the tab list; 0 blocks, 0 items, no recipe-types, no material outputs. Genuine zero-surface client utility; sanctioned support role.
+
+## platform   [anchors: support/library-API (1)]
+
+LEAVE — cross-platform code library (ItsBlackGear's Architectury-based utility framework); 0 blocks, 0 items, no recipe-types, no material outputs. Genuine zero-surface library; sanctioned support role.
+
 

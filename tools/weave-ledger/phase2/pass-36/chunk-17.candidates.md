@@ -37,3 +37,20 @@ New link candidate:
 
 - LEAVE — genuine zero-content server-behavioral mod. AFK detection with no items, no blocks, no methods, no loot. Nothing to weave.
 
+## kotlinforforge-5.11.0-all   [anchors: support/library (1)]
+
+- LEAVE — Kotlin language runtime/adapter. Pure developer plumbing; zero player-facing content, no items, no methods. Nothing to weave.
+
+## handcrafted   [anchors: support/decoration (1)]
+
+Sanctioned decoration palette anchor. Target: find a coherent 2nd anchor via method-pull.
+
+- from: handcrafted wood-furniture (chairs/tables/cupboards/shelves — planks-tier) | via: create:cutting / woodworks:sawmill | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: a Create-driven sawmill refines raw planks into precise furniture blanks, so furnishing your base is a minor Create byproduct rather than pure bench-craft — light, one-step, appropriate for everyday deco tier
+- from: handcrafted:berry_jam_jar (semi-functional food decoration) | via: farmersdelight:cooking or extradelight:mixing_bowl | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: berry jam is a real food product — routing it through a cooking station makes it an ingredient in Farmer's Delight recipes (a jam-filled pastry, a toast topping), anchoring the deco mod to the diet/survival web at zero design cost
+- from: handcrafted furniture (metal-trim variants — iron/copper/brass) | via: create:mechanical_crafting | to: create | motif: M-05 | power: mid | tone: ok | verdict: REJECT | reason: metal-trim furniture is mid-tier deco, not a flagship item; gating deco behind mechanical_crafting would be punishing for what players use furniture for (base decoration). M-12 via cutting is the right depth for everyday deco. Keep the create:cutting ACCEPT above; this heavier gate is unwarranted.
+- from: handcrafted furniture (as colony interior fittings) | via: minecolonies:composting or hut-supply requests | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: REJECT | reason: MineColonies doesn't pull furniture via recipe or requests in a way Phase 3 can author — colony huts don't consume handcrafted blocks. No mechanism to make this a real gate; would be a building convention, not a weave.
+
+## kleeslabs   [anchors: support/QoL (1)]
+
+- LEAVE — genuine zero-content behavior-only QoL mod. Single-slab-break interaction; no items, no blocks registered, no methods, no loot. Nothing to weave.
+

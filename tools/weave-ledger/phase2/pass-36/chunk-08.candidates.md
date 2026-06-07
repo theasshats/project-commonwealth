@@ -72,3 +72,35 @@ Currency Miner block fed FE mints Numismatics coins; Mining Cores from geodes ga
 - from: createblockchain:currency_miner (FE→coin chain) | via: createaddition:charging / FE from scarce ore product | to: scarcity→economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: coins are only as common as the energy to mint them — if that FE traces back to a region-locked processed metal, the money supply has geographic roots
 - from: createblockchain:piggy_bank | via: loot-seed (overworld chests) | to: economy | motif: M-08 | power: everyday | tone: ok | verdict: REJECT | reason: piggy banks seeding random coins into world chests is an NPC-adjacent faucet (coins appear "from nowhere" rather than from player minting effort); this weakens M-08's player-minted-currency framing; the ambient chest loot is flavour, not a weave node
 
+## createshufflefilter   [anchors: Create (1)]
+
+Two filter items (shuffle + weighted shuffle) that randomise which item a Create Deployer places from its inventory. Purely a Create filter utility — no materials of its own, no recipe type registered.
+
+**Method-pull:** The items themselves (`shuffle_filter`, `weighted_shuffle_filter`) are filter tools, not materials. They don't output anything; they control which items a Deployer picks. There is no coherent second system this connects to:
+- They can't route through a magic method (a filter isn't a reagent).
+- They can't route through survival (no food/combat role).
+- They can't route through economy (they don't produce or distribute value; they distribute *placement effort* within a Create contraption, which is all already Create-side).
+- Could make the filter itself require a magic reagent as an ingredient (M-10/M-29 cross-route)? The item is a low-mid everyday utility for builders; gating it behind magic would be disproportionate — the everyday/low-power rule says one light step, and a magic-gated filter has no thematic reason.
+
+**Red-team:** The dossier itself says "leave (a one-item builder QoL utility; no coherent 2nd pillar without forcing it)." I agree — there is no natural motif.
+
+**Verdict:** LEAVE — tiny two-item Create filter utility with no materials, no outputs, no method, and no coherent 2nd anchor; the everyday/low-power rule and the "don't force edges onto utility tools" guardrail both point here.
+
+- LEAVE — two-item Create Deployer filter utility; no recipe type, no materials/outputs to route; no coherent 2nd anchor exists without forcing an arbitrary cross-mod edge
+
+## necronomicon   [anchors: support/library (1)]
+
+Pure code library (Necronomicon API by ElocinDev). 0 blocks, 0 items, loot=no, no recipe types. Genuine zero-content library.
+
+**Verdict:** LEAVE — genuine zero-content code library; nothing to weave.
+
+- LEAVE — pure API/config library; 0 blocks, 0 items, no recipe types; zero player content surface
+
+## moogs_structures   [anchors: support/library (1)]
+
+Data-driven worldgen library for Moog's structure mods. 0 blocks, 0 items, loot=no, no recipe types. No standalone gameplay content.
+
+**Verdict:** LEAVE — genuine zero-content worldgen library; nothing to weave.
+
+- LEAVE — worldgen library/API; 0 blocks, 0 items, no recipe types; any loot/weave belongs on the dependent structure mods, not the library
+

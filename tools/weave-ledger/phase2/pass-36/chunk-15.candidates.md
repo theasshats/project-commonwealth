@@ -60,5 +60,59 @@ No material surface to route. The mechanic itself (advancement-gated reveal) is 
 
 REWORK: OK — no existing connections to evaluate; support-role only.
 
+## jamlib   [anchors: library/support (1)]
 
+Cross-platform API library (JamCoreModding). Zero items, zero blocks, zero recipe types, zero loot. Pure JSON5 config system and platform-abstraction helpers for dependent mods.
+
+- LEAVE — genuine zero-content code library; no items, no methods, no loot. Nothing to route.
+
+REWORK: OK — no existing connections; support-role only.
+
+## death-count-1.0   [anchors: support/flavor (1)]
+
+A vanilla-scoreboard datapack that tracks per-player deaths in the tab list. No items, no blocks, no recipe types, no loot. Purely cosmetic server scoreboard.
+
+- LEAVE — zero content surface (scoreboard cosmetic only); no items, no methods, no loot. Nothing to weave.
+
+REWORK: OK — no existing connections; support-role (friend-group flavor) only.
+
+## betterendisland   [anchors: survival (1)]
+
+Structure/worldgen overhaul of the End's central island (YUNG's). No items, no blocks of its own, no loot tables (loot=no). Purely cosmetic structural redesign.
+
+The dossier says LEAVE; let me check if there's anything to route. It's a structure overhaul only, with no loot. There is no content surface — no drops, no items, no recipe types.
+
+- LEAVE — structure-overhaul only with no loot tables, no items, no recipe types; zero content surface to route. The survival anchor (end-game spectacle/exploration) stands alone as a justified support-flavor role.
+
+REWORK: OK — no existing connections beyond single survival anchor; correct.
+
+## voicechat   [anchors: support (1)]
+
+Simple Voice Chat — proximity audio. Zero items, zero blocks, zero recipe types, no loot. Pure server-transport + client audio infrastructure.
+
+- LEAVE — genuine zero-content comms infrastructure; no items, no methods, no loot. Critical QoL for a 10-player co-op pack but not a weave node.
+
+REWORK: OK — no existing connections; support-role only.
+
+## timm   [anchors: support/QoL (1)]
+
+Traveler's Titles — client-side biome/dimension title overlay. Zero items, zero blocks, zero recipe types, no loot. Pure presentation.
+
+- LEAVE — zero content surface (UI-only overlay); no items, no methods, no loot. Nothing to weave.
+
+REWORK: OK — no existing connections; support-role only.
+
+## terralith   [anchors: survival (1)]
+
+Overworld worldgen overhaul (~95 biomes, new terrain). No items, no blocks, no recipe types. The dossier shows loot=yes but 0 items of its own — that loot tag likely refers to vanilla loot tables that the worldgen data touches, not mod-specific loot.
+
+Let me reason through this carefully. Terralith adds biomes but uses only vanilla blocks; its "loot=yes" in the dossier counts could reflect the 65 c:tags it registers, not actual mod-specific loot tables. The dossier explicitly notes "no items/blocks of its own."
+
+However, Terralith is the terrain substrate that other structure mods' content (and GTMOGS regional ore-gen) rides on. It anchors the scarcity foundation by shaping the world that regional ore-gen partitions. That's an indirect weave (terrain → ore distribution → scarcity) but no authoring is needed — it's the passive substrate.
+
+Method-pull: no items to route. No recipe types. No loot tables of its own. The biome variety creates the *map* that Serene Seasons temperature differences land on, but that's a config interaction, not a recipe weave.
+
+- LEAVE — data-only worldgen with no items, no mod-specific loot, and no recipe types; nothing to route through any method. Its real contribution is the terrain/biome substrate that regional ore-gen and other mods' spawns build on — a structural role, not a weave edge.
+
+REWORK: OK — single survival anchor correct; no existing recipe connections to evaluate.
 
