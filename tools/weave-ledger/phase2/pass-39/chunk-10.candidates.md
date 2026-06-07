@@ -82,3 +82,13 @@
 
 ## wits   [anchors: support/debug (1)]
 - LEAVE — zero items, zero blocks, zero loot, no recipe methods. Server-side command that identifies structures; no material or mechanical surface to weave. Genuine zero-content debug utility.
+
+## moblassos   [anchors: survival (1)]
+- from: moblassos golden/aqua lasso (farm animal / aquatic mob capture) | via: MineColonies colony supply — animals captured in lassos are the standard delivery method to stock a colony's animal pen / fisher / stable; the lasso is the logistics enabler for colony animal husbandry | to: economy (colony route) | motif: M-28 | power: everyday | tone: ok — bringing a lassoed cow to the colony's animal handler is exactly what the tool is for; it turns livestock relocation into a viable trade service | verdict: ACCEPT | hook: the colony animal-handler accepts lassoed livestock as a supply delivery; a rancher-player captures and delivers breeding stock to other players' colonies for pay
+- from: moblassos hostile_lasso (captures weakened monsters <50% HP) | via: occultism:spirit_trade or spirit_fire — a captured-alive mob delivered to an Occultism summoner serves as a "live spirit container" for spirit-fire transmutation, bridging the trapper to the summoner | to: magic | motif: M-11 | power: mid | tone: ok — a monster-trapper capturing creatures alive for the summoner's ritual is thematically strong; it creates a real economic role for the hostile-lasso specialist | verdict: ACCEPT | hook: the Occultism ritualist needs a live gorgon for the binding ritual; they commission the monster-trapper; the hostile lasso makes that supply chain real
+- from: moblassos:contract item | via: player-economy trade — the contract formalises a mob-delivery agreement between players (trapper promises a specific mob delivery for coin/goods) | to: economy | motif: M-33 | power: everyday | tone: ok — a written contract for mob delivery is a natural service-economy item | verdict: REJECT | reason: the contract's actual in-game mechanic is unknown from the dossier; if it's just a decorative signed-paper item rather than a functional delivery-binding mechanic, this is a thematic observation not a method-pull; flag for Phase-3 verification of what moblassos:contract actually does before authoring any economy weave around it
+
+## rightclickharvest   [anchors: support/QoL (1)]
+- LEAVE — zero items, zero blocks, zero loot, no recipe methods. Pure interaction-hook behavior mod (right-click harvest + replant); touches no material graph. Genuine zero-content QoL utility.
+
+== CHUNK COMPLETE ==
