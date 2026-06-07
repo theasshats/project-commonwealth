@@ -51,3 +51,7 @@ REWORK: OK — connections sound. Already at 2 anchors (Create material ladder +
 ## mysterious_mountain_lib   [anchors: support/library (1)]
 - LEAVE — genuine zero-surface framework library for MMF-Group mods (0 blocks, 0 items, 0 recipe-types, loot=no). Base classes + FoodInfo API only; all player content belongs to dependent mods, not this library.
 
+## patchouli   [anchors: support/library-docs (1)]
+- from: patchouli:guide_book / colored book items (everyday) | via: patchouli:shapeless_book_recipe → potential pack-authored guide | to: magic or create | motif: M-37 | power: everyday | tone: ok — Patchouli books are used by Ars Nouveau and Occultism as advancement-gated knowledge unlocks; a packdev-authored guide book could gate recipe knowledge (knowledge = research progression) | verdict: REJECT | reason: the recipe-type is Patchouli's own book-crafting method for building guide books, not a weave routing a foreign material; the knowledge gating belongs to Ars/Occultism's own progression (which already uses Patchouli), not a new Patchouli-level weave. Any knowledge-gate weave is authored on the *using* mod (Ars/Occultism), not on Patchouli as a library.
+- LEAVE — the 9 items are guide-book covers used by dependent mods (Ars Nouveau, Occultism, etc.); Patchouli itself is documentation infrastructure with no independent material or method surface to weave as a Derpack mod entry. Content is provided by its users, not by Patchouli. Sanctioned support/docs role.
+

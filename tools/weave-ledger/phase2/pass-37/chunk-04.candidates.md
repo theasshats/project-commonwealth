@@ -95,3 +95,31 @@ Existing connections: already 2 anchors; it is a massive consumer of Create + Fa
 
 OK — existing Create + survival connections sound and deep. M-28 (colony cook) and M-16 (seasonal ingredient gate) are genuine additions. Economy via M-09 (retired) is correctly removed from dossier.
 
+## chat_heads   [anchors: support/QoL (1)]
+
+LEAVE — pure client chat-UI overlay; zero items, blocks, loot, or any content surface. Sanctioned support role with no weave possible.
+
+## curios   [anchors: support/library (1)]
+
+LEAVE — equipment slot API with zero content of its own; its role is infrastructure enabling other mods' accessories (Ars rings, Iron's amulets). Sanctioned library/support role; the weave value is already expressed through those consumer mods, not Curios itself.
+
+## create_dragons_plus   [anchors: Create (1)]
+
+Existing connections: 1 anchor (Create). Dossier says "support role — leave." Re-evaluating whether the `ending`/`freezing` fan methods open a real second anchor.
+
+**Method-pull analysis:**
+- `create_dragons_plus:ending` — Bulk Ending fan mode (dragon breath catalyst → End-infuses items). This is a Create method that could be used by OTHER mods to route through (other chunks' mods route THROUGH this). But from create_dragons_plus's perspective, can it gain a second anchor by virtue of its ending method being used for magic or survival outputs?
+- Routing items through `ending` produces End-touched variants. If End-touched items are magic reagents or supply occult rituals, that is a second anchor for this mod as an intermediate method provider. For example: `ars_nouveau:imbuement` consumes End-infused materials in some packs. The `ending` method could produce an End-primed intermediate that feeds ars or occultism. M-10 (arcane infusion pull) — the ending method as a pre-processing step before imbuement.
+- `create_dragons_plus:freezing` — Bulk Freezing (powder snow catalyst). Frozen items could be magic-adjacent (ice = winter = lunar?). A lunar/celestial reagent gate via freezing? Weak without a specific item.
+- The dragon_breath fluid itself: could be a reagent for occultism rituals or Ars imbuement as a high-tier catalyst. Dragon breath is already an exotic material. `occultism:spirit_fire` or `ars_nouveau:imbuement` using dragon breath as a catalyst. M-10 (arcane infusion pull — exotic fluid as infusion catalyst).
+- Red-team: create_dragons_plus is a library for its own add-on family. Its "methods" are weave-targets that other mods route through; it gains anchors as the routing station, but the anchor is Create (which it already has). The magic angle requires authoring a recipe that routes something through `ending` or uses dragon_breath as an imbuement input — both are other-mod-consumer recipes, not create_dragons_plus-authored items. The mod earns a second anchor when another mod's recipe routes through its methods. That is a valid anchor addition, but it would be authored against create_dragons_plus's method, not as create_dragons_plus's own item output.
+- The argument: if `create_dragons_plus:ending` is used to produce a magic intermediate (e.g., an End-infused ore that then goes into Ars imbuement), then create_dragons_plus is a processing step in the magic chain — it gains magic as a second anchor.
+
+- from: create_dragons_plus:ending method (via dragon breath catalyst) producing End-infused intermediate | via: create_dragons_plus:ending → ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok — End-infusion as a pre-processing step before arcane imbuement makes thematic sense; dragon breath is already an exotic exotic-world material | verdict: ACCEPT | hook: an End-attuned ore run through the Ending fan becomes an infusion-ready substrate; the Create processor feeds the magic pillar with prepared materials.
+
+- from: create_dragons_plus:dragon_breath fluid | via: ars_nouveau:imbuement (as exotic catalyst) | to: magic | motif: M-10 | power: mid | tone: ok — dragon breath as an arcane catalyst is lore-coherent; it's a rare End-world material | verdict: REJECT | reason: overlaps the ending-method accept above (both are the same dragon-breath→magic edge at different abstraction levels); keep the method-routing (ending → imbuement) over the raw-fluid edge; consolidate.
+
+- from: create_dragons_plus:freezing method (powder snow catalyst) | via: create_dragons_plus:freezing → lunar/seasonal reagent path | to: survival/magic | motif: M-22 | power: everyday | tone: clash — powder snow + freezing is winter-flavored but the moon-lunar hook is a stretch; the freezing method is Create-practical, not celestial | verdict: REJECT | reason: M-22 requires lunar-event gating; this is just a temperature-themed processing step with no lunar mechanic behind it.
+
+REWORK: dossier says "leave — support role." The ending method does open a real second anchor (magic) when used as an M-10 intermediate step. Not a forced leave; upgrade to 2-anchor via the accepted M-10 edge.
+
