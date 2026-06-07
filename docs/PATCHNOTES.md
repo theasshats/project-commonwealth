@@ -73,7 +73,7 @@ YUNG's Better Dungeons and Dungeons and Taverns.
 ### Food and diet
 
 The two Spice of Life diet mods have been replaced by Diet – AppleSeed Edition, a single nutrition
-system that tracks a few food groups and grants small benefits for eating a varied diet. It reads each
+system that tracks five food groups and grants small benefits for eating a varied diet. It reads each
 food's groups from its recipe automatically, so it covers the whole pack without per-item setup. The
 separate Touhou Little Maid diet addon is unrelated and stays.
 

@@ -72,10 +72,10 @@ So "seasons" shows up as an *input* to scarcity and to survival, not as a standa
 Pressure's job is to **generate demand** — it's *why* anyone bothers to produce. No pressure → producers
 make things nobody needs and the trade loop never turns. It has **two faces**:
 
-- **Survival (environmental).** Temperature (Cold Sweat), hunger and **diet variety (a Diet-style
-  three-category nutrition system — replacing Spice of Life; see "Food: the diet system" below — a
-  direct Eco parallel: Eco rewards varied nutrition with skill points; here diet variety is its own
-  ongoing demand that pulls on farming/ranching/cooking production)**, the
+- **Survival (environmental).** Temperature (Cold Sweat), hunger and **diet variety (a five-group
+  nutrition system — Diet – AppleSeed Edition, replacing Spice of Life; see "Food: the diet system"
+  below — a direct Eco parallel: Eco rewards varied nutrition with skill points; here diet variety is
+  its own ongoing demand that pulls on farming/ranching/cooking production)**, the
   climate. *(Renamed from "Survival & seasons" → **Survival**, since seasons is now a driver, not a
   co-headline.)* Seasons feeds this — winter is cold pressure.
 - **Danger (the hostile world).** The world is **dangerous to exist in and dangerous to explore** —
@@ -92,24 +92,20 @@ Scarcity is itself the deepest pressure — it underlies both faces.
 ### Food: the diet system (replacing Spice of Life)
 
 Diet variety is the food face of survival pressure. The pack moves **off Spice of Life** (currently two
-overlapping diet mechanics — SoL: Classic Edition + SoL: Onion — which is itself redundant) onto a
-**three-category** nutrition model. Chosen mod: **Diet – AppleSeed Edition** (`diet-appleseed-edition`,
-Modrinth, 1.21.1/NeoForge) — the maintained successor of the classic Diet mod. Why it fits:
+overlapping diet mechanics — SoL: Classic Edition + SoL: Onion — which is itself redundant) onto **Diet –
+AppleSeed Edition** (`diet-appleseed-edition`, Modrinth, 1.21.1/NeoForge) — the maintained successor of
+the classic Diet mod. Why it fits:
 
 - **It auto-derives nutrition from recipe ingredients**, so it covers the entire sprawling modlist
   *without* hand-tagging every food — decisive for a ~200-mod pack.
-- **Groups are prunable** (`disabled_groups.json`): the default five (Grains, Vegetables, Protein,
-  Fruits, Sugars) can be cut down. The auto-calc maps foods onto these *fixed* preset groups, so
-  reaching **three** means **disabling two**, not renaming into arbitrary custom labels (custom groups
-  exist but require hand-tagging foods, which forfeits the auto-calc that makes this scale).
 - A balanced diet grants buffs / an imbalanced one withholds them — the diet-variety *demand* that pulls
   on farming, ranching/hunting, and cooking production.
 
-**The three categories** (proposed, tunable): keep **Protein**, **Grains**, and **Vegetables**; disable
-**Fruits** and **Sugars**. That still pulls on the two big production specializations — ranching/hunting/
-fishing (protein) and farming (grains + veg) — while keeping the whole-modlist auto-calc. (Trade-off:
-we give up a distinct "prepared/cooking" axis to keep auto-calc; revisit if hand-tagging a Prepared
-group is ever worth it. Exact split + per-category buffs is a config pass — see "Open / unsettled.")
+**Keep all five default groups** — Grains, Vegetables, Protein, Fruits, Sugars. (We considered pruning
+to three, but AppleSeed's auto-calc is tied to its five fixed presets: disabling groups buys nothing
+mechanically and custom labels would forfeit the auto-calc, so the five-group default is both richer
+diet variety *and* zero-config.) Per-category buff/decay tuning, if any, is a later config pass — but
+the mod is usable on defaults as-is.
 
 ---
 
@@ -175,11 +171,24 @@ into the loop's left side:
 This closes the loop tightly: **PRODUCTION → SCARCITY/PRESSURE** is now a direct edge, not only the
 indirect consumption edge.
 
-**Implementation is open** (it's the heaviest lift in the doc): few 1.21.1/NeoForge mods model pollution,
-so this is likely **custom KubeJS/datapack** work (e.g. a per-chunk extraction/pollution counter that
-nudges Serene Seasons/Cold Sweat or local mob/crop behavior) rather than a drop-in mod. Scope — how
-punishing, how visible, how reversible — is to be designed. Tracked as design intent; the mechanic is
-adopted, the *how* is not yet built.
+**Implementation is open, and it is hard — two specific blockers, not just "no mod exists":**
+
+1. **An infinite world defeats naive enforcement.** Eco's ecology bites because the map is *bounded* — a
+   finite world means finite forests and finite clean air, so damage matters. Minecraft is effectively
+   infinite: a player who exhausts/pollutes one region just moves on, and the "shared commons" never
+   actually runs out. So the mechanic only has teeth if it's tied to something players *can't* outrun —
+   **their own claimed/settled area, their colony's footprint, or per-chunk state near bases** — not a
+   global resource. Damage has to follow the player's *investment*, not the whole world.
+2. **It's TPS-heavy.** Per-chunk extraction/pollution tracking, decay ticks, and feedback into
+   Serene Seasons / Cold Sweat / crop or mob behavior is exactly the kind of always-on world-scanning
+   that costs server tick — and perf is already the pack's tightest budget (the stabilization-even
+   versions exist for this). Any design has to be **event-driven and locality-bounded** (fire on
+   place/break/process near a base, not a global sweep) to be affordable.
+
+So this is likely **custom KubeJS/datapack** work scoped to settled/claimed areas, event-driven, cheap
+per-tick. **The mechanic is adopted; the *how* is genuinely unsolved** — the infinite-world and TPS
+constraints above are the design problem to crack before it's built, and it may end up scoped down to
+"your colony/claim degrades its surroundings" rather than world-wide ecology.
 
 ---
 
@@ -190,7 +199,8 @@ The two systems that move things between players, closing the gaps that exclusiv
 - **Economy — moves *value*.** Numismatics + Trading Floor + bounties. **No longer "optional flavor":**
   it's the *necessary consequence* of production exclusivity. Because no route makes everything and base
   crafting is hard, players must exchange — economy is the layer that exchange runs on. Scarcity →
-  pressure → exclusive production → **trade**.
+  pressure → exclusive production → **trade**. *(The hard part — dynamic pricing and Eco-style
+  player-minted currencies — is unsolved; see "Open / unsettled.")*
 - **Aeronautics & logistics — moves *matter & reach*.** Create Aeronautics ships, trains, drones. A
   **producer⇄connector hybrid**: it's *built and powered through Create* (a producer output), but it
   *functions* as the distribution network for matter. It's also the system that most **threatens the
@@ -254,18 +264,26 @@ obvious: a healthy mod is usually *something you produce that pressure demands a
 - **Bosses — settled as dual-role.** They're *both* a pressure (the dangerous world — §2) and a
   high-tier production route (§3), the same way aeronautics straddles production and distribution. Not a
   contradiction; the loop allows a thing to occupy two slots.
-- **Ecological / production-consequence pressure — ADOPTED (§3a).** Eco's signature mechanic (industry
-  damages the shared world) is **in**. *Implementation* is the open part: no good 1.21.1/NeoForge
-  pollution mod exists, so it's likely custom KubeJS/datapack work, and the scope (how punishing,
-  visible, reversible; what it feeds — scarcity, Cold Sweat, crops) needs designing.
-- **Diet system — config not yet written.** Diet – AppleSeed Edition is now *in the modlist* (replacing
-  SoL), but the **three-category config is not yet shipped**: proposed = keep Protein/Grains/Vegetables,
-  disable Fruits/Sugars via `disabled_groups.json`. The exact datapack path/format and per-category
-  buffs/decay need verifying in-game before the config lands.
-- **Dynamic pricing / price discovery.** Eco's economy feels alive because players set and compete on
-  prices (supply/demand). Confirm the economy layer (Numismatics + Trading Floor) supports *dynamic*
-  pricing rather than flat fixed-price vendors — a fixed-price economy is much flatter than the Eco
-  model. (No formal governance/laws layer is planned — a deliberate divergence for a small PvPvE group.)
+- **Ecological / production-consequence pressure — ADOPTED in principle, *how* unsolved (§3a).** Eco's
+  signature mechanic (industry damages the shared world) is **in** as a goal, but two hard blockers stand
+  in the way and need cracking before it's built: **(a) an infinite world** — players just move on, so
+  damage must follow their *settled/claimed footprint*, not a global commons; and **(b) TPS** — it must
+  be event-driven and locality-bounded, never a global world-scan. May end up scoped down to "your
+  colony/claim degrades its surroundings." Likely custom KubeJS/datapack; no drop-in mod exists.
+- **Dynamic pricing + player-minted currency — the economy's hard problem (unsolved).** A real economy
+  needs **dynamic prices** (supply/demand, not flat vendors) and, Eco-style, **players minting their own
+  currencies**. We have *some levers* in the current mods (Numismatics for Create-minted coinage,
+  Trading Floor for stalls/orders), but a refined, well-made version is genuinely tricky — *how* players
+  mint and others come to trust/accept a currency is a social-mechanic design problem MC doesn't hand
+  us. **Needs a dedicated design pass** (what's possible with current mods vs. what needs custom work).
+  (No formal governance/laws layer is planned — a deliberate divergence for a small PvPvE group.)
+- **Diet — settled (keep all five).** Diet – AppleSeed Edition is in the modlist (replacing SoL) and
+  runs on its **default five groups** (no pruning config) — see "Food." Only optional per-category buff/
+  decay tuning remains, and it's usable as-is.
+- **Weather as a survival-pressure addition — considered, not committed.** Dynamic/severe weather would
+  enrich the Survival face (storms, exposure), but it's **another TPS hit** (weather sim + effects), so
+  it competes against the perf budget the same way ecology does. Park it as a *nice-to-have* pending a
+  perf-cost assessment, not a planned add.
 - **Implementation gap.** The recipe-difficulty rebalance, the MineColonies locked-outputs / cheaper-
   basics tuning, and boss/colony high-tier gating are all **design intent** — the issues/work to build
   them aren't scoped yet.
