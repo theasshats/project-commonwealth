@@ -26,6 +26,11 @@ LEAVE — numerical ping display only; no items, no mechanics. Nothing to route.
 - NEW | from: mushroomquest glowshrooms (blue / green / magenta) | via: create:haunting (soul fire transmutation) | to: magic | motif: M-19 | power: everyday | tone: ok | verdict: ACCEPT | hook: glowshrooms routed through Create haunting yield a soul-infused spore — a bioluminescent reagent distinct from vanilla glowstone that feeds the occult web; the haunting method already bridges Create to occultism and the glowing-fungus-to-spirit-material reading is thematically coherent.
 - CHALLENGE | from: mushroomquest deadly / mythical caps | via: occultism:spirit_fire or ars_nouveau:imbuement | to: magic | motif: M-11 | verdict: REJECT | hook: existing ACCEPT rows (21 votes) are well-founded on M-11 — keeping this as is. No challenge warranted; the reagent use of rare mushroom caps as occultism/ars inputs is the strongest second anchor here and prior passes have already argued it well.
 
+## mutantszombies   [anchors: survival (1)]
+- CHALLENGE | from: mutantszombies boss-class variants (Mutant Brute, Rotten Mutant) | via: loot-seed | to: economy | motif: M-34 | verdict: REJECT | hook: M-34 (combat-route supply) requires a unique loot drop that a combat specialist farms and trades to non-combat players; the dossier and AUTO data confirm `loot=no` and no special drops — only spawn eggs exist. There is no supply chain to form; rows that ACCEPT M-34 here are assuming drops that don't exist. The mod provides danger pressure (survival) only, which is already its anchor. A loot-seed could be authored *into* their tables (a Phase-3 action), but as a Phase-2 proposal on existing content this is premature — flag as loot-seed candidate for Phase-3 rather than accepting M-34 now.
+- NEW | from: mutantszombies increased mob pressure (7 harder zombie variants) | via: loot-seed (Phase-3 authoring action — seed a unique mutant drop into tables) | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: seeding a unique mutant fragment or ichor into the variant loot tables gives the combat specialist a farmable supply that non-combat crafters need; this makes the danger-pressure anchor dual-role (danger + supply) without requiring the drops to exist today — the proposal is the Phase-3 loot-table action.
+
+
 
 
 

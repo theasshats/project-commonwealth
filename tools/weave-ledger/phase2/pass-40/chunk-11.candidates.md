@@ -74,6 +74,23 @@ Red-team: Is durability-as-consumption a weave or just ambient game design? M-26
 
 Also: no existing row covers the **gold tier glider** as a wasted-material edge. Gold is a currency-adjacent metal in vanilla — a gold glider uses a scarce, non-structural metal for flight gear, which feeds the scarcity→pressure→production loop. But this is ambient game content, not a weave.
 
+## dtterralith   [anchors: survival (1)]
+Existing rows: M-12 ACCEPT (exotic seeds → create:milling for wood-pulp/dye byproduct, 8v4 — contested), M-10 ACCEPT (amethyst_seed → ars imbuement, 3v2), M-30 ACCEPT (region-specific tree species → economy, 2v0), M-16 ACCEPT (biome-specific seeds tied to seasonal biomes, 1v1). The M-04 REJECT (crushing logs) and M-10 REJECT (seeds as magic reagents) are correctly killed.
+
+The M-12 ACCEPT (seeds → milling) is the most contested (8v4) and the existing negative votes flag that the seeds are planting items not material reagents, and that the mod outputs vanilla logs on harvest. This deserves a sharper look.
+
+- CHALLENGE | from: dtterralith exotic seeds (jacaranda_seed, maple_seed etc.) | via: create:milling | to: create | motif: M-12 | verdict: REJECT | hook: the seeds are planting items — their value is *growing* the tree, not being ground up; milling a planting-seed to get wood pulp destroys the only meaningful thing the seed does; the mod's actual output (logs on harvest) already enters the Create/cooking web as vanilla wood with no authoring needed; the milling edge creates friction on a basic item for no loop-advancing reason
+
+The M-30 ACCEPT (region-specific trees → economy) is the genuinely interesting existing row, but it has no motif-specific *method* — it's ambient worldgen scarcity, not a recipe weave. M-30 requires a *recipe* that demands a region-locked input. If jacaranda planks only grow in Terralith's sakura/spring biomes, they're inherently region-locked — but this works at the log level without any authoring.
+
+One missing angle not in existing rows: dtterralith's `loot=yes` in the jar-grounded data. It has loot tables despite being a compat mod. The loot is likely seed drops from leaves. This means you could **loot-seed a rare reagent into dtterralith leaf-loot tables** (a magic catalyst that drops rarely when a Dynamic Tree's exotic canopy is broken). That's a distinct M-02 (mob-drop reagent sink via loot table, applied to a non-mob source) or M-16 seasonal variant.
+
+- NEW | from: dtterralith leaf-loot (exotic canopy drops — the loot=yes surface) | via: loot-seed | to: magic | motif: M-02 | power: everyday | tone: ok | verdict: ACCEPT | hook: breaking a jacaranda or amethyst-grove canopy block rarely drops a crystalline shard — a biome-specific, harvest-gated reagent that makes exotic tree farming (and the regions that grow them) a magic-supply node, not just a wood farm
+
+Red-team: Is seeding leaf-loot-tables a real loot-seed (the mod ships loot=yes so the tables exist)? The loot tables in dtterralith are almost certainly seed drops from Dynamic Trees leaf-decay — not custom drops. Adding an Ars reagent to a Dynamic Trees leaf-loot table is a datapack edit to a generated loot table, which is authoring. Thematically the amethyst_seed biome / jacaranda biome have a clear material identity. The pairing is plausible and advances the loop (biome → magic reagent supply). Survives.
+
+
+
 
 
 
