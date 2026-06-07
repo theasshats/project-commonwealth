@@ -1,0 +1,242 @@
+# The Create spine — design spec (v0.7.0)
+
+> **Status: PROPOSED — pending @zagwar sign-off.** This is the design draft for the v0.7.0 "Create
+> spine" milestone. It turns the *intent* in `docs/SYSTEMS.md` §3 into concrete, buildable definitions
+> for three settled-but-unspecified questions:
+>
+> 1. **The kinetic/electric power tier ladder** (#145)
+> 2. **The recipe cost model** — the concrete "3×" baseline + the step-depth ladder (#219)
+> 3. **The KubeJS locking + gating patterns**, and the **Create-spine lock list** (#220, #92)
+>
+> Nothing here is implemented yet. The point is to settle the *numbers and lists* so the implementation
+> PRs that follow are mechanical. Where a value is a genuine judgement call, it's flagged **⚖️ decision**
+> so @zagwar can weigh in directly. Once ratified, this doc becomes the spec the #145/#219/#220/#92 PRs
+> build against, and the disputed values move from "proposed" to "settled."
+
+Grounds against: `docs/SYSTEMS.md` §3 (the loop), `docs/RECIPES.md` (balance > theme > cost),
+`docs/CONNECTIVITY.md` (the web to preserve). Pairs with the addon-cohesion umbrella (#132).
+
+---
+
+## Part 1 — The power tier ladder (#145)
+
+**Problem.** Power generation is currently a flat pick-any: a player can build a windmill on turn one
+and skip the whole early curve, and the electric addons (`createaddition`, `create-new-age`) offer a
+parallel free-power route that bypasses the kinetic spine. We want power to be a *progression* where
+stress capacity and convenience scale with investment, and electricity *plugs into* the ladder rather
+than sidestepping it.
+
+### The ladder (six rungs)
+
+| Rung | Source | Mod | Stress / role | Gate (how you reach it) |
+|---|---|---|---|---|
+| **0 — Manual** | Hand crank | `create` | Tiny, momentary SU; bootstraps the first machines | Free (starting tech) |
+| **1 — Early renewable** | Water wheel, large water wheel | `create` | Low continuous SU; needs flowing water (terrain-gated) | Andesite tier — cheap, but sited |
+| **2 — Wind** | Windmill (sail bearing) | `create` | Higher SU but **area + height hungry** and weather-variable | Brass-adjacent: sail cloth + a windmill bearing (see cost notes) |
+| **3 — Thermal** | Steam engine (boiler + flywheel) | `create` | The workhorse mid-game tier; scales with boiler size + fuel | Steam tier — requires the fluid/heat chain (pump, boiler, blaze burner) |
+| **4 — Electric (basic)** | Alternator + electric motor, energisers | `createaddition`, `create-new-age` | Converts SU↔FE; enables wiring, machine compaction, cross-base transport of *power* | **Plugs in above steam** — its generators are *driven by* rung-3 kinetic, not a free source |
+| **5 — Electric (high)** | Reactor (`create-new-age`), overcharged wires; `createnuclear` | `create-new-age`, `createnuclear` | High-density FE; the end-game power tier | Gated behind rung-4 + the high-tier fork (boss/colony part — Part 3) |
+
+### The load-bearing rule: electricity is a *converter*, not a *source*
+
+The whole reason electric addons flatten progression is that some of their generators make power from
+nothing (or from trivially cheap fuel) the moment you can craft them. The fix is a **stance, applied per
+generator** during the #145 implementation pass:
+
+- **Allowed (converter):** anything that turns **kinetic SU → FE** (`createaddition` alternator driven
+  by a shaft) or **a real, spine-made fuel → FE**. These *plug into* the ladder — you still had to climb
+  rungs 1–3 to spin the alternator.
+- **Curtailed (free source):** any generator that makes FE from a cheap renewable with no kinetic input.
+  Where one exists, either (a) raise its recipe to a rung-4+ cost so it's not an *early* free route, or
+  (b) re-recipe it to require a kinetic input. **⚖️ decision:** prefer (a) cost-gating over (b)
+  re-reciping where possible — less likely to break addon assumptions, easier to revert.
+
+> **Audit task (part of #145 PR):** enumerate every generator block across `createaddition` /
+> `create-new-age` / `createnuclear`, tag each **converter** vs **free source**, and apply the stance.
+> The item lists are in `tools/mod-data/by-mod/` (`createaddition-1.6.0`, `create-new-age-*`).
+
+### What gates what (the climb)
+
+The gate is **recipe cost + step-depth** (Part 2), not a tech-tree mod. Concretely:
+
+- Rungs 0–1 are *cheap* — you must be able to bootstrap. Don't over-gate the hand crank / water wheel.
+- Rung 2 (windmill) costs **sail cloth + windmill bearing**; it's the first "you invested" tier.
+- Rung 3 (steam) is gated by its **fluid/heat dependency chain** — you can't make a boiler without the
+  pump + blaze burner + copper fluid line, which is its own multi-step climb. That dependency *is* the
+  gate; no extra lock needed.
+- Rung 4 (electric) is gated by requiring **steam-tier kinetic to drive it** + the wire/coil crafting
+  chain. ⚖️ **decision:** do we *also* cost-bump the electric machines, or is "needs rung-3 to spin"
+  enough of a gate on its own? (Proposed: enough on its own; don't double-tax.)
+- Rung 5 (reactor / nuclear) sits behind the **high-tier fork** (Part 3) — a boss drop *or* a colony
+  part — so end-game power is the same two-route choice as other high-tier goods.
+
+This ladder feeds the future onboarding/quest work (a guidebook walking rungs 0→5).
+
+---
+
+## Part 2 — The recipe cost model (#219)
+
+`docs/SYSTEMS.md` §3 settles the *direction* (basics ~3×; higher tiers gain depth via more steps, not
+multiplied cost). This part settles the *numbers* so it's applicable.
+
+### 2a. The "3×" baseline for basics
+
+**⚖️ decision — what "3×" measures against.** Proposed definition:
+
+> **3× = roughly triple the total raw-material floor of the vanilla/naive recipe**, measured in **base
+> resource units** (ore/ingot/log equivalents), **not** a literal "multiply every ingredient count by
+> 3." A recipe hits the target when producing one unit costs ~3× the raw inputs it would in vanilla —
+> whether that's via more ingredients, a lower output count, or an added processing input.
+
+Why this framing: blindly tripling counts produces silly recipes (9 planks for a crafting table) and
+ignores that Create recipes often *consume the same item through more steps*. Measuring the **raw floor**
+keeps the target meaningful across both crafting-table and Create-processing recipes.
+
+**Scope of "basics".** The ~3× dial applies to **tier-1 fabricated items** — the things every route
+needs constantly: basic machine components, casings, plates/sheets, the andesite-tier Create parts,
+basic tools. It does **not** apply to:
+
+- **Raw resources** (ores, logs, crops) — scarcity is handled by ore-gen (#93), not recipe cost.
+- **Higher tiers** — those use step-depth (2b), not the multiplier.
+- **The MineColonies route** — the *whole point* of 3× basics is that the colony route makes them
+  **cheaper/faster**, so the colony recipes stay at ~1× (or are the worker-hut "free over time" path).
+  The 3× tax on the Create hand-craft is what makes the colony route worth using (`SYSTEMS.md` §3).
+
+**⚖️ decision — exact multiplier.** 3× is the settled target, but the *band* matters: proposed **2.5–3.5×**
+as the acceptable range so we're not hunting a false-precision number per recipe. Punishing >4×; toothless
+<2×.
+
+### 2b. Step-depth ladder for higher tiers
+
+Higher tiers get **harder by gaining stages**, GregTech-style — a tier-N item passes through more
+distinct Create processes than a tier-(N-1) one. Proposed **stage budget per tier**:
+
+| Tier | Example outputs | Target distinct Create stages (min) | Notes |
+|---|---|---|---|
+| **T1 — basic** | iron sheet, andesite alloy, brass casing | 1–2 | The 3× dial lives here, not step-depth |
+| **T2 — mid** | precision mechanism, electron tube, steam parts | 3–4 | Already roughly true in stock Create — formalize it |
+| **T3 — advanced** | electric/wire chains, TFMG steel parts, reactor parts | 5–6 | Multi-machine chains; cross-addon bridges (#132) live here |
+| **T4 — high** | aeronautics controller, reactor core, end-game gear | 6+ **and** the high-tier fork | Step-depth **plus** a boss/colony gate (Part 3) |
+
+"Stage" = a distinct Create operation (pressing, mixing, washing, deploying, sequenced-assembly step,
+spout, haunting…) or a cross-machine handoff. The metric is **process length**, not ingredient count —
+a T3 item might use cheap inputs but pass through six machines.
+
+**Anti-grind guardrail (from `docs/RECIPES.md`).** Step-depth must read as *interesting chain*, not
+*tedious repetition*. Rules of thumb:
+
+- No stage should be a pure copy of the previous (no "press it, then press it again").
+- Each added stage should introduce a **new input or a new machine**, so depth = breadth of the web.
+- Sequenced assembly is the preferred vehicle for T3+ (it's *one* placed multi-step item, not N manual
+  handoffs) — better UX than a literal six-machine line.
+
+### 2c. How the two dials interact
+
+A high-tier item is **not** 3× *and* deep — the multiplier is a tier-1 tool, depth is the tier-N tool.
+The progression a player feels:
+
+```
+T1: cheap inputs, ~3× floor, 1–2 stages   →  "basics cost real resources"
+T2: moderate inputs, 3–4 stages           →  "now I'm building a small line"
+T3: cross-addon inputs, 5–6 stages        →  "the web connects; I need others' outputs"
+T4: T3 + a boss/colony part               →  "I fight or I settle to finish this"
+```
+
+---
+
+## Part 3 — KubeJS locking + gating (#220, #92)
+
+Two distinct mechanics, both KubeJS, both with reusable patterns to build once and reapply per pillar.
+
+### 3a. Pattern A — route-exclusive locking ("only Create can make X")
+
+The **anti-erosion wall** (`SYSTEMS.md` §3): each route holds outputs only it can make, so a master of
+one route still trades for others'. The KubeJS pattern is simply: **remove every alternative recipe for
+the locked output, leaving only the route's own.**
+
+```js
+// Pattern A — lock an output to a single production route.
+// Example: lock create:precision_mechanism so ONLY the Create line makes it
+// (strip any colony/auto-craft/alt recipe that would let another route produce it).
+ServerEvents.recipes(event => {
+  event.remove({ output: 'create:precision_mechanism', not: { type: 'create:sequenced_assembly' } })
+})
+```
+
+The work in the #220 PR is **deciding the list**, not the code — the code is one `event.remove` per
+locked item. See 3c for the proposed Create-spine list.
+
+### 3b. Pattern B — progression gating ("you need a boss/colony part to craft X")
+
+The **high-tier fork** (`SYSTEMS.md` §3, #92): top items require *either* a boss drop *or* a
+MineColonies-crafted part — two routes to the same goal. KubeJS pattern: **re-recipe the gated item so
+the gate item is a required (ideally non-consumed where it's a "key") ingredient, and provide both
+variants.**
+
+```js
+// Pattern B — gate a high-tier item behind the boss-OR-colony fork.
+// Two recipes for the same output: one consuming a boss drop, one a colony-made part.
+ServerEvents.recipes(event => {
+  // Route 1 — the fighter: a Cataclysm boss drop is the catalyst.
+  event.recipes.create.sequenced_assembly(/* ...controller..., requires */ 'cataclysm:<boss_drop>')
+  // Route 2 — the settler: a MineColonies-crafted part is the catalyst.
+  event.recipes.create.sequenced_assembly(/* ...controller..., requires */ 'minecolonies:<colony_part>')
+})
+```
+
+**⚖️ decisions for @zagwar (3b):**
+- **Consumed vs. key?** Is the boss/colony part *consumed per craft* (steady demand, more grind) or a
+  *one-time key* that unlocks the recipe (KubeJS-gated, crafted once)? Proposed: **consumed** for
+  components you make repeatedly (keeps the fighter/settler trade alive), **key/one-time** for
+  machine-tier unlocks. Per-item call.
+- **Which bosses?** Installed boss mods are **L_Ender's Cataclysm**, **Mowzie's Mobs**, **Mutants**,
+  **Grimoire of Gaia**. (`bosses-of-mass-destruction` referenced in older issues is **not currently in
+  the pack** — the lock list must use what's installed.) Proposed primary: **Cataclysm** (purpose-built
+  boss-drop gear progression).
+- **Which colony part?** Needs a MineColonies output that represents "colony progress" — a high-tier
+  worker-hut product or a research-gated item. To be picked in the #92 PR against the live MineColonies
+  recipe dump.
+
+### 3c. The Create-spine lock list (proposed — the v0.7.0 slice)
+
+Per `SYSTEMS.md`, the lock list is **incremental per pillar** — this is *only* the Create slice; Economy
+(v0.9.0), Magic (v0.11.0), Survival (v0.13.0) add theirs later. Proposed starting set:
+
+**Create-exclusive (Pattern A — only the Create line makes these):**
+- `create:precision_mechanism` — the signature Create gate component; the canonical "you must run a
+  Create line" item. Strong lock candidate.
+- `create:electron_tube` — second tier-2 gate component.
+- ⚖️ The above two are the **safe, high-value** locks. Going broader (locking sheets/casings) risks
+  over-restricting basics that should stay craftable — **proposed: lock only the two mechanisms for
+  v0.7.0**, expand later if playtest shows erosion.
+
+**Colony-cheaper (stays ~1× on the colony route, 3× on Create hand-craft — Pattern via cost, not lock):**
+- The tier-1 basics (sheets, andesite alloy, basic casings) — the colony makes them cheap/slow; Create
+  makes them fast/expensive. This is the 3× dial (Part 2a), not a hard lock.
+
+**First high-tier fork (Pattern B — boss OR colony):**
+- **The Aeronautics controller** — the worked example from `SYSTEMS.md` §3. End-game logistics tech
+  gated behind a Cataclysm drop *or* a colony part. This is the flagship demonstration of the fork and
+  the single best v0.7.0 target to prove the pattern. (Exact controller item id + chosen boss drop +
+  colony part: filled in the #92 PR against `create-aeronautics-bundled` recipe dump.)
+
+> **Scope discipline:** the v0.7.0 lock list is deliberately *small* — two exclusives + one fork. The
+> mechanism (Patterns A/B) is the deliverable; a long lock list is explicitly *not* the goal this
+> milestone (`SYSTEMS.md`: incremental, soft-for-now, revisit near release).
+
+---
+
+## Open decisions summary (for @zagwar)
+
+| # | Decision | Proposed default |
+|---|---|---|
+| P1 | Curtail free-source generators via cost-gate vs. re-recipe | Cost-gate where possible |
+| P1 | Double-tax electric machines, or is "needs rung-3 kinetic" enough? | Enough on its own; don't double-tax |
+| P2 | What "3×" measures against | Raw-material floor in base resource units, not literal ×3 counts |
+| P2 | Acceptable multiplier band | 2.5–3.5× |
+| P3 | Boss/colony part: consumed per craft vs. one-time key | Consumed for components, key for machine unlocks |
+| P3 | Primary boss source | Cataclysm |
+| P3 | v0.7.0 lock list breadth | 2 exclusives (precision_mechanism, electron_tube) + 1 fork (aeronautics controller) |
+
+Once these are ratified, each line becomes a concrete PR: #145 (ladder + generator audit), #219 (apply
+the cost dials), #220 (Patterns A/B + the two exclusives), #92 (the aeronautics-controller fork).
