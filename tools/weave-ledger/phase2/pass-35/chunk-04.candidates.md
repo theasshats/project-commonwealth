@@ -254,6 +254,36 @@ Method-pull: No items, no methods, no new loot. The mod's entire content is rais
 
 - LEAVE — behavior-only datapack; 0 items, 0 new loot drops (dossier-confirmed), no recipe methods. The mod amplifies danger-pressure but has no material surface to weave. A loot-seed weave targets the vanilla dragon table directly, not this mod. Nothing to route.
 
+## brazil_legends   [anchors: survival (1)]
+
+Power-read: 5 blocks, 47 items, 4 biome-modifiers, loot=yes. Custom mobs (Saci, Capelobo, Headless Mule, Cuca) with unique drops: capelobo_claw, big_tongue, amber_shard, amber_pearl, bottle_with_saci, bloodmoon_sickle. The drops are thematically unique organic materials from folkloric creatures. 4 biome-modifiers place these mobs biome-specifically — regional spawn distribution.
+
+Method-pull (reagent-sink pass — M-02 / M-11 focus):
+
+- **M-02 mob-drop reagent sink via occultism:spirit_fire or occultism:ritual — transmute capelobo_claw / big_tongue into occultism essences.** Occultism's spirit_fire transmutes organic drops into essences (it's the established organic→magic route M-11). The capelobo (wolf-like cryptid) claw and big_tongue (from the Saci? or Capelobo) are grotesque organic drops — exactly the kind of mob material that occultism's spirit fire consumes. Tone: "burning a monster's claw in spirit fire to extract its essence" is a hard fit for Occultism's dark-magic vibe. Red-team: are these drops thematically alien to occultism? The mod is Brazilian folklore; Occultism is dark European occult. The folkloric-vs-occult tonal gap is real. But spirit_fire burns organic matter into essences regardless of cultural origin — the mechanic is universal. The tonal gap is minor. ACCEPT via M-02/M-11.
+
+- **M-11 ritual sink via occultism:ritual — use a brazil_legends drop as a ritual component.** Even stronger than spirit_fire: a ritual requiring capelobo_claw or a Saci's bottle creates a cross-system demand for hunting these folkloric creatures. Power: mid (mob grinding required). Tone: "a ritual that requires the hand of a shape-shifter" is completely in line with dark occultism. ACCEPT.
+
+- **M-10 arcane infusion pull via ars_nouveau:imbuement — infuse amber_shard into a magic reagent.** The amber_shard is a crystalline drop (likely from Cuca/amber-associated mob) — crystals and arcane infusion go together visually. Ars imbuement can take a foreign material and transform it into an arcane reagent. Tone: amber imbued with source energy is sensible. Red-team: ars_nouveau's imbuement is for source-gem-level progression; amber is mid-tier drop. Appropriate if the imbuement output is a useful-but-not-endgame reagent. ACCEPT.
+
+- **M-22 lunar/celestial reagent: Headless Mule and Cuca are folklore creatures tied to specific nights/conditions (in Brazilian folklore, the Headless Mule runs on cursed Thursday nights; the Moon plays a role in Saci's power).** If these creatures spawn only under specific moon conditions (lunar mod tie), their drops become lunar-gated reagents — M-22. Power: mid. Tone: "the Cuca is more powerful under the moon" is completely on-brand folklore. Red-team: this requires configuring the spawn conditions to tie to Enhanced Celestials / lunar events — a config/datapack action, not a recipe. But M-22 allows config tie as a delivery mechanism. ACCEPT as a configuration candidate (via: config tie / spawn-condition gating).
+
+- **Economy amber_shard as luxury curio (M-09 — retired).** Dossier notes M-09. Reject — M-09 retired. No bare sell link.
+
+- **M-30 regional scarcity: brazil_legends mobs have 4 biome-modifiers — they spawn in specific biomes, making their drops biome-region-gated.** The drops (capelobo_claw, amber_shard) are only obtainable where the mobs spawn, which maps to specific biomes — natural regional scarcity. No recipe needed; the scarcity is worldgen. But as a Phase-3 action to emphasize this, the drops should be noted as regional-loot items whose scarcity feeds the economy (players in those biomes trade the drops). This is a M-30 framing but not a recipe weave — design note, not actionable Phase-3 recipe. Reject as a standalone entry but note the scarcity angle.
+
+- from: brazil_legends:capelobo_claw + big_tongue | via: occultism:spirit_fire | to: magic | motif: M-02 / M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: burning a cryptid's claw in spirit fire distills its essence — the folkloric beast feeds the occultist's reagent chest
+- from: brazil_legends drops (capelobo_claw / bottle_with_saci) | via: occultism:ritual component | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: a dark ritual that requires the hand of a shape-shifter or a captive Saci — hunting the folklore mobs unlocks a ritual tier
+- from: brazil_legends:amber_shard | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: amber shard imbued with arcane source — the crystalline essence of a Cuca's attack becomes a mid-tier Ars reagent
+- from: brazil_legends folkloric mobs (Headless Mule / Saci) | via: spawn-condition config (lunar event gating — Enhanced Celestials) | to: magic / survival | motif: M-22 | power: mid | tone: ok | verdict: ACCEPT | hook: the Headless Mule runs on cursed nights — their drops are rarer and more potent when hunted under the right moon
+- from: brazil_legends:amber_shard as luxury sell | via: n/a | to: economy | motif: M-09 | verdict: REJECT | reason: M-09 retired — bare sell link; economy connection goes through M-34 (combat-route supply: hunters of folkloric mobs trade the reagents) instead, which is ambient and not a new recipe
+- from: brazil_legends drop regional scarcity | via: biome-specific spawn | to: scarcity→economy | motif: M-30 | verdict: REJECT | reason: scarcity is real and already built-in via biome-modifiers, but it's not a Phase-3 recipe weave — design note about the drops' natural scarcity; the accepted magic-reagent weaves above are the cross-system action
+
+## freefbible   [anchors: support/flavor (1)]
+- LEAVE — single inert readable item (freef_bible); no mechanics, no crafting, no effects. Novelty/easter-egg flavor item with zero content surface. Not a code library, but a one-item gag — any recipe edge would be purely forced noise.
+
+
+
 
 
 

@@ -77,6 +77,14 @@
 - from: dndesires milkshake foods | via: diet consumption | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: ambient food→diet loop; every food item is M-26 by default; not a dedicated weave — the survival link comes from being a food, not from a designed demand-gate
 - REWORK: dossier candidate "aeronautics via cardboard + bore blocks as logistics/ship parts — M-06/M-05, WEAK-MED" — the cardboard packaging angle is rejected (mechanism pending above); the bore block as a ship-hull structural piece could be M-23 but bore blocks are aesthetic/decorative industrial panels, not structural alloy — REJECT that sub-angle too. Dossier's "economy via rubber — M-08, WEAK" is correctly weak: rubber as a coin-minted-from-scarcity good requires it to be the scarce regional input routed through minting, but rubber is synthetically produced by the Press (not ore-scarce); REJECT. Dossier's survival/milkshake suggestion confirmed REJECT above.
 
+## entity_texture_features   [anchors: support/client-rendering (1)]
+- LEAVE — client texture-feature engine (no items, no blocks, no loot, no recipe methods). Enables OptiFine-format entity textures for resourcepacks; pure visual support, nothing to weave.
+
+## necronomicon   [anchors: support/library (1)]
+- LEAVE — pure config/registry/worldgen helper API library (0 items, 0 blocks, 0 loot, no recipe methods). Pulled only as a dependency of opacpvp; no game surface whatsoever.
+
+
+
 
 
 

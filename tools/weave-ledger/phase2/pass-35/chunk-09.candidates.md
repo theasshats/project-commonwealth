@@ -255,3 +255,10 @@ Create × Rechiseled bridge — Mechanical Chisel (kinetic Create block), 242 ch
 **Existing connections review:**
 OK — connections sound. The M-04 ACCEPT above deepens rather than changes the anchors. The dossier correctly identifies this as the Rechiseled→Create bridge; no forced re-anchoring needed.
 
+## moreculling   [anchors: support/performance (1)]
+
+Pure rendering performance mod — block face culling optimization, depends on Sodium. Zero items, zero blocks, zero loot, no gameplay content.
+
+- LEAVE — pure rendering performance (block face culling); no items, no loot, no world mechanic. Nothing to weave.
+
+== CHUNK COMPLETE ==
