@@ -79,3 +79,19 @@ Also: **M-20 (deploy-application upgrade)** for affinity rings got 1 ACCEPT. Thi
 
 - CHALLENGE | from: irons_spellbooks:affinity_ring (school-specific magic gear) | via: create:deploying | to: create | motif: M-20 | verdict: REJECT | hook: the Arcane Anvil is Iron's native upgrade machine; adding create:deploying as a *second* upgrade gate for the same item doubles the friction without advancing the loop — M-20 is the "light sibling of M-06" but should apply where no native upgrade path exists, not as a parallel gate on an already-deep item
 
+## s_a_b   [anchors: create, aeronautics (2)]
+
+Existing rows converge heavily: M-06/M-23 (hardsteelblock via sequenced-assembly + aeronautics hull), M-30 (steel scarcity gates armor), M-34 (combat-supply route), M-26 (armor consumed under PvPvE fire), M-28 (colony blacksmith for basic light-steel), M-15 (boss-key gate for hard-steel). The mod sits at 2 anchors (Create + aeronautics).
+
+Gaps:
+
+1. The **brass glyph/letter blocks** (s_a_b:brass_a … brass_z, 0–9, punctuation) are a large set that appears in the block list. Two rows propose using them (M-12 as brass-plate-cut signage, M-04 as pressed brass-sheet signage). These rows have 1 ACCEPT each and represent a genuine *second material surface* in s_a_b that is distinct from the steel armor theme. The brass typeface is a natural Create-adjacent output (brass plate stamped into letters), and signage for industrial bases is a real player use. The M-12 row is cleaner (create:cutting mills a brass plate into glyph blocks) than M-04 (pressed sheet), because M-04 is deco-recycle while M-12 is processing-chain pull.
+
+- NEW | from: s_a_b:brass_a … s_a_b:brass_z (the full brass typeface set — letters, numerals, punctuation blocks) | via: create:cutting (a mechanical saw mills a brass sheet into individual letter/numeral blocks; scale: the full alphabet requires one automated cutting run) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the same rolling mill that makes brass gears and pipes stamps out factory signage — a brass letter block is an ambient Create output, turning s_a_b's full typeface into part of the Create material loop
+
+2. The **M-29 cross-route**: does s_a_b's hardsteelblock feed any magic or survival recipe? No thematic surface exists. Steel armor into magic is a genre clash. Pass.
+
+3. One weak row to challenge: M-04 "autunite deco bricks crush back to raw uranium-bearing gravel + XP nugget" (1 ACCEPT from an Opus pass) — this row is tagged under *createnuclear* but the Opus pass filed it under s_a_b context. Not applicable here; disregard.
+
+OK — s_a_b existing rows sufficient for the core anchors; brass typeface M-12 is the one genuine gap.
+

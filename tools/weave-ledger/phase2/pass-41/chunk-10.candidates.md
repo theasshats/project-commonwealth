@@ -38,4 +38,14 @@ LEAVE — pure decoration palette (no items, no blocks, no loot, no recipe-types
 
 ## hpm   [anchors: aeronautics (1)]
 
+Existing rows cover: M-06/M-05 Create hull/mast/cannon gating via mechanical_crafting and sequenced_assembly (strong consensus, well-established), M-29 cannonball/CBC cross-route, M-34 ship combat-specialist trade, M-31 hull materials as bulk logistics good, M-13 corvette steamship fuel. These are thorough. What is missing: (a) **no M-20 or M-28 row** captures a **colony route** for mid-tier ship components — the swashbucklerupgrade specifically is a compact upgrade item (not a full hull) that fits the lighter M-20 deploy-application shape and could have a colony-cheaper path; (b) the **hpm:spanner** (a tool) has never been evaluated as a potential Create-integrated repair item.
+
+- NEW | from: hpm:swashbucklerupgrade (keel upgrade fitted to an existing ship) | via: create:item_application or create:deploying (apply the upgrade kit onto a placed ship entity, analogous to how Create's deployer applies components — the upgrade IS a physical keel-level modification, exactly the light single-step M-20 shape) | to: create | motif: M-20 | power: mid | tone: ok | verdict: ACCEPT | hook: the swashbuckler upgrade is bolted onto a hull at a dock — applying it with the deployer is the industrial shipyard moment; M-20 as the lighter tier of M-06 fits a keel-upgrade better than a full sequenced chain
+
+- NEW | from: hpm:cannonball / hpm:mortar_ball (ship munitions, everyday combat consumable) | via: M-26 consumption — ammo is expended on every engagement; the maritime artillery loop (cast → load → fire → resupply) never closes | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: a ship without shot is a fishing boat — cannonballs are consumed against the danger that drives demand, and the cast-iron foundry (Create compacting) must keep pace with every naval skirmish; this is the consumption-closes-the-loop edge that no existing hpm row captures explicitly
+
+- CHALLENGE | from: hpm ships (cutter / war-cutter) | via: thematic mapping to aeronautics physics ships | to: aeronautics | motif: none | verdict: REJECT | hook: the existing REJECT consensus (3 REJECTs) is correct and should hold — hpm ships are bespoke boat-entities (not Aeronautics-physics superglue contraptions); they coexist in the same pack but occupy different mechanical layers; the "they're both vehicles so they count as aeronautics" framing is a category error, and a weave cannot be authored between two systems that share only a thematic role but no shared method
+
+## extradelight   [anchors: survival, create (2)]
+
 

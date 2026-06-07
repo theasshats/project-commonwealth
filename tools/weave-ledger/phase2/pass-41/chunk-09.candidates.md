@@ -63,6 +63,19 @@ Existing rows cover: M-16 seasonal crop gate (ACCEPT ×12); M-28 colony cook dem
 
 ## create_central_kitchen   [anchors: Create, survival (2)]
 
+Existing rows cover: M-26 consumption feasts (ACCEPT ×4); M-28 colony cook/restaurant demand (ACCEPT ×4); M-16 seasonal pumpkin pie (ACCEPT ×1); M-34 Blaze Stove combat-supply (ACCEPT ×1); M-30 Blaze Stove regional scarcity (ACCEPT ×1); M-06 sequenced-assembly (ACCEPT ×2); M-29 cross-route dependency (ACCEPT ×1). Correctly REJECTs: magic-imbuement (M-10/M-11), Blaze→haunting (M-19 misfit), aeronautics-room framing (no motif).
+
+The contested row is the blaze-stove M-12 pie-sauce→bait-trap (ACCEPT 3, but one good REJECT noting "contrived"). The M-06 sequenced-assembly and M-28 colony row are the cleanest existing signals.
+
+What's missing: the aeronautics provisioning angle (M-31) for the automated kitchen as a ship galley, and a cleaner M-37 framing for the Blaze Stove.
+
+- NEW | from: create_central_kitchen automated feast output (finished dishes via Blaze Stove-accelerated cooking) | via: create:filling (fill aeronautics ship food lockers for crew provisioning at scale) | to: economy | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: the industrial galley that can fill a ship's food stores by contraption is the kitchen that earns its spot on the flagship aeronautics build; the Blaze Stove's throughput advantage is what makes it worth building a cook-ship at all.
+- CHALLENGE | from: create_central_kitchen sauce/drink fluids → createfisheryindustry:bait_trap (kitchen sauce as fishing bait) | via: createfisheryindustry:bait_trap | to: survival | motif: M-12 | verdict: REJECT | hook: the existing ACCEPT ×3 is overturned by the logic: bait_trap is for natural baits (fish, worms), not processed sauces; routing a culinary fluid into a fishing trap is thematically forced and has no precedent in either mod's design intent. The one existing REJECT ("contrived") is correct.
+- NEW | from: create_central_kitchen Blaze Stove (requires a live Blaze as a fuel-catalyst) | via: MineColonies research gate (the Blaze Stove recipe or its efficiency-tier is unlocked by a combat-research node in the MineColonies tech tree, requiring prior Nether expedition) | to: economy | motif: M-37 | power: mid | tone: ok | verdict: ACCEPT | hook: the kitchen doesn't unlock its full 4× throughput until the colony has researched "industrial fire management" — knowledge of controlled Blaze use is gated behind progress, so the automated galley is a mid-game research prize, not a day-one drop.
+
+## createlowheated   [anchors: Create (1)]
+
+
 
 
 

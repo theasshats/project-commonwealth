@@ -100,6 +100,22 @@ Well-covered: M-28 colony-tavern demand (multiple ACCEPTs), M-35 aging (multiple
 
 OK — M-28, M-35, M-26, M-16, M-31 rows are well-founded. The NEW above adds the missing M-29 magic-route dependency that distinguishes a forced trade from ambient processability.
 
+## cold_sweat   [anchors: survival (1)]
+
+M-05 hearth-on-Create-brass is the dominant ACCEPT (37 votes). M-26 fuel-consumption is accepted. M-19 soul_stalk→create:haunting has 1 ACCEPT. M-28 colony-insulation demand has 1 ACCEPT. M-33 sewing-table service has 2. What's missing or underargued:
+
+1. The **TFMG diesel fuel as boiler input** (M-26) appeared once and was accepted. No row has articulated this as a genuine *Create-production → climate-machine* dependency: TFMG diesel is produced from petroleum (a scarce regional resource, M-30), so using it as efficient boiler fuel chains the climate-survival system into the Create fuel-production economy. That's a two-step loop advance (scarcity → fuel production → climate machine → survival pressure), which is stronger than "fuel burns." This needs a NEW as a power-tier/motivation nuance.
+
+2. The **soul_stalk M-19 angle** (soul_stalk + create:haunting → soul-infused intermediate): the 1 ACCEPT doesn't argue *what the output does*. For M-19 to earn its place, the haunted output must feed something (Occultism reagent? Ars source? A unique insulation catalyst?). Without a clear downstream consumer the weave is dangling. I'll propose a completed version.
+
+3. **M-16 seasonal**: cold_sweat insulation materials (chameleon_molt is from a tropical mob, only found in warm biomes) could be season-gated: cold-climate materials (goat_fur from mountain biomes) become *more available in winter* (more mountain mobs active in cold) while chameleon_molt is harder to get in winter. This is a config/behavior note not a method-routing — no recipe carries it. Reject as no-motif.
+
+- NEW | from: cold_sweat:hearth / boiler (fuel-burning climate machines) | via: create:filling → tfmg:distillation output (diesel) as high-efficiency fuel | to: create | motif: M-26 | power: mid | tone: ok | verdict: ACCEPT | hook: running climate machines on TFMG diesel (scarce regional petroleum → Create-refined → fuel) ties the colony's warmth to the fuel-production chain — the survival pressure loop closes back into Create's industrial output, so producing climate comfort costs real resource investment
+- NEW | from: cold_sweat:soul_stalk (Nether plant, carries soul-fire resonance) | via: create:haunting → occultism:ritual input | to: magic | motif: M-19 | power: mid | tone: ok | verdict: ACCEPT | hook: soul_stalk grows where soul sand meets cold; run through Create's soul-fire haunting it becomes a soul-charged plant essence — the output feeds an Occultism ritual (a warmth-spirit infusion) that is otherwise gated behind Nether exploration, making cold_sweat's plant a dual-system ingredient (survival-gathered, magic-consumed)
+
+OK — M-05 hearth-gating is the load-bearing 2nd-anchor weave. The two NEW rows above add the missing fuel-chain motivation (M-26 TFMG diesel) and the soul_stalk output-pathway that prior rows left dangling (M-19 completed through Occultism).
+
+
 
 
 
