@@ -43,4 +43,9 @@ REWORK: OK — single anchor documented; the dossier already notes the M-05 gati
 - LEAVE — Prickle JSON config format library; 0 blocks, 0 items, no recipe methods. Genuine zero-content
   code library (Darkhax ecosystem). No player surface.
 
+## woodworks   [anchors: survival (1)]
+REWORK: existing 2nd-anchor candidates in dossier — evaluate both.
+- from: woodworks deco blocks (boards, bookshelves, chests, ladders) | via: create:crushing → raw plank + gravel + create:experience_nugget (lossy) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: over-decorated your cabin? a crusher reclaims planks from the boards — the Create web treats wood deco like any other buildable
+- from: woodworks deco outputs (boards, ladders) | via: woodworks:sawmill or create:cutting (overlap/bridge) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: this is a cosmetic recipe-unification (making the Sawmill and Create's saw read as one web), not a cross-system weave — it doesn't add a new pillar anchor or advance the loop; it's maintenance-polish, not a weave candidate worth tracking as M-12; and M-04 (crushing back) already earns Create as the second anchor
+
 

@@ -34,6 +34,14 @@ Power-read: dark_metal is a mid-tier material (bench-crafted mob drops from ~7�
 
 OK — existing connection (survival) is sound. New edges add Create (M-03, M-19), magic (M-11), economy (M-14) — taking born_in_chaos to 3–4 anchors.
 
+## gravestone   [anchors: survival (1)]
+Power-read: 1 block (gravestone), 2 items (gravestone + obituary); loot=yes (the grave itself is a loot container). A death-QoL utility; no ore/reagent content. The obituary item is a record of death stats.
+
+- from: gravestone:obituary | via: supplementaries:item_lore or recipe | to: economy | motif: no-motif | power: everyday | tone: clash | verdict: REJECT | reason: "Sell your death report for coin" has no motif coverage and reads as forced flavor; the obituary is a QoL record, not a tradeable good. No-motif + tone: forced → reject.
+- from: gravestone:gravestone (loot table) | via: loot-seed | to: economy | motif: M-14 (provisional motif) | power: everyday | tone: clash | verdict: REJECT | reason: Gravestone is a death-recovery vessel; seeding coin into its loot table (pay to loot your own grave?) inverts its utility design and is confusing to players. The recovery mechanic is anti-frustration; monetizing it creates a friction-punishment loop the mod was designed to prevent. Theme clash → reject.
+- LEAVE — after exhausting candidates: the mod has 2 items total (gravestone + obituary) and its sole mechanic is inventory recovery. No material input/output, no processing surface. Any 2nd anchor requires forcing a connection the mod isn't built for. The single survival anchor is its correct role.
+
+
 
 
 
