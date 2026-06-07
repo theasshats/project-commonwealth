@@ -35,6 +35,26 @@ REWORK: The dossier's only economy candidate is M-09 (luxury good → coin) whic
 - from: createfisheryindustry:lobster/mussel (rare trap outputs) | via: occultism:spirit_fire or ritual | to: magic | motif: M-11 | power: mid | tone: ok | verdict: REJECT | reason: crustaceans as occult reagents feel strained — the M-11 motif is for drops that carry a thematic soul/spirit charge (ender_residue, void worm parts), not seafood; tone clash; reject
 - from: createfisheryindustry:fish_skin bulk production | via: aeronautics logistics transport | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: fish_skin produced at coastal/river fishery rigs needs aeronautics shipping to inland tailors and colony builders — a bulk industrial material that makes the logistics arm earn its keep
 
+## lootjs   [anchors: support (1)]
+- LEAVE — KubeJS scripting library; registers no items, no recipe-types, no loot of its own. It is the *enabler* of M-02 mob-drop weaves (the pack uses it to inject drops into tables), not itself a weave target. No content surface.
+
+## resourcefulconfig   [anchors: support (1)]
+- LEAVE — config API/library with zero items, blocks, or gameplay content. Pure plumbing dependency; nothing to weave.
+
+## structurize   [anchors: support (1)]
+- LEAVE — MineColonies build engine (blueprint scan/place pipeline); no recipes, no items of its own beyond build-tool scepters, no loot. Its weave is MineColonies' weave. Forcing a recipe edge onto the scan-tool scepter would be nonsensical.
+
+## galosphere   [anchors: survival (1)]
+REWORK: The dossier notes allurite/lumiere shards are already M-07 (attunement catalyst) reaching magic — that is a real established 2nd anchor. But the dossier marks only survival (1), suggesting the magic anchor isn't formally recorded. Flag: galosphere should be anchors: survival, magic (2) given M-07 is established in `33`/`80`/`97`.
+
+- from: galosphere:allurite_shard / lumiere_shard | via: ars_nouveau:imbuement / host magic methods (M-07 already authored) | to: magic | motif: M-07 | power: mid | tone: ok | verdict: ACCEPT | hook: crystal-cave shards as attunement catalysts is already the pack's established pattern — this formalizes galosphere's 2nd anchor; the reagent-ownership table reserves these items for exactly this role
+- from: c:ingots/palladium (scarce regional — deepslate_palladium_ore) | via: create:crushing → create:pressing → numismatics mint | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: palladium is region-locked to Galosphere's cave biomes; Create-processed → player-minted into coin makes palladium the mid-tier coin metal competing with/complementing tin, driving cross-biome trade
+- from: c:ingots/palladium | via: GTMOGS ore-gen (palladium biome-locked via 9 galosphere biome-modifiers) | to: economy | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: palladium's cave-biome lock (Crystal Canyon / Pink Salt / Lichen) means it's a regional scarcity good — the player with that biome controls the supply, creating a natural trade axis
+- from: galosphere deco blocks (allurite/lumiere/amethyst bricks, lamps) | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: crystal bricks and lamps crush back to shard dust + a nugget — standard Create deco-recycle; gives Galosphere's large deco palette a Create endpoint and expands the crushing table tastefully
+- from: galosphere:preserved_transform_recipe (amber items) | via: ars_nouveau:imbuement or occultism:ritual | to: magic | motif: M-10 | power: mid | tone: ok | verdict: REJECT | reason: the preserved_transform method takes any item → amber version, it's a galosphere-internal mechanic; hooking imbuement INTO it would require a separate recipe; more importantly the amber items are deco, not magic reagents — tone is ok but there's no thematic pull into magic that isn't already covered by M-07 with shards; redundant
+- from: galosphere:silver_bomb (anti-undead AoE) | via: combat / combat-supply loop | to: economy | motif: M-34 | power: mid | tone: ok | verdict: REJECT | reason: silver_bomb requires palladium (the CLAUDE.md gotcha: galosphere's "silver" is actually palladium, id `galosphere:silver_ingot`); a combat specialist farming palladium → bombs → selling to others is plausible but bare "sellable" is the ambient endpoint (M-09, retired); the demand-gating here is just PvE combat, which isn't distinct enough to satisfy a real economy motif — reject
+
+
 
 
 
