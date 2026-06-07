@@ -993,7 +993,7 @@ metafile = true
 
 [[files]]
 file = "mods/ars-n-spells.pw.toml"
-hash = "740dd770ce512da12ed514daf77d532afaa759834d158d8f301b84e324190dd7"
+hash = "effedd81f3baaf0f5169343f245750d47e2a0bebb145d78c2f4a49c374683801"
 metafile = true
 
 [[files]]
