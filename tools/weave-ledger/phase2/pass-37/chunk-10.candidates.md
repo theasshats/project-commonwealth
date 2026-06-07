@@ -30,3 +30,15 @@ REWORK: OK — connections sound. Already at 2 anchors (Create material ladder +
 ## immersivearmorhud   [anchors: support/client-UI (1)]
 - LEAVE — purely client-side HUD overlay (0 blocks, 0 items, 0 recipe-types, loot=no); display-only armor readout. No materials, no processing surface, no loot tables. Nothing to route.
 
+## pingwheel   [anchors: support/QoL-multiplayer (1)]
+- LEAVE — multiplayer coordinate-ping utility (0 blocks, 0 items, 0 recipe-types, loot=no); transient markers over the network. No materials, no processing, no loot. Nothing to route. Sanctioned as co-op QoL.
+
+## fzzy_config   [anchors: support/library (1)]
+- LEAVE — genuine zero-surface configuration engine library (0 blocks, 0 items, 0 recipe-types, loot=no); TOML serializer + GUI API for dependent mods. No player content whatsoever. Nothing to route.
+
+## blood_n_particles_datapack   [anchors: support/cosmetic (1)]
+- LEAVE — purely cosmetic blood-particle emitter (0 blocks, 0 usable items, 0 recipe-types); the 184 "items" are particle-definition holder entries, not obtainable player items. loot=yes in the digest is misleading — the items are particle holders (minecraft:blood1..blood15, etc.), not drops from loot tables that could be seeded with reagents. Nothing to route through any method.
+
+## emojitype   [anchors: support/client-UI (1)]
+- LEAVE — client-only chat shortcode-to-Unicode helper (0 blocks, 0 items, 0 recipe-types, loot=no). No in-world content surface at all. Sanctioned friend-group flavor.
+

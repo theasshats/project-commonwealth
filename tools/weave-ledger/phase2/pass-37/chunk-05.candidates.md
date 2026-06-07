@@ -20,3 +20,28 @@ New proposals:
 
 - from: galosphere:silver_ingot (palladium) | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: clash | verdict: REJECT | reason: reagent-ownership collision risk. Palladium must never be conflated with silver (occultism owns c:ingots/silver). An imbuement recipe consuming galosphere's item would need extreme care to avoid the unification trap; M-07 shards already provide the magic anchor with zero identity-collision risk. Defer unless a second explicit magic route is wanted and the anti-silver safeguard can be guaranteed at authoring time.
 
+## resourcefulconfig   [anchors: support/library (1)]
+
+LEAVE — Config-screen framework library. Zero blocks, zero items, no loot, no gameplay mechanics. Pure transitive API dependency. Nothing to weave.
+
+## modernfix   [anchors: support/performance (1)]
+
+LEAVE — JVM/loader-level performance patches (lazy init, dynamic resources). Zero blocks, zero items, no content surface of any kind. Nothing to weave.
+
+## cold_sweat   [anchors: survival (1)]
+
+New proposals:
+
+- from: cold_sweat:hearth (the post-Nether climate-control multiblock) | via: create:mechanical_crafting | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: the Hearth is a significant infrastructure investment (post-Nether, large multiblock, smokestack required); requiring Create brass fittings or a shaft assembly in its crafting means a cold-biome settlement must engage the tech spine before it can stabilize temperature — survival pressure creates demand for Create production. The loop runs: survival pressure → production (Create) → climate stability.
+
+- from: cold_sweat insulating materials (goat_fur, chameleon_molt) | via: create:milling | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: raw hides and pelts processed through a Create mill into insulation padding or fiber intermediates before reaching the sewing table — an everyday pull that keeps the cold-climate survival chain running through the Create spine even at the basic tier. Lightweight one-step; doesn't over-burden a basic survival material.
+
+- from: cold_sweat:boiler / cold_sweat:icebox | via: create:mechanical_crafting | to: create | motif: M-05 | power: everyday | tone: ok | verdict: REJECT | reason: the boiler and icebox are simpler half-power emitters compared to the Hearth. Gating the everyday climate emitters behind mechanical_crafting (a mid-tier Create method) violates the cost-model rule: never gate a basic/everyday component behind a complex recipe. The Hearth gate (mid-power item) is the correct level; leave the basic emitters on vanilla crafting.
+
+- from: cold_sweat:chameleon/hoglin/goat_fur armor sets (insulated survival gear) | via: farmersdelight:cutting | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: farmersdelight:cutting is already on the methods palette, and hide-cutting is thematically coherent — but this stays within the survival anchor (cutting hide → insulated armor is still survival-only). It doesn't add a second system anchor; the two accepted candidates above (Create) are the more valuable proposals. Record and drop.
+
+- from: cold_sweat waterskin (hot/cold water carry) | via: create:filling | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: create:filling is already listed as an inbound weave on the dossier ("made-by methods: create:filling"). Duplicate — the edge already exists.
+
+REWORK check — existing connections:
+- create:filling inbound exists (waterskins). Dossier's M-09 candidate ("sellable survival gear") is correctly identified as weak and M-09 is retired — do not carry forward.
+
