@@ -7,16 +7,16 @@ refresh` and `mr export` are local operations).
 
 Until now the repo had **no PR-triggered CI** — every workflow was `workflow_dispatch`, release-tag,
 or push-to-`main`. A bad `.pw.toml`, a silently-ignored `pin`, a stale `index.toml`, broken KubeJS
-JSON/JS, or a non-compiling editor/site change could all land unreviewed by a machine.
+JSON/JS, or a non-compiling editor change could all land unreviewed by a machine.
 
 ## The jobs
 
 | Job | What it checks | Why it matters |
 |---|---|---|
-| **packwiz index** | Runs `scripts/index-guard.sh` (refresh + verdict). **Passes** on a fresh or auto-fixable index (`sync-index` commits the refresh for you); **fails only** on the `.packwizignore` guard — a `packwiz refresh` that pulls files in under a new top-level path. | A new un-ignored dir would vacuum into the index (e.g. `site/`). Routine staleness is auto-handled, so this never flickers red — only the one human case does. |
+| **packwiz index** | Runs `scripts/index-guard.sh` (refresh + verdict). **Passes** on a fresh or auto-fixable index (`sync-index` commits the refresh for you); **fails only** on the `.packwizignore` guard — a `packwiz refresh` that pulls files in under a new top-level path. | A new un-ignored dir would vacuum into the index. Routine staleness is auto-handled, so this never flickers red — only the one human case does. |
 | **manifest lint** | `scripts/lint-manifests.py`: required fields, valid `side`, valid `hash-format`, and the **pin-placement gotcha** (a `pin =` under any `[section]` is silently ignored by `packwiz update`). | A malformed manifest or a misplaced pin breaks install or lets a pinned mod drift on update — both are silent. |
 | **kubejs / config data** | `node --check` every `kubejs/**/*.js`; `scripts/validate-data.py` parses every JSON under `kubejs/`, `config/`, `defaultconfigs/` and every TOML under `config/`, `defaultconfigs/`. | The sandbox is headless and can't run Minecraft/KubeJS — a syntax error in a recipe or config only surfaces in-game otherwise. This is the cheapest possible guard. |
-| **go build & vet** | `go build` + `go vet` for both `site/` and `tools/editor-src/` (and `go test` for the site). | The editor binary is rebuilt by `build-editor.yml` only on push to `main`; the site isn't compiled in CI at all. This catches a broken Go change *on the PR* instead of after merge. |
+| **go build & vet** | `go build` + `go vet` for `tools/editor-src/`. | The editor binary is rebuilt by `build-editor.yml` only on push to `main`, so this catches a broken Go change *on the PR* instead of after merge. (The player site moved to its own repo, `derpack-org/derpack-x-site`, which carries its own build CI.) |
 
 ## Running the same checks locally
 
@@ -30,7 +30,6 @@ python3 scripts/validate-data.py
 find kubejs -name '*.js' -exec node --check {} +
 
 # go
-(cd site && go build ./... && go vet ./... && go test ./...)
 (cd tools/editor-src && go build ./... && go vet ./...)
 ```
 
@@ -87,7 +86,7 @@ It distinguishes the two cases, because their commit policy differs:
   source of truth) plus `mods/`, and any top-level path already in the index. So adding/removing files
   under those — a new mod manifest, a config, a `tacz/` zip — is intentional churn and **rolls over**.
   It bails **only** when `refresh` pulls a file in under a **brand-new top-level path** (something not
-  in that set): that's a directory that should have been `.packwizignore`d (the classic `site/` case),
+  in that set): that's a directory that should have been `.packwizignore`d (a new un-ignored top-level dir),
   so it leaves the working tree dirty and the red **packwiz index** check for a human — who either adds
   the `.packwizignore` line, or, if it's real pack content, an `instance-dirs.txt` line. (A change at
   the **repo root** that isn't a known pack dir is exactly this case, and is what fails it.) This is
