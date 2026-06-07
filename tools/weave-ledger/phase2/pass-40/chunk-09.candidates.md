@@ -160,3 +160,5 @@ CHALLENGE | from: northstar:astronomical_reading | via: ars_nouveau:enchanting_a
 
 CHALLENGE | from: northstar titanium/tungsten/martian_steel | via: GTMOGS regional ore-gen → recipe input | to: economy | motif: M-30 | verdict: DOWNGRADE — M-30 is specifically GTMOGS biome-locked overworld ore-gen; northstar metals are dimension-locked (require a rocket to reach Mars/Moon). They're scarce and trade-worthy, but the mechanism is different — they're not biome-regional but dimension-gated. The 1 ACCEPT and the 2 REJECTs on the M-30 row are correctly leaning REJECT. Suggest re-expressing the scarcity via M-34 (combat/danger-route supply: getting to Mars is dangerous, so the space specialist controls the supply) or as a dimension-scarcity note without a formal motif assignment.
 
+== CHUNK COMPLETE ==
+

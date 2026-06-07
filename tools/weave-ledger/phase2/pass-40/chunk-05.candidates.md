@@ -47,3 +47,9 @@ OK — existing rows sufficient; mod already has ≥2 anchors (Create zinc consu
 ## grimoireofgaia   [anchors: survival (1)]
 - NEW | from: grimoireofgaia:bust_valkyrie / bust_gorgon / bust_sphinx (mini-boss decorative trophies) | via: MineColonies colony delivery (a MineColonies Great Hall or Barracks upgrade at high tier *requests* a named boss bust as a construction delivery to unlock the tier) | to: economy | motif: M-28 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Barracks upgrade to "Fortress Hall" requires a Gorgon bust delivered to the builder — a colony milestone that forces the settlement-builder to either fight the Grimoire bestiary or buy the bust from a combat specialist; colony growth and combat supply lock together
 - NEW | from: grimoireofgaia:book_of_memory (lore-heavy rare drop, proof of facing the bestiary) | via: ars_nouveau:glyph research (feeding the Book of Memory into the Ars glyph-learning system unlocks a spell tier that can't be researched by any other means) | to: magic | motif: M-37 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Ars mage who wants the Bestiary-Tier glyph must either face the Grimoire creatures themselves or purchase a Book of Memory from a combat specialist — knowledge that can't be bought, only earned through combat or trade with someone who earned it; M-37 (research gate) is more precise than M-15 here because the unlock is knowledge, not a machine input
+
+## resourcefulconfig   [anchors: support/library (1)]
+- LEAVE — config-schema/GUI library; 0 items, 0 methods, no material surface
+
+## just_blahaj   [anchors: decoration/flavor (1)]
+OK — existing rows sufficient; unanimous REJECTs on every attempted weave are correct; LEAVE confirmed; pure wholesome decoration flavor with no material surface; forcing any edge is the failure mode the briefing warns against

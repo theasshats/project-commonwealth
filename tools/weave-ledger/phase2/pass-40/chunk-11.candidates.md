@@ -166,6 +166,37 @@ Red-team: Does Demon's Dream (Occultism's key plant) actually grow in farmland t
 
 Also: the phlogiport M-33 ACCEPT deserves a second look. M-33 is "service-for-hire (labor)" — a player runs phlogiports as a remote-delivery service, charging for the item-teleport. This is coherent: an occult engineer installs phlogiport addresses across the server and offers "send me your items, I'll teleport them to the destination" as a paid service. The economy is player-run, so this works. OK — no new challenge needed.
 
+## createbigcannons   [anchors: Create, aeronautics (2)]
+Already 2-anchor. Existing rows cover: M-08 ACCEPT (cannon-grade steel → coin, 8v1), M-34 ACCEPT (shells/munitions as combat-route trade goods, 6v0), M-26 ACCEPT (shells consumed when fired, 3v0), M-30 ACCEPT (steel/cast_iron region-locked, 3v0), M-24 ACCEPT (cannon_mount → aeronautics drivetrain/control, 2v0), M-15 ACCEPT (nethersteel barrel boss-gated, 1v0).
+
+One gap: the **nethersteel** tier. The mod introduces `createbigcannons:nethersteel_ingot` (c:ingots/nethersteel) — a nether-origin alloy. Existing rows correctly REJECT M-10 (Ars imbuement of nethersteel — tone clash: military-industrial vs. arcane-scholarly) and REJECT M-11 (spirit_fire routing — nethersteel-to-occult is a tonal clash). These are correct calls. But M-07 (attunement catalyst) has not been tried for nethersteel — and it shouldn't be, because M-07 is specifically for Galosphere attunement catalysts.
+
+One missing angle: the **cannon foundry's melting method** (`createbigcannons:melting`) is a registered recipe type. No existing row proposes routing a *foreign material* through the CBC melting method. This is a method-pull opportunity — what foreign metals could be melted in a CBC foundry as a cross-mod connection?
+
+- NEW | from: createnuclear:lead_ingot (c:ingots/lead, radiation-shielding metal) | via: createbigcannons:melting | to: create | motif: M-32 | power: mid | tone: ok | verdict: ACCEPT | hook: nuclear processing produces lead as a byproduct; melting it in the cannon foundry recasts it as shot or shielding plate — industrial circularity routes the nuclear waste stream into the artillery chain, so lead is never just a discard
+
+Red-team: Does the CBC melting recipe accept arbitrary c:ingots tags? The method is for casting cannon parts from metals — it accepts the mod's own metals. If it's extensible via KubeJS to accept c:ingots/lead → lead shot or lead shielding block, this is a real M-32 (byproduct → input) weave. The thematic fit (nuclear lead → cannon lead shot / radiation-shielding cannonball) is genuinely compelling. Lead shot is historically real. Survives.
+
+Also: the **M-37 (research gate)** angle for CBC has no existing row. MineColonies research could unlock cannon-grade steel production via the colony route (cheaper cast-iron/bronze at a blacksmith hut, but the high-grade steel recipe is unlocked via MineColonies military/blacksmith research tree). This is M-37 (research/knowledge gate) meeting M-28 (colony route).
+
+- NEW | from: createbigcannons cast_iron/bronze cannon parts (lower tier) | via: minecolonies:composting or blacksmith hut (colony cheaper-basics route) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: a colony blacksmith can cast bronze and cast-iron cannon barrels at lower per-unit cost than a solo CBC foundry run — the artillerist trades with the settlement builder for basic barrel castings, keeping the munitions supply chain distributed
+
+Red-team: Can a MineColonies blacksmith hut realistically produce cannon barrels? The colony route produces "cheaper basics" — cast iron and bronze are the lower cannon tiers. Having the colony supply the basic cannon castings while the Create specialist handles the steel/nethersteel tier is an exact application of the high-tier fork (§3 of SYSTEMS.md). Survives.
+
+## create_pattern_schematics   [anchors: Create (1)]
+Existing rows: 7 rows, almost all REJECT (correctly). The one ACCEPT is M-31 (pattern schematic riding a gantry/train to auto-build repeating airframe/hull sections, aeronautics connection, 2v0). Another M-23 ACCEPT (pattern schematic on a gantry → aeronautics hull construction, 2v0).
+
+The dossier is clear: this is a Create-internal build-automation tool. No items to weave, no material outputs, no loot. The 2nd-anchor question: is M-31 (logistics-required bulk good) the right motif for a build-automation tool riding a gantry?
+
+- CHALLENGE | from: create_pattern_schematics:pattern_schematic (build tool on a moving contraption) | via: aeronautics contraption placement | to: aeronautics | motif: M-31 | verdict: REJECT | hook: M-31 is "a good is heavy/bulky/perishable enough that trading it at scale requires the aeronautics/logistics arm" — the pattern schematic is a *tool*, not a bulk good; it rides the contraption to build things, not to be shipped; the aeronautics link is mechanically interesting (gantry-on-train builds repeating hull sections) but rides M-23 more cleanly (it helps build the structural alloy→airframe construction) rather than M-31 (which is about moving goods)
+
+The M-23 ACCEPT (pattern schematic accelerates airframe construction via gantry — 2v0) is actually the better framing. The schematic is a *construction tool that makes M-23 weaves easier to execute at scale*, not a bulk good that needs ships to move. Replacing M-31 with M-23 is the right correction.
+
+OK — no new weave proposals. The mod is Create-internal QoL tooling. One motif correction (above).
+
+== CHUNK COMPLETE ==
+
+
 
 
 

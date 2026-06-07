@@ -166,6 +166,22 @@ Missing: The M-30 (regional scarcity) rows for tin (2×) are correctly accepted 
 - CHALLENGE | from: create_ironworks:steel_ingot (endgame alloy) | via: numismatics mint | to: economy | motif: M-08 | verdict: REJECT | hook: minting steel into coin on top of tin and bronze over-populates the coin-denominations and erodes the scarcity signal — one alloy (tin: scarce regional ore → processed → coin) is the pack's M-08 seam; steel should remain the endgame alloy, not also a currency; the existing M-08 steel REJECT is correct.
 - NEW | from: create_ironworks:tin_ore (biome-distributed regional ore via 3 biome-modifiers) | via: config-tie (GTMOGS ore-gen + numismatics mint path) | to: economy | motif: M-30 | power: everyday | tone: ok | verdict: ACCEPT | hook: tin's biome-modifier distribution already seeds regional lock-in — explicitly aligning GTMOGS to concentrate tin in specific biomes makes the tin-miner's region the pack's bronze/steel bottleneck; the regional scarcity foundation expressed through the Create metallurgy spine.
 
+## betterendisland   [anchors: survival (1)]
+
+Zero items, zero blocks, zero loot, structure-overhaul only. No rows in CANDIDATES.tsv (consistent with leave). Dossier: leave.
+
+LEAVE — structure/worldgen cosmetic with no item/block/method surface; nothing to route.
+
+## patchouli   [anchors: support (1)]
+
+Library with minor player-visible items (colored book covers, guide_book). The one registered recipe type (patchouli:shapeless_book_recipe) only crafts guide books — no foreign-material sink. All prior rows (3×) correctly REJECT. Dossier: leave.
+
+One nuance not challenged: patchouli guide books authored by the packdevs *could* carry M-37 (research gate) flavor if completing a Patchouli advancement unlocks a recipe — but that's a delivery mechanism for *other mods'* progression, not a weave of patchouli itself.
+
+LEAVE — documentation library; the guide book is the product, not a connective material; support role confirmed.
+
+== CHUNK COMPLETE ==
+
 
 
 
