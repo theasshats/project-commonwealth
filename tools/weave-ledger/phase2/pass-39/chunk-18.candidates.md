@@ -70,6 +70,24 @@ Candidates examined:
 
 - LEAVE — support/compat role; the actual material weaves belong to the mods being unified (TFMG for plastic, etc.); no standalone content surface.
 
+## appleskin   [anchors: support (1)]
+
+Power-read: Zero blocks, zero items, loot=no. A client-side HUD mod that renders food restoration/saturation/exhaustion overlays on tooltips and the hunger bar. Informational only — adds no mechanics. No items of its own to route.
+
+Candidates examined:
+- Could AppleSkin's information surface strengthen the Diet/survival pillar? Yes, but as a player-experience enhancement, not a weave. It makes the survival food system more readable (players can make diet decisions more deliberately), which is a support function, not a cross-system method-routing.
+- Any material to route? None — it has no items, no loot, no methods. REJECT all weave hypotheses immediately.
+
+- LEAVE — genuine zero-content client HUD (informational only); no items or methods to weave.
+
+## kambrik   [anchors: library/API — support (1)]
+
+Power-read: Zero blocks, zero items, loot=no. A Kotlin developer-framework library (registration helpers, DSLs, networking) for Kotlin-based mods. Depends on kotlinforforge. No gameplay surface.
+
+- LEAVE — genuine zero-content code library (Kotlin dev framework); nothing to weave by definition.
+
+
+
 
 
 

@@ -36,3 +36,9 @@
 
 ## kubejs_create   [anchors: support/modpack-tooling (1)]
 - LEAVE — scripting bridge exposing Create's recipe-types to KubeJS scripts; it is the tool that *builds* weaves, not a weave target itself. Zero items, no in-game methods, no loot tables. Sanctioned support anchor requires no weave.
+
+## terralith   [anchors: survival (1)]
+- LEAVE — data-only worldgen overhaul; zero items, zero blocks, no registered methods. Its real loop contribution is as the geographic substrate that makes GTMOGS regional ore scarcity *spatially legible* (biomes give regions distinct identities). That is an indirect M-30-adjacency but the weave belongs to GTMOGS, not Terralith. No method edge to author here; reaching for a loot-seed would hit vanilla loot tables (not Terralith's). The dossier's assessment is sound.
+
+## mru   [anchors: support/library (1)]
+- LEAVE — genuine zero-surface code-sharing library; no items, no methods, no loot tables. Sanctioned support anchor; no weave possible or needed.

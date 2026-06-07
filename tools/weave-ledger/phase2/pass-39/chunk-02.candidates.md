@@ -81,6 +81,21 @@ Developer AI framework — no items, no blocks, no loot, no methods, no player-f
 
 LEAVE — genuine zero-content code library/API. No items, no methods, no loot. The smarter mob AI it enables is a precondition for other mods' mob drops (which those mods' dossiers handle), but smartbrainlib itself is a pure dependency with nothing to route.
 
+## dungeons-and-taverns-v4.4.4   [anchors: survival (1)]
+
+100+ vanilla-styled structures (taverns, towers, dungeons, illager hideouts, extra Trial Chambers) with loot keyed off minecraft:trial_key / minecraft:ominous_trial_key. loot=yes confirmed by dossier. Tavern has a cartographer villager.
+
+Power-read: the structure mod's primary value is loot in dungeons, boss-style vault rewards, and exploration destinations. Trial keys are mid/endgame items (Trial Chamber completion). Structures span all biomes.
+
+- from: dungeons-and-taverns loot tables (trial-vault chests, dungeon chests) | via: loot-seed (datapack edit adding Create/magic progression items to vault loot) | to: create | motif: M-15 | power: mid | tone: ok | verdict: ACCEPT | hook: Seeding Create-progression components (precision mechanisms, Create alloys) or boss-key unlock items into the vault/dungeon loot tables makes exploring Dungeons and Taverns structures a viable alternate acquisition route for mid-tier Create parts — the combat/explorer playstyle earns tech ingredients. M-15 (boss-key unlock, loosely: locked-tier component gateable behind dungeon completion).
+
+- from: dungeons-and-taverns tavern (cartographer villager; exploration hub) | via: loot-seed / economy service node | to: economy | motif: M-33 | power: everyday | tone: ok | verdict: ACCEPT | hook: Taverns are natural player-economy meeting points — seeding them with a notice board or Trading Floor stall hook (a datapack config placing a Trading Floor block, or loot that seeds a trade token) turns the tavern into a sanctioned service hub. Players rendez-vous at taverns for economy services (enchant-for-hire, map sales, cargo contracts). The weave is a config/datapack placement, not a recipe; delivery via config tie or loot-seed.
+
+- from: dungeons-and-taverns dungeon mob drops (generic dungeon mob loot) | via: occultism:spirit_fire | to: magic | motif: M-02 | power: everyday | tone: ok | verdict: ACCEPT | hook: Dungeons and Taverns adds hostile mobs and their standard drops inside its structures; transmuting those drops into Occultism spirit essences gives dungeon-runners a magic-tier use for their haul. The spirit_fire method already handles mob-drop → essence conversion (M-02/M-11); this is a loot-seed extension pointing at the dungeon mob pool.
+
+- from: dungeons-and-taverns trial_key / ominous_trial_key | via: ars_nouveau:enchanting_apparatus | to: magic | motif: M-10 | power: mid | tone: clash | verdict: REJECT | reason: trial keys are vanilla progression items (open trial vaults); making them an Ars infusion input is a tone clash (arcane infusion of a vault opener with no thematic link to source/magic) and would gate a vanilla-progression item behind a magic-specialist step, violating the basic-components guardrail relative to its role as a structure key.
+
+
 
 
 
