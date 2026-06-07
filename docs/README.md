@@ -35,6 +35,7 @@ off those two.
 | [`ROADMAP.md`](ROADMAP.md) | **The plan** — multi-phase build-out and the milestone map + the odd/even cadence (the road to 1.0). The sequencing source of truth; can lag `main`. |
 | [`TRIAGE.md`](TRIAGE.md) | Issue-triage playbook (re-label / milestone / assign / close / sequence). |
 | [`WEAVING-STRATEGY.md`](WEAVING-STRATEGY.md) | Weave-the-web thinking — **DRAFT**, not settled. |
+| [`GOVERNANCE.md`](GOVERNANCE.md) | Player-governance scoping (#260) — municipalities→empires, cascading laws, entity minting. **SCOPING, not accepted**; flags a `SYSTEMS.md` stance reversal to ratify first. |
 
 ## Player-facing copy
 
