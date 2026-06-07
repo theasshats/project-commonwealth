@@ -124,6 +124,19 @@ Already 2-anchor. Well-covered: M-06 netherite sequenced-assembly (6 ACCEPTs), M
 
 OK — the mod is correctly 2-anchor. The NEW above clarifies the M-06/M-15 complementary role for the netherite tier; the CHALLENGE resolves the brass-tier over-gating risk.
 
+## t_and_t   [anchors: survival (1)]
+
+Well-covered: M-08 coin-seed (14 ACCEPTs), M-02 magic-reagent seed (6 ACCEPTs), M-34 combat-supply fort-loot (solid), M-30 region-specific village loot (3 ACCEPTs), M-33 village-hub trade (2 ACCEPTs). The M-15 sail-ship aeronautics-schematic angle is split. What's missing:
+
+1. The 16 biome-specific village variants are T&T's flagship feature and no prior row has exploited their biome-specificity for M-30 at the *item-category* level: a badlands village logically hoards copper-adjacent materials (rooted in arid-mining); a swamp village has herbalist/alchemy goods; a tundra village has insulation-tier materials (cold_sweat, goat_fur adjacent). This is the *richest* M-30 application for T&T — not just "put regional loot in chests" but "the biome of the village determines what category of goods it holds, so exploring T&T villages is the beginner's way to *discover* regional specialization before a player can travel far."
+
+2. The **sail-ship → aeronautics schematic** (M-15, split) — a static loot chest is exploration content, and M-15 requires a *boss drop*; the ship is not a boss. REJECT for M-15. But framing it as M-23 (structural alloy → airframe) — if the ship's hold contains treated canvas or rare sail material that is an Aeronautics construction input — that's more coherent. Only 1 prior row floated M-23 for ship loot and it got 3 ACCEPTs. This deserves sharper articulation.
+
+- NEW | from: T&T biome-specific village chest loot (16 distinct biome variants) | via: loot-seed with biome-keyed item categories | to: economy | motif: M-30 | power: everyday | tone: ok | verdict: ACCEPT | hook: a badlands T&T village chest yields copper-region goods; a tundra village holds insulation-grade materials; a jungle village carries tropical-crop seeds — the 16-variant map means exploring villages *teaches* regional scarcity before a player is mobile enough to trade at scale; loot becomes a regional identity, not just random drops
+- NEW | from: T&T ocean sail-ship cargo hold loot | via: loot-seed (treated canvas or structural sail-material as aeronautics construction input) | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: a salvaged sail-ship's hold contains treated canvas and maritime iron straps — structural materials for early Aeronautics airframes; the ocean dungeon feeds the aeronautics build-out, making seafaring exploration a prerequisite for the first proper ship
+- CHALLENGE | from: T&T ocean sail-ship loot | via: loot-seed | to: create | motif: M-15 | verdict: REJECT | hook: M-15 requires a boss drop (unique hostile-with-a-drop) as the gate item; T&T's sail-ship is a static worldgen structure with loot chests, not a boss encounter; seeding a boss-key component into a non-boss chest misapplies M-15 — the aeronautics structural-material frame (M-23, above) is the correct vehicle for the sail-ship's maritime theme
+
+
 
 
 

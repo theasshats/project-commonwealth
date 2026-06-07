@@ -42,11 +42,30 @@ Existing rows are extensive and cover the core vectors well: M-11/M-02 (soul_dus
 
 - CHALLENGE | from: deeperdarker soul materials (soul_dust, soul_crystal) | via: create:haunting | to: create | motif: M-19 | verdict: REJECT | hook: soul_dust and soul_crystal are already strong M-11/M-02 magic reagents — routing them also through create:haunting double-spends the same material without adding a new system anchor (haunting produces soul-adjacent outputs; feeding already-magical soul_crystal INTO haunting has no clear product and no thematic logic beyond "it is soul stuff"). M-19's value is using Create's soul-fire to transmute ordinary items into soul-adjacent forms (e.g. haunting plain gloomslate → haunted variant), not consuming finished soul reagents. The 1 ACCEPT row in existing passes should be reconsidered.
 
+## samurai_dynasty   [anchors: survival (1) → target Create + magic]
+
+Existing rows are extensive: M-03 (gem ore crushing), M-02/M-11 (Yokai drops → magic), M-10 (gems → imbuement), M-08 (steel → numismatics), M-05 (steel pressing), M-15 (boss-key Immortal), M-23 (steel → airframe), M-30 (regional gem scarcity), M-34 (weapons as combat-supply), M-29 (steel cross-route tfmg). The following are genuinely missing:
+
+- NEW | from: samurai_dynasty Yokai mobs (Akaname, Tengu, Enenra, Kitsune) — mob spawning intensity | via: config/spawn-rate event gating (Serene Seasons autumn config: Yokai spawn-weight boosted in autumn when the veil thins, per Japanese folklore) | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: in Japanese folklore Yokai are most active when the seasons turn — autumn in Serene Seasons doubles their spawn rate, making reagent farming seasonal and Yokai drops scarcer in other seasons; a reagent farmer plans around the harvest moon.
+
+- NEW | from: samurai_dynasty Yokai spawn events | via: lunar/celestial event (Enhanced Celestials full/blood moon: Yokai spawn rate spikes further on the pack's lunar events) | to: survival | motif: M-22 | power: everyday | tone: ok | verdict: ACCEPT | hook: the blood moon draws the spirits — Yokai surge in numbers on Enhanced Celestials' event nights, making those nights both more dangerous and the best time to farm soul reagents; the lunar cycle becomes a farming calendar.
+
+- NEW | from: samurai_dynasty:cloth (woven textile, in item sample) | via: minecolonies request (colony Tailor/Leatherworker hut requests cloth for armor-schematic upgrades — samurai cloth feeds colony textile demand) | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: the colony Tailor needs woven cloth for higher-tier worker uniforms — sourcing samurai cloth ties the feudal textile trade to the colony supply chain; the combat-themed mod's fabric output earns a colony anchor.
+
+- CHALLENGE | from: samurai_dynasty:steel_ingot (c:ingots/steel) | via: numismatics mint | to: economy | motif: M-08 | verdict: REJECT | hook: multiple M-08 rows for samurai steel are split (2 ACCEPT / 2 REJECT). The problem: samurai_dynasty shares c:ingots/steel with TFMG and other steel producers — minting "samurai steel" as a coin metal is arbitrary if any c:ingots/steel qualifies; the coin economy doesn't care which forge made the steel. M-08 is strongest when the minted metal is regionally distinctive (M-30 + M-08 paired). If samurai jade/ruby/onyx are the regionally scarce gems (M-30 accepted), those should be the coin metals, not the generic steel tag. The existing ACCEPT rows are weak; the REJECT rows are more defensible.
+
 ## supermartijn642configlib   [anchors: support (1)]
 LEAVE — pure config API library, zero content surface. No rows existed; none are needed.
 
 ## lootjs   [anchors: support (1)]
 LEAVE — packdev scripting library (loot-table modification API), zero player-facing content. No rows existed; none are needed. Note: lootjs is the *enabler* of M-02 mob-drop weaves, not a weave node itself.
+
+## lithium   [anchors: support (1)]
+LEAVE — server/world-tick optimization only, zero content surface. No rows existed; none are needed.
+
+## companion   [anchors: support (1)]
+LEAVE — pet QoL behavior mod, zero items/blocks/recipe-types. No rows existed; none are needed.
+
 
 
 

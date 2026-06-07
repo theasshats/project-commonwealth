@@ -99,6 +99,26 @@ OK — existing rows sufficient. The one ACCEPT is the TLM altar existing made-b
 
 ## companions   [anchors: survival (1)]
 
+Existing rows: M-11 crystallized_blood→occultism spirit_fire (ACCEPT ×27 — consensus); M-10 soul_gem→Ars imbuement (ACCEPT ×10); M-02 mob-drops→magic reagents (ACCEPT ×7+); M-34 relic_gold combat-supply (ACCEPT ×4); M-15 relic_gold boss-key (ACCEPT ×3); M-08 relic_gold→numismatics (ACCEPT ×6 contested by REJECT ×3+); M-04 tesla/voltaic→crushing (majority REJECT, flagged WEAK); M-19 soul_furnace→haunting (ACCEPT ×1).
+
+The strong consensus (M-11 crystallized_blood + M-10 soul_gem + M-02 mob-drops + M-34 relic_gold combat supply) covers two anchors well (survival + magic). What's genuinely missing:
+
+- CHALLENGE | from: companions:relic_gold (Sacred Pontiff boss drop) | via: create:* → numismatics mint | to: economy | motif: M-08 | verdict: REJECT | hook: M-08 is explicitly "scarce regional metal → Create-processed → player-pressed coin" — the minting motif is tied to regional ore-gen scarcity, not to boss trophy drops. Relic Gold is a boss relic, not a regional ore; minting it into coin conflates two different scarcity sources and undermines the relic's identity as a unique boss reward. The existing M-34 (combat-supply trade) and M-15 (boss-key gate) rows handle Relic Gold's economy/Create role correctly without needing a coin path. The REJECT minority is right.
+- NEW | from: companions:crystallized_blood (Soul Furnace mid-tier output — rotten flesh transmuted) | via: create:haunting (as an *alternate input acceptor*: a KubeJS haunting recipe accepts pre-crystallized blood as a substitute for the raw mob-drop in some soul-linked Create recipe) | to: create | motif: M-19 | power: mid | tone: ok | verdict: ACCEPT | hook: the Soul Furnace and the soul-fire basin are parallel transmuters — a player who already ran mob-drops through companions' furnace can skip a haunting step, linking the gothic alchemist's prep work into the Create spine without duplicating effort.
+- NEW | from: companions mob drops (companions:small_essence / companions:great_essence — dropped by every companions hostile mob) | via: occultism:spirit_trade (Occultism dimensional miner-spirits accept Small Essence as a trade currency for a rare ore sample) | to: magic | motif: M-18 | power: mid | tone: ok | verdict: ACCEPT | hook: the Occultism spirits recognise soul-adjacent material — an essence from a killed Shade buys a deep-ore sample from the miner, so every companions combat run feeds the Occultism logistics arm; killing and mining become one supply chain.
+- CHALLENGE | from: companions tesla/voltaic blocks (tesla_coil_block, voltaic_pillar_block) | via: create:crushing | to: create | motif: M-04 | verdict: REJECT | hook: M-04 is specifically for metal/stone decoration crushing back to raw materials; the Tesla electrical aesthetic is companions' thematic core progression infrastructure (you build the tesla network to power your companions), not surplus deco — dismantling it is a destroy-your-investment path, not a recycle story. The consistent WEAK/REJECT majority (×7+) is correct.
+
+## cmpackagecouriers   [anchors: Create, aeronautics (2)]
+
+Existing rows: M-31 bulk-good logistics (ACCEPT ×4+); M-33 service-for-hire courier network (ACCEPT ×3); M-29 cross-route remote fulfilment (ACCEPT ×2, contested). Correctly REJECTs: M-06 sequenced-assembly (transmitter not flagship), M-05 (transmitter not flagship), M-23 structural alloy overgate, M-08 bare coin-via-logistics, M-24 drivetrain (already is the delivery mechanism).
+
+The two anchors are solid. The contested M-29 row (remote fulfilment as cross-route dependency) needs a more precise framing:
+
+- NEW | from: cmpackagecouriers:location_transmitter (requires chunkloaded base to receive deliveries) | via: MineColonies colony hut placement (a colony chunk-loader keeps the transmitter hot — a player with a colony gets automated delivery; one without must be online to receive) | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: the courier network requires a colony or dedicated chunk-loader to be useful — a colony player becomes the logistics hub for their region, and other players route their orders through them; the cardboard-plane network and MineColonies become mutually reinforcing.
+- CHALLENGE | from: cmpackagecouriers remote delivery (cross-base package delivery) | via: M-29 cross-route dependency framing ("magic specialist orders Create ingredients via cardboard plane without building Create") | to: economy | motif: M-29 | verdict: REJECT | hook: M-29 is a *recipe-level* cross-route dependency (a recipe in one route requires an input from another route); the courier's value is logistics, not a recipe that forces two routes to share ingredients. The framing misapplies M-29 to an emergent trade pattern — the courier just moves goods, it doesn't gate a recipe. The correct motifs are M-31 (bulk logistics) and M-33 (service).
+
+== CHUNK COMPLETE ==
+
 
 
 

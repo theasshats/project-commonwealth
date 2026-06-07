@@ -26,7 +26,7 @@ Existing rows cover M-02 (loot-seed magic reagents), M-15 (boss-key via loot-see
 
 The real gap: no existing row proposes seeding Create component parts (specific: pressed copper sheet, experience nugget stacks, andesite alloy) into Trek's ship/fortress holds as everyday (non-boss-key) discovery rewards that feed the Create economy loop — that's M-08 adjacent but distinct: it's more a M-34 "combat/exploration specialist discovers and trades Create inputs" framing, and the existing M-34 rows are vague ("scarce trade good"). More concrete proposal:
 
-- NEW | from: trek structures (ship holds, fortress chests) | via: loot-seed | to: create | motif: M-32 | power: everyday | tone: ok | verdict: ACCEPT | hook: salvaged copper sheets and andesite castings in a pirate wreck's hold — the explorer brings raw Create feedstock home rather than just decoration
+- NEW | from: trek structures (ship holds, fortress chests) | via: loot-seed | to: create | motif: M-34 | power: everyday | tone: ok | verdict: ACCEPT | hook: salvaged copper sheets and andesite castings in a pirate wreck's hold — the exploration-specialist brings raw Create feedstock home to trade; distinct from existing M-34 rows in naming ship/fortress specifically and targeting Create inputs rather than magic reagents
 
 Wait — M-32 is "byproduct → input" (industrial circularity), not exploration yield → Create input. No clean motif covers "loot as Create feedstock." M-34 is the right anchor (combat-specialist finds scarce goods traded to producers). The existing M-34 ACCEPT rows cover this adequately. Let me look for something truly different.
 

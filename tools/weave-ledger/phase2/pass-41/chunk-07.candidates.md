@@ -109,3 +109,33 @@ M-34 "combat specialist farms harder undead and trades surplus drops" is structu
 
 LEAVE — no second anchor reachable; the mod is a pure survival-pressure (difficulty) addition with no routable material surface.
 
+## everycomp   [anchors: support/decoration (1)]
+
+Existing rows (2 total, both REJECTs) correctly identify that everycomp is a *generator* — its outputs are namespaced under host mods (mcwdoors, blockus, etc.), so any weave on those outputs belongs to the host mod, not to everycomp. The one gap to probe: does everycomp register any *woodworks:sawmill* recipes for its generated blocks? The dossier says it bridges Create, mcwdoors, mcwtrpdoors, blockus, moonlight — and the methods palette shows `woodworks:sawmill` as a registered method. If everycomp auto-generates sawmill recipes for the wood-variant blocks it creates, then it *does* use a cross-system method. But the attribution still belongs to the host mod (woodworks or mcwdoors), not everycomp itself.
+
+LEAVE — pure cross-mod palette generator; 0 blocks (own namespace), 1 creative-tab marker item, no own weave surface. Any weave on its outputs is attributed to the host mod.
+
+## enhancedcelestials   [anchors: survival (1)]
+
+Existing rows are dense. The core converged ACCEPTs:
+- M-04: meteor → create:crushing (iron/nickel + XP nugget) — 35 ACCEPTs, overwhelming convergence
+- M-22: Blood/Blue Moon as event-precondition on ritual/imbuement — 27 ACCEPTs
+
+Key contested rows:
+- M-16 (Harvest Moon crop acceleration) — split 9 vs 8, conceptually weak because the moon buff is passive/global, not a gated material
+- M-10 (space_moss imbuement) — 5 vs 14, correctly rejected on tone/arbitrariness
+
+Let me look for what's genuinely missing from the accepted M-22 picture:
+
+**Gap 1**: The M-22 moon-event rows focus on ritual/imbuement (ars_nouveau / occultism), but no row explores **M-22 on the *Create* / production side** — e.g., a Create machine process (mixing, haunting) that only completes at night under a Blood Moon, producing a scarce intermediate. Could create:haunting (soul-fire transmutation) interact with a Blood Moon event? The haunting process is already a soul-fire operation — a Blood Moon (monster-surge night, no sleep) as a precondition for a haunting batch that yields an elevated output is thematically coherent (monsters feed the soul-fire). Red-team: KubeJS can gate any recipe on world-state conditions, but create:haunting as currently implemented doesn't intrinsically respond to moon events — this would require a custom event-gate, which is a Phase-3 build action, not a pure recipe. The method-routing is achievable (KubeJS condition on the recipe). Worth proposing.
+
+- NEW | from: enhancedcelestials Blood Moon event-state (hostile spawn surge) | via: event-gating on create:haunting (KubeJS recipe condition: Blood Moon active → haunting output is a soul-infused variant with a bonus essence drop) | to: create | motif: M-22 | power: mid | tone: ok | verdict: ACCEPT | hook: the Blood Moon's undead surge supercharges the soul-fire — a haunting batch run on that night yields a spirit-concentrate not available on ordinary nights, so the Create-spine player times their soul-processing to the lunar calendar
+
+**Gap 2**: The **M-35 maturation** angle. Space_moss has never been explored as an aging input — but it's inert deco with no fermentation mechanic. Not applicable.
+
+**Gap 3**: The **M-34 Blood Moon mob-windfall** was rejected (correctly) as "organic supply boost, not a weave." Concur — the existing REJECT is sound.
+
+**Challenge the M-16 Harvest Moon rows**: The M-16 rows that ACCEPT "a crop harvestable only during a Harvest Moon feeds a Create/magic method" have 9 ACCEPTs but the Harvest Moon doesn't produce a *new crop variant* — it accelerates *all crops globally* (a passive world-state buff). The distinction matters for weave validity: M-16 requires routing a **season-gated material** through a method; a global growth accelerator produces the same crops faster, not a different material. A Harvest Moon crop row is not M-16 — it's M-16-adjacent at best.
+
+- CHALLENGE | from: Harvest Moon crop-growth buff (global accelerator) | via: any method | to: any | motif: M-16 | verdict: REJECT | hook: M-16 requires a *material* that only exists / only grows in a given season; the Harvest Moon is a passive global growth-rate modifier that produces the *same materials faster*, not a distinct season-locked material — no new item to route through any method means no M-16 weave; the ACCEPT rows (9 votes) are applying the motif too loosely
+

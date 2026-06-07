@@ -56,4 +56,28 @@ Existing rows cover: M-12 Create milling/pressing upstream of kitchen stations (
 
 ## modulargolems   [anchors: create (1)]
 
+Existing rows cover: M-15 boss-drop metal gating for golem bodies (Cataclysm cursium, Ice&Fire dragonsteel — strong, 5 ACCEPT), M-10/M-29 magic-core upgrade slot via ars_nouveau or occultism (split 9 ACCEPT / 4+ REJECT — the tone tension is real), M-33 golem-specialist service-for-hire, M-37 colony research gate. The magic-core upgrade is the contested row; the split reflects genuine tone tension. What is missing: (a) a **clean M-29 cross-route** that doesn't route a magic reagent through golem_assemble directly (the weak tone reading) but instead routes a golem **output** (the assembled golem entity) as an **input into a magic ritual** — the golem is destroyed/sacrificed in a ritual, not constructed with magic; (b) a **M-33 service economy specificity** — the existing rows are vague; the most credible service is a golem-builder who takes commissions for specific metal configurations.
+
+- NEW | from: modulargolems assembled golem (entity, any metal tier) | via: occultism:ritual (a high-tier summoning ritual that requires sacrificing an assembled golem entity as a material input — the golem's animating force feeds the ritual circle) | to: magic | motif: M-11 | power: endgame | tone: ok | verdict: ACCEPT | hook: an animated construct dissolved in the ritual circle yields a powerful spirit-essence — the golemancer who built it must choose: keep the automaton or spend it for a one-time ritual; this resolves the magic-anchor tension by consuming the golem rather than building it with magic, which sidesteps the industrial-arcane tone clash entirely
+
+- CHALLENGE | from: ars_nouveau:source_gem or occultism:otherstone | via: modulargolems:golem_assemble — include a magic-core upgrade slot that requires source_gem | to: magic | motif: M-10 | verdict: REJECT | hook: the 9 ACCEPT / 4 REJECT split in existing rows reflects genuine disagreement; the REJECT argument is stronger on tone grounds — modulargolems is explicitly an industrial metallic construct mod; source_gem is the reserved universal magic currency (reagent-ownership table); slotting it into a golem-core upgrade risks both tone clash (arcane animation on a metal automaton feels grafted) and reagent-ownership pressure (any recipe that consumes source_gem as a non-magic output competes with M-01 currency usage); the superior route is M-11 (sacrifice → essence), which gives magic an anchor without spending the currency reagent
+
+## doubledoors   [anchors: support/QoL (1)]
+
+LEAVE — zero-surface behavior mod (no items, no blocks, no loot, no recipe-types; pure door-interaction convenience). Nothing to route through any method.
+
+## almostunified   [anchors: support (1)]
+
+LEAVE — recipe-graph plumbing tool (operates on the recipe graph itself; no content surface). Its one prior proposal (the config as a system anchor) was correctly rejected. Note: the CLAUDE.md galosphere/palladium gotcha is relevant configuration discipline, not a weave.
+
+## attributefix   [anchors: support (1)]
+
+LEAVE — pure attribute-cap bugfix library with no items, no blocks, no loot, no recipe-types. Enables other mods' gear to scale correctly; no content surface of its own to weave.
+
+## invtweaksemuforipn   [anchors: client-only QoL/compat (1)]
+
+LEAVE — client-side compat shim (emulates InvTweaks keybinds on top of IPN); no items, no blocks, no recipe-types, no server-side content. Pure behavioral compat with zero material surface.
+
+## createimmersivetacz   [anchors: create (1)]
+
 

@@ -81,7 +81,41 @@ Existing rows are very dense. The M-05 (gun_smith_table → Create-pressed input
 
 - NEW | from: tacz:m67 (grenade) | via: loot-seed (seed m67 into TACZ's own loot tables or into combat-structure loot tables of compatible mods — military crate / dungeon chests) | to: survival | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: grenades found in ruins are the kind of pre-war scavenge that rewards dangerous exploration — the m67 as a loot-table mob-drop-adjacent reward (found, not crafted) connects the danger face of survival to tacz's combat economy without requiring a boss
 
-CHALLENGE | from: tacz:gun_smith_table + metals | via: MineColonies colony-workshop route | to: economy | motif: M-28 | verdict: WEAK | hook: the single existing M-28 row ("colony workshop produces guns slower/cheaper") is accepted once but underdeveloped; more critically, the dossier notes guns are data-driven via JSON configs, so a MineColonies blacksmith producing *guns* (not just ammo) requires a custom colony-craft recipe for each gun model — that is significant authoring work that wasn't flagged in the proposal; the ammo-only M-28 route (above) is the correct cheaper-basics form; gun production stays Create-exclusive to maintain the locked-exclusive anti-erosion wall
+CHALLENGE | from: tacz:gun_smith_table + metals | via: MineColonies colony-workshop route | to: economy | motif: M-28 | verdict: REJECT | hook: the single existing M-28 row ("colony workshop produces guns slower/cheaper") is accepted once but underdeveloped; more critically, the dossier notes guns are data-driven via JSON configs, so a MineColonies blacksmith producing *guns* (not just ammo) requires a custom colony-craft recipe for each gun model — that is significant authoring work that wasn't flagged in the proposal; the ammo-only M-28 route (above) is the correct cheaper-basics form; gun production stays Create-exclusive to maintain the locked-exclusive anti-erosion wall
+
+## dragonlib   [anchors: support/library (1)]
+
+Pure developer library (shared API for MrJulsen's mods). The lone dragonlib:dragon block is confirmed as a dev artifact.
+
+LEAVE — code-only API library; dev artifact block has no gameplay surface; no weave possible.
+
+## yet_another_config_lib_v3   [anchors: support/library (1)]
+
+Pure config-screen UI library. No content surface.
+
+LEAVE — config-UI library; no items, no methods, no weave surface.
+
+## freefbible   [anchors: support/curated flavor (1)]
+
+Single inert readable-book item. No mechanics, no crafting surface.
+
+LEAVE — joke/novelty item; single inert book; no content surface; any forced edge would be noise. The one prior row (supplementaries:antique_book) was correctly rejected.
+
+## create_better_villagers   [anchors: Create + economy (2)]
+
+Already 2-pillar. Existing rows well-cover M-08 (coin re-denomination of trades), M-30 (regional Miner profession), M-33 (service-for-hire via settlement), M-37 (trade knowledge gate). The one gap: no pass has named the *seasonal* angle — the Brass Worker's stock thinning in winter under Serene Seasons is an M-16 row that got 1 ACCEPT but was underdeveloped.
+
+- NEW | from: create_better_villagers Brass Worker profession (stock of brass parts) | via: config tie / KubeJS trade-gate (restrict some Brass Worker trades to non-winter seasons, simulating supply-chain disruption; the brass supply thins when the foundry is cold) | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: the Brass Worker's stock runs thin in winter — brass production slows when snow grounds the supply boats; a seasonal trade-gate that drives players toward self-sufficiency precisely when the world is hardest; survival's winter pressure bites into the Create supply chain
+
+## create_compressed   [anchors: Create (1)]
+
+Existing rows: M-23 (compressed mechanism/sheet blocks as aeronautics hull plating) and M-28 (colony request for compressed bulk parts) are the accepted second-anchor candidates. M-31 (logistics bulk good) is partially accepted (2/2 split). A gap: the compressed bulk-pile blocks as an explicit *logistics unit* — create_compressed makes bulk trade physically compact, which is the M-31 premise, but no pass framed it as the *unit of measurement* for inter-player bulk trade (not aeronautics specifically, just trade volume).
+
+- NEW | from: create_compressed:crushed_<scarce_metal>_pile (e.g. crushed_silver_pile, crushed_platinum_pile, crushed_lead_pile — compressed 9× ore blocks) | via: loot-seed / trade (compressed ore piles as the standard bulk-trade denomination — the Create economy uses a crate of compressed crushed-silver as the interregional exchange unit, larger than a stack of ingots and small enough to carry) | to: economy | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: one compressed platinum crate equals nine ingots' worth and fits in a single chest slot — bulk Create output gets a natural trade denominator; the logistics arm gains a standard unit to move; without this unit, inter-regional ore trade is a loose pile of ingots
+
+CHALLENGE | from: create_compressed:mechanism_block / cogwheel_block | via: aeronautics construction recipe | to: aeronautics | motif: M-24 | verdict: WEAK | hook: the M-24 rows argue compressed mechanism blocks are "dense drivetrain components for Aeronautics engines" — but M-24 requires a mod's *mechanical part (rotor, bearing, engine block, gearset)* to feed Aeronautics propellers/engines; compressed mechanism blocks are a *storage alias* (9 mechanisms → 1 block, unstacks on use), not a new mechanical component; routing a storage block into a drivetrain recipe conflates compression-for-storage with structural function. M-23 (compressed *sheet* blocks as hull plating) is sounder because flat sheet stock is genuinely structural.
+
+
 
 
 
