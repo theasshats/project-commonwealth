@@ -5,8 +5,10 @@ do NOT read candidate files; don't expand on agent summaries. **Confirm the user
 fan, and confirm the user's GO** — passes are **set up but not to be run yet** (see "Gating" below).
 
 ## State at handoff
-- **16 passes done (pass-00 … pass-15).** Convergence table: `CANDIDATES.{md,tsv}` —
-  **~1991 unique candidates** (after the merge excludes cut mods), **556 at ≥2-pass, 225 opus-corroborated**.
+- **19 passes done (pass-00 … pass-18).** Convergence: `CANDIDATES.{md,tsv}` + `CONVERGENCE.md` —
+  **~2839 unique candidates** (cut mods excluded), **831 at ≥2-pass, 174 at ≥5, 126 Gate-2 core (≥5+ACCEPT),
+  307 opus-corroborated**. Passes 16/17/18 (first post-unfreeze) added **+848** → **NOT saturated**; keep
+  running **blind**. The ready-to-paste session prompt for the next 5 passes is `RUN-5-PASSES-PROMPT.md`.
 - **The library-FREEZE was RETIRED** (maintainer call: *"I don't think I said to freeze"* + *"unfreeze
   everything"*). It skipped ~160 "zero-content" mods to save tokens, but its content test trusted the digest's
   block/item count, which **false-zeroes code-registered & mechanic-only content** (Aeronautics parts — now GROUNDED via #179 — diet/
@@ -31,7 +33,7 @@ fan, and confirm the user's GO** — passes are **set up but not to be run yet**
 
 ### 1. Generate a full-coverage pass (no freeze — covers every dossier)
 ```
-python3 scripts/phase2-chunks.py --pass 16 --seed 16          # -> ~351 mods / 36 chunks, all dossiers
+python3 scripts/phase2-chunks.py --pass 19 --seed 19 --size 20   # -> ~351 mods / ~18 chunks, all dossiers
 ```
 (Use `--mode context-fed` for later refine passes once blind passes stop adding new candidates.)
 
