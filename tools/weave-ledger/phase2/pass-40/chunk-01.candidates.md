@@ -107,3 +107,20 @@ Missing angles:
 - NEW | from: kobolds:Prospector enchantment (sold only by kobold enchanter — cannot be crafted) | via: recipe: player takes Prospector book from kobold trade → applies it at ars_nouveau:enchanting_apparatus onto a mining tool (cross-route dependency — the magic production route needs a trade-obtained book) | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: the Prospector enchant only lives in kobold dens — a magic specialist who wants ore-luck on her mining gear has to trade with the underground lizard-folk first; two routes forced to interact
 - NEW | from: kobolds pirate den (jungle structure — loot=yes, Captain + chest) | via: loot-seed (seed an Aeronautics schematic fragment or a navigation chart item into the Pirate Den chest — thematic: pirate kobolds are the pack's ancient mariners/airship-era remnants) | to: aeronautics | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: the kobold pirates' hoard contains a tattered airship blueprint — clearing the den is how the aeronautics specialist finds the schematic she can't reverse-engineer alone
 
+## doubledoors
+LEAVE — behavioral QoL mod (0 blocks, 0 items, no recipe-types); door-interaction convenience only; sanctioned support role; nothing to weave.
+
+## zeta
+LEAVE — modular mod-development framework (0 blocks, 0 items, no recipe-types); Quark's backbone library; sanctioned support role; nothing to weave.
+
+## createlowheated   [anchors: Create (1)]
+Existing rows: M-26 (basic_burner fuel consumption as a demand sink) is 5-ACCEPT; M-32 (TFMG coal coke as higher-value burner fuel — industrial fuel chain) has 1 ACCEPT; M-05 (burner itself built from Create parts) has 1 ACCEPT. The dossier says "none — leave; single-block balance tweak with no tradeable/magic surface."
+
+The key question: does the mod have *any* unexplored 2nd-anchor that isn't contrived? The dossier's own conclusion is "leave." But checking the CANDIDATES more carefully:
+
+1. M-26 (fuel consumption) is solid and has consensus — the basic_burner makes heat a managed resource; coal/charcoal demand is now sustained. This is the correct weave and it *does* thread Create into the survival fuel-supply chain (coal traders, charcoal farms have real demand). But is it a *2nd anchor* for the mod, or just a side-effect of its mechanic? The mod's primary anchor is Create; M-26 here tags "survival" as the second (the fuel comes from survival foraging/mining). That's a legitimate 2nd anchor.
+2. M-32 (coal coke in TFMG → higher burner value) is the one genuinely new-routing not in consensus: TFMG coking produces `coke` from coal; if coke burns hotter or longer in the Basic Burner (config-compatible — the mod burns "any furnace fuel"), that's a byproduct→input chain (M-32) that threads TFMG industrial fuel processing into the Create heating backbone. Neat, no existing consensus ACCEPT on it.
+
+- NEW | from: tfmg:coke (TFMG coking byproduct — coal coked into cleaner industrial coke) | via: createlowheated:basic_burner (TFMG coke accepted as a premium burner fuel — burns longer per unit than coal, making the TFMG fuel-processing chain a genuine Create heating upgrade) | to: create | motif: M-32 | power: mid | tone: ok | verdict: ACCEPT | hook: a TFMG coking oven turns coal into coke that lasts twice as long in the Basic Burner — the industrial fuel chain closes into the Create heat spine; a coke specialist keeps the factory hot
+- CHALLENGE | from: createlowheated:basic_burner fuel demand | via: create:mixing | to: survival | motif: (none) | verdict: REJECT | hook: the 2-REJECT consensus row ("fuel is generic furnace fuel; no distinctive survival join key — it's a Create-internal balance tweak") is correct; the fuel-consumption angle *does* thread survival (coal/charcoal demand) but routing it *through create:mixing* as the method has no thematic logic — the basic_burner accepts furnace fuel directly via its block interface, not through a mixing recipe; the correct delivery is config-tie / ambient consumption (M-26), not a recipe method
+

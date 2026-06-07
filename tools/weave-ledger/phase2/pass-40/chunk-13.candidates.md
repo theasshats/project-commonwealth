@@ -38,6 +38,10 @@ LEAVE — crash-recovery utility; zero items, blocks, loot, or recipe types. No 
 - NEW | from: brazil_legends:bloodmoon_sickle | via: M-22 lunar/celestial reagent (require the bloodmoon_sickle to be crafted only when the Enhanced Celestials blood moon is active — or have its drop rate spike under it — tying the weapon's acquisition to the lunar event it's named for) | to: survival | motif: M-22 | power: mid | tone: ok | verdict: ACCEPT | hook: the bloodmoon sickle earned under a real blood moon is not just a named weapon — the lunar gate makes it genuinely rare and gives the Enhanced Celestials moon a mechanical sting; existing M-22 rows converge on this but at low score (1 each); it's correct and under-affirmed
 - CHALLENGE | from: brazil_legends:big_tongue | via: occultism:spirit_fire | to: magic | motif: M-11 | verdict: REJECT | hook: the capelobo_claw already fills the M-11 spirit_fire slot for brazil_legends at consensus 29 ACCEPT — adding big_tongue to the same motif/method is redundant overlap; the Cuca's tongue earns its magic weave via the Iron's cauldron (above), not a duplicate spirit_fire transmute; using both for identical M-11 routes fragments rather than deepens
 
+## cmparallelpipes   [anchors: create (1)]
+LEAVE — Create fluid-pipe QoL tool (Pipe Wrench); 2 items, no blocks, no loot, no registered recipe types. All proposed weaves correctly rejected across blind passes. The wrench is a pure-utility interaction item with no material that can be routed into a second pillar without forcing a contrived edge.
+
+
 
 
 

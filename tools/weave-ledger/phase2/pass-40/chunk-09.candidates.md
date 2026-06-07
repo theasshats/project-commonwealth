@@ -89,3 +89,20 @@ CHALLENGE | from: create_integrated_farming fish catches (fishing net outputs) |
 
 NEW | from: create_integrated_farming:lava_fishing_net blaze-rod / magma-cream catch | via: create:milling or create:mixing | to: create | motif: M-32 | power: mid | tone: ok | verdict: ACCEPT | hook: the lava net hauls fire-adjacent byproducts (blaze rods, magma cream) that are themselves inputs to Create's heat-progression (blaze burner fuel, mixing agents); routing them through a Create mill/mixer as automated byproduct feedstock gives the farm operator a Create-side output, tying the aquatic automation rig into the tech spine's own processing chain.
 
+## cataclysm   [anchors: survival (1)]
+Existing strong ACCEPTs across multiple pillars: M-15 (ancient_metal_ingot as boss-key for Create tech), M-06 (sequenced-assembly keystone), M-11 (witherite/cursium → spirit_fire), M-34 (combat specialist trades drops), M-08 (boss-drop coin), M-23 (ancient_metal/ignitium → aeronautics hull), M-24 (ignitium-lined boiler → drivetrain), M-05 (Fusion Anvil needs Create precision_mechanism). Coverage is genuinely deep.
+
+What's missing:
+
+1. **M-37 research gate** — not yet tried. Could a MineColonies research unlock (e.g. a Knight's hut upgrade) require a Cataclysm boss drop, making "combat progression" a prerequisite for colony-military upgrades? This creates a genuine cross-route between combat (danger/survival) and colony (economy route) in a non-trivial way. The fighter who kills the Ancient Remnant supplies the colony Guard Captain's upgrade.
+
+2. **M-28 colony route** for the Mechanical Fusion Anvil — one row (M-05 ACCEPT, 1/1) gates the Fusion Anvil behind Create precision_mechanism. A complementary angle: could MineColonies produce Witherite-based weapon components at a Weaponsmith hut cheaper than weapon_fusion? That's the "boss route vs. colony route" high-tier fork the DESIGN doc describes. This is design-intent territory (not yet a specific recipe proposal) but the ledger should flag it.
+
+3. **M-12 for amethyst_crab_shell** — 1 ACCEPT (milling to pigment powder). Tone check: amethyst crab shell is boss-fight loot from a dungeon; milling it into a pigment dye is reasonable and connects combat loot to the decorating/crafting economy. Sound.
+
+NEW | from: cataclysm boss drop (witherite_ingot / ancient_metal_ingot) | via: minecolonies hut building recipe (KubeJS data — Knight's hut upgrade) | to: economy | motif: M-37 | power: endgame | tone: ok | verdict: ACCEPT | hook: the colony Guard Captain's tower upgrade requires a forged boss-material component — research alone isn't enough, the settlement needs a combat specialist who has cleared a dungeon; knowledge-gate meets danger-gate, and the fighter's kill becomes the colony's military prerequisite.
+
+NEW | from: cataclysm:amethyst_crab_shell | via: create:milling | to: create | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: the Scylla's crystalline carapace mills to an amethyst-pigment powder used in high-end dyes and glazes — the dungeon loot cycle feeds the decorator's palette; combat surplus earns beauty.
+
+CHALLENGE | from: cataclysm:weapon_fusion (Mechanical Fusion Anvil requiring Witherite) | via: requiring create:precision_mechanism or brass-tier component | to: create | motif: M-05 | verdict: SHARPEN — the M-05 ACCEPT (1/1) is correct in spirit but M-05 requires the flagship item to be built *in its own machine gated on Create parts*. The Fusion Anvil is Cataclysm's own machine, gated on Witherite (boss drop) already. Requiring a Create precision_mechanism as an *additional* input (not replacing Witherite) is a recipe add, not M-05 strictly — M-05 is "the mod's flagship built *in its own machine*." This should be re-expressed as M-29 (cross-route: a Cataclysm recipe requiring a Create-produced input), not M-05.
+

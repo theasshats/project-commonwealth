@@ -104,6 +104,23 @@ Also: The M-31 ACCEPT row (structures as aeronautics waypoints, "cargo stop" fra
 
 Red-team: M-31 is "logistics-required bulk good" — a structure isn't a good. But the framing is that the *recoverable loot is the bulk good* that justifies the aeronautics haul. The structures serve as the destinations that give aeronautics routes economic purpose. This is the same framing the tidal-towns M-31 ACCEPT uses (2v0). Survives.
 
+## tidal-towns-1.3.4   [anchors: survival (1)]
+Existing rows: M-08 ACCEPT (ocean village chests → numismatics coin, 10v0 dominant), M-31 ACCEPT (village as aeronautics cargo stop, 2v1), M-29 ACCEPT (village as aeronautics route incentive, 1v1), M-02 ACCEPT/REJECT (magic reagent in chests, contested), M-15 ACCEPT/REJECT (hull blueprint in blacksmith chest, contested).
+
+The dossier clarifies: `loot=no` in the jar-grounded data, which means the mod registers no loot tables of its own — it uses vanilla loot tables for its structures (vanilla deep-ocean village loot). This is critical: loot-seeding into tidal-towns' chests means editing *vanilla loot tables*, not the mod's own. That's more invasive than seeding into a dungeon mod's own tables.
+
+- CHALLENGE | from: tidal-towns ocean-village blacksmith/treasure chests | via: loot-seed (datapack edit to vanilla loot tables) | to: economy | motif: M-08 | verdict: ACCEPT (maintain) | hook: the coin-seeding is the most robust row but needs the delivery mechanism clarified — since loot=no, this requires editing *vanilla structure loot tables* (village/blacksmith_chest.json or a jigsaw override), not the mod's own tables; Phase 3 authors should note this is vanilla-table territory, not a mod-table patch
+
+This is not a REJECT challenge — the weave is sound, just the delivery note needs flagging.
+
+One gap: the tidal-towns ocean village populates with vanilla villagers. This means **villager trades** from a sea-village are already present. If the village spawns e.g. toolsmith or cartographer, those trades could represent "coastal economy" flavor. But M-21 is CUT (villager trade → economy, NPC coin faucet). No weave possible via trades.
+
+What's genuinely missing: the village is a *coastal settlement* in deep ocean. The most underserved connection is **colony**: a tidal-towns village is the natural seed location for a MineColonies coastal colony. That's not a recipe weave but a design note — the structures complement MineColonies' coastal building set. No motif covers "structure suggests a colony start location" — this is ambient/thematic, not a weave.
+
+OK — existing rows are the main substance. The M-31 ACCEPT (aeronautics cargo stop) and M-08 ACCEPT (coin loot) cover the two real weaves. The M-15 contested row (hull blueprint gate) is worth preserving as a proposal even if delivery is uncertain.
+
+
+
 
 
 
