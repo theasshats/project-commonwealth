@@ -15,4 +15,23 @@ REWORK: OK — single anchor documented; the dossier already notes the M-05 gati
 - from: cookingforblockheads:oven / fridge / sink (flagship appliance blocks) | via: create:mechanical_crafting or create:sequenced_assembly (M-05 native-method gating — built inside the mod's own appliance machine, gated on Create brass/copper sheets) | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: assembling a proper kitchen requires a trip to the brass workshop — the oven, fridge, and sink are machines, not just carpentry
 - from: cookingforblockheads kitchen outputs (aggregated cooked meals — stews, pies, fancy dishes pulled in from Farmer's Delight / Expanded Delight) | via: numismatics sell/price table | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: the mod is a recipe-discovery / batch-crafting convenience layer, not a food producer — the luxury-good sell is more naturally owned by Farmer's Delight and Expanded Delight (which are the actual producers); tagging CfB for M-09 duplicates economy anchors on a logistics mod without adding real loop signal
 
+## mutantszombies   [anchors: survival (1)]
+- LEAVE — 7 new hostile zombie variants with enhanced behaviors; loot=no in the dossier, no special drops
+  registered, only spawn eggs exist as items. The pressure contribution (harder nights) is real but there
+  is nothing material to route. A forced mob-drop reagent edge would need loot-table authoring to create a
+  drop first, which is a Phase 3 act of invention, not a Phase 2 mapping of existing surface. Reserve
+  LEAVE here — revisit in Phase 3 if designer wants to seed a unique drop (e.g. mutant bile) for M-02/M-14.
+
+## dtterralith   [anchors: survival/worldgen (1)]
+- LEAVE — a worldgen compatibility bridge; its product is ordinary logs/saplings that already enter the
+  Create/cooking webs as vanilla wood. The Terralith-flavored seeds (jacaranda, maple, kapok…) are
+  cosmetic species variants, not distinct materials with c:tags that differ from normal logs. Adding a
+  bespoke weave for "kapok log" when it functions identically to oak log is the forced-edge failure mode.
+  loot=yes, but its loot tables are tree drops (logs, sticks, seeds) with no novel material. No weave
+  warranted; the mod's value is purely worldgen aesthetics.
+
+## fzzy_config   [anchors: support/library (1)]
+- LEAVE — config serialization/GUI/sync API; 0 blocks, 0 items, no recipe methods. Genuine zero-content
+  code library; no player surface to weave.
+
 

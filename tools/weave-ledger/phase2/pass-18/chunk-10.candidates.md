@@ -38,3 +38,28 @@ LEAVE — genuine zero-content code library / compat patch. No items, no blocks,
 - from: ribbits:toadstool / toadstool_stem | via: ars_nouveau:imbuement or irons_spellbooks:alchemist_cauldron_brew | to: magic | motif: M-02 | power: everyday | tone: ok | verdict: ACCEPT | hook: swamp-grown toadstool fungi are a nature-school reagent — the sorcerer Ribbits were onto something
 - from: ribbits:mossy_oak_planks woodset | via: create:cutting | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: generic wood-through-sawmill; no cross-system story, arbitrary pairing — every mod's wood qualifies; the dossier already flags this as WEAK
 
+## moreculling   [anchors: support/performance (1)]
+<!-- power-read: 0 blocks, 0 items, loot=no. Pure client-side render optimization — improves face culling on translucent/leaf geometry. Depends on Sodium. No gameplay surface at all. -->
+<!-- method-pull: literally nothing to route. The mod's entire effect is in the GPU pipeline. -->
+LEAVE — zero-content client rendering optimization. No items, no blocks, no loot tables, no recipe surface. Face-culling improvements have no weave path through any motif. Correct role: performance support.
+
+## azurelib   [anchors: support/library (1)]
+<!-- power-read: 1 block (azurelib:lightblock — internal dynamic-light helper, not player-obtainable), 0 items, loot=no. Animation/rendering API for dependent mods. -->
+<!-- method-pull: nothing to route. The lightblock is internal infrastructure. -->
+LEAVE — animation engine library. The single registered block is an internal rendering utility with no player-facing use. No recipe methods, no loot, no material surface. Correct role: dependency support for animated mobs (Cataclysm etc.).
+
+## searchables   [anchors: support/library (1)]
+<!-- power-read: 0 blocks, 0 items, loot=no. Client-side UI API for search/autocomplete bars in dependent mods (JEI family). No gameplay content whatsoever. -->
+LEAVE — client UI library with zero content surface. Pulled transitively by JEI and similar; no items, no methods, no loot. Nothing to weave.
+
+## chat_heads   [anchors: support/QoL (1)]
+<!-- power-read: 0 blocks, 0 items, loot=no. Draws player face textures beside chat messages. Pure client UI cosmetic. -->
+LEAVE — client-only chat cosmetic with no content surface. No items, no blocks, no loot, no methods. Correct role: multiplayer QoL.
+
+## particlerain   [anchors: support/atmosphere (1)]
+<!-- power-read: 0 blocks, 0 items, loot=no. Client weather-particle rendering — particle-based rain/snow/sandstorm/dust; reads biome data. Depends on asyncparticles. -->
+<!-- method-pull: no material surface. The "reads biome data" angle is purely visual. No Serene Seasons API hook that would expose a seasonal material even if we wanted M-16. -->
+<!-- The dossier notes a thematic pairing with Serene Seasons weather — acknowledged as flavor-only. -->
+LEAVE — client-side atmospheric rendering with zero content surface. No items, no blocks, no loot tables. The biome-reading is visual only; no cross-mod material or method hook exists. Correct role: atmospheric support.
+
+

@@ -172,6 +172,18 @@ REWORK: the "economy" anchor is currently via vanilla emerald trades — same co
 
 LEAVE — JEI documentation display mod; its two registered "recipe-types" (jeed:effect_provider, jeed:potion_provider) are JEI viewer categories, not craftable recipe methods. No items, no loot, no material flows. Sanctioned support/QoL role (part of the JEI+JER+JEED recipe-viewer stack per CLAUDE.md).
 
+---
+
+## ctl   [anchors: Create, aeronautics (2)]
+
+OK — connections are sound. Built through create:sequenced_assembly (Create anchor earned), and entire functional purpose is train/contraption lighting (aeronautics/transport anchor earned). Already at 2-anchor target; well-integrated mod.
+
+- from: ctl:ilb_block / htlb_block as finished lamp units | via: numismatics / Trading Floor | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: train-lamp blocks are build-palette components, not trade goods in any meaningful sense — nobody is selling train lights at a market stall; the M-09 luxury-good motif requires a natural economic niche, which specialty lighting blocks don't carry in a survival-economy context; the 2-anchor status is correctly reached through Create+aeronautics
+- from: ctl incomplete intermediates (ctl:ic_ilb_block / ctl:ic_htlb_block) | via: create:sequenced_assembly (already inbound) | to: Create | motif: M-06 | power: mid | tone: ok | verdict: REJECT | reason: the sequenced_assembly weave IS the existing inbound Create anchor — this is documenting the current connection, not adding a new one; no new candidate here
+
+REWORK: none needed. Create+aeronautics is a clean and internally motivated pairing for a train-lamp mod.
+
+
 
 
 

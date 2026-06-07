@@ -188,3 +188,5 @@ Power-read: 0 blocks, 0 items, no loot, 1 biome-modifier (likely spurious/auto).
 
 LEAVE — recipe-graph plumbing; no content to weave. The galosphere palladium gotcha must be respected: any unification pass must exclude galosphere:*silver* from c:ingots/silver. This is the mod's only notable design constraint, not a weave.
 
+== CHUNK COMPLETE ==
+
