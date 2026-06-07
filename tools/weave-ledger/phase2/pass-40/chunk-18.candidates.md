@@ -49,6 +49,18 @@ Existing rows are extremely thorough across M-01, M-02, M-10, M-11, M-12, M-16, 
 - NEW | from: northstar:argyre_log / calorian_log (biome-locked exotic timber from Northstar) | via: ars_nouveau:budding_conversion (the budding_conversion method can convert non-magic blocks into archwood-adjacent budding forms by spending Source) | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: Northstar's biome-locked exotic logs, once saturated with Source via the budding conversion ritual, slowly bud magical growths — the explorer who finds argyre wood and hands it to the mage unlocks a Source-generation node unavailable from common archwood; biome-gated material becomes a magic infrastructure upgrade, tying exploration scarcity into the magic pillar
 - CHALLENGE | from: ars_nouveau:archwood_log | via: ars_nouveau:volcanic_sourcelink (archwood burns for bonus Source) | to: survival | motif: M-26 | verdict: REJECT | hook: this is correctly rejected in the existing set — the volcanic sourcelink consuming archwood is native Ars behavior, not a cross-system weave; it stays within magic and doesn't advance the loop; the reject is the right call and should be held firm against the 1 ACCEPT row that slipped through
 
+## polymorph   [anchors: support/compat-QoL]
+
+LEAVE — recipe-conflict resolver UI mod with 0 items, 0 blocks, 0 methods, loot=no. No content surface. No existing candidates, none warranted.
+
+## sky_whale_ship   [anchors: survival (1)]
+
+Existing rows: M-15 loot-seed → aeronautics progression items (17x ACCEPT, dominant consensus), M-34 combat-supply via whale-back hostiles, M-23 structural alloys from loot (4 ACCEPT / 1 REJECT split). The M-23 application here is motif-misuse: M-23 is "fabricated structural part → aeronautics construction recipe," a *recipe authoring* motif, not a loot-table seeding motif. Loot-seeding structural alloys is M-15 (boss-key unlock via structure loot) or M-34 (combat-route supply). No row yet on M-22 lunar enhancement.
+
+- NEW | from: sky_whale_ship loot chests (hostile-whale variant) | via: worldgen/spawn event gating — during an Ender Moon or Enhanced Celestials blood moon, the hostile whale's mob density and rare loot roll weight are both boosted (config: spawn_weight modifier or KubeJS loot global_modifier keyed on moon phase) | to: survival | motif: M-22 | power: endgame | tone: ok | verdict: ACCEPT | hook: the hostile sky whale is always dangerous — but on the Ender Moon night, the things aboard are worse and the cache inside is richer; the aeronautics crew times their raid to the lunar calendar, and the moon becomes the reason to launch tonight specifically
+- CHALLENGE | from: sky_whale_ship loot chests | via: loot-seed | to: aeronautics | motif: M-23 | verdict: REJECT | hook: M-23 is defined as "a fabricated structural alloy is a required *build ingredient* for Aeronautics airframes" — a recipe-authoring motif where the alloy appears in a construction recipe; applying M-23 to loot-table seeding misclassifies it; a loot drop of structural alloy is correctly M-15 (structure/boss loot unlocks the next tech tier) or M-34 (combat-route supply); the 4 ACCEPT rows for M-23-loot-seed should be re-motifed to M-15
+
+
 
 
 

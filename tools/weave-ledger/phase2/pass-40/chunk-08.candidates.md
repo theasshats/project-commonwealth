@@ -42,6 +42,10 @@ LEAVE — numerical ping display only; no items, no mechanics. Nothing to route.
 - NEW | from: securitycraft:limited_use_keycard (limited-charge access card) | via: the built-in wear mechanic (finite uses → recurring craft demand) | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: the keycard has a fixed use-count before it expires — this is a native consumption sink: players must repeatedly craft replacement keycards, creating continuous demand on whatever materials the keycard recipe requires; the wear is built in, not a custom mechanic, making this a clean M-26 application that no existing row has framed.
 - CHALLENGE | from: securitycraft reinforced block / keycard | via: recipe (keycard reader requires a Numismatics coin as component) | to: economy | motif: M-08 | verdict: REJECT | hook: the 9-vote REJECT consensus here is correct and should stay. Coins as crafting ingredients is a coin-sink (M-09 retired), not player-minted currency (M-08). The existing REJECT reasoning is sound; no new angle rescues this.
 
+## invtweaksemuforipn   [anchors: support (1)]
+LEAVE — client-only InvTweaks keybind emulation shim; no items, no mechanics, no recipe surface. Nothing to route.
+
+
 
 
 

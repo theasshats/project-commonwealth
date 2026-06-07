@@ -93,6 +93,18 @@ Missing altogether: An M-31 (logistics-required bulk good) angle. Gloomslate and
 - NEW | from: deeperdarker:crystallized_amber | via: ars_nouveau:imbuement (as anti-arbitrage catalyst in source conversion, not the reactant) | to: magic | motif: M-07 | power: mid | tone: ok | verdict: ACCEPT | hook: amber is the Otherside's attunement key — it gates a source-conversion so that Otherside magic stays Otherside-locked; pure dimension-lock enforced by the same motif as galosphere's shards, not a raw M-10 imbuement input.
 - NEW | from: deeperdarker gloomslate / sculk_stone (bulk dimension-locked building material) | via: aeronautics/logistics (dimension portal + cargo ship) | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: moving gloomslate out of the Otherside at build scale requires an organized expedition — airship cargo runs to a portal staging area is the only way to ship a full palace's worth of sculk-stone; the bulk need makes logistics matter.
 
+## createaddition   [anchors: create (1)]
+
+Existing rows: very rich. Accepted: M-17 tesla_coil → Iron's Spellbooks gear charging (29×), M-12 seed_oil/bioethanol crop fuel (12×), M-13 bioethanol as aeronautics propellant (14×), M-29 electrum requiring occultism silver (cross-route), M-24 rolling-mill wire → aeronautics wiring harness (split), M-28 biomass → colony composting, M-26 seed_oil consumption sink. Rejected: M-08 electrum coin (split, 5 reject / 4 accept), M-10 electrum → Ars infusion, M-23 electrum hull panels (2×).
+
+The sharpest missing angle: The M-08 electrum candidate is genuinely split (5R/4A) and the split deserves a reasoned challenge. Electrum is createaddition's *internal conductor material* — wires, rods, the rolling-mill's primary product. If electrum is minted into coin, the electrician loses their primary production material to the currency market (price pressure on the coin medium *and* the production input simultaneously). This is the double-spend risk M-08's own framing warns against for materials that are both production inputs and coin candidates. The cleaner M-08 candidate is tin (create_ironworks) which is a *dedicated scarce ore*, not a production-spine alloy.
+
+Also: the M-12 crop-fuel rows correctly accept seed_oil/bioethanol as a farming→energy bridge, but none of the rows articulate that this creates an *agricultural demand* from non-farmers (a magic specialist who runs a tesla coil to charge their focus *needs* the farmer's oil output) — that's the loop-advance read (survival pressure → farming production → energy → magic).
+
+- CHALLENGE | from: createaddition:electrum_ingot | via: numismatics mint | to: economy | motif: M-08 | verdict: REJECT | hook: electrum is the rolling-mill's primary conductor (wires, rods throughout the FE tier) — minting it into coin creates a dual-role conflict where the same alloy is both production feedstock and currency, which erodes both; tin (create_ironworks) is the pack's dedicated coin-metal candidate; electrum should stay an industrial alloy, not a coin.
+- NEW | from: createaddition:seed_oil / bioethanol | via: createaddition:liquid_burning → FE → createaddition:charging (tesla coil powers magic gear) | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the farming surplus that feeds the tesla coil is what keeps the magic specialist's focus charged — agriculture (survival pillar) drives the energy spine (Create) that powers magic; a three-node loop-advance edge rarely articulated as a chain.
+
+
 
 
 
