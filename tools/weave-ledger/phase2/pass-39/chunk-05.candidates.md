@@ -14,3 +14,7 @@ Existing connection note: dossier lists M-09 (luxury→coin) as a 2nd-anchor can
 
 REWORK: the dossier's existing candidate cites M-09 (retired) — retire that entry. The Create/sensor candidate is mis-motifed as M-05 — re-label as M-16.
 
+## prickle   [anchors: support/library (1)]
+
+- LEAVE — pure config-format library (zero blocks, zero items, no gameplay surface; Darkhax config serialisation dependency only). No content to weave.
+
