@@ -275,6 +275,34 @@ REWORK: Dossier identifies "decoration palette is sanctioned support role" and a
 
 Summary: 2 ACCEPT (M-04 levitite crush-recycle, M-20 deployer application), 2 REJECT.
 
+## betterstrongholds   [anchors: survival (1)]
+Existing connections: 1 anchor (survival — exploration/world-feel). One anchor is the floor; a second is the goal.
+
+Power-read: YUNG's stronghold overhaul — richer prefab rooms, traps, hidden areas, custom loot (loot=yes). No items/blocks of its own (0/0). The only weave surface is loot tables. The stronghold is an endgame exploration destination (it contains the End Portal). The loot is vanilla-standard but could be seeded with pack-specific drops.
+
+Candidates:
+
+- from: betterstrongholds loot (endgame dungeon chests) | via: loot-seed | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: Stronghold library/treasury chests contain a rare Numismatics mint plate or coin cache — the dungeon run pays out in the player-to-player settlement medium, making exploration of the deepened stronghold an economic bootstrapping event; the explorer is rewarded with currency they didn't earn through the production loop, seeding the early economy.
+
+  Red-team: Is seeding Numismatics coins into stronghold loot a coherent economy link? M-08 is player-minted currency — coins are the settlement medium minted by players, never an NPC sink. But initial coin seeding in exploration loot is a distinct case: it bootstraps the economy before players have production infrastructure. The stronghold as the primary "find starter coin" location is thematically strong (treasure in a dangerous ruin). The amount should be modest — seed plates/ingredients for minting, not finished coin stacks, so minting still requires player labor (M-08's point is player-minted, so finding mint materials is more appropriate than finding finished coins). M-08 is the closest motif, though the delivery is loot-seed rather than a recipe.
+
+- from: betterstrongholds loot | via: loot-seed | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: Stronghold hidden-room chests contain a rare Ars Nouveau spell book fragment, an Iron's Spellbooks tome, or an Occultism ritual scroll — the ruined fortress holds knowledge of ancient magic; the dungeon delver brings back magic-progression items that a non-combat mage specialist would trade for.
+
+  Red-team: Is seeding magic items into stronghold loot coherent? The stronghold is associated with End-portal access and is lore-wise a place of ancient power. Magic books/scrolls in its hidden rooms are thematically tight. M-02 (mob-drop reagent sink) is about mob drops gaining magic uses; but loot-seed is a variant — the briefing explicitly says structure mods' loot=yes surface is a "loot-seed" candidate for magic reagents or progression keys. M-02 is the closest but the delivery is loot table seeding. Actually, the motif registry doesn't have a perfect "structure-seeded magic unlock" but M-15 (boss-key unlock — boss drop gates complex tech) is the nearest analog for a dungeon key. The stronghold isn't a boss structure, but seeding it with a magic progression book is M-15-adjacent. Flag as M-15 (boss-key unlock extended to dungeon structures) rather than M-02.
+
+  Revised: | motif: M-15 | verdict: ACCEPT | hook: Stronghold hidden rooms contain Ars Nouveau spell-book fragments or Occultism ritual scrolls — rare magic-progression keys that require dangerous exploration to acquire, creating demand for the combat specialist's services (M-34 dual-role: explorer as combat-route supplier of magic progression).
+
+- from: betterstrongholds loot | via: loot-seed | to: create | motif: M-15 | power: endgame | tone: ok | verdict: REJECT | reason: The stronghold doesn't have a strong Create-tech thematic — its lore is ancient/magical/vanilla. Seeding Create blueprints or schematics into stronghold loot feels anachronistic (a medieval dungeon containing industrial schematics). The magic and economy seeds above are thematically coherent; the Create one is not. Reject.
+
+REWORK: Dossier says "leave — defer" for the loot-table link. The briefing explicitly warns against LEAVE for loot=yes structure mods — "a loot-seed link is a REAL candidate." Dossier's conservative dismissal is a REWORK flag. The two ACCEPT candidates above (M-08 coin bootstrap, M-15 magic progression key) are valid Phase-3 loot-seed actions.
+
+Summary: 2 ACCEPT (M-08 coin-seed, M-15 magic progression key), 1 REJECT.
+
+## dynamic_fps   [anchors: support/performance (1)]
+LEAVE — client FPS throttling and resource saving when unfocused/minimized; 0 blocks, 0 items, no recipe types, loot=no. Pure runtime optimization; no gameplay material surface. Genuine zero-surface case.
+
+
+
 
 
 
