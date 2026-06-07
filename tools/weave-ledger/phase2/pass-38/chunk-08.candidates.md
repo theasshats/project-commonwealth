@@ -165,3 +165,8 @@ Power-read: mid-to-endgame. A bounty board requesting Ars Nouveau source gems, O
 
 REWORK: existing connection is "economy (1)." The three accepted candidates above add survival, Create, and magic demand-gating — bringing it to ≥4-system reach. No existing connections to flag for rework (it had no connections, just an anchor).
 
+## spark   [anchors: support/performance (1)]
+
+Zero blocks, zero items, zero loot. Server-side profiler. No player-facing content.
+- LEAVE — performance profiler with no items/blocks/loot; zero weaving surface; this is a diagnostic tool, not a content mod.
+

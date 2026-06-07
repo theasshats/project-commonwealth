@@ -162,6 +162,32 @@ OK — decoration palette anchor is clear. New links: Create via M-12 (cutting) 
 
 Summary: 2 ACCEPT (M-12 create:cutting, M-04 crushing recycle), 2 REJECT.
 
+## createblockchain   [anchors: economy, create (2)]
+Existing connections: 2 anchors (economy — Numismatics faucet; Create — FE/mechanical_crafting+mixing). Two anchors meets the target. Review for REWORK.
+
+Power-read: The currency miner is mid-tier infrastructure — requires FE (Create Addition), a Mining Core (worldgen consumable from geodes every ~30 chunks), and coolant management. The geode scarcity naturally rate-limits coin output. The piggy-bank is a loot (loot=yes) mechanism seeding coins in overworld chests.
+
+Candidates:
+
+- from: createblockchain:mining_core (geode worldgen consumable) | via: regional scarcity / GTMOGS ore-gen config | to: economy | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: Mining Cores spawn in geodes that cluster in specific biomes/regions (the geode biome-modifier is already set) — the miner is therefore region-locked, making the coin-minting capacity itself a regionally scarce resource; the first player to settle near a geode-rich region becomes the server's primary minter.
+
+  Red-team: Is this M-30 or just "geodes are worldgen"? M-30 is specifically about a good's key input being region-locked so the GOOD is region-locked and must be traded. Mining Cores are the rate limiter of coin production — their regional availability directly limits where the miner can run. The biome-modifier confirms geodes have a specific spawn pattern. The minter's location is genuinely economically significant. M-30 fits. Not forced.
+
+- from: createblockchain FE→coin minting | via: createnuclear reactor SU→FE (createaddition:liquid_burning) | to: create | motif: M-32 | power: endgame | tone: ok | verdict: ACCEPT | hook: The nuclear reactor's output SU → FE (via Create Addition) powers the currency miner — meaning the reactor player's endgame power generation is the prerequisite for high-throughput coin minting; the power producer and the minter are coupled, making coin supply depend on the server's reactor status.
+
+  Red-team: Is FE→coin via the reactor a real operational coupling or just "FE comes from somewhere"? The reactor is the only large-scale FE source in the late pack; a currency miner consuming significant FE would depend on it. M-32 (byproduct→input industrial circularity) isn't quite right — the reactor's FE isn't a byproduct, it's the primary output. M-29 (cross-route dependency — tech output needed by economy method) is closer. Actually: the dependency is Create (power) → economy (minting) across routes, which is M-29. Revise to M-29.
+
+  Revised: | motif: M-29 | verdict: ACCEPT | hook: High-throughput coin minting demands FE from the nuclear reactor — the Create power specialist and the economy minter are locked together; nobody mints at scale without a reactor running.
+
+- from: createblockchain piggy-bank (loot=yes, overworld chests) | via: loot-seed | to: economy | motif: M-08 | power: everyday | tone: ok | verdict: REJECT | reason: The piggy-bank already seeds coins into overworld chests by its own mechanic — this isn't a weave we author, it's stock behavior. Proposing a loot-seed here is redundant with what the mod already does. Not a Phase-3 action.
+
+REWORK: The dossier's existing economy + Create anchors are sound. The dossier notes "M-08-adjacent: feed the miner FE from scarce processed metal" as a deepening — this is the M-29 cross-route dependency I've captured above. The dossier's analysis of createblockchain as a "money faucet" is accurate but the DESIGN concern is whether the FE→coin rate is controlled by scarcity (it is: geodes + FE source). No rework of existing anchors needed — the two ACCEPTs above deepen rather than replace.
+
+OK — existing Create + economy anchors sound. New links: M-30 (regional geode scarcity), M-29 (reactor FE cross-route dependency).
+
+Summary: 2 ACCEPT (M-30 regional scarcity, M-29 reactor cross-route), 1 REJECT.
+
+
 
 
 

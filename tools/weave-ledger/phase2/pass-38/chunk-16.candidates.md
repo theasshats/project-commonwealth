@@ -51,3 +51,8 @@
 ## crash_assistant   [anchors: support/client-utility (1)]
 - LEAVE — genuine zero-content crash-diagnostic utility (client-side only). No items, blocks, or recipe types. Sanctioned support role.
 
+## appleseed   [anchors: survival (1)]
+- from: diet-variety nutrition mechanic (five groups — Grains, Vegetables, Protein, Fruits, Sugars; auto-derived from recipes) | via: native config mechanic (auto-nutrition from recipe ingredients; food eaten → diet tracked → buffs withheld or granted) | to: create (production demand) | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: "a balanced diet means every farmer and cook has permanent customers — you can't just eat bread, so production never stops"
+- from: diet-variety demand for diverse foods | via: config/native mechanic | to: economy | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: the diet mechanic is a survival-pressure signal, not itself an economy weave — food trade is the ambient endpoint of the loop; the ACCEPT above (production demand) is the correct expression; adding economy as a second ACCEPT here would double-count the same link without adding a distinct method-routing
+- from: high-nutrient multi-group meals as sellable trade goods | via: numismatics/trade (bare sell) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: M-09 retired (#163/#240) — "varied food is sellable" is ambient loop endpoint, not a weave
+

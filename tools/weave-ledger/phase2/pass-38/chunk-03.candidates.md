@@ -63,6 +63,14 @@
 ## bundle_recipe   [anchors: support/QoL (1)]
 - LEAVE — vanilla-parity recipe restore; its whole value is restoring a basic utility item at minimal cost; gating it on Create parts would contradict its purpose ("never gate a basic/everyday component behind a complex recipe"); nothing to weave without violating the cost model
 
+## ding   [anchors: support/client-QoL (1)]
+- LEAVE — genuine zero-content client audio mod; plays a sound on menu/world load; no items, no blocks, no loot; nothing to weave
+
+## betterbiomereblend   [anchors: support/performance (1)]
+- LEAVE — genuine zero-content client render optimization; no items, no blocks, no loot; nothing to weave
+
+
+
 
 
 

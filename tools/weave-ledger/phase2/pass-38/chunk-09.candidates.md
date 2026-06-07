@@ -96,6 +96,11 @@ REWORK: dossier's "economy via numismatics — WEAK" candidate is correctly weak
 
 OK — connections sound. Create + aeronautics anchors are appropriate. The two ACCEPT candidates above (M-05 drone/port mechanical crafting, M-20 portable ticker deploy-application) are depth adds within the Create anchor, not new-pillar moves. The create_mobile_packages aeronautics anchor is well-grounded: the Robo Bee is the physical-movement arm of economy distribution.
 
+## entity_texture_features   [anchors: support/client-rendering (1)]
+- LEAVE — pure client-side texture-feature engine (random/emissive textures for resourcepacks); no items, no recipes, no loot, no gameplay content. Nothing to route.
+
+== CHUNK COMPLETE ==
+
 
 
 
