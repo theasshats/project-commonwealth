@@ -102,6 +102,46 @@ REWORK: Existing connections are sound — haunting/mixing/splashing ties it to 
 - from: supplementaries:faucet (fluid transfer — meshes with Create piping) | via: aeronautics fluid-routing on ships | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: REJECT | reason: the faucet is a useful fluid utility but it's a passive gravity-fed pipe, not a bulk cargo mover. Linking it to aeronautics as a "logistics bulk good" is a stretch — M-31 requires goods heavy enough to *need* the logistics arm; a faucet is just decoration/QoL. Tone: plausible but the weight isn't there.
 - from: supplementaries:safe (locked storage) | via: M-33 service-for-hire | to: economy | motif: M-33 | power: everyday | tone: ok | verdict: REJECT | reason: a safe as a player-economy tool is real (locked chests for market stalls) but this is ambient decoration behavior — the connection isn't a weave, it's just "players use safes to store traded goods." No method-routing exists to call this a candidate. The mod is already at 2 anchors and sound; forcing an economy edge isn't needed.
 
+## createoreexcavation   [anchors: Create (1)]
+
+Dossier proposes economy via vein-table scarcity → M-08 coin-mint (design lever, not a recipe). Need a genuine method-routing to get to 2 anchors.
+
+- from: createoreexcavation vein outputs (raw ores — any via vein recipe table) | via: create:crushing → numismatics mint | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: the drilling machine locates and mines a finite-rate ore vein; scarce regional metals (tin from create_ironworks, Galosphere palladium, etc.) extracted by drilling feed the Create crushing chain → coin mint; the drilling specialist controls a regional coin feedstock — minting is a specialization (M-08 reframe)
+- from: createoreexcavation:vein_finder (3-chunk survey tool) | via: M-30 regional-scarcity gate | to: economy | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: veins are per-chunk and biome-biased — a player who finds a palladium or tin vein in their region holds a structural economic advantage; the Vein Finder makes that geography legible and tradeable as survey knowledge; region-locked ore access is the scarcity foundation M-30 gates
+- from: createoreexcavation:diamond_drill / netherite_drill (high-tier drill heads) | via: create:sequenced_assembly | to: Create | motif: M-06 | power: endgame | tone: ok | verdict: REJECT | reason: the drill heads already route through create:crushing/cutting/milling/mechanical_crafting per the made-by line. Wrapping the diamond/netherite drill into a sequenced-assembly chain would be double-layering Create depth on a mod that's already Create-spine. The endgame drill should stay deep but it doesn't need M-06 on top of its existing Create chain — no new system anchor gained.
+- from: createoreexcavation fluid extractor (extracting type) | via: tfmg:distillation | to: Create | motif: M-32 | power: mid | tone: ok | verdict: REJECT | reason: fluid extraction feeds into the broader fluid economy (fuels, etc.) but the extracting method routing is Create-internal; TFMG distillation is a legitimate downstream but it doesn't add a new system anchor (still Create→Create). No second pillar gained.
+
+## create_compressed   [anchors: Create (1)]
+
+Dossier says Leave (Create-internal QoL/storage). Red-team: 30 blocks, 30 items, already uses create:crushing/milling/mixing/splashing/sandpaper_polishing. Items are storage blocks for Create intermediates.
+
+- from: create_compressed crushed ore pile blocks (crushed_tin_pile, crushed_copper_pile, etc.) | via: aeronautics cargo hold design | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: REJECT | reason: compressed storage blocks reduce the volume of bulk goods for shipping — this could be argued as enabling the logistics arm. But M-31 requires goods that *need* the logistics arm's bulk-movement role; storage compression is a convenience feature on any transport. Aeronautics ships are the transport, not the compressed goods themselves. The connection is ambient (compression helps logistics) not a weave.
+- from: create_compressed:mechanism_block / sturdy_sheet_block (compressed Create parts) | via: create:sequenced_assembly → aeronautics hull recipe | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: the compressed mechanism block (9 Create mechanisms in one) is a dense structural material — requiring it in airframe/hull recipes makes large ships depend on bulk Create production capacity (you need to compress enough mechanisms first); a ship's structural density is gated behind industrial-scale mechanism output
+- from: create_compressed:wheat_flour_pile / dough_block | via: farmersdelight:cooking (bulk baking) | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: flour pile is a convenience 9:1 compression of Create flour; routing it to FD cooking is just "use flour in a recipe" — the connection already exists implicitly. No weave — this is ambient use of a tagged ingredient, not a new cross-system link.
+
+## formations   [anchors: survival (1)]
+
+Dossier says Leave (scatter-structure worldgen, no items). Counts: 0 blocks, 1 item (template_editor tool), loot=no. Dossier is right that loot-seeding belongs to what it *generates*, not Formations itself.
+
+- from: formations structures (altars, cabins, ruins, campsites) | via: loot-seed | to: survival | motif: M-34 | power: everyday | tone: ok | verdict: REJECT | reason: formations has loot=no in the jar digest — no loot tables to seed. The structures use vanilla/modded block palettes but don't register drops. The template_editor is a dev authoring tool, not a gameplay item. No loot-seed candidate exists here.
+- from: formations worldgen scatter structures (ruins, altars) | via: loot-seed (custom datapack add) | to: economy | motif: M-08 | power: mid | tone: ok | verdict: REJECT | reason: formations registers NO loot tables (loot=no). Adding loot to its structures would require authoring new structure templates that include chests with custom loot — that's authoring new structures, not seeding existing ones. Out of scope for Phase 2 weave mapping; requires actual structure-authoring work. Reject here; flag as a possible Phase 3 design task separately.
+
+LEAVE — formations structures carry no loot tables (jar digest: loot=no, 0 blocks, 1 dev-tool item). No content surface to weave; loot-seed path requires authoring new structures from scratch, not seeding existing tables.
+
+## create_ironworks   [anchors: Create (1)]
+
+Dossier proposes M-08 (tin → coin) as the economy link and survival/worldgen as a second angle. Both land on the same loop node (scarcity→economy). Let me look for two distinct anchors.
+
+- from: create_ironworks:steel_ingot (near-Netherite alloy) | via: create:sequenced_assembly | to: Create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: steel is the Create metallurgy capstone — requiring a sequenced-assembly chain (press tin → alloy with iron → temper → steel plate) makes large-scale steel production a genuine Create deep-dive and gates the material behind the factory build milestone
+- from: create_ironworks:tin_ingot / tin_ore (scarce regional ore) | via: create:crushing → numismatics mint | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: tin is the pack's new scarce metal with biome-biased worldgen; crushing it and pressing it into Numismatics coin (tin cog or tin bevel) makes the coin supply tied to regional tin deposits — whoever controls tin deposits mints the coin; minting is a production specialization
+- from: create_ironworks:bronze_armor / steel_armor (gear sets) | via: M-34 combat-route supply | to: survival | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: the bronze→steel gear progression is the combat specialist's advancement path; non-combat players need steel-tier tools for late-game building and colony expansion, so the combat/Create specialists who produce them are the gear suppliers — the supply side of the danger-gear economy
+- from: create_ironworks:steel_plate (c:plates/steel tag) | via: aeronautics hull recipe (M-23 structural alloy) | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: steel plate is explicitly the pack's structural alloy candidate — requiring it in Aeronautics airframe and hull recipes (alongside iron beams) makes mid-tier ships depend on the Create ironworks supply chain; ship-builders must trade for or produce steel, tying the aeronautics build milestone to the metallurgy tier
+- from: create_ironworks:brass_hammer (3×3 AOE mining) | via: survival pressure | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: the hammer being consumed by use (durability) is M-26 tooling wear, but that's ambient Minecraft durability behavior — not a authored weave. M-38 (tooling wear) is MECHANISM-PENDING; don't propose it. Reject.
+
+
+
+
+
 
 
 

@@ -24,6 +24,19 @@
 ## lootr   [anchors: support/QoL (1)]
 - LEAVE — per-player loot instancing is a fairness wrapper over existing loot tables; no material outputs, no recipe methods, no unique drops of its own. Its `lootr:trophy` block is a reskin placeholder, not a weave target. No coherent second anchor — the QoL role is complete as-is.
 
+## farm_and_charm   [anchors: survival (1)]
+- from: farm_and_charm:barley / farm_and_charm:oat (raw grain) | via: create:milling | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: a Create miller grinds the farmstead's grain surplus into flour — the husbandry chain meets the tech spine at the millstone
+- from: farm_and_charm:barley (malt base) | via: vinery:apple_fermenting or alcohol_industry:alcohol_boiling (as alternate grain input) | to: economy | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: barley processed into malt feeds the brewing/distilling chain (M-35 maturation goods), making the farm a raw-material supplier for the economy's aged-goods tier
+- from: farm_and_charm animal products (eggs, butter, ground meat) | via: minecolonies provisioning / colony food-request system | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: the colony's workers demand farm provisions — husbandry output gates colony upkeep and growth, making the farmer indispensable to the settlement builder
+- from: farm_and_charm:barley / farm_and_charm:oat (season-gated crop) | via: config-tie (Serene Seasons crop growth gate) | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: ACCEPT | hook: barley and oat only ripen in growing season — winter stops the flour supply, and with it the baking and brewing chains; seasons are the throttle on the whole food-production tier
+- from: farm_and_charm processed foods (bread, butter, pasta) | via: MineColonies composting / zero_waste | to: create | motif: M-32 | power: everyday | tone: ok | verdict: REJECT | reason: farm waste → compost is ambient and too low-signal; M-32 (byproduct→input) is better served by more distinctive process chains; not worth adding here when M-12/M-16/M-28 already cover the meaningful weaves
+- REWORK: dossier candidate "economy via numismatics — M-09" is correctly retired. The M-28 colony provisioning and M-12 Create milling are the demand-gating replacements that actually advance the loop. No other existing connections to rework (mod had 0 inbound weaves before this pass).
+
+## endermoon   [anchors: survival (1)]
+- from: Ender Moon spawn surge → ender pearl flood | via: lunar event gating (M-22) | to: magic | motif: M-22 | power: mid | tone: ok | verdict: REJECT | reason: endermoon has 0 items, 0 loot, no recipe method — it is a spawn-rate plugin for enhancedcelestials. Any M-22 weave (Ender Moon night → ender pearl → Occultism/Ars ritual input) must be authored against `enhancedcelestials` or vanilla ender pearls, not against endermoon itself. Recording here to flag: the M-22 ender-pearl link is real but belongs on enhancedcelestials's dossier as the event-system owner.
+- LEAVE — zero content surface; all lunar-event weave potential sits on the parent enhancedcelestials mod.
+
+
 
 
 

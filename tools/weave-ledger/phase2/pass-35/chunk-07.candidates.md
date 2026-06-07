@@ -84,3 +84,40 @@ Zero blocks, zero items, loot=no. Multi-loader abstraction library (BlayTheNinth
 
 - LEAVE — genuine zero-content code library. Sanctioned support role; no weave possible or needed.
 
+## aileron   [anchors: aeronautics (1)]
+
+**Method-pull pass:**
+- 0 items, 0 blocks under its ns. Loot=yes (flight-related loot injected into tables). Mechanic: reworks Elytra physics + new Elytra enchantments.
+- The Elytra itself is vanilla; Aileron's enchants are the only new content surface.
+- M-10 (arcane infusion pull): if Aileron's Elytra enchantments are data-accessible to Ars Nouveau's Enchanting Apparatus, a magic specialist could apply them — tying personal flight to the magic route. An aeronaut who needs a mage to unlock the best flight enchants is a coherent specialisation link. Red-team: Ars Nouveau already handles generic enchantment application; there's no obvious reason the Apparatus couldn't apply Aileron enchants, but this requires Phase 3 verification that those enchants are not blacklisted. Tone: not a clash — magic enabling flight is thematically resonant.
+- M-33 (service-for-hire): the above naturally creates a service pattern (magic specialist enchants Elytras for pilots) but that is emergent from the M-10 recipe weave, not a separate authored weave.
+- M-26 (consumption): vanilla Elytra durability wear is not Aileron-specific; no new sink to author.
+- The dossier calls the magic enchanting link weak ("WEAK, M-10-adjacent"). I disagree that it's weaker than acceptable — aeronautics↔magic is exactly the kind of cross-system join that earns a second anchor. ACCEPT at medium confidence, contingent on Phase 3 confirming enchant accessibility.
+
+- from: Aileron Elytra enchantments | via: ars_nouveau:enchanting_apparatus | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: a mage infuses the Elytra with Aileron's flight enchants at the Enchanting Apparatus — the aeronaut needs a magic specialist to unlock peak glide performance, tying personal flight to the magic production route.
+- from: Aileron enchants | via: bare "magic improves elytra" (no specific method) | to: magic | motif: no-motif | verdict: REJECT | reason: without a specific method-routing, this is thematic adjacency not a weave; the ACCEPT above covers the coherent form.
+- from: worn-out enchanted Elytra | via: durability wear → repair service | to: economy | motif: M-33 | power: mid | tone: ok | verdict: REJECT | reason: vanilla Mending/anvil already handles Elytra repair; Aileron adds no new repair surface. Thin.
+
+## betterbiomereblend   [anchors: support (performance/client) (1)]
+
+Zero blocks, zero items, loot=no. Client-side render optimization only.
+
+- LEAVE — genuine zero-content client performance mod. No material surface; sanctioned support role.
+
+## trek-b0.6.1.1   [anchors: survival (1)]
+
+**Method-pull pass:**
+- 0 items, 0 blocks. Loot=yes — 150+ custom structures with chest loot tables.
+- The briefing is explicit: a structure mod with loot=yes is NOT a LEAVE candidate — the correct move is loot-seed (via: loot-seed), a Phase 3 datapack edit that seeds relevant drops into the loot tables.
+- What loop-relevant materials could be seeded? Structures span multiple biomes (jungle, taiga, ocean, savanna, etc.) — biome-keyed drops make sense thematically. Possible seeds:
+  - M-02 (mob-drop reagent sink): seeding an isolated mob-drop or rare regional material as a structure-chest find, giving magic reagents an exploration-acquisition path alongside mob farming. E.g. a jungle pyramid chest might hold a rare magic ingredient normally only mob-dropped; this widens the survival↔magic link.
+  - M-08 (player-minted currency): seeding a small quantity of Numismatics coins (or the metals that get minted into coins) as rare structure loot. Red-team: this creates a non-player-created coin source, which edges toward the retired M-14 NPC faucet concern. However, M-08 is about *minting* not finding — finding the raw metal that gets minted is fine; the player still has to process it through Create to coin it. ACCEPT with the caveat that we seed the raw metal/ore, not pre-minted coin.
+  - M-15 (boss-key unlock): a mid-tier structure could hold a rare material that acts as a boss-key ingredient — "find X in a Trek ruin to unlock Y recipe." Red-team: Trek structures are common (150+ types, weighted spawn), so they aren't appropriately rare for boss-key status; this doesn't fit M-15's intent. REJECT.
+  - M-34 (combat-route supply): structures with hostile mob spawners/guarded chests create exploration danger, and the loot (once seeded with magic/Create materials) would be farmed by combat specialists to sell to non-combat players. This is largely emergent from the loot-seed rather than a separately authored weave — folded into M-02/M-08 seeds.
+- The strongest single loot-seed candidate: seed magic reagents (M-02) into biome-appropriate structure chests, giving exploration a direct magic-supply role and earning survival↔magic as the second anchor. This is the lowest-friction Phase 3 action (a datapack loot-table add).
+
+- from: Trek structure chest loot | via: loot-seed (datapack edit — add magic reagents as rare structure finds) | to: magic | motif: M-02 | power: everyday | tone: ok | verdict: ACCEPT | hook: a shaman's camp in a jungle ruins holds a rare spirit-fire reagent — exploration is now a route into the magic supply chain, not just XP.
+- from: Trek structure chest loot | via: loot-seed (seed raw regional scarcity metals, not minted coin) | to: economy | motif: M-08 | power: everyday | tone: ok | verdict: ACCEPT | hook: a buried strongroom holds a shard of the region's scarce ore — explorers scout ahead and bring back raw metal that the colony mints; exploration feeds the currency supply chain without bypassing the mint step.
+- from: Trek structure chest loot | via: loot-seed (boss-key material) | to: create | motif: M-15 | power: endgame | tone: ok | verdict: REJECT | reason: Trek structures spawn frequently (150+ types, weighted common) — not rare enough to hold boss-key items; M-15 requires a genuinely rare/hard-to-reach source to function as a gate.
+- from: Trek structures | via: exploration danger driving gear demand | to: survival (inherent) | motif: (survival anchor is already established) | verdict: OK — existing survival anchor is sound (exploration / world variety).
+

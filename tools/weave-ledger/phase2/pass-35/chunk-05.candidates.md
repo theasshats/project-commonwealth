@@ -197,3 +197,40 @@ The dossier's LEAVE verdict is correct. No items, no loot, no method to route th
 
 - LEAVE — purely event/effect-driven rest mod; no items, no loot, no method handle; a second anchor would require inventing a new mechanic.
 
+## alcohol_industry   [anchors: Create, survival (2)]
+
+Already 2 anchors. Create-driven industrial distillery: Alcohol Base assembled via `create:filling` + `create:mixing`, then boiled in the Alcohol Boiler (`alcohol_industry:alcohol_boiling`) into beer/vodka/whiskey/tequila. Items: alcohol_boiler, alcohol_base (+ bucket), beer, vodka, whiskey, tequila, temperature_controller, glass_tube.
+
+Power-read: The distillery chain is mid-tier Create (requires heated processing; temperature_controller is a non-trivial component). The finished spirits are everyday consumables once the distillery is running, but establishing it is mid-tier. The spirits grant status effects — short buffs (equivalent to the beachparty cocktails tier).
+
+**Candidate 1 — spirits as a M-35 maturation / aging good (M-35)**
+Whiskey and tequila are canonically aged spirits. The M-35 motif (maturation/aging) explicitly lists `alcohol_industry` in its seed list. The Alcohol Boiler produces the spirit but a maturing step would require the spirit to sit under the right conditions (temperature, container). The delivery method `create_cheese:maturing` is already in the pack's methods palette. An aging step on whiskey/tequila — sit the bottled spirit in a warm/cool environment for N days using `create_cheese:maturing` or a custom analog — would differentiate aged vs. unaged spirits with better buffs. Red-team: the two mods (`alcohol_industry` and `create_cheese`) are thematically compatible (industrial food/drink production); the aging motif fits whiskey/tequila exactly. The cost is proportional: beer stays fast; aged spirits take time (maturation depth). The maturing method is already in the pack. This is a strong M-35 candidate.
+
+- from: alcohol_industry:whiskey / tequila (raw-distilled) | via: create_cheese:maturing | to: economy | motif: M-35 | power: mid | tone: ok | verdict: ACCEPT | hook: Raw-distilled whiskey and tequila get a maturing step — a player who sits their spirits in the right conditions gets aged-spirits with better effects than fresh-distilled; aged spirits become a premium trade commodity (takes time you can't just buy) vs. the commodity-beer that anyone can mass-produce.
+
+**Candidate 2 — alcohol byproduct (wash/mash) as Create feedstock / compost input (M-32)**
+Distillation produces a "spent grain" or mash byproduct in real brewing. If the Alcohol Boiler output includes a waste fluid or item, it could be routed into composting (`minecolonies:composting`) or a Create-side process (e.g. crushing/milling into fertilizer). Red-team: the dossier lists no byproduct output — only the finished spirits and glass_tube/temperature_controller as items. The Alcohol Boiler outputs just the spirit. Without a registered byproduct, M-32 has no material to route. A KubeJS recipe could add a byproduct but that's authoring, not proposing — skip.
+
+- from: alcohol distillation waste (hypothetical byproduct) | via: minecolonies:composting | to: economy | motif: M-32 | power: everyday | tone: ok | verdict: REJECT | reason: no registered byproduct output — the Alcohol Boiler produces only finished spirits; a byproduct would require authoring a new output, not routing an existing material.
+
+**Candidate 3 — spirits as a colony consumption good / tavern supply (M-28)**
+MineColonies colonists could have a demand for spirits (a tavern building). If spirits feed colonist happiness or a colony-building that the pack authors, that's M-28 (colony route). Red-team: MineColonies has a tavern building that feeds colonists; spirits could be a supplied good for colonist happiness/productivity. The delivery is a config tie or KubeJS colonist-needs override. This is a real economy anchor: the distillery feeds the colony, the colony route makes spirits a demand good not just an effect item. The hook is: "run a distillery to supply your colony's tavern — colonists who drink are happier workers."
+
+- from: alcohol_industry spirits | via: minecolonies tavern / colonist supply (config tie or KubeJS) | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: A MineColonies colony with a tavern needs a spirits supply — the distillery player becomes the colony's brewer, making spirits a demanded good rather than an optional buff item; supply disruption slows colony expansion.
+
+**Candidate 4 — spirits as a regional-scarcity good (M-30)**
+Different spirits require different flavoring inputs (grain for beer/vodka, agave-analog for tequila, oak-analog for whiskey). If flavor inputs are regionally scarce or biome-gated, spirits become regionally specialized. Red-team: the current dossier doesn't specify what flavor ingredients the mod uses beyond "Alcohol Base fluid." Without confirmed distinct regional inputs per spirit type, this is speculative. The base creation already pulls through Create mixing, but it's unclear whether specific spirits need distinct scarce ingredients.
+
+- from: alcohol_industry spirits (per-type inputs) | via: alcohol_industry:alcohol_boiling | to: economy | motif: M-30 | power: mid | tone: ok | verdict: REJECT | reason: insufficient grounding — the dossier doesn't specify distinct regional/scarce inputs per spirit type; the base fluid is generic; authoring M-30 here requires confirming distinct flavoring inputs per spirit, which would need a jar-level recipe audit.
+
+**Candidate 5 — dossier's own 3rd-anchor suggestion: M-09 (retired)**
+The dossier suggests M-09 (luxury→coin economy sell) as a 3rd anchor. M-09 is retired. The economy anchor should be M-35 (aging adds premium value → trade commodity) or M-28 (colony supply creates demand), both of which are accepted above.
+
+**Existing connections review:**
+- Create anchor: SOUND — the chain runs through `create:filling` + `create:mixing` + the Boiler.
+- Survival anchor: SOUND — spirits are consumables with status effects.
+- REWORK needed on dossier's 3rd-anchor suggestion: M-09 (retired) should be replaced with M-35 (maturation) and/or M-28 (colony demand). Flag the dossier's economy candidate as using a retired motif.
+
+REWORK: dossier lists M-09 (luxury→coin sell) as the economy candidate. M-09 is retired. Replace with M-35 maturation (aging premium) and M-28 colony supply (tavern demand) — both accepted above.
+
+== CHUNK COMPLETE ==

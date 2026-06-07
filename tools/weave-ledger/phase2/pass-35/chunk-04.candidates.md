@@ -118,6 +118,29 @@ REWORK: OK — connections sound. Create + aeronautics anchors correct; sequence
 - from: create_hypertube:hypertube_accelerator in Aeronautics boarding/docking recipe | via: aeronautics construction recipe | to: aeronautics | motif: M-24 | power: mid | tone: clash | verdict: REJECT | reason: accelerator is a ground tube-network part; grafting it into a ship docking recipe conflates two transport scales — the connection is thin and forced; better to leave the two as complementary distinct transport layers
 - from: hypertube as logistics-required bulk personnel mover | via: n/a (ambient use) | to: aeronautics | motif: M-31 | verdict: REJECT | reason: ambient usage framing, not a method-routing; no recipe connects tube items to an aeronautics demand gate
 
+## comforts   [anchors: survival (1)]
+
+Power-read: 33 blocks, 33 items (sleeping bags + hammocks in 16 colors + rope_and_nail), no methods, loot=yes. Pure vanilla-recipe wool/string items. The only real second-anchor candidate is whether a dyed/wool item can earn a Create or economy tie.
+
+Method-pull:
+
+- **create:deploying (M-20) — apply a dye via deployer to craft colored variants instead of the 16-recipe grid explosion.** This is a utility simplification for automated dye-application, not a weave that adds cross-system depth. It doesn't earn a new anchor; it's a recipe-form convenience. Reject as insufficient depth.
+
+- **M-26 consumption — sleeping bags and hammocks wear out/are consumed on travel, creating repeat demand.** The actual mod doesn't implement durability on sleeping bags (they're reusable). No consumption mechanic exists; the observation is aspirational. Reject.
+
+- **Survival → aeronautics: sleeping bags as portable bedroll for ship crew (a narrative use).** This is a player-use observation, not a method edge. No recipe. Reject.
+
+- **M-35 maturation/value-add: hammocks as a craft requiring seasoned rope (an aged/processed intermediate).** Rope is vanilla string. No aging/maturation mechanic exists on rope. The idea would require a new aging step — not something comforts provides. Reject.
+
+The dossier's conclusion (leave — no coherent 2nd anchor) holds after deeper examination. The mod is a survival-QoL convenience; forcing a second anchor on wool-and-string sleeping bags would be noise.
+
+- LEAVE — no coherent second anchor survives power-read: wool/string sleeping bags have no cross-system method surface; all candidate edges are ambient narrative or non-existent mechanics on the items
+
+## zeta   [anchors: support/library (1)]
+- LEAVE — mod-framework library; 0 blocks, 0 items, no recipe methods, no loot. Genuine zero-content code library (Quark's module-system backbone). Nothing to weave.
+
+
+
 
 
 

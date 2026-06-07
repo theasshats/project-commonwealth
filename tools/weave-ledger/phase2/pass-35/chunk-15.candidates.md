@@ -34,6 +34,38 @@ New links:
 - from: minecolonies_tweaks c:tags (c:crops/rice, c:crops/corn, etc.) | via: create:milling / farmersdelight:cooking | to: create/survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the unified crop tags this mod injects let Create milling and FD cooking target any modded rice/corn/tomato/cabbage by tag rather than per-mod ID — minecolonies_tweaks is the glue that makes M-12 food-chain weaves pack-wide without one-off per-mod recipes; its tags ARE the weave surface
 - from: scrolls as "sellable colony goods" | via: bare sell | motif: M-09 | verdict: REJECT | reason: M-09 retired. Scrolls are tools-of-the-colony-trade, not a trade commodity themselves; any economy link routes through M-28 (colony demand) not a sale.
 
+## createblockchain   [anchors: economy + create (2)]
+REWORK check on existing connections:
+- REWORK flag — economy anchor: the Currency Miner is a coin FAUCET — it mints Numismatics coins from FE at a configurable rate, gated by Mining Cores (worldgen). This is M-08-adjacent but potentially NPC-coin-faucet-flavored depending on how freely Mining Cores spawn. If the miner rate is unconstrained it becomes an NPC money printer that undermines the player-run economy (contradicts #163/#240 rework). The existing economy anchor should be strengthened: tie the FE input to a regionally scarce processed metal so coins trace back through scarcity (M-30), not minted from thin air. This is a design quality concern, not a verdict on the anchor existing.
+- REWORK flag — the dossier notes "FE (from createaddition)" as the power source. The economy loop requires that minting cost something real. Recommend: FE consumption rate tuned so that minting requires non-trivial Create infrastructure (not passive), and Mining Cores' geode frequency config tuned to limit the tap. This is a balance/config note, not a new weave.
+
+New candidates:
+- from: createblockchain:mining_core (worldgen geode drop, scarce) | via: regional scarcity gate | to: economy | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: Mining Cores spawn in geodes ~every 30 chunks — that regional pattern means some players settle near geode clusters and become the server's "mint infrastructure" providers; coin minting becomes regionally anchored, not universally accessible, which is exactly the scarcity→economy loop
+- from: createblockchain:piggy_bank (loot in overworld chests) | via: loot-seed | to: economy | motif: M-34 | power: everyday | tone: ok | verdict: ACCEPT | hook: piggy banks in exploration loot give adventurer/combat players a way to seed coin into the economy from dungeon runs — the combat-route supply side (M-34): explorers find piggy banks, crack them, coins enter circulation as a reward for danger
+- from: createblockchain:cryotheum_coolant | via: create:mixing or thermal specialization | to: create | motif: M-12 | power: mid | tone: ok | verdict: REJECT | reason: cryotheum_coolant is a proprietary coolant block for the miner, not a general processing intermediate. Routing it through Create:mixing as a generic coolant intermediate would be forced; the mod's own use of it (coolant for the miner) is already its function. No coherent M-12 path survives red-team.
+- from: FE consumption of Currency Miner → bare "hook up any FE source" | via: createaddition FE | motif: M-17 | verdict: REJECT | reason: M-17 is an electric-charging bridge for tools/foci, not a generic FE-consumer link. The miner consuming FE is already its primary mechanic (economy anchor), not a second-system bridge; claiming M-17 here would dilute the motif.
+
+## letmefeedyou   [anchors: support/QoL (1)]
+- LEAVE — zero-item behavior-only mod. Enables player-to-player food feeding; registers no items, blocks, recipe types, or loot. The mechanic it enables (co-op food sharing) is a support convenience for the survival pillar but there is nothing to route through a method. Genuine zero-surface QoL mod.
+
+## jei   [anchors: client-only UI/support (1)]
+- LEAVE — recipe-viewer client UI; zero items, zero recipe types, no loot. Its load-bearing role is visibility (renders Create's processing recipes — the reason EMI was dropped). No material surface to weave. Genuine zero-surface support mod.
+
+## supermartijn642corelib   [anchors: support/library (1)]
+- LEAVE — invisible code library (GUI/block/BE/packet scaffolding for dependent mods); zero items, zero blocks, zero recipe types, no loot. Genuine zero-surface library.
+
+## byzantine   [anchors: survival/colony (1)]
+- The dossier marks this leave with "curated colony flavor." Let me stress-test that conclusion. Byzantine ships MineColonies build schematics (schematic-only, 0 items/blocks of its own). Its content surface is CONSUMED building materials that the MineColonies Builder requests — Domum Ornamentum decorative blocks and standard vanilla/modded stone/wood. So the question is whether those building-material requests create a demand-side weave.
+- from: Byzantine schematic building-material demands (Domum Ornamentum blocks, stone, brick variants) | via: MineColonies colony build requests | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: a colony using Byzantine style must supply Domum Ornamentum architectural blocks at scale — that creates continuous colony demand for masonry and cut-stone specialists (Create stonecutting, ore-processing byproducts), feeding the M-28 colony-route anchor; the architectural style is the demand driver
+- from: Byzantine colony style — tone check | verdict for M-28 above: survives red-team. Byzantine/Shogun/Nile styles are distinct architectural flavors — players pick them — so the building-material demands are real and predictable. A colony architecture specialist (who supplies ornamental blocks to colony builds) is a coherent player role. The M-28 hook is genuine, not invented.
+- from: Byzantine as generic "more buildings → more materials → more trade" | via: bare economy link | verdict: REJECT | reason: this would be a vague "builds things, needs stuff" non-weave. The M-28 above captures it precisely (colony route demanding colony-exclusive or specialist-produced blocks). Don't double-count with a bare economy claim.
+- from: Byzantine schematic style → magic/Create unlock | motif: M-15 boss-key unlock | verdict: REJECT | reason: a building style isn't gated behind a boss drop — that would be arbitrary and punishing for purely decorative content. M-15 is for high-tier tech recipes, not architecture skins.
+
+
+
+
+
+
 
 
 

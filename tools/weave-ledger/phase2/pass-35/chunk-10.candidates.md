@@ -43,6 +43,49 @@ LEAVE — zero items, zero blocks, zero recipe methods; the Rapier physics engin
 - from: createfisheryindustry bait/trap components | via: create:sequenced_assembly | to: create | motif: M-06 | power: endgame | tone: ok | verdict: REJECT | reason: trap/bait are machine blocks (mid-tier), not endgame flagship items; M-06 sequenced-assembly is explicitly for endgame multi-stage chains — forcing the bait_trap into a sequenced chain would over-deepen an everyday component; violates the "depth scales with power" rule
 - REWORK: dossier 2nd candidate uses M-09 (retired luxury→coin) for seafood dishes. Replace with M-28 colony-supply demand as accepted above (colony food consumption is the concrete demand gate). OK — the two existing Create/survival anchors are sound.
 
+## charta   [anchors: survival (1)]
+- from: charta:card_table (social play) | via: economy service-for-hire framing | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: the card table is a player-run wagering venue — a "dealer" host earns numismatics coin by running games; that's a labor/service specialization (a tavern-keeper archetype) with emergent payment, which is exactly M-33's player-economy labor axis; no NPC faucet, purely player-to-player
+- from: charta bar furniture (bar_stool, bar_shelf, card_table) | via: create:cutting (sawmill) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: fancy bar furniture is a deco item with a Create production step — sawmilling premium wood into bar-stool blanks is a light one-step chain that roots the tavern set in the Create production web without over-deepening an everyday deco piece
+- from: charta:empty_wine_glass / empty_beer_glass | via: create:filling (with vinery/alcohol wine) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: filling Charta's decorative glasses with actual Vinery wine or Alcohol Industry beer via Create's filling method turns purely decorative glasses into a real supply-chain prop — a tavern that needs filled glasses creates demand for the drink production chain
+- from: charta card-game gambling "wager" concept | via: bare coin-sink framing | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: M-09 is retired; even though gambling IS a consumption sink, without a concrete Numismatics hook in the mod itself it's a "would need custom KubeJS" story; the M-33 service-for-hire framing above already captures the economy angle without depending on a built-in betting mechanism Charta doesn't have
+
+## sable_sa_compat   [anchors: support (compat patch) (1)]
+LEAVE — zero items, zero blocks, zero recipe methods; a behavior patch bridging Create: Stuff 'N Additions gadgets to Sable ship physics; no content surface; genuine zero-surface compat glue.
+
+## mcwstairs   [anchors: support (decoration palette) (1)]
+- from: mcwstairs stone/brick stair variants | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: stone/brick balcony and railing variants crushing back to gravel/raw stone + an XP nugget is the standard deco-recycle pass and is explicitly noted as the M-04 pattern; light, lossy, one step — exactly right for an everyday deco block
+- from: mcwstairs wood railing/balcony variants | via: create:cutting | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: wooden railing and platform variants yielding planks + sawdust on cutting is coherent and mirrors the standard Macaw's family deco-through-Create pass; gives the entire wood-railing range a Create production home
+- from: mcwstairs brick/stone variants | via: create:crushing (blanket deco pass) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: this is the same M-04 pass as the first row but stated separately as "blanket" — redundant with the stone-variant row above; one M-04 accept per material family is enough; REJECT the duplicate framing, not the concept
+- NOTE: this is a decoration-support mod; per briefing, the weave is only warranted "as part of a wholesale deco-family pass"; the two accepted rows above are exactly that scope — one for stone, one for wood.
+
+## createthreadedtrains   [anchors: support (performance) (1)]
+LEAVE — no items, no blocks, no recipe methods; a server-side threading optimization for Create railway calculations; the weave (trains as logistics backbone) happens in Create itself; no independent content surface.
+
+## prickle   [anchors: support (library/API) (1)]
+LEAVE — genuine zero-content config-format library; no items, no blocks, no recipe types; the definition of a code library LEAVE case.
+
+## gravestone   [anchors: survival (1)]
+- from: gravestone:obituary (death record item) | via: create:mechanical_crafting or loot-seed | to: economy | motif: M-33 | power: mid | tone: ok | verdict: REJECT | reason: while a "death record" could theoretically be a service artifact (a bounty hunter marks a kill, proof of a contract fulfilled), the obituary has no gameplay hook beyond its built-in death-log function; wiring it as a contract token requires KubeJS custom logic with no native method to route through — no-motif as a natural weave; forced and contrived; REJECT
+- from: gravestone:gravestone (the tombstone block) | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: the gravestone is not a decorative block a player crafts in bulk — it's a single-spawn death-utility item; M-04 deco-recycle applies to production-palette blocks, not to functional utility blocks that appear once per death; applying crushing here is thematically odd and mechanically pointless; REJECT
+LEAVE — the mod's content (gravestone block + obituary) is entirely functional utility for the death loop with no material graph; any weave would be contrived; supports the briefing's "no coherent 2nd anchor" criterion.
+
+## voicechat   [anchors: support (1)]
+LEAVE — zero items, zero blocks, zero recipe methods; proximity voice infrastructure; no content surface; genuine support-role LEAVE.
+
+## lootjs   [anchors: support (library/QoL) (1)]
+LEAVE — zero items, zero blocks, zero recipe methods; a KubeJS scripting library for loot-table manipulation; it is the *enabler* of M-02/loot-seed weaves (the tool Phase 3 will use to author them) but is itself not a node; pure dev tooling LEAVE.
+
+## dtterralith   [anchors: survival (worldgen flavor / compat) (1)]
+- from: dtterralith unique tree seeds (cedar, jacaranda, kapok, maple, giga_spruce) | via: create:milling | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: exotic biome-specific seeds milled into rare wood pulps or resins (cedar resin, jacaranda pigment) — the biome-specific tree variety provides a regionally differentiated material that ties into scarcity and the Create processing chain; a giga spruce milled differently from vanilla spruce fits the GregTech-style "more steps = more valuable" model
+- from: dtterralith exotic log types (cedar, jacaranda, kapok) | via: create:cutting | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: distinctive Terralith-biome logs producing distinctive planks via Create's saw; ties the exotic biome's wood to the production spine and gives a woodworker a reason to travel to those biomes (M-30 regional flavor — cedar only in Terralith's redwood biome, etc.)
+- from: dtterralith exotic seeds | via: worldgen/spawn only | to: economy | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: Terralith-biome-exclusive tree species are region-locked by definition — a jacaranda log only grows in Terralith's jacaranda valley; that makes the exotic plank a regional trade good consistent with M-30's scarcity gate
+- from: dtterralith tree seeds | via: ars_nouveau:imbuement | to: magic | motif: M-16 | power: mid | tone: ok | verdict: REJECT | reason: the seeds are trees, not crops, and Serene Seasons fertility doesn't gate tree growth (only crops); linking them to M-16 seasonal reagent is a stretch — trees aren't seasonally locked in the same way; theme clash between "deciduous tree seed" and "seasonal magic reagent"; REJECT
+- NOTE: dossier already recommends LEAVE; these ACCEPT rows challenge that by noting the seeds/logs ARE distinct items with a real regional-scarcity identity. The LEAVE recommendation was for "worldgen compatibility layer" but the mod does register 33 unique seeds and 104 leaf blocks — there IS content surface. The M-12/M-30 candidates are valid for a wholesale Terralith-biome woodworking pass.
+
+
+
+
+
 
 
 

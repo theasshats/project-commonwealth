@@ -71,6 +71,29 @@
 - from: create_pattern_schematics:pattern_schematic (repeating build tool) | via: aeronautics build workflow | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: pattern schematics riding a gantry/contraption auto-extend ship hulls and rail corridors — the repeating-schematic tool is exactly how a player constructs a large Aeronautics airframe efficiently; it's a build-enabler for the aeronautics tier, granting it a second anchor in the logistics arm
 - from: create_pattern_schematics:empty_pattern_schematic | via: create:mechanical_crafting | to: Create | motif: M-05 | power: mid | tone: ok | verdict: REJECT | reason: the schematic items already route through vanilla crafting; adding a mechanical_crafting gate on an M-05 logic requires a machine the schematic's use-case doesn't justify — it's a paper+quill tool, not a product that earns a multi-step gate
 
+## cbc_at   [anchors: Create, aeronautics (2)]
+- REWORK: existing Create + aeronautics anchors are tight and accurate — cannon assembly is Create-machined through cutting/casting/CBC munition types, and its weapons mount on Aeronautics ships/contraptions. OK — connections sound.
+- from: cbc_at heavy-autocannon / rocket-pod tier | via: create:sequenced_assembly (boss-drop gate) | to: Create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: the heavy autocannon barrel (the top-tier ship weapon) requires a rare boss-drop component in its sequenced_assembly — the DESIGN's "Create tech unlocks via boss drops" applied to ship armament; a dedicated combat specialist farms the drop while a builder crafts the barrel
+- from: cbc_at munitions (AP/APDSFS rockets) | via: emergent trade | to: economy | motif: M-34 | power: endgame | tone: ok | verdict: ACCEPT | hook: a munitions specialist who runs the CBC+CBC_AT assembly chain produces warheads/rockets for trade to pilots who lack the fabrication infrastructure — combat supply chain as an economy service
+- from: cbc_at gunpowder/propellant consumption | via: M-26 consumption | to: survival/economy | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: gunpowder consumption is ambient — every combat mod consumes gunpowder; this isn't a distinctive weave for cbc_at specifically, it's a generic observation. Reject as non-discriminating.
+
+## create_enchantment_industry   [anchors: Create (1)]
+- from: create_enchantment_industry liquid XP (experience_bucket fluid) | via: ars_nouveau:imbuement (liquid XP as infusion fuel) | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: liquid XP piped from a Create mob-farm can power Ars Nouveau imbuement infusions — the Create XP factory becomes the magic pillar's ritual-fuel source; a tech-magic cross-route dependency where neither side is self-sufficient
+- from: create_enchantment_industry:blaze_enchanter (automated enchanting) | via: occultism:ritual (enchant output feeds a ritual's gear requirement) | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: an Occultism ritual that requires a specific enchanted item (e.g. Soul Bound I sword for a binding rite) can only be satisfied efficiently by the Create Blaze Enchanter pipeline — forces the magic specialist to either trade for enchanted gear or maintain a Create XP line
+- from: create_enchantment_industry:printer (copies enchanted books) | via: emergent trade | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: an enchanting specialist running the Blaze Enchanter + Printer is the pack's enchant-for-hire role — they print enchanted books and sell or trade them to players who lack the XP pipeline; a knowledge/labor service that keeps the economy's non-tradeable-knowledge edge (M-37 neighbor)
+- from: create_enchantment_industry hyper-enchanting (breaks vanilla caps) | via: create:sequenced_assembly or M-06 | to: Create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: super-enchanting templates gating hyper-tier enchantments are a multi-stage chain through the Blaze Enchanter + Printer + Grindstone sequence — a Create sequenced depth loop where each pass adds an enchant level; endgame-only, scales correctly
+- from: liquid XP as aeronautics fuel alternative | via: createaddition:liquid_burning | to: aeronautics | motif: M-13 | power: mid | tone: clash | verdict: REJECT | reason: experience as a vehicle fuel is tonally wrong for this pack — XP is an arcane/progression resource, not a diesel substitute; the Create-to-aeronautics fuel path is already TFMG diesel/gasoline (M-13 reserved); inserting liquid XP breaks the fuel narrative
+
+## shulkerboxtooltip   [anchors: support/QoL client (1)]
+- LEAVE — pure client-side tooltip renderer; zero items/blocks/loot. Genuine zero-surface QoL mod; nothing to route.
+
+## fzzy_config   [anchors: support/library (1)]
+- LEAVE — Kotlin config-engine API (TOML serialization, GUI generation, config sync); zero items/blocks/loot. Genuine zero-surface library; nothing to route.
+
+
+
+
+
 
 
 

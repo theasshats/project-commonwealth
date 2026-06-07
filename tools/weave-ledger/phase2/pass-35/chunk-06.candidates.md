@@ -53,7 +53,22 @@ Power-read: the eyes are endgame items (require broad exploration across multipl
 
 OK — existing survival anchor is sound. New links (magic via ritual/imbuement, Create via sequenced assembly/haunting, boss-key, loot-seed) are all adding real 2nd/3rd system ties.
 
+## trailandtales_delight   [anchors: survival (1)]
 
+Farmer's Delight addon with Sniffer-recovered Lantern Fruit crop, cheese-making, cherry/pitcher dishes, and ancient coffee/teas. Strong food diversity. Existing anchor: survival (1). Already uses farmersdelight:cooking + farmersdelight:cutting.
+
+Power-read: Lantern Fruit is a mid-tier crop (requires Sniffer egg recovery — sniffer is exploration-gated), golden variant is higher-value. Cherry cheese pie and ancient coffee are multi-step luxury foods (everyday→mid: they require sniffer egg + milk + cherry + pottery cooking, so 3-4 steps even before any Create integration). The mod explicitly has cheese production (curd → cheese wheel → slices) which is a maturing/aging chain.
+
+- from: trailandtales_delight:lantern_fruit (Sniffer crop) | via: create:milling (mill lantern fruit into lantern_fruit_flour or jam-precursor) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the exotic Sniffer-recovered fruit feeds the Create milling chain, producing an ingredient used in further cooking steps — the food-processing web and the Create spine meet at this unusual crop
+- from: trailandtales_delight:curd_block → cheese_wheel | via: create_cheese:maturing (aging the curd under the right conditions to produce cheese) | to: economy | motif: M-35 | power: mid | tone: ok | verdict: ACCEPT | hook: cheese must age — players can't rush it — creating a natural time-specialist role: the dairy farmer who keeps a maturing cellar and trades aged cheese to the server's cooks; the wait itself is the value-add
+- from: trailandtales_delight:ancient_coffee / trailandtales_delight:cherry_petal_tea | via: farmersdelight:cooking + Serene Seasons seasonal gate (cherry/pitcher ingredients are season-dependent) | to: survival | motif: M-16 | power: mid | tone: ok | verdict: ACCEPT | hook: ancient coffee requires cherry blossoms obtainable only in spring — and cherry-blossom wood is a Serene Seasons spring-availability resource; a cup of ancient coffee is a seasonal rarity that players plan harvests around
+- from: trailandtales_delight:golden_lantern_fruit (rare golden variant from the Sniffer crop) | via: ars_nouveau:imbuement (imbuement of source gems onto golden lantern fruit to produce a magic reagent or food-buff variant) | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: the golden Sniffer-crop carries an otherworldly glow that makes it a natural imbuement substrate — the magic specialist turns the baker's rarest ingredient into a reagent, and the baker needs to trade to keep the golden fruit supply up
+- from: trailandtales_delight:cherry_cheese_pie / trailandtales_delight:cooked_sniffer_egg_block (flagship luxury dishes) | via: config tie (bountiful Decree objective pool seeded with these dishes) | to: economy | motif: M-26 | power: mid | tone: ok | verdict: ACCEPT | hook: the server's bounty boards list cherry cheese pies and stuffed sniffer eggs as weekly demand — the most elaborate dishes from this mod become the items that drive continuous cooking production; consumption is the engine, not decoration
+- from: trailandtales_delight dishes as bare "luxury sellable goods" | via: — | to: economy | motif: M-09 (RETIRED) | power: — | tone: — | verdict: REJECT | reason: M-09 retired; bare "sell the pie for coin" is the ambient endpoint; the M-26/M-35/M-16 candidates above capture the actual demand-gating mechanisms
+
+REWORK: dossier lists M-09 "luxury good → coin" as a candidate. That's retired. The real economy link is M-26 (consumption demand, e.g. via bountiful) or M-35 (cheese aging = maturation specialist). Both are stronger and correct. The Create milling pull (M-12) and Ars golden fruit imbuement (M-10) are also missing from the dossier's candidates — both are genuine.
+
+## lithostitched   [anchors: support/library (1)]
 
 Worldgen library (biome injectors, density functions, terrain modifiers). Zero blocks, zero items, zero loot tables, no recipe types. Pure worldgen plumbing.
 

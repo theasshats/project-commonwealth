@@ -96,3 +96,24 @@ Craftable clockwork wolf companion, built via deep Create sequenced assembly (ne
 **Existing connections review:**
 REWORK: Single anchor (Create) is correct but the dossier's "leave, nothing to weave" is too conservative — the optical-sensor / quantum-drive items are clearly designed as high-tech electronics and the M-17 Energiser path + M-29 imbuement magic-module are both coherent. The mod has two genuine ACCEPT candidates to lift it to 3 anchors.
 
+## create_new_age   [anchors: create (1)]
+
+Full electricity + nuclear depth layer for Create — Energiser recipe-type, coil/motor FE↔rotation bridge, solar plates, multiblock nuclear reactor consuming Thorium → heat + Corium, 2 biome-modifiers for Thorium ore. The Energiser (create_new_age:energising) is a registered recipe method on the methods palette — a key pull target.
+
+**Method-pull candidates:**
+
+- from: create_new_age Thorium ore (biome-modifier, regional) | via: scarcity foundation → M-30 regional gate | to: economy | motif: M-30 (regional-scarcity gate) | power: endgame | tone: ok — Thorium via biome-modifiers is definitionally region-locked; the reactor can only run in regions where Thorium spawns, so power is geographically anchored, driving trade for the fuel | verdict: ACCEPT | hook: Reactor fuel is only available in the regions where Thorium forms — running a nuclear power plant means either settling in a Thorium biome or trading for the fuel.
+
+- from: create_new_age:corium (nuclear waste from reactor) | via: create:mixing / occultism:spirit_fire | to: magic | motif: M-11 (ritual/transmutation sink) | power: endgame | tone: ok — radioactive reactor waste transmuted in an occult ritual (corium as a corrupted-matter catalyst) is tonally consistent with the dark-magic aesthetic; the spirit fire burns the radioactive residue into an occult essence | verdict: ACCEPT | hook: Corium, the molten reactor core output, feeds an occultism ritual — nuclear waste becomes dark magic fuel.
+
+- from: create_new_age:energising (the method itself) as a 2nd-step in magic gear | via: create_new_age:energising → irons_spellbooks gear | to: magic | motif: M-17 (electric/FE charging bridge) | power: mid-endgame | tone: ok — the dossier flags this as the cleanest 2nd-anchor candidate; charging a magic focus/scroll at the Energiser threads electricity into the magic gear progression | verdict: ACCEPT | hook: Iron's spellcasting foci must be charged at the New Age Energiser — magic gear needs the electric infrastructure.
+
+- from: create_new_age:blank_circuit / copper_circuit (electronic intermediate) | via: create:sequenced_assembly — circuits as components in aeronautics control surfaces | to: aeronautics | motif: M-24 (mechanical component → propulsion/control) | power: mid-endgame | tone: ok — electronic control circuits as required inputs for Aeronautics control surfaces (rudders, ailerons, navigation gear) is mechanically sensible and adds depth to ship construction | verdict: ACCEPT | hook: Aeronautics navigation and control surfaces require electronic circuits from the New Age line — no electricity tier, no steerable ship.
+
+- from: create_new_age solar_heating_plate | via: Create heat network → colony/survival | to: survival | motif: M-26 (consumption sink — the fuel/heat is consumed by production) | power: mid | tone: ok — solar heat is consumed continuously by boilers; this is an ambient consumption link (heat as a consumed resource feeding machines), not a strong weave on its own | verdict: REJECT | reason: M-26 consumption is the ambient endpoint — heat feeds machines, but this is how all Create heat works; it doesn't differentiate create_new_age or advance the loop specifically. Too ambient to count as a weave.
+
+- from: create_new_age:thorium_ore (rare ore worldgen) | via: create:crushing → ore-doubling byproduct | to: create | motif: M-03 (Create ore-doubling) | power: mid | tone: ok — Thorium ore through the crusher yields crushed thorium + XP nugget byproduct; natural extension of the ore-doubling pattern to the new ore | verdict: ACCEPT | hook: Thorium ore through the Create crusher yields crushed thorium and a trace of XP — the ore-doubling loop applies to nuclear fuel too.
+
+**Existing connections review:**
+REWORK: Single anchor (Create) for a mod that adds a full electricity/nuclear tier is under-represented. The 5 ACCEPT candidates (M-30 Thorium regional scarcity, M-11 Corium occult transmutation, M-17 FE charging for magic, M-24 circuits for aeronautics control, M-03 ore-doubling) collectively give it Create / magic / economy / aeronautics — a 4-pillar contribution. Priority: M-30 Thorium scarcity and M-24 aeronautics circuits are the highest-value loop-advancing edges.
+
