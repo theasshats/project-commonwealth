@@ -1,0 +1,7 @@
+{
+  "pass": 34,
+  "seed": 34,
+  "opus_chunk": 16,
+  "n_chunks": 18,
+  "mode": "blind"
+}

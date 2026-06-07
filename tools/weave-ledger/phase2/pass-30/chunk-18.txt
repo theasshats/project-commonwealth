@@ -1,0 +1,10 @@
+kubejs
+beachparty
+dragonlib
+createmechanicalcompanion
+txnilib
+terrablender
+ars_n_spells
+stylecolonies
+entity_texture_features
+recipe_integration
