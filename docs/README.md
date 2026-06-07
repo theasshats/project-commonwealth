@@ -54,6 +54,23 @@ priorities. See [`archive/`](archive/):
 - `archive/MAGIC-WEB-HANDOFF.md` — the #75 magic-web recipe weave (merged ~v0.5.2). Live design in `RECIPES.md` ("Magic web").
 - `archive/MAGIC-WEB-PLAYTEST.md` — the #75 in-game playtest checklist.
 
+### Archive candidates — proposed (we have too many live docs)
+
+The `docs/` set has grown; these are flagged to **trim once their work lands** (move to `archive/`, or
+fold their durable bits into the canonical doc and delete). Not yet moved — listed so the call is tracked:
+
+- **`MODLIST-AUDIT.md`** — explicitly a snapshot/planning artifact, now largely **superseded** by
+  `SYSTEMS.md` (model) + `CURATION.md` (rubric) + `ROADMAP.md` (plan). **Action:** file any remaining live
+  findings as issues, then archive. *(Strongest candidate.)*
+- **`ROTTEN-CREATURES-STRUCTURES.md`** — the #106 spawn-allowlist review sheet. **Action:** archive once
+  #106 is playtested (its durable rules live in `SPAWN-GATING.md`).
+- **`RELEASE-CADENCE.md`** — accepted; its rhythm now lives in `ROADMAP.md` + `CLAUDE.md`. **Action:**
+  fold the odd/even *rationale* into `ROADMAP.md`, then archive to remove the duplication.
+- **`ARCANA-BRIDGE-MOD.md`** — scoping doc for the Derpack Arcana helper mod (PR #80). **Action:** archive
+  if/when #80 has landed (it's a pre-build scoping doc, not live reference).
+- **`BOOT-LOG-BASELINE.md`** — **keep** as a living reference (the accepted boot-log-noise catalog future
+  passes check against), but trim the #119/#120/#121-specific sections now those have closed.
+
 ## Conventions
 
 **The canonical split — don't duplicate the systems preamble.** Several docs open with a version of
