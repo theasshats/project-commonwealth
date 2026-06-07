@@ -173,6 +173,8 @@ from: createmechanicalcompanion (wolf companion as combat service) | via: player
 from: createmechanicalcompanion:quantum_drive | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: endgame | tone: ok | verdict: REJECT | reason: redundant — the optical sensor already takes the magic cross-route; double-routing to magic via a second component on the same item's chain over-forces the weave; one cross-route dependency is sufficient
 from: createmechanicalcompanion components | via: minecolonies hut/research unlock | to: economy | motif: M-28 | power: endgame | tone: ok | verdict: ACCEPT (low confidence) | hook: a colony's Mechanical Workshop researches wolf-component fabrication, providing an alternative path for colony-runners who can't do deep Create; verify against designer intent before authoring
 
+== CHUNK COMPLETE ==
+
 
 
 

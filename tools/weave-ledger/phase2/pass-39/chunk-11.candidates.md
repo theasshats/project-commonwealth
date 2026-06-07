@@ -98,6 +98,13 @@ OK — survival anchor (Nether exploration danger content) is sound. The loot-se
 - from: dndesires milkshake foods (chocolate/glowberry milkshake blocks) | via: farmersdelight:cooking or extradelight:mixing_bowl | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: milkshakes are a food, and their connection to survival is already the ambient anchor (they feed the food/diet chain). Explicitly wiring them to farmersdelight:cooking adds nothing over the existing food-processing web. Redundant edge; the food chain is already the connection.
 OK — Create anchor is deep. Three new links accepted: survival via M-26 (rubber as consumed production input), survival via M-12 (crop freeze-preservation), aeronautics via M-31 (cardboard packaging as logistics prerequisite). These advance the loop: Create production → survival (food preservation) → aeronautics (packaged cargo). The dossier's survival/food routing suggestion is confirmed here; packaging→aeronautics is the aeronautics add not spotted in the dossier.
 
+## glitchcore   [anchors: support/library (1)]
+- LEAVE — loader-abstraction library backing Glitchfiend mods (Serene Seasons, TerraBlender, Biomes O' Plenty); no items, blocks, loot, or recipe methods. Zero gameplay surface. Genuine library dependency.
+
+## bigsignwriter   [anchors: support/client UI (1)]
+- LEAVE — client UI utility for large-text signs; no items, blocks, loot, or game mechanics. Zero gameplay surface. Sanctioned decoration-aid support role.
+
+
 
 
 

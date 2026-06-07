@@ -187,6 +187,29 @@ A single readable Bible item (CPDV translation) — no mechanics, no crafting, n
 
 LEAVE — a one-item novelty mod with zero gameplay surface. The freef_bible item is inert (right-click reads text). No method palette entry can coherently consume or produce it. Any forced recipe edge would be noise.
 
+## openpartiesandclaims   [anchors: support/server-protection (1)]
+
+Chunk-claim + player-party server protection mod (Xaero). No items, no blocks, no loot, no methods. Chat-command and map-UI driven territory management.
+
+Power-read: a pure social/server-protection infrastructure mod. Its claim mechanic underpins the PvPvE territory premise (players protect their colony/production zones), but it contributes no material or method.
+
+- from: openpartiesandclaims claim territory (established claimed zones) | via: colony / MineColonies synergy — claimed zones as colony territory | to: economy | motif: M-28 | power: support | tone: ok | verdict: REJECT | reason: M-28 is a recipe motif (basics cheaper/faster via colony route). Open Parties doesn't gate any recipe or production; it's territory protection software. The conceptual link (claims protect colony territory) is real but it's a config-level design choice, not a weave through a method. No recipe edge exists to author.
+
+LEAVE — server protection infrastructure; no items, no methods, no materials. The territory-ownership mechanic conceptually underpins the colony/economy layer but contributes no weave-able method or material.
+
+## mcwroofs   [anchors: support/decoration (1)]
+
+Macaw's Roofs — ~600 sloped-roof blocks in wood, brick, stone, terracotta, concrete variants. Pure decoration; no mechanics, no methods, loot=yes (ambient block-drop). Vanilla-table crafted.
+
+Power-read: everyday decoration blocks. Same position as mcwstairs — any Create weave is M-04 (lossy crush), and the dossier explicitly flags it as applicable only in a wholesale deco-family pass. 600 blocks make piecemeal additions noisy.
+
+- from: mcwroofs stone/brick/terracotta roof variants | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: Same as mcwstairs — M-04 applies but only as part of a wholesale deco-family crush pass, not per-mod. The 600-block count makes individual recipe authoring low signal-to-noise. Reject pending a coordinated deco-crush pass covering the full Macaw's family.
+
+LEAVE — pending a coordinated wholesale deco-crush pass (M-04). Same conclusion as mcwstairs; both Macaw's deco mods should be handled together.
+
+== CHUNK COMPLETE ==
+
+
 
 
 

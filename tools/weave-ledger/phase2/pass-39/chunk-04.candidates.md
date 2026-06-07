@@ -112,6 +112,23 @@ Method-pull candidates:
 
 LEAVE — developer documentation tool (KubeJS scripting API for Create Ponder animated scenes); no items, blocks, processing, or gameplay material. Pure authoring infrastructure. Nothing to weave.
 
+## better_climbing   [anchors: support/QoL (1)]
+
+LEAVE — client-side climbing physics tweak (faster descent, speed ramp, jump in climbable); no items, blocks, loot, or gameplay material surface. Pure movement-feel improvement. Nothing to weave.
+
+## create_ltab-3.9.2   [anchors: create, survival (2)]
+
+Existing connections review:
+- create anchor: Create-themed structures — correct. The mod exists within the Create aesthetic.
+- survival anchor: structures + loot push the exploration / discovery face of survival — correct.
+REWORK: OK — both anchors are sound.
+
+Method-pull (loot-seed candidates for a 3rd link):
+- from: create_ltab structure loot tables | via: loot-seed | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: Create-themed ruins hiding a coin blank or scarce Numismatics coin (requiring a player to press it with Create to mint) makes exploring Create structures an entry into the player currency layer — the builder who finds the ruin seeds the early coin economy; thematic fit is strong (industrial ruins → industrial currency). via: loot-seed.
+- from: create_ltab structure loot tables | via: loot-seed | to: create | motif: M-15 | power: endgame | tone: ok | verdict: REJECT | reason: seeding a boss-key item (M-15) into structure loot removes the boss-fight requirement — M-15 is specifically "a boss drop is the gate item for a complex Create recipe." Putting a boss-key analog into an exploration chest bypasses the combat-route dynamic that M-15 is meant to reinforce. REJECT (undermines M-15's design intent — boss kill should be the source of the gate item, not a chest in a ruin).
+
+
+
 
 
 

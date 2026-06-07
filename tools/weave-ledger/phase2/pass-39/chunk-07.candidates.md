@@ -69,3 +69,17 @@
 
 ## minecolonies_tweaks   [anchors: support/QoL-tag-harmonization (1)]
 - LEAVE — its core value is the 89 c:crops/c:foods tags that enable cross-mod food weaves authored against other mods' methods (not minecolonies_tweaks' own method). The inventory scroll items are colony-management tools with no coherent foreign-method pull — gating colony management tools on Create would be contrived; the colony route is already their native context. The `component_merge_shapeless` method is an internal colony-component combiner, not a useful foreign-material sink. The weave is in the mods whose crop items gain c: tags from this mod, not in minecolonies_tweaks itself. Sanctioned support anchor.
+
+## dynamictrees   [anchors: survival (1)]
+- from: dynamictrees:dendro_potion | via: create:mixing | to: create | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: mechanically processing botanical extracts (crushed jungle vines, botanical oils) through a Create mixing vat produces a growth accelerant for living trees; lumbering at scale needs Create to maintain tree stock efficiently
+- from: dynamictrees:dendro_potion | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: imbuing bonemeal with a source gem and wood-type essence produces an arcane growth elixir — the living forests of DT feel at home as recipients of Ars Nouveau magic; a simpler alternative to the Create route
+- from: dynamictrees:branch (branch byproduct) | via: create:milling | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the constant stream of branch drops from tree-felling gets milled into wood pulp/sawdust — a processing sink for lumbering byproduct that feeds Create paper/filter chains
+- from: DT branch waste | via: fuel burn | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: burning wood is ambient vanilla behavior; M-26 as bare fuel is the background loop function, not a weave candidate requiring Phase 3 authoring
+- from: DT branch waste → create:mechanical harvester | via: Create automated felling | to: create | motif: M-12 | power: mid | tone: clash | verdict: REJECT | reason: dossier flags DT trees as awkward with Create mechanical harvesters (branch logic doesn't cooperate with drill/saw combos); forcing this edge is a defect — the player experience would be broken harvesting rigs, not satisfying automation
+- REWORK: dossier's "leave" is too conservative given the dendro_potion item and the branch byproduct — both have method pull; the automated-harvester concern is valid (reject that specific edge) but doesn't foreclose the potion/branch-milling candidates.
+- OK — survival anchor (living-forest world-feel) is sound.
+
+## justenoughbreeding   [anchors: support/QoL-client (1)]
+- LEAVE — JEI breeding-info plugin; zero items, no methods, no loot tables. Sanctioned support anchor; nothing to route through any method.
+
+== CHUNK COMPLETE ==

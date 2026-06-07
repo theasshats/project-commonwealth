@@ -162,3 +162,36 @@ Method-pull:
 
 LEAVE — pure curated-flavor decoration with no material loop contact. The dossier's reasoning holds on blind review.
 
+## naturescompass   [anchors: support (QoL exploration utility) (1)]
+
+Zero blocks, 32 items (the compass + model variants), loot=no, no recipe types. Single craftable biome-finder compass. Pure information tool — produces no materials.
+
+Method-pull:
+- The compass itself is a mid-tier QoL item (finding scarce biomes is valuable in a scarcity-driven pack). Could be gated on Create parts (M-05 native-method gating) to make it a tech unlock rather than a vanilla craft. But the compass is a convenience, not a power item — gating it hard would punish players who just want to explore.
+- Alternatively: the compass could require a Galosphere allurite shard (M-07 attunement catalyst) to tune to a magic biome — thematic (allurite + compass = attuned biome-finder). But M-07 is reserved as an attunement catalyst for magic conversions, not exploration tools.
+- The compass finding rare biomes is genuinely useful for the scarcity loop (players hunt for ore-rich biomes), but that's ambient loop-use, not a weave.
+- No material output, no method to route through. The item's value is information, not matter.
+
+- from: naturescompass:naturescompass (craftable compass) | via: KubeJS recipe — add a Create andesite casing or brass gear as a component | to: create | motif: M-05 | power: everyday | tone: ok | verdict: REJECT | reason: The compass is a QoL navigational tool, not a powerful production item; gating it on Create parts doesn't earn a cross-system benefit proportional to the cost, and the basic-component anti-gate rule (don't gate everyday QoL behind complex recipes) applies. The compass is more like a support utility than a production anchor.
+
+LEAVE — support QoL utility with no material to route. A gating recipe was considered and rejected (violates basic-component rule for a navigational aid). No coherent second anchor.
+
+## create_ultimate_factory   [anchors: Create (1)]
+
+One anchor (Create). Zero blocks, zero items, zero loot. Pure recipe datapack authoring ~30 Create recipes onto existing Create types (compacting/crushing/mixing/splashing/haunting). Makes vanilla resources renewable (coal block+lava → diamond, nuggets+gravel → strata stones, etc.).
+
+Method-pull:
+The dossier says "leave — no items of its own; deepens Create pillar." Blind check:
+- This mod IS already anchored to Create by its nature — all recipes run through Create machines. But it has no items to route elsewhere.
+- The renewable-diamond recipe (coal block + lava → diamond via compacting) is potentially scarcity-threatening in a scarcity-first pack — it makes diamond abundant via automation. Worth flagging as a balance concern, but that's a config/RECIPES.md issue, not a weave.
+- No foreign-pillar bridge is possible without items of its own.
+- Could argue: its renewable stone/strata recipes feed the aeronautics/building arm indirectly (more stone = more structural material), but that's ambient loop, not a weave.
+
+LEAVE — recipe-only mod deepening the Create pillar; no items to route to a second system. Balance flag: some renewable-diamond/scarce-ore recipes may undercut the scarcity foundation and should be reviewed against RECIPES.md principles.
+
+## bcc   [anchors: support (QoL/modpack-ops) (1)]
+
+Zero blocks, zero items, zero loot, no recipe types. Version-handshake compatibility checker. Pure ops utility for the public release.
+
+LEAVE — genuine zero-content modpack-ops utility. Sanctioned support role. No gameplay surface.
+
