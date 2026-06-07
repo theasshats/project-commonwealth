@@ -188,6 +188,41 @@ Red-team: is this different from "any ore goes through Create crushing → coin"
 
 REWORK: none on existing anchors. Three new ACCEPTED candidates add economy as a 3rd anchor: M-09 food trade, M-15 ancienttome documenting the danger→colony→tech loop, M-08 quarry→mint. All three advance the loop.
 
+## appleseed   [anchors: survival (1)]
+
+Power-read: Diet – AppleSeed Edition is a mechanic mod with no items/blocks. It auto-derives nutrition from recipe ingredients across the whole modlist and rewards balanced eating with buffs. Its "output" is standing demand pressure, not a material. As the dossier notes, the natural 2nd anchor is production-by-demand, not a recipe edge.
+
+Existing connection check: survival (pressure/demand) — correctly single-anchored. The dossier identifies two 2nd-anchor paths: production demand (diet pulls on farming/cooking) and economy (balanced-diet foods as sellable goods via M-09). These are the right reads.
+
+Candidate 1 — diet demand → cooking production chain (M-12, survival→create/production)
+- from: appleseed diet variety demand (the five groups: Grains/Vegetables/Protein/Fruits/Sugars) | via: config tie — the diet system auto-reads all food mods' outputs, creating demand for diverse crops/meats/cooked dishes across FD/ExtraDelight/mushroomquest/etc. | to: create | motif: M-12 | power: everyday | tone: ok — the diet mechanic makes diverse cooking necessary; that demand flows through FD → Slice&Dice Slicer → Create automation. The chain reads: appleseed (pressure) → farmersdelight/sliceanddice (production) → create (automation). | verdict: ACCEPT | hook: diet variety isn't optional — the buff set requires all five groups, which means every food category needs a producer; the Create kitchen exists because the diet system demands it.
+
+Red-team: is this a recipe weave or an emergent mechanic? It's the latter — the diet system creates demand structurally, not via a recipe. But the briefing allows "config tie" as a delivery mechanism, and the link is real: appleseed's demand signal justifies the entire FD+Create food automation chain. This is a documentation weave: appleseed gains production as its 2nd anchor because it directly drives that demand. Survives.
+
+Candidate 2 — balanced-diet foods as economy trade goods (M-09, survival→economy)
+- from: appleseed diet demand (high-nutrition foods) | via: numismatics price/sell — a cook specialist who produces balanced multi-group meals becomes the server's food supplier | to: economy | motif: M-09 | power: everyday | tone: ok — balanced-diet cooking is valuable (provides buffs that matter for survival), so the cook specialist's output has real trade value; M-09 via food-selling is tight here. | verdict: ACCEPT | hook: a proper meal isn't just saturation — it's a buff package; the server's cook is a real profession because balanced plates are worth buying.
+
+Red-team: M-09 says "high-effort consumable." Does a cooked meal qualify? Yes — multi-ingredient dishes (FD stews, ExtraDelight preparations) involve several recipe steps and diverse ingredient sourcing; they are the "processed crop" class of consumable M-09 names. Survives.
+
+Candidate 3 — magic: diet buff from a rare potion-food ingredient (M-10/M-16)
+- from: appleseed nutrition demand | via: ars_nouveau:potion_flask or seasonal ingredient | to: magic | motif: M-16 | power: mid | tone: clash — forcing a magic edge onto a diet-buff system is tenuous; the diet mechanic is about food diversity across normal cooking, not magical potions. A "magic diet pill" would undermine the diet system's purpose (it should reward varied cooking, not a magic shortcut). | verdict: REJECT | reason: tone clash + undermines the diet mechanic's design intent (diet variety demands real cooking, not a magic shortcut); no coherent "of course" hook.
+
+Summary: 2 ACCEPTED (M-12 diet demand → cooking/Create production, M-09 diet foods → economy trade). 1 REJECTED (M-16 magic shortcut — undermines design intent). Gains production as 2nd anchor and economy as 3rd.
+
+## ars_n_spells   [anchors: magic (1)]
+
+Power-read: pure connective tissue between Ars Nouveau and Iron's Spellbooks. No items of its own (0 items, 0 blocks). Its join surface is "Ars source ↔ Iron's mana" — magic-internal only. Five configurable mana-unification modes + cross-cast ritual.
+
+Candidate — unified mana pool → Create electricity bridge (M-17, magic→create)
+- from: ars_n_spells unified mana (Ars source + Iron's mana as one pool) | via: createaddition:charging — charge an Ars/Iron's focus/tome from a Create electrical network | to: create | motif: M-17 | power: mid | tone: ok — M-17 is "Create electricity charges a tool/focus/reagent, threading the electric tier into magic gear." Charging a unified spell focus from a Create-Addition electric network fits exactly. | verdict: REJECT | reason: ars_n_spells has no items of its own; the charging would apply to the spell items from the underlying mods (Ars Nouveau, Iron's Spellbooks), not to ars_n_spells specifically. The weave belongs on those mods' dossiers, not here. This mod is the glue; weaving goes on the glued mods.
+
+Candidate — cross-cast ritual (two tablets → spell cross-application) → boss/structure loot gate (M-15)
+- from: ars_n_spells cross-cast mechanic (inscription ritual needing two tablets) | via: boss-key gating — the tablet materials needed for cross-casting require a boss-drop reagent | to: survival | motif: M-15 | power: mid | tone: ok — if the inscription tablets are gated behind a boss drop (e.g. require an Ars boss drop + an Iron's boss drop to make the cross-cast possible), it ties the magic-unification milestone to combat progression | verdict: REJECT | reason: ars_n_spells has no items to gate — the inscription uses the host mods' items; the gating would belong on Ars Nouveau or Iron's Spellbooks' recipe chains, not here. Same problem as above: this mod has no item surface to attach a gate to.
+
+LEAVE — pure internal magic-unification glue. No item surface to route a 2nd pillar through. The dossier conclusion is correct: this IS already a weave (Ars↔Iron's), but it's magic-internal, and no external material can attach to it. One-system (magic) mod; stays a library from the weave graph's perspective.
+
+== CHUNK COMPLETE ==
+
 
 
 

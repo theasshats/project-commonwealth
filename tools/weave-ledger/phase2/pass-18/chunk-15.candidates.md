@@ -101,6 +101,18 @@ Power-read: 2 blocks, 14 items, loot=no; uses create:cutting, create:filling, cr
 
 REWORK: Create (1) is the correct single anchor currently. New edges: economy via M-09 (ammo + guns as vendor goods) take createimmersivetacz to Create + economy (2 anchors). Solid.
 
+## createaddition   [anchors: Create (1)]
+Power-read: 23 blocks, 46 items, loot=yes; heavily inbound-woven (7 Create types, plus Mekanism/IE dead compat). Registered methods: createaddition:charging, createaddition:liquid_burning, createaddition:rolling. Key items: electric_motor, alternator, accumulator, tesla_coil, electrum_ingot, seed_oil/bioethanol. M-17 (FE charging bridge) was designed with this mod in mind.
+
+- from: createaddition:charging (tesla_coil) | via: FE-charge Iron's Spellbooks spell foci / arcane batteries | to: magic | motif: M-17 | power: mid | tone: ok | verdict: ACCEPT | hook: The tesla coil doesn't just shock — it charges. An Iron's Spellbooks focus or Ars Nouveau source-battery placed in range draws FE into magic charge, threading the electrical grid into the arcane pillar. Running a generator to power your rituals makes engineering and magic co-dependent.
+- from: createaddition:seed_oil | via: createaddition:liquid_burning | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Farmed seeds pressed to oil burned for energy — the crop field feeds the generator. A player who farms feeds the factory; agriculture and industry become one supply chain. Serene Seasons makes the crop window tight, so this is a seasonal pressure on the power grid (M-16 adjacency).
+- from: createaddition:bioethanol | via: createaddition:liquid_burning → aeronautics engine | to: aeronautics | motif: M-13 | power: mid | tone: ok | verdict: ACCEPT | hook: Bioethanol is a crop-derived fuel that burns hot enough for an engine intake. The aeronautics propulsion chain gains a renewable fuel source from farming, connecting the airship supply line back to the agricultural base.
+- from: createaddition:electrum_ingot | via: create:mixing / create:pressing | to: Create | motif: M-03 | power: mid | tone: ok | verdict: REJECT | reason: Electrum is already produced by createaddition's own recipes (gold + silver alloy via Create methods); M-03 is ore-doubling for raw ores, not further processing of an alloy product. Motif misfit → reject. The Create anchor is already well-established without forcing M-03 onto electrum.
+- from: createaddition:accumulator / portable_energy_interface | via: create_new_age:energising | to: Create | motif: M-17 | power: mid | tone: ok | verdict: REJECT | reason: The accumulator stores FE — it's the storage tier of the FE system, not something that receives energy to become a new item. M-17 is about charging tools/foci, not charging batteries; this reads as confused motif application. The FE→magic charging edge (above, via tesla_coil) is the clean M-17 application. Reject duplicate.
+
+REWORK: Create (1 anchor) is currently under-counted — createaddition already works through 7 inbound Create recipe types and produces the electrical bridge. The missing 2nd anchor is magic (M-17) or aeronautics (M-13), both of which are strong. The existing single anchor description is correct but the mod is a top candidate for multi-anchor status. New edges: magic (M-17 charging) + survival/aeronautics (M-12/M-13 oils) → Create + magic + aeronautics (3 anchors).
+
+
 
 
 

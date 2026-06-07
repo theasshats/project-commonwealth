@@ -158,4 +158,23 @@ upward. Assess the dossier's candidates plus new routes.
   reviewer might want to promote this to create+aeronautics (2 anchors) at the dossier level, since
   getting the controller requires meaningful Create progression.
 
+## expandeddelight   [anchors: survival (1)]
+REWORK: 1-anchor mod with two strong dossier candidates; assess both plus any new routes.
+- from: expandeddelight:salt_ore / deepslate_salt_ore | via: create:crushing (ore-doubling: salt ore →
+  salt dust + possible mineral byproduct — the M-03 treatment for a non-metal ore) | to: create | motif:
+  M-03 | power: everyday | tone: ok | verdict: ACCEPT | hook: salt isn't smelted — it's crushed; the
+  millstone grinds salt ore into cooking-grade dust, and the crusher doubles your yield (salt is cheap
+  but mass-scale cooking needs it by the bucket)
+- from: expandeddelight aged cheese wheels (time-gated in casks, a multi-step craft: milk → cask → time →
+  cheese wheel) | via: numismatics sell/price table at a Trade Post or MineColonies merchant |
+  to: economy | motif: M-09 | power: mid | tone: ok | verdict: ACCEPT | hook: aged cheese takes real time
+  — that time-cost makes it a genuine sellable; a wheel of cave-cured cheese is worth more than a stack of
+  raw crops on the market
+- from: expandeddelight:cinnamon_log (unique wood species) | via: create:crushing → cinnamon dust /
+  bark dust (M-04 deco-crushes-back) OR woodworks:sawmill for cinnamon boards/planks into the wood web |
+  to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: M-03 (salt crushing)
+  already earns the Create anchor cleanly; adding M-04 for cinnamon wood is a second Create-anchor route
+  that doesn't advance any new pillar — it's a nice-to-have deco-to-Create connection but redundant for
+  the anchor count; drop it and let M-03 carry the Create connection
+
 
