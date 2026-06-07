@@ -19,4 +19,18 @@ Missing angle the rows don't capture cleanly: the M-37 University-gate candidate
 
 OK — existing rows (M-04, M-31, M-30, M-37) are otherwise sound.
 
+## endrem   [anchors: survival (1)]
+
+Existing rows: very rich. Accepted: M-11 undead_eye/occultism ritual (30×), M-10 nether_eye/Ars apparatus, M-34 loot-seed into boss chests, M-15 eyes as boss-key/loot-seed, M-02 guardian_eye mob-drop, M-19 haunting a soul/nether eye, M-34 trade economy. Rejected: M-06 Create sequenced_assembly for eyes (near-unanimous, trivializes gate), M-30 regional scarcity.
+
+What's missing or worth a nuanced challenge:
+
+The M-19 haunting candidates (create:haunting for nether_eye, rogue_eye, lost_eye) are each at ACCEPT×1 with no challenge. The create:haunting bridge (M-19) is the pack's native Create→occult seam. Applying it specifically to the *lost_eye* (a "lost soul" themed eye) is the cleanest single pick — no other eye is as thematically matched to soul-fire transmutation. The existing M-19 rows scatter across multiple eyes; a focused pick on exactly one is missing.
+
+Also missing: a CHALLENGE to the over-proliferation of magic routes. The rows propose M-11 (occultism ritual), M-10 (Ars apparatus), M-19 (haunting), and M-02 all as separate ACCEPT entries for the magic anchor. That's four different magic methods on a 1-anchor mod. Phase 3 should pick *two at most* (one Ars, one Occultism or haunting), not author all four. The existing accepted rows don't record this over-routing risk.
+
+- NEW | from: endrem:lost_eye | via: create:haunting | to: create | motif: M-19 | power: mid | tone: ok | verdict: ACCEPT | hook: the lost_eye is the "wandering soul" variant — running a base ender-blank through Create's soul-fire haunting to yield it is the most coherent single M-19 pick; keeps the Create spine involved without trivializing the exploration gate.
+- CHALLENGE | from: endrem eyes (all magic routes together) | via: ars_nouveau:enchanting_apparatus + occultism:ritual + create:haunting + spirit_fire | to: magic | motif: M-10 | verdict: REJECT | hook: four parallel magic routes for a mod already accepted at M-11 + M-10 is over-routing; Phase 3 should author exactly two (one Ars path for one themed eye, one Occultism path for another) — the per-eye accepted rows are individually sound but their *sum* is too many seams on a single mod; flag for Gate-2 pruning.
+
+
 

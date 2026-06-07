@@ -50,3 +50,19 @@ LEAVE — Team Abnormals API framework; the single template_chest item is too tr
 LEAVE — cosmetic blocks (transmog table, player statue) with no routable material; the existing 1-vote REJECTs on both items are correct. No surface to weave.
 
 ## formationsnether   [anchors: survival (1)]
+- NEW | from: formationsnether Nether castle / sanctuary structure loot | via: loot-seed (seed a Create-processed intermediate — e.g., a refined TFMG steel ingot or a precision-crafted andesite machine component — into the deepest Formations Nether castle chests) | to: create | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: whoever built those Nether outposts used Create-grade machinery — the ruins still hold fabricated parts a tech player can't easily make yet; the combat specialist clears the castle and sells the part to the engineer
+- CHALLENGE | from: formationsnether structure loot | via: loot-seed coin | to: economy | motif: M-08 | verdict: REJECT | hook: the 5/4 split REJECT is correct — M-08 is "scarce regional metal → Create-processed → player-minted coin"; seeding pre-minted coins into loot is a coin *faucet* (the retired M-09 direction), not player-minted currency; the contested ACCEPTs conflate finding coins (loot) with minting coins (M-08); a Nether coin cache doesn't anchor player-minted currency, it just sprinkles premade money
+
+## puzzleslib   [anchors: support (library/API) (1)]
+LEAVE — Fuzs framework library, zero items/blocks/methods; no surface to weave.
+
+## detect-afk-1.2.2   [anchors: support (QoL/server-admin) (1)]
+LEAVE — AFK detection behavior, zero items/blocks/methods; no surface to weave.
+
+## letmefeedyou   [anchors: support (QoL) (1)]
+LEAVE — player-to-player food-giving behavior, zero items/blocks/methods; no surface to weave. The 1-vote M-33 REJECT is correct (M-33 requires a specialist performing work on materials, not a generic player interaction).
+
+## searchables   [anchors: support (client UI library) (1)]
+LEAVE — search/filter UI library, zero items/blocks/methods; no surface to weave.
+
+== CHUNK COMPLETE ==

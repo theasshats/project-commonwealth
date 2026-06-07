@@ -56,3 +56,6 @@ OK — existing rows sufficient. The four-system coverage (Create via M-03/M-04,
 
 CHALLENGE | from: galosphere:preserved_transform_recipe (amber) | via: ars_nouveau:imbuement | to: magic | motif: M-10 | verdict: REJECT confirmed — one ACCEPT row remains contested; the amber-preservation mechanic takes organic items and freezes/suspends them, which is not the same semantic as arcane infusion refining a material. The one ACCEPT (1/1) should not pass Gate 2: there is no established lore that "fossilised organic in amber = arcane reagent" in this pack's magic web (Ars Nouveau is nature/growth magic, not preservation). The amber output is a decorative/preservation item, not a magic catalyst. REJECT stands.
 
+## create   [anchors: Create (1)]
+OK — existing rows sufficient. Dossier explicitly flags "N/A as recipient — Create is the hub other mods weave INTO." All rows are REJECTs and correctly so. No new candidates.
+

@@ -12,3 +12,33 @@
 - CHALLENGE | from: simplehats grab-bags (mob drops from hostile mobs) | via: loot-seed (boss loot tables) | to: survival | motif: M-34 | verdict: REJECT-partial | hook: the 6-vote M-34 ACCEPT row (seed rare hat bags into boss loot tables) is sound in direction but the dossier already confirms grab-bags drop off *all* hostile mobs by default — which means the ambient version of this already exists. The *incremental* value of the proposed weave is only the boss-table upgrade (rarer/themed hats from high-tier kills), not a new pillar link. The row should be narrowed to explicitly target *boss-exclusive* hat variants that do not appear on common mob tables; otherwise it's just formalizing the default behavior.
 - NEW | from: simplehats rare hat variants (boss-exclusive, not on common mob tables) | via: loot-seed into Cataclysm / Mowzie's boss loot tables only | to: survival | motif: M-34 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Ignis boss drops a flame-crown hat variant obtainable nowhere else — combat specialist sells duplicates, hat collector buys them; the cosmetic scarcity is real because the only path is the boss kill, not grinding common mobs.
 
+## structurize   [anchors: support/library (1)]
+- LEAVE — required MineColonies build engine; no content of its own; its weave is MineColonies' weave.
+
+## afk-sleep-1.3.2   [anchors: support/QoL (1)]
+- LEAVE — pure server sleep-quorum behavior; zero items, zero methods, zero content surface.
+
+## moogs_structures   [anchors: support/library (1)]
+- LEAVE — worldgen library/API for Moog's structure mods; no standalone content.
+
+## emojitype   [anchors: support/client-QoL (1)]
+- LEAVE — client chat input helper; no items, no game-content surface.
+
+## mousetweaks   [anchors: support/client-QoL (1)]
+- LEAVE — inventory input-handling tweak; no content.
+
+## justenoughbreeding   [anchors: support/QoL (1)]
+- LEAVE — JEI breeding-info plugin; informational only, no material flows.
+
+## lionfishapi   [anchors: support/library (1)]
+- LEAVE — animation/entity API; no player-facing content.
+
+## betterbiomereblend   [anchors: support/performance (1)]
+- LEAVE — client color-blend renderer; no content.
+
+## inventoryprofilesnext   [anchors: support/client-QoL (1)]
+- LEAVE — inventory UI behavior; no items, no content surface. The single existing REJECT row (aeronautics/no-motif) correctly identifies no coherent link.
+
+## corgilib   [anchors: support/library (1)]
+- LEAVE — loot/worldgen helper library; no content.
+

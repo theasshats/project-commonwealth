@@ -10,5 +10,11 @@ LEAVE — pure developer data-attachment library; zero items, blocks, loot, or r
 ## createoreexcavation   [anchors: create, economy (2)]
 - NEW | from: createoreexcavation:vein_finder (3-chunk survey tool that reveals which ore a vein holds) | via: M-33 service-for-hire (a prospecting specialist uses the finder on a client's land and charges for the survey result) | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: the vein-finder specialist sells *information*, not ore — "I'll survey your claim for two crowns" is a labor transaction that needs no NPC and no recipe, emerging purely from the tool's function
 
+## oceansdelight   [anchors: survival (1)]
+- NEW | from: oceansdelight:fugu_slice (toxic fish flesh — prepared danger food) | via: create:mixing (brine-cure the sliced fugu with salt fluid in a mixer — a Create-processed step producing a preserved fugu portion as a safer cooking intermediate) | to: create | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: fugu is the ocean's deadliest catch; industrialising the cure step — mixing with salt brine in a Create basin — makes the Create spine part of making it edible, not just the cooking board
+- NEW | from: oceansdelight:elder_guardian_roll / oceansdelight:guardian_soup (high-saturation effect dishes) | via: M-16 seasonal reagent (Serene Seasons winter makes ocean surface dangerous/icy, making guardian farming harder — config the dishes as Bountiful objectives that pay extra in winter, tying ocean food scarcity to seasons) | to: survival | motif: M-16 | power: mid | tone: ok | verdict: ACCEPT | hook: guardian soup is rarer in winter when the ocean is dangerous to reach — the seasonal driver feeds back into this pillar's premium food without touching guardian AI
+- CHALLENGE | from: oceansdelight:cut_tentacles / guardian flesh | via: farmersdelight:cutting → create:milling (fishmeal) | to: create | motif: M-12 | verdict: REJECT | hook: the most common existing ACCEPT for this route (consensus REJECT 9v4) is correctly rejected — no fishmeal item or Create consumer for it exists in the pack; the processing chain dead-ends at FD and adds no cross-system edge; the existing rejection consensus is right and should be the settled verdict
+
+
 
 

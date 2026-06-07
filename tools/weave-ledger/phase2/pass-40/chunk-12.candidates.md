@@ -33,3 +33,20 @@ Existing rows: strong coverage — M-16 season_sensor→Create gearshift (22 vot
 - NEW | from: sereneseasons:season_sensor (redstone output) | via: config-tie — vendor block price-modifier reading season signal (cold winter = scarce crops = higher coin-price) | to: economy | motif: M-30 | power: everyday | tone: ok | verdict: ACCEPT | hook: the season sensor wired to a numismatics depositor adjusts the buy-price of summer crops in winter — the calendar drives the market; out-of-season produce commands a premium without any new mechanic
 - NEW | from: sereneseasons seasonal crop scarcity (winter crops stunted, greenhouse required) | via: worldgen/season-event gate — aeronautics cargo runs bring summer produce from warm-biome regions in winter | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: when local crops fail in winter, bulk seasonal produce must be airshipped from the pack's tropical/mesa region — the season clock is the logistics arm's best recurring demand driver; the aeronautics wing earns its route
 
+## blockui   [anchors: support/library (1)]
+
+LEAVE — pure UI framework library; zero items, zero methods, no content surface to weave. Hard dep of MineColonies, which is itself already a load-bearing production node — blockui's value is enabling that node, not a separate weave.
+
+## mcwroofs   [anchors: support/decoration (1)]
+
+Existing rows: M-04 create:crushing stone/brick roof variants — split ACCEPT/REJECT across passes (final consensus is borderline). The ACCEPT rows specifically note stone/masonry types, excluding wood/terracotta. No new unexplored angle; the existing split is the right call.
+
+- CHALLENGE | from: mcwroofs stone/brick/andesite roof variants | via: create:crushing | to: create | motif: M-04 | verdict: REJECT | hook: the split (9 ACCEPT / 10 REJECT by highest count) correctly diagnoses the tension — 605 roof blocks crushed to gravel is mechanically sound M-04 but operationally thin; what tips it to REJECT in practice is that players rarely bulk-demolish roofs into crushing wheels (the workflow is wrong), and the value-add per block is too thin to be load-bearing; mcwroofs is decoration, it needs no systemic 2nd anchor, and the forced M-04 edge should be recorded as REJECTED so Phase 3 doesn't waste authoring time on it
+
+## friendsandfoes   [anchors: survival (1)]
+
+Existing rows: M-02 crab_claw → magic (consensus ACCEPT, 31 votes), Wildfire/Illusioner drops → M-02 magic (6–7 vote ACCEPT), copper deco → M-04 Create crushing (split; final lean REJECT for copper_golem_head specifically), M-34 hostile drops combat-supply route. Good coverage. Two unexplored threads: (1) the beehive lines (all wood types) are entirely unexamined as a honey/wax production source; (2) the copper_button set's weathering cycle as a Create:splashing bridge (one 1-vote ACCEPT row exists but was never consolidated).
+
+- NEW | from: friendsandfoes wooden beehives (all wood types, loot=yes — honey bottle + honeycomb drops) | via: farmersdelight:cooking or extradelight:vat (honey as sweetener/cooking ingredient) | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the mod adds beehives in every wood type — a beekeeper player harvests honey that feeds ExtraDelight's vat as a sweetener input; the beehive expansion is the survival anchor (food production) and this makes it explicit, not ambient
+- NEW | from: friendsandfoes:copper_button / weathered_lightning_rod (the copper weathering set) | via: create:splashing (advances copper oxidation state) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: Create's water splashing already controls copper oxidation on sheets and pipes — extending it to Friends & Foes' copper buttons and rods is a natural one-line recipe addition; a builder uses the Spout to wax or de-wax their decorative copperwork; the copper set is absorbed into Create's metal loop without forcing a separate crush step
+

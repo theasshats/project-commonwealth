@@ -61,6 +61,21 @@ Also: The M-29 ACCEPT (salt as occultism ritual ingredient) at 2v0 deserves scru
 
 - CHALLENGE | from: expandeddelight:salt (c:dusts/salt) | via: occultism:ritual | to: magic | motif: M-29 | verdict: REJECT | hook: Occultism rituals use chalk (drawn circles) not salt for purification; inserting a food-mod byproduct as a ritual reagent has no mechanical support in Occultism's recipe schema and forces a thematic seam that players would find puzzling — the M-29 cross-route dependency requires a *genuine* recipe gate, not a retrofitted folk-magic nod
 
+## vc_gliders   [anchors: aeronautics (1)]
+Existing rows well-cover: M-05 ACCEPT (iron/gold/diamond tiers → create:pressing / mechanical_crafting), M-20 ACCEPT (copper_upgrade via deployer), M-19 ACCEPT (nether_upgrade via create:haunting). Correctly REJECTed: M-06 (sequenced assembly — glider isn't endgame flagship), M-12 on reinforced paper (gates everyday basic behind Create — forbidden by briefing).
+
+One gap: the glider's **M-20 (copper_upgrade / deploy-application)** ACCEPT exists but there is also a REJECT on M-20 for the same item. The ACCEPT at 12v2 is the dominant signal but the mechanism deserves precision: the copper upgrade is applied *via* the deployer in the existing row, which is M-20. That's correct for the nether_upgrade too (M-19 via haunting is a distinct and also accepted row). These are not redundant — M-19 routes the *nether* upgrade through haunting while M-20 routes the *copper* upgrade through deploy-application. Both survive.
+
+Missing angle: the gliders have **durability** (consumed on use/crash) — this is a natural M-26 consumption sink. No row exists for this. Gliders wear out, which means demand for replacement never zeroes. This is a pure M-26 note (not a recipe to author, but design recognition that the mod feeds the consumption loop).
+
+- NEW | from: vc_gliders:paraglider_* (tiered gliders with durability) | via: durability/wear (native mechanic) | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: gliders wear out on hard landings and extended use — the flight-gear tier ladder creates sustained replacement demand that keeps the Create-production supply line turning, feeding M-26's consumption-closes-the-loop role
+
+Red-team: Is durability-as-consumption a weave or just ambient game design? M-26 is specifically the "consumption sink" motif — goods spent against pressure so demand never zeroes. Glider durability qualifies: the glider is a produced good that degrades. The weave is recognizing this as the closing arrow of the loop (production → consumption → demand renewal), even though no recipe needs authoring. The delivery here is design-recognition, not a KubeJS action. Survives.
+
+Also: no existing row covers the **gold tier glider** as a wasted-material edge. Gold is a currency-adjacent metal in vanilla — a gold glider uses a scarce, non-structural metal for flight gear, which feeds the scarcity→pressure→production loop. But this is ambient game content, not a weave.
+
+
+
 
 
 
