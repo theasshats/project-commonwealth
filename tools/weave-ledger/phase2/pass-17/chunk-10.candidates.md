@@ -154,6 +154,26 @@ REWORK: current survival anchor is correct (hostile dimension + gear tier). The 
 
 LEAVE — pure server-side XP-orb entity merger; zero items, zero loot, zero recipe surface. No weave surface exists. Sanctioned performance-support role.
 
+---
+
+## chefsdelight   [anchors: survival, economy (2)]
+
+OK — connections are sound in principle. Cook/Chef villager professions deliver food to the survival pillar and a trade source to the economy pillar (villager trades). Already at 2-anchor target.
+
+- from: chefsdelight cook/chef trades | via: numismatics re-denomination (KubeJS: cook accepts pack coins instead of/alongside emeralds) | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: ACCEPT | hook: the village cook's trades priced in Numismatics coins rather than raw emeralds pulls the village food economy into the pack's real currency loop — a player who farms coins can buy a hot meal from the village; early-game currency demand
+- from: chefsdelight village cook structures (loot=yes) | via: loot-seed (seed small coin reward into cook structure chests) | to: economy | motif: M-14 | power: everyday | tone: ok | verdict: ACCEPT | hook: finding a village cook structure yields a small coin reward alongside the food loot — scouting villages for cook shops pays in pack currency, connecting exploration to the trade economy even before players have built trading stalls
+- from: chefsdelight Cook/Chef profession blocks (Skillet / Cooking Pot) | via: create:pressing or create:sequenced_assembly | to: Create | motif: M-05 | power: everyday | tone: ok | verdict: REJECT | reason: the Skillet and Cooking Pot are Farmer's Delight items (not chefsdelight's own), and chefsdelight's content is entirely villager-behavior / trade-tables — there's nothing to gate through a Create method here without touching a different mod's items; forced and incorrect attribution
+
+REWORK: the "economy" anchor is currently via vanilla emerald trades — same concern as kobolds. The M-09 numismatics re-denomination Accept above is the right fix: it converts a weak "participates in emerald economy" anchor into a genuine Numismatics connection. Priority fix before the 0.9 economy pass.
+
+---
+
+## jeed   [anchors: support/client-UI (1)]
+
+LEAVE — JEI documentation display mod; its two registered "recipe-types" (jeed:effect_provider, jeed:potion_provider) are JEI viewer categories, not craftable recipe methods. No items, no loot, no material flows. Sanctioned support/QoL role (part of the JEI+JER+JEED recipe-viewer stack per CLAUDE.md).
+
+
+
 
 
 

@@ -166,3 +166,25 @@ LEAVE — pure UI/config/networking code library; 0 blocks, 0 items, no loot, no
 
 LEAVE — modding infrastructure library (UI/rendering/sync); 0 real items (2 entries are dev/test blocks, not player content), no loot, no methods. Required dependency for tech mods; nothing to weave. Genuine zero-content library.
 
+## trashcans   [anchors: support/automation-QoL (1)]
+
+Power-read: 4 blocks (item_trash_can, liquid_trash_can, energy_trash_can, ultimate_trash_can), 4 items (same), loot=yes (the blocks drop their item form). Void blocks accepting items/fluids/FE. The dossier correctly flags the scarcity tension: voiding is anti-economy by nature.
+
+- from: trashcans:item_trash_can | via: recipe (requires Create-processed parts — brass casing, iron sheet) | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: gating the trash cans behind Create-processed components (a few steps of material processing rather than raw iron) doesn't make voiding harder to use, but it ties a utility block into the Create production chain. Mid-power: these are useful automation tools, not basics. M-05 (native-method gating) applied lightly — the trash can's construction requires Create, even if its operation doesn't. This is appropriate given the scarcity-pack concern about trivially voiding byproducts.
+
+- from: trashcans:ultimate_trash_can | via: create:sequenced_assembly | to: create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: the ultimate trash can (voids items + fluids + FE) is genuinely an endgame convenience tool — gating it behind a sequenced-assembly chain (an incomplete_trash_mechanism intermediate) makes acquiring the most powerful void sink a Create endgame task. This is M-06 (sequenced-assembly keystone) applied appropriately: only the top-tier version gets the deep chain, not the basic cans. Keeps the scarcity tension by making total-void convenience expensive.
+
+- from: trashcans void blocks | via: economy (sell surplus → waste less) | motif: M-09 | verdict: REJECT | reason: trash cans are the antithesis of the economy loop — they void value instead of circulating it. An explicit economy weave here (e.g. "sell trash-can output as coin") would contradict the pack's scarcity model. The right stance is that a scarcity pack should gate or tax the void, not reward it. Reject.
+
+- from: trashcans:liquid_trash_can | via: require a specific scarce liquid-handling part | to: create | motif: M-05 | power: mid | tone: ok | verdict: REJECT | reason: this is covered by the first ACCEPT above (Create-gated construction); a separate liquid_trash_can-specific recipe edge is redundant. Reject as duplicate-coverage.
+
+REWORK: The dossier notes the scarcity-pack concern ("don't make it trivialize byproduct value") but hasn't flagged a concrete remedy. The ACCEPT candidates above propose the remedy: gating construction behind Create parts (M-05) and making the ultimate version a sequenced-assembly task (M-06). This is a weak spot in the current design — trash cans currently are vanilla-cheap and the scarcity note is unacted-on. Flag for recipe-authoring in Phase 3.
+
+## almostunified   [anchors: support/recipe-graph (1)]
+
+Power-read: 0 blocks, 0 items, no loot, 1 biome-modifier (likely spurious/auto). almostunified is pure recipe-graph infrastructure — it picks dominant items per c: material tag and rewrites recipes. Its "content" is the priority list (config) and the unified tag set. Critical CLAUDE.md gotcha applies: never unify galosphere:*silver* as c:ingots/silver (galosphere "silver" is actually palladium).
+
+- from: almostunified priority list | via: config — adds/removes material unifications | to: create | motif: no-motif | verdict: REJECT | reason: almostunified operates ON the recipe graph, it doesn't add a system anchor. There is no motif for "the unifier itself gains a system anchor" — it's foundational infrastructure, not a content node. No-motif.
+
+LEAVE — recipe-graph plumbing; no content to weave. The galosphere palladium gotcha must be respected: any unification pass must exclude galosphere:*silver* from c:ingots/silver. This is the mod's only notable design constraint, not a weave.
+

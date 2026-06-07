@@ -286,4 +286,58 @@ Candidates via method-pull: None possible. Genuine code library.
 
 - LEAVE — genuine zero-content animation/rendering library; no material surface; enables visual fidelity for the pack's content mods
 
+## create_ironworks   [anchors: create (1)]
+
+Power-read: Create add-on adding Tin / Bronze / Steel metalworking tier. 8 blocks (ores + storage), 81 items (full tool/armor sets, ingots/plates/nuggets for tin/bronze/steel). 44 c:tags (full metal vocabulary: ingots/plates/nuggets/blocks for tin/bronze/steel). 3 biome-modifiers placing Tin ore in worldgen. Made-by methods: create:crushing, create:emptying, create:filling, create:mixing, create:pressing, create:sequenced_assembly, create:splashing. loot=yes.
+
+Metal tiers: tin = everyday (new ore, base metal); bronze = mid (tin+copper alloy); steel = endgame (near-Netherite, Smithing-upgradeable). The sequenced_assembly and the full c:tags vocabulary are the primary join keys.
+
+Method-pull candidates:
+
+**Economy (M-08 — coin from processed scarcity):**
+Tin is a fresh scarce/regional metal (3 biome-modifiers means region-specific distribution). The M-08 chain is textbook here: tin ore → Create:crushing → tin ingots → numismatics mint → tin coin (or a coin denomination backed by tin). The full c:tags vocabulary (ingots/plates/nuggets/blocks) gives the economy pillar clean hooks.
+
+Power sizing: tin is everyday-to-mid. The coin-from-scarcity seam should be proportionate — tin-backed coins are small denominations, steel-backed might be premium coins. Both fit M-08.
+
+Theme-fit: "the local smith processes regional tin ore and mints currency from it" is the Create-economy loop personified. No tone clash.
+
+Red-team: create_ironworks already rides the Create spine (it's a Create add-on — the processes are already create:mixing/pressing). Adding a numismatics mint step is just extending the existing chain one node further, which is exactly what M-08 calls for. The only risk is over-extending the supply chain if tin is *too* scarce — balance tuning for the biome-modifier generation rates, flagged BALANCE-PENDING.
+
+**Aeronautics (M-23 — structural alloy → airframe/hull):**
+Steel plates and bronze plates are load-bearing fabricated materials. The M-23 motif calls for exactly this: a structural alloy's plates/beams as required ingredients for Aeronautics airframes, hulls, and structural blocks. Create Ironworks' steel plates (create_ironworks:steel_plate, item/plates/steel c:tag) feeding into aeronautics hull recipes is a direct M-23 application — makes airframes cost real fabricated material.
+
+Power sizing: steel is endgame. Heavier airframe tiers requiring steel plates while basic frames use vanilla iron is the right scaling (don't gate the most basic frame behind a deep chain — but the heavy-duty warship hull logically needs steel).
+
+Theme-fit: "a war-grade airship hull is built from Create-forged steel plate, not raw iron" is perfectly coherent. No tone clash.
+
+Red-team: M-23 explicitly accepts this. The risk is if aeronautics already has its own structural material system and create_ironworks steel conflicts — but M-23 says "required build ingredient," meaning this augments rather than replaces existing recipes. Should integrate cleanly.
+
+**Survival (scarcity-driver annotation):**
+Tin's regional distribution makes it a scarcity driver — players in tin-poor regions must trade for it. This is the foundation of the M-08 chain and doesn't need a separate candidate; it's noted as the scarcity premise that makes M-08 meaningful.
+
+REWORK check: existing anchor = Create (1). The dossier already identifies both economy and survival as 2nd-anchor candidates. Economy via M-08 is STRONG per dossier assessment — confirm ACCEPT. Aeronautics via M-23 is not in the dossier yet — add as new candidate.
+
+- from: create_ironworks:tin_ingot (crushed regional ore → processed metal) | via: numismatics mint | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: regional tin ore, Create-crushed and smelted, becomes the currency of the frontier — scarcity made portable
+- from: create_ironworks:steel_plate (c:item/plates/steel) | via: aeronautics hull/frame recipe | to: aeronautics | motif: M-23 | power: endgame | tone: ok | verdict: ACCEPT | hook: a warship-grade hull demands Create-forged steel plate — the pack's toughest airframe is built from the pack's best metal
+- from: create_ironworks:bronze_plate (c:item/plates/bronze) | via: aeronautics mid-tier hull | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: a sturdy exploration airframe uses bronze plate — tougher than iron, lighter than steel, the explorer's hull material
+- from: create_ironworks:tin_ingot | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: everyday | tone: clash | verdict: REJECT | reason: tin is everyday base metal — the guardrail forbids gating basic components behind arcane infusion (M-10 explicitly); tin has no thematic link to arcane processing
+- from: create_ironworks:steel_ingot | via: ars_nouveau:imbuement (arcane-tempered steel) | to: magic | motif: M-10 | power: endgame | tone: clash | verdict: REJECT | reason: steel is endgame but its identity is industrial metallurgy, not magic; arcane tempering clashes with the Create-metallurgy vibe; the Create sequenced_assembly chain (M-06) is the right depth mechanism for steel, not magic infusion
+
+## freefbible   [anchors: support / curated-flavor (1)]
+
+Power-read: single-item joke mod — freefbible:freef_bible (readable book containing the CPDV Bible). One item, zero blocks, zero loot, no recipe types. Inert readable item; no effects, no crafting interaction.
+
+Candidates via method-pull: None coherent. The item is inert; its only "value" is the text. Any forced recipe integration would be noise — "use the Bible as a crafting ingredient" is both tonally absurd and mechanically pointless. The mod's own dossier assessment (leave) is correct.
+
+- LEAVE — single inert novelty/flavor item; no material surface; any forced recipe edge would be noise
+
+## ichunutil   [anchors: support / library (1)]
+
+Power-read: iChun's shared utility library. Zero items, zero blocks, zero loot, zero recipe types. Common classes for iChun's mods (Hats, Morph, etc.).
+
+Candidates via method-pull: None possible. Genuine code library.
+
+- LEAVE — genuine zero-content shared-class library; hard dependency for an iChun mod in the pack; no material surface
+
+== CHUNK COMPLETE ==
 
