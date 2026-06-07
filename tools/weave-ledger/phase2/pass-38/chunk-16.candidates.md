@@ -56,3 +56,9 @@
 - from: diet-variety demand for diverse foods | via: config/native mechanic | to: economy | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: the diet mechanic is a survival-pressure signal, not itself an economy weave — food trade is the ambient endpoint of the loop; the ACCEPT above (production demand) is the correct expression; adding economy as a second ACCEPT here would double-count the same link without adding a distinct method-routing
 - from: high-nutrient multi-group meals as sellable trade goods | via: numismatics/trade (bare sell) | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: M-09 retired (#163/#240) — "varied food is sellable" is ambient loop endpoint, not a weave
 
+## opacpvp   [anchors: support/PvP-rules (1)]
+- LEAVE — pure social/rules mod (0 items, 0 blocks, /opacpvp command only). Sanctioned support role; no material surface for any weave.
+
+## supermartijn642corelib   [anchors: support/library (1)]
+- LEAVE — genuine zero-content code library (GUI/block-entity/packet scaffolding for SuperMartijn642 mods). No player-facing content. Sanctioned support role.
+

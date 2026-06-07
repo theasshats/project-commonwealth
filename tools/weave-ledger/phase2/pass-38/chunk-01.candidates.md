@@ -89,3 +89,9 @@ LEAVE — cosmetic combat-feedback only; particle effects are the entire content
 - from: mcwfences stockade fence (heavy wooden barrier) | via: survival/danger context (fortification) | to: survival | motif: M-34 | power: everyday | tone: ok | verdict: REJECT | reason: M-34 (combat-route supply) is about a boss/danger output being traded; stockade fences are defensive building elements, not drops or combat outputs. There's no method to route "fortification building" through as a combat-supply weave; this is an ambient use-case (players buy fences for bases) not a mechanic-level connection. REJECT — the ambient use isn't a weave.
 REWORK: dossier correctly identifies M-04 (metal fence crush) as a weak/valid candidate and leaves it at decoration anchor. M-04 (metal fences) + M-28 (colony construction material demand) are the two light weave candidates that earn a second anchor. Keep both at everyday depth — appropriate for a decoration palette mod.
 
+## bigsignwriter   [anchors: support/UI (1)]
+LEAVE — client-side sign-GUI utility with zero items, zero blocks, zero recipe types, no gameplay material. The value is large-text signage rendering; no weave surface exists.
+
+## startuptime   [anchors: support/diagnostic (1)]
+LEAVE — boot-time logger; prints one log line after loading completes. Zero items, zero blocks, no recipe types, no gameplay surface whatsoever. No weave is possible or coherent.
+

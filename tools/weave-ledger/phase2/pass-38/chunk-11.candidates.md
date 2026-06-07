@@ -184,6 +184,32 @@ A single craftable compass item — locates biomes. No loot, no methods, no mate
 
 OK — naturescompass has zero content outside its one compass item; the weave is the recipe upgrade + system gating, not a material route.
 
+## create_connected   [anchors: create (1)]
+
+65 blocks, 57 items, loot=yes. Create-internal QoL expansion — kinetic parts (gearboxes, clutches, battery), logic blocks, silos, vaults, copycat panels. Dossier says leave (support role). Let me stress-test that.
+
+The create_connected blocks are Create machinery — they need no foreign weave to be useful; they ARE the Create spine. However some items have specific properties worth testing:
+
+- `create_connected:kinetic_battery` — stores kinetic energy — could feed aeronautics (stored power for a propulsion burst).
+- `create_connected:copycat_*` — wears any block texture — gives ANY foreign deco block a Create-structural form.
+- `create_connected:item_silo` — bulk item storage — critical infrastructure for economy logistics.
+- loot=yes means structures/chests contain create_connected items.
+
+- from: create_connected:kinetic_battery (kinetic energy storage) | via: aeronautics engine/generator | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: ACCEPT | hook: A kinetic battery is a mechanical energy buffer — an Aeronautics ship's burst-propulsion system (emergency thruster, quick-launch) draws from a kinetic battery bank, making the battery a drivetrain component that bridges Create's energy storage into the ship build.
+
+- from: create_connected:copycat_* panels | via: create:item_application (skin application) | to: aeronautics | motif: M-20 | power: everyday | tone: ok | verdict: ACCEPT | hook: Copycat panels wearing hull-material textures (stone, steel plate, wood) give Aeronautics ship builders a Create-native way to skin ship exteriors in any material without sacrificing structural function — a deploy-application upgrade that makes the copycat panel a standard hull-dressing component, weaving Create Connected into the ship-build aesthetic.
+
+- from: create_connected:item_silo (bulk storage, large capacity) | via: logistics/aeronautics supply chain | to: aeronautics/economy | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: A ship's cargo hold or colony warehouse built with item silos is the natural bulk-goods storage node for the logistics arm — bulk goods (ores, food, fuel) transit between settlements stored in silos, making create_connected the economy's on-ship warehouse infrastructure.
+
+- from: create_connected kinetic/logic parts | via: aeronautics control surfaces | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: ACCEPT | hook: Inverted clutches, gearboxes, and brakes are exactly the control-surface mechanics that an Aeronautics ship's steering/throttle system needs — routing them as required drivetrain inputs for ship control surfaces gives the Create-Connected expansion a clear aeronautics-engineering role.
+
+- from: create_connected:fan_*_catalyst items (fan catalyst blocks for haunting/blasting/enriching etc.) | via: create:haunting → magic | to: magic | motif: M-19 | power: mid | tone: ok | verdict: ACCEPT | hook: Create Connected ships fan catalysts that enable haunting, enrichment, and seething fan-processing in a block form — the haunting catalyst makes the Create→soul fire bridge (M-19) a dedicated block you construct and place, rather than requiring soul-fire positioned manually, deepening the Create→magic soul-fire seam.
+
+- from: create_connected (all Create-internal) as support-only | via: no foreign route | to: — | motif: no-motif | power: — | tone: — | verdict: REJECT | reason: The dossier's "leave" recommendation misses several real weave surfaces found above (kinetic battery→aeronautics, silos→logistics, fan catalysts→magic seam). The "support role" label is not wrong but undersells it; these are genuine M-24/M-31/M-19/M-20 edges.
+
+REWORK: dossier verdict "leave / support role" is too conservative. Create Connected has genuine multi-system surfaces (aeronautics drivetrain, logistics storage, soul-fire catalyst bridge). The 2nd anchor is aeronautics (from Create), solidly via M-24 and M-31.
+
+
 
 
 
