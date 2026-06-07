@@ -108,6 +108,16 @@ LEAVE — Verified client audio-cue only (load-complete sound). 0 blocks, 0 item
 
 LEAVE — Verified pure movement-feel tweak (ladder/vine climbing physics). 0 blocks, 0 items, no loot, no methods. No content surface; nothing to weave.
 
+## prickle   [anchors: support (library/API) (1)]
+
+LEAVE — Verified config-format library (Darkhax Prickle JSON). 0 blocks, 0 items, no loot, no methods. Developer infrastructure; nothing to weave.
+
+## zeta   [anchors: support (library/framework) (1)]
+
+LEAVE — Verified modular framework library (Vazkii / Quark's module loader). 0 blocks, 0 items, no methods. The 1 biome-modifier is framework scaffolding, not player content. Nothing to weave.
+
+
+
 
 
 

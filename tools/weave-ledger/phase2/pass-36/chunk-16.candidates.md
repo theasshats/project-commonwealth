@@ -43,6 +43,10 @@ OK — existing connections (economy + Create) are sound. The M-08 pressing step
 ## spark   [anchors: support/performance (1)]
 - LEAVE — server-side profiler; command-only diagnostic tool; 0 blocks, 0 items, no recipe surface; nothing to weave.
 
+## accessories   [anchors: support/library (1)]
+- LEAVE — accessory-slot API/framework; 0 blocks, 0 items; no standalone gameplay content. The wearables that belong to weaves live in the mods that register into its slots, not here.
+
+
 
 
 

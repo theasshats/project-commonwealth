@@ -204,3 +204,8 @@ the economy-is-player-run ruling. Leave at 2.
   through, and MineColonies colony placement is player choice, not a designed connection. No delivery
   mechanism exists; the loot-seed above is the concrete actionable edge.
 
+## betterbiomereblend   [anchors: support/performance (1)]
+
+LEAVE — genuine zero-content: no items, no blocks, no loot, no methods. Client-only biome-color renderer
+replacement. No material surface to weave.
+

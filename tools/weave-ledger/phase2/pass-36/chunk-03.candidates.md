@@ -68,6 +68,18 @@
 ## ldlib2   [anchors: support/library (1)]
 - LEAVE — GregTech-lineage UI/rendering/sync library; 2 dev-test blocks, 1 dev-test item, no loot, no recipe-types; zero player-facing content. Nothing to route.
 
+## create_factory   [anchors: Create, survival (2)]
+- OK — connections sound. Create (mixing/pressing/filling methods) + survival (food/sweets) is a correct ≥2 anchor pair; the food chain through Create is the intended throughput.
+- REWORK: the dossier's 2nd-anchor candidate is "economy via numismatics sell [M-09]" — but M-09 is RETIRED ("sellable" is the ambient endpoint, not a weave). Drop this candidate. The existing 2 anchors are sufficient; if an economy link is wanted, it would need to be demand-gating, not a bare sell.
+- from: create_factory jam/cream fluids (sweet_berries_jam, cream_bucket) | via: create:filling + farmersdelight:cooking | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the jam/nectar fluids that create_factory outputs are natural inputs for Farmer's Delight sandwich/food recipes — a processing-chain pull where Create's confectionery line feeds the cooking production chain, deepening the food-system web. Red-team: FD already has its own ingredient sources; adding create_factory fluids as inputs is additive, not redundant. Survives — it's a short one-step downstream use.
+- from: create_factory sweets (waffles, candy apples) | via: farmersdelight:cooking | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: M-26 (consumption sink) is about an item being SPENT against pressure so demand never zeroes. Waffles/candy apples are consumed as food (so technically M-26 applies), but "sweets are eaten" is the ambient food loop, not a distinctive weave — this is the exact "ambient endpoint" the briefing cautions against for food items. The survival anchor is already established through the food system; a separate M-26 tag for each food item would be noise.
+- from: create_factory:cream_bucket (cream fluid) | via: create_cheese:maturing | to: survival/economy | motif: M-35 | power: mid | tone: ok | verdict: ACCEPT | hook: cream from create_factory feeds the cheese maturing line (create_cheese mod in methods palette) — milk→cream→aged-cheese is a natural aging chain that ties the confectionery producer to the maturation/economy arc, adding value through time (M-35). Red-team: create_cheese:maturing exists in the palette; cream is a plausible input. Survives if create_cheese is in the pack and uses cream as an input — flag for Phase-3 verification.
+
+## justenoughbreeding   [anchors: support/QoL (1)]
+- LEAVE — JEI plugin displaying breeding requirements; 0 items/blocks/loot, no mechanics. Nothing to route.
+
+
+
 
 
 

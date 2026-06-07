@@ -83,3 +83,7 @@ Food-web glue mod. It IS the weaving layer for the food cluster, but has no cont
 
 - LEAVE — genuine zero-content worldgen API library. Biome placement framework with no items, no blocks, no methods, no loot. The library that other biome mods are built on, never a content node itself.
 
+## resourcefulconfig   [anchors: support/library (1)]
+
+- LEAVE — genuine zero-content config library/API. No player-facing items, blocks, methods, or loot. Infrastructure for other mods' configuration screens.
+

@@ -151,3 +151,44 @@ Halloween-themed hostile-mob mod: 50 biome-modifiers spawning aggressive undead 
 - from: born_in_chaos_v1 mob drops (dark_metal, bundle_of_bones, boss items) | via: emergent trade | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: a combat specialist farms Chaos mobs for dark metal and soul drops; the Create player buys them for M-03 crushing, the magic player buys them for M-11 rituals — danger produces tradeable supply
 - from: born_in_chaos_v1:dark_metal_block | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: derivative of M-03 on the ore drop — the lossy deco-recycle is valid in isolation but adds no new loop link; M-03 is the load-bearing connection and M-04 here is redundant noise
 
+## afk-sleep-1.3.2   [anchors: support/QoL (1)]
+
+Server QoL: excludes AFK players from the sleep-percentage count. 0 blocks, 0 items, loot=no. Pure server behavior mod.
+
+**Method-pull:** No content surface whatsoever — no items, no blocks, no recipe types, no loot. This is behavioral infrastructure, not a content node.
+
+**Verdict:** LEAVE — genuine zero-content server-behavior mod; nothing to weave.
+
+- LEAVE — pure server-behavior QoL mod (sleep quorum fix); 0 blocks, 0 items, no recipe types; no content surface exists
+
+## woodworks   [anchors: survival/decoration (1)]
+
+Wood deco variants: chests, bookshelves, ladders, boards, leaf piles, beehives for every wood type, plus a Sawmill block. Registers `woodworks:sawmill` and `woodworks:crafting_special_woodenchest` recipe types. 83 blocks, 83 items, loot=yes.
+
+**Method-pull — the Sawmill is the key resource:**
+The `woodworks:sawmill` recipe type is already in the methods palette and is used by `upgrade_aquatic` (inbound weave already exists — upgrade_aquatic's woods route through the Sawmill). This means the Sawmill is already an established connective method.
+
+**Candidate 1 — Create:cutting overlap / unification (M-12):**
+- Create's `create:cutting` is the saw in the tech web. Woodworks' Sawmill produces wood deco variants from logs/planks. Routing equivalent outputs through `create:cutting` so both paths produce wood deco (and the player can use either the Sawmill or Create's saw) creates a coherent two-route production: colonial/early Sawmill vs. industrial Create saw.
+- Power: everyday. Tone: ok — both are "cut wood with a blade," the analogy is obvious.
+- Motif: M-12 (processing-chain pull — a raw material runs through another mod's processing method into finished goods). But wait — the two methods are parallel, not one pulling the other's output. The weave here is "Create cutting produces woodworks deco shapes as outputs," unifying the two cutting webs so the Sawmill and Create's saw give the same goods. That's a recipe-weave that connects Create's spine to the wood-deco system.
+- Red-team: is this forced? No — it's exactly how packs commonly handle Woodworks/Create coexistence. The player experience is "I have two ways to get these wood shapes: artisanal Sawmill or industrial Create saw." That's a genuine cross-system weave not an arbitrary one. 
+- Verdict: ACCEPT M-12 — Create cutting produces woodworks-style wood deco variants; everyday depth, one step, appropriate for basics.
+
+**Candidate 2 — Create:crushing on deco blocks for M-04 recycle:**
+- Wood deco blocks crush back to planks + XP nugget (lossy). This is the standard M-04 deco-recycle pattern.
+- Power: everyday. Tone: ok.
+- Red-team: does this advance the loop or is it purely defensive recycling? It's defensive — a player can undo a mis-placed fancy board. But it does tie woodworks into the Create web explicitly and makes the deco palette "part of" the Create system (you can commit and reclaim).
+- Verdict: ACCEPT M-04 — useful, coherent, and the standard deco→Create recycle; pairs with M-12 to make woodworks fully Create-native.
+
+**Candidate 3 — MineColonies colony route (M-28):**
+- Woodworks bookshelves, chests, and boards could be colony builder materials. A MineColonies colonist's hut that uses `woodworks:*_chest` or `woodworks:*_bookshelf` as build materials would make Woodworks blocks a colony production input — tying survival/building to the colony route.
+- Power: everyday. Tone: ok — decorative chests and bookshelves as furnishing requirements for colony buildings is coherent.
+- Red-team: is this a real demand-gate or just "add to a recipe"? If colony buildings genuinely require specific Woodworks blocks (as special furnishing for, say, a Library hut needing a chiseled woodworks bookshelf), it becomes a colony-locked demand. That would give woodworks its economy anchor (M-28).
+- Verdict: ACCEPT M-28 — woodworks:chiseled_*_bookshelf as a Library hut furnishing requirement gates a non-trivial wood-craft behind colony progression; the thematic fit is excellent (a library needs quality bookshelves).
+
+- from: vanilla/modded logs→planks | via: create:cutting | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Create's saw produces the same stair/board/board shapes as Woodworks' Sawmill — two routes to one wood-deco palette; the industrial path joins the artisanal one
+- from: woodworks:*_boards / *_bookshelf / *_chest variants | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: mis-placed fancy boards crush back to planks plus an XP nugget — the same lossy reclaim contract Create applies to all deco
+- from: woodworks:chiseled_*_bookshelf | via: minecolonies hut build requirement | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: the MineColonies Library hut demands a quality chiseled bookshelf — a woodworking specialty only crafted on the Sawmill — so the settlement builder needs to trade with or build for a wood specialist
+- from: woodworks:*_beehive | via: loot-seed / world placement | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: beehive variants are cosmetic; honey production (the consumption sink candidate) is already vanilla; adding a wood-type beehive doesn't create a new demand node — it's decoration, not a consumption mechanic; no motif applies cleanly
+
