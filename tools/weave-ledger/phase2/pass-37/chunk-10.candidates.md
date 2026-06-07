@@ -42,3 +42,12 @@ REWORK: OK — connections sound. Already at 2 anchors (Create material ladder +
 ## emojitype   [anchors: support/client-UI (1)]
 - LEAVE — client-only chat shortcode-to-Unicode helper (0 blocks, 0 items, 0 recipe-types, loot=no). No in-world content surface at all. Sanctioned friend-group flavor.
 
+## kotlinforforge-5.11.0-all   [anchors: support/library (1)]
+- LEAVE — genuine zero-surface Kotlin language adapter (0 blocks, 0 items, 0 recipe-types, loot=no). Language loader only; no player content to route.
+
+## terrablender   [anchors: support/library (1)]
+- LEAVE — genuine zero-surface worldgen library (0 blocks, 0 items, 0 recipe-types, loot=no); biome-region partitioning API for dependent biome mods. No player-accessible content surface to route.
+
+## mysterious_mountain_lib   [anchors: support/library (1)]
+- LEAVE — genuine zero-surface framework library for MMF-Group mods (0 blocks, 0 items, 0 recipe-types, loot=no). Base classes + FoodInfo API only; all player content belongs to dependent mods, not this library.
+

@@ -45,3 +45,21 @@ New proposals:
 REWORK check — existing connections:
 - create:filling inbound exists (waterskins). Dossier's M-09 candidate ("sellable survival gear") is correctly identified as weak and M-09 is retired — do not carry forward.
 
+## kambrik   [anchors: library/API (1)]
+
+LEAVE — Kotlin mod-dev framework (registration helpers, command/text DSL, networking utilities). Zero blocks, zero items, no loot, no recipe types, no gameplay surface. Pulled as a transitive dependency of Kotlin-based mods; nothing to weave.
+
+## kobolds   [anchors: economy, survival (2)]
+
+REWORK check — existing connections:
+- survival (underground kobold civilization + Den/Pirate Den structures + combat): OK — connections sound.
+- economy (emerald-based villager-style trading, Prospector enchant): OK — connections sound. Two real anchors. The economy tie is ambient emerald-barter, which sits at the pre-currency trade layer; that's legitimate even without numismatics minting.
+
+New proposal — 2 anchors already, look for additional depth only where coherent:
+
+- from: kobolds:kobold_skull (rare drop from warriors/captain kills) | via: occultism:spirit_fire | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: kobolds are a subterranean civilization with a bone-and-skull aesthetic; their skulls fed into Occultism spirit-fire as a minor transmutation reagent ties the dungeon-combat route to the magic web. Advances the loop: danger/survival → magic production. A combat specialist farms skulls, a magic specialist processes them — no one player self-sufficient.
+
+- from: kobolds loot (Prospector enchant, redstone goods) | via: loot-seed (enrich existing tables) | to: economy | motif: M-34 | power: mid | tone: ok | verdict: REJECT | reason: this deepens the existing economy anchor (dungeon loot traded peer-to-peer) but it doesn't add a new system anchor — kobolds already have economy. The skull→magic route (accepted above) is the genuine new anchor. Loot-seeding more economy goods is incremental enrichment, not a second pillar. Record and drop.
+
+- from: kobolds:kobold_skull | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: REJECT | reason: spirit_fire (Occultism, M-02/M-11) is thematically superior for a skull/soul reagent over arcane imbuement. Imbuement is for material attunement; a physical creature skull being spirited-away in occultist ritual fire is the coherent image. Don't double-propose the same reagent through two magic methods; pick the better-fit one (spirit_fire, accepted above).
+

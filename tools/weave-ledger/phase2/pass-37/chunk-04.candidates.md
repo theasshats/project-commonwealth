@@ -73,3 +73,25 @@ Existing connections: none authored. Dossier notes two weak candidates: economy-
 
 - from: securitycraft reinforced blocks as high-value scarce-metal sink (M-08 framing) | via: numismatics | to: economy | motif: M-08 | power: mid | tone: clash — M-08 is player-minted *coin*, not "sell this for coin"; securitycraft does not process any ore into currency; the link was trying to say "security gear is expensive so it creates trade demand" which is ambient loop, not a weave | verdict: REJECT | reason: misframed as M-08; the real link is either M-05 (Create-gated) or M-33 (service) — both already accepted above.
 
+## createfood   [anchors: survival, Create (2)]
+
+Existing connections: already 2 anchors; it is a massive consumer of Create + FarmersDelight methods (dozens of inbound weave uses). Dossier candidate is M-09 (cut). Evaluating whether 3rd-anchor or better weave exists.
+
+**Method-pull analysis:**
+- createfood outputs: 1993 items, primarily finished dishes and placeable food blocks across all five diet groups. It consumes `c:foods/raw_meats/*`, `c:foods/doughs`, fish, cheese. Already fully wired into Create + FD methods — this is the *endpoint* of M-12.
+- As an endpoint of the food chain, its finished dishes are M-26 consumption sinks (eaten against diet pressure) — but that's ambient loop, the existing survival anchor already covers it.
+- Colony route: MineColonies cook hut could produce subset of createfood dishes as colony output — M-28. This adds the colony route (economy-adjacent via MineColonies) as a cheaper-basics path for common dishes. A cook's hut mass-producing bread/pastries is cheaper than running a full Create bakery — natural.
+- Seasonal reagent: some createfood dishes require seasonal crops (autumn pumpkins, summer strawberries via other food mods). If those ingredient slots are filled by season-locked crops the dish is implicitly seasonal — M-16. Not an authoring task now (depends on crop-mod presence), but the hook is real.
+- The placeable food deco blocks (pizza/cake slices on a plate) are essentially decorative. `create:crushing` crushing them back is M-04 (lossy), but it would be comical to crush a pizza. REJECT.
+- Magic: an Ars_nouveau ritual requiring a specific createfood item as a feast-offering? The `ars_nouveau:summon_ritual` or `enchanting_apparatus` could accept a dish as part of a catalyst. Thematically: feeding the apparatus a created cake feels whimsical but coherent in Ars's flavor. Power: everyday. M-10 (arcane infusion pull — a food item refined through imbuement). However, deep cuisine being a magic reagent is thematically borderline — Ars does use food components in some recipes. Survives red-team marginally.
+
+- from: createfood finished dishes (all five diet groups) | via: minecolonies cook hut production | to: economy | motif: M-28 | power: everyday | tone: ok — a cook in a colony producing bread and pastries cheaper than running Create sequences is a natural colony-route cheaper-basics path | verdict: ACCEPT | hook: the colony cook churns out everyday dishes without firing up the Create processing line; specialists trade Create's elaborate multi-stage creations for the basics the colony handles.
+
+- from: createfood dishes using season-locked crop inputs | via: season-gated ingredient → Create/FD method | to: survival | motif: M-16 | power: mid | tone: ok — a pumpkin pie only craftable in autumn, or a summer-berry ice cream, creates a seasonal pull on the food chain | verdict: ACCEPT | hook: the autumn harvest is the only window to stock pumpkin pies for the winter; the food calendar drives the kitchen calendar.
+
+- from: createfood high-tier dish (e.g. elaborate cake/feast item) | via: ars_nouveau:enchanting_apparatus (as feast-offering catalyst) | to: magic | motif: M-10 | power: mid | tone: clash — feeding elaborate cake into an arcane apparatus feels forced; food is not Ars's material language; the dish has no magic resonance beyond "organic" | verdict: REJECT | reason: thematic mismatch; Ars reagents are gems/essences/organic-magical materials, not culinary outputs; a pizza-as-magic-catalyst strains credulity.
+
+- from: createfood placeable food blocks | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: clash — crushing a pizza back to flour/crumbs is mechanically possible but tonally ridiculous and serves no gameplay function; M-04 is for stone/metal deco, not food | verdict: REJECT | reason: thematic absurdity; M-04's anti-arbitrage/lossy logic is for block materials, not culinary items.
+
+OK — existing Create + survival connections sound and deep. M-28 (colony cook) and M-16 (seasonal ingredient gate) are genuine additions. Economy via M-09 (retired) is correctly removed from dossier.
+
