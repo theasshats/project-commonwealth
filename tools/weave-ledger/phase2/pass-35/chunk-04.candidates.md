@@ -282,6 +282,28 @@ Method-pull (reagent-sink pass — M-02 / M-11 focus):
 ## freefbible   [anchors: support/flavor (1)]
 - LEAVE — single inert readable item (freef_bible); no mechanics, no crafting, no effects. Novelty/easter-egg flavor item with zero content surface. Not a code library, but a one-item gag — any recipe edge would be purely forced noise.
 
+## moblassos   [anchors: survival (1)]
+
+Power-read: 0 blocks, 13 items (5 lasso types + _filled variants + contract + creative), no methods, no loot. Mob-transport utility items — capture a mob into an item, carry it, release it. The lasso types tier by target type (land/water/any/villager/hostile).
+
+Method-pull:
+
+- **M-05 native-method gating: gate the higher-tier lassos (hostile_lasso — captures monsters at <50% HP, diamond/emerald) on Create-processed components.** The golden_lasso is an everyday item (gold is common-ish). The hostile_lasso is a mid-to-high-tier capability (capturing dangerous mobs). Gating the hostile_lasso on Create-pressed components (a special clasp mechanism?) or the emerald_lasso on Create components adds a Create tie for the expensive tiers without over-engineering the basic golden lasso. Tone: "a restraining mechanism for hostile mobs needs engineered components" is thematically sensible. Red-team: is this forced? The mod is a QoL convenience; making the high-tier lasso require Create deepens the progression naturally. ACCEPT (hostile/diamond/emerald tiers only — golden/aqua stay vanilla).
+
+- **M-28 colony route: the emerald_lasso (captures villagers) enables a colony-supply loop — capture a villager, deliver to MineColonies for a colonist.** No recipe needed; the synergy is functional (you use the lasso to populate your colony). But this is a player-use observation, not a method-routing weave. The lasso already works this way without a recipe change. Reject as not a ledger candidate.
+
+- **Aeronautics logistics: lassos enable livestock transport to Aeronautics ships (populate animal pens on airships).** Dossier cites this as a WEAK utility synergy. Power: everyday convenience. The synergy is real but there's no method to route through — no recipe connects lassos to aeronautics items. Reject as narrative utility, not a weave.
+
+- **M-29 cross-route dependency: build the hostile_lasso from a Create component + magic reagent (makes it cross-system).** A lasso that captures hostile mobs could require a Create-fabricated binding clip AND an Ars source_gem-infused cord — forcing the combat-utility intersection of both production routes. Power: mid-high (hostile mob capture is a mid-game capability). Tone: "capturing a creeper requires a magically-infused cord AND a precision metal clasp" makes sense — both the physical mechanism and the containment enchantment. Red-team: is this over-engineering a utility item? The hostile_lasso is genuinely powerful (captures monsters); a two-route gate is proportionate. ACCEPT.
+
+- from: moblassos:hostile_lasso + diamond_lasso + emerald_lasso (higher-tier) | via: create:pressing (precision clasp component) | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: a restraint for hostile mobs needs a forge-pressed binding mechanism — the golden lasso works on farm animals, but catching a creeper takes proper engineering
+- from: moblassos:hostile_lasso | via: create:pressing (Create component) + ars_nouveau:imbuement (arcane containment cord) | to: Create + magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: capturing a hostile mob requires a physically robust clasp AND a magically charged binding — neither the smith nor the mage can make it alone
+- from: emerald_lasso enables colony villager delivery | via: MineColonies functional synergy | to: economy/colony | motif: M-28 | verdict: REJECT | reason: functional player-use observation, not a recipe weave; the lasso already works for this purpose without any recipe change; no Phase-3 recipe action
+- from: lassos enable livestock to airship | via: functional synergy | to: aeronautics | motif: no-motif | verdict: REJECT | reason: narrative utility synergy, no method to route through; lasso items don't interface with any aeronautics recipe type
+
+== CHUNK COMPLETE ==
+
+
 
 
 

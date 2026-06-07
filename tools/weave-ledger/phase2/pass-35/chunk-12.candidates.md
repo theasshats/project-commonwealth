@@ -88,3 +88,6 @@
 ## creativecore   [anchors: support/library (1)]
 - LEAVE — genuine zero-content library: 0 blocks, 0 items, loot=no. GUI/packet/event API for CreativeMD mods; no material surface, no methods, nothing to weave.
 
+## accelerateddecay   [anchors: support/performance (1)]
+- LEAVE — genuine zero-content performance mod: 0 blocks, 0 items, loot=no. Replaces leaf-decay ticking behavior silently; no gameplay content, no material surface, nothing to weave.
+

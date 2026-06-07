@@ -83,6 +83,13 @@
 ## necronomicon   [anchors: support/library (1)]
 - LEAVE — pure config/registry/worldgen helper API library (0 items, 0 blocks, 0 loot, no recipe methods). Pulled only as a dependency of opacpvp; no game surface whatsoever.
 
+## gtmogs   [anchors: survival, economy (2)]
+- REWORK check: survival anchor (regional depth-gated vein exploration) + economy anchor (scarce metals underpin the trade economy) — both sound. Gtmogs is the scarcity *foundation* — it enables M-03/M-08/M-30 in other mods rather than needing its own weaves. No weak or arbitrary edges to flag.
+- from: gtmogs regional vein config | via: GTMOGS vein authoring (KubeJS) — scarcity → magic-metal veins | to: magic | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: if magic-relevant metals (e.g. silver for Occultism, amethyst-cluster veins for Ars) are vein-configured as region-locked, the magic production route has a scarcity input that must be traded — the loop from scarcity to magic production is explicit, not assumed
+- from: gtmogs overworld/nether/end marker blocks | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: clash | verdict: REJECT | reason: the 3 marker items are functional config anchors, not building materials; crushing them would be nonsensical (they're worldgen metadata objects, not deco blocks)
+- OK — core connections sound; the magic-metal vein M-30 note above is an authoring-level reminder for the GTMOGS vein config design, not a new recipe weave.
+
+
 
 
 
