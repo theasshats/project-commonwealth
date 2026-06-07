@@ -62,4 +62,16 @@ LEAVE — client-only chat cosmetic with no content surface. No items, no blocks
 <!-- The dossier notes a thematic pairing with Serene Seasons weather — acknowledged as flavor-only. -->
 LEAVE — client-side atmospheric rendering with zero content surface. No items, no blocks, no loot tables. The biome-reading is visual only; no cross-mod material or method hook exists. Correct role: atmospheric support.
 
+## dummmmmmy   [anchors: support/QoL (1)]
+<!-- power-read: 0 blocks, 1 item (dummmmmmy:target_dummy), loot=no. A single craftable invulnerable entity that shows floating damage numbers (per damage type). Can be armored or dressed with mob heads to change its type-profile. Everyday utility item — cheap vanilla recipe. -->
+<!-- method-pull: the target_dummy is a test prop. The only "use" is hitting it with spells/weapons. -->
+<!-- candidate 1: the dummy CONSUMES armor/mob heads to set its damage profile. Could we say "equip an Iron's spellbook armor-set on the dummy to test magic damage"? That's purely the existing gameplay interaction (equipping armor), not a recipe weave. no-motif. -->
+<!-- candidate 2: the dummy as a "practice dummy" for MineColonies guards — a config edge where a colony barracks uses a practice dummy for guard training efficiency. This would be a config tie, not a recipe. No motif covers "config boosts colony training." no-motif. REJECT. -->
+<!-- candidate 3: Sell the target_dummy as a crafted luxury to a Numismatics stall — a player-made combat-testing product priced via M-09. But the dummy is a vanilla-crafted utilitarian block, not a luxury good. Red-team: a "luxury good" is wine, cheese, processed food — a wooden training dummy doesn't meet the bar. REJECT. -->
+LEAVE — single-item combat-test utility. The only item is a test prop with no processing surface. "Consuming armor" is a cosmetic equip, not a recipe sink. No loot table; no viable motif applies without forcing. Genuinely a support role.
+
+- from: dummmmmmy:target_dummy → luxury-good sell | via: numismatics | to: economy | motif: M-09 | power: everyday | tone: clash | verdict: REJECT | reason: a wooden training dummy is a utility prop, not a craftable luxury; tone clash makes the M-09 sell unconvincing; no emergent economy story
+- from: target_dummy used as MineColonies barracks training prop | via: config tie | to: create (production) | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: no-motif — a config efficiency bonus is not a method-routing; this is operational flavor, not a recipe weave
+
+
 

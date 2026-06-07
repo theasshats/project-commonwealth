@@ -34,4 +34,13 @@ REWORK: OK — single anchor documented; the dossier already notes the M-05 gati
 - LEAVE — config serialization/GUI/sync API; 0 blocks, 0 items, no recipe methods. Genuine zero-content
   code library; no player surface to weave.
 
+## modonomicon   [anchors: support/documentation (1)]
+- LEAVE — data-driven guidebook engine; 6 items are the book objects themselves (no materials). It has no
+  recipe-type methods and produces nothing. The books are flavor/documentation, not a material sink.
+  Genuine zero-surface for weaving; its value is player onboarding.
+
+## prickle   [anchors: support/library (1)]
+- LEAVE — Prickle JSON config format library; 0 blocks, 0 items, no recipe methods. Genuine zero-content
+  code library (Darkhax ecosystem). No player surface.
+
 

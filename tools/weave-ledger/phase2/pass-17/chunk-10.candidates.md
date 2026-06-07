@@ -183,6 +183,27 @@ OK — connections are sound. Built through create:sequenced_assembly (Create an
 
 REWORK: none needed. Create+aeronautics is a clean and internally motivated pairing for a train-lamp mod.
 
+---
+
+## midnightthoughts   [anchors: survival (1)]
+
+- from: midnightthoughts "well-rested" buff | via: farmersdelight/farm_and_charm food (sleeping after a good meal extends the buff or improves its tier) | to: survival | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: no-motif, and this would reinforce the same survival pillar not add a new one; workflow adjacency between two survival-pressure mods; the briefing says don't force edges onto deliberately vanilla/organic content
+- from: midnightthoughts well-rested status effect (timed buff granting productivity bonus) | via: config tie to Cold Sweat / Serene Seasons (well-rested reduces cold vulnerability in winter) | to: survival | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: same — no-motif config tie within one pillar (survival→survival); not a pillar bridge
+- from: midnightthoughts (no items, no loot, no material flow) | to: any second pillar | motif: n/a | verdict: LEAVE component — the mod has zero item/material surface; the only candidate for a 2nd anchor would be a config-tie to another mod's effects, which is a no-motif forced edge; the survival anchor stands on its own and a 2nd pillar cannot be honestly earned without inventing an edge
+
+LEAVE (partial) — no coherent 2nd anchor available for a rest-buff behavior mod with zero material output. The survival anchor is correct; the mod belongs as a survival-pressure layer alongside Cold Sweat and Serene Seasons. Accept the 1-anchor floor case here.
+
+---
+
+## createthreadedtrains   [anchors: support/performance (1)]
+
+LEAVE — pure server-side threading optimization for Create's railway tick; zero items, zero loot, zero recipe surface. No material flows exist to route. Sanctioned performance-support role (indirectly serves the aeronautics/logistics pillar by making large train networks viable at scale, but this is a passive enabler, not a loop node).
+
+---
+
+== CHUNK COMPLETE ==
+
+
 
 
 

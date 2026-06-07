@@ -90,4 +90,26 @@ REWORK: none. Existing Create+magic anchors are tight and well-grounded. M-08 st
 
 LEAVE — runtime block/asset/recipe generator; no content of its own. Its outputs live in the host mods' namespaces (Create, Macaw, etc.) — any weaving belongs on those host mods. Nothing to route here.
 
+## modulargolems   [anchors: create (1)]
+
+Power-read: the mod is a mid-to-endgame combat automation tier. Base golem bodies use common metals (iron, copper, brass — everyday); boss-tier bodies use Ice&Fire dragonsteel and Cataclysm cursium — those are endgame, rare, and already tied to boss-drop progression. The workbench is Create-gated. Golem assembly is sequenced_assembly + mechanical_crafting (deep chain). This is solidly the M-06 pattern for the endgame bodies and a lighter Create-gating for the base ones.
+
+Existing connection check: the single Create anchor (sequenced_assembly/mechanical_crafting/crushing for assembly) is well-motivated. The dossier proposes two 2nd-anchor candidates:
+
+Candidate 1 — boss/mob-drop metals (dragonsteel, cursium) → golem_assemble as boss-key gate (M-02/M-15, survival→create)
+- from: iceandfire:fire_dragonsteel / cataclysm:cursium_ingot (boss drop tier metals) | via: modulargolems:golem_assemble | to: survival | motif: M-15 | power: endgame | tone: ok — boss-drop metals are the gate items for the highest-tier golem bodies; this is thematically exact (you defeat the boss, gain its metal, build the ultimate construct). Fits M-15 (boss-key unlock) squarely: the boss drop IS the input to the complex Create recipe. | verdict: ACCEPT | hook: slaying the ender guardian or the ignis dragon is the only way to unlock their metal bodies — the most powerful golems require proof of combat.
+
+Red-team: is this already the default behavior (dragonsteel is just the best metal, not KubeJS-gated)? Power-read: yes, the golem mod likely accepts any registered metal without a lock. The weave is proposing to *ensure* the endgame bodies require boss metals, either by recipe design or by the metals already being boss-gated. The weave is valid: if boss-drop metals are already the only source of dragonsteel/cursium (which they are — those drop from Ice&Fire / Cataclysm bosses), then M-15 is already satisfied emergently. We can record this as an ACCEPT that surfaces the link explicitly for documentation (and for any recipe that might try to circumvent it).
+
+Candidate 2 — Ars/Occultism material → golem-core upgrade (M-10/M-11, magic)
+- from: ars_nouveau:source_gem (magic currency) | via: modulargolems:golem_add_slot (upgrade slot mechanic) | to: magic | motif: M-10 | power: mid | tone: ok — source gem powering an upgrade slot reads as "arcane attunement" for a mechanical construct; a golem infused with source-gem energy | verdict: REJECT | reason: source_gem is the reserved universal magic currency (reagent-ownership); repurposing it as a golem upgrade material would crowd its currency role. Use occultengineering:spirit_solution instead — but that's Occultism's specific intermediate. The link is weak (M-10 says "don't gate basic components behind infusion"; this golem upgrade is mid-tier, not basic, but the magic-to-construct connection lacks a "of course" player nod — why would an arcane gem power a mechanical golem rather than Create energy?) | verdict: REJECT | reason: reagent-ownership conflict on source_gem; the Occultism route (spirit_solution → golem upgrade) is plausible but requires its own power-read and is a separate proposal. The dossier marks this WEAK and it fails red-team.
+
+Candidate 3 — occultengineering:spirit_solution → golem upgrade (M-11, magic)
+- from: occultengineering:spirit_solution (reserved occult intermediate) | via: modulargolems:golem_add_slot | to: magic | motif: M-11 | power: mid | tone: ok — spirit solution as a golem "soul animating fluid" is thematically coherent (occult spirit animating a mechanical construct is the cog-and-pentacle aesthetic); spirit_solution is the reserved occult intermediate (reagent-ownership: reuse, don't invent new). | verdict: ACCEPT | hook: a golem body is just metal until you pour spirit solution into the upgrade slot — the Occultism player's soul-fluid is what makes it truly alive.
+
+Red-team: spirit_solution is reserved — does this violate the ownership rule? No. The rule is "reuse it; don't invent a new occult reagent." Using spirit_solution as a golem upgrade input IS reusing the reserved reagent, which is explicitly encouraged. The tone is tight: modular golems already pull Cataclysm/Ice&Fire boss content, so adding an Occultism ritual link is thematically consistent (cog-and-pentacle, the occultengineering aesthetic). This advances the loop: magic → production (animated combat construct). Power: mid — spirit_solution is itself a mid-tier Occultism craft.
+
+OK on existing Create anchor. Two new candidates ACCEPTED (M-15 boss-key for dragonsteel/cursium bodies; M-11 spirit_solution golem upgrade giving magic a second anchor). One REJECTED (source_gem reagent-ownership conflict + weak tone).
+
+
 
