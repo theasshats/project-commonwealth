@@ -54,6 +54,17 @@
 - from: tacz high-tier gun barrel material | via: GTMOGS regional ore (scarce alloy) → tacz:gun_smith_table_crafting | to: economy | motif: M-30 | power: endgame | tone: ok | verdict: ACCEPT | hook: only one region has the high-grade steel for precision barrels — everyone else buys from the miner who settled there
 - from: tacz airship-mounted weapons | via: aeronautics integration | to: aeronautics | motif: no-motif | power: mid | tone: clash | verdict: REJECT | reason: TACZ doesn't natively integrate with Create Aeronautics turrets; aeronauticscompat covers other turret mods; this is flavor-only adjacency with no method to compose; no-motif → reject-for-review
 
+## minecolonies   [anchors: survival, create (2)]
+- REWORK: OK — connections sound. Survival (settlement/food/farming) and Create (quarries gated on Create parts, M-05) are both load-bearing and correctly authored. The M-09 deferral in the dossier is correct post-retirement.
+- from: minecolonies:blockhutmysticalsite / blockhutenchanter | via: ars_nouveau:source_gem or occultism essence as required research/work material input | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: the settlement's mystical wing needs magic reagents to do its research — the colony and the mage must trade or the colony can't advance its arcane branch
+- from: minecolonies colony food / goods at bulk (apple_pie, baked_salmon, bread) | via: Create trains / aeronautics cargo hold as the necessary transport for bulk trade | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: a colony that produces food at scale needs a cargo ship to move it — the colony's output is what fills the aeronaut's hold
+- from: minecolonies University research tree | via: KubeJS knowledge-gate (research progress is non-tradeable) | to: economy | motif: M-37 | power: endgame | tone: ok | verdict: ACCEPT | hook: you can buy the colony's goods but you can't buy the colony's research level — the knowledge gap is what keeps the settlement specialist irreplaceable
+
+## bundle_recipe   [anchors: support/QoL (1)]
+- LEAVE — vanilla-parity recipe restore; its whole value is restoring a basic utility item at minimal cost; gating it on Create parts would contradict its purpose ("never gate a basic/everyday component behind a complex recipe"); nothing to weave without violating the cost model
+
+
+
 
 
 

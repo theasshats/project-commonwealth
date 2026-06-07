@@ -179,6 +179,56 @@ Red-team for survival (M-15 boss-gate): Is gating a companion module behind a bo
 - from: create:haunting on a wolf component → spirit output | via: create:haunting | to: magic | motif: M-19 | power: endgame | tone: clash | verdict: REJECT | reason: haunting a mechanical wolf part into a soul item clashes with the mod's clockwork-mechanical vibe; there is no natural magic surface here
 - from: createmechanicalcompanion as companion / trade good | via: bare sell | to: economy | motif: M-09 | power: — | tone: — | verdict: REJECT | reason: M-09 retired; a personal companion isn't a traded good
 
+## revelationary   [anchors: support (1)]
+
+Zero items, zero recipe types, zero loot. Genuine code library providing an advancement-gated block-visibility API. No material in or out.
+
+- LEAVE — pure API/library; advancement-gated visibility mechanic with no items, blocks, recipes, or loot of its own. Used by dependent mods (Occultism otherworld blocks) but has no weave surface itself.
+
+## companions   [anchors: survival (1)]
+
+Power-read: Soul Furnace (registered recipe-type) converts mob-drops/food/gems into soul-state reagents — mid-to-endgame depending on input. Boss: Sacred Pontiff → Old Cloth + Relic Gold (endgame). Crystallized Blood (mid — requires farming rotten flesh in the Soul Furnace + charging with blood). Soul gems (mid-high). Tesla network (mid — copper-heavy).
+
+Candidate A — magic via occultism:spirit_fire / ritual or ars_nouveau:imbuement, M-11 + M-02:
+- Crystallized Blood → occultism ritual input: a blood-crystal that powers summon altars is a natural soul-fire/ritual feedstock. The semantic is identical: companions' Soul Furnace makes a blood-crystal; occultism's spirit_trade or ritual consumes blood-adjacent reagents.
+- Soul gems → ars imbuement: diamond→soul gem is companions' flagship conversion; that soul gem could gate an Ars spell component or imbuement ritual.
+- Theme-fit: companions sits in gothic-alchemical space; occultism is exactly gothic-ritual. The merge is very natural. Players would expect these worlds to overlap.
+- Red-team: companion's own coin system (copper/nether/end coins) and altars are a self-contained economy. The risk is the magic weave making companions' internal loop feel redundant. But routing *only specific drops* (Crystallized Blood, soul gem) into occultism while keeping the altar loop self-contained avoids this.
+- Motif: M-11 (ritual/transmutation sink) and M-02 (mob-drop reagent sink).
+- ACCEPT (strong)
+
+Candidate B — Create via create:crushing, M-04:
+- Tesla/voltaic deco blocks (copper-based) could crush back to copper scrap — M-04 (Create recycles deco).
+- Power-read: Tesla coils/pillars are mid-tier decoration. One crushing step back to copper is light.
+- Theme-fit: electric steampunk deco crushing to copper is fine, if mechanical.
+- Red-team: weak — the Tesla network isn't presented as a Create-adjacent build; it's a gothic-alchemical electrical system. Crushing it to copper feels like destroying flavor content for a copper nugget. Marginal benefit, minor thematic dissonance.
+- REJECT — weak; the Tesla aesthetic is gothic-electrical, not Create-industrial; crushing it to copper scrap feels reductive of a distinctive block set without meaningful loop benefit
+
+Candidate C — economy (Relic Gold / soul gems as trade goods), M-34:
+- Relic Gold (boss drop from Sacred Pontiff) is a high-value item from a high-difficulty boss — M-34 combat-route supply.
+- A combat specialist farms the Sacred Pontiff and trades Relic Gold to other players.
+- Power-read: boss drop — endgame. M-34 applies.
+- Theme-fit: a boss-drop economy is the pack's design intent; Sacred Pontiff drops fit.
+- Motif: M-34 (combat-route supply). ACCEPT
+
+Candidate D — companions:soul_furnace as a cross-mod magic processing method:
+- Since companions:soul_furnace is a registered recipe-type, *other* mods' materials could be routed *through* it (method-pull in reverse: other mods' drops → soul_furnace → companion outputs).
+- Specifically: occultism or Grimoire of Gaia drops → soul_furnace → Crystallized Blood or soul gem, making companions a node in the magic web rather than an isolated island.
+- This is a M-29 (cross-route dependency) angle: magic produces inputs that companions' soul furnace consumes.
+- Motif: M-29 (cross-route dependency).
+- ACCEPT — particularly if occultism drops or GoG fragments are added as soul_furnace inputs
+
+Candidate E — coin system conflict:
+- companions ships its own copper/nether/end coins. These are NOT Numismatics coins. This is a design tension: two coin systems competing in one pack. The companions coins appear to be purely internal (altars use them). The risk is players treating companions' coins as a competing currency.
+- This is a REWORK/curation flag, not a weave: either bridge companions' coins to Numismatics (mapping copper_coin → a Numismatics denomination via KubeJS), or keep them siloed as internal altar currency only. Flagging for Phase-3 economy pillar review.
+
+- from: companions:crystallized_blood / soul_gem | via: occultism:spirit_fire | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: a blood crystal forged in a gothic soul furnace is exactly the kind of reagent occultism's rituals demand
+- from: companions:relic_gold (Sacred Pontiff boss drop) | via: combat-specialist trade | to: economy | motif: M-34 | power: endgame | tone: ok | verdict: ACCEPT | hook: the Pontiff is a genuine fight; Relic Gold flows from fighters to crafters who need it
+- from: occultism / GoG drops | via: companions:soul_furnace | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: the Soul Furnace accepts dark mob-drops from across the magic bestiary — feeding it with Grimoire of Gaia fragments or occultism drops makes companions a processing node in the magic web, not a private island
+- from: companions Tesla/voltaic deco | via: create:crushing | to: create | motif: M-04 | power: mid | tone: clash | verdict: REJECT | reason: Tesla network is gothic-electrical; crushing it to copper scrap is mechanically thin and aesthetically reductive — the blocks are distinctive; recycling them for a copper nugget is a poor trade
+- REWORK — companions' internal copper/nether/end coin system competes with Numismatics; flag for Phase-3 economy review: either bridge companions' coins to a Numismatics denomination (KubeJS exchange) or explicitly scope them as altar-only internal currency to prevent two competing economies
+
+
 
 
 

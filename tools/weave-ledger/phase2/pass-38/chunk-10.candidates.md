@@ -129,5 +129,87 @@ Already ≥2 anchors, deeply cross-woven per dossier. The dossier says "none —
 
 OK — existing connections (Create + survival) are sound. Three new ACCEPT candidates extend without over-engineering.
 
+## rolling_down_in_the_deep   [anchors: support/client QoL (1)]
+LEAVE — client-only camera/movement behavior mod with no items, no blocks, no recipe methods, no material surface. Extends swimming camera feel. A sanctioned support role with zero weave surface.
+
+## ctl   [anchors: Create, aeronautics (2)]
+
+Already at 2 anchors (Create via sequenced_assembly + aeronautics as the train/contraption lighting tool). Reviewing existing connections.
+
+**Existing connection review:**
+- Create anchor via `create:sequenced_assembly` inbound: sound — the IC (incomplete) intermediate items confirm this is properly gated behind a Create processing step.
+- Aeronautics anchor: all blocks are lamp/light types for trains and contraptions — the primary purpose is train/rolling-stock detailing. Sound.
+
+**New weave candidates:**
+- Lamps are light-emitting blocks on trains. Could HTLB/ILB blocks feed an Aeronautics build requirement (airship navigation lights)? M-23 (structural alloy → airframe) wouldn't apply — lights are functional, not structural. M-24 (mechanical component → propulsion/control) doesn't apply either — lights aren't drive components. A possible M-05 (native-method gating on these lamps as required airship navigation outputs) — but that's gating a train-lamp into an airship component; thematic mismatch: train lamps for trains, not airships. Tone: mild clash. REJECT.
+- Colony route (M-28): a MineColonies Train Station building could require HTLB/ILB lamps as construction items — cheaper infrastructure via colony. Power: mid (sequenced-assembly lamps are already Create-gated). Tone: ok. Via: MineColonies hut construction recipe. This is a valid M-28 candidate — makes the lamp a colony-construction material, linking the train-lighting mod into the colony production route.
+- Economy via M-33 (service): train operators as a service profession in the player economy — but the lamp blocks don't gate this, it's emergent gameplay. Not a recipe weave. REJECT.
+
+**Candidate:**
+
+- from: ctl:ilb_block / ctl:htlb_block (finished train lamps) | via: minecolonies hut construction requirement | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: A MineColonies Station or Rail-maintenance hut requests interior/head-tail lamps as part of its construction — the colony builder needs the Create engineer's sequenced-assembly lamps, tying the two production routes together at the infrastructure level.
+
+- from: ctl:htlb_block (auto-directional head/tail light) | via: create:item_application to a train chassis | to: aeronautics | motif: M-20 | power: mid | tone: ok | verdict: REJECT | reason: CTL lamps are already placed directly on train contraptions (that's their whole function), not applied via deployer. M-20 (deploy-application upgrade) applies when a deployer applies a woven part onto a base — here the lamp is placed, not deployed-applied. Mis-method. REJECT.
+
+OK — existing connections (Create + aeronautics) are sound. The M-28 colony-infrastructure candidate is the natural extension.
+
+## createmetalwork   [anchors: Create (1)]
+
+1 anchor; target ≥2. Rich method surface: rides `create:compacting`, `create:crushing`, `create:mixing` with 55 c:tags for crushed materials across almost the entire metal roster. Molten fluid outputs from every metal.
+
+**Method-pull pass:**
+- M-08 (player-minted currency): The dossier notes this as STRONG. Createmetalwork → molten/processed metal → Numismatics coin. Power-check: molten_gold, molten_brass are mid-tier; the minting step is Create-gated (M-08 requires "scarce regional metal → Create-processed → player-pressed into coin"). Createmetalwork IS the Create-processing step for these metals. The regional scarcity comes from GTMOGS ore-gen. Tone: ok — a foundry that melts ore into ingots is precisely what feeds a mint. This is a genuine M-08 candidate (the processing step that makes the mint worth being a specialization).
+- M-03 (ore-doubling): Createmetalwork already IS M-03's implementation — it authors the crush+melt recipes that yield the ore-doubling reward. This is the existing anchor, not a new weave.
+- Magic-mod ores through the crush+melt pipeline (M-03): Galosphere palladium ore, Occultism's silver ore — these can be tagged into the createmetalwork crushing pipeline for a doubling. Power: mid (processed magic-mod metals). Tone: ok. Via: create:crushing (already in made-by). This is a real candidate: createmetalwork extends M-03 to magic-mod metals, creating a cross-system link (magic ore → Create processing).
+- Aeronautics via M-23 (structural alloy → airframe): `createmetalwork:molten_steel` or `createmetalwork:molten_bronze` as the raw material for cast structural components used in Aeronautics airframes. Power-check: steel/bronze are mid-tier alloys; basic airframe components made from cast steel fit a mid-tier airship build. Tone: ok — a foundry that produces cast-steel beams is exactly what a shipwright needs. Via: createmetalwork molten output → `create:compacting` cast component → Aeronautics recipe. This is M-23 (structural alloy → airframe).
+- `createmetalwork:molten_netherite_bucket` at endgame tier → Aeronautics endgame hull component (M-23). Power: endgame. Tone: ok — netherite-cast frames for the most advanced ships.
+
+**Candidates:**
+
+- from: createmetalwork molten metals (gold/silver/platinum) | via: create:compacting → numismatics mint | to: economy | motif: M-08 | power: mid–endgame | tone: ok | verdict: ACCEPT | hook: The foundry that melts and pours regional metals is the natural upstream step to the player mint — refined molten metal cast into blanks, then pressed into coin; the metallurgist controls the currency supply.
+
+- from: createmetalwork:molten_steel / molten_bronze | via: create:compacting → cast structural beams → aeronautics frame recipe | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: Cast-steel beams and bronze brackets are the structural skeleton of a working airship — the foundry's output is the shipwright's raw material; you can't build without it.
+
+- from: occultism / galosphere magic-mod ores | via: create:crushing (createmetalwork pipeline) | to: magic | motif: M-03 | power: mid | tone: ok | verdict: ACCEPT | hook: Magic-world ores run through the same industrial crushing-and-melting line as mundane metals, doubling yield and threading the arcane resource into the Create spine — the magic specialist's ore earns an engineer's reward.
+
+- from: createmetalwork:molten_netherite_bucket | via: create:compacting → endgame aeronautics hull block | to: aeronautics | motif: M-23 | power: endgame | tone: ok | verdict: ACCEPT | hook: A netherite-cast hull plate is the material of a flagship warship — only the most advanced foundry operation produces the stock that armors the skies.
+
+- from: createmetalwork crushed_raw_materials (all metals) | via: create:crushing → create:mixing → ingot | to: create | motif: M-03 | power: everyday–mid | tone: ok | verdict: REJECT | reason: This describes createmetalwork's own existing function — it IS the ore-doubling spine. Logging the existing anchor as a new candidate would be redundant. The Create anchor is already established. REJECT as duplicate.
+
+OK — existing Create anchor is correct and well-grounded. Three new ACCEPT candidates (economy M-08, aeronautics M-23 ×2, magic M-03) advance the loop meaningfully.
+
+## zombiemoon   [anchors: survival (1)]
+
+0 blocks, 0 items, loot=no. Hostile mob behaviors only; no unique drops surfaced in dossier. The dossier's "none — leave" assessment is correct per the facts, but the briefing says to re-examine carefully.
+
+**Method-pull pass:**
+- loot=no, 0 items. The mobs (Zombie Brute, Crawler, Spitter, Mutant Brute, etc.) drop vanilla rotten flesh / bones per dossier note "vanilla rotten-flesh-style drops (no unique reagent to weave)." No unique drop item to route.
+- Could add a custom loot-table seed for these mobs that introduces a unique drop? That would be a Phase-3 authoring action (add loot table entries for these mobs), not a weave — but proposing it as a loot-seed candidate is valid if it makes sense. What drop would fit? "Mutant flesh" or "zombie brute bone" could be an M-02 reagent-sink candidate. Tone-check: thematically coherent (tough zombie → tough drop → occult reagent). But the dossier explicitly states "no unique reagent to weave" and the mobs are confirmed to drop only vanilla items. Adding a new drop via loot-seed would require authoring a new item or routing to an existing one.
+- Could we loot-seed these mobs to drop `born_in_chaos_v1:bundle_of_bones` (which IS a registered item from BIC, a thematic fit — zombie mobs → bones bundle)? That's a cross-mod loot-seed. But the method would be loot-seed (Phase-3 datapack), not a recipe, and the material origin would become shared between two zombie-type mods — possible reagent-ownership question. This is speculative enough that it deserves a REJECT-for-review rather than acceptance.
+- No loot tables means no structure to seed into either.
+
+**Candidate:**
+
+- from: zombiemoon mutant mob drops (vanilla rotten flesh/bones) | via: loot-seed (add loot table entry for a unique drop e.g. mutant_marrow) → occultism:spirit_fire | to: magic | motif: M-02 | power: everyday | tone: ok | verdict: REJECT | reason: Zombiemoon registers no unique drop items (0 items, loot=no); a loot-seed would require inventing a new item or borrowing from another mod. The dossier confirms vanilla-only drops. Proposing a loot-seed here requires first authoring the drop item — that is Phase-3 content creation, not a route through existing methods. Log for review if a custom mutant-mob drop item is later added to the mod or pack. REJECT as no existing material to route.
+
+LEAVE — confirmed zero weave surface at current item/loot state. Survival (danger) anchor stands alone; the mobs push back on players but carry nothing to weave.
+
+## solmaiddream   [anchors: survival (1)]
+
+1 item (food_book), loot=no, 0 blocks. A tiny flavour addon for Touhou Little Maid feeding maid stats via varied food. Hard dep on touhou_little_maid.
+
+**Method-pull pass:**
+- The food_book is an inspection tool — it shows which foods a maid has eaten. No recipe, no processing.
+- The mechanic (maid stat growth from food variety) rides on the entire pack's food pool — it's a cross-system benefit from the diet/survival layer.
+- Could the maid feeding mechanic drive demand for rare foods from magic/Create routes? Technically yes — a maid fed every food group (including magic-mod foods or Create-processed dishes) would grow faster. But this is emergent gameplay, not a recipe weave.
+- The food_book as a recipe input anywhere? No coherent use as a material input to another method.
+- M-33 service: maid-keepers as a "companion service" profession? Too abstract; not a recipe weave.
+- The companion army upgrade path (more powerful maids from a varied diet) could be seen as M-26 (consumption): rare foods are spent to grow maid power. Power: everyday (maids eat anything). But M-26 requires items "spent against pressure" — maid-feeding is not survival pressure, it's companion progression. Tone: strained. REJECT.
+
+LEAVE — tiny flavour addon; one-item (inspection tool), behavior-only mechanic riding on the ambient food pool. No material surface for a coherent weave; the dossier's "none — leave" is correct.
+
+## bettercombat   [anchors: support/combat framework (1)]
+LEAVE — behavior framework; no items, no blocks, no recipe methods. JSON-driven melee overhaul that re-skins existing weapons with movesets. "Better Combat" is a behavior framework for foreign weapons — no material to route through any method. The support role (making weapons feel better to use) is its whole content.
+
 
 

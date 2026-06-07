@@ -143,3 +143,25 @@ Power-read: endgame. The dossier flags M-08 economy as a candidate. Platinum is 
 
 REWORK: no existing connections; mod is at 1 anchor. Candidates 1-4 accepted give it survival + magic + Create + economy anchors — strong multi-system mod.
 
+## bountiful   [anchors: economy (1)]
+
+1 block, 9 items, no loot. Bounty board that consumes any configured item/kill and pays out configured rewards. Fully data-driven objective and reward pools. The dossier lists M-08/M-09 for coin payout, M-09 is retired. The real candidates under the player-run economy ruling: M-26 (consumption sink), M-37 (research gate analogy), and survival via objective targeting.
+
+**Candidate 1 — Decree objectives targeting farm/hunt output (M-26 survival demand)**
+Power-read: everyday. Pointing Decrees at Serene Seasons crops, Spawn seafood, hunted meat (FD cutting targets) makes bounties reward the pack's actual food/resource production loop. The demand is renewed each board cycle. Theme: a notice-board commissioning crops/seafood is rustic-village commerce — completely coherent. Red-team: this is a config action, not a recipe edge; delivery is `via: config/data (Decree objective pool)`. Valid per the briefing's note that delivery can be "config tie."
+- from: farm/hunt/fish outputs (seasonal crops, Spawn seafood, FD meats) | via: bountiful:decree objective pool config | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: Bountiful boards commission the pack's farm and hunt produce — a wheat harvest in winter or a barrel of crabs in summer becomes a paid job, directly rewarding survival production
+
+**Candidate 2 — Decree objectives targeting Create-processed goods (M-26 / M-29 cross-route)**
+Power-read: mid. Create-processed goods (iron sheets, brass, treated wood) as bounty objectives give the Create production route a reliable external demand signal. Cross-route: a magic specialist might commission a Create-processed reagent holder, or vice versa. This is M-29 (cross-route dependency) in its demand-gating form.
+- from: Create-processed goods (iron_sheet, brass_ingot, treated_wood) | via: bountiful:decree objective pool config | to: create | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: The bounty board requests Create-processed fittings — iron sheets and treated planks for a colony build — pulling the tech specialist into the economy's demand circuit
+
+**Candidate 3 — Bounty payout in Numismatics coin (M-08 gateway, not bare coin)**
+Power-read: the reward pool. Per the player-run ruling, NPC coin faucets (M-14 cut) are banned, but the question is whether a bounty board paying Numismatics coins is an NPC faucet or a player-structured demand. The board itself is player-placed and player-configured (Decrees are authored by the pack/operators); the objectives pool player-produced goods. If a player operates a board as their shop front, the coin comes from the player's configured reward — but ultimately the coin appears from nowhere (it's a reward, not taken from another player's wallet). This is the NPC-coin-faucet problem in disguise: coin entering the economy without a corresponding player-to-player transfer. REJECT as a bare coin faucet.
+- from: bountiful:bounty turn-in | via: numismatics coin reward | to: economy | motif: M-08 | power: everyday | tone: ok | verdict: REJECT | reason: bounty payout in minted coin is an NPC-style coin faucet (coin appears from nowhere, not from another player's wallet); the player-run economy ruling (#163/#240) prohibits this; the correct design is goods-for-goods bounties or coin sourced from a player's own mint
+
+**Candidate 4 — Decree objectives targeting magic reagents (M-37 research gate / M-02)**
+Power-read: mid-to-endgame. A bounty board requesting Ars Nouveau source gems, Occultism silver dust, or Iron's Spellbooks arcane essence as objectives makes the magic production chain have external demand — a non-magic player hires a magic specialist's surplus. This is an economy-demand gate (M-37 flavor: knowledge outputs have economic value even if knowledge itself is non-tradeable).
+- from: magic reagents (ars_nouveau:source_gem, occultism:silver_dust, irons_spellbooks:arcane_essence) | via: bountiful:decree objective pool | to: magic | motif: M-37 | power: mid | tone: ok | verdict: ACCEPT | hook: The bounty board commissions a batch of source gems or arcane essence — a tech player paying a magic specialist for their surplus, threading magic production into the trade loop
+
+REWORK: existing connection is "economy (1)." The three accepted candidates above add survival, Create, and magic demand-gating — bringing it to ≥4-system reach. No existing connections to flag for rework (it had no connections, just an anchor).
+

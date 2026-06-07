@@ -172,6 +172,19 @@ REWORK: "economy (villager trades)" anchor is weak under the player-run ruling �
 
 OK — 2-anchor structure is defensible if the economy anchor is re-expressed as M-33 (service-for-hire) rather than a bare "villager trade = economy" label.
 
+## naturescompass   [anchors: support/QoL (1)]
+
+A single craftable compass item — locates biomes. No loot, no methods, no material outputs. In Derpack's scarcity-driven model, however, a biome-finder is actually a meaningful tool: finding a specific biome to access a regional ore (M-30) or a seasonal crop (M-16) is non-trivial. The compass itself is the delivery mechanism.
+
+- from: naturescompass:naturescompass (biome-locator tool) | via: recipe gating on Create brass or magic reagent | to: create or magic | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: In a pack where regional ore scarcity forces biome-hunting, a biome compass is mid-tier infrastructure — gating its recipe on Create brass casing (or an Ars source gem for a mage variant) ties exploration utility to the tech/magic production route and signals that finding your ore region is itself a crafted capability, not free.
+
+- from: naturescompass:naturescompass (the item) | via: create:mechanical_crafting | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: The compass's navigation plate + compass components assembled in a Mechanical Crafter (a multi-axis machine recipe) is a better Create-depth fit than vanilla crafting — a Mechanical Crafter recipe turns the compass into a Create milestone item (you need an MC before you can locate biomes at range), reinforcing the scarcity→exploration→production loop direction.
+
+- from: naturescompass (as-is vanilla recipe) | via: no change needed | to: — | motif: no-motif | power: everyday | tone: — | verdict: REJECT | reason: The vanilla-crafting recipe for a biome compass is fine for an everyday tool; but since no motif applies to "useful utility item with vanilla recipe," the weave here is the recipe upgrade (to M-05 via Mechanical Crafter), not keeping it vanilla. The two ACCEPTs above supersede this.
+
+OK — naturescompass has zero content outside its one compass item; the weave is the recipe upgrade + system gating, not a material route.
+
+
 
 
 

@@ -89,6 +89,14 @@ REWORK: dossier said LEAVE because "does not change dragon drops" — but the lo
 
 REWORK: dossier's "economy via numismatics — WEAK" candidate is correctly weak (bare sell); it's not repeated. The M-05 appliance-gating is the correct 2nd anchor. The M-28 colony-kitchen link is a genuine second weave that deepens the mod to 2+ anchors.
 
+## create_mobile_packages   [anchors: create, aeronautics (2)]
+- from: create_mobile_packages drone port / bee port + robo_bee | via: create:mechanical_crafting | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: The Robo Bee courier and the Bee/Drone Ports are Create logistics infrastructure — they belong in the Create machine tier. The robo_bee (a mechanical courier insect) built via create:mechanical_crafting with Create-standard parts (electron tubes, copper coil, rotation mechanism) is natural: the pack uses Create to *make* its delivery drones. The ports likewise belong in a Create machine shop. Currently the mod has no registered recipe-types and the dossier implies vanilla craft — upgrading these to Create methods earns depth.
+- from: create_mobile_packages:portable_stock_ticker | via: create:item_application | to: create | motif: M-20 | power: mid | tone: ok | verdict: ACCEPT | hook: The portable stock ticker is a handheld remote-access device — a "smart logistic device" that would plausibly be assembled by applying a tracking/link component to a base frame via a Create deployer. M-20 (deploy-application upgrade): a base portable item receives the Create-processed ticker component via deployer application. One light step, fits the mid-tier handheld gadget power level.
+- from: create_mobile_packages logistics network (package delivery) | via: minecolonies (courier/delivery huts) | to: economy | motif: M-28 | power: mid | tone: ok | verdict: REJECT | reason: MineColonies has its own courier/delivery system — the intersection with Create's package logistics is not the colony route in the M-28 sense (cheaper basics / locked exclusives). This would be a parallel logistics layer, not a colony-route weave. The mod is already 2-anchor (create + aeronautics); pushing it to a 3rd economy anchor via a logistical-overlap framing is forced. REJECT.
+
+OK — connections sound. Create + aeronautics anchors are appropriate. The two ACCEPT candidates above (M-05 drone/port mechanical crafting, M-20 portable ticker deploy-application) are depth adds within the Create anchor, not new-pillar moves. The create_mobile_packages aeronautics anchor is well-grounded: the Robo Bee is the physical-movement arm of economy distribution.
+
+
 
 
 
