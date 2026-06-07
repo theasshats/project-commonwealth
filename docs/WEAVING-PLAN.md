@@ -429,12 +429,13 @@ opus-corroborated**. Passes 13/14/15 were
    and `from_opus`. **Read `times` and `consensus` together** — a high `times` with `consensus: REJECT` is
    "robustly noticed and rejected," not a candidate (the dedup key omits the verdict, so accepts+rejects of
    one edge collapse to one row with a `verdicts` split).
-4. **Library freeze (`scripts/phase2-freeze.py`).** Mods with **no content surface** (0 blocks/0 items/
-   loot=no), zero accepts anywhere, **LEAVE-only across all three full passes [13,14,15]** are frozen
-   (~160) and **skipped by later blind passes** — focusing the spend on content. The **3-sample rule**
-   (must LEAVE in all three independent full passes) closes the single-pass-variance risk; anything with an
-   accept, item/block, or loot table is **never** frozen. ⚠ The freeze keys off the (drifted) digest, so a
-   cut mod can linger — reconcile it against the manifest like the dossiers.
+4. **Full coverage — every pass reviews every mod (no library freeze).** Per the maintainer's standing rule
+   — *nothing is excluded; reviewing a mod alongside the others can surface new links* — each pass chunks
+   **all** dossiers. An earlier **library-freeze** optimization (skip ~160 zero-content libs to save tokens)
+   was **retired**: its content test trusted the **digest**, which **false-zeroes code-registered & mechanic
+   content** (Aeronautics parts, diet/AppleSeed, sleep/`midnightthoughts`, `fishingreal`), so it silently
+   skipped real content mods and missed their weaves — re-introducing the exclusion the "review everything"
+   rule had removed. Pure libraries simply `LEAVE` each pass (cheap); only CUT mods (no dossier) are absent.
 5. **Delivery mechanisms (not just recipes).** A weave can be delivered by **recipe**, **loot-table
    seeding** (structure/dungeon mods → seed coin/reagent/boss-key drops — a Phase-3 datapack task),
    **worldgen/event gating**, **trade**, or **config/tag** — recorded per candidate so loot-bearing
@@ -628,10 +629,11 @@ The digest and recipe-graph do the heavy lifting; the genuinely new pieces are s
 3. **`tools/weave-ledger/check.py`** ✅ — the §4.4 cross-check (ledger ↔ kubejs ↔ recipe-graph ↔
    motif/reagent rules + dossier-coverage report). Reuses the kubejs-overlay parse in `recipe_graph_lib.py`.
    Advisory in `pr-checks.yml` for now (→ required at 0.15).
-4. **Phase-2 convergence harness** ✅ — `scripts/phase2-chunks.py` (per-pass randomized chunking),
-   `scripts/phase2-merge.py` (the master `CANDIDATES.{md,tsv}` accumulator with `times_suggested` /
-   `from_opus`), `scripts/phase2-freeze.py` (the 3-sample library freeze). Briefings + state in
-   `tools/weave-ledger/phase2/`.
+4. **Phase-2 convergence harness** ✅ — `scripts/phase2-chunks.py` (per-pass randomized **full-coverage**
+   chunking — every dossier, every pass), `scripts/phase2-merge.py` (the master `CANDIDATES.{md,tsv}`
+   accumulator with `times_suggested` / `from_opus`, cut-mod-aware). Briefings + state in
+   `tools/weave-ledger/phase2/`. (The earlier `phase2-freeze.py` library-freeze was **retired** — its
+   digest-based content test false-zeroed code-registered/mechanic content and silently skipped real mods; §5.)
 
 **Digest extension:** the dossier is a *new layer beside* the digest that *consumes* it. The digest stays
 the verbatim-jar ground truth; the dossier is the interpreted layer on top. #161 regenerates the digest on

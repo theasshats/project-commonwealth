@@ -10,6 +10,25 @@ theme/balance · **[PLAN]** plan-doc change · **[GITHUB]** issue action · **[N
 
 ---
 
+## Status — library-freeze RETIRED ("I don't think I said to freeze")
+
+- **[NOTE] Freeze retired — review EVERYTHING, every pass.** The maintainer flagged that **freezing was never
+  sanctioned** ("I do not think I said to freeze") and directed **"unfreeze everything."** Correct on both
+  counts: the freeze was an LLM token-saving optimization, and it **contradicted the standing rule** below
+  (*"Exclusion ABOLISHED — review everything; nothing is excluded"*) — it even re-skipped `fishingreal`, a
+  mod that rule had explicitly un-excluded. And its content guard trusted the **digest** block/item count,
+  which **false-zeroes code-registered & mechanic content** (Create Aeronautics parts, diet/`appleseed`,
+  sleep/`midnightthoughts`, `fishingreal`, `betterendisland` loot) → real content mods were frozen and their
+  weaves **missed**.
+  - **Deleted** `LIBRARY-FREEZE.txt` + `scripts/phase2-freeze.py`; **stripped** the freeze-skip from
+    `phase2-chunks.py` so every pass covers **all ~351 dossiers** (verified: 351 mods → 36 chunks). Updated
+    the plan (§5/§9) + the runbook (`NEXT-SESSION.md`). *Undo:* re-add a skip list (don't — it's the bug).
+- **[NOTE] Set up for full passes — NOT run yet (gated on #179).** Tooling is ready
+  (`python3 scripts/phase2-chunks.py --pass 16 --seed 16` → 36 full-coverage chunks). **Holding the run for
+  #179** (aeronautics registry dump — nearly done): Aeronautics' parts are code-registered, so the digest
+  under-captures them; once #179 lands, regen the digest + dossiers so aeronautics is covered like everything
+  else, then run the full passes on the maintainer's GO.
+
 ## Status — main merged (v0.6.0 loop model) + plan reframed + dossier reconcile
 
 This session brought the long-diverged weave branch up to date with `main` and reconciled the plan + the
