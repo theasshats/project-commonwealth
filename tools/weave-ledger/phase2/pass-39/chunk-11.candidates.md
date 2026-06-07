@@ -73,6 +73,24 @@ REWORK: dossier's "economy via spirit_trade [M-09/M-02 STRONG]" — M-09 is reti
 ## chat_heads   [anchors: support/QoL (1)]
 - LEAVE — client-side chat UI cosmetic, no items, blocks, loot, or gameplay hooks. Zero content surface. Pure QoL mod; sanctioned support role.
 
+## formationsnether   [anchors: survival (1)]
+- from: Nether structure loot tables (chests, altars) | via: loot-seed | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: seed occultism datura, wither skulls, blaze powder or ars_nouveau source_gems into formationsnether's Nether altar and cabin loot — Nether ruins as a source of magic reagents; a player who braves the Nether structures emerges with components that feed the magic pillar. The Nether ritual-altar theme (formationsnether has altars and sanctuaries) is coherent with magic-reagent drops.
+- from: formationsnether Nether castle / campsite loot tables | via: loot-seed | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: seed a scarce endgame component (e.g. a cataclysm boss-respawner related item, or a rare metal ingot) into the Nether structure loot at low probability — the combat specialist who clears Nether structures returns with goods the economy moves. The hostile Nether biome is a danger-zone; M-34 applies when danger exploration yields tradeable goods.
+- from: formationsnether structure siting (Nether biomes) | via: config tie / loot-seed | to: create | motif: M-30 | power: mid | tone: ok | verdict: REJECT | reason: M-30 is a regional-scarcity gate requiring ore-gen to lock a good to a region; formationsnether is a structure scatter, not an ore-gen mod. "Nether structures are regionally scarce" is ambient worldgen, not a specific material locked by GTMOGS regional ore-gen. The motif doesn't fit the mechanism.
+- from: formationsnether:nether_shrine / pedestals | via: loot-seed | to: survival | motif: M-34 | power: everyday | tone: ok | verdict: REJECT | reason: M-34 is combat-route supply (danger→economy); "seeding survival food into a Nether shrine" would be odd thematically (finding sandwiches in a fire-temple). The survival link here is already covered by the mod's anchor as Nether danger-exploration content. Don't force a third edge that doesn't fit.
+OK — survival anchor (Nether exploration danger content) is sound. The loot-seed additions tie it to magic (reagents) and economy (M-34 combat supply) — two coherent advances of the loop.
+
+## txnilib   [anchors: support/library (1)]
+- LEAVE — multiversion developer library; no items, blocks, loot, or recipe methods. Zero gameplay surface. Genuine code-library dependency; the definition of LEAVE.
+
+## resourcefullib   [anchors: support/library (1)]
+- LEAVE — cross-platform modding API library (ThatGravyBoat / Team Resourceful); no items, blocks, loot, or recipe types. Zero gameplay surface. Genuine zero-content library.
+
+## moreculling   [anchors: support/performance (1)]
+- LEAVE — client-side render culling performance mod; no items, blocks, loot, or methods. Zero gameplay surface. Sanctioned performance support role.
+
+
+
 
 
 

@@ -133,3 +133,21 @@ Zero blocks, zero items, zero loot, no recipe types. Pure developer library (Sno
 
 LEAVE — genuine zero-content code library. Sanctioned dependency support role.
 
+## endermoon   [anchors: survival (1)]
+
+One anchor (survival — spawn-surge event). Zero blocks, zero items, zero loot. Pure spawn-weight event modifier (adds Ender Moon to Enhanced Celestials lunar cycle). No registered recipe types. No material surface.
+
+Method-pull:
+The dossier says "leave — any weave belongs on ender pearls or the parent enhancedcelestials system." Blind check:
+- Endermoon amplifies enderman spawn weight on Ender Moon nights → passive ender pearl supply surge. The *material output* (ender pearls) belongs to the vanilla enderman, not this mod. Endermoon is the trigger; the pearl belongs to vanilla.
+- However: the Ender Moon event itself is a M-22 (Lunar/celestial reagent) trigger. Other mods can use the Enhanced Celestials event API to gate recipes or ritual outcomes during the Ender Moon. This mod's *event* is an anchor for M-22 weaves in OTHER mods (e.g. an Ars ritual that only completes during an Ender Moon — but that weave lives on the consuming mod, not here).
+- No items of its own — nothing to route. The event-gating M-22 pattern applies to the *enhanced-celestials system* as a whole, not to this zero-item addon specifically.
+
+LEAVE — zero items/loot/methods; the Ender Moon event is a trigger mechanism for M-22 weaves authored on other mods' materials. No independent content surface.
+
+## foodeffecttooltips   [anchors: support (client QoL) (1)]
+
+Zero blocks, zero items, zero loot, no recipe types. Pure client-side tooltip renderer — displays food effect data. No gameplay content.
+
+LEAVE — genuine zero-content client UI mod. Sanctioned support role.
+

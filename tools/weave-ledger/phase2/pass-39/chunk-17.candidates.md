@@ -14,6 +14,12 @@
 - from: farm_and_charm ground meat / dried goods | via: farm_and_charm:drying → create:mixing | to: create | motif: M-12 | power: mid | tone: ok | verdict: REJECT | reason: drying-rack output as a mixing intermediate is plausible but the chain is short and survives well inside the food-mod web already; adding a Create mixing step would be busywork (a second M-12 edge on top of the grain milling one). One clear M-12 weave is sufficient for an everyday food mod.
 - from: farm_and_charm:butter / animal surplus | via: economy (sell/trade to other players) | motif: M-09 | verdict: REJECT | reason: M-09 is retired — bare sell links are the ambient endpoint of the loop, not a weave. The M-28 colony-route edge above is the real economy anchor.
 
+## irons_lib   [anchors: support/library (1)]
+- LEAVE — framework library for Iron's Spellbooks; bundled content (transmog table, player statue) is cosmetic/UI-only with no routable material processing. No weave surface.
+
+## aeronautics_dyeable_components   [anchors: aeronautics (1)]
+- LEAVE — pure cosmetic permutation layer (16 dye-color variants of levitite/tires). Consumes only vanilla dye + base aeronautics parts; no foreign method or material with a coherent second-system routing. Forcing a Create mixing or economy edge would be busywork, not a loop-advancing weave. Decoration palette within aeronautics is a sanctioned support role.
+
 ## chefsdelight   [anchors: survival, economy (2)]
 - REWORK: the "economy" anchor is villager emerald trades (Cook/Chef NPC) — this is structurally equivalent to the cut M-21 (NPC trade-seam to economy). It's not a player-run economy hook. The anchor label is generous; the real economy contribution is the village cook structure as exploration content rather than a player-economy mechanism.
 - from: Cook/Chef village structures (exploration content) | via: loot-seed | to: survival | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: the village cook structures are dangerous enough to be worth clearing — a combat specialist raids the cook's stores (stocked larder chests, unique recipe books) and sells the haul to non-combat players. The structure itself becomes a combat-supply node, reinforcing the survival/danger face rather than an NPC faucet.

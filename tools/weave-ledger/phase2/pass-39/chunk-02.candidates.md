@@ -159,6 +159,23 @@ Power-read: a generator mod — its content is entirely derived from host mods (
 
 LEAVE — support/generator role: its outputs are host-mod content auto-stamped across wood types. Any weave targets the host mods (Create's wood shapes, Macaw's door shapes) directly; everycomp has no first-class items or methods of its own to route through.
 
+## undergroundworlds   [anchors: survival (1)]
+
+Underground biomes + trap-filled dungeons (Jungle Temple, Pyramid, Ice Dungeon, Abyssal Ruins) with themed loot, charms, weapons, and unique mob drops. Key outputs: spider_fang (Black Recluse drop), desert_charm (blindness immunity trinket), antidote_flask (poison immunity), freezing tools, blade_of_the_jungle. loot=yes confirmed. 2 c:tags.
+
+Power-read: spider_fang and themed charms are mid-tier (requires finding and surviving the specific dungeon biome). The dungeon bricks (temple/pyramid/ice bricks) are everyday building material context. Freezing tools and Blade of the Jungle are mid-tier combat gear.
+
+- from: undergroundworlds:spider_fang (Black Recluse mob drop) | via: occultism:spirit_fire | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: Spider fangs from a venomous underground spider are a natural spirit-fire reagent — transmuting them unlocks a dark-magic essence, giving dungeon delvers a direct magic-economy use for their haul. M-02 (mob-drop reagent sink); coherent with Occultism's thematic of creature-essence extraction. The underground recluse thematically fits spirit fire (dark, subterranean, venomous).
+
+- from: undergroundworlds:spider_fang | via: irons_spellbooks:alchemist_cauldron_brew | to: magic | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: Spider venom (distilled from the fang in Iron's Spellbooks' alchemist cauldron) becomes a spell-potency ingredient — a brewed venom serum that boosts poison-type spells or debuff durations. Cross-route: the cave-fighter feeds the magic specialist's cauldron. M-12 (processing-chain pull: mob-drop → alchemist brew → magic intermediate).
+
+- from: undergroundworlds temple/pyramid bricks | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: M-04 (deco/construction block → raw + XP nugget) is applicable, but the dossier already flags this as WEAK and appropriate only as part of a wholesale deco-crushing pass. Reject for now; revisit in that pass.
+
+- from: undergroundworlds:desert_charm (blindness immunity trinket) | via: ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: A charm that wards off blindness is exactly the kind of protective ward that Ars Nouveau imbuement upgrades — running the desert_charm through an imbuement (consuming source gems) would upgrade it to also ward off darkness/night-blindness effects, giving the magic specialist a reason to seek the dungeon's charm and the dungeon-explorer a reason to trade with the magic specialist. M-10 (arcane infusion pull: foreign item refined into a magic-enhanced artifact). Power-read: mid (requires reaching Pyramid dungeon + magic progression); depth proportionate.
+
+- from: undergroundworlds:freezing tools (freeze-on-hit effect) | via: create_dragons_plus:freezing | to: create | motif: M-29 | power: mid | tone: ok | verdict: REJECT | reason: create_dragons_plus:freezing is the Dragonfire-themed freezing method, not a general tool-upgrade path; routing undergroundworlds freezing tools through it has no thematic coherence (the tools are underground/subterranean, not dragon-origin). Tone clash; no M-29 cross-route that makes sense here.
+
+
 
 
 

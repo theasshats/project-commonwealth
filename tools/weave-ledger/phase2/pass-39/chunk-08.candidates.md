@@ -58,3 +58,6 @@ REWORK: OK — existing connections sound. Magic anchor is the mod's identity; C
 
 ## modernfix   [anchors: support/performance (1)]
 - LEAVE — broad performance patch (0 blocks, 0 items, loot=no); JVM/loader-level fixes only. No gameplay surface; nothing to weave.
+
+## bettercombat   [anchors: support/combat-framework (1)]
+- LEAVE — JSON-driven combat behavior framework (0 blocks, 0 items, loot=no); defines weapon swing-arcs and combos but adds no materials, recipe-types, or loot tables. A pure behavior system with no wireable surface; the weapons it enhances belong to other mods that already have weave candidates.

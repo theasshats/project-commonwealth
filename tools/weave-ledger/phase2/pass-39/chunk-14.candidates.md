@@ -122,4 +122,18 @@ REWORK: OK — single Create anchor is appropriate. The survival weave above (M-
 
 - LEAVE (for weaving purposes) — the novelty framing is correct; this mod earns its place as curated downtime content for a ~10-player co-op group. No coherent 2nd anchor weave exists that survives a theme-fit check. The dossier's recommendation to leave is sound.
 
+## northstar   [anchors: Create, aeronautics (2)]
+
+**Method-pull:** Already at 2 anchors with a rich Create inbound weave. Has 3 registered methods (northstar:electrolysis, northstar:engraving, northstar:freezing) and outputs scarce endgame metals (titanium, tungsten, martian_steel) plus advanced_circuit. These outputs are strong join keys. The dossier's 2nd-anchor candidates are weak (M-09 retired; "astronomical_reading as trade good" is an M-09 form).
+
+- from: northstar:titanium_ingot / northstar:tungsten_ingot | via: create:pressing → numismatics mint | to: economy | motif: M-08 | power: endgame | tone: ok | verdict: ACCEPT | hook: space-tier metals are the hardest-to-reach resources in the pack — they require Create rocketry just to access; pressing processed titanium/tungsten into a high-denomination Numismatics coin makes the space economy distinct from the terrestrial one; only rocket-capable players can mint it, creating a genuine late-game currency tier that others must trade for
+
+- from: northstar:advanced_circuit | via: aeronautics construction recipe (avionics/flight-computer) | to: aeronautics | motif: M-24 | power: endgame | tone: ok | verdict: ACCEPT | hook: an advanced circuit board is exactly what a real avionics/autopilot system would use; gating Aeronautics' high-tier navigation/control blocks (autopilot, long-range flight computer) behind northstar's space-fabricated circuits creates a dependency between the two mods' endgame content — the aeronautics specialist needs the rocketry specialist's circuits
+
+- from: northstar:electrolysis_machine | via: northstar:electrolysis (accepts foreign fluids) | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: electrolysis splits water into hydrogen/oxygen but can accept brine and other fluids — routing a magic-adjacent fluid (e.g. Ars Nouveau's liquid source or Occultism's spirit solution) through the electrolysis machine creates a cross-route dependency; the magic specialist needs Create-tech electrolysis to refine a reagent, the tech specialist needs the magic fluid input; neither is self-sufficient
+
+- from: northstar:biofuel | via: aeronautics engine intake | to: aeronautics | motif: M-13 | power: mid | tone: ok | verdict: REJECT | reason: the existing aeronautics anchor is already grounded in rocket propulsion (this is the mod's entire 2nd anchor); biofuel is already an organic part of the northstar system. Adding M-13 here is documenting the existing connection rather than proposing a new weave. The new adds above (M-08, M-24, M-29) are the real candidates. Records as rejected.
+
+REWORK: OK — existing Create + aeronautics anchors are sound and deep. The dossier's M-08 candidate is correctly identified (accepted here at endgame tier). The dossier's M-09 candidates (astronomical_reading / advanced_circuit as sellable) are retired-motif forms; the correct economy framings are M-08 (coin-mint from space metals) and M-24 (circuits into aeronautics control surface). The M-29 electrolysis → magic cross-route is new.
+
 

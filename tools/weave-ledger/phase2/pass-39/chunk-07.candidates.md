@@ -66,3 +66,6 @@
 
 ## timm   [anchors: support/QoL-client (1)]
 - LEAVE — client-side biome/dimension title display; zero items, no methods, no loot tables. Sanctioned support anchor; nothing to route through any method. (It pairs with Terralith to announce new biomes, reinforcing regional identity — an indirect scarcity-legibility contribution, but not a recipe weave.)
+
+## minecolonies_tweaks   [anchors: support/QoL-tag-harmonization (1)]
+- LEAVE — its core value is the 89 c:crops/c:foods tags that enable cross-mod food weaves authored against other mods' methods (not minecolonies_tweaks' own method). The inventory scroll items are colony-management tools with no coherent foreign-method pull — gating colony management tools on Create would be contrived; the colony route is already their native context. The `component_merge_shapeless` method is an internal colony-component combiner, not a useful foreign-material sink. The weave is in the mods whose crop items gain c: tags from this mod, not in minecolonies_tweaks itself. Sanctioned support anchor.
