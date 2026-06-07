@@ -1,0 +1,10 @@
+companions
+immersivearmorhud
+puzzleslib
+jeresources
+mcwdoors
+fluid
+sounds
+alcohol_industry
+blood_n_particles_datapack
+entity_texture_features
