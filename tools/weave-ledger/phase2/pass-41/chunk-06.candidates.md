@@ -30,6 +30,19 @@ LEAVE — compat-patcher glue mod (required, per CLAUDE.md) that makes foreign m
 ## bcc   [anchors: support (1)]
 LEAVE — server/client version-mismatch handshake utility; zero items, zero methods, no gameplay surface to weave.
 
+## betteroceanmonuments   [anchors: survival (1)]
+
+Existing rows converge on: M-02 loot-seed (magic reagent into monument chests — strong consensus) and M-08 coin-seed (high accept rate). The M-15 boss-key rows are split, and M-30 regional-scarcity appeared once late. What the prior passes missed:
+
+1. The M-30 angle is actually underexplored. The deeper issue is that Better Ocean Monuments concentrates the monument *as a deep-ocean-only location* — not merely "a dungeon with loot" but a *region-specific* structure that only ocean-settling players control. That's a genuine regional-scarcity gate on whatever is seeded into it, not just a loot table. No prior row has articulated the M-30 frame cleanly as the *reason* why the loot-seed of a magic reagent or coin also functions as a regional gate.
+
+2. The M-15 (boss-key) debate: the Elder Guardian IS a boss (unique hostile with a specific death mechanic, not a generic mob). A rare aquatic-component seeded as an *Elder Guardian drop* (not a chest) would be M-15-eligible, distinct from the chest-loot rows. This has not been proposed cleanly.
+
+- NEW | from: monument chest loot (ocean-monument-exclusive deep-ocean structure) | via: loot-seed | to: economy | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: whatever is seeded into monument chests is by geography region-locked to ocean players — a land-locked Create engineer who needs it must trade or sail; the aquatic specialization gate is M-30 carried by loot-table injection, not ore-gen
+- NEW | from: Elder Guardian unique drop (seeded via loot-table, distinct from chest loot) | via: loot-seed | to: create | motif: M-15 | power: mid | tone: ok | verdict: ACCEPT | hook: the Elder Guardian is the monument's capstone boss — seeding a rare aquatic-core component as its death-drop (not just a chest) gives the mod a boss-key role (M-15) that the chest-loot rows cannot: you must *defeat* the guardian, not merely open boxes
+
+OK — existing M-02 and M-08 rows are sound and well-supported; the two NEW rows above add the missing regional-scarcity frame (M-30) and the boss-drop distinction (M-15 via guardian death-loot vs chest-loot).
+
 ## createpickywheels   [anchors: Create (1)]
 
 The existing candidate pool (30+ rows) is almost entirely the same behavioral claim re-expressed: "the biome-gate on water-wheels/windmills is a survival flavour." The rows that ACCEPT do so under M-30 or M-16, but both motifs require a *material* flowing through a *method* — this mod has zero items and no recipe-types. That means every ACCEPT row is itself mis-motifed, and the REJECT rows calling that out are correct.

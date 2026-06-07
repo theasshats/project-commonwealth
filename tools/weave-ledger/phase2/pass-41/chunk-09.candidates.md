@@ -32,9 +32,9 @@ LEAVE — pure code library (loot/worldgen/datagen helpers); 0 items/blocks/meth
 
 ## naturescompass   [anchors: support (1)]
 
-Existing rows: M-05 gate-via-Create REJECT (majority); M-30 regional-scarcity tie ACCEPT (2). No clear winning row yet.
+Existing rows: M-05 gate-via-Create REJECT (majority correct); M-30 recipe-requires-regional-ore ACCEPT (2, but weakly framed).
 
-- CHALLENGE | from: naturescompass:naturescompass | via: recipe (vanilla crafting, as-is) | to: economy | motif: M-30 | verdict: REJECT | hook: M-30 gates a *good's input* by ore-gen region; the compass is a finder utility — it doesn't carry a region-locked material in its crafting and produces no trade good. Labelling it M-30 misapplies the motif (it helps find biomes, but that's emergent use, not a recipe-locked material).
-- NEW | from: naturescompass:naturescompass | via: recipe (require one regional-ore shard as a crafting input — e.g. a c:gems/lapis or a GTMOGS region-specific ore) | to: economy | motif: M-30 | power: everyday | tone: ok | verdict: ACCEPT | hook: the biome-finder itself is made partly from the ore-type of the biome you're most likely to seek — a player in a cold biome crafts one with frozen-region ore, another with desert ore; compass crafting embeds regional scarcity into the one tool used to escape it.
+- CHALLENGE | from: naturescompass:naturescompass (bare "biome compass helps find regional ore biomes") | via: recipe (vanilla, no change) | to: economy | motif: M-30 | verdict: REJECT | hook: the accepted M-30 rows don't propose an actual recipe change — they label an existing tool "useful near regional scarcity" without routing any region-locked material through its crafting. M-30 requires the *good's key input* to be region-locked; the bare navigator-utility framing doesn't satisfy that.
+- NEW | from: naturescompass:naturescompass | via: recipe (add one region-specific ore/gem shard — e.g. a GTMOGS c:gems/amethyst_shard or a regional flint variant — as a crafting ingredient) | to: economy | motif: M-30 | power: everyday | tone: ok | verdict: ACCEPT | hook: the biome-finder itself consumes a piece of the terrain it reads — a player in the desert uses desert-quartz in their compass, someone in snow-lands needs a frozen-ore shard; the tool that maps scarcity is shaped by it.
 
 
