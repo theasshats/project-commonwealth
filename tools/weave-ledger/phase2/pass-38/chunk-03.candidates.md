@@ -69,6 +69,14 @@
 ## betterbiomereblend   [anchors: support/performance (1)]
 - LEAVE — genuine zero-content client render optimization; no items, no blocks, no loot; nothing to weave
 
+## gtmogs   [anchors: survival, economy (2)]
+- REWORK: OK — connections sound. Survival (regional ore exploration) and economy (the scarcity foundation that forces trade) are both correct and load-bearing. GTMOGS is the axiom the loop rests on; its weave role is enabling motifs downstream (M-03 ore-doubling, M-08 coin-from-scarcity, M-30 regional-scarcity gate) rather than being a target for new anchors itself. No new anchor candidates — a third anchor would be forced onto a worldgen framework with no recipe surface.
+
+## mru   [anchors: support/library (1)]
+- LEAVE — genuine zero-content code library; no items, no blocks, no loot; nothing to weave
+
+
+
 
 
 

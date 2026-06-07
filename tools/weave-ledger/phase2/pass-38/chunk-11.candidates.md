@@ -209,6 +209,19 @@ The create_connected blocks are Create machinery — they need no foreign weave 
 
 REWORK: dossier verdict "leave / support role" is too conservative. Create Connected has genuine multi-system surfaces (aeronautics drivetrain, logistics storage, soul-fire catalyst bridge). The 2nd anchor is aeronautics (from Create), solidly via M-24 and M-31.
 
+## createshufflefilter   [anchors: create (1)]
+
+Two items: shuffle_filter and weighted_shuffle_filter. Pure Create filter behavior extension. Let me test honestly whether there is any non-forced 2nd system edge.
+
+The shuffle filter randomizes which item a Deployer places. This is a builder/contraption tool. A Deployer is also a sequenced-assembly tool (M-06/M-20). The weighted variant scales by stack count — relevant for probabilistic output (random output is interesting in Create processing chains for variety/game feel). However the filter itself has no material output; it just controls which item gets deployed.
+
+One genuine surface: a weighted_shuffle_filter controlling a Deployer in a sequenced-assembly chain could produce probabilistic recipe outputs — rare/variant outputs on a chain, interesting for endgame crafting with random element. But this is a use of Create's existing M-06 mechanism, not a new system anchor.
+
+- from: createshufflefilter:weighted_shuffle_filter (stack-weighted random Deployer dispatch) | via: create:sequenced_assembly / create:deploying | to: create (depth) | motif: M-06 | power: mid | tone: ok | verdict: REJECT | reason: M-06 (sequenced-assembly keystone) is already create→create depth; adding a shuffle filter is a variant of M-06's delivery, not a second-system anchor. The filter expands Create depth within the Create pillar only — it doesn't cross into magic, survival, aeronautics, or economy in any coherent way. A one-system mod that genuinely has no 2nd surface is a "leave" case with a note for future weave authoring.
+
+- LEAVE — two-item Create filter utility; no material output or loot; all depth is within the Create pillar (deployer behavior). No coherent 2nd-anchor candidate found.
+
+
 
 
 

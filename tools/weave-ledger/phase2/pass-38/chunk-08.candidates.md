@@ -170,3 +170,31 @@ REWORK: existing connection is "economy (1)." The three accepted candidates abov
 Zero blocks, zero items, zero loot. Server-side profiler. No player-facing content.
 - LEAVE — performance profiler with no items/blocks/loot; zero weaving surface; this is a diagnostic tool, not a content mod.
 
+## trading_floor   [anchors: Create, economy (2)]
+
+Already at 2 anchors. 1 block, 1 item (trading_depot), loot=yes. The Trading Depot automates villager trades on a Create belt. The dossier already identifies it as a Create×economy keystone for M-08 (Create-processed goods → emeralds).
+
+REWORK check on existing connections:
+- Create anchor: solid — it is literally a Create depot variant, hard Create dependency.
+- Economy anchor: solid — its sole purpose is automated trade (villager → belt output).
+Both connections are mechanically load-bearing, not arbitrary. OK — connections sound.
+
+**Additional candidate — Trading Depot as cross-route dependency node (M-29)**
+Power-read: mid (requires Create infrastructure + a villager hall). A Trading Depot in a Create supply chain that converts magic-specialist outputs (enchanted books via an Ars enchanting setup) into emeralds, or vice-versa, creates a cross-route dependency: magic specialists need Create logistics to run their trade. This is M-29 in its distribution-arm form. Red-team: this is more a design pattern than a new recipe edge; the depot itself has no recipe to author. Delivery: `via: design pattern / Create belt configuration`. Valid as a weave proposal (a Phase-3 action might be "configure the bounty reward / trading depot interaction so magic outputs feed the Create trade line").
+- from: magic enchanted goods or Create-processed goods | via: trading_floor:trading_depot (Create belt → villager trade) | to: economy | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: The Trading Depot on a Create belt converts Create-processed brass or magic-enchanted books into emerald currency — a cross-route bridge where tech and magic outputs meet the trade economy without a direct recipe edge
+
+**Additional candidate — aeronautics supply run delivering trade inputs (M-31)**
+Power-read: mid-to-endgame. A Trading Depot operating at scale (bulk emerald generation) needs bulk Create-processed inputs delivered. If those inputs are heavy/regional, the aeronautics arm (trains, ships) is how you supply the depot from a remote production base. This is M-31 (logistics-required bulk good). Red-team: the logistic need emerges from how the player builds the depot setup; it's not a recipe edge. Valid as a design-lever candidate.
+- from: bulk Create-processed goods (iron_sheet, brass, treated_wood) | via: aeronautics/train delivery to trading_floor:trading_depot | to: aeronautics | motif: M-31 | power: mid/endgame | tone: ok | verdict: ACCEPT | hook: A remote Create factory ships bulk iron sheets by train to a Trading Depot near the village — the airship/logistics arm earns its keep feeding the automated trade line
+
+## gravestone   [anchors: survival (1)]
+
+1 block (gravestone), 2 items (gravestone, obituary), loot=yes. Death-QoL utility. No recipe types registered. No crafting surface beyond the gravestone block itself. The obituary is a lore item. The dossier correctly flags LEAVE.
+
+Power-read: the gravestone is a utility block placed on death. It has no recipe inputs/outputs for processing. The obituary is informational. The loot=yes tag likely means the gravestone can be silk-touched and placed — still no material input/output loop.
+
+Candidate stretch — obituary as a Bountiful bounty objective (M-34 / economy)? An obituary records where and how you died; a bounty board could theoretically request "bring me proof of death at a dungeon" (the obituary). Red-team: the obituary is a personal keepsake, not a commodity; requiring players to hand over obituaries as bounty proof is thematically macabre in a way that might not serve the pack's tone, and mechanically trivial (you can die on purpose). More importantly, the delivery would be a config trick that repurposes a personal item — a forced edge.
+- from: gravestone:obituary | via: bountiful decree objective | to: economy | motif: M-34 | power: everyday | tone: clash (obituary-as-bounty-proof is morbidly gimmicky; trivially farmable) | verdict: REJECT | reason: obituary has no meaningful scarcity or specialization gating; a player can die on purpose to farm them; the personal-keepsake tone clashes with being a trade commodity
+
+LEAVE — death-recovery utility with no tradeable material surface; the only item (obituary) fails the theme/red-team test as a trade good; no loop-advancing weave exists.
+

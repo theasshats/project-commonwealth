@@ -228,6 +228,47 @@ Candidate E — coin system conflict:
 - from: companions Tesla/voltaic deco | via: create:crushing | to: create | motif: M-04 | power: mid | tone: clash | verdict: REJECT | reason: Tesla network is gothic-electrical; crushing it to copper scrap is mechanically thin and aesthetically reductive — the blocks are distinctive; recycling them for a copper nugget is a poor trade
 - REWORK — companions' internal copper/nether/end coin system competes with Numismatics; flag for Phase-3 economy review: either bridge companions' coins to a Numismatics denomination (KubeJS exchange) or explicitly scope them as altar-only internal currency to prevent two competing economies
 
+## timm   [anchors: support/QoL (1)]
+
+Zero items, zero recipe types, zero loot. Client-side UI mod that renders biome/dimension titles. No material surface.
+
+- LEAVE — pure client UI library; no items, blocks, recipes, or loot; no content to weave. QoL/immersion support role only.
+
+## charta   [anchors: survival (1)]
+
+Power-read: card tables (furniture — everyday social item); bar furniture (everyday deco); wine/beer glasses (everyday deco). Has loot=yes — tables generate in villages/dungeons; glasses/furniture are the dungeon/village loot. The furniture is all vanilla-wood crafted.
+
+Method-pull: no registered recipe types. Furniture is crafted at vanilla crafting table. Card games run on the table. No material processing.
+
+Candidate A — Create via create:cutting, M-04:
+- Bar stools, bar shelves, card tables are wood constructions — create:cutting can reprocess them back to planks/sticks (M-04, Create recycles deco).
+- Power-read: everyday furniture. One cutting step is proportionate.
+- Theme-fit: a sawmill cutting up bar furniture is mechanically fine but tonally odd — the social/tavern vibe clashes with industrial recycling. Cutting furniture back to planks is not the kind of "deco → Create" that makes the pack better.
+- Red-team: M-04 is meant for deco blocks that feel like they naturally came from a machine or return to raw form. Bar furniture is wood furniture — it doesn't feel like a Create-adjacent product. Forcing a cutting recipe on bar stools to earn a Create anchor is contrived.
+- REJECT — M-04 on tavern furniture is a forced edge; the bar-furniture tone is social/tavern, not industrial; cutting a bar stool back to planks adds no loop value
+
+Candidate B — economy as a player-gathering social space (service/social, M-33):
+- Card tables as gambling/social surfaces where players wager goods — a player-run social-economy mechanic.
+- Power-read: the card game is a player-to-player activity; wagering goods is an emergent economy outcome.
+- Theme-fit: a tavern with card games where players bet goods or coin is extremely coherent — charta's whole vibe is "tavern/casino."
+- Delivery: config/KubeJS or social convention (no built-in wagering API in Charta). The wagering behavior is emergent player behavior, not a recipe.
+- Red-team: Charta has no built-in wagering hook. This would require a KubeJS convention or server-social agreement, not a recipe weave. It's a "design intent" link, not a method-routing.
+- Motif: M-33 (service-for-hire / labor) is the closest — it's a player-runs-a-service economy node (the tavern owner as a service provider, card games as the service). But M-33's delivery is labor/service, and card wagering is more of a social-economic layer than a service.
+- ACCEPT with caveat: the tavern as a player-economy service space (M-33) is coherent — the tavern operator provides the venue (physical service), players bring their own goods/coin. This is Phase-3 social design rather than a recipe authoring task.
+
+Candidate C — economy via loot-seed (loot=yes, generates in villages/dungeons):
+- Charta tables generate in villages and dungeons — their loot tables could be seeded with weave-relevant drops (coin, magic reagents, etc.).
+- This is a loot-seed candidate: seed a Numismatics coin or a magic reagent into charta's dungeon-gen loot tables so finding a card table in a dungeon has loop-relevant rewards.
+- Motif: M-08 (player-minted currency in loot → enters the economy as a found good) or M-02 (magic reagent in loot).
+- Power-read: everyday (village/dungeon loot, common-ish).
+- Theme-fit: a casino/tavern dungeon room having coin loot is very natural. Players in the wild find an abandoned tavern with some coin left behind.
+- ACCEPT via loot-seed.
+
+- from: charta card table / tavern as player-economy service space | via: social convention + physical venue (M-33 service) | to: economy | motif: M-33 | power: everyday | tone: ok | verdict: ACCEPT | hook: the tavern owner runs card nights and charges for table time in goods or coin — the tavern is a player-economy service node, not a free community good
+- from: charta dungeon/village loot tables | via: loot-seed (Numismatics coin seeded into loot) | to: economy | motif: M-08 | power: everyday | tone: ok | verdict: ACCEPT | hook: an abandoned dungeon tavern has some coin in its till — found coin enters the player economy as a modest loot reward, not an NPC faucet
+- from: charta bar furniture / card tables | via: create:cutting | to: create | motif: M-04 | power: everyday | tone: clash | verdict: REJECT | reason: bar-furniture tone is social/tavern; cutting a bar stool to planks in a sawmill is a forced industrial edge with no loop value — M-04 is for deco that naturally comes from a machine, not for social furniture
+
+
 
 
 
