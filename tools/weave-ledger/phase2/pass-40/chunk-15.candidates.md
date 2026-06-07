@@ -139,6 +139,34 @@ Also: The M-08 dark_metal coin split (3A/1R) deserves a cleaner verdict. Dark me
 - NEW | from: born_in_chaos_v1:bagof_candy | via: extradelight:evaporator or create:mixing (candy dissolved into a seasonal sweetness concentrate) | to: create | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: candy stockpiled during the haunting window is the only off-season source of the festive sweetness concentrate — the seasonal combat event creates a year-round consumption sink where demand persists after the source stops; stockpilers become seasonal traders.
 - CHALLENGE | from: born_in_chaos_v1:dark_metal (processed ingot) | via: numismatics mint | to: economy | motif: M-08 | verdict: REJECT | hook: the existing M-08 REJECT argues flooding concern, but dark metal's drop rate (~9–16% from specific hostile mobs, not trivially farmable) and biome-modifier spawn distribution make it genuinely scarce and regional — the REJECT is overcautious; this is a clean M-08 candidate; recommend overturning the single reject.
 
+## aeronautics_dyeable_components   [anchors: aeronautics (1)]
+
+All existing rows REJECT. Consensus: the mod is a pure cosmetic color-permutation of aeronautics parts; every attempt to route through Create:mixing/toolbox_dyeing/M-04/M-20/M-23/M-10/Ars dye correctly rejected. Dossier says leave.
+
+The one ACCEPT minority (1×) for create:toolbox_dyeing M-20 was: "routing the dye step through Create's toolbox-dyeing method tethers the cosmetic palette to the Create engine." Power-read: this is gilding — the offhand-dye mechanic is simpler and intentionally so; requiring a toolbox step for a cosmetic is a friction increase with no gameplay reward. Concur with rejection.
+
+The M-28 colony-request angle (1× ACCEPT: shipwright colonist orders dyed levitite for fleet color-coding) is the most interesting minority. It's not a recipe weave but a config/datapack possibility — if a MineColonies Shipwright hut (or any relevant hut) could be configured to request a set of dyed levitite as a building supply, the cosmetic layer gets a demand mechanism. However, there is no Shipwright hut in base MineColonies, so this is speculative infrastructure.
+
+LEAVE — cosmetic color-permutation of aeronautics parts with no method surface; the dye mechanic is intentionally hand-craft simple; all rejections sound.
+
+## createfurnitureseats   [anchors: support + aeronautics (2)]
+
+Zero items, zero blocks, pure behavior-bridge compat mod. Two prior REJECT rows confirm no surface. Already at 2 anchors (support + aeronautics via sittable furniture on ships). Dossier: leave.
+
+LEAVE — zero-item behavior compat mod already at 2 anchors; no material surface.
+
+## create_ironworks   [anchors: create (1)]
+
+Existing rows: rich. Accepted: M-08 tin_ingot/crushed_tin → numismatics mint (23×+8×+3×+2×), M-23 steel_plate → aeronautics hull (18×+16×), M-24 bronze → aeronautics propeller/drivetrain (11×+5×+4×), M-28 steel via MineColonies blacksmith/colony equipment (2×+2×), M-30 tin regional scarcity (2×), M-04 bronze/tin deco storage blocks crush (1×). Rejected: M-10 steel/tin → Ars (unanimous), M-06 steel sequenced_assembly (3×), M-08 steel coin (split, concern of flooding).
+
+The M-08 steel coin row is a useful challenge target. Steel is create_ironworks' *endgame alloy* (near-Netherite, Smithing-upgradeable). Minting it as a high-denomination coin on top of also minting tin and bronze risks coin denominations losing their scarcity hierarchy — if everything can be minted, the scarcity signal breaks. The existing reject (1×) makes this point. However: the pack only needs *one* coin-metal per tier. Tin is the right everyday-tier coin (regional ore, processable to coin). Bronze is mid-tier. Steel should stay an alloy, not a coin, to avoid over-monetizing the production chain.
+
+Missing: The M-30 (regional scarcity) rows for tin (2×) are correctly accepted but undersell the *structural* role. Tin is the *only* new regional ore create_ironworks adds. If GTMOGS places tin in specific biomes only, then whoever settles in a tin-rich biome controls the bronze *and* steel supply chains entirely — this is the scarcity foundation's strongest expression in the Create spine. The existing rows note this but don't propose a distinct weave action; the action is: tag tin's biome distribution explicitly in GTMOGS config so its regional lock is deliberate.
+
+- CHALLENGE | from: create_ironworks:steel_ingot (endgame alloy) | via: numismatics mint | to: economy | motif: M-08 | verdict: REJECT | hook: minting steel into coin on top of tin and bronze over-populates the coin-denominations and erodes the scarcity signal — one alloy (tin: scarce regional ore → processed → coin) is the pack's M-08 seam; steel should remain the endgame alloy, not also a currency; the existing M-08 steel REJECT is correct.
+- NEW | from: create_ironworks:tin_ore (biome-distributed regional ore via 3 biome-modifiers) | via: config-tie (GTMOGS ore-gen + numismatics mint path) | to: economy | motif: M-30 | power: everyday | tone: ok | verdict: ACCEPT | hook: tin's biome-modifier distribution already seeds regional lock-in — explicitly aligning GTMOGS to concentrate tin in specific biomes makes the tin-miner's region the pack's bronze/steel bottleneck; the regional scarcity foundation expressed through the Create metallurgy spine.
+
+
 
 
 
