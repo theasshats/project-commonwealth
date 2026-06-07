@@ -1,0 +1,19 @@
+# Phase 2 candidates — chunk-08
+
+## accessories_compat_layer   [anchors: support (1)]
+- LEAVE — pure compat shim (mixin bridge for Curios/Trinkets onto Accessories); zero items, zero loot, no methods, no material surface to route. Genuine zero-content library.
+
+## friendsandfoes   [anchors: survival (1)]
+- from: friendsandfoes copper deco (copper_button, lightning_rod variants) | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: copper ornaments and decorative rods that oxidize over time crush back to copper nuggets — vanilla-faithful material loop, keeps the deco set connected to Create's metal economy
+- from: friendsandfoes:crab_claw | via: ars_nouveau:imbuement | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: a crustacean's reaching claw is an attunement catalyst for extension spells — the reach-potion use and an imbuement reagent use feed two different demand sources without conflict
+- from: Wildfire hostile-mob drops (fire-loot) | via: occultism:spirit_fire | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: the Wildfire's infernal essence feeds Occultism's spirit-fire transmutation — an elemental boss drop as a fire-magic reagent is an obvious pairing; combat-zone farming, not passive collection
+- from: Wildfire / Illusioner drops | via: trade (M-34 framing) | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: only a combat-capable player farms Wildfires and Illusioners; their drops become trade goods that non-combat specialists buy — the hostile-mob danger creates a combat-supply role
+- from: friendsandfoes:copper_golem_head (decorative drop) | via: ars_nouveau:imbuement | to: magic | motif: M-02 | power: everyday | tone: clash | verdict: REJECT | reason: the copper golem is a gentle, whimsical automaton; routing its head into an arcane imbuement reads as sacrifice-of-innocent, tonal clash with the mod's vanilla-plus feel — the head is better left as a deco trophy
+REWORK: the dossier's own M-04 crush-deco candidate is correctly flagged WEAK because it's a 600-block exhaustive pass; propose it as a single representative wholesale rule (all friendsandfoes copper deco → crush to copper nuggets via one tag sweep), not per-block. Connection sound in principle; size the weave appropriately.
+
+## mcwroofs   [anchors: support/decoration (1)]
+- from: mcwroofs stone/brick roof variants (andesite, brick, stone, terracotta, deepslate etc.) | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: a player who rebuilds or demolishes a roof recovers raw stone/gravel from crushed roof blocks — the largest decoration palette in the pack earning a Create anchor through a single wholesale stone-deco crush tag rule; lossy, so no free arbitrage
+- from: mcwroofs wood roof variants | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: wood roof blocks crush back to planks/sawdust — same single tag-sweep logic as stone; completes the palette's Create anchor without per-block authoring effort
+- from: mcwroofs roof blocks | via: minecolonies colony building supply | to: economy | motif: M-28 | power: everyday | tone: clash | verdict: REJECT | reason: any decorative block can be used in colony builds; there is no exclusive or gated demand that earns an economy anchor here — this would be the ambient "it's usable" endpoint, not a weave
+- REWORK: existing dossier M-04 candidate is sound but scoped as "low-value per-block" — the correct author approach is a single bulk tag rule covering all mcwroofs stone blocks and a second for all wood blocks; that makes the effort bounded and the weave real rather than aspirational. Propose both tags at once as a Phase-3 single-authoring-action.
+
