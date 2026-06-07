@@ -20,7 +20,7 @@ flow:
 
 ```
    SCARCITY  ──drives──▶  PRESSURE  ──creates demand──▶  PRODUCTION  ──feeds──▶  DISTRIBUTION
-  (foundation)            (Survival)                     (the makers)            (the movers)
+  (foundation)        (Survival + Danger)               (the makers)            (the movers)
         ▲                                                                              │
         └──────────────────────  players face scarcity again  ◀──────────────────────┘
 ```
@@ -51,15 +51,24 @@ So "seasons" shows up as an *input* to scarcity and to survival, not as a standa
 
 ---
 
-## 2. Pressure — Survival
+## 2. Pressure — the world pushing back
 
-> Renamed from "Survival & seasons" → **Survival**, since seasons is now a driver, not a co-headline.
+Pressure's job is to **generate demand** — it's *why* anyone bothers to produce. No pressure → producers
+make things nobody needs and the trade loop never turns. It has **two faces**:
 
-The world pushing back: temperature (Cold Sweat), hunger and diet variety (Spice of Life), and the
-hostile environment generally. Pressure's job is to **generate demand** — it's *why* anyone bothers to
-produce. No pressure → producers make things nobody needs and the trade loop never turns.
+- **Survival (environmental).** Temperature (Cold Sweat), hunger and diet variety (Spice of Life), the
+  climate. *(Renamed from "Survival & seasons" → **Survival**, since seasons is now a driver, not a
+  co-headline.)* Seasons feeds this — winter is cold pressure.
+- **Danger (the hostile world).** The world is **dangerous to exist in and dangerous to explore** —
+  hostile mobs, **bosses**, perilous structures and biomes. Danger pushes players to gear up (demand for
+  the producers' output), to settle defensibly, and to travel in groups — and it makes the high-tier
+  combat route (below) a real choice, not a free one.
 
-Seasons feeds this (winter cold), and scarcity is itself the deepest pressure.
+Scarcity is itself the deepest pressure — it underlies both faces.
+
+> **Bosses sit in two places at once** (like aeronautics straddles production and distribution): they're
+> a *pressure* (the danger that drives demand and gear progression) **and** a *production route* (their
+> high-tier drops — §3). That dual role is intentional, not a contradiction.
 
 ---
 
@@ -74,7 +83,7 @@ using and no one route is self-sufficient.
 | **Create** | The universal tech spine; the deep, do-it-yourself path | Base recipes **intentionally harder / more expensive** — the slow, high-ceiling route |
 | **MineColonies** | The alternate route, across **both tech *and* magic** | **Cheaper & faster for basics** (e.g. a mechanic's hut), **plus its own locked outputs** only a colony can produce |
 | **Magic** | Ars Nouveau / Iron's Spellbooks / Occultism, bridged into one progression | Specialists hold **exclusive** reagents / components / enchants; **also partly reachable via MineColonies**, mirroring Create |
-| **Bosses** | Combat route to **high-tier components** | Drops the high-tier parts that MineColonies can otherwise craft |
+| **Bosses** | Combat route to **high-tier components** (also a *pressure* — §2) | Drops the high-tier parts that MineColonies can otherwise craft |
 
 **The two forces that make trade necessary:**
 
@@ -119,7 +128,8 @@ The two systems that move things between players, closing the gaps that exclusiv
 Every mod still has to anchor *somewhere in this loop* — the `docs/CURATION.md` rubric, restated against
 the loop instead of "five systems":
 
-- a **pressure** source (survival/seasons/scarcity), or
+- a **pressure** source — environmental (survival/seasons/scarcity) or danger (hostile mobs, bosses,
+  perilous exploration), or
 - a **producer**, a producer's **exclusive output**, or an **alternate route** into one (Create /
   MineColonies / Magic / boss drops), or
 - a **connector** (economy or aeronautics/logistics), or
@@ -135,10 +145,12 @@ obvious: a healthy mod is usually *something you produce that pressure demands a
 - **Naming & count.** Whether DESIGN leads with this loop or keeps "five systems" as familiar branding
   layered on top is undecided. The distinct parts here are: scarcity (foundation), Survival (pressure),
   four producers (Create / MineColonies / Magic / bosses), two connectors (economy / aeronautics) — so
-  it's *not* a clean five, and forcing the count back to five would hide the structure.
-- **Bosses as a "system."** Boss drops are a *production route* (high-tier components) here, but bosses
-  are also a pressure and a progression gate. Is "bosses" a system, or a gating mechanic that feeds
-  production? (Currently modeled as a route into production.)
+  it's *not* a clean five, and forcing the count back to five would hide the structure. (Pressure
+  itself has two faces — Survival and Danger — and bosses double as a producer, so the parts don't
+  partition cleanly.)
+- **Bosses — settled as dual-role.** They're *both* a pressure (the dangerous world — §2) and a
+  high-tier production route (§3), the same way aeronautics straddles production and distribution. Not a
+  contradiction; the loop allows a thing to occupy two slots.
 - **Implementation gap.** The recipe-difficulty rebalance, the MineColonies locked-outputs / cheaper-
   basics tuning, and boss/colony high-tier gating are all **design intent** — the issues/work to build
   them aren't scoped yet.
