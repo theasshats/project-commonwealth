@@ -75,3 +75,9 @@
 ## jeresources   [anchors: support/client-UI (1)]
 - LEAVE — display-only JEI addon (mob-drop/loot/ore-gen viewer). No items, blocks, or recipe types. Sanctioned support role (documentation layer for the pack's scarcity design, not a content node).
 
+## aeronauticscompat   [anchors: aeronautics (1)]
+- LEAVE — required compat-glue patcher (zero items/blocks). Any second-anchor benefit flows through the mods it enables (Etched music, Cobblemon, turrets) — aeronauticscompat itself has no content surface. Sanctioned aeronautics-support role.
+
+== CHUNK COMPLETE ==
+
+

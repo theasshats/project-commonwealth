@@ -214,6 +214,42 @@ OK — existing Create + survival anchors sound. New links add economy (M-28 col
 
 Summary: 3 ACCEPT (M-28 colony demand, M-16 seasonal, M-12 spirits-into-cooking), 1 REJECT.
 
+## create_integrated_farming   [anchors: create, survival (2)]
+Existing connections: 2 anchors (Create — automated husbandry via contraptions; survival — food/animal products). Two anchors meets the target. Review for REWORK.
+
+Power-read: Roosts passively output eggs/feathers/meat from captured poultry. Fishing Nets passively output fish/aquatic drops. Mid-tier passive automation — not endgame, but a meaningful bulk-throughput improvement over manual farming. The mod's made-by methods use only vanilla crafting (no Create inbound recipe type confirmed). loot=yes likely covers net catches.
+
+Note: The dossier claims anchors "Create + survival" but the made-by methods shows "(none / vanilla only)" — the Create anchor is from the mod's *integration with Create contraptions* (harvester/arm support), not from using Create recipe types. The Create tie is behavioral, not recipe-based.
+
+Candidates:
+
+- from: create_integrated_farming poultry products (eggs, feathers, raw meat) | via: farmersdelight:cutting → cooking | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Roost-output raw poultry goes through Farmer's Delight cutting table and cooking pot to reach finished protein dishes — the automated husbandry feeds directly into the cooking chain, completing a Create-automated protein production loop that pressure from the diet system demands.
+
+  Red-team: Is this forced? The roost outputs are raw animal products; FarmersDelight:cutting is the designed processing method for them. This is a natural chain that would happen organically. M-12 (processing-chain pull — raw output fed through another mod's method into a finished good) is the correct motif. Everyday tier — light, appropriate. Not forced.
+
+- from: create_integrated_farming fish catches (fishing net outputs) | via: createfisheryindustry:peeling / bait_trap | to: create | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: The integrated fishing net's catches feed createfisheryindustry's peeling and bait-trap methods — an integrated aquaculture chain where net output feeds the fishery processor, requiring both the contraption farmer and the fishery industry player to cooperate (the net player catches; the fishery player processes).
+
+  Red-team: Is createfisheryindustry in the pack? It appears in the methods palette (createfisheryindustry:bait_trap, createfisheryindustry:peeling). If it's installed, routing create_integrated_farming's net catches through it is a natural cross-mod chain. M-29 (cross-route dependency) fits: two different Create-adjacent mods' outputs/inputs interlocking. Not a new system anchor, but a within-Create connectivity improvement.
+
+  Revised: This is a within-Create connectivity note (both mods are Create/survival), not a new pillar. Still valuable as a weave proposal. File as M-12 (processing chain pull through fishery processor) rather than M-29 since both are in the same production system.
+
+- from: create_integrated_farming roost (steady egg supply) | via: bakery:blank_cake_interaction + bakery cooking chain | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: Roost-automated eggs are a reliable input to the bakery chain (eggs → cakes/pastries in farm_and_charm:crafting_bowl) — the poultry specialist's automated output feeds the baker's production directly, coupling two Create-automation specialists in the food web.
+
+  Red-team: Is this a real coupling or just "eggs are in recipes"? The bakery chain uses eggs as an ingredient; the roost automates eggs at scale. The connection is the bulk-supply link that makes a bakery automation line viable. Everyday tier — not a deep weave, but it advances the food web's connectivity. The two Create-automation specialists (roost player, baker) are naturally coupled. M-12 fits.
+
+- from: create_integrated_farming poultry feathers | via: create:pressing → quill/fletching component | to: create | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: pressing feathers into a quill component is a stretch — feathers' natural uses are in crafting arrows (vanilla) and other items, but Create:pressing feathers to a "flat feather sheet" has no established precedent and the connection feels invented rather than discovered. Reject.
+
+- from: create_integrated_farming (automated roost production at scale) | via: aeronautics logistics — bulk animal products need refrigerated/fast transport | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: Perishable roost outputs (raw meat, eggs) produced at Create-automation scale need fast transport before spoilage threatens the supply chain — the aeronautics logistics arm becomes economically necessary for the bulk poultry trader to service distant settlements.
+
+  Red-team: M-31 (logistics-required bulk good) requires that goods be heavy/bulky/perishable enough that aeronautics/logistics is required at scale. Raw meat and eggs spoiling is M-36 (MECHANISM-PENDING, don't propose). But the bulk-goods-requiring-logistics framing of M-31 is about scale, not just perishability. At Create-automation scale, a roost produces massive egg/meat surpluses that make train/ship distribution logical for trade. M-36 would make it *necessary*; M-31 makes it *efficient*. ACCEPT on M-31 (logistics at scale), note M-36 would strengthen it.
+
+REWORK: Dossier proposes M-09 economy link (bulk goods as sell-goods). M-09 is retired. The correct economy angle here is M-31 (logistics at scale) or M-28 (colony supply). Colony supply (M-28) is also valid: a MineColonies cook/farm worker requests steady protein supply from the integrated farming player. Flag dossier's M-09 as superseded.
+
+OK — existing Create + survival anchors are directionally sound (behavioral Create tie, not recipe-based — a nuance worth noting in the dossier for a future update). New links: M-12 (cooking chain from roost), M-12 (fishery processing), M-12 (bakery egg coupling), M-31 (logistics at scale).
+
+Summary: 4 ACCEPT (M-12 cooking-chain from roost, M-12 fishery processing, M-12 bakery coupling, M-31 logistics at scale), 1 REJECT.
+
+
 
 
 

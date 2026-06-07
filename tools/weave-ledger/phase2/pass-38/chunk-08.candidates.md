@@ -205,3 +205,25 @@ Zero blocks, 6 items (book variants + leaflet), no loot, no recipe types. Pure i
 Power-read: the book items are documentation carriers. Could Modonomicon books be gated behind progression (M-37 research gate analog)? The modonomicon book IS the progression gate mechanism — packs use it to document and gate knowledge. But the book itself has no material value; it's a wiki. No loot table makes it impossible to seed via loot-seed. Red-team: any "book as trade good" framing is invented noise; the books contain documentation, not power.
 - LEAVE — documentation/guidebook framework; books are information carriers with no material surface or production value; no loop-advancing weave exists.
 
+## createoreexcavation   [anchors: Create (1)]
+
+6 blocks, 11 items, loot=yes. Three registered recipe types: createoreexcavation:drilling, createoreexcavation:extracting, createoreexcavation:vein. Key mechanic: datapack-defined per-chunk infinite ore veins, mined by a SU-powered Drilling Machine. The vein table is the pack's configurable join key — any ore can be added. The dossier identifies the economy/scarcity lever (M-30/M-08 adjacent).
+
+**Candidate 1 — vein-table configured with regional scarce metals → scarcity/economy (M-30)**
+Power-read: mid-to-endgame (requires drilling machine, Create infrastructure). The vein table is datapack-configurable per-chunk; if the pack's regional ores (GTMOGS veins) are mapped as createoreexcavation:vein recipes, the Drilling Machine becomes a Create-based regional extraction endpoint. This threads the scarcity foundation (regional ore-gen) into Create production (M-30: regional-scarcity gate). The Drilling Machine then has economic value — a base with a gold vein under it can drill infinite-but-slow gold, making that base's location a regional economic asset.
+- from: regional scarce metals (GTMOGS ore types) | via: createoreexcavation:vein table config | to: economy | motif: M-30 | power: mid/endgame | tone: ok | verdict: ACCEPT | hook: Map the pack's regional ores into Create Ore Excavation's vein table — a base's chunk vein becomes a long-term economic asset, and the drill becomes the Create-spine equivalent of a regional mine
+
+**Candidate 2 — drill-head items as wear-adjacent logistics cost (M-38 — MECHANISM-PENDING, REJECT)**
+The drill_head / diamond_drill / netherite_drill items wear out when drills deplete; this is a natural M-38 (tooling wear) surface. However, M-38 is explicitly MECHANISM-PENDING (#239) — no degradation mechanic exists in the pack. Do not propose this as a Phase-3 weave.
+- from: createoreexcavation:drill / diamond_drill | via: tooling wear | to: production | motif: M-38 | power: mid | tone: ok | verdict: REJECT | reason: M-38 is MECHANISM-PENDING (#239); no tool-degradation mechanic exists in the pack; cannot author this as a Phase-3 weave
+
+**Candidate 3 — vein ore output → create:crushing ore-doubling (M-03)**
+Power-read: mid. Vein-mined raw ores (raw_diamond, raw_redstone, raw_emerald appear in the item sample) feed directly into Create's crushing for ore-doubling. This is the standard M-03 path — it's already an established motif; Create Ore Excavation's raw ore output is a natural consumer.
+- from: createoreexcavation:raw_diamond / raw_emerald / raw_redstone | via: create:crushing | to: create | motif: M-03 | power: mid | tone: ok | verdict: ACCEPT | hook: Ore drilled from a chunk vein goes straight to Create's crusher for bonus yield — the excavation machine feeds the processing spine in one continuous automation chain
+
+**Candidate 4 — Extractor fluid output → TFMG distillation / Create processing (M-12)**
+Power-read: mid-to-endgame. The Extractor pulls infinite fluid reservoirs (per the extracting recipe type). If a fluid reservoir contains crude oil (TFMG) or another processable fluid, the Extractor becomes a Create-based infinite oil well feeding TFMG distillation → diesel → Aeronautics fuel (M-13 chain). This is a three-mod chain: createoreexcavation:extracting → tfmg:distillation → M-13 fuel. Strong loop: Create spine (drilling automation) → fuel production (M-12 processing chain) → Aeronautics propulsion (M-13).
+- from: createoreexcavation:extracting (fluid reservoir) | via: tfmg:distillation → aeronautics engine | to: aeronautics | motif: M-13 | power: endgame | tone: ok | verdict: ACCEPT | hook: A chunk fluid reservoir tapped by the Extractor feeds a TFMG distillation column — the Create drilling base becomes an airship fuel supply depot
+
+REWORK: no existing connections; mod is at 1 anchor. Three accepted candidates above add economy (M-30 scarcity gate), Create (M-03 crushing), and aeronautics (M-13 fuel chain) — a four-system web through a single Create-spine mod.
+
