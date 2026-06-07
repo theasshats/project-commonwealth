@@ -112,6 +112,22 @@ Power-read: 23 blocks, 46 items, loot=yes; heavily inbound-woven (7 Create types
 
 REWORK: Create (1 anchor) is currently under-counted — createaddition already works through 7 inbound Create recipe types and produces the electrical bridge. The missing 2nd anchor is magic (M-17) or aeronautics (M-13), both of which are strong. The existing single anchor description is correct but the mod is a top candidate for multi-anchor status. New edges: magic (M-17 charging) + survival/aeronautics (M-12/M-13 oils) → Create + magic + aeronautics (3 anchors).
 
+## create_dragons_plus   [anchors: Create (1)]
+Power-read: 20 blocks, 24 items, loot=yes; uses create:emptying, create:filling, create:mixing (inbound). Registered methods: create_dragons_plus:ending (dragon-head/breath catalyst bulk), create_dragons_plus:freezing (powder snow catalyst bulk). Its methods are weave-targets other mods route through, not edges this mod needs.
+
+- from: create_dragons_plus:ending method | via: as route target for End materials → Create | to: Create | motif: M-19 | power: endgame | tone: ok | verdict: REJECT | reason: M-19 is specifically create:haunting (soul-fire transmutation); the ending method uses Dragon's Breath / Dragon Head as catalyst — conceptually similar (exotic element transforms items) but it's a distinct method. Using M-19 for create_dragons_plus:ending would stretch the motif beyond its definition; the ending method is a separate process. The mod provides the method; other mods bring the materials. No motif fits exactly for "this mod provides the dragon-ending method" — that's its support role.
+- from: create_dragons_plus:dragon_breath fluid | via: create_dragons_plus:ending | to: magic | motif: M-10 | power: endgame | tone: ok | verdict: REJECT | reason: Dragon's Breath as an infusion catalyst is thematically appealing (M-10 = arcane infusion pull), but the ending method is already a Create method, not an Ars/Iron's infusion. The "foreign material refined through arcane infusion" framing doesn't apply when the method itself is Create-native. Motif misfit — the ending method is a Create recipe type, not an arcane ritual. Reject.
+- LEAVE — support role confirmed. create_dragons_plus is correctly classified as a Create sub-library whose ending/freezing methods serve as targets for other mods' materials. Adding a 2nd anchor to this mod itself requires forcing edges the dossier correctly identifies as "other mods route through this." No coherent self-originating weave edge.
+
+## numismatics   [anchors: economy, Create (2)]
+Power-read: 6 blocks, 45 items, loot=yes; the coin-hub of the economy pillar. No registered recipe types; functions as the destination node (vendor/bank) for every other mod's sellable goods. DESIGN explicitly names it as the economy keystone.
+
+REWORK check: economy + Create (2) is the correct and complete picture. Numismatics IS the economy — it doesn't need outgoing weave edges; the weaving direction is universally "other mods → numismatics." The reagent-ownership table reserves numismatics:* to the economy pillar. No rework needed.
+
+- LEAVE (outgoing edges) — the right model is to keep numismatics as a pure destination; adding originating weave edges from numismatics itself would invert the hub architecture. OK — connections sound as 2-anchor destination hub; no new proposals.
+
+
+
 
 
 
