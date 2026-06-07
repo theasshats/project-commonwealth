@@ -4,7 +4,7 @@
 > This is the shopping list for weaving: to give a mod a 2nd pillar, route one of its materials
 > THROUGH one of these methods (WEAVING-PLAN.md §2.0/§6). Dead compat for uninstalled mods is dropped.
 
-**223 methods across 58 installed mods.**
+**221 methods across 56 installed mods.**
 
 | mod (namespace) | # | registered methods (recipe-types) |
 |---|--:|---|
@@ -60,9 +60,7 @@
 | `occultengineering` | 1 | `occultengineering:upgrade_tier` |
 | `pantographsandwires` | 1 | `pantographsandwires:combine_wire` |
 | `patchouli` | 1 | `patchouli:shapeless_book_recipe` |
-| `solonion` | 1 | `solonion:upgrade_food_container` |
 | `spawn` | 1 | `spawn:casting_net_clam` |
 | `tacz` | 1 | `tacz:gun_smith_table_crafting` |
 | `tide` | 1 | `tide:fishy_note_recipe` |
-| `titanium` | 1 | `titanium:test_serializer` |
 | `touhou_little_maid` | 1 | `touhou_little_maid:altar_recipe_serializers` |

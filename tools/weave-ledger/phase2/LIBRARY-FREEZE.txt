@@ -31,7 +31,6 @@ blockui
 bookshelf
 buildguide
 bundle_recipe
-cerbons_api
 chat_heads
 cloth_config
 clumps
@@ -40,7 +39,6 @@ companion
 configuration
 controlling
 corgilib
-coroutil
 craftingtweaks
 crash_assistant
 createaddoncompatibility
@@ -95,7 +93,6 @@ lithium
 lithostitched
 lithostitched__tectonic-3.0
 lootjs
-midnightlib
 midnightthoughts
 miningspeedtooltips
 modelfix

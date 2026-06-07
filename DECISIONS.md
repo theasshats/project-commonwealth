@@ -10,6 +10,48 @@ theme/balance · **[PLAN]** plan-doc change · **[GITHUB]** issue action · **[N
 
 ---
 
+## Status — main merged (v0.6.0 loop model) + plan reframed + dossier reconcile
+
+This session brought the long-diverged weave branch up to date with `main` and reconciled the plan + the
+dossier work to v0.6.0. **Nothing here changes an authored weave** — it's catch-up + reframing.
+
+- **[NOTE] Branch merged with `main` (maintainer call: "full merge first").** Unshallowed and merged
+  `origin/main` (v0.6.0) into `claude/weaving-plan`. Mechanically clean — the only overlap was
+  `.packwizignore` (auto-merged: keep `DECISIONS.md` ignored, drop the now-split `site/`); `index.toml`/
+  `pack.toml` regenerated with `packwiz refresh`. Brings: the **SYSTEMS.md causal-loop model** (replaces
+  the retired five-systems framing) + reconciled DESIGN/CONNECTIVITY/RECIPES/ROADMAP/CURATION, archived
+  RELEASE-CADENCE/MODLIST-AUDIT, the **356-mod v0.6.0 manifest + fresh ground-truth digest**, the
+  site split-out. Keeps every weave artifact (plan, ledger, DECISIONS, dossiers, phase2, scripts). *Undo:*
+  the merge is one commit; `git revert -m 1 <merge>` (but then the branch is stale vs main again).
+- **[PLAN] `WEAVING-PLAN.md` reconciled to the loop + execution reality.** North star reframed
+  five-systems → **the loop** (`SYSTEMS.md`); **≥2-anchor kept as the operational test** ("don't count
+  systems, read the loop") per the maintainer's "reframe (loop is north star)" call. Per "keep a synced
+  copy," the **24-motif table + reagent table are mirrored from `WEAVE-LEDGER.md`** into §2.1/§2.2 (ledger
+  stays authoritative). Added status banners (Phase 0/1 ✅, Phase 2 16-pass converging, **Gate 2 next**);
+  folded in the library-freeze, delivery mechanisms, the settled **cost model** (≈3× basics + GregTech
+  step-depth, #219), **KubeJS locking/gating** + the high-tier boss-or-colony fork (#220), the updated
+  cadence (**0.9 Economy & logistics incl. aeronautics, 0.11 Magic, 0.13 Survival**), `CURATION.md`, and a
+  **resolved §15**.
+- **[NOTE] Dossier corpus reconciled to the v0.6.0 manifest.** **Added** a hand-authored `appleseed`
+  dossier (Diet – AppleSeed Edition — the survival/pressure diet system that replaced Spice of Life; 0
+  content, like the aeronautics card). **Pruned 8 cut-mod dossiers** (`bosses_of_mass_destruction` [BOMD,
+  cut], `cerbons_api`, `coroutil`, `midnightlib`, `solonion`, `solclassic`, `titanium`, `umapyoi`).
+  Expanded `build-dossiers.py` `CUT_NS` so a regen stays clean. Cleaned the auto artifacts:
+  `methods-palette.md` (dropped solonion/titanium → 221 methods/56 mods) and `LIBRARY-FREEZE.txt` (dropped
+  cerbons_api/coroutil/midnightlib). 351 dossiers now.
+- **[NOTE] Digest drift acknowledged (maintainer flag: "digest does not delete old mods — arphex etc.").**
+  Confirmed: the extract is **additive**; main's 461-file digest holds **~107 entries with no manifest**,
+  but **most are version-drift of INSTALLED mods** (ars_nouveau, FarmersDelight, Quark, ColdSweat… — must
+  **not** be cut); only ~12 are true removals. A perfect **jarless** digest↔manifest reconcile is unsound
+  (slug↔namespace isn't 1:1; the fuzzy matcher false-flagged core `irons_spellbooks` and missed
+  `solmaiddream`), so it is **routed to the on-box clean regen (#131)**, not hand-cleaned here. **A full
+  `build-dossiers.py` regen is DEFERRED** until that clean digest — running it against the additive digest
+  would spawn ~100 stale-mod skeletons + namespace duplicates.
+- **[NOTE] Candidate accumulator needs a v0.6.0 pass before Gate 2 / Phase 2.5.** `CANDIDATES.{md,tsv}`
+  predate v0.6.0 and reference cut mods — **BOMD ~28 rows (now cut)**, solonion ~16, umapyoi ~8. Drop
+  candidates for non-installed mods before filing issues. Not hand-edited (2053-row accumulator) — it's a
+  filter step at the Gate-2 read.
+
 ## Status — Phase 2: 16 passes; THREE full passes; freeze now 3-sample-confident
 
 - **16 passes total.** pass-13/14/15 were all FULL passes (every dossier, `--full`). Merge: **2053 unique
