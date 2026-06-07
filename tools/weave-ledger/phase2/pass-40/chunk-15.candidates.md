@@ -62,6 +62,19 @@ The M-30 angle is interesting and underdeveloped. Byzantine-style schematics fre
 
 OK — M-28 is the primary anchor; M-30 config-tie above adds depth without forcing.
 
+## modulargolems   [anchors: create (1)]
+
+Existing rows: rich. Accepted: M-15 boss-drop metal gates best golem bodies (strong consensus), M-10 arcane core slot via Ars imbuement (split), M-02 Cataclysm/Ice&Fire boss metals as body material (strong), M-33 golem specialist service-for-hire, M-34 combat-route supply. Rejected: M-06 sequenced_assembly (already inbound), M-04 entity crush, M-11 spirit_fire on metal bodies (tone), M-28 no golem hut, M-24 golems-as-drivetrain-parts.
+
+What's missing: A subtler M-29 (cross-route dependency) angle. The existing M-29 ACCEPT row proposes a magic reagent (source_gem or otherstone) as a golem-core upgrade that creates dependency between golemancer and magic specialist. But it's not fully articulated: specifically, the `modulargolems:golem_add_slot` recipe requiring `occultengineering:spirit_solution` (the reserved occult intermediate from reagent-ownership) is a cleaner pick than raw source_gem — it pulls the *already-reserved reagent* rather than risking double-spend on source_gem. One ACCEPT row already proposes spirit_solution but it's a minority (1×). This is a sharper pick worth highlighting.
+
+Also missing: The M-37 (research gate) angle. Golems are automation-tier content; unlocking *golem assembly* (or at minimum the highest-tier golem metals slot) via MineColonies University research would make golems a colony-progression reward — a player builds a colony to unlock the automation that reduces manual labor, which is the right loop direction.
+
+- NEW | from: occultengineering:spirit_solution | via: modulargolems:golem_add_slot | to: magic | motif: M-29 | power: endgame | tone: ok | verdict: ACCEPT | hook: the reserved occult intermediate (spirit_solution) is the perfect upgrade catalyst for a golem's highest slot — the engineer needs the occultist's soul-fluid to animate the construct beyond its metal ceiling; neither specialist is self-sufficient.
+- NEW | from: modulargolems golem assembly (high-tier) | via: minecolonies research gate (University) | to: economy | motif: M-37 | power: endgame | tone: ok | verdict: ACCEPT | hook: unlocking top-tier golem body templates via MineColonies University research makes colony-building a prerequisite for the automation tier — you built the town so the town teaches you to build better servants; the knowledge isn't tradeable, only the golems it produces.
+- CHALLENGE | from: ars_nouveau:source_gem | via: modulargolems:golem_assemble or golem_replace_part | to: magic | motif: M-10 | verdict: REJECT | hook: source_gem is the reserved universal magic currency (reagent-ownership); using it as a per-part golem-core input risks depleting the magic economy's medium — prefer spirit_solution (already reserved as the occult intermediate, above) so the golem-magic seam doesn't double-spend the currency slot.
+
+
 
 
 

@@ -27,6 +27,13 @@ LEAVE — every proposed weave correctly rejected across all blind passes. The p
 ## openpartiesandclaims   [anchors: support (1)]
 LEAVE — server protection/social framework; zero items, blocks, recipe types, or loot. No material to route. The two existing rows (M-30 and M-28 attempts) are correctly rejected. The chunk-claim system advances the PvPvE territory premise but has no content surface for a recipe weave.
 
+## l2library
+LEAVE — shared developer library for LightLand mods; zero items, blocks, loot, or recipe types. No content surface to weave.
+
+## notenoughcrashes
+LEAVE — crash-recovery utility; zero items, blocks, loot, or recipe types. No content surface to weave.
+
+
 
 
 

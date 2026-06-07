@@ -88,3 +88,22 @@ Missing angles:
 - NEW | from: mcwdoors:*_barn_door / *_stable_door / *_cottage_door (wood variant families — the "rustic" set) | via: create:cutting (mechanical saw mills rough planks into the pre-cut door shapes, automating the door palette for a colony builder) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the colony Builder hut needs 40 barn doors for the new Stable schematic — feed planks through the saw, not through a crafting table, if you're furnishing a town
 - CHALLENGE | from: mcwdoors iron/metal door variants | via: create:crushing | to: create | motif: M-04 | verdict: REJECT | hook: challenge the *scope*, not the motif — M-04 on metal doors is valid but the existing top row (13 ACCEPT) doesn't distinguish between "all 260 item variants get crushing entries" vs "the ~20 iron/modern-door variants only"; authoring crushing recipes for all 260 MCW door items including wood is mass-noise with negligible loop contribution; the weave should be scoped to iron-framed variants only (~20 entries) to remain coherent
 
+## revelationary
+LEAVE — advancement-gating library/API (0 blocks, 0 items, no recipe-types); no standalone gameplay content; sanctioned support role; nothing to weave.
+
+## rolling_down_in_the_deep
+LEAVE — client-only movement/camera extension (0 blocks, 0 items, no recipe-types); behavior mod with no material graph; sanctioned support role; nothing to weave.
+
+## kobolds   [anchors: economy, survival (2)]
+Existing rows: M-02/M-11 (kobold_skull → occultism:spirit_fire) is 18-ACCEPT consensus; M-34 (combat specialist farms Dens, sells skulls to magic users) has multiple ACCEPTs; M-37 (Prospector enchantment is knowledge-gated via kobold enchanter trade) has 1 ACCEPT; M-33 (Prospector enchant as a service-for-hire) has 1 ACCEPT; M-15 (kobold_wither_skull as boss-key gate for Create recipe) has 1 ACCEPT.
+
+The mod already has 2 anchors (economy + survival). The gaps are nuance/alternative-routing, not new system anchors.
+
+Missing angles:
+
+1. The M-37 row (Prospector enchantment knowledge-gated via kobold trade) is the most interesting underdeveloped row: the Prospector enchant is a mining-luck book that can only come from the kobold enchanter — it's genuinely knowledge-gated (you can't craft it), which is M-37 exactly. One ACCEPT row exists but no row articulates the full chain: Prospector book → player applies at ars_nouveau:enchanting_apparatus or smithing table → this creates a *cross-route dependency* (M-29) where the magic production route needs a trade-obtained item from the exploration/economy route. The M-29 angle (kobold enchanter trade + apparatus application) is missing.
+2. The pirate kobold den (jungle structure, loot=yes) hasn't had a loot-seed row that specifies *what* to seed beyond generic "coin precursor ingots." An aeronautics schematic or navigation chart seeded into pirate den chests (M-34) is thematically excellent — pirate kobolds as the pack's nautical/aerial history — but no row resolves this into a specific item.
+
+- NEW | from: kobolds:Prospector enchantment (sold only by kobold enchanter — cannot be crafted) | via: recipe: player takes Prospector book from kobold trade → applies it at ars_nouveau:enchanting_apparatus onto a mining tool (cross-route dependency — the magic production route needs a trade-obtained book) | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: the Prospector enchant only lives in kobold dens — a magic specialist who wants ore-luck on her mining gear has to trade with the underground lizard-folk first; two routes forced to interact
+- NEW | from: kobolds pirate den (jungle structure — loot=yes, Captain + chest) | via: loot-seed (seed an Aeronautics schematic fragment or a navigation chart item into the Pirate Den chest — thematic: pirate kobolds are the pack's ancient mariners/airship-era remnants) | to: aeronautics | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: the kobold pirates' hoard contains a tattered airship blueprint — clearing the den is how the aeronautics specialist finds the schematic she can't reverse-engineer alone
+

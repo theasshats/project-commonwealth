@@ -57,3 +57,22 @@ Existing rows: M-04 tile/chair crushing (consensus ACCEPT), M-24 chain_pulley �
 - CHALLENGE | from: bits_n_bobs:chain_pulley | via: recipe | to: aeronautics | motif: M-24 | verdict: REJECT | hook: the existing M-24 row (11 times_suggested, 7A/4R) is plausible in theme but M-24 requires a *mechanical drivetrain or control component* used in Aeronautics propeller/engine/control-surface recipes — the chain_pulley is a contraption-mover variant (it moves contraptions vertically, like a piston), not a propulsion/drivetrain component; using it as an aeronautics drivetrain ingredient is thematic but not grounded in what Aeronautics actually recipes-call-for; if Phase 3 can confirm the specific Aeronautics recipe that would reference chain_pulley, ACCEPT — but as stated the row is ungrounded
 - NEW | from: bits_n_bobs:*_nixie_board / *_large_nixie_tube (large display blocks — 16 dye variants × 2 sizes) | via: recipe (create:mechanical_crafting — nixie board requires brass + andesite casing + redstone lamp in a shaped pattern) | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: a large nixie tube isn't a tabletop craft — it takes proper Create fabrication; gating the display behind mechanical crafting keeps it as a mid-tier Create product rather than a crafting-table giveaway, and the nixie board becomes a tangible output of the Create production chain rather than a plain recipe
 
+## lithium   [anchors: support/performance (1)]
+
+LEAVE — pure server-tick optimizer; zero items, zero methods, no content surface. Performance is already the pack's tightest budget and lithium is the load-bearing TPS mod — it earns its place as a support node and that's the full extent of it.
+
+## almostunified   [anchors: support (1)]
+
+LEAVE — recipe-graph plumbing; operates on the graph itself, not a content node. The one existing row (REJECT: "operates on the graph, has no system anchor") is correct. Note: the galosphere silver/palladium gotcha documented in the dossier is the only pack-critical action point, and it belongs in config review, not weaving.
+
+## jei   [anchors: support/UI (1)]
+
+LEAVE — recipe viewer; zero items, zero methods, no content surface. CLAUDE.md specifically documents why JEI is required over EMI (Create processing recipe rendering) — do not conflate its infrastructure role with a weave candidate.
+
+## createfisheryindustry   [anchors: Create, survival (2)]
+
+Existing rows are extensive: M-12 fish_skin → leather substitute (pressing/cutting, ACCEPT), M-12 processing chain (peeling→cooking, ACCEPT), M-28 colony seafood supply (ACCEPT), M-26 seafood consumption sink (ACCEPT), M-16 seasonal bait seed (ACCEPT), M-32 fish_skin byproduct→input (ACCEPT), M-34 harpoon combat-supply (ACCEPT), M-31 bulk fish_skin logistics (ACCEPT). The mod is well-covered. What's missing: no row directly addresses the copper_diving_leggings as a cold_sweat/survival survival-pressure item (the temperature angle for underwater work), and no row captures the harpoon as specifically a Create-backtank specialization forcing cross-route dependency.
+
+- NEW | from: createfisheryindustry:copper_diving_leggings (underwater survival gear, backtank-extended) | via: recipe — require cold_sweat insulation material as a crafting component (fish_skin panels as insulating lining for cold-water diving) | to: survival | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: copper diving leggings built for deep cold ocean work need fish_skin insulation lining — the fishery's own byproduct feeds its own gear; a cross-route dependency where the cold_sweat survival system shapes what the industrial fisher builds
+- CHALLENGE | from: createfisheryindustry:fish_skin (leather-equivalent byproduct of peeling) | via: occultism:spirit_fire or ars_nouveau:imbuement | to: magic | motif: M-11 | verdict: REJECT | hook: the 2-vote ACCEPT row for fish_skin→spirit_fire is tonally weak and the dossier's own 2nd-anchor candidates don't propose magic — the mod's vibe is "industrial cannery," not arcane; fish skin as a spirit-fire transmutation has no lore grounding in Occultism (spirit_fire wants soul-charged drops, not mundane leather substitutes); the accepted M-12/M-32 rows already give fish_skin a cleaner productive role; REJECT to avoid forcing an arcane edge onto a maritime-industrial material
+

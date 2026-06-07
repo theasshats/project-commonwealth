@@ -59,3 +59,12 @@
 ## yungsapi   [anchors: support/library (1)]
 - LEAVE — YUNG's structure jigsaw library; no content.
 
+## dungeons-and-taverns-v4.4.4   [anchors: survival (1)]
+- CHALLENGE | from: dungeons-and-taverns tavern cartographer trades | via: villager trade | to: economy | motif: M-33 | verdict: REJECT | hook: the M-33 ACCEPT rows for the cartographer attempt to frame a *vanilla NPC* emerald trade as a player-labor service. M-33 requires a *player* performing work for another *player* — the cartographer is an NPC, not a player specialist. The emerald→map transaction is a vanilla NPC faucet pattern, not player-to-player labor. Any M-33 hook here must route through a player acting as scout/guide, not the NPC's emerald trade; the NPC's existence merely creates the *opportunity* for such a player service.
+- NEW | from: dungeons-and-taverns tavern cartographer (NPC anchor point) | via: emergent player-service (a player scouts structure locations and sells map-copies or escort runs for coin) | to: economy | motif: M-33 | power: everyday | tone: ok | verdict: ACCEPT | hook: the tavern cartographer NPC locates structures for emeralds, but a player who already knows the map can sell personal-guide services or pre-copied maps to others for Numismatics coin — no NPC faucet, purely player-to-player labor with the cartographer as the narrative anchor that makes the service legible.
+- NEW | from: dungeons-and-taverns trial vault / ominous trial key loot | via: loot-seed | to: survival | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: seed a rare combat-supply item (high-tier food, a resistance potion kit, or a scarce Create component) exclusively into the ominous trial vault output — these require active combat (Ominous Bottle first) to unlock, so the drop is genuinely gated on player danger and becomes a combat-specialist trade good that builders and farmers need but won't risk for.
+
+## aeronauticscompat   [anchors: aeronautics (1)]
+- LEAVE — required compat patcher for Aeronautics; pure behavior/mixin glue, no content surface.
+
+== CHUNK COMPLETE ==

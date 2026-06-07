@@ -74,3 +74,18 @@ NEW | from: farmersdelight:cooking_pot (the kitchen appliance) | via: minecoloni
 
 CHALLENGE | from: farmersdelight cooked meals as MineColonies colonist food supply | via: minecolonies:composting / colonist-feed config | to: economy | motif: M-12 | verdict: PARTIAL-REWORK — multiple rows use M-12 for colony provisioning but M-12 is "processing-chain pull" (raw material → processed good through a method). Colony *food provisioning* (feeding colonists) is closer to M-28 (colony route). The existing M-28 rows (3 ACCEPTs) correctly use M-28; the M-12-tagged colony rows are mis-motifed. At Gate 2, consolidate the colony-feeding rows under M-28 only.
 
+## create_integrated_farming   [anchors: Create, survival (2)]
+Existing strong ACCEPTs: M-12 (roost egg output → farmersdelight:cooking), M-28 (bulk roost/net output → colony butcher/cook), M-02 (feathers → ars_nouveau:imbuement), M-11 (lava_fishing_net nether drops → spirit_fire), M-31 (bulk fish output → logistics/aeronautics), M-05 (roost construction gated on Create mechanical_crafting). Coverage looks solid.
+
+What is missing:
+
+1. **M-29 cross-route dependency**: the `createfisheryindustry:peeling` / `bait_trap` cross-mod has 1 ACCEPT. This is genuinely interesting — the fishing net's catches feed createfishery's peeling/bait methods, and createfishery is a separate mod. But the row was only proposed once. It's a real Create-spine deepening (two Create add-ons whose outputs are each other's inputs), not a cross-*system* weave. M-29 requires routes from different production *pillars* to cross, not two Create add-ons crossing. This is within-Create depth, not a cross-route dependency. The M-29 row should be downgraded.
+
+2. **Lava_fishing_net nether drops → M-15 boss-key gating** — not attempted. The lava net catches fire-adjacent drops (blaze rods, magma cream, fire charges) automatically. Blaze rods are a gating material for Create's blaze burner progression. A lava net farm providing a steady automated blaze-rod supply could bypass the boss-pressure of the Nether's danger. This is a *balance concern*, not a new weave: if automated lava nets make blaze rods trivial, they undercut the scarcity of the Nether exploration pressure. No weave needed — but the balance note is important for Gate 2.
+
+3. **M-37 research gate on roost construction** — not yet in rows. If MineColonies research unlocks the ability to request roost-produced goods (bulk eggs/poultry) from a colony Farmer hut, the roost feeds into the colony route in a knowledge-gated way. Speculative without confirming MineColonies farmer hut compat.
+
+CHALLENGE | from: create_integrated_farming fish catches (fishing net outputs) | via: createfisheryindustry:peeling / bait_trap | to: create | motif: M-29 | verdict: DOWNGRADE — both mods are Create add-ons in the same Create production pillar; M-29 is cross-*route* (magic reagent in a Create chain, Create part in a ritual). Two Create add-ons exchanging outputs is within-pillar depth, not a M-29 cross-route dependency. The row is useful as texture but should not be logged as M-29.
+
+NEW | from: create_integrated_farming:lava_fishing_net blaze-rod / magma-cream catch | via: create:milling or create:mixing | to: create | motif: M-32 | power: mid | tone: ok | verdict: ACCEPT | hook: the lava net hauls fire-adjacent byproducts (blaze rods, magma cream) that are themselves inputs to Create's heat-progression (blaze burner fuel, mixing agents); routing them through a Create mill/mixer as automated byproduct feedstock gives the farm operator a Create-side output, tying the aquatic automation rig into the tech spine's own processing chain.
+
