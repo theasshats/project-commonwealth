@@ -22,4 +22,28 @@ Zero content surface — no items, no blocks, no loot tables, pure slab-break be
 
 - LEAVE — pure behavior QoL (single-slab-break interaction); registers no items, no blocks, no loot; no content surface to weave.
 
+## sky_whale_ship   [anchors: survival (1)]
+
+Zero jar-registered items/blocks — content is worldgen/structure data. The dossier correctly identifies loot tables as the weave surface. The dossier's M-09 "economy via numismatics" candidate is retired; the M-05 "aeronautics via loot" candidate is the real opportunity, but M-05 (native-method gating) isn't quite right for a loot-seed route — the correct delivery is `via: loot-seed`.
+
+- from: sky_whale_ship loot tables (loot chests on whale backs) | via: loot-seed | to: aeronautics | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: Sky whales are only reachable by airship — seeding their chests with Aeronautics build components (control surfaces, engine parts, compressed air canisters) makes them a flagship destination that rewards the aeronautics investment, turning an exploration set-piece into a supply run that feeds the logistics arm.
+
+- from: sky_whale_ship loot tables | via: loot-seed | to: survival (danger/exploration) | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: A combat specialist who can reach (and clear) hostile whale-back mobs farms rare drops that non-combat players need — the whale is both a danger zone and a supply source, completing M-34's dual role of boss/danger as a trade-feeding production route.
+
+- from: sky_whale_ship loot tables → numismatics coin | via: loot-seed (M-08) | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: Seeding whale chests with a small quantity of pre-minted coin (or a rare metal players can press into coin) gives the economy a scarce, distance-gated injection point — you only get it if you can fly there, so the coin supply is region-/skill-gated without being an NPC faucet.
+
+- from: sky_whale_ship loot (luxury rarities) | via: numismatics "sellable" bare link | to: economy | motif: M-09 (RETIRED) | power: — | tone: — | verdict: REJECT | reason: M-09 retired. Bare "whale loot is sellable for coin" is the ambient endpoint; accepted above is the demand-gating form (loot-seed with a scarce rare metal → M-08 player mint), which is the correct weave.
+
+- from: sky_whale_ship (vanilla-only blocks; no block namespace) | via: create:crushing as deco recycle | to: create | motif: M-04 | power: everyday | tone: clash | verdict: REJECT | reason: Sky whale structures are vanilla blocks (no foreign block ids to recycle); the M-04 route only applies when the structure mod registers its own block namespace. Forced edge.
+
+REWORK: dossier's "M-05 native-method gating" label on the aeronautics candidate is wrong — M-05 requires routing through a mod's own machine. Correct motif is M-15 (boss-key/loot unlock) delivered via loot-seed, as filed above.
+
+## notenoughcrashes   [anchors: support/stability (1)]
+
+Pure crash-recovery utility. Zero items, blocks, loot. Genuine zero-content code mod.
+
+- LEAVE — pure stability/crash-recovery mod; registers no items, no blocks, no loot; zero content surface.
+
+
+
 

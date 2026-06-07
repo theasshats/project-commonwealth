@@ -5,3 +5,13 @@
 
 REWORK: only 1 anchor (create); the survival flavor noted in the dossier is real but has no approved motif to hang it on. Flag for Gate 0 rather than forcing a no-motif edge.
 
+## ldlib2   [anchors: support/library (1)]
+- LEAVE — genuine zero-content code library (UI/rendering/sync infrastructure for GregTech-lineage mods; no items, no recipes, no loot). Nothing to route.
+
+## create_tweaked_controllers   [anchors: aeronautics (1)]
+- from: create_tweaked_controllers:tweaked_lectern_controller | via: create:mechanical_crafting | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: The lectern controller already costs precision mechanism + electron tubes in a standard recipe; re-expressing that as a create:mechanical_crafting recipe puts it squarely in the Create machine-building chain. A driver console for your contraptions deserves to come out of the machine shop. | reason-accept: The controller is the human-interface side of an aeronautics vehicle; anchoring it to Create via M-05 (its flagship item built in its own method, gated on Create parts) gives it a clear second anchor (create) and the recipe depth matches a mid-tier control component. The two-tube craft → mechanical crafting step is a natural fit — not an arbitrary add-on.
+- from: create_tweaked_controllers:tweaked_lectern_controller (loot=yes noted in dossier) | via: loot-seed | to: survival | motif: M-34 | power: mid | tone: ok | verdict: REJECT | reason: loot=yes is flagged in the jar data but the mod registers only the controller + linked controller; its loot surface is probably its own structure chest, not a meaningful danger-loot hook. A controller as dungeon loot makes no coherent narrative (it's a crafted tech component, not an artifact). The mod has no structure/dungeon presence. REJECT — M-34 combat-route supply doesn't apply to a control interface device.
+
+OK — the aeronautics anchor is sound. ACCEPT the create (M-05 mechanical_crafting) 2nd-anchor.
+
+

@@ -1,0 +1,19 @@
+# Phase 2 candidates — chunk-14
+
+## ars_nouveau   [anchors: magic (1)]
+
+REWORK: The dossier's 2nd-anchor candidate "economy via numismatics — source_gem or spell scrolls as sellable" is M-09 (retired). Reject. The two remaining candidates (M-02 Vitalic/Agronomic organic sink, M-01/M-10 magic currency hub) are internal to magic or well-covered by the established weave. New links below look for the missing Create/survival/economy second anchor.
+
+- from: ars_nouveau:source_gem (imbuement output) | via: ars_nouveau:enchanting_apparatus | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: A magic specialist enchants another player's gear for hire — source gems are spent as the service fee, so the spell-caster's magic supply becomes a labor node in the economy; players can't self-serve enchanting at scale without a source supply
+- from: any mob-drop → ars_nouveau:vitalic_sourcelink | via: Vitalic Sourcelink passive (non-recipe) | to: survival | motif: M-02 | power: everyday | tone: ok | verdict: ACCEPT | hook: Mob farms (hostile/passive) generate Source passively through the Vitalic link — survival-danger output (mob drops, deaths) directly fuels magic production; a rancher/fighter feeds the mage's sourcelinks without any recipe
+- from: any crop/tree growth → ars_nouveau:agronomic_sourcelink | via: Agronomic Sourcelink passive | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: A farming specialist's planted-block activity generates Source for the magic player nearby; farm output feeds magic without a crafting step — the clearest survival→magic edge in the loop
+- from: ars_nouveau:archwood_log | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: Archwood (magic-biome lumber) crushes back to pulp/charcoal like any wood — one-step Create recycling pulls the arcane wood into the tech spine without forcing it through any complex chain; everyday depth, appropriate for a basic material
+- from: ars_nouveau:source_gem | via: ars_nouveau:imbuement (as catalyst in Create part recipe) | to: create | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: A mid-tier Create component requires a source_gem as a catalyst in the imbuement stage — neither the tech player nor the mage is self-sufficient for it; cross-route trade is forced
+- from: ars_nouveau:spell scroll (combat spell) | via: emergent player trade | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: A combat specialist can't easily mass-produce their own spell scrolls — the mage sells scrolls to fighters who don't have the Source capacity; magic combat supply flows through the economy's trade layer
+- from: ars_nouveau:source_gem | via: ars_nouveau:imbuement (cross-route: seasonal crop as catalyst) | to: survival | motif: M-16 | power: mid | tone: ok | verdict: ACCEPT | hook: A seasonal crop (Serene Seasons gated) is the catalyst for a specific Ars imbuement — the magic route depends on the survival calendar; production rhythm matches the season
+- from: ars_nouveau:worn_notebook (Ars knowledge unlocks) | via: ars_nouveau progression | to: economy | motif: M-37 | power: mid | tone: ok | verdict: ACCEPT | hook: Ars spell knowledge (glyphs unlocked by crafting/research) isn't tradeable — only the scrolls/enchanted gear produced by that knowledge can be sold; the magic specialist's capability can't be bought, only their output, which sustains the mage's monopoly
+
+- from: ars_nouveau:source_gem → coin | via: numismatics mint | to: economy | motif: M-09 | power: mid | tone: ok | verdict: REJECT | reason: M-09 retired; bare sell link is ambient endpoint not a weave
+
+OK — existing M-01 (arcane currency hub) and M-02 (mob-drop reagent sink) connections are sound and well-established.
+
