@@ -312,8 +312,9 @@ obvious: a healthy mod is usually *something you produce that pressure demands a
   (GregTech-style chains), not multiplied cost.
 - **Locking + gating mechanism — settled: KubeJS (§3).** Both locked exclusives and progression gating
   (colony/boss, the high-tier fork) are KubeJS. No dedicated mod.
-- **Lock list — incremental.** Defined per-pillar as each update is built, not authored upfront; the
-  mod-update pass (#161) carries a "refine updated content against this model" step.
+- **Lock list — incremental, per feature milestone.** Defined as each **feature pillar (v0.7.0, v0.9.0,
+  …)** is built — that pillar's content is refined against this model and its locks decided then, not
+  authored upfront. (The mod-update pass #161 feeds candidates in.)
 - **Soft specialization — accepted for now (§3), revisit near release** via playtest; the hardening
   lever, if needed, is the lock list.
 
