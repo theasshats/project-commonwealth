@@ -19,7 +19,6 @@ off those two.
 | [`ORE-GENERATION.md`](ORE-GENERATION.md) | The GTMOGS mix-vein ore-gen model (GTNH-style regional veins) and its config. |
 | [`GUN-PACKS.md`](GUN-PACKS.md) | The gun system — TaCZ wired into Create via two add-ons. |
 | [`SPAWN-GATING.md`](SPAWN-GATING.md) | The spawn-control / mob-curation work from the #83 pass — what each file does and what needs in-game verification. |
-| [`ARCANA-BRIDGE-MOD.md`](ARCANA-BRIDGE-MOD.md) | Scoping doc for the **Derpack Arcana** code-level magic-weave helper mod (PR #80, `mods-src/`). |
 
 ## Setup & how-to
 
@@ -54,10 +53,10 @@ priorities. See [`archive/`](archive/):
 - `archive/MODLIST-AUDIT.md` — the modlist-vs-goals snapshot. **Superseded** by `SYSTEMS.md` (model) + `CURATION.md` (rubric) + `ROADMAP.md` (plan); kept for its §A/§B/§C analysis. Archived v0.6.0.
 - `archive/RELEASE-CADENCE.md` — the odd/even cadence proposal + extended rationale. **Accepted**; the canonical cadence now lives in `ROADMAP.md` (rationale folded in). Archived v0.6.0.
 - `archive/ROTTEN-CREATURES-STRUCTURES.md` — the #106 spawn-allowlist review sheet. Durable rules live in `SPAWN-GATING.md`. Archived v0.6.0.
+- `archive/ARCANA-BRIDGE-MOD.md` — scoping/design for the **Derpack Arcana** code-level magic-weave helper mod (PR #80). The mod moved to its own repo (`derpack-org/derpack-arcana`); the living reference is `CUSTOM-MODS.md`. Archived v0.6.0.
 
 ### Still-live docs that were *candidates* (kept, with a note)
 
-- **`ARCANA-BRIDGE-MOD.md`** — **kept**: forward-looking design for the Derpack Arcana magic-weave helper mod, which is **Magic-pillar (v0.11.0)** work, not a finished artifact. Archive once that mod ships (or is dropped).
 - **`BOOT-LOG-BASELINE.md`** — **kept** as a living reference (the accepted boot-log-noise catalog future passes check against). Trim the #119/#120/#121-specific sections now those have closed.
 
 ## Conventions
