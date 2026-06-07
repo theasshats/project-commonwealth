@@ -14,5 +14,23 @@
 - from: drones:wood_rotor | via: recipe (crafting) | to: create | motif: no-motif | power: everyday | tone: ok | verdict: REJECT | reason: wood rotors are intentionally entry-level; gating them behind a Create method would violate the "never gate basic/everyday component behind complex recipe" guardrail — they should stay vanilla-craftable
 - REWORK: the dossier's 2nd-anchor candidate M-09 ("sellable crafted good → Numismatics") is now a retired motif — REJECT that framing; the M-33 service-labor reading above is the right economy link for a custom-assembled product
 
+## ferritecore   [anchors: support/perf (1)]
+
+- LEAVE — Pure runtime memory-optimization library; zero blocks, zero items, no gameplay surface, no loot. Genuine zero-content support role; LEAVE is correct with no forced edge possible.
+
+## immersivearmorhud   [anchors: support/client-UI (1)]
+
+- LEAVE — Client-side HUD overlay only; no items, no methods, no material surface. Zero-content support role; nothing to weave.
+
+## azurelib   [anchors: support/library (1)]
+
+- LEAVE — Animation/rendering API library (GeckoLib fork); one internal utility block (azurelib:lightblock) with no recipe or gameplay role. Genuine zero-content library — the weaving happens in dependent mods (Cataclysm, etc.), not here.
+
+## aileron   [anchors: aeronautics (1)]
+
+- from: aileron Elytra enchantments (loot=yes) | via: loot-seed | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: seeding Aileron's Elytra enchantments as obtainable rewards through Ars Nouveau's enchanting apparatus makes flight mastery part of the magic progression — arcane flight upgrades you can't just grind at a table
+- from: aileron Elytra enchantments | via: ars_nouveau:enchanting_apparatus | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: applying a flight-stabilization or momentum enchantment through the Enchanting Apparatus ties Ars magic into personal aviation, giving magic players a distinct flight-upgrade path; contingent on Aileron's enchants being datapack-accessible as enchantment targets
+- from: aileron Elytra enchantments | via: create:deploying + M-20 | to: create | motif: M-20 | power: mid | tone: clash | verdict: REJECT | reason: tone clash — a Create deployer physically stamping a new flight-physics override onto an Elytra reads as incoherent; flight-physics enchants belong in a magic context, not an industrial press
+
 
 

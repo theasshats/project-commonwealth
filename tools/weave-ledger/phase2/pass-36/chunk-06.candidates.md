@@ -22,5 +22,27 @@ Power-read: The backpack is an exploration logistics item — portable large inv
 
 REWORK: The dossier's "aeronautics via portable logistics — [WEAK]" note undersells this. The fluid-tank + sleeping-bag combo is genuinely load-bearing for long-range aeronautics expeditions (field refuel + respawn anchor away from base) — this is a M-26 consumption sink link (fuel is consumed from the tank en-route) with a clear aeronautics hook. Should be upgraded from WEAK to MED/STRONG, not left as a vague comment. The Create-recipe weave candidate (M-20) is new from this pass and was missing from the dossier.
 
+## edf-remastered-5.0-beta4   [anchors: survival/boss-difficulty (1)]
+
+Power-read: Pure behavior datapack — rewrites the Ender Dragon encounter (500 HP, multi-phase AI, minion summons, boss music). Confirmed: does NOT change or add dragon drops (loot=yes on the jar but is the vanilla dragon loot unmodified). Zero registered items/blocks. The survivalpressure anchor is the only real one — it's a danger-pump that makes the endgame harder.
+
+- from: Ender Dragon encounter difficulty increase (harder boss = higher demand for gear before challenging it) | via: loot-table seeding — add pack-relevant endgame reagents or components to the dragon's enhanced loot pool, so the harder fight pays out a proportionally better return | to: magic | motif: M-02 | power: endgame | tone: ok — a harder dragon should drop better magic reagents; seeding soul_crystal or ars_nouveau:source_gem fragments into the loot pool makes the revamped fight a magic-web feeder | verdict: ACCEPT | hook: beating a 500-HP raging dragon earns rare soul reagents that feed the magic web, not just the same dragon breath drop — the scaled difficulty earns a scaled magic payout
+
+- from: Ender Dragon boss fight (endgame challenge) | via: loot-seed — drop a unique boss-key component in the enhanced dragon loot (e.g. a Fragment of Draconic Will) gating a high-tier Aeronautics controller or Create Sequenced-Assembly part | to: create | motif: M-15 | power: endgame | tone: ok — the dragon is the canonical Minecraft endgame boss; making it gate a high-tier Create component is thematically sensible and proportional to the fight's new difficulty | verdict: ACCEPT | hook: the revamped dragon drops the one component that gates the top-tier Aeronautics hull assembly — beating the End earns your airship
+
+- from: edf boss difficulty | via: loot-seed to magic | to: magic | motif: M-34 | power: endgame | tone: ok — a combat-route specialist farms the revamped dragon and trades the rare drops to non-combat players | verdict: REJECT | reason: M-34 (combat-route supply) is the correct motif for boss-drop economy role, but it's structurally a consequence of the M-02/M-15 loot-seed rather than a separate Phase-3 action; the combat-supply economy role is already baked into the dragon being a boss — listing M-34 as an additional candidate here is redundant, not additive
+
+REWORK: The dossier writes "none — leave" for 2nd-anchor candidates because the mod adds no items and doesn't touch the drop table. This misreads the Phase 2 loot-seed rule: a behavior overhaul that makes a boss significantly harder is exactly the case where loot-seeding the enhanced fight is the correct delivery — the dragon is harder and should pay out more to the magic/Create webs proportionally. Both M-02 and M-15 loot-seed candidates are coherent additions. The dossier's LEAVE recommendation is overly conservative by the briefing's own criteria ("a boss/structure feeding coin, magic reagents, or a progression key is a REAL candidate — do NOT LEAVE a loot-bearing structure mod").
+
+## yet_another_config_lib_v3   [anchors: support/library (1)]
+
+LEAVE — pure config-screen API library. No items, no blocks, no recipe types, no in-world effects. Generates settings GUIs for dependent mods. Genuine zero-content library with nothing to route.
+
+## imfast   [anchors: support/QoL-compat (1)]
+
+LEAVE — server-side movement-validation mixin. Zero items, zero blocks, zero recipe types. A behavioral patch (raises vanilla anti-cheat speed threshold) that enables aeronautics/vehicles to run at speed. No content surface; nothing to weave. Not "leaving" for convenience — the mod is genuinely zero-surface and correctly classified as support.
+
+
+
 
 

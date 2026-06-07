@@ -16,3 +16,9 @@ New candidates:
 
 - from: createfood finished dishes (seasonal fruit pies, jam variants) | via: Serene Seasons seasonal gating | to: survival | motif: M-16 | power: mid | tone: ok | verdict: ACCEPT | hook: Apple/berry-flavour lines could require seasonally-available fruits (apples heavy autumn, berries spring/summer) — a baker can't stock the full menu year-round, making seasonal pies a specialization product with variable supply. Depth matches everyday-to-mid tier (one extra seasonal-ingredient step). A Phase-3 KubeJS gating, not a recipe rewrite.
 
+## moreoverlays   [anchors: support — QoL/client (1)]
+
+LEAVE — Confirmed zero-content client HUD overlay (spawn markers, chunk-grid, JEI search dim). No items, no blocks, no loot, no processing. Nothing to route or weave.
+
+
+

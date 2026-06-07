@@ -31,3 +31,21 @@ Four void-blocks that delete items/fluids/FE at unlimited rate. Pure QoL sink; t
 
 - LEAVE — automation QoL void sink; no items/outputs to route through any method; adding a crafting requirement to the block itself finds no motif and creates no loop advancement; the balance concern (voiding byproducts in a scarcity pack) is a curation/config note, not a weave
 
+## ponderjs   [anchors: support/Create tooling (1)]
+
+KubeJS addon for authoring custom Create Ponder scenes. Zero player-facing items, zero blocks, no recipe types. It is documentation/dev infrastructure — it documents the Create spine rather than contributing a material or method.
+
+**Method-pull:** No content surface whatsoever (0 blocks, 0 items, loot=no). There is nothing to route through any method and nothing for another method to pull. This is the definition of a zero-surface code library.
+
+**Verdict:** LEAVE — pure code/authoring library with zero player-facing content surface; a genuine zero-anchor library where LEAVE is correct.
+
+- LEAVE — pure KubeJS scripting API for Create Ponder scene authoring; 0 blocks, 0 items, no loot, no recipe types; no player content surface exists to weave
+
+## playeranimator   [anchors: support/library (1)]
+
+Player Animation Library — client animation API. Zero blocks, zero items, no recipe types, no gameplay mechanics. Pure code library.
+
+**Verdict:** LEAVE — genuine zero-content code library (0 blocks, 0 items, loot=no); nothing to anchor or weave.
+
+- LEAVE — pure animation API library (0 blocks, 0 items, no recipe types); zero content surface; shipped as a silent dependency of animation-driven mods
+

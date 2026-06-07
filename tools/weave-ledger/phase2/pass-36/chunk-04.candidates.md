@@ -29,3 +29,29 @@ This mod is the c: tag glue layer for the pack's food/crop web — its OUTPUT is
 
 - LEAVE — support role (tag harmonization). This mod's function is enabling other mods' cross-system weaves by unifying crop/food tags; it earns its keep as infrastructure, but it has no independent content surface from which to weave a genuine 2nd anchor. Its scrolls are colony logistics tools, not cross-system items. Leave as support.
 
+## formationsnether   [anchors: survival (1)]
+
+Nether structure worldgen mod: generates ritual altars, sanctuaries, cabins, castles, campsites in the Nether. No own items/blocks — the content surface is loot tables (loot=yes). PHASE2-BRIEFING explicitly says "do NOT LEAVE a loot-bearing structure mod just because it has no recipes" — the delivery mechanism is loot-seed.
+
+**Method-pull analysis:**
+The Nether biome placement and structure variety makes this pack's Nether dangerous to explore — that's the danger face of Survival pressure. But loot tables are the weave surface, and the structures' thematic vibe (nether ruins, ritual altars, sanctuaries) is a strong match for:
+- Magic reagents seeded into altar/sanctuary loot → ties the Nether danger route into the magic production pillar (M-02 mob-drop reagent sink, via loot-seed variant)
+- Scarce progression components seeded into castle/fortress loot → ties Nether exploration to the boss-key/high-tier production gate (M-15 boss-key unlock analogue for structure chests)
+
+**Candidate 1: magic reagent seeded into ritual-altar / sanctuary loot tables**
+- from: formationsnether structure chests (altar / sanctuary) | via: loot-seed | to: magic | motif: M-02 | power: mid (Nether altar structures are mid-tier exploration targets) | tone: ok — nether ritual altars yielding magic reagents is thematically coherent (desecrated altars left behind occult materials) | verdict: ACCEPT | hook: Nether altars look like they belong to the magic web; finding Ars source gems or Occultism datura in a ritual altar chest makes the structure feel like a predecessor to the player's own magic practice.
+
+**Candidate 2: boss-key/progression component seeded into nether castle/stronghold loot**
+- from: formationsnether nether castle / campsite chest | via: loot-seed | to: create (production gate) | motif: M-15 | power: mid-endgame (nether fortresses are dangerous; castle structures harder to reach than overworld) | tone: ok — nether fortresses yielding rare machine components or Create processing parts (e.g., a precision mechanism, a mechanical component) as rare drops fits the "dangerous frontier yields rare goods" loop | verdict: ACCEPT | hook: the Nether's danger pressure becomes worth facing because its hardest structures drop parts the Create specialist needs, making combat players the natural Nether suppliers for tech players.
+
+**Candidate 3: numismatics coin as loot-table drop in nether structures (bare economy link)**
+- from: nether structure chests | via: loot-seed | to: economy | motif: M-08 | power: everyday | tone: clash — seeding player-minted currency from NPC/world-generated loot contradicts the player-run economy ruling (M-08 is player-minted; coin from structure loot is a faucet from outside the player economy, which is M-14 NPC coin faucet territory, cut under #163/#240) | verdict: REJECT | reason: bare coin-from-loot is a cut NPC coin faucet (M-14 cut); contradicts player-run economy. The weave would need to be a component that feeds the minting chain, not the coin itself.
+
+OK — existing survival anchor is sound; the two loot-seed links above add magic (M-02) and create/production (M-15) as second and third anchors, advancing the loop: Nether danger → loot containing magic reagents and tech components → production of magic/Create goods → economy.
+
+## dynamic_fps   [anchors: support/performance (1)]
+
+Pure client performance mod — throttles FPS/volume/rendering when the window is unfocused. Zero items, zero loot, zero methods. No material surface of any kind.
+
+- LEAVE — genuine zero-content client performance library. No items, no loot, no methods, no player-facing behavior beyond FPS management. No weave is coherent here; forcing one would be a defect edge.
+
