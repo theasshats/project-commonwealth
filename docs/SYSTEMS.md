@@ -1,15 +1,17 @@
 # The systems — how Derpack X interlocks
 
-> **Status: workshop draft.** This is the successor to the "five systems / five pillars" framing in
-> `docs/DESIGN.md`. We're defining the pack's structure concretely — as a *causal loop*, not a flat list
-> of peers. It may still resolve to ~five named systems, but the structure comes first and the count
-> falls out of it. **Much of the production/trade interlock below is design *intent*, not yet
-> implemented** — recipe difficulty, locked outputs, and boss/colony gating are targets the recipe and
-> progression work (#17, #18, weave) build toward. Flagged inline where it matters.
+> **Status: accepted** (ratified by Xela112233 + zagwar, v0.6.0). This is the **canonical structural
+> model** for the pack — the successor to, and reconciliation of, the older flat "five systems / five
+> pillars" framing in `docs/DESIGN.md`. The structure is a *causal loop*, not a list of peers; the five
+> named pillars (Create, Magic, Economy, Aeronautics, Survival) survive as the loop's recognizable parts
+> and as the milestone organization, but the loop is the truth and the count falls out of it.
 >
-> Other docs (`CLAUDE.md`, `docs/ROADMAP.md`, `docs/RELEASE-CADENCE.md`, `docs/CONNECTIVITY.md`,
-> `docs/MODLIST-AUDIT.md`, `docs/CURATION.md`) still use "five systems" language — reconciling them to
-> this model is **follow-up work**, not done here.
+> **Much of the production/trade interlock below is design *intent*, not yet implemented** — the recipe
+> cost model, locked exclusives, and boss/colony gating are targets the per-pillar feature work builds
+> toward (tracked: #219 cost model, #220 KubeJS locking/gating, #221 economy tooling, #222 ecology).
+> Flagged inline where it matters. The other docs (`docs/DESIGN.md`, `CLAUDE.md`, `docs/ROADMAP.md`,
+> `docs/RELEASE-CADENCE.md`, `docs/CONNECTIVITY.md`, `docs/MODLIST-AUDIT.md`, `docs/RECIPES.md`,
+> `docs/CURATION.md`) have been reconciled to this model.
 
 ---
 
