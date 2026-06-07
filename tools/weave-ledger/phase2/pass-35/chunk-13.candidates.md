@@ -96,6 +96,12 @@
 - from: create_integrated_farming:roost (machine block) | via: create:sequenced_assembly (building the roost itself) | to: create | motif: M-06 | power: mid | tone: ok | verdict: REJECT | reason: the roost is a mid-tier station, not a flagship keystone; applying M-06 (multi-stage sequenced assembly) to a farming appliance would be over-engineering a mid-level machine — M-06 is reserved for endgame/flagship items; the mod is already deep in Create via its contraption/harvester mechanics without needing a sequenced-assembly build path
 - OK — Create + survival connections are sound; M-28 (colony provisioning at scale) and M-02 (rare aquatic drops) are the new links.
 
+## opacpvp   [anchors: support/PvP-rules (1)]
+- LEAVE — mutual-consent PvP toggle addon (no items, no blocks, no loot, no recipe methods). Social/rules mechanic that serves the cooperative-PvPvE premise; nothing to weave.
+
+== CHUNK COMPLETE ==
+
+
 
 
 

@@ -91,3 +91,16 @@
 ## accelerateddecay   [anchors: support/performance (1)]
 - LEAVE — genuine zero-content performance mod: 0 blocks, 0 items, loot=no. Replaces leaf-decay ticking behavior silently; no gameplay content, no material surface, nothing to weave.
 
+## createaddition   [anchors: create (1)]
+
+- REWORK check: only 1 anchor currently (Create). No existing connections to flag as arbitrary — just underconnected.
+- from: createaddition:charging (FE → charged magic tool/focus) | via: createaddition:charging station charges Iron's Spellbooks gear or other FE-accepting magic items | to: magic | motif: M-17 | power: mid | tone: ok | verdict: ACCEPT | hook: a mage's spell-battery is recharged at the Create factory's accumulator — the electric tier and the magic tier are linked by a wire; a dedicated electrician is the mage's power supplier
+- from: createaddition:seed_oil / bioethanol (crop-oil fuel burned via liquid_burning) | via: createaddition:liquid_burning (agriculture → energy) | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: an oil-crop farm (sunflowers, hemp, seeds) feeds the power grid — farming pressure drives agricultural demand that in turn powers the factory; the survival-tier farm is a direct input to the electrical economy
+- from: createaddition:electrum_ingot (gold + silver alloy) | via: recipe crafting (if silver input is occultism:silver or a magic-side silver tag) | to: magic | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: electrum — the electrical alloy — requires silver from the magic side of the pack (Occultism's real silver, per CLAUDE.md); the Create electrician can't smelt electrum without trading with a magic specialist who runs the silver; cross-route dependency in the wiring itself
+- from: createaddition:barbed_wire (perimeter defense block) | via: recipe crafting (consumes copper wire + iron) | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: barbed wire is a one-time build block, not an ongoing consumable that continuously renews demand. M-26 is for materials burned/eaten/worn in a repeating loop; a placed barbed-wire perimeter doesn't create continuous demand the way food or fuel does. The consumption argument is thin.
+- from: createaddition:rolling (roll ingots → rods/wires/sheets via rolling_mill) | via: creates c:wires/copper, c:rods/brass, c:rods/electrum feeding pantographsandwires and other wire-consumers | to: aeronautics | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: rolling_mill output feeding train-wires is a Create↔Create/aeronautics connection already implicit in the pantographsandwires chain; adding createaddition as a separate aeronautics anchor via "it makes the wires" is a thin chain link, not a direct anchor.
+
+## kubejs_create   [anchors: support/modpack-tooling (1)]
+- LEAVE — genuine zero-content scripting bridge: 0 blocks, 0 items, loot=no. Exposes Create recipe-types to KubeJS scripts; it is the tool that builds the weave edges, not itself a weave target. No items, no methods to route material through.
+
+== CHUNK COMPLETE ==
