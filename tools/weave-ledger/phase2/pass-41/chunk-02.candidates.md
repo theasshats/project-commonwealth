@@ -50,9 +50,15 @@ Note: this is a config-tie proposal (appleseed + Cold Sweat config interaction),
 ## tfmg   [anchors: Create (1); strong candidates for aeronautics + economy + survival]
 OK — M-13 (fuels), M-23 (steel/aluminum airframe), M-24 (combustion engine drivetrain), M-08 (steel→coin), M-17 (voltage→magic charging), M-29 (plastic cross-route) all well-covered. Two genuine gaps in method-routing not yet captured:
 
-- NEW | from: tfmg:cast_iron (c:ingots/cast_iron, Industrial Blast Furnace byproduct — produced en route to steel) | via: create:mechanical_crafting (feeds createbigcannons:ap_shell and cannon mounts which require c:ingots/cast_iron) | to: survival | motif: M-32 | power: mid | tone: ok | verdict: ACCEPT | hook: the blast furnace's cast-iron offcut is exactly what the cannon foundry needs — the industrial tier's own byproduct arms the combat tier without a separate supply chain (circularity closes a loop: industry → weapons → scarcity pressure).
+- NEW | from: tfmg:cast_iron (c:ingots/cast_iron, Industrial Blast Furnace byproduct — produced en route to steel) | via: create:mechanical_crafting (feeds createbigcannons:ap_shell and cannon mounts which require c:ingots/cast_iron) | to: survival | motif: M-32 | power: mid | tone: ok | verdict: ACCEPT | hook: the blast furnace's cast-iron offcut is exactly what the cannon foundry needs — the industrial tier's byproduct arms the combat tier without a separate supply chain (industry → weapons → danger-scarcity pressure closes the loop).
 
-- NEW | from: tfmg:lithium (c:ingots/lithium, ore-gen regionalized ore — gates the TFMG accumulator / voltage grid) | via: GTMOGS regional ore-gen config | to: economy | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: lithium is the battery metal: whoever settles above a lithium vein controls the FE grid, making the TFMG electric tier itself a regional specialty that others must trade for rather than build themselves.
+- NEW | from: tfmg:lithium (c:ingots/lithium, ore-gen regionalized; gates the TFMG accumulator / voltage grid — the FE storage tier) | via: GTMOGS regional ore-gen config | to: economy | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: lithium is the battery metal — whoever settles above a lithium vein controls FE storage, making the TFMG electric tier a regional specialty that others must trade for rather than simply build.
+
+## aeronautics   [anchors: aeronautics + Create (2)]
+OK — M-10 (levitite magic), M-13 (fuel), M-22 (lunar levitite), M-31 (docking logistics), M-33 (docking trading-post), M-08 (levitite→coin), M-24 (propeller drivetrain), M-10 (goggles enchanting) all covered. One structural gap:
+
+- NEW | from: aeronautics:end_stone_powder (Create-crushed End Stone, required for levitite_blend) | via: recipe — Ender Dragon defeat gates End dimension access, which gates end_stone_powder, which gates levitite — the lift material's scarcity traces to a boss kill | to: survival | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: you can't build your first airship until someone kills the Ender Dragon — the End boss unlocks the lift material the whole aeronautics tier hangs on, making the dragon fight a pack-wide milestone that gates the logistics arm (clean, thematically sensible, already implicit in levitite's recipe but never stated as a weave).
+
 
 
 
