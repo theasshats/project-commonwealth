@@ -153,5 +153,9 @@ upward. Assess the dossier's candidates plus new routes.
   The only possible 2nd anchor would be Create-craft (which is already implicit in the recipe), but the
   dossier correctly notes no coherent magic/economy/survival edge. The aeronautics label is appropriate —
   this is the player's hands on the helm — but no new cross-system weave is coherent. LEAVE.
+  NOTE: the dossier lists aeronautics as the only anchor but the craft requires precision mechanism +
+  electron tubes (Create components) — the Create dependency is implicit but not formally anchored; a
+  reviewer might want to promote this to create+aeronautics (2 anchors) at the dossier level, since
+  getting the controller requires meaningful Create progression.
 
 
