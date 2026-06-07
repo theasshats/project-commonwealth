@@ -152,9 +152,7 @@ Well-covered: M-02 antler (15 ACCEPTs), M-12 venison/bushmeat (13 ACCEPTs), M-10
 
 OK — antler M-02, venison M-12, and glow_goop M-10 are the core accepted rows. The two NEWs above add the protein-demand M-26 hook (missing diet-system precision) and the season-gated M-16 framing (sharper than the existing single row).
 
-
-
-
+== CHUNK COMPLETE ==
 
 
 

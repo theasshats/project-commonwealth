@@ -48,3 +48,23 @@ NEW | from: dtterralith region-locked logs/planks (jacaranda, kapok, cedar — b
 
 ## entity_texture_features
 LEAVE — client rendering engine for OptiFine-format random/emissive entity textures (0 blocks / 0 items). Cosmetic resourcepack support; no game content to weave.
+
+## xaeroworldmap
+LEAVE — client navigation UI (full-screen world map; 0 blocks / 0 items / no methods). No material or method surface to weave.
+
+## notenoughanimations
+LEAVE — client-side cosmetic animation enhancer (0 blocks / 0 items). Visual-only; nothing to route.
+
+## accessories_compat_layer
+LEAVE — compat shim that mixin-wraps Curios/Trinkets into the Accessories slot system (0 blocks / 0 items). Pure API translation; the wearables that would weave live in the host mods, not here.
+
+## durabilitytooltip
+LEAVE — client UI mod adding a numeric durability line to tooltips (0 blocks / 0 items). Display layer only; no material to route.
+
+## pingwheel
+LEAVE — multiplayer QoL ping-marker utility (0 blocks / 0 items). A good fit for this ~10-player co-op crew, but transient location markers carry no material or method to weave.
+
+## dungeons-and-taverns-v4.4.4
+OK — existing rows sufficient. The set is comprehensive and internally self-correcting: loot-seed weaves are accepted for M-08 (Numismatics coin into tavern/dungeon chests), M-02 (Ars source_gem / Iron's arcane_essence into vaults), M-15 (boss-summon-reagent / progression key in deep vaults), and M-34 (combat-supply drops + the 100+-structure exploration-pressure that drives demand outward). The cartographer-trade rows are correctly handled: the vanilla emerald cartographer is rejected as an NPC faucet, while the one valid economy form — a *player* scout selling structure coordinates/map contracts for emergent payment (M-33) — is accepted. Two notes rather than new rows: (1) the M-15 contention is already recorded — a trial vault directly gating a Create recipe is not M-15 (which the ledger reserves for actual boss DROPS), but seeding the item that *summons* a boss is coherent because M-15 then applies to that boss's drop; the rejecting row already captures this, consistent with the tidal-towns M-15 challenge above. (2) Its structures span every dimension, so loot-seed *targeting* can exploit dimensional scarcity (end-structure → end-only reagent) — a refinement of the existing M-02/M-08 loot-seeds, not a new motif.
+
+== CHUNK COMPLETE ==
