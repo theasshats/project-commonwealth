@@ -32,6 +32,16 @@
 ## better_lib   [anchors: support/library (1)]
 - LEAVE — shared code library (config/messaging API); 0 items/blocks/loot, no methods. Genuine zero-surface library; nothing to weave.
 
+## appleseed   [anchors: survival (1)]
+- from: Diet – AppleSeed five-group nutrition mechanic | via: M-26 consumption sink — food is continuously spent against the diet-balance pressure; demand for diverse crops/meats/cooked dishes never zeroes out, pulling on farming+cooking production specialists and making food a real traded good | to: economy | motif: M-26 | power: ongoing/baseline (always active for every player) | tone: ok — diet variety creating continuous traded-food demand is the Eco parallel (varied nutrition has value); the player who can't grow all five groups buys from the cook specialist | verdict: ACCEPT | hook: no one player grows everything that satisfies all five nutrient groups — the diet gap is what makes the food economy real
+- from: diet variety → forced food specialization → magic | via: no coherent route (diet buffs don't touch magic; forcing a link would be arbitrary) | to: magic | motif: no-motif | verdict: REJECT | reason: no thematic or mechanical connection between nutrition groups and magic production; forced edge
+
+## ritchiesprojectilelib   [anchors: support/library (1)]
+- LEAVE — projectile/ballistics API library (backbone for Create Big Cannons); 0 items/blocks/loot, no methods. Genuine zero-surface library; nothing to weave.
+
+## betterendisland   [anchors: survival (1)]
+- LEAVE — YUNG's End island structure overhaul; no items/blocks/loot (confirmed loot=no). Pure cosmetic structural rework; nothing to weave. The mod raises end-game spectacle/exploration quality, which is the survival anchor it has.
+
 ## railways   [anchors: create, aeronautics (2)]
 OK — connections sound. create:mechanical_crafting + create:sequenced_assembly inbound (Create) is solid; aeronautics (rail logistics arm) is correct. No rework needed.
 - from: railways locometal blocks | via: create:crushing (M-04 deco recycle) | to: create | motif: M-04 | power: everyday | tone: ok mechanically | verdict: REJECT | reason: generic M-04 application to any metal block; adds no qualitative weave unique to railways and doesn't advance the loop in a meaningful way.

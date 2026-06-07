@@ -162,3 +162,16 @@ Already at 2 anchors (Create kinetic method + decoration companion). Dossier say
 
 OK — connections sound. rechiseledcreate is the companion bridge that makes Rechiseled's decoration palette a Create-powered production output. No additional weave needed without forcing.
 
+## letmefeedyou   [anchors: support/QoL (1)]
+
+Power read: behavior-only mod; player feeds another player by right-clicking. No items, no blocks. The only "content" is the interaction itself and the hunger mechanic it uses.
+
+- from: player feeding interaction | via: economy service-for-hire framing | to: economy | motif: M-33 | power: everyday | tone: clash | verdict: REJECT | reason: M-33 requires a *specialist performing work on another player's materials* (enchant-for-hire, colony contract, cargo run) with emergent payment; a co-op QoL feeding gesture is social glue, not a labor-market service. The interaction is too thin and ambient to constitute a real economy link — there is no material, no gating, no specialization implied.
+
+- LEAVE — behavior-only QoL. Zero items/blocks, no material surface. The feeding mechanic is co-op social glue, not a loop node. Sanctioned support role.
+
+## attributefix   [anchors: support/library-fix (1)]
+
+- LEAVE — pure compatibility/bugfix library raising vanilla attribute caps. Zero items/blocks, no content; enables magic and combat gear to scale as intended. Sanctioned support/library role. No weave possible.
+
+== CHUNK COMPLETE ==

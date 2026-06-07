@@ -14,6 +14,12 @@
 - from: farm_and_charm ground meat / dried goods | via: farm_and_charm:drying → create:mixing | to: create | motif: M-12 | power: mid | tone: ok | verdict: REJECT | reason: drying-rack output as a mixing intermediate is plausible but the chain is short and survives well inside the food-mod web already; adding a Create mixing step would be busywork (a second M-12 edge on top of the grain milling one). One clear M-12 weave is sufficient for an everyday food mod.
 - from: farm_and_charm:butter / animal surplus | via: economy (sell/trade to other players) | motif: M-09 | verdict: REJECT | reason: M-09 is retired — bare sell links are the ambient endpoint of the loop, not a weave. The M-28 colony-route edge above is the real economy anchor.
 
+## betterstrongholds   [anchors: survival (1)]
+- from: stronghold chest loot (library/hidden-room chests) | via: loot-seed | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: the stronghold's ancient library holds arcane tomes and ritual components — seed a unique magic reagent (an attunement shard, binding scroll, or calcified soul) into the hidden-room loot tables so clearing a stronghold is a genuine magic-production input. The "arcane library" framing is inherent to strongholds; this lands as "of course."
+- from: stronghold hidden-area chest loot | via: loot-seed | to: create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: a rare "archived blueprint" or "resonance core" from the stronghold's innermost room is the boss-key input for a high-tier Create sequenced-assembly recipe — you can't build the most advanced Create device without raiding an overworld stronghold first. Depth is appropriate (endgame item, single occurrence per stronghold).
+- from: stronghold loot | via: loot-seed | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: strongholds are deadly — a combat specialist clears the rooms and sells the rare arcane drops (from the M-02 seed) to magic specialists who lack the gear to go themselves. The cleared stronghold then functions as a combat-supply node feeding the magic production route.
+- (note) dossier recommended LEAVE — overridden per briefing rule: loot=yes structure mods are not LEAVE candidates; loot-seed is the delivery mechanism.
+
 ## irons_lib   [anchors: support/library (1)]
 - LEAVE — framework library for Iron's Spellbooks; bundled content (transmog table, player statue) is cosmetic/UI-only with no routable material processing. No weave surface.
 

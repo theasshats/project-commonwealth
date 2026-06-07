@@ -97,6 +97,23 @@ Method-pull candidates:
 
 LEAVE — developer library (UI/rendering/data-sync infrastructure); the two registered blocks are dev/test entries with no player-facing content. Nothing to weave.
 
+## smokeleafindustries   [anchors: survival (1)]
+
+Power-read: 62 blocks, 243 items, 12 registered recipe-types — a full industrial cluster (own machines, FE energy, 25 crop strains, multi-step processing chain). Loot=yes (dealer/stoner village trades implicit). Largely closed loop on hemp/strain items; the generator accepts external burnable fuel (join key). Effect-granting edibles touch the food/consumable space. Dossier flags M-09 (retired, so invalid) for economy, M-05 for Create FE bridge, and M-03/M-12 for Create crushing of hemp.
+
+Method-pull candidates:
+- from: smokeleafindustries refined extracts / gummies (strain output) | via: createaddition:charging or FE-kinetic bridge | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: the smokeleaf machine network runs on FE; using Create Addition's FE↔kinetic bridge, the smokeleaf farm's generator can accept Create rotational power (or export FE back into the Create ecosystem), threading the strain-processing island into the Create energy web. This is a direct integration at the energy seam — the farm is no longer an isolated FE island; it's powered by (or exports to) Create's spinning infrastructure. One config/recipe bridge at the generator. via: createaddition:liquid_burning or FE bridge config.
+- from: smokeleafindustries strain buds/extracts | via: occultism:ritual or ars_nouveau:imbuement | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: certain potent strain extracts — the high-end synthesized concentrates — are used as catalysts in Occultism rituals or Ars imbuement: an alchemical parallel (cannabis extract as a ritual reagent is mythologically real and fits the arcane-alchemical tone of Occultism/Ars). This gives the strain farmer a magic-pillar output that isn't just effect food. Mid-tier extracts only (the synthesizer output, not raw buds). via: occultism:ritual. Motif M-10 (arcane infusion pull — foreign organic refined into a magic catalyst through native magic method).
+- from: smokeleafindustries raw hemp fiber / hemp bud | via: create:milling | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: raw hemp fed through the Create miller yields hemp fiber / plant matter (a processing-chain intermediate) that feeds into other recipe steps — folding hemp into the Create processing graph and making the hemp farm contribute to the general material web, not just the smokeleaf island. One light milling step; everyday tier. via: create:milling.
+- from: smokeleafindustries extracts/gummies | via: smokeleafindustries:synthesizer | to: economy | motif: M-26 | power: mid | tone: ok | verdict: REJECT | reason: M-26 (consumption sink) needs the items to be *spent against pressure* — eaten/burned/expended in a way that renews demand. The strain effects do apply on consumption, so gummies ARE consumed. However, the loop-advancing question is whether a non-specialist needs to buy them. In a PvPvE co-op, buff-granting consumables (temporary speed, hunger-sating, etc.) bought from a strain specialist IS a genuine trade loop close. BUT this is the "sellable = ambient endpoint" territory — a player buys gummies from a strain farmer because they want buffs. Without a mechanic that forces players to *need* these buffs, it's optional trade. The consumption edge here is weak: players aren't meaningfully pressured to consume extracts. REJECT (ambient trade endpoint, not a structural pressure-driven demand gate; would need a diet/buff mechanic forcing consumption to make M-26 stick).
+- from: smokeleafindustries:generator (FE burn) | via: smokeleafindustries:generator | to: create | motif: M-13 | power: everyday | tone: ok | verdict: REJECT | reason: M-13 is the fuel→propulsion motif for Aeronautics engines. The smokeleaf generator burns items to produce FE for the smokeleaf machines — it's not an Aeronautics propulsion fuel; it doesn't power airship engines. Applying M-13 here is a motif misfire. The FE→Create bridge (M-05, accepted above) covers the energy seam correctly. REJECT (wrong motif — M-13 is aeronautics propulsion, not general FE generation).
+
+## ponderjs   [anchors: support/Create tooling (1)]
+
+LEAVE — developer documentation tool (KubeJS scripting API for Create Ponder animated scenes); no items, blocks, processing, or gameplay material. Pure authoring infrastructure. Nothing to weave.
+
+
+
 
 
 

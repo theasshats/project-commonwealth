@@ -61,3 +61,12 @@ REWORK: OK — existing connections sound. Magic anchor is the mod's identity; C
 
 ## bettercombat   [anchors: support/combat-framework (1)]
 - LEAVE — JSON-driven combat behavior framework (0 blocks, 0 items, loot=no); defines weapon swing-arcs and combos but adds no materials, recipe-types, or loot tables. A pure behavior system with no wireable surface; the weapons it enhances belong to other mods that already have weave candidates.
+
+## recipe_integration   [anchors: support/recipe-bridge (1)]
+- LEAVE — conditional datapack authoring cross-mod recipe edges (no items, no blocks, 82 c:tags mostly for uninstalled mods). It IS the weaving mechanism for its covered mods; proposals here would be meta (weave the weaver). The active subset (ars_nouveau:scry_ritual, create:milling/mixing/pressing, occultism:crushing, farmersdelight:cutting against installed mods) should be audited in Phase 3 to confirm which of its edges are live and avoid duplicating them with authored weaves.
+
+## terrablender   [anchors: support/library (1)]
+- LEAVE — worldgen biome-injection library (0 blocks, 0 items, loot=no); operates on world registration only. No materials or methods to route. Genuine zero-content library.
+
+## platform   [anchors: support/library (1)]
+- LEAVE — cross-platform registry/biome/networking library (0 blocks, 0 items, loot=no); developer API for ItsBlackGear's mods. No gameplay surface. Genuine zero-content library.

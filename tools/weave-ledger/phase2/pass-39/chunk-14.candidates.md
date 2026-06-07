@@ -136,4 +136,22 @@ REWORK: OK — single Create anchor is appropriate. The survival weave above (M-
 
 REWORK: OK — existing Create + aeronautics anchors are sound and deep. The dossier's M-08 candidate is correctly identified (accepted here at endgame tier). The dossier's M-09 candidates (astronomical_reading / advanced_circuit as sellable) are retired-motif forms; the correct economy framings are M-08 (coin-mint from space metals) and M-24 (circuits into aeronautics control surface). The M-29 electrolysis → magic cross-route is new.
 
+## securitycraft   [anchors: support / utility (1)]
+
+**Method-pull:** 7 registered recipe types (reinforcing, unreinforcing, copy-X). `block_reinforcing_recipe` is the key hook — it accepts a broad set of pack blocks as input and converts them to reinforced variants (owner-only unbreakable). Devices emit redstone; sentry/mine/camera items are crafted from vanilla+ materials. The mod has loot=yes (657 blocks, 690 items — its own gear). Dossier rates the weave candidates as WEAK for both M-08 and M-05.
+
+- from: securitycraft high-tier gear (reinforcing, scanners, sentry) | via: create:mechanical_crafting or create:sequenced_assembly | to: Create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: gating the Sentry and Block Pocket Manager (the strongest base-defense tools) behind a Create mechanical_crafting or sequenced_assembly step — requiring Create-made components (gears, brass casing, copper wire) — makes high-end base security a Create specialization; a base-defense player needs a Create player's output, not just vanilla iron; deepens the PvPvE defense dynamic without blocking basic mines (which stay cheap)
+
+- from: securitycraft:keycard_reader / reinforced blocks | via: create:pressing (metal plate into reinforced component) | to: Create | motif: M-20 | power: mid | tone: ok | verdict: REJECT | reason: the reinforcing recipe is its own method (`securitycraft:block_reinforcing_recipe`), not a Create deploying/item_application step; M-20 requires the upgrade to use create:deploying or item_application specifically. The M-05 candidate above (mechanical_crafting gating) is the correct Create entry. Records as rejected.
+
+- from: securitycraft gear (reinforcing kit, scanner) | via: numismatics | to: economy | motif: M-08 | power: mid | tone: ok | verdict: REJECT | reason: the dossier's suggestion was "make high-tier security gear a sink for traded/scarce metals so base-defense feeds trade" — but the framing is backwards; M-08 is about minting coin from processed scarce metal, not about using coin to buy gear. What the dossier is actually suggesting is M-29 (cross-route dependency: base security requires metals from Create) which M-05 above already captures more precisely. No standalone economy weave for securitycraft is clean here. Records as rejected.
+
+- from: securitycraft structures / loot (its items as loot) | via: loot-seed | to: economy | motif: M-34 | power: mid | tone: ok | verdict: REJECT | reason: securitycraft does not spawn in world structures with loot tables — its items are player-crafted. loot=yes in the dossier refers to the mod registering some items as loot sources (traps drop their own materials), not to it seeding dungeon chests. No loot-seed economy candidate is valid here.
+
+REWORK: Dossier marks it as "support (QoL/anti-grief)" which understates it for a PvPvE pack where base defense is real. Elevating to a 2nd anchor (Create, via M-05 gating) is appropriate — base security requiring Create-made components is a genuine cross-system link. The M-08 "coin from scarce metals" dossier suggestion is the wrong motif form; the M-05 gating above is the correct route.
+
+## configuration   [anchors: support / library (1)]
+
+- LEAVE — genuine zero-content library: 0 blocks, 0 items, no loot. In-game config-screen framework for dependent mods. No player-facing game surface to weave.
+
 

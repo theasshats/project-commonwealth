@@ -151,3 +151,14 @@ Zero blocks, zero items, zero loot, no recipe types. Pure client-side tooltip re
 
 LEAVE — genuine zero-content client UI mod. Sanctioned support role.
 
+## just_blahaj   [anchors: decoration palette / curated flavor (support, 1)]
+
+31 blocks (plush sharks in dye variants), 31 items, loot=yes, no recipe types. Pure decorative plushies crafted from vanilla wool/dye. No processing methods, no material to route.
+
+Method-pull:
+- Wool/dye inputs: those belong to vanilla; crushing the plushie back to wool is M-04 (deco recycles), but a plush shark is a different vibe from a stone deco block — forcing it into Create crushing feels wrong (who crushes their favorite plushie?). Tone clash.
+- Loot=yes: the plushies appear in loot chests; a glowhaj in a dungeon is pure atmosphere, not a weave vector.
+- The dossier correctly calls leave. No coherent system edge without forcing.
+
+LEAVE — pure curated-flavor decoration with no material loop contact. The dossier's reasoning holds on blind review.
+

@@ -48,3 +48,7 @@
 
 ## trashslot   [anchors: support/QoL (1)]
 - LEAVE — zero items, zero blocks, zero loot, no recipe methods. Client-side inventory trash-slot UI with no material graph. Genuine zero-content QoL utility.
+
+## copycats   [anchors: create (1-2, Create-adjacent)]
+- from: copycat blank shapes (zinc-based, all variants) | via: create:pressing (zinc ingot → zinc sheet → copycat panel recipe) | to: create | motif: M-04 | power: everyday | tone: ok — building copycat panels from pressed zinc sheets rather than raw ingots deepens the Create tie; the blank panel is a Create fabricated part | verdict: ACCEPT | hook: copycat panels go through the press first; the blank shapes are manufactured, not crafted raw — the Create spine produces the build palette
+- from: copycat blocks (skinned with colony stone/timber) | via: MineColonies colony research — a Builder's Guild research unlocks a copycat-masonry style (specific DO-facing copycat skin combos) as a colony-locked build pattern | to: economy (colony route) | motif: M-28 | power: mid | tone: ok — colony building techniques unlocked by colony research is coherent; the copycats' combinatorial power is a good fit for the colony's architectural progression | verdict: REJECT | reason: this is passive player behavior — using copycats in a colony — not a KubeJS-authored weave; MineColonies research doesn't gate copycat use in any mechanical way; the connection is thematic but has no method to author against; would need a custom colony research→recipe unlock to become real

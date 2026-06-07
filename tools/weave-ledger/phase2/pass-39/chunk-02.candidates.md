@@ -175,6 +175,20 @@ Power-read: spider_fang and themed charms are mid-tier (requires finding and sur
 
 - from: undergroundworlds:freezing tools (freeze-on-hit effect) | via: create_dragons_plus:freezing | to: create | motif: M-29 | power: mid | tone: ok | verdict: REJECT | reason: create_dragons_plus:freezing is the Dragonfire-themed freezing method, not a general tool-upgrade path; routing undergroundworlds freezing tools through it has no thematic coherence (the tools are underground/subterranean, not dragon-origin). Tone clash; no M-29 cross-route that makes sense here.
 
+## dynamic_fps   [anchors: support/performance (1)]
+
+Client performance mod — throttles frame rate, volume, and rendering when the window is unfocused/minimized/idle. No items, no blocks, no loot, no methods.
+
+LEAVE — genuine zero-content performance mod. No items, no methods, no loot tables. Client-only background optimization; nothing to route through any method palette entry.
+
+## freefbible   [anchors: support/flavor (1)]
+
+A single readable Bible item (CPDV translation) — no mechanics, no crafting, no methods, no loot. A novelty/easter-egg flavor item.
+
+LEAVE — a one-item novelty mod with zero gameplay surface. The freef_bible item is inert (right-click reads text). No method palette entry can coherently consume or produce it. Any forced recipe edge would be noise.
+
+
+
 
 
 
