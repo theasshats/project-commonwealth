@@ -50,3 +50,18 @@ Missing angles:
 - NEW | from: smokeleafindustries hemp stem / hemp crop (fibrous plant material, distinct from the drug pipeline) | via: create:milling → hemp fiber → farmersdelight:cooking (hemp-flour flatbread or seed-oil base) | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the hemp stem mills into fiber the same way flax does — one corner of the cannabis farm feeds the food web without touching the drug pipeline, weaving survival into an otherwise self-contained island
 - CHALLENGE | from: smokeleafindustries raw hemp / buds | via: create:milling | to: create | motif: M-12 | verdict: REJECT | hook: smokeleafindustries already has its own processing chain (manual_grinder → dryer → extractor); adding a Create milling path as a *parallel* entry creates redundancy without a new system anchor — the M-17 FE↔kinetic bridge already covers the Create pillar; a second Create path on the same raw material should be REJECT unless it produces a *different output* (the hemp-fiber/food route above is the distinct version worth keeping)
 
+## libipn
+LEAVE — GUI/config library (0 blocks, 0 items, no recipe-types); required dependency for IPN only; sanctioned support role; nothing to weave.
+
+## handcrafted   [anchors: support/decoration (1)]
+Existing rows converge: M-12/M-04 (furniture via create:cutting) is 9-11 ACCEPT; M-28 (colonist housing requests furniture) is 7 ACCEPT; M-31 (furniture as bulk logistics good) has 1 ACCEPT. The berry_jam_jar → farmersdelight cooking has 9 ACCEPT.
+
+Missing angles:
+
+1. No row captures the M-35 (maturation/aging) angle: handcrafted:berry_jam_jar is a condiment, not a mature good — but the *jam* itself implies a preserved-food route; is there an extradelight:drying_rack or evaporator step that ages handcrafted's jam into something of higher value? The existing rows only route it *as an ingredient into FD cooking*, not as a product that itself undergoes an aging/curing step.
+2. The M-28 rows focus on colonist housing furnishing, but the more precise framing is the **Carpenter hut** route: a MineColonies Carpenter produces basic handcrafted furniture cheaper and faster, making the colony route genuinely distinct from solo crafting. Several rows mention this but don't all cite M-28 clearly as colony-route-cheaper.
+3. Handcrafted has `loot=yes` — it's possible structure chests could drop a rare furniture piece or a jam jar as a "found homewares" reward. No loot-seed row exists.
+
+- NEW | from: handcrafted:berry_jam_jar (condiment/preserved food item) | via: extradelight:drying_rack or extradelight:evaporator (age/concentrate the jam into a higher-value preserve — jam → aged preserve or fruit leather) | to: survival | motif: M-35 | power: everyday | tone: ok | verdict: ACCEPT | hook: jam doesn't mature on its own — running it through a drying rack or evaporator concentrates it into a preserve worth more as a trade food, weaving the handcrafted condiment into the food-aging chain
+- NEW | from: handcrafted furniture (chairs, tables, fancy_bed, cupboard) | via: loot-seed (seed rare/quality furniture pieces into village/structure loot tables as "found homewares" — the explorer finds a furnished ruin) | to: economy | motif: M-34 | power: everyday | tone: ok | verdict: ACCEPT | hook: an abandoned homestead leaves behind a fine acacia table or a fancy bed — loot that rewards exploration and primes demand for the armorsmith's counterpart: the builder who can make more
+

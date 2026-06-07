@@ -43,3 +43,10 @@ LEAVE — slab-breaking behavior, zero items/blocks/methods; no surface to weave
 LEAVE — Team Abnormals API framework; the single template_chest item is too trivial to anchor a pillar and the existing 1-vote REJECT confirms this. No surface to weave.
 
 ## copperagebackport   [anchors: survival (1)]
+- NEW | from: minecraft:copper_axe / copper_sword / copper_chestplate (copperagebackport copper tools/armor) | via: recipe requiring create:pressing output (copper_sheet) as a crafting ingredient — the tool head / armor plate is stamped, not hammered by hand | to: create | motif: M-29 | power: everyday | tone: ok | verdict: ACCEPT | hook: shaping copper into a usable tool blade needs a press — the Create player's copper sheet output feeds the copper-tool line, so the builder and the machinist are lightly dependent from the first tier
+- CHALLENGE | from: Copper Golem (minecraft:copper_golem_statue) | via: various (colony, aeronautics, logistics adjacency) | to: economy/aeronautics | motif: M-28 / M-24 / M-31 | verdict: REJECT | hook: the Golem rows (M-28 ACCEPT 2, M-24 ACCEPT 1, M-31 REJECT) are overcrowded and contradictory; the Golem hauls items between copper chests in a small radius — that is a player-placed logistics mob with no method handle; there is no Create recipe it routes through, no motif that cleanly applies, and Create's own funnels/vaults supersede it technically; the cleanest answer is LEAVE the Golem entirely and let the M-04 copper-crushing rows carry the Create anchor alone
+
+## irons_lib   [anchors: support (library/API) (1)]
+LEAVE — cosmetic blocks (transmog table, player statue) with no routable material; the existing 1-vote REJECTs on both items are correct. No surface to weave.
+
+## formationsnether   [anchors: survival (1)]

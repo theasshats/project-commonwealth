@@ -43,3 +43,16 @@ CHALLENGE | from: beachparty cocktails (coconut/honey/melon/cocoa) | via: beachp
 
 NEW | from: beachparty:cooked_mussel_meat | via: farmersdelight:cooking | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: mussel meat is a coastal seafood not covered by any other mod; routing it through farmersdelight:cooking into a seafood chowder or stew adds a protein-group food from the beach biome, meaning the coastal settler supplies something the inland farmer cannot — a small but concrete cross-biome food dependency.
 
+## galosphere   [anchors: survival, magic (2)]
+Existing ACCEPTs: M-03 (palladium ore-doubling), M-04 (deco bricks crush-recycle), M-07 (reserved allurite/lumiere catalyst), M-08 (palladium → coin), M-30 (regional scarcity). These four pillars (survival, magic, create, economy) are all represented and well-argued. The amber `preserved_transform_recipe` has been contested (one M-10 ACCEPT vs multiple REJECTs) and the correct answer is nuanced.
+
+One gap: the `galosphere:preserved_transform_recipe` amber mechanic was never tested against **M-35 maturation** (a M-35 REJECT exists but the reasoning was that amber *stops* time rather than matures). That reasoning is correct — M-35 is value-added-by-time (fermenting, aging); amber preservation is suspension. REJECT stands.
+
+Second gap: **M-28 colony route** has never appeared for galosphere. Palladium (Sterling) armor and Silver Bombs require palladium. If palladium is region-locked (M-30), a MineColonies Knight's hut or Guard tower that specifically requests Sterling Armor pieces as upgrades would be a colony route for a palladium-gated good. But the MineColonies request system works on vanilla/configurable items — it doesn't natively request Sterling Armor from galosphere without KubeJS data seeding. That's a plausible but speculative config-tie. No clean motif edge without custom data work.
+
+Third gap: the **Sparkle mob** (feeds on glow lichen → grows allurite/lumiere on its back). This is an organic mob-drop pathway: a Sparkle farm could produce allurite/lumiere shards passively (they're the M-07 reserved catalyst). The Sparkle is a mob, and its drops are already covered by M-07's "reserved catalyst" role. No new weave needed — M-07 handles the shard's role regardless of how it's obtained (mined vs. farmed from Sparkles).
+
+OK — existing rows sufficient. The four-system coverage (Create via M-03/M-04, magic via M-07, economy via M-08/M-30) is genuinely strong. The amber mechanic is correctly left unweaved.
+
+CHALLENGE | from: galosphere:preserved_transform_recipe (amber) | via: ars_nouveau:imbuement | to: magic | motif: M-10 | verdict: REJECT confirmed — one ACCEPT row remains contested; the amber-preservation mechanic takes organic items and freezes/suspends them, which is not the same semantic as arcane infusion refining a material. The one ACCEPT (1/1) should not pass Gate 2: there is no established lore that "fossilised organic in amber = arcane reagent" in this pack's magic web (Ars Nouveau is nature/growth magic, not preservation). The amber output is a decorative/preservation item, not a magic catalyst. REJECT stands.
+

@@ -8,7 +8,6 @@
 LEAVE — pure developer data-attachment library; zero items, blocks, loot, or recipe types. No content surface to weave.
 
 ## createoreexcavation   [anchors: create, economy (2)]
-OK — existing rows sufficient. The core weaves (M-08 vein→coin, M-30 regional vein config, M-03 raw ore crushing, M-15 boss-key netherite_drill, M-05 vein_finder via mechanical_crafting, M-13 fluid→TFMG, M-28 colony unlock, M-29 magic-ore vein seeding) are thoroughly converged. One nuance not captured but minor:
 - NEW | from: createoreexcavation:vein_finder (3-chunk survey tool that reveals which ore a vein holds) | via: M-33 service-for-hire (a prospecting specialist uses the finder on a client's land and charges for the survey result) | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: the vein-finder specialist sells *information*, not ore — "I'll survey your claim for two crowns" is a labor transaction that needs no NPC and no recipe, emerging purely from the tool's function
 
 
