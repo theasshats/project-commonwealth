@@ -51,3 +51,25 @@ OK — existing Create + survival connections sound; add the lava-net → spirit
 
 REWORK: dossier economy candidate (M-09 luxury → coin) — M-09 retired; dismiss. No replacement needed as the 2-anchor state is already solid; the lava-net M-11 is a bonus, not a patch.
 
+## securitycraft   [anchors: support (1)]
+
+Existing connections: none authored. Dossier notes two weak candidates: economy-via-scarce-metals (M-08 framing) and Create-gating of reinforcing/sentry (M-05 framing).
+
+**Method-pull analysis:**
+- `securitycraft:block_reinforcing_recipe` — the core method: takes any block and converts it to an owner-locked reinforced variant. The reinforcing agent itself is currently vanilla-material only. Gating the reinforcing agent (the "Universal Block Reinforcer" tool) or a key component behind Create-made parts is M-05. Mid-tier power (reinforcing is a significant capability — base security).
+- Sentry (auto-turret block): a defensive gun emplacement. Routing its crafting components through Create mechanical_crafting or sequenced_assembly (M-05/M-06) is coherent — the sentry is effectively a Create-style automated device. Power: mid.
+- `securitycraft:limited_use_keycard_recipe` — keycards degrade (limited use). This has a hint of M-38 (tooling wear) but M-38 is mechanism-pending; cannot propose it. The degradation is already built in; no new weave.
+- Loot=yes: securitycraft blocks appear in dungeon-like structures? The jar suggests some loot tables. But securitycraft doesn't generate structures of its own; its loot tables are for player-built trap mines/chests, not world-generated structures. Not a loot-seed candidate.
+- Economy: reinforced-block security as a service-for-hire — a player specializing in base hardening provides security consulting for coin. M-33 (service-for-hire: one player reinforces another's base for payment). Coherent in the ~10-player co-op context. No item to trade; the service is the labor.
+- Create: the `securitycraft:block_reinforcing_recipe` requires the "Universal Block Reinforcer" to be crafted. Gating that Reinforcer's recipe behind Create:electron_tube or a Create-fabricated part is M-05 (native-method gating). Mid-tier — the Reinforcer is the unlocking tool, not trivial.
+
+- from: securitycraft Universal Block Reinforcer (the reinforcing tool) | via: create:mechanical_crafting (gate key component on Create parts — electron tube / precision mechanism) | to: Create | motif: M-05 | power: mid | tone: ok — a sophisticated electronic-security device needing precision machined parts is sensible | verdict: ACCEPT | hook: the Reinforcer needs a precision mechanism from a Create press before you can harden any block; base-defense is gated on tech investment.
+
+- from: securitycraft sentry (auto-turret) | via: create:sequenced_assembly | to: Create | motif: M-06 | power: mid | tone: ok — a sentry auto-turret is a sophisticated mechanical device; routing it through sequenced assembly (incomplete_sentry_frame stages) is coherent | verdict: ACCEPT | hook: building a sentry requires staged assembly on Create machinery; automated defense demands automated manufacture.
+
+- from: securitycraft base-hardening labor | via: player-service | to: economy | motif: M-33 | power: mid | tone: ok — in a ~10-player co-op a "base security specialist" service role is plausible and directly player-run | verdict: ACCEPT | hook: a player who masters reinforcing and traps offers to harden teammates' bases in exchange for goods; security is a labor service, not a product you buy.
+
+- from: securitycraft:limited_use_keycard_recipe | via: M-38 tooling-wear angle | to: economy | motif: M-38 | power: everyday | tone: ok | verdict: REJECT | reason: M-38 is mechanism-pending (#239); keycards already degrade natively but the wear → remade-by-toolmaker loop has no implementation method; cannot propose as a weave.
+
+- from: securitycraft reinforced blocks as high-value scarce-metal sink (M-08 framing) | via: numismatics | to: economy | motif: M-08 | power: mid | tone: clash — M-08 is player-minted *coin*, not "sell this for coin"; securitycraft does not process any ore into currency; the link was trying to say "security gear is expensive so it creates trade demand" which is ambient loop, not a weave | verdict: REJECT | reason: misframed as M-08; the real link is either M-05 (Create-gated) or M-33 (service) — both already accepted above.
+

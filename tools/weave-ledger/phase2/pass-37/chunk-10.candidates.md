@@ -21,3 +21,9 @@ REWORK: OK — connections sound. Already at 2 anchors (Create material ladder +
 - from: fxntstorage:backpack_flight_upgrade (endgame) | via: thematic adjacency to aeronautics | to: aeronautics | motif: no-motif | power: endgame | tone: clash — the flight upgrade is a worn gadget (personal propulsion), not an aeronautics propulsion/structural component; wiring it as an aeronautics input would be forced | verdict: REJECT | reason: no-motif; worn gadget ≠ ship component — the dossier itself flags this; don't force the edge
 - from: fxntstorage:hardened_backpack / hardened_storage_box (endgame tier) | via: M-28 colony-cheaper-basics route | to: economy | motif: M-28 | power: endgame | tone: ok — a hardened-tier storage solution is exactly the kind of expensive-to-make basic a colony-player could supply cheaper (hut-built brass/hardened storage goods traded for coin), putting storage in the colony-economy web | verdict: ACCEPT | hook: a settlement's storage hut turns out hardened crates the solo craftsman would spend a week making — buy, don't grind
 
+## corgilib   [anchors: support/library (1)]
+- LEAVE — genuine zero-surface code library (0 blocks, 0 items, 0 recipe-types, loot=no); loot/worldgen helpers are API framework for dependent mods, not player-accessible content. Nothing to route.
+
+## balm   [anchors: support/library (1)]
+- LEAVE — genuine zero-surface multi-loader abstraction library (0 blocks, 0 items, 0 recipe-types, loot=no). The iron/gold nugget c:tags it registers are scaffolding — already universally covered by vanilla/other mods; not a unique material surface. Nothing to route.
+
