@@ -116,6 +116,32 @@ LEAVE — Verified config-format library (Darkhax Prickle JSON). 0 blocks, 0 ite
 
 LEAVE — Verified modular framework library (Vazkii / Quark's module loader). 0 blocks, 0 items, no methods. The 1 biome-modifier is framework scaffolding, not player content. Nothing to weave.
 
+## gravestone   [anchors: survival (1)]
+
+1 block (gravestone:gravestone), 2 items (gravestone, obituary), loot=yes. Death-recovery utility. Single anchor — survival.
+
+The dossier suggests LEAVE. Red-teaming harder:
+
+- from: gravestone:gravestone (the placed grave block) | via: create:crushing | to: Create | motif: M-04 | power: everyday | tone: clash | verdict: REJECT | reason: Mechanically crushing a gravestone block (which holds a dead player's inventory) back to cobble/stone would be a jarring, griefable interaction — tonally wrong and exploitable. M-04 is for decorative blocks, not functional player containers. Theme clash and gameplay harm.
+
+- from: gravestone:obituary (item — logs coordinates, equipment snapshot, death details) | via: supplementaries:item_lore or supplementaries:antique_book enhancement | to: economy | motif: no-motif | verdict: REJECT | reason: The obituary is a death-log keepsake with no economy function. There is no coherent M-## that maps "read a death diary" to economic value without inventing a motif.
+
+- from: gravestone chest loot (loot=yes — but gravestone's loot is the dead player's own inventory, not worldgen chest loot) | via: loot-seed | to: economy | motif: M-34 | power: everyday | tone: clash | verdict: REJECT | reason: The loot=yes flag here is the grave restoring the player's OWN items, not a worldgen loot table that can be seeded. Misidentifying this as a loot-seed target is a mistake — it is not the correct delivery. No weave possible via loot-seed.
+
+LEAVE — Death-recovery utility. The gravestone block and obituary items are functional containers/keepsakes with no thematic or mechanical bridge to Create, magic, economy, or aeronautics. Any edge would be contrived. The one-anchor survival role is appropriate and complete.
+
+## betterstrongholds   [anchors: survival (1)]
+
+0 blocks, 0 items (no registry), loot=yes. YUNG's stronghold overhaul — structure + custom loot tables. Single anchor — survival. The dossier had deferred loot-seed as "possible but deferred." Revisiting:
+
+- from: betterstrongholds stronghold chest loot | via: loot-seed (datapack edit) | to: economy | motif: M-34 | power: endgame | tone: ok | verdict: ACCEPT | hook: The stronghold is the pack's most dangerous pre-End structure — the combat specialist who clears it should bring back something the production economy needs. Seeding a scarce Create component (e.g. a precision mechanism fragment) or a magic reagent (e.g. a rare essence shard) into stronghold chests makes dungeon-delving a supplier role for the rest of the server. Classic M-34 (combat-route supply). Delivery: via loot-seed (datapack). Endgame tier (the player has to reach and clear the stronghold to access it). Theme: a dungeon holding advanced tech fragments or arcane relics is coherent for a medieval-industrial pack. Nod test: "of course the deepest vanilla dungeon rewards you with a component nobody else can get."
+
+- from: betterstrongholds stronghold chest loot | via: loot-seed | to: magic | motif: M-02 | power: endgame | tone: ok | verdict: ACCEPT | hook: Mob-drop reagents (M-02 established motif) can be seeded into the stronghold's mob-boss room chests — specifically a rare essence or Ars Nouveau ingredient that the magic pillar needs but can't farm passively. The stronghold's unique danger profile (silverfish, evokers in YUNG's variant) makes it a natural rare-reagent source. Delivery: via loot-seed.
+
+- from: betterstrongholds structural loot (trapped room / hidden room chests) | via: loot-seed | to: Create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: Seed a boss-key component (M-15 — a required ingredient for a complex Create recipe, e.g. a high-tier sequenced-assembly unlock) into the stronghold's deepest chest. The stronghold becomes the single-source gate for that component — a player *must* venture down to progress the tech tree. This advances the loop (danger → production) and is the canonical M-15 use. Delivery: via loot-seed. Endgame.
+
+
+
 
 
 

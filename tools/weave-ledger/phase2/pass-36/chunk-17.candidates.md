@@ -87,3 +87,21 @@ Food-web glue mod. It IS the weaving layer for the food cluster, but has no cont
 
 - LEAVE — genuine zero-content config library/API. No player-facing items, blocks, methods, or loot. Infrastructure for other mods' configuration screens.
 
+## vc_gliders   [anchors: aeronautics (1)]
+
+Single anchor. Method-pull: gliders consume paper + tier metals; upgrades consume copper and nether materials. Create methods available: pressing (sheets), mechanical_crafting, deploying; also createaddition:charging.
+
+- from: vc_gliders:paraglider_iron / _gold / _diamond (tiered flight gear) | via: create:pressing (reinforced paper stock pressed from Create-processed fiber/sheet) + create:mechanical_crafting (frame assembly) | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: flight gear assembled on a Create mechanical crafter from pressed reinforced paper stock — the personal flight tier is a Create fabrication milestone, not just a bench recipe; makes early aerial mobility a Create investment
+- from: vc_gliders:copper_upgrade (copper component upgrade) | via: create:item_application — deployer applies the copper upgrade to a base glider | to: create | motif: M-20 | power: everyday | tone: ok | verdict: ACCEPT | hook: the copper upgrade is a single-step deployer-apply (the deploy-application upgrade motif) — exactly the light tier M-20 is for; adds a small Create step to upgrading flight gear without over-engineering it
+- from: vc_gliders:paraglider_netherite / combined upgrades (endgame flight tier) | via: create:sequenced_assembly (multi-step build) | to: create | motif: M-06 | power: endgame | tone: ok | verdict: REJECT | reason: the netherite glider is the top tier but it's still a wearable exploration tool, not a machine or technology keystone. Sequenced assembly for personal gear is overkill for what is essentially a pre-Elytra mobility item; M-05 + M-20 above already give the tier ladder appropriately. Avoid gate-stacking for durable exploration gear.
+- from: vc_gliders (weather-risk mechanic — lightning damage in rain) | via: config tie to Serene Seasons weather / particlerain storms | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: REJECT | reason: M-16 is specifically a *seasonal reagent* feeding a machine/ritual; the glider weather-risk is a behavior/config not a recipe. No Phase-3 method exists to author this as a weave (would be a config/behavior note, not a recipe edge). No-motif as a weave; reject.
+
+## s_a_b   [anchors: create, aeronautics (2)]
+
+Already at ≥2 anchors. Auditing existing connections.
+
+REWORK: OK — connections sound. Steel armor blocks are constructed via create:compacting/mixing (correct) and exist to armor Big Cannons / Aeronautics ships (correct). No arbitrary links found. The dossier notes M-06 as optional deepening — evaluate:
+
+- from: s_a_b:hardsteelblock / doublesteelblock (top-tier plating) | via: create:sequenced_assembly (multi-step armor plate fabrication: press → compact → apply heat treatment) | to: create/aeronautics | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: the hardest armor plating earns its protection through a multi-step Create chain — compacting + hot-blast + deploy-layer — so the most fortified warship hull is a real manufacturing investment, not just a material swap; naval/military construction becomes a Create depth tier
+- from: s_a_b steel plating (bulk volume needed for large ships) | via: aeronautics/trains as transport requirement | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: REJECT | reason: M-31 (logistics-required bulk good) is about goods heavy/bulky enough that trading them at scale REQUIRES the logistics arm. Steel plate blocks are heavy but not uniquely so — any building material could claim this. The link is true-ish but generic; not a tight enough mechanism to qualify as a distinct weave edge. The mod's Create+aeronautics anchors already cover the loop role.
+

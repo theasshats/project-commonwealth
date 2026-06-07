@@ -78,6 +78,13 @@
 ## justenoughbreeding   [anchors: support/QoL (1)]
 - LEAVE — JEI plugin displaying breeding requirements; 0 items/blocks/loot, no mechanics. Nothing to route.
 
+## create_ltab-3.9.2   [anchors: Create, survival (2)]
+- OK — connections sound. Create-themed structures (worldgen) + survival (exploration/loot/danger) is a correct and sufficient ≥2 anchor pair.
+- from: create_ltab structures (loot tables, Create-themed) | via: loot-seed | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: seeding player-minted coin into Create-themed building ruins makes explorers find early trade currency inside Create-flavored structures — thematically tight (an abandoned factory has its payroll chest). Red-team: coin in a Create ruin is plausible — it's discovered wealth, not NPC-dispensed. Survives.
+- from: create_ltab structures | via: loot-seed | to: magic | motif: M-02 | power: mid | tone: clash | verdict: REJECT | reason: Create-themed industrial structures seeding magic reagents (Ars source gems, occultism drops) in their loot tables is a tone clash — a gear-works ruin yielding arcane essences feels random, not "of course." Better to keep magic reagents in magic-themed structures (witch huts, dungeons). Rejected on theme.
+- from: create_ltab structures | via: loot-seed | to: create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: the hardest Create-themed structure (a large industrial ruin or a multi-floor factory) contains a rare precision-mechanism or blueprint fragment that gates a high-tier Create recipe — the structure IS the boss, spatially. Red-team: Create ruins as gatekeepers for Create tech is exactly the "of course" framing — a lost engineer's notebook found in the rubble. Survives.
+
+
 
 
 

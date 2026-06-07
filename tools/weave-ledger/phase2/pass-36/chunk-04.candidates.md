@@ -148,3 +148,24 @@ Developer utility library (data-attachment + network plumbing). No items, no loo
 
 - LEAVE — genuine zero-content code library. Data-attachment and packet-handling utilities; no player-facing items, no loot, no recipe types. Required as a dependency only. No weave surface of any kind.
 
+## appleseed   [anchors: survival (1)]
+
+Diet – AppleSeed Edition: auto-derives nutrition groups from food recipes; balanced diet → buffs, imbalanced → withheld. No items, no loot, no recipe types. A demand-driver mechanic — its "output" is standing demand for diverse food production. The pack's food face of Survival pressure per SYSTEMS.md §2.
+
+**Method-pull analysis:**
+The dossier is hand-authored specifically to note that the mod IS a demand mechanic, not a recipe node. The natural 2nd anchor is production↔economy via the diet demand it creates, but this is the ambient endpoint of the loop (diet demand → food production → food trade), which would be the M-09 retired framing ("sellable is the ambient endpoint"). The correct reading: appleseed's demand is the engine that MAKES food-production weaves for other mods valuable. It's not itself a weave node.
+
+The candidates in the dossier note:
+1. "production via diet demand pulling on farming/cooking" — this is the ambient loop, not a weave on this mod.
+2. "economy via food as trade goods" — M-09 retired (bare sellable link).
+
+**Candidate 1: diet demand pulling on Create milling for multi-group foods (grain→flour→bread chain)**
+- from: appleseed diet-balanced state | via: Create milling / mixing / farmersdelight cooking chain | to: create | motif: M-12 (processing-chain pull — diet demand creates a pull on grain-processing) | power: everyday | tone: ok — a diet system that requires grain consumption pulls on Create's milling of wheat/rice/corn into flour, which feeds into baking/cooking chains | verdict: REJECT | reason: the diet demand is an ambient pull (it exists for ALL food, not specifically a Create-processing-chain-routed connection). M-12 is for routing a specific raw material through a specific processing method — the diet demand here is undifferentiated. The weave is on the food mods (FD, ExtraDelight, etc.) not on appleseed itself. Appleseed is the demand signal, not the processing node.
+
+**Candidate 2: diet-balanced buff as a prerequisite or enhancer for MineColonies colony worker efficiency**
+- from: player diet state (balanced buffs from appleseed) | via: config/MineColonies colony production efficiency | to: economy (colony route) | motif: M-28 | power: everyday | tone: ok — if colony workers are affected by the player's diet state (fed workers = faster production), diet management becomes a colony-economics lever. Thematically reads as "a well-fed colonial overseer runs a tighter colony." | verdict: REJECT | reason: MineColonies worker efficiency is driven by the in-colony food supply, not the player's personal diet state. The diet buffs in appleseed affect the player character, not worker NPCs. This would require a forced non-existent config hook; the connection doesn't exist in either mod's mechanic surface.
+
+The dossier is correct: appleseed's real 2nd anchor is a DEMAND pull that shows up in other mods' weaves, not as a weave on appleseed itself. The mod sits correctly as single-anchor survival pressure. No coherent 2nd anchor weave exists for this mod independently — but it makes other food mods' economy and Create weaves more load-bearing.
+
+- LEAVE — the diet system is a demand driver, not a weave node. Its 2nd anchor is structurally embedded in how it amplifies other mods' weaves (it makes FD/ExtraDelight/cooking production economically necessary). No independent recipe- or method-pull weave from appleseed itself reaches a 2nd system anchor without forcing an edge that doesn't exist in either mod.
+

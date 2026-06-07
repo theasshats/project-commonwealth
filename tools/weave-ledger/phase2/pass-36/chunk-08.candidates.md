@@ -192,3 +192,34 @@ The `woodworks:sawmill` recipe type is already in the methods palette and is use
 - from: woodworks:chiseled_*_bookshelf | via: minecolonies hut build requirement | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: the MineColonies Library hut demands a quality chiseled bookshelf — a woodworking specialty only crafted on the Sawmill — so the settlement builder needs to trade with or build for a wood specialist
 - from: woodworks:*_beehive | via: loot-seed / world placement | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: beehive variants are cosmetic; honey production (the consumption sink candidate) is already vanilla; adding a wood-type beehive doesn't create a new demand node — it's decoration, not a consumption mechanic; no motif applies cleanly
 
+## owo   [anchors: support/library (1)]
+
+General utility/GUI/config library (owo-ui, owo-config). 0 blocks, 0 items, loot=no, no recipe types. Pure code library.
+
+**Verdict:** LEAVE — genuine zero-content code library; nothing to weave.
+
+- LEAVE — pure UI/config/networking library; 0 blocks, 0 items, no recipe types; zero player content surface
+
+## tipsmod   [anchors: support/QoL (1)]
+
+Rotating loading-screen tips; mods/packs add their own tips via JSON. 0 blocks, 0 items, loot=no. Pure client UI.
+
+**Verdict:** LEAVE — pure client UI tool; zero content surface; no items/methods to route. The pack-specific onboarding tips are content authoring, not a pillar weave.
+
+- LEAVE — loading-screen tips UI; 0 blocks, 0 items, no recipe types; adding pack tips is authoring work, not a loop weave
+
+## cmpackagepipebomb   [anchors: Create (1)]
+
+Create addon: a pipe bomb that detonates when a Create package is opened; can booby-trap postboxes. 4 items (pipebomb, pipebomb_rigged, tnt_rigged variants), 0 blocks, no recipe types.
+
+**Method-pull:** The pipebomb and its rigged variants are novelty PvP trap items. Their only material inputs are TNT/gunpowder (vanilla). The Create connection is the delivery mechanism (package system). There is no coherent second anchor:
+- Survival: the trap creates danger pressure, but it's PvP pranking rather than environmental survival pressure. This is "survival of the other players" not the world pushing back.
+- Economy: a purchasable/tradeable trap item? That's ambient sellable (REJECT per M-09 retired rules). Could be a bounty-adjacent item but there's no bounty system to hook into via a live motif.
+- Magic: no thematic link whatsoever.
+
+**Red-team:** Could we make the pipebomb recipe require a Create-processed explosive component (M-05 native-method gating)? The item is a low-tier novelty item. Gating it behind Create processing would be disproportionate for a prank tool and the everyday/low-power rule says one light step. And the mod's own recipes already use vanilla crafting — there's no "native machine" to gate through (M-05 requires the mod's own machine, which doesn't exist here).
+
+**Verdict:** LEAVE — tiny novelty PvP trap riding Create's package system; no recipe type, no coherent second-pillar weave; the dossier's own recommendation is confirmed.
+
+- LEAVE — novelty PvP prank addon (pipe bomb via Create packages); 4 items, no recipe type, no coherent 2nd anchor; forcing a magic or survival link would be arbitrary
+

@@ -209,3 +209,56 @@ the economy-is-player-run ruling. Leave at 2.
 LEAVE — genuine zero-content: no items, no blocks, no loot, no methods. Client-only biome-color renderer
 replacement. No material surface to weave.
 
+## quark   [anchors: support/decoration (1)]
+
+- from: quark decorative stone/brick variants (andesite bricks, cobblestone bricks, slate variants — everyday
+  building blocks) | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok (Quark's
+  decorative stone variants crushing back to raw/gravel + an xp-nugget is exactly M-04's deco-recycling
+  loop; the pack already uses this motif and Quark's polished/brick stone blocks are the canonical target) |
+  verdict: ACCEPT |
+  hook: Quark's polished/brick stone variants and vertical slabs can be recycled via Create crushing — lossy
+  return to gravel/raw stone plus an xp-nugget — so over-built deco isn't wasted and the Create deco-recycling
+  web covers Quark's palette.
+
+- from: quark:apple_crate / carrot_crate / potato_crate etc. (c:storage_blocks/apple etc. — compressed food
+  blocks, everyday) | via: create:milling or farmersdelight:cutting | to: survival | motif: M-12 |
+  power: everyday | tone: ok (a compressed crate of apples run through a cutter or mill for juice/pulp is
+  logical; Quark's storage crates invite bulk-processing just as Create's compressed ore piles do) |
+  verdict: ACCEPT |
+  hook: Quark food crates (apple, carrot, potato, beet) processed through a cutting board or Create mill yield
+  bulk juice/pulp intermediates, tying Quark's vanilla-plus storage format into the Create-to-survival food
+  pipeline and earning a second anchor.
+
+- from: quark:ancient_bookshelf / quark:bookshelf variants (enchanting-adjacent, building, everyday) |
+  via: ars_nouveau:enchanting_apparatus | to: magic | motif: M-10 | power: everyday | tone: clash —
+  Quark bookshelves boost vanilla enchanting power (like regular bookshelves); seating them as Ars Nouveau
+  apparatus input-materials stretches the function further than the item's identity warrants. Ars uses exotic
+  materials (source gems, arcane essences, flora) as apparatus ring items; a bookshelf is a power-block,
+  not a reagent. | verdict: REJECT | reason: tone clash and wrong function for the item; bookshelves are
+  enchanting-power providers, not consumable reagents. Forcing one into an Ars recipe would feel arbitrary.
+
+- from: quark:ancient_wood / ancient_planks (Glimmering Weald cave-biome wood, mid-tier deco) |
+  via: occultism:ritual | to: magic | motif: M-10 | power: mid | tone: ok (ancient wood from a glowing
+  underground biome as a ritual component for Occultism is thematically coherent — the Glimmering Weald
+  is otherworldly flora, which suits Occultism's aesthetic) | verdict: REJECT | reason: Occultism rituals
+  use its own dedicated ritual items plus entity/item conditions — dropping a specific wood block type into
+  a ritual is possible but sets a precedent for every exotic wood to have a ritual role, which is
+  over-engineered for Quark. The Create (M-04) and survival (M-12) weaves above are the cleaner pair.
+  Flag for future consideration if the magic pillar needs more ritual feedstocks.
+
+## bookshelf   [anchors: support/library (1)]
+
+LEAVE — genuine zero-content code library: no items, no blocks, no loot, no recipe types. Darkhax utility lib
+with no material surface. Sanctioned support role.
+
+## jeed   [anchors: support/client-UI (1)]
+
+LEAVE — genuine zero-content: no items, no blocks, no loot. Its two registered "recipe-types"
+(jeed:effect_provider, jeed:potion_provider) are JEI display categories, not craftable methods — they render
+effect documentation, not process materials. Client-UI support role; nothing to weave.
+
+## foodeffecttooltips   [anchors: support/QoL (1)]
+
+LEAVE — genuine zero-content: no items, no blocks, no loot, no methods. Client tooltip renderer only. QoL
+support role is complete.
+

@@ -104,6 +104,23 @@ Power-read: 31 placeable plush shark blocks in dye/pride-flag/novelty variants. 
 
 LEAVE — the plushies are curated flavor with no coherent production/economy/magic surface. The wool-and-dye craft is the entire interaction; forcing a second system anchor creates defect edges. Correctly stays as single-anchor decoration/flavor support.
 
+## undergroundworlds   [anchors: survival (1)]
+
+Power-read: 30 blocks, 68 items. Underground biomes (jungle, desert, spider cave) with themed dungeons (Jungle Temple, Pyramid, Ice Dungeon, Abyssal Ruins). loot=yes. Items: antidote_flask (poison immunity), desert_charm (blindness immunity), blade_of_the_jungle (poison), freezing tools, axe_of_regrowth, quicksand. Mob drops: spider_fang (Black Recluse). Temple/pyramid bricks as building material. The charms (Curios/Accessories slot) are the mod's most distinctive outputs.
+
+- from: undergroundworlds:spider_fang (Black Recluse drop, underground spider cave) | via: occultism:spirit_fire — transmute spider_fang into an occultism essence, giving the underground mob a downstream magic use | to: magic | motif: M-02 | power: mid | tone: ok — the Black Recluse is a venomous underground spider; its fang feeding an occultism spirit-fire transmutation is thematically sensible (venomous organic material → dark essence) | verdict: ACCEPT | hook: a Black Recluse fang dropped in spirit fire yields a venomous essence that feeds the Occultist's crafting table — cave-diving earns a magic reagent
+
+- from: undergroundworlds:spider_fang | via: ars_nouveau:imbuement — imbue spider fang into a source-gem catalyst for a poison-related Ars glyph (Projectile + Harm + Poison) | to: magic | motif: M-10 | power: mid | tone: ok — the fang is a venomous animal part; imbuing it into a magic component for a poison glyph is thematically coherent | verdict: REJECT | reason: M-11 (occultism spirit_fire, already ACCEPTed) is the cleaner single magic routing for this drop; splitting the same material across both occultism and Ars dilutes identity. One upstream (occultism) is cleaner. M-10 could be a second-stage refinement (spirit essence → Ars imbuement) but that's a Phase-3 chain decision, not a Phase-2 independent candidate.
+
+- from: undergroundworlds temple/pyramid bricks | via: create:crushing — temple brick → gravel + XP nugget (M-04 deco recycle, lossy) | to: create | motif: M-04 | power: everyday | tone: ok — block-family recycle is M-04's exact scope; dungeon bricks crushing back is standard | verdict: ACCEPT | hook: looted temple stone run through a Crusher breaks down to gravel and a shard of experience — the ruins feed the Create recycling loop
+
+- from: undergroundworlds:desert_charm / antidote_flask (worn immunity accessories) | via: ars_nouveau:enchanting_apparatus — the charm slot items are refined or enhanced at the Ars enchanting apparatus, adding a source-cost upgrade to boost their protective effect | to: magic | motif: M-10 | power: mid | tone: ok — wearable charms receiving arcane upgrades at the apparatus is exactly M-10 (arcane infusion pull for a foreign material into a magic refinement method) | verdict: ACCEPT | hook: the Desert Charm's blindness ward is strengthened at the enchanting apparatus with a source gem infusion — magic enhances the dungeon explorer's protective gear
+
+- from: undergroundworlds:freezing_sword / freezing_pickaxe etc. (freeze-on-hit tools) | via: create_new_age:energising or createaddition:charging — a charged variant of the freezing tools that uses FE to boost/maintain the freeze effect, bridging Create electricity into the dungeon gear | to: create | motif: M-17 | power: mid | tone: clash — the freezing tools are dungeon loot, not manufactured items; applying a Create-electric charge to loot items is tonally mismatched (dungeon magic vs. industrial electricity). The briefing warns against forcing edges on deliberately organic/adventure content. | verdict: REJECT | reason: tone clash — dungeon-magic ice tools are thematically distant from FE charging; the weave would feel arbitrary to a player. M-04 (bricks) + M-02 (spider_fang) already cover Create and magic routing without forcing the adventure gear into an industrial frame.
+
+REWORK: Dossier's M-04 candidate for temple bricks is directionally right and this pass ACCEPTs it. The M-11 magic candidate (spirit_fire / imbuement) is also directionally right; this pass refines it to M-02 (mob-drop reagent for spider_fang) + M-10 (charm upgrade via Ars apparatus). The dossier's Create candidate was marked [WEAK] — it ACCEPTs here because it's the standard method for any dungeon-block set and requires no invention.
+
+
 
 
 
