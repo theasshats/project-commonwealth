@@ -1,0 +1,30 @@
+# knightlib-neoforge-1.21.1-1.5.1
+
+## mod metadata (id / version / deps)
+license = "GNU LGPLv3" # Review your options at https://choosealicense.com/.
+modId = "knightlib" #mandatory
+version = "1.5.1" #mandatory
+displayName = "Knight Lib" #mandatory
+modId = "neoforge" #mandatory
+versionRange = "[21.1.80,)" #mandatory
+modId = "minecraft"
+versionRange = "[1.21.1, 1.22)"
+modId = "geckolib"
+versionRange = "(4.4.4,)"
+
+## blocks
+knightlib:great_chalice
+
+## items
+knightlib:empty_grail
+knightlib:filled_grail
+knightlib:great_chalice
+knightlib:great_essence
+knightlib:homunculus
+knightlib:small_essence
+
+## neoforge biome_modifiers
+knightlib_mob_spawns.json :: {"type": "knightlib:knightlib_mob_spawns"}
+
+## c: common tag membership
+

@@ -1,0 +1,19 @@
+# lithostitched-1.7.9-neoforge-21.1
+
+## mod metadata (id / version / deps)
+license = "MIT"
+modId = "lithostitched"
+version = "1.7.9"
+displayName = "Lithostitched"
+
+## blocks
+
+
+## items
+
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+

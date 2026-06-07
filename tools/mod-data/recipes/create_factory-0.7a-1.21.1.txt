@@ -1,0 +1,82 @@
+create_factory:cake_paste | create:mixing | c:milk create:dough create:mixing create_factory:cake_paste minecraft:egg minecraft:sugar neoforge:tag
+create_factory:caramel_apple | create:filling | create:filling create_confectionery:caramel create_factory:caramel_apple minecraft:apple neoforge:mod_loaded neoforge:single
+create_factory:caramel_roll | create:filling | create:filling create_confectionery:caramel create_factory:caramel_roll minecraft:bread neoforge:mod_loaded neoforge:single
+create_factory:caramel_waffle | create:filling | create:filling create_confectionery:caramel create_factory:caramel_waffle create_factory:waffle neoforge:mod_loaded neoforge:single
+create_factory:chocolate_apple | create:filling | create:chocolate create:filling create_factory:chocolate_apple minecraft:apple neoforge:single
+create_factory:chocolate_roll | create:filling | create:chocolate create:filling create_factory:chocolate_roll minecraft:bread neoforge:single
+create_factory:chocolate_waffle | create:filling | create:chocolate create:filling create_factory:chocolate_waffle create_factory:waffle neoforge:single
+create_factory:dark_chocolate_apple | create:filling | create:filling create_confectionery:black_chocolate create_factory:dark_chocolate_apple minecraft:apple neoforge:mod_loaded neoforge:single
+create_factory:dark_chocolate_roll | create:filling | create:filling create_confectionery:black_chocolate create_factory:dark_chocolate_roll minecraft:bread neoforge:mod_loaded neoforge:single
+create_factory:dark_chocolate_waffle | create:filling | create:filling create_confectionery:black_chocolate create_factory:dark_chocolate_waffle create_factory:waffle neoforge:mod_loaded neoforge:single
+create_factory:glow_berries_jam | create:mixing | create:mixing create_factory:glow_berries_jam minecraft:glow_berries minecraft:sugar
+create_factory:glow_berries_jam_roll | create:filling | create:filling create_factory:glow_berries_jam create_factory:glow_berries_jam_roll minecraft:bread neoforge:single
+create_factory:glow_berries_jam_waffle | create:filling | create:filling create_factory:glow_berries_jam create_factory:glow_berries_jam_waffle create_factory:waffle neoforge:single
+create_factory:honey_glazed_berries | create:filling | c:honey create:filling create_factory:honey_glazed_berries minecraft:sweet_berries neoforge:tag
+create_factory:honey_roll | create:filling | c:honey create:filling create_factory:honey_roll minecraft:bread neoforge:tag
+create_factory:honey_waffle | create:filling | c:honey create:filling create_factory:honey_waffle create_factory:waffle neoforge:tag
+create_factory:jar/black_jar | minecraft:crafting_shapeless | create_factory:black_jar create_factory:jars minecraft:black_dye minecraft:crafting_shapeless
+create_factory:jar/blue_jar | minecraft:crafting_shapeless | create_factory:blue_jar create_factory:jars minecraft:blue_dye minecraft:crafting_shapeless
+create_factory:jar/brown_jar | minecraft:crafting_shapeless | create_factory:brown_jar create_factory:jars minecraft:brown_dye minecraft:crafting_shapeless
+create_factory:jar/cyan_jar | minecraft:crafting_shapeless | create_factory:cyan_jar create_factory:jars minecraft:crafting_shapeless minecraft:cyan_dye
+create_factory:jar/gray_jar | minecraft:crafting_shapeless | create_factory:gray_jar create_factory:jars minecraft:crafting_shapeless minecraft:gray_dye
+create_factory:jar/green_jar | minecraft:crafting_shapeless | create_factory:green_jar create_factory:jars minecraft:crafting_shapeless minecraft:green_dye
+create_factory:jar/light_blue_jar | minecraft:crafting_shapeless | create_factory:jars create_factory:light_blue_jar minecraft:crafting_shapeless minecraft:light_blue_dye
+create_factory:jar/light_gray_jar | minecraft:crafting_shapeless | create_factory:jars create_factory:light_gray_jar minecraft:crafting_shapeless minecraft:light_gray_dye
+create_factory:jar/lime_jar | minecraft:crafting_shapeless | create_factory:jars create_factory:lime_jar minecraft:crafting_shapeless minecraft:lime_dye
+create_factory:jar/magenta_jar | minecraft:crafting_shapeless | create_factory:jars create_factory:magenta_jar minecraft:crafting_shapeless minecraft:magenta_dye
+create_factory:jar/orange_jar | minecraft:crafting_shapeless | create_factory:jars create_factory:orange_jar minecraft:crafting_shapeless minecraft:orange_dye
+create_factory:jar/pink_jar | minecraft:crafting_shapeless | create_factory:jars create_factory:pink_jar minecraft:crafting_shapeless minecraft:pink_dye
+create_factory:jar/purple_jar | minecraft:crafting_shapeless | create_factory:jars create_factory:purple_jar minecraft:crafting_shapeless minecraft:purple_dye
+create_factory:jar/red_jar | minecraft:crafting_shapeless | create_factory:jars create_factory:red_jar minecraft:crafting_shapeless minecraft:red_dye
+create_factory:jar/white_jar | minecraft:crafting_shapeless | create_factory:jars create_factory:white_jar minecraft:crafting_shapeless minecraft:white_dye
+create_factory:jar/yellow_jar | minecraft:crafting_shapeless | create_factory:jars create_factory:yellow_jar minecraft:crafting_shapeless minecraft:yellow_dye
+create_factory:jar_clear/clear_black_jar | minecraft:crafting_shapeless | create_factory:black_jar minecraft:crafting_shapeless
+create_factory:jar_clear/clear_blue_jar | minecraft:crafting_shapeless | create_factory:blue_jar minecraft:crafting_shapeless
+create_factory:jar_clear/clear_brown_jar | minecraft:crafting_shapeless | create_factory:brown_jar minecraft:crafting_shapeless
+create_factory:jar_clear/clear_cyan_jar | minecraft:crafting_shapeless | create_factory:cyan_jar minecraft:crafting_shapeless
+create_factory:jar_clear/clear_gray_jar | minecraft:crafting_shapeless | create_factory:gray_jar minecraft:crafting_shapeless
+create_factory:jar_clear/clear_green_jar | minecraft:crafting_shapeless | create_factory:green_jar minecraft:crafting_shapeless
+create_factory:jar_clear/clear_light_blue_jar | minecraft:crafting_shapeless | create_factory:light_blue_jar minecraft:crafting_shapeless
+create_factory:jar_clear/clear_light_gray_jar | minecraft:crafting_shapeless | create_factory:light_gray_jar minecraft:crafting_shapeless
+create_factory:jar_clear/clear_lime_jar | minecraft:crafting_shapeless | create_factory:lime_jar minecraft:crafting_shapeless
+create_factory:jar_clear/clear_magenta_jar | minecraft:crafting_shapeless | create_factory:magenta_jar minecraft:crafting_shapeless
+create_factory:jar_clear/clear_orange_jar | minecraft:crafting_shapeless | create_factory:orange_jar minecraft:crafting_shapeless
+create_factory:jar_clear/clear_pink_jar | minecraft:crafting_shapeless | create_factory:pink_jar minecraft:crafting_shapeless
+create_factory:jar_clear/clear_purple_jar | minecraft:crafting_shapeless | create_factory:purple_jar minecraft:crafting_shapeless
+create_factory:jar_clear/clear_red_jar | minecraft:crafting_shapeless | create_factory:red_jar minecraft:crafting_shapeless
+create_factory:jar_clear/clear_white_jar | minecraft:crafting_shapeless | create_factory:white_jar minecraft:crafting_shapeless
+create_factory:jar_clear/clear_yellow_jar | minecraft:crafting_shapeless | create_factory:yellow_jar minecraft:crafting_shapeless
+create_factory:nectar | create:mixing | create:mixing create_factory:nectar minecraft:sugar
+create_factory:nectar_apple | create:filling | create:filling create_factory:nectar create_factory:nectar_apple minecraft:apple neoforge:single
+create_factory:nectar_glazed_berries | create:filling | create:filling create_factory:nectar create_factory:nectar_glazed_berries minecraft:sweet_berries neoforge:single
+create_factory:ruby_chocolate_apple | create:filling | create:filling create_confectionery:ruby_chocolate create_factory:ruby_chocolate_apple minecraft:apple neoforge:mod_loaded neoforge:single
+create_factory:ruby_chocolate_roll | create:filling | create:filling create_confectionery:ruby_chocolate create_factory:ruby_chocolate_roll minecraft:bread neoforge:mod_loaded neoforge:single
+create_factory:ruby_chocolate_waffle | create:filling | create:filling create_confectionery:ruby_chocolate create_factory:ruby_chocolate_waffle create_factory:waffle neoforge:mod_loaded neoforge:single
+create_factory:shaped_jar/craft_black_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:black_jar minecraft:black_dye minecraft:crafting_shaped minecraft:glass
+create_factory:shaped_jar/craft_blue_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:blue_jar minecraft:blue_dye minecraft:crafting_shaped minecraft:glass
+create_factory:shaped_jar/craft_brown_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:brown_jar minecraft:brown_dye minecraft:crafting_shaped minecraft:glass
+create_factory:shaped_jar/craft_cyan_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:cyan_jar minecraft:crafting_shaped minecraft:cyan_dye minecraft:glass
+create_factory:shaped_jar/craft_gray_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:gray_jar minecraft:crafting_shaped minecraft:glass minecraft:gray_dye
+create_factory:shaped_jar/craft_green_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:green_jar minecraft:crafting_shaped minecraft:glass minecraft:green_dye
+create_factory:shaped_jar/craft_light_blue_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:light_blue_jar minecraft:crafting_shaped minecraft:glass minecraft:light_blue_dye
+create_factory:shaped_jar/craft_light_gray_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:light_gray_jar minecraft:crafting_shaped minecraft:glass minecraft:light_gray_dye
+create_factory:shaped_jar/craft_lime_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:lime_jar minecraft:crafting_shaped minecraft:glass minecraft:lime_dye
+create_factory:shaped_jar/craft_magenta_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:magenta_jar minecraft:crafting_shaped minecraft:glass minecraft:magenta_dye
+create_factory:shaped_jar/craft_orange_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:orange_jar minecraft:crafting_shaped minecraft:glass minecraft:orange_dye
+create_factory:shaped_jar/craft_pink_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:pink_jar minecraft:crafting_shaped minecraft:glass minecraft:pink_dye
+create_factory:shaped_jar/craft_purple_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:purple_jar minecraft:crafting_shaped minecraft:glass minecraft:purple_dye
+create_factory:shaped_jar/craft_red_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:red_jar minecraft:crafting_shaped minecraft:glass minecraft:red_dye
+create_factory:shaped_jar/craft_white_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:white_jar minecraft:crafting_shaped minecraft:glass minecraft:white_dye
+create_factory:shaped_jar/craft_yellow_jar | minecraft:crafting_shaped | create:iron_sheet create_factory:yellow_jar minecraft:crafting_shaped minecraft:glass minecraft:yellow_dye
+create_factory:spread | create:mixing | create:chocolate create:mixing create_factory:spread ecologics:walnut minecraft:sugar neoforge:mod_loaded neoforge:single
+create_factory:spread_apple | create:filling | create:filling create_factory:spread create_factory:spread_apple minecraft:apple neoforge:mod_loaded neoforge:single
+create_factory:spread_roll | create:filling | create:filling create_factory:spread create_factory:spread_roll minecraft:bread neoforge:mod_loaded neoforge:single
+create_factory:spread_waffle | create:filling | create:filling create_factory:spread create_factory:spread_waffle create_factory:waffle neoforge:mod_loaded neoforge:single
+create_factory:sweet_berries_jam | create:mixing | create:mixing create_factory:sweet_berries_jam minecraft:sugar minecraft:sweet_berries
+create_factory:sweet_berries_jam_roll | create:filling | create:filling create_factory:sweet_berries_jam create_factory:sweet_berries_jam_roll minecraft:bread neoforge:single
+create_factory:sweet_berries_jam_waffle | create:filling | create:filling create_factory:sweet_berries_jam create_factory:sweet_berries_jam_waffle create_factory:waffle neoforge:single
+create_factory:uncooked_waffle | create:pressing | create:pressing create_factory:cake_paste create_factory:uncooked_waffle
+create_factory:waffle | minecraft:smoking | create_factory:uncooked_waffle create_factory:waffle minecraft:smoking
+create_factory:white_chocolate_apple | create:filling | create:filling create_confectionery:white_chocolate create_factory:white_chocolate_apple minecraft:apple neoforge:mod_loaded neoforge:single
+create_factory:white_chocolate_roll | create:filling | create:filling create_confectionery:white_chocolate create_factory:white_chocolate_roll minecraft:bread neoforge:mod_loaded neoforge:single
+create_factory:white_chocolate_waffle | create:filling | create:filling create_confectionery:white_chocolate create_factory:waffle create_factory:white_chocolate_waffle neoforge:mod_loaded neoforge:single

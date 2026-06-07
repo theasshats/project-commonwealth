@@ -1,0 +1,95 @@
+# create_factory-0.7a-1.21.1
+
+## mod metadata (id / version / deps)
+license="MIT License"
+modId="create_factory" #mandatory
+version="0.7a-1.21.1" #mandatory
+displayName="Create: Factory" #mandatory
+modId="neoforge" #mandatory
+versionRange="[21.1.228,)" #mandatory
+modId="minecraft"
+versionRange="[1.21.1]"
+modId="create"
+versionRange="[6.0.8,6.1.0)"
+modId="create_confectionery"
+modId="ecologics"
+
+## blocks
+create_factory:black_jar
+create_factory:blue_jar
+create_factory:brown_jar
+create_factory:cyan_jar
+create_factory:glow_berries_jam
+create_factory:gray_jar
+create_factory:green_jar
+create_factory:light_blue_jar
+create_factory:light_gray_jar
+create_factory:lime_jar
+create_factory:magenta_jar
+create_factory:nectar
+create_factory:orange_jar
+create_factory:pink_jar
+create_factory:purple_jar
+create_factory:red_jar
+create_factory:spread
+create_factory:sweet_berries_jam
+create_factory:white_jar
+create_factory:yellow_jar
+
+## items
+create_factory:black_jar
+create_factory:blue_jar
+create_factory:brown_jar
+create_factory:cake_paste
+create_factory:caramel_apple
+create_factory:caramel_roll
+create_factory:caramel_waffle
+create_factory:chocolate_apple
+create_factory:chocolate_roll
+create_factory:chocolate_waffle
+create_factory:cyan_jar
+create_factory:dark_chocolate_apple
+create_factory:dark_chocolate_roll
+create_factory:dark_chocolate_waffle
+create_factory:glow_berries_jam_bucket
+create_factory:glow_berries_jam_roll
+create_factory:glow_berries_jam_waffle
+create_factory:gray_jar
+create_factory:green_jar
+create_factory:honey_glazed_berries
+create_factory:honey_roll
+create_factory:honey_waffle
+create_factory:light_blue_jar
+create_factory:light_gray_jar
+create_factory:lime_jar
+create_factory:magenta_jar
+create_factory:nectar_apple
+create_factory:nectar_bucket
+create_factory:nectar_glazed_berries
+create_factory:orange_jar
+create_factory:pink_jar
+create_factory:purple_jar
+create_factory:red_jar
+create_factory:ruby_chocolate_apple
+create_factory:ruby_chocolate_roll
+create_factory:ruby_chocolate_waffle
+create_factory:spread_apple
+create_factory:spread_bucket
+create_factory:spread_roll
+create_factory:spread_waffle
+create_factory:sweet_berries_jam_bucket
+create_factory:sweet_berries_jam_roll
+create_factory:sweet_berries_jam_waffle
+create_factory:uncooked_waffle
+create_factory:waffle
+create_factory:white_chocolate_apple
+create_factory:white_chocolate_roll
+create_factory:white_chocolate_waffle
+create_factory:white_jar
+create_factory:yellow_jar
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+

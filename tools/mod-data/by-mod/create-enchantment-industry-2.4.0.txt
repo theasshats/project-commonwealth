@@ -1,0 +1,91 @@
+# create-enchantment-industry-2.4.0
+
+## mod metadata (id / version / deps)
+license="LGPL-3.0-or-later"
+modId="create_enchantment_industry"
+version="2.4.0"
+displayName="Create: Enchantment Industry"
+modId="neoforge"
+versionRange="[21.1.0,)"
+modId="minecraft"
+versionRange="[1.21.1, 1.22)"
+modId="create"
+versionRange="[6.0.10,)"
+modId="create_dragons_plus"
+versionRange="[1.11.0,)"
+modId="apothic_enchanting"
+versionRange="[1.5.3,)"
+modId="apotheosis"
+versionRange="[8.5.4,)"
+modId="apothic_spawners"
+versionRange="[1.3.4,)"
+modId="sable"
+versionRange="[1.2.2,)"
+modId="touhou_little_maid"
+versionRange="[1.2.0,)"
+
+## blocks
+create_enchantment_industry:affix_augmentor
+create_enchantment_industry:apotheotic_essence
+create_enchantment_industry:blaze_enchanter
+create_enchantment_industry:blaze_forger
+create_enchantment_industry:brass_bookshelf
+create_enchantment_industry:classic_blaze_enchanter
+create_enchantment_industry:creative_bookshelf
+create_enchantment_industry:crystal_essence
+create_enchantment_industry:ender_woven_bag
+create_enchantment_industry:experience
+create_enchantment_industry:experience_hatch
+create_enchantment_industry:experience_lantern
+create_enchantment_industry:gem_cutter
+create_enchantment_industry:grindstone_drain
+create_enchantment_industry:infused_dragon_breath
+create_enchantment_industry:infuser
+create_enchantment_industry:mechanical_grindstone
+create_enchantment_industry:printer
+create_enchantment_industry:super_experience_block
+
+## items
+create_enchantment_industry:affix_augmentor
+create_enchantment_industry:apotheotic_affix_template
+create_enchantment_industry:apotheotic_essence_bucket
+create_enchantment_industry:blaze_enchanter
+create_enchantment_industry:blaze_forger
+create_enchantment_industry:blazes_enchanting_handbook
+create_enchantment_industry:brass_affix_template
+create_enchantment_industry:brass_bookshelf
+create_enchantment_industry:classic_blaze_enchanter
+create_enchantment_industry:creative_bookshelf
+create_enchantment_industry:crystal_affix_template
+create_enchantment_industry:crystal_essence_bucket
+create_enchantment_industry:enchanting_template
+create_enchantment_industry:ender_woven_bag
+create_enchantment_industry:experience_bucket
+create_enchantment_industry:experience_cake
+create_enchantment_industry:experience_cake_base
+create_enchantment_industry:experience_cake_slice
+create_enchantment_industry:experience_hatch
+create_enchantment_industry:experience_lantern
+create_enchantment_industry:gem_cutter
+create_enchantment_industry:grindstone_drain
+create_enchantment_industry:incomplete_brass_bookshelf
+create_enchantment_industry:infused_dragon_breath_bucket
+create_enchantment_industry:infuser
+create_enchantment_industry:mechanical_grindstone
+create_enchantment_industry:printer
+create_enchantment_industry:super_enchanting_template
+create_enchantment_industry:super_experience_block
+create_enchantment_industry:super_experience_nugget
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+block/lightning_rods :: {"values": ["minecraft:lightning_rod", {"id": "#friendsandfoes:lightning_rods", "required": false}]}
+block/storage_blocks :: {"values": ["create_enchantment_industry:super_experience_block"]}
+fluid/dragon_breath :: {"values": [{"id": "create_enchantment_industry:infused_dragon_breath", "required": false}, {"id": "create_enchantment_industry:flowing_infused_dragon_breath", "required": false}]}
+item/buckets :: {"values": ["create_enchantment_industry:experience_bucket", {"id": "create_enchantment_industry:apotheotic_essence_bucket", "required": false}, {"id": "create_enchantment_industry:crystal_essence_bucket", "required": false}, {"id": "create_enchantment_industry:infused_dragon_breath_bucket", "required": false}]}
+item/buckets/dragon_breath :: {"values": [{"id": "create_enchantment_industry:infused_dragon_breath_bucket", "required": false}]}
+item/nuggets :: {"values": ["create_enchantment_industry:super_experience_nugget"]}
+item/storage_blocks :: {"values": ["create_enchantment_industry:super_experience_block"]}
+point_of_interest_type/lightning_rods :: {"values": ["minecraft:lightning_rod", {"id": "#friendsandfoes:lightning_rods", "required": false}]}

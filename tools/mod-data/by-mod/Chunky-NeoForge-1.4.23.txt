@@ -1,0 +1,23 @@
+# Chunky-NeoForge-1.4.23
+
+## mod metadata (id / version / deps)
+license="GNU GPLv3"
+modId="chunky"
+version="1.4.23"
+displayName="Chunky"
+modId="neoforge"
+versionRange="[21.0-beta,)"
+modId="minecraft"
+versionRange="[1.21,1.22)"
+
+## blocks
+
+
+## items
+
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+
