@@ -20,7 +20,7 @@ name: Keep the packwiz index in sync
 #     conservatively: only PURE HASH DRIFT on already-indexed files is auto-committed.
 #     If the file LIST changed (entries added/removed) we bail and leave the red
 #     "packwiz index" check for a human, so the .packwizignore guard still stands
-#     (a new dir like site/ getting vacuumed in must not be silently committed).
+#     (a new un-ignored top-level dir getting vacuumed in must not be silently committed).
 #
 # One workflow + per-PR concurrency means nothing races a push to a branch. No
 # infinite loop: pushes use GITHUB_TOKEN, which doesn't re-trigger pull_request,
@@ -214,8 +214,8 @@ jobs:
           #           fixable   → staleness confined to known pack dirs (the author forgot
           #                       `packwiz refresh`); auto-commit the regenerated index.
           #           violation → refresh pulled in a new top-level path that needs a
-          #                       .packwizignore entry (the classic site/ case). We do NOT
-          #                       auto-commit (it'd vacuum the dir in) and stay green —
+          #                       .packwizignore entry. We do NOT auto-commit (it'd
+          #                       vacuum the dir in) and stay green —
           #                       pr-checks' packwiz index job carries the red for the human.
           verdict="$(bash scripts/index-guard.sh)" || true
           echo "index-guard verdict: $verdict"

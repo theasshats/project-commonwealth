@@ -121,7 +121,6 @@ See [`tools/README.md`](tools/README.md) for the user-facing editor docs and tro
 │   └── editor-src/        # Editor source — Go + HTML/CSS/JS
 ├── docs/                  # Human-facing documentation (see docs/README.md for the index)
 ├── scripts/               # Build helpers (CI runs these; you almost never run them directly)
-├── site/                  # Player-facing website (Go) — runs on ishimura, not in CI; see site/README.md
 └── .github/workflows/     # CI: PR merge-gating checks, index sync, release build, editor build, ground-truth digest
 ```
 
@@ -152,7 +151,9 @@ If the editor doesn't work for you (no Windows machine, can't install Java, what
 
 ## Player website
 
-A small player-facing site lives in [`site/`](site/), served at
+The player-facing site lives in its **own repo** now —
+[`derpack-org/derpack-site`](https://github.com/derpack-org/derpack-site)
+(split out of this repo's former `site/` directory). It's served at
 **`derpack-x.ishimura.xyz`** (and `modpack.ishimura.xyz`): how to join, what's in
 the pack, rules, FAQ, a live server-status badge, and a download button that
 auto-resolves to the latest release's Prism installer (so it never points at a
@@ -161,12 +162,9 @@ can be filed without a GitHub account — keeping the site the single player tou
 
 It's a self-contained Go binary that embeds the static site and exposes
 `/api/status` (Minecraft Server List Ping) and `/api/release` (GitHub Releases
-lookup). It runs **on the ishimura box** behind the Cloudflare Tunnel + Caddy
-stack and is **deployed by hand, not by this repo's CI**. Build, run, and deploy
-details are in [`site/README.md`](site/README.md).
-
-To edit the site's content, change the files under `site/web/` and redeploy on
-the box (`docker compose up -d --build`), then purge the Cloudflare cache.
+lookup — which still reads **this** repo's releases). It runs **on the ishimura
+box** behind the Cloudflare Tunnel + Caddy stack and is **deployed by hand, not
+by this repo's CI**. Build, run, and deploy details are in that repo's README.
 
 ---
 

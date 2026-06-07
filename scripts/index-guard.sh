@@ -7,8 +7,8 @@
 #   fresh      (exit 0) — index already up to date.
 #   fixable    (exit 0) — stale, but only within KNOWN pack dirs; safe to auto-commit.
 #   violation  (exit 1) — refresh pulled files in under a NEW top-level path (a dir
-#                         that should be .packwizignore'd, e.g. site/), OR refresh
-#                         touched files beyond the generated index — needs a human.
+#                         that should be .packwizignore'd), OR refresh touched files
+#                         beyond the generated index — needs a human.
 #
 # Callers:
 #   pr-checks.yml  — the "packwiz index" gate. Its exit code IS the check result, so
