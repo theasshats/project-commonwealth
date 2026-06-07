@@ -24,3 +24,14 @@ LEAVE — single-item combat test prop (target dummy); no processing, no meaning
 ## spyglass_improvements   [anchors: support/client (1)]
 LEAVE — client-side zoom/overlay mod; 0 items, 0 methods. Existing rows: none.
 
+## zombiemoon   [anchors: survival (1)]
+Existing rows cover: M-02 REJECT (no unique drops — jar confirmed loot=no, vanilla rotten flesh only); M-11 ACCEPT (1v1 split, weak); M-34 ACCEPT (2v0, mutants harder so combat specialist supplies rare drops).
+
+The M-34 ACCEPT (row at times_suggested=2) has a structural weakness: the dossier confirms `loot=no` and no unique drops — the mod adds no new items to the loot tables, so there is no distinct "rare drop" a combat specialist can supply that a regular player couldn't also get. M-34 requires an actual product the combat route produces for trade. With purely vanilla rotten flesh, the distinction collapses.
+
+- CHALLENGE | from: zombiemoon mutant mobs (vanilla rotten flesh, loot=no confirmed) | via: emergent trade | to: economy | motif: M-34 | verdict: REJECT | hook: M-34 requires a distinct combat-route product for trade; zombiemoon adds no new drops (loot=no, jar-grounded), so the "specialist supplier" role is hollow — any player who kills zombies gets the same rotten flesh; no differentiation exists
+
+OK — the M-11 ACCEPT (spirit_fire on vanilla rotten flesh) is borderline weak for the same reason (not a distinct drop), but it's a very minor Ask and has survived multiple rounds. No new proposals: the mod has zero items and truly zero material surface beyond the harder mob behaviors. One survived ACCEPT (M-34) should become REJECT per above; no new weaves are possible without custom loot-table seeding, which would be a pack-design action, not a mod weave.
+
+
+

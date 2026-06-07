@@ -21,3 +21,7 @@ LEAVE — ballistics API with no items/blocks/methods; pulled transitively by Cr
 LEAVE — biome placement framework, no items/blocks; no surface to weave.
 
 ## illagerinvasion   [anchors: survival (1)]
+- NEW | from: illagerinvasion:illusionary_dust | via: create:mixing (mix illusionary_dust + galosphere:allurite_shard → a glamer-attuned powder that catalyzes an Ars imbuement tier) | to: magic | motif: M-07 | power: mid | tone: ok | verdict: ACCEPT | hook: allurite grounds the illusion — the attunement catalyst can't work without a fragment of reality anchoring the Illusioner's residue; Create mixing is the neutral blending step between two magic-adjacent worlds
+- NEW | from: illagerinvasion drops (hallowed_gem, illusionary_dust) as raid outputs | via: minecolonies colony guard-hall or barracks research unlock (a colony's guard training researches access to a cheaper Imbuing Table substitute, trading the boss-drop fork vs. colony-labor fork) | to: economy | motif: M-28 | power: endgame | tone: ok | verdict: ACCEPT | hook: a settlement that trains enough guards earns the right to run its own enchantment-upgrading ritual — the colony route to what normally costs an Invoker kill, mirroring the §3 high-tier fork
+
+## drones   [anchors: aeronautics (1)]
