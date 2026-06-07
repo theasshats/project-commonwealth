@@ -107,8 +107,19 @@ pack's silver is Occultism's, so those recipes route `create:crushed_raw_silver`
   (8) — clayworks / mysticalagriculture not installed.
 - `create_ironworks:misc/compat/better_smithing_upgrades/*` (8) — not installed.
 - `createadditionallogistics` network_monitor (computercraft not installed),
-  `cmpackagecouriers:*` (references uninstalled `create_factory_logistics`),
+  `cmpackagecouriers:deploying/jar_plane` (references uninstalled
+  `create_factory_logistics:copper_jar_package_8x8`),
   `fxntstorage:*`, `s_a_b:glassarmor` — target mods/deps not installed.
+- `cmpackagecouriers:portable_stock_ticker` + `_clear` — reference
+  `cmpackagecouriers:portable_stock_ticker`, which is **unregistered** in 2.3.0
+  (`Unknown registry key`). Recipes for a non-existent own-item; upstream-broken,
+  not overridable (no valid result/ingredient to point at).
+- `createaddition:compat/jeed/shocking`, `cold_sweat:compat/jeed/{warmth,
+  frigidness}` (~6 lines) — JEED (Just Enough Effect Descriptions) info entries
+  shaped `{"id":"…"}` where the codec wants a bare string. **Cosmetic** (JEI
+  effect-description tooltips only, no craftable); #119 flagged them "low
+  stakes." Left as-is; could be re-authored with string effect ids if a clean
+  log is wanted.
 - `irons_spellbooks:test/ring_gen_break_me` — upstream dev/test artifact.
 - `create_compressed:splashing/oreganized/crushed_raw_lead_pile` — oreganized
   not installed; the recipe skips ("not a json object" under its absent-mod
@@ -174,3 +185,66 @@ pack's silver is Occultism's, so those recipes route `create:crushed_raw_silver`
 If a quiet boot is ever wanted, the tractable config-side levers are: the
 Curios slot config, the KleeSlabs vertical-slab list, and pruning the
 `cactus_extra` Every Compat wood set. The rest is upstream.
+
+## Re-check procedure (run each stabilization release)
+
+Mods update every feature wave, so the boot log can regress: an override's
+target id can change out from under it, or a freshly-updated mod can ship a new
+malformed recipe/loot table. The stabilization-release perf re-checks
+(#200-204, gate #205) carry a boot-log hygiene rider that points here. This is
+the runbook for a future instance doing that rider.
+
+**Inputs:** a fresh `latest.log` from a playtest boot of the release being
+checked (ask the maintainer to attach one — the sandbox can't launch the game),
+and this branch's `mods/*.pw.toml` (for jar URLs). The sandbox **can** reach
+`cdn.modrinth.com` / CurseForge, so jars can be downloaded and inspected.
+
+**1. Pull the drop lists from the log.**
+```
+grep -E 'RecipeManager.*(Error parsing|Parsing error|Skipping recipe)' latest.log
+grep -E "LootDataType.*Couldn't parse" latest.log
+grep -E "TagLoader.*missing following references" latest.log
+```
+
+**2. Confirm the recovered overrides still clear (each must return 0).** These
+are the ids this pass fixed under `kubejs/data/`; if any reappears, a mod update
+re-broke it — re-author against the current jar.
+```
+recipe_integration:farm_and_charm/mincer/(tfmg|occultism|create|irons_spellbooks|vinery)
+create_compressed:(splashing/(crushed_raw_(copper|gold|iron|zinc)|wheat|galosphere)|mixing/dough_block|sandpaper)
+silver_ingot_compat_galosphere            # smelt/blast → occultism:silver_ingot
+create:splashing/galosphere/crushed_raw_silver   # → occultism:silver_nugget
+create_compressed:splashing/createnuclear/crushed_uranium_pile   # → createnuclear:uranium_powder
+trailandtales_delight:.../cherry_petal_from_cherry_sapling
+createtreadmill .../treadmill (loot)      # drops createtreadmill:treadmill
+samurai_dynasty .../{komainu,kawauso,tanuki}_statue (loot)
+stoneholm .../cleric (loot)
+trailandtales_delight pottery_cooking_pot + lantern_fruits (loot)
+smokeleafindustries:has_structure/smokeleaf_house_biomes (tag)
+```
+
+**3. Every remaining ERROR must map to an entry in this file.** Diff the
+log's drop list against the "Accepted as-is" + "upstream-broken" sections
+above. A drop that isn't documented here is the signal to act:
+- **Installed mod, real content** (a recipe/loot for a mod in `mods/`): triage
+  per the #119/#120 method — download the pinned jar from its `.pw.toml` URL,
+  read the intended `data/<mod>/recipe|loot_table/...` JSON, and re-author a
+  corrected override under `kubejs/data/` (fix the schema/typo/namespace; for a
+  Create recipe, match the Create 6 shape — `id`/`count`/`chance` results,
+  `neoforge:single` fluid). Add a `## Playtest` line for it to the PR.
+- **Absent-mod / cosmetic / unregistered-item-upstream**: it's benign — add a
+  one-line entry to the relevant "Accepted as-is" section here so the next
+  re-check doesn't re-investigate it.
+
+**4. Watch for these specific regression shapes** (all seen at least once here):
+a mod renaming a metal id (Galosphere silver→palladium); a loot function
+removed in a Minecraft/loader bump (`set_nbt`→`set_components`,
+`farmersdelight:copy_meal`→`minecraft:copy_components`); a Create schema bump
+(`{"item":...}`→`{"id":...}` results, old `{"fluid","amount"}`→`neoforge:single`
+fluid ingredients); a Fabric-only resource condition that the Fabric API layer
+may or may not resolve depending on whether `fabric_resource_conditions_api_v1`
+is present (Snowy Spirit). When a recovered id moves, re-point the override, not
+the symptom.
+
+**Pass = every ERROR/`Couldn't parse`/missing-tag line in the fresh log maps to
+either a fixed override (step 2, now 0) or a documented entry here (step 3).**
