@@ -13,6 +13,17 @@
 
 ---
 
+## Design inspiration — Eco
+
+The loop's north star is **[Eco](https://play.eco/)** (Strange Loop Games) — the collaborative-economy
+survival game where a server of players must build a civilization together, **specialization is forced**
+so nobody can do everything alone, and the **economy is player-run and necessary**, not decorative. The
+ore-gen scarcity layer is already named the "Eco foundation" in `docs/ROADMAP.md` (Phase 1). What
+Derpack borrows: *forced specialization → emergent interdependence → a real player economy*. Where it
+reaches Eco's effect by different means (regional resource scarcity + locked production routes vs. Eco's
+hard skill-point cap) and where it deliberately diverges (no civilization-wide deadline; no formal
+governance) is called out inline and in **Open / unsettled**.
+
 ## The core loop
 
 The pack isn't five parallel things. It's one loop, and naming the parts is secondary to seeing the
@@ -32,7 +43,10 @@ flow:
   get filled by trade.
 
 The whole point: **nobody is self-sufficient**, so specialization and trade *emerge* from the mechanics
-rather than being forced by an economy mod. (~10 players, ~3 needed to cover all production.)
+rather than being forced by an economy mod. (~10 players, ~3 needed to cover all production.) Unlike
+Eco's civilization-wide common goal (the meteor deadline), the cooperation here is **bilateral trade
+interdependence, not a shared win condition** — a persistent sandbox, by design (freshness comes from
+content updates, not resets — `docs/DESIGN.md`).
 
 ---
 
@@ -56,7 +70,9 @@ So "seasons" shows up as an *input* to scarcity and to survival, not as a standa
 Pressure's job is to **generate demand** — it's *why* anyone bothers to produce. No pressure → producers
 make things nobody needs and the trade loop never turns. It has **two faces**:
 
-- **Survival (environmental).** Temperature (Cold Sweat), hunger and diet variety (Spice of Life), the
+- **Survival (environmental).** Temperature (Cold Sweat), hunger and **diet variety (Spice of Life — a
+  direct Eco parallel: Eco rewards varied nutrition with skill points; here diet variety is its own
+  ongoing demand, which pulls on farming/cooking production)**, the
   climate. *(Renamed from "Survival & seasons" → **Survival**, since seasons is now a driver, not a
   co-headline.)* Seasons feeds this — winter is cold pressure.
 - **Danger (the hostile world).** The world is **dangerous to exist in and dangerous to explore** —
@@ -93,6 +109,14 @@ using and no one route is self-sufficient.
 2. **Locked exclusives.** Each route (Create-tech, MineColonies, Magic) holds outputs **only it can
    make**. A Create master still *must* trade with a colony player or a magic specialist for their
    exclusives, and vice-versa.
+
+> **Locked exclusives are the load-bearing wall, because our specialization is *soft*.** Eco enforces
+> specialization with a hard skill-point cap — you *cannot* learn everything. Derpack's interdependence
+> is softer: scarcity + time make self-sufficiency *expensive*, but nothing stops a dedicated player (or
+> a tight bloc) from eventually covering every route, at which point the trade loop **erodes**. Locked
+> outputs are the closest thing to Eco's hard wall — the one mechanic that keeps interdependence from
+> decaying as players scale. So they're not just one trade incentive among several; they're *the*
+> anti-erosion device, and should be defended as such when tuning recipes.
 
 **The high-tier fork.** Top-end items require *either* a **boss drop** *or* a **MineColonies-crafted
 part** — two routes to the same goods. Worked example: a **high-tier Aeronautics controller** needs a
@@ -177,6 +201,21 @@ obvious: a healthy mod is usually *something you produce that pressure demands a
 - **Bosses — settled as dual-role.** They're *both* a pressure (the dangerous world — §2) and a
   high-tier production route (§3), the same way aeronautics straddles production and distribution. Not a
   contradiction; the loop allows a thing to occupy two slots.
+- **Ecological / production-consequence pressure (the big Eco idea we *don't* have — decision needed).**
+  Eco's signature mechanic is that **your production damages the shared world** — pollution,
+  deforestation, CO2, tailings — so over-industrialization is a *collective* cost and the economy is in
+  tension with the ecology. Derpack's pressure is entirely **external** (climate, mobs, scarcity); none
+  is **self-inflicted by industry**. The closest the loop gets is "consumption draws down *your own*
+  stock" (§5), not damage to the *shared* world. Adding a production-consequence pressure — Create-scale
+  extraction degrading the local biome, industry feeding the Cold Sweat temperature layer, mining
+  aggravating regional scarcity — would close the loop far more tightly (scarcity becomes *dynamic*,
+  worsened by the producers themselves) and create a real Create-vs-world tension. **Caveat:** it's the
+  heaviest lift here and may not suit a fantasy-industrial Create pack. **Open decision — adopt, scope
+  down, or reject.**
+- **Dynamic pricing / price discovery.** Eco's economy feels alive because players set and compete on
+  prices (supply/demand). Confirm the economy layer (Numismatics + Trading Floor) supports *dynamic*
+  pricing rather than flat fixed-price vendors — a fixed-price economy is much flatter than the Eco
+  model. (No formal governance/laws layer is planned — a deliberate divergence for a small PvPvE group.)
 - **Implementation gap.** The recipe-difficulty rebalance, the MineColonies locked-outputs / cheaper-
   basics tuning, and boss/colony high-tier gating are all **design intent** — the issues/work to build
   them aren't scoped yet.
