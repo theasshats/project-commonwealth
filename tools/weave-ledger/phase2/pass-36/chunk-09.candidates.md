@@ -154,6 +154,22 @@ The dossier's conclusion is correct but let's verify against the motif palette:
 
 - from: gnkinetics gears as Create spine deepening | via: native Create spin (no weave needed) | verdict: REWORK note — the dossier's "leave — a deepening of the Create spine" conclusion was partially correct for magic/economy/survival, but M-24 into aeronautics is a genuine second anchor that was missed. The aeronautics arm IS the economy's logistics arm, so this also earns gnkinetics an economy-adjacent tag. The correct verdict is: gnkinetics gains aeronautics as a 2nd anchor via M-24 planetary/worm gear → drivetrain seams.
 
+## trading_floor   [anchors: Create, economy (2)]
+
+Already at 2 anchors. Review existing connections, then look for new/richer links.
+
+REWORK: OK — connections sound. The Trading Depot is a Create block (hard dep) that automates villager trades — Create + economy is exactly the right arc and the two anchors are load-bearing, not arbitrary. The dossier's M-08 note is slightly imprecise (the depot itself doesn't *mint* coin — it converts goods into trade outputs), but the functional arc is correct.
+
+New candidates:
+
+- from: trading_floor:trading_depot | via: create:deploying (applying a villager-trade ticket/filter onto the depot) | to: Create | motif: M-20 | power: mid | tone: ok | verdict: REJECT | reason: The depot already fully exists as a Create component — adding a deploying-application upgrade layer on top is unnecessarily complex for what is already a Create machine. M-20 is for upgrading a base into a more capable version; the depot doesn't need an upgrade path, it IS the upgraded version of manual villager interaction. Over-engineering a 2-anchor mod.
+
+- from: trading_floor automated emerald/book output | via: aeronautics cargo hold | to: aeronautics | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: A Create-automated Trade Depot producing emeralds or enchanted books at volume is exactly the bulk good that needs an aeronautics logistics network to distribute — one settlement's trading post serves another's economy via airship cargo run. M-31 (logistics-required bulk good). The volume of automated trade output makes it natural for aeronautics to move rather than walk.
+
+- from: trading_floor:trading_depot (enabling automated villager trait farms) | via: MineColonies villager hall as the supply source | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: A MineColonies colony with a Tavern/market keeps a population of specialist villagers — pairing the Trading Depot directly adjacent to the colony's villager housing makes the colony the organic supply node for automated trade. Colony builder → villager supply → Trade Depot → Create belt output. M-28 (colony route) feeds the economy arm. The colony player's settlement becomes the logistics hub.
+
+
+
 
 
 

@@ -109,3 +109,23 @@ REWORK: OK — connections sound. Steel armor blocks are constructed via create:
 
 - LEAVE — genuine zero-content client compat shim. InvTweaks keybind emulation layer over IPN; no items, no blocks, no methods, no loot. Nothing to weave.
 
+## meadow   [anchors: survival (1)]
+
+Rich content mod with 4 registered methods (meadow:cheese, meadow:cooking, meadow:felting, meadow:woodcutting), loot=yes, alpine biomes, salt ore, cheese pipeline. Strong 2nd-anchor candidates.
+
+- from: meadow:alpine_salt (c:tag material from alpine_salt_ore) | via: create:milling (grind salt ore → salt + mineral byproduct) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: salt ore runs through a Create millstone — getting culinary-grade salt from the alpine mountains requires a small tech step, and the mineral byproduct (gypsum/calcite dust) becomes a Create feedstock; connects the pastoral cheese-making region to the Create processing web
+- from: meadow:cheese_wheel / alpine cheese variants | via: create_cheese:maturing (the cheese maturation method is already in the palette!) | to: create/economy | motif: M-35 | power: mid | tone: ok | verdict: ACCEPT | hook: meadow cheese wheels can age in a Create-cheese maturing rack — fresh-pressed alpine cheese gains value over time, creating both a maturation specialist role and a Create tie that the methods palette explicitly supports; the aged product commands a premium in the player economy
+- from: meadow:chambray_wool (felted textile) | via: meadow:felting → then create:mechanical_crafting (assembling textile + frame for a glider wing) | to: create | motif: M-12 | power: mid | tone: ok | verdict: ACCEPT | hook: chambray felt from alpine wool is a structural textile — it becomes wing fabric in vc_gliders' reinforced paper process or a Create-assembled component, linking pastoral wool production to the personal-flight tech tier
+- from: meadow:alpine_salt | via: farmersdelight:cooking / extradelight:evaporator — salt is a preservation/seasoning input in cooking chains | to: survival | motif: M-12 | power: everyday | tone: ok | verdict: REJECT | reason: meadow is already anchored to survival; this would deepen within the same anchor, not add a second one. The salt-in-cooking link is real and valuable but doesn't extend the loop to a new system — worth noting for recipe authoring but not a new anchor weave.
+- from: meadow:cheese_wheel (aged luxury dairy good) | via: minecolonies colony cook/farmer requests | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: a MineColonies colony cook requests cheese wheels as a luxury food supply — the alpine dairy specialist becomes the colony food supplier for the settlement tier; colony demand continuously pulls on cheese production, making the pastoral role economically durable
+- from: meadow:alpine_salt_ore (a worldgen ore in a specific alpine biome) | via: GTMOGS regional ore-gen (alpine biome = regional salt lock) | to: scarcity/economy | motif: M-30 | power: everyday | tone: ok | verdict: ACCEPT | hook: alpine salt is only found in meadow biomes — the regional scarcity foundation means salt (essential for food preservation/cooking chains) must be traded from players who settled in alpine terrain; one of the cleanest regional-gate candidates in the food web
+
+## txnilib   [anchors: support/library (1)]
+
+- LEAVE — genuine zero-content multiversion code library. No items, no blocks, no methods, no loot. Developer infrastructure for Txni's mods only.
+
+## durabilitytooltip   [anchors: support/client-QoL (1)]
+
+- LEAVE — genuine zero-content client UI mod. Numeric durability tooltip overlay; no items, no blocks, no methods, no loot. Nothing to weave.
+
+== CHUNK COMPLETE ==

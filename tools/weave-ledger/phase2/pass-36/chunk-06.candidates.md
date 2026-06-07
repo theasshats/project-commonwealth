@@ -148,6 +148,23 @@ LEAVE — "what-am-I-looking-at" client HUD overlay. No items, no blocks, no rec
 
 LEAVE — client-side sign-editing GUI enhancement for large-letter text. No items, no blocks, no recipe types. Pure UI utility for sign decoration. Genuine zero-content support mod.
 
+## t_and_t   [anchors: survival (1)]
+
+Power-read: 0 blocks, 0 items (structure worldgen only via cristellib). loot=yes — structures carry loot chests, spawn villagers + pillagers. 50+ structures: 16 biome-specific village variants, conquerable pillager forts/camps/towers, ocean sail-ships. The content surface is exclusively the loot tables and the structures' role as player destinations/trade hubs.
+
+Method-pull (loot-seed delivery): the village variants are natural economy anchors in the player world — they're where trade happens and where players encounter other players. The loot-seed delivery type is the right approach for this mod.
+
+- from: t_and_t village variants (16 biome-specific; natural trade-hub destinations in the world) | via: loot-seed — seed pack-specific Numismatics currency (minted coin) into village structure chests so discovering a new village nets a small starting stake in the player economy; a geographic pull that makes exploration economically relevant | to: economy | motif: M-08 | power: everyday | tone: ok — finding a village chest with a few minted coins is natural and intuitive; it's a loot-table edit, not an NPC vending machine | verdict: ACCEPT | hook: the biome village chests carry a small sample of minted coin — a player exploring a new region finds enough to start trading, anchoring travel to economic reward
+
+- from: t_and_t conquerable forts/pillager camps (danger structures, combat content) | via: loot-seed — seed a boss-key component or high-tier crafting reagent (e.g. a sealed crate holding a Create part, or a magic ritual scroll) into the fort's treasure chest, rewarding the conquest with a craft-progression unlock | to: create | motif: M-15 | power: mid | tone: ok — conquering a pillager stronghold finding a rare Create schematic or sealed part is coherent adventure reward | verdict: ACCEPT | hook: clearing the pillager fort's vault rewards a sealed canister of a needed Create alloy — combat with exploration pays into the tech supply chain
+
+- from: t_and_t ocean sail-ships (ocean structures, maritime) | via: loot-seed — seed TFMG fuel canisters or Aeronautics supply items into ship cargo holds; maritime structures carrying maritime fuel | to: aeronautics | motif: M-26 | power: everyday | tone: ok — an old sail-ship wreck containing barrels of TFMG fuel/lubricant is intuitive; maritime → ship fuel | verdict: ACCEPT | hook: looting a ghost-ship's hold turns up barrels of old fuel — exploration on the sea feeds the aeronautics supply chain
+
+- from: t_and_t village variants (economy/trade hub framing) | via: bare "sellable" link — village loot is sellable → economy | to: economy | motif: M-09 | power: everyday | tone: ok | verdict: REJECT | reason: M-09 is RETIRED. "Loot is sellable" is the ambient endpoint, not a weave. The M-08 coin-seeding candidate above is the correct demand-gating form.
+
+REWORK: The dossier's "economy via villagers/Numismatics — M-09 luxury-good → coin [MED]" incorrectly cites the retired M-09. The correct motif for coin-in-loot-chests is M-08 (player-minted currency) via loot-seed. This pass replaces the dossier's broken candidate with the correct formulation. New additions: M-15 (fort conquest → Create component loot-seed) and M-26 (ship hold → aeronautics fuel loot-seed).
+
+
 
 
 

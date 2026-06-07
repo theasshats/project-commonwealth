@@ -223,3 +223,57 @@ Create addon: a pipe bomb that detonates when a Create package is opened; can bo
 
 - LEAVE — novelty PvP prank addon (pipe bomb via Create packages); 4 items, no recipe type, no coherent 2nd anchor; forcing a magic or survival link would be arbitrary
 
+## lootjs   [anchors: support/library (1)]
+
+KubeJS addon for programmatic loot table modification. 0 blocks, 0 items, loot=no. Pure dev-utility scripting API.
+
+**Method-pull:** lootjs is itself the *enabler* of M-02 mob-drop weaves and loot-seed candidates elsewhere; it is not a content node. No player-facing items to route.
+
+**Verdict:** LEAVE — pure scripting library for loot-table modification; zero content surface; it enables other weaves but is not itself a weave target.
+
+- LEAVE — packdev scripting library for loot table rewriting; 0 blocks, 0 items; zero player content surface; it is the tool that enables loot-seed weaves authored on other mods, not itself a weave node
+
+## zombiemoon   [anchors: survival (1)]
+
+Mutants and Zombies — 7 hostile zombie/mutant mobs (Zombie Brute, Crawler, Spitter, Mutant Brute, etc.). 0 blocks, 0 items, loot=no. No unique drops surfaced in the jar.
+
+**Method-pull:** The dossier notes no unique drops or items — mobs use vanilla rotten-flesh-style drops. There is no unique reagent to weave. The loot=no flag means no loot tables to seed. This is a pure difficulty/variety mob mod.
+
+**Red-team:** Could we inject unique drops (LootJS-seeded) to create a weave? The briefing says "if a mod genuinely has no content surface, write LEAVE." The key word is "genuinely" — this mod has no items, no blocks, and no registered loot. Its contribution is spawning harder undead mobs. Those mobs use vanilla drops (rotten flesh, bones) that are already part of the loop. Inventing drops to route would be creating new content, not weaving existing content.
+
+**Verdict:** LEAVE — no unique drops, no items, no blocks, no loot tables; adding a weave here requires inventing content that doesn't exist; the mob difficulty contribution sits in survival (world pushing back), and vanilla drops route through existing weaves.
+
+- LEAVE — pure hostile-mob difficulty mod; 0 blocks, 0 items, loot=no; no unique drop or item to route; any weave would require inventing new content, not routing existing material
+
+## sky_whale_ship   [anchors: survival/adventure (1)]
+
+Four giant flying whale structures drifting across the sky with loot chests and secrets aboard. 0 registered blocks/items in the jar (content ships as structure/worldgen data), but loot is implied by the structures having chests. loot=no in the jar count, but real loot chests exist in the structure files.
+
+**The briefing specifically says: "do NOT LEAVE a loot-bearing structure mod just because it has no recipes — tag `via: loot-seed`."** Let me check: the dossier says "loot=no" but also "loot chests and hidden secrets on their backs." The jar count is loot=no because no loot tables are registered in the jar directly (they may be in data files), but the structures manifestly have chest loot. Treat it as loot-bearing.
+
+**Method-pull:**
+
+**Candidate 1 — Aeronautics destination (loot-seed + thematic, M-15/M-23-adjacent):**
+- Sky whales are a natural endpoint for Create Aeronautics airships — you fly up to board and raid them. If their loot tables drop aeronautics progression items (M-15 boss-key adjacent: a sky-whale-only structural component or rare block that feeds airframe construction), reaching them rewards the ship-builder specifically.
+- Power: mid-endgame (requires building a working airship to reach at altitude). This is a meaningful progression gate.
+- Tone: whimsical sky whales as airship-era exploration targets — coherent and thematically rich. "Of course the airship captain hunts sky whales for their rare structural bones."
+- Motif: M-15 (boss-key unlock) — the sky whale loot drops a unique airframe/structure component gating a specific Aeronautics recipe. This advances the aeronautics anchor via a loot-seed delivery.
+- Red-team: sky whales aren't bosses in the traditional sense (no boss bar, no fight — they're traversal set-pieces with onboard mobs). M-15 strictly targets boss drops as gate items. But the mechanic is identical in effect (reaching a difficult encounter yields a unique gating material). If M-15 is too strict, M-29 (cross-route dependency) could apply — but that's for recipe cross-dependencies, not loot gating. Closest motif fit is still M-15 used loosely. Record this.
+- Verdict: ACCEPT M-15 via loot-seed; note the motif application is extended beyond strict boss-kill to "difficult exploration encounter drops a gating component."
+
+**Candidate 2 — Economy via combat/exploration supply (M-34):**
+- Aerial explorers who reach sky whales trade their rare loot finds to ground-bound players. This is M-34 (combat-route supply — danger output farmed and traded).
+- But the sky whale isn't a combat boss; it's an exploration structure. The economy connection is ambient ("rare loot from hard-to-reach places is tradeable"). Without a specific unique item seeded into the loot table, this is M-09-flavored (sellable rarities) — which is REJECTED under the player-run economy rules as ambient endpoint, not a demand-gate.
+- Verdict: REJECT — without a specific seeded item that creates genuine demand-gating (someone needs that item to progress), this is ambient sell-for-coin, which is retired M-09 territory.
+
+**Candidate 3 — Magic via loot-seed (M-02 mob-drop reagent sink):**
+- The sky whale structures have onboard mobs (some hostile). If a unique mob aboard drops a magic reagent — e.g., a sky-whale-specific ether or aerial essence — it becomes a magic input obtainable only by reaching the whale.
+- Power: mid-endgame (requires airship). Tone: ok — a high-altitude creature carrying an aetheric essence is coherent.
+- Red-team: this requires inventing a new drop. The mod has no registered items. We're proposing the loot-seed injection of a foreign item (an Ars/Occultism reagent) into the whale's hostile mob drops. That's legitimate loot-seed work (via: loot-seed on the existing mob loot tables), but the item seeded would be from another mod — is this a weave on sky_whale_ship or on the magic mod? It's a loot-seed delivery on sky_whale_ship routing to magic. This is coherent per the briefing.
+- Motif: M-02 (mob-drop reagent sink — an isolated mob/boss drop is given a use as a magic input). But M-02 requires the drop to be a *magic input* — we'd be seeding a magic reagent into the whale-mob loot, not routing an existing whale drop into magic. This is actually the reverse: seeding a magic mod's item into the whale loot tables. That's not M-02 directly — M-02 routes an organic drop INTO magic. Here we'd be placing a magic item INTO the whale loot. Different direction. No clean motif applies.
+- Verdict: REJECT — loot-seeding a foreign magic item into whale loot is authoring a loot table, not a weave; there's no existing sky_whale_ship drop to route through a magic method; the right candidate (if any) is seeding the whale loot with an item that then routes somewhere, which requires M-15's gating structure.
+
+- from: sky_whale_ship structure loot tables | via: loot-seed | to: aeronautics | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: sky whales drift above the clouds; the only players who board them have built working Create Aeronautics ships — and the whales carry unique structural components (whale-bone framing, aerial cartilage blocks) that feed the highest-tier airframe recipes; the ship is its own unlock
+- from: sky_whale_ship onboard loot | via: emergent trade | to: economy | motif: M-34 | power: mid | tone: ok | verdict: REJECT | reason: without a specific seeded item creating genuine demand-gating, "rare whale loot is tradeable" is ambient sellable-goods territory (retired M-09); the economy link only works if the loot-seeded item (above, M-15) creates a specific demand; that demand is covered by the ACCEPT above
+- from: sky_whale_ship hostile mobs | via: loot-seed → magic reagent | to: magic | motif: M-02 | power: mid | tone: ok | verdict: REJECT | reason: no existing sky_whale_ship drop to route through magic; seeding a foreign magic item into whale-mob loot is authoring new content in the wrong direction for M-02; any magic connection belongs on the loot-seeded progression item (M-15 candidate) rather than a separate mob-drop edge
+

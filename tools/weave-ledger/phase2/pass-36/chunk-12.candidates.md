@@ -267,3 +267,61 @@ support role is complete.
 LEAVE — genuine zero-content: no items, no blocks, no loot, no methods. Client model/animation replacement;
 no material surface. Visual polish support role.
 
+## createnuclear   [anchors: create (1)]
+
+- from: createnuclear uranium ore / raw uranium (block/ores/uranium, item/raw_materials/uranium — regional ore,
+  mid-tier scarcity) | via: create:crushing (ore-doubling) + the full refining chain (crush → wash → mix →
+  press → enrich → fuel) | to: create | motif: M-03 | power: mid | tone: ok | verdict: REJECT |
+  reason: same-anchor; uranium processing entirely within Create earns no new pillar. Record to prevent
+  re-proposal of the internal chain as a weave.
+
+- from: createnuclear:steel_block / ingot (c:ingots/steel — shared alloy, mid-tier) |
+  via: aeronautics airframe recipes | to: aeronautics | motif: M-23 | power: mid | tone: ok (steel as a
+  structural airframe material is the canonical heavy-industry construction material; a player building an
+  airship hull out of reactor-adjacent steel plate is immediately sensible) | verdict: ACCEPT |
+  hook: createnuclear steel (refined from lead/iron via the reactor process chain) is required as a structural
+  alloy in mid-to-high-tier Aeronautics airframe recipes, making the nuclear production chain a supplier for
+  the logistics arm and tying the endgame power source to ship construction.
+
+- from: createnuclear uranium / lead (regional ores — block/ores/uranium, block/ores/lead) |
+  via: GTMOGS regional ore-gen → scarce regional input | to: economy | motif: M-30 | power: mid |
+  tone: ok (uranium and lead as regionally locked ores forcing reactor-builders to trade for fuel is exactly
+  the scarcity-to-economy loop; not every region has uranium) | verdict: ACCEPT |
+  hook: uranium and lead ore generation is regionally restricted so reactor-grade fuel is a trade good —
+  reactor operators must buy uranium from the region that has it, making the nuclear power tier an economy
+  driver rather than a self-sufficient endgame.
+
+- from: createnuclear:reactor_core output (massive SU — endgame rotational power) |
+  via: aeronautics engine intake (M-13 fuel → propulsion path) | to: aeronautics | motif: M-13 |
+  power: endgame | tone: ok (nuclear-powered airships as the endgame fleet tier is a natural and exciting
+  escalation; the reactor's SU feeds the ship's propulsion directly) | verdict: ACCEPT |
+  hook: the nuclear reactor's enormous SU output is the power source for late-game Aeronautics heavy-lift
+  ships and fortresses, positioning the reactor as the endgame propulsion engine for the logistics arm.
+
+- from: createnuclear radiation hazard (survival-pressure mechanic — irradiation effect from reactor/ore) |
+  via: cold-sweat / survival system tie | to: survival | motif: M-26 | power: mid | tone: ok (radiation
+  as a survival hazard that creates demand for anti-radiation gear is a direct pressure mechanic; the gear
+  must be produced, consumed, and replaced) | verdict: ACCEPT |
+  hook: reactor radiation is a survival hazard requiring the anti-radiation armor set as ongoing protection;
+  the armor is a consumption sink (M-26 — spent against pressure) that creates persistent demand for the
+  cloth/material inputs, tying nuclear power to the survival pressure pillar.
+
+- from: createnuclear:autunite (glowing decorative ore/block, loot=yes) | via: ars_nouveau:imbuement |
+  to: magic | motif: M-10 | power: mid | tone: clash — autunite is uranium ore mineral (real-world
+  uranium phosphate); using it as an arcane infusion catalyst places radioactive ore in a fantasy magic
+  context that clashes tonally (alchemy uses mystery, not known radiation hazard). The industrial/atomic
+  vibe of Create Nuclear clashes with Ars Nouveau's whimsical fantasy register | verdict: REJECT |
+  reason: tone clash; autunite's identity is industrial/nuclear, not arcane. Forcing it into Ars imbuement
+  confuses both mods' aesthetic registers.
+
+## creativecore   [anchors: support/library (1)]
+
+LEAVE — genuine zero-content code library: no items, no blocks, no loot, no methods. CreativeMD GUI/event
+framework dep. Sanctioned library support role.
+
+## corgilib   [anchors: support/library (1)]
+
+LEAVE — genuine zero-content code library: no items, no blocks, no loot, no methods. ModdingLegacy
+loot/worldgen/datagen utility dep. Sanctioned library support role.
+
+== CHUNK COMPLETE ==

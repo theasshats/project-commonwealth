@@ -65,6 +65,10 @@ OK — existing Create + survival connections are sound. M-29 hardened-backpack 
 ## sounds   [anchors: support/polish (1)]
 - LEAVE — client-only audio overhaul; 0 blocks, 0 items; no recipe or processing surface. Pure cosmetic polish with no weave surface.
 
+## notenoughanimations   [anchors: support/visual (1)]
+- LEAVE — client-only procedural animation enhancer; 0 blocks, 0 items; no recipe or processing surface. Pure cosmetic visual polish with no weave surface.
+
+
 
 
 
