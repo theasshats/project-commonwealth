@@ -1,5 +1,8 @@
 # Rotten Creatures spawn structures — review sheet (issue #106)
 
+> **📦 ARCHIVED (v0.6.0).** The #106 review artifact; the work landed in v0.6.0. Durable spawn-gating
+> rules live in `docs/SPAWN-GATING.md`. Kept for the per-mob placement record.
+
 > **Resolved — per-mob placement (zagwar, 2026-06-06).** The shared allowlist
 > below was the review draft; zagwar's call **split it per mob** (open question
 > #4). `config/incontrol/spawn.json` now carries one rule set per mob, not the

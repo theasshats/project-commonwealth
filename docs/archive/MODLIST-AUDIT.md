@@ -1,5 +1,10 @@
 # Modlist & Path-Forward Audit
 
+> **📦 ARCHIVED (v0.6.0) — historical snapshot.** Superseded by `docs/SYSTEMS.md` (the structural model),
+> `docs/CURATION.md` (the keep/cut rubric), and `docs/ROADMAP.md` (the plan). Its system framing predates
+> the loop model (it still says "five systems"); read it as a point-in-time audit, not current policy.
+> Kept for the §A fit-flags / §B dup / §C scarcity analysis.
+
 _356 manifests, audited against the stated goals (CLAUDE.md / DESIGN.md / Phase-1 plan).
 Slug + knowledge based — items marked ⚠ need confirming from the jar/EMI; the ground-truth
 CI digest will nail those. This is a planning artifact, not a final decision list._

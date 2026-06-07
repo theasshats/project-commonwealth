@@ -1,5 +1,10 @@
 # Release cadence — odd/even versioning
 
+> **📦 ARCHIVED (v0.6.0).** Accepted and folded into **`docs/ROADMAP.md`**, which is now the canonical
+> cadence map + rationale. Kept here for the extended reasoning. Also note: the milestone scheme changed
+> after this was written — aeronautics folded into the Economy pillar (v0.9.0), and Survival & Magic split
+> into their own pillars (v0.11.0 Magic, v0.13.0 Survival). See `docs/ROADMAP.md` / `docs/SYSTEMS.md`.
+
 > **Status: accepted** — the canonical cadence. `docs/ROADMAP.md`, `CLAUDE.md`, and `docs/CONNECTIVITY.md`
 > have been reconciled to match: the thunderdome runs on the **odd** feature versions, perf-pruning on the
 > **evens**, and the roadmap is expanded to 0.6 → 0.15 → 1.0. Pairs with the recurring passes: the curation
@@ -161,5 +166,5 @@ per `docs/DESIGN.md`: **1.1 odd** (feature / thunderdome) → **1.2 even** (perf
 ---
 
 _Refs: `docs/SYSTEMS.md` (the systems loop), `docs/DESIGN.md` (the goal + content-update model), `docs/WEAVING-STRATEGY.md` (the
-taste-weaving question), `docs/MODLIST-AUDIT.md` (path forward), #157 (curation rubric), #160 (conflict
+taste-weaving question), `docs/archive/MODLIST-AUDIT.md` (path forward), #157 (curation rubric), #160 (conflict
 catalog), #161 (mod-update pass), #147 (spark routine)._

@@ -12,7 +12,7 @@
 > cost model, locked exclusives, and boss/colony gating are targets the per-pillar feature work builds
 > toward (tracked: #219 cost model, #220 KubeJS locking/gating, #221 economy tooling, #222 ecology).
 > Flagged inline where it matters. The other docs (`docs/DESIGN.md`, `CLAUDE.md`, `docs/ROADMAP.md`,
-> `docs/RELEASE-CADENCE.md`, `docs/CONNECTIVITY.md`, `docs/MODLIST-AUDIT.md`, `docs/RECIPES.md`,
+> `docs/archive/RELEASE-CADENCE.md`, `docs/CONNECTIVITY.md`, `docs/archive/MODLIST-AUDIT.md`, `docs/RECIPES.md`,
 > `docs/CURATION.md`) have been reconciled to this model.
 
 ---
@@ -334,4 +334,4 @@ obvious: a healthy mod is usually *something you produce that pressure demands a
 
 _Refs: `docs/DESIGN.md` (the goal this refines), `docs/CURATION.md` (the rubric that scores against
 this loop), `docs/RECIPES.md` (recipe philosophy — balance > theme > cost), `docs/CONNECTIVITY.md` (the
-web the loop should read as), `docs/RELEASE-CADENCE.md` (when the weave/curation work runs)._
+web the loop should read as), `docs/archive/RELEASE-CADENCE.md` (when the weave/curation work runs)._

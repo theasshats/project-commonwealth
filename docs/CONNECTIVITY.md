@@ -43,7 +43,7 @@ number honest:
 > release target. Target a coverage number and it gets gamed (bridge-recipes-for-the-metric — Goodhart's
 > law), and a high giant-% can still hide lifeless threads. The right question is "is this island
 > *intentional* (cosmetic — fine) or a *real gap*?", not "are we at N%." The deep *taste*-weave behind the
-> number is `docs/WEAVING-STRATEGY.md`; the cadence that uses this tool is `docs/RELEASE-CADENCE.md`.
+> number is `docs/WEAVING-STRATEGY.md`; the cadence that uses this tool is `docs/archive/RELEASE-CADENCE.md`.
 
 ## Beyond connected components (the four sharper lenses)
 

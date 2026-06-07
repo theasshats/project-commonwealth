@@ -75,6 +75,6 @@ LLM tools**, centered on:
 
 ---
 
-_Refs: `docs/RELEASE-CADENCE.md` (the cadence this rides), `docs/DESIGN.md` (the goal), `docs/SYSTEMS.md` (the systems loop),
+_Refs: `docs/archive/RELEASE-CADENCE.md` (the cadence this rides), `docs/DESIGN.md` (the goal), `docs/SYSTEMS.md` (the systems loop),
 `docs/CONNECTIVITY.md` + `tools/recipe-graph/` (the web metric), `tools/mod-data/` (the digest),
 #62 / #132 (structural weave to date), #157 (curation rubric), #160 (per-mod web research)._

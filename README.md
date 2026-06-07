@@ -2,6 +2,10 @@
 
 A Create-focused Minecraft modpack for 1.21.1 / NeoForge, built around [Create Aeronautics](https://modrinth.com/mod/create-aeronautics).
 
+It's a **cooperative PvPvE** pack for a small crew (~10), **scarcity-driven**: ores are scarce and regional, so nobody can do everything alone — you specialize and trade. The design is one interlocking loop — **scarcity → pressure → production → economy** (inspired by the game *Eco*), where every mod earns its place by feeding a system (Create / magic — production · survival — pressure · economy — distribution & trade, incl. logistics/aeronautics) or it's cut.
+
+**Design & docs:** [`docs/SYSTEMS.md`](docs/SYSTEMS.md) (the structural model) · [`docs/DESIGN.md`](docs/DESIGN.md) (the why) · [`docs/ROADMAP.md`](docs/ROADMAP.md) (the plan + release cadence) · full index in [`docs/README.md`](docs/README.md).
+
 ---
 
 ## For players

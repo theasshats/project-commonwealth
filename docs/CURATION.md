@@ -3,9 +3,9 @@
 > **Status: accepted** — the canonical yardstick. This is the single document a curation pass scores
 > mods against, so calls are consistent and defensible instead of per-reviewer vibes. It gathers the
 > criteria that already existed, scattered, into one place: the `docs/DESIGN.md` north star, the
-> structural loop in `docs/SYSTEMS.md`, the `docs/MODLIST-AUDIT.md` fit-flags (§A) / scarcity (§C) /
+> structural loop in `docs/SYSTEMS.md`, the `docs/archive/MODLIST-AUDIT.md` fit-flags (§A) / scarcity (§C) /
 > dup (§B), and the in-flight curation issues (#83 / #94 / #100 / #113 / #45 / #60). Lands in **v0.6.0**
-> (Foundation) as the charter; every later pass runs against it. Pairs with `docs/RELEASE-CADENCE.md`
+> (Foundation) as the charter; every later pass runs against it. Pairs with `docs/archive/RELEASE-CADENCE.md`
 > (odd/even), #160 (conflict catalog), #161 (mod-update pass).
 
 ## What curation is (and isn't)
@@ -45,7 +45,7 @@ See `docs/ROADMAP.md` ("Milestones — the road to 1.0") for the per-version sch
 4. **Woven, not floating.** It connects into the recipe web (#113/#129), *or* it's an accepted
    standalone (pure decoration/cosmetic per the connectivity guardrails). And it **doesn't break
    scarcity** — no mega-stacks, free OP gear/loot, or kitchen-sink factory shortcuts
-   (`docs/MODLIST-AUDIT.md` §A1/§C). (Logistics/transport mods get the extra scarcity lens: do they
+   (`docs/archive/MODLIST-AUDIT.md` §A1/§C). (Logistics/transport mods get the extra scarcity lens: do they
    collapse distance enough to erase regional specialization? — `docs/SYSTEMS.md` §5.)
 5. **Performance cost is justified.** TPS/RAM cost proportional to value; worldgen-/entity-heavy mods
    get spark-measured if suspect (#48/#98/#147/#160). "Measure, don't analogize."
@@ -54,7 +54,7 @@ See `docs/ROADMAP.md` ("Milestones — the road to 1.0") for the per-version sch
 7. **Maintained / version-appropriate.** Official 1.21.1 vs community-port risk noted (#40); not
    abandoned in a way that blocks updates.
 8. **Meme exemption.** Joke/meme mods survive **only if they also pass gate 1** (anchor to a system) —
-   pure flavor is allowed but must be deliberate, not drift (#45, `docs/MODLIST-AUDIT.md` §A2).
+   pure flavor is allowed but must be deliberate, not drift (#45, `docs/archive/MODLIST-AUDIT.md` §A2).
 
 > Failing a gate isn't auto-cut. The verdict can be **cut**, **rework** (recipe-gate / config / re-tag to
 > make it pass), or **keep-with-reason** (a documented exemption). The rubric's real job is forcing the
@@ -67,7 +67,7 @@ See `docs/ROADMAP.md` ("Milestones — the road to 1.0") for the per-version sch
 ## Two modes — same rubric, different gates
 
 The cadence runs this one rubric in two modes, matched to the milestone's parity
-(`docs/RELEASE-CADENCE.md`):
+(`docs/archive/RELEASE-CADENCE.md`):
 
 - **Odd thunderdome — curation *by competition*.** Closes each odd/feature milestone. The version's new
   adds **and** the existing related set are judged against each other on merit — gates **1, 3, 4**
@@ -130,6 +130,6 @@ whichever pass hosts it:
 ---
 
 _Refs: `docs/DESIGN.md` (the north star), `docs/SYSTEMS.md` (the structural loop the rubric scores
-against), `docs/MODLIST-AUDIT.md` (fit-flags §A / scarcity §C / dup §B), `docs/CONNECTIVITY.md`,
-`docs/ROADMAP.md` (the pass schedule), `docs/RELEASE-CADENCE.md` (odd/even),
+against), `docs/archive/MODLIST-AUDIT.md` (fit-flags §A / scarcity §C / dup §B), `docs/CONNECTIVITY.md`,
+`docs/ROADMAP.md` (the pass schedule), `docs/archive/RELEASE-CADENCE.md` (odd/even),
 #83 / #94 / #100 / #21 / #45 / #60 / #113 / #129 / #131 / #132 / #147 / #160 / #161._

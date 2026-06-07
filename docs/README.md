@@ -33,10 +33,8 @@ off those two.
 
 | Doc | Purpose |
 |---|---|
-| [`ROADMAP.md`](ROADMAP.md) | **The plan** — multi-phase build-out and the milestone map (the road to 1.0). The sequencing source of truth; can lag `main`. |
-| [`MODLIST-AUDIT.md`](MODLIST-AUDIT.md) | Modlist-vs-goals audit. A **planning artifact / snapshot**, explicitly not a final decision list. |
+| [`ROADMAP.md`](ROADMAP.md) | **The plan** — multi-phase build-out and the milestone map + the odd/even cadence (the road to 1.0). The sequencing source of truth; can lag `main`. |
 | [`TRIAGE.md`](TRIAGE.md) | Issue-triage playbook (re-label / milestone / assign / close / sequence). |
-| [`RELEASE-CADENCE.md`](RELEASE-CADENCE.md) | Odd/even versioning rhythm — **proposal**, for review. |
 | [`WEAVING-STRATEGY.md`](WEAVING-STRATEGY.md) | Weave-the-web thinking — **DRAFT**, not settled. |
 
 ## Player-facing copy
@@ -53,23 +51,14 @@ priorities. See [`archive/`](archive/):
 - `archive/RECIPE-OVERHAUL-HANDOFF.md` — the #62 "Made through Create" overhaul (merged ~v0.4.6). Live convention now lives in `RECIPES.md`.
 - `archive/MAGIC-WEB-HANDOFF.md` — the #75 magic-web recipe weave (merged ~v0.5.2). Live design in `RECIPES.md` ("Magic web").
 - `archive/MAGIC-WEB-PLAYTEST.md` — the #75 in-game playtest checklist.
+- `archive/MODLIST-AUDIT.md` — the modlist-vs-goals snapshot. **Superseded** by `SYSTEMS.md` (model) + `CURATION.md` (rubric) + `ROADMAP.md` (plan); kept for its §A/§B/§C analysis. Archived v0.6.0.
+- `archive/RELEASE-CADENCE.md` — the odd/even cadence proposal + extended rationale. **Accepted**; the canonical cadence now lives in `ROADMAP.md` (rationale folded in). Archived v0.6.0.
+- `archive/ROTTEN-CREATURES-STRUCTURES.md` — the #106 spawn-allowlist review sheet. Durable rules live in `SPAWN-GATING.md`. Archived v0.6.0.
 
-### Archive candidates — proposed (we have too many live docs)
+### Still-live docs that were *candidates* (kept, with a note)
 
-The `docs/` set has grown; these are flagged to **trim once their work lands** (move to `archive/`, or
-fold their durable bits into the canonical doc and delete). Not yet moved — listed so the call is tracked:
-
-- **`MODLIST-AUDIT.md`** — explicitly a snapshot/planning artifact, now largely **superseded** by
-  `SYSTEMS.md` (model) + `CURATION.md` (rubric) + `ROADMAP.md` (plan). **Action:** file any remaining live
-  findings as issues, then archive. *(Strongest candidate.)*
-- **`ROTTEN-CREATURES-STRUCTURES.md`** — the #106 spawn-allowlist review sheet. **Action:** archive once
-  #106 is playtested (its durable rules live in `SPAWN-GATING.md`).
-- **`RELEASE-CADENCE.md`** — accepted; its rhythm now lives in `ROADMAP.md` + `CLAUDE.md`. **Action:**
-  fold the odd/even *rationale* into `ROADMAP.md`, then archive to remove the duplication.
-- **`ARCANA-BRIDGE-MOD.md`** — scoping doc for the Derpack Arcana helper mod (PR #80). **Action:** archive
-  if/when #80 has landed (it's a pre-build scoping doc, not live reference).
-- **`BOOT-LOG-BASELINE.md`** — **keep** as a living reference (the accepted boot-log-noise catalog future
-  passes check against), but trim the #119/#120/#121-specific sections now those have closed.
+- **`ARCANA-BRIDGE-MOD.md`** — **kept**: forward-looking design for the Derpack Arcana magic-weave helper mod, which is **Magic-pillar (v0.11.0)** work, not a finished artifact. Archive once that mod ships (or is dropped).
+- **`BOOT-LOG-BASELINE.md`** — **kept** as a living reference (the accepted boot-log-noise catalog future passes check against). Trim the #119/#120/#121-specific sections now those have closed.
 
 ## Conventions
 
@@ -77,9 +66,9 @@ fold their durable bits into the canonical doc and delete). Not yet moved — li
 the systems-loop framing; they are **not** interchangeable:
 - `SYSTEMS.md` is **canonical for the structure** (the *how it interlocks* — the loop). The model itself.
 - `DESIGN.md` is **canonical for the rationale** (the *why*) — cite it; don't re-argue it elsewhere.
-- `ROADMAP.md` is the **plan** (the *when / in what order*).
-- `MODLIST-AUDIT.md` is a **snapshot audit** (a planning artifact, not a decision).
+- `ROADMAP.md` is the **plan** (the *when / in what order*) and the **cadence map** (odd/even).
 - `CURATION.md` is the **keep/cut charter** (the gates a mod must pass).
+- (`archive/MODLIST-AUDIT.md` is the old **snapshot audit** — historical, superseded by the above.)
 
 **`EDITING.md` ↔ `../mods/README.md`.** `EDITING.md` is the **task walkthrough** (add a mod, change a
 config, ship an update, with the editor + packwiz CLI fallback); `mods/README.md` is the **manifest reference**
