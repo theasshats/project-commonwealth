@@ -56,8 +56,27 @@ OK — dossier's create:crushing for meteor (M-04) and event-gating for magic (M
 - from: aged cheese as 'luxury good → sell for coin' | via: numismatics | motif: M-09 | power: n/a | tone: n/a | verdict: REJECT | reason: M-09 retired. The dossier's existing economy candidate uses the retired motif; replaced above by M-28 (colony demand) and M-35 (maturation as value-add) as the real demand-gating mechanisms.
 REWORK: dossier's existing economy candidate 'M-09 luxury good→coin' is the retired motif — flag for replacement with M-28 (colony food demand) + M-35 (maturation value-add) as the two real economy links.
 
+## grimoireofgaia   [anchors: survival (1); inbound create:emptying + farmersdelight:cutting weaves exist]
+- from: mob-drop fragments (bone fragments, void shards, harpy feathers, dryad leaves, etc.) | via: occultism:spirit_fire | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: burning Grimoire mob drops in spirit fire yields occult essences — the mythic bestiary (harpies, dryads, gorgons) feeds the magic web; supernatural creatures transmuting through a spirit method is tonally seamless
+- from: rare mob-drop reagents (gorgon scale, minotaur horn, sphinx riddle-fragment, vampire fang) | via: ars_nouveau:imbuement | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: legendary creature materials become Ars Nouveau infusion catalysts — killing difficult folklore monsters earns progression in the magic system; combat gates magic supply
+- from: mini-boss drops (bust_valkyrie / bust_gorgon / bust_minotaur / bust_sphinx / bust_vampire) | via: KubeJS recipe gating | to: create | motif: M-15 | power: endgame | tone: ok | verdict: ACCEPT | hook: a gorgon bust or valkyrie trophy is the gate ingredient for a high-tier Create machine — legendary bosses unlock legendary technology, which is exactly the boss-key design intent
+- from: grimoireofgaia artifact rings (Ring of Speed/Jump/Haste) | via: ars_nouveau:enchanting_apparatus | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: Grimoire rings are enhanced via arcane infusion to unlock higher effect tiers — a combat reward becomes a magic-system upgrade target; the enchanting apparatus as a ring-enhancer is a natural delivery
+- from: c:nuggets/diamond + c:nuggets/emerald (tagged Grimoire drops) | via: create:mixing (compacting nuggets into gem blocks) | to: create | motif: M-03 | power: mid | tone: ok | verdict: ACCEPT | hook: diamond/emerald nuggets dropped by Grimoire mobs can be compacted via Create mixing into gem blocks — the bestiary becomes a Create resource feedstock for a grinding gem-accumulation route
+- from: mob-drop reagents (all types) | via: combat-specialist farming + player trade | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: combat specialists farm Grimoire's dangerous bestiary and sell reagents to magic/crafting players — 75 biome-modifiers means the bestiary is everywhere, making combat farming a real production specialization
+- from: grimoireofgaia:pearl_block | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: pearl blocks crush back to pearls + gravel + XP nugget (lossy deco-recycle) — a minor but coherent Create touch for the mod's signature decorative block
+- from: boss busts as 'decoration to sell for coin' | via: numismatics | motif: M-09 | power: n/a | tone: n/a | verdict: REJECT | reason: M-09 retired — busts are better expressed as M-15 boss-keys (gating tech) or M-34 combat-supply trade goods; bare 'sell for coin' is the ambient endpoint
+REWORK: dossier's 'economy via numismatics — M-08/M-02 [MED]' mixes two motifs. Separate: M-02 (mob-drop reagent to magic) is the correct motif for the magic side; the economy side should be M-34 (combat-supply trade), not M-08 (player-minted currency). M-08 requires a Create processing step to mint coins — the busts don't do that. Clarify in Phase 3 authoring.
 
+## configuration   [anchors: support/library (0 content)]
+LEAVE — pure config-screen API library with zero blocks, items, or gameplay mechanics; no content surface to weave. Backs dependent mods' in-game settings GUIs but contributes nothing to the loop.
 
+## glitchcore   [anchors: support/library (0 content)]
+LEAVE — loader-abstraction library for Glitchfiend mods (Serene Seasons, Biomes O' Plenty, TerraBlender); zero blocks, items, or gameplay mechanics. The mods it supports (notably Serene Seasons) are the actual survival-pillar contributors; glitchcore itself has no content surface.
+
+## rhino   [anchors: support/library (0 content)]
+LEAVE — KubeJS's JavaScript engine (Mozilla Rhino fork); zero blocks, items, or mechanics. It runs the pack's KubeJS scripts, making it an invisible infrastructure dependency that enables weaving-by-KubeJS, but has no content surface of its own to weave into the loop.
+
+== CHUNK COMPLETE ==
 
 
 

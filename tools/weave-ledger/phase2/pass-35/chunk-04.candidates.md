@@ -226,6 +226,36 @@ REWORK:
 - from: finished armor sets (traded by armorsmith specialist) | via: emergent player trade | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: running the pressing bench and the magic apparatus for themed armor sets is a craft specialty — other players buy from the one who mastered it
 - from: armor sets as "sellable luxury" | via: n/a | to: economy | motif: M-09 | verdict: REJECT | reason: M-09 retired — bare sell-to-NPC framing; replaced by M-34 accepted above
 
+## cmpackagepipebomb   [anchors: Create (1)]
+
+Power-read: 0 blocks, 4 items (pipebomb, pipebomb_rigged, pipebomb_white, tnt_rigged), no methods, no loot. Novelty/PvP trap item riding Create packages. Consumes TNT/gunpowder. Tiny mod.
+
+Method-pull:
+
+- **Survival/danger anchor: the pipebomb is a booby-trap / PvP threat tool that generates danger pressure.** In a PvPvE pack, the threat that a delivered package might be rigged is itself danger-pressure on the economy (the logistics arm). This is a narrative/design observation — not a method-routing weave — but it does give the mod a tenuous survival-danger flavour that could count as a second anchor via M-34 (combat supply: someone makes the bombs, someone trades them). Power: joke/novelty. Tone: this mod is a gag; elevating it to a serious cross-system weave overstates its role.
+
+- **M-26 consumption (gunpowder/TNT consumption drives demand).** Bombs explode and are gone; each use demands new TNT/gunpowder. But this is ambient gunpowder use that Create already handles. No new ledger edge from the pipebomb specifically. Reject.
+
+- **Cross-system weave via createbigcannons:big_cartridge gunpowder share (M-32 byproduct).** Both CBC cartridges and pipebombs consume gunpowder. Sharing the gunpowder supply chain links the two — but that's a shared-ingredient observation, not a recipe weave on cmpackagepipebomb items. Reject.
+
+The dossier's conclusion (leave — tiny novelty/PvP gag) holds. The mod's content surface is too small for a coherent second anchor that isn't forced.
+
+- LEAVE — 4 items, no methods, no loot, novelty PvP trap; no coherent second anchor. All candidate edges are ambient consumption or narrative synergy rather than method-routings. Force would be noise.
+
+## edf-remastered-5.0-beta4   [anchors: survival (1)]
+
+Power-read: 0 blocks, 0 items, loot=yes (the jar counts loot=yes but the dossier confirms it does NOT change dragon drops or add rewards — the loot flag may reflect datapack functions touching existing loot, not new loot tables). Pure behavior overhaul — harder dragon, multi-phase AI, no new item drops.
+
+Method-pull: No items, no methods, no new loot. The mod's entire content is raising the Ender Dragon fight's difficulty. With loot=yes but confirmed no new drop tables and no items, there is no surface to weave through.
+
+- Loot-seed check: could this mod's fight be *seeded* with boss-key drops? The mod does not add new loot tables — it alters AI behavior. Any loot-seeding would be done on the *vanilla* dragon loot table (which is already addressable independently of this mod). EDF-Remastered provides no hook that makes it the right target for a loot-seed weave specifically.
+
+- **Danger pressure amplification: making the Ender Dragon genuinely threatening creates demand for the armor/gear production chain.** This is a design observation about the survival pressure face of the loop — harder bosses = more demand for gear. But it's not a method-routing weave. Not a ledger candidate.
+
+- LEAVE — behavior-only datapack; 0 items, 0 new loot drops (dossier-confirmed), no recipe methods. The mod amplifies danger-pressure but has no material surface to weave. A loot-seed weave targets the vanilla dragon table directly, not this mod. Nothing to route.
+
+
+
 
 
 

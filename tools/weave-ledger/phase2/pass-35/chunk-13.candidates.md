@@ -58,6 +58,20 @@
 ## better_climbing   [anchors: support/QoL (1)]
 - LEAVE — client-side climbing-physics tweak (no items, no blocks, no loot, no recipe methods). Pure movement feel improvement; nothing to route or weave.
 
+## tacz   [anchors: support/combat-flavour (1)]
+- from: gun components (barrel, receiver, stock) | via: tacz:gun_smith_table_crafting with Create-processed inputs (create:pressing → iron_sheet, create:mechanical_crafting → machined casing) | to: create | motif: M-05 | power: mid | tone: ok | verdict: ACCEPT | hook: a gun is precision manufacture — it takes a Create specialist's machined parts to feed the gunsmith's table; firearms slot into the industrial production web
+- from: high-tier firearm assembly | via: create:sequenced_assembly (derpack:incomplete_firearm_receiver → multi-stage deploying/cutting chain → gun_smith_table final assembly) | to: create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: the finest rifle in the pack needs a full precision-manufacturing chain through Create before the gunsmith can finish it — depth equal to the weapon's power
+- from: tacz:ammo (brass/copper casings + gunpowder) | via: GTMOGS regional ore-gen (copper/brass region-locked) | to: economy | motif: M-30 | power: everyday | tone: ok | verdict: ACCEPT | hook: ammunition is only as available as the copper your region holds — soldiers in copper-poor lands must trade or travel; the ammo supply chain is region-locked from the ore up
+- from: tacz:ammo (consumed on every shot) | via: combat consumption | to: survival | motif: M-26 | power: everyday | tone: ok | verdict: ACCEPT | hook: every firefight drains the stockpile — ammo is a recurring consumption sink that pulls continuously on the Create-metalwork production chain
+- from: guns / ammo as war materiel | via: emergent player trade | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: the Create-specialist arms dealer sells to the fighter who can't spend time at the assembly line — guns and ammo are the combat-supply axis of the player economy
+- from: tacz:m67 (grenade) | via: createbigcannons munition methods (conceptual) | to: create | motif: M-29 | power: mid | tone: clash | verdict: REJECT | reason: TACZ grenades and CBC munitions are parallel independent systems; CBC has its own cartridge/fuze methods; forcing cross-dependency between two weapon systems adds complexity without a coherent demand link; the tone is "two weapon standards coexisting," not "one needs the other"
+- REWORK: dossier listed "aeronautics — mountable weapons" as WEAK; correct to reject — TACZ doesn't integrate with Aeronautics natively, and aeronauticscompat covers other turret mods only. No new rework needed on that.
+
+## modernfix   [anchors: support/performance (1)]
+- LEAVE — JVM/loader-level performance mod (no items, no blocks, no loot, no recipe methods). Purely reduces boot time and RAM use; no game surface to weave.
+
+
+
 
 
 

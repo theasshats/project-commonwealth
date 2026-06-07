@@ -98,6 +98,20 @@ New candidates:
 ## moogs_structures   [anchors: support/library (1)]
 - LEAVE — data-driven structure-generation framework library for Moog's structure mods; zero items, zero blocks, zero recipe types, no loot. Genuine zero-surface library. (Note: if a Moog's content mod — e.g. Moog's Voyager Structures — is in the pack, THAT mod's dossier is the weave surface, not this library.)
 
+## dungeons-and-taverns-v4.4.4   [anchors: survival/exploration (1)]
+- This is a structure/loot mod with loot=yes and 17 items (minecraft:trial_key, minecraft:ominous_trial_key). The briefing is explicit: "do NOT LEAVE a loot-bearing structure mod just because it has no recipes" — reach for loot-seed or processing candidates.
+- from: dungeons-and-taverns dungeon/tower loot tables | via: loot-seed | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: seed Numismatics coins (low denominations) and magic reagents (M-02-tier: a rare component usable in Ars/Occultism) into D&T dungeon/tower loot tables — the combat specialist explores, clears a dungeon, finds coin or reagents that enter player trade; the structure mod feeds the economy's combat-route supply arm
+- from: dungeons-and-taverns trial vault / ominous trial key | via: loot-seed | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT | hook: Ominous Trial Vaults are already dangerous-to-run encounters — seed a rare Ars/Occultism reagent (e.g. an Ars source gem or Occultism silver dust equivalent) into the ominous trial loot; high-risk trial completion becomes the hardest loot route into the magic spine, tying exploration danger to magic production
+- from: dungeons-and-taverns tavern cartographer (apprentice-level villager trade → maps) | via: villager trade | to: economy | motif: M-21 | verdict: REJECT | reason: M-21 cut (NPC coin faucet / villager → Numismatics is the NPC trade seam that was cut). The cartographer trade here uses emeralds (vanilla), not player-minted Numismatics coin; it doesn't hook into the player-run economy. Noting the reject.
+- from: dungeons-and-taverns structure exploration → regional discovery pressure | via: survival danger | to: survival | motif: M-34 | power: everyday | tone: ok | verdict: ACCEPT | hook: 100+ structures spread across all dimensions push players outward into danger — exploration pressure is its own demand driver (gear up before you go); D&T structures are the physical manifestation of the "dangerous world" face of survival, and their loot is the reward the combat-route specialist can trade from. The M-34 loot-seed above captures the economy side; this notes the dual survival-pressure anchor explicitly.
+- from: D&T dungeon loot → luxury goods sell | motif: M-09 | verdict: REJECT | reason: M-09 retired. The loot-seed to M-34 (above) correctly expresses the economy link as demand-gating (combat supply), not ambient sellability.
+
+## attributefix   [anchors: support/library (1)]
+- LEAVE — attribute-cap bugfix library; zero items, zero blocks, zero recipe types, no loot. It enables mod gear (magic/combat) to scale beyond vanilla caps — a sanctioned support role — but registers nothing of its own. Genuine zero-surface compatibility fix.
+
+== CHUNK COMPLETE ==
+
+
 
 
 

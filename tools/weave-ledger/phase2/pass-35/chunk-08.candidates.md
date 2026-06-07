@@ -64,3 +64,12 @@ OK — connections sound: the dossier's M-12 (farmersdelight processing) and M-0
 ## bagus_lib   [anchors: support (1)]
 - LEAVE — shared code library for baguchi's mods; zero items, zero loot, no methods, no material surface. Genuine zero-content library.
 
+## supermartijn642configlib   [anchors: support (1)]
+- LEAVE — config-definition API library; zero items, zero loot, no recipe types, no material surface. Genuine zero-content library.
+
+## craftingtweaks   [anchors: support (1)]
+- LEAVE — crafting-grid QoL mod (rotate/balance/clear buttons on crafting screens); zero items, zero loot, no recipe types, no material surface. Genuine zero-content QoL utility.
+
+## knightlib   [anchors: support (1)]
+- LEAVE — utility library for Knight Quest (not in pack); its few content items (great_chalice, grails, homunculus, essences) are dormant without the dependent mod. Weaving dead/inert items creates phantom connections. If Knight Quest is ever added, knightlib:great_essence is a natural M-02 mob-drop/altar reagent candidate — flag for that future add, not now.
+

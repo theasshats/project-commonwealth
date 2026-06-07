@@ -68,6 +68,21 @@
 ## collective   [anchors: support/library (1)]
 - LEAVE — shared code library for Serilum-family mods; no player-facing content, no items, no blocks, no material surface. Genuine zero-content library dependency. LEAVE is correct.
 
+## bettercombat   [anchors: support/combat-framework (1)]
+- LEAVE — behavior framework that re-skins melee combat animations and hitboxes; no items, no blocks, no material output, no loot. Adds no content surface to weave. The "combat weapons" it reworks are other mods' items; Better Combat itself is the substrate, not a producer or consumer. Forcing an edge here would be arbitrary. LEAVE is correct.
+
+## xaeroworldmap   [anchors: support/client-QoL (1)]
+- LEAVE — client-side map rendering and waypoints; no items, no blocks, no methods, no material surface. Genuine zero-content client utility; LEAVE is correct.
+
+## immersivearmorhud   [anchors: support/client-UI (1)]
+- LEAVE — client-only HUD overlay for armor durability display; no items, no blocks, no material surface. Pure display utility; LEAVE is correct.
+
+## lionfishapi   [anchors: support/library (1)]
+- LEAVE — lightweight entity-animation API, required dependency for L_Ender's mods; no items, no blocks, no material surface. Genuine zero-content library; LEAVE is correct.
+
+
+
+
 
 
 

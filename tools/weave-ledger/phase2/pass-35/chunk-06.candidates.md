@@ -125,3 +125,76 @@ Power-read: the Basic Burner is an everyday-tier block (early Create progression
 
 REWORK: dossier recommends LEAVE ("single-block balance tweak with no tradeable/magic surface"). That's too conservative. The Basic Burner creates a *real fuel demand* across all Create heated processing — that IS a survival-pressure connection (M-26) of genuine weight. The whole pack's Create spine now has an ongoing resource cost, which is a loop-feeding outcome. The LEAVE call should be revised to recognize this passive but load-bearing survival tie.
 
+## create_mobile_packages   [anchors: create, aeronautics (2)]
+
+Already at Create + aeronautics (2). Airborne courier Robo Bees delivering addressed packages between Bee/Drone Ports. The dossier notes economy adjacency but calls it infrastructure rather than a coin sink. Let's re-examine.
+
+Power-read: Bee Port, Drone Port are mid-tier Create logistics infrastructure. The Portable Stock Ticker is a significant convenience tool. Robo Bee is the courier item (crafted from Create parts). All are mid-tier.
+
+- from: create_mobile_packages delivery network (packages carry addressed goods between player bases) | via: aeronautics/logistics layer (Robo Bees fly packages between distant player settlements on a modded server) | to: economy | motif: M-31 | power: mid | tone: ok | verdict: ACCEPT | hook: bulk goods traded between players actually fly as packages — the economy's logistics arm is physically realised by Robo Bees; the trading-floor exchange posts the order, the bee delivers the goods; logistics is not just a build, it's the physical commerce layer
+- from: create_mobile_packages:robo_bee (crafted courier item) | via: create:sequenced_assembly (a short assembly chain — a brass chassis + Create cogwheel + copper wire → assembled Robo Bee) | to: create | motif: M-06 | power: mid | tone: ok | verdict: REJECT | reason: the robo_bee is mid-tier, not endgame — M-06 is the sequenced-assembly *keystone* for endgame items; using sequenced assembly for a mid-tier logistics item is over-engineered relative to the power level; a simpler mechanical-crafting or create:pressing step is more appropriate depth for a mid-tier courier
+- from: create_mobile_packages:portable_stock_ticker (handheld remote stock access) | via: create:mechanical_crafting (a precision-crafted brass/copper instrument) | to: create | motif: M-20 | power: mid | tone: ok | verdict: ACCEPT | hook: the portable ticker is a precision instrument — mechanical crafting (deployer-applied components onto a base) turns it into a Create-native gadget rather than a simple workbench craft; one light assembly step appropriate for its mid-tier role
+- from: create_mobile_packages delivery network (delivers paid orders) | via: bare "it moves goods so it's the economy" | to: economy | motif: no-motif | power: — | tone: — | verdict: REJECT | reason: "infrastructure moves goods" alone is the ambient role; M-31 (logistics-required bulk good) is the right frame only when the logistics arm is the *required* delivery method for bulk/distance trade — that's already captured in the M-31 ACCEPT above; a second bare version has no additional motif
+
+OK — existing Create + aeronautics anchors are sound. New link: M-31 (package delivery = logistics-required commerce layer) gives a genuine economy 3rd anchor. M-20 for portable ticker is a light, appropriate Create-depth step.
+
+## cloth_config   [anchors: support/library (1)]
+
+Config-screen API library. Zero content surface.
+
+- LEAVE — genuine zero-content config library; no items, blocks, or methods; pulled as a transitive dependency
+
+## occultism   [anchors: magic (1)]
+
+Occultism is the flagship summoning/ritual magic pillar mod. Currently at magic(1) per the dossier, though the dossier itself acknowledges strong Create, economy, and organic ties. The dossier notes spirit_trade as an economy candidate via M-09/M-02 — M-09 is retired; the M-02 framing is the right direction.
+
+Power-read: Occultism spans everyday (foliot summoning, spirit fire transmutation) through endgame (marid summoning, dimensional mineshaft, iesnium). spirit_fire and ritual are prime foreign-material sinks of the widest scope in the pack. iesnium is the endgame occult metal.
+
+- from: occultism:spirit_fire (transmutation method) | via: occultism:spirit_fire (foreign mob drops → spirit essence) | to: survival | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: every hostile mob drop in the pack — from kobold skulls to Cataclysm boss pieces — has a spirit-fire path into occult essences; the combat specialist farms the dangerous world, the magic specialist buys the drops and transmutes them; danger-pressure feeds directly into magic production
+- from: occultism:ritual (ritual pentacle method) | via: occultism:ritual (foreign magic-system reagents as ritual inputs) | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: Ars source gems, Iron's arcane essence, and Forbidden Arcanus fragments are all valid ritual sacrifices — the magic pillar's three systems are bound together at the ritual pentacle; a magic specialist who masters one system gains leverage over the others through cross-ritual trade
+- from: occultism:dimensional_mineshaft (djinni-mined void-dimension ore) | via: occultism:miner (sends bound djinni to mine scarce regional ores) | to: economy | motif: M-18 | power: endgame | tone: ok | verdict: ACCEPT | hook: the occultism dimensional miner is the magic specialist's logistics arm — it extracts scarce regional ores from a pocket dimension, giving the magic specialist ore-acquisition power that rivals the Create engineer's drilling rig; trading mined ore for magic reagents is the natural specialization split
+- from: occultism:crushing (crush doubles ores, parallel to create:crushing) | via: occultism:crushing | to: create | motif: M-03 | power: mid | tone: ok | verdict: ACCEPT | hook: the occultism crusher is a magical parallel to Create's crushing wheel — running ores through it yields doubled output just like M-03; the two crushing paths are specialization alternatives, making the choice between Create and Occultism production routes economically meaningful (one requires mechanical infrastructure, the other spirit labour)
+- from: occultism:silver_ingot (the pack's REAL silver, c:ingots/silver) | via: create:pressing (silver → silver plate for Aeronautics hull/panel components) | to: aeronautics | motif: M-23 | power: mid | tone: ok | verdict: ACCEPT | hook: occultism silver (iesnium's companion metal) provides the corrosion-resistant plating for Aeronautics airframes at a tier above iron — the magic specialist who mines silver via spirit-mining supplies the Aeronautics builder; silver plates become a cross-pillar supply chain node
+- from: occultism:spirit_trade (summoned spirit merchant) | via: occultism:spirit_trade (otherworld goods exchanged in the spirit market) | to: economy | motif: M-33 | power: mid | tone: ok | verdict: ACCEPT | hook: the spirit trader is a service the occultism specialist performs for others — summoning a spirit merchant, offering its exotic otherworld goods in exchange for the pack's player-economy currency; the magic specialist is the only player who can broker this spiritual supply line, making them a service node in the player economy
+- from: occultism:iesnium_ingot (unique endgame occult metal) | via: create:sequenced_assembly (iesnium component in an aeronautics endgame machine) | to: aeronautics | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: iesnium — the otherdimensional metal only Occultism mines — is a required component in the highest-tier Aeronautics control unit; the Create airship master must trade with the occultism specialist or never reach the largest ship tier
+- from: occultism:spirit_trade → bare "sell otherworld goods for coin" | via: — | to: economy | motif: M-09 (RETIRED) | power: — | tone: — | verdict: REJECT | reason: M-09 is retired; "spirit goods are sellable" is the ambient endpoint; M-33 (service-for-hire) is the correct framing for spirit_trade as an economy node
+
+REWORK: dossier assigns magic(1) and notes economy/Create as candidates, but the economy candidate explicitly references M-09 (retired) and M-02 (correct but incomplete). The mod's real anchor count should be magic + Create + economy (3) based on spirit_fire/crushing/silver/iesnium paths. The dossier underestimates the mod's weave potential significantly — it has the widest method surface in the pack (8 registered types) and touches every pillar. A dedicated Occultism weave pass in Phase 3 is warranted.
+
+## structurize   [anchors: support/library (1)]
+
+MineColonies build-engine library. No items of gameplay value beyond build/scan tools. No loot.
+
+- LEAVE — support role as required MineColonies build engine; its weave IS MineColonies' weave; the structurize tools themselves are scaffolding utilities, not tradeable/loop-bearing items
+
+## pingwheel   [anchors: support/QoL (1)]
+
+Team ping-marker utility. No items, no blocks, no loot.
+
+- LEAVE — zero-content multiplayer co-op utility; no material surface; fits the ~10-player group play target but carries no loop connections
+
+## mcwwindows   [anchors: support/decoration palette (1)]
+
+Macaw's Windows — 328 window/shutter/blind/curtain/parapet/arrow-slit variants. Stone, wood, and wool-based deco. loot=yes (likely block self-drop). The dossier suggests Create crushing (M-04) for stone parapets.
+
+Power-read: all blocks are everyday-tier deco (vanilla crafting table, simple recipes). The stone parapet/arrow-slit variants use stone and are the strongest M-04 candidate — crushing a carved stone deco back to gravel + xp is the standard lossy recycle. Mosaic glass is dyed-glass-based and has no compelling secondary use. Curtains are wool-based.
+
+- from: mcwwindows stone parapet / arrow-slit blocks (stone-carved deco) | via: create:crushing (M-04 lossy recycle) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: stone parapets and arrow slits crush back to gravel + an experience nugget — a routine recycle for the builder who over-ordered stone deco; low-effort, appropriate for everyday-tier decoration
+- from: mcwwindows curtain blocks (wool-based) | via: create:milling (mill curtains back to wool fibers / string, a one-step everyday recycle) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: crushing curtains into wool fibers is a reasonable idea but wool is trivially available from sheep — the recycle has near-zero value since the player loses nothing by discarding curtains; it would be a recipe no one uses; the signal/noise ratio is wrong for everyday wool items
+- from: mcwwindows mosaic glass blocks (16-color dyed-glass mosaic) | via: create:crushing (M-04 lossy recycle to glass shards/gravel) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: crushing colored mosaic glass to plain glass or gravel loses all the dye investment; the player would just never do this; the recycle is tone-mismatched (why crush a carefully colored mosaic?) and creates a recipe no one uses in practice
+- from: mcwwindows:*_parapet / *_arrow_slit (fortification blocks) | via: loot-seed (seed into dungeon/fortress loot as a rare architectural find) | to: survival | motif: M-34 | power: everyday | tone: clash | verdict: REJECT | reason: fortification deco blocks as loot-seed in a combat chest is a tone mismatch; players who find arrow slits in a dungeon chest are confused, not rewarded; these are builder palette items, not combat rewards
+
+OK — existing decoration-palette support anchor is appropriate. Only stone parapet M-04 recycle passes; the rest REJECT cleanly. The deco-family pass noted in the dossier is the right scope.
+
+## letsdocompat   [anchors: survival (1)]
+
+Cross-mod recipe/tag compat bridge for the Let's Do food family. No items, no blocks, no loot. Ships recipes + 3 c:tags. It IS the food-web weave (M-12-style cross-system tag unification). Currently survival(1).
+
+- from: letsdocompat items/foods/leafy_green tag (standardized leafy-greens across the Let's Do family) | via: create:milling (milling leafy greens into a dried-herb intermediate usable across cooking chains) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: the standardized leafy-green tag makes every Let's Do salad green millable into dried herbs in one recipe — a single Create step unifies the entire food-family into the Create processing chain; one recipe, full coverage
+- from: letsdocompat thirst-compat registration API (cross-mod thirst tagging) | via: config tie (tie pack's drink items to Serene Seasons temperature — hot season raises thirst faster) | to: survival | motif: M-16 | power: everyday | tone: ok | verdict: REJECT | reason: this is a config/external-mod interaction, not a weave against a pack method; letsdocompat itself only provides the tag bridge; the season-thirst interaction would be authored against the thirst mod directly, not through letsdocompat
+- from: letsdocompat food-web unification (bridges multiple Let's Do modules into one tag-aligned web) | via: farmersdelight:cooking + farm_and_charm methods (already present in the web) | to: create | motif: M-12 | power: everyday | tone: ok | verdict: ACCEPT | hook: with letsdocompat bridging the tags, a single Create milling recipe on the c:foods/leafy_green tag feeds every Let's Do cooking station — the compat glue becomes the hook; adding Create milling as the upstream step turns this from isolated food clusters into one connected food-Create web
+- from: letsdocompat as a pure support mod | via: — | motif: no-motif | verdict: REJECT | reason: assigning a second anchor to the compat glue mod itself is category error — the 2nd anchor accrues to the food mods it bridges, not to the glue layer; letsdocompat is correctly a survival-support mod; its value is enabling the food-web weave, not being an independent weave node
+
+OK — existing survival anchor is appropriate. The M-12 Create-milling-via-leafy_green tag is a genuine lightweight 2nd-anchor candidate that the compat layer enables (the tag is the weave-point); the thirst and support candidates reject correctly.
+
+== CHUNK COMPLETE ==

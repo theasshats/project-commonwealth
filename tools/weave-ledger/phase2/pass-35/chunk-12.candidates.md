@@ -60,3 +60,9 @@
 - from: rechiseled chiseled block variants | via: minecolonies:zero_waste or builder hut consumption as upkeep | to: economy | motif: M-26 | power: everyday | tone: ok | verdict: REJECT | reason: chiseled blocks are decoration; they aren't consumed as fuel/food/upkeep in a meaningful ongoing-demand sense. M-26 is the consumption-sink motif for fuel/food/wear — applying it to decoration is a stretch that doesn't advance the loop.
 - from: rechiseled chiseled stone/brick variants | via: create:crushing (M-04: deco → raw material + XP nugget, lossy) | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: a builder who over-chiseled or changed plans can crush chiseled blocks back to gravel/crushed stone in a Create mixer — the decoration palette plugs into Create's material recycling; a mechanical-chisel factory can reclaim its mistakes
 
+## timm   [anchors: support/client-QoL (1)]
+- LEAVE — genuine zero-content client UI mod: 0 blocks, 0 items, loot=no. On-screen biome/dimension title overlay only; no material surface, no player-facing items, nothing to weave.
+
+## multipiston   [anchors: support/colony-dependency (1)]
+- LEAVE — colony-dependency utility block: 1 block (multipistonblock), loot=yes but the loot is just the block itself dropping. The block is internal infrastructure used by MineColonies/Structurize builders; not surfaced to players as standalone content. No material sink, no connective method available.
+

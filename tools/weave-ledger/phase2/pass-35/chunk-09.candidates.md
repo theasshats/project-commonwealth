@@ -192,3 +192,30 @@ Shared library for MehVahdJukaar mods — dynamic registration, custom villager 
 
 - LEAVE — code library for MehVahdJukaar mods; its own items are internal helpers, no material content, no loot. The data-driven-trade API belongs to the dependent mods (Supplementaries etc.), not moonlight itself. Zero independent weave surface.
 
+## jakes-build-tools-2.0.1.5   [anchors: support/building-QoL (1)]
+
+Builder-convenience datapack-mod — hammer (3×3 mine), chisel (block-swap), trowel (random texture placement), magnet, rope ladder, tape measure, foreman hardhat. Vanilla mats only; 30 items in the `minecraft:` namespace. The experience_flask items (XP storage) are interesting. The dossier notes the `hardhat` grants +reach and anvil-immunity — a mild progression item.
+
+**Method-pull candidates:**
+
+- from: minecraft:experience_flask_0/1/2/3 (XP storage/release) | via: create:enchantment_industry (Create Enchantment Industry's `create_enchantment_industry:grinding` method consumes enchanted books into liquid XP) | to: create | motif: M-12 (processing-chain pull — XP flask as an intermediate in enchanting/grinding operations) | power: mid | tone: ok — XP flasks storing experience that feeds Create's enchantment grinding chain (liquid XP) is a clean intermediate: the builder tool stores construction-site XP, the Create enchantment industry consumes it | verdict: ACCEPT | hook: XP collected in a flask on a construction site is drained into the Create enchantment grinder — build sites feed the enchanting line.
+
+- from: minecraft:foreman_hard_hat (reach-boost hat, specialty builder gear) | via: create:mechanical_crafting (requiring a precision mechanism to upgrade the hardhat to the foreman variant) | to: create | motif: M-05 (native-method gating — the upgraded tool requires a Create component) | power: mid | tone: ok | verdict: REJECT | reason: The hardhat is a builder utility item, not a progression keystone. M-05 is for a mod's flagship item gated on Create parts — using it on a humble construction hat is over-engineering a QoL tool. Depth should scale with power; the hardhat is everyday, not endgame.
+
+- from: jakes-build-tools as a whole (builder utility) | via: MineColonies tie — builder colonists could use hammers/chisels as a faster building method | to: economy | motif: M-28 (colony route) | power: everyday | tone: clash — the colony builder huts use their own internal build logic, not player-held tools; there's no mechanical hook to make colony builders use jakes-build-tools items. Purely cosmetic overlap. | verdict: REJECT | reason: No mechanical tie between jakes-build-tools items and MineColonies colony behavior; the colony route doesn't consume these tools.
+
+**Existing connections review:**
+REWORK: Support/building-QoL is the right label but this mod has one genuine weave candidate (XP flasks → Create enchantment chain, M-12). The dossier's "leave" is too conservative. With one ACCEPT, it earns a Create second anchor.
+
+## kambrik   [anchors: support/library (1)]
+
+Kotlin dev library (registration helpers, command/text DSLs, networking utilities). Zero items, zero blocks, zero loot, no gameplay surface.
+
+- LEAVE — genuine zero-content Kotlin library; no items, no loot, nothing to route through any method.
+
+## searchables   [anchors: support/library (1)]
+
+Pure client UI library (search/filter + auto-complete API for JEI-family UIs). Zero items, zero blocks, zero loot, no gameplay surface.
+
+- LEAVE — zero-content client-UI library; no items, no loot, no mechanic. Nothing to weave.
+
