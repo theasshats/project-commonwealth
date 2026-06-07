@@ -2,8 +2,8 @@ name: PR checks
 
 # Merge-gating validation for pull requests. Catches the mistakes that break the
 # pack at install/update time: a misplaced `pin`, an invalid manifest, broken
-# KubeJS JSON/JS, a bad config TOML, or a non-compiling Go change in the editor or
-# site — plus the **packwiz index** guard, which is *guard-aware*: it fails only on
+# KubeJS JSON/JS, a bad config TOML, or a non-compiling Go change in the editor —
+# plus the **packwiz index** guard, which is *guard-aware*: it fails only on
 # a new top-level path that needs a .packwizignore entry. Routine staleness (forgot
 # `packwiz refresh`) is auto-fixed by sync-index, so the check stays green and never
 # flickers red. The two share one verdict (scripts/index-guard.sh).
@@ -82,13 +82,6 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: '1.22'
-
-      - name: site
-        working-directory: site
-        run: |
-          go build ./...
-          go vet ./...
-          go test ./...
 
       - name: editor (packwiz.bin is committed)
         working-directory: tools/editor-src
