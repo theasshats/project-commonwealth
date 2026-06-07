@@ -61,6 +61,15 @@ OK — M-15 (boss-gate wolf link), M-24 (booster rocket aeronautics), M-20 (opti
 
 - CHALLENGE | from: createmechanicalcompanion:illager_engineer_spawn_egg | via: loot-seed | to: survival | motif: M-34 | verdict: REJECT | hook: the spawn egg is a creative item; the right frame for M-34 is the Illager Workshop structure loot (loot=yes, confirmed above) — not the spawn egg itself, which doesn't drop from anything. The correct Phase-3 action is seeding the workshop chest loot, not tagging the spawn egg.
 
+## railways   [anchors: Create + aeronautics (2)]
+OK — M-04 (locometal crush), M-31 (logistics bulk), M-33 (conductor service) covered. One gap:
+
+- NEW | from: railways locometal blocks (massive aesthetic block palette — 617 blocks of brass/copper/iron-wrapped locometal in 17 colors) | via: create:crushing (M-04 — recycles deco back to raw material + XP nugget; lossy) applied to the *color-variant* surplus | to: create | motif: M-04 | power: everyday | tone: ok | verdict: ACCEPT | hook: when a player redecorates or tears down a rail build, the wrong-color locometal blocks crush back to copper/brass/iron plate + XP nugget — the 617-block palette makes deco-to-resource recycling genuinely useful rather than trivial (already partially in existing rows but the sheer palette scale is the nuance: the more colors, the more mis-buys, the more crushing happens).
+
+Note: this deepens an existing M-04 ACCEPT row rather than adding a new motif — the context-fed nuance is that with 617 color variants, the recycling loop is a *recurring* mid-game activity, not a one-time construction choice.
+
+- NEW | from: railways high-tier track components (high-speed track gauges / brass_wrapped_locometal_boiler — multi-step fabricated) | via: tfmg:hot_blast or tfmg:casting — TFMG steel/cast_iron required for high-speed rail boiler components | to: create | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: a high-speed railway line needs boilers that a basic forge can't make — the rail engineer depends on the industrial tier for heat-resistant components, tying the transport spine to the refinery and forcing the two Create-specialists to cooperate.
+
 ## aeronautics   [anchors: aeronautics + Create (2)]
 OK — M-10 (levitite magic), M-13 (fuel), M-22 (lunar levitite), M-31 (docking logistics), M-33 (docking trading-post), M-08 (levitite→coin), M-24 (propeller drivetrain), M-10 (goggles enchanting) all covered. One structural gap:
 
