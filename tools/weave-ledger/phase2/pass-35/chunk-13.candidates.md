@@ -89,6 +89,14 @@
 - from: gtmogs overworld/nether/end marker blocks | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: clash | verdict: REJECT | reason: the 3 marker items are functional config anchors, not building materials; crushing them would be nonsensical (they're worldgen metadata objects, not deco blocks)
 - OK — core connections sound; the magic-metal vein M-30 note above is an authoring-level reminder for the GTMOGS vein config design, not a new recipe weave.
 
+## create_integrated_farming   [anchors: create, survival (2)]
+- REWORK check: Create-automated roosts/nets (Create anchor) + automated husbandry/food output (survival anchor) — OK. Both connections are tight; the mod exists to automate the food/animal chain via Create contraptions.
+- from: roost outputs (eggs, feathers, meat) at scale | via: minecolonies colony food-request / provisioning | to: economy | motif: M-28 | power: everyday | tone: ok | verdict: ACCEPT | hook: automated roosts supply the colony's bulk animal-product demand at production scale — the Create specialist's farm feeds the settlement builder's growing workforce
+- from: fishing_net rare aquatic drops (mod-added fish from Alex's Mobs / Aquaculture if catchable) | via: occultism:spirit_fire or ars_nouveau:imbuement | to: magic | motif: M-02 | power: mid | tone: ok | verdict: ACCEPT (conditional) | hook: the net hauls up an exotic fish that a magic specialist transmutes into a ritual reagent — fishing automation feeds the occultist's supply line; conditional on the net's catch table including reagent-viable rare fish
+- from: create_integrated_farming:roost (machine block) | via: create:sequenced_assembly (building the roost itself) | to: create | motif: M-06 | power: mid | tone: ok | verdict: REJECT | reason: the roost is a mid-tier station, not a flagship keystone; applying M-06 (multi-stage sequenced assembly) to a farming appliance would be over-engineering a mid-level machine — M-06 is reserved for endgame/flagship items; the mod is already deep in Create via its contraption/harvester mechanics without needing a sequenced-assembly build path
+- OK — Create + survival connections are sound; M-28 (colony provisioning at scale) and M-02 (rare aquatic drops) are the new links.
+
+
 
 
 
