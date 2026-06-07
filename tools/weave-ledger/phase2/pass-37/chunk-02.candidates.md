@@ -30,6 +30,17 @@ New candidate — survival (danger) angle:
 
 - LEAVE — server/client profiler with no in-game items, no methods, no loot. Diagnostic tooling only; correctly filed as support.
 
+## minecolonies_compatibility   [anchors: survival, create (2)]
+
+REWORK: OK — existing connections sound. The Create↔MineColonies link (Courier pulls from Create Stock Link; colony workers use Create-processing-adjacent methods) and the survival anchor (extends colony farming/jobs) are coherent and non-arbitrary. No mis-costing.
+
+New candidate — economy anchor via combat-supply:
+- from: minecolonies_compatibility:tacz_dummy_gun / Gunner colony job output (TaCZ ammo) | via: colony job (minecolonies:request system) | to: economy | motif: M-34 | power: mid | tone: ok | verdict: ACCEPT | hook: the Gunner job in the colony produces ranged-combat supplies (ammo) that non-combat players must trade for — the colony becomes a combat-supply node, making the settlement-builder a supplier to fighters who lack a dedicated armory hut.
+
+New candidate — economy anchor via colony route:
+- from: minecolonies_compatibility:citizen_terminal (storage-network bridge) | via: colony logistics (MineColonies request system ↔ Create Stock Link) | to: economy | motif: M-28 | power: mid | tone: ok | verdict: ACCEPT | hook: the storage terminal makes colony-produced goods flow into the pack's shared logistics without a player manually shuttling items — a colony-native logistics arm that feeds the economy distribution stage.
+
+
 
 
 
