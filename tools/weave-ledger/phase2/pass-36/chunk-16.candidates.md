@@ -68,6 +68,13 @@ OK — existing Create + survival connections are sound. M-29 hardened-backpack 
 ## notenoughanimations   [anchors: support/visual (1)]
 - LEAVE — client-only procedural animation enhancer; 0 blocks, 0 items; no recipe or processing surface. Pure cosmetic visual polish with no weave surface.
 
+## create_train_parts   [anchors: aeronautics (1)]
+- from: create_train_parts:brass_sliding_window / brass_sliding_window / copper_sliding_window | via: create:pressing (pressed copper/brass sheets → sliding window frames) | to: create | motif: M-23 | power: everyday | tone: ok | verdict: ACCEPT | hook: train windows and steps are build-material blocks for the logistics arm — requiring that the brass and copper variants route through Create-pressed sheets (brass sheet → brass sliding window, copper sheet → copper sliding window) binds the train-detailing blocks to the Create materials chain, making train decoration a deliberate fabrication step rather than a cheap craft. M-23 covers structural components for aeronautics builds; train detailing is the rolling-stock equivalent. Everyday power — one light pressing step for windows/steps, matching the cost model for simple deco fittings.
+- from: create_train_parts:train_slide_brass / train_step_brass | via: create:crushing | to: create | motif: M-04 | power: everyday | tone: ok | verdict: REJECT | reason: if we already gate train parts on pressed sheets (M-23 accept above), adding a crush-back recycling route is cumulative; but M-04 (deco→raw recycle) is valid for the brass/copper parts — however, with the M-23 weave accepted, a second crush-back route is redundant and adds noise without advancing the loop. One link per mod is the floor; two accepted weaves on a decoration mod risks over-engineering. REJECT as redundant given M-23.
+- from: create_train_parts:crossing (track crossing block) | via: M-24 mechanical component → drivetrain | to: aeronautics | motif: M-24 | power: mid | tone: ok | verdict: REJECT | reason: the crossing block is an intersection piece for Create train tracks, not a drivetrain component (propeller, engine, rudder). Calling it a drivetrain component would be a forced category error. It belongs in the aeronautics/train-logistics infrastructure, but it's already in that anchor — adding M-24 is circular. REJECT.
+OK — M-23 pressing step gives create_train_parts its Create anchor alongside aeronautics. Dossier's "WEAK" deco note for the Create link is now superseded by the more specific pressed-sheet route. No existing connections to REWORK (mod was 1 anchor, aeronautics; Create is now added).
+
+
 
 
 

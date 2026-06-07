@@ -190,3 +190,35 @@ The Altar multiblock is a native ritual-style method (analogous to Ars imbuement
 
 OK — survival anchor is sound. Three accepted links: Create-gate (M-05), boss-key magic (M-15/M-11), and power-bottle mob-drop economy (M-02).
 
+## occultism   [anchors: magic (1)]
+
+Flagship summoning/ritual magic pillar: pentacle rituals, spirit_fire, spirit_trade, dimensional mineshaft, crushing, crystallize. 164 blocks, 596 items, 158 c:tags, loot=yes. Registered recipe types: ritual, spirit_fire, crushing, crystallize, miner, spirit_trade, book_binding, repairitem.
+
+**Method-pull analysis:**
+This is the richest method surface in the chunk. The dossier already identifies 3 strong 2nd-anchor candidates. Let me evaluate them rigorously and look for gaps.
+
+**Existing candidates from dossier — evaluating:**
+
+**Candidate 1: occultism:spirit_trade as economy player-to-player trade node**
+- from: spirit-traded otherworld goods | via: occultism:spirit_trade | to: economy | motif: M-02 (mob-drop reagent / spirit-drop traded goods) — but actually this is closer to M-33 (service-for-hire: the spirit performs trade) or M-29 (cross-route dependency) | power: mid-endgame (spirit_trade requires a summoned trader spirit, which requires ritual progression) | tone: ok — a summoned demon merchant is a natural intermediary for otherworld goods; players trade with it for materials unavailable by any other route | verdict: ACCEPT | hook: the Occultism specialist summons a spirit merchant that carries otherworld items (iesnium, djinn-crafted tools) — these goods exist only in the occult route, so Create and colony players must trade with the magic specialist to access them. M-18 (summoned-spirit logistics — spirit_trade as the magic acquisition route) is the exact motif.
+- Corrected motif: M-18 (Summoned-spirit logistics — spirit_trade acquires scarce materials; the magic logistics arm)
+
+**Candidate 2: mob/boss drops → occultism:spirit_fire or :ritual → essences (transmutation sink)**
+- from: foreign mob/boss drops (blaze rod, wither skull, dragon egg analogue, cataclysm boss drops) | via: occultism:spirit_fire / occultism:ritual | to: magic | motif: M-11 (ritual/transmutation sink) | power: mid-endgame (spirit_fire requires ritual setup; boss drops are endgame) | tone: ok — burning boss drops in the spirit fire to produce djinn/afrit/marid essences is exactly the mod's intended gameplay; the transmutation rite consumes the drop and yields a magic intermediate | verdict: ACCEPT | hook: a combat specialist farms boss drops and brings them to the magic specialist's pentacle — boss drops are transmuted into spirit essences that only the occultist can produce, making the two routes interdependent. M-11 + M-34 (combat-route supply).
+
+**Candidate 3: occultism:crushing as parallel ore-doubling (Create cross-route)**
+- from: raw ores (crushed in occultism crushing entity) | via: occultism:crushing | to: create | motif: M-03 (Create ore-doubling / M-29 cross-route dependency — using the magic crushing as an alternative to create:crushing) | power: everyday-mid (crushing is core early occultism) | tone: ok — occultism's crushing entity doubles ores the same way Create's crusher does; this is an alternative route that the magic specialist can use instead of building a Create ore-crushing setup | verdict: ACCEPT | hook: the magic specialist doesn't need to build a Create ore-processor — the Djinni crusher doubles ores through ritual, making the magic and Create routes genuinely non-overlapping in their production methods. M-29 (cross-route dependency) is the tighter motif — the magic route offering crushing makes the Create route non-mandatory, preserving specialist diversity.
+- Corrected motif: M-29 (cross-route dependency — magic route has its own ore-doubling, distinct from Create's; neither route is required for the other)
+
+**Candidate 4: dimensional mineshaft as regional-scarcity override / logistics (iesnium/silver acquisition)**
+- from: occultism:dimensional_mineshaft → iesnium / occultism:silver_ingot | via: occultism:miner (spirit-mined void dimension) | to: economy/scarcity | motif: M-18 (summoned-spirit logistics — the miner spirit extracts from a void dim) | power: mid-endgame (dimensional mineshaft requires ritual + binding progression) | tone: ok — a spirit miner is the magic equivalent of Create's ore excavation, acquiring materials from a pocket dimension instead of the overworld; this is the magic production route's supply chain | verdict: ACCEPT | hook: the Occultism specialist doesn't dig — they send a spirit into the void to mine, producing iesnium and silver from another dimension. This is the magic pillar's logistics arm: the scarcity of iesnium/silver in the overworld is partially bypassed by the occult route (a real cross-route diversity that forces non-magic players to trade for these materials).
+- Motif: M-18 (Summoned-spirit logistics)
+
+**Candidate 5: occultism silver ingot as cross-route dependency (silver needed in Create or magic chains)**
+- from: occultism:silver_ingot (c:ingots/silver, the pack's REAL silver — CLAUDE.md gotcha) | via: recipe (cross-route requirement) | to: create | motif: M-29 (cross-route dependency — a Create chain requires occultism silver) | power: mid | tone: ok — if a Create recipe calls for real silver (c:ingots/silver), only the Occultism specialist can produce it (via spirit mining), forcing Create specialists to trade with magic specialists | verdict: ACCEPT | hook: the Create smith who needs silver wire or a silver-contact component must acquire occultism silver — galosphere "silver" (actually palladium) won't substitute, so only the occultist's silver qualifies. M-29 cross-route dependency, and enforces the CLAUDE.md silver/palladium distinction.
+
+**Existing anchor review:**
+- REWORK: magic anchor (1) is already the correct primary anchor but occultism needs economy/Create/survival secondary anchors formalized. The dossier's economy candidate via spirit_trade was framed as M-09 (retired) — it should be M-18 (summoned-spirit logistics) instead. Correct the motif framing.
+
+OK — five accepted links across Create (M-03/M-29), magic depth (M-11), and economy/logistics (M-18). Occultism is the pack's highest-density method surface.
+
