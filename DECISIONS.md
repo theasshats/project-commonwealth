@@ -10,6 +10,25 @@ theme/balance · **[PLAN]** plan-doc change · **[GITHUB]** issue action · **[N
 
 ---
 
+## Status — passes 16/17/18 run (full-coverage, post-unfreeze); 19 passes total
+
+- **[NOTE] Three simultaneous full passes (16/17/18) complete + merged.** First passes after retiring the
+  freeze — each covered all ~350 dossiers (Sonnet bulk + one Opus chunk per pass). 54 chunks, all
+  `== CHUNK COMPLETE ==`, dispatched as background agents. Merge (19 passes): **2839 unique candidates**,
+  **831 at ≥2-pass, 174 at ≥5, Gate-2 core (≥5+ACCEPT) = 126**, 307 opus-corroborated.
+- **[NOTE] The unfreeze re-opened the yield, exactly as predicted.** Convergence jumped **1991 → 2839
+  (+848 new)** in 3 passes (`CONVERGENCE.md`). That confirms the freeze had been **hiding real candidates**:
+  the ~160 formerly-skipped mods produced genuine weaves — `midnightthoughts`/`fishingreal` reviewed,
+  structure/dungeon mods → loot-seed coin/reagent/boss-key, etc. Retiring the freeze was the right call.
+- **[NOTE] Quality held across all 54 chunks.** Method-pull dominant, motifs cited, power-read + red-team
+  rejects (double-spend, tone clash, boss-key dilution, scarcity-throttle protection); guardrails respected
+  (silver/palladium escalated, `arcane_essence`/`source_gem` reservations honored). Many REWORK flags lifted
+  under-anchored mods to 3–4 anchors (createnuclear, createmetalwork, tfmg, dungeons_arise, sky_whale_ship,
+  naturalist, occultism, cataclysm, alexsmobs…). **Aeronautics now produces OUTBOUND weaves** (levitite →
+  economy/magic) thanks to #179.
+- **Next:** yield is still climbing (not saturated) — more passes would add more, or **proceed to Gate 2**
+  (sort `CANDIDATES` by `times_suggested`; the **126 ≥5+ACCEPT** rows are the short-list) → Phase 2.5 issues.
+
 ## Status — #179 done (aeronautics GROUNDED) + docs reworked
 
 - **[NOTE] #179 (aeronautics digest gap) closed by another instance** (commit f85fc1d, rebased under my
