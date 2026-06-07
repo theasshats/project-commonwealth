@@ -131,6 +131,10 @@ LEAVE — pure JVM/loader performance patch; 0 blocks, 0 items, no recipe types,
 ## sable   [anchors: support/physics-backend (1)]
 LEAVE — Rapier physics engine library backing Aeronautics ships; 0 blocks, 0 items, no recipe types, loot=no. The weaving surface lives in the mods that build ON sable (Aeronautics itself). No content to weave here. Genuine zero-surface case.
 
+## notenoughanimations   [anchors: support/client-visual (1)]
+LEAVE — client-side cosmetic animation overrides; 0 blocks, 0 items, no recipe types, loot=no. Visual-only; no gameplay surface. Genuine zero-surface case.
+
+
 
 
 

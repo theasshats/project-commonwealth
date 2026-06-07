@@ -122,6 +122,23 @@ Client UI inventory trash slot. No items, no blocks, no loot. Zero content surfa
 
 - LEAVE — pure client QoL UI (inventory trash slot); registers no items, no blocks, no loot; zero content surface to weave.
 
+## endrem   [anchors: survival (1)]
+
+Rich surface: 16 themed eye items (loot=yes, blocks=1, items=20), progression gate to the End. The dossier has M-11/M-02 and M-06 candidates. Both survive scrutiny — the key constraint is preserving exploration intent (craft paths must stay costly).
+
+- from: endrem:undead_eye (undead-themed; sources from zombie/skeleton/wither territory) | via: occultism:ritual | to: magic | motif: M-11 | power: mid | tone: ok | verdict: ACCEPT | hook: A stuck player who can't find the undead_eye in a loot chest can transmute it through an Occultism ritual using wither rose + bone meal + a charged soul crystal — the transmutation is costly enough to stay a last resort but gives the magic specialist a unique path to End access no pure-loot player has.
+
+- from: endrem:magical_eye / endrem:corrupted_eye (arcane-themed) | via: ars_nouveau:enchanting_apparatus | to: magic | motif: M-10 | power: mid | tone: ok | verdict: ACCEPT | hook: The magical_eye and corrupted_eye have obvious arcane affinity; routing their craft through the Enchanting Apparatus (with source gem + thematic reagents as inputs) makes the magic specialist the canonical provider of these two eyes — a locked production path for End access items that forces a magic-trade partner.
+
+- from: endrem:guardian_eye (guardian-themed) | via: create:sequenced_assembly | to: create | motif: M-06 | power: endgame | tone: ok | verdict: ACCEPT | hook: One or two eyes (guardian, elder-themed) are assemble-able through a Create sequenced-assembly chain using prismarine shards + compressed materials + a guardian scale — End access partly gated on Create depth keeps the tech spine relevant without trivializing exploration (limit to at most 2 of 12 required eyes via craft, the rest stay loot-only).
+
+- from: endrem eyes generally | via: create:sequenced_assembly (many eyes) | to: create | motif: M-06 | power: endgame | tone: clash | verdict: REJECT | reason: Making most/many eyes craftable via Create defeats endrem's explicit exploration-gate design — the whole point is hunting 12 of 16 distinct sources. One or two craftable eyes (accepted above) are a safety valve; more than that erodes the progression intent. Depth scales with power, and endrem's power is "gate to the End" — keep craft paths scarce.
+
+- from: endrem eyes as magic-catalyst sinks | via: ars_nouveau:imbuement (all 16) | to: magic | motif: M-10 | power: endgame | tone: clash | verdict: REJECT | reason: Making all 16 eyes routes through the Enchanting Apparatus cheapens their exploration provenance — each eye is meant to be hunted, not crafted en masse. Only specific arcane-themed eyes (accepted above as magical/corrupted) survive the theme-fit test; the rest have non-arcane themes (nether, cold, guardian) that clash with an imbuement route.
+
+OK — the dossier's two candidate clusters survive; the sequenced-assembly candidate is accepted with a critical scope limit (≤2 eyes, not a wholesale route).
+
+
 
 
 
