@@ -11,3 +11,13 @@ OK — existing rows sufficient. M-08 coin loot-seed and M-02 magic reagent loot
 LEAVE — pure client render overlay, zero items/blocks/methods; no surface to weave.
 
 ## bettermineshafts   [anchors: survival (1)]
+- CHALLENGE | from: bettermineshafts expanded mineshaft structures | via: loot-seed (vanilla `chests/abandoned_mineshaft`) | to: economy | motif: M-08 | verdict: REJECT | hook: dossier explicitly states `loot=no` — bettermineshafts uses vanilla mineshaft loot tables, not its own; seeding that table is a *vanilla loot edit*, not a bettermineshafts-specific weave; the ACCEPT rows citing this mod as the loot anchor are mis-attributed — the correct owner of that loot-seed action is the vanilla table, not this mod
+- CHALLENGE | from: bettermineshafts expanded mineshaft structures | via: loot-seed (vanilla mineshaft chest) | to: magic | motif: M-02 | verdict: REJECT | hook: same as above — dossier `loot=no`; no unique loot table path; the existing 2-vote ACCEPTs for M-02 carry the same mis-attribution; this mod can't be the anchor for a vanilla-table edit
+
+## ritchiesprojectilelib   [anchors: support (library/API) (1)]
+LEAVE — ballistics API with no items/blocks/methods; pulled transitively by Create Big Cannons. No surface to weave.
+
+## biolith   [anchors: support (library/worldgen API) (1)]
+LEAVE — biome placement framework, no items/blocks; no surface to weave.
+
+## illagerinvasion   [anchors: survival (1)]

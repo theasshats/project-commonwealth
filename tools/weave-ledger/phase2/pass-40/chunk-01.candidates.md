@@ -16,3 +16,13 @@ Existing rows cover M-24 (flexible shafts → aeronautics drivetrain), M-20 (and
 
 OK — remaining accepted rows (M-24 flexible shaft → aeronautics drivetrain, M-20 andesite cogwheel deploy-upgrade) are well-grounded.
 
+## immersive_armors   [anchors: survival (1)]
+Existing rows strongly converge: M-05 (Heavy/Steampunk via create:pressing + mechanical_crafting) and M-10 (Divine/Robe via ars_nouveau:enchanting_apparatus/armor_upgrade) both have 25+ ACCEPTs. M-34 (finished sets as combat-supply trade goods) and M-15 (Wither set gated on wither skull boss drop) each appear with several ACCEPTs. M-28 (Guard Tower requests immersive_armors heavy sets) is present once. Missing coverage:
+
+1. The Wither set's M-15 framing exists but one row conflates it with adding a *Create pressing* step on top of vanilla boss-gating — the more precise framing is that `kobolds:kobold_wither_skull` (rare cap-variant) vs `minecraft:wither_skeleton_skull` are two distinct paths; the existing rows don't distinguish this clearly.
+2. No row picks up that the **Prismarine set** (spike retaliation, ocean-themed) has a natural tie to `upgrade_aquatic` materials — the M-29 cross-route dependency motif. Every attempt at prismarine→Create was REJECTED (M-03/M-05/M-20 all rejected correctly), but none tried a cross-route dependency into upgrade_aquatic prismarine rods.
+3. M-06 (sequenced assembly) for the Steampunk set has multiple ACCEPTs and is distinct from M-05 — the depth-vs-scale question: M-05 is "gated on Create parts"; M-06 is a multi-stage chain. Both appear with ACCEPTs. No CHALLENGE needed — they describe different depths (everyday press vs. endgame chain).
+
+- NEW | from: immersive_armors:prismarine_chestplate set (ocean-sourced, spike-retaliation) | via: recipe (upgrade_aquatic:prismarine_rod as a crafting input to the Prismarine set) | to: create | motif: M-29 | power: mid | tone: ok | verdict: ACCEPT | hook: prismarine armor that spikes attackers is forged from the actual deep-sea rods upgrade_aquatic drops — the ocean specialist's harvest gates the armorsmith's ocean set, so neither is self-sufficient
+- CHALLENGE | from: immersive_armors:wither set (wither skull input) | via: wither_skull = boss drop | to: survival | motif: M-15 | verdict: REJECT | hook: M-15 is the correct motif but tagging the pillar as "survival" is imprecise — wither_skeleton_skull already gates the vanilla wither fight; the *weave value* is routing the armor through Create-pressed nethersteel (createbigcannons:nethersteel_plate already ACCEPT'd separately), not relabeling the boss-drop as a survival anchor; accept the combined M-15+Create version instead
+

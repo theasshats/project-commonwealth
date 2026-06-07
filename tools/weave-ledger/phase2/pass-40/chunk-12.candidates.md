@@ -1,2 +1,10 @@
 # Phase 2 candidates — chunk-12 (context-fed)
 
+## create_central_kitchen   [anchors: Create, survival (2)]
+
+Existing rows cover: M-26 consumption (Blaze Stove demand, feast eating), M-28 colony provisioning, M-12 seasonal pie (M-16), M-06 Blaze Stove sequenced-assembly, M-29 cross-route feast, M-34 Blaze Stove combat-supply. The strongest omission is a deeper M-29 thread: the existing M-29 row only gestures at "FD crop inputs + Create parts" without naming the cross-route dependency cleanly. No row yet captures the economy-side output diversity (sauce/drink fluids as trade goods beyond simple feast-eating) via M-33 (service-for-hire) or the aeronautics galley gap in a non-forced way.
+
+- NEW | from: create_central_kitchen sauce/drink/ice-cream fluids (Create:filling output) | via: create:filling → numismatics vendor | to: economy | motif: M-08 | power: mid | tone: ok | verdict: ACCEPT | hook: the automated kitchen bottles its sauces and ice-cream; a vendor sells them by the cask — the distillery and the kitchen split the luxury-food market, mint-funded by regional ingredients
+- NEW | from: create_central_kitchen Blaze Stove (consumes blaze_rods continuously) | via: create_central_kitchen blaze_stove + M-30 regional-scarcity gate | to: economy | motif: M-30 | power: mid | tone: ok | verdict: ACCEPT | hook: blazes don't spawn near every base — a kitchen running Blaze Stoves at scale depends on a Nether-adjacent blaze farmer, locking high-speed automated cooking behind regional access to the Nether
+- CHALLENGE | from: create_central_kitchen automated feast output | via: farmersdelight:cooking or create_central_kitchen automation → finished feast | to: economy | motif: M-26 | verdict: REJECT | hook: the existing M-26 row for this mod (row 24 in CANDIDATES.tsv) tags to: economy but M-26 is a consumption-sink motif (survival/economy closing arrow) — the "output feeds colony consumption" narrative belongs under M-28 (colony route) and the existing M-28 rows already cover it; the standalone M-26 row with to:economy is a mislabel that adds no new arc to the loop
+
