@@ -1,0 +1,10 @@
+geckolib
+recipe_integration
+doubledoors
+bettermineshafts
+betterstrongholds
+createbigcannons
+enhancedcelestials
+ecologics
+naturalist
+travelersbackpack
