@@ -1,0 +1,10 @@
+citadel
+edf-remastered-5.0-beta4
+valarian_conquest
+recipe_integration
+create_ltab-3.9.2
+entity_texture_features
+irons_lib
+ferritecore
+lithostitched
+playeranimator

@@ -52,7 +52,7 @@ def main():
         well += pill >= 2
         allns.append(ns)
     random.Random(seed).shuffle(allns)                  # the per-pass randomization
-    size = 10
+    size = int(arg('--size', '10'))                     # mods per chunk (bigger = fewer dispatched agents)
     chunks = [allns[i:i + size] for i in range(0, len(allns), size)]
     n = len(chunks)
     opus_chunk = int(arg('--opus-chunk', str((p - 1) % n + 1)))   # cycle opus across chunks over passes
