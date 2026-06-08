@@ -1,8 +1,9 @@
 worldgen:
   oreVeins:
     # The grid size (in chunks) for ore vein generation
-    # Default: 3 — raised to 4 for Geolosys-style spread (fewer, farther-apart veins).
-    oreVeinGridSize: 4
+    # Default: 3 — single integer (no range supported). Set to 5 for strong Geolosys-style
+    # spread (rare, far-apart deposits). Lower toward 3 if veins feel too sparse in playtest.
+    oreVeinGridSize: 5
 
     # The maximum random offset (in blocks) from the grid for generating an ore vein.
     # Default: 12 — raised to 20 so the larger grid doesn't read as a visible lattice.
@@ -44,8 +45,8 @@ compat:
 
     # The radius, in blocks, that clicking an ore block will search for veins in.
     # -1 to disable
-    # Default: 24 — raised to 32 so prospecting a now-rarer vein is a little more forgiving.
-    oreBlockProspectRange: 32
+    # Default: 24
+    oreBlockProspectRange: 24
 
     # The map scale at which displayed ores will stop scaling.
     oreScaleStop: 1.0
@@ -58,7 +59,7 @@ compat:
 
     # The color to draw a box around the ore icon with.
     # Accepts either an ARGB hex color prefixed with # or the string 'material' to use the ore's material color
-    borderColor: #00000000
+    borderColor: material
 
     # Which part of the screen to anchor buttons to
     # Default: "BOTTOM_LEFT"
@@ -71,7 +72,7 @@ compat:
     # - BOTTOM_CENTER
     # - BOTTOM_LEFT
     # - LEFT_CENTER
-    buttonAnchor: BOTTOM_LEFT
+    buttonAnchor: TOP_RIGHT
 
     # Which direction the buttons will go
     # Default: "VERTICAL"
@@ -90,15 +91,15 @@ compat:
 
 dev:
   # Debug general events? (will print recipe conficts etc. to server's debug.log)
-  # Default: false
-  debug: false
+  # Default: false — ON for the v0.7.0 ore-gen tuning playtest; turn OFF before release (see #261).
+  debug: true
 
   # Debug ore vein placement? (will print placed veins to server's debug.log)
-  # Default: false (no placement printout in debug.log)
-  debugWorldgen: false
+  # Default: false — ON to verify vein placement/rarity during the #116 playtest; turn OFF before release (#261).
+  debugWorldgen: true
 
   # Generate ores in superflat worlds?
-  # Default: false
+  # Default: false (not a debug toggle — left off)
   doSuperflatOres: false
 
   # Dump all registered GT models/blockstates/etc?
