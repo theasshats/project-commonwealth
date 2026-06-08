@@ -99,8 +99,8 @@ dev:
   debugWorldgen: true
 
   # Generate ores in superflat worlds?
-  # Default: false (not a debug toggle — left off)
-  doSuperflatOres: false
+  # Default: false — enabled so superflat worlds still get GTMOGS ore veins.
+  doSuperflatOres: true
 
   # Dump all registered GT models/blockstates/etc?
   # Default: false

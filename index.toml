@@ -34,7 +34,7 @@ hash = "abe2744c46c81c28ef0bee5cc5cbf63c6982ee589f54ec06c9b31d258f841051"
 
 [[files]]
 file = "config/gtmogs.yaml"
-hash = "a32a8f2c2c77b8b592f7d2e400c9ce880164e35be13f4a69b480e456ea23e98a"
+hash = "06e2e6664013abfa34fdd65fd65edd84554141a27c982ab495b75f15d9f54437"
 
 [[files]]
 file = "config/incontrol/spawn.json"
