@@ -896,6 +896,11 @@ hash = "19cbfb37dc29169b50599dfa328fe12a0ec9caaec8ac02627b5846f3bd9d1425"
 metafile = true
 
 [[files]]
+file = "mods/aeronautics-claims.pw.toml"
+hash = "2257b50997ad5dff52ebd038fddf61896d97d5152844343a542264cb988de057"
+metafile = true
+
+[[files]]
 file = "mods/aeronautics-dyeable-components.pw.toml"
 hash = "b218b7696365829e01cc3b6844913c757836d1ebdb0c49a9abf7a7fcbc0f6678"
 metafile = true
