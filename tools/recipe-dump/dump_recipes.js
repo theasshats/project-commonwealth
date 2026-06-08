@@ -9,7 +9,7 @@
 //   1. Copy this file to  <instance>/kubejs/server_scripts/zz_dump_recipes.js
 //   2. Launch the pack (single-player world or dedicated server) so recipes load.
 //   3. Run  /reload  in-game (or just boot once). It writes:
-//        <instance>/kubejs/exported/derpack-recipes.json
+//        <instance>/kubejs/derpack-recipes.json
 //      It ALSO logs every matched recipe to latest.log, prefixed  DERPACK_RECIPE  (use this if the file
 //      write fails on your KubeJS version: `grep DERPACK_RECIPE logs/latest.log`).
 //   4. Send back that JSON (or just the recipes you care about) so exact grids are available.
@@ -40,8 +40,8 @@ ServerEvents.recipes(event => {
   })
 
   try {
-    JsonIO.write('kubejs/exported/derpack-recipes.json', out)
-    console.info(`[derpack] recipe dump: wrote ${n} recipes -> kubejs/exported/derpack-recipes.json`)
+    JsonIO.write('kubejs/derpack-recipes.json', out)
+    console.info(`[derpack] recipe dump: wrote ${n} recipes -> kubejs/derpack-recipes.json`)
   } catch (e) {
     console.warn(`[derpack] JsonIO.write failed (${e}); use the DERPACK_RECIPE log lines instead. Dumped ${n}.`)
   }

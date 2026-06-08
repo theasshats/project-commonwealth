@@ -3,7 +3,7 @@
 // keys, counts) for the Create-spine namespaces, which the tools/mod-data digest lacks.
 //
 // USE: boot v0.7.0 (world or server), run `/reload` (or just load once). It writes
-//   <instance>/kubejs/exported/derpack-recipes.json
+//   <instance>/kubejs/derpack-recipes.json
 // and logs each recipe to latest.log prefixed `DERPACK_RECIPE` (fallback). Send back the JSON.
 //
 // ⚠️ DELETE THIS FILE before the version ships — it re-dumps (and log-spams) on every reload.
@@ -31,8 +31,8 @@ ServerEvents.recipes(event => {
   })
 
   try {
-    JsonIO.write('kubejs/exported/derpack-recipes.json', out)
-    console.info(`[derpack] recipe dump: wrote ${n} recipes -> kubejs/exported/derpack-recipes.json`)
+    JsonIO.write('kubejs/derpack-recipes.json', out)
+    console.info(`[derpack] recipe dump: wrote ${n} recipes -> kubejs/derpack-recipes.json`)
   } catch (e) {
     console.warn(`[derpack] JsonIO.write failed (${e}); use the DERPACK_RECIPE log lines instead. Dumped ${n}.`)
   }

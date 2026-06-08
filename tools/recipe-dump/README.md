@@ -16,7 +16,7 @@ the full JSON for the Create-spine namespaces.
 
 1. Copy `tools/recipe-dump/dump_recipes.js` → `<instance>/kubejs/server_scripts/zz_dump_recipes.js`.
 2. Boot the pack (a world or a dedicated server) so recipes load.
-3. Run `/reload` in-game. It writes `<instance>/kubejs/exported/derpack-recipes.json` and logs each recipe
+3. Run `/reload` in-game. It writes `<instance>/kubejs/derpack-recipes.json` and logs each recipe
    to `logs/latest.log` prefixed `DERPACK_RECIPE` (fallback).
 4. Send back `derpack-recipes.json` (or paste the specific recipes needed). Commit it here as
    `tools/recipe-dump/dump/derpack-recipes.json` if you want it tracked.
