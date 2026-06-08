@@ -15,7 +15,8 @@
 | File | Issue | Role |
 |---|---|---|
 | `kubejs/server_scripts/spine/00-tiers.js` | — | The **tier trees** as a shared data object (`global.SPINE`); console summary on load; changes no recipes itself. |
-| `kubejs/server_scripts/spine/10-locks.js` | #220 | Pattern A (route-exclusive lock) on the 2 exclusives; Pattern B (boss-fork helper) + the flagship aeronautics-core fork. |
+| `kubejs/server_scripts/spine/10-locks.js` | #220 | Pattern A (route-exclusive lock) on the 2 exclusives. |
+| `kubejs/server_scripts/spine/40-gates.js` | #92/#220 | The **complete tier-gate ladder** — Pattern B boss gates at every tier, one data-driven table (`global.SPINE_GATES`). |
 | `kubejs/server_scripts/spine/20-power-ladder.js` | #145 | The rung gates + the generator converter-vs-free-source stance. |
 | `kubejs/server_scripts/spine/30-cost-basics.js` | #219 | The 3× dial on core Create tier-1 fabricated items + the step-depth helper the content batches use. |
 | `kubejs/server_scripts/tags/10-spine-tags.js` | #220 | `#derpack:boss_keys` (flat boss roster) + any spine tags. |
@@ -122,3 +123,25 @@ to gate with); `fireshard` from fire-themed mobs is a better pick.
 - **T2–T3 gate:** Mowzie's `ice_crystal`; Cataclysm `monstrous_horn` / `witherite_ingot` / `cursium_ingot`.
 - **T3–T4 gate:** Cataclysm `essence_of_the_storm`.
 - **T4 gate:** Cataclysm `ignitium_ingot`.
+
+## 8. The complete tier-gate ladder (`40-gates.js`)
+
+A gate at **every** tier transition — the tier-key item re-recipe'd to require a tier-matched drop. One
+data-driven table (`global.SPINE_GATES`) so the whole ladder is reviewable/tweakable in one place.
+
+| Tier | Gated item | Required drop | Source boss | Rationale |
+|---|---|---|---|---|
+| **T1** | `create:windmill_bearing` | `grimoireofgaia:rotten_heart` | Grimoire (early, farmable) | Early "get out into the world" gate for wind power. **Water wheel stays free** — never hard-blocked. |
+| **T2** | `create:steam_engine` | `born_in_chaos_v1:lifestealer_skull` | Born in Chaos (early miniboss) | Fight to industrialize; the skull spawns naturally in the first days. |
+| **T3** | `create_new_age:reinforced_energiser` | `mowziesmobs:ice_crystal` | Frostmaw (mid) | Gates **advanced** electric. Basic alternator stays kinetic-gated (per spec) — entry to electricity is *not* boss-gated. |
+| **T3** | `aeronautics:gyroscopic_propeller_bearing` | `cataclysm:cursium_ingot` | Maledictus (T3) | Flagship ship-core fork (the T3→T4 jump for flight). |
+| **T4** | `create_jetpack:netherite_jetpack` | `cataclysm:ignitium_ingot` | Ignis (endgame) | T4 item, T4 boss. |
+| **T4** | `createnuclear:reactor_core` | `cataclysm:ignitium_ingot` | Ignis (endgame) | T4 nuclear capstone. |
+
+> **⚠️ This EXTENDS the ratified ladder.** `CREATE-SPINE.md` gated bosses only at T4; this adds T1–T3
+> exploration gates per the "force players out" direction. **Pending sign-off** — if rejected, trim the
+> table to the T4 rows. Safety rails: water-wheel power is ungated, and every recipe grid is a tunable
+> placeholder. If a gate feels wrong, edit/delete its one row in `SPINE_GATES`.
+
+**Drops used, by mod:** Grimoire (T1) · Born in Chaos (T2) · Mowzie's (T3) · Cataclysm (T3 + T4) — the full
+roster, each placed at its progression tier.

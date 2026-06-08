@@ -16,25 +16,25 @@ global.SPINE = {
 
     T1: { name: 'Water/Wind',    rung: 2, anchors: ['create', 'createaddition', 'gnkinetics'],
           items: ['brass_casing', 'electron_tube', 'zinc_sheet', 'gnkinetics:brass_gear'],
-          gate: 'windmill: sail cloth + windmill bearing', cost: '3x basics, 2 stages',
+          gate: 'windmill_bearing behind grimoireofgaia:rotten_heart (early Gaia gate); water wheel free', cost: '3x basics, 2 stages',
           aero: 'basic hot-air balloon (aeronautics:adjustable_burner + envelope)' },
 
     T2: { name: 'Steam',         rung: 3, anchors: ['create', 'tfmg', 'create_ironworks', 'gnkinetics'],
           items: ['precision_mechanism', 'tfmg:steel_ingot', 'tfmg:heavy_machinery_casing',
                   'gnkinetics:industrial_gear', 'tfmg:unfinished_circuit_board'],
-          gate: 'steam fluid/heat chain (inherent)', cost: '2-3x, 3 stages',
+          gate: 'steam fluid chain (inherent) + steam_engine behind born_in_chaos:lifestealer_skull', cost: '2-3x, 3 stages',
           aero: 'propelled balloon + first ANALOG control (create_tweaked_controllers)' },
 
     T3: { name: 'Electric-low',  rung: 4, anchors: ['tfmg', 'createaddition', 'create_new_age', 'gnkinetics'],
           items: ['tfmg:etched_circuit_board', 'createaddition:capacitor', 'create_new_age:reinforced_energiser',
                   'tfmg:electric_motor', 'gnkinetics:planetary_gear'],
-          gate: 'electric NEEDS rung-3 kinetic to drive (no double-tax)', cost: '2-3x, 4 stages',
+          gate: 'electric needs rung-3 kinetic; advanced energiser behind mowzies:ice_crystal; ship core behind cataclysm:cursium', cost: '2-3x, 4 stages',
           aero: 'COMPLEX analog control (aeronautics:gyroscopic_propeller_bearing)' },
 
     T4: { name: 'Electric-high', rung: 5, anchors: ['create_new_age', 'createnuclear', 'aeronautics'],
           items: ['createnuclear:reactor_core', 'create_new_age:advanced_energiser',
                   'aeronautics:pearlescent_levitite'],
-          gate: 'BOSS FORK (any #derpack:boss_keys drop); colony bypass DEFERRED',
+          gate: 'BOSS FORK — cataclysm:ignitium (jetpack, reactor_core); colony bypass DEFERRED',
           cost: '2-3x, 5 stages + gate',
           aero: 'DIGITAL control (create-aeroworks, aeronautics:smart_propeller)' }
   },
