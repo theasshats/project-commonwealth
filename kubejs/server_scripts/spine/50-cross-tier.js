@@ -38,12 +38,29 @@ ServerEvents.recipes(event => {
   event.shapeless('tfmg:copper_spool', ['createaddition:copper_spool'])
   event.shapeless('createaddition:copper_spool', ['tfmg:copper_spool'])
 
-  console.info('[derpack-spine] cross-tier: aeronautics analog->digital gated; Additions<->TFMG spool bridged. TFMG->New Age + Nuclear re-recipes staged (see IMPL doc).')
+  // ── SEAM 2 — TFMG -> New Age: the advanced energiser (the T3->T4 electric step) now needs a TFMG etched
+  //    circuit, so New Age's T4 tier depends on the T3 TFMG circuit ladder. Real grid verified vs the dump
+  //    (GEG / .R. / .R.; G=overcharged_gold E=basic_energiser R=lightning_rod) — circuit row woven in. ──
+  event.remove({ output: 'create_new_age:advanced_energiser' })
+  event.shaped('create_new_age:advanced_energiser', [
+    'GEG',
+    'ZRZ',
+    ' R '
+  ], {
+    G: 'create_new_age:overcharged_gold',
+    E: 'create_new_age:basic_energiser',
+    R: 'minecraft:lightning_rod',
+    Z: 'tfmg:etched_circuit_board'            // T3 TFMG circuit gates the T4 energiser
+  })
+
+  console.info('[derpack-spine] cross-tier: aeronautics analog->digital gated; Additions<->TFMG spool bridged; New Age advanced_energiser now needs a TFMG circuit. (Nuclear already steel-linked to TFMG.)')
 })
 
-// STAGED (not built here — need careful authoring + playtest; real ingredient sets in IMPL doc §9):
-//   • TFMG -> New Age: make create_new_age:reactor_casing / advanced_energiser require tfmg:steel +
-//     tfmg circuit, so T4 New Age depends on the T3 TFMG climb.
-//   • Additions -> TFMG (hard dependency): re-recipe tfmg:electric_motor (sequenced) to consume a
-//     createaddition electric part, not just the spool bridge above.
-//   • Nuclear: already steel-linked to TFMG via c:ingots/steel; graphite stays Nuclear-internal (graphene).
+// CROSS-MOD TRUTH (verified vs the recipe dump in tools/recipe-dump/):
+//   • Nuclear -> TFMG: ALREADY woven — createnuclear:reactor_core requires #c:ingots/steel (TFMG steel).
+//   • Additions -> TFMG: tfmg:engine_controller already accepts #c:wires/copper, which createaddition's
+//     copper_wire is tagged — Additions' wire already feeds TFMG machinery (+ the spool weld above).
+//   • TFMG electric_motor is tfmg:sequenced_assembly/motor (winding tfmg:copper_spool onto an unfinished
+//     motor) — a deep sequenced chain; left as-is (the spool weld lets Additions' spool feed it).
+//   • create_new_age has NO reactor_controller (that's createnuclear's) and NO graphite (Nuclear-internal,
+//     createnuclear:graphene from coal dust).

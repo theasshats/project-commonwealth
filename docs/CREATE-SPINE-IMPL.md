@@ -159,6 +159,7 @@ forced (spec Part 4b updated):
 **Built now (safe, additive):**
 - **Aeronautics analog→digital** — `aeronautics:smart_propeller` re-recipe'd to require `aeroworks:mechanical_servo`, so digital flight genuinely needs create-aeroworks (T4) on top of the T3 analog `gyroscopic_mechanism`.
 - **Additions↔TFMG spool bridge** — 1:1 `tfmg:copper_spool` ⟷ `createaddition:copper_spool`, connecting the two electric ecosystems without re-authoring any machine.
+- **TFMG→New Age** — `create_new_age:advanced_energiser` now requires a `tfmg:etched_circuit_board`, so New Age's T4 tier depends on the T3 TFMG circuit ladder (real grid from the recipe dump).
 
 **Staged (need careful per-recipe authoring + playtest — complex sequenced/mechanical recipes, no grid data in dumps):**
 - **TFMG→New Age:** re-recipe `create_new_age:reactor_casing` / `advanced_energiser` to consume `tfmg:steel` + a TFMG circuit (real ingredient sets below).
