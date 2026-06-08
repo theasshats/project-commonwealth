@@ -28,17 +28,6 @@ ServerEvents.recipes(event => {
   // wiring the autunite stone family straight into the nuclear chain (already on the Create spine).
   event.recipes.create.crushing(['createnuclear:uranium_powder', xp(0.2)], 'createnuclear:autunite')
 
-  // #102 carbon bridge — the pack runs TWO parallel carbon intermediates for one role:
-  // createnuclear:graphene (pressed coal DUST, untagged; the only feed for graphite_rod → every
-  // anti-rad armor piece + reactor part) and the Pantographs & Wires graphite ingot (compacted coal
-  // COKE, tagged c:ingots/graphite). One-way press graphite → graphene gives the Pantographs carbon
-  // line an outbound use into the nuclear chain (the #132 "pantographs → createnuclear" weave) WITHOUT
-  // touching balance: it's one-directional (no turning cheap graphene back into coke-gated graphite),
-  // and graphite is the dearer input so it can't undercut graphene's existing dust route. graphene
-  // keeps its coal-dust recipe and nothing is removed — the canonical/coke-gating call stays with the
-  // #219 cost model. (tfmg:graphite_electrode is left alone: a distinct arc-furnace part, not an ingot.)
-  event.recipes.create.pressing('createnuclear:graphene', '#c:ingots/graphite')
-
   // TFMG asphalt (industrial paving) → crushed back to gravel rubble.
   event.recipes.create.crushing(['minecraft:gravel', xp(0.1)], 'tfmg:asphalt')
 

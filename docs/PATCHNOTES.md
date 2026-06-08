@@ -44,9 +44,10 @@ than its own. It adds:
 
 Two sets of near-duplicate materials have been reconciled. Create: Ironworks steel sheets and TFMG's
 heavy plates were separate items filling the same role; they now resolve to a single steel plate, so a
-recipe no longer cares which mod's plate you are holding. And the carbon part behind Create Nuclear's
-reactors and anti-radiation armour, previously made only from coal dust, can now also be pressed from
-graphite, joining the Pantographs & Wires carbon line into the nuclear chain.
+recipe no longer cares which mod's plate you are holding. And Create Nuclear's graphene has been folded
+into graphite, the same carbon material Pantographs & Wires already makes: the graphite rods behind the
+anti-radiation armour now take graphite in place of graphene. Graphite comes from coking coal rather than
+crushing it, so the anti-radiation line now sits behind that extra step.
 
 ## 0.6.0 — Foundation
 

@@ -769,6 +769,10 @@ file = "kubejs/server_scripts/recipes/05-metals.js"
 hash = "27307a988d430c42df60ece37ada6f6a3424c2d25eb9d20e9b1f8b2a71fa327c"
 
 [[files]]
+file = "kubejs/server_scripts/recipes/06-carbon.js"
+hash = "df2c46cdba43e74287b20c29c7ce50ac5c071d981c327f0249adf7a574557c0b"
+
+[[files]]
 file = "kubejs/server_scripts/recipes/10-immersive-armors.js"
 hash = "5e7b93deebaa13178b76ba938ce31a0977bbce99d8c3c9c3751f23d142d56657"
 
@@ -794,7 +798,7 @@ hash = "2b673631bea97d168d5a2c1459b137de9dfbb97d7c96242388a2cfd02d913a0b"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/35-web-bridges.js"
-hash = "02542b726332be48b3088a58b1bfeda931de42e86813a2c3e840c1a93bb8d779"
+hash = "2d93e09f246e49a0fc9280d3f786c47386fb15e5aeaddbb606be36426a8c2021"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/36-magic-web-create.js"
