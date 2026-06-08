@@ -37,6 +37,10 @@ file = "config/gtmogs.yaml"
 hash = "06e2e6664013abfa34fdd65fd65edd84554141a27c982ab495b75f15d9f54437"
 
 [[files]]
+file = "config/immersivepaintings.json"
+hash = "ce557ebf56196af5fa9ebcd1ece0706b08cc44b7a0afaea100cfe6068bd7242d"
+
+[[files]]
 file = "config/incontrol/spawn.json"
 hash = "dcf4991884b3238d5b4386b189acf7f8159f61faaaee3720b79c07ba66faebbc"
 
