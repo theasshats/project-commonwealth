@@ -104,6 +104,15 @@ expandeddelight-0.1.4: expandeddelight:deepslate_salt_ore
 expandeddelight-0.1.4: expandeddelight:salt_ore
 irons_spellbooks-1.21.1-3.16.0: irons_spellbooks:deepslate_mithril_ore
 irons_spellbooks-1.21.1-3.16.0: irons_spellbooks:mithril_ore
+letsdo-meadow-neoforge-1.4.8: meadow:alpine_coal_ore
+letsdo-meadow-neoforge-1.4.8: meadow:alpine_copper_ore
+letsdo-meadow-neoforge-1.4.8: meadow:alpine_diamond_ore
+letsdo-meadow-neoforge-1.4.8: meadow:alpine_emerald_ore
+letsdo-meadow-neoforge-1.4.8: meadow:alpine_gold_ore
+letsdo-meadow-neoforge-1.4.8: meadow:alpine_iron_ore
+letsdo-meadow-neoforge-1.4.8: meadow:alpine_lapis_ore
+letsdo-meadow-neoforge-1.4.8: meadow:alpine_redstone_ore
+letsdo-meadow-neoforge-1.4.8: meadow:alpine_salt_ore
 occultism-1.21.1-neoforge-1.218.0: occultism:iesnium_ore
 occultism-1.21.1-neoforge-1.218.0: occultism:iesnium_ore_natural
 occultism-1.21.1-neoforge-1.218.0: occultism:silver_ore
