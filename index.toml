@@ -361,6 +361,10 @@ file = "kubejs/data/createnuclear/neoforge/biome_modifier/lead_ore.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
+file = "kubejs/data/createnuclear/neoforge/biome_modifier/striated_ores_overworld.json"
+hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
+
+[[files]]
 file = "kubejs/data/createnuclear/neoforge/biome_modifier/uranium_ore.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
@@ -430,7 +434,7 @@ hash = "f218868d9bd3373163dcd7fd55fa7b43418a3bf90745ee6ecf3bfdcf5928cd5c"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/salt.json"
-hash = "16ead8e916dbe9fa7deedb58f550e897d2899bdcbcc7556c739cb9ee0a3763e9"
+hash = "9c3333551a05ab844b5fd1d88a3763b1ef25b5c5c64db9f04e179fc16d2b6bbe"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/silver.json"
