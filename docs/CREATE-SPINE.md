@@ -12,6 +12,12 @@
 > PRs that follow are mechanical. Where a value is a genuine judgement call, it's flagged **⚖️ decision**
 > so @zagwar can weigh in directly. Once ratified, this doc becomes the spec the #145/#219/#220/#92 PRs
 > build against, and the disputed values move from "proposed" to "settled."
+>
+> **Phase 1 working session (Xela + zagwar) — RATIFIED.** The cost model, the power-ladder pacing, the
+> boss-gate roster, the T3–T4 mod spine, the aeronautics control-complexity ladder, and the
+> MineColonies-deferral below are settled. **Part 4** captures the session's additions; the open-decisions
+> table at the foot is marked resolved. Implementation (the #145/#219/#220/#92 + aeronautics PRs) is the
+> remaining work.
 
 Grounds against: `docs/SYSTEMS.md` §3 (the loop), `docs/RECIPES.md` (balance > theme > cost),
 `docs/CONNECTIVITY.md` (the web to preserve). Pairs with the addon-cohesion umbrella (#132).
@@ -71,6 +77,19 @@ The gate is **recipe cost + step-depth** (Part 2), not a tech-tree mod. Concrete
   part — so end-game power is the same two-route choice as other high-tier goods.
 
 This ladder feeds the future onboarding/quest work (a guidebook walking rungs 0→5).
+
+### Pacing — front-loaded fast, back-loaded slow
+
+The climb is **not** linear. Early rungs come quickly so players are flying through basic automation in
+their first sessions; the back half is where the time goes. Target curve for a *dedicated* player:
+
+- **Rungs 0→3 (Manual → Steam): ~1–2 days.** Cheap, fast, low-gated — get them to a steam base quickly.
+- **Rung 3→4 (Steam → Electric-low / T3): ~a week.** The heavy jump — the bulk of the step-depth and
+  scarcity gating lives here. Electricity should *feel earned*.
+
+The gate is **step-depth + scarcity, never artificial timers** — an optimizing player still takes ~a week
+to electric because the recipe chains are deep and the inputs are regionally scarce, not because a
+cooldown blocks them.
 
 ---
 
@@ -189,13 +208,14 @@ ServerEvents.recipes(event => {
   *one-time key* that unlocks the recipe (KubeJS-gated, crafted once)? Proposed: **consumed** for
   components you make repeatedly (keeps the fighter/settler trade alive), **key/one-time** for
   machine-tier unlocks. Per-item call.
-- **Which bosses?** Installed boss mods are **L_Ender's Cataclysm**, **Mowzie's Mobs**, **Mutants**,
-  **Grimoire of Gaia**. (`bosses-of-mass-destruction` referenced in older issues is **not currently in
-  the pack** — the lock list must use what's installed.) Proposed primary: **Cataclysm** (purpose-built
-  boss-drop gear progression).
-- **Which colony part?** Needs a MineColonies output that represents "colony progress" — a high-tier
-  worker-hut product or a research-gated item. To be picked in the #92 PR against the live MineColonies
-  recipe dump.
+- **Which bosses? — RATIFIED.** Gate roster is **L_Ender's Cataclysm (primary), Mowzie's Mobs, Grimoire
+  of Gaia, Born in Chaos** (`borninchaos`); Mutants also available. Cataclysm leads (purpose-built
+  boss-drop gear progression); the others spread gate-drop variety across tiers. (`bosses-of-mass-destruction`
+  from older issues is **not** in the pack — ignore it.)
+- **Which colony part? — DEFERRED.** MineColonies is **fully out of scope for v0.7.0** — the fork ships
+  **boss-only** now, with a clean hook for the colony route to be added in a later patch. The whole point
+  of the difficulty added now is to make the colony bypass *worth building* when that pillar lands.
+  (Colony-part selection moves to the MineColonies pillar work, not the #92 PR.)
 
 ### 3c. The Create-spine lock list (proposed — the v0.7.0 slice)
 
@@ -226,9 +246,69 @@ Per `SYSTEMS.md`, the lock list is **incremental per pillar** — this is *only*
 
 ---
 
-## Open decisions summary (for @zagwar)
+## Part 4 — Aeronautics ladder + the T3–T4 mod spine (Phase 1 additions)
 
-| # | Decision | Proposed default |
+### 4a. Aeronautics as a control-complexity ladder (T1→T4)
+
+Aeronautics is **not** a single high-tier unlock — it's a thread woven across the whole ladder, gated by
+**control complexity** as much as materials. This supersedes the "Aeronautics controller is one T4 fork
+item" framing in 3c: the boss fork now sits at the **T3→T4 jump** (unlocking digital control).
+
+| Tier | Aeronautics capability | Real items / how |
+|---|---|---|
+| **T1 — Water/Wind** | Basic **hot-air balloon** — lift only, no real control | `aeronautics:adjustable_burner` + envelope + wooden/andesite propeller |
+| **T2 — Steam** | **Propelled balloon** — heavy steam engine drives a propeller; first **analog controls** (player learns control systems) | steam engine → propeller; `create_tweaked_controllers` / manual bearings |
+| **T3 — Electric-low** | **Complex analog control** — hands-on; "understand it to build cool stuff" | `aeronautics:gyroscopic_propeller_bearing` + control surfaces; TFMG circuits |
+| **T4 — Electric-high** | **Digital control** — large/complex flying machines become easy | **`create-aeroworks`** (added v0.7.0) + `aeronautics:smart_propeller` |
+
+The **boss fork gates the T3→T4 transition** (analog → digital control) — the flagship demonstration of
+Pattern B.
+
+> **New dependency:** the T4 digital-control rung requires **Create: Aeroworks** (`create-aeroworks`),
+> added to the pack on v0.7.0. [`create-avionics`](https://modrinth.com/mod/create-avionics) is parked
+> for a **future review** as a possible richer digital-control layer — not in scope now. Note: Northstar
+> (pulled, #273) was the old `advanced_circuit`/control-surface supplier, so T3–T4 control surfaces now
+> lean on `create_tweaked_controllers` + TFMG circuits.
+
+### 4b. The T3–T4 mod spine
+
+**T3 = TFMG** (industrial / electric-low). **T4 = New Age + Nuclear** (electric-high). **Additions** is
+the rung-4 FE *converter* that bolts under T3; **Nuclear** is a T4 power capstone on **New Age**.
+
+```
+ADDITIONS (rung-4 converter)            <- SU<->FE alternator/motor + wires = the electricity layer
+   |  TFMG machines RUN ON this FE (no T3 industry without first building the converter)
+   v
+TFMG  (T3 industrial)
+   |- steel ingots / casings ----------------------------->  New Age reactor_casing / structure
+   |- circuit ladder (empty->unfinished->etched->coated) ->  New Age energiser / reactor-controller circuits
+   `- coking -> coal_coke --(New Age energising)--> graphite --+--> New Age reactor moderator
+                                                               `--> createnuclear:graphite_rod (fuel)
+                                          v
+NEW AGE (T4)  ||  CREATE NUCLEAR (T4)   <- parallel rung-5 FE gen (fusion || fission), behind the boss fork
+```
+
+**The three bolt-ons, concretely:**
+
+- **Additions → TFMG.** `createaddition` provides SU↔FE conversion (alternator / electric_motor) + the
+  wire/coil chain. TFMG's `electric_motor`/`engine_controller`/industrial machines are gated behind a
+  `createaddition` power feed, so electricity is a **converter driven by steam-tier kinetic, never a free
+  source** (the Part 1 load-bearing rule). Also `createaddition:rolling` → `c:rods/*` → TFMG/aeronautics frames.
+- **TFMG → New Age.** New Age's advanced parts require TFMG **steel + circuits**, and the
+  **coking → coal_coke → (New Age energising) → graphite** carbon seam is a shared dependency — so the T3
+  climb is a hard prerequisite for T4.
+- **Nuclear → New Age.** Both feed one FE grid (Additions/New Age wires carry nuclear's output);
+  `createnuclear:graphite_rod` depends on the same TFMG→New Age graphite chain; New Age fusion and Create
+  Nuclear fission are co-equal end-game power, both behind rung-4 + the boss fork.
+
+---
+
+## Open decisions summary — RATIFIED (Phase 1 session, Xela + zagwar)
+
+All rows below were **accepted as the proposed default** in the Phase 1 session; the P4 rows are that
+session's additions.
+
+| # | Decision | Resolution (proposed default, accepted) |
 |---|---|---|
 | P1 | Curtail free-source generators via cost-gate vs. re-recipe | Cost-gate where possible |
 | P1 | Double-tax electric machines, or is "needs rung-3 kinetic" enough? | Enough on its own; don't double-tax |
@@ -237,6 +317,12 @@ Per `SYSTEMS.md`, the lock list is **incremental per pillar** — this is *only*
 | P3 | Boss/colony part: consumed per craft vs. one-time key | Consumed for components, key for machine unlocks |
 | P3 | Primary boss source | Cataclysm |
 | P3 | v0.7.0 lock list breadth | 2 exclusives (precision_mechanism, electron_tube) + 1 fork (aeronautics controller) |
+| P4 | Power-ladder pacing | Rungs 0→3 ~1–2 days; rung 3→4 ~a week; gate = step-depth + scarcity, never timers |
+| P4 | Boss-gate roster | Cataclysm (primary) + Mowzie's, Grimoire of Gaia, Born in Chaos |
+| P4 | T3–T4 mod spine | T3 = TFMG; T4 = New Age + Nuclear; Additions = rung-4 converter under T3 |
+| P4 | Aeronautics gating | Control-complexity ladder T1→T4; digital control via `create-aeroworks` (added); boss fork at the T3→T4 jump |
+| P4 | MineColonies scope | Fully out of scope for v0.7.0 — boss-only fork now, colony bypass a later patch |
 
-Once these are ratified, each line becomes a concrete PR: #145 (ladder + generator audit), #219 (apply
-the cost dials), #220 (Patterns A/B + the two exclusives), #92 (the aeronautics-controller fork).
+**Ratified.** Each line is now a concrete PR: #145 (ladder + generator audit), #219 (apply the cost
+dials), #220 (Patterns A/B + the two exclusives), #92 (the boss fork at the aeronautics T3→T4 jump), plus
+the aeronautics control-ladder + T3–T4 spine work (Part 4). MineColonies is hooked, not built.
