@@ -239,6 +239,10 @@ config and code, not art, and every asset is the work of the mod authors we buil
 been curation and glue more than original creation, and that part is still done by people who care about
 getting it right.
 
+None of this is novel. By 2025-26 most working programmers use these tools, and they ship inside the
+common editors and CI systems. A two-person project using them is ordinary; we mention it for the sake
+of being upfront, not because it's a confession.
+
 This is recorded here because the pack is now **public** (see the top-of-doc note), so the question
 "how much of this is AI?" is fair and we'd rather answer it plainly than have it surface as a gotcha.
 The stance: state it transparently where a curious player can find it, but **don't make the LLM a
