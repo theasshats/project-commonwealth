@@ -905,6 +905,22 @@ file = "kubejs/server_scripts/spine/50-cross-tier.js"
 hash = "42e733a1106d39963daafd3139145520cead23eba7f290db1b2c94e4dc8c4ec6"
 
 [[files]]
+file = "kubejs/server_scripts/spine/51-weave-additions-tfmg.js"
+hash = "22253209e579a0212d18e9771d27cfa2e5e40d19d8761bde1e6d77e6c2f2255b"
+
+[[files]]
+file = "kubejs/server_scripts/spine/52-weave-tfmg-newage.js"
+hash = "8f275735318cdf36ad51ee82c58667dda26b77bbad246986b044a8d5ca479933"
+
+[[files]]
+file = "kubejs/server_scripts/spine/53-weave-nuclear.js"
+hash = "3840d6483fbc4897c7f58af179f86ad017756ff5d9acd6c30b3aab7e8016e6fe"
+
+[[files]]
+file = "kubejs/server_scripts/spine/54-weave-aeronautics.js"
+hash = "e43d1c1738538af15509077c44a148bf631947436758e27e3965b8c2fc83f4c6"
+
+[[files]]
 file = "kubejs/server_scripts/zz-dump-recipes-TEMP.js"
 hash = "3615afccd5bb644dff3d0b1d9cb41ece92d1271b79ab27770d4b6cb30e836559"
 
