@@ -132,8 +132,8 @@ data-driven table (`global.SPINE_GATES`) so the whole ladder is reviewable/tweak
 | Tier | Gated item | Required drop | Source boss | Rationale |
 |---|---|---|---|---|
 | **T1** | `create:windmill_bearing` | `grimoireofgaia:rotten_heart` | Grimoire (early, farmable) | Early "get out into the world" gate for wind power. **Water wheel stays free** — never hard-blocked. |
-| **T2** | `create:steam_engine` | `born_in_chaos_v1:lifestealer_skull` | Born in Chaos (early miniboss) | Fight to industrialize; the skull spawns naturally in the first days. |
-| **T3** | `create_new_age:reinforced_energiser` | `mowziesmobs:ice_crystal` | Frostmaw (mid) | Gates **advanced** electric. Basic alternator stays kinetic-gated (per spec) — entry to electricity is *not* boss-gated. |
+| **T2** | `create:steam_engine` | `grimoireofgaia:fireshard` | Grimoire fire mob | Thematic — fire/heat for a steam engine. |
+| **T3** | `create_new_age:reinforced_energiser` | `#derpack:mowzies_mid` (Frostmaw/Sculptor) | Mowzie's mid bosses | Any Frostmaw-equivalent Mowzie's boss. Gates **advanced** electric; basic alternator stays kinetic-gated (per spec). |
 | **T3** | `aeronautics:gyroscopic_propeller_bearing` | `cataclysm:cursium_ingot` | Maledictus (T3) | Flagship ship-core fork (the T3→T4 jump for flight). |
 | **T4** | `create_jetpack:netherite_jetpack` | `cataclysm:ignitium_ingot` | Ignis (endgame) | T4 item, T4 boss. |
 | **T4** | `createnuclear:reactor_core` | `cataclysm:ignitium_ingot` | Ignis (endgame) | T4 nuclear capstone. |
@@ -143,5 +143,7 @@ data-driven table (`global.SPINE_GATES`) so the whole ladder is reviewable/tweak
 > table to the T4 rows. Safety rails: water-wheel power is ungated, and every recipe grid is a tunable
 > placeholder. If a gate feels wrong, edit/delete its one row in `SPINE_GATES`.
 
-**Drops used, by mod:** Grimoire (T1) · Born in Chaos (T2) · Mowzie's (T3) · Cataclysm (T3 + T4) — the full
-roster, each placed at its progression tier.
+**Drops used, by mod:** Grimoire (T1 windmill `rotten_heart`, T2 steam `fireshard`) · Mowzie's (T3 advanced
+electric) · Cataclysm (T3 ship core + T4). Born in Chaos sits in the flat `#derpack:boss_keys` roster for
+future generic gates. _(No clean wind-drop exists in the roster, so the windmill keeps the `rotten_heart`
+early-explore gate rather than a wind-themed one.)_

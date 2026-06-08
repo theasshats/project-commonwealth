@@ -878,11 +878,11 @@ hash = "7761b2b266e0a1a4e1a046e784e1fc960cefc5c77a5cfc0155c2f03ea6cfbed7"
 
 [[files]]
 file = "kubejs/server_scripts/spine/00-tiers.js"
-hash = "fd2f06dec4592bfd8c05e06403ff2dd8d449572793e7508ebf2122f824cf013b"
+hash = "7b49c22303cf8bc36d04c429beaf368553f9d566196d7722b027d9012b74f6a3"
 
 [[files]]
 file = "kubejs/server_scripts/spine/05-tags.js"
-hash = "b51018c0cdc6d979296c2f855b855960d3d98caf90deb2dcaf4e807f46d42fee"
+hash = "a1e40e48645e6744eeab4ba0047c259e3be7750eb986f7d2a9aee9baa10f730f"
 
 [[files]]
 file = "kubejs/server_scripts/spine/10-locks.js"
@@ -898,7 +898,7 @@ hash = "0cb02cfef7e1462a943e0c0d259774e1d6908f588fc501e1afb3b2d15e3a7138"
 
 [[files]]
 file = "kubejs/server_scripts/spine/40-gates.js"
-hash = "72da4102e283d01aaa2b931c96fbb82757ddc527bc070d18c45fa370ae49c49c"
+hash = "3aa3e027865c195f94aacd3a47ee35efcecca3a0eb21ed1cd75671320973610d"
 
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"

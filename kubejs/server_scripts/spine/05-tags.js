@@ -27,4 +27,12 @@ ServerEvents.tags('item', event => {
     'born_in_chaos_v1:lifestealer_skull',
     'born_in_chaos_v1:nightmare_stalker_skull'
   ])
+
+  // Mowzie's MID-tier bosses (~Frostmaw difficulty) — the T3 advanced-electric gate accepts ANY of these
+  // ("any Mowzie's boss equivalent to the Frostmaw"). Per mowziesmobs' own entity_type/bosses tag, the mid
+  // band is Frostmaw + Sculptor (Wroughtnaut is early, Umvuthi is late). Add naga_fang if you want it laxer.
+  event.add('derpack:mowzies_mid', [
+    'mowziesmobs:ice_crystal',     // Frostmaw
+    'mowziesmobs:sculptor_staff'   // Sculptor
+  ])
 })

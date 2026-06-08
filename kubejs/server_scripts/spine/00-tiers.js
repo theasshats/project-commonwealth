@@ -22,13 +22,13 @@ global.SPINE = {
     T2: { name: 'Steam',         rung: 3, anchors: ['create', 'tfmg', 'create_ironworks', 'gnkinetics'],
           items: ['precision_mechanism', 'tfmg:steel_ingot', 'tfmg:heavy_machinery_casing',
                   'gnkinetics:industrial_gear', 'tfmg:unfinished_circuit_board'],
-          gate: 'steam fluid chain (inherent) + steam_engine behind born_in_chaos:lifestealer_skull', cost: '2-3x, 3 stages',
+          gate: 'steam fluid chain (inherent) + steam_engine behind grimoireofgaia:fireshard (thematic fire)', cost: '2-3x, 3 stages',
           aero: 'propelled balloon + first ANALOG control (create_tweaked_controllers)' },
 
     T3: { name: 'Electric-low',  rung: 4, anchors: ['tfmg', 'createaddition', 'create_new_age', 'gnkinetics'],
           items: ['tfmg:etched_circuit_board', 'createaddition:capacitor', 'create_new_age:reinforced_energiser',
                   'tfmg:electric_motor', 'gnkinetics:planetary_gear'],
-          gate: 'electric needs rung-3 kinetic; advanced energiser behind mowzies:ice_crystal; ship core behind cataclysm:cursium', cost: '2-3x, 4 stages',
+          gate: 'electric needs rung-3 kinetic; advanced energiser behind any Frostmaw-equiv Mowzie boss (#derpack:mowzies_mid); ship core behind cataclysm:cursium', cost: '2-3x, 4 stages',
           aero: 'COMPLEX analog control (aeronautics:gyroscopic_propeller_bearing)' },
 
     T4: { name: 'Electric-high', rung: 5, anchors: ['create_new_age', 'createnuclear', 'aeronautics'],

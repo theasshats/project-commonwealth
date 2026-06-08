@@ -16,15 +16,15 @@ global.SPINE_GATES = [
       [' K ', 'SBS', ' B '],
       { K: K, S: 'create:shaft', B: 'create:brass_sheet' }) },
 
-  // T2 — steam engine behind an early-mid miniboss (Born in Chaos spawns naturally in the first days).
-  { tier: 'T2', out: 'create:steam_engine', drop: 'born_in_chaos_v1:lifestealer_skull',
+  // T2 — steam engine behind a FIRE-themed Grimoire drop (fireshard) — thematic heat for a steam engine.
+  { tier: 'T2', out: 'create:steam_engine', drop: 'grimoireofgaia:fireshard',
     build: (e, K) => e.shaped('create:steam_engine',
       ['CKC', 'CPC', 'BBB'],
       { K: K, C: 'create:copper_sheet', P: 'create:precision_mechanism', B: 'create:brass_casing' }) },
 
-  // T3 — ADVANCED electric behind a mid boss (Mowzie's Frostmaw). Basic alternator stays kinetic-gated
-  //      (per spec), so this gates the *advanced* energiser, not entry to electricity.
-  { tier: 'T3', out: 'create_new_age:reinforced_energiser', drop: 'mowziesmobs:ice_crystal',
+  // T3 — ADVANCED electric behind ANY Frostmaw-equivalent Mowzie's boss (#derpack:mowzies_mid). Basic
+  //      alternator stays kinetic-gated (per spec), so this gates the *advanced* energiser, not entry to electricity.
+  { tier: 'T3', out: 'create_new_age:reinforced_energiser', drop: '#derpack:mowzies_mid',
     build: (e, K) => e.shaped('create_new_age:reinforced_energiser',
       ['EKE', 'BBB', 'III'],
       { K: K, E: 'create:electron_tube', B: 'create_new_age:basic_energiser', I: '#c:plates/iron' }) },
