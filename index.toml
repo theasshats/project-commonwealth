@@ -18,11 +18,11 @@ hash = "37f013c49586db025c17f9fa6657c6f239e0169ebc97ef682ff114a2ede43c5e"
 
 [[files]]
 file = "config/almostunified/tags.json"
-hash = "6db69bf90129cced7c224a0bf969dc331299c45017d1fce3d13d00e095a3af34"
+hash = "7ea3255a5a506429ba17c07f01393540860228d51a7e773209cdd2060c1d6bf2"
 
 [[files]]
 file = "config/almostunified/unification/materials.json"
-hash = "9ed52bd38a801753c286969929487c28c7091f293af42ff3029579f8a1865f15"
+hash = "180a91c97ac6e1c873309a78842fa90e6294320c66b6d040e2899a55a5ee064e"
 
 [[files]]
 file = "config/createblockchain-common.toml"
@@ -42,7 +42,7 @@ hash = "ce557ebf56196af5fa9ebcd1ece0706b08cc44b7a0afaea100cfe6068bd7242d"
 
 [[files]]
 file = "config/incontrol/spawn.json"
-hash = "dcf4991884b3238d5b4386b189acf7f8159f61faaaee3720b79c07ba66faebbc"
+hash = "8dbb6602d8274d393a0a72c3acce550d3f50cb060726ccff30f6b6a94c5b2d55"
 
 [[files]]
 file = "config/mixinhelper.json"
