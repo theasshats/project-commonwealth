@@ -286,8 +286,7 @@ ADDITIONS (rung-4 converter)            <- SU<->FE alternator/motor + wires = th
 TFMG  (T3 industrial)
    |- steel ingots / casings ----------------------------->  New Age reactor_casing / structure
    |- circuit ladder (empty->unfinished->etched->coated) ->  New Age energiser / reactor-controller circuits
-   `- coking -> coal_coke --(New Age energising)--> graphite --+--> New Age reactor moderator
-                                                               `--> createnuclear:graphite_rod (fuel)
+   `- steel (c:ingots/steel) ----------------------------->  CREATE NUCLEAR reactor_casing/core/rods
                                           v
 NEW AGE (T4)  ||  CREATE NUCLEAR (T4)   <- parallel rung-5 FE gen (fusion || fission), behind the boss fork
 ```
@@ -298,12 +297,14 @@ NEW AGE (T4)  ||  CREATE NUCLEAR (T4)   <- parallel rung-5 FE gen (fusion || fis
   wire/coil chain. TFMG's `electric_motor`/`engine_controller`/industrial machines are gated behind a
   `createaddition` power feed, so electricity is a **converter driven by steam-tier kinetic, never a free
   source** (the Part 1 load-bearing rule). Also `createaddition:rolling` → `c:rods/*` → TFMG/aeronautics frames.
-- **TFMG → New Age.** New Age's advanced parts require TFMG **steel + circuits**, and the
-  **coking → coal_coke → (New Age energising) → graphite** carbon seam is a shared dependency — so the T3
-  climb is a hard prerequisite for T4.
-- **Nuclear → New Age.** Both feed one FE grid (Additions/New Age wires carry nuclear's output);
-  `createnuclear:graphite_rod` depends on the same TFMG→New Age graphite chain; New Age fusion and Create
-  Nuclear fission are co-equal end-game power, both behind rung-4 + the boss fork.
+- **TFMG → New Age.** New Age's advanced parts require TFMG **steel + circuits** — the intended seam is to
+  re-recipe New Age's `reactor_casing` / energisers to consume `tfmg:steel` + a TFMG circuit, so the T3
+  climb is a prerequisite for T4. _(Correction: there is **no** "coking→energising→graphite" seam — New Age
+  has no graphite at all. That premise was wrong; see `docs/CREATE-SPINE-IMPL.md` §9.)_
+- **Nuclear → TFMG/New Age.** Create Nuclear already depends on **TFMG via the shared `c:ingots/steel`
+  tag** (reactor casing/core/rods all consume steel) — that's the real existing seam, no bridge needed.
+  Graphite stays **Nuclear-internal** (`createnuclear:graphene` from coal dust → `graphite_rod` + steel);
+  it is *not* a TFMG/New Age shared resource. New Age fusion and Nuclear fission are co-equal end-game power.
 
 ---
 

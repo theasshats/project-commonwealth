@@ -131,19 +131,42 @@ data-driven table (`global.SPINE_GATES`) so the whole ladder is reviewable/tweak
 
 | Tier | Gated item | Required drop | Source boss | Rationale |
 |---|---|---|---|---|
-| **T1** | `create:windmill_bearing` | `grimoireofgaia:rotten_heart` | Grimoire (early, farmable) | Early "get out into the world" gate for wind power. **Water wheel stays free** — never hard-blocked. |
-| **T2** | `create:steam_engine` | `grimoireofgaia:fireshard` | Grimoire fire mob | Thematic — fire/heat for a steam engine. |
 | **T3** | `create_new_age:reinforced_energiser` | `#derpack:mowzies_mid` (Frostmaw/Sculptor) | Mowzie's mid bosses | Any Frostmaw-equivalent Mowzie's boss. Gates **advanced** electric; basic alternator stays kinetic-gated (per spec). |
-| **T3** | `aeronautics:gyroscopic_propeller_bearing` | `cataclysm:cursium_ingot` | Maledictus (T3) | Flagship ship-core fork (the T3→T4 jump for flight). |
-| **T4** | `create_jetpack:netherite_jetpack` | `cataclysm:ignitium_ingot` | Ignis (endgame) | T4 item, T4 boss. |
-| **T4** | `createnuclear:reactor_core` | `cataclysm:ignitium_ingot` | Ignis (endgame) | T4 nuclear capstone. |
+| **T3** | `aeronautics:gyroscopic_propeller_bearing` | `cataclysm:ancient_metal_ingot` | Ancient Remnant (mid) | Flagship ship-core fork. |
+| **T4** | `create_jetpack:netherite_jetpack` | `cataclysm:cursium_ingot` | Maledictus (mid–late) | Jetpack gate. |
+| **T4** | `createnuclear:reactor_core` | `cataclysm:ignitium_ingot` | Ignis (endgame) | Nuclear capstone — the one true endgame gate. |
+
+_T1 + T2 boss gates **pulled** — early tiers are cost/scarcity-gated per the lineage; bosses start at T3. Ascending Cataclysm gate: ancient_metal (mid) → cursium (mid–late) → ignitium (endgame)._
 
 > **⚠️ This EXTENDS the ratified ladder.** `CREATE-SPINE.md` gated bosses only at T4; this adds T1–T3
 > exploration gates per the "force players out" direction. **Pending sign-off** — if rejected, trim the
 > table to the T4 rows. Safety rails: water-wheel power is ungated, and every recipe grid is a tunable
 > placeholder. If a gate feels wrong, edit/delete its one row in `SPINE_GATES`.
 
-**Drops used, by mod:** Grimoire (T1 windmill `rotten_heart`, T2 steam `fireshard`) · Mowzie's (T3 advanced
-electric) · Cataclysm (T3 ship core + T4). Born in Chaos sits in the flat `#derpack:boss_keys` roster for
-future generic gates. _(No clean wind-drop exists in the roster, so the windmill keeps the `rotten_heart`
-early-explore gate rather than a wind-themed one.)_
+**Drops used, by mod:** Mowzie's (T3 advanced electric) · Cataclysm (T3 ship core `ancient_metal` → T4
+jetpack `cursium` → T4 reactor `ignitium`). Grimoire + Born in Chaos drops now sit only in the flat
+`#derpack:boss_keys` roster for future generic gates (their early-tier gates were pulled).
+
+## 9. Cross-tier recipe chains — the lineage (`50-cross-tier.js`)
+
+Weaving the T3–T4 addon spine so tiers flow into each other. **Two design corrections** the recipe dumps
+forced (spec Part 4b updated):
+- **No graphite seam.** New Age has *no* graphite and no "energising→graphite" recipe. The real graphite
+  chain is Nuclear-internal: `createnuclear:graphene` (press coal dust) → `graphite_rod` (+ steel).
+- **Nuclear↔TFMG already linked** via the shared `c:ingots/steel` tag (reactor casing/core/rods consume
+  steel, which TFMG supplies) — no new bridge needed.
+
+**Built now (safe, additive):**
+- **Aeronautics analog→digital** — `aeronautics:smart_propeller` re-recipe'd to require `aeroworks:mechanical_servo`, so digital flight genuinely needs create-aeroworks (T4) on top of the T3 analog `gyroscopic_mechanism`.
+- **Additions↔TFMG spool bridge** — 1:1 `tfmg:copper_spool` ⟷ `createaddition:copper_spool`, connecting the two electric ecosystems without re-authoring any machine.
+
+**Staged (need careful per-recipe authoring + playtest — complex sequenced/mechanical recipes, no grid data in dumps):**
+- **TFMG→New Age:** re-recipe `create_new_age:reactor_casing` / `advanced_energiser` to consume `tfmg:steel` + a TFMG circuit (real ingredient sets below).
+- **Additions→TFMG (hard):** re-recipe the sequenced `tfmg:electric_motor` to consume a `createaddition` electric part (beyond the spool bridge).
+
+**Real ingredient reference (from dumps, for the staged work):**
+- `create_new_age:advanced_energiser` = `basic_energiser` + `overcharged_gold` + `lightning_rod`.
+- `create_new_age:reactor_casing` = sequenced on `incomplete_reactor_casing` from `c:plates/iron` + `bricks`.
+- `tfmg:electric_motor` = sequenced from `tfmg:copper_spool` + `magnet` + `nickel_sheet` + `steel_casing` + `steel_mechanism` + `winding` + `create:shaft`.
+- `createnuclear:reactor_core` = `reactor_casing` + `c:ingots/steel` + `create:precision_mechanism` + `uranium_bucket`.
+- ⚠️ `create_new_age:reactor_controller` had **no recipe** in the dump — verify the item exists before use.

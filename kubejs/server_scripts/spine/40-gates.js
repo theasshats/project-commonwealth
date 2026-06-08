@@ -10,17 +10,7 @@
 // windmill (rung 2) and the tier-key machines are gated. All recipe grids are tunable placeholders.
 
 global.SPINE_GATES = [
-  // T1 — wind power behind an EARLY, farmable Gaia drop (forces players out; water wheel stays free).
-  { tier: 'T1', out: 'create:windmill_bearing', drop: 'grimoireofgaia:rotten_heart',
-    build: (e, K) => e.shaped('create:windmill_bearing',
-      [' K ', 'SBS', ' B '],
-      { K: K, S: 'create:shaft', B: 'create:brass_sheet' }) },
-
-  // T2 — steam engine behind a FIRE-themed Grimoire drop (fireshard) — thematic heat for a steam engine.
-  { tier: 'T2', out: 'create:steam_engine', drop: 'grimoireofgaia:fireshard',
-    build: (e, K) => e.shaped('create:steam_engine',
-      ['CKC', 'CPC', 'BBB'],
-      { K: K, C: 'create:copper_sheet', P: 'create:precision_mechanism', B: 'create:brass_casing' }) },
+  // T1 + T2 gates PULLED — early tiers are cost/scarcity-gated per the lineage; bosses start at T3.
 
   // T3 — ADVANCED electric behind ANY Frostmaw-equivalent Mowzie's boss (#derpack:mowzies_mid). Basic
   //      alternator stays kinetic-gated (per spec), so this gates the *advanced* energiser, not entry to electricity.
@@ -29,14 +19,14 @@ global.SPINE_GATES = [
       ['EKE', 'BBB', 'III'],
       { K: K, E: 'create:electron_tube', B: 'create_new_age:basic_energiser', I: '#c:plates/iron' }) },
 
-  // T3 — aeronautics ship core (flagship) behind a T3 Cataclysm drop (Maledictus / Frosted Prison).
-  { tier: 'T3', out: 'aeronautics:gyroscopic_propeller_bearing', drop: 'cataclysm:cursium_ingot',
+  // T3 — aeronautics ship core (flagship) behind ancient_metal (Ancient Remnant, mid Cataclysm boss).
+  { tier: 'T3', out: 'aeronautics:gyroscopic_propeller_bearing', drop: 'cataclysm:ancient_metal_ingot',
     build: (e, K) => e.shaped('aeronautics:gyroscopic_propeller_bearing',
       [' K ', 'BGB', ' W '],
       { K: K, B: 'create:brass_casing', G: 'simulated:gyroscopic_mechanism', W: '#minecraft:wooden_slabs' }) },
 
-  // T4 — netherite jetpack behind the endgame Cataclysm drop (Ignis), costed to T4.
-  { tier: 'T4', out: 'create_jetpack:netherite_jetpack', drop: 'cataclysm:ignitium_ingot',
+  // T3/T4 — netherite jetpack behind cursium (Maledictus, mid-late Cataclysm boss).
+  { tier: 'T4', out: 'create_jetpack:netherite_jetpack', drop: 'cataclysm:cursium_ingot',
     build: (e, K) => e.shaped('create_jetpack:netherite_jetpack',
       ['KNK', 'EPE', 'NAN'],
       { K: K, N: 'minecraft:netherite_ingot', E: 'create:electron_tube',

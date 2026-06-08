@@ -898,7 +898,11 @@ hash = "0cb02cfef7e1462a943e0c0d259774e1d6908f588fc501e1afb3b2d15e3a7138"
 
 [[files]]
 file = "kubejs/server_scripts/spine/40-gates.js"
-hash = "3aa3e027865c195f94aacd3a47ee35efcecca3a0eb21ed1cd75671320973610d"
+hash = "ff9a9f02d9aa7f74e545d55669573385b2b629956555613315072ec1a79ab06f"
+
+[[files]]
+file = "kubejs/server_scripts/spine/50-cross-tier.js"
+hash = "dbaf3470c0229f5f253209f5e8b77f5ca5ba339fa715d2068fd4e7c3807fb7b6"
 
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"
