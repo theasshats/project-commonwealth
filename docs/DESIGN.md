@@ -243,8 +243,8 @@ None of this is novel. By 2025-26 most working programmers use these tools, and 
 common editors and CI systems. A two-person project using them is ordinary; we mention it for the sake
 of being upfront, not because it's a confession.
 
-This is recorded here because the pack is now **public** (see the top-of-doc note), so the question
-"how much of this is AI?" is fair and we'd rather answer it plainly than have it surface as a gotcha.
+This is recorded here because it's a fair question to ask of any project, and we'd rather answer it
+plainly than have it surface as a gotcha.
 The stance: state it transparently where a curious player can find it, but **don't make the LLM a
 selling point** — the design is the headline, the tooling is an honest footnote. The canonical player-facing
 wording lives on the site (`derpack-org/derpack-site`, About section); keep this section and that copy
