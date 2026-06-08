@@ -25,9 +25,6 @@ wiki/
 scripts/
 tools/
 
-# Server deploy config — runs by hand on the ishimura box, not pack content
-server/
-
 # Build outputs
 dist/
 build/

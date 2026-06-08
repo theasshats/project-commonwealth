@@ -1,9 +1,10 @@
 # Derpack X — server deploy (ishimura)
 
-The compose + auto-update script that run the live server on the ishimura box.
-Staged in this repo for review and version control; intended to migrate to a
-dedicated `derpack-org/derpack-server` repo later (the same way the site was
-split out). Nothing here runs in this repo's CI — deploy is by hand on the box.
+Deploy config for the Derpack X Minecraft server: an `itzg/minecraft-server`
+compose stack plus `auto-update.sh`, which tracks the pack and keeps the box in
+sync. Generated from `scripts/server-repo/` in the pack repo
+(`derpack-org/Derpack-X`) by `scripts/build-server-repo.sh` — edit it there, not
+here. Deploy is by hand on the box; nothing here runs in CI.
 
 ## The one invariant
 
