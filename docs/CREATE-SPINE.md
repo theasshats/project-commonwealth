@@ -83,13 +83,17 @@ This ladder feeds the future onboarding/quest work (a guidebook walking rungs 0�
 The climb is **not** linear. Early rungs come quickly so players are flying through basic automation in
 their first sessions; the back half is where the time goes. Target curve for a *dedicated* player:
 
-- **Rungs 0→3 (Manual → Steam): ~1–2 days.** Cheap, fast, low-gated — get them to a steam base quickly.
-- **Rung 3→4 (Steam → Electric-low / T3): ~a week.** The heavy jump — the bulk of the step-depth and
-  scarcity gating lives here. Electricity should *feel earned*.
+- **Rungs 0→3 (Manual → Steam): ~1–2 days — *if you find the resources*.** The recipes here are cheap and
+  simple; the only thing between a player and a steam base is **sourcing the materials**. Regional ore
+  scarcity is the real early gate, not recipe complexity — a player who finds (or trades for) the right
+  resources moves fast; one who hasn't is gated on exploration and trade.
+- **Rung 3→4 (Steam → Electric-low / T3): ~a week.** The heavy jump — here *both* dials bite: deep
+  step-depth chains **and** scarcer cross-regional inputs. Electricity should *feel earned*.
 
-The gate is **step-depth + scarcity, never artificial timers** — an optimizing player still takes ~a week
-to electric because the recipe chains are deep and the inputs are regionally scarce, not because a
-cooldown blocks them.
+The gate is **step-depth + scarcity, never artificial timers.** Early tiers lean almost entirely on
+**scarcity** (find/trade the resources); later tiers stack **step-depth** on top. An optimizing player
+still takes ~a week to electric because the chains are deep and the inputs are regionally scarce — never
+because a cooldown blocks them.
 
 ---
 
@@ -208,10 +212,11 @@ ServerEvents.recipes(event => {
   *one-time key* that unlocks the recipe (KubeJS-gated, crafted once)? Proposed: **consumed** for
   components you make repeatedly (keeps the fighter/settler trade alive), **key/one-time** for
   machine-tier unlocks. Per-item call.
-- **Which bosses? — RATIFIED.** Gate roster is **L_Ender's Cataclysm (primary), Mowzie's Mobs, Grimoire
-  of Gaia, Born in Chaos** (`borninchaos`); Mutants also available. Cataclysm leads (purpose-built
-  boss-drop gear progression); the others spread gate-drop variety across tiers. (`bosses-of-mass-destruction`
-  from older issues is **not** in the pack — ignore it.)
+- **Which bosses? — RATIFIED: no primary, draw from them all.** Gate drops are pulled across **every**
+  installed boss mod — **L_Ender's Cataclysm, Mowzie's Mobs, Grimoire of Gaia, Born in Chaos, Mutants** —
+  rather than funnelling through one. Spread gate items across bosses so no single fight is the chokepoint
+  and players engage the whole roster. (`bosses-of-mass-destruction` from older issues is **not** in the
+  pack — ignore it.)
 - **Which colony part? — DEFERRED.** MineColonies is **fully out of scope for v0.7.0** — the fork ships
   **boss-only** now, with a clean hook for the colony route to be added in a later patch. The whole point
   of the difficulty added now is to make the colony bypass *worth building* when that pillar lands.
@@ -236,9 +241,10 @@ Per `SYSTEMS.md`, the lock list is **incremental per pillar** — this is *only*
 
 **First high-tier fork (Pattern B — boss OR colony):**
 - **The Aeronautics controller** — the worked example from `SYSTEMS.md` §3. End-game logistics tech
-  gated behind a Cataclysm drop *or* a colony part. This is the flagship demonstration of the fork and
-  the single best v0.7.0 target to prove the pattern. (Exact controller item id + chosen boss drop +
-  colony part: filled in the #92 PR against `create-aeronautics-bundled` recipe dump.)
+  gated behind a **boss drop** (any of the roster — see 3b; **boss-only for v0.7.0**, the colony route is
+  deferred). This is the flagship demonstration of the fork and the single best v0.7.0 target to prove the
+  pattern. (Exact controller item id + chosen boss drop: filled in the #92 PR against the
+  `create-aeronautics-bundled` recipe dump.)
 
 > **Scope discipline:** the v0.7.0 lock list is deliberately *small* — two exclusives + one fork. The
 > mechanism (Patterns A/B) is the deliverable; a long lock list is explicitly *not* the goal this
@@ -315,10 +321,10 @@ session's additions.
 | P2 | What "3×" measures against | Raw-material floor in base resource units, not literal ×3 counts |
 | P2 | Acceptable multiplier band | 2.5–3.5× |
 | P3 | Boss/colony part: consumed per craft vs. one-time key | Consumed for components, key for machine unlocks |
-| P3 | Primary boss source | Cataclysm |
+| P3 | Boss source | **No primary** — draw gate drops from all installed bosses (see P4 roster) |
 | P3 | v0.7.0 lock list breadth | 2 exclusives (precision_mechanism, electron_tube) + 1 fork (aeronautics controller) |
 | P4 | Power-ladder pacing | Rungs 0→3 ~1–2 days; rung 3→4 ~a week; gate = step-depth + scarcity, never timers |
-| P4 | Boss-gate roster | Cataclysm (primary) + Mowzie's, Grimoire of Gaia, Born in Chaos |
+| P4 | Boss-gate roster | **No primary** — draw gate drops from all installed bosses (Cataclysm, Mowzie's, Grimoire, Born in Chaos, Mutants) |
 | P4 | T3–T4 mod spine | T3 = TFMG; T4 = New Age + Nuclear; Additions = rung-4 converter under T3 |
 | P4 | Aeronautics gating | Control-complexity ladder T1→T4; digital control via `create-aeroworks` (added); boss fork at the T3→T4 jump |
 | P4 | MineColonies scope | Fully out of scope for v0.7.0 — boss-only fork now, colony bypass a later patch |
