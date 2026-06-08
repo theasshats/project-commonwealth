@@ -44,13 +44,21 @@ done
 # --- Bundle -----------------------------------------------------------------
 rm -rf "${OUT_DIR}"
 mkdir -p "${OUT_DIR}"
-cp -a "${SRC}/." "${OUT_DIR}/"          # includes dotfiles (.env.example, .gitignore)
-chmod +x "${OUT_DIR}/auto-update.sh"
+cp -a "${SRC}/." "${OUT_DIR}/"          # dotfiles too (.env.example, .gitignore, .gitattributes)
+chmod +x "${OUT_DIR}/auto-update.sh" 2>/dev/null || true
+
+# Force LF on every bundled file. The box runs these on Linux; a CRLF that snuck
+# in from a Windows checkout would break the auto-update.sh shebang. No-op on a
+# clean LF checkout (the pack repo's `* -text` keeps them LF), but cheap insurance.
+find "${OUT_DIR}" -type f -exec sed -i 's/\r$//' {} + 2>/dev/null || true
 
 mkdir -p dist
-( cd dist && rm -f "$(basename "${OUT_ZIP}")" && zip -qr "$(basename "${OUT_ZIP}")" "$(basename "${OUT_DIR}")" )
-
-echo "==> Bundle: ${OUT_ZIP}"
+if command -v zip >/dev/null 2>&1; then
+    ( cd dist && rm -f "$(basename "${OUT_ZIP}")" && zip -qr "$(basename "${OUT_ZIP}")" "$(basename "${OUT_DIR}")" )
+    echo "==> Bundle: ${OUT_ZIP}  (and ${OUT_DIR}/)"
+else
+    echo "==> Bundle: ${OUT_DIR}/  (no 'zip' on PATH — skipped the .zip; the dir is the bundle)"
+fi
 echo "    Repo root contents:"
 ( cd "${OUT_DIR}" && find . -mindepth 1 -maxdepth 1 | sort | sed 's#^\./#      #' )
 
@@ -63,6 +71,9 @@ if [[ "${PUSH}" == "true" ]]; then
         cd "${OUT_DIR}"
         git init -q -b main
         git add -A
+        # Persist the executable bit in the commit even when built on Windows
+        # (where the filesystem has no +x), so the box's clone can run it directly.
+        git update-index --add --chmod=+x auto-update.sh
         git commit -q -m "Initial deploy config (from Derpack-X/scripts/server-repo)"
         gh repo create "${ORG_REPO}" "--${VIS}" \
             -d "Deploy config for the Derpack X server (ishimura)" \
