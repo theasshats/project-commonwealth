@@ -22,7 +22,7 @@ hash = "6db69bf90129cced7c224a0bf969dc331299c45017d1fce3d13d00e095a3af34"
 
 [[files]]
 file = "config/almostunified/unification/materials.json"
-hash = "d915fc58e3804bd901448e520fcc4329430aca9069ba0d87df3411968906302d"
+hash = "9ed52bd38a801753c286969929487c28c7091f293af42ff3029579f8a1865f15"
 
 [[files]]
 file = "config/createblockchain-common.toml"
@@ -794,7 +794,7 @@ hash = "2b673631bea97d168d5a2c1459b137de9dfbb97d7c96242388a2cfd02d913a0b"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/35-web-bridges.js"
-hash = "2d93e09f246e49a0fc9280d3f786c47386fb15e5aeaddbb606be36426a8c2021"
+hash = "02542b726332be48b3088a58b1bfeda931de42e86813a2c3e840c1a93bb8d779"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/36-magic-web-create.js"

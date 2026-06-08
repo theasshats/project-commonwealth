@@ -8,6 +8,7 @@
     "c:ingots/steel": "create_ironworks",
     "c:nuggets/steel": "create_ironworks",
     "c:storage_blocks/steel": "create_ironworks",
+    "c:plates/steel": "create_ironworks",
     "c:ingots/bronze": "create_ironworks",
     "c:nuggets/bronze": "create_ironworks",
     "c:storage_blocks/bronze": "create_ironworks",

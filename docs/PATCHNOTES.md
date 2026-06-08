@@ -40,6 +40,14 @@ than its own. It adds:
 - Cider: fermented from apple must.
 - Juices: Grape Juice and Apple Juice — non-alcoholic, granting a short Speed effect.
 
+### Recipes
+
+Two sets of near-duplicate materials have been reconciled. Create: Ironworks steel sheets and TFMG's
+heavy plates were separate items filling the same role; they now resolve to a single steel plate, so a
+recipe no longer cares which mod's plate you are holding. And the carbon part behind Create Nuclear's
+reactors and anti-radiation armour, previously made only from coal dust, can now also be pressed from
+graphite, joining the Pantographs & Wires carbon line into the nuclear chain.
+
 ## 0.6.0 — Foundation
 
 This release concentrates on performance and maintenance: a new renderer, a full pass of mod updates,
