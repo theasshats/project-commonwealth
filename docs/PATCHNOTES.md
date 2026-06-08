@@ -7,6 +7,13 @@
 
 _Draft placeholder — replace with real notes before release._
 
+### Ore generation
+
+Ore veins are now larger and spread further apart, so a deposit is a real find rather than a common
+sight. Vein bodies are bigger, but they generate on a wider grid, so you will travel further between
+them. Finding ore leans on prospecting: clicking an ore block scans the surrounding area for nearby
+veins, and discovered veins are drawn on Xaero's map.
+
 ### Curation
 
 The Let's Do mod family has been trimmed. Vinery, Meadow, Bakery, and Farm & Charm (with their
