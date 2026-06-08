@@ -13,17 +13,16 @@
 # the pack is never touched. Everything else (removed mods, old jar versions) is
 # dropped, and INDEX-ores / INDEX-biome-modifiers / README are reconciled to match.
 #
-# PROTECTED: anything matching $PROTECT_RE is ALWAYS kept even if it doesn't
-# match a current manifest filename — that digest was extracted by hand because
-# those jars can't be fetched / read by the automated packwiz-installer pass, so
-# a blind regen/prune would lose it. Widen PROTECT_RE if more hand-seeded mods
-# are added.
-#   Create: Aeronautics is a BUNDLE — one `aeronautics_bundled` jar that nests
-#   THREE mod jars (simulated, offroad, and base aeronautics). extract-mod-data.sh
-#   doesn't recurse into jar-in-jar, so the bundle's own by-mod entry is an empty
-#   wrapper and the three nested mods' facts were hand-obtained. The default
-#   PROTECT_RE therefore guards aeronautic* AND the bundle's three component names
-#   so none of them can be pruned, however their digests end up named.
+# KEEPING BUNDLED + HAND-SEEDED MODS (both survive a prune):
+#  - Jar-in-Jar: extract-mod-data.sh recurses into bundles and tags each nested
+#    mod with a `bundled-in: <outer jar>` header. The prune keeps such a file
+#    while its outer jar is installed (and drops it when the bundle leaves) — so
+#    the three mods nested in create-aeronautics-bundled (simulated / offroad /
+#    base aeronautics) ride along automatically, no name allowlist needed.
+#  - PROTECT_RE is the fallback for anything hand-seeded that the automated pass
+#    can't reproduce AND that lacks a bundled-in header: a name matching it is
+#    ALWAYS kept even without a current manifest match. Widen it if such a mod
+#    is added.
 #
 # Safe to re-run after any curation pass. Run from the repo root:
 #   scripts/prune-mod-data.sh            # prune
@@ -31,7 +30,7 @@
 set -euo pipefail
 
 OUT="${1:-tools/mod-data}"
-PROTECT_RE="${PROTECT_RE:-aeronautic|simulated|offroad}"
+PROTECT_RE="${PROTECT_RE:-aeronautic}"
 DRY_RUN="${DRY_RUN:-}"
 
 python3 - "$OUT" "$PROTECT_RE" "${DRY_RUN}" <<'PY'
@@ -48,8 +47,23 @@ for pw in glob.glob("mods/*.pw.toml"):
 if not keep:
     sys.exit("refusing to prune: found 0 current jars (run from repo root?)")
 
+# Bundled mods (extract-mod-data.sh recursed into a Jar-in-Jar) carry a
+# `bundled-in: <outer jar>` header — keep them while that outer jar is installed,
+# drop them when it leaves. Map nested basename -> outer jar from the by-mod files.
+bundled = {}
+for p in glob.glob(os.path.join(out, "by-mod", "*.txt")):
+    with open(p, encoding="utf-8") as fh:
+        fh.readline()                       # "# <name>"
+        m = re.match(r'bundled-in:\s*(\S.*)', fh.readline())
+    if m:
+        bundled[os.path.basename(p)[:-4]] = m.group(1).strip()
+
 def protected(name): return bool(protect_re.search(name))
-def kept(name): return name in keep or protected(name)
+def kept(name):
+    if name in keep or protected(name):
+        return True
+    par = bundled.get(name)                 # bundled mod: follow its outer jar
+    return bool(par and (par in keep or protected(par)))
 
 # 1) Per-mod files: by-mod / recipes / loot
 pruned, protected_kept = [], set()
@@ -59,7 +73,7 @@ for sub in ("by-mod", "recipes", "loot"):
         base = os.path.basename(p)[:-4]
         if base in keep:
             continue
-        if protected(base):
+        if kept(base):                      # protected, or bundled-in an installed jar
             protected_kept.add(base)
             continue
         pruned.append(os.path.relpath(p))
