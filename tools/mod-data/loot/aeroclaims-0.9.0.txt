@@ -1,0 +1,1 @@
+aeroclaims:blocks/claim_block | minecraft:block | aeroclaims:claim_block minecraft:block minecraft:item minecraft:survives_explosion
