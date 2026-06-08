@@ -21,21 +21,19 @@ global.SPINE_BASICS_3X = {
 global.SPINE_STAGES = { T1: '1-2', T2: '3-4', T3: '5-6', T4: '6+ and the boss fork' }
 
 ServerEvents.recipes(event => {
-  // ── Dial the ROOT basic to ~3x. Vanilla andesite_alloy = 1 iron/zinc nugget + andesite. At ~3x the raw
-  //    floor that's 3 nuggets + andesite. Keep BOTH a hand-craft (bootstrap — you need alloy to build the
-  //    first mixer) and the Create mixing route, both at the dialed cost. This cost flows into every
-  //    machine, casing, and component built from alloy. ──
+  // ── Dial the ROOT basic. The hand-craft is deliberately the EXPENSIVE route (a whole ingot per alloy)
+  //    to push players onto the cheaper Create mixing route once they have a mixer; mixing stays ~3x the
+  //    raw floor (3 nuggets). This cost flows into every machine/casing/component built from alloy. ──
   event.remove({ output: 'create:andesite_alloy' })
 
-  // bootstrap hand-craft (~3x): 3 iron nuggets + andesite
-  event.shapeless('create:andesite_alloy',
-    ['minecraft:andesite', '#c:nuggets/iron', '#c:nuggets/iron', '#c:nuggets/iron'])
+  // bootstrap hand-craft — EXPENSIVE: 1 full iron ingot per alloy (= 9 nuggets, vs mixing's 3)
+  event.shapeless('create:andesite_alloy', ['minecraft:andesite', '#c:ingots/iron'])
 
-  // Create route — mixing, same dialed floor (iron or zinc nuggets)
+  // Create route — mixing, the intended cheaper path (~3x floor: 3 nuggets, iron or zinc)
   event.recipes.create.mixing('create:andesite_alloy',
     ['minecraft:andesite', '#c:nuggets/iron', '#c:nuggets/iron', '#c:nuggets/iron'])
   event.recipes.create.mixing('create:andesite_alloy',
     ['minecraft:andesite', '#c:nuggets/zinc', '#c:nuggets/zinc', '#c:nuggets/zinc'])
 
-  console.info(`[derpack-spine] cost model: root basic andesite_alloy dialed to ~3x; ${global.SPINE_BASICS_3X.propagates.length} basics inherit via inputs; sheets left 1:1 (cost = ingot). Per-mod step-depth staged.`)
+  console.info(`[derpack-spine] cost model: andesite_alloy dialed (hand-craft 1 ingot > mixing 3 nuggets); ${global.SPINE_BASICS_3X.propagates.length} basics inherit via inputs; sheets left 1:1. Per-mod step-depth staged.`)
 })

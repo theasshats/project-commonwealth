@@ -76,3 +76,49 @@ per `00-create-ify.js` patterns, target `#c:` tags, carry its own playtest sub-b
 - The aeronautics-core fork shows a boss-key recipe in JEI; non-boss path is gone.
 - Power: windmill bearing costs sail cloth; no free-source generator produces FE from nothing early.
 - The 3×-dialed basics show the new cost in JEI and are still craftable.
+
+## 7. Boss progression — drop-placement reference
+
+Rough difficulty ordering per mod, so boss drops map to tiers. **The flat `#derpack:boss_keys` tag suits a
+generic "beat a boss" gate, but it mixes early drops with endgame ones — so a *tiered* fork must pick a
+specific tier-appropriate drop from this table, not the flat tag.** (D1 uses ignitium = T4; D2 uses
+cursium = T3.)
+
+### L_Ender's Cataclysm — the premier boss-gate mod (spans T2→T4)
+Structure-gated bosses, a clear endgame ramp. Rough order: Netherite Monstrosity → Ender Guardian →
+Harbinger → Leviathan → Ancient Remnant → Maledictus → Scylla → **Ignis** (hardest, "boss of all bosses").
+
+| Boss | Structure | Signature drop | Suggested tier |
+|---|---|---|---|
+| Netherite Monstrosity | (entry boss) | `monstrous_horn` | T2–T3 |
+| Ender Guardian | End gateway | `void_core` | T3 |
+| The Harbinger | underground | `witherite_ingot` | T3 |
+| Maledictus | Frosted Prison | `cursium_ingot` | T3 |
+| Scylla / storm | ocean/storm | `essence_of_the_storm` | T3–T4 |
+| **Ignis** | Burning Arena | `ignitium_ingot` | **T4 (endgame)** |
+
+### Mowzie's Mobs — mid-tier ability bosses (T2→T3)
+| Boss | Drop | Tier |
+|---|---|---|
+| Ferrous Wroughtnaut (iron-accessible, first) | `earthrend_gauntlet` (assoc.) | T2 |
+| Frostmaw (snowy) | `ice_crystal` | T2–T3 |
+| Umvuthi / Sculptor (late) | — | T3 |
+
+### Born in Chaos — EARLY accessible minibosses (T1→T2)
+Spawn naturally after a few in-game days and scale with world age; the skulls are a 5% drop — easy-ish.
+**⚠️ Early-tier — do not place these on high-tier gates.**
+| Miniboss | Appears | Drop | Tier |
+|---|---|---|---|
+| Lifestealer | 10th night | `lifestealer_skull` | T1–T2 |
+| Nightmare Stalker | ~day 3 (scales to day 100) | `nightmare_stalker_skull` | T1–T2 |
+
+### Grimoire of Gaia — elite-mob drops, FARMABLE (T2–T3, weak gate)
+Gaia mobs spawn in the world (not one-time bosses), so their drops are grindable — better as **consumed
+component** gates than one-time keys. `rotten_heart` is a common drop (a food item — borderline too common
+to gate with); `fireshard` from fire-themed mobs is a better pick.
+
+### Suggested tier → drop palette for future forks
+- **T1–T2 gate:** Born in Chaos `lifestealer_skull` / `nightmare_stalker_skull`.
+- **T2–T3 gate:** Mowzie's `ice_crystal`; Cataclysm `monstrous_horn` / `witherite_ingot` / `cursium_ingot`.
+- **T3–T4 gate:** Cataclysm `essence_of_the_storm`.
+- **T4 gate:** Cataclysm `ignitium_ingot`.

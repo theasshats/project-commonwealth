@@ -20,37 +20,37 @@ ServerEvents.recipes(event => {
     event.remove({ output: id, not: { mod: 'create' } })
   )
 
-  // ── Pattern B — flagship boss fork. create_jetpack:netherite_jetpack was flagged (weave ledger) as the
-  //    cheap, ready second example of the #92 fork — gate it behind any boss key. PLACEHOLDER recipe shape:
-  //    the exact ingredient grid is finalized in the #92 PR against the real recipe dump; IDs here are all
-  //    real, so worst case is a no-op (the original recipe simply stays) rather than a crash. ──
-  global.spineBossFork(event, 'create_jetpack:netherite_jetpack', KEY => {
-    event.shaped('create_jetpack:netherite_jetpack', [
-      'NKN',
-      'NPN',
-      'BEB'
-    ], {
-      N: 'minecraft:netherite_ingot',
-      K: KEY,                            // any boss drop opens the fork
-      P: 'create:precision_mechanism',
-      B: 'create:brass_sheet',
-      E: 'create:electron_tube'
-    })
+  // ── Pattern B — boss forks. Per maintainer call, the flagship forks gate on SPECIFIC tiered drops (not
+  //    the flat tag): a T4 item behind a T4 boss drop, a T3 item behind a T3 boss drop (boss progression
+  //    reference: docs/CREATE-SPINE-IMPL.md §7). The #derpack:boss_keys tag + spineBossFork helper remain
+  //    for future generic gates. ──
+
+  // D1 — create_jetpack:netherite_jetpack: a T4 item, gated behind ignitium (Cataclysm Ignis, T4 boss),
+  //      costed up to T4 (netherite + electric/precision parts + the boss ingot).
+  event.remove({ output: 'create_jetpack:netherite_jetpack' })
+  event.shaped('create_jetpack:netherite_jetpack', [
+    'INI',
+    'EPE',
+    'NAN'
+  ], {
+    I: 'cataclysm:ignitium_ingot',            // T4 boss gate (Ignis)
+    N: 'minecraft:netherite_ingot',
+    E: 'create:electron_tube',
+    P: 'create:precision_mechanism',
+    A: 'create_new_age:advanced_energiser'    // T4 electric component
   })
 
-  // ── FLAGSHIP fork (CREATE-SPINE.md 3c) — the aeronautics ship core, gated at the T3->T4 jump so advanced
-  //    flight is boss-gated. Real recipe (verified vs the dump): brass_casing + wooden slab +
-  //    simulated:gyroscopic_mechanism; re-authored to require a boss key. ──
-  global.spineBossFork(event, 'aeronautics:gyroscopic_propeller_bearing', KEY => {
-    event.shaped('aeronautics:gyroscopic_propeller_bearing', [
-      ' K ',
-      'BGB',
-      ' W '
-    ], {
-      K: KEY,                                  // any boss drop opens the fork
-      B: 'create:brass_casing',
-      G: 'simulated:gyroscopic_mechanism',
-      W: '#minecraft:wooden_slabs'
-    })
+  // D2 — aeronautics:gyroscopic_propeller_bearing (T3 ship core), gated behind cursium (Cataclysm T3 boss)
+  //      for now. Real base recipe (brass_casing + gyroscopic_mechanism + wooden slab) + the cursium gate.
+  event.remove({ output: 'aeronautics:gyroscopic_propeller_bearing' })
+  event.shaped('aeronautics:gyroscopic_propeller_bearing', [
+    ' C ',
+    'BGB',
+    ' W '
+  ], {
+    C: 'cataclysm:cursium_ingot',             // T3 boss gate
+    B: 'create:brass_casing',
+    G: 'simulated:gyroscopic_mechanism',
+    W: '#minecraft:wooden_slabs'
   })
 })
