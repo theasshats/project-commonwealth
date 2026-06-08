@@ -1,0 +1,118 @@
+# dev.eriksonn.aeronautics.aeronautics-neoforge-1.21.1-1.2.1
+bundled-in: create-aeronautics-bundled-1.21.1-1.2.1
+
+## mod metadata (id / version / deps)
+license = "Read attached LICENSE.md" # Review your options at https://choosealicense.com/.
+modId = "aeronautics" #mandatory
+version = "1.2.1" #mandatory
+displayName = "Create Aeronautics" #mandatory
+modId = "neoforge" #mandatory
+versionRange = "[21.1.219,)" #mandatory
+modId = "minecraft"
+versionRange = "[1.21.1]"
+modId = "create"
+versionRange = "[6.0.10,)"
+modId = "sable"
+versionRange = "[1.2.1,)"
+modId = "simulated"
+versionRange = "[1.2.1,)"
+
+## blocks
+aeronautics:adjustable_burner
+aeronautics:andesite_propeller
+aeronautics:black_envelope
+aeronautics:black_envelope_encased_shaft
+aeronautics:blue_envelope
+aeronautics:blue_envelope_encased_shaft
+aeronautics:brown_envelope
+aeronautics:brown_envelope_encased_shaft
+aeronautics:cyan_envelope
+aeronautics:cyan_envelope_encased_shaft
+aeronautics:gray_envelope
+aeronautics:gray_envelope_encased_shaft
+aeronautics:green_envelope
+aeronautics:green_envelope_encased_shaft
+aeronautics:gyroscopic_propeller_bearing
+aeronautics:levitite
+aeronautics:levitite_blend
+aeronautics:light_blue_envelope
+aeronautics:light_blue_envelope_encased_shaft
+aeronautics:light_gray_envelope
+aeronautics:light_gray_envelope_encased_shaft
+aeronautics:lime_envelope
+aeronautics:lime_envelope_encased_shaft
+aeronautics:magenta_envelope
+aeronautics:magenta_envelope_encased_shaft
+aeronautics:mounted_potato_cannon
+aeronautics:orange_envelope
+aeronautics:orange_envelope_encased_shaft
+aeronautics:pearlescent_levitite
+aeronautics:pink_envelope
+aeronautics:pink_envelope_encased_shaft
+aeronautics:propeller_bearing
+aeronautics:purple_envelope
+aeronautics:purple_envelope_encased_shaft
+aeronautics:red_envelope
+aeronautics:red_envelope_encased_shaft
+aeronautics:smart_propeller
+aeronautics:steam_vent
+aeronautics:white_envelope
+aeronautics:white_envelope_encased_shaft
+aeronautics:wooden_propeller
+aeronautics:yellow_envelope
+aeronautics:yellow_envelope_encased_shaft
+
+## items
+aeronautics:adjustable_burner
+aeronautics:andesite_propeller
+aeronautics:aviators_goggles
+aeronautics:black_envelope
+aeronautics:black_envelope_encased_shaft
+aeronautics:blue_envelope
+aeronautics:blue_envelope_encased_shaft
+aeronautics:brown_envelope
+aeronautics:brown_envelope_encased_shaft
+aeronautics:cyan_envelope
+aeronautics:cyan_envelope_encased_shaft
+aeronautics:end_stone_powder
+aeronautics:gray_envelope
+aeronautics:gray_envelope_encased_shaft
+aeronautics:green_envelope
+aeronautics:green_envelope_encased_shaft
+aeronautics:gyroscopic_propeller_bearing
+aeronautics:levitite
+aeronautics:levitite_blend_bucket
+aeronautics:light_blue_envelope
+aeronautics:light_blue_envelope_encased_shaft
+aeronautics:light_gray_envelope
+aeronautics:light_gray_envelope_encased_shaft
+aeronautics:lime_envelope
+aeronautics:lime_envelope_encased_shaft
+aeronautics:magenta_envelope
+aeronautics:magenta_envelope_encased_shaft
+aeronautics:mounted_potato_cannon
+aeronautics:music_disc_cloud_skipper
+aeronautics:orange_envelope
+aeronautics:orange_envelope_encased_shaft
+aeronautics:pearlescent_levitite
+aeronautics:pink_envelope
+aeronautics:pink_envelope_encased_shaft
+aeronautics:propeller_bearing
+aeronautics:purple_envelope
+aeronautics:purple_envelope_encased_shaft
+aeronautics:red_envelope
+aeronautics:red_envelope_encased_shaft
+aeronautics:smart_propeller
+aeronautics:steam_vent
+aeronautics:white_envelope
+aeronautics:white_envelope_encased_shaft
+aeronautics:wooden_propeller
+aeronautics:yellow_envelope
+aeronautics:yellow_envelope_encased_shaft
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+item/armors :: {"values": ["aeronautics:aviators_goggles"]}
+item/music_discs :: {"values": ["aeronautics:music_disc_cloud_skipper"]}
