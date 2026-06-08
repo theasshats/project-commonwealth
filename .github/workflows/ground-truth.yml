@@ -74,7 +74,8 @@ jobs:
       - name: Fetch all jars (packwiz serve + bootstrap)
         run: |
           mkdir -p .tools scratch
-          curl -fsSL -o .tools/packwiz-installer-bootstrap.jar \
+          # Retry transient CDN hiccups (GitHub has 504'd this download) instead of failing the job.
+          curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 -o .tools/packwiz-installer-bootstrap.jar \
             https://github.com/packwiz/packwiz-installer-bootstrap/releases/latest/download/packwiz-installer-bootstrap.jar
           packwiz serve --port 8765 >/tmp/serve.log 2>&1 &
           SERVE_PID=$!
