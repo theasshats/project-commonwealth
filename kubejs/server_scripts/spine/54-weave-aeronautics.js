@@ -49,21 +49,24 @@ ServerEvents.recipes(event => {
     B: 'create:brass_casing'
   })
 
-  // ── T3->T4 digital: aeroworks:gyroscope — real recipe shapeless { flywheel, gimbal_sensor }.
-  //    Weave a TFMG etched circuit so the digital gyroscope needs the T3 industrial circuit ladder,
-  //    not just the analog gimbal sensor. ──
+  // ── T3->T4 digital: aeroworks:gyroscope — original crafting_shapeless { flywheel, gimbal_sensor }.
+  //    Digital control device -> routed through Create via mechanical_crafting. Weave a TFMG etched
+  //    circuit so the digital gyroscope needs the T3 industrial circuit ladder, not just the analog
+  //    gimbal sensor. ──
   event.remove({ output: 'aeroworks:gyroscope' })
-  event.shapeless('aeroworks:gyroscope', [
-    'create:flywheel',
-    'simulated:gimbal_sensor',            // T3 analog feed-in
-    'tfmg:etched_circuit_board'           // T3 TFMG circuit -> makes the gyroscope read T4 digital
-  ])
+  event.recipes.create.mechanical_crafting('aeroworks:gyroscope', [
+    'FGZ'
+  ], {
+    F: 'create:flywheel',
+    G: 'simulated:gimbal_sensor',         // T3 analog feed-in
+    Z: 'tfmg:etched_circuit_board'        // T3 TFMG circuit -> makes the gyroscope read T4 digital
+  })
 
   // ── T4 digital: mechanical_servo — real grid " A " / "DBD" / " C " (A=precision_mechanism,
   //    B=sequenced_gearshift, C=electron_tube, D=#c:ingots/brass). Replace one brass side with a
   //    TFMG etched circuit: the servo now needs the T3 circuit on top of its precision core. ──
   event.remove({ output: 'aeroworks:mechanical_servo' })
-  event.shaped('aeroworks:mechanical_servo', [
+  event.recipes.create.mechanical_crafting('aeroworks:mechanical_servo', [
     ' A ',
     'ZBD',
     ' C '
@@ -79,7 +82,7 @@ ServerEvents.recipes(event => {
   //    B=sequenced_gearshift, C=#c:ingots/brass, D=electron_tube). Swap the brass core for an
   //    Additions electric_motor so the stepping servo reads off the T3 Additions electric chain. ──
   event.remove({ output: 'aeroworks:stepper_servo' })
-  event.shaped('aeroworks:stepper_servo', [
+  event.recipes.create.mechanical_crafting('aeroworks:stepper_servo', [
     ' A ',
     'BMB',
     ' D '
@@ -95,19 +98,17 @@ ServerEvents.recipes(event => {
   //    B=#c:ingots/brass). Swap the shaft row for an Additions electrum_sheet so the digital input
   //    device draws on the T3 Additions electric line alongside its precision mechanism. ──
   event.remove({ output: 'aeroworks:joystick' })
-  event.custom({
-    type: 'create:mechanical_crafting',
-    accept_mirrored: false,
-    category: 'misc',
-    key: {
-      L: { item: 'create:redstone_link' },
-      P: { item: 'create:precision_mechanism' },
-      E: { item: 'createaddition:electrum_sheet' },  // T3 Additions electric -> T4 digital joystick
-      B: { tag: 'c:ingots/brass' }
-    },
-    pattern: [' L ', ' P ', ' E ', ' B ', 'BBB'],
-    result: { count: 1, id: 'aeroworks:joystick' },
-    show_notification: false
+  event.recipes.create.mechanical_crafting('aeroworks:joystick', [
+    ' L ',
+    ' P ',
+    ' E ',
+    ' B ',
+    'BBB'
+  ], {
+    L: 'create:redstone_link',
+    P: 'create:precision_mechanism',
+    E: 'createaddition:electrum_sheet',   // T3 Additions electric -> T4 digital joystick
+    B: '#c:ingots/brass'
   })
 
   console.info('[derpack-spine] weave-aeronautics: control ladder reinforced — propeller_bearing (T2) below gyroscopic; gimbal_sensor analog; gyroscope/servos/joystick (T4) now need TFMG circuit / Additions electric (T3->T4).')

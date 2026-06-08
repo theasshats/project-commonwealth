@@ -906,19 +906,19 @@ hash = "42e733a1106d39963daafd3139145520cead23eba7f290db1b2c94e4dc8c4ec6"
 
 [[files]]
 file = "kubejs/server_scripts/spine/51-weave-additions-tfmg.js"
-hash = "22253209e579a0212d18e9771d27cfa2e5e40d19d8761bde1e6d77e6c2f2255b"
+hash = "10f512fc5b091c609c10123d5a2e64c1d6fd15949d74c159470d6bd435c839eb"
 
 [[files]]
 file = "kubejs/server_scripts/spine/52-weave-tfmg-newage.js"
-hash = "8f275735318cdf36ad51ee82c58667dda26b77bbad246986b044a8d5ca479933"
+hash = "2a95005838768658c15a1f5a429838b5ccd9b74816406eba97aa6620c3929847"
 
 [[files]]
 file = "kubejs/server_scripts/spine/53-weave-nuclear.js"
-hash = "3840d6483fbc4897c7f58af179f86ad017756ff5d9acd6c30b3aab7e8016e6fe"
+hash = "7bc4642aa0a70b5a9cf7ddf42eff764e8b661f81b0828bb0471b711fce78ae53"
 
 [[files]]
 file = "kubejs/server_scripts/spine/54-weave-aeronautics.js"
-hash = "e43d1c1738538af15509077c44a148bf631947436758e27e3965b8c2fc83f4c6"
+hash = "7fdecffaf7ae5179ac33c9e4fd63989aefc4556b19f85d5db0ba723d4abef373"
 
 [[files]]
 file = "kubejs/server_scripts/zz-dump-recipes-TEMP.js"
@@ -927,6 +927,10 @@ hash = "3615afccd5bb644dff3d0b1d9cb41ece92d1271b79ab27770d4b6cb30e836559"
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"
 hash = "6c09092dc0f47bbeec1f63b17714436f1765163110a84e508565b9c90ec948f4"
+
+[[files]]
+file = "kubejs/startup_scripts/02-spine-incomplete.js"
+hash = "9f3024da7657c77ebe570635db2da43eab3e05988317bfacffbca1ceb2ff87b5"
 
 [[files]]
 file = "mods/accelerated-decay.pw.toml"

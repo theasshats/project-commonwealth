@@ -20,19 +20,19 @@
 ServerEvents.recipes(event => {
   // ── REACTOR MULTIBLOCK ──────────────────────────────────────────────────
 
-  // reactor_casing — real: item_application brass_casing + #c:ingots/steel. Re-route through a shaped
-  // recipe so we can weave a TFMG etched circuit in (item_application is 2-slot, no room). Keeps steel.
-  // T4 PREREQ ADDED: tfmg:etched_circuit_board (TFMG T3 circuit ladder).
+  // reactor_casing — real: item_application brass_casing + #c:ingots/steel. Re-authored as a staged
+  // sequenced_assembly on the Mechanical Crafters so we can deploy a TFMG etched circuit (item_application
+  // is a 2-slot deploy-on-anvil, no room). Base = brass_casing; deploy steel then circuit; press. Keeps steel.
+  // T4 PREREQ ADDED: tfmg:etched_circuit_board (TFMG T3 circuit ladder) -> casing-using parts inherit it.
   event.remove({ output: 'createnuclear:reactor_casing' })
-  event.shaped('createnuclear:reactor_casing', [
-    'SBS',
-    'ZBZ',
-    'SBS'
-  ], {
-    B: 'create:brass_casing',
-    S: '#c:ingots/steel',
-    Z: 'tfmg:etched_circuit_board'            // TFMG circuit woven into the base casing -> all parts inherit it
-  })
+  event.recipes.create.sequenced_assembly(
+    ['createnuclear:reactor_casing'], 'create:brass_casing',
+    [
+      event.recipes.create.deploying('derpack:incomplete_reactor_casing', ['derpack:incomplete_reactor_casing', '#c:ingots/steel']),
+      event.recipes.create.deploying('derpack:incomplete_reactor_casing', ['derpack:incomplete_reactor_casing', 'tfmg:etched_circuit_board']),
+      event.recipes.create.pressing('derpack:incomplete_reactor_casing', 'derpack:incomplete_reactor_casing')
+    ]
+  ).transitionalItem('derpack:incomplete_reactor_casing').loops(1)
 
   // reactor_controller — real: 5x5 mechanical_crafting (casing/netherite/content_observer/electron_tube/
   // item_vault/nether_star). Swap one netherite slot for a New Age advanced energiser: the controller (the
@@ -55,31 +55,33 @@ ServerEvents.recipes(event => {
     E: 'create_new_age:advanced_energiser'    // T4 electric brain gates the controller
   }).acceptMirrored(true)
 
-  // reactor_input — real: item_application reactor_casing + hopper. 2-slot, no room; re-route to shaped to
-  // weave a reinforced energiser (this block pumps fuel in — give it a real power part).
+  // reactor_input — real: item_application reactor_casing + hopper. 2-slot deploy-on-anvil, no room;
+  // re-authored as a staged sequenced_assembly. Base = reactor_casing; deploy the hopper (original applied
+  // item) then a reinforced energiser (this block pumps fuel in, give it a real power part); press to finish.
   // T4 PREREQ ADDED: create_new_age:reinforced_energiser.
   event.remove({ output: 'createnuclear:reactor_input' })
-  event.shaped('createnuclear:reactor_input', [
-    ' H ',
-    'CEC'
-  ], {
-    H: 'minecraft:hopper',
-    C: 'createnuclear:reactor_casing',
-    E: 'create_new_age:reinforced_energiser'  // T4 energiser woven into the fuel-input block
-  })
+  event.recipes.create.sequenced_assembly(
+    ['createnuclear:reactor_input'], 'createnuclear:reactor_casing',
+    [
+      event.recipes.create.deploying('derpack:incomplete_reactor_input', ['derpack:incomplete_reactor_input', 'minecraft:hopper']),
+      event.recipes.create.deploying('derpack:incomplete_reactor_input', ['derpack:incomplete_reactor_input', 'create_new_age:reinforced_energiser']),
+      event.recipes.create.pressing('derpack:incomplete_reactor_input', 'derpack:incomplete_reactor_input')
+    ]
+  ).transitionalItem('derpack:incomplete_reactor_input').loops(1)
 
-  // reactor_output — real: item_application reactor_casing + create:shaft. Re-route to shaped to weave a
-  // reinforced energiser alongside the shaft (power take-off block).
+  // reactor_output — real: item_application reactor_casing + create:shaft.
+  // Re-authored as a staged sequenced_assembly. Base = reactor_casing; deploy the shaft (original applied
+  // item) then a reinforced energiser (power take-off block); press to finish.
   // T4 PREREQ ADDED: create_new_age:reinforced_energiser.
   event.remove({ output: 'createnuclear:reactor_output' })
-  event.shaped('createnuclear:reactor_output', [
-    ' S ',
-    'CEC'
-  ], {
-    S: 'create:shaft',
-    C: 'createnuclear:reactor_casing',
-    E: 'create_new_age:reinforced_energiser'  // T4 energiser woven into the power-output block
-  })
+  event.recipes.create.sequenced_assembly(
+    ['createnuclear:reactor_output'], 'createnuclear:reactor_casing',
+    [
+      event.recipes.create.deploying('derpack:incomplete_reactor_output', ['derpack:incomplete_reactor_output', 'create:shaft']),
+      event.recipes.create.deploying('derpack:incomplete_reactor_output', ['derpack:incomplete_reactor_output', 'create_new_age:reinforced_energiser']),
+      event.recipes.create.pressing('derpack:incomplete_reactor_output', 'derpack:incomplete_reactor_output')
+    ]
+  ).transitionalItem('derpack:incomplete_reactor_output').loops(1)
 
   // reactor_cooler — real: 5x5 mechanical_crafting (casing / reinforced_glass / blue_ice / steel). Swap the
   // two steel slots' neighbours: replace the inner steel pair with reinforced energisers (active cooling = a

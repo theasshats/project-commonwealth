@@ -10,20 +10,27 @@
 // (a LOWER tier than these machines), so weaving them UP into TFMG machines adds no cycle. NOT touched:
 // New Age / Nuclear (higher tier) are never pulled in here.
 //
+// THROUGH CREATE: the assembled T3 machines (engines, gearboxes, the mixer, the winding machine, the
+// distillation controller) are no longer hand-craftable on a vanilla bench — they route through the
+// Mechanical Crafter (create:mechanical_crafting), same grid/keys as their original shaped recipes. Genuinely
+// basic parts (voltmeter = a handheld meter; pumpjack_crank = a crank component) stay shaped so a low tier
+// isn't over-gated. The two large engines were already mechanical_crafting upstream — kept as-is.
+//
 // OWNED ELSEWHERE — not re-authored here: tfmg:copper_spool / createaddition:copper_spool (welded in
 // 50-cross-tier.js); engine_controller's #c:wires/copper row already feeds Additions' wire (per 50's note).
 //
-// Each recipe below keeps its ORIGINAL type/shape from the dump and weaves in ONE createaddition electric
-// part as a hard ingredient. Grids verified vs tools/recipe-dump/derpack-recipes.txt. Note bare
-// 'accumulator' does NOT exist in this pack — Additions ships createaddition:modular_accumulator; the parts
-// used here are capacitor / electric_motor / copper_wire / alternator (all confirmed in the dump).
+// Each recipe below keeps its ORIGINAL grid/keys from the dump and weaves in ONE createaddition electric
+// part as a hard ingredient. Only the METHOD changes (shaped -> mechanical_crafting for machines). Grids
+// verified vs tools/recipe-dump/derpack-recipes.txt. Note bare 'accumulator' does NOT exist in this pack —
+// Additions ships createaddition:modular_accumulator; the parts used here are capacitor / electric_motor /
+// copper_wire / alternator (all confirmed in the dump).
 //
 // STATUS: verified vs dump, load-safe, UNVERIFIED IN-GAME.
 
 ServerEvents.recipes(event => {
-  // ── engine_gearbox: +copper_wire. The electric drive coupling now needs Additions' wire. ──
+  // ── engine_gearbox: +copper_wire. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:engine_gearbox' })
-  event.shaped('tfmg:engine_gearbox', [
+  event.recipes.create.mechanical_crafting([
     'KMK',
     'SCS',
     'KWK'
@@ -33,11 +40,11 @@ ServerEvents.recipes(event => {
     S: 'create:shaft',
     C: 'tfmg:steel_casing',
     W: 'createaddition:copper_wire'           // Additions electric part woven in
-  })
+  }, 'tfmg:engine_gearbox').acceptMirrored(false)
 
-  // ── steel_gearbox: +copper_wire. Same electric-coupling rationale, cheaper tier. ──
+  // ── steel_gearbox: +copper_wire. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:steel_gearbox' })
-  event.shaped('tfmg:steel_gearbox', [
+  event.recipes.create.mechanical_crafting([
     ' O ',
     'OCO',
     ' W '
@@ -45,9 +52,9 @@ ServerEvents.recipes(event => {
     O: 'tfmg:steel_cogwheel',
     C: 'tfmg:heavy_machinery_casing',
     W: 'createaddition:copper_wire'           // Additions electric part woven in
-  })
+  }, 'tfmg:steel_gearbox').acceptMirrored(false)
 
-  // ── voltmeter: +capacitor. A meter that reads charge now needs an Additions capacitor. ──
+  // ── voltmeter: +capacitor. KEPT SHAPED — a handheld meter is a basic part, not a T3 machine. ──
   event.remove({ output: 'tfmg:voltmeter' })
   event.shaped('tfmg:voltmeter', [
     'NNN',
@@ -60,9 +67,9 @@ ServerEvents.recipes(event => {
     E: 'createaddition:capacitor'             // Additions capacitor replaces the bare magnet
   })
 
-  // ── regular_engine: +electric_motor. The base engine now needs an Additions motor as its driver. ──
+  // ── regular_engine: +electric_motor. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:regular_engine' })
-  event.shaped('tfmg:regular_engine', [
+  event.recipes.create.mechanical_crafting([
     ' M ',
     'OIO',
     'ICI'
@@ -71,11 +78,11 @@ ServerEvents.recipes(event => {
     O: '#c:ingots/steel',
     I: '#c:plates/steel',
     C: 'tfmg:heavy_machinery_casing'
-  })
+  }, 'tfmg:regular_engine').acceptMirrored(false)
 
-  // ── radial_engine: +electric_motor. Higher-displacement engine, same motor gate. ──
+  // ── radial_engine: +electric_motor. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:radial_engine' })
-  event.shaped('tfmg:radial_engine', [
+  event.recipes.create.mechanical_crafting([
     'IOI',
     'OCO',
     'MSM'
@@ -85,11 +92,11 @@ ServerEvents.recipes(event => {
     C: 'tfmg:heavy_machinery_casing',
     S: 'create:shaft',
     M: 'createaddition:electric_motor'        // Additions motor drives the engine
-  })
+  }, 'tfmg:radial_engine').acceptMirrored(false)
 
-  // ── turbine_engine: +alternator. A turbine produces electricity -> needs Additions' alternator. ──
+  // ── turbine_engine: +alternator. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:turbine_engine' })
-  event.shaped('tfmg:turbine_engine', [
+  event.recipes.create.mechanical_crafting([
     'OOO',
     'PHA',
     'OOO'
@@ -98,11 +105,11 @@ ServerEvents.recipes(event => {
     P: 'tfmg:aluminum_pipe',
     H: 'tfmg:heavy_machinery_casing',
     A: 'createaddition:alternator'            // Additions alternator: turbine generates power
-  })
+  }, 'tfmg:turbine_engine').acceptMirrored(false)
 
-  // ── industrial_mixer: +electric_motor. The powered mixer now needs an Additions motor. ──
+  // ── industrial_mixer: +electric_motor. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:industrial_mixer' })
-  event.shaped('tfmg:industrial_mixer', [
+  event.recipes.create.mechanical_crafting([
     'KSK',
     'MHE',
     'KCK'
@@ -113,11 +120,11 @@ ServerEvents.recipes(event => {
     H: 'tfmg:heavy_machinery_casing',
     E: 'createaddition:electric_motor',       // Additions motor drives the mixer
     C: 'tfmg:large_steel_cogwheel'
-  })
+  }, 'tfmg:industrial_mixer').acceptMirrored(false)
 
-  // ── winding_machine: +copper_wire. The coil-winder needs Additions' wire to feed its winding head. ──
+  // ── winding_machine: +copper_wire. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:winding_machine' })
-  event.shaped('tfmg:winding_machine', [
+  event.recipes.create.mechanical_crafting([
     '  W',
     'ITP',
     'ICM'
@@ -128,11 +135,11 @@ ServerEvents.recipes(event => {
     P: '#c:plates/steel',
     C: 'tfmg:heavy_machinery_casing',
     M: 'tfmg:steel_mechanism'
-  })
+  }, 'tfmg:winding_machine').acceptMirrored(false)
 
-  // ── steel_distillation_controller: +capacitor. Its control board now needs an Additions capacitor. ──
+  // ── steel_distillation_controller: +capacitor. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:steel_distillation_controller' })
-  event.shaped('tfmg:steel_distillation_controller', [
+  event.recipes.create.mechanical_crafting([
     'SPS',
     'ECE',
     'MHA'
@@ -144,9 +151,9 @@ ServerEvents.recipes(event => {
     M: 'tfmg:steel_mechanism',
     H: 'tfmg:heavy_machinery_casing',
     A: 'createaddition:capacitor'             // Additions capacitor on the controller
-  })
+  }, 'tfmg:steel_distillation_controller').acceptMirrored(false)
 
-  // ── pumpjack_crank: +copper_wire. The powered crank wires into the Additions electric layer. ──
+  // ── pumpjack_crank: +copper_wire. KEPT SHAPED — a crank component is a basic part, not a T3 machine. ──
   event.remove({ output: 'tfmg:pumpjack_crank' })
   event.shaped('tfmg:pumpjack_crank', [
     'PWP',
@@ -161,8 +168,8 @@ ServerEvents.recipes(event => {
     C: 'tfmg:heavy_machinery_casing'
   })
 
-  // ── simple_large_engine (mechanical_crafting): +capacitor at the core. Keeps the create:mechanical_crafting
-  //    type/shape; one core cell swapped to an Additions capacitor so the big engine needs the converter layer. ──
+  // ── simple_large_engine (mechanical_crafting): +capacitor at the core. Already through Create upstream;
+  //    type/shape preserved, one core cell swapped to an Additions capacitor. ──
   event.remove({ output: 'tfmg:simple_large_engine' })
   event.recipes.create.mechanical_crafting([
     'CCC',
@@ -176,8 +183,8 @@ ServerEvents.recipes(event => {
     E: 'createaddition:capacitor'             // Additions capacitor at the engine core
   }, 'tfmg:simple_large_engine').acceptMirrored(false)
 
-  // ── large_engine (mechanical_crafting): +electric_motor. Top mechanical engine now needs an Additions
-  //    motor; type/shape preserved, the bottom plate row's center cell carries the motor. ──
+  // ── large_engine (mechanical_crafting): +electric_motor. Already through Create upstream; type/shape
+  //    preserved, the bottom plate row's center cell carries the motor. ──
   event.remove({ output: 'tfmg:large_engine' })
   event.recipes.create.mechanical_crafting([
     ' O ',
@@ -197,5 +204,5 @@ ServerEvents.recipes(event => {
     E: 'createaddition:electric_motor'        // Additions motor at the engine base
   }, 'tfmg:large_engine').acceptMirrored(true)
 
-  console.info('[derpack-spine] weave Additions->TFMG: 12 TFMG electric/industrial machines now require createaddition parts (copper_wire/capacitor/electric_motor/alternator). TFMG T3 industry gated behind the Additions converter layer.')
+  console.info('[derpack-spine] weave Additions->TFMG: 10 TFMG T3 machines now route THROUGH Create (mechanical_crafting) and require createaddition parts; voltmeter + pumpjack_crank kept shaped as basic parts.')
 })
