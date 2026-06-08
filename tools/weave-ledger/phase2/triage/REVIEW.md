@@ -1,0 +1,786 @@
+# Derpack X — weave triage: review & ratification
+
+> **This is the human-review surface for Phase 2.5 triage.** The 6,373 mapped candidates were consolidated per-mod into KEEP / CUT / MERGE / DEFER decisions. Your job here is to **ratify the KEEPs** — the weaves that become Phase-2.5 issues — and sanity-check the LEAVE list and flagged calls. Nothing here touches the pack.
+
+## How to review
+
+- **§1 KEEP ratification** is the main event: 423 proposed weaves, grouped by the milestone they'd be filed under. Tick `[x]` to approve, strike a line to reject, or edit it to modify. Each line is one weave: **mod** — from→to — `motif` — *why it's "of course"*.
+- **§2** lists the calls that need a decision (one-anchor mods + flagged conflicts).
+- **§3** the DEFERs (build tasks already tracked; playtest items need in-game confirmation).
+- **§4** the 42 LEAVE mods — confirm none should be reinstated.
+- **To review *everything* (incl. the 2,028 CUTs + 670 MERGEs):** open [`decisions.tsv`](decisions.tsv) — GitHub renders it as a searchable, sortable table; filter the `decision` column to CUT/MERGE, sort by `mod`, etc. Per-mod prose detail is in the batch files, linked in **§5**.
+
+## Dashboard
+
+| KEEP | CUT | MERGE | DEFER | LEAVE | mods |
+|--:|--:|--:|--:|--:|--:|
+| **423** | 2028 | 670 | 11 | 42 | 202 |
+
+Anchor reach (non-LEAVE mods): **12** @4 · **57** @3 · **63** @2 · **26** @1 · **2** @0  →  132/160 hit the 2-anchor goal or better. Full stats in [`SLATE-SUMMARY.md`](SLATE-SUMMARY.md).
+
+---
+
+## §1 — KEEP weaves to ratify (423)
+
+### v0.7.0 — Create spine  (117)
+
+- [ ] **aeronautics** — aeronautics structural alloy→create (hull + drivetrain) — `M-23` — *you can't bolt together an airship frame from dirt — real fabricated steel earns the hull; propellers and engines are Create all the way down*
+- [ ] **alexsmobs** — alexsmobs drops (void_worm_beak) → create — `M-15` — *the Void Worm is the pack's End apex predator; its beak as a progression gate into advanced tech is the DESIGN on-ramp note verbatim*
+- [ ] **appleseed** — diet-variety demand→create — `M-26` — *balanced diet requires covering all five nutrient groups; a player who only eats bread starves on buffs — the diet gap is what makes diverse farm/cooking output necessary; pulls on the Create spine's…*
+- [ ] **astikorcartsredux** — plow/reaper iron blade → create (M-20) — `M-20` — *a working plow needs a pressed iron blade, not a raw ingot; one light step that makes early farming the first reason to visit the Create spine; 9+8× top candidate, ACCEPT consensus*
+- [ ] **bakery** — wheat→flour via create:milling — `M-12` — *the millstone grinds grain before the baker bakes; Create feeds the artisan kitchen at the flour step — a single light tie that makes sense the moment you see it. Representative of 16-suggestion ACCE…*
+- [ ] **beachparty** — beachparty coconut/tropical fruit → create (M-12) — `M-12` — *beach-biome harvest flows into the same Create/FD processing web as every other crop; coconut flake is a natural milling output*
+- [ ] **bits_n_bobs** — bits_n_bobs tile/chair deco → create:crushing (M-04) — `M-04` — *a tile floor torn out goes back into the crusher — deco and industry stay one loop (times_suggested=21, ACCEPT unanimous core passes, opus-corroborated)*
+- [ ] **born_in_chaos_v1** — born_in_chaos_v1:dark_metal_deposit → create:crushing (M-03) — `M-03` — *dark-metal gear becomes a Create reward and a crafting input, tying the spooky mob zone to the tech spine*
+- [ ] **bountiful** — Decree objective pool→Create-processed goods (M-08/M-12, times=5+3+2) — `M-08` — *decrees that request Create-processed intermediates pull players toward the Create spine for economic reward; the bounty board is the demand floor under the tech workshop*
+- [ ] **cataclysm** — cataclysm:ancient_metal_ingot→create — `M-15` — *killing the Ancient Remnant is the designed on-ramp for advanced Create machinery — boss-key is the DESIGN pattern*
+- [ ] **cbc_at** — cbc_at heavy-autocannon / rocket-pod (endgame tier)→create — `M-15` — *you can't bolt a battleship cannon onto a ship until you've earned the boss drop that proves you can survive one*
+- [ ] **charta** — charta bar furniture → create — `M-04` — *tavern furniture mass-produced on a mechanical saw is the obvious craft progression; the 5-ACCEPT / opus-corroborated card_table row is the representative phrasing*
+- [ ] **companions** — companions:relic_gold → create (M-15 boss-key gate) — `M-15` — *the Pontiff's relic is the key the engineer needs to fabricate a complex machine; 3× ACCEPT M-15*
+- [ ] **cookingforblockheads** — flagship appliances (oven/fridge/sink)→create:mechanical_crafting (M-05, times=32+4+2+1 opus) — `M-05` — *the modular kitchen's three power appliances require Create metalwork — food infrastructure depends on the tech spine; highest-times-suggested row in the dataset with near-unanimous ACCEPT*
+- [ ] **copperagebackport** — copperagebackport deco/blocks→create — `M-04` — *motif M-04 | delivery: recipe (create:crushing — copper bars, chests, lanterns, oxidized variants; lossy; vanilla smelt path stays) | milestone: v0.7.0 | weathered copper ornaments feed back into the…*
+- [ ] **create_cheese** — create_cheese tier-3 maturing→Create-pressed beeswax seal (M-05, times=1 ACCEPT) — `M-05` — *proper aged cheese is wax-rinded; the wax seal gates tier-3 maturation on a Create-pressed component without sequenced-assembly depth; creates a natural produce-→-processing dependency*
+- [ ] **create_confectionery** — create_confectionery deco blocks (chocolate/caramel/gingerbread bricks) → create — `M-04` — *deco blocks recycling back through the Create crusher is exactly M-04; the confectionery palette integrates into the Create recycle loop*
+- [ ] **create_connected** — create_connected:fan_*_catalyst blocks (rare variants: haunting/withering/ender) → create — `M-20` — *fan catalysts are the portable form of Create fan-processing; making the rarest ones require a deploy step scales depth with rarity, light-tier M-20*
+- [ ] **create_hypertube** — hypertube_entrance/accelerator → Create — `M-06` — *motif M-06 | delivery: recipe (create:sequenced_assembly already inbound per dossier — confirm gate exists) | milestone: v0.7.0 | transit infrastructure at speed is of course assembled on a sequenced…*
+- [ ] **create_jetpack** — create_jetpack:netherite_jetpack→create:sequenced_assembly (M-06, times=7 ACCEPT) — `M-06` — *the lava-swim jetpack shouldn't be a flat bench craft; a sequenced finishing step befits the endgame tier; highest-times row with strong ACCEPT*
+- [ ] **create_ltab-3.9.2** — Create-themed structure loot tables → Create — `M-15` — *motif M-15 | delivery: loot-seed (inject a boss-key fragment / rare Create component into the deepest Create ruins as a gate unlock) | milestone: v0.7.0 | the hardest-to-find ruin holds the schematic…*
+- [ ] **create_mobile_packages** — create_mobile_packages:robo_bee (completed drone) → create — `M-05` — *a self-flying drone courier is obviously engineered, not crafted by hand; the mechanical crafter builds what a workbench can't*
+- [ ] **create_sa** — brass_exoskeleton_chestplate → create via FE charging — `M-17` — *powered armor that eats electricity threads the Create electric tier into survival/combat gear; the player returns to the power grid on every expedition*
+- [ ] **create_train_parts** — create_train_parts brass/copper sliding windows + train steps → create:pressing (pressed sheet as recipe input) — `M-20` — *train furniture made of brass should cost real processed brass sheets — the same sheets that go into every Create machine go into the train cabin; one light upgrade-application step, not a deep chain…*
+- [ ] **create_tweaked_controllers** — create_tweaked_controllers:tweaked_lectern_controller → create (M-05) — `M-05` — *a precision controller for an industrial vehicle is naturally a precision-machined Create component; the craft already routes through Create parts*
+- [ ] **create_ultimate_factory** — create_ultimate_factory strata-stone recipes (nuggets+gravel+lava → calcite/deepslate/tuff) → byproduct→input loop — `M-32` — *waste gravel and metal nuggets from ore crushing compact back into useful building stone — a true byproduct loop that gives a second life to crusher waste without touching scarcity. 2-suggestion ACCE…*
+- [ ] **createaddition** — createaddition:charging → irons_spellbooks FE-chargeable magic gear — `M-17` — *plugging a spell focus into the Create power grid is the moment the factory and the arcane converge — this is the pack's electric-meets-magic seam*
+- [ ] **createaddition** — farmed seeds/crops → createaddition:seed_oil → createaddition:liquid_burning (FE) — `M-12` — *surplus harvest keeps the factory running — the food economy and the energy supply are the same loop; agricultural specialist fuels the electric tier*
+- [ ] **createimmersivetacz** — createimmersivetacz:nitropowder_bucket → create (M-12 via tfmg:vat_machine_recipe) — `M-12` — *nitropowder is a Create-side fluid; TFMG's vat machine is the natural industrial chemistry vessel; 7× ACCEPT (4:3 split but the hook is coherent)*
+- [ ] **createlowheated** — createlowheated:basic_burner solid-fuel consumption → consumption sink (fuel demand) — `M-26` — *Create heat now costs real fuel every tick — a coal mine or charcoal kiln becomes a load-bearing supplier for every automated Create operation; the loop's closing arrow. Represents the 6-suggestion A…*
+- [ ] **createlowheated** — createlowheated lowheated heat-tier → woven Create basin recipes require managed heat — `M-05` — *the lowheated tier as a condition on woven processing recipes gives the burner structural importance — opus-corroborated 1-suggestion ACCEPT captures the intent; the 2-suggestion M-05 ACCEPT (iron ca…*
+- [ ] **createmechanicalcompanion** — mechanical wolf modules→create M-06 — `M-06` — *motif M-06 | delivery: recipe (create:sequenced_assembly — derpack:incomplete_mechanical_wolf_motherboard chain; netherite plates + quantum_drive as keystone parts) | milestone: v0.7.0 | the mechanic…*
+- [ ] **createmechanicalcompanion** — mechanical_wolf_link→survival M-15 — `M-15` — *motif M-15 | delivery: loot-seed (boss loot table — e.g. Cataclysm-tier boss drop gates the final quantum_drive/motherboard assembly step) | milestone: v0.7.0 | the wolf's "brain" is gated behind a b…*
+- [ ] **createnuclear** — createnuclear:uranium → create:crushing M-03 + regional scarcity M-30 — `M-03` — *uranium is a scarce, regionally-concentrated ore that requires a full Create crushing/mixing chain — the tech spine processes what it powers*
+- [ ] **createoreexcavation** — createoreexcavation:netherite_drill → create/survival (M-15 boss-key gate) — `M-15` — *the netherite drill that can tap a deep rare vein requires the fighter to supply the key part; 3× ACCEPT + multiple 1× corroborations*
+- [ ] **deeperdarker** — deeperdarker gloomslate/sculk_stone→create (crushing recycle) — `M-04` — *builders who hollow out the Otherside get something back from surplus deco stone; standard Create recycle loop applied to alien stonework (20+13+3+1+1 times_suggested; unanimous ACCEPT)*
+- [ ] **deeperdarker** — deeperdarker warden_carapace→create (pressing/mechanical_crafting) — `M-05` — *the Warden's armored shell is a natural high-tier structural input for a Create machine component; depth scales with power — this is endgame-tier material (4+4 times_suggested; ACCEPT consensus)*
+- [ ] **dndesires** — dndesires:rubber (cross-route input into Create/magic chain) → Create — `M-29` — *motif M-29 | delivery: recipe (KubeJS: require processed rubber as a sub-component in a Create belt/machine insulation recipe, or as a gasket in a magic cauldron brew) | milestone: v0.7.0 | rubber is…*
+- [ ] **domum_ornamentum** — domum_ornamentum Create-processed-stone→create (architects_cutter) — `M-04` — *Create's industrial stone palette becomes the colony's architectural vocabulary; the cutter takes what the factory produces (9+6+5+4+3+2+2+1+1+1+1 times_suggested; strong ACCEPT, multiple phrasings)*
+- [ ] **drones** — drones:iron_rotor→create — `M-05` — *iron rotors are precision mechanical parts; the mechanical crafter is the natural home for a moving-parts assembly*
+- [ ] **drones** — drones:ion_thruster→create — `M-06` — *an ion thruster is a flight-grade component — of course it needs a precision Create assembly chain, not a craft table; fly faster only after you fabricate it on the spine*
+- [ ] **dtterralith** — dtterralith exotic seeds (cedar/jacaranda/maple/kapok) → create (M-12 via create:milling) — `M-12` — *a mill grinding exotic Dynamic Trees seeds yields region-specific wood pulp or dye pigment — biome-tied raw material feedstuff for the Create dye/pigment chain; 11× top candidate, ACCEPT (8 vs 5 REJE…*
+- [ ] **dungeons-and-taverns-v4.4.4** — dungeons-and-taverns structure loot→create M-15 — `M-15` — *motif M-15 | delivery: loot-seed (datapack — ominous trial vault seeds a rare boss-key or Create-tier component; the hardest vault content gates a complex recipe) | milestone: v0.7.0 | the deepest lo…*
+- [ ] **dynamictrees** — dynamictrees:branch byproduct → create:milling (sawdust/pulp intermediate) — `M-12` — *dynamic tree growth sheds branch items passively; milling them gives Create's production chain a continuous organic feedstock — the living forest feeds the factory*
+- [ ] **dynamictreesplus** — dynamictreesplus:saguaro_fruit→create:milling (M-12, times=35 ACCEPT) — `M-12` — *the mill chews desert forage into a cactus pulp that feeds dye recipes — raw world output → machine output, exactly what Create milling is for; highest-times row, strong ACCEPT consensus*
+- [ ] **dynamictreesplus** — dynamictreesplus:brown/red mushroom_cap→farmersdelight:cutting / create:milling (M-12, times=25+2+1 ACCEPT) — `M-12` — *giant mushroom caps are bulk organic forage; routing to cutting board or mill for stew base/dye follows the same processing-chain pull; second-highest row with near-unanimous ACCEPT*
+- [ ] **ecologics** — ecologics:coconut (raw fruit) → create M-12 — `M-12` — *the Create mill splits a tropical crop into useful intermediates; 20-suggested, 21-ACCEPT, strongest row*
+- [ ] **edf-remastered-5.0-beta4** — Ender Dragon fight (harder, multi-phase) → Create (loot-seed boss-key drop) — `M-15` — *motif M-15 | delivery: loot-seed (KubeJS: add a unique "Ender Core Shard" or equivalent into the dragon's entity-drop loot table, required as input for a late-game sequenced-assembly component) | mil…*
+- [ ] **enhancedcelestials** — enhancedcelestials:meteor block → create M-04 — `M-04` — *a fallen-star rock crushed open yields iron, nickel, and an XP nugget; every meteor shower event produces lootable stone that feeds the Create ore pipeline; 35-suggested, 35-ACCEPT strongest row*
+- [ ] **expandeddelight** — expandeddelight:salt_ore → Create (create:crushing ore-doubling) — `M-03` — *motif M-03 | delivery: recipe (create:crushing on salt_ore / deepslate_salt_ore → doubled salt dust + experience_nugget byproduct) | milestone: v0.7.0 | crushing salt ore doubles the yield and feeds…*
+- [ ] **expandeddelight** — expandeddelight:cinnamon (bark → dust via create:milling) → Create — `M-12` — *motif M-12 | delivery: recipe (create:milling on cinnamon_log/bark → cinnamon_dust; the spice chain runs through the spine) | milestone: v0.7.0 | cinnamon bark goes through the Millstone before the m…*
+- [ ] **exposure** — exposure→create — `M-29` — *real B&W photography needs silver halide; you can't make film without the occultist's silver*
+- [ ] **extradelight** — extradelight crops/outputs (grain, coffee, spices) → Create (milling/pressing/mixing) — `M-12` — *motif M-12 | delivery: recipe (create:milling on coffee beans / grain → ground coffee / flour; create:pressing on citrus/oil → juice; these feed extradelight:oven / vat downstream) | milestone: v0.7.…*
+- [ ] **farm_and_charm** — farm_and_charm:barley / oat (grains) → create — `M-12` — *the millstone turns grain into flour before it reaches the pot — the farmstead runs its grains through the spine (34+4+3+3 times_suggested, opus-corroborated, ACCEPT-consensus)*
+- [ ] **farmersdelight** — farmersdelight crops → create (M-12 milling/cutting → flour, meal, paste) — `M-12` — *the mill grinds FD grain into flour — kitchen prep starts at the Create machine; partly existing but extending to full FD crop range; 4× ACCEPT (3:1)*
+- [ ] **friendsandfoes** — friendsandfoes copper deco (copper buttons / weathered lightning rods) → create:crushing (M-04 recycle) — `M-04` — *oxidized copper items crush back to nuggets — nothing is wasted in the workshop; standard Create deco-recycle motif*
+- [ ] **fxntstorage** — fxntstorage hardened_backpack→create (sequenced-assembly) — `M-06` — *the top-tier hardened backpack is the pack's highest-capacity portable storage; depth scales with power — flagship item earns a sequenced-assembly chain (3+3 times_suggested; ACCEPT consensus, matchi…*
+- [ ] **galosphere** — galosphere deco blocks→create M-04 — `M-04` — *motif M-04 | delivery: recipe (create:crushing — allurite/lumiere bricks, pink salt blocks, crystal deco sets; lossy; XP nugget byproduct) | milestone: v0.7.0 | mis-placed crystal bricks feed back in…*
+- [ ] **galosphere** — galosphere palladium ore→create M-03 — `M-03` — *motif M-03 | delivery: recipe (create:crushing — raw_palladium / deepslate_palladium_ore yields crushed palladium + byproduct nugget; vanilla smelt path stays) | milestone: v0.7.0 | regional palladiu…*
+- [ ] **grimoireofgaia** — grimoireofgaia mini-boss drops (bust_valkyrie / bust_gorgon / bust_sphinx) → boss-key gate on high-tier Create/magic recipe — `M-15` — *mini-boss busts are rare, lore-heavy trophies; using a Gorgon bust as a required ingredient for a complex Create recipe is thematically sensible and follows M-15's combat-gate mandate. 3-suggestion A…*
+- [ ] **handcrafted** — handcrafted wood furniture (chairs, tables, shelves, cupboards)→create — `M-12` — *feeding planks through a Create sawblade produces finished chair stock — wood-cutting IS what Create does with wood; the furniture line becomes automatable at scale*
+- [ ] **hpm** — hpm:largehull / largemast → create (M-05/M-23 via create:mechanical_crafting) — `M-05` — *a ship hull isn't hammered from raw planks — it needs fabricated Create structural plates; 12× ACCEPT (M-05) + 7× ACCEPT (M-23) — same link, M-23 is the more precise motif for structural alloy in a h…*
+- [ ] **hpm** — hpm:corvette_steamship_item → create (M-06 sequenced_assembly) — `M-06` — *the steamship is WIP/top-tier; staging its construction through sequenced assembly is exactly what M-06 is for; 20× top candidate, unanimous ACCEPT*
+- [ ] **hpm** — hpm:hand_cannon → create (M-05 via create:pressing + tacz:gun_smith_table_crafting) — `M-05` — *a hand cannon's barrel is forged — pressing iron plates to form the bore; 9× ACCEPT (8:1)*
+- [ ] **hpm** — hpm:cannonball / mortar_ball → create (M-12/M-29 via createbigcannons:cartridge_assembly or create:compacting) — `M-12` — *the hand cannon loads Create Big Cannon cartridges — the naval gunner and the artillery engineer share an ammunition supply line; 4× ACCEPT M-29 + 3× M-12*
+- [ ] **illagerinvasion** — lost_candle→create (soul/haunting seam) → magic — `M-19` — *a candle taken from a dead illager's dark ritual, soul-fired, yields a wisp-bound relic; thematic chain from Create's own haunting to the occult spine; 4× ACCEPT*
+- [ ] **immersive_armors** — immersive_armors Heavy / Steampunk sets → Create (create:pressing + create:mechanical_crafting) — `M-05` — *motif M-05 | delivery: recipe (KubeJS: Heavy set requires Create-pressed iron plates; Steampunk set requires mechanical-crafted brass components) | milestone: v0.7.0 | pressing the Heavy chestplate n…*
+- [ ] **irons_spellbooks** — irons_spellbooks mithril_ore→create (ore-doubling) — `M-03` — *mithril is a rare Y<38 ore; crushing it for a secondary pyrium/arcane-dust byproduct rewards the Create player who bothers to vertical-mine (13+5+4+2+2 times_suggested; ACCEPT consensus; opus-corrobo…*
+- [ ] **mcwdoors** — mcwdoors→create — `M-04` — *a scrapped iron modern door gives back its metal at a small loss — Create doesn't waste, it recycles*
+- [ ] **mcwfences** — mcwfences metal fence variants → create:crushing (M-04 deco-recycle) — `M-04` — *misplaced iron fences crush back to nuggets in the Depot — nothing is wasted on a Create server; the standard deco-recycle motif applied to the metal fence family*
+- [ ] **mcwroofs** — mcwroofs stone/brick/andesite/deepslate roof variants → create — `M-04` — *demolished stone/brick roofing tiles recycling back through the crusher is the canonical M-04 deco-recycle; builders who misplace roof blocks aren't stuck with them (6+3+1+1+1 times_suggested across…*
+- [ ] **mcwstairs** — mcwstairs stone/brick/blackstone stair/railing variants → create:crushing M-04 — `M-04` — *torn-down stone railings and balconies feed the millstone — stone deco isn't a dead end; the xp nugget byproduct is standard M-04 treatment*
+- [ ] **mcwwindows** — mcwwindows stone parapet / arrow-slit variants → create:crushing M-04 — `M-04` — *deconstructed stone fortification windows feed the crusher — the same lossy-recycle logic as every stone deco block in the pack*
+- [ ] **meadow** — meadow:alpine_salt→create M-12 — `M-12` — *motif M-12 | delivery: recipe (create:milling — alpine_salt_ore through millstone yields fine alpine salt; the Create processing chain makes salt a manufactured good, not just a pick-up) | milestone:…*
+- [ ] **mffs** — mffs:projector / interdiction_matrix → create (native-method gating + sequenced-assembly) — `M-05` — *the flagship force-field machines require a Create production spine — you can't hand-craft base security*
+- [ ] **minecolonies_compatibility** — citizen_terminal/citizen_stock_keeper→create M-05 — `M-05` — *motif M-05 | delivery: recipe (KubeJS — gate the citizen_terminal or citizen_stock_keeper behind a create:mechanical_crafting step requiring a Create component — e.g. brass casing or zinc mesh — so t…*
+- [ ] **minecolonies_tweaks** — minecolonies_tweaks→create — `M-12` — *one mill recipe, every modded grain — the tag surface this mod injects is the only reason it works at scale*
+- [ ] **minecolonies_tweaks** — minecolonies_tweaks→create — `M-05` — *a colonial inventory scroll that teleports to a warehouse of hundreds of items is a precision instrument; it costs brass*
+- [ ] **more_slabs_stairs_and_walls** — more_slabs_stairs_and_walls stone/wood cut variants → create (M-12 via create:cutting) — `M-12` — *a player building large ships or colony structures runs raw planks/stone through the mechanical saw — the Create spine produces the entire builder palette; 10× ACCEPT unanimous*
+- [ ] **mowziesmobs** — ice_crystal (Frostmaw drop)→create via boss-key sequenced_assembly gate — `M-15` — *the ice crystal is a rare, non-renewable boss trophy; gating a high-end Create machine behind it is the design's north star; 19× ACCEPT, highest corroboration in batch, no Opus dissent*
+- [ ] **mowziesmobs** — earthrend_gauntlet (Wroughtnaut drop)→create via boss-key gate — `M-15` — *a forged iron guardian's relic gating advanced Create metalwork is read-at-a-glance; 9× ACCEPT clear consensus*
+- [ ] **northstar** — northstar:advanced_circuit→create:sequenced_assembly (M-06, times=6+1 ACCEPT) — `M-06` — *advanced circuits are the Northstar endgame keystone — routing them through a sequenced-assembly chain establishes the space-tech production depth; strong ACCEPT consensus*
+- [ ] **occultengineering** — occultengineering mechanical upgrades (afrit/djinni tier) → create — `M-06` — *high-tier afrit/djinni spirit upgrades are definitionally endgame; sequenced-assembly is the correct depth method for endgame keystones — 2 times_suggested ACCEPT-consensus; fits M-06 cleanly*
+- [ ] **occultengineering** — occultengineering:spirit_solution → create cross-route dependency — `M-29` — *"the Create engineer needs a vial of spirit_solution to calibrate the mechanical chamber" — the ritual specialist's output gates the tech spine; pure M-29 (cross-route dependency, neither can self-su…*
+- [ ] **occultism** — occultism:silver_ingot / iesnium_ore → create — `M-03` — *ore-doubling for the pack's true silver through Create's crushing wheel is the M-03 pattern exactly; silver is the real c:ingots/silver (not galosphere palladium) — 9+3+1+1 times_suggested, ACCEPT-co…*
+- [ ] **pantographsandwires** — pantographsandwires:coal_coke → Create (TFMG:coking byproduct feedstock) — `M-32` — *motif M-32 | delivery: recipe (TFMG:coking oven consumes pantographsandwires:coal_coke as an input / byproduct feedstock; the coke that wires the overhead line feeds the coking chain) | milestone: v0…*
+- [ ] **pantographsandwires** — pantographsandwires:graphite → Create (create_new_age:energising cross-route dependency) — `M-29` — *motif M-29 | delivery: recipe (KubeJS: require pantographsandwires:graphite as a conductor component in a Create New Age energising recipe — the rail-infrastructure material becomes a cross-route dep…*
+- [ ] **quark** — quark deco blocks (vertical slabs, polished stone/brick variants) → create:crushing (M-04 recycle) — `M-04` — *a spent vertical slab fed into a Create crushing wheel gives back gravel and an XP nugget — standard Create deco-recycling applied to the largest stone-deco mod in the pack*
+- [ ] **quark** — quark crop/food storage_blocks (apple_crate, carrot_crate, potato_crate, sugar_cane, etc.) → create:milling / create:compacting — `M-12` — *a crate of carrots into the millstone yields nine loose carrots — bulk farm output flows directly into Create's food/chemical processing; the c:storage_blocks tag makes it pack-wide*
+- [ ] **railways** — railways:locometal blocks → create (M-04 deco recycle via create:crushing) — `M-04` — *old train parts get melted back down — locometal crushes to iron/copper/brass dust; nothing wasted in a workshop; 8+8× top candidates, ACCEPT consensus (best framing wins; keep the recycle story)*
+- [ ] **rechiseled** — rechiseled decoration blocks → create M-04 — `M-04` — *the Mechanical Chisel (rechiseledcreate, in-pack) runs chiseling on Create rotation; the builder's palette is Create-powered; 22-suggested opus-corroborated, 25-ACCEPT strongest row*
+- [ ] **rechiseledcreate** — rechiseledcreate chiseled stone/window blocks → create:crushing (M-04 deco-recycle) — `M-04` — *the kinetic workshop eats its own decorative waste — a chiseled andesite brick crushed back yields grit and an XP nugget; rechiseledcreate IS the Create-deco bridge mod, so its recycle path is the na…*
+- [ ] **rottencreatures** — rottencreatures→create — `M-19` — *soul-fire doesn't just roast it — it transmutes the magma taint into a create-native soul output*
+- [ ] **s_a_b** — s_a_b:hardsteelblock/doublesteelblock→create M-06 — `M-06` — *motif M-06 | delivery: recipe (create:sequenced_assembly — multi-step hull-plate chain: press → compacting → weld → harden; top-tier hard/double steel plate through a derpack:incomplete_hull_panel in…*
+- [ ] **samurai_dynasty** — samurai_dynasty gem/jade/ruby/onyx/aquamarine ores → create M-03 — `M-03` — *new gem ores get the same Create ore-doubling reward every other ore enjoys; 20-suggested, 20-ACCEPT strongest; steel also tagged c:ingots/steel folds in via tag unification*
+- [ ] **securitycraft** — securitycraft Universal-Block-Reinforcer→create (native-method gating) — `M-05` — *reinforcing a block to be unbreakable-by-others should demand more than a crafting table; a Create-fabricated reinforcer ties base-defense to the tech spine (17+2+1+1 times_suggested; strong ACCEPT;…*
+- [ ] **securitycraft** — securitycraft sentry→create (sentry requires CBC/Create components) — `M-05` — *a sentry is mechanically a static turret — natural synergy with BigCannons chassis/barrel parts; Create-precision machinery makes automated defense real (7+2+1 times_suggested; ACCEPT consensus)*
+- [ ] **sereneseasons** — sereneseasons:season_sensor (redstone output) → create:gearshift / contraption logic — `M-16` — *wire the sensor into a gearshift so the farm changes crops each season — the world's calendar drives the factory; 22-vote dominant-ACCEPT top row*
+- [ ] **smokeleafindustries** — smokeleafindustries generator FE output → create M-17 — `M-17` — *the hemp farm makes FE; Create Addition's alternator is exactly the FE↔SU bridge; 12-suggested, 12-ACCEPT strongest row*
+- [ ] **snowyspirit** — snowyspirit ginger→create (milling) — `M-12` — *milling dried ginger on a Create millstone is the most natural processing step for a root crop; seasonal crops feeding the Create food chain is exactly what M-12 exists for (19+5 times_suggested; opu…*
+- [ ] **supplementaries** — supplementaries:flax→create M-12 — `M-12` — *motif M-12 | delivery: recipe (create:milling — flax → linen fiber / flaxseed oil; linen → rope or pressed oil) | milestone: v0.7.0 | flax is Supplementaries' farmable crop; milling it into linen fib…*
+- [ ] **tacz** — tacz:gun_smith_table_crafting inputs → create (native-method gating, M-05) — `M-05` — *you build the rifle at the Gun Smith Table but the barrel blank came off the rolling mill — manufacturing-era firearms require industrial infrastructure; 9-vote ACCEPT dominant*
+- [ ] **tacz** — tacz high-tier guns → create:sequenced_assembly (M-06 keystone) — `M-06` — *a sniper-grade rifle isn't hand-assembled — it's a sequenced-assembly product on a Create line; 10-vote ACCEPT dominant*
+- [ ] **tfmg** — tfmg:plastic→create M-29 — `M-29` — *motif M-29 | delivery: recipe (KubeJS — TFMG plastic required as an insulation/housing input in a Create or magic-adjacent recipe, forcing the magic/tech specialist to source from the industrial chai…*
+- [ ] **tfmg** — tfmg ore byproducts (sulfur/saltpeter/coke)→create M-32 — `M-32` — *motif M-32 | delivery: recipe (createbigcannons:big_cartridge_filling — sulfur + saltpeter + charcoal → gunpowder → propellant; coal coke routed back as blast-furnace fuel; industrial circularity) |…*
+- [ ] **tide** — tide→create — `M-12` — *fish scraps from the cutting board go through the millstone as fishmeal — nothing is wasted on a proper Create line*
+- [ ] **trailandtales_delight** — trailandtales_delight→create — `M-12` — *lantern fruit milled into a glowing concentrate is the kind of thing the Create line was built for — exotic input, useful intermediate*
+- [ ] **trashcans** — trashcans:ultimate_trash_can → Create (create:sequenced_assembly gate) — `M-06` — *motif M-06 | delivery: recipe (KubeJS: gate the ultimate_trash_can behind a sequenced-assembly chain so infinite-void is a meaningful build milestone, not a starter convenience; a machine that delete…*
+- [ ] **travelersbackpack** — travelersbackpack upgrade modules (tank_upgrade / crafting_upgrade / smelting_upgrade) → create:item_application / create:pressing — `M-20` — *upgrade modules that slot into a backpack are exactly the light single-step deploy-application shape of M-20; a fluid-tank upgrade for a backpack that stores hundreds of mB logically calls for the sa…*
+- [ ] **underground_village** — underground_village Stoneholm structure blocks (dismantled) → create:crushing (M-04 deco recycle) — `M-04` — *the abandoned wing of Stoneholm crunches through the millstone like any other old stonework — productive salvage that makes the underground village not just a loot box but a material source. 1-sugges…*
+- [ ] **undergroundworlds** — undergroundworlds temple/pyramid bricks → create M-04 — `M-04` — *dungeon masonry crushing back to rubble and XP is the standard M-04 pattern for ruins content; 20-suggested, 14-ACCEPT (opus-corroborated); second strongest row*
+- [ ] **valarian_conquest** — valarian_conquest armorsmith / builder stations → create M-05 — `M-05` — *a faction war machine needs precision metalwork; faction armor requiring Create-machined plate grounds medieval warfare in the tech spine; 13-suggested, 8-ACCEPT (strongest phrasing)*
+- [ ] **vc_gliders** — vc_gliders mid/high-tier paragliders (iron/gold/diamond/netherite) → create — `M-05` — *personal flight gear obviously requires engineering — diamond and netherite glider frames need a Mechanical Crafter; the mod's flagship items gated on Create parts — 19+16+3+2+2+1+1+1+1 times_suggest…*
+- [ ] **vc_gliders** — vc_gliders:copper_upgrade / nether_upgrade → create — `M-20` — *bolt a Create-made copper sheet upgrade onto the glider via a deployer — the upgrade step that turns an iron frame into a thermal glider; 14 times_suggested, ACCEPT-dominant (12/2), opus-corroborated…*
+- [ ] **vinery** — grapes/apples→create via mechanical pressing (industrial juice production) — `M-12` — *foot-stomping grapes is for peasants — an industrial vineyard uses a mechanical press; bulk juice output at scale is exactly what Create's filling/pressing machines are for; 13× ACCEPT, highest times…*
+- [ ] **woodworks** — woodworks→create — `M-04` — *a demolished spruce bookshelf at the crushing wheel yields planks and sawdust — wood-deco waste feeds the Create processing chain, not a dead end*
+- [ ] **woodworks** — woodworks→create — `M-05` — *a Sawmill is a power-driven cutting machine; of course it costs a Create part to build*
+
+### v0.9.0 — Economy & logistics (incl. aeronautics)  (170)
+
+- [ ] **aeronautics** — adjustable_burner fuel→create/aeronautics — `M-13` — *every airship pilot running a hot-air burner becomes a diesel buyer — the refinery crew has a direct customer; charcoal farmers and oilmen both have a buyer; closes the fuel-production→propulsion leg…*
+- [ ] **aeronautics** — levitite (zinc-gated)→economy (regional commodity) — `M-30` — *zinc is regionally scarce and levitite blend is the lift material every builder needs — whoever controls the zinc region controls lift production; a lift specialist emerges without a rule*
+- [ ] **alcohol_industry** — alcohol_industry→economy — `M-28` — *colony tavern drinks through the supply faster than anyone brews alone*
+- [ ] **alcohol_industry** — alcohol_industry→economy — `M-35` — *whiskey that sits earns its premium — the aging specialist times the run*
+- [ ] **alexsmobs** — alexsmobs rare drops (void_worm_beak / ambergris / ender_residue) → economy — `M-34` — *someone has to go hunt the Void Worm; the rest of the server buys the beak — bosses are dual-role (M-15 gate + M-34 supply)*
+- [ ] **astikorcartsredux** — astikorcartsredux:oak_seed_drill + colony Farmer hut → economy (M-28) — `M-28` — *a MineColonies Farmer hut upgrading from hand-planting to a seed-drill cart is exactly the colony-route story — cheaper mechanized planting via colony, not by hand*
+- [ ] **bakery** — bakery finished goods → MineColonies cook-hut colony demand — `M-28` — *a colony cook hut needs feeding; the bakery specialist is the obvious supplier; repeating colony demand keeps the baker busy. 9-suggestion ACCEPT.*
+- [ ] **betterdungeons** — betterdungeons loot tables→economy — `M-08` — *finding coin in a deep dungeon is treasure earned through combat, not a vendor reward; puts currency into circulation via player effort*
+- [ ] **bettermineshafts** — mineshaft chest loot → loot-seed (numismatics coin) — `M-08` — *deeper, more dangerous extended mineshafts deserve a better payoff; a coin scatter makes spelunking economically meaningful and threads the exploration layer into the player economy. Represents the 4…*
+- [ ] **betteroceanmonuments** — betteroceanmonuments loot→economy — `M-08` — *the expanded monument adds true chest rooms; a dungeon hoard containing actual currency gives the aquatic-dungeon route a concrete economy payoff (10+4+4+1+1 rows; ACCEPT consensus)*
+- [ ] **betterstrongholds** — betterstrongholds loot→economy — `M-08` — *motif M-08 | delivery: loot-seed (datapack, deep-treasure room chests only — not every chest) | milestone: v0.9.0 | wealth from an abandoned civilisation seeds early coin circulation without an NPC f…*
+- [ ] **born_in_chaos_v1** — born_in_chaos_v1 mob drops (dark_metal, bones, candy) → economy via M-34 — `M-34` — *the danger-zone specialist is the natural supplier; boss and mob drops are dual-role combat-supply goods*
+- [ ] **born_in_chaos_v1** — born_in_chaos_v1:dark_metal → regional scarcity gate (M-30) — `M-30` — *dark metal generates only in BIC danger zones — regionally locked, must be traded across regions; gives the combat-biome trade territory a concrete output*
+- [ ] **bountiful** — bounty payout→numismatics coin faucet (M-08, times=9+4 opus) — `M-08` — *every bounty board pays out in the pack's coin — the board is the economy's primary demand faucet and Numismatics earns a demand-gate; this is the single most-suggested row with opus corroboration an…*
+- [ ] **bountiful** — Decree objective pool→boss drops / mob kills (M-34, times=3+2+2) — `M-34` — *premium kill-bounties on dungeon bosses make the combat specialist a structured supplier; boards create demand for the most dangerous content and route its outputs into the economy*
+- [ ] **brazil_legends** — brazil_legends signature drops (capelobo_claw / amber_shard / bottle_with_saci) → combat-specialist trade — `M-34` — *these mobs are biome-locked and dangerous; a hunter supplies drops to magic users — the economy side of the combat gate. Represents the M-34 ACCEPT cluster (2+1+1 suggestions) and the amber_pearl bou…*
+- [ ] **byzantine** — byzantine schematic styles → economy (M-28) — `M-28` — *as a MineColonies style set its builds consume colony-requested materials — it rides the colony route, the load-bearing alternate-production path; 4× ACCEPT, Opus-corroborated*
+- [ ] **byzantine** — byzantine colony buildings requiring exotic/region-locked stone → economy (M-30) — `M-30` — *the colony's material requests pull scarcity into the build pipeline; 3× ACCEPT*
+- [ ] **cbc_at** — cbc_at munitions (AP rounds, rockets) as bounty objectives→economy — `M-34` — *a munitions specialist maintains the ship's magazine and trades loaded rounds to players who build ships but don't want to run an ammo line*
+- [ ] **cbc_at** — cbc_at barrel attachments (rifled barrel, silencer, muzzle brake)→economy via MineColonies research — `M-28` — *the colony's armorer tier produces barrel attachments cheaper and faster than solo crafting, pushing weapons specialists toward colony investment*
+- [ ] **chefsdelight** — chefsdelight Cook/Chef villager → service-for-hire (player-economy labor) — `M-33` — *the Cook/Chef villager performs cooking labor; players bring raw ingredients and the NPC processes them — a labor node that routes through the village chef without being an NPC coin faucet. 5-suggest…*
+- [ ] **cmpackagecouriers** — cmpackagecouriers→economy — `M-31` — *the only way to ship a crate of aged whiskey across a 10-player map is by courier plane*
+- [ ] **cmpackagecouriers** — cmpackagecouriers→economy — `M-33` — *the player who maintains the beacon network and flies the routes is the pack's postal service*
+- [ ] **companions** — companions:relic_gold (Sacred Pontiff boss drop) → economy (M-34 combat-route supply) — `M-34` — *Relic Gold only drops from the Sacred Pontiff — combat specialists farm and trade it; 4× ACCEPT M-34 + 3× ACCEPT M-34 (same)*
+- [ ] **cookingforblockheads** — kitchen as MineColonies cook building (M-28, times=6+4 ACCEPT) — `M-28` — *MineColonies has a Cook hut; the Cooking for Blockheads kitchen naturally becomes the colony production hub; colony food demand creates a recurring commission for kitchen builders*
+- [ ] **create_better_villagers** — CBV villager trades → economy — `M-08` — *motif M-08 | delivery: KubeJS villager-trade re-denomination (swap emerald prices to Numismatics coins on Brass/Copper/Andesite Worker trades) | milestone: v0.9.0 | the factory-town's craftsmen quote…*
+- [ ] **create_better_villagers** — CBV Miner villager (buys raw regional metals) → economy — `M-30` — *motif M-30 | delivery: config (KubeJS Miner buy-list entries for regionally-scarce ores) | milestone: v0.9.0 | a Miner villager in a copper-rich region becomes the regional copper buyer — scarcity dr…*
+- [ ] **create_central_kitchen** — create_central_kitchen automated feast output → MineColonies provisioning (M-28) — `M-28` — *a colony that builds consumes food at scale; the industrial kitchen is the only production that can match colony throughput*
+- [ ] **create_cheese** — create_cheese:maturing station (tag-extensible)→economy (M-35, times=6 opus + 3 + 2) — `M-35` — *the Cellar's calendar-page wait IS the value-add; a fromagerie player can't be undercut by a quick bench craft — the aging time is the cost; opus-corroborated, strong ACCEPT consensus*
+- [ ] **create_cheese** — aged cheeses→MineColonies colony demand (M-28, times=3 ACCEPT + variants) — `M-28` — *colony food demand creates a recurring commission for the dairy specialist; high-nutrition tier-3 cheeses become the prestige food the colony Cook requests, locking the fromagerie into the colony sup…*
+- [ ] **create_compressed** — create_compressed mechanism_block / cogwheel_block → economy (MineColonies) — `M-28` — *bulk-compressed mechanical parts are the natural colony requisition unit; a mechanic hut ordering "9 cogwheels" orders one cogwheel_block*
+- [ ] **create_compressed** — create_compressed crushed_<scarce>_pile blocks → economy (M-31 bulk-good logistics) — `M-31` — *compressed scarce ore is the Create supply chain's native export format; bulk enough that moving it by airship vs. hand is a real choice*
+- [ ] **create_confectionery** — create_confectionery output (candies / chocolate goods) → economy — `M-28` — *colony workers requesting candy-tier consumables is a natural colony demand sink; the confectionery chain now has an institutional buyer*
+- [ ] **create_connected** — create_connected:kinetic_battery → aeronautics — `M-24` — *a ship engine drawing on a banked battery for calm-air thrust or burst power is exactly how a kinetic battery earns its place; 10-suggested, 8-ACCEPT, strongest phrasing*
+- [ ] **create_dragons_plus** — create_dragons_plus:levitite_fragile_fluid_tank → aeronautics (M-23) — `M-23` — *a tank storing levitation fluid is the most legible "this mod exists for airships" moment; structural/lift component, not cosmetic*
+- [ ] **create_enchantment_industry** — create_enchantment_industry→economy — `M-37` — *the colony library can't advance without books, and the factory is the only printer in town*
+- [ ] **create_enchantment_industry** — create_enchantment_industry→economy — `M-33` — *the enchanting factory is the pack's commercial enchanting bureau*
+- [ ] **create_factory** — create_factory sweets (waffles/rolls/candy apple)→economy via MineColonies colony requests — `M-28` — *a colony's cooks demand desserts the confectionery factory uniquely produces — a dedicated sweet-maker becomes the server's confectioner and colony provisioner in one*
+- [ ] **create_integrated_farming** — roost/net bulk outputs → economy (colony supply via MineColonies hut requests) — `M-28` — *motif M-28 | delivery: config (MineColonies Fisher/Butcher/Cook hut request lists seeded with roost/net output items) | milestone: v0.9.0 | the colony butcher and cook request bulk meat and eggs — ro…*
+- [ ] **create_ironworks** — tin (c:ingots/tin, regional)→economy via player-minted coin — `M-08` — *tin is scarce and biome-locked — a miner who stakes a tin region becomes the pack's tinsmith; minting tin spurs is a specialization that controls the settlement medium*
+- [ ] **create_ironworks** — tin ore→economy via regional scarcity gate — `M-30` — *tin only generates in certain regions, locking bronze and the coin supply chain to geography; the scarcity foundation earns its place*
+- [ ] **create_ironworks** — steel_plate / bronze_plate→aeronautics hull (M-23) + drivetrain (M-24) — `M-23` — *you can't bolt an airship frame from dirt — fabricated steel earns the hull; bronze is the classic propeller metal*
+- [ ] **create_ltab-3.9.2** — Create-themed structure loot tables → economy — `M-08` — *motif M-08 | delivery: loot-seed (inject Numismatics coins into Create-ruin chest loot tables) | milestone: v0.9.0 | scavenging an abandoned Create factory yields not just cogs but a few coins — the…*
+- [ ] **create_mobile_packages** — create_mobile_packages delivery network (robo_bee + drone_port) → economy — `M-31` — *the Robo Bee network IS the aeronautics arm's small-parcel distribution layer; physical matter moves via it, not teleportation*
+- [ ] **create_new_age** — create_new_age:thorium_ore (regional, 2 biome-modifiers)→economy — `M-30` — *thorium only spawns in certain continental zones; reactor operators must secure a supply route or trade — scarcity foundation anchor*
+- [ ] **create_new_age** — create_new_age advanced_motor / reinforced_motor / generator_coil→aeronautics — `M-24` — *a motor that converts FE→rotation is exactly what you bolt into an airship drivetrain; the electric engine tier makes aeronautics depend on the electricity specialist*
+- [ ] **create_tweaked_controllers** — create_tweaked_controllers:tweaked_lectern_controller → aeronautics control surface (M-24) — `M-24` — *a navigation rig without a proper control interface is just a drifting contraption; the tweaked controller is the control surface component*
+- [ ] **createaddition** — createaddition:seed_oil / bioethanol → aeronautics engine (early-tier fuel) — `M-13` — *a farming-based renewable fuel covers entry-level flight before the crew refines TFMG fuels — agriculture feeds propulsion*
+- [ ] **createaddition** — createaddition:rolling → aeronautics wiring (copper/electrum wire as control-surface harness) — `M-24` — *every ship needs wiring; the rolling mill stamps the wire that runs through the airframe's control surfaces — Create electrical infrastructure feeds the drivetrain*
+- [ ] **createadditionallogistics** — createadditionallogistics flexible-shafts→aeronautics — `M-24` — *flexible shafts that connect any direction are exactly what a ship's mechanical drivetrain needs to route power to propellers and control linkages (times_suggested=4, ACCEPT 3/4; opus-corroborated ro…*
+- [ ] **createadditionallogistics** — createadditionallogistics lazy-cogwheels→economy (colony route) — `M-28` — *a large Create factory needs dozens of lazy cogwheels; bulk production from a colony specialist is natural and gives the logistics mod an economy anchor (times_suggested=2, ACCEPT 1; strong thematic…*
+- [ ] **createbigcannons** — createbigcannons cannon-grade-steel→economy (mint) — `M-08` — *cannon-grade steel is a scarce processed metal; a metallurgist who runs the melt+cast route mints coin — the settlement medium flows from the forge (8+2 times_suggested; opus-corroborated; strong ACC…*
+- [ ] **createbigcannons** — createbigcannons munitions/shells→economy (combat supply) — `M-34` — *shells are consumed every shot, so a combat player's demand for munitions never zeroes; the munitions specialist always has a market (6+4+1+1 times_suggested; multiple ACCEPT rows)*
+- [ ] **createbigcannons** — createbigcannons munitions consumption-sink — `M-26` — *shells are spent per shot; the demand-renewal edge closes the loop for the munitions economy (3 times_suggested opus-corroborated; ACCEPT consensus) — note: this is the structural "closing arrow" of…*
+- [ ] **createblockchain** — createblockchain:currency_miner FE intake → Create-Addition FE sourced from scarce regional metal — `M-08` — *coins don't come from nothing — the currency miner runs on FE from a real Create electric plant burning processed scarce metal; controlling the FE plant means controlling the money supply. Represents…*
+- [ ] **createblockchain** — createblockchain:mining_core (geode worldgen consumable) → M-30 regional-scarcity gate on coin supply — `M-30` — *Mining Cores only spawn in geodes spread every 30+ chunks; controlling a geode vein controls the mint; regional coin scarcity emerges from spatial resource scarcity. 7-suggestion ACCEPT.*
+- [ ] **createfisheryindustry** — seafood (chowder/soups/steaks)→economy via MineColonies colony requests — `M-28` — *the colony kitchen always needs protein; a fishing specialist supplying the colony becomes the settlement's food chain — no colony can afford to keep its own fishery easily*
+- [ ] **createfood** — createfood finished dishes → economy (colony supply, MineColonies cook/restaurant hut requests) — `M-28` — *motif M-28 | delivery: config (MineColonies hut request lists seeded with createfood pies/pastries/milkshakes) | milestone: v0.9.0 | a colony cook demands pies and pastries from the player economy —…*
+- [ ] **createimmersivetacz** — createimmersivetacz:twelve_gauge_shell / rounds → economy (M-26 consumption sink) — `M-26` — *rounds are fired and gone — a consumption-sink that keeps the arms factory's output loop turning; 6× unanimous ACCEPT*
+- [ ] **createimmersivetacz** — createimmersivetacz ammo → economy (M-34 combat-route supply) — `M-34` — *the arms-dealer specialist mass-produces ammo; non-factory players buy it for defense; 5× ACCEPT (folding in 3× M-34 near-dup)*
+- [ ] **createimmersivetacz** — createimmersivetacz ammo → aeronautics (M-31 logistics-required bulk good) — `M-31` — *crates of shells are too heavy to carry in inventory at scale; the arms dealer ships bulk ammo via airship; 2× ACCEPT*
+- [ ] **createmetalwork** — createmetalwork processed metals→numismatics mint (M-08, times=24+8 opus+4+2+1) — `M-08` — *the foundry's melt-and-cast pipeline is the highest-yield ore path; refining regional scarce metals through it and minting coin is the pack's economic spine; highest-times row with strong ACCEPT and…*
+- [ ] **createmetalwork** — createmetalwork:molten_steel→aeronautics airframe/hull (M-23, times=8+8+5+7 ACCEPT) — `M-23` — *poured steel is the obvious hull material for Aeronautics airframes; the foundry output flows directly into the shipyard; strong ACCEPT consensus, opus-corroborated*
+- [ ] **createnuclear** — createnuclear:steel_ingot (c:ingots/steel) → aeronautics airframe (M-23) — `M-23` — *reactor-grade steel is the load-bearing spine of a heavy airship hull — you need the nuclear foundry running before you can build the premium airframe*
+- [ ] **createnuclear** — createnuclear:steel → MineColonies colony research unlock (M-28) — `M-28` — *the colony can't run its industrial tier without the reactor player's steel; the nuclear foundry becomes a colony dependency*
+- [ ] **createoreexcavation** — createoreexcavation vein table (scarce regional metals) → economy (M-08 player-minted currency) — `M-08` — *the infinite vein is the late-game answer to "ores run out" — it doubles as the coin faucet; the Drilling Machine in the right region is how a Create base sustains the metal supply; 16× top candidate…*
+- [ ] **createoreexcavation** — createoreexcavation vein table → economy (M-30 regional-scarcity gate) — `M-30` — *a player who finds a palladium vein in their region holds a structural economic advantage — the drilling machine is how a Create base owns its region's supply; 7× ACCEPT + 1× Opus*
+- [ ] **createoreexcavation** — createoreexcavation extractor (fluid vein) → aeronautics (M-13 via TFMG distillation) — `M-13` — *a discovered oil vein tapped by the Extractor feeds the TFMG refinery which fuels the airship fleet; 2× ACCEPT*
+- [ ] **ctov** — ctov structure chests → economy — `M-08` — *village blacksmiths have old coin; exploration was always the first step toward a player economy; 14-suggested, 13-ACCEPT strongest phrasing*
+- [ ] **dndesires** — dndesires:rubber (hydraulic_compacting output) → aeronautics — `M-23` — *motif M-23 | delivery: recipe (Aeronautics structural/hull recipe requiring processed rubber as a gasket/seal component) | milestone: v0.9.0 | rubber seals pressurized compartments on airship hulls —…*
+- [ ] **domum_ornamentum** — domum_ornamentum colony-builder-demands-DO-blocks — `M-28` — *the colony's fancy buildings require Architect's Cutter output — you need the cutter running before your colony looks right; the settlement specialist is the one who can supply framed panels (4+3+2+1…*
+- [ ] **dtterralith** — dtterralith region-specific tree species → economy (M-30 regional scarcity) — `M-30` — *the kapok seed is only found in jungle-temple loot; planting a new species requires exploring its native region; 2× ACCEPT + 1× ACCEPT loot-seed corroboration*
+- [ ] **dungeons-and-taverns-v4.4.4** — dungeons-and-taverns loot→economy M-08 — `M-08` — *motif M-08 | delivery: loot-seed (datapack — seed Numismatics coin into tavern and tower loot, exclusive trial vaults weighted higher) | milestone: v0.9.0 | cracking open a Dungeons & Taverns chest d…*
+- [ ] **dungeons_arise_seven_seas** — galleon/fortress loot tables → economy M-08 — `M-08` — *plundered galleon strongboxes should have old coin; pirates hoard wealth; 7-suggested, 7-ACCEPT strongest phrasing*
+- [ ] **dungeons_arise_seven_seas** — galleon/fortress loot → economy M-34 — `M-34` — *naval raiders are the pack's maritime combat specialists; they sell salvage that non-combat players can't reach; 4-suggested, 4-ACCEPT*
+- [ ] **dynamictrees** — dynamictrees lumberjack colony route → economy (bulk wood supply) — `M-28` — *colony huts fell whole DT trees while Create harvesters struggle with their irregular branch geometry — the colony route is the cheaper alternative that also differentiates the two production paths*
+- [ ] **ecologics** — ecologics:coconut (beach-biome regional) → economy M-30 — `M-30` — *regional scarcity is the foundation of the trade loop; a beach-locked crop is a natural trade commodity; 2-suggested, 2-ACCEPT*
+- [ ] **endrem** — endrem boss-linked eye collection → economy (combat-route supply / emergent trade) — `M-34` — *the fighter farms the boss-locked eyes and trades to builders/farmers who'll never kill that boss — eyes gate real trade*
+- [ ] **expandeddelight** — expandeddelight:cheese_wheel (aged) → economy — `M-35` — *motif M-35 | delivery: recipe/config (aged cheese wheel as a time-gated value-add trade good via create_cheese:maturing or expandeddelight cask mechanic; MineColonies cook hut requests aged cheese) |…*
+- [ ] **expandeddelight** — expandeddelight:salt_ore regional spawn → economy — `M-30` — *motif M-30 | delivery: config (GTMOGS biome-placement: salt ore spawns only in arid/coastal/deep biome bands; players in forested regions must trade for salt) | milestone: v0.9.0 | if salt ore is reg…*
+- [ ] **exposure** — exposure→economy — `M-35` — *a photograph of a Nether fortress taken three in-game years ago is worth more than one from yesterday*
+- [ ] **exposure** — exposure→economy — `M-33` — *the player with the darkroom setup and the aged print collection is the pack's archivist-for-hire*
+- [ ] **extradelight** — extradelight feasts / high-tier dishes → economy (MineColonies colony provisioning) — `M-28` — *motif M-28 | delivery: config (MineColonies restaurant/tavern/cook hut request lists seeded with extradelight feast items; colony workers request feasts for productivity buffs) | milestone: v0.9.0 |…*
+- [ ] **extradelight** — extradelight:drying_rack / evaporator outputs (dried herbs, syrups, reduced fluids) → economy — `M-35` — *motif M-35 | delivery: recipe/config (dried spices and aged reductions must sit on the rack before usable — a time-axis aging specialist role; deliver via KubeJS aging timer or existing rack mechanic…*
+- [ ] **farm_and_charm** — farm_and_charm grain/meat/egg/butter surplus → economy — `M-28` — *colony workers need grains and meat; the farmstead is the server's food wholesaler; 8+2+1+1 times_suggested ACCEPT-consensus*
+- [ ] **farm_and_charm** — farm_and_charm:barley / oat → economy — `M-35` — *barley is the canonical brewing grain; the maturation chain (M-35) gives the farmstead a time-value output route beyond raw food (3+2 times_suggested, opus-corroborated)*
+- [ ] **farmersdelight** — farmersdelight cooked meals → economy (M-28 colony provisioning) — `M-28` — *colonies require food; FD's dishes are the quality rations the colony cook mass-produces; 3× ACCEPT + Opus corroboration*
+- [ ] **fluid** — fluid:centrifugal_pump / smart_fluid_interface → aeronautics M-13 — `M-13` — *a ship needs plumbing; the centrifugal pump and smart interface are what move fuel to the engine; 1-ACCEPT opus-corroborated; fits the reagent-ownership table (TFMG diesel is the reserved propulsion…*
+- [ ] **fxntstorage** — fxntstorage hardened-tier→economy (colony cheaper-basics) — `M-28` — *the colony's bulk-production route makes the hardened tier accessible to players who can't or won't run the full Create chain themselves — creates genuine trade pressure (2 times_suggested; ACCEPT)*
+- [ ] **galosphere** — galosphere palladium→economy M-08 — `M-08` — *motif M-08 | delivery: recipe (Create-processed palladium → numismatics mint; player presses coin from the scarce cave metal) | milestone: v0.9.0 | scarce regional palladium, once crushed and smelted…*
+- [ ] **gnkinetics** — gnkinetics planetary/worm/industrial-gear→aeronautics (drivetrain) — `M-24` — *a planetary gear or worm gear is exactly the fabricated mechanical component for a ship's drivetrain — gnkinetics gears ARE gear-ratio precision parts and Aeronautics propellers need real gear assemb…*
+- [ ] **gnkinetics** — gnkinetics worm_gear→economy (colony specialist) — `M-28` — *worm gears are tricky to machine; colony production at scale fills the demand from the aeronautics anchor above without forcing every player to run the full gnkinetics chain (2 times_suggested; ACCEP…*
+- [ ] **gravestone** — gravestone:obituary → economy (M-33 service-for-hire: death recovery) — `M-33` — *dying in a dangerous biome with full gear is a real loss; a specialist player recovers the grave for a fee; this is a labor transaction (player-to-player); 3× ACCEPT (2:1)*
+- [ ] **grimoireofgaia** — grimoireofgaia mini-boss drops + rare reagents → combat-specialist trade — `M-34` — *a Gaia hunter farms rare busts and artifact rings; non-combat players trade resources for them; the combatant corners the supply. 6-suggestion ACCEPT.*
+- [ ] **handcrafted** — handcrafted furniture sets→economy via MineColonies colony requests — `M-28` — *MineColonies colonists requesting furnished homes makes a player who produces Handcrafted furniture a colony supplier; furniture production earns a colony demand-gate*
+- [ ] **hpm** — hpm ships (war-cutter / corvette) → economy (M-34 combat-route supply) — `M-34` — *a player who fights and captures at sea trades completed vessels to landlocked players; 3× ACCEPT*
+- [ ] **illagerinvasion** — hallowed_gem (boss drop)→economy via combat-route supply + enchant service — `M-34` — *only players who defeat an Invoker raid supply Hallowed Gems; enchant specialists offer over-cap upgrades for hire; 5× ACCEPT for M-33, 3× for M-34*
+- [ ] **immersive_armors** — immersive_armors finished armor sets (Heavy/Divine/Steampunk) → economy (emergent trade by armorsmith specialist) — `M-34` — *motif M-34 | delivery: emergent (a Create+magic specialist forges the gated sets and trades them to combat players; no recipe needed — the economy edge follows from the gate) | milestone: v0.9.0 | ru…*
+- [ ] **kobolds** — kobold combat drops (skulls, from raiding Dens) → economy (combat specialist → magic user trade) — `M-34` — *motif M-34 | delivery: emergent (clearing a Kobold Den is dangerous; a combat player supplies skull reagents to magic users via trade; no recipe needed — the drop creates the supply chain) | mileston…*
+- [ ] **mcwdoors** — mcwdoors→economy — `M-28` — *the colony builder needs 40 barn doors for the new Stable schematic — automated production via Create saw is the only way to fill the order*
+- [ ] **meadow** — meadow:cheese_wheel→economy M-35 — `M-35` — *motif M-35 | delivery: recipe/config (cheese_form pressing + maturing step via create_cheese:maturing; certify as M-35 aging-specialist good) | milestone: v0.9.0 | meadow cheese already has a native…*
+- [ ] **meadow** — meadow:cheese_wheel→economy M-28 — `M-28` — *motif M-28 | delivery: config (MineColonies Tavern/Restaurant hut requests cheese wheels as colony food; dairy farming becomes a viable colony supply route) | milestone: v0.9.0 | colony workers reque…*
+- [ ] **meadow** — meadow:chambray_wool→aeronautics M-23 — `M-23` — *motif M-23 | delivery: recipe (create:mechanical_crafting or aeronautics envelope recipe — felted chambray wool as a required airship envelope/gasbag lining material; wool → felt → envelope) | milest…*
+- [ ] **mffs** — mffs projector delivery → economy (colony Fortress research gate + service-for-hire) — `M-37` — *the colony's Fortress research unlocks the right to commission a projector — the colony can't make one; the tech specialist who mastered the Create chain is the only supplier*
+- [ ] **minecolonies** — minecolonies University research→knowledge gate M-37 (times=8+2 ACCEPT) — `M-37` — *certain tech capabilities are unlocked only through colony research; knowledge is non-tradeable, only its product is — this is the load-bearing alternate route and the anti-erosion wall; highest-time…*
+- [ ] **minecolonies** — minecolonies as alternate production route M-28 (times=4+1+1 ACCEPT) — `M-28` — *the colony route is cheaper for basics and locks high-tier exclusives; tech players buy from colony players — this is the load-bearing alternate route by design; established per SYSTEMS.md*
+- [ ] **minecolonies** — minecolonies colony bulk output→aeronautics logistics M-31 (times=3 ACCEPT) — `M-31` — *a colony quarry running at full speed produces bulk stone/ore faster than a player can haul — the settlement is the pack's primary bulk-goods generator and the aeronautics arm is its natural distribu…*
+- [ ] **minecolonies_compatibility** — minecolonies_compatibility colony outputs→economy M-28 — `M-28` — *motif M-28 | delivery: config (colony Butcher/Cook/Orchardist jobs produce goods — butchered meat, modded crops — that enter the shared supply line; colony as the cheaper-basics route for food/raw go…*
+- [ ] **minecolonies_compatibility** — minecolonies_compatibility TaCZ Gunner job→economy M-37 — `M-37` — *motif M-37 | delivery: config (MineColonies research tree gates the Gunner hut — the TaCZ armed-guard job requires research that can't be purchased, only unlocked through colony progression) | milest…*
+- [ ] **moblassos** — emerald_lasso (villager capture)→economy via MineColonies colony seeding — `M-28` — *you can't lead a villager across the map with a lead; the emerald lasso is the colony-seeder's tool; every new colony depends on it; 6× ACCEPT majority*
+- [ ] **modulargolems** — modulargolems assembled golem → service-for-hire (golem specialist builds for others) — `M-33` — *a golem specialist is the obvious player-economy labor node — you pay the engineer for a golem, not for its drops. 4-suggestion ACCEPT.*
+- [ ] **more_slabs_stairs_and_walls** — more_slabs_stairs_and_walls stone variants → economy (M-28 colony route) — `M-28` — *the colony builder requests polished-basalt stairs — the Create saw runs them in bulk and the logistics arm delivers to the colony; 3× ACCEPT*
+- [ ] **mushroomquest** — mushroomquest rare/mythical caps (biome-specific spawning, 32 biome-modifiers)→economy — `M-30` — *32 biome-modifiers mean specific caps only spawn in specific biomes; a forager on Mushroom Island has the only agarikon source — biome-gated fungi are the food equivalent of regional ore*
+- [ ] **naturalist** — naturalist large predator drops → economy M-34 (combat-route supply) — `M-34` — *large predators are the hunter's premium output; the bear-fat and exotic hide trade is exactly the dangerous-fauna supply chain M-34 describes*
+- [ ] **northstar** — northstar:titanium_ingot/tungsten_ingot→numismatics mint (M-08, times=22 opus + 3+1) — `M-08` — *titanium and tungsten require a rocket and off-world mining; minting them into coin makes the space-tech specialist the highest-tier mint operator; opus-corroborated, strong ACCEPT*
+- [ ] **northstar** — northstar:biofuel→aeronautics engine intake (M-13, times=17+3 ACCEPT) — `M-13` — *northstar already ties Create + aeronautics (rockets ARE the transport layer); biofuel feeding back into the fleet's engines closes the space-farm loop naturally; strong ACCEPT consensus*
+- [ ] **northstar** — northstar:martian_steel_ingot→aeronautics airframe/hull (M-23, times=10+7+1 ACCEPT) — `M-23` — *martian steel is explicitly a structural alloy; using it in top-tier Aeronautics hull frames means you go to space to get the metal that lets you build the best ships; strong ACCEPT consensus*
+- [ ] **northstar** — northstar:advanced_circuit→aeronautics control/navigation (M-24, times=8 ACCEPT) — `M-24` — *a ship's autopilot/nav system running on northstar circuits ties the space-tech tier directly into the aeronautics drivetrain; strong ACCEPT consensus*
+- [ ] **numismatics** — vendor/depositor blocks→create (native-method gating) — `M-05` — *a trading post needs precision engineering — you don't hand-craft the automated store; the economy's physical nodes cost the tech spine*
+- [ ] **numismatics** — vendor block→economy (service-for-hire storefronts, M-33) — `M-33` — *the vendor block is the labor-exchange node — specialist services (enchanting, cargo runs, synthesis) post prices and collect payment player-to-player*
+- [ ] **occultengineering** — occultengineering:sterling_silver → economy — `M-08` — *occult alloy refined through the industrial spine entering circulation as premium coin is the M-08 player-minted currency pattern exactly — 24 times_suggested, ACCEPT-dominant; sterling silver is the…*
+- [ ] **occultism** — occultism:dimensional_mineshaft (spirit miner spirits) → economy — `M-18` — *the spirit miner is the magical alternative to a Create ore excavator; two routes to the same scarce material keep both pillars active — 13 times_suggested, ACCEPT-dominant, opus-corroborated*
+- [ ] **occultism** — occultism:spirit_trade (summoned trader) → economy — `M-33` — *the summoner is a service specialist — others pay for otherworld goods only a pentacle can call — 7 times_suggested ACCEPT-consensus; M-33 (service-for-hire: the ritual is the labor)*
+- [ ] **occultism** — occultism:silver_ingot (c:ingots/silver) → economy — `M-08` — *real silver from Occultism's dimensional mines is the pack's scarce precious metal — 6 times_suggested ACCEPT-consensus; the CLAUDE.md gotcha makes this explicit; minting silver = player-minted curre…*
+- [ ] **oceansdelight** — oceansdelight elder_guardian drops → combat farming → prestige dishes→economy — `M-34` — *elder guardian farming is dangerous deep-ocean combat; a coastal combat specialist harvests the kills and trades the processed dishes to inland players; the M-34 combat-route supply pattern fits exac…*
+- [ ] **pantographsandwires** — pantographsandwires overhead-line infrastructure → aeronautics / logistics — `M-31` — *motif M-31 | delivery: config/design (electrified rail spans regions; catenary mast + wire infrastructure is the ground-logistics arm of the economy pillar alongside aeronautics; building regional el…*
+- [ ] **railways** — railways conductor logistics → economy (M-33 service-for-hire) — `M-33` — *a player running a railway service operates the conductor and benchcart for other players' cargo; this is labor/service, not a vendor sale; 4× ACCEPT (2:2 mixed, but the service-hire framing is coher…*
+- [ ] **railways** — railways locometal build demand → economy (M-31 logistics-required bulk good) — `M-31` — *a player building a rail network across regions needs massive quantities of locometal shipped from the manufacturing base; 5× ACCEPT (4:1)*
+- [ ] **rechiseled** — rechiseled high-detail stone variants → economy M-28 — `M-28` — *MineColonies Builder huts requesting chiseled brick for colony tier-ups is a concrete demand-gate; 3-suggested, 2-ACCEPT*
+- [ ] **ribbits** — ribbits amethyst-shard trade → economy M-08 (player-minted currency framing) — `M-08` — *Ribbit merchants already run a barter economy in amethyst shards — that's the regional coin feedstock; settling swamp-adjacent gives a regional economic identity*
+- [ ] **rottencreatures** — rottencreatures→economy — `M-34` — *a pirate captain's chest holds coin; a combat specialist hunting beach pirates and storm-liches earns currency and rare drops to trade*
+- [ ] **s_a_b** — s_a_b steel plates→aeronautics M-23 — `M-23` — *motif M-23 | delivery: recipe (aeronautics construction — hard/light steel plates as required structural ingredients in hull/airframe blocks, scaling depth with tier: lightsteelblock = basic frame, h…*
+- [ ] **s_a_b** — s_a_b steel plates→economy M-34 — `M-34` — *motif M-34 | delivery: recipe/trade (a Create steel-armor specialist produces hull panels that ship-builders and fort-builders who lack the steel pipeline must source; the combat-grade armor chain fe…*
+- [ ] **samurai_dynasty** — samurai_dynasty Yokai drops → economy M-34 — `M-34` — *non-combat players need Yokai drops for magic/gear work but can't or won't hunt Tengu; 5-suggested opus-corroborated, 5-ACCEPT*
+- [ ] **samurai_dynasty** — samurai_dynasty jade/ruby/onyx/aquamarine gems (regional ores) → economy M-30 — `M-30` — *gem ores only spawn in distinct biome columns; armor-forged goods from those gems are region-locked by default; 2-suggested, 2-ACCEPT (corroborated by multiple 1-pass rows)*
+- [ ] **securitycraft** — securitycraft base-defense-installation→economy (service-for-hire) — `M-33` — *in a PvPvE server, a dedicated security player installs and manages fortifications for others; labor value flows player-to-player; no NPC vendor (3 times_suggested; ACCEPT consensus)*
+- [ ] **sereneseasons** — sereneseasons out-of-season crop scarcity → economy (seasonal-scarcity gate, M-30) — `M-30` — *out-of-season produce is region-equivalent scarce; only the crew with greenhouse infrastructure produces summer crops in winter — the seasonal clock creates genuine specialization and trade pressure*
+- [ ] **sky_whale_ship** — sky_whale_ship loot chests → aeronautics M-15 — `M-15` — *flying up to a sky whale on your airship and looting propulsion parts inside is what the aeronautics pillar is for; 17-suggested, 17-ACCEPT strongest row*
+- [ ] **sky_whale_ship** — sky_whale_ship loot → economy M-34 — `M-34` — *whale-back rarities harvested by a flying combat specialist become traded goods; 6-suggested, 5-ACCEPT*
+- [ ] **smokeleafindustries** — smokeleafindustries refined extracts / gummies → economy M-28 — `M-28` — *a colony apothecary requesting analgesic edibles makes the strain farmer a colony supplier; 3-suggested, 3-ACCEPT*
+- [ ] **spawn** — spawn clam/crab bulk catch → aeronautics logistics M-31 — `M-31` — *fresh catch in quantity is the canonical logistics cargo — the coastal settlement's output is exactly what airship cargo runs exist for*
+- [ ] **stylecolonies** — stylecolonies Steampunk blueprint style → create — `M-28` — *if the colony builder is running Steampunk style they are placing Create blocks — they must buy from the Create specialist; an implicit but real demand gate (3+3 times_suggested ACCEPT-consensus)*
+- [ ] **supplementaries** — supplementaries:flax/rope→aeronautics M-23 — `M-23` — *motif M-23 | delivery: recipe (aeronautics structural — linen fiber / rope as a required rigging/sail material for basic-tier airship envelopes or rope-ladder gangways; create:milling already produce…*
+- [ ] **t_and_t** — t_and_t→economy — `M-08` — *conquerable forts and trade-port ships naturally carry coin*
+- [ ] **t_and_t** — t_and_t→aeronautics — `M-23` — *the ship's hold contains the materials that inspire — and supply — the first airship build*
+- [ ] **t_and_t** — t_and_t→economy — `M-33` — *the village is the natural place for a player to set up a trade stall; the structure already exists*
+- [ ] **tacz** — tacz guns/ammo → economy (combat-route supply / emergent trade) — `M-34` — *not everyone fights — the dedicated armorer who can run the Create fabrication line supplies the rest; 5-vote ACCEPT*
+- [ ] **terralith** — terralith biome c:tags (65) → GTMOGS regional ore-gen M-30 — `M-30` — *Terralith defines *where* regional ores appear — without the biome diversity, regional scarcity is just depth-layer locking; Terralith makes the geography meaningful*
+- [ ] **terralith** — terralith rare/fantastical biomes (Skylands, Moonlight Grove, Mirage Isles) → aeronautics logistics M-31 — `M-31` — *"the Skylands are charted on the map — the only crew who harvests them regularly has an airship"; the fantastical terrain gives aeronautics a territorial reason to exist*
+- [ ] **tfmg** — tfmg fuels→aeronautics M-13 — `M-13` — *motif M-13 | delivery: recipe/config (TFMG combustion engine → Aeronautics engine/generator fuel intake; diesel / gasoline / LPG from distillation tower directly power airship engines — the fuel supp…*
+- [ ] **tfmg** — tfmg:steel→aeronautics M-23 — `M-23` — *motif M-23 | delivery: recipe (aeronautics construction — steel plate/beams as load-bearing airframe and pressure hull structural ingredients; two-tier: aluminum for lighter craft, steel for armored…*
+- [ ] **tfmg** — tfmg:combustion_engine→aeronautics M-24 — `M-24` — *motif M-24 | delivery: recipe (aeronautics drivetrain — TFMG combustion engine block as a required propulsion/engine mount component; the factory-built powerplant that drives the propeller) | milesto…*
+- [ ] **tfmg** — tfmg:steel→economy M-08 — `M-08` — *motif M-08 | delivery: recipe (numismatics mint — steel ingot Create-processed → player-pressed coin; steel as a premium trade commodity; note: steel is abundant-iron-derived but the multi-step blast…*
+- [ ] **tfmg** — tfmg regional ores→economy M-30 — `M-30` — *motif M-30 | delivery: config (GTMOGS ore-gen — crude oil deposit placement, bauxite biome lock, lithium region lock; these gate refined fuel, aluminum, and FE storage to specific regions) | mileston…*
+- [ ] **tidal-towns-1.3.4** — tidal-towns ocean village chests → loot-seed (numismatics coin) — `M-08` — *the floating ocean village feels like a trading post — finding one rewards a handful of coins and threads sea exploration into the player economy. 11-suggestion ACCEPT, corroborated by 2-suggestion o…*
+- [ ] **tidal-towns-1.3.4** — tidal-towns as aeronautics destination / logistics stop — `M-31` — *the ocean village is a natural Aeronautics cargo stop — your airship drops supplies and picks up trade goods on the sea route; the deep-ocean location means logistics is the only reliable way to supp…*
+- [ ] **tide** — tide→economy — `M-30` — *only the angler stationed at a deep trench ever sees the abyss fish — the inland crew buys it*
+- [ ] **touhou_little_maid** — power_point_bottles (fairy drops / village loot)→economy — `M-34` — *power-point bottles are consumed to operate the Altar; seeding them into dungeon/raid loot means combat specialists supply the shrine's fuel — the combat-route supply pattern feeds the maid economy*
+- [ ] **trading_floor** — trading_floor:trading_depot → economy (Create-processed goods → player-minted coin / emerald loop) — `M-08` — *run a Create processing line's refined metal output through the Trading Depot — the depot is the natural exit valve where ore-processing becomes the settlement medium; 7-vote ACCEPT (with M-08 refram…*
+- [ ] **trading_floor** — trading_floor:trading_depot → economy (cross-route bridge + colony labor) — `M-29` — *routing a Create-processed good through the Trading Depot to acquire a magic-route input is the mechanical form of "nobody self-sufficient" — the depot makes cross-route trade automated and therefore…*
+- [ ] **trailandtales_delight** — trailandtales_delight→economy — `M-35` — *you can't rush cheese — the aging specialist's good sits until it's ready*
+- [ ] **trailandtales_delight** — trailandtales_delight→economy — `M-28` — *the colony innkeeper needs ancient coffee to keep settlers happy — the food specialist supplies the colony that supplies everyone else*
+- [ ] **trek-b0.6.1.1** — trek structures (ship holds, pyramid chests, fortress rooms)→economy — `M-08` — *finding coin in a pirate wreck or fortress is treasure earned through exploration; putting currency into circulation via world-variety is the exactly right ambient endpoint for a structure-generation…*
+- [ ] **underground_village** — underground_village Stoneholm chest loot → loot-seed (numismatics coin) — `M-08` — *cracking open a chest in a buried village reveals a stash of coin and odd materials — the settlement had commerce once; exploring it bootstraps a new arrival into the economy. 4-suggestion ACCEPT (tw…*
+- [ ] **undergroundworlds** — undergroundworlds dungeon loot (loot=yes) → economy M-34 — `M-34` — *a dungeon-clearing specialist trades items non-combat players can't obtain; desert_charm and antidote_flask are high-value consumables; 2-suggested, 2-ACCEPT; corroborated by M-08 + M-34 loot rows*
+- [ ] **upgrade_aquatic** — upgrade_aquatic raw/cooked fish (regional ocean good) → economy — `M-30` — *fish from specific aquatic biomes that inland players cannot access is the cleanest M-30 expression for a food mod — 2 times_suggested ACCEPT-consensus*
+- [ ] **valarian_conquest** — valarian_conquest faction loot (shields, armor, weapons) → economy M-08 — `M-08` — *sacking a defended faction Keep should pay out coin from its strongroom; combat-gated coin (you fight for it) fits the player-economy model; 6-suggested, 4-ACCEPT (corroborated by opus-confirmed row)*
+- [ ] **vinery** — wines (aged, effect-bearing)→economy via maturation specialization — `M-35` — *a bottle that took weeks to mature commands a premium; the winemaker's patience IS the specialization; 6× ACCEPT clear consensus; opus-confirmed*
+- [ ] **vinery** — grapes (biome-specific cultivars)→economy via regional scarcity — `M-30` — *a temperate vintner makes varieties the jungle player can never grow — regional wine specialization emerges without a rule; 2× ACCEPT clear consensus*
+- [ ] **woodworks** — woodworks→economy — `M-28` — *the colony library wants a proper chiseled bookshelf, not a vanilla oak one — the woodworker's specialty is the colony's supply target*
+
+### v0.11.0 — Magic  (86)
+
+- [ ] **aeronautics** — levitite_blend crystallization→magic (arcane catalyst gate) — `M-10` — *lift won't crystallize without an arcane touch — the ship builder must trade with the mage; the gravity-defying material requires an attunement no forge produces*
+- [ ] **alcohol_industry** — alcohol_industry→magic — `M-10` — *alchemists have always wanted a high-proof spirit as a solvent; the cauldron takes it as a brew base*
+- [ ] **alexsmobs** — alexsmobs:ambergris (rare ocean mob drop) → magic — `M-10` — *ambergris is historically an alchemical prize; bioluminescent deep-sea organics feeding arcane infusion is an immediate "of course"*
+- [ ] **alexsmobs** — alexsmobs exotic drops (ambergris / ender_residue / void_worm parts) → magic — `M-11` — *spirit-fire is the universal transmutation furnace; eldritch mob remains crackling in it is the clearest possible match*
+- [ ] **ars_nouveau** — foreign essences/lapis/amethyst → magic (M-01 hub) — `M-01` — *source_gem is the reserved universal magic currency; every magic specialist transacts through the imbuement chamber — this IS the magic spine*
+- [ ] **ars_nouveau** — ars_nouveau enchanting/spell service → economy (labor) — `M-33` — *the knowledge gate (M-37 companion: you can't buy the capability, only hire it) is the clearest labor-axis moment in the magic pillar*
+- [ ] **ars_nouveau** — Wilden Guardian summon timing → magic (celestial gate) — `M-22` — *the most powerful Ars boss doesn't answer on an ordinary night — the ritual calendar gates progression authentically*
+- [ ] **betterdungeons** — betterdungeons loot tables→magic — `M-02` — *dungeon-crawling supplies magic reagents the magic specialist can't easily farm elsewhere; risk = acquisition path*
+- [ ] **betteroceanmonuments** — betteroceanmonuments loot→magic — `M-02` — *the expanded monument's deepest vault is thematically arcane; arcane reagents in prismarine depths are the obvious reward for conquering an ocean dungeon (12+5+3+1+1 corroborating rows; strong ACCEPT…*
+- [ ] **betterstrongholds** — betterstrongholds loot→magic — `M-02` — *motif M-02 | delivery: loot-seed (datapack, deepest room/library chests) | milestone: v0.11.0 | ancient scholars left behind arcane reagents; the dungeon's lore calls it*
+- [ ] **born_in_chaos_v1** — born_in_chaos_v1:bundle_of_bones → occultism:spirit_fire (M-11) — `M-11` — *undead soul-bundle is the archetypally correct occult reagent; seasonal combat feeds the magic pillar*
+- [ ] **brazil_legends** — brazil_legends:capelobo_claw → occultism:spirit_fire — `M-11` — *the claw of a folkloric cursed dog-creature burns in spirit-fire to yield occult essence — the highest-suggestion ACCEPT (29) with unanimous consensus. Primary magic anchor.*
+- [ ] **brazil_legends** — brazil_legends:amber_shard → ars_nouveau:imbuement — `M-10` — *amber is associated with preserved/trapped essences; imbuement reads as releasing the preserved magic — 25-suggestion with strong ACCEPT. Second magic weave that adds ars_nouveau coverage alongside o…*
+- [ ] **cataclysm** — cataclysm:witherite_ingot / cursium_ingot (boss drops)→magic — `M-11` — *wither-tainted and corruption metals feeding a spirit-fire ritual is tonally exact and gives magic players a reason to care who killed the Harbinger*
+- [ ] **cold_sweat** — cold_sweat:soul_stalk→magic (M-11, times=2+1 ACCEPT) — `M-11` — *soul_stalk grows where soul sand meets cold in the Nether; running it through spirit fire produces a soul-charged cold essence — the stalk looks like a soul ingredient, fits occultism's ritual theme,…*
+- [ ] **companions** — companions:crystallized_blood → magic (M-11 via occultism:spirit_fire/ritual) — `M-11` — *the Soul Furnace feeds the ritual circle — eldritch alchemy chains from one fire to the next; 27× top candidate, unanimous ACCEPT*
+- [ ] **companions** — companions:soul_gem → magic (M-10 via ars_nouveau:imbuement) — `M-10` — *a gem distilled through soul-fire carries the arcane charge the imbuement chamber needs; 10× ACCEPT + 4× M-02 ACCEPT (same link, different motif tag — M-02 is the correct tag for mob-drop→magic but M…*
+- [ ] **create_dragons_plus** — create_dragons_plus:ending (Bulk Ending fan method, dragon breath catalyst) → magic (M-10) — `M-10` — *a native Create→magic bridge using the End dimension's own fluid; the dragon-breath catalyst is already a boss-key (Ender Dragon kill required)*
+- [ ] **create_enchantment_industry** — create_enchantment_industry→magic — `M-10` — *you bottled experience; of course the wizard wants it for the ritual*
+- [ ] **create_hypertube** — hypertube_entrance (sequenced_assembly) requires a magic reagent sub-component → magic — `M-29` — *motif M-29 | delivery: recipe (KubeJS: add Ars source_gem or Iron's arcane_essence as a sub-component in the sequenced-assembly chain) | milestone: v0.11.0 | a kinetic tube that punches players acros…*
+- [ ] **create_integrated_farming** — lava_fishing_net nether drops (blaze rods, magma cream) → magic — `M-11` — *motif M-11 | delivery: recipe (occultism:spirit_fire or ars_nouveau:imbuement consuming nether-mob drops from lava net) | milestone: v0.11.0 | lava-fishing auto-harvests nether mob drops; routing bla…*
+- [ ] **create_ironworks** — steel_ingot→magic via cross-route dependency — `M-29` — *a high-tier ritual frame needs forged steel — the smith and the caster can't each do the other's half; the clearest "nobody self-sufficient" edge for this mod*
+- [ ] **create_new_age** — create_new_age:energising (method)→magic — `M-17` — *electrifying a magic focus through the Energiser threads the electric tier into magic gear — FE charges the arcane is an intuitive industrial-magic bridge*
+- [ ] **create_new_age** — create_new_age:corium (reactor waste)→magic — `M-11` — *reactor slag is dangerous exotic material — the occultist finds a ritual that draws its emanations into spirit-fire; industrial waste becomes arcane reagent*
+- [ ] **create_sa** — blazing tools (blazing_pickaxe/axe/cleaver) → magic via arcane infusion — `M-10` — *the tool that consumes blaze rods is already fire-aligned — an Ars fire imbuement extends the blaze core's heat into a magical plane; the mage unlocks what the smith built*
+- [ ] **createbigcannons** — createbigcannons nethersteel→magic (cross-route) — `M-10` — *nethersteel is forged in nether soul-fire — arcane infusion that makes shells penetrate arcane wards is a coherent cross-route that forces the cannoneer to engage with the magic pillar (2 times_sugge…*
+- [ ] **createmechanicalcompanion** — quantum_drive/optical_sensor→magic M-29 — `M-29` — *motif M-29 | delivery: recipe (KubeJS — gate the quantum_drive or optical_sensor behind an Occultism spirit-infused sub-part or Ars imbuement step, forcing trade between Create specialist and magic s…*
+- [ ] **createmetalwork** — createmetalwork crushed magic-mod ores (occultism/galosphere)→create:crushing ore-doubling M-03 (times=7+6+4+3+3) — `M-03` — *the magic metals pass through the same foundry as iron — the ore-doubling reward extends to arcane reagent feedstocks; ⚠ palladium/silver gotcha applies (galosphere:silver_ingot is tagged c:ingots/pa…*
+- [ ] **createnuclear** — createnuclear:enriched_soul_soil → create:haunting M-19 — `M-19` — *enriched soul soil is soul-fire-adjacent by its own enriching_fire mechanic — running it through haunting is the Create→occult bridge the motif was designed for*
+- [ ] **ctov** — ctov village loot tables → magic — `M-02` — *arcane knowledge filtering out from cities into rural chests is a natural lore hook; 14-suggested, 11-ACCEPT*
+- [ ] **deeperdarker** — deeperdarker soul_dust/soul_crystal→magic (spirit_fire) — `M-11` — *soul dust from the Otherside is the most natural spirit-fire reagent in the pack; the dark dimension's soul seam feeds the occult web (37 times_suggested, opus-corroborated; unanimous ACCEPT)*
+- [ ] **deeperdarker** — deeperdarker heart_of_the_deep→magic (boss-key reagent) — `M-10` — *the Warden's Heart is the hardest drop in the pack and the key to the Otherside portal — it earns both a magic boss-key role AND a Create gate; dual-motif allowed because it is genuinely two distinct…*
+- [ ] **dndesires** — dndesires:haunting_sail / dragon_breathing_sail → magic — `M-19` — *motif M-19 | delivery: recipe (route a magic mob drop or a Wither rose through the haunting sail to yield a soul-infused intermediate; or route an allurite/lumiere shard through dragon_breathing as a…*
+- [ ] **dtterralith** — dtterralith:amethyst_seed (amethyst-cave biome) → magic (M-10 via ars_nouveau:imbuement) — `M-10` — *a seed that grows an amethyst-fused tree reads as innately magical; the arcanist's apparatus uses the grove's seed to attune a resonant crystal; 4× ACCEPT (combined from two 4× rows, corroborated)*
+- [ ] **dungeons-and-taverns-v4.4.4** — dungeons-and-taverns loot→magic — `M-02` — *motif M-02 | delivery: loot-seed (datapack — seed Ars source_gem, Iron's scroll, or Occultism soul-gear recipe into tavern/hideout/trial chamber chests; scarce, not every chest) | milestone: v0.11.0…*
+- [ ] **dungeons_arise_seven_seas** — galleon/fortress loot → magic M-02 — `M-02` — *old sea-sorcerer ships carry bottled arcane cargo; ocean exploration feeds the magic reagent supply; 8-suggested, 6-ACCEPT (multiple corroborating passes)*
+- [ ] **dynamictreesplus** — dynamictreesplus mushroom caps (brown/red)→occultism:spirit_fire (M-11, times=1+1+1 ACCEPT) — `M-11` — *giant mushrooms have an organic-uncanny presence that fits spirit-fire transmutation (amanita / poison / trance lore fits occultism ritual theme); earns the magic anchor*
+- [ ] **edf-remastered-5.0-beta4** — Ender Dragon fight → magic (loot-seed magic reagent drop) — `M-02` — *motif M-02 | delivery: loot-seed (KubeJS: add a dragon-flame reagent / arcane-essence drop to the dragon's entity-drop loot, consumed in Ars imbuement or Occultism ritual) | milestone: v0.11.0 | a ha…*
+- [ ] **endermoon** — endermoon event→magic M-22 — `M-22` — *motif M-22 | delivery: config/datapack (declare the Ender Moon night as the gate condition for bulk ender pearl farming feeding an ars_nouveau:imbuement or occultism:ritual requiring pearl volume — d…*
+- [ ] **endrem** — endrem themed eyes (undead_eye, nether_eye, corrupted_eye) → magic via occultism:ritual transmutation — `M-11` — *the magic specialist can ritually transmute a matching themed drop into the missing eye — costly alternative that keeps the End gate from dead-ending; of course the occultist can conjure what the dun…*
+- [ ] **enhancedcelestials** — Blood/Blue Moon event-state → magic M-22 — `M-22` — *certain rituals only complete under the right moon; timed scarcity is exactly what M-22 exists for; 27-suggested, 27-ACCEPT (opus-corroborated)*
+- [ ] **formations** — formations generated altars/pedestals → magic (loot-seed magic reagent) — `M-02` — *an ancient altar in the woods holds a source fragment — discovering magic reagents in ruins grounds the magic pillar in exploration; note: formations has loot=no natively so this requires a custom Ku…*
+- [ ] **formationsnether** — formationsnether structure loot→magic reagent loot-seed (M-02, times=15 opus + 10 opus + 1+1) — `M-02` — *the altar ruins in the Nether are the natural place to find a magic reagent; exploring structure loot feeds the magic web without forcing a recipe; the mod registers zero items — the only viable weav…*
+- [ ] **friendsandfoes** — friendsandfoes:crab_claw → magic (occultism:spirit_fire / ars_nouveau:imbuement) — `M-02` — *the crab's reach-extending claw is already a brewing reagent; routing it into the arcane web is the simplest cross-mod enrichment the mod has; 31-vote opus ACCEPT*
+- [ ] **galosphere** — galosphere:allurite_shard / lumiere_shard→magic M-07 — `M-07` — *motif M-07 | delivery: recipe (existing reserved role; confirm not displaced by future updates) | milestone: v0.11.0 | the shards already gate magic conversions as attunement catalysts — this is galo…*
+- [ ] **grimoireofgaia** — grimoireofgaia mob-drop fragments → occultism:spirit_fire — `M-11` — *mythic creature drops — gorgon scales, harpy feathers, mermaid pearls — transmuted in spirit fire to yield occult essences; the bestiary directly fuels the occult web. 18-suggestion unanimous ACCEPT.*
+- [ ] **grimoireofgaia** — grimoireofgaia drops → ars_nouveau:imbuement — `M-10` — *mythic creature drops (dryad blossoms, gorgon scales, gem-nuggets) are natural arcane infusion candidates; the bestiary feeds the Ars web alongside Occultism. 10-suggestion ACCEPT.*
+- [ ] **illagerinvasion** — hallowed_gem (Invoker boss drop)→magic via arcane infusion catalyst — `M-02` — *the Invoker's gem is suffused with dark enchantment energy — of course the Ars mage needs it; a raider holds the key to arcane supremacy; 25× ACCEPT, opus-independent, highest-corroboration row in th…*
+- [ ] **illagerinvasion** — illusionary_dust (Illusioner drop)→magic via spirit_fire transmutation — `M-11` — *illusion-dust is what the Illusioner leaves when reality snaps back — spirit fire transmutes it into binding essence; 20× ACCEPT, clear consensus*
+- [ ] **immersive_armors** — immersive_armors:divine_chestplate set → magic (ars_nouveau:enchanting_apparatus) — `M-10` — *motif M-10 | delivery: recipe (KubeJS armor_upgrade: the Divine set's once-per-minute block passive is imbued at the Enchanting Apparatus with a source_gem catalyst) | milestone: v0.11.0 | a divine s…*
+- [ ] **irons_spellbooks** — irons_spellbooks arcane_essence→magic (arcane-currency bond) — `M-01` — *the ledger already reserves this bond (reagent-ownership table); M-01 is established for exactly this purpose; unifying the magic web's two currencies is the single most important cross-magic weave (…*
+- [ ] **irons_spellbooks** — irons_spellbooks apothecarist-mob-drops→magic (ritual/transmutation) — `M-02` — *killing magic-school enemies yields their reagents; the dangerous apothecarist carries ingredients for the alchemist cauldron — natural danger→reward loop (6+5+3+2+1+1 times_suggested; strong ACCEPT)*
+- [ ] **kobolds** — kobolds:kobold_skull → magic (occultism:spirit_fire transmutation) — `M-02` — *motif M-02 | delivery: recipe (occultism:spirit_fire on kobold_skull → occult essence; the wither-skull variant yields a rarer essence) | milestone: v0.11.0 | a kobold skull — an underground lizard-f…*
+- [ ] **meadow** — meadow alpine herbs (lavender/yarrow)→magic M-10 — `M-10` — *motif M-10 | delivery: recipe (ars_nouveau:imbuement or irons_spellbooks:alchemist_cauldron_brew — alpine herbs as infusion inputs for biome-specific glyphs or healing brews) | milestone: v0.11.0 | a…*
+- [ ] **minecolonies** — minecolonies colony food output→magic demand (M-28 + colony magic huts, times=3+1+1 ACCEPT) — `M-28` — *a colony's magic wing (Alchemist hut, Mystical Site) requests Occultism/Ars reagents as inputs; the colony and the mage must trade — the colony can't do magic alone and the mage can't do colony food…*
+- [ ] **moblassos** — hostile_lasso (weakened monster capture) → magic via occultism spirit delivery — `M-11` — *the Occultism ritualist needs a specific live mob for the binding; they commission the monster-trapper; the lasso bridges combat and magic without a recipe — it's a logistics tool in a player economy*
+- [ ] **modulargolems** — golem-core upgrade slot → ars_nouveau:imbuement (source_gem / arcane core) — `M-10` — *a golem animated by pure arcane source is a step beyond a mundane construct; the magic specialist provides the animation core, the engineer provides the metal — neither can build a top-tier golem alo…*
+- [ ] **mowziesmobs** — elokosa_paw (crescent/gibbous/full variants)→magic via lunar-reagent — `M-22` — *a creature named for moon phases leaves behind moon-phase reagents — of course the Ars ritualist needs the right phase; 10× ACCEPT, clean consensus*
+- [ ] **mowziesmobs** — sol_visage / earthrend artifacts→magic via ritual transmutation — `M-11` — *a tribal sun-mask channels solar power — placed in an occultism ritual, it amplifies source; a mythic iron guardian's relic is obviously spirit-charged; 5–6× ACCEPT for sol_visage M-11*
+- [ ] **mushroomquest** — mushroomquest deadly / mythical mushroom caps→magic — `M-11` — *deadly caps with potent biochemical effects transmute cleanly into Occultism essence via spirit-fire; the fungal toxin has nowhere else to go and earns the magic anchor*
+- [ ] **naturalist** — naturalist:antler → ars_nouveau:imbuement (M-10) / occultism:spirit_fire (M-11) — `M-10` — *a naturally shed antler has classic arcane symbolism — lunar, bone-like, wildlife; routing it to both Ars and Occultism covers the magic pillar's two faces*
+- [ ] **naturalist** — naturalist:glow_goop → ars_nouveau:imbuement (M-10) — `M-10` — *firefly glow is the most legible "of course this is magical" material in the mod — bioluminescent fluid becomes an Ars light-attunement reagent*
+- [ ] **occultism** — foreign mob/boss drops → occultism:spirit_fire — `M-11` — *spirit-fire IS the universal transmutation furnace; every fight feeding the ritual web is the clearest possible M-11 expression — 10+7+4+1+1 times_suggested, opus-corroborated, ACCEPT-consensus*
+- [ ] **oceansdelight** — oceansdelight:fugu_slice→magic — `M-02` — *fugu venom is the ocean's most dangerous ingredient; the alchemist's cauldron is the natural home for toxin extraction; the combat/fishing specialist supplies the raw slice, the magic player extracts…*
+- [ ] **quark** — quark:ancient_wood (Glimmering Weald underground biome) → ars_nouveau:imbuement (arcane infusion) — `M-10` — *ancient wood from the deep cavern groves carries latent fey-energy — of course the mage refines it as an arcane reagent; unique underground material deserves a magic anchor*
+- [ ] **quark** — quark:ancient_bookshelf (Glimmering Weald) → ars_nouveau:enchanting_apparatus (power bonus) — `M-10` — *the Ars apparatus already draws power from bookshelves; the ancient bookshelf from the deepest biome is the premium tier; the dungeon-delver who finds the Glimmering Weald supplies the mage's power i…*
+- [ ] **ribbits** — ribbits:toadstool / brown_toadstool → occultism:spirit_fire M-11 — `M-11` — *swamp-grown toadstools are the archetypal witch's ingredient — Occultism's spirit furnace is exactly where they belong*
+- [ ] **rottencreatures** — rottencreatures→magic — `M-11` — *flesh flash-frozen in powder snow carries spectral cold; flesh seared by the Immortal's lightning carries residual heat-spirit — spirit fire extracts both*
+- [ ] **rottencreatures** — rottencreatures→magic — `M-10` — *the corrupted fungal wart that blooms on swamp undead is already halfway magical; arcane imbuement takes it the rest of the way*
+- [ ] **samurai_dynasty** — samurai_dynasty:akaname_tongue / Yokai mob drops → magic M-11 — `M-11` — *a Yokai's tongue burning in spirit-fire is the most natural recipe in the pack; 14-suggested, 14-ACCEPT*
+- [ ] **sereneseasons** — season-gated crops (specific fertile-season reagent crops) → ars_nouveau:imbuement or occultism:ritual — `M-16` — *the arcane calendar follows the seasons — a ritual ingredient only obtainable at peak summer forces mages to plan their supply; survival and magic are the same loop*
+- [ ] **sliceanddice** — sliceanddice sprinkler (fluid-area dispenser) + magic potion fluid→magic — `M-29` — *a Create farmer who wants boosted crop yields must source enchanted fluid from a magic specialist and route it through the Sprinkler — forcing the two specialists to trade; the Sprinkler was designed…*
+- [ ] **spawn** — spawn:angler_fish → occultism:spirit_fire M-11 — `M-11` — *an anglerfish's bioluminescent lure-organ is exactly the isolated mob-drop that earns a magic sink; the deep-sea creature of darkness belongs in Occultism*
+- [ ] **stylecolonies** — stylecolonies High Magic blueprint style → magic — `M-28` — *a colony player building the High Magic style needs Ars archwood or Occultism-themed blocks — they cannot self-supply without magic investment; forces cross-specialist trade (4+1 times_suggested ACCE…*
+- [ ] **supplementaries** — supplementaries:ash→magic M-10 — `M-10` — *motif M-10 | delivery: recipe (ars_nouveau:imbuement — ash as a ritual purity/cleansing catalyst; sourced from burning/haunting) | milestone: v0.11.0 | ash is a Create/haunting byproduct that attunes…*
+- [ ] **t_and_t** — t_and_t→magic — `M-02` — *the captain's chest in the jungle outpost holds something the occultist needs*
+- [ ] **terralith** — terralith Moonlight Grove / lunar biomes → magic M-22 (lunar/celestial reagent gate) — `M-22` — *a biome called Moonlight Grove is the obvious home for a lunar-gated magic ingredient — biome-exclusive magic supply makes Terralith's fantastical terrain economically meaningful*
+- [ ] **tide** — tide→magic — `M-11` — *something that survives in the void carries a fragment of it — the occultist wants that essence*
+- [ ] **touhou_little_maid** — touhou_little_maid:broom (endgame rideable flight item)→magic — `M-10` — *a flying broom demands an arcane infusion before it lifts — the source-gem / essence as altar input is coherent (shrine = ritual site); magic specialist supplies the reagent the maid-keeper needs for…*
+- [ ] **touhou_little_maid** — touhou_little_maid altar_recipe_serializers (maid summoning / high-tier upgrade gate)→magic — `M-05` — *the Hakurei altar is a summoning rite, not a workbench — gating a higher maid or flagship item behind an arcane reagent makes it the magic pillar's native-method gating; the altar reads as a ritual t…*
+- [ ] **trailandtales_delight** — trailandtales_delight→magic — `M-10` — *the golden sniffer-crop carries an otherworldly glow — of course the magic specialist wants it for the apparatus*
+- [ ] **trek-b0.6.1.1** — trek structures→magic — `M-02` — *remote Trek structures spread across the world reward exploration with magic reagents the magic specialist can't easily farm close to base — dungeon-crawl risk earns arcane supply*
+- [ ] **undergroundworlds** — undergroundworlds:spider_fang (Black Recluse drop) → magic M-11 — `M-11` — *a fang soaked in spirit-fire distills into an occult essence — the spider catacombs have always felt cursed; 31-suggested (opus), 31-ACCEPT strongest row in batch*
+- [ ] **upgrade_aquatic** — upgrade_aquatic jellyfish / thrasher mob drops → magic — `M-02` — *thrasher sharks and bioluminescent jellyfish are mid-tier ocean threats; their drops are exactly the kind of isolated exotic material M-02 addresses — 6 times_suggested, ACCEPT-dominant (5/1)*
+- [ ] **valarian_conquest** — valarian_conquest boss/elite drops (faction lord relics) → magic M-02 — `M-02` — *a conquered faction lord's relic as a magic reagent ties martial victory to the magic pillar; 2-suggested, 2-ACCEPT*
+- [ ] **woodworks** — woodworks→magic — `M-10` — *the apparatus draws power from nearby bookshelves — more wood types means more design freedom and more magic throughput*
+
+### v0.13.0 — Survival  (50)
+
+- [ ] **aileron** — aileron loot tables (enchant books) → survival — `M-34` — *premium glide-boost books aren't in the shop — you find them in ruins; the Elytra becomes an exploration reward, not a crafting target; adds a combat-supply dimension to Elytra hunting*
+- [ ] **alcohol_industry** — alcohol_industry→survival — `M-12` — *deglaze a sauce with whiskey — the distillery feeds the kitchen*
+- [ ] **appleseed** — seasonal-crop diet stress→survival — `M-16` — *out-of-season crops push specific diet groups into seasonal scarcity — winter stress on one group forces players to store or trade around the calendar; diet + seasons is a natural pressure axis*
+- [ ] **ars_nouveau** — farm/mob surplus → survival (Sourcelink passive drain) — `M-02` — *planting crops next to a Sourcelink silently powers the arcane engine — survival output literally fuels the magic side*
+- [ ] **bakery** — bakery luxury goods (tarts/cakes) → consumption sink (diet system) — `M-26` — *bakery's specialty sweets satisfy the Sugars diet group, making them a true consumption sink the diet-pressure mechanic renews constantly. Represents the 3-suggestion M-26 ACCEPT cluster.*
+- [ ] **beachparty** — beachparty cocktails → survival (M-26) — `M-26` — *buff drinks you drink and re-make; demand never zeroes; beach specialist supplies miners and builders*
+- [ ] **bountiful** — Decree objective pool→seasonal crops / survival outputs (M-16, times=9+3+2) — `M-16` — *a seasonal crop bounty active only in its harvest window makes the farming calendar matter; the board amplifies the Serene Seasons pressure*
+- [ ] **cataclysm** — cataclysm:amethyst_crab_meat (Blessed)→survival — `M-12` — *the Leviathan boss-fight yields a unique ingredient obtainable only at the Sunken City altar; cooking it produces a high-tier dish that feeds survival pressure demand*
+- [ ] **charta** — charta:empty_wine_glass / empty_beer_glass → survival — `M-12` — *the brewery and the bar are the same supply chain; glassware is only decoration until it's filled*
+- [ ] **chefsdelight** — chefsdelight feast-tier meals (Roast Chicken / Honey Glazed Ham) → diet-system consumption sink — `M-26` — *feast meals fill multiple diet groups at once; the consumption is against a mechanic that never zeroes; feasts are a repeating demand node. 3-suggestion ACCEPT.*
+- [ ] **cold_sweat** — cold_sweat:hearth (Nether climate-control multiblock)→create (M-05, times=36 opus) — `M-05` — *the Hearth is the survival pillar's single most important block; gating it on brass/casing ties the climate-control unlock to the Create spine naturally; highest-times, opus-corroborated, near-unanim…*
+- [ ] **cold_sweat** — cold_sweat insulated armor mob-drop sink→survival (M-26, times=2 ACCEPT) — `M-26` — *hides from hostile mobs (Alex's Mobs, Naturalist) feed the sewing table as insulation; mob pressure drives the hunt-to-craft loop; gear degrades under climate stress, keeping demand renewing*
+- [ ] **create_central_kitchen** — create_central_kitchen automated feast dishes → consumption sink (M-26) — `M-26` — *industrial food has to go somewhere; consumption demand is the loop-closing edge that justifies building the kitchen*
+- [ ] **create_central_kitchen** — create_central_kitchen seasonal pie recipe → Serene Seasons crop gate (M-16) — `M-16` — *seasonal production windows give the industrial kitchen real downtime and drive crop-stockpiling ahead of season*
+- [ ] **create_confectionery** — create_confectionery effect candies (Speed/Saturation/Regen/Phantom-repel) → survival — `M-26` — *effect candies are spent consumables; the pressure they counter is real and continuous; perfect M-26 candidate*
+- [ ] **create_dragons_plus** — create_dragons_plus:freezing (Bulk Freezing fan method, powder snow catalyst) → survival/seasonal (M-16) — `M-16` — *winter-only Powder Snow collected via Serene Seasons ties Create fan stations to the seasonal calendar — the industrial kitchen and Create production lines have off-season downtime*
+- [ ] **create_factory** — create_factory sweets→survival (diet demand, sugar group) — `M-26` — *desserts fill the Sugars diet group — players must keep eating them to maintain balance; the confectionery factory has a permanent consumption sink*
+- [ ] **create_integrated_farming** — roost egg/feather/poultry output → survival (via farmersdelight:cooking) — `M-12` — *motif M-12 | delivery: recipe (FD cooking / cutting recipes consuming roost outputs; loot-seed to establish the chain as canonical) | milestone: v0.13.0 | the roost's egg stream flows straight into a…*
+- [ ] **create_jetpack** — create_jetpack:netherite_jetpack→boss-drop gating (M-15, times=5+4+1+1 ACCEPT) — `M-15` — *a jetpack that lets you fly through lava should need something pulled from the Nether's worst boss, not just netherite; natural demand gate on personal endgame flight*
+- [ ] **createfisheryindustry** — seafood dishes→survival (protein diet demand, consumption sink) — `M-26` — *high-saturation seafood dishes are spent against hunger and diet-variety pressure; the fishery has a permanent consumption sink*
+- [ ] **createfisheryindustry** — bait_trap catch→survival (seasonal bait, seasonal rare catch) — `M-16` — *a fishing operation that runs year-round but peaks in season forces a stockpile-or-trade decision; the seasonal catch table is already a config surface the mod exposes*
+- [ ] **createfood** — seasonal crop ingredients → createfood recipes — `M-16` — *motif M-16 | delivery: config (Serene Seasons crop-fertility config + KubeJS ingredient gate on seasonal-crop recipes — apple pie only when apples are in season) | milestone: v0.13.0 | an apple pie i…*
+- [ ] **createfood** — createfood dishes consumed under diet/hunger pressure — `M-26` — *motif M-26 | delivery: config (diet-group mapping; dishes already consumed by players under Spice-of-Life / food-variety pressure) | milestone: v0.13.0 | high-effort processed meals are consumed agai…*
+- [ ] **createtreadmill** — createtreadmill:treadmill (player-powered SU source) → survival — `M-26` — *running a treadmill to power a contraption is effort directly spent; M-26 (consumption sink) reads as natural even if the signal is weaker than food/fuel; the mod earns one anchor*
+- [ ] **ctov** — ctov outpost chests → survival — `M-34` — *pillager outposts are danger zones; rare drops make the combat run worth the risk; 8-suggested, 7-ACCEPT*
+- [ ] **dndesires** — pack crops/drops → dndesires fan methods (freezing/seething/sanding) → survival — `M-12` — *motif M-12 | delivery: recipe (KubeJS: add pack-crop / mob-drop inputs to dndesires:freezing, dndesires:seething, dndesires:sanding fan-processing recipes — freeze-dry seasonal fish, heat-treat hides…*
+- [ ] **ecologics** — ecologics:coconut / coconut_slice → survival M-12 — `M-12` — *coconut is a tagged fruit; Farmer's Delight gets a tropical ingredient; 5-suggested, 5-ACCEPT*
+- [ ] **endrem** — endrem boss/structure eyes → survival loot-seeding (danger-locked supply) — `M-15` — *the nether and guardian eyes reward sustained dangerous exploration; the combat specialist controls the last key to the End*
+- [ ] **farm_and_charm** — farm_and_charm:barley (grain, seasonal) → survival — `M-16` — *seasonal crop gating is a stated priority survival lever; farm_and_charm's grain variety slots naturally into the seasonal gate (8 times_suggested ACCEPT-consensus)*
+- [ ] **farmersdelight** — farmersdelight seasonal crops (cabbage/tomato/rice/onion) → survival (M-16 seasonal reagent, Serene Seasons) — `M-16` — *tomatoes only in summer; the diet system's demand curve moves with the calendar; the kitchen becomes a seasonal operation; 5× unanimous ACCEPT*
+- [ ] **farmersdelight** — farmersdelight diet-system foods → survival (M-26 consumption sink, AppleSeed pressure) — `M-26` — *cooked dishes are consumed against the diet/nutrition pressure; demand for the kitchen's output never zeroes; 3× ACCEPT (1:1 mixed but Opus corroborated)*
+- [ ] **fluid** — fluid:aqueduct / copper_tap → survival M-16 — `M-16` — *aqueduct as spring irrigation and winter blockage is a natural seasonal-scarcity hook; 3-suggested, 2-ACCEPT*
+- [ ] **irons_spellbooks** — irons_spellbooks scrolls→survival (consumption sink) — `M-26` — *scrolls burn on use and can't be stockpiled; a magic scholar who sells scrolls to non-magic players has perpetual re-demand; this is the demand-renewal edge for the magic economy (multiple 1-count ro…*
+- [ ] **mffs** — mffs force-field projection → survival (PvE base defense against raids) — `M-26` — *the Fortron-powered perimeter is what keeps the raid from succeeding — survival pressure drives demand for the tech anchor*
+- [ ] **modulargolems** — boss-drop metals (Cataclysm cursium / Ice&Fire dragonsteel) → modulargolems:golem_assemble — `M-15` — *you kill the Cataclysm boss, you get cursium, you build a cursium-body combat golem — the construct is the boss-progression payoff; combat gating that reads as natural reward. 5-suggestion unanimous…*
+- [ ] **mushroomquest** — mushroomquest edible/effect mushrooms (common to mid-tier: bay_bolete, autumn_skullcap, artist_conk)→survival — `M-12` — *mushrooms are a natural cooking input; routing them through Farmer's Delight cooking produces variety meals that feed the dietary-diversity loop; the two mod systems already share the survival space*
+- [ ] **mutantszombies** — mutant zombie variants→survival M-34 — `M-34` — *motif M-34 | delivery: loot-seed (datapack — add a rare drop to mutant brute / rotten mutant loot tables: a "mutated flesh" or "biotic reagent" that a combat specialist farms and trades; note: dossie…*
+- [ ] **naturalist** — naturalist:venison + bushmeat → farmersdelight:cutting / cooking (M-12) — `M-12` — *hunted meat goes from carcass to plate through the same kitchen tools as farmed meat — the food web is obviously where wild game belongs*
+- [ ] **numismatics** — blaze_banker (requires blaze rods)→survival (consumption sink / combat-route demand) — `M-26` — *a bank that requires blaze rods to stay "hot" makes the banker a permanent blaze customer; every transaction has a fuel cost traceable to danger*
+- [ ] **simplehats** — simplehats grab-bags→survival (boss loot-seed) — `M-34` — *defeating a Tengu or an Ignis boss has a small chance to yield a themed rare hat bag — cosmetic reward from dangerous mobs that the combat specialist can trade to collectors (8+3+2+1 times_suggested;…*
+- [ ] **simplehats** — simplehats custom_hatscraps→survival (consumption-sink recycling) — `M-26` — *every duplicate hat feeds the scrap loop; players keep farming mobs to upgrade bags, sustaining the hostile-mob demand renewal with no stockpile ceiling (2 times_suggested; ACCEPT)*
+- [ ] **smokeleafindustries** — smokeleafindustries:*_gummy / *_extract (refined consumables) → survival M-26 — `M-26` — *effects run out; players need a refill; 4-suggested, 3-ACCEPT; corroborated by multiple 1-pass rows*
+- [ ] **snowyspirit** — snowyspirit ginger/eggnog/gingerbread→survival (seasonal gate) — `M-16` — *ginger only ripens in cold months — stock the root cellar before the thaw or your winter tonic recipe stalls; this is precisely the seasonal lever the pack wants more of (7+5+3+2+2+1+1+1 times_sugges…*
+- [ ] **snowyspirit** — snowyspirit gingerbread/eggnog→survival (food-processing chain) — `M-12` — *gingerbread and eggnog are multi-ingredient festive foods that naturally belong in the Farmer's Delight cooking chain; the winter crop feeds the survival food pressure (7+3+1+1 times_suggested; ACCEP…*
+- [ ] **spawn** — spawn seafood (clam, crab, anglerfish) → farmersdelight:cutting / cooking + create:milling (M-12) — `M-12` — *wild seafood obviously goes from the ocean to the kitchen via the same cutting boards and mills as any other protein — the coastal harvest feeds the food-processing web*
+- [ ] **tacz** — tacz:ammo (consumable) → survival + economy (continuous consumption sink) — `M-26` — *every firefight drains the ammo supply — the combat specialist either runs a Create ammo line or trades for resupply; 6-vote ACCEPT*
+- [ ] **tide** — tide→survival — `M-16` — *you can only brew the seasonal fish dish in summer — stock preserved fish against the winter*
+- [ ] **travelersbackpack** — travelersbackpack high-tier variants (dragon / netherite / enderman) → boss-drop crafting gate — `M-15` — *the dragon backpack made from an actual dragon component is earned, not bought — combat progression gates the expedition-tier storage; the themed cosmetic earns its look through the boss fight. 3-sug…*
+- [ ] **upgrade_aquatic** — upgrade_aquatic raw fish (raw_pike / raw_perch / raw_lionfish) → survival — `M-12` — *pike, perch, and lionfish are real fish with distinct flavors; the cutting board is the obvious processing step; the diet system gains protein variety from aquatic biomes — 5+4+2+2+1+1 times_suggeste…*
+- [ ] **vinery** — wines/ciders (effect-bearing consumables)→survival via consumption sink — `M-26` — *effect wines (speed, regen, resistance) are spent during factory runs and fights; a vintner has a permanent demand sink*
+
+---
+
+## §2 — Needs a decision
+
+### One-anchor mods (28) — add a 2nd weave, accept at 1, or LEAVE?
+
+- **aileron** — anchor: aileron loot tables (enchant books) → survival
+- **ars_n_spells** — anchor: (no KEEP)
+- **ars_nouveau** — anchor: foreign essences/lapis/amethyst → magic (M-01 hub)
+- **bettermineshafts** — anchor: mineshaft chest loot → loot-seed (numismatics coin)
+- **bits_n_bobs** — anchor: bits_n_bobs tile/chair deco → create:crushing (M-04)
+- **byzantine** — anchor: byzantine schematic styles → economy (M-28)
+- **cmpackagecouriers** — anchor: cmpackagecouriers→economy
+- **cmpackagepipebomb** — anchor: (no KEEP)
+- **copperagebackport** — anchor: copperagebackport deco/blocks→create
+- **create_pattern_schematics** — anchor: (no KEEP)
+- **create_train_parts** — anchor: create_train_parts brass/copper sliding windows + train steps → create:pressing (pressed sheet as recipe input)
+- **create_ultimate_factory** — anchor: create_ultimate_factory strata-stone recipes (nuggets+gravel+lava → calcite/deepslate/tuff) → byproduct→input loop
+- **endermoon** — anchor: endermoon event→magic M-22
+- **formations** — anchor: formations generated altars/pedestals → magic (loot-seed magic reagent)
+- **formationsnether** — anchor: formationsnether structure loot→magic reagent loot-seed (M-02, times=15 opus + 10 opus + 1+1)
+- **gravestone** — anchor: gravestone:obituary → economy (M-33 service-for-hire: death recovery)
+- **mcwfences** — anchor: mcwfences metal fence variants → create:crushing (M-04 deco-recycle)
+- **mcwroofs** — anchor: mcwroofs stone/brick/andesite/deepslate roof variants → create
+- **mcwstairs** — anchor: mcwstairs stone/brick/blackstone stair/railing variants → create:crushing M-04
+- **mcwwindows** — anchor: mcwwindows stone parapet / arrow-slit variants → create:crushing M-04
+- **mutantszombies** — anchor: mutant zombie variants→survival M-34
+- **naturescompass** — anchor: (no KEEP)
+- **rechiseledcreate** — anchor: rechiseledcreate chiseled stone/window blocks → create:crushing (M-04 deco-recycle)
+- **sliceanddice** — anchor: sliceanddice sprinkler (fluid-area dispenser) + magic potion fluid→magic
+- **trading_floor** — anchor: trading_floor:trading_depot → economy (Create-processed goods → player-minted coin / emerald loop)
+- **trashcans** — anchor: trashcans:ultimate_trash_can → Create (create:sequenced_assembly gate)
+- **vc_gliders** — anchor: vc_gliders mid/high-tier paragliders (iron/gold/diamond/netherite) → create
+- **zombiemoon** — anchor: (no KEEP)
+
+### Flagged conflicts / judgment calls
+
+- **create_ultimate_factory** — Renewable-diamond recipe undercuts the M-30 scarcity foundation — consider KubeJS-disabling it; only the strata-stone byproduct loop survives as a safe KEEP.
+- **friendsandfoes** — Wildfire/Iceologer/Illusioner drop weaves (M-02/M-34) were CUT pending confirmation the drops are *unique named items*, not generic vanilla loot already used elsewhere.
+- **exposure** — Film weave re-tagged M-29 (cross-route) *because of* the galosphere/occultism-silver gotcha — confirm the silver→mixing→film route reads as intended.
+- **minecolonies** — Colony-magic-wing link tagged M-28 (colony route); could be M-29 (cross-route dependency) instead — maintainer pick.
+- **northstar** — astronomical_reading M-37 was CUT because the reading is a *tradeable item*; reinstate as M-37 only if it becomes a non-tradeable research token.
+- **create_enchantment_industry** — Hyper-enchant boss-gate DEFERRED to #220 (locked-exclusive list) rather than filed as a standalone weave.
+- **oceansdelight** — fugu-venom routed to M-02 (alchemist cauldron) over M-11 (spirit_fire) on tone grounds — confirm the kitchen-adjacent framing.
+- **edf-remastered-5.0-beta4** — Adds no items and does not modify the dragon drop table natively; both KEEPs are KubeJS loot-table edits — delivery constraint, not a recipe.
+
+---
+
+## §3 — DEFERs
+
+### → build (2) — mechanism-pending, already tracked
+
+- **create_enchantment_industry** — create_enchantment_industry:blaze_enchanter / hyper-enchant tier — motif M-15 | →build #220 (KubeJS boss/colony gate on cap-breaking hyper-enchantment is a design decision for the locked-exclusive list, not a standalone weave; route to the unlock-gate build task)
+- **createoreexcavation** — createoreexcavation drill-head tiers (drill/diamond_drill/netherite_drill) as tooling wear — motif M-38 | →build #239 (mechanism-pending: no tool-degradation mechanic in pack; drill-heads as a toolmaker dependency would be excellent but requires M-38 implementation first)
+
+### → playtest (9) — need in-game confirmation before authoring
+
+- [ ] **aeronautics** — portable_engine boss-key tier gate — motif M-15 | →playtest: confirm whether the top-tier engine variant (netherite-grade) should require a boss drop before authoring a cross-route that could double-path the item; decision affects create_sa rows too
+- [ ] **alexsmobs** — alexsmobs:bear_fur / bison_fur → cold_sweat sewing table — motif M-26 | →playtest (confirm cold_sweat accepts alexsmobs fur by tag before wiring a demand-gate recipe; no KubeJS recipe to author without tag confirmation)
+- [ ] **createadditionallogistics** — createadditionallogistics seats→aeronautics M-31 (times_suggested=1 ACCEPT) — motif M-31 | →playtest: seat-sizing for Stock Keeper logistics mobs is a flavour detail; confirm whether aeronautics train logistics actually uses these seats in practice before authoring a weave
+- [ ] **exposure** — exposure:black_and_white_film (loot=yes) → loot-seed into structure chests (M-02, 1 row ACCEPT) — →playtest (thin single-suggest; the delivery is a datapack loot-table edit that needs human verification that the film item reads as meaningful exploration reward rather than clutter)
+- [ ] **farm_and_charm** — farm_and_charm:mincer (accepts foreign meats by tag) → cross-mod survival — motif M-12 | →playtest (confirm alexsmobs / mowziesmobs drops are tagged c:meats and that the mincer's tag acceptance works cross-mod before authoring the recipe; the hook is the key-insight from 3 separate rows)
+- [ ] **moblassos** — diamond_lasso→MineColonies research gate ("capture anything" unlocked by colony University research) — motif M-37 | →playtest: verify whether MineColonies research can gate a recipe/capability; if yes, file as a v0.9.0 issue; the lock is thematically sound (too powerful to be materials-only)
+- [ ] **recipe_integration** — recipe_integration active-cross-mod-routes audit — →playtest: conduct a Phase-3 audit of which recipe_integration entries fire given the pack's installed modlist (create:milling, create:pressing, ars_nouveau:scry_ritual, occultism:crushing, createaddition:charging paths…
+- [ ] **rottencreatures** — rottencreatures:immortal (thunderstorm event, drops only during storms) — motif M-22 | →playtest (lunar/event-reagent motif accepted; the Immortal's storm-gated drops carrying "storm-charge" is thematically strong and fits M-22, but needs in-game verification that the Immortal has a unique ha…
+- [ ] **upgrade_aquatic** — upgrade_aquatic:flare_jellyfish → M-22 lunar event imbue (bioluminescence during blood/full moon enhanced) — motif M-22 | →playtest (the M-22 lunar-event gate is accepted but requires confirming that Enhanced Celestials' moon events interact with jellyfish spawning or that a KubeJS script can detect the moon event to gate the…
+
+---
+
+## §4 — LEAVE — confirm none should be reinstated (42)
+
+- [ ] **aeronautics_dyeable_components** — pure cosmetic add-on; all candidates are REJECT-dominant; no motif survives the "no forced cosmetic weave" and "economy is player-run" rules
+- [ ] **almostunified** — pure config/unification layer; zero content items; the one candidate row is REJECT consensus and has no motif — it operates on the recipe graph, not within it
+- [ ] **blood_n_particles_datapack** — pure behavior datapack: particle VFX only, no items, no methods, no content surface; the single candidate row confirmed loot=yes is a false positive on particle-holder pseudo-item entries
+- [ ] **blueprint** — pure library — registers only framework scaffolding tags and one vanilla-style util chest; zero recipe content to weave; the single REJECT row confirms this
+- [ ] **bundle_recipe** — pure datapack shim — re-adds vanilla bundle crafting recipe only; zero mod-introduced content, no items, no methods to weave through; all rows REJECT-consensus
+- [ ] **cmparallelpipes** — pure Create-addon plumbing tool; all candidates are Create-internal — pipe wrench crafting variations with no cross-system surface; all rows REJECT-dominant; no second anchor achievable
+- [ ] **comforts** — pure QoL / travel gear — all candidate rows are REJECT; the 2 weakly-accepted rows (M-22 hammock moon-event 1A/1R, M-28 colony sleeping bag 1A) are single-pass, no opus corroboration, and add no cros…
+- [ ] **copycats** — deco/cosmetic mod; all high-times_suggested rows are REJECT-dominant; the one live candidate — M-04 zinc-block recycle — is already covered by the blanket Create zinc-cycle; forcing a second anchor o…
+- [ ] **create** — Create is the method library / hub; it is the weave *target* for every other mod; the two candidate rows are both REJECT-consensus confirming this orientation is wrong; no FROM-Create weave slate is…
+- [ ] **createaddoncompatibility** — pure compat shim — zero own items, zero recipes; the one candidate row's weave belongs on the plastic-producing mod, not this compat bridge
+- [ ] **createfurnitureseats** — zero items/blocks registered beyond Create-furniture compatibility; both candidate rows are all-REJECT confirming no weave surface; mod already at 2 anchors via companion/aeronautics integration per…
+- [ ] **createpickywheels** — pure behavioral-constraint mod — biome-gating on Create water wheels and windmills; zero items, zero material routes, no recipe-type to weave through; all rows are behavioral-config REJECT-consensus…
+- [ ] **createshufflefilter** — pure Create-internal automation utility — randomizes Deployer item-placement; all candidates REJECT-dominant across every pillar; no cross-system surface exists; forcing a weave would violate the bas…
+- [ ] **ctl** — already at 2 anchors — Create spine via sequenced_assembly + aeronautics via train-lamp role; all candidate rows either re-express the existing anchors, propose tone-mismatch magic links, or are corr…
+- [ ] **direct_chute** — pure logistics conduit block — zero items, no material outputs, no join keys; all 14 candidate rows are REJECT across every motif attempted; forcing any edge onto this block would be contrived
+- [ ] **dummmmmmy** — pure target-dummy mod; single candidate row is no-motif config-tie, correctly REJECT; no loop-advancing hook exists
+- [ ] **everycomp** — compatibility shim generating wood-variant blocks from host mod wood types; single pair of rows both correctly REJECT: wood variants don't fit M-04 metal/stone-deco scope, and any sawmill/cutting cre…
+- [ ] **fishingreal** — pure behavior layer: intercepts rod-reel events and spawns live fish entities instead of drops; adds no items, no recipe types, no materials; all 5 candidate rows are REJECT-consensus confirming no w…
+- [ ] **freefbible** — freefbible:freef_bible + supplementaries:antique_book is a pure flavor/no-method link; the single candidate is a REJECT with no-motif; the mod is a zero-content cosmetic item
+- [ ] **gamediscs** — pure cosmetic novelty — gaming console + collectible music discs from skeleton kills; zero material/resource surface; all weave candidates rejected or forced; no system anchor earnable without tone v…
+- [ ] **gtmogs** — worldgen-config framework with no item/method surface; its 3 marker blocks have no crafting role; M-30 scarcity it enables lives in the downstream ORES, not in gtmogs itself — all recipe-facing weave…
+- [ ] **immersive_paintings** — pure client-side decorative-expression mod — paintings are image canvases with no material/fluid/essence surface; all weave candidates rejected as busywork, tone-clash, or no-method; no system anchor…
+- [ ] **inventoryprofilesnext** — pure client-side QoL UI mod — 1 candidate row, all REJECT, no item/recipe/method surface; the only row is a behavioral/UI synergy with no material hook; no weave is possible
+- [ ] **irons_lib** — pure library mod — 3 rows are all REJECT; transmog_table and player_statue are cosmetic-NBT tools with no material processing method; no cross-pillar weave is possible
+- [ ] **jakes-build-tools-2.0.1.5** — pure builder QoL — hammer/chisel/trowel/hardhat are basic daily-use utilities; the basics-guardrail forbids gating them behind Create/magic; experience_flask items are build-site consumables with no…
+- [ ] **just_blahaj** — all candidates REJECT-dominant; every proposed weave — crushing for wool, haunting for ghost-shark, arcane plush — is a tone-clash with the mod's wholesome/cozy identity; no motif survives; the mod i…
+- [ ] **knightlib** — pure library framework; KnightQuest parent mod is absent from the pack; all candidate content — great_essence, homunculus, chalice — is inert without its parent; all 5 rows are REJECT consensus citin…
+- [ ] **letmefeedyou** — single candidate row; M-33 REJECT; the feeding interaction is a player-behavior QoL mod with no material to route and no specialist-labor weave; zero content items of its own
+- [ ] **letsdocompat** — pure cross-mod food-tag unification library — its entire function IS the M-12 food-chain compat it provides TO other mods; the 2nd-anchor accrues to those food mods, not to letsdocompat itself; all r…
+- [ ] **lootr** — loot-fairness wrapper — 4 rows all REJECT; lootr is a per-player loot instancing layer with no items or materials of its own; loot-table seeding decisions belong to the mod that owns the loot table,…
+- [ ] **midnightthoughts** — pure behavioral / event mod — all 9 candidate rows REJECT; ships no items, no loot tables, no material outputs; the only surface is a buff event (well-rested) with no material hook that any motif M-0…
+- [ ] **modonomicon** — guidebook framework; 4 rows all REJECT or low-confidence; the book item is documentation, not a reagent; M-37 framing rejected as tone clash; one 1-ACCEPT row for "modonomicon book as research-unlock…
+- [ ] **multipiston** — multipiston:multipistonblock is a MineColonies / Structurize internal tool block, not a player-built item in the conventional sense; the single candidate row is REJECT; no weave surface exists that i…
+- [ ] **netmusic** — music streaming / CD-burning mod with no material/resource surface beyond the existing TLM altar connection; all weave candidates rejected as no-method, no-motif, or ambient; the existing altar routi…
+- [ ] **openpartiesandclaims** — pure chunk-claim / party-management library; all rows REJECT-consensus; neither M-28 nor M-30 applies — the mod gates territory, not recipes or production; no items, no methods to weave through
+- [ ] **patchouli** — pure documentation library; all rows REJECT-consensus; the guide book is a player-facing doc item, not a recipe-graph node; M-37 explicitly does not apply to guide books per the motif definition
+- [ ] **recipe_integration** — bridge layer, not a content mod; all candidates correctly identify this: it fires conditional cross-mod recipes, owns no items of its own, and the Phase-3 action is an audit of which of its live rout…
+- [ ] **sablecollisiondamage** — pure behavior patch — 2 rows both REJECT; the mod adds no items or materials, only physics-realism collision damage on ship impact; no material flows through it; no processing method applies
+- [ ] **solmaiddream** — pure companion-stat addon over Touhou Little Maid; no cross-system item edge survives — every candidate is either no-motif, a config note, an ambient food-loop amplifier with no delivery mechanism, o…
+- [ ] **spyglass_improvements** — pure client QoL / zoom enhancement; 1 candidate row, consensus REJECT, no-motif: "improved spyglass zoom aids aerial scouting from an airship, but this is atmospheric, not a designed weave"; zero ite…
+- [ ] **steves_lava_chicken_music_disc** — single-item Easter-egg flavor mod — one music disc with no gameplay function beyond playing audio; both weave candidates rejected as tone-clash / no system surface
+- [ ] **toomanypaintings** — only 1 candidate row, no-motif; applying lore text to a painting is purely cosmetic narrative with no mechanically meaningful cross-system edge; no weave is achievable
+
+---
+
+## §5 — Per-mod index (alphabetical) → full slate detail
+
+Each mod links to its batch file (the prose KEEP/CUT/MERGE/DEFER detail). Anchors / decision counts shown for orientation.
+
+| mod | anchors | K | C | M | D | slate |
+|---|---|--:|--:|--:|--:|---|
+| aeronautics | create + economy + magic (now 3) | 4 | 16 | 10 | 1 | [batch-09.md](batch-09.md) |
+| aeronautics_dyeable_components | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-09.md](batch-09.md) |
+| aileron | aeronautics (now 1) | 1 | 13 | 3 | 0 | [batch-03.md](batch-03.md) |
+| alcohol_industry | create / survival / magic / economy (now 4) | 4 | 10 | 8 | 0 | [batch-08.md](batch-08.md) |
+| alexsmobs | magic + create + economy (now 3) | 4 | 28 | 5 | 1 | [batch-12.md](batch-12.md) |
+| almostunified | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-04.md](batch-04.md) |
+| appleseed | create + survival (now 2) | 2 | 12 | 3 | 0 | [batch-07.md](batch-07.md) |
+| ars_n_spells | magic (already woven — the mod IS a weave) | 0 | 11 | 0 | 0 | [batch-03.md](batch-03.md) |
+| ars_nouveau | magic (primary) + survival (now 2) | 4 | 27 | 8 | 0 | [batch-06.md](batch-06.md) |
+| astikorcartsredux | create + survival (now 2) | 2 | 21 | 4 | 0 | [batch-03.md](batch-03.md) |
+| bakery | create + economy (now 2) | 3 | 8 | 5 | 0 | [batch-11.md](batch-11.md) |
+| beachparty | create + survival (now 2) | 2 | 19 | 2 | 0 | [batch-01.md](batch-01.md) |
+| betterdungeons | magic + economy (now 2) | 2 | 9 | 5 | 0 | [batch-10.md](batch-10.md) |
+| bettermineshafts | economy (now 1; note: single-anchor, candidate for a second weave if a magic loot-seed proves coherent to a maintainer) | 1 | 6 | 2 | 0 | [batch-11.md](batch-11.md) |
+| betteroceanmonuments | magic + economy (now 2) | 2 | 9 | 3 | 0 | [batch-13.md](batch-13.md) |
+| betterstrongholds | magic + economy (now 2) | 2 | 7 | 4 | 0 | [batch-05.md](batch-05.md) |
+| bits_n_bobs | create (now 1) | 1 | 8 | 0 | 0 | [batch-01.md](batch-01.md) |
+| blood_n_particles_datapack | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-02.md](batch-02.md) |
+| blueprint | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-07.md](batch-07.md) |
+| born_in_chaos_v1 | create + magic + economy (now 3) | 4 | 18 | 3 | 0 | [batch-01.md](batch-01.md) |
+| bountiful | economy + create + survival (now 3) | 4 | 20 | 11 | 0 | [batch-07.md](batch-07.md) |
+| brazil_legends | magic + economy (now 2) | 3 | 13 | 5 | 0 | [batch-11.md](batch-11.md) |
+| bundle_recipe | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-12.md](batch-12.md) |
+| byzantine | economy (now 1) | 2 | 5 | 2 | 0 | [batch-03.md](batch-03.md) |
+| cataclysm | create + magic + economy (now 3) | 3 | 12 | 6 | 0 | [batch-10.md](batch-10.md) |
+| cbc_at | create + economy (now 2) | 3 | 10 | 4 | 0 | [batch-10.md](batch-10.md) |
+| charta | create + survival (now 2) | 2 | 9 | 4 | 0 | [batch-04.md](batch-04.md) |
+| chefsdelight | economy + survival (now 2) | 2 | 9 | 3 | 0 | [batch-11.md](batch-11.md) |
+| cmpackagecouriers | economy (aeronautics/logistics arm) (now 2) | 2 | 8 | 4 | 0 | [batch-08.md](batch-08.md) |
+| cmpackagepipebomb | none (mod is a PvP gag; no loop-advancing hook found) | 0 | 13 | 0 | 0 | [batch-13.md](batch-13.md) |
+| cmparallelpipes | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-08.md](batch-08.md) |
+| cold_sweat | create + survival (now 2) | 3 | 18 | 9 | 0 | [batch-07.md](batch-07.md) |
+| comforts | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-05.md](batch-05.md) |
+| companions | magic + create + economy (now 3) | 4 | 14 | 5 | 0 | [batch-03.md](batch-03.md) |
+| cookingforblockheads | create + economy (now 2) | 2 | 10 | 4 | 0 | [batch-07.md](batch-07.md) |
+| copperagebackport | create (now 1) | 1 | 10 | 2 | 0 | [batch-05.md](batch-05.md) |
+| copycats | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-09.md](batch-09.md) |
+| create | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-02.md](batch-02.md) |
+| create_better_villagers | Create + economy (now 2) | 2 | 6 | 4 | 0 | [batch-02.md](batch-02.md) |
+| create_central_kitchen | create + survival + economy (now 3) | 3 | 11 | 2 | 0 | [batch-01.md](batch-01.md) |
+| create_cheese | create + economy (now 2; third anchor survival noted) | 3 | 13 | 10 | 0 | [batch-07.md](batch-07.md) |
+| create_compressed | create + economy (now 2) | 2 | 11 | 2 | 0 | [batch-12.md](batch-12.md) |
+| create_confectionery | create + survival + economy (now 3) | 3 | 24 | 4 | 0 | [batch-12.md](batch-12.md) |
+| create_connected | create + aeronautics (now 2) | 2 | 22 | 4 | 0 | [batch-04.md](batch-04.md) |
+| create_dragons_plus | create + magic + survival (now 3) | 3 | 16 | 3 | 0 | [batch-01.md](batch-01.md) |
+| create_enchantment_industry | create / magic / economy (now 3) | 3 | 11 | 9 | 1 | [batch-08.md](batch-08.md) |
+| create_factory | create + economy (now 2) | 2 | 9 | 5 | 0 | [batch-09.md](batch-09.md) |
+| create_hypertube | Create + economy (now 2) | 2 | 11 | 2 | 0 | [batch-02.md](batch-02.md) |
+| create_integrated_farming | Create + magic + survival (now 3; 3 is acceptable given the mod's output diversity) | 3 | 11 | 6 | 0 | [batch-02.md](batch-02.md) |
+| create_ironworks | create + economy + aeronautics (now 3) | 4 | 13 | 11 | 0 | [batch-09.md](batch-09.md) |
+| create_jetpack | create + survival (now 2) | 2 | 11 | 5 | 0 | [batch-07.md](batch-07.md) |
+| create_ltab-3.9.2 | Create + economy (now 2) | 2 | 6 | 4 | 0 | [batch-02.md](batch-02.md) |
+| create_mobile_packages | create + economy (now 2) | 2 | 12 | 4 | 0 | [batch-12.md](batch-12.md) |
+| create_new_age | create + magic + economy + aeronautics (now 4) | 4 | 17 | 6 | 0 | [batch-10.md](batch-10.md) |
+| create_pattern_schematics | create (already anchored as Create utility — no second weave achievable) | 0 | 7 | 0 | 0 | [batch-01.md](batch-01.md) |
+| create_sa | create + magic (now 2) | 2 | 12 | 6 | 0 | [batch-09.md](batch-09.md) |
+| create_train_parts | create (now 1; note: single-anchor; this is a thin Create-addon deco mod — its natural 2nd anchor would be economy/aeronautics but no coherent weave survives; maintainer may LEAVE this or accept 1-anchor) | 1 | 8 | 3 | 0 | [batch-11.md](batch-11.md) |
+| create_tweaked_controllers | create + aeronautics (now 2) | 2 | 16 | 0 | 0 | [batch-01.md](batch-01.md) |
+| create_ultimate_factory | create (now 1; note: single-anchor; the renewable-diamond recipe is a scarcity *conflict*, not a weave; maintainer should evaluate disabling/removing it per the REJECT consensus) | 1 | 7 | 0 | 0 | [batch-11.md](batch-11.md) |
+| createaddition | create + magic + aeronautics (now 3) | 4 | 21 | 5 | 0 | [batch-06.md](batch-06.md) |
+| createadditionallogistics | create + aeronautics (now 2) | 2 | 8 | 2 | 1 | [batch-13.md](batch-13.md) |
+| createaddoncompatibility | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-01.md](batch-01.md) |
+| createbigcannons | create + economy + magic (now 3) | 4 | 22 | 5 | 0 | [batch-13.md](batch-13.md) |
+| createblockchain | create + economy (now 2) | 2 | 9 | 4 | 0 | [batch-11.md](batch-11.md) |
+| createfisheryindustry | create + economy + survival (now 3) | 3 | 16 | 7 | 0 | [batch-09.md](batch-09.md) |
+| createfood | Create + survival + economy (now 3) | 3 | 11 | 5 | 0 | [batch-02.md](batch-02.md) |
+| createfurnitureseats | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-07.md](batch-07.md) |
+| createimmersivetacz | create + economy + aeronautics (now 3) | 4 | 34 | 4 | 0 | [batch-03.md](batch-03.md) |
+| createlowheated | create + survival (now 2) | 2 | 11 | 2 | 0 | [batch-11.md](batch-11.md) |
+| createmechanicalcompanion | create + survival + economy (now 3) | 3 | 14 | 5 | 0 | [batch-05.md](batch-05.md) |
+| createmetalwork | create + economy + aeronautics (now 3) | 3 | 13 | 10 | 0 | [batch-07.md](batch-07.md) |
+| createnuclear | create + economy + aeronautics + magic (now 4) | 4 | 22 | 4 | 0 | [batch-01.md](batch-01.md) |
+| createoreexcavation | create + economy (now 2) | 4 | 34 | 5 | 1 | [batch-03.md](batch-03.md) |
+| createpickywheels | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-12.md](batch-12.md) |
+| createshufflefilter | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-08.md](batch-08.md) |
+| createtreadmill | create + survival (now 2, borderline) | 1 | 15 | 1 | 0 | [batch-12.md](batch-12.md) |
+| ctl | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-07.md](batch-07.md) |
+| ctov | economy + magic + survival (now 3) | 3 | 8 | 1 | 0 | [batch-04.md](batch-04.md) |
+| deeperdarker | magic + create + economy (now 3) | 4 | 18 | 8 | 0 | [batch-13.md](batch-13.md) |
+| direct_chute | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-07.md](batch-07.md) |
+| dndesires | Create + survival + aeronautics + magic (now 4; 4 is justified by the mod's broad method surface) | 4 | 15 | 7 | 0 | [batch-02.md](batch-02.md) |
+| domum_ornamentum | create + economy (now 2) | 2 | 11 | 0 | 0 | [batch-13.md](batch-13.md) |
+| drones | create + economy (now 2) | 2 | 9 | 4 | 0 | [batch-10.md](batch-10.md) |
+| dtterralith | create + magic + economy (now 3) | 3 | 9 | 3 | 0 | [batch-03.md](batch-03.md) |
+| dummmmmmy | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-13.md](batch-13.md) |
+| dungeons-and-taverns-v4.4.4 | magic + economy (now 2) | 3 | 8 | 5 | 0 | [batch-05.md](batch-05.md) |
+| dungeons_arise_seven_seas | economy + magic (now 2; aeronautics is a 3rd via loot-gate framing) | 3 | 14 | 5 | 0 | [batch-04.md](batch-04.md) |
+| dynamictrees | create + economy (now 2) | 2 | 18 | 3 | 0 | [batch-06.md](batch-06.md) |
+| dynamictreesplus | create + magic (now 2) | 3 | 15 | 5 | 0 | [batch-07.md](batch-07.md) |
+| ecologics | create + survival + economy (now 3) | 3 | 10 | 4 | 0 | [batch-04.md](batch-04.md) |
+| edf-remastered-5.0-beta4 | Create + magic (now 2) | 2 | 6 | 4 | 0 | [batch-02.md](batch-02.md) |
+| endermoon | magic (now 1) | 1 | 6 | 2 | 0 | [batch-05.md](batch-05.md) |
+| endrem | magic + survival (now 2) | 3 | 19 | 6 | 0 | [batch-06.md](batch-06.md) |
+| enhancedcelestials | create + magic (now 2) | 2 | 10 | 4 | 0 | [batch-04.md](batch-04.md) |
+| everycomp | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-13.md](batch-13.md) |
+| expandeddelight | Create + economy + survival + magic (now 4; justified; salt-ore is its own scarcity node and cheese+spice are distinct economy/magic anchors) | 4 | 10 | 7 | 0 | [batch-02.md](batch-02.md) |
+| exposure | create / economy (now 2; third anchor light) | 3 | 13 | 3 | 1 | [batch-08.md](batch-08.md) |
+| extradelight | Create + economy + survival (now 3) | 3 | 10 | 6 | 0 | [batch-02.md](batch-02.md) |
+| farm_and_charm | create + survival + economy (now 3) | 4 | 17 | 4 | 1 | [batch-12.md](batch-12.md) |
+| farmersdelight | create + survival + economy (now 3) | 4 | 15 | 7 | 0 | [batch-03.md](batch-03.md) |
+| fishingreal | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-02.md](batch-02.md) |
+| fluid | aeronautics + survival (now 2) | 2 | 13 | 0 | 0 | [batch-04.md](batch-04.md) |
+| formations | magic (now 1 — candidate for second weave) | 1 | 8 | 2 | 0 | [batch-06.md](batch-06.md) |
+| formationsnether | magic (now 1; magic is the achievable anchor for this no-item mod) | 1 | 9 | 5 | 0 | [batch-07.md](batch-07.md) |
+| freefbible | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-09.md](batch-09.md) |
+| friendsandfoes | magic + create (now 2) | 2 | 14 | 5 | 0 | [batch-06.md](batch-06.md) |
+| fxntstorage | create + economy (now 2) | 2 | 19 | 2 | 0 | [batch-13.md](batch-13.md) |
+| galosphere | create + magic + economy (now 3) | 4 | 10 | 4 | 0 | [batch-05.md](batch-05.md) |
+| gamediscs | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-10.md](batch-10.md) |
+| gnkinetics | create + aeronautics (now 2) | 2 | 14 | 0 | 0 | [batch-13.md](batch-13.md) |
+| gravestone | economy (now 1) | 1 | 16 | 0 | 0 | [batch-03.md](batch-03.md) |
+| grimoireofgaia | magic + economy + create (now 3; note: 3-anchor mod — the bestiary is large enough to sustain it) | 4 | 9 | 4 | 0 | [batch-11.md](batch-11.md) |
+| gtmogs | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-11.md](batch-11.md) |
+| handcrafted | create + economy (now 2) | 2 | 7 | 5 | 0 | [batch-10.md](batch-10.md) |
+| hpm | create + economy + aeronautics (now 3) | 5 | 19 | 5 | 0 | [batch-03.md](batch-03.md) |
+| illagerinvasion | magic + economy + create (now 3) | 4 | 10 | 8 | 0 | [batch-09.md](batch-09.md) |
+| immersive_armors | Create + magic + economy (now 3) | 3 | 10 | 6 | 0 | [batch-02.md](batch-02.md) |
+| immersive_paintings | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-10.md](batch-10.md) |
+| inventoryprofilesnext | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-05.md](batch-05.md) |
+| irons_lib | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-06.md](batch-06.md) |
+| irons_spellbooks | magic + create + survival (now 3) | 4 | 23 | 6 | 0 | [batch-13.md](batch-13.md) |
+| jakes-build-tools-2.0.1.5 | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-03.md](batch-03.md) |
+| just_blahaj | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-09.md](batch-09.md) |
+| knightlib | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-04.md](batch-04.md) |
+| kobolds | magic + economy (now 2) | 2 | 9 | 6 | 0 | [batch-02.md](batch-02.md) |
+| letmefeedyou | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-04.md](batch-04.md) |
+| letsdocompat | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-07.md](batch-07.md) |
+| lootr | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-06.md](batch-06.md) |
+| mcwdoors | create / economy (now 2) | 2 | 11 | 4 | 0 | [batch-08.md](batch-08.md) |
+| mcwfences | create (now 1 — floor; candidate for second weave via M-28) | 1 | 16 | 1 | 0 | [batch-06.md](batch-06.md) |
+| mcwroofs | create (now 1) | 1 | 7 | 2 | 0 | [batch-12.md](batch-12.md) |
+| mcwstairs | create (now 1) | 1 | 8 | 0 | 0 | [batch-01.md](batch-01.md) |
+| mcwwindows | create (now 1) | 1 | 13 | 0 | 0 | [batch-01.md](batch-01.md) |
+| meadow | create + economy + magic + survival (now 4) | 5 | 11 | 7 | 0 | [batch-05.md](batch-05.md) |
+| mffs | create + economy + survival (now 3) | 3 | 10 | 2 | 0 | [batch-06.md](batch-06.md) |
+| midnightthoughts | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-05.md](batch-05.md) |
+| minecolonies | economy + create + magic + aeronautics (now 4; major cross-cutting production route) | 4 | 14 | 9 | 0 | [batch-07.md](batch-07.md) |
+| minecolonies_compatibility | economy + create (now 2) | 3 | 8 | 4 | 0 | [batch-05.md](batch-05.md) |
+| minecolonies_tweaks | create / economy (now 2) | 2 | 5 | 3 | 0 | [batch-08.md](batch-08.md) |
+| moblassos | economy + magic (now 2) | 2 | 17 | 4 | 1 | [batch-09.md](batch-09.md) |
+| modonomicon | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-04.md](batch-04.md) |
+| modulargolems | survival + magic + economy (now 3) | 3 | 12 | 4 | 0 | [batch-11.md](batch-11.md) |
+| more_slabs_stairs_and_walls | create + economy (now 2) | 2 | 9 | 4 | 0 | [batch-03.md](batch-03.md) |
+| mowziesmobs | create + magic + economy (now 3) | 4 | 11 | 10 | 0 | [batch-09.md](batch-09.md) |
+| multipiston | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-02.md](batch-02.md) |
+| mushroomquest | survival + magic + economy (now 3) | 3 | 11 | 5 | 0 | [batch-10.md](batch-10.md) |
+| mutantszombies | survival (now 1) | 1 | 5 | 1 | 0 | [batch-05.md](batch-05.md) |
+| naturalist | create + magic + survival + economy (now 4) | 4 | 12 | 2 | 0 | [batch-01.md](batch-01.md) |
+| naturescompass | none — LEAVE | 0 | 5 | 0 | 0 | [batch-13.md](batch-13.md) |
+| netmusic | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-10.md](batch-10.md) |
+| northstar | economy + aeronautics + create + magic (now 4) | 5 | 15 | 10 | 0 | [batch-07.md](batch-07.md) |
+| numismatics | economy + create + survival (now 3) | 3 | 6 | 3 | 0 | [batch-09.md](batch-09.md) |
+| occultengineering | create + magic + economy (now 3) | 3 | 14 | 2 | 0 | [batch-12.md](batch-12.md) |
+| occultism | create + magic + economy (now 3) | 5 | 24 | 5 | 0 | [batch-12.md](batch-12.md) |
+| oceansdelight | survival + economy (now 2) | 2 | 12 | 5 | 0 | [batch-10.md](batch-10.md) |
+| openpartiesandclaims | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-12.md](batch-12.md) |
+| pantographsandwires | Create + aeronautics + magic (now 3) | 3 | 10 | 5 | 0 | [batch-02.md](batch-02.md) |
+| patchouli | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-12.md](batch-12.md) |
+| quark | create + magic (now 2) | 4 | 21 | 7 | 0 | [batch-06.md](batch-06.md) |
+| railways | create + economy (now 2) | 3 | 19 | 4 | 0 | [batch-03.md](batch-03.md) |
+| rechiseled | create + economy (now 2) | 2 | 8 | 2 | 0 | [batch-04.md](batch-04.md) |
+| rechiseledcreate | create (now 1 — floor; the mod IS the Create-deco bridge) | 1 | 9 | 2 | 0 | [batch-06.md](batch-06.md) |
+| recipe_integration | _LEAVE_ | 0 | 0 | 0 | 1 | [batch-13.md](batch-13.md) |
+| ribbits | magic + economy (now 2) | 2 | 14 | 2 | 0 | [batch-01.md](batch-01.md) |
+| rottencreatures | create / magic / economy (now 3) | 4 | 11 | 8 | 1 | [batch-08.md](batch-08.md) |
+| s_a_b | create + aeronautics + economy (now 3) | 3 | 9 | 3 | 0 | [batch-05.md](batch-05.md) |
+| sablecollisiondamage | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-06.md](batch-06.md) |
+| samurai_dynasty | create + magic + economy + survival (now 4) | 4 | 21 | 12 | 0 | [batch-04.md](batch-04.md) |
+| securitycraft | create + economy + survival (now 3) | 3 | 20 | 0 | 0 | [batch-13.md](batch-13.md) |
+| sereneseasons | create + magic + survival (now 3) | 3 | 12 | 5 | 0 | [batch-06.md](batch-06.md) |
+| simplehats | survival + economy (now 2) | 2 | 11 | 1 | 0 | [batch-13.md](batch-13.md) |
+| sky_whale_ship | aeronautics + economy (now 2) | 2 | 10 | 5 | 0 | [batch-04.md](batch-04.md) |
+| sliceanddice | create (already anchored by construction; this weave deepens survival) (now 1 new) | 1 | 8 | 3 | 0 | [batch-10.md](batch-10.md) |
+| smokeleafindustries | create + survival + economy (now 3) | 3 | 15 | 6 | 0 | [batch-04.md](batch-04.md) |
+| snowyspirit | create + survival (now 2) | 3 | 17 | 2 | 0 | [batch-13.md](batch-13.md) |
+| solmaiddream | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-08.md](batch-08.md) |
+| spawn | create + magic + economy (now 3) | 3 | 20 | 3 | 0 | [batch-01.md](batch-01.md) |
+| spyglass_improvements | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-03.md](batch-03.md) |
+| steves_lava_chicken_music_disc | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-10.md](batch-10.md) |
+| stylecolonies | create + magic (now 2) | 2 | 5 | 1 | 0 | [batch-12.md](batch-12.md) |
+| supplementaries | create + magic + aeronautics (now 3) | 3 | 11 | 2 | 0 | [batch-05.md](batch-05.md) |
+| t_and_t | economy / magic / aeronautics (now 3) | 4 | 14 | 5 | 0 | [batch-08.md](batch-08.md) |
+| tacz | create + survival + economy (now 3) | 4 | 12 | 4 | 0 | [batch-06.md](batch-06.md) |
+| terralith | magic + economy + aeronautics (now 3) | 3 | 5 | 1 | 0 | [batch-01.md](batch-01.md) |
+| tfmg | aeronautics + create + economy (now 3) | 7 | 15 | 7 | 0 | [batch-05.md](batch-05.md) |
+| tidal-towns-1.3.4 | economy + aeronautics (now 2) | 2 | 8 | 2 | 0 | [batch-11.md](batch-11.md) |
+| tide | create / economy / survival / magic (now 4) | 4 | 12 | 7 | 0 | [batch-08.md](batch-08.md) |
+| toomanypaintings | _LEAVE_ | 0 | 0 | 0 | 0 | [batch-08.md](batch-08.md) |
+| touhou_little_maid | magic + economy + survival (now 3) | 3 | 16 | 9 | 0 | [batch-10.md](batch-10.md) |
+| trading_floor | economy (primary) + create (now 2) | 2 | 9 | 3 | 0 | [batch-06.md](batch-06.md) |
+| trailandtales_delight | create / economy / magic / survival (now 4) | 4 | 17 | 9 | 0 | [batch-08.md](batch-08.md) |
+| trashcans | Create (now 1; 1 is the floor; this is a QoL/convenience mod — note for maintainer as a candidate for a second weave or for LEAVE consideration) | 1 | 6 | 2 | 0 | [batch-02.md](batch-02.md) |
+| travelersbackpack | create + survival (now 2) | 2 | 12 | 4 | 0 | [batch-11.md](batch-11.md) |
+| trek-b0.6.1.1 | magic + economy (now 2) | 2 | 7 | 3 | 0 | [batch-10.md](batch-10.md) |
+| underground_village | economy + create (now 2) | 2 | 9 | 3 | 0 | [batch-11.md](batch-11.md) |
+| undergroundworlds | magic + create + economy (now 3) | 3 | 12 | 5 | 0 | [batch-04.md](batch-04.md) |
+| upgrade_aquatic | create + survival + magic (now 3) | 3 | 20 | 3 | 1 | [batch-12.md](batch-12.md) |
+| valarian_conquest | create + economy + magic (now 3) | 3 | 18 | 8 | 0 | [batch-04.md](batch-04.md) |
+| vc_gliders | create (now 1, targeting 2) | 2 | 17 | 4 | 0 | [batch-12.md](batch-12.md) |
+| vinery | create + economy + survival (now 3) | 4 | 9 | 6 | 0 | [batch-09.md](batch-09.md) |
+| woodworks | create / magic / economy (now 3) | 4 | 8 | 6 | 0 | [batch-08.md](batch-08.md) |
+| zombiemoon | survival only (now 1 — cannot reach 2 without custom drops; flag for build task) | 0 | 7 | 0 | 0 | [batch-09.md](batch-09.md) |
+
+---
+_Generated by `build-review.py` from the 13 batch files. Re-run after any slate edit. Companion: `SLATE-SUMMARY.md` (aggregate stats), `decisions.tsv` (flat, filterable)._

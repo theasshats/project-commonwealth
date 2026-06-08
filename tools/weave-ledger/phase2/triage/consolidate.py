@@ -19,7 +19,7 @@ H_LEAVE = re.compile(r'^##\s+(\S+)\s+—\s+LEAVE', re.I)
 H_ANY   = re.compile(r'^##\s+(\S+)\s+—')
 NOW_N   = re.compile(r'\(now\s+(\d+)\)')
 ANCHORS = re.compile(r'anchors after:\s*([^(|]+)')
-CANON   = {'create', 'magic', 'economy', 'survival', 'aeronautics'}
+CANON   = ['create', 'magic', 'economy', 'survival', 'aeronautics']
 MOTIF   = re.compile(r'\bM-(\d{2})\b')
 MILE    = re.compile(r'milestone:\s*(v\d+\.\d+\.\d+)', re.I)
 BUILD   = re.compile(r'→build\s*#(\d+)')
@@ -42,13 +42,15 @@ def parse_block(ns, lines):
     if n: rec['anchors_n'] = int(n.group(1))
     a = ANCHORS.search(head)
     if a:
-        # normalize to the canonical pillar set; strip qualifiers ("survival only"),
-        # case ("Create"->"create"), and prose fragments ("none", "already anchored…")
+        # canonical pillars by substring match per token — robust to case ("Create"),
+        # qualifiers ("survival only"), and notation ("economy×2"); ignores prose since
+        # the capture is already truncated before the first '(' or '|'.
         pil = []
         for t in re.split(r'[+/,]', a.group(1)):
-            w = t.strip().lower().split()[0] if t.strip() else ''
-            if w in CANON and w not in pil:
-                pil.append(w)
+            tl = t.strip().lower()
+            for p in CANON:
+                if p in tl and p not in pil:
+                    pil.append(p)
         rec['pillars'] = pil
     for ln in lines[1:]:
         s = ln.strip()
@@ -104,9 +106,12 @@ def main():
         for p in r['pillars']: pillar_keep[p] += 1
         for m in r['keep_motifs']: motif_keep[m] += 1
         for ml in r['keep_miles']: mile_keep[ml] += 1
-        if r['anchors_n'] is not None:
-            anchor_dist[r['anchors_n']] += 1
-            if r['anchors_n'] <= 1: one_anchor.append(r['ns'])
+        # anchor count = distinct canonical pillars named in 'anchors after:' (every
+        # non-LEAVE mod, not just those with a parenthetical '(now N)' — that omission
+        # previously dropped ~24 mods and made the distribution undercount).
+        ac = len(r['pillars'])
+        anchor_dist[ac] += 1
+        if ac <= 1: one_anchor.append(r['ns'])
 
     mods_total = len([r for _, r in recs])
     out = []

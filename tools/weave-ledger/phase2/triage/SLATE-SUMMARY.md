@@ -55,13 +55,14 @@ _(counted from enumerated KEEP/CUT/MERGE/DEFER lines — the ground truth — no
 - M-18: 1
 
 ## Anchor-count distribution (mods reaching N anchors)
-- 1 anchor(s): 10 mods
-- 2 anchor(s): 62 mods
-- 3 anchor(s): 55 mods
-- 4 anchor(s): 9 mods
+- 0 anchor(s): 2 mods
+- 1 anchor(s): 26 mods
+- 2 anchor(s): 63 mods
+- 3 anchor(s): 57 mods
+- 4 anchor(s): 12 mods
 
-## One-anchor mods (candidates for a second weave) — 10
-aileron, bits_n_bobs, byzantine, copperagebackport, endermoon, gravestone, mcwroofs, mcwstairs, mcwwindows, mutantszombies
+## One-anchor mods (candidates for a second weave) — 28
+aileron, ars_n_spells, ars_nouveau, bettermineshafts, bits_n_bobs, byzantine, cmpackagecouriers, cmpackagepipebomb, copperagebackport, create_pattern_schematics, create_train_parts, create_ultimate_factory, endermoon, formations, formationsnether, gravestone, mcwfences, mcwroofs, mcwstairs, mcwwindows, mutantszombies, naturescompass, rechiseledcreate, sliceanddice, trading_floor, trashcans, vc_gliders, zombiemoon
 
 ## LEAVE mods — 42
 aeronautics_dyeable_components, almostunified, blood_n_particles_datapack, blueprint, bundle_recipe, cmparallelpipes, comforts, copycats, create, createaddoncompatibility, createfurnitureseats, createpickywheels, createshufflefilter, ctl, direct_chute, dummmmmmy, everycomp, fishingreal, freefbible, gamediscs, gtmogs, immersive_paintings, inventoryprofilesnext, irons_lib, jakes-build-tools-2.0.1.5, just_blahaj, knightlib, letmefeedyou, letsdocompat, lootr, midnightthoughts, modonomicon, multipiston, netmusic, openpartiesandclaims, patchouli, recipe_integration, sablecollisiondamage, solmaiddream, spyglass_improvements, steves_lava_chicken_music_disc, toomanypaintings
