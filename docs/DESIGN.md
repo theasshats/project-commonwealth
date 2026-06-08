@@ -229,19 +229,20 @@ Two non-obvious choices worth recording:
 
 ## 11. Build transparency — how the pack is made
 
-The pack is built by two maintainers with heavy tooling assistance, **including AI** (this repo is
+The pack is built by two maintainers with heavy tooling assistance, **including an LLM** (this repo is
 worked largely through Claude Code on the web). We use it the way you'd use any power tool: for the
 plumbing — manifest/packwiz churn, dependency untangling, recipe-graph analysis, config bookkeeping,
 the release pipeline, boilerplate. **The judgment stays human:** what's scarce, what anchors to which
 system, the keep/cut curation calls, the gnarly compat decisions (the Sodium bridge, the unification
-traps). And **we don't generate assets with AI** — no textures, models, or music; every asset is the
-work of the mod authors we build on. A pack has always been curation and glue more than original
-creation, and that part is still done by people who care about getting it right.
+traps). And **we don't generate assets with AI** — no textures, models, or music; the LLM works on
+config and code, not art, and every asset is the work of the mod authors we build on. A pack has always
+been curation and glue more than original creation, and that part is still done by people who care about
+getting it right.
 
 This is recorded here because the pack is now **public** (see the top-of-doc note), so the question
 "how much of this is AI?" is fair and we'd rather answer it plainly than have it surface as a gotcha.
-The stance: state it transparently where a curious player can find it, but **don't make AI a selling
-point** — the design is the headline, the tooling is an honest footnote. The canonical player-facing
+The stance: state it transparently where a curious player can find it, but **don't make the LLM a
+selling point** — the design is the headline, the tooling is an honest footnote. The canonical player-facing
 wording lives on the site (`derpack-org/derpack-site`, About section); keep this section and that copy
 in agreement if either changes. When the public announce release is cut, a one-line version belongs in
 that release's `docs/PATCHNOTES.md` entry.
