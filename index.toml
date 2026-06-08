@@ -1561,6 +1561,11 @@ hash = "ae6fd52d8bdcbeca5bbe6db840f22f92c1928fe0fda22017b19612b9b00a245a"
 metafile = true
 
 [[files]]
+file = "mods/dynamic-trees-ars-nouveau.pw.toml"
+hash = "1dcb872b95f48dd59d3aa5059e1ce9abb8fc90ccb5d3df91f941cbb5a2414ead"
+metafile = true
+
+[[files]]
 file = "mods/dynamic-trees-terralith.pw.toml"
 hash = "36dfee47394fd9d3fae508c7610215f920d76ef904d22565eb765c1a87e16a2b"
 metafile = true
