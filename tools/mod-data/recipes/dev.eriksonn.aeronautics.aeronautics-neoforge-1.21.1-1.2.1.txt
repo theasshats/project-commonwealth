@@ -1,0 +1,45 @@
+aeronautics:adjustable_burner | minecraft:crafting_shaped | aeronautics:adjustable_burner aeronautics:burner_fire create:andesite_alloy create:iron_sheet minecraft:crafting_shaped minecraft:redstone
+aeronautics:andesite_propeller | minecraft:crafting_shaped | aeronautics:andesite_propeller create:propeller create:shaft minecraft:crafting_shaped minecraft:wooden_slabs
+aeronautics:andesite_propeller_from_andesite | minecraft:crafting_shapeless | aeronautics:andesite_propeller aeronautics:wooden_propeller minecraft:crafting_shapeless
+aeronautics:aviators_goggles | minecraft:crafting_shapeless | aeronautics:aviators_goggles c:leathers create:goggles minecraft:crafting_shapeless
+aeronautics:black_envelope | minecraft:crafting_shaped | aeronautics:black_envelope minecraft:black_wool minecraft:crafting_shaped minecraft:stick
+aeronautics:blue_envelope | minecraft:crafting_shaped | aeronautics:blue_envelope minecraft:blue_wool minecraft:crafting_shaped minecraft:stick
+aeronautics:brown_envelope | minecraft:crafting_shaped | aeronautics:brown_envelope minecraft:brown_wool minecraft:crafting_shaped minecraft:stick
+aeronautics:crushing/end_stone_powder | create:crushing | aeronautics:end_stone_powder create:crushing minecraft:end_stone
+aeronautics:cyan_envelope | minecraft:crafting_shaped | aeronautics:cyan_envelope minecraft:crafting_shaped minecraft:cyan_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_black | create:deploying | aeronautics:black_envelope create:deploying minecraft:black_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_blue | create:deploying | aeronautics:blue_envelope create:deploying minecraft:blue_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_brown | create:deploying | aeronautics:brown_envelope create:deploying minecraft:brown_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_cyan | create:deploying | aeronautics:cyan_envelope create:deploying minecraft:cyan_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_gray | create:deploying | aeronautics:gray_envelope create:deploying minecraft:gray_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_green | create:deploying | aeronautics:green_envelope create:deploying minecraft:green_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_light_blue | create:deploying | aeronautics:light_blue_envelope create:deploying minecraft:light_blue_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_light_gray | create:deploying | aeronautics:light_gray_envelope create:deploying minecraft:light_gray_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_lime | create:deploying | aeronautics:lime_envelope create:deploying minecraft:lime_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_magenta | create:deploying | aeronautics:magenta_envelope create:deploying minecraft:magenta_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_orange | create:deploying | aeronautics:orange_envelope create:deploying minecraft:orange_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_pink | create:deploying | aeronautics:pink_envelope create:deploying minecraft:pink_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_purple | create:deploying | aeronautics:purple_envelope create:deploying minecraft:purple_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_red | create:deploying | aeronautics:red_envelope create:deploying minecraft:red_wool minecraft:stick
+aeronautics:deploying/deploying_envelope_white | create:deploying | aeronautics:white_envelope create:deploying minecraft:stick minecraft:white_wool
+aeronautics:deploying/deploying_envelope_yellow | create:deploying | aeronautics:yellow_envelope create:deploying minecraft:stick minecraft:yellow_wool
+aeronautics:gray_envelope | minecraft:crafting_shaped | aeronautics:gray_envelope minecraft:crafting_shaped minecraft:gray_wool minecraft:stick
+aeronautics:green_envelope | minecraft:crafting_shaped | aeronautics:green_envelope minecraft:crafting_shaped minecraft:green_wool minecraft:stick
+aeronautics:gyroscopic_propeller_bearing | minecraft:crafting_shaped | aeronautics:gyroscopic_propeller_bearing create:brass_casing minecraft:crafting_shaped minecraft:wooden_slabs simulated:gyroscopic_mechanism
+aeronautics:light_blue_envelope | minecraft:crafting_shaped | aeronautics:light_blue_envelope minecraft:crafting_shaped minecraft:light_blue_wool minecraft:stick
+aeronautics:light_gray_envelope | minecraft:crafting_shaped | aeronautics:light_gray_envelope minecraft:crafting_shaped minecraft:light_gray_wool minecraft:stick
+aeronautics:lime_envelope | minecraft:crafting_shaped | aeronautics:lime_envelope minecraft:crafting_shaped minecraft:lime_wool minecraft:stick
+aeronautics:magenta_envelope | minecraft:crafting_shaped | aeronautics:magenta_envelope minecraft:crafting_shaped minecraft:magenta_wool minecraft:stick
+aeronautics:mechanical_crafting/mounted_potato_cannon | create:mechanical_crafting | aeronautics:mounted_potato_cannon create:cogwheel create:copper_sheet create:fluid_pipe create:mechanical_crafting minecraft:dried_kelp_block minecraft:redstone
+aeronautics:mixing/levitite_blend | create:mixing | aeronautics:end_stone_powder aeronautics:levitite_blend c:water create:mixing create:zinc_nugget neoforge:tag
+aeronautics:orange_envelope | minecraft:crafting_shaped | aeronautics:orange_envelope minecraft:crafting_shaped minecraft:orange_wool minecraft:stick
+aeronautics:pink_envelope | minecraft:crafting_shaped | aeronautics:pink_envelope minecraft:crafting_shaped minecraft:pink_wool minecraft:stick
+aeronautics:propeller_bearing | minecraft:crafting_shaped | aeronautics:propeller_bearing create:brass_casing create:iron_sheet minecraft:crafting_shaped minecraft:wooden_slabs
+aeronautics:purple_envelope | minecraft:crafting_shaped | aeronautics:purple_envelope minecraft:crafting_shaped minecraft:purple_wool minecraft:stick
+aeronautics:red_envelope | minecraft:crafting_shaped | aeronautics:red_envelope minecraft:crafting_shaped minecraft:red_wool minecraft:stick
+aeronautics:smart_propeller | minecraft:crafting_shaped | aeronautics:smart_propeller create:brass_casing create:propeller minecraft:crafting_shaped simulated:gyroscopic_mechanism
+aeronautics:splashing/envelope_washing | create:splashing | aeronautics:shaftless_envelope aeronautics:white_envelope create:splashing
+aeronautics:steam_vent | minecraft:crafting_shaped | aeronautics:steam_vent c:plates/gold minecraft:copper_block minecraft:crafting_shaped
+aeronautics:white_envelope | minecraft:crafting_shaped | aeronautics:white_envelope minecraft:crafting_shaped minecraft:stick minecraft:white_wool
+aeronautics:wooden_propeller_from_andesite | minecraft:crafting_shapeless | aeronautics:andesite_propeller aeronautics:wooden_propeller minecraft:crafting_shapeless
+aeronautics:yellow_envelope | minecraft:crafting_shaped | aeronautics:yellow_envelope minecraft:crafting_shaped minecraft:stick minecraft:yellow_wool
