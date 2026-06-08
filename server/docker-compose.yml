@@ -20,15 +20,15 @@ services:
       - NEOFORGE_VERSION=${NEOFORGE_VERSION}
       - PACKWIZ_URL=${PACKWIZ_URL}
 
-      # JVM - Aikar/G1 at a fixed 32G heap.
-      # NOTE: scripts/build-server.sh in the pack repo deliberately uses
-      # Generational ZGC at this heap size and argues it suits the server's
-      # allocation rate better than G1. To match it: set USE_AIKAR_FLAGS=false
-      # and JVM_OPTS to the ZGC flags. Left on Aikar here to preserve current
-      # runtime behaviour - pick one of the two on purpose.
-      - USE_AIKAR_FLAGS=true
+      # JVM - Generational ZGC at a fixed 32G heap, matching scripts/build-server.sh
+      # in the pack repo (ZGC's sub-millisecond pauses suit the server's high
+      # allocation rate better than G1 at this heap size). INIT/MAX_MEMORY supply
+      # -Xms/-Xmx, so the ZGC flags go in JVM_XX_OPTS and must NOT repeat the heap
+      # size. -XX:+ZGenerational is required on Java 21 (default from Java 23+).
+      - USE_AIKAR_FLAGS=false
       - INIT_MEMORY=32G
       - MAX_MEMORY=32G
+      - JVM_XX_OPTS=-XX:+UseZGC -XX:+ZGenerational -XX:+AlwaysPreTouch -XX:+ParallelRefProcEnabled -XX:+DisableExplicitGC -XX:+PerfDisableSharedMem
 
       # Gameplay
       - VIEW_DISTANCE=10

@@ -94,8 +94,9 @@ rm    .pause-auto-update     # resume
   config uses the canonical org path.
 - **`NEOFORGE_VERSION` and `PACKWIZ_URL` are script-owned.** Don't hand-edit them
   in `.env` or hard-code them in compose — change `CHANNEL`/`BRANCH_REF` instead.
-- **JVM flags:** compose keeps Aikar/G1; `scripts/build-server.sh` in the pack
-  repo argues for Generational ZGC at 32G. They disagree — pick one deliberately
-  (see the comment in `docker-compose.yml`).
+- **JVM flags:** compose uses Generational ZGC at 32G, matching
+  `scripts/build-server.sh` in the pack repo. Heap comes from `INIT_MEMORY` /
+  `MAX_MEMORY`; the ZGC flags live in `JVM_XX_OPTS` (`-XX:+ZGenerational` is
+  required on Java 21), and `USE_AIKAR_FLAGS=false` so G1's flags aren't re-added.
 - **Healthcheck command:** `mc-health` ships in itzg images. If a future image
   tag drops it, switch the `test` to `["CMD", "mc-monitor", "status"]`.
