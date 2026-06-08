@@ -3,7 +3,7 @@
 // MFFS already plugs into the spine via `#c:ingots/steel` (Create-routed in this pack), but its
 // real MACHINES — the force-field projector, the Fortron generator/capacitor, the interdiction
 // matrix — are endgame tech that still crafted on a plain table. So gate by COMPLEXITY, the way
-// Northstar already does (simple gear = a part gate; complex machines = real Create METHODS):
+// the pack gates other complex tech (simple gear = a part gate; complex machines = real Create METHODS):
 //
 //   - focus_matrix (the field-focus component shared by every module): one precision gate
 //     (create:electron_tube). Cheap, and it flows to all the simple modules — no need to touch

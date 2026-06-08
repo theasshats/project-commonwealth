@@ -806,15 +806,11 @@ hash = "2b673631bea97d168d5a2c1459b137de9dfbb97d7c96242388a2cfd02d913a0b"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/35-web-bridges.js"
-hash = "2d93e09f246e49a0fc9280d3f786c47386fb15e5aeaddbb606be36426a8c2021"
+hash = "cd124041c810768cfc851e91296fd7cbbdce534e61df1211cbd8168a6582370b"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/36-magic-web-create.js"
 hash = "1fece23f5484582034f2498ebb2363e67ec17f61c905246c14205e4cf093e262"
-
-[[files]]
-file = "kubejs/server_scripts/recipes/40-northstar.js"
-hash = "bbb8f2608e3ce17746d287e91decc614c855457f7952dafbf91f9c38c8353831"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/50-irons-spellbooks.js"
@@ -822,7 +818,7 @@ hash = "6376950f93ae8130902a9fb8f2b80125285186e8309ebbbb184385576597f503"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/60-mffs.js"
-hash = "a0f5652cd8608129968b29ae2300459810a228ce1fddcb67328ff8b89dd17364"
+hash = "dbf696dbbc321a6e59df8faacd84c7cbd5dcfa22a21262f66d86f439ae416b2a"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/80-securitycraft.js"
@@ -2132,11 +2128,6 @@ metafile = true
 [[files]]
 file = "mods/no-chat-reports.pw.toml"
 hash = "5da18814472be5dc93a21886983646da3a7236413800075ac75229be82d114fa"
-metafile = true
-
-[[files]]
-file = "mods/northstar-redux.pw.toml"
-hash = "4d7e9989b35a90db762ee26254bd0b52bb28f0d959bd557ae4dc7a4dc1caa362"
 metafile = true
 
 [[files]]
