@@ -2515,11 +2515,6 @@ hash = "3c416c5edc0e545bac325bc1461e63097e82c541f19ce936dbde6c3590e85f26"
 metafile = true
 
 [[files]]
-file = "mods/too-many-paintings.pw.toml"
-hash = "c09c8f64907a8fa87e60d049b0d480c04c3b0427c5e888fc975a026b345e8372"
-metafile = true
-
-[[files]]
 file = "mods/touhou-little-maid.pw.toml"
 hash = "f3cf6caa22a19e0993cac2299ad3c3e84f9c104a8cae49d57e1d4f3c9d1bf1f6"
 metafile = true
