@@ -1665,11 +1665,6 @@ hash = "73360e397134d238ee8fd21d33fd7f9275e9441f74f8f1b6ed92278877c0b9f1"
 metafile = true
 
 [[files]]
-file = "mods/fishing-real.pw.toml"
-hash = "c1e4014b420a33cf7fb761c45b89b44ede1895cb564f9bf4ca9a219311e5dcd2"
-metafile = true
-
-[[files]]
 file = "mods/fogoverrides.pw.toml"
 hash = "c606979a21f66881ab4fee933d39690b15623cce504946902c5998f74e293969"
 metafile = true
