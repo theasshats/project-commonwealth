@@ -1,103 +1,97 @@
-# Derpack X — server deploy (ishimura)
+# Derpack X — Server
 
-Deploy config for the Derpack X Minecraft server: an `itzg/minecraft-server`
-compose stack plus `auto-update.sh`, which tracks the pack and keeps the box in
-sync. Generated from `scripts/server-repo/` in the pack repo
-(`derpack-org/Derpack-X`) by `scripts/build-server-repo.sh` — edit it there, not
-here. Deploy is by hand on the box; nothing here runs in CI.
+Deploy configuration for running a [Derpack X](https://github.com/derpack-org/Derpack-X)
+server. It pairs a Docker Compose stack (NeoForge 1.21.1, via the
+`itzg/minecraft-server` image) with an update script that keeps the server's
+loader and mods pinned to a single, consistent version of the pack.
 
-## The one invariant
+## Requirements
 
-**The NeoForge loader and the mod set are always resolved from the *same*
-immutable commit, and pinned together.** `auto-update.sh` resolves one commit
-from the tracked channel, reads `pack.toml` at that commit, and writes both
-`NEOFORGE_VERSION` and a commit-pinned `PACKWIZ_URL` into `.env` in one step.
+- A Linux host with Docker and the Docker Compose plugin.
+- Outbound internet access — mods are downloaded from Modrinth and CurseForge on
+  first start.
+- Memory for a large modpack. The defaults request a fixed 32 GB heap; lower
+  `INIT_MEMORY` / `MAX_MEMORY` in `docker-compose.yml` to suit your host (8 GB is
+  a practical minimum).
 
-This is the fix for the failure that prompted the overhaul: previously NeoForge
-came from `.env` (changed only by the cron script) while mods floated on `main`
-and re-synced on *every* container start. Any restart not driven by the script —
-reboot, OOM, crash-loop, manual `up` — pulled a newer mod set against the old
-loader, which is how the box ended up running NeoForge `21.1.228` while the pack
-required `21.1.233`. With both values pinned to one commit, a restart can't
-desync them.
+Java is supplied by the container image — you do not install it yourself.
 
-NeoForge is still a **human decision made in the pack repo's `pack.toml`**. The
-script only *mirrors* it onto the box — it never bumps `pack.toml`.
-
-## Channels
-
-- `release` — track the latest published `vX.Y.Z` GitHub release. **Production.**
-- `branch` — track the tip of a branch (e.g. `v0.7.0`). **Dev / playtest.**
-
-Set `CHANNEL` (and `BRANCH_REF`) in `.env`, or override per-run:
-`./auto-update.sh --channel release` / `./auto-update.sh --branch v0.7.0`.
-
-## Box layout
-
-```
-/home/Minecraft/Derpack-X/
-├── docker-compose.yml      # from this dir
-├── auto-update.sh          # from this dir (chmod +x)
-├── .env                    # from .env.example; managed by the script
-├── data/                   # bind mount: world, mods, configs (itzg-managed)
-└── auto-update.log
-```
-
-## First-time setup
+## Quick start
 
 ```bash
-cd /home/Minecraft/Derpack-X
+git clone https://github.com/derpack-org/derpack-server.git
+cd derpack-server
 cp .env.example .env
-# edit .env: CHANNEL, BRANCH_REF, and a real RCON_PASSWORD (openssl rand -hex 24)
-chmod +x auto-update.sh
-./auto-update.sh --now        # resolves the channel, pins .env, deploys
 ```
 
-Cron (every 15 min; a no-op unless the tracked commit moved):
+Edit `.env`: set `WHITELIST` and `OPS` to the players who may join and who should
+be operators (comma-separated), and set `RCON_PASSWORD` to a value of your own
+(for example `openssl rand -hex 24`). The defaults track the latest stable
+Derpack X release.
 
-```
-*/15 * * * * /home/Minecraft/Derpack-X/auto-update.sh >> /home/Minecraft/Derpack-X/auto-update.log 2>&1
-```
-
-## Run the v0.7.0 branch for playtesting right now
+Start the server:
 
 ```bash
-cd /home/Minecraft/Derpack-X
-# .env: CHANNEL=branch, BRANCH_REF=v0.7.0
 ./auto-update.sh --now
 ```
 
-To return to production later: set `CHANNEL=release` in `.env` and run
-`./auto-update.sh --now` (deploys the latest release tag).
+The first start installs NeoForge, downloads the pack's mods, and generates the
+world — allow several minutes. Follow along with `docker compose logs -f`; the
+server is ready when the log shows `Done (…)! For help, type "help"`.
 
-## How a deploy is judged
+## Updating
 
-`docker compose up -d --force-recreate`, then poll the container's **real**
-healthcheck (`State.Health.Status`) for up to 25 min — a cold first boot does a
-full NeoForge install + packwiz mod sync + worldgen, so the window is generous.
-A deploy that boots but crash-loops or never reports healthy is **rolled back**:
-the script restores the previous `.env` (previous commit, previous loader) and
-re-deploys it, because that commit's content is still pinned and reachable. Watch
-a live deploy with `docker compose logs -f` (look for `Done (NN.Ns)! For help`).
+Run `./auto-update.sh` to apply any new version of the pack. It announces the
+restart to players over RCON, recreates the container, and waits for the server
+to report healthy — and it is a no-op when nothing has changed. Add `--now` to
+skip the announcement countdown.
 
-## Controls
+To keep the server current automatically, add it to cron:
 
-```bash
-touch .pause-auto-update     # pause the cron (it skips while this exists)
-rm    .pause-auto-update     # resume
-./auto-update.sh --now       # deploy the tracked commit immediately, no countdown
+```cron
+*/15 * * * * /path/to/derpack-server/auto-update.sh >> /path/to/derpack-server/auto-update.log 2>&1
 ```
 
-## Notes / gotchas
+Pause automatic updates with `touch .pause-auto-update`; resume by deleting that
+file.
 
-- **Owner is `derpack-org`,** not the old `Xela112233`. The old raw URLs still
-  redirect today but will break the moment that account name is reused; this
-  config uses the canonical org path.
-- **`NEOFORGE_VERSION` and `PACKWIZ_URL` are script-owned.** Don't hand-edit them
-  in `.env` or hard-code them in compose — change `CHANNEL`/`BRANCH_REF` instead.
-- **JVM flags:** compose uses Generational ZGC at 32G, matching
-  `scripts/build-server.sh` in the pack repo. Heap comes from `INIT_MEMORY` /
-  `MAX_MEMORY`; the ZGC flags live in `JVM_XX_OPTS` (`-XX:+ZGenerational` is
-  required on Java 21), and `USE_AIKAR_FLAGS=false` so G1's flags aren't re-added.
-- **Healthcheck command:** `mc-health` ships in itzg images. If a future image
-  tag drops it, switch the `test` to `["CMD", "mc-monitor", "status"]`.
+## Channels
+
+Set in `.env`:
+
+- `CHANNEL=release` — track the latest published Derpack X release. Recommended
+  for normal play.
+- `CHANNEL=branch` with `BRANCH_REF=<branch>` — track a development branch, for
+  playtesting an upcoming version.
+
+`auto-update.sh` resolves the channel to one commit, reads the pack's `pack.toml`
+at that commit, and pins both the NeoForge version and the mod set together.
+Because the loader and mods always come from the same commit, a restart cannot
+leave them mismatched, and a version that fails to start healthy is rolled back
+to the previous one automatically.
+
+## Configuration
+
+In `.env` (operator settings):
+
+- `WHITELIST`, `OPS` — comma-separated player names.
+- `CHANNEL` / `BRANCH_REF` — which version to track (see Channels).
+- `RCON_PASSWORD`.
+
+In `docker-compose.yml`:
+
+- The published port — the host side of `25568:25565` (change the left value).
+- `INIT_MEMORY`, `MAX_MEMORY` — heap size.
+- `DIFFICULTY`, `VIEW_DISTANCE`, and the full range of
+  [itzg/minecraft-server](https://docker-minecraft-server.readthedocs.io/)
+  options.
+
+`NEOFORGE_VERSION` and `PACKWIZ_URL` are written by `auto-update.sh` and should
+not be edited by hand.
+
+## Notes
+
+- The server runs on Generational ZGC with a fixed heap (Java 21).
+- Shaders are a client-side option and have no effect on the server.
+- This configuration is maintained in the
+  [Derpack X](https://github.com/derpack-org/Derpack-X) pack repository.

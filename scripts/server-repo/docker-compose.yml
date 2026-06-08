@@ -34,11 +34,11 @@ services:
       - VIEW_DISTANCE=10
       - DIFFICULTY=normal
 
-      # Access
+      # Access - WHITELIST and OPS are set per-operator in .env (not committed).
       - ENABLE_WHITELIST=TRUE
       - ENFORCE_WHITELIST=TRUE
-      - WHITELIST=xela112233,zagwar
-      - OPS=xela112233,zagwar
+      - WHITELIST=${WHITELIST}
+      - OPS=${OPS}
 
       # RCON - internal only; not exposed to the host. auto-update.sh uses it via
       # `docker exec derpack-x-mc rcon-cli` to warn players and flush the world.

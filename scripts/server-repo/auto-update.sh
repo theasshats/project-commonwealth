@@ -143,17 +143,19 @@ write_env() {
     local tmp; tmp=$(mktemp)
     cat > "$tmp" <<EOF
 # Managed by auto-update.sh.
-# CHANNEL, BRANCH_REF and RCON_PASSWORD are operator inputs, preserved across
-# runs. The rest are resolved from the deployed commit and rewritten on every
-# successful update - do not hand-edit them; change CHANNEL/BRANCH_REF and let
-# the script redeploy.
+# The operator fields (CHANNEL, BRANCH_REF, WHITELIST, OPS, RCON_PASSWORD) are
+# preserved across runs. The rest are resolved from the deployed commit and
+# rewritten on every successful update - do not hand-edit those; change the
+# operator fields and let the script redeploy.
 CHANNEL=${CHANNEL}
 BRANCH_REF=${BRANCH_REF}
+WHITELIST=${WHITELIST}
+OPS=${OPS}
+RCON_PASSWORD=${RCON_PASSWORD}
 NEOFORGE_VERSION=${NEOFORGE_VERSION}
 PACKWIZ_URL=${PACKWIZ_URL}
 DEPLOYED_SHA=${DEPLOYED_SHA}
 DEPLOYED_VERSION=${DEPLOYED_VERSION}
-RCON_PASSWORD=${RCON_PASSWORD}
 EOF
     chmod 600 "$tmp"; mv "$tmp" "$ENV_FILE"
 }
@@ -196,8 +198,9 @@ fi
 
 # First-run bootstrap.
 if [[ ! -f "$ENV_FILE" ]]; then
-    log "First run: creating $ENV_FILE (channel=branch, ref=v0.7.0)."
-    CHANNEL="branch"; BRANCH_REF="v0.7.0"
+    log "First run: creating $ENV_FILE (channel=release). Set WHITELIST/OPS in it."
+    CHANNEL="release"; BRANCH_REF="v0.7.0"
+    WHITELIST=""; OPS=""
     NEOFORGE_VERSION=""; PACKWIZ_URL=""; DEPLOYED_SHA=""; DEPLOYED_VERSION=""
     RCON_PASSWORD=$(openssl rand -hex 24 2>/dev/null || head -c 32 /dev/urandom | base64 | tr -d '\n+/=')
     write_env
@@ -207,8 +210,9 @@ mkdir -p "${PACK_DIR}/data"
 # Load state.
 # shellcheck disable=SC1090
 source "$ENV_FILE"
-: "${CHANNEL:=branch}" "${BRANCH_REF:=v0.7.0}"
+: "${CHANNEL:=release}" "${BRANCH_REF:=v0.7.0}" "${WHITELIST:=}" "${OPS:=}"
 [[ -n "${RCON_PASSWORD:-}" ]] || fail "RCON_PASSWORD missing from $ENV_FILE"
+[[ -n "$WHITELIST" ]] || log "WARNING: WHITELIST is empty - with enforcement on, no one can join. Set it in .env."
 DEPLOYED_SHA="${DEPLOYED_SHA:-}"
 NEOFORGE_VERSION="${NEOFORGE_VERSION:-}"
 [[ -n "$CLI_CHANNEL" ]] && CHANNEL="$CLI_CHANNEL"

@@ -66,21 +66,41 @@ echo "    Repo root contents:"
 if [[ "${PUSH}" == "true" ]]; then
     command -v gh >/dev/null 2>&1 \
         || { echo "ERROR: gh (GitHub CLI) not found. Install it, or push ${OUT_ZIP} by hand." >&2; exit 1; }
-    echo "==> Creating ${ORG_REPO} (${VIS}) and pushing the bundle..."
-    (
-        cd "${OUT_DIR}"
-        git init -q -b main
-        git add -A
-        # Persist the executable bit in the commit even when built on Windows
-        # (where the filesystem has no +x), so the box's clone can run it directly.
-        git update-index --add --chmod=+x auto-update.sh
-        git commit -q -m "Initial deploy config (from Derpack-X/scripts/server-repo)"
-        gh repo create "${ORG_REPO}" "--${VIS}" \
-            -d "Deploy config for the Derpack X server (ishimura)" \
-            --source=. --remote=origin --push
-    )
+    if gh repo view "${ORG_REPO}" >/dev/null 2>&1; then
+        echo "==> ${ORG_REPO} exists — syncing the bundle into it..."
+        WORK="$(mktemp -d)"
+        gh repo clone "${ORG_REPO}" "${WORK}" -- -q
+        cp -a "${OUT_DIR}/." "${WORK}/"          # overlay built files; keeps the clone's .git
+        (
+            cd "${WORK}"
+            git add -A
+            git update-index --add --chmod=+x auto-update.sh 2>/dev/null || true
+            if git diff --cached --quiet; then
+                echo "    Already up to date — nothing to push."
+            else
+                git commit -q -m "Sync deploy config from Derpack-X"
+                git push -q
+                echo "    Pushed update."
+            fi
+        )
+        rm -rf "${WORK}"
+    else
+        echo "==> Creating ${ORG_REPO} (${VIS}) and pushing the bundle..."
+        (
+            cd "${OUT_DIR}"
+            git init -q -b main
+            git add -A
+            # Persist the executable bit even when built on Windows (no +x on the
+            # filesystem), so the box's clone can run auto-update.sh directly.
+            git update-index --add --chmod=+x auto-update.sh
+            git commit -q -m "Initial deploy config (from Derpack-X/scripts/server-repo)"
+            gh repo create "${ORG_REPO}" "--${VIS}" \
+                -d "Deploy config for a Derpack X Minecraft server" \
+                --source=. --remote=origin --push
+        )
+    fi
     echo "==> Done: https://github.com/${ORG_REPO}"
-    echo "    Next: delete scripts/server-repo/ and scripts/build-server-repo.sh from the pack repo."
+    echo "    Once deployed, you can delete scripts/server-repo/ + scripts/build-server-repo.sh from the pack repo."
 else
     echo "    (no --push: bundle only. Add --push to create ${ORG_REPO} via gh.)"
 fi
