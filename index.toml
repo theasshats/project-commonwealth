@@ -878,7 +878,7 @@ hash = "7761b2b266e0a1a4e1a046e784e1fc960cefc5c77a5cfc0155c2f03ea6cfbed7"
 
 [[files]]
 file = "kubejs/server_scripts/spine/00-tiers.js"
-hash = "7b49c22303cf8bc36d04c429beaf368553f9d566196d7722b027d9012b74f6a3"
+hash = "2ea10b5338fc371a3c7d39248afaa27698171417091cdb72fdd44fd6f1a34fa4"
 
 [[files]]
 file = "kubejs/server_scripts/spine/05-tags.js"
@@ -890,15 +890,15 @@ hash = "99c82d9442ecf093e23809b8478a8ea276c51a98c5c39590b40f7a6819730726"
 
 [[files]]
 file = "kubejs/server_scripts/spine/20-power-ladder.js"
-hash = "2a084fafe026a9c8399f5536e47f976dec38aa735fe9582f028a7b157aa5fc28"
+hash = "06186e2bf574e7e738fb4b62e37ec52028f6a598941e6ecf12fcf064bf011a76"
 
 [[files]]
 file = "kubejs/server_scripts/spine/30-cost-basics.js"
-hash = "0cb02cfef7e1462a943e0c0d259774e1d6908f588fc501e1afb3b2d15e3a7138"
+hash = "11c860e5a3f0219049ca2a5559c5f6070edf97869f0fb8cfe047a04873ddfa2d"
 
 [[files]]
 file = "kubejs/server_scripts/spine/40-gates.js"
-hash = "ff9a9f02d9aa7f74e545d55669573385b2b629956555613315072ec1a79ab06f"
+hash = "01b549720a516e4a07302dcbb5de5f491db7e79c4a8ef5adb3d6f13d16fe863a"
 
 [[files]]
 file = "kubejs/server_scripts/spine/50-cross-tier.js"
