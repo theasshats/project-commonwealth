@@ -18,7 +18,7 @@ hash = "37f013c49586db025c17f9fa6657c6f239e0169ebc97ef682ff114a2ede43c5e"
 
 [[files]]
 file = "config/almostunified/tags.json"
-hash = "ae21856320bd068d0498b5fc3ae8c49d3102453ba274e7b0fee034392fc2f577"
+hash = "6db69bf90129cced7c224a0bf969dc331299c45017d1fce3d13d00e095a3af34"
 
 [[files]]
 file = "config/almostunified/unification/materials.json"
@@ -701,74 +701,6 @@ file = "kubejs/data/occultism/neoforge/biome_modifier/add_ore_silver_deepslate.j
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/create/raw_zinc_from_deepslate_ore.json"
-hash = "a68d490766efcdea622dec4b19349f097d976503d9eda6972aa137b258fa19e2"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/create/raw_zinc_from_ore.json"
-hash = "b19cab015b385867f133a1db88de9c5aa748411800b95431a996f58915539d23"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/irons_spellbooks/raw_mithril_from_deepslate_ore.json"
-hash = "fd2a6c30682182f57ffc2789a25af9deb365589a52a80fc6d47d4ef56d76c55c"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/irons_spellbooks/raw_mithril_from_ore.json"
-hash = "1bc848f7585e7565c5bc7e339fb24fc14dd0b74e61bbaab4a119b0b495e0354a"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/occultism/otherworld_log.json"
-hash = "2e54aa82825d4d1a6f25d910722c5fd65967f96f427c2378bfd93b18704f4178"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/occultism/otherworld_wood.json"
-hash = "d978f3e173647c6cd14e3bc02186ed2cb784042f267890f22edc4c3fe90390f0"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/occultism/raw_iesnium_from_ore.json"
-hash = "341d325948f9a9a1e67fd386bf8cd2d6104ed35e43b572cf0f1bea01238191d2"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/occultism/raw_silver_from_deepslate_ore.json"
-hash = "4aedd71df1a3b509f1d05a9c790e17b1dab185fdc6e1b9ec164273b00b947063"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/occultism/raw_silver_from_ore.json"
-hash = "39ae53d57c85ca000a21c075dc3e2460c3d85fae25e78f39e84c543fb82a90ef"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/tfmg/raw_lead_from_deepslate_ore.json"
-hash = "319fa3db0e58730d560e56ee2d99448da4c60d36dae4d9db6afcd6ca1b49abe9"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/tfmg/raw_lead_from_ore.json"
-hash = "fdb5a4d54d475ac9232aa101a19557d4d7c397f55f45158ad26adc7fe8a1c673"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/tfmg/raw_lithium_from_deepslate_ore.json"
-hash = "f50e64a3cbf2d9b1240459c5574ba4a579a928746e0e5bcab1a90cb53fd07bb5"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/tfmg/raw_lithium_from_ore.json"
-hash = "2d4a11d0befc4606a237141b472eec6ea1896b7f16f7613d076c32faff6a9ca6"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/tfmg/raw_nickel_from_deepslate_ore.json"
-hash = "667ba1f8b72397331635425d45548fe2b0e764a8f7ddb50bccf9d406b5f11f48"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/tfmg/raw_nickel_from_ore.json"
-hash = "9f752fbff85ba3aa3e2476dd42126a32d2c7ddbb75e105b652eabd9813a153ae"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/vinery/dark_cherry_log.json"
-hash = "fce681ed19eaf7a72f24095626ca43df33e01206675a5ccdc44ca82b89def2bf"
-
-[[files]]
-file = "kubejs/data/recipe_integration/recipe/farm_and_charm/mincer/vinery/dark_cherry_wood.json"
-hash = "7cd48250646781f2f7a95ba61b29a3db33ef6fe334a77628a20e204a6571c96e"
-
-[[files]]
 file = "kubejs/data/samurai_dynasty/loot_table/blocks/kawauso_statue.json"
 hash = "9a78c97269819ebddf31729a78d12108cf952ec1814e2a63bf3ac7363f44d10c"
 
@@ -923,10 +855,6 @@ hash = "12ef3675dfe7625404ef5e49f8f11ad877f60136918334fcb99a1ce823cac21b"
 [[files]]
 file = "kubejs/server_scripts/recipes/98-minecolonies.js"
 hash = "503ba2fd0732ccb18acba32adc5e7c8f074b82c801e912f4b5dba4a82d776b40"
-
-[[files]]
-file = "kubejs/server_scripts/recipes/99-meadow-cheese.js"
-hash = "8142b4ddd8db3447133aa357d41654dc2af74908f9337a25375097895bc2d25a"
 
 [[files]]
 file = "kubejs/server_scripts/remove-default-tacz-guns.js"
@@ -1492,6 +1420,11 @@ hash = "34d808989e71221b8e01a44bc8031f20af1c94981acb0cba4669e0e58be69629"
 metafile = true
 
 [[files]]
+file = "mods/create-winery.pw.toml"
+hash = "0494165f772354b6796a0a5869f07afacf178519e888ab0450da3d4865d2a692"
+metafile = true
+
+[[files]]
 file = "mods/create.pw.toml"
 hash = "dcaf5f2e28db0b9a127d0167456832341045ddc9aec058c3d9fcf53f618d2404"
 metafile = true
@@ -1972,33 +1905,8 @@ hash = "710aceee1b9896d40fbba7da87d8f14cca0b29d32a75ad85abeab9f64d6b384a"
 metafile = true
 
 [[files]]
-file = "mods/lets-do-addon-compat.pw.toml"
-hash = "73fd079686b7fe5c45c08ac2b08cf414080a323cc966231bf5ddfbb1126760fb"
-metafile = true
-
-[[files]]
-file = "mods/lets-do-bakery-farmcharm-compat.pw.toml"
-hash = "bcc419e665600b7ae3351478c159477c6a4b3d59b08e7da73499dbc929812385"
-metafile = true
-
-[[files]]
 file = "mods/lets-do-beachparty.pw.toml"
 hash = "64a5531d7aacebc6ad691f76e108938cd0d84d5e5b927b7eac3dcdb38a3dbe87"
-metafile = true
-
-[[files]]
-file = "mods/lets-do-farm-charm.pw.toml"
-hash = "139243c0b47a2d89147289b8d9ef91178c1c2511f3060e00e3699d0e3adb226b"
-metafile = true
-
-[[files]]
-file = "mods/lets-do-meadow.pw.toml"
-hash = "98929c2d2368656d039c75d32612333edf4838ce95b84c7191d01021e3cde6fb"
-metafile = true
-
-[[files]]
-file = "mods/lets-do-vinery.pw.toml"
-hash = "535e8e9c6bc184e9771cf4e35795c8f162d89abeb5b9aed9c2ea2988c710776f"
 metafile = true
 
 [[files]]

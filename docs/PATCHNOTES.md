@@ -7,6 +7,28 @@
 
 _Draft placeholder — replace with real notes before release._
 
+### Curation
+
+The Let's Do mod family has been trimmed. Vinery, Meadow, Bakery, and Farm & Charm (with their
+compatibility add-ons) have been removed; their food and cooking content overlapped existing mods, and
+the cross-mod ore-processing recipes that relied on Farm & Charm's mincer have been retired. Let's Do
+Beachparty is kept — its beach and tiki furniture is not covered by any other mod in the pack.
+
+Wine-making returns through Create: Winery, which routes the whole process through Create machines rather
+than its own. It adds:
+
+- Crops: Red Grapes and White Grapes, growing on red and white grape bushes (found in plains and forest
+  biomes).
+- Storage: Red Grape Crate and White Grape Crate.
+- Processing: grapes are pressed (Mechanical Press) into Red and White Grape Pomace; apples press into
+  Apple Must.
+- Workstation: the Wine Cellar, an automatable block that matures pomace and must into finished drinks.
+- Wines: Cabernet Sauvignon, Merlot, Pinot Noir, Zinfandel, and Bordeaux (red); Chardonnay, Riesling,
+  and Champaign (white); and Rosé (a red and white blend) — each matured in the Wine Cellar and carrying
+  a light tipsy effect.
+- Cider: fermented from apple must.
+- Juices: Grape Juice and Apple Juice — non-alcoholic, granting a short Speed effect.
+
 ## 0.6.0 — Foundation
 
 This release concentrates on performance and maintenance: a new renderer, a full pass of mod updates,
