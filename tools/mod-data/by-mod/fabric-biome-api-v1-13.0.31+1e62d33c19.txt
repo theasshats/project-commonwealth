@@ -1,0 +1,24 @@
+# fabric-biome-api-v1-13.0.31+1e62d33c19
+bundled-in: txnilib-neoforge-1.0.24-1.21.1
+
+## mod metadata (id / version / deps)
+license = "Apache-2.0"
+modId = "fabric_biome_api_v1"
+version = "${file.jarVersion}"
+displayName = "Forgified Fabric Biome API (v1)"
+modId = "neoforge"
+versionRange = "[21.1.169,)"
+modId = "minecraft"
+versionRange = "[1.21.1,1.22)"
+
+## blocks
+
+
+## items
+
+
+## neoforge biome_modifiers
+fabric_biome_modifier_instance.json :: {"type": "fabric_biome_api_v1:fabric_biome_modifier"}
+
+## c: common tag membership
+
