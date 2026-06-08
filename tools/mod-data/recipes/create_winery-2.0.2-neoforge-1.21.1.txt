@@ -1,0 +1,28 @@
+create_winery:apple_juice_recipe | minecraft:crafting_shaped | create_winery:apple_juice create_winery:apple_must minecraft:crafting_shaped minecraft:sugar
+create_winery:apple_must_recipe | minecraft:crafting_shaped | create_winery:apple_must minecraft:apple minecraft:crafting_shaped
+create_winery:bordeaux_recipe | create_winery:maturing | create_winery:bordeaux create_winery:maturing create_winery:red_grape_pomace
+create_winery:cabernet_sauvignon_recipe | create_winery:maturing | create_winery:cabernet_sauvignon create_winery:maturing create_winery:red_grape_pomace
+create_winery:champaign_recipe | create_winery:maturing | create_winery:champaign create_winery:maturing create_winery:white_grape_pomace
+create_winery:chardonnay_recipe | create_winery:maturing | create_winery:chardonnay create_winery:maturing create_winery:white_grape_pomace
+create_winery:cider_recipe | create_winery:maturing | create_winery:apple_must create_winery:cider create_winery:maturing
+create_winery:create/compacting_apples | create:compacting | create:compacting create_winery:apple_must minecraft:apple
+create_winery:create/compacting_red_grapes | create:compacting | create:compacting create_winery:red_grape_pomace create_winery:red_grapes
+create_winery:create/compacting_white_grapes | create:compacting | create:compacting create_winery:white_grape_pomace create_winery:white_grapes
+create_winery:create/mixing_apple_must | create:mixing | create:mixing create_winery:apple_juice create_winery:apple_must minecraft:sugar
+create_winery:create/mixing_grape_pomace | create:mixing | create:mixing create_winery:grape_juice create_winery:grape_pomaces minecraft:sugar
+create_winery:create/wine_cellar_recipe | minecraft:crafting_shaped | create:andesite_alloy create_winery:wine_cellar minecraft:crafting_shaped minecraft:planks minecraft:wooden_slabs
+create_winery:merlot_recipe | create_winery:maturing | create_winery:maturing create_winery:merlot create_winery:red_grape_pomace
+create_winery:pinot_noir_recipe | create_winery:maturing | create_winery:maturing create_winery:pinot_noir create_winery:red_grape_pomace
+create_winery:red_grape_crate_recipe | minecraft:crafting_shapeless | create_winery:red_grape_crate create_winery:red_grapes minecraft:crafting_shapeless
+create_winery:red_grape_crate_unpack | minecraft:crafting_shaped | create_winery:red_grape_crate create_winery:red_grapes minecraft:crafting_shaped
+create_winery:red_grape_juice_recipe | minecraft:crafting_shaped | create_winery:grape_juice create_winery:red_grape_pomace minecraft:crafting_shaped minecraft:sugar
+create_winery:red_grape_pomace_recipe | minecraft:crafting_shaped | create_winery:red_grape_pomace create_winery:red_grapes minecraft:crafting_shaped
+create_winery:riesling_recipe | create_winery:maturing | create_winery:maturing create_winery:riesling create_winery:white_grape_pomace
+create_winery:rose_recipe | create_winery:maturing_blend | create_winery:maturing_blend create_winery:red_grape_pomace create_winery:rose create_winery:white_grape_pomace
+create_winery:rose_recipe_2 | create_winery:maturing_blend | create_winery:maturing_blend create_winery:red_grape_pomace create_winery:rose create_winery:white_grape_pomace
+create_winery:white_grape_crate_recipe | minecraft:crafting_shapeless | create_winery:white_grape_crate create_winery:white_grapes minecraft:crafting_shapeless
+create_winery:white_grape_crate_unpack | minecraft:crafting_shaped | create_winery:white_grape_crate create_winery:white_grapes minecraft:crafting_shaped
+create_winery:white_grape_juice_recipe | minecraft:crafting_shaped | create_winery:grape_juice create_winery:white_grape_pomace minecraft:crafting_shaped minecraft:sugar
+create_winery:white_grape_pomace_recipe | minecraft:crafting_shaped | create_winery:white_grape_pomace create_winery:white_grapes minecraft:crafting_shaped
+create_winery:wine_cellar_recipe | minecraft:crafting_shaped | create_winery:wine_cellar minecraft:crafting_shaped minecraft:iron_ingot minecraft:planks minecraft:wooden_slabs
+create_winery:zinfandel_recipe | create_winery:maturing | create_winery:maturing create_winery:red_grape_pomace create_winery:zinfandel

@@ -1,0 +1,13 @@
+create_winery:blocks/red_grape_bush | minecraft:block | create_winery:blocks/red_grape_bush create_winery:red_grape_bush create_winery:red_grapes minecraft:apply_bonus minecraft:block minecraft:block_state_property minecraft:explosion_decay minecraft:fortune minecraft:item minecraft:set_count minecraft:uniform minecraft:uniform_bonus_count
+create_winery:blocks/red_grape_bush_stage_0 | minecraft:block | create_winery:blocks/red_grape_bush_stage_0 minecraft:block
+create_winery:blocks/red_grape_bush_stage_1 | minecraft:block | create_winery:blocks/red_grape_bush_stage_1 minecraft:block
+create_winery:blocks/red_grape_bush_stage_2 | minecraft:block | create_winery:blocks/red_grape_bush_stage_2 create_winery:red_grapes minecraft:block minecraft:item minecraft:survives_explosion
+create_winery:blocks/red_grape_bush_stage_3 | minecraft:block | create_winery:blocks/red_grape_bush_stage_3 create_winery:red_grapes minecraft:block minecraft:explosion_decay minecraft:item minecraft:set_count
+create_winery:blocks/red_grape_crate | minecraft:block | create_winery:blocks/red_grape_crate create_winery:red_grape_crate minecraft:block minecraft:item minecraft:survives_explosion
+create_winery:blocks/white_grape_bush | minecraft:block | create_winery:blocks/white_grape_bush create_winery:white_grape_bush create_winery:white_grapes minecraft:apply_bonus minecraft:block minecraft:block_state_property minecraft:explosion_decay minecraft:fortune minecraft:item minecraft:set_count minecraft:uniform minecraft:uniform_bonus_count
+create_winery:blocks/white_grape_bush_stage_0 | minecraft:block | create_winery:blocks/white_grape_bush_stage_0 minecraft:block
+create_winery:blocks/white_grape_bush_stage_1 | minecraft:block | create_winery:blocks/white_grape_bush_stage_1 minecraft:block
+create_winery:blocks/white_grape_bush_stage_2 | minecraft:block | create_winery:blocks/white_grape_bush_stage_2 create_winery:white_grapes minecraft:block minecraft:item minecraft:survives_explosion
+create_winery:blocks/white_grape_bush_stage_3 | minecraft:block | create_winery:blocks/white_grape_bush_stage_3 create_winery:white_grapes minecraft:block minecraft:explosion_decay minecraft:item minecraft:set_count
+create_winery:blocks/white_grape_crate | minecraft:block | create_winery:blocks/white_grape_crate create_winery:white_grape_crate minecraft:block minecraft:item minecraft:survives_explosion
+create_winery:blocks/wine_cellar | minecraft:block | create_winery:blocks/wine_cellar create_winery:wine_cellar minecraft:block minecraft:item minecraft:survives_explosion
