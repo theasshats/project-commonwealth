@@ -7,7 +7,7 @@
 //
 // Load-bearing rule: electricity is a CONVERTER, not a SOURCE. Audit (verified against tools/mod-data):
 
-global.SPINE_GENERATORS = {
+const SPINE_GENERATORS = {
   // CONVERTERS — plug into the ladder (SU<->FE or fuel->FE); leave as-is, you climbed rungs 1-3 to spin them.
   converter: [
     'createaddition:alternator',                 // kinetic SU -> FE (the canonical converter)
@@ -43,5 +43,5 @@ ServerEvents.recipes(event => {
 
   // Converters are deliberately untouched (preserving the alternator/motor SU->FE path = the ladder).
   // Steam (rung 3) and electric (rung 4) need no recipe edit — their dependency chains are the gate.
-  console.info(`[derpack-spine] power ladder resolved: ${global.SPINE_GENERATORS.converter.length} converters kept, ${global.SPINE_GENERATORS.free_source.length} free-sources cost-gated`)
+  console.info(`[derpack-spine] power ladder resolved: ${SPINE_GENERATORS.converter.length} converters kept, ${SPINE_GENERATORS.free_source.length} free-sources cost-gated`)
 })

@@ -9,7 +9,7 @@
 // rung-1 WATER WHEEL power stays UNGATED, so players are never hard-blocked from basic power; only the
 // windmill (rung 2) and the tier-key machines are gated. All recipe grids are tunable placeholders.
 
-global.SPINE_GATES = [
+const SPINE_GATES = [
   // T1 + T2 gates PULLED — early tiers are cost/scarcity-gated per the lineage; bosses start at T3.
 
   // T3 — ADVANCED electric behind ANY Frostmaw-equivalent Mowzie's boss (#derpack:mowzies_mid). Basic
@@ -41,6 +41,6 @@ global.SPINE_GATES = [
 ]
 
 ServerEvents.recipes(event => {
-  global.SPINE_GATES.forEach(g => { event.remove({ output: g.out }); g.build(event, g.drop) })
-  console.info(`[derpack-spine] tier-gate ladder: ${global.SPINE_GATES.length} gates applied (${global.SPINE_GATES.map(g => g.tier).join('/')})`)
+  SPINE_GATES.forEach(g => { event.remove({ output: g.out }); g.build(event, g.drop) })
+  console.info(`[derpack-spine] tier-gate ladder: ${SPINE_GATES.length} gates applied (${SPINE_GATES.map(g => g.tier).join('/')})`)
 })

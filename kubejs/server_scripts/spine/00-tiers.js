@@ -7,7 +7,7 @@
 // Tiers map to the power ladder (CREATE-SPINE.md Part 1). Aeronautics is a control-complexity thread
 // woven across tiers (Part 4a); the boss fork sits at the T3->T4 jump.
 
-global.SPINE = {
+const SPINE = {
   // Power rung per tier (CREATE-SPINE.md Part 1).
   tiers: {
     T0: { name: 'Manual',        rung: 0, anchors: ['create'],
@@ -48,6 +48,6 @@ global.SPINE = {
 }
 
 ServerEvents.recipes(event => {
-  const t = global.SPINE.tiers
+  const t = SPINE.tiers
   console.info(`[derpack-spine] tier trees loaded: ${Object.keys(t).map(k => `${k}=${t[k].name}`).join(', ')}`)
 })
