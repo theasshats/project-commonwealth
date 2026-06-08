@@ -1,6 +1,21 @@
 # Phase 2 — next-session runbook (read with CLAUDE.md + READINESS-REVIEW.md)
 
-> **LATEST — 42 passes done (pass-00…41): 35–39 blind + 40–41 context-fed refine, all merged.**
+> **LATEST — Phase 2.5 triage COMPLETE (all 202 mods, 13 batches; gated agent fan-out, Sonnet).** The
+> 6,373-row corpus was consolidated per-mod into KEEP/CUT/MERGE/DEFER slates — `triage/batch-01..13.md`;
+> cross-batch rollup in `triage/SLATE-SUMMARY.md` (regen: `python3 triage/consolidate.py`). Result:
+> **423 KEEP weaves** across 160 mods · **2,028 CUT** · **670 MERGE** · **11 DEFER** (2→build #239/#220,
+> 9→playtest) · **42 LEAVE**. KEEP-by-pillar (via milestone): Create 117 / Economy+aero 170 / Magic 86 /
+> Survival 50. Anchor reach: 9 mods @4, 55 @3, 62 @2, **10 @1** (second-weave candidates: aileron, bits_n_bobs,
+> byzantine, copperagebackport, endermoon, gravestone, mcwroofs, mcwstairs, mcwwindows, mutantszombies).
+> Batching/inputs frozen in `triage/MANIFEST.json` + `triage/inputs/`. **NEXT: maintainer ratifies the slates
+> (skim SLATE-SUMMARY + batch files, override as needed) → Phase 2.5 files one milestone issue per accepted
+> weave (or a per-mod umbrella), folded into the pillar issues on ROADMAP.** Build-task DEFERs already tracked
+> (#239 tooling-wear, #220 locked-exclusive gate); economy dynamic-pricing #240. _(Prior phase below — 42
+> passes, refine saturated — retained for history.)_
+>
+> ---
+>
+> **PRIOR — 42 passes done (pass-00…41): 35–39 blind + 40–41 context-fed refine, all merged.**
 > **7,282 total → 6,373 live + 909 dead-motif quarantined**; live **Gate-2 core (≥5+ACCEPT) = 435**, ≥2 =
 > 2,387, ~198 mods. The 2 context-fed passes added ~+125 unique each (≈half blind's rate) and grew the ≥2
 > corroboration band by +228, but the **live core stayed flat (433→439→435)** — the 2nd refine pass

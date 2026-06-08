@@ -19,6 +19,7 @@ H_LEAVE = re.compile(r'^##\s+(\S+)\s+—\s+LEAVE', re.I)
 H_ANY   = re.compile(r'^##\s+(\S+)\s+—')
 NOW_N   = re.compile(r'\(now\s+(\d+)\)')
 ANCHORS = re.compile(r'anchors after:\s*([^(|]+)')
+CANON   = {'create', 'magic', 'economy', 'survival', 'aeronautics'}
 MOTIF   = re.compile(r'\bM-(\d{2})\b')
 MILE    = re.compile(r'milestone:\s*(v\d+\.\d+\.\d+)', re.I)
 BUILD   = re.compile(r'→build\s*#(\d+)')
@@ -28,10 +29,11 @@ def parse_block(ns, lines):
     head = lines[0]
     rec = {'ns': ns, 'leave': False, 'keep': 0, 'cut': 0, 'merge': 0, 'defer': 0,
            'anchors_n': None, 'pillars': [], 'keep_motifs': [], 'keep_miles': [],
-           'defer_builds': [], 'line_keep': 0, 'line_cut': 0, 'line_merge': 0, 'line_defer': 0}
+           'defer_builds': [], 'defer_playtest': 0,
+           'line_keep': 0, 'line_cut': 0, 'line_merge': 0, 'line_defer': 0}
     if H_LEAVE.match(head):
         rec['leave'] = True
-        return rec
+        # fall through and still scan the body — a LEAVE mod can carry a DEFER (audit) line
     m = H_SLATE.match(head)
     if m:
         rec['keep'] = int(m.group(2)); rec['cut'] = int(m.group(3))
@@ -40,7 +42,14 @@ def parse_block(ns, lines):
     if n: rec['anchors_n'] = int(n.group(1))
     a = ANCHORS.search(head)
     if a:
-        rec['pillars'] = [p.strip() for p in re.split(r'[+/,]', a.group(1)) if p.strip()]
+        # normalize to the canonical pillar set; strip qualifiers ("survival only"),
+        # case ("Create"->"create"), and prose fragments ("none", "already anchored…")
+        pil = []
+        for t in re.split(r'[+/,]', a.group(1)):
+            w = t.strip().lower().split()[0] if t.strip() else ''
+            if w in CANON and w not in pil:
+                pil.append(w)
+        rec['pillars'] = pil
     for ln in lines[1:]:
         s = ln.strip()
         if s.startswith('KEEP'):
@@ -53,6 +62,7 @@ def parse_block(ns, lines):
             rec['line_defer'] += 1
             b = BUILD.search(s)
             if b: rec['defer_builds'].append('#'+b.group(1))
+            else: rec['defer_playtest'] += 1
     return rec
 
 def main():
@@ -80,22 +90,20 @@ def main():
     motif_keep = collections.Counter()
     anchor_dist = collections.Counter()
     leave_mods, one_anchor, build_routes = [], [], collections.Counter()
-    mismatches = []
+    defer_playtest = 0
     for fn, r in recs:
+        # totals come from actual enumerated lines (ground truth), not the agent's
+        # rounded header self-count. DEFER routing is scanned for every mod, including
+        # LEAVE mods (e.g. recipe_integration carries an audit DEFER under a LEAVE header).
+        tot['keep'] += r['line_keep']; tot['cut'] += r['line_cut']
+        tot['merge'] += r['line_merge']; tot['defer'] += r['line_defer']
+        for b in r['defer_builds']: build_routes[b] += 1
+        defer_playtest += r['defer_playtest']
         if r['leave']:
             leave_mods.append(r['ns']); continue
-        tot['keep'] += r['keep']; tot['cut'] += r['cut']; tot['merge'] += r['merge']; tot['defer'] += r['defer']
-        # header vs counted line cross-check. KEEP/DEFER must be 1:1 (no bundling);
-        # CUT lines legitimately bundle multiple near-dup rows, so header_cut >= line_cut
-        # is normal — only flag KEEP/DEFER drift or any line count EXCEEDING the header.
-        if (r['keep'] != r['line_keep'] or r['defer'] != r['line_defer']
-                or r['line_cut'] > r['cut'] or r['line_merge'] > r['merge']):
-            mismatches.append(f"{fn}:{r['ns']} header K/C/M/D={r['keep']}/{r['cut']}/{r['merge']}/{r['defer']} "
-                              f"lines={r['line_keep']}/{r['line_cut']}/{r['line_merge']}/{r['line_defer']}")
         for p in r['pillars']: pillar_keep[p] += 1
         for m in r['keep_motifs']: motif_keep[m] += 1
         for ml in r['keep_miles']: mile_keep[ml] += 1
-        for b in r['defer_builds']: build_routes[b] += 1
         if r['anchors_n'] is not None:
             anchor_dist[r['anchors_n']] += 1
             if r['anchors_n'] <= 1: one_anchor.append(r['ns'])
@@ -107,16 +115,14 @@ def main():
                f'{mods_total} mod blocks ({len(leave_mods)} LEAVE).\n')
     if incomplete:
         out.append(f'\n⚠️ **INCOMPLETE batch files (no completion marker):** {", ".join(incomplete)}\n')
-    if mismatches:
-        out.append('\n⚠️ **Header/line count mismatches (spot-check these):**\n')
-        for m in mismatches: out.append(f'- {m}')
-        out.append('')
     out.append('\n## Totals')
+    out.append('_(counted from enumerated KEEP/CUT/MERGE/DEFER lines — the ground truth — '
+               'not the agents\' rounded header self-counts.)_')
     out.append(f'- **KEEP {tot["keep"]} · CUT {tot["cut"]} · MERGE {tot["merge"]} · DEFER {tot["defer"]}**')
     out.append(f'- weave KEEPs across {mods_total - len(leave_mods)} non-LEAVE mods\n')
-    out.append('## KEEP by pillar anchor')
+    out.append('## Mods anchored to each pillar (breadth — counts a mod once per pillar it touches)')
     for p, c in pillar_keep.most_common(): out.append(f'- {p}: {c}')
-    out.append('\n## KEEP by target milestone')
+    out.append('\n## KEEP weaves by target milestone (KEEP-by-pillar; sums to total KEEP)')
     for ml, c in sorted(mile_keep.items()): out.append(f'- {ml}: {c}')
     out.append('\n## KEEP motif histogram')
     for mo, c in motif_keep.most_common(): out.append(f'- {mo}: {c}')
@@ -126,17 +132,18 @@ def main():
     out.append(', '.join(sorted(one_anchor)) or '(none)')
     out.append(f'\n## LEAVE mods — {len(leave_mods)}')
     out.append(', '.join(sorted(leave_mods)) or '(none)')
-    out.append('\n## DEFER→build routing')
-    for b, c in build_routes.most_common(): out.append(f'- build {b}: {c}')
+    out.append(f'\n## DEFER routing  (build {sum(build_routes.values())} / playtest {defer_playtest})')
+    for b, c in build_routes.most_common(): out.append(f'- →build {b}: {c}')
+    out.append(f'- →playtest (in-game confirmation before authoring): {defer_playtest}')
     out.append('')
     report = '\n'.join(out)
     with open(os.path.join(HERE, 'SLATE-SUMMARY.md'), 'w') as f:
         f.write(report)
     # also echo headline to stdout
     print(f'batches={len(files)} mods={mods_total} LEAVE={len(leave_mods)} '
-          f'KEEP={tot["keep"]} CUT={tot["cut"]} MERGE={tot["merge"]} DEFER={tot["defer"]}')
+          f'KEEP={tot["keep"]} CUT={tot["cut"]} MERGE={tot["merge"]} DEFER={tot["defer"]} '
+          f'(build {sum(build_routes.values())}/playtest {defer_playtest})')
     if incomplete: print('INCOMPLETE:', ', '.join(incomplete))
-    if mismatches: print(f'{len(mismatches)} header/line mismatches')
 
 if __name__ == '__main__':
     main()
