@@ -1,0 +1,7 @@
+offroad:borehead_bearing | minecraft:crafting_shaped | create:gearbox create:industrial_iron_block minecraft:crafting_shaped minecraft:wooden_slabs offroad:borehead_bearing
+offroad:large_tire | minecraft:crafting_shaped | create:belt_connector create:shaft minecraft:crafting_shaped offroad:large_tire
+offroad:monstrous_tire | minecraft:crafting_shaped | create:shaft minecraft:crafting_shaped minecraft:dried_kelp_block offroad:monstrous_tire
+offroad:rockcutting_wheel | minecraft:crafting_shaped | create:crushing_wheel create:industrial_iron_block create:iron_sheet minecraft:crafting_shaped offroad:rockcutting_wheel
+offroad:small_tire | minecraft:crafting_shapeless | create:shaft minecraft:crafting_shapeless minecraft:dried_kelp offroad:small_tire
+offroad:tire | minecraft:crafting_shaped | create:shaft minecraft:crafting_shaped minecraft:dried_kelp offroad:tire
+offroad:wheel_mount | minecraft:crafting_shaped | create:andesite_casing create:iron_sheet minecraft:crafting_shaped offroad:wheel_mount simulated:spring

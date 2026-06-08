@@ -1,0 +1,3 @@
+offroad:blocks/borehead_bearing | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion offroad:blocks/borehead_bearing offroad:borehead_bearing
+offroad:blocks/rockcutting_wheel | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion offroad:blocks/rockcutting_wheel offroad:rockcutting_wheel
+offroad:blocks/wheel_mount | minecraft:block | minecraft:block minecraft:item minecraft:survives_explosion offroad:blocks/wheel_mount offroad:wheel_mount
