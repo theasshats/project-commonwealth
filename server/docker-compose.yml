@@ -1,0 +1,63 @@
+services:
+  mc:
+    image: itzg/minecraft-server:java21
+    container_name: derpack-x-mc
+    tty: true
+    stdin_open: true
+    ports:
+      - "25568:25565"
+    environment:
+      - EULA=TRUE
+      - PUID=1000
+      - PGID=1000
+
+      # itzg installs the NeoForge loader; packwiz fetches the mods.
+      # NEOFORGE_VERSION and PACKWIZ_URL are BOTH written by auto-update.sh from
+      # the same pinned commit, so the loader and the mod set can never drift
+      # apart on a restart. Do not hard-code either here.
+      - TYPE=NEOFORGE
+      - VERSION=1.21.1
+      - NEOFORGE_VERSION=${NEOFORGE_VERSION}
+      - PACKWIZ_URL=${PACKWIZ_URL}
+
+      # JVM - Aikar/G1 at a fixed 32G heap.
+      # NOTE: scripts/build-server.sh in the pack repo deliberately uses
+      # Generational ZGC at this heap size and argues it suits the server's
+      # allocation rate better than G1. To match it: set USE_AIKAR_FLAGS=false
+      # and JVM_OPTS to the ZGC flags. Left on Aikar here to preserve current
+      # runtime behaviour - pick one of the two on purpose.
+      - USE_AIKAR_FLAGS=true
+      - INIT_MEMORY=32G
+      - MAX_MEMORY=32G
+
+      # Gameplay
+      - VIEW_DISTANCE=10
+      - DIFFICULTY=normal
+
+      # Access
+      - ENABLE_WHITELIST=TRUE
+      - ENFORCE_WHITELIST=TRUE
+      - WHITELIST=xela112233,zagwar
+      - OPS=xela112233,zagwar
+
+      # RCON - internal only; not exposed to the host. auto-update.sh uses it via
+      # `docker exec derpack-x-mc rcon-cli` to warn players and flush the world.
+      - ENABLE_RCON=true
+      - RCON_PASSWORD=${RCON_PASSWORD}
+    volumes:
+      - ./data:/data
+
+    # Real healthcheck. auto-update.sh gates a deploy on State.Health.Status
+    # (server actually accepting connections), not "is the process alive".
+    # start_period MUST cover a cold first boot - NeoForge install + full packwiz
+    # mod sync + initial worldgen - or the loader gets marked unhealthy mid-setup
+    # and a good deploy is wrongly rolled back. (If your itzg image tag lacks the
+    # `mc-health` helper, use: ["CMD", "mc-monitor", "status"].)
+    healthcheck:
+      test: ["CMD", "mc-health"]
+      start_period: 20m
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+    restart: unless-stopped
