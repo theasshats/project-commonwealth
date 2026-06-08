@@ -757,6 +757,10 @@ file = "kubejs/data/trailandtales_delight/recipe/cutting/cherry_petal_from_cherr
 hash = "015b8cb0b08aa636585c2a0b2bd759cd23ce6f64b8a6e8e409e22deb996d7cf1"
 
 [[files]]
+file = "kubejs/server_scripts/40-gamediscs-loot.js"
+hash = "4eccf786527225aa6548bb8120cedbd503daf7c344ae70323b055afdcffa4d14"
+
+[[files]]
 file = "kubejs/server_scripts/example.js"
 hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
 
@@ -866,7 +870,7 @@ hash = "503ba2fd0732ccb18acba32adc5e7c8f074b82c801e912f4b5dba4a82d776b40"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/99-gamediscs.js"
-hash = "db1943def4285aaf83321a29d0a67b57e525572db71496d9cb5128b920a02bbc"
+hash = "1ee6f31578aeab8ab15e147416d34448e9ed0ca241db7ac096126423e260a097"
 
 [[files]]
 file = "kubejs/server_scripts/remove-default-tacz-guns.js"

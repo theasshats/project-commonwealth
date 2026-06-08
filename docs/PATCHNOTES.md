@@ -49,6 +49,13 @@ into graphite, the same carbon material Pantographs & Wires already makes: the g
 anti-radiation armour now take graphite in place of graphene. Graphite comes from coking coal rather than
 crushing it, so the anti-radiation line now sits behind that extra step.
 
+### Game Discs
+
+The Game Discs handheld console and its five parts now build through Create rather than from plain vanilla
+materials. One game, Pong, is craftable to get you started; the other six — Blocktris, Froggie, Flappy
+Bird, Slime, Rabbit, and TNT Sweeper — are found in structure chests while exploring, the rarer titles
+turning up less often.
+
 ## 0.6.0 — Foundation
 
 This release concentrates on performance and maintenance: a new renderer, a full pass of mod updates,

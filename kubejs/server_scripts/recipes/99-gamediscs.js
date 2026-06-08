@@ -43,9 +43,10 @@ ServerEvents.recipes(event => {
     P: 'gamediscs:processor', C: 'gamediscs:control_pad', R: 'gamediscs:redstone_circuit'
   })
 
-  // Starter game disc — Blocktris (the one game you can build day-one): a copper-sheet disc with a
-  // polished-rose-quartz "data crystal" + redstone. The other six discs are exploration loot.
-  event.shaped('gamediscs:game_disc_blocktris', [' R ', 'SQS', ' S '], {
+  // Starter game disc — Pong (the original arcade game; the one you build day-one): a copper-sheet disc
+  // with a polished-rose-quartz "data crystal" + redstone. The other six discs (incl. Blocktris) are
+  // exploration loot, distributed in kubejs/server_scripts/40-gamediscs-loot.js.
+  event.shaped('gamediscs:game_disc_pong', [' R ', 'SQS', ' S '], {
     R: 'minecraft:redstone', S: 'create:copper_sheet', Q: 'create:polished_rose_quartz'
   })
 })
