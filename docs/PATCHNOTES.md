@@ -21,6 +21,10 @@ compatibility add-ons) have been removed; their food and cooking content overlap
 the cross-mod ore-processing recipes that relied on Farm & Charm's mincer have been retired. Let's Do
 Beachparty is kept — its beach and tiki furniture is not covered by any other mod in the pack.
 
+Traveler's Backpack has been removed. The pack already ships Create: Storage, whose backpack line
+(andesite, copper, brass, and hardened tiers) builds through Create, so backpacks now sit on the tech
+spine rather than running as a parallel system.
+
 Wine-making returns through Create: Winery, which routes the whole process through Create machines rather
 than its own. It adds:
 

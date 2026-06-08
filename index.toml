@@ -813,10 +813,6 @@ file = "kubejs/server_scripts/recipes/60-mffs.js"
 hash = "a0f5652cd8608129968b29ae2300459810a228ce1fddcb67328ff8b89dd17364"
 
 [[files]]
-file = "kubejs/server_scripts/recipes/70-travelers-backpack.js"
-hash = "c3f35695fdf29cdc531b5323b0211aa10972aa673e7b4e14115a14c4f3fdac9a"
-
-[[files]]
 file = "kubejs/server_scripts/recipes/80-securitycraft.js"
 hash = "ecc681b293943092354a7751fa75bbb746730dd6e7fe85b0fae3ff62e977eba7"
 
@@ -2525,11 +2521,6 @@ metafile = true
 [[files]]
 file = "mods/trashslot.pw.toml"
 hash = "1ba14762ecca813695eb6a43c2a374db84d7106325ad51d5da6050bf4efea182"
-metafile = true
-
-[[files]]
-file = "mods/travelersbackpack.pw.toml"
-hash = "51792be52a28307d13f582e7791add6d5974a9fc18ad2679f715c3ab10a9bc8b"
 metafile = true
 
 [[files]]
