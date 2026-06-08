@@ -1,7 +1,0 @@
-# Box-local deploy state — never commit (becomes the new repo's root .gitignore)
-.env
-data/
-*.log
-*.last-good
-.auto-update.lock
-.pause-auto-update

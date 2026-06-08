@@ -21,22 +21,17 @@ two sides can't drift on content — only on `side` tags (below).
 ## The deploy config lives in its own repo
 
 The box's run config — `docker-compose.yml` + `auto-update.sh` — is **not** pack
-content. It lives in **`derpack-org/derpack-server`** (split out like the site),
-generated from `scripts/server-repo/` by `scripts/build-server-repo.sh`:
+content. It lives in its own repo, **`derpack-org/derpack-server`** (split out
+like the site); see that repo's README for the deploy runbook.
 
-```bash
-./scripts/build-server-repo.sh             # bundle -> dist/derpack-server.zip
-./scripts/build-server-repo.sh --push      # create + push derpack-org/derpack-server (gh)
-```
-
-`auto-update.sh` resolves one immutable commit from a channel (`release` =
+`auto-update.sh` there resolves one immutable commit from a channel (`release` =
 production / `branch` = playtest, e.g. `v0.7.0`), reads `pack.toml` at that
 commit, and pins **both** the NeoForge version and a commit-pinned `PACKWIZ_URL`
 into `.env` together — so the loader and the mod set always come from the same
-commit and can't desync on a restart. See that repo's README for the runbook.
+commit and can't desync on a restart.
 
-The only repo-side server task remaining is the NeoForge `[versions]` bump in
-`pack.toml` (a human decision; the deploy script only mirrors it onto the box).
+The only repo-side server task is the NeoForge `[versions]` bump in `pack.toml`
+(a human decision; the deploy script only mirrors it onto the box).
 
 ## Side metadata — the rule that keeps both installs healthy
 
@@ -55,8 +50,14 @@ client/server registry parity so players can't connect. So:
   `simple-voice-chat`, `no-chat-reports`, `playeranimator`, and any mod that
   registers items/blocks (music discs, content). Do not narrow these.
 
-Current state: no client-only mod in the server set is a known server-crasher,
-and the live server boots this modset — so the pack serves both correctly today.
+The `side` tags themselves are correct — no client-only mod is mis-routed to the
+server. A separate, mod-level failure mode still exists: a `both`-tagged mod can
+carry its own server-side crash (e.g. loading a client class from common code),
+which only a real server boot catches — not CI, not the `side` tags. Live
+example: **appleseed 2.0.3** does exactly this (a client `KeyMapping` constructed
+from its common mod constructor) and currently blocks server boot; the fix is in
+the mod (`derpack-org/Diet---AppleSeed-Edition-fix`, pending upstream), not the
+pack's tags.
 
 ### Optional: slimming the server (playtest-gated)
 

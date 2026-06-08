@@ -1,4 +1,0 @@
-# derpack-server is deployed on Linux. Force LF on every text file so the shell
-# scripts keep working regardless of where they're edited (e.g. a Windows
-# git-bash build or edit of this repo).
-* text=auto eol=lf
