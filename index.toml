@@ -877,6 +877,26 @@ file = "kubejs/server_scripts/remove-default-tacz-guns.js"
 hash = "7761b2b266e0a1a4e1a046e784e1fc960cefc5c77a5cfc0155c2f03ea6cfbed7"
 
 [[files]]
+file = "kubejs/server_scripts/spine/00-tiers.js"
+hash = "b2151db0e3af930b9c53eafe01005efd26401a2fb8eccbe5ef59c4f257844e88"
+
+[[files]]
+file = "kubejs/server_scripts/spine/05-tags.js"
+hash = "a2ac76b699a96ddcbda6526618870008d0e1fb5bbfa73c40103aea7594bd4fdd"
+
+[[files]]
+file = "kubejs/server_scripts/spine/10-locks.js"
+hash = "25b99379faf358937037764eb623e904b5230db488946766889283f02d0c6ae4"
+
+[[files]]
+file = "kubejs/server_scripts/spine/20-power-ladder.js"
+hash = "bf3000b61d548897c07db759a0e35acbfcda3c4349db04ff3221178f93955d87"
+
+[[files]]
+file = "kubejs/server_scripts/spine/30-cost-basics.js"
+hash = "262253c8a6f9bf09055861f4184c4a997fe974f106161418cd68af6bb938cc80"
+
+[[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"
 hash = "6c09092dc0f47bbeec1f63b17714436f1765163110a84e508565b9c90ec948f4"
 
