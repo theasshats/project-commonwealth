@@ -865,6 +865,10 @@ file = "kubejs/server_scripts/recipes/98-minecolonies.js"
 hash = "503ba2fd0732ccb18acba32adc5e7c8f074b82c801e912f4b5dba4a82d776b40"
 
 [[files]]
+file = "kubejs/server_scripts/recipes/99-gamediscs.js"
+hash = "db1943def4285aaf83321a29d0a67b57e525572db71496d9cb5128b920a02bbc"
+
+[[files]]
 file = "kubejs/server_scripts/remove-default-tacz-guns.js"
 hash = "7761b2b266e0a1a4e1a046e784e1fc960cefc5c77a5cfc0155c2f03ea6cfbed7"
 
