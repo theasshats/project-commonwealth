@@ -3,6 +3,10 @@
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme", a short lead paragraph, then sections (see CLAUDE.md). -->
 
+## 0.6.2 — Cannon crash fix
+
+Create Big Cannons was updated to 5.11.5, but the Advanced Technologies addon is built against 5.11.3 and called a block-damage method whose signature changed in the newer build. Firing a heavy autocannon armour-piercing round at a block crashed the server. Create Big Cannons has been moved back to 5.11.3 to match the addon.
+
 ## 0.6.1 — Dedicated server fix
 
 Diet – AppleSeed Edition, which provides the diet and nutrition system, crashed dedicated servers on startup. It now uses a patched build that resolves the crash. Single-player and client installs are unaffected.
