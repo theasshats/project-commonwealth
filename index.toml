@@ -882,19 +882,19 @@ hash = "b2151db0e3af930b9c53eafe01005efd26401a2fb8eccbe5ef59c4f257844e88"
 
 [[files]]
 file = "kubejs/server_scripts/spine/05-tags.js"
-hash = "a2ac76b699a96ddcbda6526618870008d0e1fb5bbfa73c40103aea7594bd4fdd"
+hash = "b51018c0cdc6d979296c2f855b855960d3d98caf90deb2dcaf4e807f46d42fee"
 
 [[files]]
 file = "kubejs/server_scripts/spine/10-locks.js"
-hash = "25b99379faf358937037764eb623e904b5230db488946766889283f02d0c6ae4"
+hash = "31c18839142a6c6bd8e2e73c3e09369121827045e12d90a6155006e84bb83dfc"
 
 [[files]]
 file = "kubejs/server_scripts/spine/20-power-ladder.js"
-hash = "bf3000b61d548897c07db759a0e35acbfcda3c4349db04ff3221178f93955d87"
+hash = "2a084fafe026a9c8399f5536e47f976dec38aa735fe9582f028a7b157aa5fc28"
 
 [[files]]
 file = "kubejs/server_scripts/spine/30-cost-basics.js"
-hash = "262253c8a6f9bf09055861f4184c4a997fe974f106161418cd68af6bb938cc80"
+hash = "06a68b34389d3f79e036e82882550b4c451428c30483d53d6539091d30d419d4"
 
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"

@@ -4,9 +4,11 @@
 > living reference** for the Phase 3 *foundation*: the tier trees, the cost engine, the lock/fork
 > patterns, and the power ladder. Tracks #219/#220/#145/#92. Player-facing version: `docs/wiki/create-progression.md`.
 
-> **Status: FOUNDATION — draft, playtest-gated.** The framework + the high-confidence concrete recipes are
-> authored; exhaustive per-addon cost application is staged in per-mod batches (see §5). Nothing here is
-> verified in-game — CI only parses. Stays draft on #234 until a fresh-world playtest passes.
+> **Status: FOUNDATION COMPLETE — draft, playtest-gated.** The structural foundation is authored: tier
+> trees, Pattern A/B locks, the **complete** boss roster, the **resolved** generator audit (free-source
+> solar cost-gated), the root cost dial (`andesite_alloy` ~3×), and the **flagship** aeronautics-core fork.
+> What remains is the per-mod **content** tail — applying the dials across all addons (§5) — which is *not*
+> the foundation. Nothing here is verified in-game (CI only parses); stays draft on #234 until playtest.
 
 ## 1. Files (this foundation)
 
@@ -54,10 +56,10 @@ circuits + the coking→graphite carbon seam; Nuclear = T4 capstone on New Age (
 - Rungs 0–1 stay cheap (bootstrap). Rung 2 (windmill) gated by sail cloth + windmill bearing. Rung 3
   (steam) gated by its inherent fluid/heat chain — no extra lock. Rung 4 (electric) gated by **needing
   rung-3 kinetic to drive** (no double-tax). Rung 5 behind the boss fork.
-- **Generator audit:** enumerate every `createaddition` / `create_new_age` / `createnuclear` generator;
-  tag **converter** (SU→FE or real-fuel→FE — allowed) vs **free source** (cheap renewable → FE — curtail
-  via cost-gate). The audit list + stance live in `20-power-ladder.js`; free-source curtailment is
-  cost-gated (the settled stance), not re-reciped.
+- **Generator audit — RESOLVED** (`20-power-ladder.js`): converters preserved (`createaddition:alternator`,
+  New Age `basic/advanced/reinforced_motor` + `generator_coil`, `createnuclear:reactor_controller`); the two
+  free-source items (`create_new_age:basic/advanced_solar_heating_plate`) are **cost-gated** behind
+  electron_tube / capacitor — the settled stance (cost-gate, not re-recipe) — so solar isn't early free power.
 
 ## 5. Per-mod cost application — staged (the content tail)
 

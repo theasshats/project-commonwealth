@@ -38,7 +38,19 @@ ServerEvents.recipes(event => {
     })
   })
 
-  // The FLAGSHIP fork (CREATE-SPINE.md 3c) is the aeronautics ship core
-  // (aeronautics:gyroscopic_propeller_bearing) gated at the T3->T4 jump — authored in the #92 PR against
-  // the create-aeronautics recipe dump, using the same global.spineBossFork helper.
+  // ── FLAGSHIP fork (CREATE-SPINE.md 3c) — the aeronautics ship core, gated at the T3->T4 jump so advanced
+  //    flight is boss-gated. Real recipe (verified vs the dump): brass_casing + wooden slab +
+  //    simulated:gyroscopic_mechanism; re-authored to require a boss key. ──
+  global.spineBossFork(event, 'aeronautics:gyroscopic_propeller_bearing', KEY => {
+    event.shaped('aeronautics:gyroscopic_propeller_bearing', [
+      ' K ',
+      'BGB',
+      ' W '
+    ], {
+      K: KEY,                                  // any boss drop opens the fork
+      B: 'create:brass_casing',
+      G: 'simulated:gyroscopic_mechanism',
+      W: '#minecraft:wooden_slabs'
+    })
+  })
 })
