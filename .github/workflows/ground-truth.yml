@@ -97,10 +97,31 @@ jobs:
           GIT_COMMITTER_NAME: github-actions[bot]
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         run: |
-          git add tools/mod-data
+          BR="${{ github.head_ref || github.ref_name }}"
+          git add -A tools/mod-data
           if git diff --cached --quiet; then
             echo "Digest unchanged — nothing to commit."
             exit 0
           fi
-          git commit -m "ci: refresh mod-data facts digest (IDs/tags/biome-modifiers)"
-          git push
+          # Snapshot the fresh digest. ground-truth can race other automation
+          # pushing to the same branch (a concurrent digest run, or sync-index),
+          # and a bare push just fails red on the loser. On a non-fast-forward
+          # rejection, re-base our digest onto the latest remote and retry; if a
+          # concurrent run already pushed an identical digest, finish clean.
+          snap="$(mktemp -d)"; cp -r tools/mod-data "$snap/md"
+          for i in 1 2 3 4 5; do
+            git commit -q -m "ci: refresh mod-data facts digest (IDs/tags/biome-modifiers)"
+            if git push origin "HEAD:${BR}"; then exit 0; fi
+            echo "push raced with concurrent automation — rebasing digest onto origin/${BR} (try ${i})"
+            git fetch -q origin "${BR}"
+            git reset -q --hard FETCH_HEAD
+            rm -rf tools/mod-data; cp -r "$snap/md" tools/mod-data
+            git add -A tools/mod-data
+            if git diff --cached --quiet; then
+              echo "An identical digest was already pushed by the concurrent run — done."
+              exit 0
+            fi
+            sleep $((2 ** i))
+          done
+          # Final attempt — let a genuine, persistent failure surface.
+          git push origin "HEAD:${BR}"
