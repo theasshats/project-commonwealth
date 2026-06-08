@@ -54,7 +54,7 @@ generator** during the #145 implementation pass:
   rungs 1–3 to spin the alternator.
 - **Curtailed (free source):** any generator that makes FE from a cheap renewable with no kinetic input.
   Where one exists, either (a) raise its recipe to a rung-4+ cost so it's not an *early* free route, or
-  (b) re-recipe it to require a kinetic input. **⚖️ decision:** prefer (a) cost-gating over (b)
+  (b) re-recipe it to require a kinetic input. **Settled:** prefer (a) cost-gating over (b)
   re-reciping where possible — less likely to break addon assumptions, easier to revert.
 
 > **Audit task (part of #145 PR):** enumerate every generator block across `createaddition` /
@@ -71,8 +71,8 @@ The gate is **recipe cost + step-depth** (Part 2), not a tech-tree mod. Concrete
   pump + blaze burner + copper fluid line, which is its own multi-step climb. That dependency *is* the
   gate; no extra lock needed.
 - Rung 4 (electric) is gated by requiring **steam-tier kinetic to drive it** + the wire/coil crafting
-  chain. ⚖️ **decision:** do we *also* cost-bump the electric machines, or is "needs rung-3 to spin"
-  enough of a gate on its own? (Proposed: enough on its own; don't double-tax.)
+  chain. **Settled:** "needs rung-3 to spin" is enough of a gate on its own — don't double-tax the
+  electric machines.
 - Rung 5 (reactor / nuclear) sits behind the **high-tier fork** (Part 3) — a boss drop *or* a colony
   part — so end-game power is the same two-route choice as other high-tier goods.
 
@@ -104,7 +104,7 @@ multiplied cost). This part settles the *numbers* so it's applicable.
 
 ### 2a. The "3×" baseline for basics
 
-**⚖️ decision — what "3×" measures against.** Proposed definition:
+**Settled — what "3×" measures against.** Definition:
 
 > **3× = roughly triple the total raw-material floor of the vanilla/naive recipe**, measured in **base
 > resource units** (ore/ingot/log equivalents), **not** a literal "multiply every ingredient count by
@@ -125,9 +125,8 @@ basic tools. It does **not** apply to:
   **cheaper/faster**, so the colony recipes stay at ~1× (or are the worker-hut "free over time" path).
   The 3× tax on the Create hand-craft is what makes the colony route worth using (`SYSTEMS.md` §3).
 
-**⚖️ decision — exact multiplier.** 3× is the settled target, but the *band* matters: proposed **2.5–3.5×**
-as the acceptable range so we're not hunting a false-precision number per recipe. Punishing >4×; toothless
-<2×.
+**Settled — multiplier band.** 3× is the target; the *band* is **2.5–3.5×** as the acceptable range so
+we're not hunting a false-precision number per recipe. Punishing >4×; toothless <2×.
 
 ### 2b. Step-depth ladder for higher tiers
 
@@ -207,11 +206,10 @@ ServerEvents.recipes(event => {
 })
 ```
 
-**⚖️ decisions for @zagwar (3b):**
-- **Consumed vs. key?** Is the boss/colony part *consumed per craft* (steady demand, more grind) or a
-  *one-time key* that unlocks the recipe (KubeJS-gated, crafted once)? Proposed: **consumed** for
-  components you make repeatedly (keeps the fighter/settler trade alive), **key/one-time** for
-  machine-tier unlocks. Per-item call.
+**Settled (3b):**
+- **Consumed vs. key.** **Settled: consumed** for components you make repeatedly (keeps the
+  fighter/settler trade alive), **key/one-time** for machine-tier unlocks — a per-item call within that
+  rule.
 - **Which bosses? — RATIFIED: no primary, draw from them all.** Gate drops are pulled across **every**
   installed boss mod — **L_Ender's Cataclysm, Mowzie's Mobs, Grimoire of Gaia, Born in Chaos, Mutants** —
   rather than funnelling through one. Spread gate items across bosses so no single fight is the chokepoint
@@ -231,8 +229,8 @@ Per `SYSTEMS.md`, the lock list is **incremental per pillar** — this is *only*
 - `create:precision_mechanism` — the signature Create gate component; the canonical "you must run a
   Create line" item. Strong lock candidate.
 - `create:electron_tube` — second tier-2 gate component.
-- ⚖️ The above two are the **safe, high-value** locks. Going broader (locking sheets/casings) risks
-  over-restricting basics that should stay craftable — **proposed: lock only the two mechanisms for
+- The above two are the **safe, high-value** locks. Going broader (locking sheets/casings) risks
+  over-restricting basics that should stay craftable — **settled: lock only the two mechanisms for
   v0.7.0**, expand later if playtest shows erosion.
 
 **Colony-cheaper (stays ~1× on the colony route, 3× on Create hand-craft — Pattern via cost, not lock):**
