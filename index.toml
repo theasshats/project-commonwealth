@@ -902,7 +902,7 @@ hash = "01b549720a516e4a07302dcbb5de5f491db7e79c4a8ef5adb3d6f13d16fe863a"
 
 [[files]]
 file = "kubejs/server_scripts/spine/50-cross-tier.js"
-hash = "dbaf3470c0229f5f253209f5e8b77f5ca5ba339fa715d2068fd4e7c3807fb7b6"
+hash = "42e733a1106d39963daafd3139145520cead23eba7f290db1b2c94e4dc8c4ec6"
 
 [[files]]
 file = "kubejs/server_scripts/zz-dump-recipes-TEMP.js"
