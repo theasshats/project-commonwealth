@@ -55,6 +55,9 @@ The Game Discs handheld console and its five parts now build through Create rath
 materials. One game, Pong, is craftable to get you started; the other six — Blocktris, Froggie, Flappy
 Bird, Slime, Rabbit, and TNT Sweeper — are found in structure chests while exploring, the rarer titles
 turning up less often.
+## 0.6.1 — Dedicated server fix
+
+Diet – AppleSeed Edition, which provides the diet and nutrition system, crashed dedicated servers on startup. It now uses a patched build that resolves the crash. Single-player and client installs are unaffected.
 
 ## 0.6.0 — Foundation
 
