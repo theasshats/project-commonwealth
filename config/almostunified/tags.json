@@ -8,6 +8,18 @@
     "c:foods/raw_pasta": [
       "extradelight:raw_pasta",
       "farmersdelight:raw_pasta"
+    ],
+    "c:bear_fur": [
+      "alexsmobs:bear_fur",
+      "naturalist:fur"
+    ],
+    "c:foods/raw_catfish": [
+      "alexsmobs:raw_catfish",
+      "naturalist:catfish"
+    ],
+    "c:foods/cooked_catfish": [
+      "alexsmobs:cooked_catfish",
+      "naturalist:cooked_catfish"
     ]
   },
   "tag_substitutions": {},

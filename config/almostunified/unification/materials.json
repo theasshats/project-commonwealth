@@ -21,7 +21,10 @@
     "c:nuggets/cast_iron": "tfmg",
     "c:storage_blocks/cast_iron": "tfmg",
     "c:foods/pasta": "farmersdelight",
-    "c:foods/raw_pasta": "farmersdelight"
+    "c:foods/raw_pasta": "farmersdelight",
+    "c:bear_fur": "alexsmobs",
+    "c:foods/raw_catfish": "alexsmobs",
+    "c:foods/cooked_catfish": "alexsmobs"
   },
   "stone_variants": [
     "stone",
@@ -46,7 +49,10 @@
     "c:storage_blocks/{material}",
     "c:wires/{material}",
     "c:foods/pasta",
-    "c:foods/raw_pasta"
+    "c:foods/raw_pasta",
+    "c:bear_fur",
+    "c:foods/raw_catfish",
+    "c:foods/cooked_catfish"
   ],
   "ignored_tags": [],
   "ignored_items": [],

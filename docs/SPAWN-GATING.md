@@ -164,6 +164,57 @@ single kobold.
 > GoG items; confirm no GoG kobolds appear. If a variant should also carry the
 > GoG drops, add sibling loot tables.
 
+### Alex's Mobs / Naturalist overlap trim (issue #168)
+Alex's Mobs (`alexsmobs`) and Naturalist (`naturalist`) both register the same
+five animals — rhino, catfish, elephant, rattlesnake, brown bear — plus
+near-duplicate drop/food items. Both mods stay (each has plenty of
+non-overlapping content); this is a per-entity trim. **Maintainer decision:
+Alex's Mobs wins** (richer behaviour and drops that already feed
+recipes/economy — `bear_fur`, `rattlesnake_rattle`, three catfish sizes), so
+the Naturalist versions are the losers.
+
+**Spawn gate (this file).** A single `deny` rule blocks natural spawns of the
+five Naturalist mobs: `naturalist:rhino`, `naturalist:catfish`,
+`naturalist:elephant`, `naturalist:rattlesnake`, `naturalist:bear`. Spawn
+**eggs** still work; only natural spawning is blocked. Naturalist's
+non-overlapping animals (lion, deer, duck, snail, …) are untouched.
+
+**Item unification (`config/almostunified/`).** The duplicate items collapse
+onto the Alex's item via the pack's standard `almost-unified` route — the same
+custom-tag pattern as the pasta unification. Three custom tags bridge the
+pairs (they share no tag natively — `alexsmobs` raw catfish is `c:foods`/`raw_fish`,
+`naturalist` is `raw_fishes`; `bear_fur` and `fur` share none), each set to
+`alexsmobs` as dominant in `unification/materials.json`:
+
+| Custom tag | Members | Dominant |
+|---|---|---|
+| `c:bear_fur` | `alexsmobs:bear_fur`, `naturalist:fur` | `alexsmobs:bear_fur` |
+| `c:foods/raw_catfish` | `alexsmobs:raw_catfish`, `naturalist:catfish` | `alexsmobs:raw_catfish` |
+| `c:foods/cooked_catfish` | `alexsmobs:cooked_catfish`, `naturalist:cooked_catfish` | `alexsmobs:cooked_catfish` |
+
+With `recipe_viewer_hiding: true`, the non-dominant Naturalist items drop out of
+JEI and recipes resolve to the Alex's item. No recipe rewire was needed: Alex's
+bear-fur recipes (`falconry_glove`, `frontier_cap`/`_alt`, `banner_pattern_bear`)
+already consume `alexsmobs:bear_fur`, which stays dominant; the catfish cooking
+recipes in both mods keep working against the surviving raw item. (Those Alex's
+recipes hardcode the `alexsmobs:bear_fur` *item*, not the tag, so they were never
+at risk — the rewire only applied to the never-chosen "keep Naturalist" path.)
+
+> ⚠️ **Notes / playtest.**
+> - `naturalist:fur` also drops from Naturalist's **lion** (out of scope, not
+>   gated). No recipe consumes `naturalist:fur`, so unifying it onto
+>   `alexsmobs:bear_fur` is clean; the lion simply yields the surviving fur item
+>   in JEI. Confirm in-game that lion fur shows as bear fur with no second entry.
+> - **The catfish bucket is left un-unified on purpose.** Alex's has three sizes
+>   (`small`/`medium`/`large_catfish_bucket`); Naturalist has one
+>   (`naturalist:catfish_bucket`). A 3→1 mapping doesn't unify cleanly, and with
+>   `naturalist:catfish` spawn-gated the Naturalist bucket is only reachable via
+>   spawn egg, so it's a non-issue. Revisit only if it shows up as a stray JEI
+>   entry that bothers anyone.
+> - Verify: the chosen survivors spawn and the five Naturalist versions do **not**
+>   spawn naturally (cross-ref #108's watchlist); surviving fur/catfish craft and
+>   cook with no orphaned recipe; no duplicate JEI entries for the unified items.
+
 ## Open maintainer decisions (not changed here)
 
 - **`ender-moon` — keep/cut.** The issue said: gate "special endermen"

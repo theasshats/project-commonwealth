@@ -25,6 +25,12 @@ Traveler's Backpack has been removed. The pack already ships Create: Storage, wh
 (andesite, copper, brass, and hardened tiers) builds through Create, so backpacks now sit on the tech
 spine rather than running as a parallel system.
 
+Alex's Mobs and Naturalist both added the same five animals — rhino, catfish, elephant, rattlesnake, and
+brown bear — along with overlapping fur and catfish items. Both mods stay for their other content, but
+the duplicates have been reconciled: the Alex's Mobs versions are kept, and the Naturalist copies of
+those five no longer spawn in the wild. Their fur and catfish items now resolve to the Alex's Mobs item,
+so the recipe viewer shows one of each instead of two.
+
 Wine-making returns through Create: Winery, which routes the whole process through Create machines rather
 than its own. It adds:
 
