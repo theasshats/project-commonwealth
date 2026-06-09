@@ -1,54 +1,90 @@
 # Finding Ores: Prospecting
 
-Derpack X uses GregTech-style ore generation. Ores are concentrated in large veins of
-related materials instead of being scattered evenly through the world, and most vanilla
-overworld ore generation is turned off. Veins, plus a thin layer of small ores, are the
-only sources. Prospecting is how you find the veins.
+Derpack X uses GregTech-style ore generation through the GTMOGS mod (Gregtech: Modern Ore
+Generation Standalone). Ores are concentrated in large veins of related materials instead of
+being scattered evenly, and most vanilla overworld ore generation is turned off
+(`removeVanillaOreGen` and `removeVanillaLargeOreVeins` both default on). Veins, plus a thin
+layer of small ores, are the only sources. Prospecting is how you locate the veins and put
+them on your map.
 
-## The short version
+> The details below are taken from the shipped GTMOGS jar (`gtmogs-1.21.1-1.0.6`). Where a number
+> or message is quoted, it is the mod's actual default or string, not an estimate.
 
-Right-click an ore block to reveal nearby veins of that material on your map, then travel to
-the vein and dig it out. Right-click, not break — breaking an ore does nothing for prospecting.
+## How prospecting works
+
+You prospect by **right-clicking** a vein ore block. Breaking it does nothing — there is no
+block-break trigger and no prospector tool item in this version; the only trigger is a
+right-click (use) on a block that belongs to a registered vein.
+
+When you right-click such a block, the server scans for veins within `oreBlockProspectRange`
+(default **24** blocks) and adds any it finds to your prospecting records. A chat message
+confirms the result:
+
+- `Prospected %d new veins!` when several are found.
+- `Prospected %s!` naming the vein when a single new one is found.
+
+If you get no message, either you broke the block instead of right-clicking it, or that block
+type is not part of any vein. An empty hand is the simplest way to right-click without doing
+anything else.
 
 ## Small ores are indicators
 
 Single ore blocks are scattered across the overworld: coal, iron, copper, tin, zinc, gold,
-silver, nickel, redstone, lapis, and the occasional diamond. They are enough to get a first
-set of tools, but their real job is to point at veins. When you find one, right-click it and
-check your map.
+silver, nickel, redstone, lapis, and the occasional diamond. They are enough for a first set of
+tools, but their real job is to point at veins. When you find one, right-click it and check
+your map.
 
 ## Step by step
 
-1. Find an ore block. A scattered small ore works, or any vein ore you have already exposed.
-2. Right-click the ore block (an empty hand is simplest). This is the important part: breaking
-   the block does nothing — prospecting only triggers on a right-click (use) on a vein ore.
-3. A chat message confirms how many veins were located ("Prospected N new veins"). This message
-   is the reliable confirmation that prospecting happened. If you get no message, you either
-   broke the block instead of right-clicking it, or that block type is not part of any vein.
-4. Travel toward the prospected vein and dig down. Veins are several blocks tall and hold a few
-   related ores in layers, so one shaft into a vein usually returns more than the headline ore.
-5. When a vein is mined out, you can mark it as depleted so it stops cluttering your records.
+1. Find an ore block — a scattered small ore, or any vein ore you have already exposed.
+2. Right-click the ore block (empty hand is simplest). Breaking it will not prospect.
+3. Read the chat confirmation (`Prospected N new veins!`). This is the reliable signal that
+   prospecting happened.
+4. Open your map and enable the ore-vein layer (below) to see where the located veins are.
+5. Travel to a vein and dig down. Veins are several blocks tall and hold a few related ores in
+   layers, so one shaft usually returns more than the headline ore.
+6. When a vein is mined out, mark it depleted so it stops cluttering your map.
 
-How far each right-click scans is controlled by the `oreBlockProspectRange` setting (default 24).
+## The map overlay
 
-## Map overlay
+Prospected veins are drawn by whichever supported map mod you have. GTMOGS ships integrations
+for Xaero's (this pack's map mod), FTB Chunks, and JourneyMap; all three default on in the
+config and need a game restart to toggle. The integration only **displays** veins you have
+already prospected — it does not prospect for you, and an empty overlay almost always means you
+have not right-clicked an ore yet, not that anything is broken.
 
-Prospected veins can be drawn on a map if you have a supported map mod, with a "Show GT Ore
-Veins" option to toggle them and waypoints you can set per vein. Note that the overlay only
-shows veins you have already prospected — an empty overlay usually just means you have not
-broken any ore yet, not that anything is wrong. If you have prospected veins and the option
-does not appear at all, the map integration for your map mod may be off or unsupported; the
-in-world chat confirmation still works regardless.
+Look for these toggles in your map mod's interface (the exact placement depends on the map mod;
+in JourneyMap they appear under a "Prospection layers" option group):
+
+- "Show GT Ore Veins" — the main overlay.
+- "Show Depleted Veins" / "Hide Depleted Veins" — controls whether mined-out veins still draw.
+- "Show Bedrock Fluid Veins" — a separate layer (not used by this pack's overworld setup).
+
+## Managing veins on the map
+
+Interacting with a vein marker gives two actions:
+
+- "Mark as Depleted" — flags a mined-out vein; it then shows as `Depleted` and can be hidden
+  with the toggle above.
+- "Toggle Waypoint" — creates or removes a waypoint for the vein. Creating one confirms with
+  `Created waypoint named %s!`.
 
 ## Sharing with your group
 
-Run `/gtmogs share_prospection_data <player>` to send the veins you have located to a
-teammate. On a shared world this is part of how the group divides work: a player who has
-mapped a region can pass that knowledge on, or trade it.
+Run `/gtmogs share_prospection_data <player>` to send the veins you have located to a teammate.
+They receive a notification (`<you> is sharing prospecting data with you!`). On a shared world
+this is part of how a group divides work — a player who has mapped a region can hand that
+knowledge on, or trade it.
+
+## Looking veins up in JEI
+
+GTMOGS adds an "Ore Vein Diagram" category to JEI. Looking up an ore there shows the vein it
+belongs to along with its Weight, Chance, Dimensions, and Spawn Range, so you can confirm which
+biome and depth to search before you set out.
 
 ## Where to look
 
-Veins are regional, so the biome decides what you find. A rough guide:
+Veins are regional — the biome at the vein's depth decides what generates. A rough guide:
 
 - Mountains and hills: iron, magnetite, lead, silver, nickel, palladium (deep).
 - Badlands and savanna: copper, gold, thorium, uranium (deep), bauxite (savanna).
@@ -62,13 +98,30 @@ Veins are regional, so the biome decides what you find. A rough guide:
 - Coasts and oceans: salt.
 
 Depth matters as much as biome. Marquee ores such as diamond, uranium, and mithril sit deep;
-emerald sits high in peaks. If you have a recipe viewer open, you can also look up an ore to
-see the vein it belongs to and its spawn range.
+emerald sits high in peaks. The JEI diagram above gives the exact spawn range per vein.
+
+## Configuration knobs
+
+These live in the GTMOGS config (`config/gtmogs.json`, generated on first run). Defaults read
+from the jar:
+
+- `oreBlockProspectRange` = 24 — how far a right-click scans for veins.
+- `oreVeinGridSize` = 3 and `oreVeinRandomOffset` = 12 — veins sit on a grid roughly every few
+  chunks, with a random jitter, so once you find one the next sits at a predictable interval.
+- `xaerosMapIntegration` / `ftbChunksIntegration` / `journeyMapIntegration` = all on.
+- `oreIconSize` = 32, `oreNamePrefix` = ">", `borderColor` = "#00000000" (fully transparent —
+  if vein markers ever look like they have no outline, this is why).
+- `removeVanillaOreGen` / `removeVanillaLargeOreVeins` = on (vanilla ore is disabled, as above).
 
 ## Tips
 
-- Veins generate on a regular grid, roughly every few chunks. Once you find one, others sit
-  at predictable intervals.
-- A single vertical shaft through the center of a vein chunk covers every depth a vein could
-  be at, so there is no need to strip-mine.
-- Caves cut through veins too. Prospecting works the same on ore you find while caving.
+- Veins generate on a regular grid, so once you find one others sit at predictable intervals.
+- A single vertical shaft through the center of a vein covers every depth it could be at, so
+  there is no need to strip-mine.
+- Caves cut through veins too; right-click ore you find while caving the same way.
+
+## Admin / debug
+
+Operators can force a vein for testing with `/gtmogs place_vein <vein> <pos>`, which confirms
+with `Placed vein %s at position %s` (or a failure message). This places a vein directly and is
+a fast way to verify a vein definition without searching the world.
