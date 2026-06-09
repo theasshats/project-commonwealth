@@ -50,11 +50,12 @@ mapped a region can pass that knowledge on, or trade it.
 Veins are regional, so the biome decides what you find. A rough guide:
 
 - Mountains and hills: iron, magnetite, lead, silver, nickel, palladium (deep).
-- Badlands and savanna: copper, gold, thorium, uranium (deep).
+- Badlands and savanna: copper, gold, thorium, uranium (deep), bauxite (savanna).
 - Desert: redstone, lithium.
 - Forest and taiga: coal.
-- Plains: zinc, tin.
-- Jungle: diamond (deep), jade.
+- Plains: zinc, tin, lignite, fireclay.
+- Swamps: lignite, fireclay.
+- Jungle: diamond (deep), jade, bauxite.
 - Snowy biomes: lapis.
 - Mountain peaks: emerald.
 - Coasts and oceans: salt.
