@@ -17,6 +17,10 @@ The in-game prospecting guide was corrected. Veins are located by right-clicking
 
 Vein markers on the map now draw with a hot pink outline so they stand out against terrain. Previously the outline was transparent and effectively invisible.
 
+### Fixes
+
+Create Big Cannons was running at 5.11.5, but the Advanced Technologies addon is built against 5.11.3 and called a block-damage method whose signature changed in the newer build. Firing a heavy autocannon armour-piercing round at a block crashed the server. Create Big Cannons has been moved back to 5.11.3 to match the addon.
+
 ## 0.6.1 — Dedicated server fix
 
 Diet – AppleSeed Edition, which provides the diet and nutrition system, crashed dedicated servers on startup. It now uses a patched build that resolves the crash. Single-player and client installs are unaffected.
