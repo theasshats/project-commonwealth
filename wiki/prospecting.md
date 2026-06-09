@@ -7,28 +7,29 @@ only sources. Prospecting is how you find the veins.
 
 ## The short version
 
-Break an ore block to reveal nearby veins of that material on your map, then travel to the
-vein and dig it out.
+Right-click an ore block to reveal nearby veins of that material on your map, then travel to
+the vein and dig it out. Right-click, not break — breaking an ore does nothing for prospecting.
 
 ## Small ores are indicators
 
 Single ore blocks are scattered across the overworld: coal, iron, copper, tin, zinc, gold,
 silver, nickel, redstone, lapis, and the occasional diamond. They are enough to get a first
-set of tools, but their real job is to point at veins. When you find one, break it and check
-your map.
+set of tools, but their real job is to point at veins. When you find one, right-click it and
+check your map.
 
 ## Step by step
 
-1. Find and break an ore block. A scattered small ore works, or any vein ore you have already
-   exposed. This is the important part: simply seeing ore does nothing — you have to break a
-   block to prospect.
-2. A chat message confirms how many veins were located ("Prospected N new veins"). This message
-   is the reliable confirmation that prospecting happened.
-3. Travel toward the prospected vein and dig down. Veins are several blocks tall and hold a few
+1. Find an ore block. A scattered small ore works, or any vein ore you have already exposed.
+2. Right-click the ore block (an empty hand is simplest). This is the important part: breaking
+   the block does nothing — prospecting only triggers on a right-click (use) on a vein ore.
+3. A chat message confirms how many veins were located ("Prospected N new veins"). This message
+   is the reliable confirmation that prospecting happened. If you get no message, you either
+   broke the block instead of right-clicking it, or that block type is not part of any vein.
+4. Travel toward the prospected vein and dig down. Veins are several blocks tall and hold a few
    related ores in layers, so one shaft into a vein usually returns more than the headline ore.
-4. When a vein is mined out, you can mark it as depleted so it stops cluttering your records.
+5. When a vein is mined out, you can mark it as depleted so it stops cluttering your records.
 
-How far each broken block scans is controlled by the `oreBlockProspectRange` setting.
+How far each right-click scans is controlled by the `oreBlockProspectRange` setting (default 24).
 
 ## Map overlay
 
