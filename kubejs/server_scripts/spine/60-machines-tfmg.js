@@ -24,9 +24,10 @@
 // STATUS: verified vs dump, load-safe, UNVERIFIED IN-GAME.
 
 ServerEvents.recipes(event => {
+  const mc = (p, k, o) => event.recipes.create.mechanical_crafting(o, p, k)
   // ── Fluid tanks (assembled tank blocks): barrel + plates. count preserved. ──
   event.remove({ output: 'tfmg:aluminum_fluid_tank' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     ' P ',
     ' B ',
     ' P '
@@ -36,7 +37,7 @@ ServerEvents.recipes(event => {
   }, 'tfmg:aluminum_fluid_tank').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:cast_iron_fluid_tank' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     ' P ',
     ' B ',
     ' P '
@@ -46,7 +47,7 @@ ServerEvents.recipes(event => {
   }, 'tfmg:cast_iron_fluid_tank').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:steel_fluid_tank' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     ' P ',
     ' B ',
     ' P '
@@ -57,7 +58,7 @@ ServerEvents.recipes(event => {
 
   // ── Mechanical pumps (devices): shapeless cogwheel + pipe laid into a 2-cell grid. ──
   event.remove({ output: 'tfmg:aluminum_mechanical_pump' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'CP'
   ], {
     C: 'create:cogwheel',
@@ -65,7 +66,7 @@ ServerEvents.recipes(event => {
   }, 'tfmg:aluminum_mechanical_pump').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:brass_mechanical_pump' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'CP'
   ], {
     C: 'create:cogwheel',
@@ -73,7 +74,7 @@ ServerEvents.recipes(event => {
   }, 'tfmg:brass_mechanical_pump').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:cast_iron_mechanical_pump' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'CP'
   ], {
     C: 'create:cogwheel',
@@ -81,7 +82,7 @@ ServerEvents.recipes(event => {
   }, 'tfmg:cast_iron_mechanical_pump').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:plastic_mechanical_pump' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'CP'
   ], {
     C: 'create:cogwheel',
@@ -89,7 +90,7 @@ ServerEvents.recipes(event => {
   }, 'tfmg:plastic_mechanical_pump').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:steel_mechanical_pump' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'CP'
   ], {
     C: 'create:cogwheel',
@@ -98,7 +99,7 @@ ServerEvents.recipes(event => {
 
   // ── Electric pump (electrical machine block). ──
   event.remove({ output: 'tfmg:electric_pump' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'MQK',
     'CPW',
     'MQK'
@@ -113,7 +114,7 @@ ServerEvents.recipes(event => {
 
   // ── Blast furnace multi-part machine blocks (hatch + output). ──
   event.remove({ output: 'tfmg:blast_furnace_hatch' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'FIF',
     'PTP',
     'FIF'
@@ -125,7 +126,7 @@ ServerEvents.recipes(event => {
   }, 'tfmg:blast_furnace_hatch').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:blast_furnace_output' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'BCB',
     'CQC',
     'BCB'
@@ -137,7 +138,7 @@ ServerEvents.recipes(event => {
 
   // ── Centrifuge (machine block). ──
   event.remove({ output: 'tfmg:centrifuge' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'BAB',
     'BAB',
     'BAB'
@@ -148,7 +149,7 @@ ServerEvents.recipes(event => {
 
   // ── Crankshaft (engine drivetrain device). ──
   event.remove({ output: 'tfmg:crankshaft' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'ABA',
     'BAB',
     '   '
@@ -168,7 +169,7 @@ ServerEvents.recipes(event => {
 
   // ── Accumulator (electrical energy-storage machine block). ──
   event.remove({ output: 'tfmg:accumulator' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'LWL',
     'SBS',
     'LCL'
@@ -182,7 +183,7 @@ ServerEvents.recipes(event => {
 
   // ── Chemical vats (fluid-processing machine blocks). ──
   event.remove({ output: 'tfmg:cast_iron_chemical_vat' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'PPP',
     'NTN',
     'PPP'
@@ -193,7 +194,7 @@ ServerEvents.recipes(event => {
   }, 'tfmg:cast_iron_chemical_vat').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:steel_chemical_vat' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'PPP',
     'NTN',
     'PPP'
@@ -204,7 +205,7 @@ ServerEvents.recipes(event => {
   }, '2x tfmg:steel_chemical_vat').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:fireproof_chemical_vat' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'PRP',
     'NTN',
     'PHP'
@@ -218,7 +219,7 @@ ServerEvents.recipes(event => {
 
   // ── Firebox (heating machine block). ──
   event.remove({ output: 'tfmg:firebox' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'BTB',
     'PPP',
     'BPB'
@@ -230,7 +231,7 @@ ServerEvents.recipes(event => {
 
   // ── Polarizer (electrical instrument machine). ──
   event.remove({ output: 'tfmg:polarizer' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'BWB',
     'CVC',
     'RSR'
@@ -245,7 +246,7 @@ ServerEvents.recipes(event => {
 
   // ── Cable hubs (electrical distribution devices). count preserved (all 2x). ──
   event.remove({ output: 'tfmg:aluminum_cable_hub' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'WWW',
     'MMM',
     'WWW'
@@ -255,7 +256,7 @@ ServerEvents.recipes(event => {
   }, '2x tfmg:aluminum_cable_hub').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:brass_cable_hub' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'WWW',
     'MMM',
     'WWW'
@@ -265,7 +266,7 @@ ServerEvents.recipes(event => {
   }, '2x tfmg:brass_cable_hub').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:copper_cable_hub' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'WWW',
     'MMM',
     'WWW'
@@ -275,7 +276,7 @@ ServerEvents.recipes(event => {
   }, '2x tfmg:copper_cable_hub').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:steel_cable_hub' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'WWW',
     'MMM',
     'WWW'
@@ -285,7 +286,7 @@ ServerEvents.recipes(event => {
   }, '2x tfmg:steel_cable_hub').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:heavy_cable_hub' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'WWW',
     ' M ',
     'WWW'
@@ -295,7 +296,7 @@ ServerEvents.recipes(event => {
   }, '2x tfmg:heavy_cable_hub').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:steel_casing_cable_hub' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'WWW',
     ' M ',
     'WWW'
@@ -306,7 +307,7 @@ ServerEvents.recipes(event => {
 
   // ── Smokestacks (machine exhaust multi-part blocks). count preserved (all 4x). ──
   event.remove({ output: 'tfmg:brick_smokestack' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'BPB',
     'BPB',
     'BPB'
@@ -316,7 +317,7 @@ ServerEvents.recipes(event => {
   }, '4x tfmg:brick_smokestack').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:concrete_smokestack' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'BPB',
     'BPB',
     'BPB'
@@ -326,7 +327,7 @@ ServerEvents.recipes(event => {
   }, '4x tfmg:concrete_smokestack').acceptMirrored(false)
 
   event.remove({ output: 'tfmg:metal_smokestack' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'BPB',
     'BPB',
     'BPB'

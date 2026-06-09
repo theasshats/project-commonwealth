@@ -136,7 +136,6 @@ ServerEvents.recipes(event => {
     category: 'misc',
     key: {
       C: { item: 'create_new_age:copper_circuit' },
-      D: { item: 'create_new_age:overcharged_diamond' },
       M: { item: 'create_new_age:reinforced_motor' },
       S: { item: 'create_new_age:overcharged_iron_sheet' },
       B: { item: 'tfmg:coated_circuit_board' } // TFMG circuit gates the advanced extension

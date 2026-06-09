@@ -29,11 +29,10 @@ ServerEvents.recipes(event => {
   // bootstrap hand-craft — EXPENSIVE: 1 full iron ingot per alloy (= 9 nuggets, vs mixing's 3)
   event.shapeless('create:andesite_alloy', ['minecraft:andesite', '#c:ingots/iron'])
 
-  // Create route — mixing, the intended cheaper path (~3x floor: 3 nuggets, iron or zinc)
-  event.recipes.create.mixing('create:andesite_alloy',
-    ['minecraft:andesite', '#c:nuggets/iron', '#c:nuggets/iron', '#c:nuggets/iron'])
-  event.recipes.create.mixing('create:andesite_alloy',
-    ['minecraft:andesite', '#c:nuggets/zinc', '#c:nuggets/zinc', '#c:nuggets/zinc'])
+  // Create route — mixing, the intended cheaper path (~3x floor: 3 nuggets, iron or zinc).
+  // Concrete items + count (tag strings mis-parse as fluids in create:mixing on this KubeJS build).
+  event.recipes.create.mixing('create:andesite_alloy', ['minecraft:andesite', '3x minecraft:iron_nugget'])
+  event.recipes.create.mixing('create:andesite_alloy', ['minecraft:andesite', '3x create:zinc_nugget'])
 
   console.info(`[derpack-spine] cost model: andesite_alloy dialed (hand-craft 1 ingot > mixing 3 nuggets); ${SPINE_BASICS_3X.propagates.length} basics inherit via inputs; sheets left 1:1. Per-mod step-depth staged.`)
 })

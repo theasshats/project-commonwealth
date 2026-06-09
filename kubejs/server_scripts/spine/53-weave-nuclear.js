@@ -28,7 +28,7 @@ ServerEvents.recipes(event => {
   event.recipes.create.sequenced_assembly(
     ['createnuclear:reactor_casing'], 'create:brass_casing',
     [
-      event.recipes.create.deploying('derpack:incomplete_reactor_casing', ['derpack:incomplete_reactor_casing', '#c:ingots/steel']),
+      event.recipes.create.deploying('derpack:incomplete_reactor_casing', ['derpack:incomplete_reactor_casing', 'create_ironworks:steel_ingot']),
       event.recipes.create.deploying('derpack:incomplete_reactor_casing', ['derpack:incomplete_reactor_casing', 'tfmg:etched_circuit_board']),
       event.recipes.create.pressing('derpack:incomplete_reactor_casing', 'derpack:incomplete_reactor_casing')
     ]

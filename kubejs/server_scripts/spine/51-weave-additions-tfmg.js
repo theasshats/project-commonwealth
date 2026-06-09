@@ -28,9 +28,10 @@
 // STATUS: verified vs dump, load-safe, UNVERIFIED IN-GAME.
 
 ServerEvents.recipes(event => {
+  const mc = (p, k, o) => event.recipes.create.mechanical_crafting(o, p, k)
   // ── engine_gearbox: +copper_wire. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:engine_gearbox' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'KMK',
     'SCS',
     'KWK'
@@ -44,7 +45,7 @@ ServerEvents.recipes(event => {
 
   // ── steel_gearbox: +copper_wire. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:steel_gearbox' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     ' O ',
     'OCO',
     ' W '
@@ -69,7 +70,7 @@ ServerEvents.recipes(event => {
 
   // ── regular_engine: +electric_motor. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:regular_engine' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     ' M ',
     'OIO',
     'ICI'
@@ -82,7 +83,7 @@ ServerEvents.recipes(event => {
 
   // ── radial_engine: +electric_motor. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:radial_engine' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'IOI',
     'OCO',
     'MSM'
@@ -96,7 +97,7 @@ ServerEvents.recipes(event => {
 
   // ── turbine_engine: +alternator. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:turbine_engine' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'OOO',
     'PHA',
     'OOO'
@@ -109,7 +110,7 @@ ServerEvents.recipes(event => {
 
   // ── industrial_mixer: +electric_motor. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:industrial_mixer' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'KSK',
     'MHE',
     'KCK'
@@ -124,7 +125,7 @@ ServerEvents.recipes(event => {
 
   // ── winding_machine: +copper_wire. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:winding_machine' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     '  W',
     'ITP',
     'ICM'
@@ -139,7 +140,7 @@ ServerEvents.recipes(event => {
 
   // ── steel_distillation_controller: +capacitor. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:steel_distillation_controller' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'SPS',
     'ECE',
     'MHA'
@@ -171,7 +172,7 @@ ServerEvents.recipes(event => {
   // ── simple_large_engine (mechanical_crafting): +capacitor at the core. Already through Create upstream;
   //    type/shape preserved, one core cell swapped to an Additions capacitor. ──
   event.remove({ output: 'tfmg:simple_large_engine' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     'CCC',
     'OEO',
     'OMO',
@@ -186,7 +187,7 @@ ServerEvents.recipes(event => {
   // ── large_engine (mechanical_crafting): +electric_motor. Already through Create upstream; type/shape
   //    preserved, the bottom plate row's center cell carries the motor. ──
   event.remove({ output: 'tfmg:large_engine' })
-  event.recipes.create.mechanical_crafting([
+  mc([
     ' O ',
     ' B ',
     'AOA',
