@@ -4,10 +4,10 @@
 // assembled aeronautics CONTROL DEVICES route through Create's mechanical_crafting. Grids verified vs
 // tools/recipe-dump/derpack-recipes.txt. No new ingredients, no count changes, no global state.
 //
-// SCOPE (re-reviewed): the simulated control devices/sensors are multi-part Create-Aeronautics gear and
-// belong on the Mechanical Crafter. GEARS are deliberately NOT here — gnkinetics gears (planetary, ring,
-// magnet, and all the simple/conversion gears) stay on the bench; routing gears through Create reads as
-// busywork, and gnkinetics is a gear-expansion mod where gears are the basic vocabulary.
+// SCOPE (re-reviewed): the simulated control devices/sensors + the gnkinetics gearbox ASSEMBLIES
+// (planetary, ring — multi-brass) route through the Mechanical Crafter. The BASIC gears stay on the
+// bench: magnet gears, simple/conversion gears, cogs — routing those through Create is busywork, and
+// gnkinetics is a gear-expansion mod where single gears are the basic vocabulary.
 //
 // Excluded (owned by other seams): simulated:gyroscopic_mechanism, gimbal_sensor (54);
 //   aeronautics:gyroscopic_propeller_bearing / propeller_bearing / smart_propeller (40/54/50).
@@ -16,6 +16,10 @@
 
 ServerEvents.recipes(event => {
   const mc = (out, pattern, key) => { event.remove({ output: out }); event.recipes.create.mechanical_crafting(out, pattern, key) }
+
+  // ── gnkinetics gearbox ASSEMBLIES (multi-brass; basic/simple gears stay on the bench) ──
+  mc('gnkinetics:planetary_gear', [' b ', 'bgb', ' b '], { b: '#c:ingots/brass', g: 'gnkinetics:ring_gear' })
+  mc('gnkinetics:ring_gear', ['bbb', 'bgb', 'bbb'], { b: '#c:ingots/brass', g: 'gnkinetics:hollow_large_brass_gear' })
 
   // ── core machines ──
   mc('simulated:physics_assembler', ['   ', ' N ', 'ARA'], { A: 'create:andesite_alloy', N: 'minecraft:lever', R: 'create:andesite_casing' })
@@ -41,8 +45,9 @@ ServerEvents.recipes(event => {
   mc('simulated:altitude_sensor', ['P', 'S', 'A'], { P: 'minecraft:paper', S: '#c:plates/iron', A: 'create:andesite_casing' })
   mc('simulated:torsion_spring', ['A', 'S', 'C'], { A: 'create:shaft', S: 'simulated:spring', C: 'create:andesite_casing' })
 
-  console.info('[derpack-spine] 62-machines-misc: 18 simulated aeronautics control devices/sensors routed through create:mechanical_crafting. gnkinetics gears left on the bench.')
+  console.info('[derpack-spine] 62-machines-misc: 20 routed through create:mechanical_crafting (2 gnkinetics gearbox assemblies + 18 simulated control devices/sensors). Basic gears left on the bench.')
 
-  // LEFT AS CRAFTING: all gnkinetics gears (planetary/ring/magnet/simple/conversion) — gears stay benchcraftable;
-  //   simulated simple parts (spring, ropes, handles, steering_wheel, throttle_lever, cosmetics).
+  // LEFT AS CRAFTING: gnkinetics BASIC gears (magnet/simple/conversion gears, cogs) — only the planetary/ring
+  //   gearbox assemblies route through Create; simulated simple parts (spring, ropes, handles, steering_wheel,
+  //   throttle_lever, cosmetics).
 })
