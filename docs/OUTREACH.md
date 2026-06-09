@@ -230,6 +230,10 @@ it and it doesn't fit the audience.
 
 Rough priority. "Blocking" = a wide push shouldn't happen without it.
 
+> **Full production plan in [`docs/ASSETS.md`](ASSETS.md)** — exact specs per surface, the
+> reference-image → brief workflow (zagwar's references drive the direction), tools, and sequencing.
+> The table below is the summary; ASSETS.md is the how.
+
 | Asset | Status / source | Priority |
 |---|---|---|
 | **The name** (#78) | **Decided — Project Commonwealth** (motto *Magna Communitas*, handle `pcmc`) | Decision made — unblocks logo, copy, trailer, store page. (Mechanical rename pending, #78.) |
