@@ -921,6 +921,18 @@ file = "kubejs/server_scripts/spine/54-weave-aeronautics.js"
 hash = "7fdecffaf7ae5179ac33c9e4fd63989aefc4556b19f85d5db0ba723d4abef373"
 
 [[files]]
+file = "kubejs/server_scripts/spine/60-machines-tfmg.js"
+hash = "d77e2b2f957f4865b3e6c2ba97e7752d9e6c50e41d88c55825db7006b445de8f"
+
+[[files]]
+file = "kubejs/server_scripts/spine/61-machines-newage-additions.js"
+hash = "e42a8ce3112decae16b10ac526cab155571057601bac6d1cabfb2497c3f29742"
+
+[[files]]
+file = "kubejs/server_scripts/spine/62-machines-misc.js"
+hash = "8268ebe51a0050b99e1fb47b80f8b874642e6577fa10c10fd463e453069808d2"
+
+[[files]]
 file = "kubejs/server_scripts/zz-dump-recipes-TEMP.js"
 hash = "3615afccd5bb644dff3d0b1d9cb41ece92d1271b79ab27770d4b6cb30e836559"
 
