@@ -894,7 +894,7 @@ hash = "06186e2bf574e7e738fb4b62e37ec52028f6a598941e6ecf12fcf064bf011a76"
 
 [[files]]
 file = "kubejs/server_scripts/spine/30-cost-basics.js"
-hash = "11c860e5a3f0219049ca2a5559c5f6070edf97869f0fb8cfe047a04873ddfa2d"
+hash = "c26d51c846a18f70b711c8f10e92a948c2af370fe21e61ee0523ada1c701d907"
 
 [[files]]
 file = "kubejs/server_scripts/spine/40-gates.js"
@@ -906,15 +906,15 @@ hash = "42e733a1106d39963daafd3139145520cead23eba7f290db1b2c94e4dc8c4ec6"
 
 [[files]]
 file = "kubejs/server_scripts/spine/51-weave-additions-tfmg.js"
-hash = "10f512fc5b091c609c10123d5a2e64c1d6fd15949d74c159470d6bd435c839eb"
+hash = "b854e1d655273052dfd8e21c75448b02fdb8a228457c957d88c151fe9fe69069"
 
 [[files]]
 file = "kubejs/server_scripts/spine/52-weave-tfmg-newage.js"
-hash = "2a95005838768658c15a1f5a429838b5ccd9b74816406eba97aa6620c3929847"
+hash = "dfb89e264a7602feb071f122117c302137f5cb35c3939d35df99ee94b0dc26d3"
 
 [[files]]
 file = "kubejs/server_scripts/spine/53-weave-nuclear.js"
-hash = "7bc4642aa0a70b5a9cf7ddf42eff764e8b661f81b0828bb0471b711fce78ae53"
+hash = "a5a33c570ee06a0b82415ad9da162b6fc26b297105fc0b2154d78de143e8c6a9"
 
 [[files]]
 file = "kubejs/server_scripts/spine/54-weave-aeronautics.js"
@@ -922,7 +922,7 @@ hash = "7fdecffaf7ae5179ac33c9e4fd63989aefc4556b19f85d5db0ba723d4abef373"
 
 [[files]]
 file = "kubejs/server_scripts/spine/60-machines-tfmg.js"
-hash = "d77e2b2f957f4865b3e6c2ba97e7752d9e6c50e41d88c55825db7006b445de8f"
+hash = "66f55ca78e8c89b80d36c7734a93e2fad0c2973ad378a1a7494d2f130c5bc6f7"
 
 [[files]]
 file = "kubejs/server_scripts/spine/61-machines-newage-additions.js"
