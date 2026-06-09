@@ -137,6 +137,21 @@ You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:
 *Left as-is (not metal ore): TFMG oil (`oil_deposit`/`oil_well` — a fluid), Create/Nuclear/TFMG
 "striated" stone (scoria/crimsite/tuff/andesite), Create: Metalwork (processing only).*
 
+> ⚠️ **TFMG `tfmg_striated_ores_overworld` WAS NOT purely decorative — now it is.** Upstream it's a
+> `create:layered_ore` feature (global `#is_overworld`) that carried four *material* bands: `tfmg:bauxite`
+> (→ aluminum, its **only** source), `tfmg:galena` (→ lead), `tfmg:lignite` (→ coal), and `tfmg:fireclay`
+> (→ fireproof bricks). All four generated in **every** overworld biome, bypassing the regional vein
+> system — the same region-agnostic leak class as the infected-diamond/palladium overrides. **Fixed by
+> overriding the configured feature** at `kubejs/data/tfmg/worldgen/configured_feature/tfmg_striated_ores_overworld.json`
+> — all four material bands swapped to decorative stone (`granite`/`smooth_basalt`/`tuff`), so the feature
+> is now genuinely cosmetic striated stone. Each material was **re-homed regionally** so nothing is lost:
+>
+> - **galena** → no new vein; lead is already the regional **lead vein**, so its product stays available.
+>   (Cost: TFMG galena *building* blocks lose their natural source — acceptable.)
+> - **bauxite (aluminum)** → new **`bauxite` vein** (jungle/savanna — tropical laterite).
+> - **lignite + fireclay** → new **`lignite` vein** (swamp/plains lowlands — coal-seam association), with
+>   fireclay as its secondary band so both sedimentary materials share one regional home.
+
 **Nether / dimensional (optional, later pass):** `nether_gold_ore`, `nether_quartz_ore`,
 `ancient_debris`; Occultism `occultism:iesnium_ore` (nether); Deeper Darker (Otherside dimension).
 
@@ -160,8 +175,9 @@ vein. Override targets in use (all verified + already shipped):
 | Infected diamond (Born in Chaos) | `born_in_chaos_v1/neoforge/biome_modifier/infected_diamond_ore_feature_biome_modifier.json` + `infected_deepslate_diamond_ore_feature_biome_modifier.json` — **shadow only, no vein.** It was a second diamond source injected into all overworld biomes; disabled outright so diamonds come solely from the GTMOGS diamond mix vein + the diamond small ore. |
 | Palladium (Galosphere) | `galosphere/neoforge/biome_modifier/add_silver_ores.json` — the `#is_overworld` small-blob injection (feature still named `ore_silver_small` after the Silver→Palladium rename). Veined separately; `add_large_silver_ores` (crystal_canyons) left as a regional bonus. |
 
-Left untouched: nether ores (`occultism` iesnium, `striated_ores_nether`), the decorative
-`striated_ores_overworld` (scoria/crimsite/stone), and TFMG `oil_deposit`/`oil_well` (fluid).
+Left untouched: nether ores (`occultism` iesnium, `striated_ores_nether`) and TFMG
+`oil_deposit`/`oil_well` (fluid). `striated_ores_overworld` is **kept but de-leaded** — it carries
+bauxite/lignite/fireclay (sole source, kept) plus galena (lead, removed); see the ⚠️ note above.
 
 ---
 
@@ -193,6 +209,8 @@ biome tag (edit the tag to move a vein). **Composition** is primary → secondar
 | mithril | special (Terralith) | -48…16 | 24 | 10 | mithril → mithril → silver → emerald |
 | jade | jungle | -24…48 | 32 | 30 | jade → jade → emerald → diamond |
 | palladium | mountains / deep_dark | -56…24 | 24 | 12 | palladium → palladium → nickel → silver |
+| bauxite | jungle / savanna | 32…128 | 40 | 50 | bauxite → iron → zinc → gold |
+| lignite | swamp / plains | 8…80 | 40 | 45 | lignite → fireclay → coal → lithium |
 
 > All region tags are **strictly regional** — region biomes only, no `#c:is_underground` /
 > generic-cave fallback (issue #65). Veins generate where the region's surface biome extends down,

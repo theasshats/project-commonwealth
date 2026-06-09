@@ -33,6 +33,10 @@ file = "config/everycomp-hazardous.toml"
 hash = "abe2744c46c81c28ef0bee5cc5cbf63c6982ee589f54ec06c9b31d258f841051"
 
 [[files]]
+file = "config/gtmogs.yaml"
+hash = "e48941821880fe42f50396beb3661af385384684f7ceaa3db672a1b6cb004229"
+
+[[files]]
 file = "config/incontrol/spawn.json"
 hash = "dcf4991884b3238d5b4386b189acf7f8159f61faaaee3720b79c07ba66faebbc"
 
@@ -365,6 +369,10 @@ file = "kubejs/data/createtreadmill/loot_table/blocks/treadmill.json"
 hash = "1488936e86133dc573aadbf9f816d2e0d5be836750ca88aa3258eb1adba461a6"
 
 [[files]]
+file = "kubejs/data/derpack/gtmogs/ore_vein/bauxite.json"
+hash = "f4436fb0474a0637b344a3854f2db5edfc0d12b18206569a42871d4855dd605b"
+
+[[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/coal.json"
 hash = "74f571f358b7d22d73859e4a645035dd149244dc8c43675b918197fbc31b55ca"
 
@@ -399,6 +407,10 @@ hash = "cbe765c7e05e09f14a6b8140275e943a42060d6c01357f144cac2c839fbcb5a2"
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/lead.json"
 hash = "b37f503a4671803e162e730430a542ba8aedf932d0e36528b391bf7cb6f83e2c"
+
+[[files]]
+file = "kubejs/data/derpack/gtmogs/ore_vein/lignite.json"
+hash = "0825874d1a880348efb6e4ef4b7d17299ee410307ee7dabe56b3dd6952dc581c"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/lithium.json"
@@ -469,6 +481,10 @@ file = "kubejs/data/derpack/recipe/primer.json"
 hash = "9f63003561b61c810d7ba7a4cfc0f5f0a0dfa0236b6bba99cfbb423a79beeea2"
 
 [[files]]
+file = "kubejs/data/derpack/tags/worldgen/biome/vein_bauxite.json"
+hash = "f3fe9529eafdb3bb7c203e93fcf2901b3b14829d037c7c34b619869e22c9d06e"
+
+[[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_coal.json"
 hash = "231d453d0e6c3c82866e25f4042fe9f2dd2f1b04ddee27907370990c78c554fb"
 
@@ -503,6 +519,10 @@ hash = "a03d3104257f7cd6f7ad39a0eedf08ee58bba6f0cb8c73d21e53dfbe476f7b49"
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_lead.json"
 hash = "68b109c832f6b594805ab51658da7e079172be87d092ce4b1a011f71b4599458"
+
+[[files]]
+file = "kubejs/data/derpack/tags/worldgen/biome/vein_lignite.json"
+hash = "329c0666e009424ebdff29e429728b63d03730806e96cc25de5b0f5ca80bf834"
 
 [[files]]
 file = "kubejs/data/derpack/tags/worldgen/biome/vein_lithium.json"
@@ -803,6 +823,10 @@ hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 [[files]]
 file = "kubejs/data/tfmg/neoforge/biome_modifier/nickel_ore.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
+
+[[files]]
+file = "kubejs/data/tfmg/worldgen/configured_feature/tfmg_striated_ores_overworld.json"
+hash = "b6333989377654b77debf8ce66e98e52e78fb3fad30ab37c81caf5f3beffcf53"
 
 [[files]]
 file = "kubejs/data/trailandtales_delight/loot_table/blocks/lantern_fruits.json"

@@ -1,0 +1,11 @@
+# Derpack X — GTMOGS overrides (config id "gtmogs", YAML format).
+#
+# borderColor: ARGB hex (#AARRGGBB) for the outline drawn around vein markers on the map,
+# or the literal "material" to use the ore's material colour. The mod default is fully
+# transparent (#00000000), which renders no visible outline.
+#
+# Active: hot pink (#FF1493) at full alpha.
+# Playtest alternates (swap the value below): bright yellow #FFFFFF00, pure white #FFFFFFFF.
+compat:
+  minimap:
+    borderColor: #FFFF1493

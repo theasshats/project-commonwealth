@@ -3,9 +3,19 @@
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme", a short lead paragraph, then sections (see CLAUDE.md). -->
 
-## 0.6.2 — TBD
+## 0.6.2 — Ore generation and prospecting
 
-_Draft placeholder — replace with real notes before release._
+A set of fixes to regional ore generation and the prospecting guide.
+
+### Ore generation
+
+Aluminium (bauxite), lignite, and fireclay previously generated in every overworld biome as part of a background stone feature, which sidestepped the regional vein system. They are now found in dedicated regional veins: bauxite in jungle and savanna, and lignite together with fireclay in swamps and lowland plains. The background stone feature still generates as terrain decoration but no longer carries ore. Lead's stray secondary source was removed for the same reason; lead remains available from its regional vein.
+
+### Prospecting
+
+The in-game prospecting guide was corrected. Veins are located by right-clicking an ore block, not by breaking it; breaking does nothing. The guide now describes the right-click trigger, the map overlay toggles, marking veins as depleted, waypoints, sharing prospecting data with teammates, and the JEI ore-vein diagram.
+
+Vein markers on the map now draw with a hot pink outline so they stand out against terrain. Previously the outline was transparent and effectively invisible.
 
 ## 0.6.1 — Dedicated server fix
 
