@@ -14,11 +14,12 @@
 // with LootType.CHEST is the non-deprecated "all chests" target; conditions (randomChance) are checked
 // before the addLoot action.
 LootJS.lootTables(event => {
-  const find = (chance, ...discs) => discs.forEach(disc =>
+  // (Rhino/KubeJS doesn't support rest params — pass the discs as an array.)
+  const find = (chance, discs) => discs.forEach(disc =>
     event.addTableModifier(LootType.CHEST).randomChance(chance).addLoot(disc)
   )
 
-  find(0.06,  'gamediscs:game_disc_blocktris', 'gamediscs:game_disc_froggie')
-  find(0.03,  'gamediscs:game_disc_flappy_bird', 'gamediscs:game_disc_slime')
-  find(0.015, 'gamediscs:game_disc_rabbit', 'gamediscs:game_disc_tnt_sweeper')
+  find(0.06,  ['gamediscs:game_disc_blocktris', 'gamediscs:game_disc_froggie'])
+  find(0.03,  ['gamediscs:game_disc_flappy_bird', 'gamediscs:game_disc_slime'])
+  find(0.015, ['gamediscs:game_disc_rabbit', 'gamediscs:game_disc_tnt_sweeper'])
 })
