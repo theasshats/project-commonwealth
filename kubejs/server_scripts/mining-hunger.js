@@ -74,8 +74,9 @@ const FREE_EXACT = [
   'firefly_bush'
 ]
 
-// Light: wood, wool, glass, loose ground, foliage solids.
-const LIGHT_CONTAINS = ['_planks', '_log', '_wood', '_stem', 'wool', 'glass', 'ice']
+// Light: planks, wool, glass, loose ground, foliage solids. Raw timber (logs, wood, stems,
+// hyphae) is NOT light — it falls through to Normal; only processed planks sit here.
+const LIGHT_CONTAINS = ['_planks', 'wool', 'glass', 'ice']
 const LIGHT_EXACT = [
   'sand', 'red_sand', 'soul_sand', 'soul_soil', 'gravel', 'suspicious_sand', 'suspicious_gravel',
   'mud', 'packed_mud', 'hay_block', 'sponge', 'wet_sponge', 'glowstone', 'shroomlight',

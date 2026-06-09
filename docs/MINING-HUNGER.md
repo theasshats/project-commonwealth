@@ -11,8 +11,8 @@ Breaking a solid block makes the player hungrier. The cost is per-block and scal
 | Tier | Weight | Blocks per full hunger bar | Examples |
 |------|--------|----------------------------|----------|
 | Free | 0.0 | ∞ (no cost) | torches, crops, flowers, saplings, redstone wire, leaves, carpets, signs |
-| Light | 0.5 | ~200 | wood (logs/planks), wool, glass, sand, gravel, ice |
-| Normal | 1.0 | **100** | stone, dirt, concrete, bricks, terracotta |
+| Light | 0.5 | ~200 | planks, wool, glass, sand, gravel, ice |
+| Normal | 1.0 | **100** | stone, dirt, concrete, bricks, terracotta, **logs/wood/stems** |
 | Heavy | 1.6 | ~62 | ores, obsidian, deepslate, basalt, anvils |
 | Very heavy | 2.2 | ~45 | solid metal/storage blocks (iron/gold/…), netherite, ancient debris |
 
