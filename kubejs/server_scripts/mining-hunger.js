@@ -47,8 +47,10 @@ const METALS = [
 ]
 const VHEAVY_EXACT = ['ancient_debris']
 
-// Heavy: ores and dense stone/machines.
-const HEAVY_CONTAINS = ['ore', 'obsidian', 'deepslate', 'blackstone', 'basalt']
+// Heavy: ores and dense stone/machines. Ores are matched on a word boundary (below) so
+// "*_ore" lands here while incidental "ore" substrings (e.g. "reactor_core") do not.
+const HEAVY_CONTAINS = ['obsidian', 'deepslate', 'blackstone', 'basalt']
+const isOre = (p) => p === 'ore' || p.endsWith('_ore') || p.indexOf('_ore_') !== -1
 const HEAVY_EXACT = ['anvil', 'chipped_anvil', 'damaged_anvil', 'lodestone', 'respawn_anchor', 'enchanting_table']
 
 // Free (no hunger): near-massless blocks. Suffix/exact lists are kept separate from the
@@ -97,7 +99,7 @@ function hungerWeight(id) {
   if (p.endsWith('_block') && includesAny(p, METALS)) return W_VHEAVY
 
   // Heavy: ores and dense stone/machines.
-  if (includesAny(p, HEAVY_CONTAINS) || equalsAny(p, HEAVY_EXACT)) return W_HEAVY
+  if (isOre(p) || includesAny(p, HEAVY_CONTAINS) || equalsAny(p, HEAVY_EXACT)) return W_HEAVY
 
   // Free: near-massless foliage / decoration / mechanisms.
   if (equalsAny(p, FREE_EXACT) || endsWithAny(p, FREE_SUFFIX) || includesAny(p, FREE_CONTAINS)) return W_FREE
