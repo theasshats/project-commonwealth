@@ -22,9 +22,10 @@
   Discord, the site — uses the *same* logo, mark, and palette. Recognizability comes from repetition,
   not variety. The logo + pack icon + palette are the **gating assets**; everything else is built on
   them, so they come first (§6).
-- **Built by two people, no budget assumed.** Favor what's cheap and repeatable: in-game capture (free
-  and perfectly on-brand), reusable templates, free tools. Spend real effort (or a small commission) on
-  exactly one thing — the **logo** — because everything else reuses it.
+- **Built by two people, with ~$200 to spend on art.** Favor what's cheap and repeatable: in-game
+  capture (free and perfectly on-brand), reusable templates, free tools. Put the **whole budget into one
+  thing — a commissioned logo + pack icon** — because every other surface reuses it (§5). Everything else
+  is in-house.
 - **Honesty (the `OUTREACH.md` §9 / `CLAUDE.md` rule applies to pixels too).** Screenshots and the
   trailer show the *actual game*. No doctored looks a player can't reproduce. Note the shaders caveat in
   §3.
@@ -132,10 +133,17 @@ from.
 
 ## 5. Production approach & tools (two people, low budget)
 
-- **Logo — the one asset worth doing carefully.** Three viable routes: **(a) commission** a small artist
-  from the brief (the modding/Fiverr communities do clean vector logos cheaply); **(b) in-house** in
-  **Inkscape** (free, vector) straight from the brief; **(c) AI-concept then hand-vectorize**. Decide
-  commission-vs-in-house *after* the §4 brief exists — don't brief an artist (or yourself) without it.
+- **Logo + pack icon — commission this; the whole ~$200 goes here.** It's the gating asset every other
+  surface reuses, and ~$200 is solid-freelancer range for a clean vector logo — so this is the
+  highest-leverage way to spend it. **Brief from §4 first** — don't commission without it. **Require in
+  the commission:** the full deliverable set (§2 — horizontal logo, **mark-only**, **light/dark**
+  variants, and the **512×512 square icon**), **editable vector source (SVG/AI)**, and **full
+  commercial-use rights + the right to modify** (so you can recolor/derive later without going back to the
+  artist). **Budget split:** ~$150–180 for the logo+icon package, keep ~$20–50 in reserve for one
+  revision round or an extra variant (e.g. a Discord-icon crop). **Where to hire:** the Create / modded-MC
+  art Discords (artists are right there), r/HungryArtists, or Fiverr. *(Free fallback if you'd rather not
+  spend: in-house in **Inkscape** from the brief, or AI-concept → hand-vectorize — but the commission is
+  the recommended use of the budget.)*
 - **Everything else — in-house.** Pack icon, thumbnail template, social card, banners: **GIMP/Krita**
   (raster) or **Figma free** (layout/templates). Build the thumbnail as a **reusable template** (logo +
   text zone + hero-image slot) so future videos are a 5-minute swap.
@@ -153,8 +161,9 @@ from.
 Mirrors `OUTREACH.md` §6 (build quietly now, loud finish) — assets are *ready* before the loud push, not
 scrambled at launch.
 
-- **Now (~v0.7):** collect references → **brief** (§4); lock palette + type; pick a logo direction; start
-  the **screenshot/clip habit** (§3). *Gating work — do the brief and logo first.*
+- **Now (~v0.7):** collect references → **brief** (§4); lock palette + type; **commission the logo + pack
+  icon** from the brief (§5 — the budget goes here); start the **screenshot/clip habit** (§3). *Gating
+  work — the brief and logo come first.*
 - **Mid (~v0.9, Economy & airships — the best content beat):** **logo final**, **pack icon**, social
   card, site header, first gallery shots. This is when the airship + economy hooks are both live, so it's
   the strongest moment to have polished visuals.
