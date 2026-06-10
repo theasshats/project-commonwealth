@@ -51,3 +51,11 @@ The staged cross-tier re-recipes in `docs/CREATE-SPINE-IMPL.md` §9 — priority
 `tfmg:electric_motor`, `tfmg:engine_controller`, `create_new_age:reactor_casing`,
 `create_new_age:advanced_energiser`, `createnuclear:reactor_core`, and confirmation that
 `create_new_age:reactor_controller` exists. With those exact recipes, the lineage work stops being blind.
+
+## Known blind spot — KubeJS-added recipes
+
+The dump's `NAMESPACES` filter matches **recipe ids**, and recipes added by our own KubeJS scripts get
+`kubejs:`-namespaced ids — so they are filtered OUT of the dump even when their *output* is a covered
+mod's item. A "missing" recipe for an item the spine re-authored (e.g. `gnkinetics:planetary_gear`,
+re-added in `spine/62-machines-misc.js`) is usually this, not an unobtainable item: check
+`kubejs/server_scripts/` before concluding a recipe doesn't exist.

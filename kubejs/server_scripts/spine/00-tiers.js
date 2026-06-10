@@ -41,6 +41,16 @@ const SPINE = {
           aero: 'DIGITAL control (create-aeroworks, aeronautics:smart_propeller)' }
   },
 
+  // TIER TOKENS (CREATE-SPINE.md Part 2) — the proof-of-tier item each tier's recipes weave in. When
+  // costing a tiered item, reach for ITS token instead of inventing a new marker; that's what pulls the
+  // recipe graph into one web. T1 has none (bootstrap must stay open).
+  tokens: {
+    T2: ['createlowheated:basic_burner', '#c:ingots/steel'],   // built heat + the steel chain
+    T3: ['createaddition:capacitor'],                          // proof of running electricity (needs overcharged_iron)
+    T4: ['cataclysm:ignitium_ingot', 'cataclysm:cursium_ingot', // boss metals (the gates)
+         '#c:ingots/silver']                                   // the cross-producer ingredient (occultism-only -> trade with magic)
+  },
+
   // T3->T4 mod spine (CREATE-SPINE.md Part 4b): how the addon chain bolts together.
   spine: {
     additions_to_tfmg:  'createaddition (rung-4 SU<->FE converter) powers TFMG electric machines',

@@ -89,9 +89,17 @@ exoskeletons remain earlier-tier entry points.
 
 Create: Ore Excavation has been repositioned as an end-game operation. Its drilling machine and
 extractor now require TFMG circuit boards and electric motors, and drill heads are steel-bodied and
-assembled on the Mechanical Crafter. Finding veins stays accessible — the sample drill, vein finder, and
-vein atlas are unchanged — but industrial extraction is a late investment that consumes drill heads,
-heavy rotational power, and fluid while it runs.
+assembled on the Mechanical Crafter. Finding veins stays accessible and early: the vein finder now senses
+through an electron tube rather than an eye of ender, and the vein atlas binds its surveys with a Create
+clipboard. Industrial extraction, by contrast, is a late investment that consumes drill heads, heavy
+rotational power, and fluid while it runs.
+
+End-game electricity now reaches outside the tech route. The layered magnet at the heart of New Age's
+generators takes a silver core, and silver is smelted only by Occultism's magic route — so a reactor-tier
+power plant needs something from a magic base, by trade or by practicing the craft yourself.
+
+The basic burner also warms you. Under Cold Sweat, standing near a lit workshop's burner now provides
+gentle heat — less than a campfire, but enough to matter on a cold night in the early game.
 
 Create Stuff & Additions ties into the wider pack: the heat engine is built around a basic burner, the
 steam engine takes steel, and the copper exoskeleton and portable drill assemble on the Mechanical

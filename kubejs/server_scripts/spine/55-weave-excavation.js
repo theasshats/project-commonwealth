@@ -11,9 +11,11 @@
 //     upgrade of the diamond drill (minecraft:netherite_drill_smithing — consistent with vanilla tooling).
 //   - The SINK mechanics are native and deliberately kept: drills wear out (consumable heads), drilling
 //     recipes draw heavy stress (256-2048 SU) and eat fluid (e.g. 1000mb lava per netherite op).
-//   - NOT touched: sample_drill + vein_finder + vein_atlas (the T2-3 prospecting kit — finding veins
-//     early is fine, even good for planning; EXTRACTING is the T4 privilege). drilling/* vein yields
-//     stay stock.
+//   - PROSPECTING stays EARLY and bench-crafted (finding veins is fine, even good for planning;
+//     EXTRACTING is the T4 privilege) — but the kit now reads as Create tech: the vein finder's ender
+//     eye becomes an electron tube (the Create sensor) and the atlas binds with a clipboard. The
+//     sample_drill is untouched (already brass-tier mechanical_crafting). drilling/* vein yields stay
+//     stock (finite/curated veins tracked for v0.9.0).
 //
 // LOAD-SAFE / UNVERIFIED: grids taken from tools/recipe-dump/pcmc-recipes.json (real dump); ingredient
 // swaps only, patterns/counts preserved. Parses + static-checks, but NOT playtest-verified.
@@ -81,5 +83,23 @@ ServerEvents.recipes(event => {
     ' II'
   ], { B: '#c:storage_blocks/diamond', I: '#c:gems/diamond', D: 'createoreexcavation:drill' })
 
-  console.info('[pcmc-spine] weave excavation: drilling_machine/extractor T4-gated on TFMG circuits+motors; drill heads steel-bodied through the Mechanical Crafter (netherite via vanilla smithing); prospecting kit left T2-3.')
+  // ── prospecting kit — early-tier, BENCH-kept (handheld tools per the 51 doctrine); one Create part
+  //    each ties the all-game prospecting loop to the spine. Shapes preserved from the stock grids. ──
+  event.remove({ output: 'createoreexcavation:vein_finder' })
+  event.shaped('createoreexcavation:vein_finder', [
+    'TA',
+    'RS',
+    ' S'
+  ], { T: 'create:electron_tube',              // the Create sensor (was minecraft:ender_eye)
+       A: '#c:gems/amethyst', R: '#c:ores/redstone', S: '#c:rods/wooden' })
+
+  event.remove({ output: 'createoreexcavation:vein_atlas' })
+  event.shaped('createoreexcavation:vein_atlas', [
+    'CA',
+    'MB'
+  ], { C: '#c:chests',
+       A: 'create:clipboard',                  // survey records (was a loose amethyst)
+       M: 'minecraft:map', B: 'minecraft:writable_book' })
+
+  console.info('[pcmc-spine] weave excavation: drilling_machine/extractor T4-gated on TFMG circuits+motors; drill heads steel-bodied through the Mechanical Crafter (netherite via vanilla smithing); prospecting kit early-tier with Create sensor/clipboard ties.')
 })

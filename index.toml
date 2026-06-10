@@ -389,6 +389,10 @@ file = "kubejs/data/occultism/neoforge/biome_modifier/add_ore_silver_deepslate.j
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
+file = "kubejs/data/pcmc/cold_sweat/block/block_temp/basic_burner.json"
+hash = "257a22438c13a301072865e8a7ed879acaeb6ca3bbada36cd4ec5ad910a93338"
+
+[[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/coal.json"
 hash = "c131f259e76eff072ed7fb2373da7a5d45b6152259d332262022cc654590a3a5"
 
@@ -818,7 +822,7 @@ hash = "3c302a55a8f5896d2cc07b6e1019a22c23dfd43b79174179b6aa402cf6afeb18"
 
 [[files]]
 file = "kubejs/server_scripts/spine/00-tiers.js"
-hash = "49d4c11426cad27415ec44c526833946b3ca3250471ca8df56b691a46e5f345c"
+hash = "e0aaf1bcc0051f74058a98a4730ed483fb45fa7f759190f3d74b4d8719644735"
 
 [[files]]
 file = "kubejs/server_scripts/spine/05-tags.js"
@@ -850,7 +854,7 @@ hash = "ec97021e9662028d55611e94b212b00e4e4ecf431466a53c48dd52595c6ea03d"
 
 [[files]]
 file = "kubejs/server_scripts/spine/52-weave-tfmg-newage.js"
-hash = "e71adf5a531e3718d9299333f10ad26f6f79f0027f7ddaef92b708f8760dc9bc"
+hash = "22d406991c5124394a056ba569ceecbb8396a30b976e1e7944c8adf740385141"
 
 [[files]]
 file = "kubejs/server_scripts/spine/54-weave-aeronautics.js"
@@ -858,7 +862,7 @@ hash = "ef266574d8d53e63ae8feb01fd6f3f1d6f90d8be6974463ea0bd91df714038c6"
 
 [[files]]
 file = "kubejs/server_scripts/spine/55-weave-excavation.js"
-hash = "7ef0ecb1da34bb483c388a9d3d930d62679a4010cd87662866f344f9e767db80"
+hash = "91ddd75a990c6d5407f35cb7be37453f49fe61572b48717031e7c35d2e99a37b"
 
 [[files]]
 file = "kubejs/server_scripts/spine/56-weave-stuff-additions.js"

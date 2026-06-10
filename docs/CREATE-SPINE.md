@@ -160,6 +160,23 @@ a T3 item might use cheap inputs but pass through six machines.
 - Sequenced assembly is the preferred vehicle for T3+ (it's *one* placed multi-step item, not N manual
   handoffs) — better UX than a literal six-machine line.
 
+### 2b-ii. Tier tokens — the standard markers (authoring rule)
+
+Each tier has one **proof-of-tier item** that its recipes weave in. When costing or gating a tiered item,
+reach for **its tier's token** rather than inventing a new marker — convergence on the same few items is
+what pulls the recipe graph into one web instead of many private chains. (Mirrored as data in
+`spine/00-tiers.js` → `SPINE.tokens`.)
+
+| Tier | Token(s) | Why it proves the tier |
+|---|---|---|
+| **T1** | _none_ | Bootstrap must stay open — never token-gate the entry. |
+| **T2** | `createlowheated:basic_burner` · `#c:ingots/steel` | Built heat (the steam-rung enabler) and the TFMG steel chain. |
+| **T3** | `createaddition:capacitor` | Requires `create_new_age:overcharged_iron` — energised iron that only exists with rung-4 power **running**. A capacitor is literal proof of electricity. ⚠️ Its entry chain (rolling mill → wire → spool → alternator \| basic motor \| basic solar → energiser) must stay capacitor-free — invariant in the `51`/`52` headers. |
+| **T4** | boss metals (`ignitium`, `cursium`) · `#c:ingots/silver` | The boss gates (Part 3) — plus **silver, the cross-producer ingredient**: its only source is `occultism:silver_ingot` (the magic producer), so the T4 generator build (layered magnet) forces a tech↔magic trade or dabble. First live SYSTEMS.md "producers need each other" seam. Never let galosphere "silver" satisfy it — that item is palladium. |
+
+Worked examples: the jetpack + SNA power gear carry the capacitor; the heat engine is assembled *on* a
+basic burner; reactor rods are ignitium-sheathed; the layered magnet cores on silver.
+
 ### 2c. How the two dials interact
 
 A high-tier item is **not** 3× *and* deep — the multiplier is a tier-1 tool, depth is the tier-N tool.

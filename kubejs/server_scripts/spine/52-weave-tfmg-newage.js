@@ -147,15 +147,20 @@ ServerEvents.recipes(event => {
   })
 
   // ── layered_magnet — shaped -> mechanical_crafting (magnet, made through Create). ──
-  // Same 3x3 pattern/keys. ADDED: #c:ingots/steel (S row, was overcharged_gold).
+  // Same 3x3 pattern; ADDED: #c:ingots/steel (S, was overcharged_gold) and a SILVER core (V).
+  // ⚠️ THE TECH<->MAGIC INTERLOCK: silver's only source is occultism:silver_ingot (the magic producer),
+  // so every T4 generator build needs a magic-side trade or dabble — the first cross-producer seam
+  // (SYSTEMS.md: producers must need each other). NEVER satisfy this with galosphere "silver" — that
+  // item is palladium (c:ingots/palladium) and must not be tagged into c:ingots/silver.
   event.remove({ output: 'create_new_age:layered_magnet' })
   event.recipes.create.mechanical_crafting('4x create_new_age:layered_magnet', [
     'III',
-    'SSS',
+    'SVS',
     'III'
   ], {
     I: 'create_new_age:overcharged_iron',
-    S: '#c:ingots/steel'                       // TFMG steel cores the layered magnet (yields 4)
+    S: '#c:ingots/steel',                      // TFMG steel layers the magnet (yields 4)
+    V: '#c:ingots/silver'                      // occultism silver core — the magic-trade ingredient
   })
 
   console.info('[pcmc-spine] weave TFMG->New Age: reactor parts/motors/coil/magnet now assemble through Create (mechanical_crafting / sequenced_assembly), consuming TFMG end-products (steel/circuits/plastic).')
