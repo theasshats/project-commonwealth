@@ -1,6 +1,6 @@
 # Why Your Inventory Behaves Differently: Inventory Profiles Next
 
-Derpack X ships **Inventory Profiles Next** (IPN), a client-side mod that adds sorting,
+Project Commonwealth ships **Inventory Profiles Next** (IPN), a client-side mod that adds sorting,
 auto-refill, locked slots, and one-click item moving on top of vanilla. None of it changes
 the server or your saves, but several features are on by default, which is usually why a new
 player thinks their inventory is "acting weird." This page explains what IPN does out of the
@@ -56,7 +56,7 @@ inventory screen and use the lock toggle that appears, or set it in the settings
 slot can also be set to **stay empty**, which keeps shift-clicked and picked-up items from
 landing there.
 
-In vanilla IPN, empty locked slots show a small arrow indicator. **Derpack X blanks that
+In vanilla IPN, empty locked slots show a small arrow indicator. **Project Commonwealth blanks that
 indicator** so it does not clutter the hotbar, but the feature itself still works if you set
 it up. (Pack note: this is the arrow that earlier versions of the pack showed on every empty
 hotbar slot; it is now hidden by a bundled texture override.)

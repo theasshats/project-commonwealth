@@ -1,4 +1,4 @@
-module github.com/derpack/derpack-edit
+module github.com/pcmc/pcmc-edit
 
 go 1.22
 

@@ -1,6 +1,6 @@
 # Serving the pack — clients and servers
 
-Derpack X is distributed as packwiz manifests and installs cleanly as **both** a
+Project Commonwealth is distributed as packwiz manifests and installs cleanly as **both** a
 client and a dedicated server. This is the reference for the server side and for
 keeping the two in sync.
 
@@ -21,7 +21,7 @@ two sides can't drift on content — only on `side` tags (below).
 ## The deploy config lives in its own repo
 
 The box's run config — `docker-compose.yml` + `auto-update.sh` — is **not** pack
-content. It lives in its own repo, **`derpack-org/derpack-server`** (split out
+content. It lives in its own repo, **`theasshats/pcmc-server`** (split out
 like the site); see that repo's README for the deploy runbook.
 
 `auto-update.sh` there resolves one immutable commit from a channel (`release` =
@@ -56,7 +56,7 @@ carry its own server-side crash (e.g. loading a client class from common code),
 which only a real server boot catches — not CI, not the `side` tags. Live
 example: **appleseed 2.0.3** does exactly this (a client `KeyMapping` constructed
 from its common mod constructor) and currently blocks server boot; the fix is in
-the mod (`derpack-org/Diet---AppleSeed-Edition-fix`, pending upstream), not the
+the mod (`theasshats/Diet---AppleSeed-Edition-fix`, pending upstream), not the
 pack's tags.
 
 ### Optional: slimming the server (playtest-gated)

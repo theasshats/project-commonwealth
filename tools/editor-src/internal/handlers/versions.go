@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/derpack/derpack-edit/internal/curseforge"
-	"github.com/derpack/derpack-edit/internal/hashutil"
-	"github.com/derpack/derpack-edit/internal/modrinth"
-	"github.com/derpack/derpack-edit/internal/packwiz"
+	"github.com/pcmc/pcmc-edit/internal/curseforge"
+	"github.com/pcmc/pcmc-edit/internal/hashutil"
+	"github.com/pcmc/pcmc-edit/internal/modrinth"
+	"github.com/pcmc/pcmc-edit/internal/packwiz"
 )
 
 // cfOptOutMessage is the user-facing explanation when a CurseForge author

@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-const userAgent = "derpack-edit/1.0 (modpack editor)"
+const userAgent = "pcmc-edit/1.0 (modpack editor)"
 
 // downloadClient has a long timeout for big jars.
 var downloadClient = &http.Client{

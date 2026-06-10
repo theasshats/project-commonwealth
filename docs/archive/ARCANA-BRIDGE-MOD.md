@@ -1,6 +1,6 @@
-# Derpack Arcana — scoping doc for the magic-weave helper mod
+# Project Commonwealth Arcana — scoping doc for the magic-weave helper mod
 
-> Working name: **Derpack Arcana** (modid `derpackarcana`). Status: **SCOPING** — not built yet.
+> Working name: **Project Commonwealth Arcana** (modid `pcmcarcana`). Status: **SCOPING** — not built yet.
 > Companion to the recipe-level weave (`kubejs/server_scripts/recipes/33–35-magic-web-*.js`, PR #75).
 
 ## Context — why a mod at all
@@ -62,7 +62,7 @@ don't: **Occultism, Born in Chaos, and a Source↔mana energy bridge.**
 > reassess P2/P3 after it proves the toolchain.
 
 ## Tech approach
-- **NeoForge 1.21.1**, Java 21, Gradle (NeoGradle/ModDevGradle). New subtree `mods-src/derpack-arcana/`
+- **NeoForge 1.21.1**, Java 21, Gradle (NeoGradle/ModDevGradle). New subtree `mods-src/pcmc-arcana/`
   (mirrors `tools/editor-src/` for the Go editor).
 - **Soft dependencies** on `ars_nouveau`, `irons_spellbooks`, `occultism`, `born_in_chaos_v1`,
   `galosphere` — declared `optional` in `neoforge.mods.toml`; pull their APIs from CurseForge/Modrinth
@@ -71,10 +71,10 @@ don't: **Occultism, Born in Chaos, and a Source↔mana energy bridge.**
 
 ## Build & distribution (modeled on existing precedents)
 - **CI**: new `.github/workflows/build-arcana.yml` modeled on `build-editor.yml` — on push to
-  `mods-src/derpack-arcana/**`, run Gradle `build`, produce the jar.
+  `mods-src/pcmc-arcana/**`, run Gradle `build`, produce the jar.
 - **Hosting**: upload the jar to the **`mod-mirror` GitHub release** (the same release the gun pack /
   metafiles use — see `docs/GUN-PACKS.md`).
-- **Pack wiring**: add `mods/derpack-arcana.pw.toml` (a packwiz metafile → mod-mirror URL + hash).
+- **Pack wiring**: add `mods/pcmc-arcana.pw.toml` (a packwiz metafile → mod-mirror URL + hash).
   Mods land in `mods/`, so the standard metafile path works (unlike the `tacz/` non-standard-path issue).
   Run `packwiz refresh`.
 - **Server**: `[versions]` NeoForge already covers it; the mod is a normal `mods/` entry pulled at startup.
@@ -88,11 +88,11 @@ don't: **Occultism, Born in Chaos, and a Source↔mana energy bridge.**
 ## Open decisions (for the maintainer)
 1. **Greenlight building a Java mod** (net-new Gradle/CI infra), or keep weaving to recipes/datapack for now?
 2. **MVP = P1 (Source↔mana Attunement Font)?** Or a different first feature.
-3. **Mod name** — "Derpack Arcana" / "Arcane Loom" / other.
+3. **Mod name** — "Project Commonwealth Arcana" / "Arcane Loom" / other.
 4. **Hosting** — reuse the existing `mod-mirror` release, or a new one.
 
 ## Verification (when built)
 - Dev: `runClient`/`runServer` with the five target mods present; confirm each feature no-ops when a
   target is absent (toggle via config).
-- In pack: build a test `.mrpack`, confirm `mods/derpack-arcana.pw.toml` delivers the jar; check the
+- In pack: build a test `.mrpack`, confirm `mods/pcmc-arcana.pw.toml` delivers the jar; check the
   Attunement Font moves Source↔mana in-game; no log errors when any integrated mod is removed.

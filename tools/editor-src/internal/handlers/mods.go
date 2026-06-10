@@ -6,9 +6,9 @@ import (
 	"path"
 	"strings"
 
-	"github.com/derpack/derpack-edit/internal/curseforge"
-	"github.com/derpack/derpack-edit/internal/hashutil"
-	"github.com/derpack/derpack-edit/internal/packwiz"
+	"github.com/pcmc/pcmc-edit/internal/curseforge"
+	"github.com/pcmc/pcmc-edit/internal/hashutil"
+	"github.com/pcmc/pcmc-edit/internal/packwiz"
 )
 
 type addReq struct {

@@ -17,9 +17,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/derpack/derpack-edit/internal/config"
-	"github.com/derpack/derpack-edit/internal/handlers"
-	"github.com/derpack/derpack-edit/internal/packwiz"
+	"github.com/pcmc/pcmc-edit/internal/config"
+	"github.com/pcmc/pcmc-edit/internal/handlers"
+	"github.com/pcmc/pcmc-edit/internal/packwiz"
 )
 
 //go:embed ui/*
@@ -32,12 +32,12 @@ const (
 
 func main() {
 	if err := run(); err != nil {
-		log.Fatalf("derpack-edit: %v", err)
+		log.Fatalf("pcmc-edit: %v", err)
 	}
 }
 
 func run() error {
-	// Resolve repo root. If we're run as `tools/derpack-edit.exe` from the
+	// Resolve repo root. If we're run as `tools/pcmc-edit.exe` from the
 	// repo root, the working dir IS the repo root. If invoked elsewhere, we
 	// fall back to assuming the binary lives in <repo>/tools/.
 	repoRoot, err := resolveRepoRoot()
@@ -118,7 +118,7 @@ func run() error {
 	}()
 
 	url := fmt.Sprintf("http://localhost:%d", port)
-	fmt.Printf("\n  Derpack Editor running at %s\n", url)
+	fmt.Printf("\n  Project Commonwealth Editor running at %s\n", url)
 	fmt.Printf("  Press Ctrl+C to stop.\n\n")
 
 	// Try to open the browser. Best-effort; don't fail if it doesn't work.
@@ -147,7 +147,7 @@ func run() error {
 
 // resolveRepoRoot finds the directory containing pack.toml, starting from CWD
 // and walking up. Falls back to the binary's parent's parent (assuming
-// .../tools/derpack-edit.exe) if no pack.toml is found from CWD.
+// .../tools/pcmc-edit.exe) if no pack.toml is found from CWD.
 func resolveRepoRoot() (string, error) {
 	cwd, err := os.Getwd()
 	if err != nil {
@@ -166,7 +166,7 @@ func resolveRepoRoot() (string, error) {
 		}
 	}
 
-	return "", fmt.Errorf("could not find pack.toml in current directory or any parent. Run derpack-edit from the modpack repo root, or place it in <repo>/tools/")
+	return "", fmt.Errorf("could not find pack.toml in current directory or any parent. Run pcmc-edit from the modpack repo root, or place it in <repo>/tools/")
 }
 
 func findPackToml(start string) string {

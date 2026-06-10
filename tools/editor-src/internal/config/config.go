@@ -11,7 +11,7 @@ import (
 type Config struct {
 	// PrismInstancePath is the directory of the Prism Launcher instance to
 	// copy bundled mods into when "Launch in Prism" is clicked.
-	// Example: C:\Users\Alex\AppData\Roaming\PrismLauncher\instances\Derpack
+	// Example: C:\Users\Alex\AppData\Roaming\PrismLauncher\instances\Project Commonwealth
 	PrismInstancePath string `json:"prism_instance_path,omitempty"`
 
 	// CurseForgeAPIKey is a personal CurseForge API key, used to fetch the

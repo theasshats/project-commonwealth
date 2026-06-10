@@ -25,7 +25,7 @@
 #
 set -euo pipefail
 
-REPO="${REPO:-derpack-org/Derpack-X}"
+REPO="${REPO:-theasshats/project-commonwealth}"
 DRY_RUN="${1:-}"
 
 run() {
