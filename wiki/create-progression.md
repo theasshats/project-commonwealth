@@ -50,8 +50,8 @@ Each tier also has a telltale component that its gear is built around. Steam-tie
 burner and steel; the electric tier's mark is the capacitor — which itself takes energised iron, real
 proof of a powered base — and you will meet it in jetpacks and power gear (firearms run on Create Big
 Cannons parts instead — recoil springs and autocannon barrels); the top
-tier asks for boss metals, and its generator magnets take silver, which only the occult smelting route
-produces. If a recipe asks for one of these, that is the game telling you what tier you are stepping into.
+tier asks for boss metals, and its generator magnets take silver — the occult metal, found only in
+dedicated silver country and a few trace veins. If a recipe asks for one of these, that is the game telling you what tier you are stepping into.
 
 See also: [weapons-and-gear](weapons-and-gear.md) for the full equipment picture, and
 [prospecting](prospecting.md) for finding ore.

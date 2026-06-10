@@ -148,10 +148,11 @@ ServerEvents.recipes(event => {
 
   // ── layered_magnet — shaped -> mechanical_crafting (magnet, made through Create). ──
   // Same 3x3 pattern; ADDED: #c:ingots/steel (S, was overcharged_gold) and a SILVER core (V).
-  // ⚠️ THE TECH<->MAGIC INTERLOCK: silver's only source is occultism:silver_ingot (the magic producer),
-  // so every T4 generator build needs a magic-side trade or dabble — the first cross-producer seam
-  // (SYSTEMS.md: producers must need each other). NEVER satisfy this with galosphere "silver" — that
-  // item is palladium (c:ingots/palladium) and must not be tagged into c:ingots/silver.
+  // ⚠️ THE SILVER SEAM: c:ingots/silver = occultism:silver_ingot, smelted from the occult mod's ore —
+  // which only generates in silver country (hills/rocky mtns) + trace bands. T4 generators therefore
+  // pull a REGION most tech bases don't hold (mine or trade). Not yet producer-locked (anyone can
+  // furnace the ore); the true magic-crafted seam is v0.11.0 work. NEVER satisfy this with galosphere
+  // "silver" — that item is palladium (c:ingots/palladium) and must not be tagged into c:ingots/silver.
   event.remove({ output: 'create_new_age:layered_magnet' })
   event.recipes.create.mechanical_crafting('4x create_new_age:layered_magnet', [
     'III',

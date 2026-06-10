@@ -104,8 +104,9 @@ clipboard. Industrial extraction, by contrast, is a late investment that consume
 rotational power, and fluid while it runs.
 
 End-game electricity now reaches outside the tech route. The layered magnet at the heart of New Age's
-generators takes a silver core, and silver is smelted only by Occultism's magic route — so a reactor-tier
-power plant needs something from a magic base, by trade or by practicing the craft yourself.
+generators takes a silver core. Silver is the occult metal — it generates only in dedicated silver
+country (hills and rocky mountains) and as a trace in a handful of other veins — so a reactor-tier power
+plant pulls on a region most tech bases don't hold. Mine it, or trade with whoever does.
 
 Your machines now warm you. Under Cold Sweat, the pack's heat sources radiate real warmth: the basic
 burner gently, blaze burners by their heat level (a seething burner is a serious fire), the kitchen
