@@ -1,6 +1,20 @@
 # Phase 2 — next-session runbook (read with CLAUDE.md + READINESS-REVIEW.md)
 
-> **LATEST — Phase 2.5 triage COMPLETE (all 202 mods, 13 batches; gated agent fan-out, Sonnet).** The
+> **LATEST — independent review COMPLETE (June 2026): read `WEAVE-PLAN-REVIEW.md` (audit of the triage
+> output, with corrections + maintainer flags F1–F5) and `PASS-PLAN-V2.md` (the revised discovery
+> playbook for future runs).** Applied: the #305 milestone reorder is remapped into the regenerated
+> `triage/REVIEW.md` / `SLATE-SUMMARY.md` / `decisions.tsv` (economy→**v0.13.0**, survival→**v0.9.0** —
+> the per-pillar KEEP counts below predate this), and the anchor stats were rebuilt after an
+> anchor-parser fix (corrected reach: 2 @0 · 24 @1 · 65 @2 · 57 @3 · 12 @4; the flagship mods formerly
+> on the one-anchor list were parser artifacts). Verdict in brief: triage is sound and ratifiable after
+> the listed corrections; **don't file 423 issues — file ~30–45 delivery-cluster issues** (REVIEW §8);
+> **no further discovery passes this cycle** (the last 7 passes found 0 new core rows — PASS-PLAN-V2 §2).
+> **NEXT: maintainer rules on flags F1–F3 (M-04 demotion is the big one), then ratifies on the
+> regenerated `triage/REVIEW.md`.** _(Prior states below retained for history.)_
+>
+> ---
+>
+> **PRIOR — Phase 2.5 triage COMPLETE (all 202 mods, 13 batches; gated agent fan-out, Sonnet).** The
 > 6,373-row corpus was consolidated per-mod into KEEP/CUT/MERGE/DEFER slates — `triage/batch-01..13.md`;
 > cross-batch rollup in `triage/SLATE-SUMMARY.md` (regen: `python3 triage/consolidate.py`). Result:
 > **423 KEEP weaves** across 160 mods · **2,028 CUT** · **670 MERGE** · **11 DEFER** (2→build #239/#220,
