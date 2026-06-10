@@ -146,7 +146,10 @@ def build(mods):
              'counted as ONE anchor; flagship mods were wrongly listed as one-anchor. §2\'s list and the '
              'dashboard distribution are now parsed from the full header. Read §2 with `WEAVE-PLAN-REVIEW.md` '
              '§4-§5: the audit found agent-written headers also OVER-count in places (an anchor claimed with '
-             'no kept weave behind it), so treat headers as claims, not ground truth.\n')
+             'no kept weave behind it), so treat headers as claims, not ground truth. **(3) A ratification '
+             'overlay now sits above this surface** — `ratification.tsv` → `apply-ratification.py` → '
+             '`decisions-ratified.tsv` / `RATIFIED-SLATE.md` / `FILING-PLAN.md`. This REVIEW reflects the '
+             'pre-ratification slate; the ratified layer is what Phase 2.5 files from.\n')
     o.append('## How to review\n')
     o.append(f'- **§1 KEEP ratification** is the main event: {cnt["KEEP"]} proposed weaves, grouped by the milestone '
              'they\'d be filed under. Tick `[x]` to approve, strike a line to reject, or edit it to modify. '

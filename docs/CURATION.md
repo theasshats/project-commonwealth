@@ -36,7 +36,12 @@ See `docs/ROADMAP.md` ("Milestones — the road to 1.0") for the per-version sch
    **library/API, performance, QoL, decoration palette, or curated co-op-group flavor**. Anchors to
    nothing → **cut**. (`docs/DESIGN.md` + `docs/SYSTEMS.md`; the "if none, why is it here?" test. The
    goal is *two* anchors — one is the floor, so a one-system mod is a candidate for a second weave, not a
-   cut.)
+   cut.) *Counting anchors (ratified with the weave triage, 2026-06):* a mod's anchors = its home
+   system plus the distinct target systems of its ratified weaves; **support-role anchors (decoration
+   palette, QoL, library) are named as such and don't count toward the two**, and **ambient plumbing**
+   (e.g. the blanket deco-crush batch — M-04) grants no anchor. **Hub mods** (Create, Ars Nouveau,
+   Occultism, MineColonies — the systems themselves) are the anchor *suppliers*: the two-anchor target
+   applies to content mods, and a hub's cross-system tie is satisfied by the weaves it hosts.
 2. **Not an orphan.** A dependency-only library must still have an installed dependent (#100).
    Content-free **and** undepended-on → cut.
 3. **No redundant mechanic.** If it overlaps another mod's mechanic it must be the **canonical pick** or

@@ -1,0 +1,31 @@
+action	mod	match	arg	reason
+ruling	*	F1 demote M-04		MAINTAINER-AGREED 2026-06-10: M-04 deco-crush is ambient plumbing, not an anchor-granting weave (WEAVE-PLAN-REVIEW §9 F1). All M-04 KEEPs fold into one deco-crush plumbing batch — still authored once, grants no anchors.
+ruling	*	F2 hub-mod policy		DECIDED (delegated): hub mods are the anchor suppliers; the 2-anchor target applies to content mods, and a hub's cross-pillar tie is satisfied by the weaves it hosts. Recorded in docs/CURATION.md gate 1.
+ruling	*	F3 countable anchors		DECIDED (delegated): a mod's anchors = its home system + the distinct target pillars of its ratified weaves; support-role anchors are named as such and excluded from the 2-anchor arithmetic. Implemented in this layer's derived counts.
+ruling	*	F4 economy split		DECIDED (delegated): v0.13.0 KEEPs are tagged authorable-now vs blocked-on-mechanism (#221/#240/#309) in FILING-PLAN.md.
+ruling	*	F5 weave-log		DECIDED (delegated): CANDIDATES.tsv + decisions(-ratified).tsv are the canonical considered-set record; docs/WEAVE-LEDGER.md §3 reworded accordingly.
+demote-motif	*	M-04		F1: every M-04 KEEP → PLUMB (one v0.7.0 plumbing batch; no anchor credit)
+move-milestone	*	M-28	v0.11.0	post-#305 MineColonies builds at v0.11.0 — the colony-route weaves ride the colony pillar, not the economy version
+drop-keep	appleseed	seasonal-crop diet stress		singleton corpus row with REJECT consensus (works against the diet design rather than feeding it); appleseed keeps its M-26 anchor
+drop-keep	create_connected	fan_*_catalyst		singleton REJECT: duplicates the vanilla copycat-catalyst mechanic; the M-24 kinetic_battery KEEP stands
+drop-keep	createmechanicalcompanion	wolf modules→create		singleton REJECT: M-06 prestige inflation — optical_sensor already rides sandpaper_polishing; M-15/M-29 KEEPs stand
+drop-keep	createoreexcavation	extractor (fluid vein)		singleton REJECT: fluid veins are deliberately uncapped; the M-13 tie adds nothing
+drop-keep	createtreadmill	player-powered SU source		singleton REJECT: power-for-power is circular; native Create flavor addon, no forced weave
+drop-keep	dndesires	cross-route input into Create/magic		singleton REJECT: gateless cross-route assertion (bare link); M-23 rubber→aeronautics and M-12 fan methods stand
+drop-keep	dndesires	haunting_sail		singleton REJECT: haunted rubber has no thematic grounding
+drop-keep	fluid	centrifugal_pump		singleton REJECT: aeronautics is already among fluid's anchors; redundant second claim
+drop-keep	gnkinetics	worm_gear→economy		singleton REJECT: Create-internal gears — colony production of them has no demand gate
+note	tfmg	ore byproducts		RETAINED deliberately: the structural audit flagged this as singleton-REJECT, but the kept row is the 4×ACCEPT propellant chain (sulfur+saltpeter→CBC gunpowder; coke→blast furnace) the deep audit praised
+note	dungeons-and-taverns	(none)		the flagged "loot→create M-15" KEEP does not exist in decisions.tsv — audit misattribution, nothing to drop
+leave	zombiemoon			zero distinguishing drops (shares mutantszombies' jar); its own slate said "cannot reach 2 without custom drops"
+leave	trashcans			void-can is anti-scarcity by nature; the M-06 sequenced-assembly gate was a forced weave (the slate itself flagged "candidate for LEAVE")
+leave	mcwroofs			F1: support-role (decoration palette) — the stone-crush M-04 was its only weave
+leave	mcwstairs			F1: support-role (decoration palette) — stone-crush only
+leave	mcwwindows			F1: support-role (decoration palette) — stone-crush only
+add-keep	copperagebackport	copper golem → MineColonies courier/warehouse role	M-28|v0.11.0	delivery: colony schematic/request config — the Copper Golem as the pre-Create colony courier (2 corpus ACCEPTs incl. Opus; reinstated: the "overlaps Create logistics" cut undervalued the colony route) | why "of course": the colony's first hauler is the little copper fellow — working before anyone owns a cogwheel
+add-keep	mcwfences	metal fence variants → MineColonies builder orders	M-28|v0.11.0	delivery: colony request config — builder huts request metal fencing in bulk (parity with sibling mcwdoors' kept M-28; reinstated at ratification) | why "of course": the colony barn paddock wants forty iron fences — the fence-maker finally has a customer
+add-keep	occultism	silver_ingot → regional-scarcity gate	M-30|v0.13.0	delivery: GTMOGS vein config + silver-keyed recipe inputs (c:ingots/silver — occultism is the pack's only true silver; galosphere's "silver" is palladium, never unify) | why "of course": ritual silver only comes out of one region's ground — restored at ratification: the M-18 spirit-miner is the workaround to scarcity, not a replacement for the anchor
+annotate	trading_floor	trading_depot		ratify-note: drop "emeralds" from the loop phrasing at authoring — player-minted coin only, no NPC-trade medium (WEAVE-PLAN-REVIEW §4.5)
+annotate	terralith	M-30		ratify-note: build-coupled — presumes GTMOGS biome-keying that is not yet authored; treat as blocked-on-worldgen-config, not a free recipe
+annotate	oceansdelight	fugu		ratify-note: fragile evidence (ts=4 for vs ts=8 opus-against in a sibling phrasing) — author last, drop without ceremony if playtest reads wrong
+set-anchors	minecolonies	create+economy+magic+aeronautics		includes the previously-authored Create M-05 quarry weave (inherited, not added by this slate)

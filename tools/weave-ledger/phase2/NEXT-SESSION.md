@@ -9,8 +9,14 @@
 > on the one-anchor list were parser artifacts). Verdict in brief: triage is sound and ratifiable after
 > the listed corrections; **don't file 423 issues — file ~30–45 delivery-cluster issues** (REVIEW §8);
 > **no further discovery passes this cycle** (the last 7 passes found 0 new core rows — PASS-PLAN-V2 §2).
-> **NEXT: maintainer rules on flags F1–F3 (M-04 demotion is the big one), then ratifies on the
-> regenerated `triage/REVIEW.md`.** _(Prior states below retained for history.)_
+> **RATIFIED 2026-06-10** (F1 maintainer-agreed; F2–F5 delegated and resolved — see the
+> WEAVE-PLAN-REVIEW banner): the overlay `triage/ratification.tsv` → `apply-ratification.py` →
+> **`triage/decisions-ratified.tsv` + `triage/RATIFIED-SLATE.md`** is the post-ratification truth
+> (**395 KEEPs**; 21 M-04 patterns → one plumbing batch; 10 singleton-REJECT drops; 3 reinstates;
+> zombiemoon / trashcans / mcwroofs / mcwstairs / mcwwindows → LEAVE/support-role; M-28 colony weaves
+> → v0.11.0), and **`triage/FILING-PLAN.md`** holds the 26 cluster issues ready to file.
+> **NEXT: maintainer GO to file the issues — nothing else blocks Phase 2.5.** _(Prior states below
+> retained for history.)_
 >
 > ---
 >

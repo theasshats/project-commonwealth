@@ -8,6 +8,17 @@
 > one-anchor set; plus a recipe-graph islands × KEEPs join. Companion: `PASS-PLAN-V2.md` (the
 > methodology review). **Nothing here touches the pack**; two data-integrity fixes were applied to the
 > *triage tooling layer* and are described in §2 — everything else is a recommendation or a flag.
+>
+> **RATIFICATION OUTCOME (2026-06-10).** The maintainer agreed **F1** explicitly and delegated the
+> remaining calls ("this whole branch and project is a test to see how well LLMs can do this work — you
+> decide"). F2–F5 and §10's per-item calls were therefore resolved as recommended below, and applied as
+> an auditable overlay: `triage/ratification.tsv` (every decision, with reasons) →
+> `triage/apply-ratification.py` → **`triage/decisions-ratified.tsv` + `triage/RATIFIED-SLATE.md`**
+> (the post-ratification truth: **395 KEEPs**, 21 M-04 patterns folded into one plumbing batch, 10
+> singleton-REJECT drops, 3 reinstates, 5 LEAVE reclasses, M-28 moved to v0.11.0) and
+> **`triage/FILING-PLAN.md`** (26 cluster issues, ready to file — **filing itself stays gated on an
+> explicit GO**, since it writes to the shared tracker). The frozen batch files and `decisions.tsv`
+> are untouched.
 
 ## §1 — TL;DR verdict
 
@@ -242,9 +253,9 @@ Recommendation:
 This keeps milestone bars meaningful (45 bars climb; 423 would be noise) and matches how the work will
 actually be authored.
 
-## §9 — Flags for maintainer ratification (core-design adjacent — not changed unilaterally)
+## §9 — Flags for maintainer ratification (resolved 2026-06-10 — see the banner; statuses inline)
 
-- **F1 — Demote M-04 from "anchor-granting weave" to default plumbing.** A blanket "stone deco crushes
+- **F1 — RATIFIED (maintainer-agreed). Demote M-04 from "anchor-granting weave" to default plumbing.** A blanket "stone deco crushes
   to gravel" applies to every block family in the pack with zero design friction — the same test that
   retired M-09 for the economy. Proposal: implement deco-crush as one generic KubeJS rule (or per-material
   family), stop counting it as a mod's second anchor, and re-class the M-04-only mods (mcwroofs,
@@ -254,25 +265,27 @@ actually be authored.
   plumbing task, the one-anchor list shrinks to the genuine ceilings, and the metric stops being
   gameable in exactly the way `docs/WEAVING-STRATEGY.md` warns about ("bridge-for-the-metric…
   Goodhart"). **This is the highest-leverage single ruling available on the slate.**
-- **F2 — Hub-mod anchor policy.** `create` was LEAVE'd as "the weave target"; `ars_nouveau` (the magic
+- **F2 — DECIDED (delegated). Hub-mod anchor policy.** `create` was LEAVE'd as "the weave target"; `ars_nouveau` (the magic
   hub) sat on the one-anchor worklist until the §2 fix. Rule to ratify: **system-hub mods are the
   anchor *suppliers*; the two-anchor target applies to content mods, and a hub's "second anchor" is
   satisfied by cross-pillar weaves it hosts** (Ars hosting M-17 charging / M-33 enchant-services
   already ties it to Create/economy from the hosting side). One sentence in CURATION.md ends the
   ambiguity.
-- **F3 — Define "anchor" countably.** Today it's free prose. Proposal: a mod's anchors = its dossier
+- **F3 — DECIDED (delegated). Define "anchor" countably.** Today it's free prose. Proposal: a mod's anchors = its dossier
   home system(s) + the distinct target pillars of its ratified weaves, with **support-role anchors
   (decoration/QoL/library) named as such and excluded from the 2-anchor arithmetic**. This turns the
   §2 dashboard into a computable fact (and is the Phase-D format change in PASS-PLAN-V2).
-- **F4 — Park mechanism-dependent economy KEEPs explicitly.** At ratification, tag each v0.13.0 KEEP
+- **F4 — DECIDED (delegated). Park mechanism-dependent economy KEEPs explicitly.** At ratification, tag each v0.13.0 KEEP
   "authorable now" vs "blocked on #221/#240/#309" so the economy pillar's true ready-work is visible
   and the #309 split (if taken) has a pre-sorted list. (Surface only — no re-bucketing done here.)
-- **F5 — Reconcile WEAVE-LEDGER §3's weave-log promise with reality** (§6.3): either declare
-  `CANDIDATES.tsv` + `decisions.tsv` the canonical considered-set record (recommended; one-paragraph
-  edit) or commit to back-filling `weaves.json` at authoring time. The empty log + stale promise will
-  confuse Phase 3 otherwise.
+- **F5 — DECIDED (delegated). Reconcile WEAVE-LEDGER §3's weave-log promise with reality** (§6.3): the
+  TSVs (`CANDIDATES.tsv` + `decisions-ratified.tsv`) are now declared the canonical considered-set
+  record; `docs/WEAVE-LEDGER.md` §3 reworded.
 
-## §10 — Recommended next moves (ordered)
+## §10 — Recommended next moves (ordered) — status as of ratification
+
+_Items 1–2 are DONE via the ratification overlay (`triage/RATIFIED-SLATE.md` is the result); item 3 is
+PREPARED (`triage/FILING-PLAN.md` — filing gated on GO); items 4–6 unchanged._
 
 1. Maintainer reads the regenerated `triage/REVIEW.md` end-to-end **after** ruling on F1–F3 (F1 changes
    ~21 lines of what's being ratified — rule first, ratify once).

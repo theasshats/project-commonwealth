@@ -113,10 +113,14 @@ Each authored or proposed connection. Status is a state machine:
 `proposed → approved → authored → validated(static) → playtested`. Confidence is two independent flags:
 **COHERENT** (an LLM can assert) and **BALANCE-OK / BALANCE-PENDING** (only play confirms).
 
-**The `considered` set — record everything, including rejects.** Every integration *proposed* in Phase 2
-is logged here even if the red-team or theme-fit **rejected** it (status `rejected`, with the reason), so a
-human reviews the full set — accepted and killed — before Phase 3, and a good idea dropped for a fixable
-reason isn't lost.
+**The `considered` set lives in the Phase-2 TSVs, not this log** (ruling F5, ratified 2026-06 —
+`tools/weave-ledger/phase2/WEAVE-PLAN-REVIEW.md`). Every integration *proposed* in Phase 2 — accepted
+and killed, with reasons — is recorded in `tools/weave-ledger/phase2/CANDIDATES.tsv` (the discovery
+corpus) and `tools/weave-ledger/phase2/triage/decisions-ratified.tsv` (the per-link verdicts after
+ratification); those files are the canonical considered-set record. **This log starts at authoring:**
+each weave Phase 3 actually authors gets a W-### entry below (with the `weaves.json` mirror) tracking
+the state machine from `approved` onward — the log is the running state of the *built* web, not a
+duplicate of the proposal corpus.
 
 Format:
 ```
