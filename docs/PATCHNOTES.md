@@ -1,7 +1,12 @@
 # Project Commonwealth — Patch Notes
 
-<!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
-     "## X.Y.Z — Theme", a short lead paragraph, then sections (see CLAUDE.md). -->
+<!-- Style: professional, player-facing. No decorative emoji, sparing bold, no hype or filler.
+     Each release: "## X.Y.Z — Theme", a short lead paragraph, then "### Section"s.
+     Bullets where they make sense: independent changes (fixes, additions, tweaks) get one
+     bullet each — lead with the change, then the why/impact in the same bullet. Keep prose
+     paragraphs for narrative that doesn't enumerate (a new system's introduction, a rename).
+     The "## X.Y.Z" section ships verbatim as the GitHub release body (build.yml), so it must
+     read complete on its own. Shipped sections are the published record — don't restyle them. -->
 
 ## 0.6.3 — Ore generation, prospecting, and mining hunger
 
@@ -9,27 +14,31 @@ Fixes to regional ore generation and the prospecting guide, plus a new survival 
 
 ### Ore generation
 
-Aluminium (bauxite), lignite, and fireclay previously generated in every overworld biome as part of a background stone feature, which sidestepped the regional vein system. They are now found in dedicated regional veins: bauxite in jungle and savanna, and lignite together with fireclay in swamps and lowland plains. The background stone feature still generates as terrain decoration but no longer carries ore. Lead's stray secondary source was removed for the same reason; lead remains available from its regional vein.
+- Aluminium (bauxite), lignite, and fireclay no longer generate in every overworld biome. They rode along in a background stone feature, which sidestepped the regional vein system; they now come from dedicated regional veins — bauxite in jungle and savanna, and lignite, with fireclay as its secondary band, in swamps and lowland plains.
+- The background stone feature still generates as terrain decoration but no longer carries any ore. Lead's stray secondary source there was removed for the same reason; lead remains available from its regional vein.
 
 ### Prospecting
 
-The in-game prospecting guide was corrected. Veins are located by right-clicking an ore block, not by breaking it; breaking does nothing. The guide now describes the right-click trigger, the map overlay toggles, marking veins as depleted, waypoints, sharing prospecting data with teammates, and the JEI ore-vein diagram.
-
-Vein markers on the map now draw with a hot pink outline so they stand out against terrain. Previously the outline was transparent and effectively invisible.
+- The in-game prospecting guide was corrected: veins are located by right-clicking an ore block, not by breaking it — breaking does nothing. The guide now covers the right-click trigger, the map overlay toggles, marking veins as depleted, waypoints, sharing prospecting data with teammates, and the JEI ore-vein diagram.
+- Vein markers on the map now draw with a hot pink outline so they stand out against terrain. Previously the outline was transparent and effectively invisible.
 
 ### Mining hunger
 
-Breaking blocks now drains hunger. The cost scales with the block — roughly 100 stone or dirt per hunger bar with an iron tool; planks, wool, and glass cost about half that, ores and metal blocks noticeably more — and with the tool in hand: each tier from wood up to netherite tires you less, and digging with no tool at all drains fastest. Harvesting crops costs a small amount, decorative blocks such as torches, flowers, and saplings cost nothing, and creative mode is exempt. Machines pay nothing either: Create drills and other automated breakers do not drain anyone's hunger, so automation remains the answer to industrial-scale digging.
+Breaking blocks now drains hunger, so a big dig needs provisioning — or machinery.
 
-### Other
-
-This build bundles an X-ray resource pack (disabled by default) as a debugging aid for verifying the ore generation changes during the pre-alpha. It will be removed in a later release.
+- The cost scales with the block: roughly 100 stone or dirt per hunger bar with an iron tool; planks, wool, and glass cost about half that; ores and metal blocks noticeably more.
+- The tool matters: each tier from wood up to netherite tires you less, and digging with no tool at all drains fastest.
+- Harvesting crops costs a small amount. Decorative blocks such as torches, flowers, and saplings cost nothing, and creative mode is exempt.
+- Automation pays nothing: Create drills and other machine breakers drain nobody's hunger, so machines remain the answer to industrial-scale digging.
 
 ### Fixes
 
-Create Big Cannons was running at 5.11.5, but the Advanced Technologies addon is built against 5.11.3 and called a block-damage method whose signature changed in the newer build. Firing a heavy autocannon armour-piercing round at a block crashed the server. Create Big Cannons has been moved back to 5.11.3 to match the addon.
+- Create Big Cannons moved back from 5.11.5 to 5.11.3. The Advanced Technologies addon is built against 5.11.3 and calls a block-damage method whose signature changed in the newer build, so firing a heavy autocannon armour-piercing round at a block crashed the server.
+- Firing a cannon no longer crashes the client while rendering its muzzle smoke. The smoke particle uses a vertex format the renderer's optimized particle path did not expect; that path is now disabled for billboard particles, which fall back to the standard renderer with no visible difference.
 
-Firing a cannon also crashed the client while rendering its smoke particle. The cannon smoke uses a vertex format the renderer's optimized particle path did not expect, and the mismatch threw during rendering. That optimized path is now disabled for billboard particles, which fall back to the standard renderer with no visible difference.
+### Other
+
+- This build bundles an X-ray resource pack (disabled by default) as a debugging aid for verifying the ore generation changes during the pre-alpha. It will be removed in a later release.
 
 ## 0.6.2 — Project Commonwealth
 
