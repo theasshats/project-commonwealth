@@ -156,7 +156,7 @@ If the editor doesn't work for you (no Windows machine, can't install Java, what
 The player-facing site lives in its **own repo** now —
 [`theasshats/pcmc-site`](https://github.com/theasshats/pcmc-site)
 (split out of this repo's former `site/` directory). It's served at
-**`pcmc.ishimura.xyz`** (and `modpack.ishimura.xyz`): how to join, what's in
+**`pcmc.ishimura.xyz`**: how to join, what's in
 the pack, rules, FAQ, a live server-status badge, and a download button that
 auto-resolves to the latest release's Prism installer (so it never points at a
 dead/stale asset). A player bug/issue report form is planned (#77) so problems
