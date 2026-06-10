@@ -34,7 +34,7 @@ hash = "abe2744c46c81c28ef0bee5cc5cbf63c6982ee589f54ec06c9b31d258f841051"
 
 [[files]]
 file = "config/gtmogs.yaml"
-hash = "06e2e6664013abfa34fdd65fd65edd84554141a27c982ab495b75f15d9f54437"
+hash = "fca7679e0e294780f98a300f4b445a676e4cd5e7a965c9315f0fe14dba9e168f"
 
 [[files]]
 file = "config/immersivepaintings.json"
@@ -46,7 +46,7 @@ hash = "8dbb6602d8274d393a0a72c3acce550d3f50cb060726ccff30f6b6a94c5b2d55"
 
 [[files]]
 file = "config/mixinhelper.json"
-hash = "f3360c4145dec3287c85e9318cd6680d719cab696fa87dc4fea650eaebe9ad1e"
+hash = "e79e162a143d75ab2f19dd8ac5eef5f0c12f9cea6aae872b829c4ea3b869ce3d"
 
 [[files]]
 file = "defaultconfigs/accessories.json5"
@@ -55,6 +55,10 @@ hash = "2d34c1d20dfa9047a4ba9bfab54cbd89232cc0ba966acf0aac1f1c110581f624"
 [[files]]
 file = "kubejs/assets/inventoryprofilesnext/textures/gui/overlay_new.png"
 hash = "cce47379706d8eb5075a66e9710353bc659971b4f26f1fe1e9813956fdfe0ee4"
+
+[[files]]
+file = "kubejs/client_scripts/mining-speed-tooltip.js"
+hash = "aad40ea1cf31d88a0ec23cfc55b9e279a51db47cb84f5764c191c63c24a169b1"
 
 [[files]]
 file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_deepslate_diamond_ore_feature_biome_modifier.json"
@@ -437,6 +441,10 @@ file = "kubejs/data/pcmc/cold_sweat/block/block_temp/tfmg_industrial_heat.json"
 hash = "15b8152cdba066fa7f118641549b8bd36f1165a3fcf3d584638238811b0b3df3"
 
 [[files]]
+file = "kubejs/data/pcmc/gtmogs/ore_vein/bauxite.json"
+hash = "4c78aa2bfe7253c4a105e8912aabe2585a0a79be506780bd40e0ef7d5ea290de"
+
+[[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/coal.json"
 hash = "c131f259e76eff072ed7fb2373da7a5d45b6152259d332262022cc654590a3a5"
 
@@ -471,6 +479,10 @@ hash = "dd55afb498185c76d13344369af7fe0c6bdfc7535ec65e31642b552a9958ae37"
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/lead.json"
 hash = "0673d627ba6b7923812731fd3ce045eb16a6abf3f6f2cce3e0f2c672227a957d"
+
+[[files]]
+file = "kubejs/data/pcmc/gtmogs/ore_vein/lignite.json"
+hash = "9136debc91b58134c363a77ca4dc68c8eb70c5408be2c63341fc80731bf9d888"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/lithium.json"
@@ -537,6 +549,10 @@ file = "kubejs/data/pcmc/recipe/primer.json"
 hash = "9f63003561b61c810d7ba7a4cfc0f5f0a0dfa0236b6bba99cfbb423a79beeea2"
 
 [[files]]
+file = "kubejs/data/pcmc/tags/worldgen/biome/vein_bauxite.json"
+hash = "f3fe9529eafdb3bb7c203e93fcf2901b3b14829d037c7c34b619869e22c9d06e"
+
+[[files]]
 file = "kubejs/data/pcmc/tags/worldgen/biome/vein_coal.json"
 hash = "231d453d0e6c3c82866e25f4042fe9f2dd2f1b04ddee27907370990c78c554fb"
 
@@ -571,6 +587,10 @@ hash = "a03d3104257f7cd6f7ad39a0eedf08ee58bba6f0cb8c73d21e53dfbe476f7b49"
 [[files]]
 file = "kubejs/data/pcmc/tags/worldgen/biome/vein_lead.json"
 hash = "68b109c832f6b594805ab51658da7e079172be87d092ce4b1a011f71b4599458"
+
+[[files]]
+file = "kubejs/data/pcmc/tags/worldgen/biome/vein_lignite.json"
+hash = "329c0666e009424ebdff29e429728b63d03730806e96cc25de5b0f5ca80bf834"
 
 [[files]]
 file = "kubejs/data/pcmc/tags/worldgen/biome/vein_lithium.json"
@@ -741,6 +761,10 @@ file = "kubejs/data/tfmg/neoforge/biome_modifier/nickel_ore.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
+file = "kubejs/data/tfmg/worldgen/configured_feature/tfmg_striated_ores_overworld.json"
+hash = "b6333989377654b77debf8ce66e98e52e78fb3fad30ab37c81caf5f3beffcf53"
+
+[[files]]
 file = "kubejs/data/trailandtales_delight/loot_table/blocks/lantern_fruits.json"
 hash = "8393dbf4a02bf9157b990d08da840f6b468296cc41e0c0b1d09501b3599c09b9"
 
@@ -759,6 +783,10 @@ hash = "365e30a0265297b79f43fe952e369555d9b7f211369184c4335743efc68444e9"
 [[files]]
 file = "kubejs/server_scripts/example.js"
 hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
+
+[[files]]
+file = "kubejs/server_scripts/mining-hunger.js"
+hash = "744b4b6cf5ae217e448c8229439437d35bf87fb8530358e3008f5d2b11bcc118"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/00-create-ify.js"
@@ -1286,7 +1314,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-big-cannons.pw.toml"
-hash = "96cf97e70af78acba5f72552f481701810c3e2b1c30a928279ce93a7e8bcc242"
+hash = "2c6621f2d82a9be0240bbf9c0a416f7dc79edd63636f6d1b869c93ca5f59bade"
 metafile = true
 
 [[files]]
@@ -1730,6 +1758,11 @@ hash = "a71713076503c473ca3216c71285b2641ca250f80933d713a9f42edd03f5da17"
 metafile = true
 
 [[files]]
+file = "mods/forgified-fabric-api.pw.toml"
+hash = "fcf0eac162bc9f1655c8a390bc37b79b32503e86dccf222b6d8173d2f74ff602"
+metafile = true
+
+[[files]]
 file = "mods/formations-nether.pw.toml"
 hash = "cdddddbf94aabd1af201bfbe02733c871da8cfa4141828843e1e9fc6d7c89bf6"
 metafile = true
@@ -1832,11 +1865,6 @@ metafile = true
 [[files]]
 file = "mods/im-fast.pw.toml"
 hash = "5317f95cd9c23531b620127a48a4371d6d22d8ba491c72e0218623c7f2c89d52"
-metafile = true
-
-[[files]]
-file = "mods/immersive-armor-hud.pw.toml"
-hash = "6cb69c92c54312ef9dfaace42928704c392cab0eaeb88c95dc1a591261180a0f"
 metafile = true
 
 [[files]]
@@ -2062,11 +2090,6 @@ metafile = true
 [[files]]
 file = "mods/minecolonies.pw.toml"
 hash = "8f8805ca43fd5e3151cb25116ee20b170595135213aab742466c9bba9e4250f0"
-metafile = true
-
-[[files]]
-file = "mods/mining-speed-tooltips.pw.toml"
-hash = "04af3f8798c38b917bf34ce2d7503ca378c3a28d7ab56637bea1da3f2e4ffe02"
 metafile = true
 
 [[files]]
@@ -2590,11 +2613,6 @@ hash = "6508d7fadd019bf4c3652ccd31c9e1c65f1118b7e88e4e1e97c0abbc9835e2f6"
 metafile = true
 
 [[files]]
-file = "mods/txnilib.pw.toml"
-hash = "bbf8f2ba1e4bba18c1f61b2f003063052f56dd9951ceae3e227b6cbf9affd29f"
-metafile = true
-
-[[files]]
 file = "mods/underground-village,-stoneholm.pw.toml"
 hash = "2f7758c4210f63c9fc8d05729dbf18c5ca80ffe78bec65ea80d0f736bc5c0f51"
 metafile = true
@@ -2683,6 +2701,10 @@ metafile = true
 file = "mods/zeta.pw.toml"
 hash = "cb474b6c0dde741836ed4f796f3b6ab0b9d3cdc0453e651122cd002d5d1f8df8"
 metafile = true
+
+[[files]]
+file = "resourcepacks/Xray_Ultimate_1.21_v5.2.2.zip"
+hash = "ba22ae2ba81bdcc4f9c221536805e147d7b72922310e29d40fe767d18dd77afe"
 
 [[files]]
 file = "tacz/Create_Armorer-v1.2.0.1.zip"

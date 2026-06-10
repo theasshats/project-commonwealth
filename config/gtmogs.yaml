@@ -58,8 +58,14 @@ compat:
     oreNamePrefix: >
 
     # The color to draw a box around the ore icon with.
-    # Accepts either an ARGB hex color prefixed with # or the string 'material' to use the ore's material color
-    borderColor: material
+    # Accepts either an ARGB hex color prefixed with # or the string 'material' to use the ore's material color.
+    # Active (0.6.3 fix, merged from main): hot pink #FF1493 at full alpha — 'material' rendered no visible
+    # outline. Playtest alternates: #FFFFFF00 (yellow), #FFFFFFFF (white).
+    # ⚠️ The unquoted value below is CORRECT — do not quote it. GTMOGS reads this file with the toma config
+    # lib's hand-rolled YAML parser (verified against gtmogs-1.21.1-1.0.6): it strips only whole-line
+    # comments, so an inline '#' is part of the value, and quotes would be read literally and break the
+    # colour parse. Standard YAML tooling will misread this line — trust the parser, not the linter.
+    borderColor: #FFFF1493
 
     # Which part of the screen to anchor buttons to
     # Default: "BOTTOM_LEFT"
