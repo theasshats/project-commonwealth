@@ -7,10 +7,6 @@ create-1.21.1-6.0.10: create:zinc_ore
 create-new-age-1.1.7c+neoforge-mc1.21.1: create_new_age:thorium_ore
 create_ironworks-4.0.3-neoforge-1.21.1: create_ironworks:deepslate_tin_ore
 create_ironworks-4.0.3-neoforge-1.21.1: create_ironworks:tin_ore
-createnuclear-1.3.2-beta.3-neoforge: createnuclear:deepslate_lead_ore
-createnuclear-1.3.2-beta.3-neoforge: createnuclear:deepslate_uranium_ore
-createnuclear-1.3.2-beta.3-neoforge: createnuclear:lead_ore
-createnuclear-1.3.2-beta.3-neoforge: createnuclear:uranium_ore
 deeperdarker-neoforge-1.21.1-1.4.1: deeperdarker:gloomslate_coal_ore
 deeperdarker-neoforge-1.21.1-1.4.1: deeperdarker:gloomslate_copper_ore
 deeperdarker-neoforge-1.21.1-1.4.1: deeperdarker:gloomslate_diamond_ore
