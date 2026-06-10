@@ -1,4 +1,4 @@
-# CLAUDE.md — Derpack X
+# CLAUDE.md — Project Commonwealth
 
 A **cooperative PvPvE Create pack** for **1.21.1 / NeoForge**, designed for small-group co-op play (~10 on a server). It's broad on purpose — food, structures, magic, colonies, mobs, decoration, vehicles — but **scarcity-driven**: ores are scarce and regional, nobody can do everything alone, so specializing and trading happen on their own (an **emergent** economy, not a forced one). Built around Create, including **Create Aeronautics** (airships/planes/vehicles).
 
@@ -12,7 +12,7 @@ You're in an **Anthropic-managed cloud sandbox** with this repo cloned into it �
 
 - **Your output is a branch + PR.** Don't commit to `main`. Branch names follow the version convention below.
 - **You can't reach the live server.** `ishimura` is a home box on a residential LAN; this sandbox has no path to it. Anything labeled "server" here means **editing files**, never running them — the real deploy is done by hand on the box.
-- **Don't run the editor binary.** `tools/derpack-edit.exe` is a Windows GUI app; it can't run here. Work on its Go source instead (see below).
+- **Don't run the editor binary.** `tools/pcmc-edit.exe` is a Windows GUI app; it can't run here. Work on its Go source instead (see below).
 - **Network is gated.** packwiz fetches from Modrinth/CurseForge and builds need internet. If the session's environment doesn't allow those domains, `packwiz refresh` / `add` / hash steps fail. (Maintainer: when a task touches packwiz or builds, give the session access to at least `api.modrinth.com`, `cdn.modrinth.com`, `*.forgecdn.net`, and `github.com` — or full access.)
 
 ## Repo layout
@@ -23,8 +23,8 @@ You're in an **Anthropic-managed cloud sandbox** with this repo cloned into it �
 - `config/` — per-mod configs shipped to every install. `defaultconfigs/` — configs applied only to fresh instances.
 - `kubejs/` — KubeJS scripts (recipe tweaks, gameplay).
 - `scripts/` — build helpers.
-- `tools/derpack-edit.exe` — editor binary, **CI-built; never hand-edit.** `tools/editor-src/` — its Go source.
-- The **player-facing website** lives in its **own repo** now — **`derpack-org/derpack-site`** (split out of this repo's former `site/` dir): a self-contained Go binary serving an embedded static site plus `/api/status` (Minecraft ping) and `/api/release` (GitHub Releases lookup). Runs **on the ishimura box** behind the Cloudflare Tunnel + Caddy stack, deployed by hand — **not** in this repo's CI. Served at `derpack-x.ishimura.xyz` / `modpack.ishimura.xyz`. ⚠️ Its `/api/release` still reads **this** pack repo's releases (`GITHUB_REPO=derpack-org/Derpack-X`) — the download button resolves the *pack's* latest installer, not the site binary's. The pack repo no longer builds or tests the site (`pr-checks.yml`'s Go job is editor-only).
+- `tools/pcmc-edit.exe` — editor binary, **CI-built; never hand-edit.** `tools/editor-src/` — its Go source.
+- The **player-facing website** lives in its **own repo** now — **`theasshats/pcmc-site`** (split out of this repo's former `site/` dir): a self-contained Go binary serving an embedded static site plus `/api/status` (Minecraft ping) and `/api/release` (GitHub Releases lookup). Runs **on the ishimura box** behind the Cloudflare Tunnel + Caddy stack, deployed by hand — **not** in this repo's CI. Served at `pcmc.ishimura.xyz`. ⚠️ Its `/api/release` still reads **this** pack repo's releases (`GITHUB_REPO=theasshats/project-commonwealth`) — the download button resolves the *pack's* latest installer, not the site binary's. The pack repo no longer builds or tests the site (`pr-checks.yml`'s Go job is editor-only).
 - `docs/` — `DESIGN.md` (the why), `EDITING.md`, `PRISM-SETUP.md`.
 
 ## packwiz conventions
@@ -37,7 +37,7 @@ You're in an **Anthropic-managed cloud sandbox** with this repo cloned into it �
 
 ## The editor (`tools/editor-src/`)
 
-A custom Go web-UI app wrapping routine packwiz ops (add/remove/pin/set-version/batch-add/build). The committed `.exe` is rebuilt by `build-editor.yml` on every push to `main` touching `tools/editor-src/**` (or via manual `workflow_dispatch` — e.g. to build the `.exe` on a PR branch for playtesting) — it cross-compiles **just the editor** for windows/amd64, embedding the **committed** `packwiz.bin` (it no longer rebuilds packwiz from source each run — keep CI cheap; bump `packwiz.bin` manually per the vendored-packwiz note above when it needs it), and commits `tools/derpack-edit.exe` back with `[skip ci]`. So: **edit the source, never the binary**, and don't commit the `.exe` yourself — CI does. To check a source change compiles, cross-compile for windows/amd64; don't expect to *run* it here.
+A custom Go web-UI app wrapping routine packwiz ops (add/remove/pin/set-version/batch-add/build). The committed `.exe` is rebuilt by `build-editor.yml` on every push to `main` touching `tools/editor-src/**` (or via manual `workflow_dispatch` — e.g. to build the `.exe` on a PR branch for playtesting) — it cross-compiles **just the editor** for windows/amd64, embedding the **committed** `packwiz.bin` (it no longer rebuilds packwiz from source each run — keep CI cheap; bump `packwiz.bin` manually per the vendored-packwiz note above when it needs it), and commits `tools/pcmc-edit.exe` back with `[skip ci]`. So: **edit the source, never the binary**, and don't commit the `.exe` yourself — CI does. To check a source change compiles, cross-compile for windows/amd64; don't expect to *run* it here.
 
 ## NeoForge version bumps (manual, out-of-band)
 
@@ -82,7 +82,7 @@ NeoForge is **not** a packwiz-managed mod — it's a field in `pack.toml` under 
 
 The server uses `TYPE=NEOFORGE` and pulls mods from the live `pack.toml` via packwiz-installer at startup, so "deploy a new version" = restart the container, which re-pulls. The only repo-side server task is the NeoForge `[versions]` bump above. Performance (TPS) is profiled with **spark** on the live server — and **measure, don't analogize**: old-pack tuning lessons (e.g. NTNH's 12G-vs-16G) were 1.7.10 / Java 8 and don't carry to 1.21.1 / Java 21 / G1GC.
 
-- **The box's deploy config lives in its own repo, `derpack-org/derpack-server`** (`docker-compose.yml` + `auto-update.sh` + a runbook — the site-split pattern), **not** in this repo. It replaces the old split-brain deploy where NeoForge (from `.env`) and mods (floating on `main`, re-synced every container start) drifted apart on any unscripted restart — the cause of the `21.1.228`-vs-`21.1.233` crash loop. `auto-update.sh` resolves **one immutable commit** from a channel (`release` = production / `branch` = playtest, e.g. `v0.7.0`), reads `pack.toml` at that commit, and pins **both** `NEOFORGE_VERSION` and a commit-pinned `PACKWIZ_URL` into `.env` together, then gates the deploy on the container's real healthcheck with rollback to the prior commit. So the box-side NeoForge value is now **derived** from the pinned commit's `pack.toml` (the script *mirrors* the human decision — it still never bumps `pack.toml` itself), narrowing the "two places that must match" to just the repo-side `[versions]` edit. **The pack serves client *and* server from one `pack.toml` via packwiz `side` filtering — see `docs/SERVER.md`** (delivery paths + the side-metadata rule that keeps both installs healthy).
+- **The box's deploy config lives in its own repo, `theasshats/pcmc-server`** (`docker-compose.yml` + `auto-update.sh` + a runbook — the site-split pattern), **not** in this repo. It replaces the old split-brain deploy where NeoForge (from `.env`) and mods (floating on `main`, re-synced every container start) drifted apart on any unscripted restart — the cause of the `21.1.228`-vs-`21.1.233` crash loop. `auto-update.sh` resolves **one immutable commit** from a channel (`release` = production / `branch` = playtest, e.g. `v0.7.0`), reads `pack.toml` at that commit, and pins **both** `NEOFORGE_VERSION` and a commit-pinned `PACKWIZ_URL` into `.env` together, then gates the deploy on the container's real healthcheck with rollback to the prior commit. So the box-side NeoForge value is now **derived** from the pinned commit's `pack.toml` (the script *mirrors* the human decision — it still never bumps `pack.toml` itself), narrowing the "two places that must match" to just the repo-side `[versions]` edit. **The pack serves client *and* server from one `pack.toml` via packwiz `side` filtering — see `docs/SERVER.md`** (delivery paths + the side-metadata rule that keeps both installs healthy).
 
 ## Working style
 

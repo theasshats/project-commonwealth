@@ -8,9 +8,9 @@
 > source. Sprinkled **small ores** give the early-game trickle and act as surface
 > indicators of a nearby vein.
 >
-> **Collaborator:** edit the per-vein JSON in `kubejs/data/derpack/gtmogs/ore_vein/` to tune
+> **Collaborator:** edit the per-vein JSON in `kubejs/data/pcmc/gtmogs/ore_vein/` to tune
 > a vein's composition / rarity / depth, and the **region tags** in
-> `kubejs/data/derpack/tags/worldgen/biome/vein_<ore>.json` to change *where* it generates.
+> `kubejs/data/pcmc/tags/worldgen/biome/vein_<ore>.json` to change *where* it generates.
 
 ---
 
@@ -23,10 +23,10 @@ hand-built vanilla features for veins anymore. The moving parts:
 
 | File / dir | Purpose | Key dial |
 |---|---|---|
-| `derpack/gtmogs/ore_vein/<vein>.json` | **the mix vein** (engine: GTMOGS) | `cluster_size`, `weight`, `density`, `height_range`, `generator` layers |
-| `derpack/tags/worldgen/biome/vein_<vein>.json` | **which biomes** the vein is allowed in | tag `values` (can mix `#tag` refs + biome IDs) |
-| `derpack/worldgen/{configured,placed}_feature/small_<ore>.json` | **small ores** (vanilla features) | `count`, `height_range` |
-| `derpack/neoforge/biome_modifier/small_ores.json` | adds all small ores to `#is_overworld` | `features` list |
+| `pcmc/gtmogs/ore_vein/<vein>.json` | **the mix vein** (engine: GTMOGS) | `cluster_size`, `weight`, `density`, `height_range`, `generator` layers |
+| `pcmc/tags/worldgen/biome/vein_<vein>.json` | **which biomes** the vein is allowed in | tag `values` (can mix `#tag` refs + biome IDs) |
+| `pcmc/worldgen/{configured,placed}_feature/small_<ore>.json` | **small ores** (vanilla features) | `count`, `height_range` |
+| `pcmc/neoforge/biome_modifier/small_ores.json` | adds all small ores to `#is_overworld` | `features` list |
 
 Vanilla overworld ore generation is **disabled by GTMOGS itself** — its `removeVanillaOreGen`
 config defaults to `true` (and `removeVanillaLargeOreVeins` too). We don't ship a `remove_features`
@@ -61,7 +61,7 @@ deepslate variant (magnetite, thorium) list the same block in both bands.
 - **`density`** — 0–1 fill probability inside the vein body. Commons ~0.4, rare ~0.2.
 - **`height_range`** — `{ "height": { "type": "uniform"|"trapezoid", "min_inclusive"/"max_inclusive": {"absolute": N} } }`. Match real ore depth.
 - **`dimension_filter`** — `["minecraft:overworld"]` for now; the engine also supports nether/end via the `layer` field (`stone`/`deepslate`/`netherrack`/`endstone`).
-- **`biomes`** — a single biome tag (e.g. `#derpack:vein_iron`) keeps the vein regional. **Don't**
+- **`biomes`** — a single biome tag (e.g. `#pcmc:vein_iron`) keeps the vein regional. **Don't**
   inline a list of `#tag`s here for the same reason as below — point at one tag and edit the tag.
 - **`discard_chance_on_air_exposure`** — 0.0 = veins show in caves/cliffs (good for findability).
 
@@ -107,8 +107,8 @@ You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:
 > (`["#minecraft:is_taiga", "#minecraft:is_forest"]` fails to parse → "Failed to load registries").
 > A *single* tag as a bare string is fine (`"biomes": "#minecraft:is_mountain"`). To combine
 > several tags (or tags + IDs), make a **custom biome tag** under
-> `kubejs/data/derpack/tags/worldgen/biome/<name>.json` (tag `values` *can* mix `#tag` refs and IDs)
-> and point the modifier at it: `"biomes": "#derpack:<name>"`. That's what the `vein_*` modifiers do.
+> `kubejs/data/pcmc/tags/worldgen/biome/<name>.json` (tag `values` *can* mix `#tag` refs and IDs)
+> and point the modifier at it: `"biomes": "#pcmc:<name>"`. That's what the `vein_*` modifiers do.
 
 ---
 
@@ -183,7 +183,7 @@ bauxite/lignite/fireclay (sole source, kept) plus galena (lead, removed); see th
 
 ## Mix-vein table (shipped)
 
-Each row is one `derpack/gtmogs/ore_vein/<name>.json`. **Region** is the `#derpack:vein_<name>`
+Each row is one `pcmc/gtmogs/ore_vein/<name>.json`. **Region** is the `#pcmc:vein_<name>`
 biome tag (edit the tag to move a vein). **Composition** is primary → secondary → between → sporadic.
 
 | Vein | Region (biome tag) | Y-band | Size | Weight | Composition (P → S → B → Sp) |

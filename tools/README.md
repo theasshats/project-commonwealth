@@ -4,7 +4,7 @@ What lives in this folder:
 
 | Thing | What it is |
 |---|---|
-| `derpack-edit.exe` | the **editor** — local web app for managing the pack (the rest of this README). CI-built; never hand-edit. |
+| `pcmc-edit.exe` | the **editor** — local web app for managing the pack (the rest of this README). CI-built; never hand-edit. |
 | `recipe-graph/` | **connectivity tooling** — measures "one web vs many clusters" + an interactive viz. See [`recipe-graph/README.md`](recipe-graph/README.md). |
 | `packwiz` | vendored `packwiz` binary (linux/amd64), so agent/CI sessions run `./tools/packwiz …` without `go install`. `.packwizignore`'d. |
 | `mod-data/` | recipe + loot **digests** (`recipes/*.txt`, ground truth for the recipe work). |
@@ -12,7 +12,7 @@ What lives in this folder:
 
 ---
 
-# Derpack Editor
+# Project Commonwealth Editor
 
 A local web app for managing the modpack without using the command line. Edit mods through your browser, commit through GitHub Desktop, ship through PRs.
 
@@ -21,7 +21,7 @@ A local web app for managing the modpack without using the command line. Edit mo
 1. Make sure you've cloned the repo with GitHub Desktop and have the latest `main` pulled.
 2. In GitHub Desktop, create a branch named after the next version (e.g. `0.3.3`) — see [Branch naming](#branch-naming) below.
 3. Open the repo folder in File Explorer.
-4. Double-click `tools\derpack-edit.exe`.
+4. Double-click `tools\pcmc-edit.exe`.
 5. A console window appears, then your browser opens to `http://localhost:8765`.
 6. Edit mods. When done, switch to GitHub Desktop, commit, push, open a PR.
 
@@ -111,9 +111,9 @@ The editor also caches its packwiz binary and downloaded build files under `.edi
 
 ## Running it
 
-The .exe is committed to the repo at `tools/derpack-edit.exe`. You don't need to build anything yourself; CI rebuilds it whenever the source under `tools/editor-src/` changes.
+The .exe is committed to the repo at `tools/pcmc-edit.exe`. You don't need to build anything yourself; CI rebuilds it whenever the source under `tools/editor-src/` changes.
 
-To update the editor itself (rare): edit files under `tools/editor-src/`, commit, push to main. The build-editor workflow rebuilds and commits a new `tools/derpack-edit.exe`.
+To update the editor itself (rare): edit files under `tools/editor-src/`, commit, push to main. The build-editor workflow rebuilds and commits a new `tools/pcmc-edit.exe`.
 
 ## Troubleshooting
 

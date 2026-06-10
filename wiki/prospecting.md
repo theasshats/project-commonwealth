@@ -1,6 +1,6 @@
 # Finding Ores: Prospecting
 
-Derpack X uses GregTech-style ore generation through the GTMOGS mod (Gregtech: Modern Ore
+Project Commonwealth uses GregTech-style ore generation through the GTMOGS mod (Gregtech: Modern Ore
 Generation Standalone). Ores are concentrated in large veins of related materials instead of
 being scattered evenly, and most vanilla overworld ore generation is turned off
 (`removeVanillaOreGen` and `removeVanillaLargeOreVeins` both default on). Veins, plus a thin

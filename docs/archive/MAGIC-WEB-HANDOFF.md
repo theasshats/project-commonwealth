@@ -91,7 +91,7 @@ Authored with `event.custom({...})` (Ars/occultism) + `event.recipes.create.mixi
 
 ## 7. Relationship to the Arcana mod (PR #80)
 This PR is the **recipe/material layer**. The deeper, code-level magic weave lives in the **Arcana** helper
-mod (`mods-src/derpack-arcana/`, PR #80): the Attunement Font (Ars Source→Iron's mana), spell-power
+mod (`mods-src/pcmc-arcana/`, PR #80): the Attunement Font (Ars Source→Iron's mana), spell-power
 crossover, and Soul Reaping (Born-in-Chaos kills→Occultism essence). Keep the two consistent; the Arcana
 `docs/archive/ARCANA-BRIDGE-MOD.md` covers that side.
 

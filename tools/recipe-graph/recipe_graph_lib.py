@@ -1,4 +1,4 @@
-"""Shared recipe-graph core for Derpack X connectivity tooling.
+"""Shared recipe-graph core for Project Commonwealth connectivity tooling.
 
 Builds an undirected graph from the mod-jar recipe digests (tools/mod-data/recipes/*.txt) plus the live
 kubejs/ overlay, and provides the connectivity analyses used by recipe-graph.py (CLI) and

@@ -3,7 +3,7 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/derpack/derpack-edit/internal/packwiz"
+	"github.com/pcmc/pcmc-edit/internal/packwiz"
 )
 
 // packResp is what GET /api/pack returns.

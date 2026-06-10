@@ -1,4 +1,4 @@
-# The systems — how Derpack X interlocks
+# The systems — how Project Commonwealth interlocks
 
 > **Status: accepted** (ratified by Xela112233 + zagwar, v0.6.0). This is the **canonical structural
 > model** for the pack — it **replaces the old flat "five systems / five pillars" framing** (that phrasing
@@ -23,7 +23,7 @@ The loop's north star is **[Eco](https://play.eco/)** (Strange Loop Games) — t
 survival game where a server of players must build a civilization together, **specialization is forced**
 so nobody can do everything alone, and the **economy is player-run and necessary**, not decorative. The
 ore-gen scarcity layer is already named the "Eco foundation" in `docs/ROADMAP.md` (Phase 1). What
-Derpack borrows: *forced specialization → emergent interdependence → a real player economy*. Where it
+Project Commonwealth borrows: *forced specialization → emergent interdependence → a real player economy*. Where it
 reaches Eco's effect by different means (regional resource scarcity + locked production routes vs. Eco's
 hard skill-point cap) and where it deliberately diverges (no civilization-wide deadline; no formal
 governance) is called out inline and in **Open / unsettled**.
@@ -152,7 +152,7 @@ using and no one route is self-sufficient.
 > include a refine step: re-check the updated content against this model.)
 
 > **Locked exclusives are the load-bearing wall, because our specialization is *soft*.** Eco enforces
-> specialization with a hard skill-point cap — you *cannot* learn everything. Derpack's interdependence
+> specialization with a hard skill-point cap — you *cannot* learn everything. Project Commonwealth's interdependence
 > is softer: scarcity + time make self-sufficiency *expensive*, but nothing stops a dedicated player (or
 > a tight bloc) from eventually covering every route, at which point the trade loop **erodes**. Locked
 > outputs are the closest thing to Eco's hard wall — the one mechanic that keeps interdependence from

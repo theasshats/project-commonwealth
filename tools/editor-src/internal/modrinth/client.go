@@ -12,7 +12,7 @@ import (
 
 const (
 	baseURL   = "https://api.modrinth.com/v2"
-	userAgent = "derpack-edit/1.0 (modpack editor)"
+	userAgent = "pcmc-edit/1.0 (modpack editor)"
 )
 
 // Version is a single version of a Modrinth project, simplified to the fields

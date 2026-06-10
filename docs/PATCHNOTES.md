@@ -1,9 +1,9 @@
-# Derpack X — Patch Notes
+# Project Commonwealth — Patch Notes
 
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme", a short lead paragraph, then sections (see CLAUDE.md). -->
 
-## 0.6.2 — Ore generation and prospecting
+## 0.6.3 — Ore generation and prospecting
 
 A set of fixes to regional ore generation and the prospecting guide.
 
@@ -22,6 +22,12 @@ Vein markers on the map now draw with a hot pink outline so they stand out again
 Create Big Cannons was running at 5.11.5, but the Advanced Technologies addon is built against 5.11.3 and called a block-damage method whose signature changed in the newer build. Firing a heavy autocannon armour-piercing round at a block crashed the server. Create Big Cannons has been moved back to 5.11.3 to match the addon.
 
 Firing a cannon also crashed the client while rendering its smoke particle. The cannon smoke uses a vertex format the renderer's optimized particle path did not expect, and the mismatch threw during rendering. That optimized path is now disabled for billboard particles, which fall back to the standard renderer with no visible difference.
+
+## 0.6.2 — Project Commonwealth
+
+The pack has been renamed to Project Commonwealth (motto: Magna Communitas). The new name runs through the installer, the launcher instance, the documentation, and the pack's internal data. Mods, recipes, balance, and world generation are unchanged from 0.6.1.
+
+Existing worlds and installs continue to work, and ore generation is unchanged.
 
 ## 0.6.1 — Dedicated server fix
 
@@ -273,7 +279,7 @@ sheet (#103).
 - **Fixed world-creation crash** from biome modifiers that listed multiple biome tags in a JSON
   array (`"biomes": ["#tag", "#tag"]`). That form is invalid for a HolderSet and failed registry
   load with `Failed to load registries`. All 21 veins now resolve their biomes through proper
-  custom biome **tags** (`#derpack:vein_<ore>`).
+  custom biome **tags** (`#pcmc:vein_<ore>`).
 - **Fixed second world-creation crash** (`Unbound values … [minecraft:ore_copper, minecraft:ore_diamond]`):
   the copper/diamond vanilla-thinning files pointed at configured features that don't exist in 1.21
   (the real names are `ore_copper_small` / `ore_diamond_small`).

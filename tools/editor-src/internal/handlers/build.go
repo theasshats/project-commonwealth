@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/derpack/derpack-edit/internal/builder"
+	"github.com/pcmc/pcmc-edit/internal/builder"
 )
 
 // HandleBuild builds a Prism instance into <repo>/.editor/build-staging/.
