@@ -1,0 +1,30 @@
+# forgified-fabric-api-0.116.7+2.2.4+1.21.1
+
+## mod metadata (id / version / deps)
+license = "Apache-2.0"
+modId = "fabric_api"
+version = "${file.jarVersion}"
+displayName = "Forgified Fabric API"
+modId = "neoforge"
+versionRange = "[21.1.169,)"
+modId = "minecraft"
+versionRange = "[1.21.1,1.22)"
+modId = "forgified_fabric_api"
+version = "${file.jarVersion}"
+displayName = "Forgified Fabric API (dummy)"
+modId = "neoforge"
+versionRange = "[21.1.169,)"
+modId = "minecraft"
+versionRange = "[1.21.1,1.22)"
+
+## blocks
+
+
+## items
+
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+
