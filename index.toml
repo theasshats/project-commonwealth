@@ -393,8 +393,48 @@ file = "kubejs/data/pcmc/cold_sweat/block/block_temp/basic_burner.json"
 hash = "257a22438c13a301072865e8a7ed879acaeb6ca3bbada36cd4ec5ad910a93338"
 
 [[files]]
+file = "kubejs/data/pcmc/cold_sweat/block/block_temp/blaze_burner_active.json"
+hash = "910ec8cc0fa875fd5fd754d8fe68f88ebdf313085ce04ec0cbe26ee6ea4b7267"
+
+[[files]]
+file = "kubejs/data/pcmc/cold_sweat/block/block_temp/blaze_burner_smouldering.json"
+hash = "c6a17c30ba79bd51bb46421e5f5daf623e3239b690e4d42f2e21050e3b733534"
+
+[[files]]
+file = "kubejs/data/pcmc/cold_sweat/block/block_temp/cookingforblockheads_ovens.json"
+hash = "7d54f850e75a348836cc315c18806ca7f8a8f95735d83bbdf308320d476da620"
+
+[[files]]
+file = "kubejs/data/pcmc/cold_sweat/block/block_temp/dndesires_burner.json"
+hash = "1c8ea172b260c3712e560865faa007d81cb3a0aa6bdcc2927d35def1e94731e2"
+
+[[files]]
+file = "kubejs/data/pcmc/cold_sweat/block/block_temp/extradelight_oven.json"
+hash = "ce6aae05aeca91c4f9edf2dd2212832f6a61c9a00d9e45183ac0258e39057e89"
+
+[[files]]
+file = "kubejs/data/pcmc/cold_sweat/block/block_temp/farmersdelight_stove.json"
+hash = "6bbeb714a1b83c22a25fe6cd769cd9397f24f0362b6f0b797d0644c259376ce7"
+
+[[files]]
+file = "kubejs/data/pcmc/cold_sweat/block/block_temp/liquid_blaze_burner.json"
+hash = "2ba7a955b94706b59cd56de3bbe9b8fa8d65d3923d9c89d0b32159becde2c108"
+
+[[files]]
+file = "kubejs/data/pcmc/cold_sweat/block/block_temp/lit_blaze_burner.json"
+hash = "5dcf6aa4f3e7fe92db6d3345d63ee047677a2822f17b984b225c28e78b533cb1"
+
+[[files]]
 file = "kubejs/data/pcmc/cold_sweat/block/block_temp/new_age_heater.json"
 hash = "58f023d82742192a3e115b8cb592c84c8f764cacb78a3bb4be1c4ba74db7b1ad"
+
+[[files]]
+file = "kubejs/data/pcmc/cold_sweat/block/block_temp/tfmg_blue_fire.json"
+hash = "0333ee846a3faff13245aab43bbd6759d95185600978446d10f7019730526d57"
+
+[[files]]
+file = "kubejs/data/pcmc/cold_sweat/block/block_temp/tfmg_industrial_heat.json"
+hash = "15b8152cdba066fa7f118641549b8bd36f1165a3fcf3d584638238811b0b3df3"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/coal.json"
@@ -838,7 +878,7 @@ hash = "8f0f68afb201d0712071e65a7fafac962828695980cf6fb337abcd7a6fb7e44d"
 
 [[files]]
 file = "kubejs/server_scripts/spine/00-tiers.js"
-hash = "e0aaf1bcc0051f74058a98a4730ed483fb45fa7f759190f3d74b4d8719644735"
+hash = "65de43b56f031ff87eee0a449313bcf0de2cd567b5d0278c727174fb4a8642a1"
 
 [[files]]
 file = "kubejs/server_scripts/spine/05-tags.js"

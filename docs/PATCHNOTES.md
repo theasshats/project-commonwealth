@@ -101,11 +101,12 @@ End-game electricity now reaches outside the tech route. The layered magnet at t
 generators takes a silver core, and silver is smelted only by Occultism's magic route — so a reactor-tier
 power plant needs something from a magic base, by trade or by practicing the craft yourself.
 
-The basic burner also warms you. Under Cold Sweat, standing near a lit workshop's burner now provides
-gentle heat — less than a campfire, but enough to matter on a cold night in the early game — and New
-Age's electric heater does the same, a little stronger, for powered bases. The hot-air balloon's
-adjustable burner now accepts the basic burner as its fire source, so the heat ladder carries you from
-the kitchen to the boiler to the sky.
+Your machines now warm you. Under Cold Sweat, the pack's heat sources radiate real warmth: the basic
+burner gently, blaze burners by their heat level (a seething burner is a serious fire), the kitchen
+stoves and ovens (Farmer's Delight, Extra Delight, Cooking for Blockheads), New Age's electric heater,
+and TFMG's blast stove and coke oven — a working steelworks is a warm place to winter. The hot-air
+balloon's adjustable burner also accepts the basic burner as its fire source, so the heat ladder carries
+you from the kitchen to the boiler to the sky.
 
 Create Stuff & Additions ties into the wider pack: the heat engine is built around a basic burner, the
 steam engine takes steel, and the copper exoskeleton and portable drill assemble on the Mechanical

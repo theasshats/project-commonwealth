@@ -1,0 +1,13 @@
+{
+  "block": [
+    {
+      "blocks": [
+        "create:lit_blaze_burner"
+      ]
+    }
+  ],
+  "temperature": 12,
+  "range": 5,
+  "max_effect": 24,
+  "units": "f"
+}

@@ -103,6 +103,24 @@ The gate is **step-depth + scarcity, never artificial timers.** Early tiers lean
 still takes ~a week to electric because the chains are deep and the inputs are regionally scarce — never
 because a cooldown blocks them.
 
+### The seam ladder — cross-mod weave grows with the tier
+
+**Rule:** each tier **T_n carries at least n+1 cross-mod seams** (a seam = a recipe/tag dependency where
+one mod's chain consumes another's part at that tier). The early game stays deliberately thin — T0/T1
+openness is the ratified bootstrap rule — and the weave *thickens as you climb*, so by end-game every
+build is pulling on half the pack. Census as of v0.7.0 (target in parens):
+
+| Tier | Seams (≥ target) | The seams |
+|---|---|---|
+| **T0** | 1 (1) | treadmill (create parts → `createtreadmill`) |
+| **T1** | 3 (2) | basic_burner → `aeronautics:burner_fire` (balloon); heat_engine on a burner base (`create_sa`↔`createlowheated`); brass gear (`gnkinetics`↔create) |
+| **T2** | 4 (3) | the steam gate's burner (`createlowheated`); steel canonical + the steel-cored steam engine (`tfmg`/`create_ironworks`); the prospecting kit (`createoreexcavation`↔create); industrial gear (`gnkinetics`) |
+| **T3** | 6+ (4) | the capacitor root (`createaddition`↔`create_new_age` overcharged iron); recoil-spring guns (`createbigcannons`); the SNA functional gear set (drill head / fluid tank / plunger launcher / electric motor — 4 mods); 10 TFMG machines + the motor stage (`createaddition`); the jetpack; telephoto optics |
+| **T4** | 8+ (5) | the reactor line (`tfmg`→`create_new_age`, ×9 parts); autocannon-barrel heavies + the 40mm fuze + the powder-charge fill (`createbigcannons`↔armory, both ways); ignitium + cursium (`cataclysm`); **silver** (`occultism` — the cross-producer); the drilling machine (`tfmg`→`createoreexcavation`) |
+
+When adding tiered content, check the census: if your item's tier is at its floor, your change should
+*carry* a seam (the Part 2b-ii functional-part rule tells you which one).
+
 ---
 
 ## Part 2 — The recipe cost model (#219)

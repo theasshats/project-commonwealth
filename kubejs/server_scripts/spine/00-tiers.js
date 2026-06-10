@@ -5,7 +5,8 @@
 // Design: docs/CREATE-SPINE.md. Build reference: docs/CREATE-SPINE-IMPL.md. Changes NO recipes itself.
 //
 // Tiers map to the power ladder (CREATE-SPINE.md Part 1). Aeronautics is a control-complexity thread
-// woven across tiers (Part 4a); the boss fork sits at the T3->T4 jump.
+// woven across tiers (Part 4a); the boss fork sits at the T3->T4 jump. SEAM LADDER (Part 1): tier T_n
+// carries >= n+1 cross-mod seams — thin at bootstrap, thick at end-game; census table in the doc.
 
 const SPINE = {
   // Power rung per tier (CREATE-SPINE.md Part 1).
@@ -30,7 +31,7 @@ const SPINE = {
     T3: { name: 'Electric-low',  rung: 4, anchors: ['tfmg', 'createaddition', 'create_new_age', 'gnkinetics', 'create_jetpack'],
           items: ['tfmg:etched_circuit_board', 'createaddition:capacitor', 'create_new_age:reinforced_energiser',
                   'tfmg:electric_motor', 'gnkinetics:planetary_gear', 'create_jetpack:jetpack'],
-          gate: 'electric needs rung-3 kinetic; capacitor = THE T3 token (needs create_new_age:overcharged_iron = running power); advanced energiser behind any Frostmaw-equiv Mowzie boss (#pcmc:mowzies_mid); ship core behind cataclysm:ancient_metal_ingot; jetpack + SNA power gear = capacitor-gated (#87)', cost: '2-3x, 4 stages',
+          gate: 'electric needs rung-3 kinetic; capacitor = THE T3 token (needs create_new_age:overcharged_iron = running power); advanced energiser behind any Frostmaw-equiv Mowzie boss (#pcmc:mowzies_mid); ship core behind cataclysm:ancient_metal_ingot; jetpack/brass-exo = capacitor; guns + SNA gear = functional thematic parts (recoil spring, drill head, fluid tank, plunger launcher, electric motor — Part 2b-ii family rule)', cost: '2-3x, 4 stages',
           aero: 'COMPLEX analog control (aeronautics:gyroscopic_propeller_bearing)' },
 
     T4: { name: 'Electric-high', rung: 5, anchors: ['create_new_age', 'aeronautics', 'createoreexcavation'],

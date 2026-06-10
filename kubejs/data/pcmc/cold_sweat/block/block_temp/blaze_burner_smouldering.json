@@ -1,0 +1,16 @@
+{
+  "block": [
+    {
+      "blocks": [
+        "create:blaze_burner"
+      ],
+      "state": {
+        "blaze": "smouldering"
+      }
+    }
+  ],
+  "temperature": 12,
+  "range": 5,
+  "max_effect": 24,
+  "units": "f"
+}
