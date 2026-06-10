@@ -1750,6 +1750,11 @@ hash = "a71713076503c473ca3216c71285b2641ca250f80933d713a9f42edd03f5da17"
 metafile = true
 
 [[files]]
+file = "mods/forgified-fabric-api.pw.toml"
+hash = "fcf0eac162bc9f1655c8a390bc37b79b32503e86dccf222b6d8173d2f74ff602"
+metafile = true
+
+[[files]]
 file = "mods/formations-nether.pw.toml"
 hash = "cdddddbf94aabd1af201bfbe02733c871da8cfa4141828843e1e9fc6d7c89bf6"
 metafile = true
