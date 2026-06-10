@@ -11,8 +11,10 @@
 //       hydraulic_engine (T2, copper/water) — untouched, already anchored via copper + spout filling.
 //   - JETPACKS: REMOVED from create_sa (#87, 57-jetpacks.js) — create_jetpack is the canonical flight
 //     line. The engines now power exoskeletons/tools, not flight.
-//   - METHOD CONVERSIONS (61-style, ingredients/grids verbatim): copper_exoskeleton + portable_drill were
-//     the only devices still on the vanilla bench -> Mechanical Crafter.
+//   - #87 POWER GEAR -> EARLY T3: the brass exoskeleton (strength/haste), portable drill, grappling
+//     whisk, flamethrower, and fan component each weave a createaddition:capacitor (the T3 token) into
+//     their native grid and assemble on the Mechanical Crafter — power gear is electric-age gear. The
+//     andesite/copper exoskeletons stay pre-T3 as the line's entry rungs.
 //   - Left alone: drones (already mechanical_crafting + precision), tanks/components, tools/armor.
 //
 // LOAD-SAFE / UNVERIFIED: structures reproduced verbatim from tools/recipe-dump/pcmc-recipes.json (their
@@ -78,7 +80,8 @@ ServerEvents.recipes(event => {
     transitional_item: { item: { id: 'create_sa:incomplete_steam_engine' } }
   })
 
-  // ── copper_exoskeleton — vanilla bench -> Mechanical Crafter (grid/keys verbatim). ──
+  // ── copper_exoskeleton — vanilla bench -> Mechanical Crafter (grid/keys verbatim). Kept PRE-T3:
+  //    it's the entry exoskeleton (hydraulic/copper tier); the power gear above it carries the gate. ──
   event.remove({ output: 'create_sa:copper_exoskeleton_chestplate' })
   event.recipes.create.mechanical_crafting('create_sa:copper_exoskeleton_chestplate', [
     'ACA',
@@ -87,14 +90,55 @@ ServerEvents.recipes(event => {
   ], { A: '#c:ingots/copper', C: 'create:cogwheel', H: 'create_sa:hydraulic_engine',
        T: 'create:fluid_tank', S: 'create:andesite_alloy', B: '#c:storage_blocks/copper' })
 
-  // ── portable_drill — vanilla bench -> Mechanical Crafter (grid/keys verbatim). ──
+  // ════ #87 — the SNA POWER GEAR is early-T3: each piece carries a createaddition:capacitor (the T3
+  //      token — real electricity, per 51-weave) woven into its native grid. Same idiom as the jetpack. ════
+
+  // ── portable_drill — Crafter + capacitor (was: bare brass ingot on top). ──
   event.remove({ output: 'create_sa:portable_drill' })
   event.recipes.create.mechanical_crafting('create_sa:portable_drill', [
-    ' B ',
+    ' Z ',
     'CSC',
     ' D '
-  ], { B: '#c:ingots/brass', C: 'create:cogwheel', S: 'create_sa:steam_engine',
+  ], { Z: 'createaddition:capacitor', C: 'create:cogwheel', S: 'create_sa:steam_engine',
        D: 'create_sa:brass_drill_head' })
 
-  console.info('[pcmc-spine] weave create_sa: heat_engine seams to the basic_burner, steam_engine to steel; copper exoskeleton + portable drill assemble on the Crafter; netherite jetpack gate in 40-gates.')
+  // ── brass_exoskeleton (strength/haste — the TOP exoskeleton) — native 5x3 kept; the two andesite
+  //    alloys in the engine row become capacitors. ──
+  event.remove({ output: 'create_sa:brass_exoskeleton_chestplate' })
+  event.recipes.create.mechanical_crafting('create_sa:brass_exoskeleton_chestplate', [
+    'AAFAA',
+    'ZASAZ',
+    'KAXAK'
+  ], { A: '#c:ingots/brass', F: 'create:flywheel', S: 'create_sa:steam_engine',
+       Z: 'createaddition:capacitor', X: 'create:andesite_alloy', K: '#c:storage_blocks/brass' })
+
+  // ── grapplin_whisk (traversal) — native 3x5 kept; the zinc tip becomes the capacitor. ──
+  event.remove({ output: 'create_sa:grapplin_whisk' })
+  event.recipes.create.mechanical_crafting('create_sa:grapplin_whisk', [
+    ' Z ',
+    'CHC',
+    'MMM',
+    'MMM',
+    ' W '
+  ], { Z: 'createaddition:capacitor', C: 'create:cogwheel', H: 'create_sa:heat_engine',
+       M: 'create:minecart_coupling', W: 'create:whisk' })
+
+  // ── flamethrower (backtank gadget) — native shape kept; one obsidian plate becomes the capacitor. ──
+  event.remove({ output: 'create_sa:flamethrower' })
+  event.recipes.create.mechanical_crafting('create_sa:flamethrower', [
+    'ABHOZ',
+    'AAO  '
+  ], { A: 'create:andesite_alloy', B: 'create:blaze_burner', H: 'create_sa:heat_engine',
+       O: '#c:plates/obsidian', Z: 'createaddition:capacitor' })
+
+  // ── fan_component (the nozzle-fan air gadget) — bench -> Crafter; one alloy becomes the capacitor. ──
+  event.remove({ output: 'create_sa:fan_component' })
+  event.recipes.create.mechanical_crafting('create_sa:fan_component', [
+    'NAN',
+    'APA',
+    'NZN'
+  ], { N: '#c:ingots/zinc', A: 'create:andesite_alloy', P: 'create:propeller',
+       Z: 'createaddition:capacitor' })
+
+  console.info('[pcmc-spine] weave create_sa: heat_engine seams to the basic_burner, steam_engine to steel; the #87 power gear (brass exo, portable drill, whisk, flamethrower, fan) is capacitor-gated early-T3 on the Crafter.')
 })

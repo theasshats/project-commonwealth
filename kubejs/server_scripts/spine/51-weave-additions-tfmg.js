@@ -7,8 +7,12 @@
 //
 // TIER DAG (never a cycle): TFMG machines (T3) may require create parts, brass/copper, TFMG's own
 // steel/circuits, AND createaddition electric parts. createaddition parts depend only on create + TFMG steel
-// (a LOWER tier than these machines), so weaving them UP into TFMG machines adds no cycle. NOT touched:
-// New Age / Nuclear (higher tier) are never pulled in here.
+// (a LOWER tier than these machines), so weaving them UP into TFMG machines adds no cycle.
+// ⚠️ ONE SANCTIONED EXCEPTION: the capacitor (below) consumes create_new_age:overcharged_iron — the
+// T3-entry token. Its chain (rolling mill -> wire -> spool -> alternator | basic_motor | basic_solar ->
+// energiser = andesite casing + lightning rod -> energise iron) is verified capacitor-free AND
+// TFMG-machine-free end to end, so no cycle is possible THROUGH it. Keep it that way: never weave a
+// capacitor (or anything downstream of one) into that entry chain.
 //
 // THROUGH CREATE: the assembled T3 machines (engines, gearboxes, the mixer, the winding machine, the
 // distillation controller) are no longer hand-craftable on a vanilla bench — they route through the
@@ -29,6 +33,21 @@
 
 ServerEvents.recipes(event => {
   const mc = (p, k, o) => event.recipes.create.mechanical_crafting(o, p, k)
+
+  // ── createaddition:capacitor — THE early-T3 token, made real (#87). Stock was zinc plate + copper
+  //    plate + redstone torch in a column (both variants) — all T1 inputs, so anything "gated on a
+  //    capacitor" was actually craftable pre-electric. The new grid keeps that identity and adds
+  //    create_new_age:overcharged_iron: energised iron exists only with rung-4 power RUNNING, so a
+  //    capacitor is literal proof of electricity (and a three-way Additions/New Age/TFMG interlock at
+  //    the T3 door). Yields 2 — capacitors are consumed all over the spine now (TFMG machines + motor
+  //    stage, the jetpack, SNA gear). Cycle-free per the header note. ──
+  event.remove({ output: 'createaddition:capacitor' })
+  event.shaped('2x createaddition:capacitor', [
+    'ZO',
+    'CT'
+  ], { Z: '#c:plates/zinc', O: 'create_new_age:overcharged_iron',
+       C: '#c:plates/copper', T: 'minecraft:redstone_torch' })
+
   // ── engine_gearbox: +copper_wire. T3 machine -> Mechanical Crafter. ──
   event.remove({ output: 'tfmg:engine_gearbox' })
   mc([

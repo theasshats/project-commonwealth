@@ -81,6 +81,12 @@ is now an electric-age build, assembled on the Mechanical Crafter around a capac
 upgrade requires cursium — the smithing-table shortcut no longer works. Create Stuff & Additions' three
 parallel jetpacks are no longer craftable; that mod keeps its engines, exoskeletons, and tools.
 
+Power gear is electric-age gear. The capacitor now requires overcharged iron, which only exists once a
+base has electricity running, so a capacitor is proof of power. Create Stuff & Additions' strongest
+equipment — the brass exoskeleton, portable drill, grappling whisk, flamethrower, and fan component —
+each build around a capacitor on the Mechanical Crafter, alongside the jetpack. The andesite and copper
+exoskeletons remain earlier-tier entry points.
+
 Create: Ore Excavation has been repositioned as an end-game operation. Its drilling machine and
 extractor now require TFMG circuit boards and electric motors, and drill heads are steel-bodied and
 assembled on the Mechanical Crafter. Finding veins stays accessible — the sample drill, vein finder, and

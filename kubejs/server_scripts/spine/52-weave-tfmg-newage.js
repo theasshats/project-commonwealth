@@ -9,8 +9,10 @@
 //
 // TIER DAG (no cycles): New Age T4 parts may require create, TFMG end-products
 //   (tfmg:etched_circuit_board, tfmg:coated_circuit_board, #c:ingots/steel | #c:plates/steel,
-//   tfmg:plastic_sheet) and LOWER New Age parts. They must NOT require Nuclear (higher tier), and a TFMG
-//   item must NEVER require a New Age item (that would be a cycle).
+//   tfmg:plastic_sheet) and LOWER New Age parts. A TFMG item must never require a New Age item — with
+//   ONE sanctioned exception: createaddition:capacitor consumes create_new_age:overcharged_iron (the
+//   T3-entry token, 51-weave), whose chain is TFMG-machine-free by construction. Keep overcharged_iron's
+//   chain (energiser + basic generators + wires) free of capacitors/TFMG machines or the door deadlocks.
 //
 // NOT touched (owned elsewhere): advanced_energiser, reinforced_energiser, basic/advanced solar plates.
 // basic_energiser is the root and is deliberately SKIPPED to avoid breaking early bootstrap.
