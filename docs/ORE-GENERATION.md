@@ -202,7 +202,7 @@ biome tag (edit the tag to move a vein). **Composition** is primary → secondar
 | zinc | plains / savanna | 0…80 | 50 | 55 | zinc → tin → copper → nickel |
 | tin | hills / plains | 0…96 | 50 | 55 | tin → zinc → iron → silver |
 | silver | hills / rocky mtns | -32…48 | 40 | 35 | silver → lead → nickel → palladium |
-| lead | hills / mountains | -32…64 | 40 | 40 | lead → silver → nickel → lead |
+| lead | hills / mountains | -32…64 | 40 | 40 | lead → zinc → silver → copper |
 | lithium | desert / badlands | -48…16 | 40 | 35 | lithium → salt → redstone → nickel |
 | salt | ocean / beach | 0…72 | 24 | 25 | salt → salt → lithium → salt |
 | nickel | savanna / mountain | -32…48 | 40 | 40 | nickel → iron → silver → palladium |
@@ -211,7 +211,7 @@ biome tag (edit the tag to move a vein). **Composition** is primary → secondar
 | mithril | special (Terralith) | -48…16 | 30 | 10 | mithril → mithril → silver → emerald |
 | jade | jungle | -24…48 | 40 | 30 | jade → jade → emerald → diamond |
 | palladium | mountains / deep_dark | -56…24 | 30 | 12 | palladium → palladium → nickel → silver |
-| bauxite | jungle / savanna | 32…128 | 50 | 50 | bauxite → iron → zinc → gold |
+| bauxite | jungle / savanna | 32…128 | 50 | 30 | bauxite → iron → zinc → gold |
 | lignite | swamp / plains | 8…80 | 50 | 45 | lignite → fireclay → coal → lithium |
 
 > **v0.7.0:** the uranium vein was removed with Create: Nuclear (#289) — thorium and lead absorbed its

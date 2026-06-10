@@ -442,7 +442,7 @@ hash = "f11f10777de47f37b15376898eadbc30136d20558f52b390a5ffcc5a8f74abb8"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/bauxite.json"
-hash = "7d6399db2524a2b411328319c7e1b82bd2860213ccab3da7a675d516d3d7aae3"
+hash = "3938899a8e8fb820d2b7a0804d206561d5e5e4b2ffcd2bcf8dd2e82ceaf195be"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/coal.json"
@@ -478,7 +478,7 @@ hash = "dd55afb498185c76d13344369af7fe0c6bdfc7535ec65e31642b552a9958ae37"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/lead.json"
-hash = "0673d627ba6b7923812731fd3ce045eb16a6abf3f6f2cce3e0f2c672227a957d"
+hash = "613e1d325d0c7eba114c54f53a5314aa08a88fe81d384b8056aec85f7b810df2"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/lignite.json"
