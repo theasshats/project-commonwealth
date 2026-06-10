@@ -106,51 +106,51 @@ hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/ammo/40mmhe_casing.json"
-hash = "6ee0632375df0cbbfd11a65375be78acd6de5ea8a81ef9e738ed1bde4eee8e61"
+hash = "d2945c8aefb1563a87ca8d7ea3bde6beee83f73d3bc7832be1aa7450947bcc61"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/ammo/40mmhe_casing_fill.json"
-hash = "6a63120c5ba0b98d212b1cfc0cba463271359e4a50e28e0407e4454c247bbba6"
+hash = "0f656a6e267ceb23d156738aa29ba4769450d65c8f41f62dd1d3e7fdc4ce9c6a"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/ammo/grenade_casing.json"
-hash = "e4941686a1ffa8a5df345fd3109f76171f8e189198833bb3476755c59c756e11"
+hash = "23e94a700b58ef2325e4ec1c3e20433b4527281232e9b2eef3d4e722f48aed9e"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/ammo/grenade_casing_fill.json"
-hash = "11123d1295407ee15fb474734ba2a4323482ba6c742263c895ca655fd91d816d"
+hash = "cc98a20119ba36fbae54c20d4d77a8a12d6bbdbd954b4b17f6cba257182dd1f6"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/ammo/pneumatic_pistol_casing.json"
-hash = "f28f066a5ba8a956cdee3f9b9426ab9991d6fe3f8af9dfe81e4090836d334996"
+hash = "2d4d7aeab55a2fc4c7466a81ac1dc821f75f0ae243c12a990f117ba5ee3c7ad7"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/ammo/pneumatic_pistol_casing_fill.json"
-hash = "e0a1e45cb888d6287652dfe4987b0bb5b55a77d15f132ba41d2cf4aaede7661b"
+hash = "c3f394c382471508a6a7a8abb1766efa203c7d55cea952b71e4ee0cab0e6b36f"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/ammo/rimmed_blunt_ap_casing.json"
-hash = "ff3810038ce2c326825d76815b0fcaba98337fec8ce5bd98453fb99484e212f0"
+hash = "d7a8f0034b1ca59a7e391f98eddb2418c7e7374301024ac566f26141a83dedf1"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/ammo/rimmed_blunt_ap_casing_fill.json"
-hash = "283b60faaa5d1beb5dee6de00e9987070050375fc1eab8f9522d3ba5fddbde25"
+hash = "603999ff6bc1421839845b69bb2099ec7bf9d88fa2f6f34db912875839368233"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/ammo/slap_casing.json"
-hash = "d27ad905974c9e5236c8e12e80d599e5ed49554e981bac46f00b52fa0fe28740"
+hash = "f5fd7bb73947c3bbfa6aff3c5f245af11bc9a724806e47c91a2987e907e6e94c"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/ammo/slap_casing_fill.json"
-hash = "a1e0eb2893d7af7a966147abdc78a792a020f6378c5ba274442ad7c27a621980"
+hash = "169da78c81da09c5e79cd6db5497aa7d15b6890406153302bbcd4770288a727a"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/ammo/twelve_gauge_shell.json"
-hash = "26605a2341d635f3c08ea1fe4ab35f999b2ccbc7a504c30d8dfd06287c394563"
+hash = "bb45f29cc976aa1acfb718420972d3176ad92e20d94647ed472433dde0fb00ad"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/ammo/twelve_gauge_shell_fill.json"
-hash = "d8556e24b2879260c51256fc9f8512c001a8885ba5b1ca01fdd418eaceb9fdc3"
+hash = "fb02993e82704f5ba1d7c84e040abb295420bcccbc9f32382566a89724ebf45c"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/attachments/ap_projectile.json"
@@ -258,19 +258,19 @@ hash = "f373b6904b553c235dee5640e39094a5d5e2b27bd516f0139198495e9a8479e1"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/guns/double_barrel_shotgun.json"
-hash = "6420eb7fe8a547f7f5acbb2ea678eb168979eaea9a76295ed183c971ba08d408"
+hash = "7adc26a2d9d9d4822e2bcfa242efb3abb3cdac97de431ae29658e609569ea1cb"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/guns/field_gun.json"
-hash = "09b5fcf0edda4d1931653b1bea54c5a62069288bca83d32007b7a4a6a4dab763"
+hash = "87415d458cfff58347f76854fdbc1f1966476c8eefe4136e3a194403333b4cfc"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/guns/grenade_launcher.json"
-hash = "77686a7ad226e18b0395c4f64deb27421551b006c1b96c70575cda9ee89b0dd9"
+hash = "031fba37272ae14c433627391794554252679a5a671dba145107849e424d6af0"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/guns/lmg.json"
-hash = "7d87f7f7b5c486206323fafc4c852dcb07728f3cc81b73f6a61574401055e846"
+hash = "ac52bcdc363b908be99da8d1b56c0a6892780e8e88f50036f7d1352d5800033c"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/guns/melee_wrench.json"
@@ -2638,4 +2638,4 @@ metafile = true
 
 [[files]]
 file = "tacz/Create_Armorer-v1.2.0.1.zip"
-hash = "479f0ac05833ccec554efa1b22e6f71553c7ebe7f381310c28467a399c98b0ba"
+hash = "43ac2502a14392f89f55d6e90d96ee5d208acf09bc103e188237ffff15f9100b"

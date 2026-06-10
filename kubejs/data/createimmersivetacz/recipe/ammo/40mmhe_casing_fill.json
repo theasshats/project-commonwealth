@@ -49,6 +49,35 @@
           "id": "createimmersivetacz:40mmhe_casing"
         }
       ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "createimmersivetacz:40mmhe_casing"
+        },
+        {
+          "tag": "c:ingots/lead"
+        }
+      ],
+      "results": [
+        {
+          "id": "createimmersivetacz:40mmhe_casing"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "createimmersivetacz:40mmhe_casing"
+        }
+      ],
+      "results": [
+        {
+          "id": "createimmersivetacz:40mmhe_casing"
+        }
+      ]
     }
   ],
   "transitional_item": {

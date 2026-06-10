@@ -18,7 +18,7 @@
       "tag": "minecraft:planks"
     },
     "K": {
-      "tag": "pcmc:boss_keys"
+      "item": "createbigcannons:steel_autocannon_barrel"
     }
   },
   "pattern": [
