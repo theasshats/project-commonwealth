@@ -20,7 +20,9 @@
 ServerEvents.recipes(event => {
   const NAMESPACES = [
     'create', 'createaddition', 'tfmg', 'create_new_age',
-    'aeronautics', 'aeroworks', 'simulated', 'create_tweaked_controllers', 'gnkinetics'
+    'aeronautics', 'aeroworks', 'simulated', 'create_tweaked_controllers', 'gnkinetics',
+    // §4/§5 integrations (create_new_age already covers the reactor parts):
+    'createlowheated', 'createoreexcavation', 'create_sa', 'create_ironworks'
   ]
 
   const out = {}

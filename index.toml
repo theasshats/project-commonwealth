@@ -870,7 +870,7 @@ hash = "2b60e4cb06b59859c0d52340f1210e62b0017f61d5ac827baf52e2014e46ab07"
 
 [[files]]
 file = "kubejs/server_scripts/zz-dump-recipes-TEMP.js"
-hash = "26953dd9d30417407d3412ad4042a221884d7b8252edd39af1e19ed021156015"
+hash = "28bae75f6776a2e0ddfa7ae5aa6e1b39c020cd2a147b0d79b9d07d5def5e5433"
 
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"
