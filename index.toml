@@ -706,7 +706,7 @@ hash = "015b8cb0b08aa636585c2a0b2bd759cd23ce6f64b8a6e8e409e22deb996d7cf1"
 
 [[files]]
 file = "kubejs/server_scripts/40-gamediscs-loot.js"
-hash = "e4ecd530b702ec5d14d8bcf7b521a2d35e8b3900e6544a4c9e54adf0b8df722c"
+hash = "365e30a0265297b79f43fe952e369555d9b7f211369184c4335743efc68444e9"
 
 [[files]]
 file = "kubejs/server_scripts/example.js"

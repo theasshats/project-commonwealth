@@ -10,10 +10,12 @@
 //   rare    ~1.5% — Rabbit, TNT Sweeper
 //
 // (Pong is the craftable starter — see recipes/99-gamediscs.js.) Chances are a STARTING preset; tune
-// against how dense the modded-structure chest count turns out to be. LootJS 3.x API: addTableModifier
-// with LootType.CHEST is the non-deprecated "all chests" target; conditions (randomChance) are checked
-// before the addLoot action.
-LootJS.lootTables(event => {
+// against how dense the modded-structure chest count turns out to be. LootJS 3.x API (verified against
+// LootJS 1.21.1/3.7.0 source): the modifier builders live on LootJS.modifiers — NOT LootJS.lootTables,
+// whose event (LootTableEventJS) has no addTableModifier and crashes at /reload. addTableModifier accepts
+// LootType.CHEST via the LootTableFilter type wrapper and is the non-deprecated "all chests" target
+// (addTypeModifier is @Deprecated forRemoval); conditions (randomChance) are checked before the addLoot action.
+LootJS.modifiers(event => {
   // (Rhino/KubeJS doesn't support rest params — pass the discs as an array.)
   const find = (chance, discs) => discs.forEach(disc =>
     event.addTableModifier(LootType.CHEST).randomChance(chance).addLoot(disc)
