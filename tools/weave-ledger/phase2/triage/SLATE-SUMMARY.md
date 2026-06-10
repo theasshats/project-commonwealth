@@ -9,17 +9,17 @@ _(counted from enumerated KEEP/CUT/MERGE/DEFER lines — the ground truth — no
 - weave KEEPs across 160 non-LEAVE mods
 
 ## Mods anchored to each pillar (breadth — counts a mod once per pillar it touches)
-- create: 122
+- create: 123
 - economy: 105
 - magic: 70
-- survival: 50
+- survival: 51
 - aeronautics: 24
 
-## KEEP weaves by target milestone (KEEP-by-pillar; sums to total KEEP)
+## KEEP weaves by target milestone (KEEP-by-pillar; sums to total KEEP; post-#305 map — economy→v0.13.0, survival→v0.9.0)
 - v0.11.0: 86
-- v0.13.0: 50
+- v0.13.0: 170
 - v0.7.0: 117
-- v0.9.0: 170
+- v0.9.0: 50
 
 ## KEEP motif histogram
 - M-28: 37
@@ -56,13 +56,13 @@ _(counted from enumerated KEEP/CUT/MERGE/DEFER lines — the ground truth — no
 
 ## Anchor-count distribution (mods reaching N anchors)
 - 0 anchor(s): 2 mods
-- 1 anchor(s): 26 mods
-- 2 anchor(s): 63 mods
+- 1 anchor(s): 24 mods
+- 2 anchor(s): 65 mods
 - 3 anchor(s): 57 mods
 - 4 anchor(s): 12 mods
 
-## One-anchor mods (candidates for a second weave) — 28
-aileron, ars_n_spells, ars_nouveau, bettermineshafts, bits_n_bobs, byzantine, cmpackagecouriers, cmpackagepipebomb, copperagebackport, create_pattern_schematics, create_train_parts, create_ultimate_factory, endermoon, formations, formationsnether, gravestone, mcwfences, mcwroofs, mcwstairs, mcwwindows, mutantszombies, naturescompass, rechiseledcreate, sliceanddice, trading_floor, trashcans, vc_gliders, zombiemoon
+## One-anchor mods (candidates for a second weave) — 26
+aileron, ars_n_spells, bettermineshafts, bits_n_bobs, byzantine, cmpackagecouriers, cmpackagepipebomb, copperagebackport, create_pattern_schematics, create_train_parts, create_ultimate_factory, endermoon, formations, formationsnether, gravestone, mcwfences, mcwroofs, mcwstairs, mcwwindows, mutantszombies, naturescompass, rechiseledcreate, sliceanddice, trashcans, vc_gliders, zombiemoon
 
 ## LEAVE mods — 42
 aeronautics_dyeable_components, almostunified, blood_n_particles_datapack, blueprint, bundle_recipe, cmparallelpipes, comforts, copycats, create, createaddoncompatibility, createfurnitureseats, createpickywheels, createshufflefilter, ctl, direct_chute, dummmmmmy, everycomp, fishingreal, freefbible, gamediscs, gtmogs, immersive_paintings, inventoryprofilesnext, irons_lib, jakes-build-tools-2.0.1.5, just_blahaj, knightlib, letmefeedyou, letsdocompat, lootr, midnightthoughts, modonomicon, multipiston, netmusic, openpartiesandclaims, patchouli, recipe_integration, sablecollisiondamage, solmaiddream, spyglass_improvements, steves_lava_chicken_music_disc, toomanypaintings

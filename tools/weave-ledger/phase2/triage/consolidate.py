@@ -17,12 +17,16 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 H_SLATE = re.compile(r'^##\s+(\S+)\s+—\s+slate:\s*(\d+)\s*KEEP\s*/\s*(\d+)\s*CUT(?:\s*/\s*(\d+)\s*MERGE)?\s*/\s*(\d+)\s*DEFER', re.I)
 H_LEAVE = re.compile(r'^##\s+(\S+)\s+—\s+LEAVE', re.I)
 H_ANY   = re.compile(r'^##\s+(\S+)\s+—')
-NOW_N   = re.compile(r'\(now\s+(\d+)\)')
-ANCHORS = re.compile(r'anchors after:\s*([^(|]+)')
+NOW_N   = re.compile(r'\(now\s+(\d+)')
+ANCHORS = re.compile(r'anchors after:\s*(.*)$')
 CANON   = ['create', 'magic', 'economy', 'survival', 'aeronautics']
 MOTIF   = re.compile(r'\bM-(\d{2})\b')
 MILE    = re.compile(r'milestone:\s*(v\d+\.\d+\.\d+)', re.I)
 BUILD   = re.compile(r'→build\s*#(\d+)')
+# #305 reordered the pillar milestones (Survival and Economy swapped places). The batch files were
+# written under the pre-#305 map (economy→v0.9.0, survival→v0.13.0) and stay frozen; remap at render
+# time so the rollup reflects the current ROADMAP.
+MILE_REMAP = {'v0.9.0': 'v0.13.0', 'v0.13.0': 'v0.9.0'}
 
 def parse_block(ns, lines):
     """lines: the header line + body lines until next header."""
@@ -43,10 +47,13 @@ def parse_block(ns, lines):
     a = ANCHORS.search(head)
     if a:
         # canonical pillars by substring match per token — robust to case ("Create"),
-        # qualifiers ("survival only"), and notation ("economy×2"); ignores prose since
-        # the capture is already truncated before the first '(' or '|'.
+        # qualifiers ("survival only"), and notation ("economy×2"). Parenthetical SPANS are
+        # stripped (they're prose/qualifiers like "(primary)" or "(now 2)"), but the text
+        # AFTER them survives — the old version truncated at the first '(' and miscounted
+        # e.g. "magic (primary) + survival" as one anchor.
+        tail = re.sub(r'\([^)]*\)', ' ', a.group(1))
         pil = []
-        for t in re.split(r'[+/,]', a.group(1)):
+        for t in re.split(r'[+/,|]', tail):
             tl = t.strip().lower()
             for p in CANON:
                 if p in tl and p not in pil:
@@ -57,7 +64,8 @@ def parse_block(ns, lines):
         if s.startswith('KEEP'):
             rec['line_keep'] += 1
             mm = MOTIF.search(s);  rec['keep_motifs'].append('M-'+mm.group(1) if mm else '(none)')
-            ml = MILE.search(s);   rec['keep_miles'].append(ml.group(1) if ml else '(none)')
+            ml = MILE.search(s)
+            rec['keep_miles'].append(MILE_REMAP.get(ml.group(1), ml.group(1)) if ml else '(none)')
         elif s.startswith('CUT'):   rec['line_cut'] += 1
         elif s.startswith('MERGE'): rec['line_merge'] += 1
         elif s.startswith('DEFER'):
@@ -127,7 +135,7 @@ def main():
     out.append(f'- weave KEEPs across {mods_total - len(leave_mods)} non-LEAVE mods\n')
     out.append('## Mods anchored to each pillar (breadth — counts a mod once per pillar it touches)')
     for p, c in pillar_keep.most_common(): out.append(f'- {p}: {c}')
-    out.append('\n## KEEP weaves by target milestone (KEEP-by-pillar; sums to total KEEP)')
+    out.append('\n## KEEP weaves by target milestone (KEEP-by-pillar; sums to total KEEP; post-#305 map — economy→v0.13.0, survival→v0.9.0)')
     for ml, c in sorted(mile_keep.items()): out.append(f'- {ml}: {c}')
     out.append('\n## KEEP motif histogram')
     for mo, c in motif_keep.most_common(): out.append(f'- {mo}: {c}')
