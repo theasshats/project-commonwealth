@@ -1,6 +1,9 @@
 # Power-system mods — evaluation & the Create: Power Grid question
 
-> **Status: design review / decision doc — not yet a decision.** Internal curation artifact. Evaluates the
+> **Status: DECIDED (v0.7.0) — kept as the 2.0 basis.** The v0.7.0 calls this review recommended all
+> landed: shipped on the createaddition backbone, Create: Nuclear cut (#289), New Age's reactor is the
+> end-game generator, and **Create: Power Grid is the 2.0 electricity-overhaul flagship (#282)** — this
+> doc is the analysis #282 builds on. Internal curation artifact. Evaluates the
 > pack's Create power/electricity mods on their own merits (independent of the v0.7.0 integration weave),
 > and assesses **Create: Power Grid** as a candidate for *the* central power mod. Pairs with
 > `docs/CREATE-SPINE.md` (the ratified tier design) and `docs/CURATION.md` (keep/cut rubric).

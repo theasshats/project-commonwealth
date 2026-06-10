@@ -46,6 +46,15 @@ have real weight. Higher-tier items do not simply cost more — they pass throug
 in components from across the pack's mods. A more complex machine is a longer chain, not a bigger pile of
 the same ingredient.
 
+Each tier also has a telltale component that its gear is built around. Steam-tier work runs on the basic
+burner and steel; the electric tier's mark is the capacitor — which itself takes energised iron, real
+proof of a powered base — and you will meet it in jetpacks, power gear, and the better firearms; the top
+tier asks for boss metals, and its generator magnets take silver, which only the occult smelting route
+produces. If a recipe asks for one of these, that is the game telling you what tier you are stepping into.
+
+See also: [weapons-and-gear](weapons-and-gear.md) for the full equipment picture, and
+[prospecting](prospecting.md) for finding ore.
+
 ## Flight
 
 Aircraft advance alongside the power ladder, gated by how much control you can manage:

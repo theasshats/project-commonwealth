@@ -50,7 +50,7 @@ mapped a region can pass that knowledge on, or trade it.
 Veins are regional, so the biome decides what you find. A rough guide:
 
 - Mountains and hills: iron, magnetite, lead, silver, nickel, palladium (deep).
-- Badlands and savanna: copper, gold, thorium, uranium (deep).
+- Badlands and savanna: copper, gold, thorium (deep).
 - Desert: redstone, lithium.
 - Forest and taiga: coal.
 - Plains: zinc, tin.
@@ -70,3 +70,33 @@ see the vein it belongs to and its spawn range.
 - A single vertical shaft through the center of a vein chunk covers every depth a vein could
   be at, so there is no need to strip-mine.
 - Caves cut through veins too. Prospecting works the same on ore you find while caving.
+
+
+## The prospecting kit
+
+Create: Ore Excavation adds three tools that work alongside break-to-prospect, and all three are
+early-game crafts:
+
+- **Vein finder** — built around an electron tube, it points you toward buried deposits from the
+  surface.
+- **Vein atlas** — a clipboard-bound survey book that keeps a record of what you have found.
+- **Sample drill** — a small brass machine that bores a test column so you can check what is below
+  without committing to a shaft.
+
+## Two vein systems
+
+The pack has two different kinds of "vein," and they are found and used differently:
+
+- **Ore veins** (the GregTech-style system above) are the pack's ordinary ore supply: regional,
+  hand-mined, revealed by breaking ore.
+- **Drilling veins** are separate, deeper deposits that only Create: Ore Excavation's machines can
+  tap. The vein finder, atlas, and sample drill locate them. You cannot dig these out by hand.
+
+## End-game: industrial vein drilling
+
+Tapping a drilling vein is an end-game operation. The drilling machine and its fluid-pumping
+counterpart, the extractor, require etched circuit boards and electric motors from the top of the
+industrial chain, and they only run on serious rotational power. Drill heads are steel-bodied,
+assembled on the Mechanical Crafter, and wear out with use; the heavier veins also consume fluid
+(the netherite vein drinks lava). Expect to spend drills, power, and logistics to run one — finding
+veins is free, but emptying the planet is not.

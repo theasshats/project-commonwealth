@@ -112,8 +112,7 @@ barrels, deployer-built firing mechanisms, precision triggers, fluid-filled prim
 gun table stays out of the pack. The electric-age weapons (the SMG, both shotguns, the rifles, and the
 snipers) take a capacitor in the build, and the three heavy weapons — the machine gun, the grenade
 launcher, and the 40mm field cannon — are each built around a steel autocannon barrel from Create Big
-Cannons, so heavy small arms grow out of the artillery industry. The grenade launcher and the field
-cannon also hit like they should now: their shells break blocks on detonation.
+Cannons, so heavy small arms grow out of the artillery industry.
 
 Ammunition is a production line. Brass casings cut leaner from sheets — yields are half what they were —
 and every round is assembled in four stages: a primer is deployed, gunpowder is filled, a lead projectile
