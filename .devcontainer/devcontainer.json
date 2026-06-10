@@ -1,5 +1,5 @@
 {
-    "name": "Project Commonwealth: Create dev",
+    "name": "Project Commonwealth: Magna Communitas dev",
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
         "ghcr.io/devcontainers/features/go:1": {
