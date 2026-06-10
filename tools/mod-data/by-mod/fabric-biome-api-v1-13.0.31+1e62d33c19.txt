@@ -1,5 +1,5 @@
 # fabric-biome-api-v1-13.0.31+1e62d33c19
-bundled-in: txnilib-neoforge-1.0.24-1.21.1
+bundled-in: forgified-fabric-api-0.116.7+2.2.4+1.21.1
 
 ## mod metadata (id / version / deps)
 license = "Apache-2.0"
@@ -7,7 +7,7 @@ modId = "fabric_biome_api_v1"
 version = "${file.jarVersion}"
 displayName = "Forgified Fabric Biome API (v1)"
 modId = "neoforge"
-versionRange = "[21.1.169,)"
+versionRange = "[21.1.219,)"
 modId = "minecraft"
 versionRange = "[1.21.1,1.22)"
 
