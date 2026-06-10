@@ -25,18 +25,15 @@ const SPINE_GATES = [
       [' K ', 'BGB', ' W '],
       { K: K, B: 'create:brass_casing', G: 'simulated:gyroscopic_mechanism', W: '#minecraft:wooden_slabs' }) },
 
-  // T3/T4 — netherite jetpack behind cursium (Maledictus, mid-late Cataclysm boss).
+  // T3/T4 — netherite jetpack behind cursium (Maledictus, mid-late Cataclysm boss). Through Create
+  //      (Mechanical Crafter), and the remove also wipes create_jetpack's two netherite_upgrade smithing
+  //      routes — no template bypass around the gate. (create_sa's jetpacks are disabled outright in
+  //      57-jetpacks.js — #87: one canonical jetpack line.)
   { tier: 'T4', out: 'create_jetpack:netherite_jetpack', drop: 'cataclysm:cursium_ingot',
-    build: (e, K) => e.shaped('create_jetpack:netherite_jetpack',
+    build: (e, K) => e.recipes.create.mechanical_crafting('create_jetpack:netherite_jetpack',
       ['KNK', 'EPE', 'NAN'],
       { K: K, N: 'minecraft:netherite_ingot', E: 'create:electron_tube',
         P: 'create:precision_mechanism', A: 'create_new_age:advanced_energiser' }) },
-
-  // T4 — create_sa's netherite jetpack aligned onto the SAME cursium gate (two netherite jetpacks in the
-  //      pack must cost the same boss). Smithing kept; the freebie fluid_tank template slot becomes the drop.
-  { tier: 'T4', out: 'create_sa:netherite_jetpack_chestplate', drop: 'cataclysm:cursium_ingot',
-    build: (e, K) => e.smithing('create_sa:netherite_jetpack_chestplate', K,
-      'create_sa:brass_jetpack_chestplate', '#c:ingots/netherite') },
 
   // T4 — CAPSTONE (repointed from the cut createnuclear:reactor_core — #258/#283/#289-A): the New Age
   //      reactor runs on reactor rods; ignitium (Ignis, end-game Cataclysm) sheathes them. Native 5x4

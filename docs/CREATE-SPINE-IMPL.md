@@ -139,8 +139,7 @@ data-driven table (`global.SPINE_GATES`) so the whole ladder is reviewable/tweak
 |---|---|---|---|---|
 | **T3** | `create_new_age:reinforced_energiser` | `#pcmc:mowzies_mid` (Frostmaw/Sculptor) | Mowzie's mid bosses | Any Frostmaw-equivalent Mowzie's boss. Gates **advanced** electric; basic alternator stays kinetic-gated (per spec). |
 | **T3** | `aeronautics:gyroscopic_propeller_bearing` | `cataclysm:ancient_metal_ingot` | Ancient Remnant (mid) | Flagship ship-core fork. |
-| **T4** | `create_jetpack:netherite_jetpack` | `cataclysm:cursium_ingot` | Maledictus (mid–late) | Jetpack gate. |
-| **T4** | `create_sa:netherite_jetpack_chestplate` | `cataclysm:cursium_ingot` | Maledictus (mid–late) | The pack's second netherite jetpack — same boss, same tier (smithing template slot). |
+| **T4** | `create_jetpack:netherite_jetpack` | `cataclysm:cursium_ingot` | Maledictus (mid–late) | Jetpack gate — through the Crafter; the remove also wipes the mod's netherite_upgrade smithing bypasses. _(#87: create_sa's parallel jetpacks are disabled in `57-jetpacks.js`; the base `create_jetpack:jetpack` is costed early-T3 with a capacitor.)_ |
 | **T4** | `create_new_age:reactor_rod` | `cataclysm:ignitium_ingot` | Ignis (endgame) | Reactor capstone — repointed from the cut `createnuclear:reactor_core`; the one mandatory reactor part `52-weave` doesn't touch. |
 
 _T1 + T2 boss gates **pulled** — early tiers are cost/scarcity-gated per the lineage; bosses start at T3. Ascending Cataclysm gate: ancient_metal (mid) → cursium (mid–late) → ignitium (endgame)._
@@ -170,9 +169,9 @@ forced (spec Part 4b updated):
 **Staged → status after the §2/§4/§5 batch:**
 - **TFMG→New Age:** ✅ DONE — `52-weave-tfmg-newage.js` re-recipes `reactor_casing` (steel-plate deploy) +
   the reactor parts/motors/coil/magnet; `50-cross-tier.js` did `advanced_energiser` (etched circuit).
-- **Additions→TFMG (hard):** still staged — re-recipe the sequenced `tfmg:electric_motor` to consume a
-  `createaddition` electric part (beyond the spool bridge). The full grid is now available in
-  `tools/recipe-dump/pcmc-recipes.json` (`tfmg:sequenced_assembly/motor`), so this is authorable when picked up.
+- **Additions→TFMG (hard):** ✅ DONE — `51-weave-additions-tfmg.js` re-authors the sequenced
+  `tfmg:electric_motor` with a `createaddition:capacitor` deploy stage (native assembly preserved; the
+  added stage brings the motor to T3's 5-stage step-depth target). No staged spine seams remain.
 
 **Real ingredient reference (from dumps; updated post-cut):**
 - `create_new_age:advanced_energiser` = `basic_energiser` + `overcharged_gold` + `lightning_rod` (+ the woven `tfmg:etched_circuit_board`).

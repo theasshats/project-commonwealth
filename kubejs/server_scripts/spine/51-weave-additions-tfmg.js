@@ -205,5 +205,41 @@ ServerEvents.recipes(event => {
     E: 'createaddition:electric_motor'        // Additions motor at the engine base
   }, 'tfmg:large_engine').acceptMirrored(true)
 
-  console.info('[pcmc-spine] weave Additions->TFMG: 10 TFMG T3 machines now route THROUGH Create (mechanical_crafting) and require createaddition parts; voltmeter + pumpjack_crank kept shaped as basic parts.')
+  // ── tfmg:electric_motor — the LAST staged seam (CREATE-SPINE-IMPL §9): the sequenced motor now winds in
+  //    a createaddition:capacitor stage. Full native assembly preserved verbatim (winding -> magnet ->
+  //    steel_mechanism -> screwdriver, x3 loops, chanced byproducts); ONE deploy stage added before the
+  //    screwdriver finisher = 3 capacitors per motor, and the motor hits T3's 5-stage step-depth target.
+  //    No cycle: capacitor = zinc plate + copper plate + redstone torch (T1-T2 inputs only). ──
+  event.remove({ output: 'tfmg:electric_motor' })
+  event.custom({
+    type: 'create:sequenced_assembly',
+    ingredient: { item: 'create:shaft' },
+    loops: 3,
+    results: [
+      { chance: 120.0, id: 'tfmg:electric_motor' },
+      { chance: 4.0, id: 'tfmg:steel_casing' },
+      { chance: 4.0, id: 'tfmg:nickel_sheet' }
+    ],
+    sequence: [
+      { type: 'tfmg:winding',
+        ingredients: [{ item: 'tfmg:unfinished_electric_motor' }, { item: 'tfmg:copper_spool' }],
+        processing_time: 75,
+        results: [{ id: 'tfmg:unfinished_electric_motor' }] },
+      { type: 'create:deploying',
+        ingredients: [{ item: 'tfmg:unfinished_electric_motor' }, { item: 'tfmg:magnet' }],
+        results: [{ id: 'tfmg:unfinished_electric_motor' }] },
+      { type: 'create:deploying',
+        ingredients: [{ item: 'tfmg:unfinished_electric_motor' }, { item: 'tfmg:steel_mechanism' }],
+        results: [{ id: 'tfmg:unfinished_electric_motor' }] },
+      { type: 'create:deploying',               // the Additions seam — added stage
+        ingredients: [{ item: 'tfmg:unfinished_electric_motor' }, { item: 'createaddition:capacitor' }],
+        results: [{ id: 'tfmg:unfinished_electric_motor' }] },
+      { type: 'create:deploying',
+        ingredients: [{ item: 'tfmg:unfinished_electric_motor' }, { item: 'tfmg:screwdriver' }],
+        results: [{ id: 'tfmg:unfinished_electric_motor' }] }
+    ],
+    transitional_item: { id: 'tfmg:unfinished_electric_motor' }
+  })
+
+  console.info('[pcmc-spine] weave Additions->TFMG: 10 TFMG T3 machines route THROUGH Create and require createaddition parts; the sequenced electric_motor winds in a capacitor stage; voltmeter + pumpjack_crank kept shaped as basic parts.')
 })

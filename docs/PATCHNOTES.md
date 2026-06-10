@@ -71,10 +71,15 @@ blaze cakes carry the hotter recipes. Building a burner is now part of reaching 
 
 From the steam tier up, key machines call for materials won from the world's bosses. The advanced
 energiser asks for a trophy from one of Mowzie's mid-tier bosses, the airship's gyroscopic bearing for
-Ancient Remnant metal, and both netherite jetpacks for Maledictus cursium. At the top, Create: New Age's
+Ancient Remnant metal, and the netherite jetpack for Maledictus cursium. At the top, Create: New Age's
 reactor is the pack's end-game generator: its reactor rods are sheathed in ignitium won from Ignis, and
 its casings call for TFMG steel and circuit boards, so the full industrial chain and the end-game hunt
 both stand between a base and reactor power.
+
+Jetpacks have been consolidated into one line. Create Jetpack is the pack's flight item: the base jetpack
+is now an electric-age build, assembled on the Mechanical Crafter around a capacitor, and its netherite
+upgrade requires cursium — the smithing-table shortcut no longer works. Create Stuff & Additions' three
+parallel jetpacks are no longer craftable; that mod keeps its engines, exoskeletons, and tools.
 
 Create: Ore Excavation has been repositioned as an end-game operation. Its drilling machine and
 extractor now require TFMG circuit boards and electric motors, and drill heads are steel-bodied and
@@ -84,8 +89,9 @@ heavy rotational power, and fluid while it runs.
 
 Create Stuff & Additions ties into the wider pack: the heat engine is built around a basic burner, the
 steam engine takes steel, and the copper exoskeleton and portable drill assemble on the Mechanical
-Crafter. The treadmill joins the hand crank and water wheel as recognized early power — modest, and
-capped by whatever walks on it.
+Crafter. TFMG's electric motor now winds in a Crafts & Additions capacitor during assembly, so the two
+electric ecosystems depend on each other. The treadmill joins the hand crank and water wheel as
+recognized early power — modest, and capped by whatever walks on it.
 
 ### Recipes
 

@@ -59,4 +59,5 @@ ServerEvents.recipes(event => {
 //   • Additions -> TFMG: tfmg:engine_controller already accepts #c:wires/copper, which createaddition's
 //     copper_wire is tagged — Additions' wire already feeds TFMG machinery (+ the spool weld above).
 //   • TFMG electric_motor is tfmg:sequenced_assembly/motor (winding tfmg:copper_spool onto an unfinished
-//     motor) — a deep sequenced chain; left as-is (the spool weld lets Additions' spool feed it).
+//     motor) — re-authored in 51-weave-additions-tfmg.js with a createaddition:capacitor stage (the last
+//     staged seam, done); the spool weld additionally lets Additions' spool feed the winding.

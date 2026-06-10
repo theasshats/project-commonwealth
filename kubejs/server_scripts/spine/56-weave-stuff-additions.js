@@ -9,8 +9,8 @@
 //       steam_engine (T2) — its andesite-alloy deploy becomes #c:ingots/steel: the STEAM engine pulls the
 //                            T2 steel chain (seam: create_sa <-> TFMG/ironworks steel).
 //       hydraulic_engine (T2, copper/water) — untouched, already anchored via copper + spout filling.
-//   - JETPACKS: andesite (T1, heat_engine) and brass (T2, steam_engine) inherit the new engine seams
-//     untouched; the NETHERITE jetpack's cursium boss gate lives in 40-gates (same gate as create_jetpack's).
+//   - JETPACKS: REMOVED from create_sa (#87, 57-jetpacks.js) — create_jetpack is the canonical flight
+//     line. The engines now power exoskeletons/tools, not flight.
 //   - METHOD CONVERSIONS (61-style, ingredients/grids verbatim): copper_exoskeleton + portable_drill were
 //     the only devices still on the vanilla bench -> Mechanical Crafter.
 //   - Left alone: drones (already mechanical_crafting + precision), tanks/components, tools/armor.

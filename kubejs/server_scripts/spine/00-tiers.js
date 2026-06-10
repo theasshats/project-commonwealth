@@ -27,16 +27,16 @@ const SPINE = {
           gate: 'steam fluid chain (inherent) + LOW HEAT earned via createlowheated:basic_burner (T1-craftable, the rung-3 enabler — blaze passive heat is off; heated/superheated start at the Blaze Burner). T2 boss gate PULLED (bosses start at T3)', cost: '2-3x, 3 stages',
           aero: 'propelled balloon + first ANALOG control (create_tweaked_controllers)' },
 
-    T3: { name: 'Electric-low',  rung: 4, anchors: ['tfmg', 'createaddition', 'create_new_age', 'gnkinetics'],
+    T3: { name: 'Electric-low',  rung: 4, anchors: ['tfmg', 'createaddition', 'create_new_age', 'gnkinetics', 'create_jetpack'],
           items: ['tfmg:etched_circuit_board', 'createaddition:capacitor', 'create_new_age:reinforced_energiser',
-                  'tfmg:electric_motor', 'gnkinetics:planetary_gear'],
-          gate: 'electric needs rung-3 kinetic; advanced energiser behind any Frostmaw-equiv Mowzie boss (#pcmc:mowzies_mid); ship core behind cataclysm:cursium', cost: '2-3x, 4 stages',
+                  'tfmg:electric_motor', 'gnkinetics:planetary_gear', 'create_jetpack:jetpack'],
+          gate: 'electric needs rung-3 kinetic; advanced energiser behind any Frostmaw-equiv Mowzie boss (#pcmc:mowzies_mid); ship core behind cataclysm:ancient_metal_ingot; jetpack = early-T3 (capacitor-costed, #87)', cost: '2-3x, 4 stages',
           aero: 'COMPLEX analog control (aeronautics:gyroscopic_propeller_bearing)' },
 
     T4: { name: 'Electric-high', rung: 5, anchors: ['create_new_age', 'aeronautics', 'createoreexcavation'],
           items: ['create_new_age:reactor_casing', 'create_new_age:reactor_rod', 'create_new_age:advanced_energiser',
                   'aeronautics:pearlescent_levitite', 'createoreexcavation:drilling_machine'],
-          gate: 'BOSS FORK — cataclysm:ignitium -> create_new_age:reactor_rod (reactor capstone, 40-gates); cursium -> the netherite jetpacks (create_jetpack + create_sa); colony bypass DEFERRED (#220)',
+          gate: 'BOSS FORK — cataclysm:ignitium -> create_new_age:reactor_rod (reactor capstone, 40-gates); cursium -> create_jetpack:netherite_jetpack (the one jetpack line, #87); colony bypass DEFERRED (#220)',
           cost: '2-3x, 5 stages + gate',
           aero: 'DIGITAL control (create-aeroworks, aeronautics:smart_propeller)' }
   },
