@@ -3,6 +3,10 @@
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme", a short lead paragraph, then sections (see CLAUDE.md). -->
 
+## 0.6.3 — TBD
+
+_Draft placeholder — replace with real notes before release._
+
 ## 0.6.2 — Project Commonwealth
 
 The pack has been renamed to Project Commonwealth (motto: Magna Communitas). The new name runs through the installer, the launcher instance, the documentation, and the pack's internal data. Mods, recipes, balance, and world generation are unchanged from 0.6.1.
