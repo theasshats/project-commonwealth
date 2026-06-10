@@ -30,8 +30,27 @@ const SPINE_GATES = [
     build: (e, K) => e.shaped('create_jetpack:netherite_jetpack',
       ['KNK', 'EPE', 'NAN'],
       { K: K, N: 'minecraft:netherite_ingot', E: 'create:electron_tube',
-        P: 'create:precision_mechanism', A: 'create_new_age:advanced_energiser' }) }
-  // (T4 ignitium reactor gate removed with Create: Nuclear — repoints onto a New Age reactor part in the post-dump weave.)
+        P: 'create:precision_mechanism', A: 'create_new_age:advanced_energiser' }) },
+
+  // T4 — create_sa's netherite jetpack aligned onto the SAME cursium gate (two netherite jetpacks in the
+  //      pack must cost the same boss). Smithing kept; the freebie fluid_tank template slot becomes the drop.
+  { tier: 'T4', out: 'create_sa:netherite_jetpack_chestplate', drop: 'cataclysm:cursium_ingot',
+    build: (e, K) => e.smithing('create_sa:netherite_jetpack_chestplate', K,
+      'create_sa:brass_jetpack_chestplate', '#c:ingots/netherite') },
+
+  // T4 — CAPSTONE (repointed from the cut createnuclear:reactor_core — #258/#283/#289-A): the New Age
+  //      reactor runs on reactor rods; ignitium (Ignis, end-game Cataclysm) sheathes them. Native 5x4
+  //      mechanical_crafting grid + 2x yield kept — casings/glass arrive TFMG-gated via 52-weave (which
+  //      deliberately does NOT touch reactor_rod, so no double-remove), fuel via the thorium chain. Only
+  //      the two gold-band centers turn to ignitium (1 per rod). MineColonies leg deferred -> #220.
+  { tier: 'T4', out: 'create_new_age:reactor_rod', drop: 'cataclysm:ignitium_ingot',
+    build: (e, K) => e.recipes.create.mechanical_crafting('2x create_new_age:reactor_rod', [
+      'CPKPC',
+      ' GFG ',
+      ' GFG ',
+      'CPKPC'
+    ], { C: 'create_new_age:reactor_casing', G: 'create_new_age:reactor_glass',
+         F: 'create_new_age:nuclear_fuel', P: '#c:plates/gold', K: K }) }
 ]
 
 ServerEvents.recipes(event => {

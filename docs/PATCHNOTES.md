@@ -31,6 +31,15 @@ the duplicates have been reconciled: the Alex's Mobs versions are kept, and the 
 those five no longer spawn in the wild. Their fur and catfish items now resolve to the Alex's Mobs item,
 so the recipe viewer shows one of each instead of two.
 
+The Create-spine review removed four more mods. Create Ultimate Factory made diamonds and netherite
+renewable, which works against the pack's scarcity-driven economy. Create Metalwork duplicated the
+molten-metal casting TFMG already covers, and most of its content targeted metals from mods the pack
+does not ship. Create Compressed added storage compression already served by Create's own crushing and
+storage. Create: Nuclear has been removed for this release cycle: the pack ships one end-game reactor,
+Create: New Age's, and the nuclear option is planned to return with the power-grid overhaul after 1.0.
+The uranium ore vein no longer generates, and the thorium and lead veins that carried uranium alongside
+their own metal now hold only their namesake ores.
+
 Wine-making returns through Create: Winery, which routes the whole process through Create machines rather
 than its own. It adds:
 
@@ -46,14 +55,44 @@ than its own. It adds:
 - Cider: fermented from apple must.
 - Juices: Grape Juice and Apple Juice — non-alcoholic, granting a short Speed effect.
 
+### The Create spine
+
+This release builds the progression backbone for the pack's tech route. Create and its addons climb four
+tiers — manual, water and wind, steam, then electricity — and each step up is earned through deeper
+processing chains and scarcer materials rather than timers or research screens.
+
+Andesite alloy, the root of nearly every Create machine, is dearer: crafting it by hand takes a full
+iron ingot per alloy, while the Mechanical Mixer makes it from three nuggets. The mixer is the intended
+route once a base is running; the hand craft is the bootstrap.
+
+Heat is no longer free. Blaze burners do not radiate passive heat any more: the new basic burner
+provides low heat, enough for everyday cooking and the first steam boilers, while blaze burners and
+blaze cakes carry the hotter recipes. Building a burner is now part of reaching steam.
+
+From the steam tier up, key machines call for materials won from the world's bosses. The advanced
+energiser asks for a trophy from one of Mowzie's mid-tier bosses, the airship's gyroscopic bearing for
+Ancient Remnant metal, and both netherite jetpacks for Maledictus cursium. At the top, Create: New Age's
+reactor is the pack's end-game generator: its reactor rods are sheathed in ignitium won from Ignis, and
+its casings call for TFMG steel and circuit boards, so the full industrial chain and the end-game hunt
+both stand between a base and reactor power.
+
+Create: Ore Excavation has been repositioned as an end-game operation. Its drilling machine and
+extractor now require TFMG circuit boards and electric motors, and drill heads are steel-bodied and
+assembled on the Mechanical Crafter. Finding veins stays accessible — the sample drill, vein finder, and
+vein atlas are unchanged — but industrial extraction is a late investment that consumes drill heads,
+heavy rotational power, and fluid while it runs.
+
+Create Stuff & Additions ties into the wider pack: the heat engine is built around a basic burner, the
+steam engine takes steel, and the copper exoskeleton and portable drill assemble on the Mechanical
+Crafter. The treadmill joins the hand crank and water wheel as recognized early power — modest, and
+capped by whatever walks on it.
+
 ### Recipes
 
-Two sets of near-duplicate materials have been reconciled. Create: Ironworks steel sheets and TFMG's
-heavy plates were separate items filling the same role; they now resolve to a single steel plate, so a
-recipe no longer cares which mod's plate you are holding. And Create Nuclear's graphene has been folded
-into graphite, the same carbon material Pantographs & Wires already makes: the graphite rods behind the
-anti-radiation armour now take graphite in place of graphene. Graphite comes from coking coal rather than
-crushing it, so the anti-radiation line now sits behind that extra step.
+Steel has been consolidated under TFMG. Create: Ironworks steel sheets and TFMG heavy plates were
+separate items filling the same role; all steel forms — ingot, nugget, block, and plate — now resolve to
+the TFMG item, so steel reads as one material across every recipe regardless of which mod produced it.
+Bronze remains with Create: Ironworks.
 
 ### Game Discs
 
@@ -61,6 +100,7 @@ The Game Discs handheld console and its five parts now build through Create rath
 materials. One game, Pong, is craftable to get you started; the other six — Blocktris, Froggie, Flappy
 Bird, Slime, Rabbit, and TNT Sweeper — are found in structure chests while exploring, the rarer titles
 turning up less often.
+
 ## 0.6.2 — Project Commonwealth
 
 The pack has been renamed to Project Commonwealth (motto: Magna Communitas). The new name runs through the installer, the launcher instance, the documentation, and the pack's internal data. Mods, recipes, balance, and world generation are unchanged from 0.6.1.

@@ -12,10 +12,18 @@
 // so dialing the root does most of the work; per-component fine-tuning is the staged content tail.
 
 const SPINE_BASICS_3X = {
-  applied:     ['create:andesite_alloy'],                       // dialed in this file (the root; propagates widely)
-  propagates:  ['create:andesite_casing', 'create:brass_casing', 'create:electron_tube'], // inherit via inputs; fine-tune in batch
+  applied:     ['create:andesite_alloy',                        // dialed in this file (the root; propagates widely)
+                'createlowheated:basic_burner'],                // dialed in 20-power-ladder (§4a — the heat-ladder enabler)
+  propagates:  ['create:andesite_casing', 'create:brass_casing', 'create:electron_tube',
+                'createtreadmill:treadmill', 'create_sa:heat_engine'], // inherit via inputs; fine-tune in batch
   metal_1to1:  ['create:iron_sheet', 'create:copper_sheet', 'create:brass_sheet', 'createaddition:zinc_sheet'] // 1:1 press; cost carried by the ingot, NOT dialed
 }
+
+// #219 tail status: the integrated-mod tail (handoff §4/§5) carries its dial in the weave files —
+// excavation's drill line went steel-bodied + Crafter-routed (55), create_sa's engines hold their
+// sequenced step-depth with burner/steel seams (56), the burner itself is dialed (20). gnkinetics gears
+// sit at metal-transform cost (shaft + ingot) like cogwheels — left undialed on the same grounds as
+// sheets. The broader per-mod 3x sweep beyond the spine anchors waits on playtest measurement (#219 open).
 
 // Step-depth budget per tier (min distinct Create stages). Sequenced assembly preferred for T3+.
 const SPINE_STAGES = { T1: '1-2', T2: '3-4', T3: '5-6', T4: '6+ and the boss fork' }

@@ -5,10 +5,10 @@
     "create"
   ],
   "priority_overrides": {
-    "c:ingots/steel": "create_ironworks",
-    "c:nuggets/steel": "create_ironworks",
-    "c:storage_blocks/steel": "create_ironworks",
-    "c:plates/steel": "create_ironworks",
+    "c:ingots/steel": "tfmg",
+    "c:nuggets/steel": "tfmg",
+    "c:storage_blocks/steel": "tfmg",
+    "c:plates/steel": "tfmg",
     "c:ingots/bronze": "create_ironworks",
     "c:nuggets/bronze": "create_ironworks",
     "c:storage_blocks/bronze": "create_ironworks",

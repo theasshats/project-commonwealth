@@ -41,7 +41,7 @@ than sidestepping it.
 | **2 — Wind** | Windmill (sail bearing) | `create` | Higher SU but **area + height hungry** and weather-variable | Brass-adjacent: sail cloth + a windmill bearing (see cost notes) |
 | **3 — Thermal** | Steam engine (boiler + flywheel) | `create` | The workhorse mid-game tier; scales with boiler size + fuel | Steam tier — requires the fluid/heat chain (pump, boiler, blaze burner) |
 | **4 — Electric (basic)** | Alternator + electric motor, energisers | `createaddition`, `create-new-age` | Converts SU↔FE; enables wiring, machine compaction, cross-base transport of *power* | **Plugs in above steam** — its generators are *driven by* rung-3 kinetic, not a free source |
-| **5 — Electric (high)** | Reactor (`create-new-age`), overcharged wires; `createnuclear` | `create-new-age`, `createnuclear` | High-density FE; the end-game power tier | Gated behind rung-4 + the high-tier fork (boss/colony part — Part 3) |
+| **5 — Electric (high)** | Reactor (`create-new-age`), overcharged wires | `create-new-age` | High-density FE; the end-game power tier | Gated behind rung-4 + the high-tier fork (boss/colony part — Part 3). _Create: Nuclear cut for 1.0 (#289); returns with the 2.0 Power Grid (#282)._ |
 
 ### The load-bearing rule: electricity is a *converter*, not a *source*
 
@@ -58,8 +58,9 @@ generator** during the #145 implementation pass:
   re-reciping where possible — less likely to break addon assumptions, easier to revert.
 
 > **Audit task (part of #145 PR):** enumerate every generator block across `createaddition` /
-> `create-new-age` / `createnuclear`, tag each **converter** vs **free source**, and apply the stance.
-> The item lists are in `tools/mod-data/by-mod/` (`createaddition-1.6.0`, `create-new-age-*`).
+> `create-new-age` (+ `createtreadmill`, tiered as a capped rung-0/1 source), tag each **converter** vs
+> **free source**, and apply the stance. The item lists are in `tools/mod-data/by-mod/`
+> (`createaddition-1.6.0`, `create-new-age-*`). Resolved in `kubejs/server_scripts/spine/20-power-ladder.js`.
 
 ### What gates what (the climb)
 
@@ -68,13 +69,20 @@ The gate is **recipe cost + step-depth** (Part 2), not a tech-tree mod. Concrete
 - Rungs 0–1 are *cheap* — you must be able to bootstrap. Don't over-gate the hand crank / water wheel.
 - Rung 2 (windmill) costs **sail cloth + windmill bearing**; it's the first "you invested" tier.
 - Rung 3 (steam) is gated by its **fluid/heat dependency chain** — you can't make a boiler without the
-  pump + blaze burner + copper fluid line, which is its own multi-step climb. That dependency *is* the
-  gate; no extra lock needed.
+  pump + a heat source + copper fluid line, which is its own multi-step climb. That dependency *is* the
+  gate; no extra lock needed. **The heat ladder makes the heat source explicit** (`createlowheated`,
+  integrated per #289): Blaze Burner *passive* heat is disabled, so heat climbs
+  **low heat** (`createlowheated:basic_burner` — a built component; enough for a basic boiler and
+  temperate processing) → **heated** (Blaze Burner) → **superheated** (+ Blaze Cake). Low heat is
+  *constructed*, never free — steam stays earned. Don't author pack recipes at `heated` where
+  `lowheated` would do; the hotter levels are the T2→T3+ premium.
 - Rung 4 (electric) is gated by requiring **steam-tier kinetic to drive it** + the wire/coil crafting
   chain. **Settled:** "needs rung-3 to spin" is enough of a gate on its own — don't double-tax the
   electric machines.
-- Rung 5 (reactor / nuclear) sits behind the **high-tier fork** (Part 3) — a boss drop *or* a colony
-  part — so end-game power is the same two-route choice as other high-tier goods.
+- Rung 5 (reactor) sits behind the **high-tier fork** (Part 3) — a boss drop *or* a colony part — so
+  end-game power is the same two-route choice as other high-tier goods. Concretely: the New Age
+  reactor's **rods are ignitium-sheathed** (Ignis — the `40-gates.js` capstone), its casings/glass ride
+  the TFMG chain (52-weave), and the colony leg lands with the colony hook (#220).
 
 This ladder feeds the future onboarding/quest work (a guidebook walking rungs 0→5).
 
@@ -276,8 +284,9 @@ Pattern B.
 
 ### 4b. The T3–T4 mod spine
 
-**T3 = TFMG** (industrial / electric-low). **T4 = New Age + Nuclear** (electric-high). **Additions** is
-the rung-4 FE *converter* that bolts under T3; **Nuclear** is a T4 power capstone on **New Age**.
+**T3 = TFMG** (industrial / electric-low). **T4 = New Age** (electric-high). **Additions** is the
+rung-4 FE *converter* that bolts under T3. _(Create: Nuclear was cut for 1.0 — #289/#283; it returns as
+the standalone heavy generator in the 2.0 Power Grid overhaul, #282.)_
 
 ```
 ADDITIONS (rung-4 converter)            <- SU<->FE alternator/motor + wires = the electricity layer
@@ -285,10 +294,10 @@ ADDITIONS (rung-4 converter)            <- SU<->FE alternator/motor + wires = th
    v
 TFMG  (T3 industrial)
    |- steel ingots / casings ----------------------------->  New Age reactor_casing / structure
-   |- circuit ladder (empty->unfinished->etched->coated) ->  New Age energiser / reactor-controller circuits
-   `- steel (c:ingots/steel) ----------------------------->  CREATE NUCLEAR reactor_casing/core/rods
+   `- circuit ladder (empty->unfinished->etched->coated) ->  New Age energiser / reactor circuits
                                           v
-NEW AGE (T4)  ||  CREATE NUCLEAR (T4)   <- parallel rung-5 FE gen (fusion || fission), behind the boss fork
+NEW AGE (T4)                            <- rung-5 FE gen, behind the boss fork
+                                           (capstone: ignitium-sheathed reactor_rod, 40-gates)
 ```
 
 **The three bolt-ons, concretely:**
@@ -301,10 +310,11 @@ NEW AGE (T4)  ||  CREATE NUCLEAR (T4)   <- parallel rung-5 FE gen (fusion || fis
   re-recipe New Age's `reactor_casing` / energisers to consume `tfmg:steel` + a TFMG circuit, so the T3
   climb is a prerequisite for T4. _(Correction: there is **no** "coking→energising→graphite" seam — New Age
   has no graphite at all. That premise was wrong; see `docs/CREATE-SPINE-IMPL.md` §9.)_
-- **Nuclear → TFMG/New Age.** Create Nuclear already depends on **TFMG via the shared `c:ingots/steel`
-  tag** (reactor casing/core/rods all consume steel) — that's the real existing seam, no bridge needed.
-  Graphite stays **Nuclear-internal** (`createnuclear:graphene` from coal dust → `graphite_rod` + steel);
-  it is *not* a TFMG/New Age shared resource. New Age fusion and Nuclear fission are co-equal end-game power.
+- **Nuclear → ~~TFMG/New Age~~ cut.** _Create: Nuclear was removed for 1.0 (#289-A): beta +
+  All-Rights-Reserved + redundant with New Age's reactor. Its T4 capstone role moved onto the New Age
+  **reactor_rod** (ignitium gate, `40-gates.js`); its uranium worldgen was deleted (thorium/lead veins
+  reverted to their namesake metals). Nuclear returns as the standalone heavy end-game generator in the
+  2.0 Power Grid overhaul (#282), where the old two-route overhaul design (#258) is the starting point._
 
 ---
 
@@ -324,7 +334,7 @@ session's additions.
 | P3 | v0.7.0 lock list breadth | 2 exclusives (precision_mechanism, electron_tube) + 1 fork (aeronautics controller) |
 | P4 | Power-ladder pacing | Rungs 0→3 ~1–2 days; rung 3→4 ~a week; gate = step-depth + scarcity, never timers |
 | P4 | Boss-gate roster | **No primary** — draw gate drops from all installed bosses (Cataclysm, Mowzie's, Grimoire, Born in Chaos, Mutants) |
-| P4 | T3–T4 mod spine | T3 = TFMG; T4 = New Age + Nuclear; Additions = rung-4 converter under T3 |
+| P4 | T3–T4 mod spine | T3 = TFMG; T4 = New Age + Nuclear; Additions = rung-4 converter under T3 _(post-ratification update: Nuclear cut for 1.0 → #289; T4 = New Age alone)_ |
 | P4 | Aeronautics gating | Control-complexity ladder T1→T4; digital control via `create-aeroworks` (added); boss fork at the T3→T4 jump |
 | P4 | MineColonies scope | Fully out of scope for v0.7.0 — boss-only fork now, colony bypass a later patch |
 
