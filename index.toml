@@ -54,7 +54,7 @@ hash = "cce47379706d8eb5075a66e9710353bc659971b4f26f1fe1e9813956fdfe0ee4"
 
 [[files]]
 file = "kubejs/client_scripts/mining-speed-tooltip.js"
-hash = "8ed37ac7abc10300f3e534445b7cd075bfb57e5999959ce6c989d49369b52c86"
+hash = "db7c4a34d769b1edffa3b2ebf900985b3fa0257664ae0e7d39ee8acee228b263"
 
 [[files]]
 file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_deepslate_diamond_ore_feature_biome_modifier.json"
