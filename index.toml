@@ -822,7 +822,7 @@ hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
 
 [[files]]
 file = "kubejs/server_scripts/mining-hunger.js"
-hash = "09463ae6d4ed1bf894a7e6672522253daa025b1fa38f159e576bce27b5276cc0"
+hash = "84142aea7e19339aaf6892764e690f0c04067af88c8c1d022e5ae1f634d84e96"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/00-create-ify.js"
