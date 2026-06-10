@@ -34,7 +34,7 @@ hash = "abe2744c46c81c28ef0bee5cc5cbf63c6982ee589f54ec06c9b31d258f841051"
 
 [[files]]
 file = "config/gtmogs.yaml"
-hash = "fca7679e0e294780f98a300f4b445a676e4cd5e7a965c9315f0fe14dba9e168f"
+hash = "37723fb5b0d21c4cb2fecec47122b826a1f8aa876c790e876e64be8e3406c0d4"
 
 [[files]]
 file = "config/immersivepaintings.json"
@@ -442,7 +442,7 @@ hash = "f11f10777de47f37b15376898eadbc30136d20558f52b390a5ffcc5a8f74abb8"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/bauxite.json"
-hash = "4c78aa2bfe7253c4a105e8912aabe2585a0a79be506780bd40e0ef7d5ea290de"
+hash = "7d6399db2524a2b411328319c7e1b82bd2860213ccab3da7a675d516d3d7aae3"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/coal.json"
@@ -482,7 +482,7 @@ hash = "0673d627ba6b7923812731fd3ce045eb16a6abf3f6f2cce3e0f2c672227a957d"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/lignite.json"
-hash = "9136debc91b58134c363a77ca4dc68c8eb70c5408be2c63341fc80731bf9d888"
+hash = "4ec29d338fcf2171833f8a4a50c7821bf6c947af6bfc2d5773150370d292b319"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/lithium.json"
