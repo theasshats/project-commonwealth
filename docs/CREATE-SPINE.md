@@ -175,7 +175,10 @@ what pulls the recipe graph into one web instead of many private chains. (Mirror
 | **T4** | boss metals (`ignitium`, `cursium`) · `#c:ingots/silver` | The boss gates (Part 3) — plus **silver, the cross-producer ingredient**: its only source is `occultism:silver_ingot` (the magic producer), so the T4 generator build (layered magnet) forces a tech↔magic trade or dabble. First live SYSTEMS.md "producers need each other" seam. Never let galosphere "silver" satisfy it — that item is palladium. |
 
 Worked examples: the jetpack + SNA power gear carry the capacitor; the heat engine is assembled *on* a
-basic burner; reactor rods are ignitium-sheathed; the layered magnet cores on silver.
+basic burner; reactor rods are ignitium-sheathed; the layered magnet cores on silver. **Family
+exception:** a coherent item family may converge on a thematic part-set at the same tier instead of the
+generic token — the firearms run on CBC ordnance parts (`recoil_spring` at T3, `steel_autocannon_barrel`
+at T4), which keeps the tier math and adds the CBC seam.
 
 ### 2c. How the two dials interact
 

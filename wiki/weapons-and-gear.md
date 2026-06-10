@@ -20,13 +20,13 @@ The weapons themselves climb the tiers:
 
 | Tier | Weapons | What they ask for |
 |---|---|---|
-| Steam age | Both pistols, the melee wrench | Components + brass and wood |
-| Electric age | SMG, both shotguns, both rifles, both snipers, the atomic melee | Components + a **capacitor** |
+| Early | Both pistols, the melee wrench | Components + brass and wood |
+| Self-loading | SMG, both shotguns, both rifles, both snipers, the atomic melee | Components + a **recoil spring** from Create Big Cannons |
 | Heavy ordnance | The machine gun, the grenade launcher, the 40mm field cannon | Components + a **steel autocannon barrel** from Create Big Cannons |
 
-The capacitor only exists once your base has electricity running, and the autocannon barrel comes out of
-Create Big Cannons' cast-and-bore steel line — so the heavy weapons literally grow out of the artillery
-industry.
+A self-loading action cycles on its recoil spring, and the autocannon barrel comes out of Create Big
+Cannons' cast-and-bore steel line — the pack's firearms grow out of the artillery industry, so expect to
+build a Big Cannons workshop on the way to a serious armory.
 
 ## Ammunition
 
@@ -72,7 +72,7 @@ Bosses themselves cannot be lassoed, by any tier.
 
 ## Where the gates are
 
-If a recipe asks for a **capacitor**, you need a powered base. If it asks for an **autocannon barrel**,
-you need a Big Cannons foundry. If it asks for a **boss material** — cursium, ignitium, a monstrous horn,
-or a trophy of your choice — the game is sending you hunting. The gates are the map: gear up for the
-fight that matches the gear you want.
+If a recipe asks for a **capacitor**, you need a powered base. If it asks for a **recoil spring** or an
+**autocannon barrel**, you need a Big Cannons workshop. If it asks for a **boss material** — cursium,
+ignitium, a monstrous horn, or a trophy of your choice — the game is sending you hunting. The gates are
+the map: gear up for the fight that matches the gear you want.

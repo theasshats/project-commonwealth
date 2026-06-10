@@ -12,7 +12,7 @@
       "item": "create:brass_ingot"
     },
     "Z": {
-      "item": "createaddition:capacitor"
+      "item": "createbigcannons:recoil_spring"
     }
   },
   "pattern": [

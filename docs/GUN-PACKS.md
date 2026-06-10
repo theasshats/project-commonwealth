@@ -192,10 +192,12 @@ the override rewrites every tab icon to the component form, clearing the error.
 - **The Mechanical Crafter is the only gun path.** The gun-smith table type and all four bench blocks
   are removed (`remove-default-tacz-guns.js`); every gun is built from Create-processed components
   (steel barrels, deployer+RSC firing mechanisms, precision triggers, fluid-filled primers).
-- **Tier tokens on the guns** (`kubejs/data/createimmersivetacz/recipe/guns/`): the electric-age guns
-  (SMG, both shotguns, rifles, snipers, atomic melee) carry a `createaddition:capacitor`; the three
-  heavies (LMG, grenade launcher, 40mm cannon) build around a `createbigcannons:steel_autocannon_barrel`
-  — the CBC↔TaCZ seam; heavy small arms grow out of the artillery industry.
+- **Tiered via CBC ordnance parts** (`kubejs/data/createimmersivetacz/recipe/guns/`): the self-loading
+  guns (SMG, both shotguns, rifles, snipers, atomic melee) cycle on a `createbigcannons:recoil_spring`;
+  the three heavies (LMG, grenade launcher, 40mm cannon) build around a
+  `createbigcannons:steel_autocannon_barrel`. Both gates are the CBC↔TaCZ seam — small arms grow out of
+  the artillery industry. (The generic tier token, the capacitor, was deliberately NOT used here:
+  per-family thematic parts, same tier math.)
 - **Ammo is a four-stage line** (`.../recipe/ammo/`): casings cut from brass sheets (yields halved in
   v0.7.0), then per round: deploy primer → fill gunpowder → deploy a **lead** projectile (nuggets;
   ingots for the 40mm/grenade payloads) → crimping press. Lead demand is intentional (the lead veins).

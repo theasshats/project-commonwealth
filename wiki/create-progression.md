@@ -48,7 +48,8 @@ the same ingredient.
 
 Each tier also has a telltale component that its gear is built around. Steam-tier work runs on the basic
 burner and steel; the electric tier's mark is the capacitor — which itself takes energised iron, real
-proof of a powered base — and you will meet it in jetpacks, power gear, and the better firearms; the top
+proof of a powered base — and you will meet it in jetpacks and power gear (firearms run on Create Big
+Cannons parts instead — recoil springs and autocannon barrels); the top
 tier asks for boss metals, and its generator magnets take silver, which only the occult smelting route
 produces. If a recipe asks for one of these, that is the game telling you what tier you are stepping into.
 
