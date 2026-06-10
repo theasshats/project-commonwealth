@@ -24,10 +24,6 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing(['minecraft:gravel', xp(0.12)], stone)
   )
 
-  // Create Nuclear: autunite is a uranium-bearing decorative mineral → crush it for uranium powder,
-  // wiring the autunite stone family straight into the nuclear chain (already on the Create spine).
-  event.recipes.create.crushing(['createnuclear:uranium_powder', xp(0.2)], 'createnuclear:autunite')
-
   // TFMG asphalt (industrial paving) → crushed back to gravel rubble.
   event.recipes.create.crushing(['minecraft:gravel', xp(0.1)], 'tfmg:asphalt')
 

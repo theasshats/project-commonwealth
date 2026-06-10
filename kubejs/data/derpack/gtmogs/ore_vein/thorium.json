@@ -75,7 +75,7 @@
             "tag": "minecraft:stone_ore_replaceables"
           },
           "state": {
-            "Name": "createnuclear:uranium_ore"
+            "Name": "create_new_age:thorium_ore"
           }
         },
         {
@@ -84,7 +84,7 @@
             "tag": "minecraft:deepslate_ore_replaceables"
           },
           "state": {
-            "Name": "createnuclear:deepslate_uranium_ore"
+            "Name": "create_new_age:thorium_ore"
           }
         }
       ],

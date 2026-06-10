@@ -98,7 +98,7 @@
             "tag": "minecraft:stone_ore_replaceables"
           },
           "state": {
-            "Name": "createnuclear:uranium_ore"
+            "Name": "tfmg:lead_ore"
           }
         },
         {
@@ -107,7 +107,7 @@
             "tag": "minecraft:deepslate_ore_replaceables"
           },
           "state": {
-            "Name": "createnuclear:deepslate_uranium_ore"
+            "Name": "tfmg:deepslate_lead_ore"
           }
         }
       ],

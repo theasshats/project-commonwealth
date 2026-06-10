@@ -13,7 +13,6 @@ const SPINE_GENERATORS = {
     'createaddition:alternator',                 // kinetic SU -> FE (the canonical converter)
     'create_new_age:basic_motor', 'create_new_age:advanced_motor', 'create_new_age:reinforced_motor',
     'create_new_age:generator_coil',
-    'createnuclear:reactor_controller'           // uranium fuel -> heat/FE (fuel converter)
   ],
   // FREE SOURCE — solar makes FE from a free renewable. Settled stance: cost-gate to rung-4+ so it isn't an
   // EARLY free route (don't re-recipe to require kinetic — cost-gating is less likely to break addon logic).

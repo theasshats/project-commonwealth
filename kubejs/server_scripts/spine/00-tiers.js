@@ -31,10 +31,10 @@ const SPINE = {
           gate: 'electric needs rung-3 kinetic; advanced energiser behind any Frostmaw-equiv Mowzie boss (#derpack:mowzies_mid); ship core behind cataclysm:cursium', cost: '2-3x, 4 stages',
           aero: 'COMPLEX analog control (aeronautics:gyroscopic_propeller_bearing)' },
 
-    T4: { name: 'Electric-high', rung: 5, anchors: ['create_new_age', 'createnuclear', 'aeronautics'],
-          items: ['createnuclear:reactor_core', 'create_new_age:advanced_energiser',
+    T4: { name: 'Electric-high', rung: 5, anchors: ['create_new_age', 'aeronautics'],
+          items: ['create_new_age:reactor_casing', 'create_new_age:advanced_energiser',
                   'aeronautics:pearlescent_levitite'],
-          gate: 'BOSS FORK — cataclysm:ignitium (jetpack, reactor_core); colony bypass DEFERRED',
+          gate: 'BOSS FORK — cataclysm:ignitium (New Age reactor; repoint post-dump); colony bypass DEFERRED',
           cost: '2-3x, 5 stages + gate',
           aero: 'DIGITAL control (create-aeroworks, aeronautics:smart_propeller)' }
   },
@@ -42,8 +42,8 @@ const SPINE = {
   // T3->T4 mod spine (CREATE-SPINE.md Part 4b): how the addon chain bolts together.
   spine: {
     additions_to_tfmg:  'createaddition (rung-4 SU<->FE converter) powers TFMG electric machines',
-    tfmg_to_newage:     'TFMG steel + circuits + coking->coal_coke->(energising)->graphite feed New Age',
-    nuclear_to_newage:  'createnuclear shares the FE grid; graphite_rod uses the TFMG->New Age graphite chain'
+    tfmg_to_newage:     'TFMG steel + circuits feed New Age (advanced_energiser needs a TFMG etched circuit)',
+    newage_reactor:     'New Age reactor is the end-game generator (Nuclear cut for 1.0; returns in 2.0)'
   }
 }
 

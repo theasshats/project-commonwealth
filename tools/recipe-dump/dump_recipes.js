@@ -19,7 +19,7 @@
 
 ServerEvents.recipes(event => {
   const NAMESPACES = [
-    'create', 'createaddition', 'tfmg', 'create_new_age', 'createnuclear',
+    'create', 'createaddition', 'tfmg', 'create_new_age',
     'aeronautics', 'aeroworks', 'simulated', 'create_tweaked_controllers', 'gnkinetics'
   ]
 

@@ -1,6 +1,0 @@
-{ "type": "create:splashing",
-  "ingredients": [ { "item": "create_compressed:crushed_iron_pile" } ],
-  "results": [
-    { "id": "minecraft:iron_nugget", "count": 81 },
-    { "id": "minecraft:redstone", "count": 9, "chance": 0.75 }
-  ] }

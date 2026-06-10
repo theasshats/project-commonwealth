@@ -23,7 +23,7 @@ ServerEvents.recipes(event => {
   // KEPT — the Create steel chain (steel stays craftable through these):
   //   tfmg:casting/steel · createmetalwork …compacting(molten_steel) · createbigcannons:compacting/forge_steel_ingot · create_ironworks
   // Also KEPT (not bypasses): samurai_dynasty:steel_ingot is just steel_block->9 ingots (storage
-  //   decompacting); the createnuclear/ironworks/cbc "from_block"/"from_nuggets" steel recipes are
+  //   decompacting); the ironworks/cbc "from_block"/"from_nuggets" steel recipes are
   //   likewise storage conversions — you must already own steel.
   // ALREADY Create-only: bronze & brass (Ironworks/Metalwork create:mixing / compacting / splashing).
   // RESOLVED (was a FLAG): occultengineering smelt/blast brass_dust -> create:brass_ingot is NOT a

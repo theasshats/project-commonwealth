@@ -1,6 +1,0 @@
-{ "type": "create:splashing",
-  "ingredients": [ { "item": "create_compressed:crushed_copper_pile" } ],
-  "results": [
-    { "id": "create:copper_nugget", "count": 81 },
-    { "id": "minecraft:clay_ball", "count": 9, "chance": 0.5 }
-  ] }

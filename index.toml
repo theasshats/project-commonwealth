@@ -85,42 +85,6 @@ file = "kubejs/data/create_armorer/data/blocks/create_workbench.json"
 hash = "2fe0d845b737b1648e9bcc193d5584bb4f1b0faeb411977a664099ac27476714"
 
 [[files]]
-file = "kubejs/data/create_compressed/recipe/mixing/dough_block.json"
-hash = "539ec4adf10ff8dc469e6eece82c451c5af5d504371c2c82d10663f5e3755c28"
-
-[[files]]
-file = "kubejs/data/create_compressed/recipe/sandpaper_polishing/polished_rose_quartz_block.json"
-hash = "fd742e7f083a45ba0f26972ffa84ab50448be2d1e98031ed281572cee5db8298"
-
-[[files]]
-file = "kubejs/data/create_compressed/recipe/splashing/createnuclear/crushed_uranium_pile.json"
-hash = "fd44e75dc218446104ec3f8f97a0e1d151a6ac58b4fc5386d483c5fe90e09e21"
-
-[[files]]
-file = "kubejs/data/create_compressed/recipe/splashing/crushed_raw_copper_pile.json"
-hash = "0202588d3912441647e14190342b7a714934bd2936cc2712a869d75bb9d326dc"
-
-[[files]]
-file = "kubejs/data/create_compressed/recipe/splashing/crushed_raw_gold_pile.json"
-hash = "346304e32eaf5d23852902f54cf1f2b7c5a4ec95d8ba8e7ed2016e5758617e6c"
-
-[[files]]
-file = "kubejs/data/create_compressed/recipe/splashing/crushed_raw_iron_pile.json"
-hash = "b97475184db828323ad58b96ca6e03e0be2e58bcfa3049a6f10d0cd91d1b2ea7"
-
-[[files]]
-file = "kubejs/data/create_compressed/recipe/splashing/crushed_raw_zinc_pile.json"
-hash = "5b79576f4d8b2820ed8e5dbd843ed7fa60c6114db82f28b8bde94454576949ec"
-
-[[files]]
-file = "kubejs/data/create_compressed/recipe/splashing/galosphere/crushed_raw_silver_pile.json"
-hash = "d4651adbfed043936ab033ecfe9f9e1a6d96de0083a260cf7d8565259dc3565f"
-
-[[files]]
-file = "kubejs/data/create_compressed/recipe/splashing/wheat_flour_pile.json"
-hash = "7c197d59824b5efe758c7e41b5ac57c27ea78123370323622aa1bba87c04c706"
-
-[[files]]
 file = "kubejs/data/create_ironworks/neoforge/biome_modifier/deepslate_tin_ore_biome_modifier.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
@@ -361,18 +325,6 @@ file = "kubejs/data/createimmersivetacz/recipe/primer_from_nitropowder.json"
 hash = "dbb2512b277212b962355adc7486d9f560e33274c96606ffc5deac070fbc20f6"
 
 [[files]]
-file = "kubejs/data/createnuclear/neoforge/biome_modifier/lead_ore.json"
-hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
-
-[[files]]
-file = "kubejs/data/createnuclear/neoforge/biome_modifier/striated_ores_overworld.json"
-hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
-
-[[files]]
-file = "kubejs/data/createnuclear/neoforge/biome_modifier/uranium_ore.json"
-hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
-
-[[files]]
 file = "kubejs/data/createtreadmill/loot_table/blocks/treadmill.json"
 hash = "1488936e86133dc573aadbf9f816d2e0d5be836750ca88aa3258eb1adba461a6"
 
@@ -410,7 +362,7 @@ hash = "18d545a8b9afadcbadc63e20b054d1549a1e62661c4586c91e706b0746ef546c"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/lead.json"
-hash = "605c0fd97b389bd09f05f939cb7b394646aee7b484cec8d57196118d27ebd9a6"
+hash = "748d4948eb91d5142738a5152465c5e6fcefb075adb94fc2716ebd1b44d9035d"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/lithium.json"
@@ -446,15 +398,11 @@ hash = "589e209d34d292f3e854dd3d42a3d1a1c0783ddc903eb16636ea978f9a34abaf"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/thorium.json"
-hash = "f06480e1732c174b6b3b8efed9981aded4f0bf37d6a02ba8a0568fe4fe82fcb1"
+hash = "7234a874e61118adc04fb6630d03e90fb59a30d9a93dcb442f4d918d1fac1bf6"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/tin.json"
 hash = "ccf005744cc32f261dc4037552d4fe0b7a2d3e2ffcf3be25e534457b1dfdd532"
-
-[[files]]
-file = "kubejs/data/derpack/gtmogs/ore_vein/uranium.json"
-hash = "0a091aa71849b53deb000d71c47024920d605f4c4d85f9881eb0f055ea408980"
 
 [[files]]
 file = "kubejs/data/derpack/gtmogs/ore_vein/zinc.json"
@@ -774,11 +722,7 @@ hash = "e9f67f7388af8d4866d5741d07c7ff8d7c275701e4e135bde24446a29e2f2453"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/05-metals.js"
-hash = "27307a988d430c42df60ece37ada6f6a3424c2d25eb9d20e9b1f8b2a71fa327c"
-
-[[files]]
-file = "kubejs/server_scripts/recipes/06-carbon.js"
-hash = "df2c46cdba43e74287b20c29c7ce50ac5c071d981c327f0249adf7a574557c0b"
+hash = "0efe69f1e040a999bbee8563621bd122700a9e7085c73677aae67d413924ddc8"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/10-immersive-armors.js"
@@ -806,7 +750,7 @@ hash = "2b673631bea97d168d5a2c1459b137de9dfbb97d7c96242388a2cfd02d913a0b"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/35-web-bridges.js"
-hash = "cd124041c810768cfc851e91296fd7cbbdce534e61df1211cbd8168a6582370b"
+hash = "8c341aa274cf20269dee6c4cb0dab2541512978acb02017cf275894a857501ee"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/36-magic-web-create.js"
@@ -878,7 +822,7 @@ hash = "7761b2b266e0a1a4e1a046e784e1fc960cefc5c77a5cfc0155c2f03ea6cfbed7"
 
 [[files]]
 file = "kubejs/server_scripts/spine/00-tiers.js"
-hash = "2ea10b5338fc371a3c7d39248afaa27698171417091cdb72fdd44fd6f1a34fa4"
+hash = "18e8eab5ecf9a592bdf3006040d401ac50ab49e1aa3f0825819ff8cc36ed3397"
 
 [[files]]
 file = "kubejs/server_scripts/spine/05-tags.js"
@@ -890,7 +834,7 @@ hash = "99c82d9442ecf093e23809b8478a8ea276c51a98c5c39590b40f7a6819730726"
 
 [[files]]
 file = "kubejs/server_scripts/spine/20-power-ladder.js"
-hash = "06186e2bf574e7e738fb4b62e37ec52028f6a598941e6ecf12fcf064bf011a76"
+hash = "947567f1784d4cc7334e7044cf3b358ccb75cd6289a34878c2d07752409d109a"
 
 [[files]]
 file = "kubejs/server_scripts/spine/30-cost-basics.js"
@@ -898,11 +842,11 @@ hash = "c26d51c846a18f70b711c8f10e92a948c2af370fe21e61ee0523ada1c701d907"
 
 [[files]]
 file = "kubejs/server_scripts/spine/40-gates.js"
-hash = "01b549720a516e4a07302dcbb5de5f491db7e79c4a8ef5adb3d6f13d16fe863a"
+hash = "9316d8a63e9dfb70959a413104947b1be238b571ed8ef3c532aca3833a527e7f"
 
 [[files]]
 file = "kubejs/server_scripts/spine/50-cross-tier.js"
-hash = "42e733a1106d39963daafd3139145520cead23eba7f290db1b2c94e4dc8c4ec6"
+hash = "66a2d6f85e36a2d9ce3b0efd483a1f754e14713838896092a73ce170be5bae6a"
 
 [[files]]
 file = "kubejs/server_scripts/spine/51-weave-additions-tfmg.js"
@@ -911,10 +855,6 @@ hash = "b854e1d655273052dfd8e21c75448b02fdb8a228457c957d88c151fe9fe69069"
 [[files]]
 file = "kubejs/server_scripts/spine/52-weave-tfmg-newage.js"
 hash = "dfb89e264a7602feb071f122117c302137f5cb35c3939d35df99ee94b0dc26d3"
-
-[[files]]
-file = "kubejs/server_scripts/spine/53-weave-nuclear.js"
-hash = "a5a33c570ee06a0b82415ad9da162b6fc26b297105fc0b2154d78de143e8c6a9"
 
 [[files]]
 file = "kubejs/server_scripts/spine/54-weave-aeronautics.js"
@@ -934,15 +874,11 @@ hash = "7627cd17ee8453e31ad932100ee79cb516e7d0d7182eccc92b93dd9abb8c7be9"
 
 [[files]]
 file = "kubejs/server_scripts/zz-dump-recipes-TEMP.js"
-hash = "3615afccd5bb644dff3d0b1d9cb41ece92d1271b79ab27770d4b6cb30e836559"
+hash = "d37c8b9dd595c48e3c8a5065224eb8555ada4eb10c51d0d02856d74fe6ee2778"
 
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"
 hash = "6c09092dc0f47bbeec1f63b17714436f1765163110a84e508565b9c90ec948f4"
-
-[[files]]
-file = "kubejs/startup_scripts/02-spine-incomplete.js"
-hash = "9f3024da7657c77ebe570635db2da43eab3e05988317bfacffbca1ceb2ff87b5"
 
 [[files]]
 file = "mods/accelerated-decay.pw.toml"
@@ -1310,11 +1246,6 @@ hash = "b6945f59f87f123909cc548c573b1fa0ee7459b9acedd9643efa7517d6d41336"
 metafile = true
 
 [[files]]
-file = "mods/create-compressed.pw.toml"
-hash = "a946542ae4970e35a3f721b16872d2c66e62235778eb640c4102c1faaa008b3e"
-metafile = true
-
-[[files]]
 file = "mods/create-confectionery.pw.toml"
 hash = "85bfeee744eff6e3cb9146da32407874d569237298072c4455224566e322e476"
 metafile = true
@@ -1392,11 +1323,6 @@ metafile = true
 [[files]]
 file = "mods/create-mechanical-companion.pw.toml"
 hash = "bb0261a22d16696bcd0b86b937b00dd49a8fe9fd8df08c7ba2818fc74d408004"
-metafile = true
-
-[[files]]
-file = "mods/create-metalwork.pw.toml"
-hash = "2ccd7b4207893b19787f1d94c6df2d41ab114a93d3fffebf51f6914a009c8650"
 metafile = true
 
 [[files]]
@@ -1500,11 +1426,6 @@ hash = "2ac00d5f2ad5d18267a6146ed2cfc7ea4522ff655a49e20b5bc601cf7f123ec9"
 metafile = true
 
 [[files]]
-file = "mods/create-ultimate-factory.pw.toml"
-hash = "34d808989e71221b8e01a44bc8031f20af1c94981acb0cba4669e0e58be69629"
-metafile = true
-
-[[files]]
 file = "mods/create-winery.pw.toml"
 hash = "0494165f772354b6796a0a5869f07afacf178519e888ab0450da3d4865d2a692"
 metafile = true
@@ -1522,11 +1443,6 @@ metafile = true
 [[files]]
 file = "mods/createaddoncompatibility.pw.toml"
 hash = "046a80051e21c0bab042ad1b7e27d42a7456fd36cfabf0454e9110ec345078fd"
-metafile = true
-
-[[files]]
-file = "mods/createnuclear.pw.toml"
-hash = "b411c5446f2d01c3de71bc1ff773ee10825616074865d92d5fb2cb1a678efcb6"
 metafile = true
 
 [[files]]

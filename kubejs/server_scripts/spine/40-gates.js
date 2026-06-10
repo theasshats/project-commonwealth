@@ -30,14 +30,8 @@ const SPINE_GATES = [
     build: (e, K) => e.shaped('create_jetpack:netherite_jetpack',
       ['KNK', 'EPE', 'NAN'],
       { K: K, N: 'minecraft:netherite_ingot', E: 'create:electron_tube',
-        P: 'create:precision_mechanism', A: 'create_new_age:advanced_energiser' }) },
-
-  // T4 — nuclear reactor core behind the endgame Cataclysm drop.
-  { tier: 'T4', out: 'createnuclear:reactor_core', drop: 'cataclysm:ignitium_ingot',
-    build: (e, K) => e.shaped('createnuclear:reactor_core',
-      ['SKS', 'EPE', 'SAS'],
-      { K: K, S: 'tfmg:steel_ingot', E: 'create:electron_tube',
         P: 'create:precision_mechanism', A: 'create_new_age:advanced_energiser' }) }
+  // (T4 ignitium reactor gate removed with Create: Nuclear — repoints onto a New Age reactor part in the post-dump weave.)
 ]
 
 ServerEvents.recipes(event => {

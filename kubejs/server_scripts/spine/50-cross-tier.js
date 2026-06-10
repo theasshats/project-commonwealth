@@ -1,12 +1,9 @@
 // Create spine — CROSS-TIER recipe chains (the lineage; CREATE-SPINE.md Part 4b).
 //
 // Weaves the T3-T4 addon spine so tiers FLOW into each other instead of self-sourcing. Grounded in the
-// real recipes (tools/mod-data/recipes). Two important DESIGN CORRECTIONS the dumps surfaced:
-//   • New Age has NO graphite and no "energising->graphite" recipe — the spec's coking->graphite seam is
-//     WRONG. The real graphite chain is Nuclear's own: createnuclear:graphene (press coal dust) ->
-//     graphite_rod (+ steel). (CREATE-SPINE.md Part 4b corrected.)
-//   • The real existing cross-mod seam between Nuclear and TFMG is the shared `c:ingots/steel` tag (both
-//     consume it) — TFMG is already the steel supplier for Nuclear. No new bridge needed there.
+// real recipes (tools/mod-data/recipes). DESIGN CORRECTION the dumps surfaced:
+//   • New Age has NO graphite and no "energising->graphite" recipe — the spec's coking->graphite seam was
+//     WRONG. (Create: Nuclear, which had the only graphite chain, was cut for 1.0 — see 2.0 overhaul.)
 //
 // This file builds the SAFE, additive weaves now. The invasive re-recipes (making TFMG's sequenced
 // electric_motor depend on Additions, New Age energisers require TFMG circuits) are STAGED — they re-author
@@ -57,10 +54,9 @@ ServerEvents.recipes(event => {
 })
 
 // CROSS-MOD TRUTH (verified vs the recipe dump in tools/recipe-dump/):
-//   • Nuclear -> TFMG: ALREADY woven — createnuclear:reactor_core requires #c:ingots/steel (TFMG steel).
+//   • Create: Nuclear was CUT for 1.0 (returns in the 2.0 Power Grid overhaul) — New Age's reactor is the
+//     end-game generator now. The old Nuclear weave (graphite chain, reactor gating) was removed with it.
 //   • Additions -> TFMG: tfmg:engine_controller already accepts #c:wires/copper, which createaddition's
 //     copper_wire is tagged — Additions' wire already feeds TFMG machinery (+ the spool weld above).
 //   • TFMG electric_motor is tfmg:sequenced_assembly/motor (winding tfmg:copper_spool onto an unfinished
 //     motor) — a deep sequenced chain; left as-is (the spool weld lets Additions' spool feed it).
-//   • create_new_age has NO reactor_controller (that's createnuclear's) and NO graphite (Nuclear-internal,
-//     createnuclear:graphene from coal dust).
