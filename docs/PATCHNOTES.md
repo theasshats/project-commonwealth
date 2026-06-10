@@ -21,6 +21,8 @@ Vein markers on the map now draw with a hot pink outline so they stand out again
 
 Create Big Cannons was running at 5.11.5, but the Advanced Technologies addon is built against 5.11.3 and called a block-damage method whose signature changed in the newer build. Firing a heavy autocannon armour-piercing round at a block crashed the server. Create Big Cannons has been moved back to 5.11.3 to match the addon.
 
+Firing a cannon also crashed the client while rendering its smoke particle. The cannon smoke uses a vertex format the renderer's optimized particle path did not expect, and the mismatch threw during rendering. That optimized path is now disabled for billboard particles, which fall back to the standard renderer with no visible difference.
+
 ## 0.6.1 — Dedicated server fix
 
 Diet – AppleSeed Edition, which provides the diet and nutrition system, crashed dedicated servers on startup. It now uses a patched build that resolves the crash. Single-player and client installs are unaffected.
