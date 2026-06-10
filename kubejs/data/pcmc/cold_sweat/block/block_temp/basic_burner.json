@@ -1,7 +1,9 @@
 {
-  "block": [
-    { "blocks": ["createlowheated:basic_burner"] }
-  ],
+  "block": {
+    "blocks": [
+      "createlowheated:basic_burner"
+    ]
+  },
   "temperature": 12,
   "range": 5,
   "max_effect": 24,

@@ -1,14 +1,12 @@
 {
-  "block": [
-    {
-      "blocks": [
-        "extradelight:oven"
-      ],
-      "state": {
-        "lit": true
-      }
+  "block": {
+    "blocks": [
+      "extradelight:oven"
+    ],
+    "state": {
+      "lit": true
     }
-  ],
+  },
   "temperature": 15,
   "range": 5,
   "max_effect": 30,

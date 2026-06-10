@@ -1,17 +1,15 @@
 {
-  "block": [
-    {
-      "blocks": [
-        "create:blaze_burner"
-      ],
-      "state": {
-        "blaze": [
-          "kindled",
-          "seething"
-        ]
-      }
+  "block": {
+    "blocks": [
+      "create:blaze_burner"
+    ],
+    "state": {
+      "blaze": [
+        "kindled",
+        "seething"
+      ]
     }
-  ],
+  },
   "temperature": 22,
   "range": 5,
   "max_effect": 44,

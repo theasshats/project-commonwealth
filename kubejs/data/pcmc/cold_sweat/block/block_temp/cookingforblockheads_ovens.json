@@ -1,27 +1,25 @@
 {
-  "block": [
-    {
-      "blocks": [
-        "cookingforblockheads:oven",
-        "cookingforblockheads:black_oven",
-        "cookingforblockheads:blue_oven",
-        "cookingforblockheads:brown_oven",
-        "cookingforblockheads:cyan_oven",
-        "cookingforblockheads:gray_oven",
-        "cookingforblockheads:green_oven",
-        "cookingforblockheads:light_blue_oven",
-        "cookingforblockheads:light_gray_oven",
-        "cookingforblockheads:lime_oven",
-        "cookingforblockheads:magenta_oven",
-        "cookingforblockheads:orange_oven",
-        "cookingforblockheads:pink_oven",
-        "cookingforblockheads:purple_oven",
-        "cookingforblockheads:red_oven",
-        "cookingforblockheads:white_oven",
-        "cookingforblockheads:yellow_oven"
-      ]
-    }
-  ],
+  "block": {
+    "blocks": [
+      "cookingforblockheads:oven",
+      "cookingforblockheads:black_oven",
+      "cookingforblockheads:blue_oven",
+      "cookingforblockheads:brown_oven",
+      "cookingforblockheads:cyan_oven",
+      "cookingforblockheads:gray_oven",
+      "cookingforblockheads:green_oven",
+      "cookingforblockheads:light_blue_oven",
+      "cookingforblockheads:light_gray_oven",
+      "cookingforblockheads:lime_oven",
+      "cookingforblockheads:magenta_oven",
+      "cookingforblockheads:orange_oven",
+      "cookingforblockheads:pink_oven",
+      "cookingforblockheads:purple_oven",
+      "cookingforblockheads:red_oven",
+      "cookingforblockheads:white_oven",
+      "cookingforblockheads:yellow_oven"
+    ]
+  },
   "temperature": 12,
   "range": 4,
   "max_effect": 24,

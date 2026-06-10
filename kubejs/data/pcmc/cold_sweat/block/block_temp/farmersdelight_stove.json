@@ -1,14 +1,12 @@
 {
-  "block": [
-    {
-      "blocks": [
-        "farmersdelight:stove"
-      ],
-      "state": {
-        "lit": true
-      }
+  "block": {
+    "blocks": [
+      "farmersdelight:stove"
+    ],
+    "state": {
+      "lit": true
     }
-  ],
+  },
   "temperature": 18,
   "range": 5,
   "max_effect": 36,

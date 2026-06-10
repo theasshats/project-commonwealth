@@ -1,11 +1,9 @@
 {
-  "block": [
-    {
-      "blocks": [
-        "dndesires:burner"
-      ]
-    }
-  ],
+  "block": {
+    "blocks": [
+      "dndesires:burner"
+    ]
+  },
   "temperature": 15,
   "range": 5,
   "max_effect": 30,

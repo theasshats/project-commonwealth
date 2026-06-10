@@ -394,51 +394,51 @@ hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
 file = "kubejs/data/pcmc/cold_sweat/block/block_temp/basic_burner.json"
-hash = "257a22438c13a301072865e8a7ed879acaeb6ca3bbada36cd4ec5ad910a93338"
+hash = "1b09270ca03545ea92679b0155b2c2e1e4c136e73655f7056861eaa21e10c7e5"
 
 [[files]]
 file = "kubejs/data/pcmc/cold_sweat/block/block_temp/blaze_burner_active.json"
-hash = "910ec8cc0fa875fd5fd754d8fe68f88ebdf313085ce04ec0cbe26ee6ea4b7267"
+hash = "31348ab316ef12a555b5b212c81b11de7ff10dba8359648c911bb7c14a136b50"
 
 [[files]]
 file = "kubejs/data/pcmc/cold_sweat/block/block_temp/blaze_burner_smouldering.json"
-hash = "c6a17c30ba79bd51bb46421e5f5daf623e3239b690e4d42f2e21050e3b733534"
+hash = "907009b03580f1a7c909eb42376feb71b0857a992b8822c094dd81803185a740"
 
 [[files]]
 file = "kubejs/data/pcmc/cold_sweat/block/block_temp/cookingforblockheads_ovens.json"
-hash = "7d54f850e75a348836cc315c18806ca7f8a8f95735d83bbdf308320d476da620"
+hash = "634756a589434862b68ed15cfa4c35350428f7e92a5fcbe9e7a4ab6a59ab3771"
 
 [[files]]
 file = "kubejs/data/pcmc/cold_sweat/block/block_temp/dndesires_burner.json"
-hash = "1c8ea172b260c3712e560865faa007d81cb3a0aa6bdcc2927d35def1e94731e2"
+hash = "9c64d5d70b12678307954ada53068eda17b19a626cb7f3616e1e25d9a20fc381"
 
 [[files]]
 file = "kubejs/data/pcmc/cold_sweat/block/block_temp/extradelight_oven.json"
-hash = "ce6aae05aeca91c4f9edf2dd2212832f6a61c9a00d9e45183ac0258e39057e89"
+hash = "960a4fdc842944ee697da134c271e5612157aa63e602132cc116163280d51cbd"
 
 [[files]]
 file = "kubejs/data/pcmc/cold_sweat/block/block_temp/farmersdelight_stove.json"
-hash = "6bbeb714a1b83c22a25fe6cd769cd9397f24f0362b6f0b797d0644c259376ce7"
+hash = "14e854e7a5234df587a341e49baf4a6421e0c5a8b092a0e5a0bfd6ed28cffb21"
 
 [[files]]
 file = "kubejs/data/pcmc/cold_sweat/block/block_temp/liquid_blaze_burner.json"
-hash = "2ba7a955b94706b59cd56de3bbe9b8fa8d65d3923d9c89d0b32159becde2c108"
+hash = "e66d2d895962df6bcc41841d9b46c9f5d8b7af472c14445b1d23ccf06c263532"
 
 [[files]]
 file = "kubejs/data/pcmc/cold_sweat/block/block_temp/lit_blaze_burner.json"
-hash = "5dcf6aa4f3e7fe92db6d3345d63ee047677a2822f17b984b225c28e78b533cb1"
+hash = "592ec52b25843b5f267fd865ac935a15ef9da26b3e200054a977b1ce84fb318f"
 
 [[files]]
 file = "kubejs/data/pcmc/cold_sweat/block/block_temp/new_age_heater.json"
-hash = "58f023d82742192a3e115b8cb592c84c8f764cacb78a3bb4be1c4ba74db7b1ad"
+hash = "85ff626634a05abdd5031e312fe28322aeddb83961cbf3ab97399b5534d74ead"
 
 [[files]]
 file = "kubejs/data/pcmc/cold_sweat/block/block_temp/tfmg_blue_fire.json"
-hash = "0333ee846a3faff13245aab43bbd6759d95185600978446d10f7019730526d57"
+hash = "eed2c516c26a4c8865549ba473a25367d7ca56ee2a0350a1d6e59fdb5f0de849"
 
 [[files]]
 file = "kubejs/data/pcmc/cold_sweat/block/block_temp/tfmg_industrial_heat.json"
-hash = "15b8152cdba066fa7f118641549b8bd36f1165a3fcf3d584638238811b0b3df3"
+hash = "f11f10777de47f37b15376898eadbc30136d20558f52b390a5ffcc5a8f74abb8"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/bauxite.json"
