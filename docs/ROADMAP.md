@@ -1,4 +1,4 @@
-# Derpack X — Roadmap (multi-phase)
+# Project Commonwealth — Roadmap (multi-phase)
 
 > Living roadmap for the build-out. **Goal:** a cooperative PvPvE Create pack for a small crew (~10)
 > where every mod earns its place by anchoring to one of the systems — **Create** or **magic**
@@ -23,8 +23,8 @@
 `pr-checks.yml`, the **recipe overhaul (#62, v0.4.6)**, the **curation/spawn-gating pass (#88, v0.5.0)**,
 the **GTMOGS ore-gen rework (#82, v0.5.1)**, and the **magic web (#75, v0.5.2)**.
 
-**No stacked feature PRs remain.** The custom mods (Derpack Arcana #80, Kill Feed #196) moved to their
-own repos (`derpack-org/derpack-arcana`, `derpack-org/derpack-killfeed`) — those prototype PRs are
+**No stacked feature PRs remain.** The custom mods (Project Commonwealth Arcana #80, Kill Feed #196) moved to their
+own repos (`theasshats/pcmc-arcana`, `theasshats/pcmc-killfeed`) — those prototype PRs are
 superseded; see `docs/CUSTOM-MODS.md`. Everything else is now issue work, not stacked PRs.
 
 | Release | Shipped |
@@ -63,7 +63,7 @@ weave; worldgen-island bridges; EMI→JEI + JER/JEED; the `tools/recipe-graph/` 
 ### Phase 3b — Magic web ✅ on `main` (#75, v0.5.2)
 KubeJS bridges weaving Ars Nouveau / Iron's Spells / Occultism into the Create spine.
 - **Follow-ups:** #122 (post-merge balance, playtest), #123 (flagship depth, conceded from #75).
-- **Code track:** #80 (Derpack Arcana) — the bridges KubeJS can't express; #118 tracks its P3 deviation.
+- **Code track:** #80 (Project Commonwealth Arcana) — the bridges KubeJS can't express; #118 tracks its P3 deviation.
 
 ### Phase 4 — Loot pass ⏳ (#18)
 `lootjs` + the loot index: pull structure/dungeon loot back from free end-game gear; seed Numismatics
@@ -100,7 +100,7 @@ post-release polish or ongoing curation.
 - [ ] **Early-game ore bootstrap** — #81 (vanilla trickle removed; define the replacement). Phase 1.
 - [ ] **Ore-gen tuned for release** — #116 (cave-ore biome follow, rarity curve) + #58 review. Phase 1.
 - [x] **Create recipe spine landed** — #62 (v0.4.6). Follow-ups: #101/#102/#103/#113.
-- [ ] **Pack renamed** — #78 (decide the name with zagwar before players have instances named "Derpack X").
+- [x] **Pack renamed** — #78 (renamed to **Project Commonwealth**).
 - [ ] **CI required on `main`** — #79 (turn on the `pr-checks.yml` ruleset; Phase 8).
 - [x] **Design/goal docs merged** — PR #61; the systems-loop direction is canon (`docs/SYSTEMS.md`).
 - [x] **Release artifacts sane** — `.mrpack` dropped (#73); Prism installer is the single ~5 MB artifact.

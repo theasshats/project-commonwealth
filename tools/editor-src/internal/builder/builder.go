@@ -31,7 +31,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/derpack/derpack-edit/internal/packwiz"
+	"github.com/pcmc/pcmc-edit/internal/packwiz"
 )
 
 // Result describes a completed build.
@@ -229,7 +229,7 @@ OverrideMemory=true
 PermGen=256
 iconKey=default
 name=%s %s
-notes=Built locally from %s by derpack-edit.
+notes=Built locally from %s by pcmc-edit.
 `, jvmBlock, packName, packVersion, packName)
 	return os.WriteFile(filepath.Join(staging, "instance.cfg"), []byte(contents), 0o644)
 }

@@ -1,4 +1,4 @@
-# Derpack X — Patch Notes
+# Project Commonwealth — Patch Notes
 
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme", a short lead paragraph, then sections (see CLAUDE.md). -->
@@ -61,6 +61,12 @@ The Game Discs handheld console and its five parts now build through Create rath
 materials. One game, Pong, is craftable to get you started; the other six — Blocktris, Froggie, Flappy
 Bird, Slime, Rabbit, and TNT Sweeper — are found in structure chests while exploring, the rarer titles
 turning up less often.
+## 0.6.2 — Project Commonwealth
+
+The pack has been renamed to Project Commonwealth (motto: Magna Communitas). The new name runs through the installer, the launcher instance, the documentation, and the pack's internal data. Mods, recipes, balance, and world generation are unchanged from 0.6.1.
+
+Existing worlds and installs continue to work, and ore generation is unchanged.
+
 ## 0.6.1 — Dedicated server fix
 
 Diet – AppleSeed Edition, which provides the diet and nutrition system, crashed dedicated servers on startup. It now uses a patched build that resolves the crash. Single-player and client installs are unaffected.
@@ -311,7 +317,7 @@ sheet (#103).
 - **Fixed world-creation crash** from biome modifiers that listed multiple biome tags in a JSON
   array (`"biomes": ["#tag", "#tag"]`). That form is invalid for a HolderSet and failed registry
   load with `Failed to load registries`. All 21 veins now resolve their biomes through proper
-  custom biome **tags** (`#derpack:vein_<ore>`).
+  custom biome **tags** (`#pcmc:vein_<ore>`).
 - **Fixed second world-creation crash** (`Unbound values … [minecraft:ore_copper, minecraft:ore_diamond]`):
   the copper/diamond vanilla-thinning files pointed at configured features that don't exist in 1.21
   (the real names are `ore_copper_small` / `ore_diamond_small`).

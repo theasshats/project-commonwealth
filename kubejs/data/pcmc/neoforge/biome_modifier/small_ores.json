@@ -1,0 +1,18 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "pcmc:small_coal",
+    "pcmc:small_iron",
+    "pcmc:small_copper",
+    "pcmc:small_tin",
+    "pcmc:small_zinc",
+    "pcmc:small_gold",
+    "pcmc:small_silver",
+    "pcmc:small_nickel",
+    "pcmc:small_redstone",
+    "pcmc:small_lapis",
+    "pcmc:small_diamond"
+  ],
+  "step": "underground_ores"
+}

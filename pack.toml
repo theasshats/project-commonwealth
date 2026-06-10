@@ -1,4 +1,4 @@
-name = "Derpack X"
+name = "Project Commonwealth"
 author = "Alex Ignacio-Gamez"
 version = "0.7.0"
 pack-format = "packwiz:1.1.0"
@@ -6,7 +6,7 @@ pack-format = "packwiz:1.1.0"
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "baa74fc02f0d6191c0e047b0609eead597a6b30de136e87569029080eed257b9"
+hash = "17622355fb9d642790c0cd10013ad136dfcb194b7b592823585c5ce02a1a1c59"
 
 [versions]
 minecraft = "1.21.1"

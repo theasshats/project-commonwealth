@@ -1,6 +1,6 @@
-# Editing Derpack X
+# Editing Project Commonwealth
 
-How to add mods, change configs, and ship updates. Most of this happens through the Derpack Editor — a local desktop app that runs from the repo. When the editor isn't an option, the packwiz CLI is the fallback.
+How to add mods, change configs, and ship updates. Most of this happens through the Project Commonwealth Editor — a local desktop app that runs from the repo. When the editor isn't an option, the packwiz CLI is the fallback.
 
 This doc assumes you've already done the [one-time setup in the README](../README.md#setup-one-time): GitHub Desktop installed, repo cloned, Java 21 installed.
 
@@ -29,7 +29,7 @@ You're now on the new branch. Edit, commit, push, open a PR when ready.
 
 1. Make sure you're on your branch (GitHub Desktop confirms this in the top bar).
 2. Open the repo folder in File Explorer.
-3. Double-click `tools\derpack-edit.exe`.
+3. Double-click `tools\pcmc-edit.exe`.
 4. A console window appears, your browser opens to `http://localhost:8765`.
 
 The editor reads from disk on every action — no need to refresh the page after you make changes elsewhere.

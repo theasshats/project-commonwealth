@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Recipe-graph connectivity metric for Derpack X.
+"""Recipe-graph connectivity metric for Project Commonwealth.
 
 North star (CLAUDE.md): if you drew a line from every item to what it's used for, the pack should look
 like ONE or two cohesive webs, not many disconnected clusters. This measures that, four ways — connected

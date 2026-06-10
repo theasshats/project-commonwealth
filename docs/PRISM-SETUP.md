@@ -1,4 +1,4 @@
-# Installing Derpack X in Prism Launcher
+# Installing Project Commonwealth in Prism Launcher
 
 Step-by-step for players. If you've imported a Prism instance before, you can skim — it's just "Add Instance → Import from zip → done."
 
@@ -13,7 +13,7 @@ Step-by-step for players. If you've imported a Prism instance before, you can sk
 
 ## The download
 
-### `derpack-x-prism-installer-X.Y.Z.zip`
+### `project-commonwealth-prism-installer-X.Y.Z.zip`
 
 A small (~5 MB) Prism instance configured to fetch all mod jars on first launch. Every future launch checks for updates and syncs them automatically. This is the only release artifact — we no longer ship a `.mrpack` (it had bloated to ~200 MB and nobody used it).
 
@@ -26,7 +26,7 @@ A small (~5 MB) Prism instance configured to fetch all mod jars on first launch.
 5. Click **Browse** and select the zip.
 6. Click **OK**.
 
-Prism will unpack the instance scaffold (it's small — no jars yet). You'll see a new instance in your list named "Derpack X X.Y.Z".
+Prism will unpack the instance scaffold (it's small — no jars yet). You'll see a new instance in your list named "Project Commonwealth X.Y.Z".
 
 ## First launch
 

@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/derpack/derpack-edit/internal/packwiz"
+	"github.com/pcmc/pcmc-edit/internal/packwiz"
 )
 
 type pinReq struct {
