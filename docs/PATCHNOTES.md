@@ -52,6 +52,9 @@ tier you are stepping into.
   ecosystems depend on each other.
 - The hot-air balloon's adjustable burner accepts the basic burner as its fire source, so the heat
   ladder carries from the kitchen to the boiler to the sky.
+- Create: Aeroworks is added as the top tier of flight: its digital controls are what make large or
+  complex flying machines practical to pilot, and they sit at the electric tier alongside the rest of
+  the end-game machinery.
 
 ### Ore generation
 
@@ -85,6 +88,8 @@ tier you are stepping into.
   server-side.
 - Alex's Mobs and Naturalist duplicated five animals; the Alex's Mobs versions are kept and the
   Naturalist copies no longer spawn, with their fur and catfish items unified.
+- Create Aeronautics: Claims is added — a claim block that extends land-claim protection to airships,
+  working with the pack's Open Parties and Claims.
 
 ### Weapons and capture tools
 

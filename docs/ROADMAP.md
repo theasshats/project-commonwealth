@@ -15,7 +15,7 @@
 
 **Status:** ✅ done & on `main` · 🟦 in review (open PR) · 🚧 in progress · ⏳ queued · 💤 not started
 
-**Current release:** **v0.6.0** (Foundation). MC **1.21.1** / NeoForge **21.1.233**.
+**Current release:** **v0.6.3** (Foundation line). MC **1.21.1** / NeoForge **21.1.233**.
 
 ## Where the work lives
 
