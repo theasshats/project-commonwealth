@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate an interactive, offline mod-level connectivity map for Derpack X.
+"""Generate an interactive, offline mod-level connectivity map for Project Commonwealth.
 
 Projects the item-level recipe graph down to a MOD graph (nodes = mods, edge weight = how many recipe
 links tie two mods together, incl. shared `c:` tags) and emits a single self-contained HTML file with a
@@ -36,7 +36,7 @@ def main():
     open(OUT, 'w', encoding='utf-8').write(html)
     print(f"wrote {OUT}")
 
-HTML = r"""<!doctype html><html><head><meta charset="utf-8"><title>Derpack X — recipe web</title>
+HTML = r"""<!doctype html><html><head><meta charset="utf-8"><title>Project Commonwealth — recipe web</title>
 <style>
  *{box-sizing:border-box} html,body{margin:0;height:100%;font:13px/1.4 system-ui,sans-serif;background:#10131a;color:#cdd3df}
  #app{display:flex;height:100vh}
@@ -56,7 +56,7 @@ HTML = r"""<!doctype html><html><head><meta charset="utf-8"><title>Derpack X —
  canvas{flex:1;display:block;cursor:grab} #tip{position:fixed;pointer-events:none;background:#000a;border:1px solid #38445f;border-radius:4px;padding:3px 6px;font-size:12px;display:none}
 </style></head><body><div id="app">
  <div id="side">
-   <h1>Derpack&nbsp;X — recipe web</h1>
+   <h1>Project Commonwealth — recipe web</h1>
    <div id="stats"></div>
    <div id="presets">
      <button data-p="reset">Reset</button>

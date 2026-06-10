@@ -6,7 +6,7 @@
 
 ## The goal
 
-Derpack X's identity is *"one or two cohesive webs, not many clusters"* — every mod tied into ≥2 of the
+Project Commonwealth's identity is *"one or two cohesive webs, not many clusters"* — every mod tied into ≥2 of the
 systems (Create / magic — production; survival — pressure; economy — distribution & trade, incl.
 logistics/aeronautics), which form one causal loop (the *Eco*-style scarcity → pressure → production →
 economy; canonical model in `docs/SYSTEMS.md`). The pack is broad on purpose; what makes it **AAA rather

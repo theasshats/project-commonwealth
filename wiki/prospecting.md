@@ -1,6 +1,6 @@
 # Finding Ores: Prospecting
 
-Derpack X uses GregTech-style ore generation. Ores are concentrated in large veins of
+Project Commonwealth uses GregTech-style ore generation. Ores are concentrated in large veins of
 related materials instead of being scattered evenly through the world, and most vanilla
 overworld ore generation is turned off. Veins, plus a thin layer of small ores, are the
 only sources. Prospecting is how you find the veins.

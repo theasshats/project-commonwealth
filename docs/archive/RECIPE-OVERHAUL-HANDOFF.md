@@ -35,7 +35,7 @@ Create parts"), **not** grind. Minecraft **1.21.1 / NeoForge 21.1.228**, KubeJS-
   worldgen materials (quark stones, createnuclear autunite, tfmg asphalt) to the web. Nothing gated.
 - `81-decoration-metal.js` — **the decoration/equipment weave** (§4a): routes metal decoration + kitchenware
   through Create-pressed sheets via `event.replaceInput` (ingredient-only, shapes/yields preserved).
-- `kubejs/startup_scripts/01-intermediate-parts.js` — registers the `derpack:incomplete_*` transitional
+- `kubejs/startup_scripts/01-intermediate-parts.js` — registers the `pcmc:incomplete_*` transitional
   items used by the MFFS `sequenced_assembly` chains (`60-mffs.js`). If you add a sequenced_assembly chain,
   register its in-progress item here.
 
@@ -86,7 +86,7 @@ bulb" pass (organic lamps); details + the playtest flag on the FD early-gate are
    })
    ```
    Create methods: `event.recipes.create.pressing/mixing/compacting(...)`, `.mechanical_crafting(out,[pattern],{key})`,
-   `.sequenced_assembly([out], seed, [steps]).transitionalItem('derpack:incomplete_x').loops(n)`.
+   `.sequenced_assembly([out], seed, [steps]).transitionalItem('pcmc:incomplete_x').loops(n)`.
 4. **`node --check`** the file. **Run `./tools/packwiz refresh`** (vendored binary — see `tools/README.md`)
    and commit `index.toml`/`pack.toml` — the `pr-checks.yml` "packwiz index" job fails otherwise.
 5. Update the ledger/triage in `docs/RECIPES.md`.

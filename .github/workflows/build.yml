@@ -108,11 +108,11 @@ jobs:
 
       # Publish a stable, version-less copy alongside the versioned artifact so
       # the website (and anyone else) can link to a permanent "latest" download:
-      #   .../releases/latest/download/derpack-x-prism-installer.zip
+      #   .../releases/latest/download/project-commonwealth-prism-installer.zip
       - name: Add stable-named copy for permanent latest-download link
         run: |
           cd dist
-          cp "$(ls *-prism-installer-*.zip | head -1)" derpack-x-prism-installer.zip
+          cp "$(ls *-prism-installer-*.zip | head -1)" project-commonwealth-prism-installer.zip
 
       - name: List final artifacts
         run: ls -lh dist/

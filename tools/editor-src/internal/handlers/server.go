@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/derpack/derpack-edit/internal/config"
-	"github.com/derpack/derpack-edit/internal/packwiz"
+	"github.com/pcmc/pcmc-edit/internal/config"
+	"github.com/pcmc/pcmc-edit/internal/packwiz"
 )
 
 // Server holds the dependencies used by all handlers.

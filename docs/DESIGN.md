@@ -1,6 +1,6 @@
-# Derpack X — Design
+# Project Commonwealth — Design
 
-This document captures the **why** behind the architectural decisions in Derpack X. The README and per-folder docs cover the **what**: how to install, how to add a mod, where things live. This is for when someone is staring at something and wondering why it's structured that way.
+This document captures the **why** behind the architectural decisions in Project Commonwealth. The README and per-folder docs cover the **what**: how to install, how to add a mod, where things live. This is for when someone is staring at something and wondering why it's structured that way.
 
 If a decision feels weird, look here first. If it isn't here, it should be — propose an addition.
 
@@ -8,19 +8,19 @@ If a decision feels weird, look here first. If it isn't here, it should be — p
 
 ## What is this thing
 
-Derpack X is a Minecraft 1.21.1 / NeoForge modpack distributed via [packwiz](https://packwiz.infra.link/) manifests. The repo doesn't contain mod jars; it contains URLs and hashes. CI builds one small release artifact, a Prism installer zip. End-users' launchers fetch jars from each mod's authoritative source at install time. A custom Go-based local editor handles routine pack maintenance through a web UI; the packwiz CLI is the fallback.
+Project Commonwealth is a Minecraft 1.21.1 / NeoForge modpack distributed via [packwiz](https://packwiz.infra.link/) manifests. The repo doesn't contain mod jars; it contains URLs and hashes. CI builds one small release artifact, a Prism installer zip. End-users' launchers fetch jars from each mod's authoritative source at install time. A custom Go-based local editor handles routine pack maintenance through a web UI; the packwiz CLI is the fallback.
 
 ---
 
 ## The goal — the systems loop, every mod earns its place
 
-**Derpack X is a cooperative PvPvE Create pack for a small crew (~10) where scarcity means nobody can do everything alone — so specializing and trading happen on their own, not as a forced economy. Every mod earns its place: it feeds one of the systems — Create or magic (production), survival (pressure), or the economy (trade + logistics) — or it's cut. Progression pushes you to specialize, complex tech unlocks through MineColonies or boss drops, and freshness comes from curated content updates, not resets.**
+**Project Commonwealth is a cooperative PvPvE Create pack for a small crew (~10) where scarcity means nobody can do everything alone — so specializing and trading happen on their own, not as a forced economy. Every mod earns its place: it feeds one of the systems — Create or magic (production), survival (pressure), or the economy (trade + logistics) — or it's cut. Progression pushes you to specialize, complex tech unlocks through MineColonies or boss drops, and freshness comes from curated content updates, not resets.**
 
 That's the whole goal. The rest of this section is what it means in practice.
 
 > **The systems are not flat peers — they form one causal loop.** The structural model (inspired by the game *Eco*) is **scarcity → pressure → production → economy**, and back: forced specialization producing an emergent, load-bearing player economy. **`docs/SYSTEMS.md` is the canonical structural model** — read it for how the parts interlock (producers, the economy, pressure, the ecological cost, the recipe/gating spine). This section is the *why*; SYSTEMS.md is the *how it fits*. (The old flat "five systems" framing is retired — it's the loop now.)
 
-**Audience & distribution — now public.** Derpack X started as a private friend-group pack; the maintainers (Xela112233 + zagwar) have since decided the build-out is worth **publishing and advertising on the open internet**. The *design* is unchanged — it's still tuned for **small-group cooperative play** (~10 on a server), and the player-count reasoning below (emergent economy, specialization) still assumes that scale of co-op group. What changed is the **audience**: strangers on unknown hardware will install it, so player-facing polish, stability, broad-hardware support, and clear docs are now first-class concerns, not afterthoughts. Where this doc says "friend group," read it as "the small co-op group the pack is balanced for" — not "the only people who'll ever play it."
+**Audience & distribution — now public.** Project Commonwealth started as a private friend-group pack; the maintainers (Xela112233 + zagwar) have since decided the build-out is worth **publishing and advertising on the open internet**. The *design* is unchanged — it's still tuned for **small-group cooperative play** (~10 on a server), and the player-count reasoning below (emergent economy, specialization) still assumes that scale of co-op group. What changed is the **audience**: strangers on unknown hardware will install it, so player-facing polish, stability, broad-hardware support, and clear docs are now first-class concerns, not afterthoughts. Where this doc says "friend group," read it as "the small co-op group the pack is balanced for" — not "the only people who'll ever play it."
 
 **Breadth is intentional, but not unconditional.** The pack is large and varied — food, structures, magic, colonies, mobs, decoration, vehicles — because players want a world with a lot to do. Breadth's failure mode is **incoherence**: a heap of mods that never talk to each other. The fix is *not* "route everything through Create" (the old framing) — it's that every mod **anchors to at least one system, and ideally *two*** (one is the floor; the target is two — a mod tied to only one is a candidate for a second weave). Pictured as a graph — every item linked to what it's used for — the pack should read as **one or two cohesive webs, not many isolated clusters** (measurable: `tools/recipe-graph/`, `docs/CONNECTIVITY.md`). The systems (loop order: pressure → production → economy, on a scarcity foundation):
 
@@ -247,7 +247,7 @@ This is recorded here because it's a fair question to ask of any project, and we
 plainly than have it surface as a gotcha.
 The stance: state it transparently where a curious player can find it, but **don't make the LLM a
 selling point** — the design is the headline, the tooling is an honest footnote. The canonical player-facing
-wording lives on the site (`derpack-org/derpack-site`, About section); keep this section and that copy
+wording lives on the site (`theasshats/pcmc-site`, About section); keep this section and that copy
 in agreement if either changes. When the public announce release is cut, a one-line version belongs in
 that release's `docs/PATCHNOTES.md` entry.
 

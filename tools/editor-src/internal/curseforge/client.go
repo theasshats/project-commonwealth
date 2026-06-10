@@ -13,7 +13,7 @@ import (
 
 const (
 	baseURL   = "https://api.curseforge.com"
-	userAgent = "derpack-edit/1.0 (modpack editor)"
+	userAgent = "pcmc-edit/1.0 (modpack editor)"
 
 	// Minecraft's CurseForge game ID, used in /v1/mods/search.
 	minecraftGameID = 432

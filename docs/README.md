@@ -1,6 +1,6 @@
 # `docs/` — index
 
-The durable documentation for Derpack X. This folder is **reference**, not scratch: every file here is
+The durable documentation for Project Commonwealth. This folder is **reference**, not scratch: every file here is
 meant to stay useful. Ephemeral session/handoff prompts don't belong in `docs/` (see the convention at
 the bottom). `docs/` is fully `.packwizignore`'d, so nothing here touches the packwiz index or CI.
 
@@ -53,7 +53,7 @@ priorities. See [`archive/`](archive/):
 - `archive/MODLIST-AUDIT.md` — the modlist-vs-goals snapshot. **Superseded** by `SYSTEMS.md` (model) + `CURATION.md` (rubric) + `ROADMAP.md` (plan); kept for its §A/§B/§C analysis. Archived v0.6.0.
 - `archive/RELEASE-CADENCE.md` — the odd/even cadence proposal + extended rationale. **Accepted**; the canonical cadence now lives in `ROADMAP.md` (rationale folded in). Archived v0.6.0.
 - `archive/ROTTEN-CREATURES-STRUCTURES.md` — the #106 spawn-allowlist review sheet. Durable rules live in `SPAWN-GATING.md`. Archived v0.6.0.
-- `archive/ARCANA-BRIDGE-MOD.md` — scoping/design for the **Derpack Arcana** code-level magic-weave helper mod (PR #80). The mod moved to its own repo (`derpack-org/derpack-arcana`); the living reference is `CUSTOM-MODS.md`. Archived v0.6.0.
+- `archive/ARCANA-BRIDGE-MOD.md` — scoping/design for the **Project Commonwealth Arcana** code-level magic-weave helper mod (PR #80). The mod moved to its own repo (`theasshats/pcmc-arcana`); the living reference is `CUSTOM-MODS.md`. Archived v0.6.0.
 
 ### Still-live docs that were *candidates* (kept, with a note)
 
