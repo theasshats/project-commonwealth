@@ -3,9 +3,9 @@
 <!-- Style: professional, plain prose. No decorative emoji, sparing bold, no hype. Each release:
      "## X.Y.Z — Theme", a short lead paragraph, then sections (see CLAUDE.md). -->
 
-## 0.6.3 — Ore generation and prospecting
+## 0.6.3 — Ore generation, prospecting, and mining hunger
 
-A set of fixes to regional ore generation and the prospecting guide.
+Fixes to regional ore generation and the prospecting guide, plus a new survival mechanic: mining now costs hunger.
 
 ### Ore generation
 
@@ -16,6 +16,14 @@ Aluminium (bauxite), lignite, and fireclay previously generated in every overwor
 The in-game prospecting guide was corrected. Veins are located by right-clicking an ore block, not by breaking it; breaking does nothing. The guide now describes the right-click trigger, the map overlay toggles, marking veins as depleted, waypoints, sharing prospecting data with teammates, and the JEI ore-vein diagram.
 
 Vein markers on the map now draw with a hot pink outline so they stand out against terrain. Previously the outline was transparent and effectively invisible.
+
+### Mining hunger
+
+Breaking blocks now drains hunger. The cost scales with the block — roughly 100 stone or dirt per hunger bar with an iron tool; planks, wool, and glass cost about half that, ores and metal blocks noticeably more — and with the tool in hand: each tier from wood up to netherite tires you less, and digging with no tool at all drains fastest. Harvesting crops costs a small amount, decorative blocks such as torches, flowers, and saplings cost nothing, and creative mode is exempt. Machines pay nothing either: Create drills and other automated breakers do not drain anyone's hunger, so automation remains the answer to industrial-scale digging.
+
+### Other
+
+This build bundles an X-ray resource pack (disabled by default) as a debugging aid for verifying the ore generation changes during the pre-alpha. It will be removed in a later release.
 
 ### Fixes
 
