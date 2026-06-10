@@ -11,10 +11,15 @@
 //       hydraulic_engine (T2, copper/water) — untouched, already anchored via copper + spout filling.
 //   - JETPACKS: REMOVED from create_sa (#87, 57-jetpacks.js) — create_jetpack is the canonical flight
 //     line. The engines now power exoskeletons/tools, not flight.
-//   - #87 POWER GEAR -> EARLY T3: the brass exoskeleton (strength/haste), portable drill, grappling
-//     whisk, flamethrower, and fan component each weave a createaddition:capacitor (the T3 token) into
-//     their native grid and assemble on the Mechanical Crafter — power gear is electric-age gear. The
-//     andesite/copper exoskeletons stay pre-T3 as the line's entry rungs.
+//   - #87 POWER GEAR -> EARLY T3, each piece gated on the FUNCTIONAL part it works like (the Part 2b-ii
+//     family exception — thematic part-sets over the generic token, same tier math):
+//       brass exoskeleton  -> 2x createaddition:capacitor   (powered armor — the one place the token reads)
+//       portable drill     -> createoreexcavation:drill     (carries a real drill head — Ore Excavation seam)
+//       flamethrower       -> tfmg:steel_fluid_tank         (the fuel tank — TFMG fuel-industry seam)
+//       grappling whisk    -> simulated:plunger_launcher    (the launcher, rope coupling included — aeronautics seam)
+//       fan component      -> createaddition:electric_motor (a motorized nozzle fan)
+//     All assemble on the Mechanical Crafter; the andesite/copper exoskeletons stay pre-T3 entry rungs.
+//     Cycle-checked: none of the four donor parts consumes create_sa content.
 //   - Left alone: drones (already mechanical_crafting + precision), tanks/components, tools/armor.
 //
 // LOAD-SAFE / UNVERIFIED: structures reproduced verbatim from tools/recipe-dump/pcmc-recipes.json (their
@@ -90,16 +95,15 @@ ServerEvents.recipes(event => {
   ], { A: '#c:ingots/copper', C: 'create:cogwheel', H: 'create_sa:hydraulic_engine',
        T: 'create:fluid_tank', S: 'create:andesite_alloy', B: '#c:storage_blocks/copper' })
 
-  // ════ #87 — the SNA POWER GEAR is early-T3: each piece carries a createaddition:capacitor (the T3
-  //      token — real electricity, per 51-weave) woven into its native grid. Same idiom as the jetpack. ════
+  // ════ #87 — the SNA POWER GEAR is early-T3, gated on FUNCTIONAL thematic parts (see header). ════
 
-  // ── portable_drill — Crafter + capacitor (was: bare brass ingot on top). ──
+  // ── portable_drill — carries a REAL drill head (Ore Excavation; was: bare brass ingot on top). ──
   event.remove({ output: 'create_sa:portable_drill' })
   event.recipes.create.mechanical_crafting('create_sa:portable_drill', [
     ' Z ',
     'CSC',
     ' D '
-  ], { Z: 'createaddition:capacitor', C: 'create:cogwheel', S: 'create_sa:steam_engine',
+  ], { Z: 'createoreexcavation:drill', C: 'create:cogwheel', S: 'create_sa:steam_engine',
        D: 'create_sa:brass_drill_head' })
 
   // ── brass_exoskeleton (strength/haste — the TOP exoskeleton) — native 5x3 kept; the two andesite
@@ -112,7 +116,7 @@ ServerEvents.recipes(event => {
   ], { A: '#c:ingots/brass', F: 'create:flywheel', S: 'create_sa:steam_engine',
        Z: 'createaddition:capacitor', X: 'create:andesite_alloy', K: '#c:storage_blocks/brass' })
 
-  // ── grapplin_whisk (traversal) — native 3x5 kept; the zinc tip becomes the capacitor. ──
+  // ── grapplin_whisk (traversal) — native 3x5 kept; the tip is the aeronautics plunger launcher. ──
   event.remove({ output: 'create_sa:grapplin_whisk' })
   event.recipes.create.mechanical_crafting('create_sa:grapplin_whisk', [
     ' Z ',
@@ -120,25 +124,25 @@ ServerEvents.recipes(event => {
     'MMM',
     'MMM',
     ' W '
-  ], { Z: 'createaddition:capacitor', C: 'create:cogwheel', H: 'create_sa:heat_engine',
+  ], { Z: 'simulated:plunger_launcher', C: 'create:cogwheel', H: 'create_sa:heat_engine',
        M: 'create:minecart_coupling', W: 'create:whisk' })
 
-  // ── flamethrower (backtank gadget) — native shape kept; one obsidian plate becomes the capacitor. ──
+  // ── flamethrower (backtank gadget) — native shape kept; built around a TFMG steel fluid tank. ──
   event.remove({ output: 'create_sa:flamethrower' })
   event.recipes.create.mechanical_crafting('create_sa:flamethrower', [
     'ABHOZ',
     'AAO  '
   ], { A: 'create:andesite_alloy', B: 'create:blaze_burner', H: 'create_sa:heat_engine',
-       O: '#c:plates/obsidian', Z: 'createaddition:capacitor' })
+       O: '#c:plates/obsidian', Z: 'tfmg:steel_fluid_tank' })
 
-  // ── fan_component (the nozzle-fan air gadget) — bench -> Crafter; one alloy becomes the capacitor. ──
+  // ── fan_component (the nozzle-fan air gadget) — bench -> Crafter; spins on an Additions electric motor. ──
   event.remove({ output: 'create_sa:fan_component' })
   event.recipes.create.mechanical_crafting('create_sa:fan_component', [
     'NAN',
     'APA',
     'NZN'
   ], { N: '#c:ingots/zinc', A: 'create:andesite_alloy', P: 'create:propeller',
-       Z: 'createaddition:capacitor' })
+       Z: 'createaddition:electric_motor' })
 
-  console.info('[pcmc-spine] weave create_sa: heat_engine seams to the basic_burner, steam_engine to steel; the #87 power gear (brass exo, portable drill, whisk, flamethrower, fan) is capacitor-gated early-T3 on the Crafter.')
+  console.info('[pcmc-spine] weave create_sa: heat_engine seams to the basic_burner, steam_engine to steel; the #87 power gear is early-T3 on the Crafter via functional parts (drill head / fluid tank / plunger launcher / electric motor; brass exo keeps capacitors).')
 })

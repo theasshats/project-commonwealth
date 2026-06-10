@@ -16,6 +16,10 @@ manufactured components, and the components are factory work in their own right.
 - **Gun trigger** — brass sheets around a precision mechanism.
 - **Primer** — andesite alloy filled with gunpowder fluid at a spout.
 
+Scopes and grips are Create work too — the telephoto sniper scope carries an electron-tube rangefinder —
+and the propellant line feeds the artillery as well: cannon powder charges fill from the same gunpowder
+fluid, and the 40mm high-explosive shell is finished with a Create Big Cannons impact fuze.
+
 The weapons themselves climb the tiers:
 
 | Tier | Weapons | What they ask for |
@@ -52,8 +56,10 @@ ladder: the **heat engine** is assembled around a basic burner, and the **steam 
 - **Exoskeletons** climb andesite → copper → brass. The andesite and copper models are reachable before
   electricity; the brass exoskeleton — the strength-and-haste flagship — is an electric-age build with
   capacitors in its engine row.
-- The **portable drill**, **grappling whisk**, **flamethrower**, and **fan component** are electric-age
-  gear too: each takes a capacitor and assembles on the Mechanical Crafter.
+- The rest of the power gear is built from the machine it works like, each on the Mechanical Crafter:
+  the **portable drill** carries a real drill head from Create: Ore Excavation, the **flamethrower** is
+  built around a TFMG steel fluid tank, the **grappling whisk** launches from an aeronautics plunger
+  launcher, and the **fan component** spins on a Crafts & Additions electric motor.
 
 ## Capture tools
 

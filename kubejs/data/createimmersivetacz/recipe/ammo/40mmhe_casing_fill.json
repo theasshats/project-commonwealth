@@ -78,6 +78,22 @@
           "id": "createimmersivetacz:40mmhe_casing"
         }
       ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "createimmersivetacz:40mmhe_casing"
+        },
+        {
+          "item": "createbigcannons:impact_fuze"
+        }
+      ],
+      "results": [
+        {
+          "id": "createimmersivetacz:40mmhe_casing"
+        }
+      ]
     }
   ],
   "transitional_item": {

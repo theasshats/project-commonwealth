@@ -110,7 +110,7 @@ hash = "d2945c8aefb1563a87ca8d7ea3bde6beee83f73d3bc7832be1aa7450947bcc61"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/ammo/40mmhe_casing_fill.json"
-hash = "0f656a6e267ceb23d156738aa29ba4769450d65c8f41f62dd1d3e7fdc4ce9c6a"
+hash = "207f64444e7b6cea7d8f502ed07b7f51410a476799dc1a6b3de8db5a0ead2676"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/ammo/grenade_casing.json"
@@ -226,7 +226,7 @@ hash = "311d8673945dca8497eb93d3aeb5b556f2625b569e9b4ecf75ef397369368565"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/attachments/telephoto_scope.json"
-hash = "b2b764ae4fe62f2be1938ba0faa709ead6fc7f956a729ac8c77cec13f42bebec"
+hash = "99df0eb6b5c917ade3f68aecc2f2f811bae8f8807e1326e9984fa4a14dbf9ed5"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/attachments/wooden_grip.json"
@@ -391,6 +391,10 @@ hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 [[files]]
 file = "kubejs/data/pcmc/cold_sweat/block/block_temp/basic_burner.json"
 hash = "257a22438c13a301072865e8a7ed879acaeb6ca3bbada36cd4ec5ad910a93338"
+
+[[files]]
+file = "kubejs/data/pcmc/cold_sweat/block/block_temp/new_age_heater.json"
+hash = "58f023d82742192a3e115b8cb592c84c8f764cacb78a3bb4be1c4ba74db7b1ad"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/coal.json"
@@ -741,6 +745,10 @@ file = "kubejs/server_scripts/recipes/23-immersive-paintings.js"
 hash = "c5f698bbd131f4103c1222f67dd32bde90912fb352223c429b8cd95b52c20477"
 
 [[files]]
+file = "kubejs/server_scripts/recipes/24-artillery-seams.js"
+hash = "a7716289498d25d22e4ef9bc0e0013a7b7190a23857cb5e32da6a8b8840d0af7"
+
+[[files]]
 file = "kubejs/server_scripts/recipes/30-modular-golems.js"
 hash = "e1a80e4bece804d4423bfb9a9f2173d6208d15ea8dfd0513dba7537ebcdb683c"
 
@@ -834,7 +842,7 @@ hash = "e0aaf1bcc0051f74058a98a4730ed483fb45fa7f759190f3d74b4d8719644735"
 
 [[files]]
 file = "kubejs/server_scripts/spine/05-tags.js"
-hash = "783898c5ccb9a882afa6339488d982f9f6338fc47ff19ec6f485570532816e5e"
+hash = "cfcab59545f2486ade8c9d79f8cede77c96d21e56d5df4b715245997a8a12bfe"
 
 [[files]]
 file = "kubejs/server_scripts/spine/10-locks.js"
@@ -874,7 +882,7 @@ hash = "91ddd75a990c6d5407f35cb7be37453f49fe61572b48717031e7c35d2e99a37b"
 
 [[files]]
 file = "kubejs/server_scripts/spine/56-weave-stuff-additions.js"
-hash = "5900d333501d1bdc7d66c34a06a8b0ec11adf40241ac3021ad9ca73a5d2fdca0"
+hash = "6b17050e860fc7891bd95530a682ad97315030b78b667976f0a0643f45b15488"
 
 [[files]]
 file = "kubejs/server_scripts/spine/57-jetpacks.js"

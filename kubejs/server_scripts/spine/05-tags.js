@@ -37,4 +37,9 @@ ServerEvents.tags('item', event => {
     'mowziesmobs:ice_crystal',     // Frostmaw
     'mowziesmobs:sculptor_staff'   // Sculptor
   ])
+
+  // ── HEAT LADDER -> FLIGHT seam: the hot-air balloon's adjustable burner takes any aeronautics
+  //    burner_fire item as its fire source — the heat ladder's basic_burner joins the tag, so the
+  //    T1 flight chain runs on the same built heat as the kitchen and the first boilers. ──
+  event.add('aeronautics:burner_fire', ['createlowheated:basic_burner'])
 })

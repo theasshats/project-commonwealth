@@ -1,0 +1,9 @@
+{
+  "block": [
+    { "blocks": ["create_new_age:heater"] }
+  ],
+  "temperature": 18,
+  "range": 5,
+  "max_effect": 36,
+  "units": "f"
+}

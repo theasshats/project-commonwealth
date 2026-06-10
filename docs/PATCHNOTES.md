@@ -81,11 +81,14 @@ is now an electric-age build, assembled on the Mechanical Crafter around a capac
 upgrade requires cursium — the smithing-table shortcut no longer works. Create Stuff & Additions' three
 parallel jetpacks are no longer craftable; that mod keeps its engines, exoskeletons, and tools.
 
-Power gear is electric-age gear. The capacitor now requires overcharged iron, which only exists once a
-base has electricity running, so a capacitor is proof of power. Create Stuff & Additions' strongest
-equipment — the brass exoskeleton, portable drill, grappling whisk, flamethrower, and fan component —
-each build around a capacitor on the Mechanical Crafter, alongside the jetpack. The andesite and copper
-exoskeletons remain earlier-tier entry points.
+Power gear is built from the machines it works like. Create Stuff & Additions' strongest equipment now
+takes functional parts on the Mechanical Crafter: the portable drill carries a real drill head from
+Create: Ore Excavation, the flamethrower is built around a TFMG steel fluid tank, the grappling whisk
+launches from an aeronautics plunger launcher, and the fan component spins on a Crafts & Additions
+electric motor. The brass exoskeleton — the strength-and-haste flagship — runs on capacitors, and the
+capacitor itself now requires overcharged iron, which only exists once a base has electricity running.
+The jetpack is likewise a capacitor build, and the andesite and copper exoskeletons remain earlier-tier
+entry points.
 
 Create: Ore Excavation has been repositioned as an end-game operation. Its drilling machine and
 extractor now require TFMG circuit boards and electric motors, and drill heads are steel-bodied and
@@ -99,7 +102,10 @@ generators takes a silver core, and silver is smelted only by Occultism's magic 
 power plant needs something from a magic base, by trade or by practicing the craft yourself.
 
 The basic burner also warms you. Under Cold Sweat, standing near a lit workshop's burner now provides
-gentle heat — less than a campfire, but enough to matter on a cold night in the early game.
+gentle heat — less than a campfire, but enough to matter on a cold night in the early game — and New
+Age's electric heater does the same, a little stronger, for powered bases. The hot-air balloon's
+adjustable burner now accepts the basic burner as its fire source, so the heat ladder carries you from
+the kitchen to the boiler to the sky.
 
 Create Stuff & Additions ties into the wider pack: the heat engine is built around a basic burner, the
 steam engine takes steel, and the copper exoskeleton and portable drill assemble on the Mechanical
@@ -112,7 +118,10 @@ barrels, deployer-built firing mechanisms, precision triggers, fluid-filled prim
 gun table stays out of the pack. The self-loading weapons — the SMG, both shotguns, the rifles, and the
 snipers — cycle on a recoil spring from Create Big Cannons, and the three heavy weapons — the machine
 gun, the grenade launcher, and the 40mm field cannon — are each built around a steel autocannon barrel
-from the same mod, so small arms grow out of the artillery industry.
+from the same mod, so small arms grow out of the artillery industry. The seam runs both ways: cannon
+powder charges can be filled from the armory's gunpowder fluid at a spout, the 40mm high-explosive shell
+is finished with a Create Big Cannons impact fuze, and the telephoto sniper scope gains an electron-tube
+rangefinder.
 
 Ammunition is a production line. Brass casings cut leaner from sheets — yields are half what they were —
 and every round is assembled in four stages: a primer is deployed, gunpowder is filled, a lead projectile

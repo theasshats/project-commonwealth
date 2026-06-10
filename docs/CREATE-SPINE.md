@@ -178,7 +178,9 @@ Worked examples: the jetpack + SNA power gear carry the capacitor; the heat engi
 basic burner; reactor rods are ignitium-sheathed; the layered magnet cores on silver. **Family
 exception:** a coherent item family may converge on a thematic part-set at the same tier instead of the
 generic token — the firearms run on CBC ordnance parts (`recoil_spring` at T3, `steel_autocannon_barrel`
-at T4), which keeps the tier math and adds the CBC seam.
+at T4), and the SNA power gear gates on the functional part each piece works like (a drill head, a fuel
+tank, a plunger launcher, an electric motor). Same tier math, and every gate doubles as a mod seam.
+Prefer the functional part when one exists in-pack; fall back to the token when none does.
 
 ### 2c. How the two dials interact
 
