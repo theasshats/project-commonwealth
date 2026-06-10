@@ -41,7 +41,8 @@ const TOOL_SUFFIXES = ['_pickaxe', '_axe', '_shovel', '_hoe', '_paxel']
 // "heavier to fly is heavier to mine." They are NOT read from Aeronautics at runtime (it
 // exposes no stable API for resolved block mass); they track its mass tiers by category.
 // Tune freely — this list is the balancing surface.
-const W_FREE   = 0.0  //   no cost — instant-break / near-massless: torches, crops, flowers, redstone wire, leaves
+const W_FREE   = 0.0  //   no cost — instant-break / near-massless: torches, flowers, redstone wire, leaves
+const W_CROP   = 0.25 //  ~400/bar (iron hoe) — harvesting crops; a light farming cost (per zagwar)
 const W_LIGHT  = 0.5  //  200/bar — wood, wool, glass, sand, ice, foliage solids
 const W_NORMAL = 1.0  //  100/bar — stone, dirt, concrete, bricks (the anchor)
 const W_HEAVY  = 1.6  //  ~62/bar — ores, obsidian, deepslate, dense machines
@@ -79,16 +80,21 @@ const FREE_EXACT = [
   'lightning_rod', 'chain', 'scaffolding', 'ladder', 'lantern', 'soul_lantern', 'snow', 'powder_snow',
   'sugar_cane', 'cactus', 'bamboo', 'vine', 'weeping_vines', 'twisting_vines', 'kelp', 'kelp_plant',
   'seagrass', 'tall_seagrass', 'sea_pickle', 'lily_pad', 'dead_bush', 'short_grass', 'tall_grass',
-  'fern', 'large_fern', 'nether_wart', 'wheat', 'carrots', 'potatoes', 'beetroots', 'melon_stem',
-  'pumpkin_stem', 'attached_melon_stem', 'attached_pumpkin_stem', 'cocoa', 'brown_mushroom', 'red_mushroom',
+  'fern', 'large_fern', 'melon_stem',
+  'pumpkin_stem', 'attached_melon_stem', 'attached_pumpkin_stem', 'brown_mushroom', 'red_mushroom',
   'crimson_roots', 'warped_roots', 'nether_sprouts', 'glow_lichen', 'sculk_vein', 'hanging_roots',
   'spore_blossom', 'small_dripleaf', 'big_dripleaf', 'azalea', 'flowering_azalea', 'pink_petals',
-  'torchflower', 'torchflower_crop', 'pitcher_crop', 'pitcher_plant', 'sweet_berry_bush', 'cave_vines',
-  'cave_vines_plant', 'frogspawn', 'chorus_flower', 'chorus_plant', 'poppy', 'dandelion', 'blue_orchid',
+  'torchflower', 'frogspawn', 'chorus_flower', 'chorus_plant', 'poppy', 'dandelion', 'blue_orchid',
   'allium', 'azure_bluet', 'oxeye_daisy', 'cornflower', 'lily_of_the_valley', 'wither_rose', 'sunflower',
   'lilac', 'rose_bush', 'peony', 'wildflowers', 'closed_eyeblossom', 'open_eyeblossom', 'leaf_litter',
   'firefly_bush'
 ]
+
+// Crops: harvestable farm plants. A light cost so big manual harvests aren't free, while
+// routine farming stays cheap. "_crop" catches modded crops (e.g. farmersdelight tomato_crop).
+// Maturity isn't checked — breaking any crop block costs the same light amount.
+const CROP_EXACT = ['wheat', 'carrots', 'potatoes', 'beetroots', 'nether_wart', 'cocoa', 'sweet_berry_bush', 'cave_vines', 'cave_vines_plant', 'torchflower_crop', 'pitcher_crop', 'pitcher_plant']
+const CROP_CONTAINS = ['_crop']
 
 // Light: planks, wool, glass, loose ground, foliage solids. Raw timber (logs, wood, stems,
 // hyphae) is NOT light — it falls through to Normal; only processed planks sit here.
@@ -117,6 +123,9 @@ function hungerWeight(id) {
 
   // Heavy: ores and dense stone/machines.
   if (isOre(p) || includesAny(p, HEAVY_CONTAINS) || equalsAny(p, HEAVY_EXACT)) return W_HEAVY
+
+  // Crops: light farming cost (checked before Free, since these would otherwise read as free).
+  if (equalsAny(p, CROP_EXACT) || includesAny(p, CROP_CONTAINS)) return W_CROP
 
   // Free: near-massless foliage / decoration / mechanisms.
   if (equalsAny(p, FREE_EXACT) || endsWithAny(p, FREE_SUFFIX) || includesAny(p, FREE_CONTAINS)) return W_FREE

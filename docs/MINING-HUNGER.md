@@ -10,7 +10,8 @@ Breaking a solid block makes the player hungrier. The cost is per-block and scal
 
 | Tier | Weight | Blocks per full hunger bar | Examples |
 |------|--------|----------------------------|----------|
-| Free | 0.0 | ∞ (no cost) | torches, crops, flowers, saplings, redstone wire, leaves, carpets, signs |
+| Free | 0.0 | ∞ (no cost) | torches, flowers, saplings, redstone wire, leaves, carpets, signs, immature stems |
+| Crop | 0.25 | ~400 | wheat, carrots, potatoes, beetroots, nether wart, cocoa, berries, modded `*_crop` |
 | Light | 0.5 | ~200 | planks, wool, glass, sand, gravel, ice |
 | Normal | 1.0 | **100** | stone, dirt, concrete, bricks, terracotta, **logs/wood/stems** |
 | Heavy | 1.6 | ~62 | ores, obsidian, deepslate, basalt, anvils |
@@ -53,7 +54,9 @@ saturation is gone — same as sprinting or jumping.
   endermen, etc. The event only charges when `event.player` is present, so automated mining
   is unaffected (it remains a reason to *build* the Create spine rather than hand-mine).
 - **Free-tier blocks** (see table). The "lighter blocks excluded" rule is what makes this
-  livable: routine torch/crop/foliage work never touches your food bar.
+  livable: routine torch/foliage/decoration work never touches your food bar. (Crops are a
+  small exception — a light Crop-tier cost, not free, so manual harvesting isn't entirely
+  free; ~400 blocks/bar with a hoe.)
 
 ## The Create: Aeronautics tie-in
 
