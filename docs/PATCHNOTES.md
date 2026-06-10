@@ -8,156 +8,120 @@
      The "## X.Y.Z" section ships verbatim as the GitHub release body (build.yml), so it must
      read complete on its own. Shipped sections are the published record — don't restyle them. -->
 
-## 0.7.0 — TBD
+## 0.7.0 — The Create spine
 
-_Draft placeholder — replace with real notes before release._
-
-### Ore generation
-
-Ore veins are now larger and spread further apart, so a deposit is a real find rather than a common
-sight. Vein bodies are bigger, but they generate on a wider grid, so you will travel further between
-them. Finding ore leans on prospecting: clicking an ore block scans the surrounding area for nearby
-veins, and discovered veins are drawn on Xaero's map. Vein markers outline in the ore's own material
-colour, replacing the temporary hot-pink debugging outline from 0.6.3.
-
-### Curation
-
-The Let's Do mod family has been trimmed. Vinery, Meadow, Bakery, and Farm & Charm (with their
-compatibility add-ons) have been removed; their food and cooking content overlapped existing mods, and
-the cross-mod ore-processing recipes that relied on Farm & Charm's mincer have been retired. Let's Do
-Beachparty is kept — its beach and tiki furniture is not covered by any other mod in the pack.
-
-Traveler's Backpack has been removed. The pack already ships Create: Storage, whose backpack line
-(andesite, copper, brass, and hardened tiers) builds through Create, so backpacks now sit on the tech
-spine rather than running as a parallel system.
-
-Alex's Mobs and Naturalist both added the same five animals — rhino, catfish, elephant, rattlesnake, and
-brown bear — along with overlapping fur and catfish items. Both mods stay for their other content, but
-the duplicates have been reconciled: the Alex's Mobs versions are kept, and the Naturalist copies of
-those five no longer spawn in the wild. Their fur and catfish items now resolve to the Alex's Mobs item,
-so the recipe viewer shows one of each instead of two.
-
-The Create-spine review removed four more mods. Create Ultimate Factory made diamonds and netherite
-renewable, which works against the pack's scarcity-driven economy. Create Metalwork duplicated the
-molten-metal casting TFMG already covers, and most of its content targeted metals from mods the pack
-does not ship. Create Compressed added storage compression already served by Create's own crushing and
-storage. Create: Nuclear has been removed for this release cycle: the pack ships one end-game reactor,
-Create: New Age's, and the nuclear option is planned to return with the power-grid overhaul after 1.0.
-The uranium ore vein no longer generates, and the thorium and lead veins that carried uranium alongside
-their own metal now hold only their namesake ores.
-
-Wine-making returns through Create: Winery, which routes the whole process through Create machines rather
-than its own. It adds:
-
-- Crops: Red Grapes and White Grapes, growing on red and white grape bushes (found in plains and forest
-  biomes).
-- Storage: Red Grape Crate and White Grape Crate.
-- Processing: grapes are pressed (Mechanical Press) into Red and White Grape Pomace; apples press into
-  Apple Must.
-- Workstation: the Wine Cellar, an automatable block that matures pomace and must into finished drinks.
-- Wines: Cabernet Sauvignon, Merlot, Pinot Noir, Zinfandel, and Bordeaux (red); Chardonnay, Riesling,
-  and Champaign (white); and Rosé (a red and white blend) — each matured in the Wine Cellar and carrying
-  a light tipsy effect.
-- Cider: fermented from apple must.
-- Juices: Grape Juice and Apple Juice — non-alcoholic, granting a short Speed effect.
+The tech route gets its backbone. Create and its addons now climb four tiers — manual, water and wind,
+steam, then electricity — and each step is earned through deeper production chains and scarcer
+materials, never timers or research screens. Alongside the spine: a curation pass that removed eight
+mods, retuned regional ore generation, and rebuilt weapons, ammunition, and capture tools as Create
+production lines.
 
 ### The Create spine
 
-This release builds the progression backbone for the pack's tech route. Create and its addons climb four
-tiers — manual, water and wind, steam, then electricity — and each step up is earned through deeper
-processing chains and scarcer materials rather than timers or research screens.
+Progression now runs on a few telltale components. Steam-tier work is built on the basic burner and
+steel; the electric tier's mark is the capacitor, which itself takes energised iron — proof of a powered
+base; the top tier asks for boss metals, and its generator magnets take silver, the occult metal found
+only in dedicated silver country. If a recipe asks for one of these, that is the game telling you what
+tier you are stepping into.
 
-Andesite alloy, the root of nearly every Create machine, is dearer: crafting it by hand takes a full
-iron ingot per alloy, while the Mechanical Mixer makes it from three nuggets. The mixer is the intended
-route once a base is running; the hand craft is the bootstrap.
+- Andesite alloy, the root of nearly every Create machine, is dearer: a full iron ingot per alloy by
+  hand, three nuggets in the Mechanical Mixer. The mixer is the intended route; the hand craft is the
+  bootstrap.
+- Heat is no longer free. Blaze burners give no passive heat: the new basic burner provides low heat for
+  everyday cooking and the first boilers, while blaze burners and blaze cakes carry the hotter recipes.
+- From the steam tier up, key machines call for boss materials: a Mowzie's trophy for the advanced
+  energiser, Ancient Remnant metal for the airship's gyroscopic bearing, Maledictus cursium for the
+  netherite jetpack.
+- Create: New Age's reactor is the end-game generator. Its rods are sheathed in ignitium won from Ignis,
+  and its casings call for TFMG steel and circuit boards — the full industrial chain and the end-game
+  hunt both stand between a base and reactor power.
+- Jetpacks consolidated into one line: Create Jetpack. The base jetpack is an electric-age Mechanical
+  Crafter build around a capacitor; the netherite upgrade requires cursium, and the smithing-table
+  shortcut no longer works. Create Stuff & Additions' three parallel jetpacks are no longer craftable.
+- Power gear is built from the machine it works like, each on the Mechanical Crafter: the portable drill
+  carries a real Ore Excavation drill head, the flamethrower a TFMG steel fluid tank, the grappling
+  whisk an aeronautics plunger launcher, the fan component a Crafts & Additions electric motor. The
+  brass exoskeleton runs on capacitors; the andesite and copper exoskeletons remain earlier entry points.
+- Create: Ore Excavation is an end-game operation: the drilling machine and extractor require TFMG
+  circuit boards and electric motors, and drill heads are steel-bodied Crafter work that wears out in
+  use. Finding veins stays early — the vein finder senses through an electron tube, the vein atlas binds
+  with a Create clipboard.
+- The treadmill joins the hand crank and water wheel as recognized early power — modest, and capped by
+  whatever walks on it.
+- TFMG's electric motor winds in a Crafts & Additions capacitor during assembly, so the two electric
+  ecosystems depend on each other.
+- The hot-air balloon's adjustable burner accepts the basic burner as its fire source, so the heat
+  ladder carries from the kitchen to the boiler to the sky.
 
-Heat is no longer free. Blaze burners do not radiate passive heat any more: the new basic burner
-provides low heat, enough for everyday cooking and the first steam boilers, while blaze burners and
-blaze cakes carry the hotter recipes. Building a burner is now part of reaching steam.
+### Ore generation
 
-From the steam tier up, key machines call for materials won from the world's bosses. The advanced
-energiser asks for a trophy from one of Mowzie's mid-tier bosses, the airship's gyroscopic bearing for
-Ancient Remnant metal, and the netherite jetpack for Maledictus cursium. At the top, Create: New Age's
-reactor is the pack's end-game generator: its reactor rods are sheathed in ignitium won from Ignis, and
-its casings call for TFMG steel and circuit boards, so the full industrial chain and the end-game hunt
-both stand between a base and reactor power.
+- Veins are larger and spread further apart than 0.6.3 — bigger bodies on a wider grid, so a deposit is
+  a real find and then a real supply. Prospecting (right-click an ore) and the map overlay carry the
+  finding.
+- Vein markers outline in the ore's own material colour, replacing 0.6.3's temporary hot-pink debugging
+  outline.
+- The uranium vein no longer generates (Create: Nuclear left the pack); thorium veins now run pure
+  thorium, and lead country was rebuilt as an industrial corridor — lead with zinc, silver, and copper
+  bands.
+- Bauxite is rarer in jungles, which read as jade and deep-diamond country again; salt veins are
+  deliberately small on the coasts.
 
-Jetpacks have been consolidated into one line. Create Jetpack is the pack's flight item: the base jetpack
-is now an electric-age build, assembled on the Mechanical Crafter around a capacitor, and its netherite
-upgrade requires cursium — the smithing-table shortcut no longer works. Create Stuff & Additions' three
-parallel jetpacks are no longer craftable; that mod keeps its engines, exoskeletons, and tools.
+### Curation
 
-Power gear is built from the machines it works like. Create Stuff & Additions' strongest equipment now
-takes functional parts on the Mechanical Crafter: the portable drill carries a real drill head from
-Create: Ore Excavation, the flamethrower is built around a TFMG steel fluid tank, the grappling whisk
-launches from an aeronautics plunger launcher, and the fan component spins on a Crafts & Additions
-electric motor. The brass exoskeleton — the strength-and-haste flagship — runs on capacitors, and the
-capacitor itself now requires overcharged iron, which only exists once a base has electricity running.
-The jetpack is likewise a capacitor build, and the andesite and copper exoskeletons remain earlier-tier
-entry points.
+- The Let's Do family was trimmed: Vinery, Meadow, Bakery, and Farm & Charm removed (their food and
+  cooking overlapped existing mods); Beachparty stays for its unmatched beach furniture. Wine-making
+  returns through Create: Winery — grapes and apples press into pomace and must, the Wine Cellar matures
+  nine wines, a cider, and two juices, all through Create machines.
+- Create Ultimate Factory removed — renewable diamonds and netherite work against the scarcity economy.
+- Create Metalwork removed — its molten casting duplicated TFMG, and most of its content targeted absent
+  mods.
+- Create Compressed removed — storage compression already served by Create's own options.
+- Create: Nuclear removed for this cycle — the pack ships one end-game reactor (New Age's); the nuclear
+  option is planned to return with the power-grid overhaul after 1.0.
+- Traveler's Backpack removed — Create: Storage's backpack line builds through Create and keeps
+  backpacks on the tech spine.
+- Brazil Legends and Create: Northstar - Redux removed (the latter pending a post-beta re-review); Too
+  Many Paintings removed in favour of Immersive Paintings, with custom image uploads disabled
+  server-side.
+- Alex's Mobs and Naturalist duplicated five animals; the Alex's Mobs versions are kept and the
+  Naturalist copies no longer spawn, with their fur and catfish items unified.
 
-Create: Ore Excavation has been repositioned as an end-game operation. Its drilling machine and
-extractor now require TFMG circuit boards and electric motors, and drill heads are steel-bodied and
-assembled on the Mechanical Crafter. Finding veins stays accessible and early: the vein finder now senses
-through an electron tube rather than an eye of ender, and the vein atlas binds its surveys with a Create
-clipboard. Industrial extraction, by contrast, is a late investment that consumes drill heads, heavy
-rotational power, and fluid while it runs.
+### Weapons and capture tools
 
-End-game electricity now reaches outside the tech route. The layered magnet at the heart of New Age's
-generators takes a silver core. Silver is the occult metal — it generates only in dedicated silver
-country (hills and rocky mountains) and as a trace in a handful of other veins — so a reactor-tier power
-plant pulls on a region most tech bases don't hold. Mine it, or trade with whoever does.
+- Firearms are Create projects: guns assemble on the Mechanical Crafter from manufactured parts — steel
+  barrels, deployer-built firing mechanisms, precision triggers, fluid-filled primers — and the
+  bench-style gun table stays out of the pack.
+- The self-loading weapons (SMG, both shotguns, the rifles, the snipers) cycle on a Create Big Cannons
+  recoil spring; the three heavies (machine gun, grenade launcher, 40mm field cannon) are built around a
+  steel autocannon barrel from the same mod. Small arms grow out of the artillery industry.
+- Ammunition is a four-stage production line: casings cut leaner from brass (half the old yields), then
+  each round takes a primer, a gunpowder fill, a deployed lead projectile, and a crimping press. The
+  40mm shell is finished with a Big Cannons impact fuze, and cannon powder charges can be filled from
+  the armory's gunpowder fluid.
+- The telephoto sniper scope gains an electron-tube rangefinder.
+- Mob lassos are priced for what they do: the golden lasso is built around Create electronics, the
+  hostile lasso takes a monstrous horn from the Ancient Remnant, and the diamond lasso merges the
+  golden, aqua, and hostile lassos with diamonds and one boss trophy of your choice. Bosses themselves
+  cannot be lassoed, by any tier.
 
-Your machines now warm you. Under Cold Sweat, the pack's heat sources radiate real warmth: the basic
-burner gently, blaze burners by their heat level (a seething burner is a serious fire), the kitchen
-stoves and ovens (Farmer's Delight, Extra Delight, Cooking for Blockheads), New Age's electric heater,
-and TFMG's blast stove and coke oven — a working steelworks is a warm place to winter. The hot-air
-balloon's adjustable burner also accepts the basic burner as its fire source, so the heat ladder carries
-you from the kitchen to the boiler to the sky.
+### Recipes and survival
 
-Create Stuff & Additions ties into the wider pack: the heat engine is built around a basic burner, the
-steam engine takes steel, and the copper exoskeleton and portable drill assemble on the Mechanical
-Crafter. TFMG's electric motor now winds in a Crafts & Additions capacitor during assembly, so the two
-electric ecosystems depend on each other. The treadmill joins the hand crank and water wheel as
-recognized early power — modest, and capped by whatever walks on it.
-
-Firearms are Create projects. Guns assemble on the Mechanical Crafter from manufactured parts — steel
-barrels, deployer-built firing mechanisms, precision triggers, fluid-filled primers — and the bench-style
-gun table stays out of the pack. The self-loading weapons — the SMG, both shotguns, the rifles, and the
-snipers — cycle on a recoil spring from Create Big Cannons, and the three heavy weapons — the machine
-gun, the grenade launcher, and the 40mm field cannon — are each built around a steel autocannon barrel
-from the same mod, so small arms grow out of the artillery industry. The seam runs both ways: cannon
-powder charges can be filled from the armory's gunpowder fluid at a spout, the 40mm high-explosive shell
-is finished with a Create Big Cannons impact fuze, and the telephoto sniper scope gains an electron-tube
-rangefinder.
-
-Ammunition is a production line. Brass casings cut leaner from sheets — yields are half what they were —
-and every round is assembled in four stages: a primer is deployed, gunpowder is filled, a lead projectile
-is set, and a press crimps the round. Lead, from the lead veins, becomes a standing demand of any armory.
-
-Mob lassos are powerful, and now priced like it. The golden lasso is built around Create electronics;
-the aqua and emerald lassos branch off it with prismarine and brass; the hostile lasso takes a monstrous
-horn won from the Ancient Remnant; and the diamond lasso merges the golden, aqua, and hostile lassos
-with diamonds and a boss trophy of your choice. Bosses themselves can no longer be captured by any
-lasso.
-
-### Recipes
-
-Steel has been consolidated under TFMG. Create: Ironworks steel sheets and TFMG heavy plates were
-separate items filling the same role; all steel forms — ingot, nugget, block, and plate — now resolve to
-the TFMG item, so steel reads as one material across every recipe regardless of which mod produced it.
-Bronze remains with Create: Ironworks.
-
-Immersive Paintings' craftables print through Create: a painting is dye deployed onto paper, graffiti is
-dye, gunpowder, and a bucket mixed in a basin, and the glow variants take glow ink at a deployer. Custom
-image uploads remain disabled on the server; the built-in gallery is unaffected.
+- Steel is consolidated under TFMG: ingot, nugget, block, and plate all resolve to the TFMG item, so
+  steel reads as one material across every recipe. Bronze remains with Create: Ironworks.
+- End-game electricity reaches outside the tech route: the layered magnet at the heart of New Age's
+  generators takes a silver core, pulling a region most tech bases don't hold — mine silver country or
+  trade with whoever does.
+- Your machines warm you under Cold Sweat: blaze burners by their heat level, the basic burner gently,
+  kitchen stoves and ovens, New Age's electric heater, and TFMG's blast stove and coke oven — a working
+  steelworks is a warm place to winter.
+- Immersive Paintings' craftables print through Create: a painting is dye deployed onto paper, graffiti
+  is dye, gunpowder, and a bucket mixed in a basin, and the glow variants take glow ink at a deployer.
 
 ### Game Discs
 
-The Game Discs handheld console and its five parts now build through Create rather than from plain vanilla
-materials. One game, Pong, is craftable to get you started; the other six — Blocktris, Froggie, Flappy
-Bird, Slime, Rabbit, and TNT Sweeper — are found in structure chests while exploring, the rarer titles
-turning up less often.
+The Game Discs handheld console and its parts build through Create. Pong is craftable to get you
+started; the other six titles are found in structure chests while exploring, the rarer ones turning up
+less often.
 
 ## 0.6.3 — Ore generation, prospecting, and mining hunger
 
