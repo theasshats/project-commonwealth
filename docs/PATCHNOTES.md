@@ -8,6 +8,10 @@
      The "## X.Y.Z" section ships verbatim as the GitHub release body (build.yml), so it must
      read complete on its own. Shipped sections are the published record — don't restyle them. -->
 
+## 0.6.4 — TBD
+
+_Draft placeholder — replace with real notes before release._
+
 ## 0.6.3 — Ore generation, prospecting, and mining hunger
 
 Fixes to regional ore generation and the prospecting guide, plus a new survival mechanic: mining now costs hunger.
