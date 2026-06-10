@@ -1860,11 +1860,6 @@ hash = "5317f95cd9c23531b620127a48a4371d6d22d8ba491c72e0218623c7f2c89d52"
 metafile = true
 
 [[files]]
-file = "mods/immersive-armor-hud.pw.toml"
-hash = "6cb69c92c54312ef9dfaace42928704c392cab0eaeb88c95dc1a591261180a0f"
-metafile = true
-
-[[files]]
 file = "mods/immersive-armors.pw.toml"
 hash = "3fd5ea4eed85e2d0f62a61d8de7185b6bf20d021cbdc83f5c9210d4ea72bab88"
 metafile = true
@@ -2112,11 +2107,6 @@ metafile = true
 [[files]]
 file = "mods/minecolonies.pw.toml"
 hash = "8f8805ca43fd5e3151cb25116ee20b170595135213aab742466c9bba9e4250f0"
-metafile = true
-
-[[files]]
-file = "mods/mining-speed-tooltips.pw.toml"
-hash = "04af3f8798c38b917bf34ce2d7503ca378c3a28d7ab56637bea1da3f2e4ffe02"
 metafile = true
 
 [[files]]
@@ -2652,11 +2642,6 @@ metafile = true
 [[files]]
 file = "mods/trek.pw.toml"
 hash = "6508d7fadd019bf4c3652ccd31c9e1c65f1118b7e88e4e1e97c0abbc9835e2f6"
-metafile = true
-
-[[files]]
-file = "mods/txnilib.pw.toml"
-hash = "bbf8f2ba1e4bba18c1f61b2f003063052f56dd9951ceae3e227b6cbf9affd29f"
 metafile = true
 
 [[files]]

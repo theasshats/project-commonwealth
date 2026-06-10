@@ -34,6 +34,7 @@ Breaking blocks now drains hunger, so a big dig needs provisioning — or machin
 ### Fixes
 
 - Dying no longer disconnects you from the server. A library bundled inside another mod (Forgified Fabric API) crashed while opening the death screen, and the resulting packet error kicked the player to the server list on every death. The pack now ships the library explicitly at a newer build that contains the fix.
+- TxniLib and the two small interface mods that pulled it in — Immersive Armor HUD and Mining Speed Tooltips — have been removed. The library carried its own hidden copy of the Fabric API build involved in the death-screen bug; the pack now ships that library once, explicitly, at the fixed version.
 - Create Big Cannons moved back from 5.11.5 to 5.11.3. The Advanced Technologies addon is built against 5.11.3 and calls a block-damage method whose signature changed in the newer build, so firing a heavy autocannon armour-piercing round at a block crashed the server.
 - Firing a cannon no longer crashes the client while rendering its muzzle smoke. The smoke particle uses a vertex format the renderer's optimized particle path did not expect; that path is now disabled for billboard particles, which fall back to the standard renderer with no visible difference.
 
