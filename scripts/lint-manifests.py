@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Lint Derpack X packwiz manifests for PR checks.
+"""Lint Project Commonwealth packwiz manifests for PR checks.
 
 Validates `mods/*.pw.toml` and `pack.toml` for the mistakes that slip past
 `packwiz refresh` but break the pack at install or update time:
