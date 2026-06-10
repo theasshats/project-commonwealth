@@ -17,6 +17,9 @@ name: Build modpack
 #   - release:published — a release created by hand in the GitHub UI still builds
 #     and uploads (legacy/manual path).
 #   - workflow_dispatch — manual test build, no release (tag input left empty).
+#     Builds the BRANCH it's dispatched from (not main) and uploads the installer
+#     zip as a downloadable workflow artifact, so you can playtest a version
+#     branch (e.g. v0.7.0) without merging it to main first.
 #
 # Version-first model: pack.toml's `version` is the source of truth and drives
 # the tag (release.yml). The old "sync pack.toml from the release tag" step was
@@ -41,11 +44,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Resolve which ref to build from. The release paths (workflow_call from
+      # release.yml, and the release:published event) build main's tip — the
+      # merge commit that bumped the version, not a detached tag commit. A manual
+      # workflow_dispatch instead builds the branch it was dispatched on, so you
+      # can produce a test installer for a version branch (e.g. v0.7.0) before it
+      # merges to main.
+      - name: Resolve build ref
+        id: ref
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            ref="${{ github.ref_name }}"
+          else
+            ref="main"
+          fi
+          echo "ref=${ref}" >> "$GITHUB_OUTPUT"
+          echo "==> building from ref: ${ref}"
+
       - uses: actions/checkout@v4
         with:
-          # Always build from main's tip (the merge commit that bumped the
-          # version), not a detached tag commit.
-          ref: main
+          ref: ${{ steps.ref.outputs.ref }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # Resolve which tag (if any) this build should publish a release under:
@@ -80,7 +98,9 @@ jobs:
       # Modrinth/CurseForge.
       - name: Build Prism instance (installer)
         env:
-          PACK_URL: https://raw.githubusercontent.com/${{ github.repository }}/main/pack.toml
+          # Bake in the same ref we built from, so a dispatched branch build's
+          # instance fetches that branch's pack.toml at launch (main for releases).
+          PACK_URL: https://raw.githubusercontent.com/${{ github.repository }}/${{ steps.ref.outputs.ref }}/pack.toml
         run: bash scripts/build-prism-installer.sh
 
       - name: Clean staging from dist
@@ -88,14 +108,28 @@ jobs:
 
       # Publish a stable, version-less copy alongside the versioned artifact so
       # the website (and anyone else) can link to a permanent "latest" download:
-      #   .../releases/latest/download/derpack-x-prism-installer.zip
+      #   .../releases/latest/download/project-commonwealth-prism-installer.zip
       - name: Add stable-named copy for permanent latest-download link
         run: |
           cd dist
-          cp "$(ls *-prism-installer-*.zip | head -1)" derpack-x-prism-installer.zip
+          cp "$(ls *-prism-installer-*.zip | head -1)" project-commonwealth-prism-installer.zip
 
       - name: List final artifacts
         run: ls -lh dist/
+
+      # On a build-only run (manual workflow_dispatch — no tag) there's no
+      # release to attach the zip to, so upload it as a downloadable workflow
+      # artifact instead. Release runs skip this — the zip is already a release
+      # asset. Pairs with the dispatch "build the triggering branch" behavior
+      # above to give a downloadable test installer for a version branch.
+      - name: Upload installer artifact (build-only runs)
+        if: steps.tag.outputs.tag == ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: prism-installer
+          path: dist/*-prism-installer-*.zip
+          if-no-files-found: error
+          retention-days: 14
 
       # Pull the release body from docs/PATCHNOTES.md — the "## X.Y.Z …" section
       # for this version, up to the next "## ". Falls back to a placeholder if the

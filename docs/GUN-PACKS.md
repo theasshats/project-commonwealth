@@ -1,6 +1,6 @@
 # Gun integration — TaCZ + Create
 
-Derpack-X's gun system is built on **TaCZ** (Timeless and Classics Zero), with two add-ons that tie
+Project Commonwealth's gun system is built on **TaCZ** (Timeless and Classics Zero), with two add-ons that tie
 guns into Create:
 
 | Piece | What it is | Source | Delivery |
@@ -18,13 +18,14 @@ Unlike mods (which land in `mods/`), a gun pack must land in that folder.
 
 **We commit the gun-pack zip directly into the repo `tacz/` folder.** The packwiz *metafile* approach
 (a `tacz/*.pw.toml` pointing at the mod-mirror release) was tried first and **did not deliver
-reliably** — packwiz-installer / some `.mrpack` launchers don't place files under non-standard paths
-like `tacz/`, so the zip silently never arrived. Committing it makes delivery deterministic:
+reliably** — packwiz-installer doesn't place files under non-standard paths like `tacz/`, so the zip
+silently never arrived. Committing it makes delivery deterministic:
 
-- `tacz/Create_Armorer-v1.2.0.1.zip` is a normal committed file. `packwiz refresh` indexes it, so
-  the `.mrpack` carries it as an **override** → `.minecraft/tacz/`.
-- For the Prism builds, `scripts/build-prism-skeleton.sh` and `scripts/build-server.sh` include
-  `tacz` in their copy loop, so the zip is copied into `.minecraft/tacz/` directly.
+- `tacz/Create_Armorer-v1.2.0.1.zip` is a normal committed file that `packwiz refresh` indexes, so
+  packwiz-installer pulls it on update like any other tracked file.
+- For built instances, `tacz` is listed in `scripts/instance-dirs.txt` (`tacz both`) — the single
+  source of truth all three builders read (`build-prism-skeleton.sh`, `build-server.sh`, and the
+  editor) — so the zip is copied into `.minecraft/tacz/` directly.
 - CC BY-NC-ND 4.0 permits **verbatim** redistribution: commit the zip **unmodified**, keep
   attribution (Koei), non-commercial only.
 
@@ -58,15 +59,15 @@ This pack ships **four** TaCZ table-block variants — all driven by the same
 - `tacz:workbench_b` — the **Create: Armorer table** (create-themed `create_armorer:create_workbench`, all 12 tabs)
 - `tacz:workbench_c` — the **ammo table**
 
-(`tacz:workbench_b` was also crafted by our old `kubejs/data/derpack/recipe/create_workbench.json`, now deleted.)
+(`tacz:workbench_b` was also crafted by our old `kubejs/data/pcmc/recipe/create_workbench.json`, now deleted.)
 
 `tacz:gun_smith_table_crafting` is a **real custom recipe type registered in the vanilla
 `RecipeManager`**, so KubeJS's `event.remove` *does* match it — this is the **same call that already
 removed TaCZ's stock default guns** (the `tacz` namespace); we just drop the namespace filter so it
-clears every namespace, including Create: Armorer (`create_armorer` / `derpack_armorer`). The Create
+clears every namespace, including Create: Armorer (`create_armorer`). The Create
 recipes are a **different** type (`create:mechanical_crafting` / `mixing` / `filling` / `cutting` / …),
-so they're untouched. The committed `tacz/Derpack_Armorer_Recipes.zip` (the old `derpack_armorer`
-table recipes) is dropped — redundant once those recipes are removed at load.
+so they're untouched. A previously committed datapack of custom Armorer table recipes was
+dropped — redundant once those recipes are removed at load.
 
 > **Caveat:** the gun *items* still exist in the creative tab; this only removes the survival craft.
 > **Verify in-game:** the gun smith table's tabs are empty (no guns/ammo/attachments to craft), and
@@ -86,7 +87,7 @@ the gun branch of the pack's Create-driven scarcity economy (see `DESIGN.md`).
   to, and they render in **JEI** (the recipe viewer the pack switched to precisely because EMI can't
   draw Create processing recipes). The gun smith table is **disabled** (above), so this is the only path.
 - **The three core gun parts** — `gun_barrel`, `gun_trigger`, `firing_mechanism` (and `primer`) — via
-  **plain shaped recipes** in `kubejs/data/derpack/recipe/`. Shaped (not Create `mechanical_crafting`)
+  **plain shaped recipes** in `kubejs/data/pcmc/recipe/`. Shaped (not Create `mechanical_crafting`)
   so they're trivially discoverable; the *ingredients* are still all Create/processed-metal, so the
   Create gating holds.
 
@@ -178,6 +179,5 @@ the override rewrites every tab icon to the component form, clearing the error.
 > blocker. If the hotfix tweaked any schema field, TaCZ skips just the affected entry (lenient
 > parser) rather than crashing — confirm by playtest.
 
-> **Verification items:** confirm packwiz indexes a metafile under `tacz/` and that the `.mrpack`
-> export carries it; if not, fall back to committing the zip into a repo `tacz/` folder and adding
-> `tacz` to the copy loop in `scripts/build-prism-skeleton.sh`.
+> **Verification items:** confirm `tacz/` is indexed in `index.toml` and that the committed zip is
+> copied into `.minecraft/tacz/` by all three builders (it's in `scripts/instance-dirs.txt`).

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build script for derpack-edit.
+# Build script for pcmc-edit.
 #
 # Downloads the packwiz binary for Windows, embeds it into the Go binary,
 # and cross-compiles a Windows .exe.
@@ -8,7 +8,7 @@
 #   bash build.sh                 # default: builds for windows/amd64
 #   GOOS=linux GOARCH=amd64 bash build.sh   # builds for current platform (dev)
 #
-# Output: bin/derpack-edit.exe (or bin/derpack-edit on non-Windows)
+# Output: bin/pcmc-edit.exe (or bin/pcmc-edit on non-Windows)
 
 set -euo pipefail
 
@@ -67,15 +67,15 @@ fi
 echo "==> Embedding packwiz at internal/packwiz/assets/packwiz.bin"
 cp "$PACKWIZ_PATH" internal/packwiz/assets/packwiz.bin
 
-echo "==> Compiling derpack-edit ($TARGET_GOOS/$TARGET_GOARCH)"
+echo "==> Compiling pcmc-edit ($TARGET_GOOS/$TARGET_GOARCH)"
 ext=""
 [[ "$TARGET_GOOS" == "windows" ]] && ext=".exe"
 
 GOOS="$TARGET_GOOS" GOARCH="$TARGET_GOARCH" \
-  go build -o "$OUT_DIR/derpack-edit$ext" \
+  go build -o "$OUT_DIR/pcmc-edit$ext" \
     -ldflags="-s -w" \
     .
 
 echo ""
-echo "Built: $OUT_DIR/derpack-edit$ext"
-ls -lh "$OUT_DIR/derpack-edit$ext"
+echo "Built: $OUT_DIR/pcmc-edit$ext"
+ls -lh "$OUT_DIR/pcmc-edit$ext"

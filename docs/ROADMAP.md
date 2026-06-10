@@ -1,4 +1,4 @@
-# Derpack X — Roadmap (multi-phase)
+# Project Commonwealth — Roadmap (multi-phase)
 
 > Living roadmap for the build-out. **Goal:** a cooperative PvPvE Create pack for a small crew (~10)
 > where every mod earns its place by anchoring to one of the systems — **Create** or **magic**
@@ -15,7 +15,7 @@
 
 **Status:** ✅ done & on `main` · 🟦 in review (open PR) · 🚧 in progress · ⏳ queued · 💤 not started
 
-**Current release:** **v0.5.2** (Magic Web). MC **1.21.1** / NeoForge **21.1.228**.
+**Current release:** **v0.6.0** (Foundation). MC **1.21.1** / NeoForge **21.1.233**.
 
 ## Where the work lives
 
@@ -23,8 +23,9 @@
 `pr-checks.yml`, the **recipe overhaul (#62, v0.4.6)**, the **curation/spawn-gating pass (#88, v0.5.0)**,
 the **GTMOGS ore-gen rework (#82, v0.5.1)**, and the **magic web (#75, v0.5.2)**.
 
-**The only open PR is #80** — Derpack Arcana, the code-bridge mod (skeleton in `mods-src/`), a draft
-until its P1 "Attunement Font" is ready. Everything else is now issue work, not stacked PRs.
+**No stacked feature PRs remain.** The custom mods (Project Commonwealth Arcana #80, Kill Feed #196) moved to their
+own repos (`theasshats/pcmc-arcana`, `theasshats/pcmc-killfeed`) — those prototype PRs are
+superseded; see `docs/CUSTOM-MODS.md`. Everything else is now issue work, not stacked PRs.
 
 | Release | Shipped |
 |---|---|
@@ -62,7 +63,7 @@ weave; worldgen-island bridges; EMI→JEI + JER/JEED; the `tools/recipe-graph/` 
 ### Phase 3b — Magic web ✅ on `main` (#75, v0.5.2)
 KubeJS bridges weaving Ars Nouveau / Iron's Spells / Occultism into the Create spine.
 - **Follow-ups:** #122 (post-merge balance, playtest), #123 (flagship depth, conceded from #75).
-- **Code track:** #80 (Derpack Arcana) — the bridges KubeJS can't express; #118 tracks its P3 deviation.
+- **Code track:** #80 (Project Commonwealth Arcana) — the bridges KubeJS can't express; #118 tracks its P3 deviation.
 
 ### Phase 4 — Loot pass ⏳ (#18)
 `lootjs` + the loot index: pull structure/dungeon loot back from free end-game gear; seed Numismatics
@@ -77,7 +78,7 @@ thinnest-in-integration system. **#129** (mob drops in the connectivity tool) is
 The mob/boss + duplicate-mechanic pass landed (arphex/creeper-overhaul/mutant-monsters cuts, In Control!
 spawn-gating, kobold swap). Remaining curation: **#94** (un-anchored mods + dup clusters), **#106/#108** (spawn-gating allowlist +
 behavioral review), **#21** (living removal tracker), **#87** (Create Stuff'N Additions balance).
-_Settled: #60 umapyoi cut, #100 orphan libs swept, #107 Ender Moon kept (flavor → v0.11.0)._ MineColonies is settled as a woven on-ramp (#92).
+_Settled: #60 umapyoi cut, #100 orphan libs swept, #107 Ender Moon kept (flavor → v0.9.0)._ MineColonies is settled as a woven on-ramp (#92).
 
 ### Phase 7 — Stability & QoL 💤 (needs a live server)
 Playtest pre-gen #98 (force-multiplier) · RAM/GC #48 · flight interactions #43 · claims #25 ·
@@ -99,7 +100,7 @@ post-release polish or ongoing curation.
 - [ ] **Early-game ore bootstrap** — #81 (vanilla trickle removed; define the replacement). Phase 1.
 - [ ] **Ore-gen tuned for release** — #116 (cave-ore biome follow, rarity curve) + #58 review. Phase 1.
 - [x] **Create recipe spine landed** — #62 (v0.4.6). Follow-ups: #101/#102/#103/#113.
-- [ ] **Pack renamed** — #78 (decide the name with zagwar before players have instances named "Derpack X").
+- [x] **Pack renamed** — #78 (renamed to **Project Commonwealth**).
 - [ ] **CI required on `main`** — #79 (turn on the `pr-checks.yml` ruleset; Phase 8).
 - [x] **Design/goal docs merged** — PR #61; the systems-loop direction is canon (`docs/SYSTEMS.md`).
 - [x] **Release artifacts sane** — `.mrpack` dropped (#73); Prism installer is the single ~5 MB artifact.
@@ -124,31 +125,31 @@ Open issues are organized into GitHub **milestones** on an **odd/even release ca
 - Server's up: #98 pre-gen test world · #3 purple-arrows repro · #38 inventory-sort verify + close.
 
 **`v0.7.0 — Create spine` · odd / feature** — *Goal: the recipe graph reads as one connected web — no functional-duplicate parts, materials unified, Create addons cohere; **the recipe/gating spine is built** — cost model applied (~3× basics, GregTech-style step-depth for tiers) and the KubeJS locking + progression-gating mechanism stood up with the Create-spine lock list. Everything builds on this, so it goes first.*
-#219 recipe cost model (3× basics + step-depth) · #220 KubeJS locking + gating mechanism + first lock list · #103 duplicate parts (steel-plate family) · #101 limestones · #102 carbon/graphene · #113 connectivity islands · #132 Create-addon cohesion · #145 kinetic power tier ladder · #92 MineColonies/boss gating · #112 guns through sequenced assembly · #87 Create Stuff'N Additions · #17 recipes tracker (zagwar) · #105 prune merged branches (recurring hygiene sweep).
+#219 recipe cost model (3× basics + step-depth) · #220 KubeJS locking + gating mechanism + first lock list · #103 duplicate parts (steel-plate family) · #101 limestones · #102 carbon/graphene · #113 connectivity islands · #132 Create-addon cohesion · #145 kinetic power tier ladder · #112 guns through sequenced assembly · #87 Create Stuff'N Additions · #17 recipes tracker (zagwar) · #105 prune merged branches (recurring hygiene sweep).
 **Closes with the thunderdome** — the Create-related set reviewed by feature merit. _(Per `docs/SYSTEMS.md`, each feature pillar refines its content against the model and sets its locks as it's built.)_
 
-**`v0.8.0 — Stabilization I` · even** — *Goal: profile, balance, and bug-fix everything 0.7 added; no new mods.* Spark the Create-spine feature dump (#147 routine), run the mod-conflict catalog (#160), perf-prune by the #157 perf gate, clear any boot-log regressions.
+**`v0.8.0 — Stabilization I` · even** — *Goal: profile, balance, and bug-fix everything 0.7 added; no new mods.* Spark the Create-spine feature dump (#147 routine), run the mod-conflict catalog (#160), perf-prune by the #157 perf gate, clear any boot-log regressions. Plus #129 — mob drops into the connectivity tool + rename (dev tooling pulled forward from the economy pillar; the weave/bounty enabler).
 
-**`v0.9.0 — Economy & logistics` · odd / feature** — *Goal: the **load-bearing** economy is playable end-to-end — coins valued, vendors price, bounties pay, mob/structure inputs wired, the dynamic-pricing / player-minted-currency question resolved — **and its logistics/aeronautics movement arm is woven** (airship payoff + transport ladder), balanced against the scarcity lens (logistics must relieve regional scarcity without erasing it — `docs/SYSTEMS.md` §5).* The economy *is* the distribution stage and aeronautics is its physical arm, so they build together. The highest-leverage pillar — where the economy stops being optional flavor.
-Economy: #221 economy tooling (dynamic pricing + player-minted currency) · #129 mob drops in the connectivity tool (enabler) · #138 shop/transaction mechanism · #136 coin tiers + price sheet · #137 Bountiful bounty pools · #150 faucet/sink integrity audit · #139 regional export specialization · #90 Numismatics + Trading Floor + Bountiful + wire inputs · #18 loot pass · #94 modlist audit (un-anchored mods + new dup clusters). Logistics/aeronautics: #84 Create + Aeronautics harder · #43 flight-system interactions · #144 airship assembly/docking infra · #143 ship power/fuel economy · #142 audit Create machinery on ships · #141 transport/logistics ladder · #140 airship combat balance (Big Cannons) · #125 Touhou-maids weave.
+**`v0.9.0 — Survival` · odd / feature** — *Goal: the survival interlock (temperature × diet × seasons-driven scarcity) works in play — the world pushing back is real and tuned.* Pressure goes first by design: it generates the demand the later pillars serve (production exclusives at v0.11.0, distribution at v0.13.0), it's config-heavy rather than mod-risky (Cold Sweat / Serene Seasons / Diet shipped in v0.6.0), and it needs the longest tuning soak — a full seasons cycle is weeks of real server time.
+Survival: #91 interlock (umbrella over #124/#99) · #124 altitude-driven cold (lands *before* the airship build-out, so ships contend with cold from day one) · #99 midnight-thoughts anchor · #152 author Cold Sweat world config · #155 death-penalty + gravestone tuning (settles PvPvE stakes before airship-combat balance at v0.13.0) · #238 perishability as continuous demand · #263 First Aid eval · #225 crop growth × season/temperature · #197 Cold Sweat heat-source range · #217 absolute darkness · #270 Terralith companion curation · #301 mining-hunger review · #25 open-parties-and-claims (the stakes infrastructure #155 tunes against) · #251 mod-review sweep (Survival core). _(Diet — AppleSeed replaced the SoL forks in v0.6.0; tune its groups/buffs here.)_ Flavor: #107 Ender Moon weave (kept; earn its place via a system tie).
 **Closes with the thunderdome.**
 
 **`v0.10.0 — Stabilization II` · even** — *Goal: profile, balance, and bug-fix everything 0.9 added; no new mods.*
 
-**`v0.11.0 — Magic` · odd / feature** — *Goal: the magic web is balanced and bridged into one progression, **with its own locked exclusives** (so a magic specialist is a needed trade partner — reachable also via the MineColonies route, mirroring Create).*
-Magic (the #80 Arcana satellites): #122 post-merge balance · #123 flagship depth · #118 Soul-Reaping intent · #146 gate Ars/Iron's/Occultism behind Create + define magic's locked exclusives (per #220).
+**`v0.11.0 — Magic & MineColonies` · odd / feature** — *Goal: the two non-Create production routes completed, one owner each (`docs/SYSTEMS.md` §3 — they're the mirrored alternate routes, both with locked exclusives). **Magic (Xela112233):** the magic web balanced and bridged into one progression, **with its own locked exclusives** (a magic specialist is a needed trade partner — reachable also via the MineColonies route, mirroring Create). **MineColonies (zagwar):** the colony route stood up — the **colony lock list** (outputs only a colony can produce, per the incremental #220 pattern) and the **cheap-basics calibration** against the ~3× Create cost. Completes the supply side, so the economy pillar has specialists to distribute between.*
+Magic (the #80 Arcana satellites): #122 post-merge balance · #123 flagship depth · #118 Soul-Reaping intent · #146 gate Ars/Iron's/Occultism behind Create + define magic's locked exclusives (per #220) · #235 End Remastered eyes ↔ boss drops. Colonies: #92 progression on-ramp (complex Create tech behind colony/boss progress) · #259 boss respawning (keeps the boss half of the high-tier fork reachable for late joiners). Sweep: #249 (Magic + MineColonies).
 **Closes with the thunderdome.**
 
-**`v0.12.0 — Stabilization III` · even** — *Goal: profile, balance, and bug-fix everything 0.11 added; no new mods.*
+**`v0.12.0 — Stabilization III` · even** — *Goal: profile, balance, and bug-fix everything 0.11 added; no new mods.* Carries #309 — the scheduled assessment of splitting v0.13.0 into logistics + economy pillar versions.
 
-**`v0.13.0 — Survival` · odd / feature** — *Goal: the survival interlock (temperature × diet × seasons-driven scarcity) works in play — the world pushing back is real and tuned.*
-Survival: #91 interlock (umbrella over #124/#99) · #124 altitude-driven cold · #99 midnight-thoughts anchor · #152 author Cold Sweat world config · #155 death-penalty + gravestone tuning. _(Diet — AppleSeed replaced the SoL forks in v0.6.0; tune its groups/buffs here.)_ Flavor: #107 Ender Moon weave (kept; earn its place via a system tie).
-**Closes with the thunderdome.**
+**`v0.13.0 — Economy & logistics` · odd / feature** — *Goal: the **load-bearing** economy is playable end-to-end — coins valued, player-driven pricing, bounties pay, mob/structure inputs wired, the dynamic-pricing / player-minted-currency question resolved — **and its logistics/aeronautics movement arm is woven** (airship payoff + transport ladder), balanced against the scarcity lens (logistics must relieve regional scarcity without erasing it — `docs/SYSTEMS.md` §5).* The economy *is* the distribution stage and aeronautics is its physical arm, so they build together. It lands **last** by design: this pillar has come to encompass whole-pack balance (pricing, faucet/sink, export specialization), which needs the things being priced — magic/colony exclusives, transport costs — and the pressure that makes anyone buy to exist first. **Hedge the tooling risk early:** run #221 as a research spike during v0.9–v0.11 so this build starts with the pricing/currency tooling question answered (#129 already moved up to v0.8.0 on the same logic).
+Economy: #221 economy tooling (dynamic pricing + player-minted currency) · #240 player-driven value model (retire vendor-sell + NPC coin faucets) · #138 shop/transaction mechanism · #136 coin tiers + price sheet · #137 Bountiful bounty pools · #150 faucet/sink integrity audit · #139 regional export specialization · #178 Companions coins vs Numismatics · #167 horse-betting loop · #209 gravel→iron rates + Ex Nihilo question · #298 finite excavation veins · #300 ore-gen review against the loop · #90 Numismatics + Trading Floor + Bountiful + wire inputs · #18 loot pass. Logistics/aeronautics: #280 Aeronautics keeps review · #43 flight-system interactions · #144 airship assembly/docking infra · #143 ship power/fuel economy · #142 audit Create machinery on ships · #141 transport/logistics ladder · #140 airship combat balance (Big Cannons) · #304 trains + logistics clusters audit/weave · #277 map-gating (Xaero's mid/late, Antique Atlas early — the travel-meaningfulness lens) · #125 Touhou-maids weave. Sweep: #247 (Economy/logistics/aeronautics).
+**Closes with the thunderdome.** _(Split assessment scheduled — #309, on v0.12.0: if this is still ~20+ open there, split logistics (v0.13.0) from economy-value (v0.15.0) via the cadence's insert-a-pair rule, polish sliding to v0.17.0. Logistics goes first: transport cost is a pricing input.)_
 
 **`v0.14.0 — Stabilization IV` · even** — *Goal: profile, balance, and bug-fix everything 0.13 added; no new mods.*
 
 **`v0.15.0 — Polish & site + weave review` · odd / feature — LAST CALL** — *Goal: wiki, onboarding, QoL, claims, and the open decisions settled — plus the comprehensive weave review (all systems checked against each other — the loop seams) before the freeze.*
-#115 player wiki · #148 in-game onboarding quest/guide · #153 JEI recipe-viewer cleanup pass · #77 in-site issue submission · #134 map server to new Cloudflare address · #70 WEB_DIR bind-mount · #13 Create: Harmonics eval · #25 open-parties-and-claims · #1 shaders decision · #2 far-field render distance.
+#115 player wiki · #148 in-game onboarding quest/guide · #153 JEI recipe-viewer cleanup pass · #77 in-site issue submission · #134 map server to new Cloudflare address · #70 WEB_DIR bind-mount · #13 Create: Harmonics eval · #1 shaders decision · #2 far-field render distance.
 **Last call for major additions/integrations**; closes with the final thunderdome + the full weave review (the loop seams *between* the systems), then feature freeze.
 
 **`v1.0.0 — Release` · even / perf patch [NFR]** — *Goal: feature-frozen — final performance + RAM tuning, ore-gen finalized, renamed, CI required → ship the public build.*

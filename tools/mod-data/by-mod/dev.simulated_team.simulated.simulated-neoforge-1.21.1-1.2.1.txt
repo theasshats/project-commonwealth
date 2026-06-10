@@ -1,0 +1,222 @@
+# dev.simulated_team.simulated.simulated-neoforge-1.21.1-1.2.1
+bundled-in: create-aeronautics-bundled-1.21.1-1.2.1
+
+## mod metadata (id / version / deps)
+license = "Read attached LICENSE.md" # Review your options at https://choosealicense.com/.
+modId = "simulated" #mandatory
+version = "1.2.1" #mandatory
+displayName = "Create Simulated" #mandatory
+modId = "neoforge" #mandatory
+versionRange = "[21.1.219,)" #mandatory
+modId = "minecraft"
+versionRange = "[1.21.1]"
+modId = "create"
+versionRange = "[6.0.10,)"
+modId = "flywheel"
+versionRange = "[1.0.6,)"
+modId = "sable"
+versionRange = "[1.2.1,)"
+
+## blocks
+simulated:altitude_sensor
+simulated:analog_transmission
+simulated:auger_cog
+simulated:auger_shaft
+simulated:black_handle
+simulated:black_nameplate
+simulated:black_portable_engine
+simulated:black_symmetric_sail
+simulated:blue_handle
+simulated:blue_nameplate
+simulated:blue_portable_engine
+simulated:blue_symmetric_sail
+simulated:brown_handle
+simulated:brown_nameplate
+simulated:brown_portable_engine
+simulated:brown_symmetric_sail
+simulated:copper_handle
+simulated:cyan_handle
+simulated:cyan_nameplate
+simulated:cyan_portable_engine
+simulated:cyan_symmetric_sail
+simulated:directional_gearshift
+simulated:directional_linked_receiver
+simulated:docking_connector
+simulated:gimbal_sensor
+simulated:gray_handle
+simulated:gray_nameplate
+simulated:gray_portable_engine
+simulated:gray_symmetric_sail
+simulated:green_handle
+simulated:green_nameplate
+simulated:green_portable_engine
+simulated:green_symmetric_sail
+simulated:iron_handle
+simulated:laser_pointer
+simulated:laser_sensor
+simulated:light_blue_handle
+simulated:light_blue_nameplate
+simulated:light_blue_portable_engine
+simulated:light_blue_symmetric_sail
+simulated:light_gray_handle
+simulated:light_gray_nameplate
+simulated:light_gray_portable_engine
+simulated:light_gray_symmetric_sail
+simulated:lime_handle
+simulated:lime_nameplate
+simulated:lime_portable_engine
+simulated:lime_symmetric_sail
+simulated:linked_typewriter
+simulated:magenta_handle
+simulated:magenta_nameplate
+simulated:magenta_portable_engine
+simulated:magenta_symmetric_sail
+simulated:merging_glue
+simulated:modulating_linked_receiver
+simulated:navigation_table
+simulated:optical_sensor
+simulated:orange_handle
+simulated:orange_nameplate
+simulated:orange_portable_engine
+simulated:orange_symmetric_sail
+simulated:paired_docking_connector
+simulated:physics_assembler
+simulated:pink_handle
+simulated:pink_nameplate
+simulated:pink_portable_engine
+simulated:pink_symmetric_sail
+simulated:purple_handle
+simulated:purple_nameplate
+simulated:purple_portable_engine
+simulated:purple_symmetric_sail
+simulated:red_handle
+simulated:red_nameplate
+simulated:red_portable_engine
+simulated:red_symmetric_sail
+simulated:redstone_accumulator
+simulated:redstone_inductor
+simulated:redstone_magnet
+simulated:rope_connector
+simulated:rope_winch
+simulated:spring
+simulated:steering_wheel
+simulated:swivel_bearing
+simulated:swivel_bearing_link_block
+simulated:throttle_lever
+simulated:torsion_spring
+simulated:velocity_sensor
+simulated:white_handle
+simulated:white_nameplate
+simulated:white_portable_engine
+simulated:white_symmetric_sail
+simulated:yellow_handle
+simulated:yellow_nameplate
+simulated:yellow_portable_engine
+simulated:yellow_symmetric_sail
+
+## items
+simulated:altitude_sensor
+simulated:analog_transmission
+simulated:auger_cog
+simulated:auger_shaft
+simulated:black_handle
+simulated:black_nameplate
+simulated:black_portable_engine
+simulated:blue_handle
+simulated:blue_nameplate
+simulated:blue_portable_engine
+simulated:brown_handle
+simulated:brown_nameplate
+simulated:brown_portable_engine
+simulated:contraption_diagram
+simulated:copper_handle
+simulated:creative_physics_staff
+simulated:creative_physics_staff/core
+simulated:creative_physics_staff/core_glow
+simulated:creative_physics_staff/inner_cube
+simulated:creative_physics_staff/item
+simulated:creative_physics_staff/item_old
+simulated:creative_physics_staff/outer_cube
+simulated:creative_physics_staff/ring
+simulated:creative_physics_staff/sigma
+simulated:cyan_handle
+simulated:cyan_nameplate
+simulated:cyan_portable_engine
+simulated:directional_gearshift
+simulated:directional_linked_receiver
+simulated:docking_connector
+simulated:engine_assembly
+simulated:gimbal_sensor
+simulated:gray_handle
+simulated:gray_nameplate
+simulated:gray_portable_engine
+simulated:green_handle
+simulated:green_nameplate
+simulated:green_portable_engine
+simulated:gyroscopic_mechanism
+simulated:honey_glue
+simulated:incomplete_engine_assembly
+simulated:incomplete_gyroscopic_mechanism
+simulated:iron_handle
+simulated:laser_pointer
+simulated:laser_sensor
+simulated:light_blue_handle
+simulated:light_blue_nameplate
+simulated:light_blue_portable_engine
+simulated:light_gray_handle
+simulated:light_gray_nameplate
+simulated:light_gray_portable_engine
+simulated:lime_handle
+simulated:lime_nameplate
+simulated:lime_portable_engine
+simulated:linked_typewriter
+simulated:magenta_handle
+simulated:magenta_nameplate
+simulated:magenta_portable_engine
+simulated:modulating_linked_receiver
+simulated:navigation_table
+simulated:optical_sensor
+simulated:orange_handle
+simulated:orange_nameplate
+simulated:orange_portable_engine
+simulated:physics_assembler
+simulated:pink_handle
+simulated:pink_nameplate
+simulated:pink_portable_engine
+simulated:plunger_launcher
+simulated:plunger_launcher/item
+simulated:plunger_launcher/item_reference_2
+simulated:plunger_launcher/plunger_tether
+simulated:plunger_launcher/spool_joint
+simulated:plunger_launcher/tether_spool
+simulated:purple_handle
+simulated:purple_nameplate
+simulated:purple_portable_engine
+simulated:red_handle
+simulated:red_nameplate
+simulated:red_portable_engine
+simulated:redstone_accumulator
+simulated:redstone_inductor
+simulated:redstone_magnet
+simulated:rope_connector
+simulated:rope_coupling
+simulated:rope_winch
+simulated:spring
+simulated:steering_wheel
+simulated:swivel_bearing
+simulated:throttle_lever
+simulated:torsion_spring
+simulated:velocity_sensor
+simulated:white_handle
+simulated:white_nameplate
+simulated:white_portable_engine
+simulated:white_symmetric_sail
+simulated:yellow_handle
+simulated:yellow_nameplate
+simulated:yellow_portable_engine
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+item/enchantables :: {"values": ["simulated:plunger_launcher"]}

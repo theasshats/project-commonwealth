@@ -31,7 +31,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/derpack/derpack-edit/internal/packwiz"
+	"github.com/pcmc/pcmc-edit/internal/packwiz"
 )
 
 // Result describes a completed build.
@@ -76,14 +76,48 @@ func (b *Builder) Build(ctx context.Context, log func(string)) (*Result, error) 
 	}
 
 	staging := filepath.Join(b.RepoRoot, ".editor", "build-staging")
+	mcDir := filepath.Join(staging, ".minecraft")
+
+	// Preserve the packwiz-installer mod cache (the mods/ dir and its packwiz.json
+	// state file) across builds, then rebuild everything else from scratch. A full
+	// wipe re-downloaded all ~360 mods on every build; the handful hosted on GitHub
+	// releases (the mod-mirror jars, the appleseed fix) intermittently 504 under that
+	// parallel load, and a single random failure aborts the whole build. Keeping the
+	// cache lets packwiz-installer validate existing jars by hash and fetch only the
+	// changed ones — and still prune orphans (e.g. an old mod version) via
+	// packwiz.json — cutting GitHub-release exposure from several files to ~one.
+	cache := filepath.Join(b.RepoRoot, ".editor", "mods-cache")
+	_ = os.RemoveAll(cache)
+	if err := os.MkdirAll(cache, 0o755); err != nil {
+		return nil, fmt.Errorf("mkdir mods cache: %w", err)
+	}
+	for _, name := range []string{"mods", "packwiz.json"} {
+		if _, err := os.Stat(filepath.Join(mcDir, name)); err == nil {
+			_ = os.Rename(filepath.Join(mcDir, name), filepath.Join(cache, name))
+		}
+	}
 	if err := os.RemoveAll(staging); err != nil {
 		return nil, fmt.Errorf("clean staging: %w", err)
 	}
-	mcDir := filepath.Join(staging, ".minecraft")
 	if err := os.MkdirAll(mcDir, 0o755); err != nil {
 		return nil, fmt.Errorf("mkdir staging: %w", err)
 	}
-	collect("Staging dir: %s", staging)
+	// Restore the cache ONLY when both the jars and packwiz-installer's state file
+	// survived a prior build. packwiz.json is what lets the installer prune mods
+	// that have since left the pack, so requiring it guarantees the rebuilt modset
+	// equals a clean install — a dev never ends up with a stale mod a new player
+	// wouldn't have. Missing either piece => fall back to a clean full fetch.
+	_, modsErr := os.Stat(filepath.Join(cache, "mods"))
+	_, stateErr := os.Stat(filepath.Join(cache, "packwiz.json"))
+	cacheUsable := modsErr == nil && stateErr == nil
+	if cacheUsable {
+		_ = os.Rename(filepath.Join(cache, "mods"), filepath.Join(mcDir, "mods"))
+		_ = os.Rename(filepath.Join(cache, "packwiz.json"), filepath.Join(mcDir, "packwiz.json"))
+		collect("Staging dir: %s (reusing mod cache — only changed mods download)", staging)
+	} else {
+		collect("Staging dir: %s (clean build — full mod download)", staging)
+	}
+	_ = os.RemoveAll(cache)
 
 	// 2. Scaffold Prism instance files.
 	if err := writeMmcPack(staging, mcVersion, neoforgeVersion); err != nil {
@@ -141,10 +175,11 @@ func (b *Builder) Build(ctx context.Context, log func(string)) (*Result, error) 
 		return nil, fmt.Errorf("install mods: %w", err)
 	}
 
-	// 6. Clean up bootstrap leftovers.
-	for _, f := range []string{"packwiz.json", "packwiz-installer-bootstrap.jar"} {
-		_ = os.Remove(filepath.Join(mcDir, f))
-	}
+	// 6. Clean up the bootstrap jar leftover. Keep packwiz.json — it is
+	// packwiz-installer's state file, preserved across builds together with mods/
+	// so the next build validates the cache by hash and prunes orphaned mods
+	// (e.g. an old mod version) instead of re-downloading everything.
+	_ = os.Remove(filepath.Join(mcDir, "packwiz-installer-bootstrap.jar"))
 
 	// 7. Sanity check.
 	jars, _ := filepath.Glob(filepath.Join(mcDir, "mods", "*.jar"))
@@ -194,7 +229,7 @@ OverrideMemory=true
 PermGen=256
 iconKey=default
 name=%s %s
-notes=Built locally from %s by derpack-edit.
+notes=Built locally from %s by pcmc-edit.
 `, jvmBlock, packName, packVersion, packName)
 	return os.WriteFile(filepath.Join(staging, "instance.cfg"), []byte(contents), 0o644)
 }

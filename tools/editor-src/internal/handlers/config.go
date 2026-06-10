@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/derpack/derpack-edit/internal/config"
+	"github.com/pcmc/pcmc-edit/internal/config"
 )
 
 // configResp is what GET /api/config returns. Includes default Prism path

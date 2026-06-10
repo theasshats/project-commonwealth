@@ -30,7 +30,7 @@ When weighing any recipe change, decide in this order:
      cheaper. **Locked exclusives** (an output only one route can make) and **boss/colony gating** are
      implemented in **KubeJS**, with the lock list defined incrementally per pillar (#219/#220).
 5. **`60-mffs.js` is the gold standard.** Its `sequenced_assembly` chain (staged on the Mechanical
-   Crafters through a registered `derpack:incomplete_*` transitional item) is what "truly woven in"
+   Crafters through a registered `pcmc:incomplete_*` transitional item) is what "truly woven in"
    looks like. Use it as the model for powerful/endgame machines; reach for that depth wherever an
    item's power justifies it, not just where a mod happened to already be complex.
 
@@ -49,7 +49,7 @@ When weighing any recipe change, decide in this order:
   But richer, well-themed recipes are welcome where they weave mods together (see the rubric).
 - **Endgame / flagship machines SHOULD be multi-stage `sequenced_assembly` chains** (maintainer
   call — depth is wanted here, GregTech-leaning is OK *for endgame only*). The chain's in-progress
-  item is a registered `derpack:incomplete_*` part (see `kubejs/startup_scripts/`) that Create
+  item is a registered `pcmc:incomplete_*` part (see `kubejs/startup_scripts/`) that Create
   cycles through `deploying`/`pressing` stages on the Mechanical Crafters. Everyday gear stays a
   single coherent gate — the heavy chains are the *reward-tier* ceiling, not the baseline.
 - Ore→metal uses Create **crushing** (the ore-doubling players already like) — a *reward*, not a tax;
@@ -94,7 +94,7 @@ ServerEvents.recipes(event => {
 ```
 - Target by **tags** where possible so a change spans mods.
 - `remove({ output })` kills all recipes for an item without needing its exact id.
-- Verify in-game: JEI/EMI shows the new recipe; no recipe errors in the log.
+- Verify in-game: JEI shows the new recipe; no recipe errors in the log.
 
 ## Scope & sequence (per-branch)
 Each branch's key craftables get a Create-part gate or Create-method build:

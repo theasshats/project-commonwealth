@@ -1,4 +1,4 @@
-# derpack-edit — source
+# pcmc-edit — source
 
 Local web app for managing the modpack. Single Go binary, embedded packwiz, embedded UI.
 
@@ -31,7 +31,7 @@ First-time setup: place a packwiz Windows binary at `internal/packwiz/assets/pac
 ```sh
 git clone https://github.com/packwiz/packwiz /tmp/packwiz
 cd /tmp/packwiz
-go build -o /path/to/derpack-edit/tools/editor-src/internal/packwiz/assets/packwiz.bin .
+go build -o /path/to/pcmc-edit/tools/editor-src/internal/packwiz/assets/packwiz.bin .
 ```
 
 Then iterate normally:
@@ -52,7 +52,7 @@ The workflow:
 2. Cross-compiles packwiz for `windows/amd64`
 3. Embeds it into the editor binary
 4. Cross-compiles the editor for `windows/amd64`
-5. Commits the resulting `tools/derpack-edit.exe` if it changed (with `[skip ci]` to avoid loops)
+5. Commits the resulting `tools/pcmc-edit.exe` if it changed (with `[skip ci]` to avoid loops)
 
 To force a rebuild manually, use the workflow's "Run workflow" button (workflow_dispatch trigger).
 

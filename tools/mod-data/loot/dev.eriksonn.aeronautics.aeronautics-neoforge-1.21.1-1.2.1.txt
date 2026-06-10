@@ -1,0 +1,40 @@
+aeronautics:blocks/adjustable_burner | minecraft:block | aeronautics:adjustable_burner aeronautics:blocks/adjustable_burner minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/andesite_propeller | minecraft:block | aeronautics:andesite_propeller aeronautics:blocks/andesite_propeller minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/black_envelope | minecraft:block | aeronautics:black_envelope aeronautics:blocks/black_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/black_envelope_encased_shaft | minecraft:block | aeronautics:black_envelope aeronautics:blocks/black_envelope_encased_shaft create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/blue_envelope | minecraft:block | aeronautics:blocks/blue_envelope aeronautics:blue_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/blue_envelope_encased_shaft | minecraft:block | aeronautics:blocks/blue_envelope_encased_shaft aeronautics:blue_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/brown_envelope | minecraft:block | aeronautics:blocks/brown_envelope aeronautics:brown_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/brown_envelope_encased_shaft | minecraft:block | aeronautics:blocks/brown_envelope_encased_shaft aeronautics:brown_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/cyan_envelope | minecraft:block | aeronautics:blocks/cyan_envelope aeronautics:cyan_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/cyan_envelope_encased_shaft | minecraft:block | aeronautics:blocks/cyan_envelope_encased_shaft aeronautics:cyan_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/gray_envelope | minecraft:block | aeronautics:blocks/gray_envelope aeronautics:gray_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/gray_envelope_encased_shaft | minecraft:block | aeronautics:blocks/gray_envelope_encased_shaft aeronautics:gray_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/green_envelope | minecraft:block | aeronautics:blocks/green_envelope aeronautics:green_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/green_envelope_encased_shaft | minecraft:block | aeronautics:blocks/green_envelope_encased_shaft aeronautics:green_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/gyroscopic_propeller_bearing | minecraft:block | aeronautics:blocks/gyroscopic_propeller_bearing aeronautics:gyroscopic_propeller_bearing minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/light_blue_envelope | minecraft:block | aeronautics:blocks/light_blue_envelope aeronautics:light_blue_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/light_blue_envelope_encased_shaft | minecraft:block | aeronautics:blocks/light_blue_envelope_encased_shaft aeronautics:light_blue_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/light_gray_envelope | minecraft:block | aeronautics:blocks/light_gray_envelope aeronautics:light_gray_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/light_gray_envelope_encased_shaft | minecraft:block | aeronautics:blocks/light_gray_envelope_encased_shaft aeronautics:light_gray_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/lime_envelope | minecraft:block | aeronautics:blocks/lime_envelope aeronautics:lime_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/lime_envelope_encased_shaft | minecraft:block | aeronautics:blocks/lime_envelope_encased_shaft aeronautics:lime_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/magenta_envelope | minecraft:block | aeronautics:blocks/magenta_envelope aeronautics:magenta_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/magenta_envelope_encased_shaft | minecraft:block | aeronautics:blocks/magenta_envelope_encased_shaft aeronautics:magenta_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/mounted_potato_cannon | minecraft:block | aeronautics:blocks/mounted_potato_cannon aeronautics:mounted_potato_cannon minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/orange_envelope | minecraft:block | aeronautics:blocks/orange_envelope aeronautics:orange_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/orange_envelope_encased_shaft | minecraft:block | aeronautics:blocks/orange_envelope_encased_shaft aeronautics:orange_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/pink_envelope | minecraft:block | aeronautics:blocks/pink_envelope aeronautics:pink_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/pink_envelope_encased_shaft | minecraft:block | aeronautics:blocks/pink_envelope_encased_shaft aeronautics:pink_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/propeller_bearing | minecraft:block | aeronautics:blocks/propeller_bearing aeronautics:propeller_bearing minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/purple_envelope | minecraft:block | aeronautics:blocks/purple_envelope aeronautics:purple_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/purple_envelope_encased_shaft | minecraft:block | aeronautics:blocks/purple_envelope_encased_shaft aeronautics:purple_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/red_envelope | minecraft:block | aeronautics:blocks/red_envelope aeronautics:red_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/red_envelope_encased_shaft | minecraft:block | aeronautics:blocks/red_envelope_encased_shaft aeronautics:red_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/smart_propeller | minecraft:block | aeronautics:blocks/smart_propeller aeronautics:smart_propeller minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/steam_vent | minecraft:block | aeronautics:blocks/steam_vent aeronautics:steam_vent minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/white_envelope | minecraft:block | aeronautics:blocks/white_envelope aeronautics:white_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/white_envelope_encased_shaft | minecraft:block | aeronautics:blocks/white_envelope_encased_shaft aeronautics:white_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/wooden_propeller | minecraft:block | aeronautics:blocks/wooden_propeller aeronautics:wooden_propeller minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/yellow_envelope | minecraft:block | aeronautics:blocks/yellow_envelope aeronautics:yellow_envelope minecraft:block minecraft:item minecraft:survives_explosion
+aeronautics:blocks/yellow_envelope_encased_shaft | minecraft:block | aeronautics:blocks/yellow_envelope_encased_shaft aeronautics:yellow_envelope create:shaft minecraft:block minecraft:item minecraft:survives_explosion

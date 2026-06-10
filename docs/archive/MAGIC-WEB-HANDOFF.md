@@ -91,9 +91,9 @@ Authored with `event.custom({...})` (Ars/occultism) + `event.recipes.create.mixi
 
 ## 7. Relationship to the Arcana mod (PR #80)
 This PR is the **recipe/material layer**. The deeper, code-level magic weave lives in the **Arcana** helper
-mod (`mods-src/derpack-arcana/`, PR #80): the Attunement Font (Ars Source→Iron's mana), spell-power
+mod (`mods-src/pcmc-arcana/`, PR #80): the Attunement Font (Ars Source→Iron's mana), spell-power
 crossover, and Soul Reaping (Born-in-Chaos kills→Occultism essence). Keep the two consistent; the Arcana
-`docs/ARCANA-BRIDGE-MOD.md` covers that side.
+`docs/archive/ARCANA-BRIDGE-MOD.md` covers that side.
 
 ## 8. To extend (add a magic bridge)
 1. Verify the source/target item ids in `tools/mod-data/recipes/<mod>.txt` (don't guess).
@@ -104,7 +104,7 @@ crossover, and Soul Reaping (Born-in-Chaos kills→Occultism essence). Keep the 
 
 ## 9. Pointers
 - Design: `docs/RECIPES.md` ("Magic web" section). Digests: `tools/mod-data/recipes/*.txt`, loot: `tools/mod-data/loot/*.txt`.
-- Arcana mod + wider roadmap: `docs/ARCANA-BRIDGE-MOD.md`, `docs/RECIPES.md` ("Magic web").
+- Arcana mod + wider roadmap: `docs/archive/ARCANA-BRIDGE-MOD.md`, `docs/RECIPES.md` ("Magic web").
 - The two real model bridge mods to study: **Ars 'n Spells** (`ars_n_spells`) and **Create: Occult Engineering** (`occultengineering`).
 
 ## 10. Definition of done — does it meet the standard? (next-iteration checklist)

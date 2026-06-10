@@ -1,6 +1,6 @@
-# Editing Derpack X
+# Editing Project Commonwealth
 
-How to add mods, change configs, and ship updates. Most of this happens through the Derpack Editor — a local desktop app that runs from the repo. When the editor isn't an option, the packwiz CLI is the fallback.
+How to add mods, change configs, and ship updates. Most of this happens through the Project Commonwealth Editor — a local desktop app that runs from the repo. When the editor isn't an option, the packwiz CLI is the fallback.
 
 This doc assumes you've already done the [one-time setup in the README](../README.md#setup-one-time): GitHub Desktop installed, repo cloned, Java 21 installed.
 
@@ -29,7 +29,7 @@ You're now on the new branch. Edit, commit, push, open a PR when ready.
 
 1. Make sure you're on your branch (GitHub Desktop confirms this in the top bar).
 2. Open the repo folder in File Explorer.
-3. Double-click `tools\derpack-edit.exe`.
+3. Double-click `tools\pcmc-edit.exe`.
 4. A console window appears, your browser opens to `http://localhost:8765`.
 
 The editor reads from disk on every action — no need to refresh the page after you make changes elsewhere.
@@ -231,20 +231,17 @@ If you haven't configured a Prism instance path yet, click **⚙ Settings** firs
 
 ## I want to publish a release
 
-After your PR is merged into main:
+Releases are **automatic and version-first** — you don't draft them by hand. To cut `vX.Y.Z`:
 
-1. On GitHub: **Releases → Draft a new release**
-2. **Choose a tag** → type `v0.3.3` (or whatever the new version is) → **Create new tag on publish**
-3. Title: `v0.3.3`
-4. Description: write what changed, or just hit "Generate release notes"
-5. Click **Publish release**
+1. In your PR, **bump `version` in `pack.toml`** to the new number.
+2. Add the matching `## X.Y.Z` section to **`docs/PATCHNOTES.md`** — this becomes the public release notes.
+3. Merge the PR into `main`.
 
-GitHub Actions will then:
-- Build the .mrpack
-- Build the Prism installer zip
-- Attach both to the release page
+On that merge, `release.yml` reads `version` from `pack.toml` and — if the tag `vX.Y.Z` doesn't already exist — tags the release and calls `build.yml`, which builds the Prism installer zip and attaches it to the GitHub release. About a minute; no manual tagging.
 
-This takes ~5 minutes the first time, much less if the build cache hits. If something fails, check the **Actions** tab — the failed step will be red.
+- Forgetting the `pack.toml` bump means **no release** — the version is the trigger.
+- Only one artifact ships: the Prism installer zip (we no longer build a `.mrpack` — issue #73).
+- If something fails, check the **Actions** tab — the failed step will be red.
 
 ---
 
