@@ -822,11 +822,11 @@ hash = "3c302a55a8f5896d2cc07b6e1019a22c23dfd43b79174179b6aa402cf6afeb18"
 
 [[files]]
 file = "kubejs/server_scripts/spine/00-tiers.js"
-hash = "18e8eab5ecf9a592bdf3006040d401ac50ab49e1aa3f0825819ff8cc36ed3397"
+hash = "e5bc33375d15d8823fce1253132065400a8d9c0ec5a51f5a15f402dd9534e0a8"
 
 [[files]]
 file = "kubejs/server_scripts/spine/05-tags.js"
-hash = "a1e40e48645e6744eeab4ba0047c259e3be7750eb986f7d2a9aee9baa10f730f"
+hash = "86c41e4058bfd17409c05fa798c94d385635ef53377380a20a8a2086cafee039"
 
 [[files]]
 file = "kubejs/server_scripts/spine/10-locks.js"
@@ -834,47 +834,47 @@ hash = "99c82d9442ecf093e23809b8478a8ea276c51a98c5c39590b40f7a6819730726"
 
 [[files]]
 file = "kubejs/server_scripts/spine/20-power-ladder.js"
-hash = "947567f1784d4cc7334e7044cf3b358ccb75cd6289a34878c2d07752409d109a"
+hash = "be9e123d2f6f717e8e746a2741dce4c12d231cdb09329443cca5ee2b1c95cbd9"
 
 [[files]]
 file = "kubejs/server_scripts/spine/30-cost-basics.js"
-hash = "c26d51c846a18f70b711c8f10e92a948c2af370fe21e61ee0523ada1c701d907"
+hash = "36d0742168ccf03d421e24f948705757bb7b4da0c89db3c2d78c8b397db8d978"
 
 [[files]]
 file = "kubejs/server_scripts/spine/40-gates.js"
-hash = "9316d8a63e9dfb70959a413104947b1be238b571ed8ef3c532aca3833a527e7f"
+hash = "78a47933f0c381e562c68a3036015f44dfa74485eba396c76cee9b64f31b3655"
 
 [[files]]
 file = "kubejs/server_scripts/spine/50-cross-tier.js"
-hash = "66a2d6f85e36a2d9ce3b0efd483a1f754e14713838896092a73ce170be5bae6a"
+hash = "7867c400eaf4bcb182dee6807c83e2b696645ea66f064edfc8cdafe37ae776cb"
 
 [[files]]
 file = "kubejs/server_scripts/spine/51-weave-additions-tfmg.js"
-hash = "b854e1d655273052dfd8e21c75448b02fdb8a228457c957d88c151fe9fe69069"
+hash = "fd6cb16950e8de36e5ea589fab1cb62be3b25cfea8413138f0a21ae306aa997a"
 
 [[files]]
 file = "kubejs/server_scripts/spine/52-weave-tfmg-newage.js"
-hash = "dfb89e264a7602feb071f122117c302137f5cb35c3939d35df99ee94b0dc26d3"
+hash = "3847a7390d6131a5a403af6ceb9ac677f923ae6efc2ad6dc28c65d9e335356a1"
 
 [[files]]
 file = "kubejs/server_scripts/spine/54-weave-aeronautics.js"
-hash = "7fdecffaf7ae5179ac33c9e4fd63989aefc4556b19f85d5db0ba723d4abef373"
+hash = "ef266574d8d53e63ae8feb01fd6f3f1d6f90d8be6974463ea0bd91df714038c6"
 
 [[files]]
 file = "kubejs/server_scripts/spine/60-machines-tfmg.js"
-hash = "66f55ca78e8c89b80d36c7734a93e2fad0c2973ad378a1a7494d2f130c5bc6f7"
+hash = "15ebb75f2b480af5f24f756f5cd62cf09060c55662102338e0908dc4ef0fbf99"
 
 [[files]]
 file = "kubejs/server_scripts/spine/61-machines-newage-additions.js"
-hash = "e42a8ce3112decae16b10ac526cab155571057601bac6d1cabfb2497c3f29742"
+hash = "89b7101c0e1658fcea763e55da6dba669e0977a3f7089ac3a13d2e7c1fa9586b"
 
 [[files]]
 file = "kubejs/server_scripts/spine/62-machines-misc.js"
-hash = "7627cd17ee8453e31ad932100ee79cb516e7d0d7182eccc92b93dd9abb8c7be9"
+hash = "2b60e4cb06b59859c0d52340f1210e62b0017f61d5ac827baf52e2014e46ab07"
 
 [[files]]
 file = "kubejs/server_scripts/zz-dump-recipes-TEMP.js"
-hash = "d37c8b9dd595c48e3c8a5065224eb8555ada4eb10c51d0d02856d74fe6ee2778"
+hash = "26953dd9d30417407d3412ad4042a221884d7b8252edd39af1e19ed021156015"
 
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"

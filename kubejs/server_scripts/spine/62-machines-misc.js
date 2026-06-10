@@ -2,7 +2,7 @@
 //
 // Pure method conversion: re-add with IDENTICAL ingredients/grid, changing only the recipe TYPE so the
 // assembled aeronautics CONTROL DEVICES route through Create's mechanical_crafting. Grids verified vs
-// tools/recipe-dump/derpack-recipes.txt. No new ingredients, no count changes, no global state.
+// tools/recipe-dump/pcmc-recipes.txt. No new ingredients, no count changes, no global state.
 //
 // SCOPE (re-reviewed): the simulated control devices/sensors + the gnkinetics gearbox ASSEMBLIES
 // (planetary, ring — multi-brass) route through the Mechanical Crafter. The BASIC gears stay on the
@@ -45,7 +45,7 @@ ServerEvents.recipes(event => {
   mc('simulated:altitude_sensor', ['P', 'S', 'A'], { P: 'minecraft:paper', S: '#c:plates/iron', A: 'create:andesite_casing' })
   mc('simulated:torsion_spring', ['A', 'S', 'C'], { A: 'create:shaft', S: 'simulated:spring', C: 'create:andesite_casing' })
 
-  console.info('[derpack-spine] 62-machines-misc: 20 routed through create:mechanical_crafting (2 gnkinetics gearbox assemblies + 18 simulated control devices/sensors). Basic gears left on the bench.')
+  console.info('[pcmc-spine] 62-machines-misc: 20 routed through create:mechanical_crafting (2 gnkinetics gearbox assemblies + 18 simulated control devices/sensors). Basic gears left on the bench.')
 
   // LEFT AS CRAFTING: gnkinetics BASIC gears (magnet/simple/conversion gears, cogs) — only the planetary/ring
   //   gearbox assemblies route through Create; simulated simple parts (spring, ropes, handles, steering_wheel,

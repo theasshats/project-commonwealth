@@ -15,7 +15,7 @@
 // NOT touched (owned elsewhere): advanced_energiser, reinforced_energiser, basic/advanced solar plates.
 // basic_energiser is the root and is deliberately SKIPPED to avoid breaking early bootstrap.
 //
-// LOAD-SAFE / UNVERIFIED: grids taken from tools/recipe-dump/derpack-recipes.txt; ingredients preserved,
+// LOAD-SAFE / UNVERIFIED: grids taken from tools/recipe-dump/pcmc-recipes.txt; ingredients preserved,
 // methods routed through Create. Parses + static-checks, but NOT playtest-verified.
 
 ServerEvents.recipes(event => {
@@ -156,5 +156,5 @@ ServerEvents.recipes(event => {
     S: '#c:ingots/steel'                       // TFMG steel cores the layered magnet (yields 4)
   })
 
-  console.info('[derpack-spine] weave TFMG->New Age: reactor parts/motors/coil/magnet now assemble through Create (mechanical_crafting / sequenced_assembly), consuming TFMG end-products (steel/circuits/plastic).')
+  console.info('[pcmc-spine] weave TFMG->New Age: reactor parts/motors/coil/magnet now assemble through Create (mechanical_crafting / sequenced_assembly), consuming TFMG end-products (steel/circuits/plastic).')
 })

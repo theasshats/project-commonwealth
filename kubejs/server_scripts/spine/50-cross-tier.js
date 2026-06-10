@@ -50,7 +50,7 @@ ServerEvents.recipes(event => {
     Z: 'tfmg:etched_circuit_board'            // T3 TFMG circuit gates the T4 energiser
   })
 
-  console.info('[derpack-spine] cross-tier: aeronautics analog->digital gated; Additions<->TFMG spool bridged; New Age advanced_energiser now needs a TFMG circuit. (Nuclear already steel-linked to TFMG.)')
+  console.info('[pcmc-spine] cross-tier: aeronautics analog->digital gated; Additions<->TFMG spool bridged; New Age advanced_energiser now needs a TFMG circuit. (Nuclear already steel-linked to TFMG.)')
 })
 
 // CROSS-MOD TRUTH (verified vs the recipe dump in tools/recipe-dump/):

@@ -21,7 +21,7 @@
 //
 // Each recipe below keeps its ORIGINAL grid/keys from the dump and weaves in ONE createaddition electric
 // part as a hard ingredient. Only the METHOD changes (shaped -> mechanical_crafting for machines). Grids
-// verified vs tools/recipe-dump/derpack-recipes.txt. Note bare 'accumulator' does NOT exist in this pack —
+// verified vs tools/recipe-dump/pcmc-recipes.txt. Note bare 'accumulator' does NOT exist in this pack —
 // Additions ships createaddition:modular_accumulator; the parts used here are capacitor / electric_motor /
 // copper_wire / alternator (all confirmed in the dump).
 //
@@ -205,5 +205,5 @@ ServerEvents.recipes(event => {
     E: 'createaddition:electric_motor'        // Additions motor at the engine base
   }, 'tfmg:large_engine').acceptMirrored(true)
 
-  console.info('[derpack-spine] weave Additions->TFMG: 10 TFMG T3 machines now route THROUGH Create (mechanical_crafting) and require createaddition parts; voltmeter + pumpjack_crank kept shaped as basic parts.')
+  console.info('[pcmc-spine] weave Additions->TFMG: 10 TFMG T3 machines now route THROUGH Create (mechanical_crafting) and require createaddition parts; voltmeter + pumpjack_crank kept shaped as basic parts.')
 })

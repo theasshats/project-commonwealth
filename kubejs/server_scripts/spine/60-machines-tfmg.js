@@ -19,7 +19,7 @@
 //
 // mechanical_crafting takes the same grid as the shaped recipe; tags are '#c:...', items are bare ids. For the
 // two shapeless devices (the mechanical_pumps) the same two items are laid into a small grid (rule 1).
-// Grids/keys/counts all verified vs tools/recipe-dump/derpack-recipes.txt.
+// Grids/keys/counts all verified vs tools/recipe-dump/pcmc-recipes.txt.
 //
 // STATUS: verified vs dump, load-safe, UNVERIFIED IN-GAME.
 
@@ -336,5 +336,5 @@ ServerEvents.recipes(event => {
     P: 'tfmg:industrial_pipe'
   }, '4x tfmg:metal_smokestack').acceptMirrored(false)
 
-  console.info('[derpack-spine] machines TFMG: 26 TFMG machine/multi-part blocks now route THROUGH Create (mechanical_crafting), pure method swap; simple parts (fluid valves, reinforcement blocks, hammer heads) and the component-bearing engine cylinders left shaped.')
+  console.info('[pcmc-spine] machines TFMG: 26 TFMG machine/multi-part blocks now route THROUGH Create (mechanical_crafting), pure method swap; simple parts (fluid valves, reinforcement blocks, hammer heads) and the component-bearing engine cylinders left shaped.')
 })

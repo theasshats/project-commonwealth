@@ -1,6 +1,6 @@
 # Create progression
 
-Derpack X gates its technology through Create. Power and machines advance in tiers: each tier unlocks the
+Project Commonwealth gates its technology through Create. Power and machines advance in tiers: each tier unlocks the
 next, and the cost of progress is paid in finding scarce resources and building deeper production chains,
 not in waiting out timers. This page is the player's map of that climb.
 

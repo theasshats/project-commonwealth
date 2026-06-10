@@ -28,7 +28,7 @@ const SPINE = {
     T3: { name: 'Electric-low',  rung: 4, anchors: ['tfmg', 'createaddition', 'create_new_age', 'gnkinetics'],
           items: ['tfmg:etched_circuit_board', 'createaddition:capacitor', 'create_new_age:reinforced_energiser',
                   'tfmg:electric_motor', 'gnkinetics:planetary_gear'],
-          gate: 'electric needs rung-3 kinetic; advanced energiser behind any Frostmaw-equiv Mowzie boss (#derpack:mowzies_mid); ship core behind cataclysm:cursium', cost: '2-3x, 4 stages',
+          gate: 'electric needs rung-3 kinetic; advanced energiser behind any Frostmaw-equiv Mowzie boss (#pcmc:mowzies_mid); ship core behind cataclysm:cursium', cost: '2-3x, 4 stages',
           aero: 'COMPLEX analog control (aeronautics:gyroscopic_propeller_bearing)' },
 
     T4: { name: 'Electric-high', rung: 5, anchors: ['create_new_age', 'aeronautics'],
@@ -49,5 +49,5 @@ const SPINE = {
 
 ServerEvents.recipes(event => {
   const t = SPINE.tiers
-  console.info(`[derpack-spine] tier trees loaded: ${Object.keys(t).map(k => `${k}=${t[k].name}`).join(', ')}`)
+  console.info(`[pcmc-spine] tier trees loaded: ${Object.keys(t).map(k => `${k}=${t[k].name}`).join(', ')}`)
 })

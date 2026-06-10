@@ -34,5 +34,5 @@ ServerEvents.recipes(event => {
   event.recipes.create.mixing('create:andesite_alloy', ['minecraft:andesite', '3x minecraft:iron_nugget'])
   event.recipes.create.mixing('create:andesite_alloy', ['minecraft:andesite', '3x create:zinc_nugget'])
 
-  console.info(`[derpack-spine] cost model: andesite_alloy dialed (hand-craft 1 ingot > mixing 3 nuggets); ${SPINE_BASICS_3X.propagates.length} basics inherit via inputs; sheets left 1:1. Per-mod step-depth staged.`)
+  console.info(`[pcmc-spine] cost model: andesite_alloy dialed (hand-craft 1 ingot > mixing 3 nuggets); ${SPINE_BASICS_3X.propagates.length} basics inherit via inputs; sheets left 1:1. Per-mod step-depth staged.`)
 })

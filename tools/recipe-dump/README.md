@@ -16,16 +16,16 @@ the full JSON for the Create-spine namespaces.
 
 1. Copy `tools/recipe-dump/dump_recipes.js` → `<instance>/kubejs/server_scripts/zz_dump_recipes.js`.
 2. Boot the pack (a world or a dedicated server) so recipes load.
-3. Run `/reload` in-game. It writes `<instance>/kubejs/derpack-recipes.json` and logs each recipe
-   to `logs/latest.log` prefixed `DERPACK_RECIPE` (fallback).
-4. Send back `derpack-recipes.json` (or paste the specific recipes needed). Commit it here as
-   `tools/recipe-dump/dump/derpack-recipes.json` if you want it tracked.
+3. Run `/reload` in-game. It writes `<instance>/kubejs/pcmc-recipes.json` and logs each recipe
+   to `logs/latest.log` prefixed `PCMC_RECIPE` (fallback).
+4. Send back `pcmc-recipes.json` (or paste the specific recipes needed). Commit it here as
+   `tools/recipe-dump/dump/pcmc-recipes.json` if you want it tracked.
 5. **Delete** the copied `zz_dump_recipes.js` — it re-dumps on every reload.
 
 Edit the `NAMESPACES` list at the top of the script to widen/narrow the dump.
 
-> If `JsonIO.write` errors on your KubeJS build, the `DERPACK_RECIPE` log lines have the same data —
-> `grep DERPACK_RECIPE logs/latest.log > derpack-recipes.txt`.
+> If `JsonIO.write` errors on your KubeJS build, the `PCMC_RECIPE` log lines have the same data —
+> `grep PCMC_RECIPE logs/latest.log > pcmc-recipes.txt`.
 
 ## Method B — extract straight from the jars (no game launch)
 

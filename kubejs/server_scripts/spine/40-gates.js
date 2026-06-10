@@ -12,9 +12,9 @@
 const SPINE_GATES = [
   // T1 + T2 gates PULLED — early tiers are cost/scarcity-gated per the lineage; bosses start at T3.
 
-  // T3 — ADVANCED electric behind ANY Frostmaw-equivalent Mowzie's boss (#derpack:mowzies_mid). Basic
+  // T3 — ADVANCED electric behind ANY Frostmaw-equivalent Mowzie's boss (#pcmc:mowzies_mid). Basic
   //      alternator stays kinetic-gated (per spec), so this gates the *advanced* energiser, not entry to electricity.
-  { tier: 'T3', out: 'create_new_age:reinforced_energiser', drop: '#derpack:mowzies_mid',
+  { tier: 'T3', out: 'create_new_age:reinforced_energiser', drop: '#pcmc:mowzies_mid',
     build: (e, K) => e.shaped('create_new_age:reinforced_energiser',
       ['EKE', 'BBB', 'III'],
       { K: K, E: 'create:electron_tube', B: 'create_new_age:basic_energiser', I: '#c:plates/iron' }) },
@@ -36,5 +36,5 @@ const SPINE_GATES = [
 
 ServerEvents.recipes(event => {
   SPINE_GATES.forEach(g => { event.remove({ output: g.out }); g.build(event, g.drop) })
-  console.info(`[derpack-spine] tier-gate ladder: ${SPINE_GATES.length} gates applied (${SPINE_GATES.map(g => g.tier).join('/')})`)
+  console.info(`[pcmc-spine] tier-gate ladder: ${SPINE_GATES.length} gates applied (${SPINE_GATES.map(g => g.tier).join('/')})`)
 })

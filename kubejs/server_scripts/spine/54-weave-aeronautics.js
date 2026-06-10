@@ -14,7 +14,7 @@
 // aeronautics:gyroscopic_propeller_bearing (40-gates.js).
 //
 // load-safe: every recipe below removes then re-adds with its REAL original type + shape (verified
-// against tools/recipe-dump/derpack-recipes.txt); only one woven ingredient is added per recipe.
+// against tools/recipe-dump/pcmc-recipes.txt); only one woven ingredient is added per recipe.
 // All woven dep IDs (tfmg:etched_circuit_board, createaddition:electric_motor/electrum_sheet,
 // create:cogwheel) confirmed present as real recipe outputs in the dump.
 // unverified: not booted in-game (sandbox can't launch); needs playtest.
@@ -111,5 +111,5 @@ ServerEvents.recipes(event => {
     B: '#c:ingots/brass'
   })
 
-  console.info('[derpack-spine] weave-aeronautics: control ladder reinforced — propeller_bearing (T2) below gyroscopic; gimbal_sensor analog; gyroscope/servos/joystick (T4) now need TFMG circuit / Additions electric (T3->T4).')
+  console.info('[pcmc-spine] weave-aeronautics: control ladder reinforced — propeller_bearing (T2) below gyroscopic; gimbal_sensor analog; gyroscope/servos/joystick (T4) now need TFMG circuit / Additions electric (T3->T4).')
 })

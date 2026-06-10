@@ -1,6 +1,6 @@
 // Create spine — spine tags.
 //
-// #derpack:boss_keys — the FLAT boss-gate roster (CREATE-SPINE.md 3b: no primary; any roster drop opens a
+// #pcmc:boss_keys — the FLAT boss-gate roster (CREATE-SPINE.md 3b: no primary; any roster drop opens a
 // fork). Pattern B recipes require this tag, so any listed boss drop satisfies a gate — no single fight is
 // a chokepoint. Consumed for repeat components, one-time key for machine unlocks (per recipe).
 //
@@ -9,7 +9,7 @@
 // supply a key; excluded until/unless it adds a drop item.)
 
 ServerEvents.tags('item', event => {
-  event.add('derpack:boss_keys', [
+  event.add('pcmc:boss_keys', [
     // L_Ender's Cataclysm
     'cataclysm:ignitium_ingot',
     'cataclysm:cursium_ingot',
@@ -31,7 +31,7 @@ ServerEvents.tags('item', event => {
   // Mowzie's MID-tier bosses (~Frostmaw difficulty) — the T3 advanced-electric gate accepts ANY of these
   // ("any Mowzie's boss equivalent to the Frostmaw"). Per mowziesmobs' own entity_type/bosses tag, the mid
   // band is Frostmaw + Sculptor (Wroughtnaut is early, Umvuthi is late). Add naga_fang if you want it laxer.
-  event.add('derpack:mowzies_mid', [
+  event.add('pcmc:mowzies_mid', [
     'mowziesmobs:ice_crystal',     // Frostmaw
     'mowziesmobs:sculptor_staff'   // Sculptor
   ])

@@ -42,5 +42,5 @@ ServerEvents.recipes(event => {
 
   // Converters are deliberately untouched (preserving the alternator/motor SU->FE path = the ladder).
   // Steam (rung 3) and electric (rung 4) need no recipe edit — their dependency chains are the gate.
-  console.info(`[derpack-spine] power ladder resolved: ${SPINE_GENERATORS.converter.length} converters kept, ${SPINE_GENERATORS.free_source.length} free-sources cost-gated`)
+  console.info(`[pcmc-spine] power ladder resolved: ${SPINE_GENERATORS.converter.length} converters kept, ${SPINE_GENERATORS.free_source.length} free-sources cost-gated`)
 })

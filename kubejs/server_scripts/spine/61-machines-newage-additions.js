@@ -11,7 +11,7 @@
 //   - redstone/netherite/fluxuated magnets -> material components, not machines.
 //   - createaddition:capacitor -> tiny 3-slot component, not a device.
 //
-// LOAD-SAFE / UNVERIFIED: grids taken verbatim from tools/recipe-dump/derpack-recipes.txt; parses +
+// LOAD-SAFE / UNVERIFIED: grids taken verbatim from tools/recipe-dump/pcmc-recipes.txt; parses +
 // static-checks, but NOT playtest-verified.
 
 ServerEvents.recipes(event => {
@@ -88,5 +88,5 @@ ServerEvents.recipes(event => {
     W: '#c:wires/electrum'
   })
 
-  console.info('[derpack-spine] machines: New Age (basic_motor/extension, heat_pump, heater, stirling_engine) + Create Crafts & Additions (modular_accumulator) now assemble through Create (mechanical_crafting) — pure method swap, ingredients unchanged.')
+  console.info('[pcmc-spine] machines: New Age (basic_motor/extension, heat_pump, heater, stirling_engine) + Create Crafts & Additions (modular_accumulator) now assemble through Create (mechanical_crafting) — pure method swap, ingredients unchanged.')
 })

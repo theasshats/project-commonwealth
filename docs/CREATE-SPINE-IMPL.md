@@ -19,7 +19,7 @@
 | `kubejs/server_scripts/spine/40-gates.js` | #92/#220 | The **complete tier-gate ladder** — Pattern B boss gates at every tier, one data-driven table (`global.SPINE_GATES`). |
 | `kubejs/server_scripts/spine/20-power-ladder.js` | #145 | The rung gates + the generator converter-vs-free-source stance. |
 | `kubejs/server_scripts/spine/30-cost-basics.js` | #219 | The 3× dial on core Create tier-1 fabricated items + the step-depth helper the content batches use. |
-| `kubejs/server_scripts/tags/10-spine-tags.js` | #220 | `#derpack:boss_keys` (flat boss roster) + any spine tags. |
+| `kubejs/server_scripts/tags/10-spine-tags.js` | #220 | `#pcmc:boss_keys` (flat boss roster) + any spine tags. |
 | `docs/wiki/create-progression.md` | — | Player-facing progression guide. |
 
 Loads alongside the existing `00-create-ify.js` overhaul hub (the pattern templates there feed the
@@ -48,7 +48,7 @@ circuits + the coking→graphite carbon seam; Nuclear = T4 capstone on New Age (
 
 - **Pattern A — route-exclusive lock.** `event.remove({ output, not: { mod: 'create' } })` — strip every
   non-Create recipe for the locked output. v0.7.0 slice: `create:precision_mechanism`, `create:electron_tube`.
-- **Pattern B — boss fork.** Gated item requires a member of `#derpack:boss_keys` (flat roster — any boss
+- **Pattern B — boss fork.** Gated item requires a member of `#pcmc:boss_keys` (flat roster — any boss
   works, no chokepoint). **consumed** for repeat components, **one-time key** for machine unlocks. Colony
   bypass is a deferred second route (not built in v0.7.0). Helper: `spineBossFork(event, output, recipeFn)`.
 
@@ -80,7 +80,7 @@ per `00-create-ify.js` patterns, target `#c:` tags, carry its own playtest sub-b
 
 ## 7. Boss progression — drop-placement reference
 
-Rough difficulty ordering per mod, so boss drops map to tiers. **The flat `#derpack:boss_keys` tag suits a
+Rough difficulty ordering per mod, so boss drops map to tiers. **The flat `#pcmc:boss_keys` tag suits a
 generic "beat a boss" gate, but it mixes early drops with endgame ones — so a *tiered* fork must pick a
 specific tier-appropriate drop from this table, not the flat tag.** (D1 uses ignitium = T4; D2 uses
 cursium = T3.)
@@ -131,7 +131,7 @@ data-driven table (`global.SPINE_GATES`) so the whole ladder is reviewable/tweak
 
 | Tier | Gated item | Required drop | Source boss | Rationale |
 |---|---|---|---|---|
-| **T3** | `create_new_age:reinforced_energiser` | `#derpack:mowzies_mid` (Frostmaw/Sculptor) | Mowzie's mid bosses | Any Frostmaw-equivalent Mowzie's boss. Gates **advanced** electric; basic alternator stays kinetic-gated (per spec). |
+| **T3** | `create_new_age:reinforced_energiser` | `#pcmc:mowzies_mid` (Frostmaw/Sculptor) | Mowzie's mid bosses | Any Frostmaw-equivalent Mowzie's boss. Gates **advanced** electric; basic alternator stays kinetic-gated (per spec). |
 | **T3** | `aeronautics:gyroscopic_propeller_bearing` | `cataclysm:ancient_metal_ingot` | Ancient Remnant (mid) | Flagship ship-core fork. |
 | **T4** | `create_jetpack:netherite_jetpack` | `cataclysm:cursium_ingot` | Maledictus (mid–late) | Jetpack gate. |
 | **T4** | `createnuclear:reactor_core` | `cataclysm:ignitium_ingot` | Ignis (endgame) | Nuclear capstone — the one true endgame gate. |
@@ -145,7 +145,7 @@ _T1 + T2 boss gates **pulled** — early tiers are cost/scarcity-gated per the l
 
 **Drops used, by mod:** Mowzie's (T3 advanced electric) · Cataclysm (T3 ship core `ancient_metal` → T4
 jetpack `cursium` → T4 reactor `ignitium`). Grimoire + Born in Chaos drops now sit only in the flat
-`#derpack:boss_keys` roster for future generic gates (their early-tier gates were pulled).
+`#pcmc:boss_keys` roster for future generic gates (their early-tier gates were pulled).
 
 ## 9. Cross-tier recipe chains — the lineage (`50-cross-tier.js`)
 

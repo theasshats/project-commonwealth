@@ -3,8 +3,8 @@
 // keys, counts) for the Create-spine namespaces, which the tools/mod-data digest lacks.
 //
 // USE: boot v0.7.0 (world or server), run `/reload` (or just load once). It writes
-//   <instance>/kubejs/derpack-recipes.json
-// and logs each recipe to latest.log prefixed `DERPACK_RECIPE` (fallback). Send back the JSON.
+//   <instance>/kubejs/pcmc-recipes.json
+// and logs each recipe to latest.log prefixed `PCMC_RECIPE` (fallback). Send back the JSON.
 //
 // ⚠️ DELETE THIS FILE before the version ships — it re-dumps (and log-spams) on every reload.
 
@@ -27,13 +27,13 @@ ServerEvents.recipes(event => {
     try { json = r.json } catch (e) { /* some recipe types may not expose .json */ }
     out[id] = json
     n++
-    console.info(`DERPACK_RECIPE ${id} ${json}`)   // bulletproof log fallback
+    console.info(`PCMC_RECIPE ${id} ${json}`)   // bulletproof log fallback
   })
 
   try {
-    JsonIO.write('kubejs/derpack-recipes.json', out)
-    console.info(`[derpack] recipe dump: wrote ${n} recipes -> kubejs/derpack-recipes.json`)
+    JsonIO.write('kubejs/pcmc-recipes.json', out)
+    console.info(`[pcmc] recipe dump: wrote ${n} recipes -> kubejs/pcmc-recipes.json`)
   } catch (e) {
-    console.warn(`[derpack] JsonIO.write failed (${e}); use the DERPACK_RECIPE log lines instead. Dumped ${n}.`)
+    console.warn(`[pcmc] JsonIO.write failed (${e}); use the PCMC_RECIPE log lines instead. Dumped ${n}.`)
   }
 })
