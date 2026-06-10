@@ -237,7 +237,7 @@ gaps that exclusivity opens. It has two arms:
 > **Why aeronautics folds in here.** It used to be framed as a co-equal "connector" beside the economy;
 > it's cleaner as the economy's logistics arm — distribution of *matter* serving the same trade loop as
 > distribution of *value*. It keeps its own **build milestone** (flagship content; folded into the
-> Economy pillar — v0.9.0), but it isn't a separate top-level system.
+> Economy pillar — v0.13.0), but it isn't a separate top-level system.
 
 ---
 
@@ -302,13 +302,13 @@ obvious: a healthy mod is usually *something you produce that pressure demands a
   damage must follow their *settled/claimed footprint*, not a global commons; and **(b) TPS** — it must
   be event-driven and locality-bounded, never a global world-scan. May end up scoped down to "your
   colony/claim degrades its surroundings." Likely custom KubeJS/datapack; no drop-in mod exists.
-- **Dynamic pricing + player-minted currency — the economy's hard problem (DEFERRED to v0.9.0).** A real
+- **Dynamic pricing + player-minted currency — the economy's hard problem (DEFERRED to v0.13.0).** A real
   economy needs **dynamic prices** (supply/demand, not flat vendors) and, Eco-style, **players minting
   their own currencies** — *how* players mint and others come to trust/accept a currency is a
   social-mechanic problem MC doesn't hand us. We have *some levers* now (Numismatics for Create-minted
   coinage, Trading Floor for stalls/orders) but **the tooling is an unknown**: what's achievable with
-  current mods vs. what needs custom work will be **determined when the Economy pillar (v0.9.0) is
-  built**, not now. (No formal governance/laws layer is planned — a deliberate divergence for a small
+  current mods vs. what needs custom work will be **determined when the Economy pillar (v0.13.0) is
+  built** — with #221 run as an early research spike during v0.9–v0.11 so that build starts informed, not now. (No formal governance/laws layer is planned — a deliberate divergence for a small
   PvPvE group.)
 - **Diet — settled (keep all five).** Diet – AppleSeed Edition is in the modlist (replacing SoL) and
   runs on its **default five groups** (no pruning config) — see "Food." Only optional per-category buff/
