@@ -107,12 +107,28 @@ Crafter. TFMG's electric motor now winds in a Crafts & Additions capacitor durin
 electric ecosystems depend on each other. The treadmill joins the hand crank and water wheel as
 recognized early power — modest, and capped by whatever walks on it.
 
+Firearms are Create projects. Guns assemble on the Mechanical Crafter from manufactured parts — steel
+barrels, deployer-built firing mechanisms, precision triggers, fluid-filled primers — and the bench-style
+gun table stays out of the pack. The electric-age weapons (the SMG, pump shotgun, rifles, and snipers)
+now also take a capacitor in the build, and the three heavy weapons — the machine gun, the grenade
+launcher, and the 40mm field cannon — each demand a trophy from one of the world's bosses.
+
+Mob lassos are powerful, and now priced like it. The golden lasso is built around Create electronics;
+the aqua and emerald lassos branch off it with prismarine and brass; the hostile lasso takes a monstrous
+horn won from the Ancient Remnant; and the diamond lasso merges the golden, aqua, and hostile lassos
+with diamonds and a boss trophy of your choice. Bosses themselves can no longer be captured by any
+lasso.
+
 ### Recipes
 
 Steel has been consolidated under TFMG. Create: Ironworks steel sheets and TFMG heavy plates were
 separate items filling the same role; all steel forms — ingot, nugget, block, and plate — now resolve to
 the TFMG item, so steel reads as one material across every recipe regardless of which mod produced it.
 Bronze remains with Create: Ironworks.
+
+Immersive Paintings' craftables print through Create: a painting is dye deployed onto paper, graffiti is
+dye, gunpowder, and a bucket mixed in a basin, and the glow variants take glow ink at a deployer. Custom
+image uploads remain disabled on the server; the built-in gallery is unaffected.
 
 ### Game Discs
 

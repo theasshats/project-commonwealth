@@ -10,13 +10,16 @@
     },
     "B": {
       "item": "create:brass_ingot"
+    },
+    "Z": {
+      "item": "createaddition:capacitor"
     }
   },
   "pattern": [
     "DDBDD",
     "  S  ",
     "  S  ",
-    "  B  "
+    "Z B  "
   ],
   "result": {
     "id": "tacz:modern_kinetic_gun",

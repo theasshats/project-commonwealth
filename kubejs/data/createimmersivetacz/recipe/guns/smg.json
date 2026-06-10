@@ -19,11 +19,14 @@
     },
     "W": {
       "tag": "minecraft:planks"
+    },
+    "Z": {
+      "item": "createaddition:capacitor"
     }
   },
   "pattern": [
     "BPFI",
-    " TW "
+    "ZTW "
   ],
   "result": {
     "id": "tacz:modern_kinetic_gun",

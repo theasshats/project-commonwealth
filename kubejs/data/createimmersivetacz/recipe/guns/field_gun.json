@@ -19,12 +19,15 @@
     },
     "W": {
       "tag": "minecraft:planks"
+    },
+    "K": {
+      "tag": "pcmc:boss_keys"
     }
   },
   "pattern": [
     " BBB   ",
     "BBBBCFI",
-    "   WT W"
+    "K  WT W"
   ],
   "result": {
     "id": "tacz:modern_kinetic_gun",
