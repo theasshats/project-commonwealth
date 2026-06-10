@@ -1,4 +1,4 @@
-# Derpack X — GTMOGS overrides (config id "gtmogs", YAML format).
+# Project Commonwealth — GTMOGS overrides (config id "gtmogs", YAML format).
 #
 # borderColor: ARGB hex (#AARRGGBB) for the outline drawn around vein markers on the map,
 # or the literal "material" to use the ore's material colour. The mod default is fully
@@ -6,6 +6,12 @@
 #
 # Active: hot pink (#FF1493) at full alpha.
 # Playtest alternates (swap the value below): bright yellow #FFFFFF00, pure white #FFFFFFFF.
+#
+# The unquoted value below is CORRECT — do not quote it. GTMOGS reads this file with the
+# toma configuration lib's hand-rolled YAML parser (verified against gtmogs-1.21.1-1.0.6):
+# it strips only whole-line comments, so an inline '#' is part of the value, and quote
+# characters would be read literally and break the colour parse. Standard YAML tooling
+# will misread this line as a comment/null — trust the parser, not the linter.
 compat:
   minimap:
     borderColor: #FFFF1493

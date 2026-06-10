@@ -102,7 +102,7 @@ emerald sits high in peaks. The JEI diagram above gives the exact spawn range pe
 
 ## Configuration knobs
 
-These live in the GTMOGS config (`config/gtmogs.json`, generated on first run). Defaults read
+These live in the GTMOGS config (`config/gtmogs.yaml`, generated on first run). Defaults read
 from the jar:
 
 - `oreBlockProspectRange` = 24 — how far a right-click scans for veins.
