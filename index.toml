@@ -818,11 +818,11 @@ hash = "3c302a55a8f5896d2cc07b6e1019a22c23dfd43b79174179b6aa402cf6afeb18"
 
 [[files]]
 file = "kubejs/server_scripts/spine/00-tiers.js"
-hash = "a61a5200e11a052f32284223812b6e8311cf72484e288d3d93e3fc528b3f3626"
+hash = "34fb871c51c312d0a2253969c87fe4c737ea823e639f4739aeb6039be042d20c"
 
 [[files]]
 file = "kubejs/server_scripts/spine/05-tags.js"
-hash = "86c41e4058bfd17409c05fa798c94d385635ef53377380a20a8a2086cafee039"
+hash = "783898c5ccb9a882afa6339488d982f9f6338fc47ff19ec6f485570532816e5e"
 
 [[files]]
 file = "kubejs/server_scripts/spine/10-locks.js"
@@ -862,7 +862,7 @@ hash = "7ef0ecb1da34bb483c388a9d3d930d62679a4010cd87662866f344f9e767db80"
 
 [[files]]
 file = "kubejs/server_scripts/spine/56-weave-stuff-additions.js"
-hash = "32cb600f015fd299d6f02235255d713fd637bd32e9e62d6a86489d2e229d9845"
+hash = "0419a91135cf83400b4fa08d3df7f751ac557f15ce94f3fc20f858a073dc1e47"
 
 [[files]]
 file = "kubejs/server_scripts/spine/60-machines-tfmg.js"

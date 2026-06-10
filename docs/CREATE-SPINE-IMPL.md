@@ -19,7 +19,7 @@
 | `kubejs/server_scripts/spine/40-gates.js` | #92/#220 | The **complete tier-gate ladder** — Pattern B boss gates at every tier, one data-driven table (`global.SPINE_GATES`). |
 | `kubejs/server_scripts/spine/20-power-ladder.js` | #145 | The rung gates + the generator converter-vs-free-source stance. |
 | `kubejs/server_scripts/spine/30-cost-basics.js` | #219 | The 3× dial on core Create tier-1 fabricated items + the step-depth helper the content batches use. |
-| `kubejs/server_scripts/tags/10-spine-tags.js` | #220 | `#pcmc:boss_keys` (flat boss roster) + any spine tags. |
+| `kubejs/server_scripts/spine/05-tags.js` | #220 | `#pcmc:boss_keys` (flat boss roster, reserved) + `#pcmc:mowzies_mid` (in use). |
 | `docs/wiki/create-progression.md` | — | Player-facing progression guide. |
 
 Loads alongside the existing `00-create-ify.js` overhaul hub (the pattern templates there feed the
@@ -36,21 +36,25 @@ The single source of truth for "what tier is X, how is it gated, what does it co
 | **T1 Water/Wind** | 1–2 water wheel / windmill | `create`, `createaddition`, `gnkinetics` | brass + brass casing, electron tube, zinc sheet, brass gear; **basic hot-air balloon** (`aeronautics:adjustable_burner` + envelope) | windmill: sail cloth + windmill bearing | 3× basics; 2 stages |
 | **T2 Steam** | 3 steam engine | `create`, `tfmg`, `create_ironworks`, `gnkinetics` | precision mechanism, steel, heavy casing, industrial gear, circuit T1; **propelled balloon + analog control** (`create_tweaked_controllers`) | steam fluid/heat chain (inherent) | 2–3×; 3 stages |
 | **T3 Electric-low** | 4 alternator/electric | `tfmg`, `createaddition`, `create_new_age`, `gnkinetics` | TFMG circuit ladder (etched/coated), capacitor, energiser, electric motor, planetary gear; **complex analog control** (`aeronautics:gyroscopic_propeller_bearing`) | electric **needs rung-3 kinetic** to drive | 2–3×; 4 stages |
-| **T4 Electric-high** | 5 reactor / nuclear | `create_new_age`, `createnuclear`, `aeronautics` | reactor multiblock, fusion, advanced energiser, pearlescent levitite; **digital control** (`create-aeroworks`, `aeronautics:smart_propeller`) | **boss fork** (any roster drop); colony bypass deferred | 2–3×; 5 stages + gate |
+| **T4 Electric-high** | 5 reactor | `create_new_age`, `aeronautics`, `createoreexcavation` | reactor multiblock + ignitium-sheathed rods, advanced energiser, pearlescent levitite, the vein-drilling machine (end-game sink); **digital control** (`create-aeroworks`, `aeronautics:smart_propeller`) | **boss fork** — ignitium → `reactor_rod`, cursium → the netherite jetpacks; colony bypass deferred (#220) | 2–3×; 5 stages + gate |
 
 **Aeronautics control-complexity thread** (woven across tiers, per `CREATE-SPINE.md` 4a): T1 balloon →
 T2 propelled/analog → T3 complex analog → T4 digital. The **boss fork sits at the T3→T4 jump**.
 
 **T3–T4 mod spine** (per 4b): Additions = rung-4 converter under T3; TFMG (T3) → New Age (T4) via steel +
-circuits + the coking→graphite carbon seam; Nuclear = T4 capstone on New Age (shared FE grid).
+circuits (no graphite seam — that premise was wrong, see §9). _Create: Nuclear cut for 1.0 (#289); the T4
+capstone is New Age's ignitium-gated `reactor_rod`._
 
 ## 3. Patterns (#220)
 
 - **Pattern A — route-exclusive lock.** `event.remove({ output, not: { mod: 'create' } })` — strip every
   non-Create recipe for the locked output. v0.7.0 slice: `create:precision_mechanism`, `create:electron_tube`.
-- **Pattern B — boss fork.** Gated item requires a member of `#pcmc:boss_keys` (flat roster — any boss
-  works, no chokepoint). **consumed** for repeat components, **one-time key** for machine unlocks. Colony
-  bypass is a deferred second route (not built in v0.7.0). Helper: `spineBossFork(event, output, recipeFn)`.
+- **Pattern B — boss fork.** Gated item is re-recipe'd to require a boss drop. _As implemented_
+  (`40-gates.js`): thematic **per-tier drops** (ancient_metal → cursium → ignitium ascend Cataclysm;
+  `#pcmc:mowzies_mid` is the one band-tag gate) — "no chokepoint" holds **across** the ladder, not within
+  each gate. The flat `#pcmc:boss_keys` roster stays registered for future *generic* gates (colony fork,
+  #220). **Consumed** for repeat components, **one-time key** for machine unlocks. Colony bypass is a
+  deferred second route (not built in v0.7.0).
 
 ## 4. Power ladder (#145)
 
@@ -67,7 +71,9 @@ circuits + the coking→graphite carbon seam; Nuclear = T4 capstone on New Age (
 The exhaustive 3×-basics + step-depth application across all Create addons is **defined by the trees** and
 authored in reviewable batches, one sibling file per mod-family, after this foundation. Batch order
 (highest-value first): `create` basics → `tfmg` (T3 industrial) → `createaddition`/`create_new_age` (T3–T4
-electric) → `createnuclear` (T4) → `aeronautics` (control ladder) → the long tail. Each batch: remove+replace
+electric) → ~~`createnuclear` (T4)~~ _(cut, #289)_ → `aeronautics` (control ladder) → the long tail
+_(the §4/§5 integrated mods — lowheated/excavation/create_sa/treadmill — carried their dials in
+`20-power-ladder` / `55-weave-excavation` / `56-weave-stuff-additions`)_. Each batch: remove+replace
 per `00-create-ify.js` patterns, target `#c:` tags, carry its own playtest sub-block on #234.
 
 ## 6. Playtest gates (foundation)
@@ -134,7 +140,8 @@ data-driven table (`global.SPINE_GATES`) so the whole ladder is reviewable/tweak
 | **T3** | `create_new_age:reinforced_energiser` | `#pcmc:mowzies_mid` (Frostmaw/Sculptor) | Mowzie's mid bosses | Any Frostmaw-equivalent Mowzie's boss. Gates **advanced** electric; basic alternator stays kinetic-gated (per spec). |
 | **T3** | `aeronautics:gyroscopic_propeller_bearing` | `cataclysm:ancient_metal_ingot` | Ancient Remnant (mid) | Flagship ship-core fork. |
 | **T4** | `create_jetpack:netherite_jetpack` | `cataclysm:cursium_ingot` | Maledictus (mid–late) | Jetpack gate. |
-| **T4** | `createnuclear:reactor_core` | `cataclysm:ignitium_ingot` | Ignis (endgame) | Nuclear capstone — the one true endgame gate. |
+| **T4** | `create_sa:netherite_jetpack_chestplate` | `cataclysm:cursium_ingot` | Maledictus (mid–late) | The pack's second netherite jetpack — same boss, same tier (smithing template slot). |
+| **T4** | `create_new_age:reactor_rod` | `cataclysm:ignitium_ingot` | Ignis (endgame) | Reactor capstone — repointed from the cut `createnuclear:reactor_core`; the one mandatory reactor part `52-weave` doesn't touch. |
 
 _T1 + T2 boss gates **pulled** — early tiers are cost/scarcity-gated per the lineage; bosses start at T3. Ascending Cataclysm gate: ancient_metal (mid) → cursium (mid–late) → ignitium (endgame)._
 
@@ -144,30 +151,33 @@ _T1 + T2 boss gates **pulled** — early tiers are cost/scarcity-gated per the l
 > placeholder. If a gate feels wrong, edit/delete its one row in `SPINE_GATES`.
 
 **Drops used, by mod:** Mowzie's (T3 advanced electric) · Cataclysm (T3 ship core `ancient_metal` → T4
-jetpack `cursium` → T4 reactor `ignitium`). Grimoire + Born in Chaos drops now sit only in the flat
-`#pcmc:boss_keys` roster for future generic gates (their early-tier gates were pulled).
+jetpacks `cursium` (both mods') → T4 reactor rods `ignitium`). Grimoire + Born in Chaos drops now sit only
+in the flat `#pcmc:boss_keys` roster for future generic gates (their early-tier gates were pulled).
 
 ## 9. Cross-tier recipe chains — the lineage (`50-cross-tier.js`)
 
 Weaving the T3–T4 addon spine so tiers flow into each other. **Two design corrections** the recipe dumps
 forced (spec Part 4b updated):
-- **No graphite seam.** New Age has *no* graphite and no "energising→graphite" recipe. The real graphite
-  chain is Nuclear-internal: `createnuclear:graphene` (press coal dust) → `graphite_rod` (+ steel).
-- **Nuclear↔TFMG already linked** via the shared `c:ingots/steel` tag (reactor casing/core/rods consume
-  steel, which TFMG supplies) — no new bridge needed.
+- **No graphite seam.** New Age has *no* graphite and no "energising→graphite" recipe. _(The graphite
+  chain that did exist was Nuclear-internal and left with the Create: Nuclear cut, #289.)_
+- ~~**Nuclear↔TFMG already linked**~~ _(historical — Nuclear cut; its steel seam went with it.)_
 
 **Built now (safe, additive):**
 - **Aeronautics analog→digital** — `aeronautics:smart_propeller` re-recipe'd to require `aeroworks:mechanical_servo`, so digital flight genuinely needs create-aeroworks (T4) on top of the T3 analog `gyroscopic_mechanism`.
 - **Additions↔TFMG spool bridge** — 1:1 `tfmg:copper_spool` ⟷ `createaddition:copper_spool`, connecting the two electric ecosystems without re-authoring any machine.
 - **TFMG→New Age** — `create_new_age:advanced_energiser` now requires a `tfmg:etched_circuit_board`, so New Age's T4 tier depends on the T3 TFMG circuit ladder (real grid from the recipe dump).
 
-**Staged (need careful per-recipe authoring + playtest — complex sequenced/mechanical recipes, no grid data in dumps):**
-- **TFMG→New Age:** re-recipe `create_new_age:reactor_casing` / `advanced_energiser` to consume `tfmg:steel` + a TFMG circuit (real ingredient sets below).
-- **Additions→TFMG (hard):** re-recipe the sequenced `tfmg:electric_motor` to consume a `createaddition` electric part (beyond the spool bridge).
+**Staged → status after the §2/§4/§5 batch:**
+- **TFMG→New Age:** ✅ DONE — `52-weave-tfmg-newage.js` re-recipes `reactor_casing` (steel-plate deploy) +
+  the reactor parts/motors/coil/magnet; `50-cross-tier.js` did `advanced_energiser` (etched circuit).
+- **Additions→TFMG (hard):** still staged — re-recipe the sequenced `tfmg:electric_motor` to consume a
+  `createaddition` electric part (beyond the spool bridge). The full grid is now available in
+  `tools/recipe-dump/pcmc-recipes.json` (`tfmg:sequenced_assembly/motor`), so this is authorable when picked up.
 
-**Real ingredient reference (from dumps, for the staged work):**
-- `create_new_age:advanced_energiser` = `basic_energiser` + `overcharged_gold` + `lightning_rod`.
-- `create_new_age:reactor_casing` = sequenced on `incomplete_reactor_casing` from `c:plates/iron` + `bricks`.
+**Real ingredient reference (from dumps; updated post-cut):**
+- `create_new_age:advanced_energiser` = `basic_energiser` + `overcharged_gold` + `lightning_rod` (+ the woven `tfmg:etched_circuit_board`).
+- `create_new_age:reactor_casing` = sequenced on `incomplete_reactor_casing` from `c:plates/steel` (woven; was iron) + `bricks`.
+- `create_new_age:reactor_rod` = 5×4 mechanical_crafting: `reactor_casing` + `reactor_glass` + `nuclear_fuel` + gold plates, 2× out — the gate swaps the two band-center plates for `cataclysm:ignitium_ingot` (`40-gates.js`).
 - `tfmg:electric_motor` = sequenced from `tfmg:copper_spool` + `magnet` + `nickel_sheet` + `steel_casing` + `steel_mechanism` + `winding` + `create:shaft`.
-- `createnuclear:reactor_core` = `reactor_casing` + `c:ingots/steel` + `create:precision_mechanism` + `uranium_bucket`.
-- ⚠️ `create_new_age:reactor_controller` had **no recipe** in the dump — verify the item exists before use.
+- ~~`createnuclear:reactor_core`~~ _(mod cut, #289)._
+- `create_new_age:reactor_controller` — **answered:** no such recipe exists in the live dump; the reactor has no controller block. The capstone part is `reactor_rod`.

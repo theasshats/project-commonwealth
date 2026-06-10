@@ -247,10 +247,12 @@ Per `SYSTEMS.md`, the lock list is **incremental per pillar** — this is *only*
 
 **First high-tier fork (Pattern B — boss OR colony):**
 - **The Aeronautics controller** — the worked example from `SYSTEMS.md` §3. End-game logistics tech
-  gated behind a **boss drop** (any of the roster — see 3b; **boss-only for v0.7.0**, the colony route is
-  deferred). This is the flagship demonstration of the fork and the single best v0.7.0 target to prove the
-  pattern. (Exact controller item id + chosen boss drop: filled in the #92 PR against the
-  `create-aeronautics-bundled` recipe dump.)
+  gated behind a **boss drop** (**boss-only for v0.7.0**, the colony route is deferred). _Implemented
+  (the id resolved against the recipe dump):_ the flagship aero control item is the
+  **`aeronautics:gyroscopic_propeller_bearing`** (the ship core), gated behind
+  `cataclysm:ancient_metal_ingot` in `40-gates.js`; the digital control tier additionally requires the
+  `aeroworks:mechanical_servo` chain (`50-cross-tier.js`). The colony leg of the fork lands with the
+  colony hook — tracked on #220 alongside the reactor capstone's colony leg.
 
 > **Scope discipline:** the v0.7.0 lock list is deliberately *small* — two exclusives + one fork. The
 > mechanism (Patterns A/B) is the deliverable; a long lock list is explicitly *not* the goal this

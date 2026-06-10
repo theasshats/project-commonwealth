@@ -17,14 +17,14 @@ const SPINE = {
     T1: { name: 'Water/Wind',    rung: 2, anchors: ['create', 'createaddition', 'gnkinetics', 'createtreadmill', 'create_sa'],
           items: ['brass_casing', 'electron_tube', 'zinc_sheet', 'gnkinetics:brass_gear',
                   'create_sa:heat_engine', 'createtreadmill:treadmill'],
-          gate: 'windmill_bearing behind grimoireofgaia:rotten_heart (early Gaia gate); water wheel free; treadmill = capped entity SU', cost: '3x basics, 2 stages',
+          gate: 'cost/scarcity only — the T1 boss gate was PULLED (40-gates: bosses start at T3); windmill = the sail-cloth + bearing investment; water wheel free; treadmill = capped entity SU', cost: '3x basics, 2 stages',
           aero: 'basic hot-air balloon (aeronautics:adjustable_burner + envelope)' },
 
-    T2: { name: 'Steam',         rung: 3, anchors: ['create', 'tfmg', 'create_ironworks', 'gnkinetics', 'createlowheated'],
+    T2: { name: 'Steam',         rung: 3, anchors: ['create', 'tfmg', 'create_ironworks', 'gnkinetics', 'createlowheated', 'create_sa'],
           items: ['precision_mechanism', 'tfmg:steel_ingot', 'tfmg:heavy_machinery_casing',
                   'gnkinetics:industrial_gear', 'tfmg:unfinished_circuit_board', 'createlowheated:basic_burner',
                   'create_sa:steam_engine'],
-          gate: 'steam fluid chain (inherent; LOW HEAT earned via createlowheated:basic_burner — blaze passive heat is off, heated/superheated start at the Blaze Burner) + steam_engine behind grimoireofgaia:fireshard (thematic fire)', cost: '2-3x, 3 stages',
+          gate: 'steam fluid chain (inherent) + LOW HEAT earned via createlowheated:basic_burner (T1-craftable, the rung-3 enabler — blaze passive heat is off; heated/superheated start at the Blaze Burner). T2 boss gate PULLED (bosses start at T3)', cost: '2-3x, 3 stages',
           aero: 'propelled balloon + first ANALOG control (create_tweaked_controllers)' },
 
     T3: { name: 'Electric-low',  rung: 4, anchors: ['tfmg', 'createaddition', 'create_new_age', 'gnkinetics'],

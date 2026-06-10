@@ -3,9 +3,9 @@
 // The mod is already well-formed (engines are sequenced-assembly; jetpacks/exoskeletons are mostly
 // mechanical_crafting) — "the one clean weave." What it lacked was ANCHORS into the pack's chains, so:
 //   - ENGINE TIERS map onto the ladder and pull pack seams in:
-//       heat_engine  (T1) — its zinc-nugget deploy becomes createlowheated:basic_burner: the HEAT engine
-//                            now literally contains the heat ladder's burner (seam: create_sa <-> lowheated,
-//                            and every jetpack/exoskeleton built on it inherits the heat-rung dependency).
+//       heat_engine  (T1) — assembled ON a createlowheated:basic_burner base (1 per engine): the HEAT
+//                            engine literally contains the heat ladder's burner (seam: create_sa <->
+//                            lowheated; every jetpack/exoskeleton built on it inherits the dependency).
 //       steam_engine (T2) — its andesite-alloy deploy becomes #c:ingots/steel: the STEAM engine pulls the
 //                            T2 steel chain (seam: create_sa <-> TFMG/ironworks steel).
 //       hydraulic_engine (T2, copper/water) — untouched, already anchored via copper + spout filling.
@@ -19,11 +19,14 @@
 // own serialized shapes kept, incl. chanced byproducts); single-ingredient swaps only. NOT playtest-verified.
 
 ServerEvents.recipes(event => {
-  // ── heat_engine — keep the mod's full assembly (3 loops, chanced byproducts); zinc nugget -> basic_burner. ──
+  // ── heat_engine — the BASE becomes a basic_burner (was a loose andesite_alloy): the engine is built
+  //    AROUND its heat source, exactly one burner per engine. Every deploy step (cog / large cog / zinc /
+  //    copper, x3 loops) stays verbatim, so the T1 cost only shifts by alloy->burner at the root — in the
+  //    3x band, not multiplied (a x3-looped burner step would have cost 3 burners; this costs 1). ──
   event.remove({ output: 'create_sa:heat_engine' })
   event.custom({
     type: 'create:sequenced_assembly',
-    ingredient: { item: 'create:andesite_alloy' },
+    ingredient: { item: 'createlowheated:basic_burner' },
     loops: 3,
     results: [
       { chance: 120.0, item: { id: 'create_sa:heat_engine' } },
@@ -37,8 +40,8 @@ ServerEvents.recipes(event => {
       { type: 'create:deploying',
         ingredients: [{ item: 'create_sa:incomplete_heat_engine' }, { item: 'create:large_cogwheel' }],
         results: [{ item: { id: 'create_sa:incomplete_heat_engine' } }] },
-      { type: 'create:deploying',                // was {tag: c:nuggets/zinc} — the burner IS the heat
-        ingredients: [{ item: 'create_sa:incomplete_heat_engine' }, { item: 'createlowheated:basic_burner' }],
+      { type: 'create:deploying',
+        ingredients: [{ item: 'create_sa:incomplete_heat_engine' }, { tag: 'c:nuggets/zinc' }],
         results: [{ item: { id: 'create_sa:incomplete_heat_engine' } }] },
       { type: 'create:deploying',
         ingredients: [{ item: 'create_sa:incomplete_heat_engine' }, { tag: 'c:nuggets/copper' }],
