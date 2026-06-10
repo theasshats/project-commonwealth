@@ -40,7 +40,7 @@ Breaking blocks now drains hunger, so a big dig needs provisioning — or machin
 
 ### Other
 
-- Mining tools show their mining speed in the tooltip again. The removed Mining Speed Tooltips mod is replaced by a small pack script that reads the speed directly from the tool's own data, so nothing external is needed.
+- Mining tools show their mining speed in the tooltip again, now including the Efficiency enchantment's boost. The removed Mining Speed Tooltips mod is replaced by a small pack script that reads the speed directly from the tool's own data, so nothing external is needed.
 - This build bundles an X-ray resource pack (disabled by default) as a debugging aid for verifying the ore generation changes during the pre-alpha. It will be removed in a later release.
 
 ## 0.6.2 — Project Commonwealth
