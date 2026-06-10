@@ -16,16 +16,35 @@ Breaking a solid block makes the player hungrier. The cost is per-block and scal
 | Heavy | 1.6 | ~62 | ores, obsidian, deepslate, basalt, anvils |
 | Very heavy | 2.2 | ~45 | solid metal/storage blocks (iron/gold/…), netherite, ancient debris |
 
-The **100 blocks per bar** target sets the Normal tier; the others scale off it.
+The **100 blocks per bar** figure is the Normal tier **mined with an iron tool**; everything
+scales off it — block weight on one axis, tool tier on the other.
+
+### Tool tier
+
+A better tool tires you less. The drain is multiplied by the tier of the mining tool held in
+the main hand (pickaxe / axe / shovel / hoe / paxel — swords and non-tools count as "no tool"):
+
+| Held tool | Multiplier | Normal block → blocks/bar |
+|-----------|-----------|---------------------------|
+| None / non-mining item | 2.5 | 40 |
+| Wood (and gold) | 2.0 | 50 |
+| Stone | 1.5 | ~67 |
+| **Iron** | **1.0** | **100** (the anchor) |
+| Diamond | 0.75 | ~133 |
+| Netherite | 0.5 | 200 |
+
+Gold maps to the wood multiplier (it shares wood's harvest tier). A modded tool whose tier
+can't be read defaults to the neutral 1.0 (it's still a tool), while a truly empty hand or a
+non-mining item is the hardest 2.5.
 
 ### How the rate is set
 
 Minecraft drains 1 food point per **4.0 exhaustion**, and a full hunger bar is 20 food
-points (= 80 exhaustion). The script adds `EXHAUSTION_PER_WEIGHT × weight` per block.
-With `EXHAUSTION_PER_WEIGHT = 0.8`, a Normal block costs 0.8 exhaustion, so 100 of them
-drain a full bar. Saturation absorbs the first hits (as it does for any exhaustion), so a
-well-fed player sees the bar start dropping only once saturation is gone — same as sprinting
-or jumping.
+points (= 80 exhaustion). The script adds `EXHAUSTION_PER_WEIGHT × block weight × tool
+multiplier` per block. With `EXHAUSTION_PER_WEIGHT = 0.8`, a Normal block mined with an iron
+tool costs 0.8 exhaustion, so 100 of them drain a full bar. Saturation absorbs the first hits
+(as it does for any exhaustion), so a well-fed player sees the bar start dropping only once
+saturation is gone — same as sprinting or jumping.
 
 ### What does **not** cost hunger
 

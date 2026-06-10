@@ -19,6 +19,22 @@
 // hits, as it does for any exhaustion, so the bar starts visibly dropping once it's gone.)
 const EXHAUSTION_PER_WEIGHT = 0.8
 
+// Tool-tier multiplier on the drain — better tools tire you less. Values per zagwar: a
+// bare hand is hardest (2.5×), each tier of tool easier, down to netherite (0.5×). This is
+// why the "100 blocks per bar" anchor below is calibrated to an IRON tool (1.0×): wood/none
+// compress it, diamond/netherite stretch it. Final drain = rate × block weight × this.
+const T_NONE      = 2.5  //  bare hand / non-mining item (sword, block, food, …)
+const T_WOOD      = 2.0  //  wooden (and golden — same harvest tier as wood)
+const T_STONE     = 1.5
+const T_IRON      = 1.0  //  the anchor: iron tool on a Normal block = 100/bar
+const T_DIAMOND   = 0.75
+const T_NETHERITE = 0.5
+const T_UNKNOWN   = 1.0  //  a tool we recognise as a tool but whose tier we can't read (modded) — neutral
+
+// Item-id suffixes that mark something as a mining tool. Swords/weapons are deliberately
+// excluded — holding one counts as "no tool" for mining. "_paxel" covers the common modded multitool.
+const TOOL_SUFFIXES = ['_pickaxe', '_axe', '_shovel', '_hoe', '_paxel']
+
 // Weight tiers (multipliers on the rate above). These deliberately MIRROR the Create:
 // Aeronautics physics-value mass ranking — light envelopes/wood/wool sit well below
 // stone/dirt, metal and ore sit well above (oak planks are ~0.5 kpg in Aeronautics) — so
@@ -112,6 +128,21 @@ function hungerWeight(id) {
   return W_NORMAL
 }
 
+// Multiplier from the tool held in the main hand. Recognised vanilla tiers map to zagwar's
+// values; a recognised-but-unknown-tier tool (modded material) is neutral; anything that
+// isn't a mining tool (empty hand, sword, a block, food) is the hardest "no tool" case.
+function toolMultiplier(itemId) {
+  const p = itemId.indexOf(':') === -1 ? itemId : itemId.substring(itemId.indexOf(':') + 1)
+  if (!p || p === 'air') return T_NONE
+  if (!endsWithAny(p, TOOL_SUFFIXES)) return T_NONE
+  if (p.indexOf('netherite') !== -1) return T_NETHERITE
+  if (p.indexOf('diamond') !== -1) return T_DIAMOND
+  if (p.indexOf('iron') !== -1) return T_IRON
+  if (p.indexOf('stone') !== -1) return T_STONE
+  if (p.indexOf('wood') !== -1 || p.indexOf('gold') !== -1) return T_WOOD
+  return T_UNKNOWN
+}
+
 // ---- Event -----------------------------------------------------------------
 
 BlockEvents.broken(event => {
@@ -134,7 +165,12 @@ BlockEvents.broken(event => {
   }
   if (weight <= 0) return
 
-  const amount = EXHAUSTION_PER_WEIGHT * weight
+  let toolMult = T_IRON // neutral default if the held item can't be read
+  try {
+    toolMult = toolMultiplier(String(event.player.mainHandItem.id))
+  } catch (e) { /* keep neutral default */ }
+
+  const amount = EXHAUSTION_PER_WEIGHT * weight * toolMult
   try {
     player.causeFoodExhaustion(amount)
   } catch (e) {
