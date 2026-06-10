@@ -565,10 +565,6 @@ file = "kubejs/data/pcmc/tags/worldgen/biome/vein_tin.json"
 hash = "eafb565f0950f99d838d56e7a10fcaec6290c671fe6c4fd20158e0dca584fc86"
 
 [[files]]
-file = "kubejs/data/pcmc/tags/worldgen/biome/vein_uranium.json"
-hash = "bc773d5110824bd9125ac334d440620945eb5e41fdf556b46af831ba8615eb69"
-
-[[files]]
 file = "kubejs/data/pcmc/tags/worldgen/biome/vein_zinc.json"
 hash = "7642b53be6292821aa188f459b1157f750332aceec6a66716deb33530969c2e1"
 
