@@ -10,6 +10,7 @@ on:
     paths:
       - 'kubejs/server_scripts/recipes/**'
       - 'tools/mod-data/recipes/**'
+      - 'tools/mod-data/loot/**'
       - 'tools/recipe-graph/**'
       - '.github/workflows/recipe-web.yml'
   workflow_dispatch: {}  # manual trigger

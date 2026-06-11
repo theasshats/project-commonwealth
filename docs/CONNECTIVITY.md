@@ -38,6 +38,13 @@ number honest:
   links every item it produces — "made in that machine" is real connectivity (vanilla types stay dropped as
   universal). This is what connected `createfood` to `create` (its food is made *in* Create machines, not
   *from* Create items), and it lights up **magic-apparatus** connectivity too — useful for the #75 magic PR.
+- **Mob drops are edges (#129, default-on; `--no-drops` to compare).** Entity loot tables from the
+  `loot/` digest become mob nodes (`mod:entities/<mob>`) with a *direct* edge to each dropped item — no
+  shared "drop" hub node, which would weld all ~540 mob tables into one artificial cluster and inflate
+  the giant %. The design says mobs anchor via drops/bounties (#90); this makes that checkable: the
+  report's **drop-only items** list (drops no recipe consumes) is the mob-curation signal (#90/#94).
+  Caveat: the digest has no pools/weights/conditions, so these are *possible* drops (presence), **not
+  rates** — fine for connectivity, wrong tool for balance. Chest/structure loot is excluded (#18's pass).
 
 > **The % is a compass, not a gate.** Use it to *find* off-web clusters worth a human look — never as a
 > release target. Target a coverage number and it gets gamed (bridge-recipes-for-the-metric — Goodhart's
@@ -59,8 +66,10 @@ Connectivity is binary — in the web or not. These add nuance (all in the CLI r
   tag, so a mod's own steel/tin can look islanded though it's tag-unified in game. The tool infers this:
   any `mod:[raw_]<metal>[_ingot/_block/…]` is wired to a synthetic `c:material/<metal>` node, collapsing
   those false islands (and surfacing real unification gaps as a tagging — not recipe — fix).
-- **Phantom filtering.** Only namespaces that *author* a recipe count; condition predicates
-  (`neoforge:tag_empty`) and dead compat for uninstalled mods (`mekanism:*`) are dropped.
+- **Phantom filtering.** Only namespaces that *author* a recipe or a loot table count; condition
+  predicates (`neoforge:tag_empty`), dead compat for uninstalled mods (`mekanism:*`), and loot
+  functions/conditions (`minecraft:set_count` — filtered by a vanilla loot-registry noise set, with
+  modded refs validated against the by-mod block/item registries) are dropped.
 
 ## How to read it — and how to fix an island
 

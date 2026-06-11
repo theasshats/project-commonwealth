@@ -56,7 +56,8 @@ HTML = r"""<!doctype html><html><head><meta charset="utf-8"><title>Project Commo
  canvas{flex:1;display:block;cursor:grab} #tip{position:fixed;pointer-events:none;background:#000a;border:1px solid #38445f;border-radius:4px;padding:3px 6px;font-size:12px;display:none}
 </style></head><body><div id="app">
  <div id="side">
-   <h1>Project Commonwealth — recipe web</h1>
+   <h1>Project Commonwealth — connectivity web</h1>
+   <div style="margin:0 14px 6px;color:#8b95a7;font-size:11px">recipes + kubejs overlay + mob-drop edges (entity loot, #129)</div>
    <div id="stats"></div>
    <div id="presets">
      <button data-p="reset">Reset</button>
