@@ -61,8 +61,12 @@ file = "kubejs/assets/inventoryprofilesnext/textures/gui/overlay_new.png"
 hash = "cce47379706d8eb5075a66e9710353bc659971b4f26f1fe1e9813956fdfe0ee4"
 
 [[files]]
+file = "kubejs/client_scripts/hide-default-tacz-jei.js"
+hash = "d6d76fbcef53296769fc44e39ca0e9230bc58d1c888d6cbba7cd767076e4eabc"
+
+[[files]]
 file = "kubejs/client_scripts/mining-speed-tooltip.js"
-hash = "aad40ea1cf31d88a0ec23cfc55b9e279a51db47cb84f5764c191c63c24a169b1"
+hash = "9e4068358a93173af9ac94b1117a978c89d753764a1b663c47adda5ce36b0ea7"
 
 [[files]]
 file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_deepslate_diamond_ore_feature_biome_modifier.json"
@@ -1007,6 +1011,10 @@ hash = "83257926e2952d7b5da23a097381c435b5698a9f94f19423a802ece9eb1ebfd9"
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"
 hash = "91a9288b4c6589ecb3c41e05f23c7ae4a79facfe6453bf8e5d0c507e2c41c7bf"
+
+[[files]]
+file = "kubejs/startup_scripts/hide-default-tacz-creative.js"
+hash = "380bbbedb2ddc7336b526aebcc8053a8aa5f4956ebfac0c1be31a07b671a5544"
 
 [[files]]
 file = "mods/accelerated-decay.pw.toml"

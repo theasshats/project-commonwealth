@@ -10,7 +10,18 @@
 
 ## 0.8.0 — TBD
 
-_Draft placeholder — replace with real notes before release._
+_Draft placeholder — replace the lead with real notes before release._
+
+### Fixes and cleanup
+
+- Mining tools now show their mining speed in the tooltip, including the bonus from Efficiency. The
+  line was announced for 0.6.3 as an in-pack replacement for the removed Mining Speed Tooltips mod
+  but never rendered; the script has been rewritten against the correct API and works now.
+- The stock TaCZ guns, ammunition, and attachments no longer appear in JEI or the creative menu.
+  They were never craftable in this pack — the gun roster is the Create: Armorer set, built through
+  Create machines — so the leftover entries only read as broken content. The 12-gauge shell stays
+  visible: two Armorer shotguns fire it and it has a Create recipe. The four unused TaCZ gun
+  workbenches are hidden as well.
 
 ## 0.7.0 — The Create spine
 
