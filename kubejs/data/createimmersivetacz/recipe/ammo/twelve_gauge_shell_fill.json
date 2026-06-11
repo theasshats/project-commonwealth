@@ -49,6 +49,35 @@
           "id": "createimmersivetacz:twelve_gauge_shell"
         }
       ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "createimmersivetacz:twelve_gauge_shell"
+        },
+        {
+          "tag": "c:nuggets/lead"
+        }
+      ],
+      "results": [
+        {
+          "id": "createimmersivetacz:twelve_gauge_shell"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "createimmersivetacz:twelve_gauge_shell"
+        }
+      ],
+      "results": [
+        {
+          "id": "createimmersivetacz:twelve_gauge_shell"
+        }
+      ]
     }
   ],
   "transitional_item": {

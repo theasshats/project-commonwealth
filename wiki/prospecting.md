@@ -87,7 +87,7 @@ biome and depth to search before you set out.
 Veins are regional — the biome at the vein's depth decides what generates. A rough guide:
 
 - Mountains and hills: iron, magnetite, lead, silver, nickel, palladium (deep).
-- Badlands and savanna: copper, gold, thorium, uranium (deep), bauxite (savanna).
+- Badlands and savanna: copper, gold, thorium (deep), bauxite (savanna).
 - Desert: redstone, lithium.
 - Forest and taiga: coal.
 - Plains: zinc, tin, lignite, fireclay.
@@ -97,7 +97,7 @@ Veins are regional — the biome at the vein's depth decides what generates. A r
 - Mountain peaks: emerald.
 - Coasts and oceans: salt.
 
-Depth matters as much as biome. Marquee ores such as diamond, uranium, and mithril sit deep;
+Depth matters as much as biome. Marquee ores such as diamond, thorium, and mithril sit deep;
 emerald sits high in peaks. The JEI diagram above gives the exact spawn range per vein.
 
 ## Configuration knobs
@@ -119,6 +119,35 @@ from the jar:
 - A single vertical shaft through the center of a vein covers every depth it could be at, so
   there is no need to strip-mine.
 - Caves cut through veins too; right-click ore you find while caving the same way.
+
+## The prospecting kit
+
+Create: Ore Excavation adds three tools that work alongside right-click prospecting, and all three
+are early-game crafts:
+
+- **Vein finder** — built around an electron tube, it points you toward buried deposits from the
+  surface.
+- **Vein atlas** — a clipboard-bound survey book that keeps a record of what you have found.
+- **Sample drill** — a small brass machine that bores a test column so you can check what is below
+  without committing to a shaft.
+
+## Two vein systems
+
+The pack has two different kinds of "vein," and they are found and used differently:
+
+- **Ore veins** (the GregTech-style system above) are the pack's ordinary ore supply: regional,
+  hand-mined, revealed by right-clicking ore.
+- **Drilling veins** are separate, deeper deposits that only Create: Ore Excavation's machines can
+  tap. The vein finder, atlas, and sample drill locate them. You cannot dig these out by hand.
+
+## End-game: industrial vein drilling
+
+Tapping a drilling vein is an end-game operation. The drilling machine and its fluid-pumping
+counterpart, the extractor, require etched circuit boards and electric motors from the top of the
+industrial chain, and they only run on serious rotational power. Drill heads are steel-bodied,
+assembled on the Mechanical Crafter, and wear out with use; the heavier veins also consume fluid
+(the netherite vein drinks lava). Expect to spend drills, power, and logistics to run one — finding
+veins is free, but emptying the planet is not.
 
 ## Admin / debug
 

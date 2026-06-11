@@ -1,6 +1,0 @@
-{ "type": "create:splashing",
-  "ingredients": [ { "item": "create_compressed:crushed_gold_pile" } ],
-  "results": [
-    { "id": "minecraft:gold_nugget", "count": 81 },
-    { "id": "minecraft:quartz", "count": 9, "chance": 0.5 }
-  ] }

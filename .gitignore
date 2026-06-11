@@ -51,3 +51,6 @@ tools/editor-src/bin/
 
 # packwiz source checkout used only by the build-editor workflow
 .packwiz-src/
+
+# Downloaded build tooling (packwiz-installer-bootstrap.jar — fetched by scripts/setup.sh + the build scripts)
+.tools/

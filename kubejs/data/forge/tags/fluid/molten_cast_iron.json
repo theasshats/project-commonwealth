@@ -1,0 +1,7 @@
+{
+  "__comment": "Legacy-tag fill for cbc_at's cannon_casting — see molten_steel.json in this folder. Cast iron's only molten form is CBC's.",
+  "values": [
+    "createbigcannons:molten_cast_iron",
+    "createbigcannons:flowing_molten_cast_iron"
+  ]
+}

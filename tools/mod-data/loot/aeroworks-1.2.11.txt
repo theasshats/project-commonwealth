@@ -1,0 +1,4 @@
+aeroworks:blocks/gyroscope | minecraft:block | aeroworks:gyroscope minecraft:block minecraft:item minecraft:survives_explosion
+aeroworks:blocks/joystick | minecraft:block | aeroworks:joystick minecraft:block minecraft:item minecraft:survives_explosion
+aeroworks:blocks/mechanical_servo | minecraft:block | aeroworks:mechanical_servo minecraft:block minecraft:item minecraft:survives_explosion
+aeroworks:blocks/stepper_servo | minecraft:block | aeroworks:stepper_servo minecraft:block minecraft:item minecraft:survives_explosion

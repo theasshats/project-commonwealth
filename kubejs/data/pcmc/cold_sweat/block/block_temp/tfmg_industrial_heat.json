@@ -1,0 +1,12 @@
+{
+  "block": {
+    "blocks": [
+      "tfmg:blast_stove",
+      "tfmg:coke_oven"
+    ]
+  },
+  "temperature": 18,
+  "range": 6,
+  "max_effect": 36,
+  "units": "f"
+}

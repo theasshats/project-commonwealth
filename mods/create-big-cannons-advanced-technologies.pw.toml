@@ -1,5 +1,7 @@
 name = "Create Big Cannons: Advanced Technologies"
 filename = "cbc_at_Neoforge_1.21.1_0.1.4c.jar"
+# Pinned as a pair with create-big-cannons (5.11.3) — see the comment there.
+pin = true
 
 [download]
 url = "https://cdn.modrinth.com/data/pTfszyXD/versions/ds01YFge/cbc_at_Neoforge_1.21.1_0.1.4c.jar"
