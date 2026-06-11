@@ -910,7 +910,7 @@ hash = "8f0f68afb201d0712071e65a7fafac962828695980cf6fb337abcd7a6fb7e44d"
 
 [[files]]
 file = "kubejs/server_scripts/spine/00-tiers.js"
-hash = "65de43b56f031ff87eee0a449313bcf0de2cd567b5d0278c727174fb4a8642a1"
+hash = "1aa0b90bc7332961832e22097698eaf502b45cdceedd14b90766a2e8f4018a0f"
 
 [[files]]
 file = "kubejs/server_scripts/spine/05-tags.js"
@@ -938,7 +938,7 @@ hash = "cc7ea8f5eba3ead2c70f7082e986a785959f498b05c5e578eed9b1155c57ce5f"
 
 [[files]]
 file = "kubejs/server_scripts/spine/51-weave-additions-tfmg.js"
-hash = "ec97021e9662028d55611e94b212b00e4e4ecf431466a53c48dd52595c6ea03d"
+hash = "4c9a09be571814840ffb20ff4db9c318dc778bba18e01afcf5ce11a05876ad30"
 
 [[files]]
 file = "kubejs/server_scripts/spine/52-weave-tfmg-newage.js"
@@ -950,7 +950,7 @@ hash = "ef266574d8d53e63ae8feb01fd6f3f1d6f90d8be6974463ea0bd91df714038c6"
 
 [[files]]
 file = "kubejs/server_scripts/spine/55-weave-excavation.js"
-hash = "91ddd75a990c6d5407f35cb7be37453f49fe61572b48717031e7c35d2e99a37b"
+hash = "4def03db59f494f0c83d6eac041260f69f868ae640991c68ed27409d4e0ce480"
 
 [[files]]
 file = "kubejs/server_scripts/spine/56-weave-stuff-additions.js"
@@ -962,7 +962,7 @@ hash = "295eeeb8663b5189817ad39a406dbb4b9be5c91b98bd4bd7127602bf4ec57717"
 
 [[files]]
 file = "kubejs/server_scripts/spine/60-machines-tfmg.js"
-hash = "666bc636ffe3865dfb2a52350f655cc653549359344f7b41e055e9abfdf52068"
+hash = "945572dd323f8f2ba67235bc21a63f1d07b2f88b49691de6d8895ed6b1a047c7"
 
 [[files]]
 file = "kubejs/server_scripts/spine/61-machines-newage-additions.js"
@@ -973,8 +973,8 @@ file = "kubejs/server_scripts/spine/62-machines-misc.js"
 hash = "2b60e4cb06b59859c0d52340f1210e62b0017f61d5ac827baf52e2014e46ab07"
 
 [[files]]
-file = "kubejs/server_scripts/spine/63-fe-boundary-tfmg.js"
-hash = "e2625cd03584161f1672df596b241b4f3caffd6a7fdb53cc4ac36d2758644c43"
+file = "kubejs/server_scripts/spine/63-tfmg-voltage-removed.js"
+hash = "4389429fcf735e4fd6b080fe3265725a454bfd7b39be551bd5fc6075875dce37"
 
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"
