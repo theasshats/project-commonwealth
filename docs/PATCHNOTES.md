@@ -38,6 +38,15 @@ expedition over. Ore generation only affects newly generated chunks.
   startup fix the pack had carried as a custom build is in the official release, which also adds a
   filter to the automatic food-group calculator.
 
+### Interface
+
+- Mining tools show their mining speed on the tooltip again, and the line reflects any Efficiency
+  enchantment on the tool (for example, "Mining speed: 34 (base 8, Efficiency V)"). This restores the
+  feature lost when the Mining Speed Tooltips mod was removed in 0.6.3.
+- The recipe viewer and creative search now list only the pack's Create: Armorer guns, ammunition, and
+  attachments. The stock TaCZ guns and attachments, which were already uncraftable, no longer show up
+  without a recipe.
+
 ## 0.7.0 — The Create spine
 
 The tech route gets its backbone. Create and its addons now climb four tiers — manual, water and wind,
