@@ -2,8 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "W": {
-      "item": "tacz:modern_kinetic_gun",
-      "nbt": "{GunId:\"create_armorer:special_melee_wrench\", GunFireMode:\"SEMI\"}"
+      "type": "neoforge:components",
+      "items": "tacz:modern_kinetic_gun",
+      "components": {
+        "minecraft:custom_data": {
+          "GunId": "create_armorer:special_melee_wrench",
+          "GunFireMode": "SEMI"
+        }
+      },
+      "strict": false
     }
   },
   "pattern": [

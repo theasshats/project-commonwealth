@@ -32,15 +32,16 @@ ServerEvents.recipes(event => {
   event.remove({ output: 'create_sa:brass_jetpack_chestplate' })
   event.remove({ output: 'create_sa:netherite_jetpack_chestplate' })
 
-  // ── Create: Storage's backpack FLIGHT upgrade — kept, but it obeys the #87 ladder (06-11 review).
-  //    Stock grid rides a netherite backtank with no electric dependency, letting backpack flight skip
-  //    the "flight is an electric-age privilege" rule the base jetpack pays. Same stock grid (verified
-  //    in fxntstorage-1.2.7's jar), the two iron sheets become capacitors. ──
+  // ── Create: Storage's backpack FLIGHT upgrade — kept, but it sits at the TOP of the #87 ladder
+  //    (06-11 round 3, maintainer call): the upgrade is built FROM a netherite jetpack, so backpack
+  //    flight is a convenience above the cursium-gated flagship, never a bypass around it. Stock grid
+  //    (verified in fxntstorage-1.2.7's jar) with one backtank promoted to the jetpack and the two
+  //    iron sheets as capacitors (the electric tier carries through). ──
   event.remove({ output: 'fxntstorage:backpack_flight_upgrade' })
   event.recipes.create.mechanical_crafting('fxntstorage:backpack_flight_upgrade', [
     ' #V# ',
     '#PCP#',
-    '#TBT#',
+    '#TBJ#',
     '#FCF#',
     ' #N# '
   ], {
@@ -51,6 +52,7 @@ ServerEvents.recipes(event => {
     N: 'create:nozzle',
     P: 'create:propeller',
     T: 'create:netherite_backtank',
+    J: 'create_jetpack:netherite_jetpack',     // the T4 flagship — storage flight builds on it (#87)
     V: 'create:copper_valve_handle'
   })
 

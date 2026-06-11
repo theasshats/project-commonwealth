@@ -29,6 +29,8 @@ tier you are stepping into.
   bootstrap.
 - Heat is no longer free. Blaze burners give no passive heat: the new basic burner provides low heat for
   everyday cooking and the first boilers, while blaze burners and blaze cakes carry the hotter recipes.
+  The ladder is literal — a blaze burner is built on a basic burner, so each heat rung contains the one
+  below it.
 - From the steam tier up, key machines call for boss materials: a Mowzie's trophy for the advanced
   energiser, Ancient Remnant metal for the airship's gyroscopic bearing, Maledictus cursium for the
   netherite jetpack.
@@ -38,9 +40,9 @@ tier you are stepping into.
 - Jetpacks consolidated into one line: Create Jetpack. The base jetpack is an electric-age Mechanical
   Crafter build around a capacitor; the netherite upgrade requires cursium, and the smithing-table
   shortcut no longer works. Create Stuff & Additions' four parallel jetpacks are no longer craftable
-  and no longer appear in JEI. Create: Storage's backpack flight upgrade remains as the
-  storage-flavoured option, and now takes capacitors so backpack flight is earned at the electric
-  tier like every other flight.
+  and no longer appear in JEI. Create: Storage's backpack flight upgrade remains as the top of the
+  flight ladder: it is built from a netherite jetpack and capacitors, so backpack flight comes after
+  the flagship, not around it.
 - Power gear is built from the machine it works like, each on the Mechanical Crafter: the portable drill
   carries a real Ore Excavation drill head, the flamethrower a TFMG steel fluid tank, the grappling
   whisk an aeronautics plunger launcher, the fan component a Crafts & Additions electric motor. The
@@ -63,7 +65,8 @@ tier you are stepping into.
   the boiler to the sky.
 - Aeronautics flight machinery is Mechanical Crafter work: the adjustable burner, steam vent,
   propeller bearings, and smart propeller all assemble on the Crafter rather than the crafting
-  table. Simple parts — propellers, envelopes, goggles — stay table-craftable.
+  table. Simple parts — propellers, envelopes, goggles — stay table-craftable. Envelopes are crafted
+  white and coloured at the deployer with dye; the per-colour crafting recipes are gone.
 - Create: Aeroworks is added as the top tier of flight: its digital controls are what make large or
   complex flying machines practical to pilot, and they sit at the electric tier alongside the rest of
   the end-game machinery.
@@ -129,7 +132,10 @@ tier you are stepping into.
 - Steel is consolidated under TFMG: ingot, nugget, block, and plate all resolve to the TFMG item, so
   steel reads as one material across every recipe. The same goes for the molten form — melting steel
   down in the Big Cannons foundry now yields TFMG's molten steel, which pours cannons and casts back
-  to ingots; Big Cannons' duplicate fluid is gone. Bronze remains with Create: Ironworks.
+  to ingots; Big Cannons' duplicate fluid is gone, and everything runs on one scale: 144 mb to the
+  ingot, 16 to the nugget, with the foundry's melting and casting updated to match. The steel plate
+  also has a single recipe now — TFMG's press line — with Ironworks' one-step press shortcut removed.
+  Bronze remains with Create: Ironworks.
 - End-game electricity reaches outside the tech route: the layered magnet at the heart of New Age's
   generators takes a silver core, pulling a region most tech bases don't hold — mine silver country or
   trade with whoever does.

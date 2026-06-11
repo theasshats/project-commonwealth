@@ -39,14 +39,17 @@ ServerEvents.recipes(event => {
   // the forge_steel_* compacting, and the c/fluid_casting_time data), so the melts re-point to
   // tfmg:molten_steel and CBC's fluid goes inert — dropped from c:molten_steel and JEI-hidden, both in
   // kubejs/data/c/tags/. CBC's other molten metals (cast iron / bronze / nethersteel) have no TFMG
-  // twin and stay.
-  // Amounts stay CBC's stock 10/90/810 mb at "heated": CBC compacting casts ingots at 90 mb, so a melt
-  // may never yield more than 90 per ingot or that loop inflates (TFMG's own casting runs on a richer
-  // 144 mb/ingot scale — melting toward it is lossy, profitable nowhere).
+  // twin and stay on their own scale.
+  // ONE SCALE (06-11 round 3, maintainer call): 144 mb/ingot — TFMG's standard — everywhere. CBC's
+  // stock 90 mb/ingot melts AND its 90 mb forge compacting are both re-authored to 16/144/1296
+  // (nugget/ingot/block), so melt -> compact is lossless and melt -> TFMG-cast is lossless; no route
+  // profits. (Melting at 144 against 90-mb compacting would inflate — the two MUST move together.)
+  // Cannon casting consumes fixed mb per cast shape (code-side), so steel cannons get proportionally
+  // cheaper in ingot terms under the richer melt — flagged on the PR playtest.
   const STEEL_MELTS = [
-    ['melt_steel_nugget', 'c:nuggets/steel', 10, 20],
-    ['melt_steel_ingot', 'c:ingots/steel', 90, 180],
-    ['melt_steel_block', 'c:storage_blocks/steel', 810, 1620]
+    ['melt_steel_nugget', 'c:nuggets/steel', 16, 20],
+    ['melt_steel_ingot', 'c:ingots/steel', 144, 180],
+    ['melt_steel_block', 'c:storage_blocks/steel', 1296, 1620]
   ]
   STEEL_MELTS.forEach(([name, tag, mb, ticks]) => {
     event.remove({ id: 'createbigcannons:melting/' + name })
@@ -58,4 +61,26 @@ ServerEvents.recipes(event => {
       results: [{ amount: mb, id: 'tfmg:molten_steel' }]
     }).id('pcmc:melting/' + name)
   })
+
+  // The matching half of the 144 rescale: CBC's forge compacting (molten -> solid) moves from the
+  // stock 90-mb scale to 16/144/1296. Outputs keep CBC's items — AlmostUnified rewrites them to the
+  // canonical TFMG forms at runtime.
+  const STEEL_FORGES = [
+    ['forge_steel_nugget', 16, 'createbigcannons:steel_scrap'],
+    ['forge_steel_ingot', 144, 'createbigcannons:steel_ingot'],
+    ['forge_steel_block', 1296, 'createbigcannons:steel_block']
+  ]
+  STEEL_FORGES.forEach(([name, mb, out]) => {
+    event.remove({ id: 'createbigcannons:compacting/' + name })
+    event.custom({
+      type: 'create:compacting',
+      ingredients: [{ type: 'neoforge:tag', amount: mb, tag: 'c:molten_steel' }],
+      results: [{ id: out }]
+    }).id('pcmc:compacting/' + name)
+  })
+
+  // ONE steel plate (06-11 round 3, #103): ironworks' pressing (steel ingot -> steel_sheet) unifies to
+  // the same item as TFMG's heavy_plate, so JEI showed two routes — a 1-step press beside TFMG's
+  // 2-step sequenced assembly. The assembly is the canonical route; the press shortcut goes.
+  event.remove({ id: 'create_ironworks:materials/plates/steel_sheet' })
 })

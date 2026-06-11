@@ -143,5 +143,12 @@ ServerEvents.recipes(event => {
     C: 'minecraft:copper_block'
   })
 
+  //    envelopes — ONE craft, colours by machine (06-11 round 3): the white envelope's stock shaped
+  //    recipe is the only way to make a NEW envelope; the 15 colored shaped recipes go, leaving the
+  //    stock deploying recipes (dye onto an envelope) as the only colour route. Washing stays.
+  ;['black', 'blue', 'brown', 'cyan', 'gray', 'green', 'light_blue', 'light_gray', 'lime',
+    'magenta', 'orange', 'pink', 'purple', 'red', 'yellow'
+  ].forEach(c => event.remove({ id: 'aeronautics:' + c + '_envelope' }))
+
   console.info('[pcmc-spine] weave-aeronautics: control ladder reinforced — propeller_bearing (T2) below gyroscopic; gimbal_sensor analog; gyroscope/servos/joystick (T4) need TFMG circuit / Additions electric; flight machines (burner/vent/bearings/propellers) are Mechanical Crafter builds.')
 })

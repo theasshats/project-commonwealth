@@ -330,7 +330,7 @@ hash = "fc681945734a54860074cfd3ae62824ac92927596d241ea33ac0bfefa679e839"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/guns/unmelee_wrench.json"
-hash = "39b66afbed376f7bbdd1cf056999a804b6b0a44fb9605160dbd893c906249331"
+hash = "726019ddf5829f9cdcdd2f1412c6ab992a1753b454477a72c623a29669520505"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/nitropowder_fluid.json"
@@ -814,7 +814,7 @@ hash = "8fbaa79d17e549628a197b6c77e1bc70cba19d9ff64793ea2928d778ad9fb0ae"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/05-metals.js"
-hash = "0d3f87e13bd825eed1ef46b236aee9c2128a51c65068ec9f31291ae67d954c26"
+hash = "0f4920f47a13a19bc3d54a61f73f5f9a55765dd18ee6f8a14c528027cf9d3c54"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/10-immersive-armors.js"
@@ -938,7 +938,7 @@ hash = "99c82d9442ecf093e23809b8478a8ea276c51a98c5c39590b40f7a6819730726"
 
 [[files]]
 file = "kubejs/server_scripts/spine/20-power-ladder.js"
-hash = "51a2c0ec6139c48cca26ab168c46a0ee4d15870a2e7edf8c29992cc5d229d440"
+hash = "dae12ef5a2b8f9ac5eb0c076a708b288843a467820c6bd3189d6cb812255b5ae"
 
 [[files]]
 file = "kubejs/server_scripts/spine/30-cost-basics.js"
@@ -962,7 +962,7 @@ hash = "088baa705eef36234815342eac4a9f150d4071a26bf7236a7c864fc37ea9c4a0"
 
 [[files]]
 file = "kubejs/server_scripts/spine/54-weave-aeronautics.js"
-hash = "abf2cd71e87b55375353d664dc292f0c81e411aae2ad5e703a72eb00f9f4f8c4"
+hash = "1885b9d4d11fcc6589057b3f7335038e19dba0460316f38cf7ca7464f978df5b"
 
 [[files]]
 file = "kubejs/server_scripts/spine/55-weave-excavation.js"
@@ -974,7 +974,7 @@ hash = "7792c10a5d11f1baf5affdfee917b48bfd1630bcb6044a07d599d5834d3de78b"
 
 [[files]]
 file = "kubejs/server_scripts/spine/57-jetpacks.js"
-hash = "6715743ba7c51d17e43630e8dab4df6967bf2870c14b369316e72ba885cbd01d"
+hash = "79204ddeace9df0e10367fe1c533217a7657dda124a48c45e1246adbd60a457f"
 
 [[files]]
 file = "kubejs/server_scripts/spine/60-machines-tfmg.js"

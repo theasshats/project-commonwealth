@@ -64,6 +64,17 @@ ServerEvents.recipes(event => {
     'AIA'
   ], { A: 'create:andesite_alloy', I: '#c:ingots/iron' })
 
+  // §4a — the heat ladder is LITERAL (06-11 round 3): the Blaze Burner is built ON a basic burner —
+  // stock grid (iron plates around netherrack, from the create-6.0.10 jar) with the burner as its
+  // base, so each heat rung physically contains the one below. Removed by ID (never by output — the
+  // 06-11 mechanism lesson).
+  event.remove({ id: 'create:crafting/kinetics/empty_blaze_burner' })
+  event.shaped('create:empty_blaze_burner', [
+    ' I ',
+    'IAI',
+    ' B '
+  ], { I: '#c:plates/iron', A: '#c:netherracks', B: 'createlowheated:basic_burner' })
+
   // Converters are deliberately untouched (preserving the alternator/motor SU->FE path = the ladder).
   // Steam (rung 3) and electric (rung 4) need no recipe edit — their dependency chains are the gate.
   console.info(`[pcmc-spine] power ladder resolved: ${SPINE_GENERATORS.converter.length} converters kept, ${SPINE_GENERATORS.free_source.length} free-sources cost-gated, ${SPINE_GENERATORS.capped_source.length} capped source tiered; heat ladder lowheated->heated->superheated documented (basic_burner dialed)`)
