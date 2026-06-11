@@ -49,7 +49,8 @@ tier you are stepping into.
 - The treadmill joins the hand crank and water wheel as recognized early power — modest, and capped by
   whatever walks on it.
 - TFMG's voltage system is removed for now: its generators, cables, transformers, electric machines,
-  meters, and electric lights are no longer craftable. The pack runs two electricity systems whose
+  meters, and electric lights are no longer craftable and no longer appear in the recipe viewer. The
+  pack runs two electricity systems whose
   conversion rates are balanced against each other — Crafts & Additions and Create: New Age — and
   TFMG's grid was a third with rates of its own. None of TFMG's production machinery is affected; the
   blast furnace, distillation, centrifuge, and winding machine all run on rotation, and gas lamps stay.

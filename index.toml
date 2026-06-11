@@ -45,6 +45,10 @@ file = "config/incontrol/spawn.json"
 hash = "8dbb6602d8274d393a0a72c3acce550d3f50cb060726ccff30f6b6a94c5b2d55"
 
 [[files]]
+file = "config/jei/blacklist.cfg"
+hash = "8a937b97d9b42eb02985fae7bffd6d75ff947e1a51db107c648b3ed2e2c2c94e"
+
+[[files]]
 file = "config/mixinhelper.json"
 hash = "e79e162a143d75ab2f19dd8ac5eef5f0c12f9cea6aae872b829c4ea3b869ce3d"
 

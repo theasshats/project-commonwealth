@@ -37,9 +37,12 @@
 //     machines (55-weave) and the T3 representative set (00-tiers).
 //
 // Cross-file: 51-weave (voltmeter + the staged electric_motor seam retired), 60-machines (electric_pump,
-// polarizer, 6 cable hubs, accumulator not re-added) — pointers at each site. Removals here are
-// load-safe no-ops for ids without recipes. Existing placed blocks in dev worlds keep working until
-// broken (recipe removal, not registry removal). Verification: #315 / PR #234 playtest.
+// polarizer, 6 cable hubs, accumulator not re-added) — pointers at each site. VISIBILITY: the family is
+// also hidden from JEI via config/jei/blacklist.cfg (67 digest-verified ids, incl. the unfinished_*
+// transitionals this file's removals orphan) — recipes gone here, search entries gone there; keep the
+// two lists in step. Removals here are load-safe no-ops for ids without recipes. Existing placed blocks
+// in dev worlds keep working until broken (recipe removal, not registry removal). Verification: #315 /
+// PR #234 playtest.
 //
 // STATUS: list verified vs tools/recipe-dump + the mod-data digest, load-safe, UNVERIFIED IN-GAME.
 
