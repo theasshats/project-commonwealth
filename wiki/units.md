@@ -110,13 +110,13 @@ ladder, driven by the kinetic rungs below it (see
   walls.
 - **Create: Blockchain** — the currency miner (see Money, below).
 
-How many joules is 1 FE? There is no canonical answer, but the pack's bridges imply one: New
-Age's generator yields exactly **0.029296875 FE per SU per tick** (`suToEnergy` — the cleanest
-closed-form rate in the pack), and with 1 SU ≈ 10 W that pegs **1 FE at roughly 17 J**
-(1 FE/t ≈ 350 W). For honesty's sake: createaddition's alternator runs at its own independently
-defined rate, and the wider ecosystem's conventions imply values up to a few hundred joules per
-FE — so FE is not dimensionally self-consistent even inside one pack. Treat 17 J as the local
-standard set by the one bridge with a clean constant.
+How many joules is 1 FE? There is no canonical answer, but the pack's bridges agree on one rate:
+New Age's generator yields exactly **0.029296875 FE per SU per tick** (`suToEnergy`), and
+createaddition's base conversion — 480 FE/t at 256 RPM against 16,384 SU — works out to the
+*same* number, so New Age evidently adopted createaddition's constant. With 1 SU ≈ 10 W that
+pegs **1 FE at roughly 17 J** (1 FE/t ≈ 350 W). For honesty's sake: the wider ecosystem's
+conventions imply values up to a few hundred joules per FE — so FE is only locally consistent.
+Treat 17 J as the pack's standard, set by its shared base rate.
 
 ## Heat: °T and heat levels
 
@@ -211,15 +211,21 @@ between their practitioners necessary.
 Where unit systems touch, an exchange rate exists — and every exchange rate is a balance lever
 someone has to own. The pack's seams, and their current state:
 
-- **SU ↔ FE is bridged twice, at independently defined rates.** createaddition's
-  alternator/motor pair is the canonical path (lossy, ~75% round trip); New Age's generator
-  coil and motors use one shared constant (`suToEnergy` = 0.029296875 FE per SU·tick) in *both*
-  directions, so its internal round trip is lossless on paper. Its real tax is billing: New Age
-  motors burn FE at their full rated SU capacity whenever powered, used or not, so an oversized
-  or idle motor is the inefficiency. Because the two bridges don't share a rate, a cross-mod
-  loop (generate FE on one bridge, spend it on the other) has no built-in guarantee of staying
-  under 100% — that audit, and the solar question below, are tracked in
-  [#315](https://github.com/theasshats/project-commonwealth/issues/315).
+- **SU ↔ FE is bridged twice — on one shared base rate.** createaddition's base conversion
+  (480 FE/t at 256 RPM, 16,384 SU) and New Age's `suToEnergy` are the identical constant,
+  0.029296875 FE per SU·tick. The devices then ladder by efficiency: the alternator pays a 25%
+  conversion tax (75% of base — the early-tier price), New Age's T4 generator coil converts at
+  the full base rate, and motors on both sides give SU at the base rate but bill by their dialed
+  speed or rated capacity rather than actual load — an oversized or idle motor is the
+  inefficiency. The worst possible conversion loop is therefore *exactly* 100%, never more: no
+  cross-bridge free-energy exploit exists at these defaults (verified from both mods' sources).
+  What remains for [#315](https://github.com/theasshats/project-commonwealth/issues/315) is
+  in-game confirmation, plus TFMG's separate voltage network (below).
+- **TFMG runs a third electric network on its own meter.** Its generator, cable hubs,
+  transformers, and voltmeter form a voltage-flavored grid parallel to the FE wires, feeding
+  TFMG's own electric machines. Whether (and at what rate) it interchanges with FE is an open
+  playtest question on [#315](https://github.com/theasshats/project-commonwealth/issues/315);
+  until verified, treat TFMG power as a fourth non-convertible currency in practice.
 - **`suToEnergy` is the pack's currency peg.** Blockchain prices coins in absolute FE and MFFS
   bills upkeep in absolute FE/t, so retuning the SU↔FE rate silently re-prices money minting and
   force fields. It is deliberately left at the mod default; treat it as load-bearing.
@@ -249,7 +255,7 @@ in skill points and happiness scores. None of these have dimensions, and none of
 | 1 RPM | angular velocity | 1 RPM (it's real) |
 | 1 SU | power | ≈ 10 W (waterwheel calibration) |
 | 1 SU/RPM (base value) | torque | ≈ 95 N·m |
-| 1 FE | energy | ≈ 17 J (New Age bridge; rates vary by mod) |
+| 1 FE | energy | ≈ 17 J (shared base rate; alternator pays 25% tax) |
 | 1 FE/t | power | ≈ 350 W |
 | 1 °T/s (New Age heat) | caloric flow | n/a — physics discarded this in the 1840s |
 | 1 spur | currency | ≥ 8.3 MFE ≈ 40 kWh of minting energy |
