@@ -155,7 +155,7 @@ bot commit appearing on your PR (or on `main`) is expected, not a glitch.
   `scripts/extract-mod-data.sh`) into `tools/mod-data/`, so recipe-design sessions have offline ground
   truth. Triggers on `mods/**` / `pack.toml` (push to `main` **and** PRs, including drafts — committed
   back to the PR branch), a weekly cron backstop, and `workflow_dispatch`. It doesn't watch
-  `tools/mod-data/**`, so its own commit can't re-trigger it; that commit instead feeds `recipe-web.yml`.
-- **`recipe-web.yml` — connectivity viz.** Rebuilds `tools/recipe-graph/recipe-web.html` and the data
-  block in `docs/CONNECTIVITY.md` whenever the recipes, the digest, or the recipe-graph tooling change
+  `tools/mod-data/**`, so its own commit can't re-trigger it; that commit instead feeds `connectivity-web.yml`.
+- **`connectivity-web.yml` — connectivity viz.** Rebuilds `tools/connectivity/connectivity-web.html` and the data
+  block in `docs/CONNECTIVITY.md` whenever the recipes, the digest, or the connectivity tooling change
   (push to `main`, or `workflow_dispatch`). Commits back with `[skip ci]` to avoid a loop.

@@ -5,7 +5,7 @@ What lives in this folder:
 | Thing | What it is |
 |---|---|
 | `pcmc-edit.exe` | the **editor** — local web app for managing the pack (the rest of this README). CI-built; never hand-edit. |
-| `recipe-graph/` | **connectivity tooling** — measures "one web vs many clusters" + an interactive viz. See [`recipe-graph/README.md`](recipe-graph/README.md). |
+| `connectivity/` | **connectivity tooling** — recipe + mob-drop graph: measures "one web vs many clusters" + an interactive viz. Renamed from `recipe-graph/` (#129). See [`connectivity/README.md`](connectivity/README.md). |
 | `packwiz` | vendored `packwiz` binary (linux/amd64), so agent/CI sessions run `./tools/packwiz …` without `go install`. `.packwizignore`'d. |
 | `mod-data/` | recipe + loot **digests** (`recipes/*.txt`, ground truth for the recipe work). Machine-maintained — see the pipeline below; never hand-edit. |
 | `recipe-dump/` | manual runtime recipe-dump tool (exact grids/counts for re-authoring spine recipes). Its outputs are **local-only, never committed** — see its README. |

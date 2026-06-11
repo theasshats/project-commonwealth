@@ -8,7 +8,7 @@ docs/CONNECTIVITY.md for the math.
 import re, glob, os
 from collections import defaultdict, deque
 
-HERE = os.path.dirname(os.path.abspath(__file__))                       # tools/recipe-graph/
+HERE = os.path.dirname(os.path.abspath(__file__))                       # tools/connectivity/
 RECIPE_DIR = os.path.join(HERE, '..', 'mod-data', 'recipes')            # tools/mod-data/recipes/
 LOOT_DIR   = os.path.join(HERE, '..', 'mod-data', 'loot')               # tools/mod-data/loot/
 BYMOD_DIR  = os.path.join(HERE, '..', 'mod-data', 'by-mod')             # tools/mod-data/by-mod/

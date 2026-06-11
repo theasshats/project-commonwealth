@@ -18,7 +18,7 @@ Flags:  --with-vanilla     keep minecraft: nodes
 import sys, os
 from collections import defaultdict
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import recipe_graph_lib as L
+import connectivity_lib as L
 
 WITH_VANILLA = '--with-vanilla' in sys.argv
 JARS_ONLY    = '--jars-only' in sys.argv

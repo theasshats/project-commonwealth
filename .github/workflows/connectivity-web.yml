@@ -1,6 +1,6 @@
 name: Regenerate recipe web
 
-# Rebuilds the interactive connectivity viz (tools/recipe-graph/recipe-web.html) and refreshes the
+# Rebuilds the interactive connectivity viz (tools/connectivity/connectivity-web.html) and refreshes the
 # data block in docs/CONNECTIVITY.md whenever the recipes, digests, or the tooling change. The result
 # is committed back to main with a [skip ci] tag to prevent loops (same pattern as build-editor.yml).
 
@@ -11,8 +11,8 @@ on:
       - 'kubejs/server_scripts/recipes/**'
       - 'tools/mod-data/recipes/**'
       - 'tools/mod-data/loot/**'
-      - 'tools/recipe-graph/**'
-      - '.github/workflows/recipe-web.yml'
+      - 'tools/connectivity/**'
+      - '.github/workflows/connectivity-web.yml'
   workflow_dispatch: {}  # manual trigger
 
 permissions:
@@ -33,16 +33,16 @@ jobs:
       - name: Regenerate viz + connectivity data
         run: |
           set -euo pipefail
-          python3 tools/recipe-graph/recipe-graph-viz.py
+          python3 tools/connectivity/connectivity-viz.py
           # rewrite the data block under the marker in docs/CONNECTIVITY.md
-          MARKER='<!-- DATA: regenerate with `python3 tools/recipe-graph/recipe-graph.py` -->'
+          MARKER='<!-- DATA: regenerate with `python3 tools/connectivity/connectivity.py` -->'
           python3 - "$MARKER" <<'PY'
           import sys
           p = 'docs/CONNECTIVITY.md'; marker = sys.argv[1]
           head = open(p, encoding='utf-8').read().split(marker)[0]
           open(p, 'w', encoding='utf-8').write(head + marker + '\n\n')
           PY
-          python3 tools/recipe-graph/recipe-graph.py >> docs/CONNECTIVITY.md
+          python3 tools/connectivity/connectivity.py >> docs/CONNECTIVITY.md
 
       - name: Commit if changed
         env:
@@ -52,7 +52,7 @@ jobs:
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         run: |
           set -euo pipefail
-          git add tools/recipe-graph/recipe-web.html docs/CONNECTIVITY.md
+          git add tools/connectivity/connectivity-web.html docs/CONNECTIVITY.md
           if git diff --cached --quiet; then
             echo "No viz/connectivity changes."
           else
