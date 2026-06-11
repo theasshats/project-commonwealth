@@ -810,7 +810,7 @@ hash = "04003566b89b1c9dd73438e0213a9ee7fb9134d52c61b14fa14c0b329fed1a6b"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/23-immersive-paintings.js"
-hash = "c5f698bbd131f4103c1222f67dd32bde90912fb352223c429b8cd95b52c20477"
+hash = "16bf89b12430c5922b1033a2a47a644bfb8cd64b0e642ed509485f1760517fca"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/24-artillery-seams.js"
@@ -950,7 +950,7 @@ hash = "91ddd75a990c6d5407f35cb7be37453f49fe61572b48717031e7c35d2e99a37b"
 
 [[files]]
 file = "kubejs/server_scripts/spine/56-weave-stuff-additions.js"
-hash = "6b17050e860fc7891bd95530a682ad97315030b78b667976f0a0643f45b15488"
+hash = "7792c10a5d11f1baf5affdfee917b48bfd1630bcb6044a07d599d5834d3de78b"
 
 [[files]]
 file = "kubejs/server_scripts/spine/57-jetpacks.js"
