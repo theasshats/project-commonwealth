@@ -32,6 +32,12 @@ expedition over. Ore generation only affects newly generated chunks.
   enormous deposit at roughly one per three hundred chunks of its region — a find worth building a
   mining outpost and a trade route around.
 
+### Mods
+
+- Diet - AppleSeed Edition updates to 2.1.0 and installs from Modrinth again. The dedicated-server
+  startup fix the pack had carried as a custom build is in the official release, which also adds a
+  filter to the automatic food-group calculator.
+
 ## 0.7.0 — The Create spine
 
 The tech route gets its backbone. Create and its addons now climb four tiers — manual, water and wind,
