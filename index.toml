@@ -962,7 +962,7 @@ hash = "295eeeb8663b5189817ad39a406dbb4b9be5c91b98bd4bd7127602bf4ec57717"
 
 [[files]]
 file = "kubejs/server_scripts/spine/60-machines-tfmg.js"
-hash = "15ebb75f2b480af5f24f756f5cd62cf09060c55662102338e0908dc4ef0fbf99"
+hash = "666bc636ffe3865dfb2a52350f655cc653549359344f7b41e055e9abfdf52068"
 
 [[files]]
 file = "kubejs/server_scripts/spine/61-machines-newage-additions.js"
@@ -971,6 +971,10 @@ hash = "89b7101c0e1658fcea763e55da6dba669e0977a3f7089ac3a13d2e7c1fa9586b"
 [[files]]
 file = "kubejs/server_scripts/spine/62-machines-misc.js"
 hash = "2b60e4cb06b59859c0d52340f1210e62b0017f61d5ac827baf52e2014e46ab07"
+
+[[files]]
+file = "kubejs/server_scripts/spine/63-fe-boundary-tfmg.js"
+hash = "e2625cd03584161f1672df596b241b4f3caffd6a7fdb53cc4ac36d2758644c43"
 
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"
