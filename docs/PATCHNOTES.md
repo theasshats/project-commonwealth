@@ -17,6 +17,9 @@ _Draft placeholder — replace the lead with real notes before release._
 - Mining tools now show their mining speed in the tooltip, including the bonus from Efficiency. The
   line was announced for 0.6.3 as an in-pack replacement for the removed Mining Speed Tooltips mod
   but never rendered; the script has been rewritten against the correct API and works now.
+- The grenade launcher and the 40mm field cannon now break blocks. Their shells always exploded but
+  never carried the block-destruction flag; the fix ships as the pack's own data override, so the
+  bundled Create: Armorer gun pack remains unmodified.
 - The stock TaCZ guns, ammunition, and attachments no longer appear in JEI or the creative menu.
   They were never craftable in this pack — the gun roster is the Create: Armorer set, built through
   Create machines — so the leftover entries only read as broken content. The 12-gauge shell stays

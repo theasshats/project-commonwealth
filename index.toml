@@ -109,6 +109,14 @@ file = "kubejs/data/create_armorer/data/blocks/create_workbench.json"
 hash = "2fe0d845b737b1648e9bcc193d5584bb4f1b0faeb411977a664099ac27476714"
 
 [[files]]
+file = "kubejs/data/create_armorer/data/guns/cannon_40mm_salamander_data.json"
+hash = "5a9dec638b3863517002ed4cff16e276c0c677651575a5e0971cb6f05f354bbe"
+
+[[files]]
+file = "kubejs/data/create_armorer/data/guns/gl_revolver_devastator_data.json"
+hash = "917821eefaa6d733721aeaff2f1904ad98ab0ded34382229ad7f20a4af876e27"
+
+[[files]]
 file = "kubejs/data/create_ironworks/neoforge/biome_modifier/deepslate_tin_ore_biome_modifier.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
