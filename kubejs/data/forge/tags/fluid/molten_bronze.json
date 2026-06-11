@@ -1,0 +1,7 @@
+{
+  "__comment": "Legacy-tag fill for cbc_at's cannon_casting — see molten_steel.json in this folder. Bronze's only molten form is CBC's.",
+  "values": [
+    "createbigcannons:molten_bronze",
+    "createbigcannons:flowing_molten_bronze"
+  ]
+}

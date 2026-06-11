@@ -1,0 +1,35 @@
+# aeroworks-1.2.11
+
+## mod metadata (id / version / deps)
+license = "MIT (code), All Rights Reserved (assets)"
+modId = "aeroworks"
+version = "1.2.11"
+displayName = "Create: Aeroworks"
+modId = "neoforge"
+versionRange = "[21,)"
+modId = "minecraft"
+versionRange = "[1.21.1]"
+modId = "create"
+versionRange = "[6.0.0,)"
+modId = "sable"
+versionRange = "[1.1.0,)"
+modId = "drivebywire"
+versionRange = "[0.2.8,)"
+
+## blocks
+aeroworks:gyroscope
+aeroworks:joystick
+aeroworks:mechanical_servo
+aeroworks:stepper_servo
+
+## items
+aeroworks:gyroscope
+aeroworks:joystick
+aeroworks:mechanical_servo
+aeroworks:stepper_servo
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+

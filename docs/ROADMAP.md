@@ -15,7 +15,7 @@
 
 **Status:** ✅ done & on `main` · 🟦 in review (open PR) · 🚧 in progress · ⏳ queued · 💤 not started
 
-**Current release:** **v0.6.0** (Foundation). MC **1.21.1** / NeoForge **21.1.233**.
+**Current release:** **v0.6.3** (Foundation line). MC **1.21.1** / NeoForge **21.1.233**.
 
 ## Where the work lives
 
@@ -112,9 +112,43 @@ bundled-jar distribution — all deliberately out, see `docs/DESIGN.md`.
 
 Open issues are organized into GitHub **milestones** on an **odd/even release cadence** (this section is the canonical cadence map; the original proposal + extended rationale is archived at `docs/archive/RELEASE-CADENCE.md`): the minor version's parity sets the job. **ODD = feature / integration** — add the pillar's mods, weave them in structurally, then curate by merit (**the thunderdome** — see below). **EVEN = stabilization** — profile, balance, and bug-fix what the prior odd added; *no new mods or features*. One **pillar per odd version**, each followed by its own **even stabilization pass** so feature debt never stacks; the version count is open (extend with odd/even pairs as the pillars need). **`1.0.0` is even → a feature-frozen performance patch.** **Every issue maps to a milestone, and so does every *new* issue** — the pillar's odd version, the stabilization even that follows it, or `📋 Backlog / living`. (Milestones are created/edited on GitHub; this list is the map. See `docs/TRIAGE.md` for the process.)
 
-**Two kinds of curation — both apply the #157 rubric, on different gates.** The **odd thunderdome** is curation *by competition*: the version's new adds **and** the existing related set are reviewed against each other on merit (system-anchor, no-redundant-mechanic, woven-not-floating); winners stay, losers are cut or reworked, then the version freezes. The **even stabilization** is *performance pruning*: is a mod's TPS/RAM cost justified (spark — #147/#160)? Cut or optimize the expensive, fix what broke, balance. **Web % is a compass, not a gate** — use the connectivity tool (#129) to *find* off-web clusters worth a human look, never as a release target (target it and it gets gamed — Goodhart). The deep *taste*-weaving question is worked separately in `docs/WEAVING-STRATEGY.md`.
+**Two kinds of curation — both apply the #157 rubric, on different gates.** The **odd thunderdome** is curation *by competition*: the version's new adds **and** the existing related set are reviewed against each other on merit (system-anchor, no-redundant-mechanic, woven-not-floating); winners stay, losers are cut or reworked, then the version freezes. The **even stabilization** is *performance pruning*: is a mod's TPS/RAM cost justified (spark — #147/#160)? Cut or optimize the expensive, fix what broke, balance. **Web % is a compass, not a gate** — use the connectivity tool (#129) to *find* off-web clusters worth a human look, never as a release target (target it and it gets gamed — Goodhart). The deep *taste*-weaving question now has working rules: the **seam ladder** (tier T_n ≥ n+1 cross-mod seams) and the **functional-part rule** (gate on the part the item works like), both in `docs/CREATE-SPINE.md` Parts 1 + 2b-ii.
 
-**Why this cadence (rationale, folded in from the former RELEASE-CADENCE doc).** One **themed pillar per odd version** rather than mixing pillars or chasing a per-release web-% target, because: themed milestones **motivate** ("ship the Economy update" feels like an accomplishment in a way "raise cohesion to 78%" doesn't); each pillar release is a natural **ecosystem-survey** moment to pull in what's new and good; and a per-release web-% target is **gameable** (Goodhart — the compass note above). Weaving has **two depths** — *structural plumbing* (tags unified, no hard dups, recipes valid, nothing orphaned; largely automatable) and *taste weaving* (the cross-system connections that are actually good and themed — the hard part), the latter worked in `docs/WEAVING-STRATEGY.md`. **Post-1.0:** keep the rhythm for live content updates (no world resets; freshness from curated updates) — `1.1` odd (feature/thunderdome) → `1.2` even (perf/balance) → …
+**Why this cadence (rationale, folded in from the former RELEASE-CADENCE doc).** One **themed pillar per odd version** rather than mixing pillars or chasing a per-release web-% target, because: themed milestones **motivate** ("ship the Economy update" feels like an accomplishment in a way "raise cohesion to 78%" doesn't); each pillar release is a natural **ecosystem-survey** moment to pull in what's new and good; and a per-release web-% target is **gameable** (Goodhart — the compass note above). Weaving has **two depths** — *structural plumbing* (tags unified, no hard dups, recipes valid, nothing orphaned; largely automatable) and *taste weaving* (the cross-system connections that are actually good and themed — the hard part), the latter governed by the seam-ladder + functional-part rules in `docs/CREATE-SPINE.md`. **Post-1.0:** keep the rhythm for live content updates (no world resets; freshness from curated updates) — `1.1` odd (feature/thunderdome) → `1.2` even (perf/balance) → …
+
+### The cycle — order of operations (one odd/even pair)
+
+Every pillar runs the same loop (formalized after v0.7.0 ran it informally). Steps 5–6 overlap by
+design: the cycle is a pipeline, not a queue.
+
+1. **Kickoff** (the odd milestone opens). Triage the milestone against the pillar's goal line — close
+   the stale, re-home strays, file the gaps — until the milestone states its exit criterion. **Arm the
+   instruments:** regenerate the recipe dump if recipes will be authored, record the connectivity
+   baseline, switch the pillar's diagnostic configs ON (e.g. the gtmogs debug flags).
+2. **Implementation.** Work the milestone on the version branch, folded into the integration PR; every
+   change lands with its playtest items on that PR (CLAUDE.md law), and **patchnotes/docs are written
+   with the change, never after**. Close-on-stage as work lands (close + `playtest-blocked`), so the
+   milestone bar reads implementation progress. Ends in a **freeze**: milestone fully implemented, CI
+   green, PATCHNOTES convention-styled, docs/wiki matching the data. After the freeze, only playtest
+   fixes land.
+3. **Smoke playtest** (the MVP gate). One human pass over the PR checklist on a fresh world + dedicated
+   server: it boots, a world creates, every change exists and works. Failures: fix → re-freeze → re-run
+   the failed items. Passes drop the `playtest-blocked` labels. Exit: checklist ticked, labels gone, PR
+   un-drafted.
+4. **Ship the feature patch.** Verify the version bump, merge; `release.yml` tags and publishes; deploy
+   to the box.
+5. **Soak** (the live playtest — which *is* the even milestone's kickoff). Real play on the shipped
+   release, aimed at *finding work*: balance misses, bugs, perf, pacing feel. Diagnostics stay ON
+   (debug logs, spark). Everything found files straight onto the even milestone as it's found; the
+   measured passes live here (the cost-dial sweep, the pacing targets from `CREATE-SPINE.md` Part 1).
+6. **Stabilization implementation** (parallel with the soak). Work the even milestone while play
+   continues: balance, bugs, perf, the review-tail checklists — **no new mods or features** (cadence
+   law). The *next* odd's design and triage may begin in the background — specs, issue filing, dumps —
+   **paper only, no feature code**.
+7. **Extended smoke, then ship the stab patch.** A longer verification pass — balance needs feel-time,
+   not just existence checks — plus the standard smoke items, with **diagnostics switched OFF** for
+   ship. Merge, release, deploy.
+8. **Repeat.** The next odd's kickoff opens on a stabilized base.
 
 **`v0.6.0 — Foundation` · even / stabilization** — *Goal: clean boot log, deterministic CI, a fast playtest loop, a perf baseline, modlist hygiene — decks cleared for the pillar work.* The initial cleanup, not a feature dump (already even-aligned).
 - Quick wins / CI: #127 consolidate index-refresh workflows · #131 auto-regen the ground-truth digest · #154 config/ vs defaultconfigs audit. _Done in #166: #111 pin · #100 orphan-lib sweep · #126 docs cleanup + index. #105 prune branches → recurring at v0.7.0._

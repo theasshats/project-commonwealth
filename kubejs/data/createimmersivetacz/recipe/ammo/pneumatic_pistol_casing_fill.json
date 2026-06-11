@@ -49,6 +49,35 @@
           "id": "createimmersivetacz:pneumatic_pistol_casing"
         }
       ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "createimmersivetacz:pneumatic_pistol_casing"
+        },
+        {
+          "tag": "c:nuggets/lead"
+        }
+      ],
+      "results": [
+        {
+          "id": "createimmersivetacz:pneumatic_pistol_casing"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "createimmersivetacz:pneumatic_pistol_casing"
+        }
+      ],
+      "results": [
+        {
+          "id": "createimmersivetacz:pneumatic_pistol_casing"
+        }
+      ]
     }
   ],
   "transitional_item": {

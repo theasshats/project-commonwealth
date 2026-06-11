@@ -1,0 +1,27 @@
+# aeroclaims-0.9.0
+
+## mod metadata (id / version / deps)
+license = "MIT"
+modId="aeroclaims"
+version="0.9.0"
+displayName="Aeronautics Claims"
+modId = "neoforge"
+versionRange = "[21.1.200,)"
+modId = "minecraft"
+versionRange = "[1.21.1,1.22)"
+modId = "ftbteams"
+versionRange = "[0,)"
+modId = "openpartiesandclaims"
+versionRange = "[0,)"
+
+## blocks
+aeroclaims:claim_block
+
+## items
+aeroclaims:claim_block
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+

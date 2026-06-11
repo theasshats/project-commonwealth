@@ -1,5 +1,5 @@
 {
-  "cluster_size": 24,
+  "cluster_size": 30,
   "density": 0.2,
   "weight": 12,
   "layer": "stone",

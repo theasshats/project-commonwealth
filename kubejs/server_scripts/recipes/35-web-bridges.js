@@ -24,10 +24,6 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing(['minecraft:gravel', xp(0.12)], stone)
   )
 
-  // Create Nuclear: autunite is a uranium-bearing decorative mineral → crush it for uranium powder,
-  // wiring the autunite stone family straight into the nuclear chain (already on the Create spine).
-  event.recipes.create.crushing(['createnuclear:uranium_powder', xp(0.2)], 'createnuclear:autunite')
-
   // TFMG asphalt (industrial paving) → crushed back to gravel rubble.
   event.recipes.create.crushing(['minecraft:gravel', xp(0.1)], 'tfmg:asphalt')
 
@@ -35,11 +31,6 @@ ServerEvents.recipes(event => {
   //    tag or vanilla copper (which the metric can't see), leaving them islanded. "Create crushes metal
   //    back to its raw form" is the natural, non-grindy bridge — a real recycling use AND a web edge.
   //    Lossy (you never get the full ingot back), so it's not free duplication. ──
-  // Northstar tungsten sheetmetal/grate (built from c:plates/tungsten) → reclaim tungsten nuggets. The
-  //    raw metal is already Create-pressed (create:pressing tungsten_ingot→sheet); this rejoins the deco.
-  ;['northstar:tungsten_sheetmetal', 'northstar:tungsten_grate'].forEach(block =>
-    event.recipes.create.crushing(['4x northstar:tungsten_nugget', xp(0.3)], block)
-  )
   // Quark raw-copper bricks (a raw-metal block) → crushed back to raw copper.
   event.recipes.create.crushing(['2x minecraft:raw_copper', xp(0.2)], 'quark:raw_copper_bricks')
 })

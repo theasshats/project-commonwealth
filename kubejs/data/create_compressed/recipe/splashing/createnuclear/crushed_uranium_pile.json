@@ -1,6 +1,0 @@
-{
-  "neoforge:conditions": [ { "type": "neoforge:mod_loaded", "modid": "createnuclear" } ],
-  "type": "create:splashing",
-  "ingredients": [ { "item": "create_compressed:crushed_uranium_pile" } ],
-  "results": [ { "count": 81, "id": "createnuclear:uranium_powder" } ]
-}

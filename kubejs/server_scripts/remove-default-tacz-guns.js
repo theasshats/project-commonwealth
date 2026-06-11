@@ -1,6 +1,8 @@
 // Disable the TaCZ gun smith table as a crafting path. Guns, ammo, and attachments are
 // Create-gated and crafted through the Create recipes (kubejs/data/createimmersivetacz/...),
-// not assembled at the bench.
+// not assembled at the bench. (#187: this makes the Mechanical Crafter the ONE canonical gun
+// path — the gun data files also carry tier tokens: capacitors on the electric-age guns,
+// a #pcmc:boss_keys drop on the three heavies.)
 //
 // tacz:gun_smith_table_crafting is a real (custom) recipe type registered in the vanilla
 // RecipeManager, so KubeJS CAN remove these — the same call already removes TaCZ's stock

@@ -1,6 +1,0 @@
-{ "type": "create:mixing",
-  "ingredients": [
-    { "item": "create_compressed:wheat_flour_pile" },
-    { "type": "neoforge:single", "amount": 1000, "fluid": "minecraft:water" }
-  ],
-  "results": [ { "id": "create_compressed:dough_block" } ] }

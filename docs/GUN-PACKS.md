@@ -27,7 +27,11 @@ silently never arrived. Committing it makes delivery deterministic:
   source of truth all three builders read (`build-prism-skeleton.sh`, `build-server.sh`, and the
   editor) — so the zip is copied into `.minecraft/tacz/` directly.
 - CC BY-NC-ND 4.0 permits **verbatim** redistribution: commit the zip **unmodified**, keep
-  attribution (Koei), non-commercial only.
+  attribution (Koei), non-commercial only. ⚠️ **ND means NO in-repo edits to the zip — ever.** A
+  two-line data fix (explosive shells' missing `destroy_block` flag) was committed and same-day
+  reverted in v0.7.0 once this clause was checked; the compliant paths (upstream ask / TaCZ-side
+  override / self-authored override pack) are tracked in **#308**. If a change inside the zip looks
+  necessary, it goes through #308's options, not an edit.
 
 ### Adding / updating a gun pack
 
@@ -181,3 +185,22 @@ the override rewrites every tab icon to the component form, clearing the error.
 
 > **Verification items:** confirm `tacz/` is indexed in `index.toml` and that the committed zip is
 > copied into `.minecraft/tacz/` by all three builders (it's in `scripts/instance-dirs.txt`).
+
+
+## v0.7.0 state — one canonical path, tiered
+
+- **The Mechanical Crafter is the only gun path.** The gun-smith table type and all four bench blocks
+  are removed (`remove-default-tacz-guns.js`); every gun is built from Create-processed components
+  (steel barrels, deployer+RSC firing mechanisms, precision triggers, fluid-filled primers).
+- **Tiered via CBC ordnance parts** (`kubejs/data/createimmersivetacz/recipe/guns/`): the self-loading
+  guns (SMG, both shotguns, rifles, snipers, atomic melee) cycle on a `createbigcannons:recoil_spring`;
+  the three heavies (LMG, grenade launcher, 40mm cannon) build around a
+  `createbigcannons:steel_autocannon_barrel`. Both gates are the CBC↔TaCZ seam — small arms grow out of
+  the artillery industry. (The generic tier token, the capacitor, was deliberately NOT used here:
+  per-family thematic parts, same tier math.)
+- **Ammo is a four-stage line** (`.../recipe/ammo/`): casings cut from brass sheets (yields halved in
+  v0.7.0), then per round: deploy primer → fill gunpowder → deploy a **lead** projectile (nuggets;
+  ingots for the 40mm/grenade payloads) → crimping press. Lead demand is intentional (the lead veins).
+- **Known gap:** the grenade launcher + 40mm cannon don't break blocks — diagnosed (missing per-gun
+  `destroy_block`; the global TaCZ config already allows it) but the fix sits inside the ND-licensed
+  zip → **#308**. Default-TaCZ JEI visibility cleanup → **#307**.

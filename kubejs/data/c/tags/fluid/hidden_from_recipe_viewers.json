@@ -1,0 +1,7 @@
+{
+  "__comment": "CBC's molten steel is inert in this pack (nothing makes it, nothing takes it — see 05-metals.js); JEI honours this convention tag and drops it from the fluid list.",
+  "values": [
+    "createbigcannons:molten_steel",
+    "createbigcannons:flowing_molten_steel"
+  ]
+}

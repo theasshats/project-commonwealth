@@ -1,0 +1,7 @@
+{
+  "__comment": "cbc_at's cannon_casting recipes pour from the LEGACY forge:molten_* tags (verified in cbc_at 0.1.4c's jar) and nothing registers them on NeoForge 1.21.1 — without this fill the heavy-autocannon casting line can't pour at all. Steel is the canonical TFMG fluid (one molten steel, 05-metals.js).",
+  "values": [
+    "tfmg:molten_steel",
+    "tfmg:flowing_molten_steel"
+  ]
+}

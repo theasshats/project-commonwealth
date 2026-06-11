@@ -1,0 +1,11 @@
+{
+  "block": {
+    "blocks": [
+      "tfmg:blue_fire"
+    ]
+  },
+  "temperature": 28,
+  "range": 3,
+  "max_effect": 56,
+  "units": "f"
+}
