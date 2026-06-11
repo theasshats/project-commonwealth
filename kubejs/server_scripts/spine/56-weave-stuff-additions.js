@@ -22,8 +22,10 @@
 //     Cycle-checked: none of the four donor parts consumes create_sa content.
 //   - Left alone: drones (already mechanical_crafting + precision), tanks/components, tools/armor.
 //
-// LOAD-SAFE / UNVERIFIED: structures reproduced verbatim from tools/recipe-dump/pcmc-recipes.json (their
-// own serialized shapes kept, incl. chanced byproducts); single-ingredient swaps only. NOT playtest-verified.
+// LOAD-SAFE / UNVERIFIED: structures reproduced from tools/recipe-dump/pcmc-recipes.json (chanced
+// byproducts kept); single-ingredient swaps only. Outputs are written in KubeJS's FLAT form
+// ({ id, chance }, like 51-weave) — the dump's nested item:{id} shape is Create's on-disk codec,
+// which KubeJS's processing_output component rejects at parse. NOT playtest-verified.
 
 ServerEvents.recipes(event => {
   // ── heat_engine — the BASE becomes a basic_burner (was a loose andesite_alloy): the engine is built
@@ -36,25 +38,25 @@ ServerEvents.recipes(event => {
     ingredient: { item: 'createlowheated:basic_burner' },
     loops: 3,
     results: [
-      { chance: 120.0, item: { id: 'create_sa:heat_engine' } },
-      { chance: 8.0, item: { id: 'create:zinc_nugget' } },
-      { chance: 4.0, item: { id: 'create:andesite_alloy' } }
+      { chance: 120.0, id: 'create_sa:heat_engine' },
+      { chance: 8.0, id: 'create:zinc_nugget' },
+      { chance: 4.0, id: 'create:andesite_alloy' }
     ],
     sequence: [
       { type: 'create:deploying',
         ingredients: [{ item: 'create_sa:incomplete_heat_engine' }, { item: 'create:cogwheel' }],
-        results: [{ item: { id: 'create_sa:incomplete_heat_engine' } }] },
+        results: [{ id: 'create_sa:incomplete_heat_engine' }] },
       { type: 'create:deploying',
         ingredients: [{ item: 'create_sa:incomplete_heat_engine' }, { item: 'create:large_cogwheel' }],
-        results: [{ item: { id: 'create_sa:incomplete_heat_engine' } }] },
+        results: [{ id: 'create_sa:incomplete_heat_engine' }] },
       { type: 'create:deploying',
         ingredients: [{ item: 'create_sa:incomplete_heat_engine' }, { tag: 'c:nuggets/zinc' }],
-        results: [{ item: { id: 'create_sa:incomplete_heat_engine' } }] },
+        results: [{ id: 'create_sa:incomplete_heat_engine' }] },
       { type: 'create:deploying',
         ingredients: [{ item: 'create_sa:incomplete_heat_engine' }, { tag: 'c:nuggets/copper' }],
-        results: [{ item: { id: 'create_sa:incomplete_heat_engine' } }] }
+        results: [{ id: 'create_sa:incomplete_heat_engine' }] }
     ],
-    transitional_item: { item: { id: 'create_sa:incomplete_heat_engine' } }
+    transitional_item: { id: 'create_sa:incomplete_heat_engine' }
   })
 
   // ── steam_engine — same assembly; the andesite-alloy deploy becomes steel (T2 chain). ──
@@ -64,25 +66,25 @@ ServerEvents.recipes(event => {
     ingredient: { tag: 'c:plates/brass' },
     loops: 3,
     results: [
-      { chance: 120.0, item: { id: 'create_sa:steam_engine' } },
-      { chance: 8.0, item: { id: 'create:brass_sheet' } },
-      { chance: 4.0, item: { id: 'create:andesite_alloy' } }
+      { chance: 120.0, id: 'create_sa:steam_engine' },
+      { chance: 8.0, id: 'create:brass_sheet' },
+      { chance: 4.0, id: 'create:andesite_alloy' }
     ],
     sequence: [
       { type: 'create:deploying',
         ingredients: [{ item: 'create_sa:incomplete_steam_engine' }, { item: 'create:cogwheel' }],
-        results: [{ item: { id: 'create_sa:incomplete_steam_engine' } }] },
+        results: [{ id: 'create_sa:incomplete_steam_engine' }] },
       { type: 'create:deploying',
         ingredients: [{ item: 'create_sa:incomplete_steam_engine' }, { item: 'create:large_cogwheel' }],
-        results: [{ item: { id: 'create_sa:incomplete_steam_engine' } }] },
+        results: [{ id: 'create_sa:incomplete_steam_engine' }] },
       { type: 'create:deploying',
         ingredients: [{ item: 'create_sa:incomplete_steam_engine' }, { item: 'create:propeller' }],
-        results: [{ item: { id: 'create_sa:incomplete_steam_engine' } }] },
+        results: [{ id: 'create_sa:incomplete_steam_engine' }] },
       { type: 'create:deploying',                // was create:andesite_alloy — steam tier runs on steel
         ingredients: [{ item: 'create_sa:incomplete_steam_engine' }, { tag: 'c:ingots/steel' }],
-        results: [{ item: { id: 'create_sa:incomplete_steam_engine' } }] }
+        results: [{ id: 'create_sa:incomplete_steam_engine' }] }
     ],
-    transitional_item: { item: { id: 'create_sa:incomplete_steam_engine' } }
+    transitional_item: { id: 'create_sa:incomplete_steam_engine' }
   })
 
   // ── copper_exoskeleton — vanilla bench -> Mechanical Crafter (grid/keys verbatim). Kept PRE-T3:

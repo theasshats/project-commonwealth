@@ -10,17 +10,18 @@
 //   graffiti      = dye + gunpowder + bucket, mixed    (pressurized spray can in a basin)
 //   glow variants = glow ink deployed onto the base
 //
-// immersive_paintings:dye is the mod's own dye item (crafted from any vanilla dye). LOAD-SAFE /
+// #immersive_paintings:dye is the mod's own item TAG (the 16 vanilla dyes) — the mod registers no
+// dye item, so the bare id fails to resolve; the stock bench recipes use the tag too. LOAD-SAFE /
 // UNVERIFIED in-game; playtest items on #234.
 
 ServerEvents.recipes(event => {
   event.remove({ output: 'immersive_paintings:painting' })
   event.recipes.create.deploying('immersive_paintings:painting',
-    ['minecraft:paper', 'immersive_paintings:dye'])
+    ['minecraft:paper', '#immersive_paintings:dye'])
 
   event.remove({ output: 'immersive_paintings:graffiti' })
   event.recipes.create.mixing('immersive_paintings:graffiti',
-    ['immersive_paintings:dye', 'minecraft:gunpowder', 'minecraft:bucket'])
+    ['#immersive_paintings:dye', 'minecraft:gunpowder', 'minecraft:bucket'])
 
   event.remove({ output: 'immersive_paintings:glow_painting' })
   event.recipes.create.deploying('immersive_paintings:glow_painting',
