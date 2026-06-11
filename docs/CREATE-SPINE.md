@@ -115,7 +115,7 @@ build is pulling on half the pack. Census as of v0.7.0 (target in parens):
 | **T0** | 1 (1) | treadmill (create parts → `createtreadmill`) |
 | **T1** | 3 (2) | basic_burner → `aeronautics:burner_fire` (balloon); heat_engine on a burner base (`create_sa`↔`createlowheated`); brass gear (`gnkinetics`↔create) |
 | **T2** | 4 (3) | the steam gate's burner (`createlowheated`); steel canonical + the steel-cored steam engine (`tfmg`/`create_ironworks`); the prospecting kit (`createoreexcavation`↔create); industrial gear (`gnkinetics`) |
-| **T3** | 6+ (4) | the capacitor root (`createaddition`↔`create_new_age` overcharged iron); recoil-spring guns (`createbigcannons`); the SNA functional gear set (drill head / fluid tank / plunger launcher / electric motor — 4 mods); 10 TFMG machines + the motor stage (`createaddition`); the jetpack; telephoto optics |
+| **T3** | 6+ (4) | the capacitor root (`createaddition`↔`create_new_age` overcharged iron); recoil-spring guns (`createbigcannons`); the SNA functional gear set (drill head / fluid tank / plunger launcher / electric motor — 4 mods); 10 TFMG machines (`createaddition` parts woven in; the separate motor-stage seam retired with TFMG's voltage layer, `63`); the jetpack; telephoto optics |
 | **T4** | 8+ (5) | the reactor line (`tfmg`→`create_new_age`, ×9 parts); autocannon-barrel heavies + the 40mm fuze + the powder-charge fill (`createbigcannons`↔armory, both ways); ignitium + cursium (`cataclysm`); **silver** (`occultism` — the cross-producer); the drilling machine (`tfmg`→`createoreexcavation`) |
 
 When adding tiered content, check the census: if your item's tier is at its floor, your change should
@@ -345,8 +345,9 @@ NEW AGE (T4)                            <- rung-5 FE gen, behind the boss fork
 **The three bolt-ons, concretely:**
 
 - **Additions → TFMG.** `createaddition` provides SU↔FE conversion (alternator / electric_motor) + the
-  wire/coil chain. TFMG's `electric_motor`/`engine_controller`/industrial machines are gated behind a
-  `createaddition` power feed, so electricity is a **converter driven by steam-tier kinetic, never a free
+  wire/coil chain. TFMG's `engine_controller`/industrial machines are gated behind a `createaddition`
+  power feed (TFMG's own `electric_motor` was retired with its voltage layer, `63-tfmg-voltage-removed.js`),
+  so electricity is a **converter driven by steam-tier kinetic, never a free
   source** (the Part 1 load-bearing rule). Also `createaddition:rolling` → `c:rods/*` → TFMG/aeronautics frames.
 - **TFMG → New Age.** New Age's advanced parts require TFMG **steel + circuits** — the intended seam is to
   re-recipe New Age's `reactor_casing` / energisers to consume `tfmg:steel` + a TFMG circuit, so the T3

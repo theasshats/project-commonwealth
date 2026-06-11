@@ -221,7 +221,7 @@ someone has to own. The pack's seams, and their current state:
   inefficiency. The worst possible conversion loop is therefore *exactly* 100%, never more: no
   cross-bridge free-energy exploit exists at these defaults (verified from both mods' sources).
   What remains for [#315](https://github.com/theasshats/project-commonwealth/issues/315) is
-  in-game confirmation, plus TFMG's separate voltage network (below).
+  in-game confirmation.
 - **TFMG's voltage grid is removed — pending the 2.0 electricity overhaul.** The grid deserves a
   footnote in any units page: it simulates **real SI electricity** — volts, amps, watts, ohms,
   U = IR voltage splitting, transformers by coil turn ratio — the only genuine physical units in

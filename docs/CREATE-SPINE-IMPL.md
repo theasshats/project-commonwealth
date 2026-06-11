@@ -169,14 +169,16 @@ forced (spec Part 4b updated):
 **Staged → status after the §2/§4/§5 batch:**
 - **TFMG→New Age:** ✅ DONE — `52-weave-tfmg-newage.js` re-recipes `reactor_casing` (steel-plate deploy) +
   the reactor parts/motors/coil/magnet; `50-cross-tier.js` did `advanced_energiser` (etched circuit).
-- **Additions→TFMG (hard):** ✅ DONE — `51-weave-additions-tfmg.js` re-authors the sequenced
-  `tfmg:electric_motor` with a `createaddition:capacitor` deploy stage (native assembly preserved; the
-  added stage brings the motor to T3's 5-stage step-depth target). No staged spine seams remain.
+- **Additions→TFMG (hard):** ✅ DONE, then **superseded** — `51-weave-additions-tfmg.js` re-authored the
+  sequenced `tfmg:electric_motor` with a `createaddition:capacitor` deploy stage; the motor (and its
+  stage) were later **retired with TFMG's voltage layer** (`63-tfmg-voltage-removed.js`;
+  POWER-MODS-REVIEW addendum). The Additions↔TFMG interlock survives in the 10 machine weaves. No
+  staged spine seams remain.
 
 **Real ingredient reference (from dumps; updated post-cut):**
 - `create_new_age:advanced_energiser` = `basic_energiser` + `overcharged_gold` + `lightning_rod` (+ the woven `tfmg:etched_circuit_board`).
 - `create_new_age:reactor_casing` = sequenced on `incomplete_reactor_casing` from `c:plates/steel` (woven; was iron) + `bricks`.
 - `create_new_age:reactor_rod` = 5×4 mechanical_crafting: `reactor_casing` + `reactor_glass` + `nuclear_fuel` + gold plates, 2× out — the gate swaps the two band-center plates for `cataclysm:ignitium_ingot` (`40-gates.js`).
-- `tfmg:electric_motor` = sequenced from `tfmg:copper_spool` + `magnet` + `nickel_sheet` + `steel_casing` + `steel_mechanism` + `winding` + `create:shaft`.
+- ~~`tfmg:electric_motor`~~ _(retired with the voltage layer, `63-tfmg-voltage-removed.js`; `createaddition:electric_motor` is the T4 drive now)._
 - ~~`createnuclear:reactor_core`~~ _(mod cut, #289)._
 - `create_new_age:reactor_controller` — **answered:** no such recipe exists in the live dump; the reactor has no controller block. The capstone part is `reactor_rod`.
