@@ -134,7 +134,9 @@ tier you are stepping into.
   steel reads as one material across every recipe. The same goes for the molten form — melting steel
   down in the Big Cannons foundry now yields TFMG's molten steel, which pours cannons and casts back
   to ingots; Big Cannons' duplicate fluid is gone, and everything runs on one scale: 144 mb to the
-  ingot, 16 to the nugget, with the foundry's melting and casting updated to match. The steel plate
+  ingot, 16 to the nugget, with the foundry's melting and casting updated to match. One known gap:
+  cannon casts measure their volume in the mod's old units, so cast cannons currently cost fewer
+  ingots than intended — a recalibration is planned. The steel plate
   also has a single recipe now — TFMG's press line — with Ironworks' one-step press shortcut removed.
   Bronze remains with Create: Ironworks.
 - End-game electricity reaches outside the tech route: the layered magnet at the heart of New Age's
