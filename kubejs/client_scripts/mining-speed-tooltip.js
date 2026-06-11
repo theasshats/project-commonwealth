@@ -51,7 +51,17 @@
 // (netherite 9); iron pickaxe + Efficiency V shows "Mining speed: 34 (base 8,
 // Efficiency V)"; a sword/shears shows no line; a modded digger (paxel/hammer) shows
 // one; the line appears in both inventory and JEI tooltips; no kubejs errors in the
-// client log on load or on hover.
+// client log on load or on hover. Stamina line (zagwar, PR #320): iron tools show
+// "Stamina drain: x1 (~100 stone per hunger bar)", netherite x0.5 (~200), wood/gold x2
+// (~50), modded-tier diggers x1.
+//
+// The stamina line mirrors server_scripts/mining-hunger.js (the mining-costs-hunger
+// pressure mechanic): drain = EXHAUSTION_PER_WEIGHT x block weight x tool-tier
+// multiplier, and the per-TOOL part is the tier multiplier, anchored player-facing as
+// "standard blocks per hunger bar" (80 exhaustion / (0.8 x mult) = 100/mult on a
+// weight-1.0 block). Client and server scripts can't share code, so the tier table and
+// id rules below are a deliberate copy of toolMultiplier() there — KEEP THEM IN SYNC
+// (a note in mining-hunger.js points back here).
 
 const $ItemTooltipEvent = Java.loadClass('net.neoforged.neoforge.event.entity.player.ItemTooltipEvent')
 const $DataComponents = Java.loadClass('net.minecraft.core.component.DataComponents')
@@ -60,6 +70,18 @@ const $Component = Java.loadClass('net.minecraft.network.chat.Component')
 const $ChatFormatting = Java.loadClass('net.minecraft.ChatFormatting')
 
 const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
+
+// Mirror of mining-hunger.js toolMultiplier() — same substring rules, same order, same
+// values (wood and gold share the wood tier; an unrecognised tool material is neutral).
+function staminaMultiplier(itemId) {
+  const p = itemId.indexOf(':') === -1 ? itemId : itemId.substring(itemId.indexOf(':') + 1)
+  if (p.indexOf('netherite') !== -1) return 0.5
+  if (p.indexOf('diamond') !== -1) return 0.75
+  if (p.indexOf('iron') !== -1) return 1.0
+  if (p.indexOf('stone') !== -1) return 1.5
+  if (p.indexOf('wood') !== -1 || p.indexOf('gold') !== -1) return 2.0
+  return 1.0
+}
 
 function efficiencyLevel(stack) {
   try {
@@ -99,6 +121,10 @@ NativeEvents.onEvent($ItemTooltipEvent, event => {
       text = `Mining speed: ${base}`
     }
     event.getToolTip().add($Component.literal(text).withStyle($ChatFormatting.GRAY))
+
+    const mult = staminaMultiplier(stack.kjs$getId())
+    const perBar = Math.round(100 / mult)
+    event.getToolTip().add($Component.literal(`Stamina drain: x${mult} (~${perBar} stone per hunger bar)`).withStyle($ChatFormatting.GRAY))
   } catch (err) {
     // swallow — a tooltip must never crash the client
   }

@@ -66,7 +66,7 @@ hash = "d6d76fbcef53296769fc44e39ca0e9230bc58d1c888d6cbba7cd767076e4eabc"
 
 [[files]]
 file = "kubejs/client_scripts/mining-speed-tooltip.js"
-hash = "9e4068358a93173af9ac94b1117a978c89d753764a1b663c47adda5ce36b0ea7"
+hash = "03062c2cde8553e2be8f63448df77e8ab86cca8a53d9b664278e990ed2e7030d"
 
 [[files]]
 file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_deepslate_diamond_ore_feature_biome_modifier.json"
@@ -830,7 +830,7 @@ hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
 
 [[files]]
 file = "kubejs/server_scripts/mining-hunger.js"
-hash = "744b4b6cf5ae217e448c8229439437d35bf87fb8530358e3008f5d2b11bcc118"
+hash = "e0f92357225e1e426135025060c8b78bf46b120e1d9ef998e5c4a98c3b63c8bc"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/00-create-ify.js"
