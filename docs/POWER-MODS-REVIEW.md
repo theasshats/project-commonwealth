@@ -219,3 +219,31 @@ the work already built.
 - **Backlog / 2.0:** "2.0 electricity overhaul — adopt Create: Power Grid as the power spine; retire New Age
   electricity; layer createaddition as the on-ramp."
 - **v0.7.0/curation:** "Pick ONE reactor — New Age vs Create Nuclear" (needed regardless of Power Grid).
+
+## 13. Swap notes: TFMG electricity → Power Grid (for #282)
+
+TFMG is **MIT** (confirmed via Modrinth; source: `github.com/DrMango14/Create-The_Factory_Must_Grow`),
+and its electricity code is unusually swappable: the entire layer lives in one package
+(`content.electricity`), devices share one base (`ElectricBlockEntity` + `IElectric`), production
+machinery never touches it (kinetic `machine_input`), and the v0.7.0 removal (`63-tfmg-voltage-removed.js`)
+already proved the seam clean. Routes, cheapest first:
+
+1. **Leave it removed and weave thematically (default).** Power Grid owns electricity; TFMG stays the
+   kinetic industrial mid-tier feeding it (engines → SU → PG alternator; steel/circuits → PG's PCB tier —
+   its etched boards rhyme with TFMG's circuit-board line). Zero code, zero maintenance. Cost: TFMG's
+   devices (neon, traffic light, segmented display, electric pump) stay retired.
+2. **Adapter companion mod.** A one-block mod that joins TFMG's network as a generator (implement its
+   `IElectric` contract) and drains an FE buffer fed from PG's bridge. The in-mod precedent exists:
+   `tfmg:converter` is exactly this shim (FE → grid, 500k buffer) — an adapter is that block re-skinned
+   and compiled against TFMG, which MIT makes clean. Revives the devices on PG power without forking.
+   ⚠️ Only TFMG's side needs touching; **check Power Grid's license before borrowing anything from its
+   code**, and remember PG's inbound-FE behavior is still an unverified §11 gate.
+3. **Fork TFMG and strip the layer.** Delete `content.electricity`, port the keeper devices onto plain
+   NeoForge FE capabilities. MIT permits the patched redistribution (host our build; point the
+   `.pw.toml` at it), but it re-patches on every TFMG release — an actively maintained mod — so prefer
+   1 or 2. Before any fork, file the upstream ask ("FE fallback for electric devices") on DrMango14's
+   tracker: the converter shows the author is halfway there already.
+
+Whichever route: any revived TFMG device must price its power through the pegged base rate
+(0.029296875 FE/SU·tick), not TFMG's native 40 W/RPM economy — that rate mismatch is *why* the layer
+came out (see the v0.7.0 addendum above and #315).
