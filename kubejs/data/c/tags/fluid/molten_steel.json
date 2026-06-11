@@ -1,0 +1,8 @@
+{
+  "__comment": "ONE molten steel: only TFMG's fluid counts as c:molten_steel. CBC's duplicate is replaced out (its melts re-point to TFMG in 05-metals.js; cannon casting / forge compacting / casting-time all match this TAG, verified in the 5.11.3 jar). createmetalwork's entries left with the mod (#289).",
+  "replace": true,
+  "values": [
+    "tfmg:molten_steel",
+    "tfmg:flowing_molten_steel"
+  ]
+}

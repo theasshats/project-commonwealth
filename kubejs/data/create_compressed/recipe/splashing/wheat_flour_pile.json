@@ -1,3 +1,0 @@
-{ "type": "create:splashing",
-  "ingredients": [ { "item": "create_compressed:wheat_flour_pile" } ],
-  "results": [ { "id": "create_compressed:dough_block" } ] }

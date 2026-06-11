@@ -1,0 +1,4 @@
+aeroworks:gyroscope | minecraft:crafting_shapeless | aeroworks:gyroscope create:flywheel minecraft:crafting_shapeless simulated:gimbal_sensor
+aeroworks:joystick | create:mechanical_crafting | aeroworks:joystick c:ingots/brass create:mechanical_crafting create:precision_mechanism create:redstone_link create:shaft
+aeroworks:mechanical_servo | minecraft:crafting_shaped | aeroworks:mechanical_servo c:ingots/brass create:electron_tube create:precision_mechanism create:sequenced_gearshift minecraft:crafting_shaped
+aeroworks:stepper_servo | minecraft:crafting_shaped | aeroworks:stepper_servo c:ingots/brass create:electron_tube create:precision_mechanism create:sequenced_gearshift minecraft:crafting_shaped

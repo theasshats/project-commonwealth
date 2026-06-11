@@ -22,11 +22,14 @@
     },
     "W": {
       "tag": "minecraft:planks"
+    },
+    "K": {
+      "item": "createbigcannons:steel_autocannon_barrel"
     }
   },
   "pattern": [
     "BOOFI",
-    " CTW "
+    "KCTW "
   ],
   "result": {
     "id": "tacz:modern_kinetic_gun",

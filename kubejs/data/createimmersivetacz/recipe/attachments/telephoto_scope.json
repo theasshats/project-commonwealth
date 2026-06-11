@@ -7,10 +7,13 @@
     },
     "G": {
       "item": "minecraft:glass_pane"
+    },
+    "T": {
+      "item": "create:electron_tube"
     }
   },
   "pattern": [
-    "BGGB"
+    "BGTGB"
   ],
   "result": {
     "id": "tacz:attachment",

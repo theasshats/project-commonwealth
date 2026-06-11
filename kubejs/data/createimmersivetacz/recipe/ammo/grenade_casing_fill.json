@@ -49,6 +49,35 @@
           "id": "createimmersivetacz:grenade_casing"
         }
       ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "createimmersivetacz:grenade_casing"
+        },
+        {
+          "tag": "c:ingots/lead"
+        }
+      ],
+      "results": [
+        {
+          "id": "createimmersivetacz:grenade_casing"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "createimmersivetacz:grenade_casing"
+        }
+      ],
+      "results": [
+        {
+          "id": "createimmersivetacz:grenade_casing"
+        }
+      ]
     }
   ],
   "transitional_item": {
