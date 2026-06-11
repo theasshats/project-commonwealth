@@ -104,10 +104,9 @@ ladder, driven by the kinetic rungs below it (see
   the way back; accumulators are the batteries.
 - **Create: New Age** — the second converter (generator coils, motors), the energising tier
   (overcharged metals — FE made item-shaped), and the end-game **reactor**.
-- **TFMG** — the industrial mid-tier, with its own electric grid alongside the oil/steel/circuit
-  chains. Remarkably, that grid simulates **real SI electricity** — volts, amps, watts, and ohms,
-  with U = IR voltage splitting and transformers that work by coil turn ratios — making TFMG the
-  only mod in the pack whose power system uses genuine physical units.
+- **TFMG** — the industrial mid-tier. Its production machinery (blast furnace, distillation,
+  centrifuge, winding machine) runs on rotation; its separate voltage grid is currently removed
+  from the pack (see the conversion seams below).
 - **MFFS** — force fields with an FE/t upkeep that scales with field size. You pay watts for
   walls.
 - **Create: Blockchain** — the currency miner (see Money, below).
@@ -223,12 +222,14 @@ someone has to own. The pack's seams, and their current state:
   cross-bridge free-energy exploit exists at these defaults (verified from both mods' sources).
   What remains for [#315](https://github.com/theasshats/project-commonwealth/issues/315) is
   in-game confirmation, plus TFMG's separate voltage network (below).
-- **TFMG's volt grid is a closed currency — by policy.** Its kinetic generator produces about
-  0.8 FE-equivalent per SU·tick, roughly **27× the pegged rate**, because TFMG balances its grid
-  around its own physics, not the pack's exchange rate. The two blocks that bridged volts to
-  Forge Energy (the converter inbound, the accumulator outbound) are uncraftable in this pack,
-  so volts power TFMG's machines and lights and never touch FE pricing. Rotation becomes wired
-  FE only through the pegged converters. In-game verification is tracked in
+- **TFMG's voltage grid is removed — pending the 2.0 electricity overhaul.** The grid deserves a
+  footnote in any units page: it simulates **real SI electricity** — volts, amps, watts, ohms,
+  U = IR voltage splitting, transformers by coil turn ratio — the only genuine physical units in
+  any of the pack's power systems. But its exchange rate ignores the peg (its generator makes
+  ~0.8 FE-equivalent per SU·tick, **27× the base rate**), and nothing in TFMG accepts Forge
+  Energy, so it could only ever be a third parallel grid. The pack removes the whole layer
+  (generators, cables, devices, meters, electric lights) until the post-1.0 electricity overhaul
+  re-tiers it. TFMG's production machines are unaffected — they run on rotation. Tracking:
   [#315](https://github.com/theasshats/project-commonwealth/issues/315).
 - **`suToEnergy` is the pack's currency peg.** Blockchain prices coins in absolute FE and MFFS
   bills upkeep in absolute FE/t, so retuning the SU↔FE rate silently re-prices money minting and
@@ -262,7 +263,7 @@ in skill points and happiness scores. None of these have dimensions, and none of
 | 1 FE | energy | ≈ 17 J (shared base rate; alternator pays 25% tax) |
 | 1 FE/t | power | ≈ 350 W |
 | 1 °T/s (New Age heat) | caloric flow | n/a — physics discarded this in the 1840s |
-| TFMG volts/watts/ohms | real SI electricity | genuine units; closed grid, no FE exchange |
+| TFMG volts/watts/ohms | real SI electricity | genuine units; grid removed until the 2.0 overhaul |
 | 1 spur | currency | ≥ 8.3 MFE ≈ 40 kWh of minting energy |
 | 1 Source jar | magic energy | 10,000 Source; no exchange rate, by design |
 | Gravity | acceleration | 32 m/s² ≈ 3¼ g |

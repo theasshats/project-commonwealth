@@ -97,20 +97,9 @@ ServerEvents.recipes(event => {
     P: 'tfmg:steel_pipe'
   }, 'tfmg:steel_mechanical_pump').acceptMirrored(false)
 
-  // ── Electric pump (electrical machine block). ──
-  event.remove({ output: 'tfmg:electric_pump' })
-  mc([
-    'MQK',
-    'CPW',
-    'MQK'
-  ], {
-    M: 'tfmg:magnet',
-    Q: 'tfmg:capacitor_item',
-    K: 'tfmg:electromagnetic_coil',
-    C: 'tfmg:circuit_board',
-    P: 'tfmg:steel_mechanical_pump',
-    W: '#c:wires/copper'
-  }, 'tfmg:electric_pump').acceptMirrored(false)
+  // ── Electric pump: NOT re-added — voltage-layer block (volts-only, no FE port); the layer removal
+  //    (63-tfmg-voltage-removed.js) strips it until the 2.0 electricity overhaul (#282). The kinetic
+  //    mechanical_pumps above are the pack's pumps.
 
   // ── Blast furnace multi-part machine blocks (hatch + output). ──
   event.remove({ output: 'tfmg:blast_furnace_hatch' })
@@ -167,10 +156,10 @@ ServerEvents.recipes(event => {
   // straight type swap would silently strip the fuel data and break the engine system.
   // Per rule 3 ("when unsure, skip"), these stay on their original shaped recipes.
 
-  // ── Accumulator: NOT re-added. It is one of TFMG's two FE-boundary blocks (it charges from the
-  //    volt grid and exposes standard extractable FE), so the FE-boundary policy removes it outright —
-  //    see 63-fe-boundary-tfmg.js. Deliberately no mc() re-add here, so the removal there is not
-  //    order-dependent on this file.
+  // ── Accumulator: NOT re-added — one of TFMG's two FE-boundary blocks (it charges from the volt
+  //    grid and exposes standard extractable FE); the voltage-layer removal
+  //    (63-tfmg-voltage-removed.js) strips it. Deliberately no mc() re-add here, so the removal
+  //    there is not order-dependent on this file.
 
   // ── Chemical vats (fluid-processing machine blocks). ──
   event.remove({ output: 'tfmg:cast_iron_chemical_vat' })
@@ -220,81 +209,8 @@ ServerEvents.recipes(event => {
     T: 'tfmg:steel_fluid_tank'
   }, 'tfmg:firebox').acceptMirrored(false)
 
-  // ── Polarizer (electrical instrument machine). ──
-  event.remove({ output: 'tfmg:polarizer' })
-  mc([
-    'BWB',
-    'CVC',
-    'RSR'
-  ], {
-    B: '#c:plates/brass',
-    W: '#c:wires/copper',
-    C: 'tfmg:capacitor_item',
-    V: 'tfmg:voltmeter',
-    R: 'tfmg:resistor',
-    S: 'tfmg:steel_casing'
-  }, 'tfmg:polarizer').acceptMirrored(false)
-
-  // ── Cable hubs (electrical distribution devices). count preserved (all 2x). ──
-  event.remove({ output: 'tfmg:aluminum_cable_hub' })
-  mc([
-    'WWW',
-    'MMM',
-    'WWW'
-  ], {
-    M: '#c:ingots/aluminum',
-    W: '#c:wires/copper'
-  }, '2x tfmg:aluminum_cable_hub').acceptMirrored(false)
-
-  event.remove({ output: 'tfmg:brass_cable_hub' })
-  mc([
-    'WWW',
-    'MMM',
-    'WWW'
-  ], {
-    M: '#c:ingots/brass',
-    W: '#c:wires/copper'
-  }, '2x tfmg:brass_cable_hub').acceptMirrored(false)
-
-  event.remove({ output: 'tfmg:copper_cable_hub' })
-  mc([
-    'WWW',
-    'MMM',
-    'WWW'
-  ], {
-    M: '#c:ingots/copper',
-    W: '#c:wires/copper'
-  }, '2x tfmg:copper_cable_hub').acceptMirrored(false)
-
-  event.remove({ output: 'tfmg:steel_cable_hub' })
-  mc([
-    'WWW',
-    'MMM',
-    'WWW'
-  ], {
-    M: '#c:nuggets/steel',
-    W: '#c:wires/copper'
-  }, '2x tfmg:steel_cable_hub').acceptMirrored(false)
-
-  event.remove({ output: 'tfmg:heavy_cable_hub' })
-  mc([
-    'WWW',
-    ' M ',
-    'WWW'
-  ], {
-    M: 'tfmg:heavy_machinery_casing',
-    W: '#c:wires/copper'
-  }, '2x tfmg:heavy_cable_hub').acceptMirrored(false)
-
-  event.remove({ output: 'tfmg:steel_casing_cable_hub' })
-  mc([
-    'WWW',
-    ' M ',
-    'WWW'
-  ], {
-    M: 'tfmg:steel_casing',
-    W: '#c:wires/copper'
-  }, '2x tfmg:steel_casing_cable_hub').acceptMirrored(false)
+  // ── Polarizer + the six cable hubs: NOT re-added — voltage-layer blocks; the layer removal
+  //    (63-tfmg-voltage-removed.js) strips them until the 2.0 electricity overhaul (#282).
 
   // ── Smokestacks (machine exhaust multi-part blocks). count preserved (all 4x). ──
   event.remove({ output: 'tfmg:brick_smokestack' })

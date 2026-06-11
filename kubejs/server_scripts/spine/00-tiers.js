@@ -30,7 +30,7 @@ const SPINE = {
 
     T3: { name: 'Electric-low',  rung: 4, anchors: ['tfmg', 'createaddition', 'create_new_age', 'gnkinetics', 'create_jetpack'],
           items: ['tfmg:etched_circuit_board', 'createaddition:capacitor', 'create_new_age:reinforced_energiser',
-                  'tfmg:electric_motor', 'gnkinetics:planetary_gear', 'create_jetpack:jetpack'],
+                  'createaddition:electric_motor', 'gnkinetics:planetary_gear', 'create_jetpack:jetpack'],
           gate: 'electric needs rung-3 kinetic; capacitor = THE T3 token (needs create_new_age:overcharged_iron = running power); advanced energiser behind any Frostmaw-equiv Mowzie boss (#pcmc:mowzies_mid); ship core behind cataclysm:ancient_metal_ingot; jetpack/brass-exo = capacitor; guns + SNA gear = functional thematic parts (recoil spring, drill head, fluid tank, plunger launcher, electric motor — Part 2b-ii family rule)', cost: '2-3x, 4 stages',
           aero: 'COMPLEX analog control (aeronautics:gyroscopic_propeller_bearing)' },
 

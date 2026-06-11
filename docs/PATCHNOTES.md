@@ -43,18 +43,17 @@ tier you are stepping into.
   whisk an aeronautics plunger launcher, the fan component a Crafts & Additions electric motor. The
   brass exoskeleton runs on capacitors; the andesite and copper exoskeletons remain earlier entry points.
 - Create: Ore Excavation is an end-game operation: the drilling machine and extractor require TFMG
-  circuit boards and electric motors, and drill heads are steel-bodied Crafter work that wears out in
-  use. Finding veins stays early — the vein finder senses through an electron tube, the vein atlas binds
+  circuit boards and Crafts & Additions electric motors, and drill heads are steel-bodied Crafter work
+  that wears out in use. Finding veins stays early — the vein finder senses through an electron tube, the vein atlas binds
   with a Create clipboard.
 - The treadmill joins the hand crank and water wheel as recognized early power — modest, and capped by
   whatever walks on it.
-- TFMG's electric motor winds in a Crafts & Additions capacitor during assembly, so the two electric
-  ecosystems depend on each other.
-- TFMG's power grid is now a closed circuit: its converter and accumulator are no longer craftable, so
-  volts and Forge Energy do not exchange. TFMG generators still power TFMG's own machines and lights —
-  but rotation converted to wired FE always goes through the alternator or a New Age coil, whose rates
-  are balanced against each other. Energy storage on the FE side stays with the Crafts & Additions
-  accumulator.
+- TFMG's voltage system is removed for now: its generators, cables, transformers, electric machines,
+  meters, and electric lights are no longer craftable. The pack runs two electricity systems whose
+  conversion rates are balanced against each other — Crafts & Additions and Create: New Age — and
+  TFMG's grid was a third with rates of its own. None of TFMG's production machinery is affected; the
+  blast furnace, distillation, centrifuge, and winding machine all run on rotation, and gas lamps stay.
+  The voltage system returns, properly integrated, with the planned electricity overhaul after 1.0.
 - The hot-air balloon's adjustable burner accepts the basic burner as its fire source, so the heat
   ladder carries from the kitchen to the boiler to the sky.
 - Create: Aeroworks is added as the top tier of flight: its digital controls are what make large or

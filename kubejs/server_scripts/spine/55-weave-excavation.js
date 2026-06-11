@@ -22,7 +22,7 @@
 
 ServerEvents.recipes(event => {
   // ── drilling_machine — keep the native 5x5 mechanical_crafting; T4-ify the smarts. ──
-  // SWAPPED: e electron_tube -> tfmg:etched_circuit_board, m precision_mechanism -> tfmg:electric_motor.
+  // SWAPPED: e electron_tube -> tfmg:etched_circuit_board, m precision_mechanism -> createaddition:electric_motor (was tfmg:electric_motor until the voltage-layer removal, 63).
   event.remove({ output: 'createoreexcavation:drilling_machine' })
   event.custom({
     type: 'create:mechanical_crafting',
@@ -36,7 +36,7 @@ ServerEvents.recipes(event => {
       S: { item: 'create:spout' },
       b: { tag: 'c:plates/brass' },
       e: { item: 'tfmg:etched_circuit_board' },  // was create:electron_tube — T4 smarts
-      m: { item: 'tfmg:electric_motor' },        // was create:precision_mechanism — T4 drive
+      m: { item: 'createaddition:electric_motor' }, // was create:precision_mechanism — T4 drive (tfmg motor retired w/ voltage layer)
       s: { tag: 'c:plates/obsidian' },
       t: { item: 'create:copper_casing' }
     },
@@ -58,7 +58,7 @@ ServerEvents.recipes(event => {
       P: { item: 'create:mechanical_pump' },
       b: { tag: 'c:plates/brass' },
       e: { item: 'tfmg:etched_circuit_board' },  // was create:electron_tube
-      m: { item: 'tfmg:electric_motor' },        // was create:precision_mechanism
+      m: { item: 'createaddition:electric_motor' }, // was create:precision_mechanism
       s: { tag: 'c:plates/obsidian' }
     },
     pattern: ['BbPbB', 'beHeb', 'CmDmb', 'bsssb', 'BbbbB'],

@@ -14,13 +14,17 @@
 > createaddition backbone, and reimagine power around Power Grid for a 2.0 once there's a stable base +
 > live performance data. (§9, §11.)
 >
-> **Addendum (v0.7.0): the TFMG voltage-layer overlap (§2/§6) is resolved early, by closing its FE
-> boundary** rather than hiding the layer. Bytecode reading of tfmg-1.2.0 found the volt grid's kinetic
-> rate is off the pack's pegged 0.029296875 FE/SU·tick base (its generator: 40 W/RPM against a 50 SU/RPM
-> impact ≈ 27× the peg), and exactly two blocks bridge volts↔FE (`tfmg:converter` in,
-> `tfmg:accumulator` out). Both are made uncraftable in `kubejs/server_scripts/spine/63-fe-boundary-tfmg.js`;
-> the grid survives as a closed "industrial mains" powering TFMG's own machines. Verification + the
-> conversion-rate audit: #315. The full re-tier of the voltage layer still belongs to #282.
+> **Addendum (v0.7.0): the TFMG voltage-layer overlap (§2/§6) is resolved early — the layer is removed
+> outright**, not just hidden at the FE boundary. Bytecode reading of tfmg-1.2.0 established: the grid's
+> kinetic rate is off the pack's pegged 0.029296875 FE/SU·tick base (its generator: 40 W/RPM against a
+> 50 SU/RPM impact ≈ 27× the peg); exactly two blocks bridge volts↔FE (`tfmg:converter` in,
+> `tfmg:accumulator` out); **no TFMG machine accepts FE** — production machinery is kinetic
+> (`machine_input`), and the grid's one production machine (polarizer → magnet) feeds only grid devices,
+> so the layer is fully self-contained. `kubejs/server_scripts/spine/63-tfmg-voltage-removed.js` makes
+> the whole family uncraftable (generation, transmission, devices, instruments, electric lights);
+> `createaddition:electric_motor` takes over the T4 drive role. Circuit boards, wires/spools, engines,
+> and the gas lamp are untouched. **Re-adding TFMG electricity, re-tiered, is now explicitly part of
+> #282's scope.** Verification: #315 / PR #234.
 
 ## 1. Why this review
 
