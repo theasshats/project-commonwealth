@@ -549,6 +549,10 @@ file = "kubejs/data/pcmc/recipe/primer.json"
 hash = "9f63003561b61c810d7ba7a4cfc0f5f0a0dfa0236b6bba99cfbb423a79beeea2"
 
 [[files]]
+file = "kubejs/data/pcmc/tags/block/vein_ores.json"
+hash = "5f611d23716cb74d8a34f3b7f0f754a9804e4a9de2bdba29e4d7309f79a04483"
+
+[[files]]
 file = "kubejs/data/pcmc/tags/worldgen/biome/vein_bauxite.json"
 hash = "f3fe9529eafdb3bb7c203e93fcf2901b3b14829d037c7c34b619869e22c9d06e"
 
