@@ -8,6 +8,10 @@
      The "## X.Y.Z" section ships verbatim as the GitHub release body (build.yml), so it must
      read complete on its own. Shipped sections are the published record — don't restyle them. -->
 
+## 0.8.0 — TBD
+
+_Draft placeholder — replace with real notes before release._
+
 ## 0.7.0 — The Create spine
 
 The tech route gets its backbone. Create and its addons now climb four tiers — manual, water and wind,
