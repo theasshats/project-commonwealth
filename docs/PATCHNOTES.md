@@ -68,6 +68,8 @@ tier you are stepping into.
   bands.
 - Bauxite is rarer in jungles, which read as jade and deep-diamond country again; salt veins are
   deliberately small on the coasts.
+- Every block the regional veins can place is collected under the `pcmc:vein_ores` block tag, so map
+  tools, filters, and commands can address vein ore in one expression.
 
 ### Curation
 
