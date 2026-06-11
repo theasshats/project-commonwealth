@@ -102,7 +102,7 @@ dev:
   debug: true
 
   # Debug ore vein placement? (will print placed veins to server's debug.log)
-  # Default: false — ON to verify vein placement/rarity during the #116 playtest; turn OFF before release (#261).
+  # Default: false — ON to verify vein placement/rarity during the ore playtest (#318); turn OFF before release (#261).
   debugWorldgen: true
 
   # Generate ores in superflat worlds?

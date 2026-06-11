@@ -34,7 +34,7 @@ hash = "abe2744c46c81c28ef0bee5cc5cbf63c6982ee589f54ec06c9b31d258f841051"
 
 [[files]]
 file = "config/gtmogs.yaml"
-hash = "37723fb5b0d21c4cb2fecec47122b826a1f8aa876c790e876e64be8e3406c0d4"
+hash = "139b9efbbd940d797a0abc5673c040f14081853477cfb7a86a46cd9a7d9dd534"
 
 [[files]]
 file = "config/immersivepaintings.json"

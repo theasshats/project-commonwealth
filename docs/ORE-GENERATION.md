@@ -196,7 +196,7 @@ bauxite/lignite/fireclay (sole source, kept) plus galena (lead, removed); see th
 Also deliberately global, audited v0.7.1 (#296) — **decorative stone, not ore**: Born in Chaos
 `black_argillite` and Samurai Dynasty `spirit_stone` (both `#is_overworld` at the `underground_ores`
 step), Spawn `reefstone` (oceans), and Upgrade Aquatic ammonite (its own biome tag). Deeper Darker's
-Otherside ores ride with the dimensional pass (the nether/end item on #116's checklist).
+Otherside ores ride with the dimensional pass (the nether/end item on #318's exit checklist).
 
 ---
 
@@ -235,8 +235,8 @@ biome tag (edit the tag to move a vein). **Composition** is primary → secondar
 
 > **v0.7.0:** the uranium vein was removed with Create: Nuclear (#289) — thorium and lead absorbed its
 > slots in their own chains. Salt was deliberately shrunk (24/25) from its early oversized preset. The
-> debug flags in `config/gtmogs.yaml` (`debug`, `debugWorldgen`) are ON for the #116 playtest and must
-> go OFF before release (#261).
+> debug flags in `config/gtmogs.yaml` (`debug`, `debugWorldgen`) are ON for the ore playtest (#318,
+> formerly #116) and must go OFF before release (#261).
 >
 > **v0.7.1 (#296):** silver thinned back to its identity — vein weight 35→15 (~10% of hill anchors;
 > hills now split tin 37% / lead 27% / magnetite 27% / silver 10%), the lapis/tin/nickel silver bands
