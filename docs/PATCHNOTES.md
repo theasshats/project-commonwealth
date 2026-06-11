@@ -107,8 +107,9 @@ tier you are stepping into.
   steel autocannon barrel from the same mod. Small arms grow out of the artillery industry.
 - Ammunition is a four-stage production line: casings cut leaner from brass (half the old yields), then
   each round takes a primer, a gunpowder fill, a deployed lead projectile, and a crimping press. The
-  40mm shell is finished with a Big Cannons impact fuze, and cannon powder charges can be filled from
-  the armory's gunpowder fluid.
+  40mm shell is finished with a Big Cannons impact fuze, and cannon powder charges are filled from
+  the armory's gunpowder fluid at a spout — the hand-packed gunpowder route is gone, so the two
+  calibers share one propellant line.
 - The telephoto sniper scope gains an electron-tube rangefinder.
 - Mob lassos are priced for what they do: the golden lasso is built around Create electronics, the
   hostile lasso takes a monstrous horn from the Ancient Remnant, and the diamond lasso merges the
@@ -118,7 +119,9 @@ tier you are stepping into.
 ### Recipes and survival
 
 - Steel is consolidated under TFMG: ingot, nugget, block, and plate all resolve to the TFMG item, so
-  steel reads as one material across every recipe. Bronze remains with Create: Ironworks.
+  steel reads as one material across every recipe. The same goes for the molten form — melting steel
+  down in the Big Cannons foundry now yields TFMG's molten steel, which pours cannons and casts back
+  to ingots; Big Cannons' duplicate fluid is gone. Bronze remains with Create: Ironworks.
 - End-game electricity reaches outside the tech route: the layered magnet at the heart of New Age's
   generators takes a silver core, pulling a region most tech bases don't hold — mine silver country or
   trade with whoever does.

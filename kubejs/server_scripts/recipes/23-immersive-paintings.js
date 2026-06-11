@@ -11,25 +11,40 @@
 //   glow variants = glow ink deployed onto the base
 //
 // #immersive_paintings:dye is the mod's own item TAG (the 16 vanilla dyes) — the mod registers no
-// dye item, so the bare id fails to resolve; the stock bench recipes use the tag too. LOAD-SAFE /
-// UNVERIFIED in-game; playtest items on #234.
+// dye item. Written as event.custom() raw JSON, NOT event.recipes.create.*: in the create schema's
+// item-or-fluid ingredient union a bare '#ns:path' string lands in the FLUID branch — deploying then
+// fails parse ("Recipe has more fluid inputs (1) than supported (0)", the 06-11 playtest error) and
+// mixing silently took the dye as an EMPTY fluid tag, so graffiti listed only gunpowder + bucket.
+// A raw {tag:} ingredient object is unambiguous. Playtest items on #234.
 
 ServerEvents.recipes(event => {
   event.remove({ output: 'immersive_paintings:painting' })
-  event.recipes.create.deploying('immersive_paintings:painting',
-    ['minecraft:paper', '#immersive_paintings:dye'])
+  event.custom({
+    type: 'create:deploying',
+    ingredients: [{ item: 'minecraft:paper' }, { tag: 'immersive_paintings:dye' }],
+    results: [{ id: 'immersive_paintings:painting' }]
+  }).id('pcmc:paintings/painting')
 
   event.remove({ output: 'immersive_paintings:graffiti' })
-  event.recipes.create.mixing('immersive_paintings:graffiti',
-    ['#immersive_paintings:dye', 'minecraft:gunpowder', 'minecraft:bucket'])
+  event.custom({
+    type: 'create:mixing',
+    ingredients: [{ tag: 'immersive_paintings:dye' }, { item: 'minecraft:gunpowder' }, { item: 'minecraft:bucket' }],
+    results: [{ id: 'immersive_paintings:graffiti' }]
+  }).id('pcmc:paintings/graffiti')
 
   event.remove({ output: 'immersive_paintings:glow_painting' })
-  event.recipes.create.deploying('immersive_paintings:glow_painting',
-    ['immersive_paintings:painting', 'minecraft:glow_ink_sac'])
+  event.custom({
+    type: 'create:deploying',
+    ingredients: [{ item: 'immersive_paintings:painting' }, { item: 'minecraft:glow_ink_sac' }],
+    results: [{ id: 'immersive_paintings:glow_painting' }]
+  }).id('pcmc:paintings/glow_painting')
 
   event.remove({ output: 'immersive_paintings:glow_graffiti' })
-  event.recipes.create.deploying('immersive_paintings:glow_graffiti',
-    ['immersive_paintings:graffiti', 'minecraft:glow_ink_sac'])
+  event.custom({
+    type: 'create:deploying',
+    ingredients: [{ item: 'immersive_paintings:graffiti' }, { item: 'minecraft:glow_ink_sac' }],
+    results: [{ id: 'immersive_paintings:glow_graffiti' }]
+  }).id('pcmc:paintings/glow_graffiti')
 
   console.info('[pcmc] immersive paintings: painting/graffiti + glow variants route through Create (deploying/mixing); uploads stay locked via config (#94).')
 })

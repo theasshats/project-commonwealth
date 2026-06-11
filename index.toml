@@ -69,6 +69,18 @@ file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_diamond_or
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
+file = "kubejs/data/c/tags/fluid/hidden_from_recipe_viewers.json"
+hash = "4394a43e65b969f98e120d69cd0e973b9b78eb0c1518b57985345f92544c7668"
+
+[[files]]
+file = "kubejs/data/c/tags/fluid/molten_steel.json"
+hash = "81f0c175924c339037b5feab41b8429ecd20beab677546832f83733e93acbd4a"
+
+[[files]]
+file = "kubejs/data/c/tags/item/hidden_from_recipe_viewers.json"
+hash = "c2b2f620eb7a86766634206d8ed65468d19319218722ceb19b7836d79537a011"
+
+[[files]]
 file = "kubejs/data/create/neoforge/biome_modifier/zinc_ore.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
@@ -278,7 +290,7 @@ hash = "ac52bcdc363b908be99da8d1b56c0a6892780e8e88f50036f7d1352d5800033c"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/guns/melee_wrench.json"
-hash = "5cb6d9ad5759705d0b2d460d7ac9367269818b3aaca269b7321d3c8f6dd5f78e"
+hash = "cb1ab028be5cc8acd20d81ef394ac2995d4e08089674449d07db39904f453a42"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/guns/pistol.json"
@@ -314,7 +326,7 @@ hash = "fc681945734a54860074cfd3ae62824ac92927596d241ea33ac0bfefa679e839"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/guns/unmelee_wrench.json"
-hash = "963b307b83cdcb6c7e9014849012857114e3f42b1210fd2b2039851509bd9c80"
+hash = "39b66afbed376f7bbdd1cf056999a804b6b0a44fb9605160dbd893c906249331"
 
 [[files]]
 file = "kubejs/data/createimmersivetacz/recipe/nitropowder_fluid.json"
@@ -798,7 +810,7 @@ hash = "8fbaa79d17e549628a197b6c77e1bc70cba19d9ff64793ea2928d778ad9fb0ae"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/05-metals.js"
-hash = "0efe69f1e040a999bbee8563621bd122700a9e7085c73677aae67d413924ddc8"
+hash = "0d3f87e13bd825eed1ef46b236aee9c2128a51c65068ec9f31291ae67d954c26"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/10-immersive-armors.js"
@@ -814,11 +826,11 @@ hash = "04003566b89b1c9dd73438e0213a9ee7fb9134d52c61b14fa14c0b329fed1a6b"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/23-immersive-paintings.js"
-hash = "16bf89b12430c5922b1033a2a47a644bfb8cd64b0e642ed509485f1760517fca"
+hash = "99a15d05b53086e9cc78879201231060ffa742c30890007ad0070ef696dc2bef"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/24-artillery-seams.js"
-hash = "a7716289498d25d22e4ef9bc0e0013a7b7190a23857cb5e32da6a8b8840d0af7"
+hash = "38491dbffa4c89463566a0b91f068fb6df7ddbe42198f44391e2c7df72a8ecc6"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/30-modular-golems.js"

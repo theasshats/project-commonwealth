@@ -1,0 +1,7 @@
+{
+  "__comment": "Dead items JEI should not list: the bucket of CBC's inert molten steel (05-metals.js) and packed_gunpowder, orphaned when the powder charge went spout-fill-only (24-artillery-seams.js).",
+  "values": [
+    "createbigcannons:molten_steel_bucket",
+    "createbigcannons:packed_gunpowder"
+  ]
+}
