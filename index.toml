@@ -934,7 +934,7 @@ hash = "457608d9fd5de915689e146f82fc8b06edf5ba1e0f9b2f8749c16134a413a008"
 
 [[files]]
 file = "kubejs/server_scripts/spine/10-locks.js"
-hash = "99c82d9442ecf093e23809b8478a8ea276c51a98c5c39590b40f7a6819730726"
+hash = "1764993d8e861949b002cf02b510d4ca580644204a829a4180d1d82bfcbbc841"
 
 [[files]]
 file = "kubejs/server_scripts/spine/20-power-ladder.js"
