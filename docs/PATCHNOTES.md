@@ -18,7 +18,7 @@ _Draft placeholder — replace the lead with real notes before release._
   line was announced for 0.6.3 as an in-pack replacement for the removed Mining Speed Tooltips mod
   but never rendered; the script has been rewritten against the correct API and works now. A second
   line shows the tool's stamina drain — how the mining-hunger cost scales with the tool's tier,
-  anchored as standard blocks per hunger bar.
+  anchored as standard blocks per shank of hunger.
 - The grenade launcher and the 40mm field cannon now break blocks. Their shells always exploded but
   never carried the block-destruction flag; the fix ships as the pack's own data override, so the
   bundled Create: Armorer gun pack remains unmodified.
