@@ -167,19 +167,10 @@ ServerEvents.recipes(event => {
   // straight type swap would silently strip the fuel data and break the engine system.
   // Per rule 3 ("when unsure, skip"), these stay on their original shaped recipes.
 
-  // ── Accumulator (electrical energy-storage machine block). ──
-  event.remove({ output: 'tfmg:accumulator' })
-  mc([
-    'LWL',
-    'SBS',
-    'LCL'
-  ], {
-    L: '#c:ingots/lithium',
-    W: '#c:wires/copper',
-    S: '#c:plates/nickel',
-    B: '#c:storage_blocks/lithium',
-    C: 'tfmg:industrial_aluminum_casing'
-  }, 'tfmg:accumulator').acceptMirrored(false)
+  // ── Accumulator: NOT re-added. It is one of TFMG's two FE-boundary blocks (it charges from the
+  //    volt grid and exposes standard extractable FE), so the FE-boundary policy removes it outright —
+  //    see 63-fe-boundary-tfmg.js. Deliberately no mc() re-add here, so the removal there is not
+  //    order-dependent on this file.
 
   // ── Chemical vats (fluid-processing machine blocks). ──
   event.remove({ output: 'tfmg:cast_iron_chemical_vat' })

@@ -13,6 +13,14 @@
 > post-1.0 "2.0 electricity overhaul" flagship, not a v0.7.0 change** — ship v0.7.0 on the stable
 > createaddition backbone, and reimagine power around Power Grid for a 2.0 once there's a stable base +
 > live performance data. (§9, §11.)
+>
+> **Addendum (v0.7.0): the TFMG voltage-layer overlap (§2/§6) is resolved early, by closing its FE
+> boundary** rather than hiding the layer. Bytecode reading of tfmg-1.2.0 found the volt grid's kinetic
+> rate is off the pack's pegged 0.029296875 FE/SU·tick base (its generator: 40 W/RPM against a 50 SU/RPM
+> impact ≈ 27× the peg), and exactly two blocks bridge volts↔FE (`tfmg:converter` in,
+> `tfmg:accumulator` out). Both are made uncraftable in `kubejs/server_scripts/spine/63-fe-boundary-tfmg.js`;
+> the grid survives as a closed "industrial mains" powering TFMG's own machines. Verification + the
+> conversion-rate audit: #315. The full re-tier of the voltage layer still belongs to #282.
 
 ## 1. Why this review
 

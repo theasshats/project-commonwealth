@@ -50,6 +50,11 @@ tier you are stepping into.
   whatever walks on it.
 - TFMG's electric motor winds in a Crafts & Additions capacitor during assembly, so the two electric
   ecosystems depend on each other.
+- TFMG's power grid is now a closed circuit: its converter and accumulator are no longer craftable, so
+  volts and Forge Energy do not exchange. TFMG generators still power TFMG's own machines and lights —
+  but rotation converted to wired FE always goes through the alternator or a New Age coil, whose rates
+  are balanced against each other. Energy storage on the FE side stays with the Crafts & Additions
+  accumulator.
 - The hot-air balloon's adjustable burner accepts the basic burner as its fire source, so the heat
   ladder carries from the kitchen to the boiler to the sky.
 - Create: Aeroworks is added as the top tier of flight: its digital controls are what make large or
