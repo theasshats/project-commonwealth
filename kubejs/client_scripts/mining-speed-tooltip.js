@@ -52,16 +52,17 @@
 // Efficiency V)"; a sword/shears shows no line; a modded digger (paxel/hammer) shows
 // one; the line appears in both inventory and JEI tooltips; no kubejs errors in the
 // client log on load or on hover. Stamina line (zagwar, PR #320): iron tools show
-// "Stamina drain: x1 (~100 stone per hunger bar)", netherite x0.5 (~200), wood/gold x2
-// (~50), modded-tier diggers x1.
+// "Stamina drain: x1 (~10 stone per shank)", netherite x0.5 (~20), wood/gold x2 (~5),
+// modded-tier diggers x1.
 //
 // The stamina line mirrors server_scripts/mining-hunger.js (the mining-costs-hunger
 // pressure mechanic): drain = EXHAUSTION_PER_WEIGHT x block weight x tool-tier
 // multiplier, and the per-TOOL part is the tier multiplier, anchored player-facing as
-// "standard blocks per hunger bar" (80 exhaustion / (0.8 x mult) = 100/mult on a
-// weight-1.0 block). Client and server scripts can't share code, so the tier table and
-// id rules below are a deliberate copy of toolMultiplier() there — KEEP THEM IN SYNC
-// (a note in mining-hunger.js points back here).
+// "standard blocks per shank" (one drumstick = 2 points = 8 exhaustion; 8 / (0.8 x mult)
+// = 10/mult on a weight-1.0 block — zagwar's preferred framing). Client and server
+// scripts can't share code, so the tier table and id rules below are a deliberate copy
+// of toolMultiplier() there — KEEP THEM IN SYNC (a note in mining-hunger.js points back
+// here).
 
 const $ItemTooltipEvent = Java.loadClass('net.neoforged.neoforge.event.entity.player.ItemTooltipEvent')
 const $DataComponents = Java.loadClass('net.minecraft.core.component.DataComponents')
@@ -123,8 +124,10 @@ NativeEvents.onEvent($ItemTooltipEvent, event => {
     event.getToolTip().add($Component.literal(text).withStyle($ChatFormatting.GRAY))
 
     const mult = staminaMultiplier(stack.kjs$getId())
-    const perBar = Math.round(100 / mult)
-    event.getToolTip().add($Component.literal(`Stamina drain: x${mult} (~${perBar} stone per hunger bar)`).withStyle($ChatFormatting.GRAY))
+    // One shank (drumstick) = 2 hunger points = 8 exhaustion; a weight-1.0 block costs
+    // 0.8 x mult, so blocks per shank = 10 / mult. (Framing per zagwar, PR #320.)
+    const perShank = Math.round(10 / mult)
+    event.getToolTip().add($Component.literal(`Stamina drain: x${mult} (~${perShank} stone per shank)`).withStyle($ChatFormatting.GRAY))
   } catch (err) {
     // swallow — a tooltip must never crash the client
   }
