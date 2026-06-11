@@ -3,8 +3,10 @@
 // The pack shipped two parallel jetpack families (Create Jetpack's backtank-pressure line and Create
 // Stuff & Additions' engine line). Decision (#87): Create Jetpack is the canonical flight item — it rides
 // the pack's existing backtank/pressure systems and the aeronautics compat. create_sa keeps its identity
-// items (engines, exoskeletons, tools, drones); ONLY its three jetpack chestplates are disabled, by
-// recipe removal (the disable-by-recipe pattern; items stay registered but uncraftable).
+// items (engines, exoskeletons, tools, drones); ONLY its four jetpack chestplates are disabled, by
+// recipe removal (the disable-by-recipe pattern; items stay registered but uncraftable + JEI-hidden).
+// Create: Storage's backpack flight upgrade survives as the storage-flavoured flight option, re-gated
+// below so it pays the same electric toll as the canonical jetpack.
 //
 // The surviving line is tier-costed:
 //   - create_jetpack:jetpack — EARLY T3 (user call): flight is an electric-age privilege, not a brass
@@ -22,10 +24,35 @@
 // preserved. Parses + static-checks; NOT playtest-verified.
 
 ServerEvents.recipes(event => {
-  // ── create_sa jetpacks — disabled (#87: create_jetpack canonical). Engines/exoskeletons untouched. ──
+  // ── create_sa jetpacks — disabled (#87: create_jetpack canonical). Engines/exoskeletons untouched.
+  //    All FOUR chestplates (copper was missed in the first pass — 06-11 playtest catch); the
+  //    uncraftable items are JEI-hidden via kubejs/data/c/tags/item/hidden_from_recipe_viewers.json. ──
+  event.remove({ output: 'create_sa:copper_jetpack_chestplate' })
   event.remove({ output: 'create_sa:andesite_jetpack_chestplate' })
   event.remove({ output: 'create_sa:brass_jetpack_chestplate' })
   event.remove({ output: 'create_sa:netherite_jetpack_chestplate' })
+
+  // ── Create: Storage's backpack FLIGHT upgrade — kept, but it obeys the #87 ladder (06-11 review).
+  //    Stock grid rides a netherite backtank with no electric dependency, letting backpack flight skip
+  //    the "flight is an electric-age privilege" rule the base jetpack pays. Same stock grid (verified
+  //    in fxntstorage-1.2.7's jar), the two iron sheets become capacitors. ──
+  event.remove({ output: 'fxntstorage:backpack_flight_upgrade' })
+  event.recipes.create.mechanical_crafting('fxntstorage:backpack_flight_upgrade', [
+    ' #V# ',
+    '#PCP#',
+    '#TBT#',
+    '#FCF#',
+    ' #N# '
+  ], {
+    '#': 'create:brass_sheet',
+    B: 'fxntstorage:backpack_blank_upgrade',
+    F: 'create:encased_fan',
+    C: 'createaddition:capacitor',             // the T3 token — backpack flight stays electric-gated
+    N: 'create:nozzle',
+    P: 'create:propeller',
+    T: 'create:netherite_backtank',
+    V: 'create:copper_valve_handle'
+  })
 
   // ── create_jetpack:jetpack — early T3, through Create. Every stock component family kept (brass
   //    plates, elytra, chute, copper backtank, shaft, precision mechanism) + the capacitor seam. ──

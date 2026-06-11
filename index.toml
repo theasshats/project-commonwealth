@@ -82,7 +82,7 @@ hash = "81f0c175924c339037b5feab41b8429ecd20beab677546832f83733e93acbd4a"
 
 [[files]]
 file = "kubejs/data/c/tags/item/hidden_from_recipe_viewers.json"
-hash = "c2b2f620eb7a86766634206d8ed65468d19319218722ceb19b7836d79537a011"
+hash = "c46713145479dad6c600f6e1b40ea2787c6ab2b92bcfb90a1400a337e688bebd"
 
 [[files]]
 file = "kubejs/data/create/neoforge/biome_modifier/zinc_ore.json"
@@ -930,11 +930,15 @@ hash = "1aa0b90bc7332961832e22097698eaf502b45cdceedd14b90766a2e8f4018a0f"
 
 [[files]]
 file = "kubejs/server_scripts/spine/05-tags.js"
-hash = "cfcab59545f2486ade8c9d79f8cede77c96d21e56d5df4b715245997a8a12bfe"
+hash = "457608d9fd5de915689e146f82fc8b06edf5ba1e0f9b2f8749c16134a413a008"
 
 [[files]]
 file = "kubejs/server_scripts/spine/10-locks.js"
 hash = "99c82d9442ecf093e23809b8478a8ea276c51a98c5c39590b40f7a6819730726"
+
+[[files]]
+file = "kubejs/server_scripts/spine/11-mechanism-pins.js"
+hash = "a522b843fd43471d44fda0067b2d270a13d1e21f310808f0f9f1cf31ee36e687"
 
 [[files]]
 file = "kubejs/server_scripts/spine/20-power-ladder.js"
@@ -946,11 +950,11 @@ hash = "370b7606679aa1214c29dceb385aea5ca2bc39a7f867ecfbce7e99eaa1836711"
 
 [[files]]
 file = "kubejs/server_scripts/spine/40-gates.js"
-hash = "122d083488d6f6683c648338b9ec2f13863ef4798c54e2a99772c1191219946e"
+hash = "08fc08303d6ee638b95804352bf3a68179cec4b64b29a6cd4df5ab71611ede94"
 
 [[files]]
 file = "kubejs/server_scripts/spine/50-cross-tier.js"
-hash = "cc7ea8f5eba3ead2c70f7082e986a785959f498b05c5e578eed9b1155c57ce5f"
+hash = "21cbbd890fc48a7749cbd30563d29745428fb9dc4a07f389e586d61f10ca1eed"
 
 [[files]]
 file = "kubejs/server_scripts/spine/51-weave-additions-tfmg.js"
@@ -962,7 +966,7 @@ hash = "088baa705eef36234815342eac4a9f150d4071a26bf7236a7c864fc37ea9c4a0"
 
 [[files]]
 file = "kubejs/server_scripts/spine/54-weave-aeronautics.js"
-hash = "ef266574d8d53e63ae8feb01fd6f3f1d6f90d8be6974463ea0bd91df714038c6"
+hash = "abf2cd71e87b55375353d664dc292f0c81e411aae2ad5e703a72eb00f9f4f8c4"
 
 [[files]]
 file = "kubejs/server_scripts/spine/55-weave-excavation.js"
@@ -974,7 +978,7 @@ hash = "7792c10a5d11f1baf5affdfee917b48bfd1630bcb6044a07d599d5834d3de78b"
 
 [[files]]
 file = "kubejs/server_scripts/spine/57-jetpacks.js"
-hash = "295eeeb8663b5189817ad39a406dbb4b9be5c91b98bd4bd7127602bf4ec57717"
+hash = "6715743ba7c51d17e43630e8dab4df6967bf2870c14b369316e72ba885cbd01d"
 
 [[files]]
 file = "kubejs/server_scripts/spine/60-machines-tfmg.js"

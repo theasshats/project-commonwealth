@@ -37,7 +37,10 @@ tier you are stepping into.
   hunt both stand between a base and reactor power.
 - Jetpacks consolidated into one line: Create Jetpack. The base jetpack is an electric-age Mechanical
   Crafter build around a capacitor; the netherite upgrade requires cursium, and the smithing-table
-  shortcut no longer works. Create Stuff & Additions' three parallel jetpacks are no longer craftable.
+  shortcut no longer works. Create Stuff & Additions' four parallel jetpacks are no longer craftable
+  and no longer appear in JEI. Create: Storage's backpack flight upgrade remains as the
+  storage-flavoured option, and now takes capacitors so backpack flight is earned at the electric
+  tier like every other flight.
 - Power gear is built from the machine it works like, each on the Mechanical Crafter: the portable drill
   carries a real Ore Excavation drill head, the flamethrower a TFMG steel fluid tank, the grappling
   whisk an aeronautics plunger launcher, the fan component a Crafts & Additions electric motor. The
@@ -55,8 +58,12 @@ tier you are stepping into.
   TFMG's grid was a third with rates of its own. None of TFMG's production machinery is affected; the
   blast furnace, distillation, centrifuge, and winding machine all run on rotation, and gas lamps stay.
   The voltage system returns, properly integrated, with the planned electricity overhaul after 1.0.
-- The hot-air balloon's adjustable burner accepts the basic burner as its fire source, so the heat
-  ladder carries from the kitchen to the boiler to the sky.
+- The hot-air balloon's adjustable burner is built around the basic burner — its only accepted fire
+  source now, a raw coal block no longer qualifies — so the heat ladder carries from the kitchen to
+  the boiler to the sky.
+- Aeronautics flight machinery is Mechanical Crafter work: the adjustable burner, steam vent,
+  propeller bearings, and smart propeller all assemble on the Crafter rather than the crafting
+  table. Simple parts — propellers, envelopes, goggles — stay table-craftable.
 - Create: Aeroworks is added as the top tier of flight: its digital controls are what make large or
   complex flying machines practical to pilot, and they sit at the electric tier alongside the rest of
   the end-game machinery.

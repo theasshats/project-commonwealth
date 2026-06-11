@@ -24,7 +24,7 @@ ServerEvents.recipes(event => {
   //    T3 gyroscopic line. Real grid: A=wooden_slab / S=#c:plates/iron / B=brass_casing. Add a
   //    cogwheel so the analog bearing reads as a turned/geared part (still T2, no digital dep). ──
   event.remove({ output: 'aeronautics:propeller_bearing' })
-  event.shaped('aeronautics:propeller_bearing', [
+  event.recipes.create.mechanical_crafting('aeronautics:propeller_bearing', [
     ' A ',
     'CSC',
     ' B '
@@ -111,5 +111,37 @@ ServerEvents.recipes(event => {
     B: '#c:ingots/brass'
   })
 
-  console.info('[pcmc-spine] weave-aeronautics: control ladder reinforced — propeller_bearing (T2) below gyroscopic; gimbal_sensor analog; gyroscope/servos/joystick (T4) now need TFMG circuit / Additions electric (T3->T4).')
+  // ── AERONAUTICS = CRAFTER WORK (06-11 playtest call): flight machine blocks build on the Mechanical
+  //    Crafter, not the crafting table. Stock shaped recipes removed and re-added as mechanical_crafting
+  //    with their original grids (verified in the aeronautics 1.2.1 jar); the bearings/propeller above
+  //    and the gate in 40-gates.js are converted in place. Parts (propellers, envelopes, goggles,
+  //    handles) stay table-craftable. ──
+
+  //    adjustable_burner — stock grid kept; the fire slot is #aeronautics:burner_fire, which 05-tags.js
+  //    narrows to the basic_burner only (coal block removed), so the balloon burner is a BUILT heat
+  //    source assembled on the Crafter. NOTE: this moves T1 ballooning behind a Mechanical Crafter.
+  event.remove({ output: 'aeronautics:adjustable_burner' })
+  event.recipes.create.mechanical_crafting('aeronautics:adjustable_burner', [
+    'S S',
+    'SCS',
+    'ARA'
+  ], {
+    S: 'create:iron_sheet',
+    C: '#aeronautics:burner_fire',
+    A: 'create:andesite_alloy',
+    R: 'minecraft:redstone'
+  })
+
+  //    steam_vent — stock grid kept (gold plate over copper block), Crafter-built like the rest of the
+  //    flight machinery.
+  event.remove({ output: 'aeronautics:steam_vent' })
+  event.recipes.create.mechanical_crafting('aeronautics:steam_vent', [
+    'G',
+    'C'
+  ], {
+    G: '#c:plates/gold',
+    C: 'minecraft:copper_block'
+  })
+
+  console.info('[pcmc-spine] weave-aeronautics: control ladder reinforced — propeller_bearing (T2) below gyroscopic; gimbal_sensor analog; gyroscope/servos/joystick (T4) need TFMG circuit / Additions electric; flight machines (burner/vent/bearings/propellers) are Mechanical Crafter builds.')
 })

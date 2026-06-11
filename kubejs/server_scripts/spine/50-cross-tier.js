@@ -16,8 +16,9 @@ ServerEvents.recipes(event => {
   // aeronautics:smart_propeller (the "digital" propeller) currently needs only the ANALOG gyroscopic
   // mechanism, so digital flight isn't actually gated behind a digital part. Weave it: require an aeroworks
   // servo, making smart flight genuinely T4 (needs create-aeroworks). Base ingredients verified vs the dump.
+  // Mechanical Crafter build (06-11: aeronautics flight machines are Crafter work, see 54-weave).
   event.remove({ output: 'aeronautics:smart_propeller' })
-  event.shaped('aeronautics:smart_propeller', [
+  event.recipes.create.mechanical_crafting('aeronautics:smart_propeller', [
     ' M ',
     'GPG',
     ' B '

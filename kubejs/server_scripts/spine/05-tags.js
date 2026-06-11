@@ -40,6 +40,9 @@ ServerEvents.tags('item', event => {
 
   // ── HEAT LADDER -> FLIGHT seam: the hot-air balloon's adjustable burner takes any aeronautics
   //    burner_fire item as its fire source — the heat ladder's basic_burner joins the tag, so the
-  //    T1 flight chain runs on the same built heat as the kitchen and the first boilers. ──
+  //    flight chain runs on the same built heat as the kitchen and the first boilers. The stock
+  //    coal_block entry is REMOVED (06-11 playtest call): a raw coal block must not stand in for a
+  //    built burner, so the basic_burner is the only fire source. ──
   event.add('aeronautics:burner_fire', ['createlowheated:basic_burner'])
+  event.remove('aeronautics:burner_fire', 'minecraft:coal_block')
 })

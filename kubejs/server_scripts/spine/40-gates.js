@@ -20,8 +20,9 @@ const SPINE_GATES = [
       { K: K, E: 'create:electron_tube', B: 'create_new_age:basic_energiser', I: '#c:plates/iron' }) },
 
   // T3 — aeronautics ship core (flagship) behind ancient_metal (Ancient Remnant, mid Cataclysm boss).
+  //      Mechanical Crafter build (06-11: aeronautics flight machines are Crafter work, see 54-weave).
   { tier: 'T3', out: 'aeronautics:gyroscopic_propeller_bearing', drop: 'cataclysm:ancient_metal_ingot',
-    build: (e, K) => e.shaped('aeronautics:gyroscopic_propeller_bearing',
+    build: (e, K) => e.recipes.create.mechanical_crafting('aeronautics:gyroscopic_propeller_bearing',
       [' K ', 'BGB', ' W '],
       { K: K, B: 'create:brass_casing', G: 'simulated:gyroscopic_mechanism', W: '#minecraft:wooden_slabs' }) },
 

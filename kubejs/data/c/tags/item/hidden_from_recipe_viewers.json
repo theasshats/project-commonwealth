@@ -1,7 +1,11 @@
 {
-  "__comment": "Dead items JEI should not list: the bucket of CBC's inert molten steel (05-metals.js) and packed_gunpowder, orphaned when the powder charge went spout-fill-only (24-artillery-seams.js).",
+  "__comment": "Dead items JEI should not list: the bucket of CBC's inert molten steel (05-metals.js), packed_gunpowder (orphaned when the powder charge went spout-fill-only, 24-artillery-seams.js), and create_sa's four disabled jetpack chestplates (#87, 57-jetpacks.js).",
   "values": [
     "createbigcannons:molten_steel_bucket",
-    "createbigcannons:packed_gunpowder"
+    "createbigcannons:packed_gunpowder",
+    "create_sa:copper_jetpack_chestplate",
+    "create_sa:andesite_jetpack_chestplate",
+    "create_sa:brass_jetpack_chestplate",
+    "create_sa:netherite_jetpack_chestplate"
   ]
 }
