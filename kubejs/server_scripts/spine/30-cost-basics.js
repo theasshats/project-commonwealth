@@ -32,7 +32,16 @@ ServerEvents.recipes(event => {
   // ── Dial the ROOT basic. The hand-craft is deliberately the EXPENSIVE route (a whole ingot per alloy)
   //    to push players onto the cheaper Create mixing route once they have a mixer; mixing stays ~3x the
   //    raw floor (3 nuggets). This cost flows into every machine/casing/component built from alloy. ──
-  event.remove({ output: 'create:andesite_alloy' })
+  // ⚠️ Remove by ID, never `{ output: 'create:andesite_alloy' }`: the broad output filter also matches
+  // every recipe with alloy among its CHANCED JUNK results — it silently deleted the precision /
+  // gyroscopic / pneumatic mechanism sequenced assemblies (06-11 playtest, root-caused from latest.log:
+  // KubeJS "removed 443 recipes", no errors) and the alloy-block unpacking. These four are the only
+  // alloy PRODUCERS in the pack (verified across tools/mod-data/recipes); from_block stays (storage).
+  ;['create:crafting/materials/andesite_alloy',
+    'create:crafting/materials/andesite_alloy_from_zinc',
+    'create:mixing/andesite_alloy',
+    'create:mixing/andesite_alloy_from_zinc'
+  ].forEach(id => event.remove({ id: id }))
 
   // bootstrap hand-craft — EXPENSIVE: 1 full iron ingot per alloy (= 9 nuggets, vs mixing's 3)
   event.shapeless('create:andesite_alloy', ['minecraft:andesite', '#c:ingots/iron'])

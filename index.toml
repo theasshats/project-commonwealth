@@ -937,16 +937,12 @@ file = "kubejs/server_scripts/spine/10-locks.js"
 hash = "99c82d9442ecf093e23809b8478a8ea276c51a98c5c39590b40f7a6819730726"
 
 [[files]]
-file = "kubejs/server_scripts/spine/11-mechanism-pins.js"
-hash = "a522b843fd43471d44fda0067b2d270a13d1e21f310808f0f9f1cf31ee36e687"
-
-[[files]]
 file = "kubejs/server_scripts/spine/20-power-ladder.js"
 hash = "51a2c0ec6139c48cca26ab168c46a0ee4d15870a2e7edf8c29992cc5d229d440"
 
 [[files]]
 file = "kubejs/server_scripts/spine/30-cost-basics.js"
-hash = "370b7606679aa1214c29dceb385aea5ca2bc39a7f867ecfbce7e99eaa1836711"
+hash = "445e1f89ec1e29a1568a7e19da8f76e994c9869e8ba7e8e30d6579b4793fb2e2"
 
 [[files]]
 file = "kubejs/server_scripts/spine/40-gates.js"
