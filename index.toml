@@ -361,6 +361,18 @@ file = "kubejs/data/expandeddelight/neoforge/biome_modifier/salt_ore.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
+file = "kubejs/data/forge/tags/fluid/molten_bronze.json"
+hash = "d5d6e65da32e577a10a1da939a99c26d6459904795cb362bbffebf0f70373f65"
+
+[[files]]
+file = "kubejs/data/forge/tags/fluid/molten_cast_iron.json"
+hash = "d2fac4f80357aef0c042f3636f39d6b14c83dbe1379ef921074207ecd5bd8473"
+
+[[files]]
+file = "kubejs/data/forge/tags/fluid/molten_steel.json"
+hash = "f73517f042445757cc42c660ab56229cfd08ca31f893986d3771a939e65ba93b"
+
+[[files]]
 file = "kubejs/data/galosphere/neoforge/biome_modifier/add_silver_ores.json"
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
@@ -962,7 +974,7 @@ hash = "088baa705eef36234815342eac4a9f150d4071a26bf7236a7c864fc37ea9c4a0"
 
 [[files]]
 file = "kubejs/server_scripts/spine/54-weave-aeronautics.js"
-hash = "1885b9d4d11fcc6589057b3f7335038e19dba0460316f38cf7ca7464f978df5b"
+hash = "4cbb3666a0835428630acb8400c075d828bf2e28103707d56c6921673f951387"
 
 [[files]]
 file = "kubejs/server_scripts/spine/55-weave-excavation.js"

@@ -143,12 +143,22 @@ ServerEvents.recipes(event => {
     C: 'minecraft:copper_block'
   })
 
-  //    envelopes — ONE craft, colours by machine (06-11 round 3): the white envelope's stock shaped
-  //    recipe is the only way to make a NEW envelope; the 15 colored shaped recipes go, leaving the
-  //    stock deploying recipes (dye onto an envelope) as the only colour route. Washing stays.
-  ;['black', 'blue', 'brown', 'cyan', 'gray', 'green', 'light_blue', 'light_gray', 'lime',
+  //    envelopes — DEPLOYER-ONLY crafting + dye recolouring (06-11 rounds 3-4): the mod's stock model
+  //    is shaped (wool+2 sticks -> 4) AND deploying (stick onto wool -> 3) per colour. ALL 16 shaped
+  //    recipes go — white included — so a new envelope is always deployer work; the stock deploying
+  //    recipes stay as the craft. Recolouring: NEW basin mixing recipes (any shaftless envelope + dye),
+  //    raw-JSON customs because a '#tag' string in the create schema's ingredient union lands in the
+  //    fluid branch (the 06-11 paintings bug). Washing back to white stays stock.
+  ;['white', 'black', 'blue', 'brown', 'cyan', 'gray', 'green', 'light_blue', 'light_gray', 'lime',
     'magenta', 'orange', 'pink', 'purple', 'red', 'yellow'
-  ].forEach(c => event.remove({ id: 'aeronautics:' + c + '_envelope' }))
+  ].forEach(c => {
+    event.remove({ id: 'aeronautics:' + c + '_envelope' })
+    event.custom({
+      type: 'create:mixing',
+      ingredients: [{ tag: 'aeronautics:shaftless_envelope' }, { item: 'minecraft:' + c + '_dye' }],
+      results: [{ id: 'aeronautics:' + c + '_envelope' }]
+    }).id('pcmc:envelopes/dye_' + c)
+  })
 
   console.info('[pcmc-spine] weave-aeronautics: control ladder reinforced — propeller_bearing (T2) below gyroscopic; gimbal_sensor analog; gyroscope/servos/joystick (T4) need TFMG circuit / Additions electric; flight machines (burner/vent/bearings/propellers) are Mechanical Crafter builds.')
 })

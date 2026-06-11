@@ -65,8 +65,9 @@ tier you are stepping into.
   the boiler to the sky.
 - Aeronautics flight machinery is Mechanical Crafter work: the adjustable burner, steam vent,
   propeller bearings, and smart propeller all assemble on the Crafter rather than the crafting
-  table. Simple parts — propellers, envelopes, goggles — stay table-craftable. Envelopes are crafted
-  white and coloured at the deployer with dye; the per-colour crafting recipes are gone.
+  table. Simple parts — propellers and goggles — stay table-craftable. Envelopes are machine work
+  too: a deployer presses a stick onto wool to make them, a basin of dye recolours them, and washing
+  returns them to white; the crafting-table recipes are gone.
 - Create: Aeroworks is added as the top tier of flight: its digital controls are what make large or
   complex flying machines practical to pilot, and they sit at the electric tier alongside the rest of
   the end-game machinery.
