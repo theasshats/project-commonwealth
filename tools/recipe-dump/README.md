@@ -48,12 +48,21 @@ JEI has **no** native "export all recipes to JSON." For a one-off, open the reci
 the grid directly, then paste the layout. For bulk, use Method A or B instead — don't hand-transcribe
 dozens of recipes.
 
-## What the agent actually needs first
+## When to ask for a dump (agent guidance)
 
-The staged cross-tier re-recipes in `docs/CREATE-SPINE-IMPL.md` §9 — priority items:
-`tfmg:electric_motor`, `tfmg:engine_controller`, `create_new_age:reactor_casing`,
-`create_new_age:advanced_energiser`, `createnuclear:reactor_core`, and confirmation that
-`create_new_age:reactor_controller` exists. With those exact recipes, the lineage work stops being blind.
+The digest answers *reading* questions (what touches what — connectivity, curation). Ask the
+maintainer for a dump when a task needs *writing* fidelity the digest deliberately lacks:
+
+- **Re-authoring a `sequenced_assembly` / `mechanical_crafting` / shaped recipe** — you need the real
+  grid, keys, and result counts, and guessing them ships broken recipes.
+- **Debugging "recipe missing at runtime"** — the dump shows what's *actually registered* after
+  conditionals/compat resolve (with the KubeJS blind spot below).
+- **Verifying a digest-vs-game discrepancy** — the dump is the runtime truth to settle it.
+
+Ask early (the maintainer needs a booted instance — it's a human round-trip, not a tool call), name
+the namespaces you need so the `NAMESPACES` filter stays tight, and record provenance (pack version +
+commit + date) on any dump you work from. *(The original v0.7.0 spine priority list that used to live
+here shipped; this section is now the standing rule it taught.)*
 
 ## Known blind spot — KubeJS-added recipes
 

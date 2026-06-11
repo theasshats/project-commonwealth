@@ -151,11 +151,18 @@ Two more workflows keep generated artifacts fresh. Neither gates merges; both **
 bot commit appearing on your PR (or on `main`) is expected, not a glitch.
 
 - **`ground-truth.yml` — mod-data facts digest.** Fetches every mod jar (CI has the network the dev
-  sandbox doesn't) and extracts a license-safe facts digest (IDs / tags / biome-modifiers only, via
-  `scripts/extract-mod-data.sh`) into `tools/mod-data/`, so recipe-design sessions have offline ground
-  truth. Triggers on `mods/**` / `pack.toml` (push to `main` **and** PRs, including drafts — committed
-  back to the PR branch), a weekly cron backstop, and `workflow_dispatch`. It doesn't watch
-  `tools/mod-data/**`, so its own commit can't re-trigger it; that commit instead feeds `connectivity-web.yml`.
+  sandbox doesn't: client-side bootstrap, then a hash-verified **backfill** of any manifest jar the
+  side filter skipped — exactly once per mod, and an unfetchable jar fails the job), extracts a
+  license-safe facts digest (IDs / tags / biome-modifiers only, via `scripts/extract-mod-data.sh`)
+  into `tools/mod-data/`, **prunes** digests of removed/superseded jars (`scripts/prune-mod-data.sh`
+  — #312 closed the leak where every cut mod left an orphan forever), and runs the same script as a
+  **reconciliation guard** (`CHECK=1`): the job **fails red** if the digest doesn't reconcile 1:1
+  with `mods/*.pw.toml` (+ `bundled-in:` jar-in-jar entries) — this is the one part of the workflow
+  that *does* gate, and red means a real divergence for a human (fetch failure, broken jar), not a
+  forgotten script: the fixer already ran. Triggers on `mods/**` / `pack.toml` (push to `main` **and**
+  PRs, including drafts — committed back to the PR branch), a weekly cron backstop, and
+  `workflow_dispatch`. It doesn't watch `tools/mod-data/**`, so its own commit can't re-trigger it;
+  that commit instead feeds `connectivity-web.yml`.
 - **`connectivity-web.yml` — connectivity viz.** Rebuilds `tools/connectivity/connectivity-web.html` and the data
   block in `docs/CONNECTIVITY.md` whenever the recipes, the digest, or the connectivity tooling change
   (push to `main`, or `workflow_dispatch`). Commits back with `[skip ci]` to avoid a loop.
