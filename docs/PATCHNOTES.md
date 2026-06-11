@@ -12,7 +12,7 @@
 
 The tech route gets its backbone. Create and its addons now climb four tiers — manual, water and wind,
 steam, then electricity — and each step is earned through deeper production chains and scarcer
-materials, never timers or research screens. Alongside the spine: a curation pass that removed eight
+materials, never timers or research screens. Alongside the spine: a curation pass that removed twelve
 mods, retuned regional ore generation, and rebuilt weapons, ammunition, and capture tools as Create
 production lines.
 
@@ -123,6 +123,9 @@ tier you are stepping into.
   the armory's gunpowder fluid at a spout — the hand-packed gunpowder route is gone, so the two
   calibers share one propellant line.
 - The telephoto sniper scope gains an electron-tube rangefinder.
+- Heavy autocannon parts can now actually be cast: Advanced Technologies' casting recipes pointed at
+  a fluid tag nothing registered, so the whole line was unpourable. The tag is now filled, and steel
+  casts draw the same molten steel as the rest of the pack.
 - Mob lassos are priced for what they do: the golden lasso is built around Create electronics, the
   hostile lasso takes a monstrous horn from the Ancient Remnant, and the diamond lasso merges the
   golden, aqua, and hostile lassos with diamonds and one boss trophy of your choice. Bosses themselves
