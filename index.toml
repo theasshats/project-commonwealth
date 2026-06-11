@@ -61,8 +61,12 @@ file = "kubejs/assets/inventoryprofilesnext/textures/gui/overlay_new.png"
 hash = "cce47379706d8eb5075a66e9710353bc659971b4f26f1fe1e9813956fdfe0ee4"
 
 [[files]]
+file = "kubejs/client_scripts/hide-default-tacz-guns.js"
+hash = "51f8c3c5f904a9ea01cd7ff0c564b90c42e872ab99678c4a332a3105597c819b"
+
+[[files]]
 file = "kubejs/client_scripts/mining-speed-tooltip.js"
-hash = "aad40ea1cf31d88a0ec23cfc55b9e279a51db47cb84f5764c191c63c24a169b1"
+hash = "b42b4b6b75ce4983fa414ad3ba96db20c1d6510d4b8f9e862742b786e7d6c18e"
 
 [[files]]
 file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_deepslate_diamond_ore_feature_biome_modifier.json"
