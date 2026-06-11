@@ -54,11 +54,12 @@ deepslate variant (magnetite, thorium) list the same block in both bands.
 
 ## Tuning knobs
 
-- **`cluster_size`** — vein footprint in blocks (the **v0.7.0 tuning uses 20–60**; big commons like
-  iron/coal/copper at 50–60, mid metals at 35–40, marquee/rare ores like diamond/thorium/mithril at
-  20–30, salt deliberately small at 24). Pairs with the **grid-5 spread** in `config/gtmogs.yaml`
-  (`oreVeinGridSize: 5`, `oreVeinRandomOffset: 20`): veins are rarer than the mod default but
-  individually richer — a find is an event, then a supply.
+- **`cluster_size`** — vein footprint in blocks (the **v0.7.1 tuning uses 20–40 plus a 120 mega
+  class**; commons like iron/coal/copper at 32–36 — routine small finds, per the #296 size-variance
+  call — mid metals at 35–40, marquee/rare ores like diamond/thorium/mithril at 20–30, salt
+  deliberately small at 24, megas at 120). Pairs with the **grid-5 spread** in `config/gtmogs.yaml`
+  (`oreVeinGridSize: 5`, `oreVeinRandomOffset: 20`): veins are rarer than the mod default; commons
+  stay modest while a mega find is the regional jackpot.
 - **`weight`** — relative chance this vein wins a roll *against other veins eligible at that spot*.
   Commons 55–80, mid 30–45, rare 10–20.
 - **`density`** — 0–1 fill probability inside the vein body. Commons ~0.4, rare ~0.2.
@@ -67,6 +68,19 @@ deepslate variant (magnetite, thorium) list the same block in both bands.
 - **`biomes`** — a single biome tag (e.g. `#pcmc:vein_iron`) keeps the vein regional. **Don't**
   inline a list of `#tag`s here for the same reason as below — point at one tag and edit the tag.
 - **`discard_chance_on_air_exposure`** — 0.0 = veins show in caves/cliffs (good for findability).
+
+### Mega veins (v0.7.1)
+
+A second rarity class on the same grid: `iron_mega` (mountains), `copper_mega` (badlands) and
+`coal_mega` (taiga/forest) are `cluster_size` 120 / `density` 0.5 / `y_radius` 8 bodies whose low
+`weight` makes them win only ~8% of their region's anchors — roughly **one per ~300 chunks** of
+region (grid 5 ⇒ one anchor per 25 chunks). They're deliberate trade/logistics anchors: a find worth
+building an outpost and a route around (#296). Each points at an **alias biome tag**
+(`vein_<ore>_mega.json` → `#pcmc:vein_<ore>`), so they follow the parent region today but can be
+re-homed independently later. The real ore-per-vein yield of a size-120 body hasn't been measured
+in-game yet — calibrate against the `debugWorldgen` placement logs in the v0.7.1 playtest (target:
+zagwar's 32–80 stacks per mega, and at least 10× a common vein). Roster is deliberately minimal
+(no precious-metal mega yet) — expansion is zagwar's call on the v0.7.1 PR.
 
 ## No starter trickle — small ores instead
 
@@ -124,9 +138,8 @@ You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:
 - **Thorium** — Create: New Age — `create_new_age:thorium_ore` (stone-only, no deepslate)
 - **Magnetite** — Create: New Age — `create_new_age:magnetite_block` (stone-only)
 - **Silver** — Occultism — `occultism:silver_ore` (+`silver_ore_deepslate`)
-- **Uranium** — Create: Nuclear — `createnuclear:uranium_ore` (+`deepslate_uranium_ore`)
-- **Lead** — TFMG — `tfmg:lead_ore` (+deepslate). *Nuclear also adds `createnuclear:lead_ore`; we vein
-  only the TFMG one and disable both defaults — both register lead under the standard `c:ores/lead`/`c:ingots/lead` tags, so they're interchangeable.*
+- **Lead** — TFMG — `tfmg:lead_ore` (+deepslate). *(Create: Nuclear's parallel lead and uranium ores
+  left with the mod in v0.7.0 — #289.)*
 - **Lithium** — TFMG — `tfmg:lithium_ore` (+deepslate)
 - **Nickel** — TFMG — `tfmg:nickel_ore` (+deepslate)
 - **Palladium** — Galosphere — `galosphere:palladium_ore` (+`deepslate_palladium_ore`). Prestige metal:
@@ -171,8 +184,7 @@ vein. Override targets in use (all verified + already shipped):
 | Thorium | `create_new_age/neoforge/biome_modifier/thorium_ore.json` |
 | Magnetite | `create_new_age/neoforge/biome_modifier/magnetite_block.json` |
 | Silver | `occultism/neoforge/biome_modifier/add_ore_silver.json` + `add_ore_silver_deepslate.json` |
-| Uranium | `createnuclear/neoforge/biome_modifier/uranium_ore.json` |
-| Lead | `createnuclear/neoforge/biome_modifier/lead_ore.json` + `tfmg/neoforge/biome_modifier/lead_ore.json` |
+| Lead | `tfmg/neoforge/biome_modifier/lead_ore.json` *(the `createnuclear` lead/uranium shadows left with the mod — #289)* |
 | Lithium | `tfmg/neoforge/biome_modifier/lithium_ore.json` |
 | Nickel | `tfmg/neoforge/biome_modifier/nickel_ore.json` |
 | Infected diamond (Born in Chaos) | `born_in_chaos_v1/neoforge/biome_modifier/infected_diamond_ore_feature_biome_modifier.json` + `infected_deepslate_diamond_ore_feature_biome_modifier.json` — **shadow only, no vein.** It was a second diamond source injected into all overworld biomes; disabled outright so diamonds come solely from the GTMOGS diamond mix vein + the diamond small ore. |
@@ -181,6 +193,10 @@ vein. Override targets in use (all verified + already shipped):
 Left untouched: nether ores (`occultism` iesnium, `striated_ores_nether`) and TFMG
 `oil_deposit`/`oil_well` (fluid). `striated_ores_overworld` is **kept but de-leaded** — it carries
 bauxite/lignite/fireclay (sole source, kept) plus galena (lead, removed); see the ⚠️ note above.
+Also deliberately global, audited v0.7.1 (#296) — **decorative stone, not ore**: Born in Chaos
+`black_argillite` and Samurai Dynasty `spirit_stone` (both `#is_overworld` at the `underground_ores`
+step), Spawn `reefstone` (oceans), and Upgrade Aquatic ammonite (its own biome tag). Deeper Darker's
+Otherside ores ride with the dimensional pass (the nether/end item on #116's checklist).
 
 ---
 
@@ -191,33 +207,44 @@ biome tag (edit the tag to move a vein). **Composition** is primary → secondar
 
 | Vein | Region (biome tag) | Y-band | Size | Weight | Composition (P → S → B → Sp) |
 |---|---|---|---|---|---|
-| iron | mountains | -24…64 | 50 | 80 | iron → magnetite → nickel → gold |
-| copper | badlands | -16…112 | 50 | 70 | copper → iron → gold → zinc |
-| coal | taiga / forest | 0…136 | 60 | 80 | coal → coal → lithium → iron |
+| iron | mountains | -24…64 | 36 | 80 | iron → magnetite → nickel → gold |
+| copper | badlands | -16…112 | 36 | 70 | copper → iron → gold → zinc |
+| coal | taiga / forest | 0…136 | 36 | 80 | coal → coal → lithium → iron |
 | gold | savanna / badlands | -48…40 | 40 | 45 | gold → nickel → copper → zinc |
 | redstone | desert | -60…-8 | 40 | 45 | redstone → redstone → lithium → lapis |
-| lapis | snowy | -32…40 | 35 | 35 | lapis → lapis → silver → lithium |
+| lapis | snowy | -32…40 | 35 | 35 | lapis → lapis → iron → lithium |
 | diamond | jungle (deep) | -60…-16 | 30 | 15 | diamond → diamond → jade → emerald |
 | emerald | mountain peaks | 64…256 | 20 | 20 | emerald → emerald → gold → mithril |
-| zinc | plains / savanna | 0…80 | 50 | 55 | zinc → tin → copper → nickel |
-| tin | hills / plains | 0…96 | 50 | 55 | tin → zinc → iron → silver |
-| silver | hills / rocky mtns | -32…48 | 40 | 35 | silver → lead → nickel → palladium |
+| zinc | plains / savanna | 0…80 | 32 | 55 | zinc → tin → copper → nickel |
+| tin | hills / plains | 0…96 | 32 | 55 | tin → zinc → iron → copper |
+| silver | hills / rocky mtns | -32…48 | 40 | 15 | silver → lead → nickel → palladium |
 | lead | hills / mountains | -32…64 | 40 | 40 | lead → zinc → silver → copper |
 | lithium | desert / badlands | -48…16 | 40 | 35 | lithium → salt → redstone → nickel |
 | salt | ocean / beach | 0…72 | 24 | 25 | salt → salt → lithium → salt |
-| nickel | savanna / mountain | -32…48 | 40 | 40 | nickel → iron → silver → palladium |
+| nickel | savanna / mountain | -32…48 | 40 | 40 | nickel → iron → gold → palladium |
 | magnetite | hills / mountains | 0…72 | 40 | 40 | magnetite → iron → gold → nickel |
 | thorium | badlands / volcanic | 0…48 | 30 | 15 | thorium → thorium → thorium → lithium |
 | mithril | special (Terralith) | -48…16 | 30 | 10 | mithril → mithril → silver → emerald |
 | jade | jungle | -24…48 | 40 | 30 | jade → jade → emerald → diamond |
 | palladium | mountains / deep_dark | -56…24 | 30 | 12 | palladium → palladium → nickel → silver |
-| bauxite | jungle / savanna | 32…128 | 50 | 30 | bauxite → iron → zinc → gold |
-| lignite | swamp / plains | 8…80 | 50 | 45 | lignite → fireclay → coal → lithium |
+| bauxite | jungle / savanna | 32…128 | 32 | 30 | bauxite → iron → zinc → gold |
+| lignite | swamp / plains | 8…80 | 32 | 45 | lignite → fireclay → coal → lithium |
+| iron_mega | mountains (alias of iron) | -24…64 | 120 | 20 | iron → iron → magnetite → nickel |
+| copper_mega | badlands (alias of copper) | -16…112 | 120 | 14 | copper → copper → iron → gold |
+| coal_mega | taiga / forest (alias of coal) | 0…136 | 120 | 7 | coal → coal → lithium → iron |
 
 > **v0.7.0:** the uranium vein was removed with Create: Nuclear (#289) — thorium and lead absorbed its
 > slots in their own chains. Salt was deliberately shrunk (24/25) from its early oversized preset. The
 > debug flags in `config/gtmogs.yaml` (`debug`, `debugWorldgen`) are ON for the #116 playtest and must
 > go OFF before release (#261).
+>
+> **v0.7.1 (#296):** silver thinned back to its identity — vein weight 35→15 (~10% of hill anchors;
+> hills now split tin 37% / lead 27% / magnetite 27% / silver 10%), the lapis/tin/nickel silver bands
+> swapped to iron/copper/gold, and the silver small ore removed; lead's between band stays the
+> deliberate byproduct source. Commons shrunk to 32–36 (size variance: routine finds, not carpets).
+> Three mega veins added (iron/copper/coal, size 120, ~1 per 300 region chunks) as trade anchors —
+> roster deliberately minimal pending playtest. Samurai Dynasty silver c-tagged + AlmostUnified-pinned
+> to occultism (#177).
 
 > All region tags are **strictly regional** — region biomes only, no `#c:is_underground` /
 > generic-cave fallback (issue #65). Veins generate where the region's surface biome extends down,
@@ -226,8 +253,9 @@ biome tag (edit the tag to move a vein). **Composition** is primary → secondar
 > the underground-biomes note above.
 
 **Small ores (early-game floor + indicators):** single scattered blocks across `#is_overworld` of
-coal, iron, copper, tin, zinc, gold, silver, nickel, redstone, lapis (low `count`), plus diamond
-(rare). Vanilla overworld ore is otherwise fully disabled.
+coal, iron, copper, tin, zinc, gold, nickel, redstone, lapis (low `count`), plus diamond (rare).
+Silver was removed from the set in v0.7.1 — it's a regional trade metal, not a bootstrap one (#296).
+Vanilla overworld ore is otherwise fully disabled.
 
 ---
 

@@ -1,7 +1,7 @@
 {
-  "cluster_size": 32,
-  "density": 0.4,
-  "weight": 55,
+  "cluster_size": 120,
+  "density": 0.5,
+  "weight": 7,
   "layer": "stone",
   "dimension_filter": [
     "minecraft:overworld"
@@ -13,12 +13,12 @@
         "absolute": 0
       },
       "max_inclusive": {
-        "absolute": 96
+        "absolute": 136
       }
     }
   },
   "discard_chance_on_air_exposure": 0.0,
-  "biomes": "#pcmc:vein_tin",
+  "biomes": "#pcmc:vein_coal_mega",
   "generator": {
     "type": "gtmogs:classic",
     "primary": {
@@ -29,7 +29,7 @@
             "tag": "minecraft:stone_ore_replaceables"
           },
           "state": {
-            "Name": "create_ironworks:tin_ore"
+            "Name": "minecraft:coal_ore"
           }
         },
         {
@@ -38,7 +38,7 @@
             "tag": "minecraft:deepslate_ore_replaceables"
           },
           "state": {
-            "Name": "create_ironworks:deepslate_tin_ore"
+            "Name": "minecraft:deepslate_coal_ore"
           }
         }
       ],
@@ -52,7 +52,7 @@
             "tag": "minecraft:stone_ore_replaceables"
           },
           "state": {
-            "Name": "create:zinc_ore"
+            "Name": "minecraft:coal_ore"
           }
         },
         {
@@ -61,13 +61,36 @@
             "tag": "minecraft:deepslate_ore_replaceables"
           },
           "state": {
-            "Name": "create:deepslate_zinc_ore"
+            "Name": "minecraft:deepslate_coal_ore"
           }
         }
       ],
       "layers": 3
     },
     "between": {
+      "targets": [
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:stone_ore_replaceables"
+          },
+          "state": {
+            "Name": "tfmg:lithium_ore"
+          }
+        },
+        {
+          "target": {
+            "predicate_type": "minecraft:tag_match",
+            "tag": "minecraft:deepslate_ore_replaceables"
+          },
+          "state": {
+            "Name": "tfmg:deepslate_lithium_ore"
+          }
+        }
+      ],
+      "layers": 2
+    },
+    "sporadic": {
       "targets": [
         {
           "target": {
@@ -88,31 +111,8 @@
           }
         }
       ],
-      "layers": 2
-    },
-    "sporadic": {
-      "targets": [
-        {
-          "target": {
-            "predicate_type": "minecraft:tag_match",
-            "tag": "minecraft:stone_ore_replaceables"
-          },
-          "state": {
-            "Name": "minecraft:copper_ore"
-          }
-        },
-        {
-          "target": {
-            "predicate_type": "minecraft:tag_match",
-            "tag": "minecraft:deepslate_ore_replaceables"
-          },
-          "state": {
-            "Name": "minecraft:deepslate_copper_ore"
-          }
-        }
-      ],
       "layers": 1
     },
-    "y_radius": 4
+    "y_radius": 8
   }
 }

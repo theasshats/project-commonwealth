@@ -8,6 +8,30 @@
      The "## X.Y.Z" section ships verbatim as the GitHub release body (build.yml), so it must
      read complete on its own. Shipped sections are the published record — don't restyle them. -->
 
+## 0.7.1 — Ore rebalance
+
+A worldgen follow-up to 0.7.0's ore retune, acting on the first playtest reports: silver was
+everywhere, every vein was roughly the same size, and there was no find worth mounting an
+expedition over. Ore generation only affects newly generated chunks.
+
+### Silver is scarce again
+
+- Silver now comes from silver country. The stray silver bands in the snowy lapis, tin, and nickel
+  veins are gone (replaced by iron, copper, and gold), and silver no longer appears among the
+  scattered small ores. What remains: the dedicated hill vein — now about one hill deposit in ten —
+  a thin band in lead country, and traces in the rare mithril and palladium veins.
+- Samurai Dynasty silver is now the same silver as everyone else's: its ingots, nuggets, raw silver,
+  ore, and blocks count as the pack's silver and unify into Occultism's. Galosphere's metal remains
+  palladium and is unaffected.
+
+### Vein sizes now vary
+
+- Common-metal veins (coal, iron, copper, tin, zinc, bauxite, lignite) are smaller — routine finds
+  that keep a region supplied without carpeting it. Mid-tier and rare veins are unchanged.
+- New mega veins: iron in mountains, copper in badlands, coal in taiga and forest. A mega vein is an
+  enormous deposit at roughly one per three hundred chunks of its region — a find worth building a
+  mining outpost and a trade route around.
+
 ## 0.7.0 — The Create spine
 
 The tech route gets its backbone. Create and its addons now climb four tiers — manual, water and wind,

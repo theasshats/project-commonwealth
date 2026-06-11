@@ -22,7 +22,7 @@ hash = "7ea3255a5a506429ba17c07f01393540860228d51a7e773209cdd2060c1d6bf2"
 
 [[files]]
 file = "config/almostunified/unification/materials.json"
-hash = "7725fdda23e1f9f73fe4165105f6ad97f58f454a645db7cbffcf8166886de261"
+hash = "4efa666f5b6094abbc285c4006add752476fa2ff61405d00421f5f37a78d9964"
 
 [[files]]
 file = "config/createblockchain-common.toml"
@@ -73,6 +73,14 @@ file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_diamond_or
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
+file = "kubejs/data/c/tags/block/ores/silver.json"
+hash = "11586695c2720481441b9112bec175befb247a47ca9d7e71afbab4c9a23ba309"
+
+[[files]]
+file = "kubejs/data/c/tags/block/storage_blocks/silver.json"
+hash = "dfe71d4e84eece2539a9b93ad673c0f0e097caf1e5ebd1b32b2de02534a3054c"
+
+[[files]]
 file = "kubejs/data/c/tags/fluid/hidden_from_recipe_viewers.json"
 hash = "4394a43e65b969f98e120d69cd0e973b9b78eb0c1518b57985345f92544c7668"
 
@@ -83,6 +91,26 @@ hash = "81f0c175924c339037b5feab41b8429ecd20beab677546832f83733e93acbd4a"
 [[files]]
 file = "kubejs/data/c/tags/item/hidden_from_recipe_viewers.json"
 hash = "71b2d072ff3284156bfea9765946f5657d6d060c0ff5a324618da1ca7bc3805e"
+
+[[files]]
+file = "kubejs/data/c/tags/item/ingots/silver.json"
+hash = "02bab33057c66fcee4f286a46b5c08f0bfba44dea2624fd676978478a2e88878"
+
+[[files]]
+file = "kubejs/data/c/tags/item/nuggets/silver.json"
+hash = "4d62e668a894cdede8fc69397b94122e03a291faab7bc061f8886239bb0b574c"
+
+[[files]]
+file = "kubejs/data/c/tags/item/ores/silver.json"
+hash = "11586695c2720481441b9112bec175befb247a47ca9d7e71afbab4c9a23ba309"
+
+[[files]]
+file = "kubejs/data/c/tags/item/raw_materials/silver.json"
+hash = "9af6caf06a5b8cfe9f2207e13fef7989b4709eca89f1d116ec61d752f420b7ce"
+
+[[files]]
+file = "kubejs/data/c/tags/item/storage_blocks/silver.json"
+hash = "dfe71d4e84eece2539a9b93ad673c0f0e097caf1e5ebd1b32b2de02534a3054c"
 
 [[files]]
 file = "kubejs/data/create/neoforge/biome_modifier/zinc_ore.json"
@@ -470,15 +498,23 @@ hash = "f11f10777de47f37b15376898eadbc30136d20558f52b390a5ffcc5a8f74abb8"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/bauxite.json"
-hash = "3938899a8e8fb820d2b7a0804d206561d5e5e4b2ffcd2bcf8dd2e82ceaf195be"
+hash = "97f309f1d252dfd1cd6be4ba481520dfaa363016c45a8d00524df46c90083e9b"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/coal.json"
-hash = "c131f259e76eff072ed7fb2373da7a5d45b6152259d332262022cc654590a3a5"
+hash = "cb9974fabed25434ffa6fb6bfa2d16b0257111d7049b498c46b4b3bc5e294155"
+
+[[files]]
+file = "kubejs/data/pcmc/gtmogs/ore_vein/coal_mega.json"
+hash = "54634116c5183f641698f7bce6bda4bb16e18bb9e0da5489202f9edcb6bc9988"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/copper.json"
-hash = "289d470cc6bec1245d219155278708b40a833ab6f4ba209a20dd676480862c33"
+hash = "563d1c7ba2f4bcfb5fcb04e5d633a783008a738bea08f7e1a4b5d38323f666c1"
+
+[[files]]
+file = "kubejs/data/pcmc/gtmogs/ore_vein/copper_mega.json"
+hash = "b27076643eb2e426760024a4c10bf533b1f649970b5674eb60dea86e2947a017"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/diamond.json"
@@ -494,7 +530,11 @@ hash = "94ce08ca987340fc96448657f8d0b80e1289ab4c948c19c4c16b90a5ae21e1cc"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/iron.json"
-hash = "8f9c8e81298a076da4a0ebb68a4cd164bd3d720de6ace04c71d6afba05e0f48d"
+hash = "e1c7bd483b2a8df3106e624b017cb797f49191c6bef66cf1c097ac2a2a796e52"
+
+[[files]]
+file = "kubejs/data/pcmc/gtmogs/ore_vein/iron_mega.json"
+hash = "4afd952d8fb664e271cba59cf3017381248b9b712d896eac13c144dc22239d5c"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/jade.json"
@@ -502,7 +542,7 @@ hash = "cf06ae006b4f7a8119bc0b23c78e22cb01b246d06d02814bc2c4c06cf1629b34"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/lapis.json"
-hash = "dd55afb498185c76d13344369af7fe0c6bdfc7535ec65e31642b552a9958ae37"
+hash = "4243804d21c9c1f2640e6f7cfba9867b6c045b8e6e60fff35ab63866a0cb0fc3"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/lead.json"
@@ -510,7 +550,7 @@ hash = "613e1d325d0c7eba114c54f53a5314aa08a88fe81d384b8056aec85f7b810df2"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/lignite.json"
-hash = "4ec29d338fcf2171833f8a4a50c7821bf6c947af6bfc2d5773150370d292b319"
+hash = "aa6083e291f10a1cc156793f280b392e3367d1c5c54002bc7487dd83a7e6ba0d"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/lithium.json"
@@ -526,7 +566,7 @@ hash = "93066c1357efbe22ede5cae912e42f90da94916f10c43660a7f52a8fe69825a7"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/nickel.json"
-hash = "5662a2bc7149f19bab427ff4432275c2a202f2e0af5531b166438015ec36a17e"
+hash = "74964478dd9be211c1d7a45146a3abc3f9dd7f8455f950ef3c39aa9d12302735"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/palladium.json"
@@ -542,7 +582,7 @@ hash = "27e185f99e464991a46b24ace15e7a44a1a493ca0425a3f27830867160c3f0c3"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/silver.json"
-hash = "0725386c449a60122f2cf2713928d39c6ad4d60b30daad36ca254d66dfe4a0fe"
+hash = "b5f60a312a05c18c43d7b0e305abcbf521560200d3053a5ba5be66b2f5e530b8"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/thorium.json"
@@ -550,15 +590,15 @@ hash = "2f64ffe21d7d5c3201d70c189f440f82c94f34dbe174d9716cb6563f4d389f76"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/tin.json"
-hash = "7f1d8824f1f88d0e329da069f04a1c1b0f80c5b2e1efca8d7dc47b7dd99c2d93"
+hash = "c2e4492e25d6024d8368744b4656a523992d5a5c1ac2bfeababc3008caf533ad"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/zinc.json"
-hash = "539d8783b93dd9341a8349fffed1ae35e245f8f249f44929b0d9b0dbd5a158c8"
+hash = "097a6a9a35441ce5bacc8ce561373b2bc59a5d59e16a5be5a7e0b74e5a0ef90b"
 
 [[files]]
 file = "kubejs/data/pcmc/neoforge/biome_modifier/small_ores.json"
-hash = "713727121de30c7dc4481420414d50b6cfc01b307f83b0d629c788be9a9107c1"
+hash = "f0121b233b2e02bcfe02605fd3c8de33e72a37f1bd850c7a16994f8242f4703e"
 
 [[files]]
 file = "kubejs/data/pcmc/recipe/firing_mechanism.json"
@@ -589,8 +629,16 @@ file = "kubejs/data/pcmc/tags/worldgen/biome/vein_coal.json"
 hash = "231d453d0e6c3c82866e25f4042fe9f2dd2f1b04ddee27907370990c78c554fb"
 
 [[files]]
+file = "kubejs/data/pcmc/tags/worldgen/biome/vein_coal_mega.json"
+hash = "82a8e0e9628a3de521e80aa895b3aea6cde60ee69c293ac3fb259c147a2c2db6"
+
+[[files]]
 file = "kubejs/data/pcmc/tags/worldgen/biome/vein_copper.json"
 hash = "bf30af9bd952baf26dfb805aa37a39750061886a4dc2f065b889e9c951b27eb3"
+
+[[files]]
+file = "kubejs/data/pcmc/tags/worldgen/biome/vein_copper_mega.json"
+hash = "235295a73f541ed180b9534e01fdd27ec86cba62a317efa4b8b451a106fa38af"
 
 [[files]]
 file = "kubejs/data/pcmc/tags/worldgen/biome/vein_diamond.json"
@@ -607,6 +655,10 @@ hash = "c4c772fd5eca83d22d3412df02e2e441e34501b8864db7379efdbf5cb780837e"
 [[files]]
 file = "kubejs/data/pcmc/tags/worldgen/biome/vein_iron.json"
 hash = "ae4c30b0ee20c1ba8b44bfa0503da48fd8e4544e4ec1acd46c4e71abb87565f3"
+
+[[files]]
+file = "kubejs/data/pcmc/tags/worldgen/biome/vein_iron_mega.json"
+hash = "5786cf8f4047afacb87c6815687aa59c5763418566df5bff1fc4d73d6fffeb48"
 
 [[files]]
 file = "kubejs/data/pcmc/tags/worldgen/biome/vein_jade.json"
@@ -701,10 +753,6 @@ file = "kubejs/data/pcmc/worldgen/configured_feature/small_redstone.json"
 hash = "6e94254d3750eaefb0ffefc1a62f3d3f363aec85aa14ac433d9b9417f9bc2b1a"
 
 [[files]]
-file = "kubejs/data/pcmc/worldgen/configured_feature/small_silver.json"
-hash = "07b762ceef9636c15a65cb85100131fbd0dec73000af96bd56d3c2735e7acc69"
-
-[[files]]
 file = "kubejs/data/pcmc/worldgen/configured_feature/small_tin.json"
 hash = "17ec7ae0bee77c5a4e5a78c56b0b3388049028dc409e9259a58026485adf6ee7"
 
@@ -743,10 +791,6 @@ hash = "66d702350ae6fab3a6b028bfddbc0dda15f2394ef957972a12bc9ea857e7bdd7"
 [[files]]
 file = "kubejs/data/pcmc/worldgen/placed_feature/small_redstone.json"
 hash = "372398baa8cc0a01d06836d17b184b82220e99c92e13d5b3eac2395785d3d6eb"
-
-[[files]]
-file = "kubejs/data/pcmc/worldgen/placed_feature/small_silver.json"
-hash = "783b14288d87582523f26d78d583466962463edc1a8e9646234c8fd45cabe31f"
 
 [[files]]
 file = "kubejs/data/pcmc/worldgen/placed_feature/small_tin.json"
