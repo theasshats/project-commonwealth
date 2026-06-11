@@ -46,7 +46,7 @@ hash = "8dbb6602d8274d393a0a72c3acce550d3f50cb060726ccff30f6b6a94c5b2d55"
 
 [[files]]
 file = "config/jei/blacklist.cfg"
-hash = "8a937b97d9b42eb02985fae7bffd6d75ff947e1a51db107c648b3ed2e2c2c94e"
+hash = "0b63d79dcd37cc83bd48584dc3505e00ea712e7a10c19af1155c12c4f2ed41ac"
 
 [[files]]
 file = "config/mixinhelper.json"
@@ -82,7 +82,7 @@ hash = "81f0c175924c339037b5feab41b8429ecd20beab677546832f83733e93acbd4a"
 
 [[files]]
 file = "kubejs/data/c/tags/item/hidden_from_recipe_viewers.json"
-hash = "c46713145479dad6c600f6e1b40ea2787c6ab2b92bcfb90a1400a337e688bebd"
+hash = "71b2d072ff3284156bfea9765946f5657d6d060c0ff5a324618da1ca7bc3805e"
 
 [[files]]
 file = "kubejs/data/create/neoforge/biome_modifier/zinc_ore.json"
@@ -1002,7 +1002,7 @@ hash = "2b60e4cb06b59859c0d52340f1210e62b0017f61d5ac827baf52e2014e46ab07"
 
 [[files]]
 file = "kubejs/server_scripts/spine/63-tfmg-voltage-removed.js"
-hash = "049f3473d1e40812c866174f268c06d32fa836014bbd637799d80ef3b9af1f83"
+hash = "83257926e2952d7b5da23a097381c435b5698a9f94f19423a802ece9eb1ebfd9"
 
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"

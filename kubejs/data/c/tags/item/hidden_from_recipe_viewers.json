@@ -1,11 +1,275 @@
 {
-  "__comment": "Dead items JEI should not list: the bucket of CBC's inert molten steel (05-metals.js), packed_gunpowder (orphaned when the powder charge went spout-fill-only, 24-artillery-seams.js), and create_sa's four disabled jetpack chestplates (#87, 57-jetpacks.js).",
+  "__comment": "Dead items JEI should not list: the bucket of CBC's inert molten steel (05-metals.js), packed_gunpowder (orphaned when the powder charge went spout-fill-only, 24-artillery-seams.js), and create_sa's four disabled jetpack chestplates (#87, 57-jetpacks.js). Plus the TFMG voltage family (67 ids, mirrored from config/jei/blacklist.cfg): uncraftable since the layer removal (63-tfmg-voltage-removed.js) but still listed in JEI on the 06-11 playtest instance - the convention tag is the data-driven hide that provably applies; entries optional in case a TFMG bump renames ids.",
   "values": [
     "createbigcannons:molten_steel_bucket",
     "createbigcannons:packed_gunpowder",
     "create_sa:copper_jetpack_chestplate",
     "create_sa:andesite_jetpack_chestplate",
     "create_sa:brass_jetpack_chestplate",
-    "create_sa:netherite_jetpack_chestplate"
+    "create_sa:netherite_jetpack_chestplate",
+    {
+      "id": "tfmg:generator",
+      "required": false
+    },
+    {
+      "id": "tfmg:rotor",
+      "required": false
+    },
+    {
+      "id": "tfmg:stator",
+      "required": false
+    },
+    {
+      "id": "tfmg:converter",
+      "required": false
+    },
+    {
+      "id": "tfmg:accumulator",
+      "required": false
+    },
+    {
+      "id": "tfmg:cable_connector",
+      "required": false
+    },
+    {
+      "id": "tfmg:cable_tube",
+      "required": false
+    },
+    {
+      "id": "tfmg:concrete_encased_cable_tube",
+      "required": false
+    },
+    {
+      "id": "tfmg:diagonal_cable_block",
+      "required": false
+    },
+    {
+      "id": "tfmg:copycat_cable_block",
+      "required": false
+    },
+    {
+      "id": "tfmg:copycat_cable_base",
+      "required": false
+    },
+    {
+      "id": "tfmg:aluminum_cable_hub",
+      "required": false
+    },
+    {
+      "id": "tfmg:brass_cable_hub",
+      "required": false
+    },
+    {
+      "id": "tfmg:copper_cable_hub",
+      "required": false
+    },
+    {
+      "id": "tfmg:steel_cable_hub",
+      "required": false
+    },
+    {
+      "id": "tfmg:heavy_cable_hub",
+      "required": false
+    },
+    {
+      "id": "tfmg:steel_casing_cable_hub",
+      "required": false
+    },
+    {
+      "id": "tfmg:electric_post",
+      "required": false
+    },
+    {
+      "id": "tfmg:concrete_encased_electric_post",
+      "required": false
+    },
+    {
+      "id": "tfmg:glass_cable_insulator",
+      "required": false
+    },
+    {
+      "id": "tfmg:glass_insulator_segment",
+      "required": false
+    },
+    {
+      "id": "tfmg:transformer",
+      "required": false
+    },
+    {
+      "id": "tfmg:large_transformer",
+      "required": false
+    },
+    {
+      "id": "tfmg:electromagnetic_coil",
+      "required": false
+    },
+    {
+      "id": "tfmg:large_coil",
+      "required": false
+    },
+    {
+      "id": "tfmg:electrical_switch",
+      "required": false
+    },
+    {
+      "id": "tfmg:large_switch",
+      "required": false
+    },
+    {
+      "id": "tfmg:electric_diode",
+      "required": false
+    },
+    {
+      "id": "tfmg:encased_diode",
+      "required": false
+    },
+    {
+      "id": "tfmg:potentiometer",
+      "required": false
+    },
+    {
+      "id": "tfmg:encased_potentiometer",
+      "required": false
+    },
+    {
+      "id": "tfmg:electric_motor",
+      "required": false
+    },
+    {
+      "id": "tfmg:electric_pump",
+      "required": false
+    },
+    {
+      "id": "tfmg:polarizer",
+      "required": false
+    },
+    {
+      "id": "tfmg:magnet",
+      "required": false
+    },
+    {
+      "id": "tfmg:voltage_observer",
+      "required": false
+    },
+    {
+      "id": "tfmg:segmented_display",
+      "required": false
+    },
+    {
+      "id": "tfmg:traffic_light",
+      "required": false
+    },
+    {
+      "id": "tfmg:voltmeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:electricians_wrench",
+      "required": false
+    },
+    {
+      "id": "tfmg:multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:black_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:blue_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:brown_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:cyan_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:gray_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:green_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:light_blue_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:light_gray_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:lime_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:magenta_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:orange_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:pink_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:purple_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:red_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:white_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:yellow_multimeter",
+      "required": false
+    },
+    {
+      "id": "tfmg:light_bulb",
+      "required": false
+    },
+    {
+      "id": "tfmg:neon_tube",
+      "required": false
+    },
+    {
+      "id": "tfmg:circular_light",
+      "required": false
+    },
+    {
+      "id": "tfmg:aluminum_lamp",
+      "required": false
+    },
+    {
+      "id": "tfmg:modern_light",
+      "required": false
+    },
+    {
+      "id": "tfmg:unfinished_electric_motor",
+      "required": false
+    },
+    {
+      "id": "tfmg:unfinished_generator",
+      "required": false
+    },
+    {
+      "id": "tfmg:unfinished_generator_model",
+      "required": false
+    },
+    {
+      "id": "tfmg:glass_insulator_segment_model",
+      "required": false
+    }
   ]
 }

@@ -60,7 +60,10 @@ const TFMG_VOLTAGE_LAYER = [
   'tfmg:electromagnetic_coil', 'tfmg:large_electromagnetic_coil', 'tfmg:large_coil',
   'tfmg:electrical_switch', 'tfmg:large_switch',
   'tfmg:electric_diode', 'tfmg:encased_diode',
-  'tfmg:potentiometer', 'tfmg:encased_potentiometer', 'tfmg:resistor',
+  'tfmg:potentiometer', 'tfmg:encased_potentiometer',
+  // NOT tfmg:resistor — it is a CIRCUIT-BOARD component (winding machine -> resistor -> the
+  // unfinished_circuit_board assembly), same kept family as capacitor_item/transistor. Removing it
+  // broke the circuit-board line (06-11 playtest: 'no winding machine recipe').
   // devices
   'tfmg:electric_motor', 'tfmg:electric_pump', 'tfmg:polarizer', 'tfmg:magnet',
   'tfmg:voltage_observer', 'tfmg:segmented_display', 'tfmg:traffic_light',
