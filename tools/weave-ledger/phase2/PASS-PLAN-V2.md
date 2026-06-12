@@ -184,7 +184,7 @@ hand-copied by agents (the #305 reorder instantly staled 220 hand-written labels
 ### When to re-run (the actual reuse case)
 
 - **Content update (mods added/removed):** do **not** re-census the world. Run Phase A over the **delta
-  only**: new mods' chunks plus their likeliest partners (recipe-graph adjacency + methods-palette
+  only**: new mods' chunks plus their likeliest partners (connectivity-graph adjacency (tools/connectivity, renamed from recipe-graph by #129) + methods-palette
   owners), 3–4 passes, then Phases B–D on the delta. Removed mods: drop their rows (the cut-mod exclusion
   already does this).
 - **Rule/registry change (new motif, a retirement):** bump the **era**, re-ballot affected clusters
@@ -222,6 +222,15 @@ re-find the same core at new expense. The one cheap, high-value probe available 
 wants more assurance before ratifying: a single Phase-C-style **ballot run over the 423 KEEPs only**
 (~15–20 Opus agent-runs, no discovery) to attach an independent accept-rate + fragility flag to each
 KEEP before issues are filed. Gated on GO; the ratification surface works without it.
+
+> **Status update (2026-06-12, post-v0.7.0):** the §3 delta trigger has arrived — v0.7.0 shipped with
+> 5 additions / 12 removals / 116 kubejs files of spine recipes, and #312/#129 delivered clean digests
+> plus the mob-drop lens (220 drop-only items = the census's targeting seed; see `WEAVE-PLAN-REVIEW.md`
+> §11). The **delta census is now the planned next discovery run**, scoped per §3: the five new mods
+> (create_winery, aeroworks, aeroclaims, the two dynamic-trees compats) + spine mods whose recipes
+> materially changed + the survival→aeronautics starved-pair probe. **Remaining precondition: dossiers
+> for the five new mods** (digests exist; dossier regen is the #131-cautioned on-box step). Still gated
+> on maintainer GO.
 
 ## 6. Appendix — how the numbers were computed
 

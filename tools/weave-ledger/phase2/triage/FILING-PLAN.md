@@ -1,19 +1,19 @@
 # Filing plan — Phase 2.5 cluster issues (ready to file on GO)
 
-> Built from `decisions-ratified.tsv` (the post-ratification slate, 395 KEEPs + the M-04
-> plumbing batch). **One issue per delivery cluster**, not per weave (WEAVE-PLAN-REVIEW §8) —
-> ~26 issues instead of 423, so milestone bars stay meaningful. Each issue body = its member
-> checklist below + the verify line. Milestone numbers per CLAUDE.md. The 2 build-DEFERs are
-> already tracked (#239, #220); the 9 playtest-DEFERs ride their clusters' verify lines.
-> Deep-slate per-mod umbrellas (tfmg, northstar, occultism, minecolonies, aeronautics) were
-> considered and SKIPPED — they would double-track the same weaves the clusters own.
-> **No issues have been filed yet** — this file is the payload; filing is gated on maintainer GO.
+> Built from `decisions-ratified.tsv` — **reconciled against shipped v0.7.0 + #312/#129**
+> (2026-06-12): 9 thunderdome-removed mods dropped (-31 weaves), the create-spine bucket
+> re-homed v0.7.0→v0.9.0 (v0.7.0 shipped without the weave program; C-1/C-6 are flagged
+> v0.8.0-eligible if the maintainer reads them as balance), and #129 drop-only/overlap data
+> folded into the verify lines. **364 ratified weaves + the 21-pattern plumbing batch in
+> 26 cluster issues.** Each issue body = member checklist + verify line. The 2 build-DEFERs
+> stay tracked (#239, #220); playtest-DEFERs ride their clusters. Per-mod umbrellas skipped
+> (would double-track). **No issues filed yet — filing is gated on maintainer GO.**
 
 
-## v0.7.0 — Create spine (milestone 11) — 92 weaves + plumbing batch
+## v0.9.0 — Survival (milestone 13) — 130 weaves (incl. the re-homed create-spine bucket) + plumbing batch
 
 ### C-1 · Deco-crush plumbing batch (M-04, one KubeJS loop) — 21 patterns, 21 mods
-_static change; no anchor credit (F1); covers all demoted M-04 patterns incl. support-role LEAVE mods_
+_static; no anchor credit (F1). v0.8.0-ELIGIBLE: pure recycling balance fits the stabilization charter — maintainer pick_
 - [ ] `bits_n_bobs` — bits_n_bobs tile/chair deco → create:crushing (M-04)
 - [ ] `charta` — charta bar furniture → create
 - [ ] `copperagebackport` — copperagebackport deco/blocks→create
@@ -36,8 +36,8 @@ _static change; no anchor credit (F1); covers all demoted M-04 patterns incl. su
 - [ ] `undergroundworlds` — undergroundworlds temple/pyramid bricks → create M-04
 - [ ] `woodworks` — woodworks→create
 
-### C-2 · M-12 processing pulls — mill/press/mix raw materials into the spine — 24 weaves
-_verify: each input item id exists and is not already consumed by a native recipe_
+### C-2 · M-12 processing pulls — mill/press/mix raw materials into the spine — 21 weaves *(re-homed from v0.7.0)*
+_VERIFY-NOT-ALREADY-SHIPPED: 0.7.0 shipped 116 kubejs files; check each input is not already consumed_
 - [ ] `bakery` — wheat→flour via create:milling `M-12`
 - [ ] `beachparty` — beachparty coconut/tropical fruit → create (M-12) `M-12`
 - [ ] `createaddition` — farmed seeds/crops → createaddition:seed_oil → createaddition:liquid_burning (FE) `M-12`
@@ -49,11 +49,9 @@ _verify: each input item id exists and is not already consumed by a native recip
 - [ ] `ecologics` — ecologics:coconut (raw fruit) → create M-12 `M-12`
 - [ ] `expandeddelight` — expandeddelight:cinnamon (bark → dust via create:milling) → Create `M-12`
 - [ ] `extradelight` — extradelight crops/outputs (grain, coffee, spices) → Create (milling/pressing/mixing) `M-12`
-- [ ] `farm_and_charm` — farm_and_charm:barley / oat (grains) → create `M-12`
 - [ ] `farmersdelight` — farmersdelight crops → create (M-12 milling/cutting → flour, meal, paste) `M-12`
 - [ ] `handcrafted` — handcrafted wood furniture (chairs, tables, shelves, cupboards)→create `M-12`
 - [ ] `hpm` — hpm:cannonball / mortar_ball → create (M-12/M-29 via createbigcannons:cartridge_assembly or cre `M-12`
-- [ ] `meadow` — meadow:alpine_salt→create M-12 `M-12`
 - [ ] `minecolonies_tweaks` — minecolonies_tweaks→create `M-12`
 - [ ] `more_slabs_stairs_and_walls` — more_slabs_stairs_and_walls stone/wood cut variants → create (M-12 via create:cutting) `M-12`
 - [ ] `quark` — quark crop/food storage_blocks (apple_crate, carrot_crate, potato_crate, sugar_cane, etc.) → cr `M-12`
@@ -61,10 +59,9 @@ _verify: each input item id exists and is not already consumed by a native recip
 - [ ] `supplementaries` — supplementaries:flax→create M-12 `M-12`
 - [ ] `tide` — tide→create `M-12`
 - [ ] `trailandtales_delight` — trailandtales_delight→create `M-12`
-- [ ] `vinery` — grapes/apples→create via mechanical pressing (industrial juice production) `M-12`
 
-### C-3 · M-05 native-method gates — flagship items built in their own machine on Create parts — 19 weaves
-_verify: target machine recipe-type accepts KubeJS injection_
+### C-3 · M-05 native-method gates — flagship items built in their own machine on Create parts — 19 weaves *(re-homed from v0.7.0)*
+_VERIFY-NOT-ALREADY-SHIPPED (0.7.0 spine work touched 35/76 of these mods); verify recipe-type injection_
 - [ ] `cookingforblockheads` — flagship appliances (oven/fridge/sink)→create:mechanical_crafting (M-05, times=32+4+2+1 opus) `M-05`
 - [ ] `create_cheese` — create_cheese tier-3 maturing→Create-pressed beeswax seal (M-05, times=1 ACCEPT) `M-05`
 - [ ] `create_mobile_packages` — create_mobile_packages:robo_bee (completed drone) → create `M-05`
@@ -85,8 +82,8 @@ _verify: target machine recipe-type accepts KubeJS injection_
 - [ ] `vc_gliders` — vc_gliders mid/high-tier paragliders (iron/gold/diamond/netherite) → create `M-05`
 - [ ] `woodworks` — woodworks→create `M-05`
 
-### C-4 · M-15 boss-key gates — boss drops unlock complex tech recipes — 12 weaves
-_verify: each gate item is a UNIQUE named drop (the friendsandfoes lesson), and the gated recipe is endgame-tier_
+### C-4 · M-15 boss-key gates — boss drops unlock complex tech recipes — 12 weaves *(re-homed from v0.7.0)*
+_verify: each gate item is a UNIQUE named drop; check against 0.7.0s shipped gating (kubejs/spine/40-gates.js)_
 - [ ] `alexsmobs` — alexsmobs drops (void_worm_beak) → create `M-15`
 - [ ] `cataclysm` — cataclysm:ancient_metal_ingot→create `M-15`
 - [ ] `cbc_at` — cbc_at heavy-autocannon / rocket-pod (endgame tier)→create `M-15`
@@ -100,23 +97,20 @@ _verify: each gate item is a UNIQUE named drop (the friendsandfoes lesson), and 
 - [ ] `mowziesmobs` — ice_crystal (Frostmaw drop)→create via boss-key sequenced_assembly gate `M-15`
 - [ ] `mowziesmobs` — earthrend_gauntlet (Wroughtnaut drop)→create via boss-key gate `M-15`
 
-### C-5 · M-06 sequenced-assembly keystones — 9 weaves
-_verify: depth scales with power — no everyday item behind a chain_
+### C-5 · M-06 sequenced-assembly keystones — 8 weaves *(re-homed from v0.7.0)*
+_VERIFY-NOT-ALREADY-SHIPPED; depth scales with power — no everyday item behind a chain_
 - [ ] `create_hypertube` — hypertube_entrance/accelerator → Create `M-06`
 - [ ] `create_jetpack` — create_jetpack:netherite_jetpack→create:sequenced_assembly (M-06, times=7 ACCEPT) `M-06`
 - [ ] `drones` — drones:ion_thruster→create `M-06`
 - [ ] `fxntstorage` — fxntstorage hardened_backpack→create (sequenced-assembly) `M-06`
 - [ ] `hpm` — hpm:corvette_steamship_item → create (M-06 sequenced_assembly) `M-06`
-- [ ] `northstar` — northstar:advanced_circuit→create:sequenced_assembly (M-06, times=6+1 ACCEPT) `M-06`
 - [ ] `occultengineering` — occultengineering mechanical upgrades (afrit/djinni tier) → create `M-06`
 - [ ] `s_a_b` — s_a_b:hardsteelblock/doublesteelblock→create M-06 `M-06`
 - [ ] `tacz` — tacz high-tier guns → create:sequenced_assembly (M-06 keystone) `M-06`
 
-### C-6 · M-03/M-32 ore & byproduct circularity — 10 weaves
-_verify: byproduct streams exist at the stated rates; no free-ore arbitrage_
+### C-6 · M-03/M-32 ore & byproduct circularity — 8 weaves *(re-homed from v0.7.0)*
+_v0.8.0-ELIGIBLE (balance-shaped); verify byproduct streams + no free-ore arbitrage_
 - [ ] `born_in_chaos_v1` — born_in_chaos_v1:dark_metal_deposit → create:crushing (M-03) `M-03`
-- [ ] `create_ultimate_factory` — create_ultimate_factory strata-stone recipes (nuggets+gravel+lava → calcite/deepslate/tuff) → b `M-32`
-- [ ] `createnuclear` — createnuclear:uranium → create:crushing M-03 + regional scarcity M-30 `M-03`
 - [ ] `expandeddelight` — expandeddelight:salt_ore → Create (create:crushing ore-doubling) `M-03`
 - [ ] `galosphere` — galosphere palladium ore→create M-03 `M-03`
 - [ ] `irons_spellbooks` — irons_spellbooks mithril_ore→create (ore-doubling) `M-03`
@@ -125,8 +119,8 @@ _verify: byproduct streams exist at the stated rates; no free-ore arbitrage_
 - [ ] `samurai_dynasty` — samurai_dynasty gem/jade/ruby/onyx/aquamarine ores → create M-03 `M-03`
 - [ ] `tfmg` — tfmg ore byproducts (sulfur/saltpeter/coke)→create M-32 `M-32`
 
-### C-7 · M-20/M-17/M-19 light bridges — deploy upgrades, FE charging, haunting seams — 9 weaves
-_verify: charging/haunting recipe-types accept the target items_
+### C-7 · M-20/M-17/M-19 light bridges — deploy upgrades, FE charging, haunting seams — 8 weaves *(re-homed from v0.7.0)*
+_VERIFY-NOT-ALREADY-SHIPPED (createaddition appears in 17 shipped files)_
 - [ ] `astikorcartsredux` — plow/reaper iron blade → create (M-20) `M-20`
 - [ ] `create_sa` — brass_exoskeleton_chestplate → create via FE charging `M-17`
 - [ ] `create_train_parts` — create_train_parts brass/copper sliding windows + train steps → create:pressing (pressed sheet  `M-20`
@@ -134,10 +128,9 @@ _verify: charging/haunting recipe-types accept the target items_
 - [ ] `illagerinvasion` — lost_candle→create (soul/haunting seam) → magic `M-19`
 - [ ] `rottencreatures` — rottencreatures→create `M-19`
 - [ ] `smokeleafindustries` — smokeleafindustries generator FE output → create M-17 `M-17`
-- [ ] `travelersbackpack` — travelersbackpack upgrade modules (tank_upgrade / crafting_upgrade / smelting_upgrade) → create `M-20`
 - [ ] `vc_gliders` — vc_gliders:copper_upgrade / nether_upgrade → create `M-20`
 
-### C-8 · v0.7.0 stragglers (cross-route, misc) — 9 weaves
+### C-8 · Create-spine integration stragglers — 9 weaves *(re-homed from v0.7.0)*
 _review individually at authoring_
 - [ ] `aeronautics` — aeronautics structural alloy→create (hull + drivetrain) `M-23`
 - [ ] `appleseed` — diet-variety demand→create `M-26`
@@ -149,9 +142,7 @@ _review individually at authoring_
 - [ ] `sereneseasons` — sereneseasons:season_sensor (redstone output) → create:gearshift / contraption logic `M-16`
 - [ ] `tfmg` — tfmg:plastic→create M-29 `M-29`
 
-## v0.9.0 — Survival (milestone 13) — 48 weaves
-
-### S-1 · M-26 consumption sinks — goods spent against pressure — 17 weaves
+### S-1 · M-26 consumption sinks — goods spent against pressure — 16 weaves
 _verify: consumption rates against the ~3x cost model_
 - [ ] `bakery` — bakery luxury goods (tarts/cakes) → consumption sink (diet system) `M-26`
 - [ ] `beachparty` — beachparty cocktails → survival (M-26) `M-26`
@@ -169,23 +160,21 @@ _verify: consumption rates against the ~3x cost model_
 - [ ] `simplehats` — simplehats custom_hatscraps→survival (consumption-sink recycling) `M-26`
 - [ ] `smokeleafindustries` — smokeleafindustries:*_gummy / *_extract (refined consumables) → survival M-26 `M-26`
 - [ ] `tacz` — tacz:ammo (consumable) → survival + economy (continuous consumption sink) `M-26`
-- [ ] `vinery` — wines/ciders (effect-bearing consumables)→survival via consumption sink `M-26`
 
-### S-2 · M-16 seasonal reagent gates (Serene Seasons) — 10 weaves
+### S-2 · M-16 seasonal reagent gates (Serene Seasons) — 9 weaves
 _verify: season-gating works per crop/material in-game (priority survival lever)_
 - [ ] `bountiful` — Decree objective pool→seasonal crops / survival outputs (M-16, times=9+3+2) `M-16`
 - [ ] `create_central_kitchen` — create_central_kitchen seasonal pie recipe → Serene Seasons crop gate (M-16) `M-16`
 - [ ] `create_dragons_plus` — create_dragons_plus:freezing (Bulk Freezing fan method, powder snow catalyst) → survival/season `M-16`
 - [ ] `createfisheryindustry` — bait_trap catch→survival (seasonal bait, seasonal rare catch) `M-16`
 - [ ] `createfood` — seasonal crop ingredients → createfood recipes `M-16`
-- [ ] `farm_and_charm` — farm_and_charm:barley (grain, seasonal) → survival `M-16`
 - [ ] `farmersdelight` — farmersdelight seasonal crops (cabbage/tomato/rice/onion) → survival (M-16 seasonal reagent, Se `M-16`
 - [ ] `fluid` — fluid:aqueduct / copper_tap → survival M-16 `M-16`
 - [ ] `snowyspirit` — snowyspirit ginger/eggnog/gingerbread→survival (seasonal gate) `M-16`
 - [ ] `tide` — tide→survival `M-16`
 
 ### S-3 · M-12 survival-side processing chains (food) — 11 weaves
-_verify: tag membership for cross-mod food inputs (e.g. c:meats for the mincer)_
+_SCOPE INPUT (#129): tide has 88 drop-only fish — write the tide M-12 weave against the drop-only list (tag-level), not single fish; verify cross-mod food tags_
 - [ ] `alcohol_industry` — alcohol_industry→survival `M-12`
 - [ ] `cataclysm` — cataclysm:amethyst_crab_meat (Blessed)→survival `M-12`
 - [ ] `charta` — charta:empty_wine_glass / empty_beer_glass → survival `M-12`
@@ -198,7 +187,7 @@ _verify: tag membership for cross-mod food inputs (e.g. c:meats for the mincer)_
 - [ ] `spawn` — spawn seafood (clam, crab, anglerfish) → farmersdelight:cutting / cooking + create:milling (M-1 `M-12`
 - [ ] `upgrade_aquatic` — upgrade_aquatic raw fish (raw_pike / raw_perch / raw_lionfish) → survival `M-12`
 
-### S-4 · Danger-face items — M-34/M-15/M-02/M-05 survival-side — 10 weaves
+### S-4 · Danger-face items — M-34/M-15/M-02/M-05 survival-side — 9 weaves
 _verify: drop uniqueness; PvPvE stakes alignment with #155_
 - [ ] `aileron` — aileron loot tables (enchant books) → survival `M-34`
 - [ ] `ars_nouveau` — farm/mob surplus → survival (Sourcelink passive drain) `M-02`
@@ -209,12 +198,11 @@ _verify: drop uniqueness; PvPvE stakes alignment with #155_
 - [ ] `modulargolems` — boss-drop metals (Cataclysm cursium / Ice&Fire dragonsteel) → modulargolems:golem_assemble `M-15`
 - [ ] `mutantszombies` — mutant zombie variants→survival M-34 `M-34`
 - [ ] `simplehats` — simplehats grab-bags→survival (boss loot-seed) `M-34`
-- [ ] `travelersbackpack` — travelersbackpack high-tier variants (dragon / netherite / enderman) → boss-drop crafting gate `M-15`
 
-## v0.11.0 — Magic & MineColonies (milestone 15) — 121 weaves
+## v0.11.0 — Magic & MineColonies (milestone 15) — 113 weaves
 
-### M-1 · M-28 colony route wave — requests, cheap basics, colony-locked outputs — 38 weaves
-_PRECONDITION: stress-test the MineColonies request/research API on a handful of these BEFORE batch authoring (37+ weaves share the assumption); pairs with the #220 lock-list pattern_
+### M-1 · M-28 colony route wave — requests, cheap basics, colony-locked outputs — 35 weaves
+_PRECONDITION: stress-test the MineColonies request/research API on a handful BEFORE batch authoring; pairs with #220_
 - [ ] `alcohol_industry` — alcohol_industry→economy `M-28`
 - [ ] `astikorcartsredux` — astikorcartsredux:oak_seed_drill + colony Farmer hut → economy (M-28) `M-28`
 - [ ] `bakery` — bakery finished goods → MineColonies cook-hut colony demand `M-28`
@@ -231,17 +219,14 @@ _PRECONDITION: stress-test the MineColonies request/research API on a handful of
 - [ ] `createadditionallogistics` — createadditionallogistics lazy-cogwheels→economy (colony route) `M-28`
 - [ ] `createfisheryindustry` — seafood (chowder/soups/steaks)→economy via MineColonies colony requests `M-28`
 - [ ] `createfood` — createfood finished dishes → economy (colony supply, MineColonies cook/restaurant hut requests) `M-28`
-- [ ] `createnuclear` — createnuclear:steel → MineColonies colony research unlock (M-28) `M-28`
 - [ ] `domum_ornamentum` — domum_ornamentum colony-builder-demands-DO-blocks `M-28`
 - [ ] `dynamictrees` — dynamictrees lumberjack colony route → economy (bulk wood supply) `M-28`
 - [ ] `extradelight` — extradelight feasts / high-tier dishes → economy (MineColonies colony provisioning) `M-28`
-- [ ] `farm_and_charm` — farm_and_charm grain/meat/egg/butter surplus → economy `M-28`
 - [ ] `farmersdelight` — farmersdelight cooked meals → economy (M-28 colony provisioning) `M-28`
 - [ ] `fxntstorage` — fxntstorage hardened-tier→economy (colony cheaper-basics) `M-28`
 - [ ] `handcrafted` — handcrafted furniture sets→economy via MineColonies colony requests `M-28`
 - [ ] `mcwdoors` — mcwdoors→economy `M-28`
 - [ ] `mcwfences` — metal fence variants → MineColonies builder orders `M-28` **(reinstated)**
-- [ ] `meadow` — meadow:cheese_wheel→economy M-28 `M-28`
 - [ ] `minecolonies` — minecolonies as alternate production route M-28 (times=4+1+1 ACCEPT) `M-28`
 - [ ] `minecolonies` — minecolonies colony food output→magic demand (M-28 + colony magic huts, times=3+1+1 ACCEPT) `M-28`
 - [ ] `minecolonies_compatibility` — minecolonies_compatibility colony outputs→economy M-28 `M-28`
@@ -254,12 +239,11 @@ _PRECONDITION: stress-test the MineColonies request/research API on a handful of
 - [ ] `trailandtales_delight` — trailandtales_delight→economy `M-28`
 - [ ] `woodworks` — woodworks→economy `M-28`
 
-### M-2 · M-10 imbuement reagent pulls — 24 weaves
-_verify: no basic component behind infusion (M-10 guardrail); reagent-ownership respected (ambergris scoped to M-10 only)_
+### M-2 · M-10 imbuement reagent pulls — 22 weaves
+_verify: no basic component behind infusion; reagent-ownership respected (ambergris scoped to M-10 only)_
 - [ ] `aeronautics` — levitite_blend crystallization→magic (arcane catalyst gate) `M-10`
 - [ ] `alcohol_industry` — alcohol_industry→magic `M-10`
 - [ ] `alexsmobs` — alexsmobs:ambergris (rare ocean mob drop) → magic `M-10`
-- [ ] `brazil_legends` — brazil_legends:amber_shard → ars_nouveau:imbuement `M-10`
 - [ ] `companions` — companions:soul_gem → magic (M-10 via ars_nouveau:imbuement) `M-10`
 - [ ] `create_dragons_plus` — create_dragons_plus:ending (Bulk Ending fan method, dragon breath catalyst) → magic (M-10) `M-10`
 - [ ] `create_enchantment_industry` — create_enchantment_industry→magic `M-10`
@@ -269,7 +253,6 @@ _verify: no basic component behind infusion (M-10 guardrail); reagent-ownership 
 - [ ] `dtterralith` — dtterralith:amethyst_seed (amethyst-cave biome) → magic (M-10 via ars_nouveau:imbuement) `M-10`
 - [ ] `grimoireofgaia` — grimoireofgaia drops → ars_nouveau:imbuement `M-10`
 - [ ] `immersive_armors` — immersive_armors:divine_chestplate set → magic (ars_nouveau:enchanting_apparatus) `M-10`
-- [ ] `meadow` — meadow alpine herbs (lavender/yarrow)→magic M-10 `M-10`
 - [ ] `modulargolems` — golem-core upgrade slot → ars_nouveau:imbuement (source_gem / arcane core) `M-10`
 - [ ] `naturalist` — naturalist:antler → ars_nouveau:imbuement (M-10) / occultism:spirit_fire (M-11) `M-10`
 - [ ] `naturalist` — naturalist:glow_goop → ars_nouveau:imbuement (M-10) `M-10`
@@ -281,11 +264,10 @@ _verify: no basic component behind infusion (M-10 guardrail); reagent-ownership 
 - [ ] `trailandtales_delight` — trailandtales_delight→magic `M-10`
 - [ ] `woodworks` — woodworks→magic `M-10`
 
-### M-3 · M-11 ritual / spirit-fire transmutation sinks — 23 weaves
-_verify: occultism ritual/spirit_fire recipe injection works_
+### M-3 · M-11 ritual / spirit-fire transmutation sinks — 22 weaves
+_SCOPE INPUT (#129): born_in_chaos_v1 (24) and deeperdarker (9) drop-only items are candidate reagents where tone-coherent; verify ritual/spirit_fire injection_
 - [ ] `alexsmobs` — alexsmobs exotic drops (ambergris / ender_residue / void_worm parts) → magic `M-11`
 - [ ] `born_in_chaos_v1` — born_in_chaos_v1:bundle_of_bones → occultism:spirit_fire (M-11) `M-11`
-- [ ] `brazil_legends` — brazil_legends:capelobo_claw → occultism:spirit_fire `M-11`
 - [ ] `cataclysm` — cataclysm:witherite_ingot / cursium_ingot (boss drops)→magic `M-11`
 - [ ] `cold_sweat` — cold_sweat:soul_stalk→magic (M-11, times=2+1 ACCEPT) `M-11`
 - [ ] `companions` — companions:crystallized_blood → magic (M-11 via occultism:spirit_fire/ritual) `M-11`
@@ -308,7 +290,7 @@ _verify: occultism ritual/spirit_fire recipe injection works_
 - [ ] `undergroundworlds` — undergroundworlds:spider_fang (Black Recluse drop) → magic M-11 `M-11`
 
 ### M-4 · M-02 mob-drop reagent loot-seeds (magic-side) — 18 weaves
-_verify: drops are unique named items, not vanilla loot reuse_
+_SCOPE INPUT (#129): grimoireofgaia has 50 drop-only items (many self-useful loot-bags — pick the inert ones); drops must be unique named items_
 - [ ] `betterdungeons` — betterdungeons loot tables→magic `M-02`
 - [ ] `betteroceanmonuments` — betteroceanmonuments loot→magic `M-02`
 - [ ] `betterstrongholds` — betterstrongholds loot→magic `M-02`
@@ -339,23 +321,21 @@ _verify: moon-event detectability from KubeJS/datapack predicates_
 - [ ] `mowziesmobs` — elokosa_paw (crescent/gibbous/full variants)→magic via lunar-reagent `M-22`
 - [ ] `terralith` — terralith Moonlight Grove / lunar biomes → magic M-22 (lunar/celestial reagent gate) `M-22`
 
-### M-6 · v0.11.0 stragglers — 10 weaves
+### M-6 · v0.11.0 stragglers — 8 weaves
 _review individually at authoring_
 - [ ] `ars_nouveau` — ars_nouveau enchanting/spell service → economy (labor) `M-33`
 - [ ] `create_hypertube` — hypertube_entrance (sequenced_assembly) requires a magic reagent sub-component → magic `M-29`
 - [ ] `create_ironworks` — steel_ingot→magic via cross-route dependency `M-29`
 - [ ] `create_new_age` — create_new_age:energising (method)→magic `M-17`
 - [ ] `createmechanicalcompanion` — quantum_drive/optical_sensor→magic M-29 `M-29`
-- [ ] `createmetalwork` — createmetalwork crushed magic-mod ores (occultism/galosphere)→create:crushing ore-doubling M-03 `M-03`
-- [ ] `createnuclear` — createnuclear:enriched_soul_soil → create:haunting M-19 `M-19`
 - [ ] `sereneseasons` — season-gated crops (specific fertile-season reagent crops) → ars_nouveau:imbuement or occultism `M-16`
 - [ ] `sliceanddice` — sliceanddice sprinkler (fluid-area dispenser) + magic potion fluid→magic `M-29`
 - [ ] `touhou_little_maid` — touhou_little_maid altar_recipe_serializers (maid summoning / high-tier upgrade gate)→magic `M-05`
 
-## v0.13.0 — Economy & logistics (milestone 17) — 134 weaves
+## v0.13.0 — Economy & logistics (milestone 17) — 121 weaves
 
-### E-1 · M-08 player-minted currency set — mint recipes + coin loot-seeds — 27 weaves
-_AUTHORABLE-NOW (Numismatics shipped). verify: every mint input is a processed SCARCE metal; no NPC-facing sinks; trading_floor phrasing drops emeralds (ratify-note)_
+### E-1 · M-08 player-minted currency set — mint recipes + coin loot-seeds — 25 weaves
+_AUTHORABLE-NOW (Numismatics shipped); every mint input a processed SCARCE metal; trading_floor phrasing drops emeralds_
 - [ ] `betterdungeons` — betterdungeons loot tables→economy `M-08`
 - [ ] `bettermineshafts` — mineshaft chest loot → loot-seed (numismatics coin) `M-08`
 - [ ] `betteroceanmonuments` — betteroceanmonuments loot→economy `M-08`
@@ -366,13 +346,11 @@ _AUTHORABLE-NOW (Numismatics shipped). verify: every mint input is a processed S
 - [ ] `create_ltab-3.9.2` — Create-themed structure loot tables → economy `M-08`
 - [ ] `createbigcannons` — createbigcannons cannon-grade-steel→economy (mint) `M-08`
 - [ ] `createblockchain` — createblockchain:currency_miner FE intake → Create-Addition FE sourced from scarce regional met `M-08`
-- [ ] `createmetalwork` — createmetalwork processed metals→numismatics mint (M-08, times=24+8 opus+4+2+1) `M-08`
 - [ ] `createoreexcavation` — createoreexcavation vein table (scarce regional metals) → economy (M-08 player-minted currency) `M-08`
 - [ ] `ctov` — ctov structure chests → economy `M-08`
 - [ ] `dungeons-and-taverns-v4.4.4` — dungeons-and-taverns loot→economy M-08 `M-08`
 - [ ] `dungeons_arise_seven_seas` — galleon/fortress loot tables → economy M-08 `M-08`
 - [ ] `galosphere` — galosphere palladium→economy M-08 `M-08`
-- [ ] `northstar` — northstar:titanium_ingot/tungsten_ingot→numismatics mint (M-08, times=22 opus + 3+1) `M-08`
 - [ ] `occultengineering` — occultengineering:sterling_silver → economy `M-08`
 - [ ] `occultism` — occultism:silver_ingot (c:ingots/silver) → economy `M-08`
 - [ ] `ribbits` — ribbits amethyst-shard trade → economy M-08 (player-minted currency framing) `M-08`
@@ -384,12 +362,11 @@ _AUTHORABLE-NOW (Numismatics shipped). verify: every mint input is a processed S
 - [ ] `underground_village` — underground_village Stoneholm chest loot → loot-seed (numismatics coin) `M-08`
 - [ ] `valarian_conquest` — valarian_conquest faction loot (shields, armor, weapons) → economy M-08 `M-08`
 
-### E-2 · M-34 combat-route supply — 24 weaves
-_AUTHORABLE-NOW; ~half are emergent (no authoring) — confirm and close those on playtest only_
+### E-2 · M-34 combat-route supply — 23 weaves
+_AUTHORABLE-NOW; ~half emergent (no authoring) — confirm on playtest and close_
 - [ ] `alexsmobs` — alexsmobs rare drops (void_worm_beak / ambergris / ender_residue) → economy `M-34`
 - [ ] `born_in_chaos_v1` — born_in_chaos_v1 mob drops (dark_metal, bones, candy) → economy via M-34 `M-34`
 - [ ] `bountiful` — Decree objective pool→boss drops / mob kills (M-34, times=3+2+2) `M-34`
-- [ ] `brazil_legends` — brazil_legends signature drops (capelobo_claw / amber_shard / bottle_with_saci) → combat-specia `M-34`
 - [ ] `cbc_at` — cbc_at munitions (AP rounds, rockets) as bounty objectives→economy `M-34`
 - [ ] `companions` — companions:relic_gold (Sacred Pontiff boss drop) → economy (M-34 combat-route supply) `M-34`
 - [ ] `createbigcannons` — createbigcannons munitions/shells→economy (combat supply) `M-34`
@@ -411,8 +388,8 @@ _AUTHORABLE-NOW; ~half are emergent (no authoring) — confirm and close those o
 - [ ] `touhou_little_maid` — power_point_bottles (fairy drops / village loot)→economy `M-34`
 - [ ] `undergroundworlds` — undergroundworlds dungeon loot (loot=yes) → economy M-34 `M-34`
 
-### E-3 · M-30 regional-scarcity gates — 20 weaves
-_MIXED: vein configs authorable now; recipe gates ride GTMOGS biome-keying (terralith ratify-note — blocked-on-worldgen-config)_
+### E-3 · M-30 regional-scarcity gates — 19 weaves
+_MIXED: vein configs authorable; recipe gates ride GTMOGS biome-keying (terralith note). 0.7.x ore-rebalance shipped — re-read each against the NEW vein map before authoring_
 - [ ] `aeronautics` — levitite (zinc-gated)→economy (regional commodity) `M-30`
 - [ ] `born_in_chaos_v1` — born_in_chaos_v1:dark_metal → regional scarcity gate (M-30) `M-30`
 - [ ] `byzantine` — byzantine colony buildings requiring exotic/region-locked stone → economy (M-30) `M-30`
@@ -432,10 +409,9 @@ _MIXED: vein configs authorable now; recipe gates ride GTMOGS biome-keying (terr
 - [ ] `tfmg` — tfmg regional ores→economy M-30 `M-30`
 - [ ] `tide` — tide→economy `M-30`
 - [ ] `upgrade_aquatic` — upgrade_aquatic raw/cooked fish (regional ocean good) → economy `M-30`
-- [ ] `vinery` — grapes (biome-specific cultivars)→economy via regional scarcity `M-30`
 
-### E-4 · M-23/M-24 airframe & drivetrain seams — 19 weaves
-_RIDES-AERONAUTICS-BUILD: author alongside the v0.13.0 ship recipes; depth scales with ship tier_
+### E-4 · M-23/M-24 airframe & drivetrain seams — 14 weaves
+_RIDES-AERONAUTICS-BUILD (v0.13.0 ship recipes); depth scales with ship tier; northstar/createmetalwork members removed — steel supply now rides tfmg/s_a_b/create_ironworks/createbigcannons_
 - [ ] `create_connected` — create_connected:kinetic_battery → aeronautics `M-24`
 - [ ] `create_dragons_plus` — create_dragons_plus:levitite_fragile_fluid_tank → aeronautics (M-23) `M-23`
 - [ ] `create_ironworks` — steel_plate / bronze_plate→aeronautics hull (M-23) + drivetrain (M-24) `M-23`
@@ -443,13 +419,8 @@ _RIDES-AERONAUTICS-BUILD: author alongside the v0.13.0 ship recipes; depth scale
 - [ ] `create_tweaked_controllers` — create_tweaked_controllers:tweaked_lectern_controller → aeronautics control surface (M-24) `M-24`
 - [ ] `createaddition` — createaddition:rolling → aeronautics wiring (copper/electrum wire as control-surface harness) `M-24`
 - [ ] `createadditionallogistics` — createadditionallogistics flexible-shafts→aeronautics `M-24`
-- [ ] `createmetalwork` — createmetalwork:molten_steel→aeronautics airframe/hull (M-23, times=8+8+5+7 ACCEPT) `M-23`
-- [ ] `createnuclear` — createnuclear:steel_ingot (c:ingots/steel) → aeronautics airframe (M-23) `M-23`
 - [ ] `dndesires` — dndesires:rubber (hydraulic_compacting output) → aeronautics `M-23`
 - [ ] `gnkinetics` — gnkinetics planetary/worm/industrial-gear→aeronautics (drivetrain) `M-24`
-- [ ] `meadow` — meadow:chambray_wool→aeronautics M-23 `M-23`
-- [ ] `northstar` — northstar:martian_steel_ingot→aeronautics airframe/hull (M-23, times=10+7+1 ACCEPT) `M-23`
-- [ ] `northstar` — northstar:advanced_circuit→aeronautics control/navigation (M-24, times=8 ACCEPT) `M-24`
 - [ ] `s_a_b` — s_a_b steel plates→aeronautics M-23 `M-23`
 - [ ] `supplementaries` — supplementaries:flax/rope→aeronautics M-23 `M-23`
 - [ ] `t_and_t` — t_and_t→aeronautics `M-23`
@@ -457,7 +428,7 @@ _RIDES-AERONAUTICS-BUILD: author alongside the v0.13.0 ship recipes; depth scale
 - [ ] `tfmg` — tfmg:combustion_engine→aeronautics M-24 `M-24`
 
 ### E-5 · M-33 service-for-hire — 11 weaves
-_mostly emergent/config; AUTHORABLE-NOW; payment stays emergent (no vendor)_
+_mostly emergent/config; AUTHORABLE-NOW; payment stays emergent_
 - [ ] `chefsdelight` — chefsdelight Cook/Chef villager → service-for-hire (player-economy labor) `M-33`
 - [ ] `cmpackagecouriers` — cmpackagecouriers→economy `M-33`
 - [ ] `create_enchantment_industry` — create_enchantment_industry→economy `M-33`
@@ -471,7 +442,7 @@ _mostly emergent/config; AUTHORABLE-NOW; payment stays emergent (no vendor)_
 - [ ] `t_and_t` — t_and_t→economy `M-33`
 
 ### E-6 · M-31 logistics-required bulk goods — 10 weaves
-_BLOCKED-ON-LOGISTICS-ARM (#309 split watch): author after the transport ladder exists_
+_BLOCKED-ON-LOGISTICS-ARM (#309 watch)_
 - [ ] `cmpackagecouriers` — cmpackagecouriers→economy `M-31`
 - [ ] `create_compressed` — create_compressed crushed_<scarce>_pile blocks → economy (M-31 bulk-good logistics) `M-31`
 - [ ] `create_mobile_packages` — create_mobile_packages delivery network (robo_bee + drone_port) → economy `M-31`
@@ -483,20 +454,17 @@ _BLOCKED-ON-LOGISTICS-ARM (#309 split watch): author after the transport ladder 
 - [ ] `terralith` — terralith rare/fantastical biomes (Skylands, Moonlight Grove, Mirage Isles) → aeronautics logis `M-31`
 - [ ] `tidal-towns-1.3.4` — tidal-towns as aeronautics destination / logistics stop `M-31`
 
-### E-7 · M-35 maturation / aging — 9 weaves
-_AUTHORABLE-NOW (methods exist: cheese maturing, vinery ferment, drying racks)_
+### E-7 · M-35 maturation / aging — 6 weaves
+_AUTHORABLE-NOW; vinery removed — create_winery (new, Create-native) is the heir: confirm via its dossier + delta census before authoring its members_
 - [ ] `alcohol_industry` — alcohol_industry→economy `M-35`
 - [ ] `create_cheese` — create_cheese:maturing station (tag-extensible)→economy (M-35, times=6 opus + 3 + 2) `M-35`
 - [ ] `expandeddelight` — expandeddelight:cheese_wheel (aged) → economy `M-35`
 - [ ] `exposure` — exposure→economy `M-35`
 - [ ] `extradelight` — extradelight:drying_rack / evaporator outputs (dried herbs, syrups, reduced fluids) → economy `M-35`
-- [ ] `farm_and_charm` — farm_and_charm:barley / oat → economy `M-35`
-- [ ] `meadow` — meadow:cheese_wheel→economy M-35 `M-35`
 - [ ] `trailandtales_delight` — trailandtales_delight→economy `M-35`
-- [ ] `vinery` — wines (aged, effect-bearing)→economy via maturation specialization `M-35`
 
-### E-8 · v0.13.0 stragglers — M-13 fuels, M-37 research gates, misc — 14 weaves
-_M-37: verify knowledge-gates are non-tradeable (northstar lesson); M-13 fuel-tag configs are authorable-now_
+### E-8 · v0.13.0 stragglers — M-13 fuels, M-37 research gates, misc — 13 weaves
+_M-37 gates must be non-tradeable; M-13 fuel-tag configs authorable-now_
 - [ ] `aeronautics` — adjustable_burner fuel→create/aeronautics `M-13`
 - [ ] `create_enchantment_industry` — create_enchantment_industry→economy `M-37`
 - [ ] `createaddition` — createaddition:seed_oil / bioethanol → aeronautics engine (early-tier fuel) `M-13`
@@ -505,7 +473,6 @@ _M-37: verify knowledge-gates are non-tradeable (northstar lesson); M-13 fuel-ta
 - [ ] `mffs` — mffs projector delivery → economy (colony Fortress research gate + service-for-hire) `M-37`
 - [ ] `minecolonies` — minecolonies University research→knowledge gate M-37 (times=8+2 ACCEPT) `M-37`
 - [ ] `minecolonies_compatibility` — minecolonies_compatibility TaCZ Gunner job→economy M-37 `M-37`
-- [ ] `northstar` — northstar:biofuel→aeronautics engine intake (M-13, times=17+3 ACCEPT) `M-13`
 - [ ] `numismatics` — vendor/depositor blocks→create (native-method gating) `M-05`
 - [ ] `occultism` — occultism:dimensional_mineshaft (spirit miner spirits) → economy `M-18`
 - [ ] `sky_whale_ship` — sky_whale_ship loot chests → aeronautics M-15 `M-15`
@@ -513,4 +480,4 @@ _M-37: verify knowledge-gates are non-tradeable (northstar lesson); M-13 fuel-ta
 - [ ] `trading_floor` — trading_floor:trading_depot → economy (cross-route bridge + colony labor) `M-29`
 
 ---
-_26 cluster issues total. Regenerate member lists from `decisions-ratified.tsv` if the ledger changes (this file is then hand-maintained once filing begins)._
+_26 cluster issues total. Regenerate member lists from `decisions-ratified.tsv` after any ledger change; hand-maintain once filing begins. Delta-census candidates (create_winery, aeroworks, aeroclaims, the dynamic-trees compats) join their clusters when mapped._

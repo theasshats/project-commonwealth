@@ -4,25 +4,26 @@
 
 ## Dashboard
 
-- **Ratified KEEP weaves: 395** (was 423: -10 dropped, -21 folded into the deco-crush plumbing batch, +3 reinstated)
+- **Ratified KEEP weaves: 364** (was 423: -10 dropped, -21 folded into the deco-crush plumbing batch, +3 reinstated, -31 on mods removed from the pack)
+- Mods removed from the pack (v0.7.0 thunderdome — rows now REMOVED): brazil_legends (3), createmetalwork (3), createnuclear (4), create_ultimate_factory (1), farm_and_charm (5), meadow (5), northstar (5), travelersbackpack (2), vinery (4)
 - Plumbing batch (M-04, authored once at v0.7.0): 21 crush patterns across 21 mods
 - Mods reclassified LEAVE/support-role: zombiemoon, trashcans, mcwroofs, mcwstairs, mcwwindows
 
 ## Ratified KEEPs by milestone (post-#305 map; M-28 colony weaves ride v0.11.0)
 
-- v0.7.0: 92
-- v0.9.0: 48
-- v0.11.0: 121
-- v0.13.0: 134
+- v0.7.0: 0
+- v0.9.0: 130
+- v0.11.0: 113
+- v0.13.0: 121
 
 ## Derived weave-anchor distribution (F3: targets of ratified KEEPs; support roles and plumbing grant nothing; home systems not double-counted)
 
-- 1 pillar(s): 35 mods
+- 1 pillar(s): 33 mods
 - 2 pillar(s): 56 mods
-- 3 pillar(s): 53 mods
-- 4 pillar(s): 4 mods
+- 3 pillar(s): 47 mods
+- 4 pillar(s): 3 mods
 
-Mods at ≤1 derived weave-pillar (35): aileron, appleseed, bettermineshafts, byzantine, charta, cmpackagecouriers, copperagebackport, create_better_villagers, create_compressed, create_connected, create_train_parts, create_ultimate_factory, createlowheated, domum_ornamentum, drones, endermoon, enhancedcelestials, fluid, formations, formationsnether, friendsandfoes, gnkinetics, gravestone, kobolds, mcwdoors, mcwfences, minecolonies_tweaks, mutantszombies, railways, rechiseled, simplehats, sliceanddice, trading_floor, underground_village, vc_gliders
+Mods at ≤1 derived weave-pillar (33): aileron, appleseed, bettermineshafts, byzantine, charta, cmpackagecouriers, copperagebackport, create_better_villagers, create_compressed, create_connected, create_train_parts, domum_ornamentum, drones, endermoon, enhancedcelestials, fluid, formations, formationsnether, friendsandfoes, gnkinetics, gravestone, kobolds, mcwdoors, mcwfences, minecolonies_tweaks, mutantszombies, railways, rechiseled, simplehats, sliceanddice, trading_floor, underground_village, vc_gliders
 
 _Read with care: a mod whose home system is its only pillar (hub mods, F2) or whose second anchor is a sanctioned support role is **not** a gap._
 
@@ -113,4 +114,32 @@ _Read with care: a mod whose home system is its only pillar (hub mods, F2) or wh
   ratify-note: fragile evidence (ts=4 for vs ts=8 opus-against in a sibling phrasi
 - **SET-ANCHORS** minecolonies — create+economy+magic+aeronautics  
   includes the previously-authored Create M-05 quarry weave (inherited, not added by this slate)
+- **RULING** * — post-0.7.0 reconciliation  
+  2026-06-12, maintainer-directed ("review, update your plan"): v0.7.0 shipped (thunderdome removals + spine recipes) and #312/#129 cleaned ground truth (digest pruned; connectivity tool renamed tools/connectivity, now with mob-drop edges). This block reconciles the ratified slate against the shipped pack.
+- **REMOVE-MOD** brazil_legends — 3 rows -> REMOVED  
+  v0.7.0 thunderdome cut (3 KEEPs orphaned)
+- **REMOVE-MOD** createmetalwork — 3 rows -> REMOVED  
+  v0.7.0 thunderdome cut (3 KEEPs; steel/mint clusters survive on remaining members)
+- **REMOVE-MOD** createnuclear — 4 rows -> REMOVED  
+  v0.7.0 thunderdome cut (4 KEEPs; NOTE a shipped kubejs script still greps for this namespace — flag for the v0.7.x sweep)
+- **REMOVE-MOD** create_ultimate_factory — 1 rows -> REMOVED  
+  v0.7.0 thunderdome cut (1 KEEP; the removal also resolves its flagged renewable-diamond scarcity conflict by deletion)
+- **REMOVE-MOD** farm_and_charm — 5 rows -> REMOVED  
+  v0.7.0 thunderdome cut (4 KEEPs + the mincer playtest DEFER)
+- **REMOVE-MOD** meadow — 5 rows -> REMOVED  
+  v0.7.0 thunderdome cut (5 KEEPs)
+- **REMOVE-MOD** northstar — 5 rows -> REMOVED  
+  v0.7.0 thunderdome cut (5 KEEPs — the space-tech quartet; M-08/M-23/M-24 clusters survive on remaining members)
+- **REMOVE-MOD** travelersbackpack — 2 rows -> REMOVED  
+  v0.7.0 thunderdome cut (2 KEEPs)
+- **REMOVE-MOD** vinery — 4 rows -> REMOVED  
+  v0.7.0 thunderdome cut (4 KEEPs — ideas seed create_winery, see note)
+- **NOTE** create_winery — (new in v0.7.0)  
+  Create-native winery replacing vinery: the dropped vinery ideas (M-35 maturation, M-30 regional grapes, M-26 consumption) are prime transfer candidates, and its press edge is likely NATIVE (the mod is Create-anchored by construction). Primary target of the delta census once its dossier exists.
+- **REHOME** v0.7.0->v0.9.0 — 85 KEEPs  
+  v0.7.0 shipped without the weave program; per the cadence (even = no new features; #129 the weave enabler landed in v0.8.0) the create-spine integration weaves file under the next odd, v0.9.0. Maintainer may cherry-pick light clusters (C-1 plumbing, C-6 byproducts) into v0.8.0 under its balance charter.
+- **NOTE** * — drop-only targeting (#129)  
+  the mob-drop lens lists 220 drop-only items; mod-level KEEP coverage is complete (only the LEAVE'd lava-chicken disc uncovered) but only 6/220 are named at item level — the big piles (tide 88 fish, grimoireofgaia 50, born_in_chaos_v1 24, minecolonies 12, deeperdarker 9) become scope/verify inputs on the S-3/M-3/M-4 clusters and seeds for the delta census. NOT a weave-all-220 mandate: many are self-useful gear/food/discs (the Goodhart trap).
+- **NOTE** * — kubejs overlap  
+  35 of 76 create-bucket KEEP mods already appear in shipped spine kubejs (createaddition 17 files, tfmg 14, aeronautics 9, galosphere 7, occultism 7, ...): every re-homed C-* cluster carries a verify-not-already-shipped precondition.
 

@@ -5,7 +5,7 @@
 > the process docs and scripts; statistical passes over `CANDIDATES.tsv` (6,373 rows) and
 > `triage/decisions.tsv` (3,174 decisions); three parallel read-only audits — a 14-mod deep re-judgment
 > of triage slates, a structural analysis of all 423 KEEPs, and a full audit of the 42 LEAVEs + the
-> one-anchor set; plus a recipe-graph islands × KEEPs join. Companion: `PASS-PLAN-V2.md` (the
+> one-anchor set; plus a connectivity islands × KEEPs join (tool since renamed tools/connectivity, #129). Companion: `PASS-PLAN-V2.md` (the
 > methodology review). **Nothing here touches the pack**; two data-integrity fixes were applied to the
 > *triage tooling layer* and are described in §2 — everything else is a recommendation or a flag.
 >
@@ -205,7 +205,7 @@ problems and one ruling-request:
 
 **Does the KEEP set move the pack toward "one or two cohesive webs"? Mostly yes, with three caveats.**
 
-- **Island coverage is good.** Joining the fresh recipe-graph island table (81% giant component, post-merge
+- **Island coverage is good.** Joining the fresh island table (tools/connectivity, then named recipe-graph) (81% giant component, post-merge
   data) against the KEEPs: 51 of 56 islanded mods carry ≥1 KEEP; the five with none are the spine itself
   (`create` — correctly LEAVE'd as the weave *target*) and four LEAVE'd cosmetics (aeronautics_dyeable_components,
   just_blahaj, gamediscs, immersive_paintings). No real gap.
@@ -301,3 +301,42 @@ PREPARED (`triage/FILING-PLAN.md` — filing gated on GO); items 4–6 unchanged
    (`PASS-PLAN-V2.md` §5) if independent accept-rates are wanted on the slate before filing.
 6. No discovery re-run this cycle (`PASS-PLAN-V2.md` §5). Next discovery is delta-mode, on the next
    content update, under the V2 engine.
+
+## §11 — Post-0.7.0 reconciliation addendum (2026-06-12, maintainer-directed)
+
+v0.7.0 shipped (thunderdome removals + 116 kubejs files of spine recipes) and #312/#129 completed
+(digest pruned of 24 orphans with a self-pruning guard; connectivity tool renamed `tools/connectivity`
+and now counting **mob-drop edges**). The ratified slate was reconciled via a new ledger block in
+`triage/ratification.tsv` (actions `remove-mod` / `rehome-milestone` added to `apply-ratification.py`):
+
+- **9 removed mods → 31 weaves + 1 playtest-DEFER marked REMOVED** (northstar, meadow, vinery,
+  createnuclear, farm_and_charm, brazil_legends, createmetalwork, travelersbackpack,
+  create_ultimate_factory — whose removal also resolves its flagged renewable-diamond conflict).
+  The parallel-supply clusters absorb the losses (steel now rides tfmg / s_a_b / create_ironworks /
+  createbigcannons).
+- **The create-spine bucket re-homed v0.7.0 → v0.9.0** (85 weaves): the pillar shipped without the
+  weave program; per the cadence the next odd version hosts integration work. C-1 (plumbing) and C-6
+  (byproducts) are flagged v0.8.0-eligible if the maintainer reads them as stabilization balance.
+- **New slate: 364 ratified KEEPs** — v0.9.0: 130 · v0.11.0: 113 · v0.13.0: 121 — packaged as the same
+  26 clusters in the regenerated `FILING-PLAN.md`.
+- **create_winery** (new, Create-native) is the designated heir to vinery's dropped maturation/regional/
+  consumption ideas — confirmed at delta census, not assumed.
+
+**What #129's mob-drop lens adds.** 220 **drop-only items** (drops nothing consumes). Mod-level KEEP
+coverage of those mods is complete (the only uncovered one is the LEAVE'd lava-chicken disc), but only
+**6 of 220 are named at item level** in any ratified weave — tide (88 fish), grimoireofgaia (50),
+born_in_chaos_v1 (24), minecolonies (12), deeperdarker (9) hold the piles. This is now a **scope/verify
+input** on clusters S-3 / M-3 / M-4 and the seed list for the delta census — deliberately *not* a
+weave-all-220 mandate, since many drop-only items are self-useful gear/food/discs and blanket coverage
+would be the Goodhart trap this review keeps warning about.
+
+**Shipped-kubejs overlap.** 35 of the 76 re-homed create-bucket mods already appear in 0.7.0's shipped
+spine scripts (createaddition ×17 files, tfmg ×14, aeronautics ×9, galosphere/occultism ×7) — every C-*
+cluster now carries a VERIFY-NOT-ALREADY-SHIPPED precondition. Found in passing:
+`kubejs/server_scripts/spine/40-gates.js` still references the removed `createnuclear` — flag for the
+v0.7.x sweep (a gate pointing at a mod that no longer exists).
+
+**Delta census status:** digests for the five v0.7.0 additions exist (#312's pipeline), **dossiers do
+not** — that's the one remaining precondition, and dossier regeneration is still the #131-cautioned
+on-box step. The census itself stays gated on GO. The v0.7.1 ore rebalance also rewrites the vein map
+the E-3 (M-30) weaves read against — re-read each against the new veins at authoring.

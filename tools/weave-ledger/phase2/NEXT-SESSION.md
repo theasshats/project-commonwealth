@@ -1,6 +1,17 @@
 # Phase 2 — next-session runbook (read with CLAUDE.md + READINESS-REVIEW.md)
 
-> **LATEST — independent review COMPLETE (June 2026): read `WEAVE-PLAN-REVIEW.md` (audit of the triage
+> **LATEST — post-0.7.0 reconciliation applied (2026-06-12).** v0.7.0 shipped; #312/#129 done (clean
+> digests; `tools/connectivity` with mob-drop edges). The ratified slate was reconciled
+> (`WEAVE-PLAN-REVIEW.md` §11): 9 thunderdome-removed mods → 31 weaves REMOVED; the create-spine bucket
+> re-homed v0.7.0→**v0.9.0**; **new totals: 364 ratified KEEPs** (v0.9.0: 130 · v0.11.0: 113 ·
+> v0.13.0: 121) + the 21-pattern plumbing batch — `triage/FILING-PLAN.md` regenerated (26 cluster
+> issues, **filing still gated on GO**). #129's 220 drop-only items are folded in as scope/verify
+> inputs. **NEXT: (a) GO to file the clusters; (b) dossiers for the 5 new v0.7.0 mods (digests exist),
+> which unblocks the gated delta census (`PASS-PLAN-V2.md` §5).** _(Prior states below for history.)_
+>
+> ---
+>
+> **PRIOR — independent review COMPLETE (June 2026): read `WEAVE-PLAN-REVIEW.md` (audit of the triage
 > output, with corrections + maintainer flags F1–F5) and `PASS-PLAN-V2.md` (the revised discovery
 > playbook for future runs).** Applied: the #305 milestone reorder is remapped into the regenerated
 > `triage/REVIEW.md` / `SLATE-SUMMARY.md` / `decisions.tsv` (economy→**v0.13.0**, survival→**v0.9.0** —

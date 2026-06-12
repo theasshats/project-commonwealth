@@ -21,6 +21,10 @@ Actions understood (see ratification.tsv):
   add-keep      — append a reinstated KEEP (match=link, arg=motif|milestone, reason=detail)
   annotate      — append a ratify-note to the matching KEEP's detail
   set-anchors   — override the mod's derived anchor set (e.g. inherited authored weaves)
+  remove-mod    — mod left the pack (thunderdome cut / version removal): its ratified
+                  KEEP/PLUMB/DEFER rows -> REMOVED  [post-0.7.0 reconciliation]
+  rehome-milestone — every ratified KEEP at <match> milestone -> <arg> (e.g. the create
+                  bucket after v0.7.0 shipped without the weave program)
 """
 import csv, os, sys, collections
 
@@ -64,6 +68,7 @@ def main():
 
     log, errors = [], []
     leaves, plumb_motifs, anchor_over = [], set(), {}
+    removed_mods = []
 
     # pass 1: demote-motif / move-milestone (global), collect others in order
     for a in acts:
@@ -112,6 +117,21 @@ def main():
             for h in hits:
                 h['detail'] += ' [' + a['reason'] + ']'
             log.append(('ANNOTATE', a['mod'], a['match'], a['reason'][:80]))
+        elif act == 'remove-mod':
+            n = 0
+            for r in rows:
+                if r['mod'] == a['mod'] and r['ratified'] in ('KEEP', 'PLUMB', 'DEFER'):
+                    r['ratified'] = 'REMOVED'; r['note'] = 'mod removed from pack: ' + a['reason']; n += 1
+            removed_mods.append((a['mod'], n))
+            log.append(('REMOVE-MOD', a['mod'], f'{n} rows -> REMOVED', a['reason']))
+        elif act == 'rehome-milestone':
+            n = 0
+            for r in rows:
+                if r['ratified'] == 'KEEP' and r['mile'] == a['match']:
+                    r['mile'] = a['arg']
+                    r['note'] = (r['note'] + '; ' if r['note'] else '') + f"rehomed {a['match']}->{a['arg']}"
+                    n += 1
+            log.append(('REHOME', f"{a['match']}->{a['arg']}", f'{n} KEEPs', a['reason']))
         elif act == 'set-anchors':
             anchor_over[a['mod']] = a['match'].split('+')
             log.append(('SET-ANCHORS', a['mod'], a['match'], a['reason']))
@@ -136,6 +156,7 @@ def main():
     keeps = [r for r in rows if r['ratified'] == 'KEEP']
     plumbs = [r for r in rows if r['ratified'] == 'PLUMB']
     drops = [r for r in rows if r['ratified'] == 'DROPPED']
+    gone = [r for r in rows if r['ratified'] == 'REMOVED']
     mods_k = collections.defaultdict(set)
     for r in keeps:
         mods_k[r['mod']] |= pillars_of_keep(r['link'], r['motif'], r['mile'])
@@ -155,7 +176,11 @@ def main():
     s.append('## Dashboard\n')
     s.append(f'- **Ratified KEEP weaves: {len(keeps)}** (was 423: '
              f'-{len(drops)} dropped, -{len(plumbs)} folded into the deco-crush plumbing batch, '
-             f'+{sum(1 for r in keeps if r["note"] == "added at ratification")} reinstated)')
+             f'+{sum(1 for r in keeps if "added at ratification" in r["note"])} reinstated'
+             + (f', -{sum(1 for r in gone if r["decision"] == "KEEP" or "added" in r["note"])} on mods removed from the pack' if gone else '') + ')')
+    if removed_mods:
+        s.append(f'- Mods removed from the pack (v0.7.0 thunderdome — rows now REMOVED): '
+                 + ', '.join(f'{m} ({n})' for m, n in removed_mods))
     s.append(f'- Plumbing batch (M-04, authored once at v0.7.0): {len(plumbs)} crush patterns across '
              f'{len(set(r["mod"] for r in plumbs))} mods')
     s.append(f'- Mods reclassified LEAVE/support-role: {", ".join(leaves)}')
