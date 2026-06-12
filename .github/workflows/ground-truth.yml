@@ -22,7 +22,7 @@ name: Ground-truth digest
 #
 # No loop: the triggers watch mods/** / pack.toml only — never tools/mod-data/**
 # — so the digest's own commit-back can't re-trigger this. (That commit DOES feed
-# recipe-web.yml, which watches tools/mod-data/recipes/** — intended chain.) PR
+# connectivity-web.yml, which watches tools/mod-data/recipes/** — intended chain.) PR
 # pushes use GITHUB_TOKEN, which doesn't re-fire pull_request.
 
 on:

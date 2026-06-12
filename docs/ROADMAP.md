@@ -56,7 +56,7 @@ TaCZ + Create: Immersive TaCZ + Create: Armorer gunpack + Create Big Cannons. Me
 ### Phase 3 — Recipe overhaul: "made through Create" ✅ on `main` (#62, v0.4.6)
 Routed crafting through Create parts + methods across the pack (`docs/RECIPES.md` = convention + full
 triage ledger). Metals foundation + almost-unified dedup; per-mod gating; the decoration/equipment
-weave; worldgen-island bridges; EMI→JEI + JER/JEED; the `tools/recipe-graph/` connectivity toolkit.
+weave; worldgen-island bridges; EMI→JEI + JER/JEED; the `tools/connectivity/` connectivity toolkit.
 - **Dedup follow-ups:** #103 (functional-duplicate parts), #101 (limestones), #102 (carbon/graphene), #113 (connectivity islands).
 - **Boot-log correctness:** #119 (dropped recipes), #120 (mangled loot tables), #121 (remaining ERROR noise).
 

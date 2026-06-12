@@ -44,7 +44,12 @@ client/server registry parity so players can't connect. So:
   registered content (safe for the server to lack): the Sodium bridge
   (`sodium`, `sable-new-sodium-compat`), minimaps, `controlling`, `mouse-tweaks`,
   texture/animation/culling mods, etc. — 22 mods today.
-- **`server`** = no client half (1 today: `smarter-farmers`).
+- **`server`** = no client half — **0 today, and the bar is higher than "no client half":**
+  `side = "server"` also means **single-player never gets the mod** (SP runs everything in the
+  client install), so a behavior mod narrowed to `server` silently vanishes from SP worlds.
+  `smarter-farmers` was exactly this (narrowed reason-less in PR #88; farmers didn't replant in
+  SP until #312 caught it — flipped back to `both`). Narrow to `server` only for a mod that is
+  *meaningless* in single-player, and write the reason in the manifest.
 - Everything else is `both`. Mods that *look* client but **must** be `both`
   because they have a server half: `appleskin`, `jade`, `ping-wheel`,
   `simple-voice-chat`, `no-chat-reports`, `playeranimator`, and any mod that
