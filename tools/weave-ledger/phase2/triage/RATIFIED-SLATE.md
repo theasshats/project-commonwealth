@@ -144,4 +144,6 @@ _Read with care: a mod whose home system is its only pillar (hub mods, F2) or wh
   TRIPLE-CONFIRMED by independent sweep chunks (S-07 ctov, S-09 betterdungeons, S-10 t_and_t): chest-seeded Numismatics coins are currency entering from outside the player economy — the class M-14/M-21 were cut for. Structure chests seed RAW regional mint-metal + trade goods, never minted coins. Applied as rescopes on the found rows; the E-1 coin-loot-seed sub-batch rewrites accordingly at filing. FLAGGED for maintainer sign-off (ruling-level interpretation of #163/#240).
 - **FOLD** tools/weave-ledger/phase2/sweep/FOLD-QUEUE.tsv — {'add-keep': 12, 'skipped': 10, 'balance-note': 24, 'custom (routed to CUSTOM-MOD-CANDIDATES)': 6, 'drop': 40, 'leave-to-done': 3, 'mark-done': 53, 'record-done': 8, 'rescope': 77}  
   V2-S sweep fold at the 12/22 waypoint (pilot + waves 2-3, 369 findings -> 135 actions): mark-done/drop/rescope/balance-note per chunk evidence; AMBIG/NONE + add-keep milestones resolved in sweep/FOLD-RESOLUTIONS.tsv; the two act:CUSTOM rows route to sweep/CUSTOM-MOD-CANDIDATES.md.
+- **RULING** * — coin loot-seeds — SIGNED  
+  maintainer signed 2026-06-12 ("raw metal and trade goods in chests seems reasonable"); implementation checklist filed as the loot-table actions issue #328. The [G2] entry in DECISIONS.md is resolved.
 

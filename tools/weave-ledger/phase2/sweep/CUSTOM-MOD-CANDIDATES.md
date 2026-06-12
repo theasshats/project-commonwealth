@@ -68,3 +68,22 @@ The sweep BRIEFING gains one line once the in-flight S-01…S-04 wave lands (not
 *when a weave is loop-positive but mechanism-absent, do not DROP — record `act: CUSTOM` with the
 feature one-liner; it routes here.* The S-01…S-04 agents' "build task / no mechanism" notes get
 converted to this disposition at fold time by hand.
+
+## Approval outcomes (maintainer, 2026-06-12) — all routed
+
+- **Perishability (A1)** — already tracked: #238 (v0.9.0). No new filing needed.
+- **Moon-event listener (A2)** — APPROVED → spec'd 1:1-translatable in #118 (comment), pcmc-arcana.
+- **Bookshelf amplifier (A3)** — APPROVED with the design ruling that vanilla bookshelves count as
+  the baseline tier → spec'd alongside A2 in #118.
+- **Sprinkler magic fluids (A4)** — APPROVED → #331 (v0.11.0).
+- **Winter burner fuel draw (A5)** — APPROVED → #332 (v0.9.0).
+- **VC faction-lord relic (A6)** — soft: folded into #328 (loot-table actions) as a low-priority
+  idea with uses.
+- **Tooling wear (A7)** — re-framed as a production update → #239 moved to v0.11.0 with the
+  drill-head flagship scope.
+- **Delivery-contract bounties (B2)** — parked for the economy/government plan → #329 (v0.13.0,
+  zagwar tagged).
+- **Banker fuel upkeep (B3)** — parked likewise → #330 (v0.13.0, zagwar tagged).
+- **Dynamic pricing (B1)** — no new issue; sweep inputs delivered to #240 as a comment
+  (mint ladder, faucet constraint, marginal-mint precedent), zagwar tagged.
+- **Coin-loot-seed ruling** — SIGNED; implementation checklist in #328.
