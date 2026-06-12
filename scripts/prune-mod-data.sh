@@ -5,7 +5,7 @@
 # WRITES a file per fetched jar — it never deletes the digest of a mod that was
 # removed from the pack, or of a superseded jar version. So every cut / version
 # bump leaves a stale by-mod/recipes/loot entry behind, and the connectivity
-# tooling (tools/recipe-graph/, which reads tools/mod-data/recipes/) ends up
+# tooling (tools/connectivity/, which reads tools/mod-data/recipes/) ends up
 # measuring phantom mods. This reconciles the digest to mods/*.pw.toml.
 #
 # It is deterministic and conservative: it keeps exactly the digest files whose

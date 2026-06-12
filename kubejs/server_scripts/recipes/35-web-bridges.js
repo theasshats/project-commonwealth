@@ -1,4 +1,4 @@
-// Web bridges — rejoin orphaned worldgen MATERIALS to the Create web (driven by tools/recipe-graph.py).
+// Web bridges — rejoin orphaned worldgen MATERIALS to the Create web (driven by tools/connectivity/connectivity.py).
 //
 // The connectivity metric flags materials that only ever feed their own block family — a worldgen stone →
 // its bricks/slabs/walls, used nowhere else — as ISLANDS. "Create crushes rock" is the natural, non-grindy

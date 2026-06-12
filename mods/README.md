@@ -117,7 +117,10 @@ The `side` field controls which artifacts the mod gets bundled into:
 
 - `side = "both"` — bundled into client AND server packs
 - `side = "client"` — only in client artifacts
-- `side = "server"` — only in server artifact (or omitted from client)
+- `side = "server"` — only in server artifact (or omitted from client). ⚠️ This also removes the
+  mod from **single-player** (SP runs everything in the client install) — only narrow to `server`
+  for a mod that's meaningless in SP, and write the reason in the manifest (the `smarter-farmers`
+  lesson, #312).
 
 Easiest: in the editor, click the **side dropdown** on the mod's row. Pick the value, manifest is rewritten and indexed in one shot.
 
