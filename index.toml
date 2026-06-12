@@ -25,6 +25,10 @@ file = "config/almostunified/unification/materials.json"
 hash = "4efa666f5b6094abbc285c4006add752476fa2ff61405d00421f5f37a78d9964"
 
 [[files]]
+file = "config/ars_nouveau-common.toml"
+hash = "3362627305afe2fcfb927aab03dbe9d4ad17146b69206fc17918765b8c07bee9"
+
+[[files]]
 file = "config/createblockchain-common.toml"
 hash = "d9dd73ac05c5696f4d79c48b60209e87e74657372529b139d163491484e3cbe3"
 

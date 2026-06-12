@@ -29,6 +29,12 @@ expedition over. Ore generation only affects newly generated chunks.
   enormous deposit at roughly one per three hundred chunks of its region — a find worth building a
   mining outpost and a trade route around.
 
+### World generation
+
+- Archwood forests are much rarer. Ars Nouveau's default biome weight handed a single biome
+  roughly a sixth of the overworld; it is now at the minimum non-zero weight, so the magic
+  forest is a find rather than a backdrop. Applies to newly generated chunks.
+
 ### Mods
 
 - Diet - AppleSeed Edition updates to 2.1.0 and installs from Modrinth again. The dedicated-server
