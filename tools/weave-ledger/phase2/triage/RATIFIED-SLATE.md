@@ -4,27 +4,27 @@
 
 ## Dashboard
 
-- **Ratified KEEP weaves: 314** (was 423: -29 dropped, -15 folded into the deco-crush plumbing batch, +1 reinstated, -36 on mods removed from the pack)
+- **Ratified KEEP weaves: 287** (was 423: -50 dropped, -14 folded into the deco-crush plumbing batch, +1 reinstated, -36 on mods removed from the pack)
 - Mods removed from the pack (v0.7.0 thunderdome — rows now REMOVED): brazil_legends (3), createmetalwork (3), createnuclear (4), create_ultimate_factory (1), farm_and_charm (5), meadow (5), northstar (5), travelersbackpack (2), vinery (4), create_compressed (2), bakery (3)
-- **Closed as DONE (shipped/native — zero authoring): 48 rows**, 32 mods (V2-S sweep verification against shipped kubejs)
-- Plumbing batch (M-04, authored once at v0.7.0): 15 crush patterns across 15 mods
+- **Closed as DONE (shipped/native — zero authoring): 64 rows**, 43 mods (V2-S sweep verification against shipped kubejs)
+- Plumbing batch (M-04, authored once at v0.7.0): 14 crush patterns across 14 mods
 - Mods reclassified LEAVE/support-role: zombiemoon, trashcans, mcwroofs, mcwstairs, mcwwindows
 
 ## Ratified KEEPs by milestone (post-#305 map; M-28 colony weaves ride v0.11.0)
 
 - v0.7.0: 0
-- v0.9.0: 101
-- v0.11.0: 103
-- v0.13.0: 110
+- v0.9.0: 93
+- v0.11.0: 99
+- v0.13.0: 95
 
 ## Derived weave-anchor distribution (F3: targets of ratified KEEPs; support roles and plumbing grant nothing; home systems not double-counted)
 
 - 1 pillar(s): 34 mods
-- 2 pillar(s): 61 mods
-- 3 pillar(s): 31 mods
+- 2 pillar(s): 59 mods
+- 3 pillar(s): 24 mods
 - 4 pillar(s): 4 mods
 
-Mods at ≤1 derived weave-pillar (34): aileron, appleseed, astikorcartsredux, bettermineshafts, byzantine, charta, cmpackagecouriers, copperagebackport, create_better_villagers, create_connected, domum_ornamentum, endermoon, enhancedcelestials, formationsnether, friendsandfoes, gnkinetics, gravestone, irons_spellbooks, kobolds, mcwdoors, mcwfences, minecolonies_compatibility, minecolonies_tweaks, mutantszombies, numismatics, railways, securitycraft, simplehats, sliceanddice, tacz, tfmg, trading_floor, underground_village, vc_gliders
+Mods at ≤1 derived weave-pillar (34): aileron, appleseed, astikorcartsredux, bettermineshafts, betteroceanmonuments, charta, cmpackagecouriers, copperagebackport, create_connected, create_hypertube, createblockchain, endermoon, enhancedcelestials, formationsnether, friendsandfoes, gnkinetics, irons_spellbooks, kobolds, mcwdoors, mcwfences, minecolonies_compatibility, minecolonies_tweaks, moblassos, mutantszombies, numismatics, railways, ribbits, securitycraft, simplehats, sliceanddice, tacz, tfmg, trading_floor, vc_gliders
 
 _Read with care: a mod whose home system is its only pillar (hub mods, F2) or whose second anchor is a sanctioned support role is **not** a gap._
 
@@ -35,15 +35,14 @@ _Read with care: a mod whose home system is its only pillar (hub mods, F2) or wh
 - `copperagebackport` — copperagebackport deco/blocks→create
 - `create_confectionery` — create_confectionery deco blocks (chocolate/caramel/gingerbread bricks) → create
 - `deeperdarker` — deeperdarker gloomslate/sculk_stone→create (crushing recycle)
-- `domum_ornamentum` — domum_ornamentum Create-processed-stone→create (architects_cutter)
 - `enhancedcelestials` — enhancedcelestials:meteor block → create M-04
 - `friendsandfoes` — friendsandfoes copper deco (copper buttons / weathered lightning rods) → create:crushing (
 - `galosphere` — galosphere deco blocks→create M-04
 - `mcwdoors` — mcwdoors→create
+- `mcwfences` — mcwfences metal fence variants → create:crushing (M-04 deco-recycle)
 - `mcwroofs` — mcwroofs stone/brick/andesite/deepslate roof variants → create
 - `quark` — quark deco blocks (vertical slabs, polished stone/brick variants) → create:crushing (M-04 
 - `railways` — railways:locometal blocks → create (M-04 deco recycle via create:crushing)
-- `underground_village` — underground_village Stoneholm structure blocks (dismantled) → create:crushing (M-04 deco r
 - `undergroundworlds` — undergroundworlds temple/pyramid bricks → create M-04
 - `woodworks` — woodworks→create
 
@@ -143,6 +142,6 @@ _Read with care: a mod whose home system is its only pillar (hub mods, F2) or wh
   cut from the pack post-v0.7.0 (commit 6bcba06; no manifest/digest on main) — missed by reconciliation, caught by sweep S-16; its 3 KEEPs (M-12/M-28/M-26) drop with it
 - **RULING** * — coin loot-seeds are faucets  
   TRIPLE-CONFIRMED by independent sweep chunks (S-07 ctov, S-09 betterdungeons, S-10 t_and_t): chest-seeded Numismatics coins are currency entering from outside the player economy — the class M-14/M-21 were cut for. Structure chests seed RAW regional mint-metal + trade goods, never minted coins. Applied as rescopes on the found rows; the E-1 coin-loot-seed sub-batch rewrites accordingly at filing. FLAGGED for maintainer sign-off (ruling-level interpretation of #163/#240).
-- **FOLD** tools/weave-ledger/phase2/sweep/FOLD-QUEUE.tsv — {'add-keep': 8, 'balance-note': 15, 'custom (routed to CUSTOM-MOD-CANDIDATES)': 2, 'drop': 19, 'leave-to-done': 2, 'mark-done': 41, 'record-done': 5, 'skipped': 2, 'rescope': 41}  
+- **FOLD** tools/weave-ledger/phase2/sweep/FOLD-QUEUE.tsv — {'add-keep': 12, 'skipped': 10, 'balance-note': 24, 'custom (routed to CUSTOM-MOD-CANDIDATES)': 6, 'drop': 40, 'leave-to-done': 3, 'mark-done': 53, 'record-done': 8, 'rescope': 77}  
   V2-S sweep fold at the 12/22 waypoint (pilot + waves 2-3, 369 findings -> 135 actions): mark-done/drop/rescope/balance-note per chunk evidence; AMBIG/NONE + add-keep milestones resolved in sweep/FOLD-RESOLUTIONS.tsv; the two act:CUSTOM rows route to sweep/CUSTOM-MOD-CANDIDATES.md.
 

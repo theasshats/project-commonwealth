@@ -21,3 +21,12 @@ create_compressed	drop	M-31	skip	superseded by the remove-mod ledger row
 bakery	drop	M-12	skip	superseded by the remove-mod ledger row (S-16 caught the missed cut)
 bakery	drop	M-28	skip	superseded by the remove-mod ledger row
 bakery	drop	M-26	skip	superseded by the remove-mod ledger row
+netmusic	mark-done	M-07	leave-to-done	shipped 97-netmusic.js wove its electronics through the Create spine (registry-blessed M-07 allurite) — the ratified LEAVE converts to DONE
+moblassos	mark-done	M-05	record-done	beyond-slate shipped reality superseding the slate's M-05 CUT (lasso family gated via electron_tube)
+mowziesmobs	drop	M-10	skip	targets the SHIPPED ice_crystal imbuement recipe, not a slate row — handled via the DECISIONS.md double-spend escalation + pack-fix bundle
+create_better_villagers	rescope		skip	targets the mod's NATIVE trade lists, not a slate row — pack-fix bundle item 7 (audit/cap CBV trades vs the lock wall)
+create_confectionery	add-keep	M-26	milestone:v0.9.0	hot_chocolate -> cold_sweat food-temperature config (pressure-production seam; the earlier CUT judged the wrong mechanism)
+quark	add-keep	M-12	milestone:v0.9.0	crab_shell milling -> bone_meal (drop-only sink; replaces the XP-arbitrage crate row)
+smokeleafindustries	add-keep	M-12	milestone:v0.9.0	hemp_plastic -> tfmg processing (industrial hemp joins the polymer chain)
+spawn	add-keep	M-11	milestone:v0.11.0	sunstone -> spirit_fire light-magic reagent (drop-only sink)
+underground_village	add-keep		skip	the lock-bypass loot trim is a pack fix (bundle item), not a weave to file

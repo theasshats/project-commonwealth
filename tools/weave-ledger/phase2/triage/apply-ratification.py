@@ -32,7 +32,7 @@ Actions understood (see ratification.tsv):
                   milestone:vX.Y.0). Custom rows route to sweep/CUSTOM-MOD-CANDIDATES.md
                   by hand. New ratified states: DONE (shipped/native — no authoring).
 """
-import csv, os, sys, collections
+import csv, os, sys, collections, re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CANON = ['create', 'magic', 'economy', 'survival', 'aeronautics']
@@ -150,14 +150,33 @@ def main():
                     res[(rr[0], rr[1], rr[2])].append((rr[3], rr[4]))
             stats = collections.Counter(); warn = []
 
-            def find(mod, link_prefix, states, motif=''):
-                hits = [r for r in rows if r['mod'] == mod and r['ratified'] in states
-                        and (r['link'].startswith(link_prefix) or link_prefix.startswith(r['link'][:60]))]
+            TOKRE = re.compile(r'[a-z0-9_]{4,}')
+
+            def find(mod, link_prefix, states, motif='', ref=''):
+                live = [r for r in rows if r['mod'] == mod and r['ratified'] in states]
+                hits = [r for r in live if link_prefix and
+                        (r['link'].startswith(link_prefix) or link_prefix.startswith(r['link'][:60]))]
                 if len(hits) > 1 and motif:
                     mh = [r for r in hits if r['motif'] == motif]
                     if len(mh) == 1:
                         return mh[0]
-                return hits[0] if len(hits) == 1 else None
+                if len(hits) == 1:
+                    return hits[0]
+                # apply-time fallback: the queue's matched_link was computed against a
+                # post-fold file, but apply rebuilds from the pristine base — re-match here
+                # by motif, then token overlap on the finding's ref.
+                cand = [r for r in live if motif and r['motif'] == motif]
+                if len(cand) == 1:
+                    return cand[0]
+                pool = cand if len(cand) > 1 else live
+                rt = set(TOKRE.findall(ref.lower()))
+                best, bs = None, 0.0
+                for rr in pool:
+                    st = set(TOKRE.findall(rr['link'].lower()))
+                    sc = len(rt & st) / (len(rt | st) or 1)
+                    if sc > bs:
+                        best, bs = rr, sc
+                return best if best and bs >= 0.15 else None
 
             qrd = csv.DictReader(open(qpath), delimiter='\t')
             for q in qrd:
@@ -188,7 +207,16 @@ def main():
                     stats['add-keep'] += 1; continue
                 if q['action'] == 'custom':
                     stats['custom (routed to CUSTOM-MOD-CANDIDATES)'] += 1; continue
-                hit = find(q['mod'], q['matched_link'], ('KEEP', 'PLUMB', 'DEFER'), q.get('motif', ''))
+                # shipped-beyond-slate findings (ref leads with NEW) have no slate row by
+                # definition — record them as DONE rows instead of matching.
+                if q['action'] == 'mark-done' and q['ref'].startswith('NEW'):
+                    rows.append({'mod': q['mod'], 'decision': '(recorded at sweep fold)', 'link': q['ref'],
+                                 'motif': q['motif'], 'mile': '', 'detail': (q['note'] + ' | ' + q['evidence']).strip(' |'),
+                                 'ratified': 'DONE', 'note': 'shipped-beyond-slate, recorded by V2-S sweep'})
+                    stats['record-done'] += 1; continue
+                # match on the finding's ref (the agent quotes the slate row it judged);
+                # the queue's matched_link is unreliable (computed against a post-fold file).
+                hit = find(q['mod'], q['ref'], ('KEEP', 'PLUMB', 'DEFER'), q.get('motif', ''), q.get('ref', ''))
                 if not hit:
                     warn.append(f"{q['action']}: no unique match for {q['mod']} :: {q['matched_link'][:50]}"); continue
                 if q['action'] == 'mark-done':

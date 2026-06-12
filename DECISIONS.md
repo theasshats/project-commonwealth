@@ -423,3 +423,17 @@ Per "prep phase 2 fan out for review." Phase 2 = opportunity mapping only (**no 
 - ✅ **`samurai_dynasty` silver is real silver** ≠ palladium → #177.
 - ✅ **Issue tracking:** comment-on-existing (#137/#143/#92/#91) + new #176/#177 — approved.
 - ✅ **Decisions-queue approach approved** ("decisions are good").
+
+## V2-S sweep escalations (post-fold, 2026-06-12)
+
+- **[G3] Reagent double-spend, shipped: `mowziesmobs:ice_crystal`.** `35-magic-web-mobs.js` imbues
+  it (→ water essence) while `40-gates.js`/`05-tags.js` spend it as the T3 boss key — the ledger's
+  one-master rule says one of these yields. Sweep recommendation: keep the boss-key role (shipped
+  gate ladder depends on it), re-point the imbuement input to `glowing_jelly`. Undo: revert the one
+  imbue line. Fix bundled in `tools/weave-ledger/phase2/sweep/PACK-FIXES.md` item 2.
+- **[G3] Reagent double-booking, shipped: `grimoireofgaia:rotten_heart`** — boss-keys roster vs
+  spent spirit-fire reagent; swap the Gaia roster entries to the mini-boss busts (the ratified M-15
+  row's own items). PACK-FIXES item 1.
+- **[G2] Coin-loot-seed ruling (awaiting ratify):** nine independent sweep chunks judged chest-seeded
+  Numismatics coins an NPC-class faucet under #163/#240; applied as rescopes/drops (seed raw regional
+  mint-metal + trade goods instead). Override reverts the fold rows tagged with the ruling.

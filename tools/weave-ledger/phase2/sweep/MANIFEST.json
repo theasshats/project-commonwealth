@@ -22,11 +22,11 @@
   "S13": "done",
   "S14": "done",
   "S15": "done",
-  "S16": "pending",
-  "S17": "pending",
-  "S18": "pending",
-  "S19": "pending",
-  "S20": "pending",
+  "S16": "done",
+  "S17": "done",
+  "S18": "done",
+  "S19": "done",
+  "S20": "done",
   "P1": "done",
   "P2": "done"
  },
@@ -51,7 +51,14 @@
   "S13": "148k/16",
   "S14": "139k/16",
   "S15": "159k/16",
-  "wave4": "680k tok / 80 mods / 137 findings"
+  "wave4": "680k tok / 80 mods / 137 findings",
+  "S16": "115k/16",
+  "S17": "118k/16",
+  "S18": "107k/16",
+  "S19": "141k/16",
+  "S20": "93k/9",
+  "wave5": "574k tok / 73 mods / 114 findings",
+  "TOTAL": "~3.05M subagent tokens / 345 mods / 620 findings / 22 chunks"
  },
- "fold_note": "findings fold into triage/ratification.tsv at waypoints (next: ~S10 or on maintainer word); convert wave-1/2 build-task notes to act:CUSTOM per CUSTOM-MOD-CANDIDATES.md"
+ "fold_note": "FINAL FOLD applied \u2014 see triage/RATIFIED-SLATE.md; sweep series COMPLETE"
 }
