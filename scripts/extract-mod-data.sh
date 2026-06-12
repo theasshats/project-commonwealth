@@ -129,7 +129,8 @@ def collect(zf, zf_facts, top_name, depth, pending):
         nb = os.path.basename(ne)[:-4]
         try:
             nz = zipfile.ZipFile(io.BytesIO(zf.read(ne)))
-        except Exception:
+        except Exception as e:
+            print(f"WARNING: unreadable nested jar {ne} in {top_name}: {e}", file=sys.stderr)
             continue
         nf = scan(nz)
         pending.append((nb, nf, top_name))
@@ -142,7 +143,10 @@ for jar in sorted(glob.glob(os.path.join(jars_dir, "*.jar"))):
     name = os.path.basename(jar)[:-4]
     try:
         zf = zipfile.ZipFile(jar)
-    except Exception:
+    except Exception as e:
+        # Loud, not silent: a skipped jar means a missing digest, and the prune
+        # guard (CHECK=1) downstream treats that as drift — surface the cause here.
+        print(f"WARNING: unreadable jar {jar}: {e} — its digest will be MISSING", file=sys.stderr)
         continue
     f = scan(zf)
     emit(name, f)

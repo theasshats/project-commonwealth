@@ -1,0 +1,25 @@
+# smarterfarmers-1.21-2.2.4-neoforge
+
+## mod metadata (id / version / deps)
+license = "Supplementaries Team License v.1.4"
+modId = "smarterfarmers"
+version = "1.21-2.2.4"
+displayName = "Smarter Farmers"
+modId = "neoforge"
+versionRange = "[4,)"
+modId = "minecraft"
+versionRange = "[1.21,1.22)"
+modId = "moonlight"
+versionRange = "*"
+
+## blocks
+
+
+## items
+
+
+## neoforge biome_modifiers
+
+
+## c: common tag membership
+
