@@ -14,6 +14,8 @@ It's a **cooperative PvPvE** pack for a small crew (~10), **scarcity-driven**: o
 
 **Everything players need is on the website — [pcmc.ishimura.xyz](https://pcmc.ishimura.xyz).** The download, live server status, how to join, the rules, and the FAQ all live there; you shouldn't need to touch this repo at all. Reporting a problem will go through the site too (no GitHub account needed — see #77). The steps below are the same ones the site walks you through, kept here as the canonical reference.
 
+**Community:** join the Discord — [discord.gg/AxfjYbQ86K](https://discord.gg/AxfjYbQ86K).
+
 Grab the installer from the site's download button (it always resolves to the latest [release](../../releases)):
 
 | File | What it is | When to use |
