@@ -1,9 +1,9 @@
-# gtmogs-1.21.1-1.0.6
+# gtmogs-1.21.1-1.0.6-pcmc.1
 
 ## mod metadata (id / version / deps)
 license = "LGPL-3.0 license"
 modId = "gtmogs"
-version = "1.0.6"
+version = "1.0.6-pcmc.1"
 displayName = "GregTech Modern Ore Gen Standalone"
 modId = "neoforge"
 versionRange = "[21.1,)"
@@ -25,14 +25,10 @@ modId = "jade"
 versionRange = "[15.10.0+neoforge,)"
 
 ## blocks
-gtmogs:overworld_marker
-gtmogs:the_end_marker
-gtmogs:the_nether_marker
+
 
 ## items
-gtmogs:overworld_marker
-gtmogs:the_end_marker
-gtmogs:the_nether_marker
+
 
 ## neoforge biome_modifiers
 
