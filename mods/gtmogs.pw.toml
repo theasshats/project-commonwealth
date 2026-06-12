@@ -1,6 +1,8 @@
 name = "Gregtech: Modern Ore Generation Standalone"
 filename = "gtmogs-1.21.1-1.0.6.jar"
 side = "both"
+# Pinned with the Xaero pair (see xaeros-world-map.pw.toml) - matched set.
+pin = true
 
 [download]
 url = "https://cdn.modrinth.com/data/fNd6d6cd/versions/m0HcaGYd/gtmogs-1.21.1-1.0.6.jar"
