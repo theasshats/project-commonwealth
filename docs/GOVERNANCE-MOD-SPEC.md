@@ -7,10 +7,10 @@
 >
 > Per `docs/CUSTOM-MODS.md`, a custom mod lives in **its own repo** under `theasshats` and reaches the
 > pack via the mod-mirror packwiz pattern — it is *not* developed in this repo. The implementation is
-> split into **three parts — claims → government → economy (§8)** — which may ship as **one mod or
-> three separate mods** (packaging call deferred; see §8 "One mod or three?"). This doc is the design
-> reference that would seed that repo (working name **`theasshats/pcmc-realms`** for the single-mod
-> shape; per-part working names in §8).
+> split into **three parts — claims → government → economy (§8)** — shipping as **three separate mods
+> (decided)**: **`theasshats/pcmc-territory`**, **`theasshats/pcmc-realms`**, **`theasshats/pcmc-mint`**,
+> dependency chain economy → government → claims. This doc is the design reference that seeds those
+> repos.
 
 ---
 
@@ -216,9 +216,8 @@ playable before any screen work.
 
 The full vision is multi-month; it splits into **three sequential parts with hard boundaries** —
 **claims** (territory resolution), **government** (hierarchy + laws), **economy** (treasury + minting).
-Each part is independently playtestable on the box, each starts with its own spike, and the boundaries
-are designed so the split can become **three separate mods** if that's how it shakes out — see "One mod
-or three?" below.
+Each part is independently playtestable on the box, each starts with its own spike, and each ships as
+**its own mod** — see "Packaging" below.
 
 ### Part 1 — Claims (the territory layer)
 
@@ -268,20 +267,31 @@ The Numismatics bridge (§5) — the least certain part, deliberately last.
 GUI (entity/law/treasury screens), `/realm map` border render, ITEM_BAN, config surface — after the
 three parts, blocking none of them.
 
-### One mod or three?
+### Packaging — three separate mods (decided)
 
-The parts are designed to stand as **separate mods** (working names: `pcmc-territory` /
-`pcmc-realms` / `pcmc-mint`), each in its own repo per `docs/CUSTOM-MODS.md`, dependency chain
-**economy → government → claims**. Whether to actually split is a packaging call deferrable to Part 2
-kickoff:
+The parts ship as **three separate mods**, each in its own repo per `docs/CUSTOM-MODS.md`:
 
-- **Three mods** buys independent versioning and release cadence (a treasury fix doesn't re-ship the
-  law engine), a smaller blast radius per release, and the option to ship Part 1 alone as a useful
-  "who governs here" utility. Cost: three repos/CI/manifests and a cross-mod API kept stable.
-- **One mod, three Gradle modules** keeps the plumbing cheap while preserving identical boundaries.
+| Part | Repo (mod id) | Depends on |
+| --- | --- | --- |
+| 1 — Claims | `theasshats/pcmc-territory` (`pcmc_territory`) | MineColonies + OPAC (soft, §9) |
+| 2 — Government | `theasshats/pcmc-realms` (`pcmc_realms`) | `pcmc_territory` (hard) |
+| 3 — Economy | `theasshats/pcmc-mint` (`pcmc_mint`) | `pcmc_realms` + Numismatics (hard) |
 
-Either way, the boundary contracts above (Part 1's `resolve` API, Part 2's `LawType` registry) are
-non-negotiable — they are what keep the split possible and the layers honest.
+This buys independent versioning and release cadence (a treasury fix doesn't re-ship the law engine),
+a smaller blast radius per release, and Part 1 shipping alone as a useful "who governs here" utility.
+The cost — three repos/CI/manifests and a cross-mod API kept stable — is accepted; the release
+pipeline is the same one `pcmc-killfeed` already runs.
+
+Consequences of the split:
+
+- The boundary contracts are **inter-mod APIs**, not internal seams: Part 1's `resolve`/entity-events
+  surface and Part 2's `LawType` registry are published packages the mods above compile against —
+  version them deliberately (breaking the API = major bump, the dependents pin a range).
+- **Persistence partitions per mod.** Each mod owns its own `SavedData` keyed by entity UUID
+  (territory: the core entity record; realms: tier/hierarchy/laws; mint: treasury) — no shared NBT
+  blob, so an upper mod being absent never corrupts a lower one's state. §2's unified table is the
+  *logical* model across all three.
+- **Lower mods never reference upper ones**: `pcmc_territory` knows nothing of laws or money.
 
 ---
 
