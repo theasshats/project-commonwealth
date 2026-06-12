@@ -1,0 +1,16 @@
+# Pilot chunk P-1 — production→economy side (shipped-spine checks, mint/steel/magic-production)
+tfmg
+occultism
+galosphere
+createaddition
+create_winery (digest-only: tools/mod-data/by-mod/create_winery-2.0.2-neoforge-1.21.1.txt)
+aeroworks (digest-only: tools/mod-data/by-mod/aeroworks-1.2.11.txt)
+securitycraft
+trading_floor
+numismatics
+create_ironworks
+createbigcannons
+cbc_at
+sliceanddice
+mcwfences
+copperagebackport

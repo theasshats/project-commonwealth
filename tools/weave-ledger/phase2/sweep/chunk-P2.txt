@@ -1,0 +1,17 @@
+# Pilot chunk P-2 — pressure/return side (survival, drop-only piles, hubs, starved pressure→aeronautics seam)
+aeronautics
+aeroclaims (digest-only: tools/mod-data/by-mod/aeroclaims-0.9.0.txt)
+dtarsnouveau (digest-only: tools/mod-data/by-mod/dtarsnouveau-1.3.0.txt)
+dtquark (digest-only: tools/mod-data/by-mod/dtquark-2.6.1.txt)
+cold_sweat
+sereneseasons
+tide
+born_in_chaos_v1
+deeperdarker
+grimoireofgaia
+ars_nouveau
+irons_spellbooks
+minecolonies
+friendsandfoes
+vc_gliders
+aileron
