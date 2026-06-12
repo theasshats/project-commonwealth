@@ -1,4 +1,4 @@
-# ritchiesprojectilelib-2.1.2-mc.1.21.1-neoforge
+# ritchiesprojectilelib-2.1.2+mc.1.21.1-neoforge
 
 ## mod metadata (id / version / deps)
 license = "MIT License"

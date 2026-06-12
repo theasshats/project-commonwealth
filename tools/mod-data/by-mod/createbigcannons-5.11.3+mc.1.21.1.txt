@@ -1,4 +1,4 @@
-# createbigcannons-5.11.3-mc.1.21.1
+# createbigcannons-5.11.3+mc.1.21.1
 
 ## mod metadata (id / version / deps)
 license = "MIT and CC BY-NC-SA (see github for details)"
