@@ -48,6 +48,10 @@ expedition over. Ore generation only affects newly generated chunks.
 - The recipe viewer and creative search now list only the pack's Create: Armorer guns, ammunition, and
   attachments. The stock TaCZ guns and attachments, which were already uncraftable, no longer show up
   without a recipe.
+- Inventory sorting is now Inventory Essentials, replacing Inventory Profiles Next and its two
+  companion mods. Sorting and bulk item movement work the same or better, with one mod instead of
+  three and none of the old overlay quirks; saved inventory profiles and locked slots, which saw
+  little use, are gone with it.
 
 ## 0.7.0 — The Create spine
 

@@ -57,10 +57,6 @@ file = "defaultconfigs/accessories.json5"
 hash = "2d34c1d20dfa9047a4ba9bfab54cbd89232cc0ba966acf0aac1f1c110581f624"
 
 [[files]]
-file = "kubejs/assets/inventoryprofilesnext/textures/gui/overlay_new.png"
-hash = "cce47379706d8eb5075a66e9710353bc659971b4f26f1fe1e9813956fdfe0ee4"
-
-[[files]]
 file = "kubejs/client_scripts/hide-default-tacz-guns.js"
 hash = "51f8c3c5f904a9ea01cd7ff0c564b90c42e872ab99678c4a332a3105597c819b"
 
@@ -1972,13 +1968,8 @@ hash = "8e90c889394fe3e69d75a8aa8466b74af5ff8a26b755abf90b668dcc225b23d5"
 metafile = true
 
 [[files]]
-file = "mods/inventory-profiles-next.pw.toml"
-hash = "8fa66c922e1f46810b1e973175bf2c203aa2c799c19e88d86eb5b11f5ad9ee5b"
-metafile = true
-
-[[files]]
-file = "mods/invtweaks-emu-for-ipn.pw.toml"
-hash = "be26a76ebecc5004c7723c86ed5b989603d750c20698b176e9f69f4c787459b8"
+file = "mods/inventory-essentials.pw.toml"
+hash = "702a028e2d428d352b4d664a21b0fb6182c20a930888a6c962f557aeba05871f"
 metafile = true
 
 [[files]]
@@ -2094,11 +2085,6 @@ metafile = true
 [[files]]
 file = "mods/lets-do-beachparty.pw.toml"
 hash = "64a5531d7aacebc6ad691f76e108938cd0d84d5e5b927b7eac3dcdb38a3dbe87"
-metafile = true
-
-[[files]]
-file = "mods/libipn.pw.toml"
-hash = "f31297be9617ca9c68a9167c974c29d1c28c2495df333b4263cc117642fc58ea"
 metafile = true
 
 [[files]]
