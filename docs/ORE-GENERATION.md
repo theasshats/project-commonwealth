@@ -74,7 +74,7 @@ the consolidated ore-gen tracker.
 - **`weight`** — relative chance this vein wins a roll *against other veins eligible at that spot*.
   Commons 55–80, mid 30–45, rare 10–20.
 - **`density`** — 0–1 fill probability inside the vein body. Commons ~0.4, rare ~0.2.
-- **`height_range`** — `{ "height": { "type": "uniform"|"trapezoid", "min_inclusive"/"max_inclusive": {"absolute": N} } }`. Match real ore depth.
+- **`height_range`** — `{ "height": { "type": "uniform"|"trapezoid", "min_inclusive"/"max_inclusive": {"absolute": N} } }`. Match real ore depth. ⚠️ Keep the band **under the region's terrain surface**: anchors rolled above ground have no stone to replace and place nothing, silently wasting that share of the vein's rolls (bauxite at 32…128 under ~y70 jungle canopy was the proven case — effectively unfindable until re-banded to 8…72 in v0.7.1). Above-surface bands are legitimate only where terrain actually reaches them (emerald in peaks).
 - **`dimension_filter`** — `["minecraft:overworld"]` for now; the engine also supports nether/end via the `layer` field (`stone`/`deepslate`/`netherrack`/`endstone`).
 - **`biomes`** — a single biome tag (e.g. `#pcmc:vein_iron`) keeps the vein regional. **Don't**
   inline a list of `#tag`s here for the same reason as below — point at one tag and edit the tag.
@@ -238,7 +238,7 @@ biome tag (edit the tag to move a vein). **Composition** is primary → secondar
 | mithril | special (Terralith) | -48…16 | 30 | 10 | mithril → mithril → silver → emerald |
 | jade | jungle | -24…48 | 40 | 30 | jade → jade → emerald → diamond |
 | palladium | mountains / deep_dark | -56…24 | 30 | 12 | palladium → palladium → nickel → silver |
-| bauxite | jungle / savanna | 32…128 | 32 | 30 | bauxite → iron → zinc → gold |
+| bauxite | jungle / savanna | 8…72 | 32 | 30 | bauxite → iron → zinc → gold |
 | lignite | swamp / plains | 8…80 | 32 | 45 | lignite → fireclay → coal → lithium |
 | iron_mega | mountains (alias of iron) | -24…64 | 120 | 20 | iron → iron → magnetite → nickel |
 | copper_mega | badlands (alias of copper) | -16…112 | 120 | 14 | copper → copper → iron → gold |
