@@ -220,7 +220,7 @@ biome tag (edit the tag to move a vein). **Composition** is primary → secondar
 |---|---|---|---|---|---|
 | iron | mountains | -24…64 | 36 | 80 | iron → magnetite → nickel → gold |
 | copper | badlands | -16…112 | 36 | 70 | copper → iron → gold → zinc |
-| coal | taiga / forest | 0…136 | 36 | 80 | coal → coal → lithium → iron |
+| coal | taiga / forest | 0…112 | 36 | 80 | coal → coal → lithium → iron |
 | gold | savanna / badlands | -48…40 | 40 | 45 | gold → nickel → copper → zinc |
 | redstone | desert | -60…-8 | 40 | 45 | redstone → redstone → lithium → lapis |
 | lapis | snowy | -32…40 | 35 | 35 | lapis → lapis → iron → lithium |
@@ -239,10 +239,10 @@ biome tag (edit the tag to move a vein). **Composition** is primary → secondar
 | jade | jungle | -24…48 | 40 | 30 | jade → jade → emerald → diamond |
 | palladium | mountains / deep_dark | -56…24 | 30 | 12 | palladium → palladium → nickel → silver |
 | bauxite | jungle / savanna | 8…72 | 32 | 30 | bauxite → iron → zinc → gold |
-| lignite | swamp / plains | 8…80 | 32 | 45 | lignite → fireclay → coal → lithium |
+| lignite | swamp / plains | 8…72 | 32 | 45 | lignite → fireclay → coal → lithium |
 | iron_mega | mountains (alias of iron) | -24…64 | 120 | 20 | iron → iron → magnetite → nickel |
 | copper_mega | badlands (alias of copper) | -16…112 | 120 | 14 | copper → copper → iron → gold |
-| coal_mega | taiga / forest (alias of coal) | 0…136 | 120 | 7 | coal → coal → lithium → iron |
+| coal_mega | taiga / forest (alias of coal) | 0…112 | 120 | 7 | coal → coal → lithium → iron |
 
 > **v0.7.0:** the uranium vein was removed with Create: Nuclear (#289) — thorium and lead absorbed its
 > slots in their own chains. Salt was deliberately shrunk (24/25) from its early oversized preset. The
