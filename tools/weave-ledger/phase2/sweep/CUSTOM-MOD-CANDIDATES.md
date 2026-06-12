@@ -48,6 +48,20 @@
   draw more fuel in winter so cold season tightens the fuel market; no config surface exists for
   season-keyed burn rates — needs a code hook. Pairs with the coal-coke hearth-fuel weave. (S-10)
 
+## Candidates from sweep waves 4–5 (act: CUSTOM)
+
+- **Delivery-contract bounty type (bountiful, M-31)** — a bounty that pays on physically hauling
+  goods to a distant board would give the logistics arm its labor market; Bountiful has no such
+  objective type — small addon or PR-upstream. (S-16)
+- **Bookshelf apparatus amplifier (quark `ancient_bookshelf` → Ars, M-10)** — same pcmc-arcana
+  hook family as the woodworks candidate; one hook serves both. (S-15)
+- **Faction-lord relic drop (valarian_conquest, M-02)** — the mod ships zero entity loot tables;
+  a unique relic drop (custom loot injection + item) would give the conquest pillar its reagent
+  edge; the ratified row's "relic" never existed. (S-13)
+- **Horde-night drop hook (zombiemoon, M-22)** — event-conditioned drops during horde moons need
+  an event-listener hook; joins the pcmc-arcana moon-event family (ritual gating, EC
+  moon-conditioned recipes — one listener serves all three). (S-13, S-16)
+
 ## Process note (applies from chunk S-05 onward)
 
 The sweep BRIEFING gains one line once the in-flight S-01…S-04 wave lands (not edited mid-wave):

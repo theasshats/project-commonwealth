@@ -1,6 +1,19 @@
 # Phase 2 — next-session runbook (read with CLAUDE.md + READINESS-REVIEW.md)
 
-> **LATEST — post-0.7.0 reconciliation applied (2026-06-12).** v0.7.0 shipped; #312/#129 done (clean
+> **LATEST — V2-S SWEEP COMPLETE + FINAL FOLD (2026-06-12).** The full-coverage strong-model sweep
+> ran 22/22 chunks over all 345 mods (~3.05M subagent tokens, 620 findings) and folded through the
+> ratification ledger. **Final slate: 287 ratified KEEPs** (v0.9.0: 93 · v0.11.0: 99 · v0.13.0: 95)
+> + 14 plumbing patterns; **64 rows DONE** (verified shipped/native — zero authoring); 50 dropped.
+> Read: `triage/FILING-PLAN.md` (FINAL — 26 cluster issues), `triage/RATIFIED-SLATE.md`,
+> `sweep/PACK-FIXES.md` (7 shipped-pack bugs → one v0.8.0 issue), `sweep/CUSTOM-MOD-CANDIDATES.md`
+> (cherry-pick list), `DECISIONS.md` tail (two [G3] reagent escalations + the [G2] coin-faucet
+> ruling). **DECISION QUEUE: (1) sign off the coin-loot-seed ruling, (2) GO to file the 26
+> clusters + the pack-fixes issue, (3) cherry-pick custom-mod candidates.** Discovery is closed
+> until the next content delta (delta-mode per `PASS-PLAN-V2.md`). _(Prior states below.)_
+>
+> ---
+>
+> **PRIOR — post-0.7.0 reconciliation applied (2026-06-12).** v0.7.0 shipped; #312/#129 done (clean
 > digests; `tools/connectivity` with mob-drop edges). The ratified slate was reconciled
 > (`WEAVE-PLAN-REVIEW.md` §11): 9 thunderdome-removed mods → 31 weaves REMOVED; the create-spine bucket
 > re-homed v0.7.0→**v0.9.0**; **new totals: 364 ratified KEEPs** (v0.9.0: 130 · v0.11.0: 113 ·
