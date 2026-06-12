@@ -3,18 +3,18 @@
 
 Projects the item-level recipe graph down to a MOD graph (nodes = mods, edge weight = how many recipe
 links tie two mods together, incl. shared `c:` tags) and emits a single self-contained HTML file with a
-canvas force-directed layout. No dependencies / no network: open tools/recipe-web.html in a browser.
+canvas force-directed layout. No dependencies / no network: open tools/connectivity-web.html in a browser.
 
 Interactive: toggle any mod off (checkboxes / presets like "remove vanilla" or "remove Create spine") and
 the connected components + giant-web % recompute live — the same surgery the CLI does, but watchable.
 
-Usage:  python3 tools/recipe-graph-viz.py        # writes tools/recipe-web.html
+Usage:  python3 tools/connectivity/connectivity-viz.py   # writes tools/connectivity/connectivity-web.html
 """
 import os, sys, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import recipe_graph_lib as L
+import connectivity_lib as L
 
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'recipe-web.html')
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'connectivity-web.html')
 
 def main():
     g = L.build(remove=frozenset(), overlay=True)   # keep EVERYTHING (incl. vanilla) — viz removes live
@@ -56,7 +56,8 @@ HTML = r"""<!doctype html><html><head><meta charset="utf-8"><title>Project Commo
  canvas{flex:1;display:block;cursor:grab} #tip{position:fixed;pointer-events:none;background:#000a;border:1px solid #38445f;border-radius:4px;padding:3px 6px;font-size:12px;display:none}
 </style></head><body><div id="app">
  <div id="side">
-   <h1>Project Commonwealth — recipe web</h1>
+   <h1>Project Commonwealth — connectivity web</h1>
+   <div style="margin:0 14px 6px;color:#8b95a7;font-size:11px">recipes + kubejs overlay + mob-drop edges (entity loot, #129)</div>
    <div id="stats"></div>
    <div id="presets">
      <button data-p="reset">Reset</button>
