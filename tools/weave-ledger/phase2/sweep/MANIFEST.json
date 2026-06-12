@@ -17,11 +17,11 @@
   "S08": "done",
   "S09": "done",
   "S10": "done",
-  "S11": "pending",
-  "S12": "pending",
-  "S13": "pending",
-  "S14": "pending",
-  "S15": "pending",
+  "S11": "done",
+  "S12": "done",
+  "S13": "done",
+  "S14": "done",
+  "S15": "done",
   "S16": "pending",
   "S17": "pending",
   "S18": "pending",
@@ -45,7 +45,13 @@
   "S08": "152k/16",
   "S09": "151k/16",
   "S10": "127k/16",
-  "wave3": "818k tok / 96 mods / 157 findings (~8.5k/mod)"
+  "wave3": "818k tok / 96 mods / 157 findings (~8.5k/mod)",
+  "S11": "128k/16",
+  "S12": "106k/16",
+  "S13": "148k/16",
+  "S14": "139k/16",
+  "S15": "159k/16",
+  "wave4": "680k tok / 80 mods / 137 findings"
  },
  "fold_note": "findings fold into triage/ratification.tsv at waypoints (next: ~S10 or on maintainer word); convert wave-1/2 build-task notes to act:CUSTOM per CUSTOM-MOD-CANDIDATES.md"
 }
