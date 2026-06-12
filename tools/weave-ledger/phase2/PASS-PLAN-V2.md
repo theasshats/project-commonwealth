@@ -4,7 +4,7 @@
 > auditing the V1 run end-to-end. V1's corpus and triage outputs are **frozen and stay valid**; nothing
 > here re-opens them. This doc is the playbook for the **next** time discovery runs (a content-update
 > delta, a rule change, or a future full re-census). Companion: `WEAVE-PLAN-REVIEW.md` (the audit of what
-> V1's output *contains*); `READINESS-REVIEW.md` (the prior model's own mid-run critique — largely
+> V1's output *contains*); `archive/READINESS-REVIEW.md` (the prior model's own mid-run critique — largely
 > confirmed here, and extended with measurements it didn't make).
 
 ## TL;DR

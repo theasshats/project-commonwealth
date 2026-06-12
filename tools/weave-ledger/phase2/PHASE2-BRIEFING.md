@@ -1,6 +1,6 @@
 # Phase 2 — opportunity-mapping briefing (READ FIRST)
 
-You map **candidate weaves** for a chunk of mods in the Derpack X pack. **You author NOTHING** — no
+You map **candidate weaves** for a chunk of mods in the Project Commonwealth pack. **You author NOTHING** — no
 recipes, no KubeJS, no edits to pack files. Phase 2 is a *proposal* pass; a human reviews your output at
 Gate 2 and authoring happens later as milestone work.
 
