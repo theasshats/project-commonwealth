@@ -10,8 +10,7 @@
 > **NEXT MOVES:** (1) Phase-3 authoring sessions work #333–#341 via `../PHASE3-AUTHORING-PROMPT.md`
 > (plan-first, one issue per exchange, maintainer approval gate). (2) v0.9.0/v0.11.0 clusters file
 > from `triage/FILING-PLAN.md` on maintainer GO. (3) Next discovery is DELTA-MODE only, on the next
-> content update, per `PASS-PLAN-V2.md` §3. (4) Dossier refresh plan: see the maintainer thread —
-> dossiers are weave-program jurisdiction as of 2026-06-12.
+> content update, per `PASS-PLAN-V2.md` §3. (4) Dossiers refreshed + pruned 2026-06-12 (see Standing rules) — regen is now routine per content update.
 
 ## History (full story in `archive/` + `WEAVE-PLAN-REVIEW.md`; raw outputs in git history at `7cbf8a8^`)
 
@@ -29,8 +28,11 @@
 - Branch `weaving-plan`: the program's home — slate pipeline, evidence, playbooks. **Proposal/record
   only: pack authoring happens on version branches** (Phase 3 uses `v0.8.0`). No PRs from here;
   maintainer owns merges.
-- **Do NOT run `scripts/build-dossiers.py`** until the dossier-refresh plan is ratified (the old
-  #131 drift caution; the digest is clean post-#312, but the regen needs its audit first).
+- **Dossiers are weave-program jurisdiction** (maintainer, 2026-06-12). `scripts/build-dossiers.py`
+  is safe again (the #131 caution died with #312's clean digest): default mode preserves curated
+  heads and now PRUNES dossiers of removed mods. **Run it after every content update**, once
+  ground-truth.yml has landed the digest changes; review the git diff; hand-fix any curated-head
+  claims the update invalidates.
 - The frozen records (`CANDIDATES.tsv`, `triage/decisions.tsv`, `batch-*.md`, `sweep/*.findings.md`)
   are never edited — all change flows through `triage/ratification.tsv`.
 - Any discovery/triage/sweep fan-out is gated on maintainer GO + usage budget.

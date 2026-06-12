@@ -183,8 +183,10 @@ hand-copied by agents (the #305 reorder instantly staled 220 hand-written labels
 
 ### When to re-run (the actual reuse case)
 
-- **Content update (mods added/removed):** do **not** re-census the world. Run Phase A over the **delta
-  only**: new mods' chunks plus their likeliest partners (connectivity-graph adjacency (tools/connectivity, renamed from recipe-graph by #129) + methods-palette
+- **Content update (mods added/removed):** FIRST refresh ground truth — ground-truth.yml lands the
+  digest, then `python3 scripts/build-dossiers.py` (head-preserving regen + stale-dossier prune; review
+  the diff, hand-fix invalidated curated heads). Then do **not** re-census the world. Run Phase A over
+  the **delta only**: new mods' chunks plus their likeliest partners (connectivity-graph adjacency (tools/connectivity, renamed from recipe-graph by #129) + methods-palette
   owners), 3–4 passes, then Phases B–D on the delta. Removed mods: drop their rows (the cut-mod exclusion
   already does this).
 - **Rule/registry change (new motif, a retirement):** bump the **era**, re-ballot affected clusters
