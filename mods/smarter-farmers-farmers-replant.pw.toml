@@ -1,6 +1,8 @@
 name = "Smarter Farmers (farmers replant)"
 filename = "smarterfarmers-1.21-2.2.4-neoforge.jar"
-side = "server"
+# both, not server: narrowed without reason in PR #88; server-sided mods never
+# install on clients, so farmers didn't replant in single-player (#312 audit).
+side = "both"
 
 [download]
 url = "https://cdn.modrinth.com/data/Bh6ZOMvp/versions/odppGdXf/smarterfarmers-1.21-2.2.4-neoforge.jar"
