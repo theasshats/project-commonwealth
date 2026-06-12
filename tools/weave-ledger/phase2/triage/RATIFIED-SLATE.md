@@ -4,8 +4,8 @@
 
 ## Dashboard
 
-- **Ratified KEEP weaves: 317** (was 423: -29 dropped, -15 folded into the deco-crush plumbing batch, +1 reinstated, -33 on mods removed from the pack)
-- Mods removed from the pack (v0.7.0 thunderdome — rows now REMOVED): brazil_legends (3), createmetalwork (3), createnuclear (4), create_ultimate_factory (1), farm_and_charm (5), meadow (5), northstar (5), travelersbackpack (2), vinery (4), create_compressed (2)
+- **Ratified KEEP weaves: 314** (was 423: -29 dropped, -15 folded into the deco-crush plumbing batch, +1 reinstated, -36 on mods removed from the pack)
+- Mods removed from the pack (v0.7.0 thunderdome — rows now REMOVED): brazil_legends (3), createmetalwork (3), createnuclear (4), create_ultimate_factory (1), farm_and_charm (5), meadow (5), northstar (5), travelersbackpack (2), vinery (4), create_compressed (2), bakery (3)
 - **Closed as DONE (shipped/native — zero authoring): 48 rows**, 32 mods (V2-S sweep verification against shipped kubejs)
 - Plumbing batch (M-04, authored once at v0.7.0): 15 crush patterns across 15 mods
 - Mods reclassified LEAVE/support-role: zombiemoon, trashcans, mcwroofs, mcwstairs, mcwwindows
@@ -13,15 +13,15 @@
 ## Ratified KEEPs by milestone (post-#305 map; M-28 colony weaves ride v0.11.0)
 
 - v0.7.0: 0
-- v0.9.0: 103
-- v0.11.0: 104
+- v0.9.0: 101
+- v0.11.0: 103
 - v0.13.0: 110
 
 ## Derived weave-anchor distribution (F3: targets of ratified KEEPs; support roles and plumbing grant nothing; home systems not double-counted)
 
 - 1 pillar(s): 34 mods
 - 2 pillar(s): 61 mods
-- 3 pillar(s): 32 mods
+- 3 pillar(s): 31 mods
 - 4 pillar(s): 4 mods
 
 Mods at ≤1 derived weave-pillar (34): aileron, appleseed, astikorcartsredux, bettermineshafts, byzantine, charta, cmpackagecouriers, copperagebackport, create_better_villagers, create_connected, domum_ornamentum, endermoon, enhancedcelestials, formationsnether, friendsandfoes, gnkinetics, gravestone, irons_spellbooks, kobolds, mcwdoors, mcwfences, minecolonies_compatibility, minecolonies_tweaks, mutantszombies, numismatics, railways, securitycraft, simplehats, sliceanddice, tacz, tfmg, trading_floor, underground_village, vc_gliders
@@ -139,6 +139,8 @@ _Read with care: a mod whose home system is its only pillar (hub mods, F2) or wh
   35 of 76 create-bucket KEEP mods already appear in shipped spine kubejs (createaddition 17 files, tfmg 14, aeronautics 9, galosphere 7, occultism 7, ...): every re-homed C-* cluster carries a verify-not-already-shipped precondition.
 - **REMOVE-MOD** create_compressed — 2 rows -> REMOVED  
   v0.7.0 thunderdome cut MISSED by the first reconciliation (slug create-compressed was mis-mapped to ns "createcompressed"; the real ns is create_compressed) — caught by sweep S-12; its 2 KEEPs (M-28, M-31) drop with it
+- **REMOVE-MOD** bakery — 3 rows -> REMOVED  
+  cut from the pack post-v0.7.0 (commit 6bcba06; no manifest/digest on main) — missed by reconciliation, caught by sweep S-16; its 3 KEEPs (M-12/M-28/M-26) drop with it
 - **RULING** * — coin loot-seeds are faucets  
   TRIPLE-CONFIRMED by independent sweep chunks (S-07 ctov, S-09 betterdungeons, S-10 t_and_t): chest-seeded Numismatics coins are currency entering from outside the player economy — the class M-14/M-21 were cut for. Structure chests seed RAW regional mint-metal + trade goods, never minted coins. Applied as rescopes on the found rows; the E-1 coin-loot-seed sub-batch rewrites accordingly at filing. FLAGGED for maintainer sign-off (ruling-level interpretation of #163/#240).
 - **FOLD** tools/weave-ledger/phase2/sweep/FOLD-QUEUE.tsv — {'add-keep': 8, 'balance-note': 15, 'custom (routed to CUSTOM-MOD-CANDIDATES)': 2, 'drop': 19, 'leave-to-done': 2, 'mark-done': 41, 'record-done': 5, 'skipped': 2, 'rescope': 41}  

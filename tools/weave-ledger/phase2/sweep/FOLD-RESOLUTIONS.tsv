@@ -18,3 +18,6 @@ railways	add-keep	M-26	milestone:v0.13.0	the rail arm burns fuel (fuel_tank/coal
 sereneseasons	add-keep	M-31	milestone:v0.13.0	tropical/temperate asymmetry makes winter food a logistics-required bulk import (pairs with v0.9.0 season tuning)
 create_compressed	drop	M-28	skip	superseded by the remove-mod ledger row (S-12 caught the missed v0.7.0 removal)
 create_compressed	drop	M-31	skip	superseded by the remove-mod ledger row
+bakery	drop	M-12	skip	superseded by the remove-mod ledger row (S-16 caught the missed cut)
+bakery	drop	M-28	skip	superseded by the remove-mod ledger row
+bakery	drop	M-26	skip	superseded by the remove-mod ledger row
