@@ -52,7 +52,7 @@ in the `loop:` field; if you can't name one, that IS the verdict.
 - **No forced weaves on cosmetic/organic identity** — LEAVE is a valid, respected verdict.
 - Blanket deco-crush (M-04) is plumbing: grants nothing, lives in one batch — don't re-propose it per mod.
 
-## What to produce, per mod (five channels)
+## What to produce, per mod (six channels)
 
 For EVERY ratified KEEP row of the mod: **confirm**, **challenge**, or **shipped**. Then add **new**
 findings only where you'd stake your judgment on them. Use **leave** when the mod has no coherent
@@ -72,6 +72,12 @@ loop surface (one line; don't force).
   logistics arm?) and Create→magic flow.** Quality over count — an empty new-channel is acceptable;
   a padded one is not.
 - `leave` — zero-surface (libraries, admin tools, pure cosmetics).
+- `custom` — the weave is **loop-positive but its mechanism doesn't exist** and KubeJS/datapack can't
+  reach it (code-side behavior, missing system). Do NOT drop these: `kind: custom | act: CUSTOM`,
+  state the wanted feature in one line — the pack builds purpose-built mods (`docs/CUSTOM-MODS.md`;
+  `pcmc-arcana` is the magic-side landing zone) and these route to `sweep/CUSTOM-MOD-CANDIDATES.md`
+  for maintainer cherry-pick. (The standing M-25/M-36/M-38/pricing build-tasks keep their issues —
+  this channel is for *new* mechanism-absent finds.)
 
 ## Output format (STRICT — one line per finding; machine-parsed later)
 
