@@ -37,6 +37,8 @@ expedition over. Ore generation only affects newly generated chunks.
 - Diet - AppleSeed Edition updates to 2.1.0 and installs from Modrinth again. The dedicated-server
   startup fix the pack had carried as a custom build is in the official release, which also adds a
   filter to the automatic food-group calculator.
+- Villager farmers replant crops in single-player worlds again. Smarter Farmers was marked
+  server-only, so single-player installs never received it; it now installs everywhere.
 
 ### Interface
 
