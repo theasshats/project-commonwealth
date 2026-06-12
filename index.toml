@@ -2684,11 +2684,6 @@ hash = "627a8401f992e449475d2403d2f02091ade5da0687d5a8dae7b0e9f8986053bc"
 metafile = true
 
 [[files]]
-file = "mods/veil.pw.toml"
-hash = "7fc272526017c9a6df2bb70ba8b60e4061fcbdb21572343963056cc7396baae3"
-metafile = true
-
-[[files]]
 file = "mods/when-dungeons-arise-seven-seas.pw.toml"
 hash = "8630faa4460132aee0b31448f98acc89e67c28b0439fd7f58a63f6d6584ae334"
 metafile = true
