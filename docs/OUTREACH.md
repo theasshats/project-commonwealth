@@ -39,8 +39,9 @@ land.** Going loud before then spends first-impression capital you can't get bac
    `pcmc`). The identity is locked, so every downstream asset — logo, store copy, trailer — can proceed.
    (The mechanical repo-wide rename is a separate task, #78, not done here.)
 2. **Resolve the discoverability problem** (§3). The pack is invisible to the normal modded-MC discovery
-   funnel (Modrinth/CurseForge browse), and its own mod-sourcing makes a Modrinth listing infeasible.
-   This is the single biggest structural limiter on reach. Decide the path deliberately.
+   funnel (Modrinth/CurseForge browse). The CF-only license audit (§3) now clears the way — both a
+   CurseForge and a Modrinth listing are viable — so this is the single biggest structural limiter on
+   reach left undecided. Decide the path deliberately.
 3. **Stand up the owned channels** — a real Discord and the existing site as a landing page — because
    if the storefront front-door is closed (it largely is, §3), discovery has to run through channels you
    control plus word-of-mouth.
@@ -154,36 +155,60 @@ packwiz installer zip from GitHub Releases, surfaced via the self-hosted site. S
 to the single biggest discovery funnel in the ecosystem.
 
 That was the right call for a private friend group (`docs/DESIGN.md` §4, #73 dropped the `.mrpack`). But
-"public release, advertised on the open internet" changes the inputs. The hard part: **the pack's own
-mod-sourcing makes the obvious fix infeasible.**
+"public release, advertised on the open internet" changes the inputs. The hard part used to be **the
+pack's own mod-sourcing** — but v0.7.1's re-sourcing and the license audit below have largely cleared it.
 
-**The technical reality (measured):**
+**The technical reality (measured — v0.7.1):**
 
-- 356 mod manifests: **324 Modrinth-sourced, 30 CurseForge-sourced.**
-- A **Modrinth modpack** (`.mrpack`) index may only reference whitelisted CDNs — it **cannot** include
-  CurseForge-only jars. And the CF-sourced set includes the **load-bearing, can't-drop** ones:
-  `create-aeronautics-compatability` (required per `CLAUDE.md`) and the **entire MineColonies family**
-  (a core production route). So a clean Modrinth listing is effectively **blocked** — not by effort, by
-  format.
-- A **CurseForge modpack** *can* reference CF mods, and most Modrinth mods that permit third-party
-  distribution — so CF is the **more feasible storefront**, but it needs a distribution-permission audit
-  (some Modrinth authors disallow CF redistribution) and CF's modpack tooling is clunkier.
+- 345 mod manifests: **331 Modrinth-sourced, 12 CurseForge-sourced** (+2 self-hosted custom mods —
+  `ars-n-spells`, `gtmogs`). **This changed in v0.7.1:** 20 mods were **re-sourced from CurseForge to
+  Modrinth** — including the formerly-blocking `create-aeronautics-compatability` and the Sable/Create
+  compat addons — dropping the CF-only set from 30 to **12**. So aeronautics-compat is **no longer a CF
+  blocker**, and the only load-bearing CF-only mods left are the **MineColonies family**.
+- A **Modrinth modpack** (`.mrpack`) index may only reference whitelisted CDNs — it **cannot** point at a
+  CurseForge download. So each of the 12 CF-only jars would have to live on a whitelisted host (i.e. be
+  uploaded to Modrinth). Whether that's *allowed* is a per-mod license question — audited below.
+- A **CurseForge modpack** *can* reference CF mods directly (the 12 are already on CF) plus Modrinth mods
+  that permit third-party distribution — so CF remains the **more straightforward storefront**, needing
+  the *reverse* audit (which Modrinth authors forbid CF redistribution) rather than any rehosting.
+
+**CF-only license audit — can the 12 be rehosted?** (declared jar license; the gating question for a
+Modrinth listing.) Verified against v0.7.1's manifests — these are exactly its 12 CF-sourced mods:
+
+| Mod(s) | License | Rehost / redistribute? |
+|---|---|---|
+| minecolonies, blockui, structurize, domum-ornamentum, multi-piston | GPL-3.0 | **Yes** — mirror unmodified + link source (ldtteam repos are public) |
+| minecolonies-compatibility, minecolonies-tweaks | GPL-3.0 | **Yes**, but verify their source repos are public first (GPL needs source availability) |
+| configured | LGPL-3.0 | **Yes** |
+| veil-lib | LGPL-3.0 | **Yes** (same terms as the gtmogs fork) |
+| dynamic-trees-ars-nouveau | MIT | **Yes**, unconditionally |
+| stylecolonies | ARR | **No** — needs author permission |
+| towntalk | ARR | **No** — needs author permission |
+
+**What the audit changes:** **10 of the 12** CF-only mods are GPL/LGPL/MIT and **legally rehostable** (so
+they could be uploaded to a whitelisted CDN for a `.mrpack` — shipping unmodified + linking source where
+GPL requires). The only two holdouts are **`stylecolonies` and `towntalk`** (All-Rights-Reserved) — and
+both are **optional MineColonies cosmetic/chat addons, not load-bearing**, so they can be dropped or have
+permission asked. The old "can't drop Aeronautics-compat or MineColonies" blocker is **gone**:
+aeronautics-compat is now Modrinth-sourced, and the MineColonies family is GPL (rehostable, not
+drop-required).
 
 **So the options are:**
 
 | Path | What it takes | Verdict |
 |---|---|---|
-| **A. Modrinth listing** | Re-source or drop CF-only mods | **Infeasible** — can't drop Aeronautics-compat or MineColonies |
-| **B. CurseForge listing** | Build a CF modpack export; audit that every mod permits CF distribution | **The viable storefront** — but real work + an audit, and reverses part of #73 |
-| **C. Stay installer-native** | Accept no storefront browse; lean entirely on owned channels + creators + word-of-mouth (§4) | **The default if B is too costly** — makes §4 do all the work |
+| **A. Modrinth listing** | Rehost the 10 redistributable CF-only jars to Modrinth (legal under GPL/LGPL/MIT); drop or get permission for the 2 ARR addons (`stylecolonies`, `towntalk`) | **No longer license-blocked** — now a *work* question (rehosting + 2 droppable addons), not a format dead-end |
+| **B. CurseForge listing** | Build a CF modpack export; reverse-audit that the 331 Modrinth mods permit CF distribution | **The most straightforward storefront** — the 12 CF-only mods are already on CF; open work is the Modrinth→CF audit + clunkier CF tooling |
+| **C. Stay installer-native** | Accept no storefront browse; lean entirely on owned channels + creators + word-of-mouth (§4) | **The fallback** — still valid, but A is no longer ruled out, so this is a choice now, not a forced hand |
 
-**Recommendation:** treat this as an explicit decision, not a default. Scope **B** with a short spike —
-"how many of the 324 Modrinth mods forbid CF redistribution, and how painful is the CF export/upload?"
-If the answer is "few and not bad," a CurseForge listing is the highest-leverage reach unlock in this
-whole doc and worth reversing the relevant part of #73 for (the #73 reasoning was *GitHub's* 2 GiB asset
-cap + "nobody used it" — neither applies to a CF storefront listing). If the answer is "lots of
-holdouts," commit to **C** and pour the saved effort into §4. **Don't drift into C by inaction** — that's
-how the pack ends up public-but-undiscoverable.
+**Recommendation:** the CF-only audit (above) is now **done** — that removes the biggest unknown and
+**reopens option A**. Both storefronts are genuinely on the table; pick deliberately. **B (CurseForge)**
+is still the lowest-effort reach unlock — the CF mods are already hosted, so it only needs the reverse
+redistribution audit of the 331 Modrinth mods. **A (Modrinth)** now costs rehosting 10 GPL/LGPL/MIT jars
+and shedding two optional ARR addons, but Modrinth is the larger, cleaner discovery funnel, so the extra
+work may pay back. Either beats drifting into **C by inaction** — that's how the pack ends up
+public-but-undiscoverable. (#73's `.mrpack` drop was about GitHub's 2 GiB asset cap + "nobody used it" —
+neither applies to a storefront listing.)
 
 > Whichever path: a thin landing on the site with one-click-ish install instructions and a prominent
 > "what is this" remains the canonical home, because it's the one channel that works regardless of
@@ -354,8 +379,10 @@ When the pack is actually ready (0.15 done, perf frozen, named):
 - [x] **Name decided — Project Commonwealth** (motto *Magna Communitas*, handle `pcmc`). Identity work (logo, store copy, trailer) is unblocked. (Mechanical repo-wide rename: separate #78 task, not done here.)
 - [ ] **Start the screenshot/clip habit** — capture during every playtest. Zero dependencies, feeds
       everything.
-- [ ] **Scope the distribution decision** (§3) — a short spike on the CurseForge-listing feasibility
-      (how many Modrinth mods forbid CF redistribution?), then pick A/B/C deliberately.
+- [x] **CF-only license audit done** (§3) — the 12 CF-only mods are 10 rehostable (GPL/LGPL/MIT) + 2 ARR
+      addons (`stylecolonies`, `towntalk`, droppable). Reopened option A.
+- [ ] **Scope the remaining distribution decision** (§3) — for option B, the reverse spike (how many of
+      the 331 Modrinth mods forbid CF redistribution?); for option A, the rehost effort. Then pick A/B/C.
 - [ ] **Make the Discord a real front door** — minimal channels, set up to grow.
 
 **Mid (0.9 Economy & airships — the best content beat):**
