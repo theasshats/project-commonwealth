@@ -13,9 +13,10 @@
 ## Ratified KEEPs by milestone (post-#305 map; M-28 colony weaves ride v0.11.0)
 
 - v0.7.0: 0
-- v0.9.0: 93
+- v0.9.0: 40
 - v0.11.0: 99
 - v0.13.0: 95
+- v0.8.0: 53  ⚠ unexpected
 
 ## Derived weave-anchor distribution (F3: targets of ratified KEEPs; support roles and plumbing grant nothing; home systems not double-counted)
 
@@ -130,8 +131,8 @@ _Read with care: a mod whose home system is its only pillar (hub mods, F2) or wh
   v0.7.0 thunderdome cut (4 KEEPs — ideas seed create_winery, see note)
 - **NOTE** create_winery — (new in v0.7.0)  
   Create-native winery replacing vinery: the dropped vinery ideas (M-35 maturation, M-30 regional grapes, M-26 consumption) are prime transfer candidates, and its press edge is likely NATIVE (the mod is Create-anchored by construction). Primary target of the delta census once its dossier exists.
-- **REHOME** v0.7.0->v0.9.0 — 85 KEEPs  
-  v0.7.0 shipped without the weave program; per the cadence (even = no new features; #129 the weave enabler landed in v0.8.0) the create-spine integration weaves file under the next odd, v0.9.0. Maintainer may cherry-pick light clusters (C-1 plumbing, C-6 byproducts) into v0.8.0 under its balance charter.
+- **REHOME** v0.7.0->v0.8.0 — 85 KEEPs  
+  v0.7.0 shipped without the weave program; maintainer ruled 2026-06-12 the create-spine integration rides v0.8.0 (balance/integration of what 0.7 shipped) — FILED as the pilot cluster issues #334-#341.
 - **NOTE** * — drop-only targeting (#129)  
   the mob-drop lens lists 220 drop-only items; mod-level KEEP coverage is complete (only the LEAVE'd lava-chicken disc uncovered) but only 6/220 are named at item level — the big piles (tide 88 fish, grimoireofgaia 50, born_in_chaos_v1 24, minecolonies 12, deeperdarker 9) become scope/verify inputs on the S-3/M-3/M-4 clusters and seeds for the delta census. NOT a weave-all-220 mandate: many are self-useful gear/food/discs (the Goodhart trap).
 - **NOTE** * — kubejs overlap  
@@ -146,4 +147,6 @@ _Read with care: a mod whose home system is its only pillar (hub mods, F2) or wh
   V2-S sweep fold at the 12/22 waypoint (pilot + waves 2-3, 369 findings -> 135 actions): mark-done/drop/rescope/balance-note per chunk evidence; AMBIG/NONE + add-keep milestones resolved in sweep/FOLD-RESOLUTIONS.tsv; the two act:CUSTOM rows route to sweep/CUSTOM-MOD-CANDIDATES.md.
 - **RULING** * — coin loot-seeds — SIGNED  
   maintainer signed 2026-06-12 ("raw metal and trade goods in chests seems reasonable"); implementation checklist filed as the loot-table actions issue #328. The [G2] entry in DECISIONS.md is resolved.
+- **RULING** * — pilot filing — create clusters + pack fixes  
+  maintainer-directed 2026-06-12: the create-spine clusters C-1..C-8 filed under v0.8.0 (milestone 12) as the PILOT of the cluster-issue format — #334 plumbing, #335 M-12 pulls, #336 M-05 gates, #337 M-15 boss keys (blocked on #333 fixes), #338 M-06 keystones, #339 M-03/M-32 circularity, #340 light bridges, #341 stragglers; the sweep pack-fix bundle filed as #333.
 

@@ -1,4 +1,4 @@
-# Pack fixes found by the V2-S sweep — file as ONE issue (v0.8.0 Stabilization)
+# Pack fixes found by the V2-S sweep — FILED as #333 (v0.8.0 Stabilization)
 
 > These are **shipped-pack bugs**, not weaves — found in passing while verifying the weave slate
 > against shipped kubejs/data. They belong to the pack's own milestones (v0.8.0 stabilization
