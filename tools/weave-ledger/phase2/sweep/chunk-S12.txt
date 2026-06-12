@@ -1,0 +1,17 @@
+# Sweep chunk S-12 (full-coverage series; seed 7, size 16)
+ding
+trashcans
+create_compressed
+fishingreal
+cristellib
+naturalist
+puzzleslib
+bcc
+necronomicon
+createtreadmill
+creativecore
+tidal-towns-1.3.4
+betterpingdisplay
+resourcefulconfig
+cmparallelpipes
+more_slabs_stairs_and_walls

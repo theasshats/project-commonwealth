@@ -1,0 +1,18 @@
+# Sweep chunk S-01 (full-coverage series; seed 7, size 16)
+create_sa
+kobolds
+death-count-1.0
+hpm
+almostunified
+collective
+undergroundworlds
+companion
+nochatreports
+tacz
+entity_texture_features
+bettercombat
+betterstrongholds
+dungeons-and-taverns-v4.4.4
+doubledoors
+expandeddelight
+worldedit (digest-only: tools/mod-data/by-mod/worldedit-mod-7.3.8.txt)

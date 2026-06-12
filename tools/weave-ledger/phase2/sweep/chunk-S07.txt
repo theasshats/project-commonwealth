@@ -1,0 +1,17 @@
+# Sweep chunk S-07 (full-coverage series; seed 7, size 16)
+ritchiesprojectilelib
+packetfixer
+createmechanicalcompanion
+endrem
+rechiseledcreate
+patchouli
+blood_n_particles_datapack
+ctov
+controlling
+immersivearmorhud
+cookingforblockheads
+astikorcartsredux
+farmersdelight
+spyglass_improvements
+just_blahaj
+zeta

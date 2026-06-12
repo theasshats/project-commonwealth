@@ -1,0 +1,17 @@
+# Sweep chunk S-17 (full-coverage series; seed 7, size 16)
+sable_sa_compat
+bookshelf
+dynamictrees
+sparsestructures
+edf-remastered-5.0-beta4
+glitchcore
+l2library
+openpartiesandclaims
+pingwheel
+illagerinvasion
+mushroomquest
+ribbits
+cubes_without_borders
+timm
+betteroceanmonuments
+chefsdelight

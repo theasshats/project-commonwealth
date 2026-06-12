@@ -1,0 +1,10 @@
+# Sweep chunk S-20 (full-coverage series; seed 7, size 16)
+trek-b0.6.1.1
+letmefeedyou
+chat_heads
+spark
+bits_n_bobs
+betteranimationscollection
+minecolonies_tweaks
+create_hypertube
+incontrol

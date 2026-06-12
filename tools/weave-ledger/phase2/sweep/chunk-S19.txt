@@ -1,0 +1,17 @@
+# Sweep chunk S-19 (full-coverage series; seed 7, size 16)
+domum_ornamentum
+copycats
+terralith
+bettermineshafts
+multipiston
+stylecolonies
+cataclysm
+dynamic_fps
+bigsignwriter
+mousetweaks
+naturescompass
+bundle_recipe
+balm
+detect-afk-1.2.2
+s_a_b
+betterendisland

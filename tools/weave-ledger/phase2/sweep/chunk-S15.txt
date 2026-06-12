@@ -1,0 +1,17 @@
+# Sweep chunk S-15 (full-coverage series; seed 7, size 16)
+geckolib
+createblockchain
+kambrik
+ponderjs
+create_ltab-3.9.2
+moogs_structures
+sky_whale_ship
+yungsapi
+formationsnether
+fogoverrides
+mcwdoors
+underground_village
+jamlib
+appleseed
+quark
+dynamictreesplus

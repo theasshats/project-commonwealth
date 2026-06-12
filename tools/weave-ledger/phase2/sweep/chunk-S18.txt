@@ -1,0 +1,17 @@
+# Sweep chunk S-18 (full-coverage series; seed 7, size 16)
+lithium
+createoreexcavation
+clumps
+createfurnitureseats
+handcrafted
+configuration
+spawn
+create_connected
+trashslot
+fusion
+create_better_villagers
+better_lib
+do_a_barrel_roll
+betterbiomereblend
+miningspeedtooltips
+bettermodsbutton

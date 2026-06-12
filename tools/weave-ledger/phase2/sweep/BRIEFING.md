@@ -60,7 +60,12 @@ loop surface (one line; don't force).
 
 - `confirm` — the weave survives your scrutiny against shipped reality. One line; cite evidence.
 - `challenge` — it should be dropped/changed: tone, balance, motif misfit, contradicted by shipped
-  recipes, loop-inert. Say exactly why; this channel is your highest value.
+  recipes, loop-inert. Say exactly why; this channel is your highest value. **If the weave is right
+  but its delivery is wrong/unauthorable, use `act: RESCOPE` and state the corrected delivery in the
+  note** (pilot lesson — don't overload challenge+KEEP).
+- **Balance tensions are not verdicts:** if a row is sound but supply/inflation/rates need play data
+  (e.g. two demands on one vein), keep your verdict and append `[BALANCE-PENDING: <one clause>]` to
+  the note — these route to playtest, not the ledger.
 - `shipped` — the weave (or a real equivalent) ALREADY exists in `kubejs/` — cite the file. (act: DONE)
 - `new` — a weave the old run missed: deeper, multi-step, mechanism-grounded. **Where your mods allow,
   probe the two starved seams: pressure→aeronautics demand (does cold/season/danger ever pull on the

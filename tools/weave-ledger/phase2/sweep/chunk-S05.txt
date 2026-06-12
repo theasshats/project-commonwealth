@@ -1,0 +1,17 @@
+# Sweep chunk S-05 (full-coverage series; seed 7, size 16)
+moonlight
+supplementaries
+prickle
+cloth_config
+rechiseled
+yet_another_config_lib_v3
+create_enchantment_industry
+kotlinforforge-5.11.0-all
+corgilib
+create_train_parts
+lithostitched__tectonic-3.0
+entity_model_features
+invtweaksemuforipn
+irons_lib
+fxntstorage
+jeed

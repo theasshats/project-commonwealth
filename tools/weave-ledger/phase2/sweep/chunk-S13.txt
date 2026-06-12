@@ -1,0 +1,17 @@
+# Sweep chunk S-13 (full-coverage series; seed 7, size 16)
+ecologics
+valarian_conquest
+gtmogs
+buildguide
+createfisheryindustry
+dtterralith
+afk-sleep-1.3.2
+createaddoncompatibility
+particlerain
+createshufflefilter
+kubejs
+create_confectionery
+resourcefullib
+jeresources
+freefbible
+zombiemoon

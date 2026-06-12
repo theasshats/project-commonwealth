@@ -1,0 +1,17 @@
+# Sweep chunk S-11 (full-coverage series; seed 7, size 16)
+towntalk
+fzzy_config
+rottencreatures
+aeronautics_dyeable_components
+modonomicon
+moreoverlays
+jade
+byzantine
+beachparty
+polymorph
+companions
+createpickywheels
+createfood
+curios
+steves_lava_chicken_music_disc
+oceansdelight

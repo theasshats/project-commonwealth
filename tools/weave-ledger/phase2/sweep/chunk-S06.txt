@@ -1,0 +1,17 @@
+# Sweep chunk S-06 (full-coverage series; seed 7, size 16)
+minecolonies_compatibility
+appleskin
+kubejs_create
+createimmersivetacz
+immersive_armors
+mru
+owo
+justenoughbreeding
+ichunutil
+mcwstairs
+accessories_compat_layer
+crash_assistant
+opacpvp
+mffs
+ctl
+libipn

@@ -1,0 +1,17 @@
+# Sweep chunk S-10 (full-coverage series; seed 7, size 16)
+revelationary
+sablecollisiondamage
+followersteleporttoo
+mysterious_mountain_lib
+ars_n_spells
+railways
+snowyspirit
+create_mobile_packages
+foodeffecttooltips
+createlowheated
+exposure
+playeranimator
+xaeroworldmap
+accessories
+t_and_t
+create

@@ -1,0 +1,17 @@
+# Sweep chunk S-02 (full-coverage series; seed 7, size 16)
+aeronauticscompat
+create_tweaked_controllers
+modulargolems
+occultengineering
+biolith
+cmpackagepipebomb
+supermartijn642corelib
+modernfix
+mcwroofs
+ohthetreesyoullgrow
+upgrade_aquatic
+craftingtweaks
+blueprint
+notenoughanimations
+create_pattern_schematics
+lootr

@@ -1,0 +1,17 @@
+# Sweep chunk S-08 (full-coverage series; seed 7, size 16)
+txnilib
+imfast
+gamediscs
+pantographsandwires
+extradelight
+durabilitytooltip
+endermoon
+direct_chute
+alternate_current
+immersive_paintings
+create_integrated_farming
+shulkerboxtooltip
+simplehats
+architectury
+touhou_little_maid
+inventoryprofilesnext

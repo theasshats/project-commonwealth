@@ -1,0 +1,17 @@
+# Sweep chunk S-04 (full-coverage series; seed 7, size 16)
+tipsmod
+xaerominimap
+jei
+create_cheese
+better_climbing
+create_new_age
+everycomp
+platform
+moreculling
+create_dragons_plus
+gnkinetics
+citadel
+sounds
+staaaaaaaaaaaack
+drones
+create_factory
