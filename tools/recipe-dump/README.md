@@ -18,8 +18,11 @@ the full JSON for the Create-spine namespaces.
 2. Boot the pack (a world or a dedicated server) so recipes load.
 3. Run `/reload` in-game. It writes `<instance>/kubejs/pcmc-recipes.json` and logs each recipe
    to `logs/latest.log` prefixed `PCMC_RECIPE` (fallback).
-4. Send back `pcmc-recipes.json` (or paste the specific recipes needed). Commit it here as
-   `tools/recipe-dump/dump/pcmc-recipes.json` if you want it tracked.
+4. Send back `pcmc-recipes.json` (or paste the specific recipes needed). **Never commit a dump**
+   (`pcmc-recipes.*` and `dump/` are gitignored): it's verbatim mod recipe JSON — the mod
+   authors' content, licensing-sensitive in a public repo — and a point-in-time snapshot that
+   goes stale on every mod update with no CI able to refresh it. Keep dumps local, note their
+   provenance (pack version + commit + date), and discard them when the authoring work lands.
 5. **Delete** the copied `zz_dump_recipes.js` — it re-dumps on every reload.
 
 Edit the `NAMESPACES` list at the top of the script to widen/narrow the dump.
@@ -45,12 +48,21 @@ JEI has **no** native "export all recipes to JSON." For a one-off, open the reci
 the grid directly, then paste the layout. For bulk, use Method A or B instead — don't hand-transcribe
 dozens of recipes.
 
-## What the agent actually needs first
+## When to ask for a dump (agent guidance)
 
-The staged cross-tier re-recipes in `docs/CREATE-SPINE-IMPL.md` §9 — priority items:
-`tfmg:electric_motor`, `tfmg:engine_controller`, `create_new_age:reactor_casing`,
-`create_new_age:advanced_energiser`, `createnuclear:reactor_core`, and confirmation that
-`create_new_age:reactor_controller` exists. With those exact recipes, the lineage work stops being blind.
+The digest answers *reading* questions (what touches what — connectivity, curation). Ask the
+maintainer for a dump when a task needs *writing* fidelity the digest deliberately lacks:
+
+- **Re-authoring a `sequenced_assembly` / `mechanical_crafting` / shaped recipe** — you need the real
+  grid, keys, and result counts, and guessing them ships broken recipes.
+- **Debugging "recipe missing at runtime"** — the dump shows what's *actually registered* after
+  conditionals/compat resolve (with the KubeJS blind spot below).
+- **Verifying a digest-vs-game discrepancy** — the dump is the runtime truth to settle it.
+
+Ask early (the maintainer needs a booted instance — it's a human round-trip, not a tool call), name
+the namespaces you need so the `NAMESPACES` filter stays tight, and record provenance (pack version +
+commit + date) on any dump you work from. *(The original v0.7.0 spine priority list that used to live
+here shipped; this section is now the standing rule it taught.)*
 
 ## Known blind spot — KubeJS-added recipes
 

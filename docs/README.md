@@ -15,7 +15,7 @@ off those two.
 | [`SYSTEMS.md`](SYSTEMS.md) | **The canonical structural model** — the systems as one causal loop (scarcity → pressure → production → economy; *Eco*-inspired). How the parts interlock: production (Create/magic), the economy (trade + logistics/aeronautics), pressure (survival), the recipe/gating spine, the ecological cost. The old flat "five systems" framing is retired here. |
 | [`CURATION.md`](CURATION.md) | **The curation rubric** — the charter every keep/cut pass scores mods against (the 8 gates). |
 | [`RECIPES.md`](RECIPES.md) | The "Made through Create" recipe convention **and the live triage ledger** — the most-referenced doc; the source of truth for recipe changes. |
-| [`CONNECTIVITY.md`](CONNECTIVITY.md) | The "one web, not many clusters" connectivity metric — turns the north-star web goal into a number you can re-check (`tools/recipe-graph/`). |
+| [`CONNECTIVITY.md`](CONNECTIVITY.md) | The "one web, not many clusters" connectivity metric — turns the north-star web goal into a number you can re-check (`tools/connectivity/`). |
 | [`ORE-GENERATION.md`](ORE-GENERATION.md) | The GTMOGS mix-vein ore-gen model (GTNH-style regional veins) and its config. |
 | [`GUN-PACKS.md`](GUN-PACKS.md) | The gun system — TaCZ wired into Create via two add-ons. |
 | [`CREATE-SPINE.md`](CREATE-SPINE.md) | **The ratified Create-spine design** — the tier ladder, the cost model + tier tokens (Part 2b-ii), boss gates, the aeronautics control thread, and the ratification record. |

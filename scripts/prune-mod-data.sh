@@ -5,7 +5,7 @@
 # WRITES a file per fetched jar — it never deletes the digest of a mod that was
 # removed from the pack, or of a superseded jar version. So every cut / version
 # bump leaves a stale by-mod/recipes/loot entry behind, and the connectivity
-# tooling (tools/recipe-graph/, which reads tools/mod-data/recipes/) ends up
+# tooling (tools/connectivity/, which reads tools/mod-data/recipes/) ends up
 # measuring phantom mods. This reconciles the digest to mods/*.pw.toml.
 #
 # It is deterministic and conservative: it keeps exactly the digest files whose
@@ -21,22 +21,37 @@
 #    base aeronautics) ride along automatically, no name allowlist needed.
 #  - PROTECT_RE is the fallback for anything hand-seeded that the automated pass
 #    can't reproduce AND that lacks a bundled-in header: a name matching it is
-#    ALWAYS kept even without a current manifest match. Widen it if such a mod
-#    is added.
+#    ALWAYS kept even without a current manifest match. It defaults to the
+#    never-matching regex `(?!)` — every formerly protected entry now carries a
+#    bundled-in header, so nothing needs it. Widen it (with a reason) if a
+#    hand-seeded digest is ever added. NOTE: the default must never be the empty
+#    string — `re.search('', name)` matches everything, which would protect every
+#    orphan and neuter the prune.
 #
-# Safe to re-run after any curation pass. Run from the repo root:
+# Safe to re-run after any curation pass. ground-truth.yml runs it (and the CHECK
+# guard) after every extract, so by-hand runs are only needed for local work.
+# Run from the repo root:
 #   scripts/prune-mod-data.sh            # prune
 #   DRY_RUN=1 scripts/prune-mod-data.sh  # report only, change nothing
+#   CHECK=1  scripts/prune-mod-data.sh   # guard mode: change nothing, exit 1 on
+#                                        # ANY drift (would-prune, stale INDEX
+#                                        # lines, or a manifest jar with no
+#                                        # digest). Same verdict logic as the
+#                                        # prune itself, so checker and fixer
+#                                        # cannot disagree.
 set -euo pipefail
 
 OUT="${1:-tools/mod-data}"
-PROTECT_RE="${PROTECT_RE:-aeronautic}"
+PROTECT_RE="${PROTECT_RE:-(?!)}"
 DRY_RUN="${DRY_RUN:-}"
+CHECK="${CHECK:-}"
 
-python3 - "$OUT" "$PROTECT_RE" "${DRY_RUN}" <<'PY'
+python3 - "$OUT" "$PROTECT_RE" "${DRY_RUN}" "${CHECK}" <<'PY'
 import sys, os, re, glob
 
-out, protect_re, dry = sys.argv[1], re.compile(sys.argv[2], re.I), bool(sys.argv[3])
+out, protect_re = sys.argv[1], re.compile(sys.argv[2], re.I)
+check = bool(sys.argv[4])
+dry = bool(sys.argv[3]) or check          # CHECK never mutates
 
 # Current jar basenames from the manifests (allow leading whitespace before key).
 keep = set()
@@ -103,9 +118,20 @@ if os.path.exists(readme) and not dry:
     txt = re.sub(r'over \d+ jars', f'over {n_bymod} jars', open(readme, encoding="utf-8").read())
     open(readme, "w", encoding="utf-8").write(txt)
 
+# 4) Manifest jars with no digest at all (fetch/extract failure — the other
+#    direction of drift; the prune can't fix it, but the guard must see it).
+missing = sorted(n for n in keep
+                 if not os.path.exists(os.path.join(out, "by-mod", n + ".txt")))
+
 print(f"current jars (manifests): {len(keep)}")
 print(f"protected (kept, no current manifest match): {sorted(protected_kept) or '—'}")
 print(f"per-mod files {'to prune' if dry else 'pruned'}: {len(pruned)}")
 print(f"INDEX-ores lines removed: {ores_removed} | INDEX-biome-modifiers lines removed: {bmod_removed}")
+print(f"manifest jars with NO digest: {missing or '—'}")
 print(f"by-mod files after: {n_bymod}")
+
+if check:
+    drift = bool(pruned or missing or ores_removed or bmod_removed)
+    print(f"CHECK verdict: {'DRIFT — digest does not reconcile with mods/*.pw.toml' if drift else 'clean — digest reconciles 1:1 with the manifests'}")
+    sys.exit(1 if drift else 0)
 PY

@@ -1,9 +1,14 @@
 name: Ground-truth digest
 
-# Fetches every mod jar (CI has the network the dev sandbox doesn't), extracts a
-# licensing-SAFE facts digest (IDs / tags / biome-modifiers only — no recipes,
-# loot, lang, or assets), and commits it under tools/mod-data/ so contributors
-# and Claude have offline ground truth without per-session jar uploads.
+# Fetches every mod jar (CI has the network the dev sandbox doesn't — client
+# side via the bootstrap, the rest via a hash-verified backfill so every
+# manifest jar is present exactly once), extracts a licensing-SAFE facts digest
+# (IDs / tags / biome-modifiers only — no recipes, loot, lang, or assets),
+# prunes digests of removed/superseded jars (#312 — extract only writes, so
+# without the prune every cut leaked an orphan), verifies digest ⟷ manifest
+# 1:1 reconciliation (CHECK guard fails the job on drift), and commits it under
+# tools/mod-data/ so contributors and Claude have offline ground truth without
+# per-session jar uploads.
 #
 # Only the facts digest is committed. Full configs / recipe dumps are the mod
 # authors' content (licensing-sensitive) and are intentionally NOT produced here.
@@ -17,7 +22,7 @@ name: Ground-truth digest
 #
 # No loop: the triggers watch mods/** / pack.toml only — never tools/mod-data/**
 # — so the digest's own commit-back can't re-trigger this. (That commit DOES feed
-# recipe-web.yml, which watches tools/mod-data/recipes/** — intended chain.) PR
+# connectivity-web.yml, which watches tools/mod-data/recipes/** — intended chain.) PR
 # pushes use GITHUB_TOKEN, which doesn't re-fire pull_request.
 
 on:
@@ -88,8 +93,80 @@ jobs:
               -g -s client http://localhost:8765/pack.toml )
           echo "jars fetched: $(find scratch/mods -name '*.jar' 2>/dev/null | wc -l)"
 
+      # The bootstrap installs the CLIENT side only, and packwiz-installer is an
+      # updater (it reconciles the dir to the requested side), so a second -s server
+      # pass would DELETE the client-only jars. Instead: backfill any manifest jar
+      # still missing, straight from its manifest's own URL (or the forgecdn pattern
+      # for metadata:curseforge mods), hash-verified. Steady state is ZERO jars —
+      # a non-empty backfill means a mod's side was narrowed, worth a second look.
+      # An unfetchable jar fails the job HERE, before extraction, so a missing
+      # digest always means broken, never silently skipped.
+      - name: Backfill non-client jars (exactly-once fetch completeness)
+        run: |
+          python3 - <<'PY'
+          import glob, hashlib, os, re, sys, time, urllib.parse, urllib.request
+
+          missing = []
+          for pw in sorted(glob.glob("mods/*.pw.toml")):
+              txt = open(pw, encoding="utf-8").read()
+              get = lambda k: (re.search(rf'^\s*{k}\s*=\s*"(.+?)"\s*$', txt, re.M) or [None, None])[1]
+              fname = get("filename")
+              # .jar only — the digest pipeline (extract/prune) is jar-scoped, and
+              # non-jar pack files (e.g. tacz zips) install outside scratch/mods.
+              if (not fname or not fname.endswith(".jar")
+                      or os.path.exists(os.path.join("scratch", "mods", fname))):
+                  continue
+              url = get("url")
+              if not url:  # metadata:curseforge — no direct URL; use the forgecdn layout
+                  m = re.search(r'^\s*file-id\s*=\s*(\d+)\s*$', txt, re.M)
+                  if m:
+                      fid = int(m.group(1))
+                      url = (f"https://mediafilez.forgecdn.net/files/{fid // 1000}/"
+                             f"{fid % 1000}/{urllib.parse.quote(fname)}")
+              missing.append((pw, fname, url, get("hash-format") or "sha512", get("hash")))
+
+          failed = []
+          for pw, fname, url, hfmt, hexp in missing:
+              dest = os.path.join("scratch", "mods", fname)
+              if not url or not hexp:
+                  print(f"ERROR: {pw}: no resolvable URL/hash for {fname}", file=sys.stderr)
+                  failed.append(fname)
+                  continue
+              for attempt in range(3):
+                  try:
+                      with urllib.request.urlopen(url, timeout=60) as r:
+                          data = r.read()
+                      got = hashlib.new(hfmt.replace("-", ""), data).hexdigest()
+                      if got != hexp.lower():
+                          raise ValueError(f"hash mismatch: expected {hexp}, got {got}")
+                      os.makedirs(os.path.dirname(dest), exist_ok=True)
+                      open(dest, "wb").write(data)
+                      print(f"backfilled {fname} from {url}")
+                      break
+                  except Exception as e:
+                      print(f"attempt {attempt + 1}/3 for {fname}: {e}", file=sys.stderr)
+                      time.sleep(2 ** attempt)
+              else:
+                  failed.append(fname)
+
+          print(f"backfilled: {len(missing) - len(failed)} | failed: {len(failed)}")
+          if failed:
+              sys.exit(f"ERROR: could not fetch manifest jars: {failed}")
+          PY
+
       - name: Extract facts digest
         run: bash scripts/extract-mod-data.sh scratch/mods tools/mod-data
+
+      # extract-mod-data.sh only WRITES; without this, every cut mod / version bump
+      # leaks an orphaned digest forever (#312). The prune reconciles the digest to
+      # mods/*.pw.toml; the CHECK pass re-judges with the same verdict logic and
+      # fails the job on any remaining drift, so it shows red on the PR instead of
+      # silently accumulating.
+      - name: Prune digest to current manifests
+        run: bash scripts/prune-mod-data.sh
+
+      - name: Reconciliation guard (digest must match manifests 1:1)
+        run: CHECK=1 bash scripts/prune-mod-data.sh
 
       - name: Commit digest
         env:

@@ -866,7 +866,7 @@ hash = "2b673631bea97d168d5a2c1459b137de9dfbb97d7c96242388a2cfd02d913a0b"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/35-web-bridges.js"
-hash = "8c341aa274cf20269dee6c4cb0dab2541512978acb02017cf275894a857501ee"
+hash = "f70641e028f5ece5d5f0313bcc1b5dd77974c786608c85f821d33174649cffb0"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/36-magic-web-create.js"
@@ -2470,7 +2470,7 @@ metafile = true
 
 [[files]]
 file = "mods/smarter-farmers-farmers-replant.pw.toml"
-hash = "918104735fe4da7e223394b5f76c0f063178b34e653fab7135ce451fd08d0746"
+hash = "7a7a11c4be8dd98232e81a3e8f82c0193c640e39f4e46b71ccfaadf8cf869d95"
 metafile = true
 
 [[files]]
