@@ -10,12 +10,12 @@ signature:  (no items/blocks — pure behavior datapack; 0 registered content)
 
 methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THROUGH — §2.0):
   registered recipe-types (AUTO, jar-grounded): (none registered)
-  non-recipe mechanics (SWEEP): rewrites the Ender Dragon encounter via datapack functions/loot — more HP, multi-phase AI, adds attacks and minion summons. Does NOT change dragon drops or add rewards (confirmed on Modrinth).
+  non-recipe mechanics (SWEEP): rewrites the Ender Dragon encounter via datapack functions/loot — more HP, multi-phase AI, adds attacks and minion summons. NOTE (loot digest, sweep S-17): it DOES override minecraft:entities/ender_dragon (dragon_head / elytra / enchanted_golden_apple) — any pack loot-seed must deliver via LootJS over the FINAL table, never a datapack override (collision).
   consumes / outputs (SWEEP): none — no items in or out; it only alters an existing boss's behavior.
 
 anchors:    survival (endgame boss difficulty) (1)
 2nd-anchor candidates (SWEEP — PREFER method-routings; cite a motif M-01..M-24 where one fits):
-  - none — leave. It adds no items and doesn't touch the dragon's drop table, so there's no material to route through any method; a forced edge would be inventing content the mod doesn't have.
+  - loot-seed via LootJS over the final ender_dragon table (it overrides the table — see NOTE above); both ratified KEEPs are LootJS edits (M-15 boss-key drop, #337).
 
 how-packs-integrate (SWEEP): dropped in as a difficulty-spike for the vanilla endgame; pairs with End-progression mods (e.g. End Remastered) to make reaching AND beating the End harder. https://modrinth.com/datapack/edf-remastered
 sources (SWEEP): https://modrinth.com/datapack/edf-remastered

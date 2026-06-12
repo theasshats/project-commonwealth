@@ -10,7 +10,7 @@ signature:  hypertube, hypertube_entrance, hypertube_accelerator, the attachment
 
 methods (FIRST-CLASS — what this mod can DO; the resources other mods pull THROUGH — §2.0):
   registered recipe-types (AUTO, jar-grounded): (none registered)
-  non-recipe mechanics (SWEEP): place tubes, power a Hypertube Entrance with a cogwheel → players (and entities: fish, villagers) shoot through curves/straightaways; Accelerator boosts travel; wrench sets Entrance mode and connects tubes; Attachments detect/automate travellers. Transport mechanic, not a processing recipe. Crafted via create:sequenced_assembly.
+  non-recipe mechanics (SWEEP): place tubes, power a Hypertube Entrance with a cogwheel → players (and entities: fish, villagers) shoot through curves/straightaways; Accelerator boosts travel; wrench sets Entrance mode and connects tubes; Attachments detect/automate travellers. Transport mechanic, not a processing recipe. Crafting (digest-verified, sweep S-20): hypertube_entrance and accelerator are PLAIN shaped recipes (cogwheel+smart_chute; precision_mechanism) — only the tube_scanner attachment uses sequenced_assembly. Native Create gating already suffices for a mid-tier transit block.
   consumes / outputs (SWEEP): consumes Create parts (cogs/brass/copper) to craft tube blocks; "moves" players/entities rather than items — a transport network, no material throughput.
 
 anchors:    Create, aeronautics (2)  — kinetic-powered entity/player transport = the logistics/transport pillar

@@ -4,7 +4,7 @@
 > This is the shopping list for weaving: to give a mod a 2nd anchor, route one of its materials
 > THROUGH one of these methods (WEAVING-PLAN.md §2.0/§6). Dead compat for uninstalled mods is dropped.
 
-**221 methods across 56 installed mods.**
+**211 methods across 52 installed mods.**
 
 | mod (namespace) | # | registered methods (recipe-types) |
 |---|--:|---|
@@ -18,39 +18,34 @@
 | `occultism` | 8 | `occultism:crafting_special_book_binding`, `occultism:crafting_special_repairitem`, `occultism:crushing`, `occultism:crystallize`, `occultism:miner`, `occultism:ritual`, `occultism:spirit_fire`, `occultism:spirit_trade` |
 | `tfmg` | 8 | `tfmg:casting`, `tfmg:coking`, `tfmg:distillation`, `tfmg:hot_blast`, `tfmg:industrial_blasting`, `tfmg:polarizing`, `tfmg:vat_machine_recipe`, `tfmg:winding` |
 | `securitycraft` | 7 | `securitycraft:block_reinforcing_recipe`, `securitycraft:block_unreinforcing_recipe`, `securitycraft:copy_camera_monitor_recipe`, `securitycraft:copy_mine_remote_access_tool_recipe`, `securitycraft:copy_sentry_remote_access_tool_recipe`, `securitycraft:copy_sonic_security_system_recipe`, `securitycraft:limited_use_keycard_recipe` |
-| `farm_and_charm` | 6 | `farm_and_charm:crafting_bowl`, `farm_and_charm:drying`, `farm_and_charm:mincer`, `farm_and_charm:pot_cooking`, `farm_and_charm:roaster`, `farm_and_charm:stove` |
+| `justenoughbreeding` | 6 | `justenoughbreeding:allay_duplication`, `justenoughbreeding:breeding`, `justenoughbreeding:taming`, `justenoughbreeding:temper`, `justenoughbreeding:transformation`, `justenoughbreeding:trusting` |
 | `quark` | 6 | `quark:dye_item`, `quark:elytra_duplication`, `quark:exclusion`, `quark:mixed_exclusion`, `quark:slab_to_block`, `quark:smithing_rune` |
 | `dndesires` | 5 | `dndesires:dragon_breathing`, `dndesires:freezing`, `dndesires:hydraulic_compacting`, `dndesires:sanding`, `dndesires:seething` |
 | `exposure` | 4 | `exposure:component_transferring`, `exposure:film_developing`, `exposure:photograph_aging`, `exposure:photograph_copying` |
 | `farmersdelight` | 4 | `farmersdelight:cooking`, `farmersdelight:cutting`, `farmersdelight:dough`, `farmersdelight:food_serving` |
-| `meadow` | 4 | `meadow:cheese`, `meadow:cooking`, `meadow:felting`, `meadow:woodcutting` |
 | `createaddition` | 3 | `createaddition:charging`, `createaddition:liquid_burning`, `createaddition:rolling` |
 | `createoreexcavation` | 3 | `createoreexcavation:drilling`, `createoreexcavation:extracting`, `createoreexcavation:vein` |
 | `irons_spellbooks` | 3 | `irons_spellbooks:alchemist_cauldron_brew`, `irons_spellbooks:alchemist_cauldron_empty`, `irons_spellbooks:alchemist_cauldron_fill` |
 | `modulargolems` | 3 | `modulargolems:golem_add_slot`, `modulargolems:golem_assemble`, `modulargolems:golem_replace_part` |
-| `northstar` | 3 | `northstar:electrolysis`, `northstar:engraving`, `northstar:freezing` |
-| `vinery` | 3 | `vinery:apple_fermenting`, `vinery:apple_mashing`, `vinery:wine_fermentation` |
 | `alexsmobs` | 2 | `alexsmobs:bison_upgrade`, `alexsmobs:mimicream_repair` |
 | `beachparty` | 2 | `beachparty:mini_fridge_freezing`, `beachparty:palm_bar_mixing` |
 | `cataclysm` | 2 | `cataclysm:amethyst_bless`, `cataclysm:weapon_fusion` |
 | `create_dragons_plus` | 2 | `create_dragons_plus:ending`, `create_dragons_plus:freezing` |
+| `create_enchantment_industry` | 2 | `create_enchantment_industry:grinding`, `create_enchantment_industry:infusing` |
+| `create_winery` | 2 | `create_winery:maturing`, `create_winery:maturing_blend` |
 | `createfisheryindustry` | 2 | `createfisheryindustry:bait_trap`, `createfisheryindustry:peeling` |
 | `deeperdarker` | 2 | `deeperdarker:gloomslate_pot_recipe`, `deeperdarker:sculk_transmitter_coloring` |
 | `dynamictrees` | 2 | `dynamictrees:mega_seed`, `dynamictrees:seed_conversion` |
 | `jeed` | 2 | `jeed:effect_provider`, `jeed:potion_provider` |
 | `minecolonies` | 2 | `minecolonies:composting`, `minecolonies:zero_waste` |
 | `simplehats` | 2 | `simplehats:custom_hatscraps`, `simplehats:custom_hatvariants` |
-| `travelersbackpack` | 2 | `travelersbackpack:backpack_shaped`, `travelersbackpack:backpack_upgrade` |
 | `woodworks` | 2 | `woodworks:crafting_special_woodenchest`, `woodworks:sawmill` |
 | `alcohol_industry` | 1 | `alcohol_industry:alcohol_boiling` |
-| `bakery` | 1 | `bakery:blank_cake_interaction` |
 | `companions` | 1 | `companions:soul_furnace` |
 | `cookingforblockheads` | 1 | `cookingforblockheads:toaster` |
 | `create_cheese` | 1 | `create_cheese:maturing` |
-| `create_enchantment_industry` | 1 | `create_enchantment_industry:grinding` |
 | `create_jetpack` | 1 | `create_jetpack:copy_components_mechanical_crafting` |
 | `create_new_age` | 1 | `create_new_age:energising` |
-| `createnuclear` | 1 | `createnuclear:enriched` |
 | `domum_ornamentum` | 1 | `domum_ornamentum:architects_cutter` |
 | `expandeddelight` | 1 | `expandeddelight:juicing` |
 | `fxntstorage` | 1 | `fxntstorage:backpack_crafting` |
@@ -60,6 +55,7 @@
 | `occultengineering` | 1 | `occultengineering:upgrade_tier` |
 | `pantographsandwires` | 1 | `pantographsandwires:combine_wire` |
 | `patchouli` | 1 | `patchouli:shapeless_book_recipe` |
+| `simulated` | 1 | `simulated:portable_engine_dyeing` |
 | `spawn` | 1 | `spawn:casting_net_clam` |
 | `tacz` | 1 | `tacz:gun_smith_table_crafting` |
 | `tide` | 1 | `tide:fishy_note_recipe` |

@@ -203,12 +203,14 @@ def main():
                                                     for m in mods for x in m['blocks'] + m['items'] if ':' in x}
 
     seen, written, preserved = {}, 0, 0
+    expected = set()
     for d in mods:
         ns = d['primary_ns']
         if ns in CUT_NS:
             continue   # cut from the pack — don't generate a dossier (see #131 drift)
         key = ns if ns not in seen else f'{ns}__{d["jar"][:12]}'
         seen[ns] = seen.get(ns, 0) + 1
+        expected.add(key)
         path = os.path.join(OUT, f'{key}.md')
         fresh = skeleton(d, registered, made_by, d['jar'] in loot_jars)
         if os.path.exists(path):
@@ -219,6 +221,17 @@ def main():
             out = fresh
         open(path, 'w', encoding='utf-8').write(out)
         written += 1
+
+    # ---- prune: a dossier whose mod has no digest is a CUT mod's leftover (post-#312 the digest
+    # mirrors the manifests 1:1, so digest absence == not installed). The generator only ever WROTE
+    # files — this is the same write-only leak #312 fixed for the digest itself. --no-prune to skip.
+    pruned = []
+    if '--no-prune' not in sys.argv:
+        for f in sorted(glob.glob(os.path.join(OUT, '*.md'))):
+            stem = os.path.basename(f)[:-3]
+            if stem not in expected:
+                pruned.append(stem)
+                os.remove(f)
 
     # ---- methods palette: installed namespaces only, sorted by method count ----
     live = {ns: sorted(ts) for ns, ts in registered.items()
@@ -239,6 +252,8 @@ def main():
     open(PALETTE, 'w', encoding='utf-8').write('\n'.join(P) + '\n')
 
     print(f'dossiers: {written} written ({preserved} had sweep-content preserved) -> {OUT}')
+    if pruned:
+        print(f'pruned {len(pruned)} stale dossier(s) (no digest => not installed): {", ".join(pruned)}')
     print(f'palette:  {sum(len(v) for v in live.values())} methods / {len(live)} mods -> {PALETTE}')
 
 
