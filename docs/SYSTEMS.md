@@ -25,8 +25,8 @@ so nobody can do everything alone, and the **economy is player-run and necessary
 ore-gen scarcity layer is already named the "Eco foundation" in `docs/ROADMAP.md` (Phase 1). What
 Project Commonwealth borrows: *forced specialization → emergent interdependence → a real player economy*. Where it
 reaches Eco's effect by different means (regional resource scarcity + locked production routes vs. Eco's
-hard skill-point cap) and where it deliberately diverges (no civilization-wide deadline; no formal
-governance) is called out inline and in **Open / unsettled**.
+hard skill-point cap) and where it deliberately diverges (no civilization-wide deadline; formal
+governance was a divergence too, now reopened by #260) is called out inline and in **Open / unsettled**.
 
 ## The core loop
 

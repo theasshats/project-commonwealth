@@ -5,8 +5,8 @@
 > *on top of* the claim systems the pack already runs, owning no claims of its own. It assumes the
 > governance direction is pursued; the decision to commit is still open. Nothing here is built.
 >
-> Per `docs/CUSTOM-MODS.md`, a custom mod lives in **its own repo** under `derpack-org` (working name
-> **`derpack-org/derpack-realms`**) and reaches the pack via the mod-mirror packwiz pattern — it is *not*
+> Per `docs/CUSTOM-MODS.md`, a custom mod lives in **its own repo** under `theasshats` (working name
+> **`theasshats/pcmc-realms`**) and reaches the pack via the mod-mirror packwiz pattern — it is *not*
 > developed in this repo. This doc is the design reference that would seed that repo.
 
 ---

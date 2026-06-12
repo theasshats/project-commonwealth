@@ -2,7 +2,8 @@
 
 > **Status: SCOPING, not accepted.** This doc captures the survey + implementation options for a
 > player-driven hierarchical governance system (municipalities → counties/kingdoms/empires, cascading
-> laws, entity minting), milestoned **v0.9.0 — Economy & logistics** (#260). It is a *speculative
+> laws, entity minting), filed under **📋 Backlog / living** as a candidate for the **v0.13.0 — Economy
+> & logistics** pillar (#260). It is a *speculative
 > project*, not a committed feature. Nothing here is built. The *whether* and the *how* are both open.
 
 ---
@@ -106,12 +107,12 @@ it introduces **no new claim system**, it *reads* the two that already exist. It
 - a **minting policy** issuing Numismatics-compatible currency with supply caps / backing rules.
 
 - **Pro:** the only path that satisfies *all* of #260 cleanly and respects the existing claim systems.
-  `docs/CUSTOM-MODS.md` already sanctions custom mods as a project (their own repo under `derpack-org`,
+  `docs/CUSTOM-MODS.md` already sanctions custom mods as a project (their own repo under `theasshats`,
   pulled in via the mod-mirror packwiz pattern). **Full technical design: [`GOVERNANCE-MOD-SPEC.md`](GOVERNANCE-MOD-SPEC.md)**
   (data model, law-precedence resolver, Numismatics minting bridge, MVP phasing).
 - **Con:** the largest effort — genuine multi-week mod development. The web sandbox **cannot compile or
   run NeoForge**, so work here is source-only; it's built/playtested on the box. Almost certainly cannot
-  *fully* land inside a single v0.9.0 release — a long-lived `claude/governance` project, not a patch.
+  *fully* land inside a single v0.13.0 release — a long-lived `claude/governance` project, not a patch.
 
 ### Path C — Pure KubeJS / datapack, no new mod
 
@@ -131,7 +132,7 @@ it introduces **no new claim system**, it *reads* the two that already exist. It
    existing mod gets and how badly its claims collide with MineColonies/OPAC. That result decides Path A
    vs B far better than more desk research.
 3. If the full vision is kept, **Path B is the only complete answer** — scoped as a long-lived
-   `claude/governance` custom-mod project (per `docs/CUSTOM-MODS.md`), not a v0.9.0 patch.
+   `claude/governance` custom-mod project (per `docs/CUSTOM-MODS.md`), not a v0.13.0 patch.
 
 ---
 
