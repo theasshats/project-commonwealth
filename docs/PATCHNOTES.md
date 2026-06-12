@@ -37,6 +37,10 @@ expedition over. Ore generation only affects newly generated chunks.
 
 ### Mods
 
+- Prospected ore veins draw on Xaero's maps again, and the vein-layer buttons are back on the
+  fullscreen map. Xaero's World Map 1.40 removed internals the ore-vein map integration depends
+  on, which silently disabled the whole layer; the pack pins Xaero's World Map 1.39.12 and
+  Xaero's Minimap 25.2.10 — the matching pair — until the integration supports newer versions.
 - Diet - AppleSeed Edition updates to 2.1.0 and installs from Modrinth again. The dedicated-server
   startup fix the pack had carried as a custom build is in the official release, which also adds a
   filter to the automatic food-group calculator.
