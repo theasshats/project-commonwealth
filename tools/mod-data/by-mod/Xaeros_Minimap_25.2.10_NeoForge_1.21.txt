@@ -1,20 +1,16 @@
-# xaerominimap-neoforge-1.21.1-25.3.13
+# Xaeros_Minimap_25.2.10_NeoForge_1.21
 
 ## mod metadata (id / version / deps)
 license = "All Rights Reserved" # Review your options at https://choosealicense.com/.
 modId = "xaerominimap" #mandatory
-version = "25.3.13" #mandatory
+version = "25.2.10" #mandatory
 displayName = "Xaero's Minimap" #mandatory
 modId = "neoforge" #mandatory
-versionRange = "[21.0.110-beta,21.2.0)" #mandatory
+versionRange = "[21.0.110-beta,)" #mandatory
 modId = "minecraft"
-versionRange = "1.21.1"
+versionRange = "[1.21, 1.22)"
 modId = "openpartiesandclaims"
 versionRange = "[0.14.0,)"
-modId = "xaeroworldmap"
-versionRange = "[1.40.2,)"
-modId = "xaerolib"
-versionRange = "[1.0.50,)"
 
 ## blocks
 
