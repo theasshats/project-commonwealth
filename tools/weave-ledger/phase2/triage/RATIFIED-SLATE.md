@@ -4,26 +4,27 @@
 
 ## Dashboard
 
-- **Ratified KEEP weaves: 364** (was 423: -10 dropped, -21 folded into the deco-crush plumbing batch, +3 reinstated, -31 on mods removed from the pack)
+- **Ratified KEEP weaves: 319** (was 423: -29 dropped, -15 folded into the deco-crush plumbing batch, +1 reinstated, -31 on mods removed from the pack)
 - Mods removed from the pack (v0.7.0 thunderdome — rows now REMOVED): brazil_legends (3), createmetalwork (3), createnuclear (4), create_ultimate_factory (1), farm_and_charm (5), meadow (5), northstar (5), travelersbackpack (2), vinery (4)
-- Plumbing batch (M-04, authored once at v0.7.0): 21 crush patterns across 21 mods
+- **Closed as DONE (shipped/native — zero authoring): 48 rows**, 32 mods (V2-S sweep verification against shipped kubejs)
+- Plumbing batch (M-04, authored once at v0.7.0): 15 crush patterns across 15 mods
 - Mods reclassified LEAVE/support-role: zombiemoon, trashcans, mcwroofs, mcwstairs, mcwwindows
 
 ## Ratified KEEPs by milestone (post-#305 map; M-28 colony weaves ride v0.11.0)
 
 - v0.7.0: 0
-- v0.9.0: 130
-- v0.11.0: 113
-- v0.13.0: 121
+- v0.9.0: 103
+- v0.11.0: 105
+- v0.13.0: 111
 
 ## Derived weave-anchor distribution (F3: targets of ratified KEEPs; support roles and plumbing grant nothing; home systems not double-counted)
 
-- 1 pillar(s): 33 mods
-- 2 pillar(s): 56 mods
-- 3 pillar(s): 47 mods
-- 4 pillar(s): 3 mods
+- 1 pillar(s): 35 mods
+- 2 pillar(s): 61 mods
+- 3 pillar(s): 32 mods
+- 4 pillar(s): 4 mods
 
-Mods at ≤1 derived weave-pillar (33): aileron, appleseed, bettermineshafts, byzantine, charta, cmpackagecouriers, copperagebackport, create_better_villagers, create_compressed, create_connected, create_train_parts, domum_ornamentum, drones, endermoon, enhancedcelestials, fluid, formations, formationsnether, friendsandfoes, gnkinetics, gravestone, kobolds, mcwdoors, mcwfences, minecolonies_tweaks, mutantszombies, railways, rechiseled, simplehats, sliceanddice, trading_floor, underground_village, vc_gliders
+Mods at ≤1 derived weave-pillar (35): aileron, appleseed, astikorcartsredux, bettermineshafts, byzantine, charta, cmpackagecouriers, copperagebackport, create_better_villagers, create_compressed, create_connected, domum_ornamentum, endermoon, enhancedcelestials, formationsnether, friendsandfoes, gnkinetics, gravestone, irons_spellbooks, kobolds, mcwdoors, mcwfences, minecolonies_compatibility, minecolonies_tweaks, mutantszombies, numismatics, railways, securitycraft, simplehats, sliceanddice, tacz, tfmg, trading_floor, underground_village, vc_gliders
 
 _Read with care: a mod whose home system is its only pillar (hub mods, F2) or whose second anchor is a sanctioned support role is **not** a gap._
 
@@ -31,7 +32,6 @@ _Read with care: a mod whose home system is its only pillar (hub mods, F2) or wh
 ## Plumbing batch members (M-04 → one v0.7.0 task)
 
 - `bits_n_bobs` — bits_n_bobs tile/chair deco → create:crushing (M-04)
-- `charta` — charta bar furniture → create
 - `copperagebackport` — copperagebackport deco/blocks→create
 - `create_confectionery` — create_confectionery deco blocks (chocolate/caramel/gingerbread bricks) → create
 - `deeperdarker` — deeperdarker gloomslate/sculk_stone→create (crushing recycle)
@@ -40,14 +40,9 @@ _Read with care: a mod whose home system is its only pillar (hub mods, F2) or wh
 - `friendsandfoes` — friendsandfoes copper deco (copper buttons / weathered lightning rods) → create:crushing (
 - `galosphere` — galosphere deco blocks→create M-04
 - `mcwdoors` — mcwdoors→create
-- `mcwfences` — mcwfences metal fence variants → create:crushing (M-04 deco-recycle)
 - `mcwroofs` — mcwroofs stone/brick/andesite/deepslate roof variants → create
-- `mcwstairs` — mcwstairs stone/brick/blackstone stair/railing variants → create:crushing M-04
-- `mcwwindows` — mcwwindows stone parapet / arrow-slit variants → create:crushing M-04
 - `quark` — quark deco blocks (vertical slabs, polished stone/brick variants) → create:crushing (M-04 
 - `railways` — railways:locometal blocks → create (M-04 deco recycle via create:crushing)
-- `rechiseled` — rechiseled decoration blocks → create M-04
-- `rechiseledcreate` — rechiseledcreate chiseled stone/window blocks → create:crushing (M-04 deco-recycle)
 - `underground_village` — underground_village Stoneholm structure blocks (dismantled) → create:crushing (M-04 deco r
 - `undergroundworlds` — undergroundworlds temple/pyramid bricks → create M-04
 - `woodworks` — woodworks→create
@@ -142,4 +137,8 @@ _Read with care: a mod whose home system is its only pillar (hub mods, F2) or wh
   the mob-drop lens lists 220 drop-only items; mod-level KEEP coverage is complete (only the LEAVE'd lava-chicken disc uncovered) but only 6/220 are named at item level — the big piles (tide 88 fish, grimoireofgaia 50, born_in_chaos_v1 24, minecolonies 12, deeperdarker 9) become scope/verify inputs on the S-3/M-3/M-4 clusters and seeds for the delta census. NOT a weave-all-220 mandate: many are self-useful gear/food/discs (the Goodhart trap).
 - **NOTE** * — kubejs overlap  
   35 of 76 create-bucket KEEP mods already appear in shipped spine kubejs (createaddition 17 files, tfmg 14, aeronautics 9, galosphere 7, occultism 7, ...): every re-homed C-* cluster carries a verify-not-already-shipped precondition.
+- **RULING** * — coin loot-seeds are faucets  
+  TRIPLE-CONFIRMED by independent sweep chunks (S-07 ctov, S-09 betterdungeons, S-10 t_and_t): chest-seeded Numismatics coins are currency entering from outside the player economy — the class M-14/M-21 were cut for. Structure chests seed RAW regional mint-metal + trade goods, never minted coins. Applied as rescopes on the found rows; the E-1 coin-loot-seed sub-batch rewrites accordingly at filing. FLAGGED for maintainer sign-off (ruling-level interpretation of #163/#240).
+- **FOLD** tools/weave-ledger/phase2/sweep/FOLD-QUEUE.tsv — {'add-keep': 8, 'balance-note': 15, 'custom (routed to CUSTOM-MOD-CANDIDATES)': 2, 'drop': 19, 'leave-to-done': 2, 'mark-done': 41, 'record-done': 5, 'skipped': 2, 'rescope': 41}  
+  V2-S sweep fold at the 12/22 waypoint (pilot + waves 2-3, 369 findings -> 135 actions): mark-done/drop/rescope/balance-note per chunk evidence; AMBIG/NONE + add-keep milestones resolved in sweep/FOLD-RESOLUTIONS.tsv; the two act:CUSTOM rows route to sweep/CUSTOM-MOD-CANDIDATES.md.
 

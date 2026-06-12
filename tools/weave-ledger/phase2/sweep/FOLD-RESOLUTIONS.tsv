@@ -1,0 +1,18 @@
+mod	action	motif	directive	reason
+gamediscs	drop		leave-to-done	v0.7.0 shipped a real Create + loot weave (99-gamediscs.js, 40-gamediscs-loot.js) — the ratified LEAVE converts to DONE
+gamediscs	mark-done	M-05	skip	folded into the leave-to-done conversion above
+immersive_paintings	drop		leave-to-done	v0.7.0 shipped Create routing for all four craftables (23-immersive-paintings.js) — LEAVE converts to DONE
+immersive_paintings	mark-done	M-12	skip	folded into the leave-to-done conversion above
+aeroworks	mark-done	M-24	record-done	new mod, no slate rows: record the shipped weave (54-weave-aeronautics.js + 50-cross-tier.js) so future sweeps confirm instead of re-proposing
+create_sa	mark-done	M-06	record-done	beyond-slate shipped reality (tier-anchored assembly seams) — record as DONE
+createaddition	mark-done	M-29	record-done	beyond-slate shipped reality (T3 machines on Additions parts, 51-weave-additions-tfmg.js) — record as DONE
+kobolds	mark-done		record-done	shipped loot override currently loop-inert — record; gains motion when gaia's drop pile gets sinks
+mcwroofs	mark-done		record-done	shipped second-system tie (81-decoration-metal.js metal inputs -> Create sheets) the slate never recorded
+aileron	add-keep	M-33	milestone:v0.13.0	mage-applied flight enchant services
+cold_sweat	add-keep	M-26	milestone:v0.9.0	coal_coke as premium hearth/boiler fuel
+copperagebackport	add-keep		milestone:v0.9.0	copper deco joins the Create copper economy via the shipped 81 replaceInput pattern
+create_winery	add-keep	M-35	milestone:v0.13.0	maturing — also register create_winery:maturing in the M-35 method list (WEAVE-LEDGER)
+create_winery	add-keep	M-16	milestone:v0.9.0	season-gated grape harvest (config-only)
+occultism	add-keep	M-29	milestone:v0.11.0	price the dimensional mineshaft in Create fabrication (keeps M-18 honest vs the new vein map)
+railways	add-keep	M-26	milestone:v0.13.0	the rail arm burns fuel (fuel_tank/coalburner exist unconfigured; reagent-ownership check vs M-13 at authoring)
+sereneseasons	add-keep	M-31	milestone:v0.13.0	tropical/temperate asymmetry makes winter food a logistics-required bulk import (pairs with v0.9.0 season tuning)

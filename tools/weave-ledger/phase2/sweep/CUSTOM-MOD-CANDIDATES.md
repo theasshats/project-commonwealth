@@ -38,6 +38,16 @@
   *catalyst requirement to crystallization itself* is the deeper version if the cheap one
   underwhelms in play. Low priority.
 
+## Candidates from sweep waves 2–3 (act: CUSTOM)
+
+- **Bookshelf source-bonus (woodworks → magic, M-10)** — Ars Nouveau has no bookshelf-power mechanic
+  or apparatus config, so the ratified "config" delivery is unauthorable; the loop-positive idea
+  (magic throughput buying the woodworker's palette) needs a small **pcmc-arcana** hook reading
+  nearby bookshelf variants at the apparatus. (S-09)
+- **Winter-scaled burner fuel draw (createlowheated × Serene Seasons, M-16)** — make low-heat burners
+  draw more fuel in winter so cold season tightens the fuel market; no config surface exists for
+  season-keyed burn rates — needs a code hook. Pairs with the coal-coke hearth-fuel weave. (S-10)
+
 ## Process note (applies from chunk S-05 onward)
 
 The sweep BRIEFING gains one line once the in-flight S-01…S-04 wave lands (not edited mid-wave):

@@ -25,6 +25,12 @@ Actions understood (see ratification.tsv):
                   KEEP/PLUMB/DEFER rows -> REMOVED  [post-0.7.0 reconciliation]
   rehome-milestone — every ratified KEEP at <match> milestone -> <arg> (e.g. the create
                   bucket after v0.7.0 shipped without the weave program)
+  fold          — apply a sweep FOLD-QUEUE.tsv (arg = path relative to repo root); per-row
+                  actions mark-done/drop/rescope/balance-note/add-keep/custom, with
+                  AMBIG/NONE matches and add-keep milestones resolved by the sibling
+                  FOLD-RESOLUTIONS.tsv (directives: leave-to-done, record-done, skip,
+                  milestone:vX.Y.0). Custom rows route to sweep/CUSTOM-MOD-CANDIDATES.md
+                  by hand. New ratified states: DONE (shipped/native — no authoring).
 """
 import csv, os, sys, collections
 
@@ -132,6 +138,71 @@ def main():
                     r['note'] = (r['note'] + '; ' if r['note'] else '') + f"rehomed {a['match']}->{a['arg']}"
                     n += 1
             log.append(('REHOME', f"{a['match']}->{a['arg']}", f'{n} KEEPs', a['reason']))
+        elif act == 'fold':
+            ROOT = os.path.abspath(os.path.join(HERE, '..', '..', '..', '..'))
+            qpath = os.path.join(ROOT, a['match'])
+            res = collections.defaultdict(list)
+            rpath = os.path.join(os.path.dirname(qpath), 'FOLD-RESOLUTIONS.tsv')
+            if os.path.exists(rpath):
+                rd = csv.reader(open(rpath), delimiter='\t'); next(rd)
+                for rr in rd:
+                    rr += [''] * (5 - len(rr))
+                    res[(rr[0], rr[1], rr[2])].append((rr[3], rr[4]))
+            stats = collections.Counter(); warn = []
+
+            def find(mod, link_prefix, states, motif=''):
+                hits = [r for r in rows if r['mod'] == mod and r['ratified'] in states
+                        and (r['link'].startswith(link_prefix) or link_prefix.startswith(r['link'][:60]))]
+                if len(hits) > 1 and motif:
+                    mh = [r for r in hits if r['motif'] == motif]
+                    if len(mh) == 1:
+                        return mh[0]
+                return hits[0] if len(hits) == 1 else None
+
+            qrd = csv.DictReader(open(qpath), delimiter='\t')
+            for q in qrd:
+                key = (q['mod'], q['action'], q.get('motif', ''))
+                directive, dreason = (res[key].pop(0) if res.get(key) else ('', ''))
+                if directive == 'skip':
+                    stats['skipped'] += 1; continue
+                if directive == 'leave-to-done':
+                    hit = next((r for r in rows if r['mod'] == q['mod'] and r['decision'] == 'LEAVE'), None)
+                    if hit:
+                        hit['ratified'] = 'DONE'; hit['note'] = dreason
+                        stats['leave-to-done'] += 1
+                    else:
+                        warn.append(f"leave-to-done: no LEAVE row for {q['mod']}")
+                    continue
+                if directive == 'record-done':
+                    rows.append({'mod': q['mod'], 'decision': '(recorded at sweep fold)', 'link': q['ref'],
+                                 'motif': q['motif'], 'mile': '', 'detail': (q['note'] + ' | ' + q['evidence']).strip(' |'),
+                                 'ratified': 'DONE', 'note': 'shipped-beyond-slate, recorded by V2-S sweep'})
+                    stats['record-done'] += 1; continue
+                if q['action'] == 'add-keep':
+                    mile = directive.split(':', 1)[1] if directive.startswith('milestone:') else ''
+                    if not mile:
+                        warn.append(f"add-keep without milestone resolution: {q['mod']} {q['ref'][:40]}"); continue
+                    rows.append({'mod': q['mod'], 'decision': '(added at sweep fold)', 'link': q['ref'],
+                                 'motif': q['motif'], 'mile': mile, 'detail': (q['note'] + ' | ' + q['evidence']).strip(' |'),
+                                 'ratified': 'KEEP', 'note': 'added by V2-S sweep (' + q['chunk'] + ')'})
+                    stats['add-keep'] += 1; continue
+                if q['action'] == 'custom':
+                    stats['custom (routed to CUSTOM-MOD-CANDIDATES)'] += 1; continue
+                hit = find(q['mod'], q['matched_link'], ('KEEP', 'PLUMB', 'DEFER'), q.get('motif', ''))
+                if not hit:
+                    warn.append(f"{q['action']}: no unique match for {q['mod']} :: {q['matched_link'][:50]}"); continue
+                if q['action'] == 'mark-done':
+                    hit['ratified'] = 'DONE'; hit['note'] = ('sweep ' + q['chunk'] + ': ' + q['evidence'])[:200]
+                elif q['action'] == 'drop':
+                    hit['ratified'] = 'DROPPED'; hit['note'] = ('sweep ' + q['chunk'] + ': ' + q['note'])[:200]
+                elif q['action'] == 'rescope':
+                    hit['detail'] += ' [RESCOPED@sweep ' + q['chunk'] + ': ' + q['note'] + ']'
+                elif q['action'] == 'balance-note':
+                    hit['detail'] += ' [BALANCE-PENDING@sweep: ' + q['note'] + ']'
+                stats[q['action']] += 1
+            log.append(('FOLD', a['match'], str(dict(stats)), a['reason']))
+            for w in warn:
+                errors.append('fold: ' + w)
         elif act == 'set-anchors':
             anchor_over[a['mod']] = a['match'].split('+')
             log.append(('SET-ANCHORS', a['mod'], a['match'], a['reason']))
@@ -157,6 +228,7 @@ def main():
     plumbs = [r for r in rows if r['ratified'] == 'PLUMB']
     drops = [r for r in rows if r['ratified'] == 'DROPPED']
     gone = [r for r in rows if r['ratified'] == 'REMOVED']
+    done = [r for r in rows if r['ratified'] == 'DONE']
     mods_k = collections.defaultdict(set)
     for r in keeps:
         mods_k[r['mod']] |= pillars_of_keep(r['link'], r['motif'], r['mile'])
@@ -181,6 +253,9 @@ def main():
     if removed_mods:
         s.append(f'- Mods removed from the pack (v0.7.0 thunderdome — rows now REMOVED): '
                  + ', '.join(f'{m} ({n})' for m, n in removed_mods))
+    if done:
+        s.append(f'- **Closed as DONE (shipped/native — zero authoring): {len(done)} rows**, '
+                 f'{len(set(r["mod"] for r in done))} mods (V2-S sweep verification against shipped kubejs)')
     s.append(f'- Plumbing batch (M-04, authored once at v0.7.0): {len(plumbs)} crush patterns across '
              f'{len(set(r["mod"] for r in plumbs))} mods')
     s.append(f'- Mods reclassified LEAVE/support-role: {", ".join(leaves)}')
@@ -206,7 +281,7 @@ def main():
     s.append('')
     open(os.path.join(HERE, 'RATIFIED-SLATE.md'), 'w').write('\n'.join(s) + '\n')
 
-    print(f'ratified: KEEP={len(keeps)} PLUMB={len(plumbs)} DROPPED={len(drops)} '
+    print(f'ratified: KEEP={len(keeps)} PLUMB={len(plumbs)} DONE={len(done)} DROPPED={len(drops)} '
           f'LEAVE+={len(leaves)} | by milestone: ' +
           ', '.join(f'{m}={by_mile.get(m, 0)}' for m in ['v0.7.0', 'v0.9.0', 'v0.11.0', 'v0.13.0']))
     print(f'derived anchors: {dict(sorted(dist.items()))}; <=1: {len(one)}')
