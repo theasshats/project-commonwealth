@@ -19,11 +19,14 @@
     },
     "W": {
       "tag": "minecraft:planks"
+    },
+    "Z": {
+      "item": "createbigcannons:recoil_spring"
     }
   },
   "pattern": [
     "BPFI",
-    " TW "
+    "ZTW "
   ],
   "result": {
     "id": "tacz:modern_kinetic_gun",

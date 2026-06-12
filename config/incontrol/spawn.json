@@ -138,5 +138,16 @@
     "mod": ["mowziesmobs"],
     "random": 0.5,
     "result": "deny"
+  },
+
+  {
+    "mob": [
+      "naturalist:rhino",
+      "naturalist:catfish",
+      "naturalist:elephant",
+      "naturalist:rattlesnake",
+      "naturalist:bear"
+    ],
+    "result": "deny"
   }
 ]

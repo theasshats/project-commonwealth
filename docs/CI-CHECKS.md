@@ -16,7 +16,7 @@ JSON/JS, or a non-compiling editor change could all land unreviewed by a machine
 | **packwiz index** | Runs `scripts/index-guard.sh` (refresh + verdict). **Passes** on a fresh or auto-fixable index (`sync-index` commits the refresh for you); **fails only** on the `.packwizignore` guard — a `packwiz refresh` that pulls files in under a new top-level path. | A new un-ignored dir would vacuum into the index. Routine staleness is auto-handled, so this never flickers red — only the one human case does. |
 | **manifest lint** | `scripts/lint-manifests.py`: required fields, valid `side`, valid `hash-format`, and the **pin-placement gotcha** (a `pin =` under any `[section]` is silently ignored by `packwiz update`). | A malformed manifest or a misplaced pin breaks install or lets a pinned mod drift on update — both are silent. |
 | **kubejs / config data** | `node --check` every `kubejs/**/*.js`; `scripts/validate-data.py` parses every JSON under `kubejs/`, `config/`, `defaultconfigs/` and every TOML under `config/`, `defaultconfigs/`. | The sandbox is headless and can't run Minecraft/KubeJS — a syntax error in a recipe or config only surfaces in-game otherwise. This is the cheapest possible guard. |
-| **go build & vet** | `go build` + `go vet` for `tools/editor-src/`. | The editor binary is rebuilt by `build-editor.yml` only on push to `main`, so this catches a broken Go change *on the PR* instead of after merge. (The player site moved to its own repo, `derpack-org/derpack-site`, which carries its own build CI.) |
+| **go build & vet** | `go build` + `go vet` for `tools/editor-src/`. | The editor binary is rebuilt by `build-editor.yml` only on push to `main`, so this catches a broken Go change *on the PR* instead of after merge. (The player site moved to its own repo, `theasshats/pcmc-site`, which carries its own build CI.) |
 
 ## Running the same checks locally
 
@@ -151,11 +151,18 @@ Two more workflows keep generated artifacts fresh. Neither gates merges; both **
 bot commit appearing on your PR (or on `main`) is expected, not a glitch.
 
 - **`ground-truth.yml` — mod-data facts digest.** Fetches every mod jar (CI has the network the dev
-  sandbox doesn't) and extracts a license-safe facts digest (IDs / tags / biome-modifiers only, via
-  `scripts/extract-mod-data.sh`) into `tools/mod-data/`, so recipe-design sessions have offline ground
-  truth. Triggers on `mods/**` / `pack.toml` (push to `main` **and** PRs, including drafts — committed
-  back to the PR branch), a weekly cron backstop, and `workflow_dispatch`. It doesn't watch
-  `tools/mod-data/**`, so its own commit can't re-trigger it; that commit instead feeds `recipe-web.yml`.
-- **`recipe-web.yml` — connectivity viz.** Rebuilds `tools/recipe-graph/recipe-web.html` and the data
-  block in `docs/CONNECTIVITY.md` whenever the recipes, the digest, or the recipe-graph tooling change
+  sandbox doesn't: client-side bootstrap, then a hash-verified **backfill** of any manifest jar the
+  side filter skipped — exactly once per mod, and an unfetchable jar fails the job), extracts a
+  license-safe facts digest (IDs / tags / biome-modifiers only, via `scripts/extract-mod-data.sh`)
+  into `tools/mod-data/`, **prunes** digests of removed/superseded jars (`scripts/prune-mod-data.sh`
+  — #312 closed the leak where every cut mod left an orphan forever), and runs the same script as a
+  **reconciliation guard** (`CHECK=1`): the job **fails red** if the digest doesn't reconcile 1:1
+  with `mods/*.pw.toml` (+ `bundled-in:` jar-in-jar entries) — this is the one part of the workflow
+  that *does* gate, and red means a real divergence for a human (fetch failure, broken jar), not a
+  forgotten script: the fixer already ran. Triggers on `mods/**` / `pack.toml` (push to `main` **and**
+  PRs, including drafts — committed back to the PR branch), a weekly cron backstop, and
+  `workflow_dispatch`. It doesn't watch `tools/mod-data/**`, so its own commit can't re-trigger it;
+  that commit instead feeds `connectivity-web.yml`.
+- **`connectivity-web.yml` — connectivity viz.** Rebuilds `tools/connectivity/connectivity-web.html` and the data
+  block in `docs/CONNECTIVITY.md` whenever the recipes, the digest, or the connectivity tooling change
   (push to `main`, or `workflow_dispatch`). Commits back with `[skip ci]` to avoid a loop.

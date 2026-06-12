@@ -1,4 +1,6 @@
-# Derpack X
+# Project Commonwealth
+
+*Magna Communitas*
 
 A Create-focused Minecraft modpack for 1.21.1 / NeoForge, built around [Create Aeronautics](https://modrinth.com/mod/create-aeronautics).
 
@@ -10,13 +12,13 @@ It's a **cooperative PvPvE** pack for a small crew (~10), **scarcity-driven**: o
 
 ## For players
 
-**Everything players need is on the website — [derpack-x.ishimura.xyz](https://derpack-x.ishimura.xyz).** The download, live server status, how to join, the rules, and the FAQ all live there; you shouldn't need to touch this repo at all. Reporting a problem will go through the site too (no GitHub account needed — see #77). The steps below are the same ones the site walks you through, kept here as the canonical reference.
+**Everything players need is on the website — [pcmc.ishimura.xyz](https://pcmc.ishimura.xyz).** The download, live server status, how to join, the rules, and the FAQ all live there; you shouldn't need to touch this repo at all. Reporting a problem will go through the site too (no GitHub account needed — see #77). The steps below are the same ones the site walks you through, kept here as the canonical reference.
 
 Grab the installer from the site's download button (it always resolves to the latest [release](../../releases)):
 
 | File | What it is | When to use |
 |------|-----------|-------------|
-| `derpack-x-prism-installer-X.Y.Z.zip` | Prism instance that downloads mods on first launch | Drop into Prism, launch, mods auto-fetch. |
+| `project-commonwealth-prism-installer-X.Y.Z.zip` | Prism instance that downloads mods on first launch | Drop into Prism, launch, mods auto-fetch. |
 
 **Steps:** download → open Prism Launcher → Add Instance → Import from zip → pick the file → launch.
 
@@ -36,10 +38,10 @@ This repo doesn't store mod jars — it stores manifests describing *what mods a
 
 There are two ways to make changes, in order of how often they're used:
 
-1. **Derpack Editor** (recommended) — local desktop app, GUI, runs from the repo.
+1. **Project Commonwealth Editor** (recommended) — local desktop app, GUI, runs from the repo.
 2. **packwiz CLI directly** — fallback for things the editor doesn't cover yet, or when you can't run it.
 
-(The pack used to also expose browser-button GitHub Actions for add/remove/update/hash; those were retired once the editor covered them — see [issue #127](https://github.com/derpack-org/Derpack-X/issues/127).)
+(The pack used to also expose browser-button GitHub Actions for add/remove/update/hash; those were retired once the editor covered them — see [issue #127](https://github.com/theasshats/project-commonwealth/issues/127).)
 
 The workflow we follow: each contributor works on a **version-named branch**, edits via the editor, opens a **pull request to main**. Every PR runs automated merge-gating checks (packwiz index freshness, manifest lint, KubeJS/config parse, Go build & vet) — see [`docs/CI-CHECKS.md`](docs/CI-CHECKS.md). Releases are cut from main.
 
@@ -71,7 +73,7 @@ Then in GitHub Desktop: **File → Clone repository →** pick this repo. You're
 
 1. Open GitHub Desktop, **Fetch origin** + **Pull**.
 2. Create a new branch (or check out your existing branch). Name it after the next version (e.g. `0.4.7`, `0.5.0`).
-3. Open the repo folder in File Explorer. Double-click `tools\derpack-edit.exe`.
+3. Open the repo folder in File Explorer. Double-click `tools\pcmc-edit.exe`.
 4. A console window appears, your browser opens to `http://localhost:8765`.
 5. Make changes — add mods, set versions, pin, etc. The status pane logs every operation.
 6. (Optional) Click **Build & Launch in Prism** to test in-game before committing.
@@ -117,7 +119,7 @@ See [`tools/README.md`](tools/README.md) for the user-facing editor docs and tro
 ├── resourcepacks/         # Bundled resource packs (.zip files)
 ├── shaderpacks/           # Bundled shaderpacks (.zip files)
 ├── tools/
-│   ├── derpack-edit.exe   # The editor binary (auto-built by CI)
+│   ├── pcmc-edit.exe   # The editor binary (auto-built by CI)
 │   └── editor-src/        # Editor source — Go + HTML/CSS/JS
 ├── docs/                  # Human-facing documentation (see docs/README.md for the index)
 ├── scripts/               # Build helpers (CI runs these; you almost never run them directly)
@@ -145,16 +147,16 @@ The build runs fresh each time — no caching, ~30s — then attaches the Prism 
 
 If the editor doesn't work for you (no Windows machine, can't install Java, whatever), every operation can be done with `packwiz` directly from the repo root — `packwiz mr add <slug>` / `packwiz cf add <slug>`, `packwiz update <slug>` (or `--all`), `packwiz pin`/`unpin`, `packwiz refresh`. See [`docs/EDITING.md`](docs/EDITING.md#fallbacks) and [`mods/README.md`](mods/README.md).
 
-(The browser-button GitHub Actions that used to sit here — Add mod(s) / Remove mod / Update mods / Compute hash — were retired; the editor replaced them, [#127](https://github.com/derpack-org/Derpack-X/issues/127).)
+(The browser-button GitHub Actions that used to sit here — Add mod(s) / Remove mod / Update mods / Compute hash — were retired; the editor replaced them, [#127](https://github.com/theasshats/project-commonwealth/issues/127).)
 
 ---
 
 ## Player website
 
 The player-facing site lives in its **own repo** now —
-[`derpack-org/derpack-site`](https://github.com/derpack-org/derpack-site)
+[`theasshats/pcmc-site`](https://github.com/theasshats/pcmc-site)
 (split out of this repo's former `site/` directory). It's served at
-**`derpack-x.ishimura.xyz`** (and `modpack.ishimura.xyz`): how to join, what's in
+**`pcmc.ishimura.xyz`**: how to join, what's in
 the pack, rules, FAQ, a live server-status badge, and a download button that
 auto-resolves to the latest release's Prism installer (so it never points at a
 dead/stale asset). A player bug/issue report form is planned (#77) so problems

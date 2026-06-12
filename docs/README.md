@@ -1,6 +1,6 @@
 # `docs/` — index
 
-The durable documentation for Derpack X. This folder is **reference**, not scratch: every file here is
+The durable documentation for Project Commonwealth. This folder is **reference**, not scratch: every file here is
 meant to stay useful. Ephemeral session/handoff prompts don't belong in `docs/` (see the convention at
 the bottom). `docs/` is fully `.packwizignore`'d, so nothing here touches the packwiz index or CI.
 
@@ -15,9 +15,11 @@ off those two.
 | [`SYSTEMS.md`](SYSTEMS.md) | **The canonical structural model** — the systems as one causal loop (scarcity → pressure → production → economy; *Eco*-inspired). How the parts interlock: production (Create/magic), the economy (trade + logistics/aeronautics), pressure (survival), the recipe/gating spine, the ecological cost. The old flat "five systems" framing is retired here. |
 | [`CURATION.md`](CURATION.md) | **The curation rubric** — the charter every keep/cut pass scores mods against (the 8 gates). |
 | [`RECIPES.md`](RECIPES.md) | The "Made through Create" recipe convention **and the live triage ledger** — the most-referenced doc; the source of truth for recipe changes. |
-| [`CONNECTIVITY.md`](CONNECTIVITY.md) | The "one web, not many clusters" connectivity metric — turns the north-star web goal into a number you can re-check (`tools/recipe-graph/`). |
+| [`CONNECTIVITY.md`](CONNECTIVITY.md) | The "one web, not many clusters" connectivity metric — turns the north-star web goal into a number you can re-check (`tools/connectivity/`). |
 | [`ORE-GENERATION.md`](ORE-GENERATION.md) | The GTMOGS mix-vein ore-gen model (GTNH-style regional veins) and its config. |
 | [`GUN-PACKS.md`](GUN-PACKS.md) | The gun system — TaCZ wired into Create via two add-ons. |
+| [`CREATE-SPINE.md`](CREATE-SPINE.md) | **The ratified Create-spine design** — the tier ladder, the cost model + tier tokens (Part 2b-ii), boss gates, the aeronautics control thread, and the ratification record. |
+| [`SERVER.md`](SERVER.md) | Client *and* server from one `pack.toml` — delivery paths and the `side`-metadata rules. |
 | [`SPAWN-GATING.md`](SPAWN-GATING.md) | The spawn-control / mob-curation work from the #83 pass — what each file does and what needs in-game verification. |
 
 ## Setup & how-to
@@ -34,7 +36,11 @@ off those two.
 |---|---|
 | [`ROADMAP.md`](ROADMAP.md) | **The plan** — multi-phase build-out and the milestone map + the odd/even cadence (the road to 1.0). The sequencing source of truth; can lag `main`. |
 | [`TRIAGE.md`](TRIAGE.md) | Issue-triage playbook (re-label / milestone / assign / close / sequence). |
-| [`WEAVING-STRATEGY.md`](WEAVING-STRATEGY.md) | Weave-the-web thinking — **DRAFT**, not settled. |
+| [`CREATE-SPINE-IMPL.md`](CREATE-SPINE-IMPL.md) | The spine **build map** — file-by-file implementation record, the gate table, staged-work status. Pairs with `CREATE-SPINE.md` (design). |
+| [`POWER-MODS-REVIEW.md`](POWER-MODS-REVIEW.md) | The power-mod landscape review — decided for v0.7.0; kept as the basis for the 2.0 Power Grid overhaul (#282). |
+| [`MOD-REVIEW.md`](MOD-REVIEW.md) / [`WEAVE-REVIEW.md`](WEAVE-REVIEW.md) | Generated review ledgers (`tools/weave-ledger/`) — the pre-1.0 sweep and weave-status snapshots. Regenerate, don't hand-edit. |
+| [`PERFORMANCE.md`](PERFORMANCE.md) | Performance ledger — measured findings (spark) and the perf rules of thumb. |
+| [`CUSTOM-MODS.md`](CUSTOM-MODS.md) | The custom-mods program (pcmc-arcana etc.) — what we build ourselves and why. |
 | [`GOVERNANCE.md`](GOVERNANCE.md) | Player-governance scoping (#260) — municipalities→empires, cascading laws, entity minting. **SCOPING, not accepted** — survey + 3 implementation paths. (Governance reopened in `SYSTEMS.md`.) |
 | [`GOVERNANCE-MOD-SPEC.md`](GOVERNANCE-MOD-SPEC.md) | Path B technical spec for #260 — the custom NeoForge governance mod (data model, law-precedence resolver, Numismatics minting bridge, claim-mod integration, MVP phasing). **DRAFT, not accepted.** |
 
@@ -42,6 +48,7 @@ off those two.
 
 | Doc | Purpose |
 |---|---|
+| [`../wiki/`](../wiki/) | **The player wiki source** — progression, prospecting, weapons/gear guides (staging for the site; see `wiki/README.md`). |
 | [`PATCHNOTES.md`](PATCHNOTES.md) | Hand-maintained changelog. **Kept and maintained** (CLAUDE.md treats it as canonical player-facing copy) — `build.yml` cuts GitHub Releases on tag, but the prose release notes live here. Professional plain prose only. |
 
 ## Archive — `archive/`
@@ -55,7 +62,8 @@ priorities. See [`archive/`](archive/):
 - `archive/MODLIST-AUDIT.md` — the modlist-vs-goals snapshot. **Superseded** by `SYSTEMS.md` (model) + `CURATION.md` (rubric) + `ROADMAP.md` (plan); kept for its §A/§B/§C analysis. Archived v0.6.0.
 - `archive/RELEASE-CADENCE.md` — the odd/even cadence proposal + extended rationale. **Accepted**; the canonical cadence now lives in `ROADMAP.md` (rationale folded in). Archived v0.6.0.
 - `archive/ROTTEN-CREATURES-STRUCTURES.md` — the #106 spawn-allowlist review sheet. Durable rules live in `SPAWN-GATING.md`. Archived v0.6.0.
-- `archive/ARCANA-BRIDGE-MOD.md` — scoping/design for the **Derpack Arcana** code-level magic-weave helper mod (PR #80). The mod moved to its own repo (`derpack-org/derpack-arcana`); the living reference is `CUSTOM-MODS.md`. Archived v0.6.0.
+- `archive/V0.7.0-PHASE-PLAN.md` + `archive/V0.7.0-SPINE-HANDOFF.md` — the v0.7.0 spine phase plan and the org-rename resume doc. **Executed in full**; the living records are `CREATE-SPINE.md` (design) + `CREATE-SPINE-IMPL.md` (build map). Archived v0.7.0.
+- `archive/ARCANA-BRIDGE-MOD.md` — scoping/design for the **Project Commonwealth Arcana** code-level magic-weave helper mod (PR #80). The mod moved to its own repo (`theasshats/pcmc-arcana`); the living reference is `CUSTOM-MODS.md`. Archived v0.6.0.
 
 ### Still-live docs that were *candidates* (kept, with a note)
 

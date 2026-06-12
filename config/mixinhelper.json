@@ -1,9 +1,10 @@
 {
-  "warning": "Managed by Derpack X. Disables Supplementaries' Sodium fluid-render compat mixin, which is incompatible with the alpha Sodium the Aeronautics bridge requires (Supplementaries #2011). Cosmetic only: Lumisene loses its special emissive glow under Sodium. See #98.",
+  "warning": "Managed by Project Commonwealth. Disables alpha-Sodium-incompatible mixins required by the Aeronautics Sodium bridge (see #98). (1) Supplementaries' Sodium fluid-render compat mixin (Supplementaries #2011) - cosmetic only, Lumisene loses its emissive glow under Sodium. (2) Sodium's own SingleQuadParticle render optimization - Create Big Cannons' CannonSmokeParticle has a vertex format missing the UV-short element Sodium's optimized particle path requires, so firing a cannon crashed the client with 'Source format is missing element 2,UV,Short'; disabling this routes particles through the vanilla path (minor particle-render perf cost, not the terrain win #98 targets). Coupled to Sodium 0.8.12-alpha.4's mixin layout - re-verify the class path if Sodium is bumped.",
   "enabled": true,
   "blacklist": {
     "mixins": [
-      "net.mehvahdjukaar.supplementaries.mixins.neoforge.compat.CompatSodiumFluidRendererMixin"
+      "net.mehvahdjukaar.supplementaries.mixins.neoforge.compat.CompatSodiumFluidRendererMixin",
+      "net.caffeinemc.mods.sodium.mixin.features.render.particle.SingleQuadParticleMixin"
     ],
     "mixinConfigs": [],
     "targetClasses": []

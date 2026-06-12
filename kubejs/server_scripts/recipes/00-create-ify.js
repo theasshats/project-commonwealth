@@ -1,4 +1,4 @@
-// Derpack X — "Made through Create" recipe overhaul.
+// Project Commonwealth — "Made through Create" recipe overhaul.
 //
 // Principle: route crafting through Create PARTS + METHODS, woven through every branch.
 // This is NOT a grind — coherence over tedium. Full convention + parts palette: docs/RECIPES.md
@@ -8,7 +8,7 @@
 // This file is shared notes + a load check. It changes no recipes on its own.
 
 ServerEvents.recipes(event => {
-  console.info('[derpack] recipe-overhaul scripts loaded')
+  console.info('[pcmc] recipe-overhaul scripts loaded')
 
   // ─────────────────────────────────────────────────────────────────────────────
   // PATTERN TEMPLATES — copy into a per-branch file, then uncomment + fill real ids.

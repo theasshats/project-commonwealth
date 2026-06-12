@@ -49,6 +49,35 @@
           "id": "createimmersivetacz:rimmed_blunt_ap_casing"
         }
       ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "createimmersivetacz:rimmed_blunt_ap_casing"
+        },
+        {
+          "tag": "c:nuggets/lead"
+        }
+      ],
+      "results": [
+        {
+          "id": "createimmersivetacz:rimmed_blunt_ap_casing"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "createimmersivetacz:rimmed_blunt_ap_casing"
+        }
+      ],
+      "results": [
+        {
+          "id": "createimmersivetacz:rimmed_blunt_ap_casing"
+        }
+      ]
     }
   ],
   "transitional_item": {

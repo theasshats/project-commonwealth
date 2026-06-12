@@ -1,0 +1,66 @@
+# create_winery-2.0.2-neoforge-1.21.1
+
+## mod metadata (id / version / deps)
+license="All Rights Reserved"
+modId="create_winery"
+version="2.0.2"
+displayName="Create: Winery"
+modId="neoforge"
+versionRange="[21.1.65,)"
+modId="minecraft"
+versionRange="[1.21.1]"
+modId="jei"
+versionRange="[0,)"
+
+## blocks
+create_winery:red_grape_bush
+create_winery:red_grape_bush_stage_0
+create_winery:red_grape_bush_stage_1
+create_winery:red_grape_bush_stage_2
+create_winery:red_grape_bush_stage_3
+create_winery:red_grape_crate
+create_winery:white_grape_bush
+create_winery:white_grape_bush_stage_0
+create_winery:white_grape_bush_stage_1
+create_winery:white_grape_bush_stage_2
+create_winery:white_grape_bush_stage_3
+create_winery:white_grape_crate
+create_winery:wine_cellar
+
+## items
+create_winery:apple_juice
+create_winery:apple_must
+create_winery:bordeaux
+create_winery:cabernet_sauvignon
+create_winery:champaign
+create_winery:chardonnay
+create_winery:cider
+create_winery:grape_juice
+create_winery:merlot
+create_winery:pinot_noir
+create_winery:red_grape_bush
+create_winery:red_grape_bush_stage_0
+create_winery:red_grape_bush_stage_1
+create_winery:red_grape_bush_stage_2
+create_winery:red_grape_bush_stage_3
+create_winery:red_grape_crate
+create_winery:red_grape_pomace
+create_winery:red_grapes
+create_winery:riesling
+create_winery:rose
+create_winery:white_grape_bush
+create_winery:white_grape_bush_stage_0
+create_winery:white_grape_bush_stage_1
+create_winery:white_grape_bush_stage_2
+create_winery:white_grape_bush_stage_3
+create_winery:white_grape_crate
+create_winery:white_grape_pomace
+create_winery:white_grapes
+create_winery:wine_cellar
+create_winery:zinfandel
+
+## neoforge biome_modifiers
+grape_bush_world_gen_biome_modifier.json :: {"type": "neoforge:add_features", "biomes": ["meadow", "forest", "flower_forest", "birch_forest", "plains", "sunflower_plains"], "features": "create_winery:grape_bush_world_gen", "step": "vegetal_decoration"}
+
+## c: common tag membership
+

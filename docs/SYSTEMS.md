@@ -1,4 +1,4 @@
-# The systems — how Derpack X interlocks
+# The systems — how Project Commonwealth interlocks
 
 > **Status: accepted** (ratified by Xela112233 + zagwar, v0.6.0). This is the **canonical structural
 > model** for the pack — it **replaces the old flat "five systems / five pillars" framing** (that phrasing
@@ -23,7 +23,7 @@ The loop's north star is **[Eco](https://play.eco/)** (Strange Loop Games) — t
 survival game where a server of players must build a civilization together, **specialization is forced**
 so nobody can do everything alone, and the **economy is player-run and necessary**, not decorative. The
 ore-gen scarcity layer is already named the "Eco foundation" in `docs/ROADMAP.md` (Phase 1). What
-Derpack borrows: *forced specialization → emergent interdependence → a real player economy*. Where it
+Project Commonwealth borrows: *forced specialization → emergent interdependence → a real player economy*. Where it
 reaches Eco's effect by different means (regional resource scarcity + locked production routes vs. Eco's
 hard skill-point cap) and where it deliberately diverges (no civilization-wide deadline; no formal
 governance) is called out inline and in **Open / unsettled**.
@@ -152,7 +152,7 @@ using and no one route is self-sufficient.
 > include a refine step: re-check the updated content against this model.)
 
 > **Locked exclusives are the load-bearing wall, because our specialization is *soft*.** Eco enforces
-> specialization with a hard skill-point cap — you *cannot* learn everything. Derpack's interdependence
+> specialization with a hard skill-point cap — you *cannot* learn everything. Project Commonwealth's interdependence
 > is softer: scarcity + time make self-sufficiency *expensive*, but nothing stops a dedicated player (or
 > a tight bloc) from eventually covering every route, at which point the trade loop **erodes**. Locked
 > outputs are the closest thing to Eco's hard wall — the one mechanic that keeps interdependence from
@@ -237,7 +237,7 @@ gaps that exclusivity opens. It has two arms:
 > **Why aeronautics folds in here.** It used to be framed as a co-equal "connector" beside the economy;
 > it's cleaner as the economy's logistics arm — distribution of *matter* serving the same trade loop as
 > distribution of *value*. It keeps its own **build milestone** (flagship content; folded into the
-> Economy pillar — v0.9.0), but it isn't a separate top-level system.
+> Economy pillar — v0.13.0), but it isn't a separate top-level system.
 
 ---
 
@@ -302,14 +302,14 @@ obvious: a healthy mod is usually *something you produce that pressure demands a
   damage must follow their *settled/claimed footprint*, not a global commons; and **(b) TPS** — it must
   be event-driven and locality-bounded, never a global world-scan. May end up scoped down to "your
   colony/claim degrades its surroundings." Likely custom KubeJS/datapack; no drop-in mod exists.
-- **Dynamic pricing + player-minted currency — the economy's hard problem (DEFERRED to v0.9.0).** A real
+- **Dynamic pricing + player-minted currency — the economy's hard problem (DEFERRED to v0.13.0).** A real
   economy needs **dynamic prices** (supply/demand, not flat vendors) and, Eco-style, **players minting
   their own currencies** — *how* players mint and others come to trust/accept a currency is a
   social-mechanic problem MC doesn't hand us. We have *some levers* now (Numismatics for Create-minted
   coinage, Trading Floor for stalls/orders) but **the tooling is an unknown**: what's achievable with
-  current mods vs. what needs custom work will be **determined when the Economy pillar (v0.9.0) is
-  built**, not now.
-- **Formal governance/laws layer — REOPENED (under consideration, v0.9.0).** Earlier this was ruled out
+  current mods vs. what needs custom work will be **determined when the Economy pillar (v0.13.0) is
+  built** — with #221 run as an early research spike during v0.9–v0.11 so that build starts informed, not now.
+- **Formal governance/laws layer — REOPENED (under consideration, v0.13.0).** Earlier this was ruled out
   ("no formal governance — a deliberate divergence from Eco for a small PvPvE group"); that was
   *unsettled*, and #260 reopens it. A player-driven hierarchical governance system (municipalities →
   counties/kingdoms/empires, cascading laws, entity-minted currency, layered on MineColonies/claims) is

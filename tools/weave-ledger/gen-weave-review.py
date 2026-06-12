@@ -1,0 +1,145 @@
+#!/usr/bin/env python3
+"""Regenerate docs/WEAVE-REVIEW.md from the weave corpus + the review data files.
+
+This integrates the pre-1.0 mod-review sweep (docs/MOD-REVIEW.md) with the weave
+ledger's candidate corpus, and is RE-RUNNABLE: as more convergence passes land
+(targeting ~50), re-run this and the doc refreshes with the latest CANDIDATES.md.
+
+The candidate corpus lives on the **`claude/weaving-plan`** branch (NOT vendored here — we reference
+that branch, we don't merge it). By default this reads it via `git show <ref>:<path>`; override with
+--ref / --candidates, or point --candidates at a local checkout of the weaving-plan branch.
+
+Inputs:
+  CANDIDATES.md          — master candidate accumulator, read from the weaving-plan branch by default
+  review-map.json        — modid -> {slug, milestone}; the schedule mapping (this dir)
+  review-dx.json         — modid -> my DX note (hand-maintained; persists across passes) (this dir)
+  review-preamble.md     — static intro (thunderdome framing, synthesis); hand-maintained (this dir)
+
+Output:
+  ../../docs/WEAVE-REVIEW.md
+
+Triage safety: any mod present in CANDIDATES.md (at the threshold) but MISSING from
+review-map or review-dx is surfaced in a "Needs triage" section rather than dropped,
+so new mods from later passes can't slip through unreviewed.
+
+Usage:  python3 tools/weave-ledger/gen-weave-review.py [--threshold N] [--per-mod K]
+"""
+import json, re, os, argparse, datetime, subprocess, sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
+MAP  = os.path.join(HERE, "review-map.json")
+DX   = os.path.join(HERE, "review-dx.json")
+PRE  = os.path.join(HERE, "review-preamble.md")
+OUT  = os.path.join(ROOT, "docs", "WEAVE-REVIEW.md")
+# The corpus is NOT vendored here — it lives on the weaving-plan branch (referenced, not merged).
+WEAVE_REF  = "origin/claude/weaving-plan"
+WEAVE_PATH = "tools/weave-ledger/phase2/CANDIDATES.md"
+
+def read_candidates_text(candidates_arg, ref):
+    """Read CANDIDATES.md: from a local path if given, else from the weaving-plan branch via git."""
+    if candidates_arg:
+        return open(candidates_arg).read()
+    try:
+        return subprocess.check_output(["git", "show", f"{ref}:{WEAVE_PATH}"], cwd=ROOT, text=True)
+    except subprocess.CalledProcessError:
+        sys.exit(f"ERROR: couldn't read {ref}:{WEAVE_PATH}. Fetch the branch "
+                 f"(`git fetch origin claude/weaving-plan`) or pass --candidates <path>.")
+
+MS = {11:'v0.7.0 — Create spine',12:'v0.8.0 — Stabilization I',13:'v0.9.0 — Economy & logistics',
+ 14:'v0.10.0 — Stabilization II',15:'v0.11.0 — Magic',16:'v0.12.0 — Stabilization III',
+ 17:'v0.13.0 — Survival',18:'v0.14.0 — Stabilization IV',19:'v0.15.0 — Polish & site',
+ 20:'v1.0.0 — Release'}
+
+# Motifs the ledger RETIRED/CUT as NPC/ambient coin faucets — the economy is player-driven, so a flat
+# vendor-sell / bounty-coin / trade-seam is NOT a real anchor. These never count toward the anchor tally
+# and are shown struck-through. (M-09 retired, M-14 + M-21 cut — docs/WEAVE-LEDGER.md, #163/#240.)
+RETIRED = {'M-09', 'M-14', 'M-21'}
+
+def parse_candidates(text):
+    rows=[]; unique=None
+    for line in text.splitlines():
+        m=re.match(r'\*\*(\d+) unique', line.strip())
+        if m: unique=int(m.group(1))
+        if not line.startswith('| '): continue
+        c=[x.strip() for x in line.strip().strip('|').split('|')]
+        if len(c)<8 or c[0]=='times' or c[0].startswith('--'): continue
+        try: t=int(c[0])
+        except: continue
+        rows.append(dict(times=t, mod=c[2].strip('`'), frm=c[3], via=c[4],
+                         pillar=c[5], motif=c[6], consensus=c[7]))
+    return rows, unique
+
+def main():
+    ap=argparse.ArgumentParser()
+    ap.add_argument('--threshold', type=int, default=2, help='min passes (times) to include')
+    ap.add_argument('--per-mod', type=int, default=6, help='max ACCEPT rows shown per mod')
+    ap.add_argument('--ref', default=WEAVE_REF, help='git ref of the weaving-plan branch to read the corpus from')
+    ap.add_argument('--candidates', default=None, help='local path to CANDIDATES.md (overrides --ref)')
+    a=ap.parse_args()
+
+    rows, unique = parse_candidates(read_candidates_text(a.candidates, a.ref))
+    rmap=json.load(open(MAP)); dx=json.load(open(DX))
+    pre=open(PRE).read() if os.path.exists(PRE) else ""
+
+    ge=[r for r in rows if r['times']>=a.threshold]
+    bymod={}
+    for r in ge: bymod.setdefault(r['mod'],[]).append(r)
+
+    # group mods by milestone (0 = unmapped/needs triage)
+    msmods={}
+    triage_map=[]; triage_dx=[]
+    for mid in bymod:
+        ms = rmap.get(mid,{}).get('milestone', 0)
+        msmods.setdefault(ms,[]).append(mid)
+        if mid not in rmap: triage_map.append(mid)
+        if mid not in dx:   triage_dx.append(mid)
+
+    out=[]
+    out.append(pre.rstrip()+"\n" if pre else "# Mod review × weave ledger — integrated analysis\n")
+    out.append("> **Generated by `tools/weave-ledger/gen-weave-review.py` — re-run after each pass.** "
+        "Edit DX notes in `review-dx.json`, the schedule map in `review-map.json`, and the framing in "
+        "`review-preamble.md`; never hand-edit this file.\n")
+    out.append("_Last generated: %s · corpus: **%s unique candidates**, showing the **%d** seen in "
+        "≥%d passes (the consensus signal)._\n" % (datetime.date.today().isoformat(),
+        unique if unique else "?", len(ge), a.threshold))
+
+    if triage_map or triage_dx:
+        out.append("\n> ⚠ **Needs triage** (new since the review data was last updated): " +
+            (("**unmapped** (add to `review-map.json`): "+", ".join(f"`{m}`" for m in sorted(triage_map))+". ") if triage_map else "") +
+            (("**no DX note** (add to `review-dx.json`): "+", ".join(f"`{m}`" for m in sorted(triage_dx))+".") if triage_dx else ""))
+
+    for ms in sorted(MS)+([0] if 0 in msmods else []):
+        mids=sorted(msmods.get(ms,[]))
+        if not mids: continue
+        title = MS.get(ms, "Unmapped — needs triage")
+        out.append("\n## %s — %d mods\n" % (title, len(mids)))
+        for mid in mids:
+            cs=sorted(bymod[mid], key=lambda r:-r['times'])
+            acc=[c for c in cs if 'ACCEPT' in c['consensus'].upper()]
+            rej=[c for c in cs if 'REJECT' in c['consensus'].upper()]
+            # Real anchors exclude RETIRED/CUT motifs (player-driven economy: sell/bounty isn't a weave).
+            real=[c for c in acc if c['motif'] not in RETIRED]
+            real_motifs=sorted({c['motif'] for c in real if c['motif'] and c['motif']!='—'})
+            ret_motifs=sorted({c['motif'] for c in acc if c['motif'] in RETIRED})
+            slug=rmap.get(mid,{}).get('slug','?')
+            motif_str = ", ".join(real_motifs) or "—"
+            if ret_motifs:
+                motif_str += " · ~~%s~~ (retired, not an anchor)" % ", ".join(ret_motifs)
+            out.append("### `%s`  (%s) — %d real-anchor accepts / %dR · motifs: %s" %
+                (mid, slug, len(real), len(rej), motif_str))
+            note=dx.get(mid)
+            out.append("**DX:** %s" % (note if note else "_no DX note yet — add to `review-dx.json`._"))
+            for c in acc[:a.per_mod]:
+                strike = c['motif'] in RETIRED
+                line = "- `%s` ×%d → %s · %s · *via* %s" % (c['motif'], c['times'], c['pillar'], c['frm'][:75], c['via'][:55])
+                out.append(("- ~~%s~~ _(retired motif — ambient, not a weave)_" % line[2:]) if strike else line)
+            out.append("")
+
+    open(OUT,"w").write("\n".join(out)+"\n")
+    print("wrote", OUT)
+    print("mods: %d  shown candidates: %d  unmapped: %d  missing-DX: %d" %
+        (len(bymod), len(ge), len(triage_map), len(triage_dx)))
+
+if __name__=="__main__":
+    main()

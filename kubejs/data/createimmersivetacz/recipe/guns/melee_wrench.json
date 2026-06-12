@@ -1,6 +1,5 @@
 {
-  "type": "create:mechanical_crafting",
-  "accept_mirrored": false,
+  "type": "minecraft:crafting_shaped",
   "key": {
     "W": {
       "item": "create:wrench"

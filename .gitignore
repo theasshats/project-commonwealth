@@ -46,8 +46,17 @@ out/
 # App-local state — per-user, not synced
 .editor/
 
-# Editor build outputs (we commit derpack-edit.exe but not intermediate stuff)
+# Editor build outputs (we commit pcmc-edit.exe but not intermediate stuff)
 tools/editor-src/bin/
 
 # packwiz source checkout used only by the build-editor workflow
 .packwiz-src/
+
+# Downloaded build tooling (packwiz-installer-bootstrap.jar — fetched by scripts/setup.sh + the build scripts)
+.tools/
+
+# Runtime recipe dumps — local working files, NEVER committed: verbatim mod
+# recipe JSON (licensing-sensitive in a public repo) and unrefreshable
+# point-in-time snapshots besides. See tools/recipe-dump/README.md.
+tools/recipe-dump/pcmc-recipes.*
+tools/recipe-dump/dump/

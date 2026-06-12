@@ -1,4 +1,4 @@
-// Derpack Editor frontend
+// Project Commonwealth Editor frontend
 // Vanilla JS, no framework. Single page with a mod list and modals.
 
 const $ = (sel) => document.querySelector(sel);

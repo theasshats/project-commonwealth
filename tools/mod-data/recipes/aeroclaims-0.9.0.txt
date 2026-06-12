@@ -1,0 +1,1 @@
+aeroclaims:claim_block | minecraft:crafting_shaped | aeroclaims:claim_block create:framed_glass_pane create:iron_sheet create:precision_mechanism minecraft:black_dye minecraft:crafting_shaped minecraft:orange_dye

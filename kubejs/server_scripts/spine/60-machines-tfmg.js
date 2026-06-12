@@ -1,0 +1,247 @@
+// Create spine — METHOD conversion: TFMG MACHINE blocks/devices -> THROUGH Create.
+//
+// PURE METHOD OVERHAUL. This file takes TFMG machine / multi-part block recipes that were still on a plain
+// vanilla bench and routes them through Create's Mechanical Crafter (create:mechanical_crafting), keeping the
+// IDENTICAL pattern/keys/ingredients and output counts from the recipe dump. Nothing about WHAT goes in
+// changes — only HOW it's assembled. No new ingredients, no cross-tier parts, no global.* state.
+//
+// This complements the seam files (40/50/51/52/53/54), which already converted the engines, gearboxes, the
+// mixer, the winding machine, the distillation controller, the pumpjack crank and the two large engines (and
+// wove createaddition electric parts into them). Those 12 outputs are NOT touched here. This file is the rest
+// of TFMG's machine catalogue — the fluid-handling, blast-furnace, centrifuge, engine-cylinder and electrical
+// multi-part blocks — getting the same "made through Create" treatment, but as a STRAIGHT type swap (no woven
+// ingredient). The engine cylinders are an explicit exception left shaped — see the note at their position.
+//
+// WHAT'S A MACHINE (converted) vs a SIMPLE PART (left shaped): assembled devices and multi-part machine blocks
+// route through the Crafter. Genuinely simple parts — plates/sheets/rods/nuggets, hand tools, building blocks
+// (the *_reinforcement bricks, which are structural blocks not machines), and trivial pipe fittings (the
+// *_fluid_valve = one plate + one pipe) — stay shaped. See the LEFT-AS-CRAFTING note at the bottom.
+//
+// mechanical_crafting takes the same grid as the shaped recipe; tags are '#c:...', items are bare ids. For the
+// two shapeless devices (the mechanical_pumps) the same two items are laid into a small grid (rule 1).
+// Grids/keys/counts all verified vs tools/recipe-dump/pcmc-recipes.txt.
+//
+// STATUS: verified vs dump, load-safe, UNVERIFIED IN-GAME.
+
+ServerEvents.recipes(event => {
+  const mc = (p, k, o) => event.recipes.create.mechanical_crafting(o, p, k)
+  // ── Fluid tanks (assembled tank blocks): barrel + plates. count preserved. ──
+  event.remove({ output: 'tfmg:aluminum_fluid_tank' })
+  mc([
+    ' P ',
+    ' B ',
+    ' P '
+  ], {
+    P: '#c:plates/aluminum',
+    B: 'minecraft:barrel'
+  }, 'tfmg:aluminum_fluid_tank').acceptMirrored(false)
+
+  event.remove({ output: 'tfmg:cast_iron_fluid_tank' })
+  mc([
+    ' P ',
+    ' B ',
+    ' P '
+  ], {
+    P: '#c:plates/cast_iron',
+    B: 'minecraft:barrel'
+  }, 'tfmg:cast_iron_fluid_tank').acceptMirrored(false)
+
+  event.remove({ output: 'tfmg:steel_fluid_tank' })
+  mc([
+    ' P ',
+    ' B ',
+    ' P '
+  ], {
+    P: '#c:plates/steel',
+    B: 'minecraft:barrel'
+  }, '2x tfmg:steel_fluid_tank').acceptMirrored(false)
+
+  // ── Mechanical pumps (devices): shapeless cogwheel + pipe laid into a 2-cell grid. ──
+  event.remove({ output: 'tfmg:aluminum_mechanical_pump' })
+  mc([
+    'CP'
+  ], {
+    C: 'create:cogwheel',
+    P: 'tfmg:aluminum_pipe'
+  }, 'tfmg:aluminum_mechanical_pump').acceptMirrored(false)
+
+  event.remove({ output: 'tfmg:brass_mechanical_pump' })
+  mc([
+    'CP'
+  ], {
+    C: 'create:cogwheel',
+    P: 'tfmg:brass_pipe'
+  }, 'tfmg:brass_mechanical_pump').acceptMirrored(false)
+
+  event.remove({ output: 'tfmg:cast_iron_mechanical_pump' })
+  mc([
+    'CP'
+  ], {
+    C: 'create:cogwheel',
+    P: 'tfmg:cast_iron_pipe'
+  }, 'tfmg:cast_iron_mechanical_pump').acceptMirrored(false)
+
+  event.remove({ output: 'tfmg:plastic_mechanical_pump' })
+  mc([
+    'CP'
+  ], {
+    C: 'create:cogwheel',
+    P: 'tfmg:plastic_pipe'
+  }, 'tfmg:plastic_mechanical_pump').acceptMirrored(false)
+
+  event.remove({ output: 'tfmg:steel_mechanical_pump' })
+  mc([
+    'CP'
+  ], {
+    C: 'create:cogwheel',
+    P: 'tfmg:steel_pipe'
+  }, 'tfmg:steel_mechanical_pump').acceptMirrored(false)
+
+  // ── Electric pump: NOT re-added — voltage-layer block (volts-only, no FE port); the layer removal
+  //    (63-tfmg-voltage-removed.js) strips it until the 2.0 electricity overhaul (#282). The kinetic
+  //    mechanical_pumps above are the pack's pumps.
+
+  // ── Blast furnace multi-part machine blocks (hatch + output). ──
+  event.remove({ output: 'tfmg:blast_furnace_hatch' })
+  mc([
+    'FIF',
+    'PTP',
+    'FIF'
+  ], {
+    F: 'tfmg:fireproof_bricks',
+    I: '#c:plates/cast_iron',
+    P: 'tfmg:cast_iron_pipe',
+    T: 'tfmg:cast_iron_fluid_tank'
+  }, 'tfmg:blast_furnace_hatch').acceptMirrored(false)
+
+  event.remove({ output: 'tfmg:blast_furnace_output' })
+  mc([
+    'BCB',
+    'CQC',
+    'BCB'
+  ], {
+    B: 'tfmg:fireproof_bricks',
+    C: 'tfmg:cast_iron_pipe',
+    Q: '#c:storage_blocks/cast_iron'
+  }, 'tfmg:blast_furnace_output').acceptMirrored(false)
+
+  // ── Centrifuge (machine block). ──
+  event.remove({ output: 'tfmg:centrifuge' })
+  mc([
+    'BAB',
+    'BAB',
+    'BAB'
+  ], {
+    A: '#c:ingots/aluminum',
+    B: 'tfmg:aluminum_bars'
+  }, 'tfmg:centrifuge').acceptMirrored(false)
+
+  // ── Crankshaft (engine drivetrain device). ──
+  event.remove({ output: 'tfmg:crankshaft' })
+  mc([
+    'ABA',
+    'BAB',
+    '   '
+  ], {
+    A: '#c:rods/steel',
+    B: '#c:plates/aluminum'
+  }, 'tfmg:crankshaft').acceptMirrored(false)
+
+  // ── Engine cylinders: intentionally LEFT shaped (NOT converted). ──
+  // tfmg:diesel_engine_cylinder and tfmg:simple_engine_cylinder are NOT plain machine
+  // assemblies: their crafting recipes write fuel data onto the result as item COMPONENTS
+  // (`tfmg:fuel_tags` / `tfmg:fuels`) — they are the entry point of TFMG's engine-fueling
+  // upgrade chain (engine_cylinder_gas / engine_cylinder_spark_plug build on them). A
+  // create.mechanical_crafting output id cannot reproduce those result components, so a
+  // straight type swap would silently strip the fuel data and break the engine system.
+  // Per rule 3 ("when unsure, skip"), these stay on their original shaped recipes.
+
+  // ── Accumulator: NOT re-added — one of TFMG's two FE-boundary blocks (it charges from the volt
+  //    grid and exposes standard extractable FE); the voltage-layer removal
+  //    (63-tfmg-voltage-removed.js) strips it. Deliberately no mc() re-add here, so the removal
+  //    there is not order-dependent on this file.
+
+  // ── Chemical vats (fluid-processing machine blocks). ──
+  event.remove({ output: 'tfmg:cast_iron_chemical_vat' })
+  mc([
+    'PPP',
+    'NTN',
+    'PPP'
+  ], {
+    N: '#c:plates/lead',
+    P: '#c:plates/cast_iron',
+    T: 'tfmg:cast_iron_fluid_tank'
+  }, 'tfmg:cast_iron_chemical_vat').acceptMirrored(false)
+
+  event.remove({ output: 'tfmg:steel_chemical_vat' })
+  mc([
+    'PPP',
+    'NTN',
+    'PPP'
+  ], {
+    N: '#c:plates/nickel',
+    P: '#c:plates/steel',
+    T: 'tfmg:steel_fluid_tank'
+  }, '2x tfmg:steel_chemical_vat').acceptMirrored(false)
+
+  event.remove({ output: 'tfmg:fireproof_chemical_vat' })
+  mc([
+    'PRP',
+    'NTN',
+    'PHP'
+  ], {
+    P: 'tfmg:fireproof_bricks',
+    R: 'tfmg:rubber_sheet',
+    N: 'tfmg:circuit_board',
+    T: 'tfmg:steel_chemical_vat',
+    H: 'tfmg:heavy_machinery_casing'
+  }, 'tfmg:fireproof_chemical_vat').acceptMirrored(false)
+
+  // ── Firebox (heating machine block). ──
+  event.remove({ output: 'tfmg:firebox' })
+  mc([
+    'BTB',
+    'PPP',
+    'BPB'
+  ], {
+    B: 'tfmg:fireproof_bricks',
+    P: 'tfmg:brass_pipe',
+    T: 'tfmg:steel_fluid_tank'
+  }, 'tfmg:firebox').acceptMirrored(false)
+
+  // ── Polarizer + the six cable hubs: NOT re-added — voltage-layer blocks; the layer removal
+  //    (63-tfmg-voltage-removed.js) strips them until the 2.0 electricity overhaul (#282).
+
+  // ── Smokestacks (machine exhaust multi-part blocks). count preserved (all 4x). ──
+  event.remove({ output: 'tfmg:brick_smokestack' })
+  mc([
+    'BPB',
+    'BPB',
+    'BPB'
+  ], {
+    B: 'minecraft:bricks',
+    P: 'tfmg:industrial_pipe'
+  }, '4x tfmg:brick_smokestack').acceptMirrored(false)
+
+  event.remove({ output: 'tfmg:concrete_smokestack' })
+  mc([
+    'BPB',
+    'BPB',
+    'BPB'
+  ], {
+    B: 'tfmg:concrete',
+    P: 'tfmg:industrial_pipe'
+  }, '4x tfmg:concrete_smokestack').acceptMirrored(false)
+
+  event.remove({ output: 'tfmg:metal_smokestack' })
+  mc([
+    'BPB',
+    'BPB',
+    'BPB'
+  ], {
+    B: '#c:nuggets/steel',
+    P: 'tfmg:industrial_pipe'
+  }, '4x tfmg:metal_smokestack').acceptMirrored(false)
+
+  console.info('[pcmc-spine] machines TFMG: 26 TFMG machine/multi-part blocks now route THROUGH Create (mechanical_crafting), pure method swap; simple parts (fluid valves, reinforcement blocks, hammer heads) and the component-bearing engine cylinders left shaped.')
+})

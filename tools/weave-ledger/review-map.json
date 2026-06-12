@@ -1,0 +1,714 @@
+{
+ "aeronautics": {
+  "milestone": 13,
+  "slug": "create-aeronautics"
+ },
+ "aeronautics_dyeable_components": {
+  "milestone": 13,
+  "slug": "aeronautics-dyeable-components"
+ },
+ "aileron": {
+  "milestone": 13,
+  "slug": "aileron"
+ },
+ "alcohol_industry": {
+  "milestone": 17,
+  "slug": "create-alcohol-industry"
+ },
+ "alexsmobs": {
+  "milestone": 17,
+  "slug": "alexs-mobs(1.21.1)"
+ },
+ "appleseed": {
+  "milestone": 17,
+  "slug": "diet-appleseed-edition"
+ },
+ "ars_n_spells": {
+  "milestone": 20,
+  "slug": "ars-n-spells ::"
+ },
+ "ars_nouveau": {
+  "milestone": 15,
+  "slug": "ars-nouveau"
+ },
+ "astikorcartsredux": {
+  "milestone": 19,
+  "slug": "astikorcarts-redux"
+ },
+ "bakery": {
+  "milestone": 14,
+  "slug": "lets-do-bakery-farmcharm-compat"
+ },
+ "beachparty": {
+  "milestone": 14,
+  "slug": "lets-do-beachparty"
+ },
+ "betterdungeons": {
+  "milestone": 16,
+  "slug": "yungs-better-dungeons"
+ },
+ "bettermineshafts": {
+  "milestone": 16,
+  "slug": "yungs-better-mineshafts"
+ },
+ "betteroceanmonuments": {
+  "milestone": 16,
+  "slug": "yungs-better-ocean-monuments"
+ },
+ "betterstrongholds": {
+  "milestone": 16,
+  "slug": "yungs-better-strongholds"
+ },
+ "bits_n_bobs": {
+  "milestone": 11,
+  "slug": "create-bits-n-bobs"
+ },
+ "born_in_chaos_v1": {
+  "milestone": 17,
+  "slug": "borninchaos"
+ },
+ "bountiful": {
+  "milestone": 13,
+  "slug": "bountiful"
+ },
+ "brazil_legends": {
+  "milestone": 17,
+  "slug": "brazil-legends"
+ },
+ "byzantine": {
+  "milestone": 13,
+  "slug": "byzantine-styles-pack-for-minecolonies"
+ },
+ "cataclysm": {
+  "milestone": 14,
+  "slug": "l_enders-cataclysm"
+ },
+ "cbc_at": {
+  "milestone": 17,
+  "slug": "create-big-cannons-advanced-technologies"
+ },
+ "charta": {
+  "milestone": 20,
+  "slug": "charta"
+ },
+ "chefsdelight": {
+  "milestone": 17,
+  "slug": "chefs-delight"
+ },
+ "cmpackagecouriers": {
+  "milestone": 13,
+  "slug": "create-more-package-couriers"
+ },
+ "cmpackagepipebomb": {
+  "milestone": 13,
+  "slug": "create-more-pipe-bombs-in-packages"
+ },
+ "cmparallelpipes": {
+  "milestone": 13,
+  "slug": "create-more-parallel-pipes"
+ },
+ "cold_sweat": {
+  "milestone": 17,
+  "slug": "cold-sweat"
+ },
+ "comforts": {
+  "milestone": 17,
+  "slug": "comforts"
+ },
+ "companions": {
+  "milestone": 17,
+  "slug": "companion"
+ },
+ "cookingforblockheads": {
+  "milestone": 17,
+  "slug": "cooking-for-blockheads"
+ },
+ "copperagebackport": {
+  "milestone": 19,
+  "slug": "backport-copper-age"
+ },
+ "copycats": {
+  "milestone": 11,
+  "slug": "copycats"
+ },
+ "create_better_villagers": {
+  "milestone": 17,
+  "slug": "create-better-villagers"
+ },
+ "create_central_kitchen": {
+  "milestone": 17,
+  "slug": "create-central-kitchen"
+ },
+ "create_cheese": {
+  "milestone": 17,
+  "slug": "create-cheese"
+ },
+ "create_compressed": {
+  "milestone": 11,
+  "slug": "create-compressed"
+ },
+ "create_confectionery": {
+  "milestone": 17,
+  "slug": "create-confectionery"
+ },
+ "create_connected": {
+  "milestone": 11,
+  "slug": "create-connected"
+ },
+ "create_dragons_plus": {
+  "milestone": 17,
+  "slug": "create-dragons-plus"
+ },
+ "create_enchantment_industry": {
+  "milestone": 11,
+  "slug": "create-enchantment-industry"
+ },
+ "create_factory": {
+  "milestone": 11,
+  "slug": "create-factory"
+ },
+ "create_hypertube": {
+  "milestone": 11,
+  "slug": "create"
+ },
+ "create_integrated_farming": {
+  "milestone": 17,
+  "slug": "create-integrated-farming"
+ },
+ "create_ironworks": {
+  "milestone": 11,
+  "slug": "create-ironworks"
+ },
+ "create_jetpack": {
+  "milestone": 11,
+  "slug": "create-jetpack"
+ },
+ "create_ltab-3.9.2": {
+  "milestone": 11,
+  "slug": "create"
+ },
+ "create_mobile_packages": {
+  "milestone": 13,
+  "slug": "create-mobile-packages"
+ },
+ "create_new_age": {
+  "milestone": 11,
+  "slug": "create-new-age"
+ },
+ "create_pattern_schematics": {
+  "milestone": 13,
+  "slug": "create-pattern-schematics"
+ },
+ "create_sa": {
+  "milestone": 11,
+  "slug": "create"
+ },
+ "create_train_parts": {
+  "milestone": 13,
+  "slug": "create-train-parts"
+ },
+ "create_tweaked_controllers": {
+  "milestone": 13,
+  "slug": "create-tweaked-controllers"
+ },
+ "create_ultimate_factory": {
+  "milestone": 11,
+  "slug": "create-ultimate-factory"
+ },
+ "createaddition": {
+  "milestone": 11,
+  "slug": "createaddition"
+ },
+ "createadditionallogistics": {
+  "milestone": 13,
+  "slug": "create-additional-logistics"
+ },
+ "createbigcannons": {
+  "milestone": 17,
+  "slug": "create-big-cannons"
+ },
+ "createblockchain": {
+  "milestone": 13,
+  "slug": "create-blockchain"
+ },
+ "createfisheryindustry": {
+  "milestone": 17,
+  "slug": "create-fishery-industry"
+ },
+ "createfood": {
+  "milestone": 17,
+  "slug": "create-food"
+ },
+ "createimmersivetacz": {
+  "milestone": 11,
+  "slug": "create"
+ },
+ "createlowheated": {
+  "milestone": 11,
+  "slug": "create-low-heated"
+ },
+ "createmechanicalcompanion": {
+  "milestone": 17,
+  "slug": "create-mechanical-companion"
+ },
+ "createmetalwork": {
+  "milestone": 11,
+  "slug": "create-metalwork"
+ },
+ "createnuclear": {
+  "milestone": 11,
+  "slug": "createnuclear"
+ },
+ "createoreexcavation": {
+  "milestone": 11,
+  "slug": "create-ore-excavation"
+ },
+ "createpickywheels": {
+  "milestone": 13,
+  "slug": "create-picky-wheels"
+ },
+ "createtreadmill": {
+  "milestone": 11,
+  "slug": "createtreadmill"
+ },
+ "ctl": {
+  "milestone": 13,
+  "slug": "create-tweaked-controllers"
+ },
+ "ctov": {
+  "milestone": 17,
+  "slug": "ct-overhaul-village"
+ },
+ "deeperdarker": {
+  "milestone": 17,
+  "slug": "deeperdarker"
+ },
+ "direct_chute": {
+  "milestone": 13,
+  "slug": "direct-chute"
+ },
+ "dndesires": {
+  "milestone": 17,
+  "slug": "create-dreams-and-desires"
+ },
+ "domum_ornamentum": {
+  "milestone": 13,
+  "slug": "domum-ornamentum"
+ },
+ "drones": {
+  "milestone": 19,
+  "slug": "buddy-drones"
+ },
+ "dtterralith": {
+  "milestone": 16,
+  "slug": "terralith"
+ },
+ "dungeons-and-taverns-v4.4.4": {
+  "milestone": 17,
+  "slug": "dungeons-and-taverns"
+ },
+ "dungeons_arise_seven_seas": {
+  "milestone": 16,
+  "slug": "when-dungeons-arise-seven-seas"
+ },
+ "dynamictrees": {
+  "milestone": 19,
+  "slug": "dynamictrees"
+ },
+ "dynamictreesplus": {
+  "milestone": 19,
+  "slug": "dynamictreesplus"
+ },
+ "ecologics": {
+  "milestone": 17,
+  "slug": "ecologics"
+ },
+ "edf-remastered-5.0-beta4": {
+  "milestone": 17,
+  "slug": "edf-remastered"
+ },
+ "endermoon": {
+  "milestone": 17,
+  "slug": "ender-moon"
+ },
+ "endrem": {
+  "milestone": 17,
+  "slug": "endrem"
+ },
+ "enhancedcelestials": {
+  "milestone": 17,
+  "slug": "enhanced-celestials"
+ },
+ "expandeddelight": {
+  "milestone": 17,
+  "slug": "expanded-delight"
+ },
+ "exposure": {
+  "milestone": 19,
+  "slug": "exposure"
+ },
+ "extradelight": {
+  "milestone": 17,
+  "slug": "extradelight"
+ },
+ "farm_and_charm": {
+  "milestone": 14,
+  "slug": "lets-do-farm-charm"
+ },
+ "farmersdelight": {
+  "milestone": 17,
+  "slug": "farmers-delight"
+ },
+ "fluid": {
+  "milestone": 11,
+  "slug": "create-fluid"
+ },
+ "formations": {
+  "milestone": 14,
+  "slug": "formations"
+ },
+ "formationsnether": {
+  "milestone": 19,
+  "slug": "formations-nether"
+ },
+ "friendsandfoes": {
+  "milestone": 14,
+  "slug": "friends-and-foes-forge"
+ },
+ "fxntstorage": {
+  "milestone": 13,
+  "slug": "create-storage-neo-forge"
+ },
+ "galosphere": {
+  "milestone": 14,
+  "slug": "galosphere"
+ },
+ "gamediscs": {
+  "milestone": 19,
+  "slug": "game-discs"
+ },
+ "gnkinetics": {
+  "milestone": 11,
+  "slug": "gears-n-kinetics"
+ },
+ "gravestone": {
+  "milestone": 14,
+  "slug": "gravestone-mod"
+ },
+ "grimoireofgaia": {
+  "milestone": 14,
+  "slug": "grimoire-of-gaia"
+ },
+ "gtmogs": {
+  "milestone": 14,
+  "slug": "gtmogs"
+ },
+ "handcrafted": {
+  "milestone": 19,
+  "slug": "handcrafted"
+ },
+ "illagerinvasion": {
+  "milestone": 14,
+  "slug": "illager-invasion"
+ },
+ "immersive_armors": {
+  "milestone": 14,
+  "slug": "immersive-armors"
+ },
+ "immersive_paintings": {
+  "milestone": 19,
+  "slug": "immersive-paintings"
+ },
+ "irons_lib": {
+  "milestone": 20,
+  "slug": "irons-lib"
+ },
+ "irons_spellbooks": {
+  "milestone": 15,
+  "slug": "irons-spells-n-spellbooks"
+ },
+ "jakes-build-tools-2.0.1.5": {
+  "milestone": 19,
+  "slug": "jakes-build-tools"
+ },
+ "just_blahaj": {
+  "milestone": 14,
+  "slug": "just-blahaj"
+ },
+ "knightlib": {
+  "milestone": 20,
+  "slug": "knight-lib"
+ },
+ "kobolds": {
+  "milestone": 14,
+  "slug": "kobolds"
+ },
+ "letsdocompat": {
+  "milestone": 14,
+  "slug": "lets-do-addon-compat"
+ },
+ "mcwdoors": {
+  "milestone": 18,
+  "slug": "macaws-doors"
+ },
+ "mcwfences": {
+  "milestone": 18,
+  "slug": "macaws-fences-and-walls"
+ },
+ "mcwroofs": {
+  "milestone": 18,
+  "slug": "macaws-roofs"
+ },
+ "mcwstairs": {
+  "milestone": 18,
+  "slug": "macaws-stairs"
+ },
+ "mcwwindows": {
+  "milestone": 18,
+  "slug": "macaws-windows"
+ },
+ "meadow": {
+  "milestone": 14,
+  "slug": "lets-do-meadow"
+ },
+ "mffs": {
+  "milestone": 15,
+  "slug": "mffs"
+ },
+ "midnightthoughts": {
+  "milestone": 18,
+  "slug": "midnight-thoughts"
+ },
+ "minecolonies": {
+  "milestone": 13,
+  "slug": "minecolonies"
+ },
+ "minecolonies_compatibility": {
+  "milestone": 13,
+  "slug": "minecolonies-compatibility"
+ },
+ "minecolonies_tweaks": {
+  "milestone": 13,
+  "slug": "minecolonies-tweaks"
+ },
+ "moblassos": {
+  "milestone": 13,
+  "slug": "mob-lassos"
+ },
+ "modulargolems": {
+  "milestone": 15,
+  "slug": "modular-golems"
+ },
+ "more_slabs_stairs_and_walls": {
+  "milestone": 18,
+  "slug": "more-slabs-stairs-and-walls"
+ },
+ "mowziesmobs": {
+  "milestone": 14,
+  "slug": "mowzies-mobs"
+ },
+ "mushroomquest": {
+  "milestone": 14,
+  "slug": "mushroom-quest"
+ },
+ "mutantszombies": {
+  "milestone": 14,
+  "slug": "mutants-and-zombies"
+ },
+ "naturalist": {
+  "milestone": 14,
+  "slug": "naturalist"
+ },
+ "naturescompass": {
+  "milestone": 14,
+  "slug": "natures-compass"
+ },
+ "netmusic": {
+  "milestone": 18,
+  "slug": "net-music"
+ },
+ "northstar": {
+  "milestone": 13,
+  "slug": "northstar-redux"
+ },
+ "numismatics": {
+  "milestone": 13,
+  "slug": "numismatics"
+ },
+ "occultengineering": {
+  "milestone": 15,
+  "slug": "occult-engineering"
+ },
+ "occultism": {
+  "milestone": 15,
+  "slug": "occultism"
+ },
+ "oceansdelight": {
+  "milestone": 14,
+  "slug": "oceans-delight"
+ },
+ "pantographsandwires": {
+  "milestone": 13,
+  "slug": "create-pantographs-and-wires"
+ },
+ "patchouli": {
+  "milestone": 15,
+  "slug": "patchouli"
+ },
+ "quark": {
+  "milestone": 18,
+  "slug": "quark"
+ },
+ "railways": {
+  "milestone": 13,
+  "slug": "create-steam-n-rails-1.21.1"
+ },
+ "rechiseled": {
+  "milestone": 18,
+  "slug": "rechiseled"
+ },
+ "rechiseledcreate": {
+  "milestone": 11,
+  "slug": "rechiseled-create"
+ },
+ "ribbits": {
+  "milestone": 14,
+  "slug": "ribbits"
+ },
+ "rottencreatures": {
+  "milestone": 14,
+  "slug": "rottencreatures"
+ },
+ "s_a_b": {
+  "milestone": 16,
+  "slug": "steel-armor-blocks"
+ },
+ "samurai_dynasty": {
+  "milestone": 17,
+  "slug": "epic-samurais"
+ },
+ "securitycraft": {
+  "milestone": 18,
+  "slug": "security-craft"
+ },
+ "sereneseasons": {
+  "milestone": 14,
+  "slug": "serene-seasons"
+ },
+ "simplehats": {
+  "milestone": 18,
+  "slug": "simple-hats"
+ },
+ "sky_whale_ship": {
+  "milestone": 13,
+  "slug": "sky-whale-ship"
+ },
+ "sliceanddice": {
+  "milestone": 11,
+  "slug": "slice-and-dice"
+ },
+ "smokeleafindustries": {
+  "milestone": 15,
+  "slug": "smokeleaf-industries"
+ },
+ "snowyspirit": {
+  "milestone": 14,
+  "slug": "snowy-spirit"
+ },
+ "solmaiddream": {
+  "milestone": 16,
+  "slug": "spice-of-life-maids-dream"
+ },
+ "spawn": {
+  "milestone": 16,
+  "slug": "spawn-mod"
+ },
+ "steves_lava_chicken_music_disc": {
+  "milestone": 18,
+  "slug": "steves-lava-chicken-music-disc-backport"
+ },
+ "stylecolonies": {
+  "milestone": 13,
+  "slug": "stylecolonies"
+ },
+ "supplementaries": {
+  "milestone": 18,
+  "slug": "supplementaries"
+ },
+ "t_and_t": {
+  "milestone": 16,
+  "slug": "towns-and-towers"
+ },
+ "tacz": {
+  "milestone": 16,
+  "slug": "tacz-1.21.1"
+ },
+ "terralith": {
+  "milestone": 16,
+  "slug": "terralith"
+ },
+ "tfmg": {
+  "milestone": 11,
+  "slug": "create-tfmg"
+ },
+ "tidal-towns-1.3.4": {
+  "milestone": 16,
+  "slug": "tidal-towns"
+ },
+ "tide": {
+  "milestone": 16,
+  "slug": "tide"
+ },
+ "touhou_little_maid": {
+  "milestone": 18,
+  "slug": "touhou-little-maid"
+ },
+ "trading_floor": {
+  "milestone": 13,
+  "slug": "create-trading-floor"
+ },
+ "trailandtales_delight": {
+  "milestone": 16,
+  "slug": "trailtales-delight"
+ },
+ "trashcans": {
+  "milestone": 18,
+  "slug": "trash-cans"
+ },
+ "travelersbackpack": {
+  "milestone": 13,
+  "slug": "travelersbackpack"
+ },
+ "trek-b0.6.1.1": {
+  "milestone": 16,
+  "slug": "trek"
+ },
+ "underground_village": {
+  "milestone": 16,
+  "slug": "underground-village,-stoneholm"
+ },
+ "undergroundworlds": {
+  "milestone": 16,
+  "slug": "underground-worlds"
+ },
+ "upgrade_aquatic": {
+  "milestone": 16,
+  "slug": "upgrade-aquatic"
+ },
+ "valarian_conquest": {
+  "milestone": 16,
+  "slug": "valarian-conquest"
+ },
+ "vc_gliders": {
+  "milestone": 13,
+  "slug": "gliders"
+ },
+ "vinery": {
+  "milestone": 14,
+  "slug": "lets-do-vinery"
+ },
+ "woodworks": {
+  "milestone": 18,
+  "slug": "woodworks"
+ }
+}

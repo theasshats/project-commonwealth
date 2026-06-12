@@ -8,9 +8,9 @@
 > source. Sprinkled **small ores** give the early-game trickle and act as surface
 > indicators of a nearby vein.
 >
-> **Collaborator:** edit the per-vein JSON in `kubejs/data/derpack/gtmogs/ore_vein/` to tune
+> **Collaborator:** edit the per-vein JSON in `kubejs/data/pcmc/gtmogs/ore_vein/` to tune
 > a vein's composition / rarity / depth, and the **region tags** in
-> `kubejs/data/derpack/tags/worldgen/biome/vein_<ore>.json` to change *where* it generates.
+> `kubejs/data/pcmc/tags/worldgen/biome/vein_<ore>.json` to change *where* it generates.
 
 ---
 
@@ -23,10 +23,10 @@ hand-built vanilla features for veins anymore. The moving parts:
 
 | File / dir | Purpose | Key dial |
 |---|---|---|
-| `derpack/gtmogs/ore_vein/<vein>.json` | **the mix vein** (engine: GTMOGS) | `cluster_size`, `weight`, `density`, `height_range`, `generator` layers |
-| `derpack/tags/worldgen/biome/vein_<vein>.json` | **which biomes** the vein is allowed in | tag `values` (can mix `#tag` refs + biome IDs) |
-| `derpack/worldgen/{configured,placed}_feature/small_<ore>.json` | **small ores** (vanilla features) | `count`, `height_range` |
-| `derpack/neoforge/biome_modifier/small_ores.json` | adds all small ores to `#is_overworld` | `features` list |
+| `pcmc/gtmogs/ore_vein/<vein>.json` | **the mix vein** (engine: GTMOGS) | `cluster_size`, `weight`, `density`, `height_range`, `generator` layers |
+| `pcmc/tags/worldgen/biome/vein_<vein>.json` | **which biomes** the vein is allowed in | tag `values` (can mix `#tag` refs + biome IDs) |
+| `pcmc/worldgen/{configured,placed}_feature/small_<ore>.json` | **small ores** (vanilla features) | `count`, `height_range` |
+| `pcmc/neoforge/biome_modifier/small_ores.json` | adds all small ores to `#is_overworld` | `features` list |
 
 Vanilla overworld ore generation is **disabled by GTMOGS itself** — its `removeVanillaOreGen`
 config defaults to `true` (and `removeVanillaLargeOreVeins` too). We don't ship a `remove_features`
@@ -54,14 +54,17 @@ deepslate variant (magnetite, thorium) list the same block in both bands.
 
 ## Tuning knobs
 
-- **`cluster_size`** — vein footprint in blocks (we use **16–48**; big commons like iron/coal/copper
-  at 40–48, marquee/rare ores like diamond/uranium/mithril at 16–24).
+- **`cluster_size`** — vein footprint in blocks (the **v0.7.0 tuning uses 20–60**; big commons like
+  iron/coal/copper at 50–60, mid metals at 35–40, marquee/rare ores like diamond/thorium/mithril at
+  20–30, salt deliberately small at 24). Pairs with the **grid-5 spread** in `config/gtmogs.yaml`
+  (`oreVeinGridSize: 5`, `oreVeinRandomOffset: 20`): veins are rarer than the mod default but
+  individually richer — a find is an event, then a supply.
 - **`weight`** — relative chance this vein wins a roll *against other veins eligible at that spot*.
   Commons 55–80, mid 30–45, rare 10–20.
 - **`density`** — 0–1 fill probability inside the vein body. Commons ~0.4, rare ~0.2.
 - **`height_range`** — `{ "height": { "type": "uniform"|"trapezoid", "min_inclusive"/"max_inclusive": {"absolute": N} } }`. Match real ore depth.
 - **`dimension_filter`** — `["minecraft:overworld"]` for now; the engine also supports nether/end via the `layer` field (`stone`/`deepslate`/`netherrack`/`endstone`).
-- **`biomes`** — a single biome tag (e.g. `#derpack:vein_iron`) keeps the vein regional. **Don't**
+- **`biomes`** — a single biome tag (e.g. `#pcmc:vein_iron`) keeps the vein regional. **Don't**
   inline a list of `#tag`s here for the same reason as below — point at one tag and edit the tag.
 - **`discard_chance_on_air_exposure`** — 0.0 = veins show in caves/cliffs (good for findability).
 
@@ -107,8 +110,8 @@ You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:
 > (`["#minecraft:is_taiga", "#minecraft:is_forest"]` fails to parse → "Failed to load registries").
 > A *single* tag as a bare string is fine (`"biomes": "#minecraft:is_mountain"`). To combine
 > several tags (or tags + IDs), make a **custom biome tag** under
-> `kubejs/data/derpack/tags/worldgen/biome/<name>.json` (tag `values` *can* mix `#tag` refs and IDs)
-> and point the modifier at it: `"biomes": "#derpack:<name>"`. That's what the `vein_*` modifiers do.
+> `kubejs/data/pcmc/tags/worldgen/biome/<name>.json` (tag `values` *can* mix `#tag` refs and IDs)
+> and point the modifier at it: `"biomes": "#pcmc:<name>"`. That's what the `vein_*` modifiers do.
 
 ---
 
@@ -137,6 +140,21 @@ You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:
 *Left as-is (not metal ore): TFMG oil (`oil_deposit`/`oil_well` — a fluid), Create/Nuclear/TFMG
 "striated" stone (scoria/crimsite/tuff/andesite), Create: Metalwork (processing only).*
 
+> ⚠️ **TFMG `tfmg_striated_ores_overworld` WAS NOT purely decorative — now it is.** Upstream it's a
+> `create:layered_ore` feature (global `#is_overworld`) that carried four *material* bands: `tfmg:bauxite`
+> (→ aluminum, its **only** source), `tfmg:galena` (→ lead), `tfmg:lignite` (→ coal), and `tfmg:fireclay`
+> (→ fireproof bricks). All four generated in **every** overworld biome, bypassing the regional vein
+> system — the same region-agnostic leak class as the infected-diamond/palladium overrides. **Fixed by
+> overriding the configured feature** at `kubejs/data/tfmg/worldgen/configured_feature/tfmg_striated_ores_overworld.json`
+> — all four material bands swapped to decorative stone (`granite`/`smooth_basalt`/`tuff`), so the feature
+> is now genuinely cosmetic striated stone. Each material was **re-homed regionally** so nothing is lost:
+>
+> - **galena** → no new vein; lead is already the regional **lead vein**, so its product stays available.
+>   (Cost: TFMG galena *building* blocks lose their natural source — acceptable.)
+> - **bauxite (aluminum)** → new **`bauxite` vein** (jungle/savanna — tropical laterite).
+> - **lignite + fireclay** → new **`lignite` vein** (swamp/plains lowlands — coal-seam association), with
+>   fireclay as its secondary band so both sedimentary materials share one regional home.
+
 **Nether / dimensional (optional, later pass):** `nether_gold_ore`, `nether_quartz_ore`,
 `ancient_debris`; Occultism `occultism:iesnium_ore` (nether); Deeper Darker (Otherside dimension).
 
@@ -160,39 +178,46 @@ vein. Override targets in use (all verified + already shipped):
 | Infected diamond (Born in Chaos) | `born_in_chaos_v1/neoforge/biome_modifier/infected_diamond_ore_feature_biome_modifier.json` + `infected_deepslate_diamond_ore_feature_biome_modifier.json` — **shadow only, no vein.** It was a second diamond source injected into all overworld biomes; disabled outright so diamonds come solely from the GTMOGS diamond mix vein + the diamond small ore. |
 | Palladium (Galosphere) | `galosphere/neoforge/biome_modifier/add_silver_ores.json` — the `#is_overworld` small-blob injection (feature still named `ore_silver_small` after the Silver→Palladium rename). Veined separately; `add_large_silver_ores` (crystal_canyons) left as a regional bonus. |
 
-Left untouched: nether ores (`occultism` iesnium, `striated_ores_nether`), the decorative
-`striated_ores_overworld` (scoria/crimsite/stone), and TFMG `oil_deposit`/`oil_well` (fluid).
+Left untouched: nether ores (`occultism` iesnium, `striated_ores_nether`) and TFMG
+`oil_deposit`/`oil_well` (fluid). `striated_ores_overworld` is **kept but de-leaded** — it carries
+bauxite/lignite/fireclay (sole source, kept) plus galena (lead, removed); see the ⚠️ note above.
 
 ---
 
 ## Mix-vein table (shipped)
 
-Each row is one `derpack/gtmogs/ore_vein/<name>.json`. **Region** is the `#derpack:vein_<name>`
+Each row is one `pcmc/gtmogs/ore_vein/<name>.json`. **Region** is the `#pcmc:vein_<name>`
 biome tag (edit the tag to move a vein). **Composition** is primary → secondary → between → sporadic.
 
 | Vein | Region (biome tag) | Y-band | Size | Weight | Composition (P → S → B → Sp) |
 |---|---|---|---|---|---|
-| iron | mountains | -24…64 | 40 | 80 | iron → magnetite → nickel → gold |
-| copper | badlands | -16…112 | 40 | 70 | copper → iron → gold → zinc |
-| coal | taiga / forest | 0…136 | 48 | 80 | coal → coal → lithium → iron |
-| gold | savanna / badlands | -48…40 | 32 | 45 | gold → nickel → copper → zinc |
-| redstone | desert | -60…-8 | 32 | 45 | redstone → redstone → lithium → lapis |
-| lapis | snowy | -32…40 | 28 | 35 | lapis → lapis → silver → lithium |
-| diamond | jungle (deep) | -60…-16 | 24 | 15 | diamond → diamond → jade → emerald |
-| emerald | mountain peaks | 64…256 | 16 | 20 | emerald → emerald → gold → mithril |
-| zinc | plains / savanna | 0…80 | 40 | 55 | zinc → tin → copper → nickel |
-| tin | hills / plains | 0…96 | 40 | 55 | tin → zinc → iron → silver |
-| silver | hills / rocky mtns | -32…48 | 32 | 35 | silver → lead → nickel → palladium |
-| lead | hills / mountains | -32…64 | 32 | 40 | lead → silver → nickel → uranium |
-| lithium | desert / badlands | -48…16 | 32 | 35 | lithium → salt → redstone → nickel |
-| salt | ocean / beach | 0…72 | 40 | 45 | salt → salt → lithium → salt |
-| nickel | savanna / mountain | -32…48 | 32 | 40 | nickel → iron → silver → palladium |
-| magnetite | hills / mountains | 0…72 | 32 | 40 | magnetite → iron → gold → nickel |
-| thorium | badlands / volcanic | 0…48 | 24 | 15 | thorium → thorium → uranium → lithium |
-| uranium | badlands / desert (deep) | -64…-8 | 24 | 12 | uranium → uranium → thorium → lead |
-| mithril | special (Terralith) | -48…16 | 24 | 10 | mithril → mithril → silver → emerald |
-| jade | jungle | -24…48 | 32 | 30 | jade → jade → emerald → diamond |
-| palladium | mountains / deep_dark | -56…24 | 24 | 12 | palladium → palladium → nickel → silver |
+| iron | mountains | -24…64 | 50 | 80 | iron → magnetite → nickel → gold |
+| copper | badlands | -16…112 | 50 | 70 | copper → iron → gold → zinc |
+| coal | taiga / forest | 0…136 | 60 | 80 | coal → coal → lithium → iron |
+| gold | savanna / badlands | -48…40 | 40 | 45 | gold → nickel → copper → zinc |
+| redstone | desert | -60…-8 | 40 | 45 | redstone → redstone → lithium → lapis |
+| lapis | snowy | -32…40 | 35 | 35 | lapis → lapis → silver → lithium |
+| diamond | jungle (deep) | -60…-16 | 30 | 15 | diamond → diamond → jade → emerald |
+| emerald | mountain peaks | 64…256 | 20 | 20 | emerald → emerald → gold → mithril |
+| zinc | plains / savanna | 0…80 | 50 | 55 | zinc → tin → copper → nickel |
+| tin | hills / plains | 0…96 | 50 | 55 | tin → zinc → iron → silver |
+| silver | hills / rocky mtns | -32…48 | 40 | 35 | silver → lead → nickel → palladium |
+| lead | hills / mountains | -32…64 | 40 | 40 | lead → zinc → silver → copper |
+| lithium | desert / badlands | -48…16 | 40 | 35 | lithium → salt → redstone → nickel |
+| salt | ocean / beach | 0…72 | 24 | 25 | salt → salt → lithium → salt |
+| nickel | savanna / mountain | -32…48 | 40 | 40 | nickel → iron → silver → palladium |
+| magnetite | hills / mountains | 0…72 | 40 | 40 | magnetite → iron → gold → nickel |
+| thorium | badlands / volcanic | 0…48 | 30 | 15 | thorium → thorium → thorium → lithium |
+| mithril | special (Terralith) | -48…16 | 30 | 10 | mithril → mithril → silver → emerald |
+| jade | jungle | -24…48 | 40 | 30 | jade → jade → emerald → diamond |
+| palladium | mountains / deep_dark | -56…24 | 30 | 12 | palladium → palladium → nickel → silver |
+| bauxite | jungle / savanna | 32…128 | 50 | 30 | bauxite → iron → zinc → gold |
+| lignite | swamp / plains | 8…80 | 50 | 45 | lignite → fireclay → coal → lithium |
+
+> **v0.7.0:** the uranium vein was removed with Create: Nuclear (#289) — thorium and lead absorbed its
+> slots in their own chains. Salt was deliberately shrunk (24/25) from its early oversized preset. The
+> debug flags in `config/gtmogs.yaml` (`debug`, `debugWorldgen`) are ON for the #116 playtest and must
+> go OFF before release (#261).
 
 > All region tags are **strictly regional** — region biomes only, no `#c:is_underground` /
 > generic-cave fallback (issue #65). Veins generate where the region's surface biome extends down,

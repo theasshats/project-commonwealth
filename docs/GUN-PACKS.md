@@ -1,6 +1,6 @@
 # Gun integration — TaCZ + Create
 
-Derpack-X's gun system is built on **TaCZ** (Timeless and Classics Zero), with two add-ons that tie
+Project Commonwealth's gun system is built on **TaCZ** (Timeless and Classics Zero), with two add-ons that tie
 guns into Create:
 
 | Piece | What it is | Source | Delivery |
@@ -27,7 +27,11 @@ silently never arrived. Committing it makes delivery deterministic:
   source of truth all three builders read (`build-prism-skeleton.sh`, `build-server.sh`, and the
   editor) — so the zip is copied into `.minecraft/tacz/` directly.
 - CC BY-NC-ND 4.0 permits **verbatim** redistribution: commit the zip **unmodified**, keep
-  attribution (Koei), non-commercial only.
+  attribution (Koei), non-commercial only. ⚠️ **ND means NO in-repo edits to the zip — ever.** A
+  two-line data fix (explosive shells' missing `destroy_block` flag) was committed and same-day
+  reverted in v0.7.0 once this clause was checked; the compliant paths (upstream ask / TaCZ-side
+  override / self-authored override pack) are tracked in **#308**. If a change inside the zip looks
+  necessary, it goes through #308's options, not an edit.
 
 ### Adding / updating a gun pack
 
@@ -59,15 +63,15 @@ This pack ships **four** TaCZ table-block variants — all driven by the same
 - `tacz:workbench_b` — the **Create: Armorer table** (create-themed `create_armorer:create_workbench`, all 12 tabs)
 - `tacz:workbench_c` — the **ammo table**
 
-(`tacz:workbench_b` was also crafted by our old `kubejs/data/derpack/recipe/create_workbench.json`, now deleted.)
+(`tacz:workbench_b` was also crafted by our old `kubejs/data/pcmc/recipe/create_workbench.json`, now deleted.)
 
 `tacz:gun_smith_table_crafting` is a **real custom recipe type registered in the vanilla
 `RecipeManager`**, so KubeJS's `event.remove` *does* match it — this is the **same call that already
 removed TaCZ's stock default guns** (the `tacz` namespace); we just drop the namespace filter so it
-clears every namespace, including Create: Armorer (`create_armorer` / `derpack_armorer`). The Create
+clears every namespace, including Create: Armorer (`create_armorer`). The Create
 recipes are a **different** type (`create:mechanical_crafting` / `mixing` / `filling` / `cutting` / …),
-so they're untouched. The committed `tacz/Derpack_Armorer_Recipes.zip` (the old `derpack_armorer`
-table recipes) is dropped — redundant once those recipes are removed at load.
+so they're untouched. A previously committed datapack of custom Armorer table recipes was
+dropped — redundant once those recipes are removed at load.
 
 > **Caveat:** the gun *items* still exist in the creative tab; this only removes the survival craft.
 > **Verify in-game:** the gun smith table's tabs are empty (no guns/ammo/attachments to craft), and
@@ -87,7 +91,7 @@ the gun branch of the pack's Create-driven scarcity economy (see `DESIGN.md`).
   to, and they render in **JEI** (the recipe viewer the pack switched to precisely because EMI can't
   draw Create processing recipes). The gun smith table is **disabled** (above), so this is the only path.
 - **The three core gun parts** — `gun_barrel`, `gun_trigger`, `firing_mechanism` (and `primer`) — via
-  **plain shaped recipes** in `kubejs/data/derpack/recipe/`. Shaped (not Create `mechanical_crafting`)
+  **plain shaped recipes** in `kubejs/data/pcmc/recipe/`. Shaped (not Create `mechanical_crafting`)
   so they're trivially discoverable; the *ingredients* are still all Create/processed-metal, so the
   Create gating holds.
 
@@ -181,3 +185,22 @@ the override rewrites every tab icon to the component form, clearing the error.
 
 > **Verification items:** confirm `tacz/` is indexed in `index.toml` and that the committed zip is
 > copied into `.minecraft/tacz/` by all three builders (it's in `scripts/instance-dirs.txt`).
+
+
+## v0.7.0 state — one canonical path, tiered
+
+- **The Mechanical Crafter is the only gun path.** The gun-smith table type and all four bench blocks
+  are removed (`remove-default-tacz-guns.js`); every gun is built from Create-processed components
+  (steel barrels, deployer+RSC firing mechanisms, precision triggers, fluid-filled primers).
+- **Tiered via CBC ordnance parts** (`kubejs/data/createimmersivetacz/recipe/guns/`): the self-loading
+  guns (SMG, both shotguns, rifles, snipers, atomic melee) cycle on a `createbigcannons:recoil_spring`;
+  the three heavies (LMG, grenade launcher, 40mm cannon) build around a
+  `createbigcannons:steel_autocannon_barrel`. Both gates are the CBC↔TaCZ seam — small arms grow out of
+  the artillery industry. (The generic tier token, the capacitor, was deliberately NOT used here:
+  per-family thematic parts, same tier math.)
+- **Ammo is a four-stage line** (`.../recipe/ammo/`): casings cut from brass sheets (yields halved in
+  v0.7.0), then per round: deploy primer → fill gunpowder → deploy a **lead** projectile (nuggets;
+  ingots for the 40mm/grenade payloads) → crimping press. Lead demand is intentional (the lead veins).
+- **Known gap:** the grenade launcher + 40mm cannon don't break blocks — diagnosed (missing per-gun
+  `destroy_block`; the global TaCZ config already allows it) but the fix sits inside the ND-licensed
+  zip → **#308**. Default-TaCZ JEI visibility cleanup → **#307**.

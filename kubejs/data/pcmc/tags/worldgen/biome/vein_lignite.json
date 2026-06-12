@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:swamp",
+    "minecraft:mangrove_swamp",
+    "minecraft:plains",
+    "minecraft:sunflower_plains",
+    {
+      "id": "terralith:orchid_swamp",
+      "required": false
+    },
+    {
+      "id": "terralith:ice_marsh",
+      "required": false
+    }
+  ]
+}

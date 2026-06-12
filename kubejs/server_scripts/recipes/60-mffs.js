@@ -3,7 +3,7 @@
 // MFFS already plugs into the spine via `#c:ingots/steel` (Create-routed in this pack), but its
 // real MACHINES — the force-field projector, the Fortron generator/capacitor, the interdiction
 // matrix — are endgame tech that still crafted on a plain table. So gate by COMPLEXITY, the way
-// Northstar already does (simple gear = a part gate; complex machines = real Create METHODS):
+// the pack gates other complex tech (simple gear = a part gate; complex machines = real Create METHODS):
 //
 //   - focus_matrix (the field-focus component shared by every module): one precision gate
 //     (create:electron_tube). Cheap, and it flows to all the simple modules — no need to touch
@@ -35,28 +35,28 @@ ServerEvents.recipes(event => {
   event.recipes.create.sequenced_assembly(
     ['mffs:projector'], 'mffs:focus_matrix',
     [
-      event.recipes.create.deploying('derpack:incomplete_force_projector', ['derpack:incomplete_force_projector', 'tfmg:steel_casing']),
-      event.recipes.create.deploying('derpack:incomplete_force_projector', ['derpack:incomplete_force_projector', 'mffs:battery']),
-      event.recipes.create.deploying('derpack:incomplete_force_projector', ['derpack:incomplete_force_projector', 'create:electron_tube']),
-      event.recipes.create.deploying('derpack:incomplete_force_projector', ['derpack:incomplete_force_projector', 'tfmg:steel_mechanism']),
-      event.recipes.create.deploying('derpack:incomplete_force_projector', ['derpack:incomplete_force_projector', 'create:precision_mechanism']),
-      event.recipes.create.pressing('derpack:incomplete_force_projector', 'derpack:incomplete_force_projector')
+      event.recipes.create.deploying('pcmc:incomplete_force_projector', ['pcmc:incomplete_force_projector', 'tfmg:steel_casing']),
+      event.recipes.create.deploying('pcmc:incomplete_force_projector', ['pcmc:incomplete_force_projector', 'mffs:battery']),
+      event.recipes.create.deploying('pcmc:incomplete_force_projector', ['pcmc:incomplete_force_projector', 'create:electron_tube']),
+      event.recipes.create.deploying('pcmc:incomplete_force_projector', ['pcmc:incomplete_force_projector', 'tfmg:steel_mechanism']),
+      event.recipes.create.deploying('pcmc:incomplete_force_projector', ['pcmc:incomplete_force_projector', 'create:precision_mechanism']),
+      event.recipes.create.pressing('pcmc:incomplete_force_projector', 'pcmc:incomplete_force_projector')
     ]
-  ).transitionalItem('derpack:incomplete_force_projector').loops(1)
+  ).transitionalItem('pcmc:incomplete_force_projector').loops(1)
 
   // INTERDICTION MATRIX (endgame area-denial). orig: focus_matrix + shock_module + ender_chest
   event.remove({ output: 'mffs:interdiction_matrix' })
   event.recipes.create.sequenced_assembly(
     ['mffs:interdiction_matrix'], 'mffs:focus_matrix',
     [
-      event.recipes.create.deploying('derpack:incomplete_interdiction_matrix', ['derpack:incomplete_interdiction_matrix', 'tfmg:steel_casing']),
-      event.recipes.create.deploying('derpack:incomplete_interdiction_matrix', ['derpack:incomplete_interdiction_matrix', 'mffs:shock_module']),
-      event.recipes.create.deploying('derpack:incomplete_interdiction_matrix', ['derpack:incomplete_interdiction_matrix', 'minecraft:ender_chest']),
-      event.recipes.create.deploying('derpack:incomplete_interdiction_matrix', ['derpack:incomplete_interdiction_matrix', 'tfmg:steel_mechanism']),
-      event.recipes.create.deploying('derpack:incomplete_interdiction_matrix', ['derpack:incomplete_interdiction_matrix', 'create:precision_mechanism']),
-      event.recipes.create.pressing('derpack:incomplete_interdiction_matrix', 'derpack:incomplete_interdiction_matrix')
+      event.recipes.create.deploying('pcmc:incomplete_interdiction_matrix', ['pcmc:incomplete_interdiction_matrix', 'tfmg:steel_casing']),
+      event.recipes.create.deploying('pcmc:incomplete_interdiction_matrix', ['pcmc:incomplete_interdiction_matrix', 'mffs:shock_module']),
+      event.recipes.create.deploying('pcmc:incomplete_interdiction_matrix', ['pcmc:incomplete_interdiction_matrix', 'minecraft:ender_chest']),
+      event.recipes.create.deploying('pcmc:incomplete_interdiction_matrix', ['pcmc:incomplete_interdiction_matrix', 'tfmg:steel_mechanism']),
+      event.recipes.create.deploying('pcmc:incomplete_interdiction_matrix', ['pcmc:incomplete_interdiction_matrix', 'create:precision_mechanism']),
+      event.recipes.create.pressing('pcmc:incomplete_interdiction_matrix', 'pcmc:incomplete_interdiction_matrix')
     ]
-  ).transitionalItem('derpack:incomplete_interdiction_matrix').loops(1)
+  ).transitionalItem('pcmc:incomplete_interdiction_matrix').loops(1)
 
   // ── MID-TIER MACHINES — deep but not flagship: rich TFMG-steel crafts, no full chain. ──
 

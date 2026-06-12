@@ -49,6 +49,35 @@
           "id": "createimmersivetacz:slap_casing"
         }
       ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "createimmersivetacz:slap_casing"
+        },
+        {
+          "tag": "c:nuggets/lead"
+        }
+      ],
+      "results": [
+        {
+          "id": "createimmersivetacz:slap_casing"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "createimmersivetacz:slap_casing"
+        }
+      ],
+      "results": [
+        {
+          "id": "createimmersivetacz:slap_casing"
+        }
+      ]
     }
   ],
   "transitional_item": {

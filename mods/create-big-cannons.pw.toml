@@ -1,13 +1,18 @@
 name = "Create Big Cannons"
-filename = "createbigcannons-5.11.5+mc.1.21.1.jar"
+filename = "createbigcannons-5.11.3-mc.1.21.1.jar"
 side = "both"
+# 5.11.3 is the newest CBC that works with cbc_at 0.1.4c: the addon calls a block-damage
+# method whose signature changed after 5.11.3, so a newer CBC crashes the server on heavy
+# autocannon AP impact. Pinned as a pair with create-big-cannons-advanced-technologies;
+# re-pair only when a newer cbc_at targets a newer CBC.
+pin = true
 
 [download]
 hash-format = "sha1"
-hash = "e2b81eab4edfaa4aefa774e7a804a05a240d697d"
+hash = "8b61fa850e260bdeb5d360576123f98c260afa50"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8175295
+file-id = 8002961
 project-id = 646668
