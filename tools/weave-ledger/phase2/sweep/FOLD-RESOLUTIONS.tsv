@@ -16,3 +16,5 @@ create_winery	add-keep	M-16	milestone:v0.9.0	season-gated grape harvest (config-
 occultism	add-keep	M-29	milestone:v0.11.0	price the dimensional mineshaft in Create fabrication (keeps M-18 honest vs the new vein map)
 railways	add-keep	M-26	milestone:v0.13.0	the rail arm burns fuel (fuel_tank/coalburner exist unconfigured; reagent-ownership check vs M-13 at authoring)
 sereneseasons	add-keep	M-31	milestone:v0.13.0	tropical/temperate asymmetry makes winter food a logistics-required bulk import (pairs with v0.9.0 season tuning)
+create_compressed	drop	M-28	skip	superseded by the remove-mod ledger row (S-12 caught the missed v0.7.0 removal)
+create_compressed	drop	M-31	skip	superseded by the remove-mod ledger row
