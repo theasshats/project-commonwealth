@@ -7,10 +7,10 @@
  "excluded_removed": 12,
  "chunks": 20,
  "status": {
-  "S01": "pending",
-  "S02": "pending",
-  "S03": "pending",
-  "S04": "pending",
+  "S01": "done",
+  "S02": "done",
+  "S03": "done",
+  "S04": "done",
   "S05": "pending",
   "S06": "pending",
   "S07": "pending",
@@ -30,5 +30,15 @@
   "P1": "done",
   "P2": "done"
  },
- "note": "dispatch in waves as usage allows; one fable agent per chunk per BRIEFING.md; mark done when <chunk>.findings.md ends with the completion marker"
+ "note": "dispatch in waves as usage allows; one fable agent per chunk per BRIEFING.md; mark done when <chunk>.findings.md ends with the completion marker",
+ "usage_log": {
+  "P1": "224k tok/15 mods",
+  "P2": "161k/16",
+  "S01": "181k/17",
+  "S02": "133k/16",
+  "S03": "129k/16",
+  "S04": "147k/16",
+  "note": "wave-2 avg ~148k/chunk (~9.1k/mod) \u2014 random chunks ~25% cheaper than the dense pilot"
+ },
+ "fold_note": "findings fold into triage/ratification.tsv at waypoints (next: ~S10 or on maintainer word); convert wave-1/2 build-task notes to act:CUSTOM per CUSTOM-MOD-CANDIDATES.md"
 }
