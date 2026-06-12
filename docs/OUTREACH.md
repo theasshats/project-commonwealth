@@ -193,22 +193,51 @@ permission asked. The old "can't drop Aeronautics-compat or MineColonies" blocke
 aeronautics-compat is now Modrinth-sourced, and the MineColonies family is GPL (rehostable, not
 drop-required).
 
+**Modrinth-compatible sourcing (researched).** A `.mrpack` index isn't limited to Modrinth's own CDN —
+the format **whitelists `github.com`, `raw.githubusercontent.com`, and `gitlab.com`** alongside
+`cdn.modrinth.com`, so a jar hosted on any of those can be referenced **directly**, with no need to get
+it onto Modrinth itself. (Other launchers may widen the list, but these are the safe set.) Mapping the 12
+CF-only mods against that:
+
+- **Already on Modrinth for 1.21.1 → just re-source (no work):** `configured` (Modrinth lists it MIT —
+  even more permissive than the audit's LGPL) and `veil-lib` (the Veil rendering lib, LGPL-3.0). *Verify
+  `veil-lib` is the same artifact/version the Sable bridge pins (`CLAUDE.md`) before swapping the source.*
+- **Not on Modrinth, but GPL/MIT on a whitelisted host → reference or self-mirror:** the **ldtteam family**
+  (`minecolonies`, `blockui`, `structurize`, `domum-ornamentum`, `multi-piston`, `minecolonies-compatibility`,
+  `minecolonies-tweaks`) and `dynamic-trees-ars-nouveau`. MineColonies *has* a Modrinth page but it only
+  carries **1.18.2** — for 1.21.1 ldtteam ships via CurseForge + their own maven, with public GPL source
+  on GitHub. `dynamic-trees-ars-nouveau` (MIT) publishes its own GitHub **releases** (DynamicTreesTeam).
+  **Open item:** confirm whether ldtteam attaches built jars to GitHub *releases* (then reference them
+  directly — `github.com` is whitelisted) or only to their maven/CF (then **mirror the GPL jars to our own
+  GitHub release** — legal, unmodified + source link). Either way there's a whitelisted path; the only
+  question is "their release or our mirror."
+- **The 2 ARR holdouts — the real blockers:** `stylecolonies` (public ldtteam GitHub repo, but ARR-licensed
+  jar) and `towntalk`. Neither is rehostable without author permission; both are optional addons. A near
+  equivalent, **Talking Colonists (Minecolonies Addon)**, *is* on Modrinth for 1.21.1 and could substitute
+  for `towntalk`.
+
+**Net:** no mod is a hard dead-end for a Modrinth listing — every one has a Modrinth-compatible source
+(direct re-source, GitHub reference, or legal GPL mirror) **except** the two optional ARR addons, which
+drop, substitute, or get permission.
+
 **So the options are:**
 
 | Path | What it takes | Verdict |
 |---|---|---|
-| **A. Modrinth listing** | Rehost the 10 redistributable CF-only jars to Modrinth (legal under GPL/LGPL/MIT); drop or get permission for the 2 ARR addons (`stylecolonies`, `towntalk`) | **No longer license-blocked** — now a *work* question (rehosting + 2 droppable addons), not a format dead-end |
+| **A. Modrinth listing** | Re-source the 2 already-on-Modrinth mods; reference the 8 GPL/MIT mods from GitHub (their releases or a legal self-mirror); drop/substitute/seek-permission for the 2 ARR addons | **No hard blocker** — every mod has a Modrinth-compatible path bar the 2 optional ARR addons; cost is mirror-hosting + the addon call, not a format dead-end |
 | **B. CurseForge listing** | Build a CF modpack export; reverse-audit that the 331 Modrinth mods permit CF distribution | **The most straightforward storefront** — the 12 CF-only mods are already on CF; open work is the Modrinth→CF audit + clunkier CF tooling |
 | **C. Stay installer-native** | Accept no storefront browse; lean entirely on owned channels + creators + word-of-mouth (§4) | **The fallback** — still valid, but A is no longer ruled out, so this is a choice now, not a forced hand |
 
-**Recommendation:** the CF-only audit (above) is now **done** — that removes the biggest unknown and
-**reopens option A**. Both storefronts are genuinely on the table; pick deliberately. **B (CurseForge)**
-is still the lowest-effort reach unlock — the CF mods are already hosted, so it only needs the reverse
-redistribution audit of the 331 Modrinth mods. **A (Modrinth)** now costs rehosting 10 GPL/LGPL/MIT jars
-and shedding two optional ARR addons, but Modrinth is the larger, cleaner discovery funnel, so the extra
-work may pay back. Either beats drifting into **C by inaction** — that's how the pack ends up
-public-but-undiscoverable. (#73's `.mrpack` drop was about GitHub's 2 GiB asset cap + "nobody used it" —
-neither applies to a storefront listing.)
+**Recommendation:** the CF-only audit + sourcing research (above) are now **done** — that removes the
+biggest unknown and **reopens option A**. Both storefronts are genuinely on the table; pick deliberately.
+**B (CurseForge)** is still the lowest-effort reach unlock — the CF mods are already hosted, so it only
+needs the reverse redistribution audit of the 331 Modrinth mods. **A (Modrinth)** costs re-sourcing 2 mods,
+referencing or mirroring 8 GPL/MIT jars from a whitelisted host, and handling 2 optional ARR addons — more
+plumbing than B, but Modrinth is the larger, cleaner discovery funnel, so the work may pay back. The one
+remaining open question for A is whether ldtteam already attaches jars to GitHub releases (direct
+reference) or we mirror them ourselves; either is tractable. Either path beats drifting into **C by
+inaction** — that's how the pack ends up public-but-undiscoverable. (#73's `.mrpack` drop was about
+GitHub's 2 GiB asset cap + "nobody used it" — neither applies to a storefront listing.)
 
 > Whichever path: a thin landing on the site with one-click-ish install instructions and a prominent
 > "what is this" remains the canonical home, because it's the one channel that works regardless of
