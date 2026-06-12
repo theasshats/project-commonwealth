@@ -43,8 +43,24 @@ def known_ids():
     return ids
 
 
+BAND_FRACTION = {"primary": 3 / 9, "secondary": 3 / 9, "between": 2 / 9, "sporadic": 1 / 9}
+
+
+def material(state):
+    """minecraft:deepslate_iron_ore -> iron; create_new_age:magnetite_block -> magnetite; tfmg:bauxite -> bauxite."""
+    name = state.split(":", 1)[1]
+    for prefix in ("deepslate_",):
+        if name.startswith(prefix):
+            name = name[len(prefix):]
+    for suffix in ("_ore", "_block"):
+        if name.endswith(suffix):
+            name = name[: -len(suffix)]
+    return name
+
+
 def check_veins(ids):
     weights = {}
+    compositions = {}
     for f in sorted(glob.glob(f"{VEIN_DIR}/*.json")):
         name = os.path.basename(f)[:-5]
         d = json.load(open(f))
@@ -52,6 +68,7 @@ def check_veins(ids):
             if key not in d:
                 problems.append(f"{name}: missing top-level `{key}`")
         gen = d.get("generator", {})
+        comp = {}
         for band in BANDS:
             b = gen.get(band)
             if b is None:
@@ -70,6 +87,10 @@ def check_veins(ids):
                 state = t["state"].get("Name", "?")
                 if state.split(":")[0] != "minecraft" and state not in ids:
                     problems.append(f"{name}/{band}: block `{state}` not found in tools/mod-data digests")
+            first = b["targets"][0].get("state", {}).get("Name") if b["targets"] else None
+            if first:
+                mat = material(first)
+                comp[mat] = comp.get(mat, 0) + BAND_FRACTION[band]
         biomes = d.get("biomes", "")
         if isinstance(biomes, str) and biomes.startswith("#pcmc:"):
             tag = biomes.split(":", 1)[1]
@@ -79,7 +100,8 @@ def check_veins(ids):
             problems.append(f"{name}: `biomes` should be exactly one `#pcmc:vein_*` tag (got {biomes!r}) "
                             f"— edit the tag file to move a vein, never this field")
         weights[name] = d.get("weight", 0)
-    return weights
+        compositions[name] = comp
+    return weights, compositions
 
 
 def check_small_ores():
@@ -96,8 +118,9 @@ def check_small_ores():
         problems.append(f"small ores: {orphan} exists but is not in the small_ores biome modifier (never generates)")
 
 
-def region_shares(weights):
+def region_shares(weights, compositions):
     # region -> member veins, mirrors the vein_* tag files; update when regions move.
+    # Singletons get their own rows: every anchor in that region is that vein.
     regions = {
         "hills": ["tin", "lead", "magnetite", "silver"],
         "mountains": ["iron", "lead", "magnetite", "nickel", "emerald", "palladium", "iron_mega"],
@@ -107,27 +130,39 @@ def region_shares(weights):
         "plains": ["tin", "zinc", "lignite"],
         "desert": ["redstone", "lithium"],
         "jungle": ["bauxite", "jade", "diamond"],
+        "snowy [singleton]": ["lapis"],
+        "coasts [singleton]": ["salt"],
+        "swamps [singleton]": ["lignite"],
+        "Terralith specials [singleton]": ["mithril"],
+        "dripstone/deep_dark pockets [singleton]": ["palladium"],
     }
-    print("\nper-region weight shares (anchor every grid^2 chunks; grid 5 = 25):")
+    print("\nper-region shares (anchor every grid^2 chunks; grid 5 = 25).")
+    print("ore output model: bands P/S/B/Sp = 3/3/2/1 of 9 layers (between/sporadic are engine-")
+    print("reduced -> upper bounds; vein-size differences NOT folded in - megas are ~10-25x volume):")
     for region, members in regions.items():
         total = sum(weights.get(m, 0) for m in members)
         if not total:
             continue
         parts = ", ".join(f"{m} {weights.get(m, 0) / total * 100:.0f}%" for m in members)
         print(f"  {region} (sum {total}): {parts}")
-    print("  singletons (weight moot, rarity = biome rarity): lapis/snowy, salt/coasts,"
-          " lignite/swamps, mithril/Terralith specials")
+        ores = {}
+        for m in members:
+            share = weights.get(m, 0) / total
+            for ore, frac in compositions.get(m, {}).items():
+                ores[ore] = ores.get(ore, 0) + share * frac
+        ranked = sorted(ores.items(), key=lambda kv: -kv[1])
+        print("      ore output: " + " · ".join(f"{o} {v * 100:.0f}%" for o, v in ranked))
 
 
 def main():
     ids = known_ids()
-    weights = check_veins(ids)
+    weights, compositions = check_veins(ids)
     check_small_ores()
     print(f"{len(weights)} veins checked against {len(ids)} known ids:",
           "ALL CLEAN" if not problems else f"{len(problems)} PROBLEM(S)")
     for p in problems:
         print("  !!", p)
-    region_shares(weights)
+    region_shares(weights, compositions)
     sys.exit(1 if problems else 0)
 
 
