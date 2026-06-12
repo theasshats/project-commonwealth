@@ -160,10 +160,10 @@ reachable from `create:*`: **14340** items (avg **1.8** hops); unreachable: **32
 | 85 | 41 | 45 | block/deco | `domum_ornamentum` |
 | 74 | 30 | 17 | organic/mob | `cataclysm` |
 | 69 | 2 | 68 | tech/gear | `tfmg` |
-| 69 | 20 | 15 | phantom | `spawn` |
+| 69 | 19 | 15 | phantom | `spawn` |
 | 68 | 4 | 17 | other | `aeronautics_dyeable_components` |
 | 67 | 11 | 14 | organic/mob | `deeperdarker` |
-| 64 | 26 | 6 | organic/mob | `alexsmobs` |
+| 64 | 27 | 6 | organic/mob | `alexsmobs` |
 | 60 | 11 | 14 | block/deco | `galosphere` |
 | 59 | 40 | 10 | other | `mushroomquest` |
 | 56 | 10 | 28 | organic/mob | `born_in_chaos_v1` |
@@ -195,5 +195,5 @@ reachable from `create:*`: **14340** items (avg **1.8** hops); unreachable: **32
 | 6 | 3 | 3 | other | `rottencreatures` |
 | 6 | 6 | 1 | other | `smokeleafindustries` |
 | 5 | 1 | 5 | other | `immersive_paintings` |
-| 5 | 3 | 2 | other | `endrem` |
 | 5 | 4 | 2 | organic/mob | `grimoireofgaia` |
+| 5 | 3 | 2 | other | `endrem` |
