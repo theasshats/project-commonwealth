@@ -20,9 +20,6 @@ expedition over. Ore generation only affects newly generated chunks.
   veins are gone (replaced by iron, copper, and gold), and silver no longer appears among the
   scattered small ores. What remains: the dedicated hill vein — now about one hill deposit in ten —
   a thin band in lead country, and traces in the rare mithril and palladium veins.
-- Samurai Dynasty silver is now the same silver as everyone else's: its ingots, nuggets, raw silver,
-  ore, and blocks count as the pack's silver and unify into Occultism's. Galosphere's metal remains
-  palladium and is unaffected.
 
 ### Vein sizes now vary
 

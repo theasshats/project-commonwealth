@@ -7,7 +7,10 @@ pr-checks green but crash or silently misbehave at world creation:
   - a band keyed `target` instead of the required plural `targets` (crashes worldgen)
   - missing bands / missing top-level keys
   - placed block states that exist in no installed mod (checked against
-    tools/mod-data digests; minecraft: ids are trusted)
+    tools/mod-data digests; minecraft: ids are trusted). Caveat: the digests are
+    ASSET-derived (blockstates/item models), so an id passing this check can still
+    be an unregistered datagen ghost (the samurai-silver v0.7.1 crash) — corroborate
+    new ids against the mod's lang/loot/recipes before tagging them anywhere.
   - a vein whose `biomes` tag file does not exist
   - small-ore features whose configured/placed halves or biome-modifier entry
     are out of sync (a placed_feature pointing at a missing configured_feature

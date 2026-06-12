@@ -1,7 +1,0 @@
-{
-  "__comment": "#177: samurai_dynasty silver is real silver (unlike Galosphere's palladium-with-a-silver-name, which must NEVER join these tags). The mod ships no c: tags for it; merge it in so AlmostUnified folds it into the one silver (canonical: occultism, pinned in almostunified/unification/materials.json).",
-  "replace": false,
-  "values": [
-    "samurai_dynasty:silver_ingot"
-  ]
-}

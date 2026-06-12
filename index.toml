@@ -73,14 +73,6 @@ file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_diamond_or
 hash = "d47a9327525c734da68f9c5659e4ae15157e8d2cb691c9b910b00e572825cb6e"
 
 [[files]]
-file = "kubejs/data/c/tags/block/ores/silver.json"
-hash = "11586695c2720481441b9112bec175befb247a47ca9d7e71afbab4c9a23ba309"
-
-[[files]]
-file = "kubejs/data/c/tags/block/storage_blocks/silver.json"
-hash = "dfe71d4e84eece2539a9b93ad673c0f0e097caf1e5ebd1b32b2de02534a3054c"
-
-[[files]]
 file = "kubejs/data/c/tags/fluid/hidden_from_recipe_viewers.json"
 hash = "4394a43e65b969f98e120d69cd0e973b9b78eb0c1518b57985345f92544c7668"
 
@@ -91,26 +83,6 @@ hash = "81f0c175924c339037b5feab41b8429ecd20beab677546832f83733e93acbd4a"
 [[files]]
 file = "kubejs/data/c/tags/item/hidden_from_recipe_viewers.json"
 hash = "71b2d072ff3284156bfea9765946f5657d6d060c0ff5a324618da1ca7bc3805e"
-
-[[files]]
-file = "kubejs/data/c/tags/item/ingots/silver.json"
-hash = "02bab33057c66fcee4f286a46b5c08f0bfba44dea2624fd676978478a2e88878"
-
-[[files]]
-file = "kubejs/data/c/tags/item/nuggets/silver.json"
-hash = "4d62e668a894cdede8fc69397b94122e03a291faab7bc061f8886239bb0b574c"
-
-[[files]]
-file = "kubejs/data/c/tags/item/ores/silver.json"
-hash = "11586695c2720481441b9112bec175befb247a47ca9d7e71afbab4c9a23ba309"
-
-[[files]]
-file = "kubejs/data/c/tags/item/raw_materials/silver.json"
-hash = "9af6caf06a5b8cfe9f2207e13fef7989b4709eca89f1d116ec61d752f420b7ce"
-
-[[files]]
-file = "kubejs/data/c/tags/item/storage_blocks/silver.json"
-hash = "dfe71d4e84eece2539a9b93ad673c0f0e097caf1e5ebd1b32b2de02534a3054c"
 
 [[files]]
 file = "kubejs/data/create/neoforge/biome_modifier/zinc_ore.json"
