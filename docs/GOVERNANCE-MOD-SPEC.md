@@ -5,9 +5,12 @@
 > *on top of* the claim systems the pack already runs, owning no claims of its own. It assumes the
 > governance direction is pursued; the decision to commit is still open. Nothing here is built.
 >
-> Per `docs/CUSTOM-MODS.md`, a custom mod lives in **its own repo** under `theasshats` (working name
-> **`theasshats/pcmc-realms`**) and reaches the pack via the mod-mirror packwiz pattern — it is *not*
-> developed in this repo. This doc is the design reference that would seed that repo.
+> Per `docs/CUSTOM-MODS.md`, a custom mod lives in **its own repo** under `theasshats` and reaches the
+> pack via the mod-mirror packwiz pattern — it is *not* developed in this repo. The implementation is
+> split into **three parts — claims → government → economy (§8)** — which may ship as **one mod or
+> three separate mods** (packaging call deferred; see §8 "One mod or three?"). This doc is the design
+> reference that would seed that repo (working name **`theasshats/pcmc-realms`** for the single-mod
+> shape; per-part working names in §8).
 
 ---
 
@@ -144,8 +147,8 @@ reading of a hierarchy.
 
 ## 5. Treasury & minting (the hard part — Numismatics bridge)
 
-This is the **least certain** part and should be **MVP-deferred** behind laws/hierarchy. Two viable
-shapes; pick after a Numismatics API spike:
+This is the **least certain** part and is deferred to **Part 3 (§8)**, behind laws/hierarchy. Two
+shapes were considered; the desk check has since settled it:
 
 - **Option 1 — ledger + entity notes (recommended).** Each entity has a `Treasury` = a Numismatics
   **bank account** (Numismatics already has accounts/cards) plus the authority to issue **entity notes** —
@@ -154,9 +157,12 @@ shapes; pick after a Numismatics API spike:
   only mint notes against reserves** (a hard backing ratio in config), so an entity can't print free money.
   Rival currencies "compete" by their redemption trust; exchange is manual (player-to-player) or via a
   Trading Floor stall. This rides Numismatics' existing money rather than forking the coin system.
-- **Option 2 — new coin denominations.** True new coins via Numismatics' coin registry, if its API permits
-  registering denominations at runtime (**unverified — likely not**). Higher fidelity, much higher risk;
-  only if the spike shows Numismatics supports it. Default assumption: **it does not**, so Option 1.
+- **Option 2 — new coin denominations: ruled out.** Verified against upstream source
+  (`Layers-of-Railways/CreateNumismatics`, LGPL): `Coin` is a **fixed Java enum** (SPUR/BEVEL/SPROCKET/…),
+  not a registry — there is no runtime denomination registration without mixins into the coin system.
+  Option 1 is the shape. (LGPL also means linking a separate mod against Numismatics is license-clean;
+  whether the bank-account credit/debit surface is reachable as API or needs a small mixin is the Part 3
+  spike's first question.)
 
 **Minting authority by tier:** config-gated; default **only FEDERATION-kind entities (COUNTY+) may mint**,
 so a lone settlement can't issue currency — minting is a privilege of scale, reinforcing the federation
@@ -206,19 +212,76 @@ playable before any screen work.
 
 ---
 
-## 8. Scope / phasing — MVP first
+## 8. Scope — three parts: claims → government → economy
 
-The full vision is multi-week; ship it in slices, each independently playtestable on the box:
+The full vision is multi-month; it splits into **three sequential parts with hard boundaries** —
+**claims** (territory resolution), **government** (hierarchy + laws), **economy** (treasury + minting).
+Each part is independently playtestable on the box, each starts with its own spike, and the boundaries
+are designed so the split can become **three separate mods** if that's how it shakes out — see "One mod
+or three?" below.
 
-| Phase | Delivers | Gate |
+### Part 1 — Claims (the territory layer)
+
+The read-only substrate everything else stands on: **given a position, which entity governs it?**
+
+| Delivers | Detail |
+| --- | --- |
+| Spike | Verify the §6 assumptions: MineColonies position/colony lookup, OPAC claims-manager lookup, both reachable from a NeoForge 1.21.1 dev env. |
+| Entity registry | `RealmsSavedData` + a minimal `Entity` (id, name, members, `colonyIds`, `claimKeys`) — **no tiers, laws, or treasury yet**. |
+| Resolution | The colonyId→entity / claimKey→entity reverse indexes and the chunk→entity cache + invalidation (§6). |
+| Commands | `/realm found`, `/realm info`, plus a `/realm whogoverns` debug query for the chunk under the player. |
+| Degradation | Soft-dep no-ops when MineColonies/OPAC absent (§9). |
+
+**Gate:** founding binds a real colony; `whogoverns` answers correctly with no measurable hot-path cost;
+the mod owns zero claims.
+
+**Public surface for the parts above it:** `resolve(level, chunkPos) → entity chain (leaf→root)` plus
+entity CRUD events — kept in a clean `api` package from day one. This is the contract Part 2 consumes.
+
+### Part 2 — Government (the political layer)
+
+The hierarchy and the law engine, standing on Part 1's resolution. Two slices:
+
+| Slice | Delivers | Gate |
 | --- | --- | --- |
-| **0 — spike** | Verify OPAC + MineColonies + Numismatics APIs do what §3/§5/§6 assume. | Decides Option 1 vs 2 for minting; confirms chunk→entity lookup is cheap. |
-| **1 — MVP** | Entity model, found/promote, the **law engine + resolver** (PVP, BLOCK_INTERACT), chunk→entity cache. **No federation, no minting.** | A single municipality can set & enforce laws on its colony. |
-| **2 — hierarchy** | Federations, recursive carve, ancestry-based law cascade. | Empire>kingdom>city precedence verified in-game. |
-| **3 — economy** | TAX laws → treasury, Option-1 minting + entity notes, Trading Floor weave. | Taxes fund a mint; notes circulate. |
-| **4 — polish** | GUI, map render, ITEM_BAN, config surface. | — |
+| **2a — single-entity laws (MVP)** | Tier field + `/realm promote` validation (§3); the **law engine + resolver** (§4) with PVP and BLOCK_INTERACT enforcement. **No federation yet.** | A single municipality sets & enforces PvP/build laws on its colony — independently shippable. |
+| **2b — hierarchy** | Federation composition (consent, capital), recursive `carve`, parent/child links, roles; the full leaf→root cascade + tie-breaks. | Empire>kingdom>city precedence verified in-game. |
 
-Phase 1 alone is a shippable, useful feature (per-municipality PvP/build laws) and de-risks the rest.
+**Public surface for Part 3:** a **pluggable `LawType` registry**, so the economy part registers TAX
+without the law engine knowing anything about money.
+
+### Part 3 — Economy (the value layer)
+
+The Numismatics bridge (§5) — the least certain part, deliberately last.
+
+| Delivers | Detail |
+| --- | --- |
+| Spike | The Numismatics account credit/debit surface (API or small mixin — LGPL source, either workable), and **whether Trading Floor exposes any sale hook** — a desk check found no public event, so assume a mixin until proven otherwise. |
+| Treasury + TAX | Entity treasury = Numismatics bank account; TAX `LawType` registered into Part 2's engine; revenue flows per §4/§5. |
+| Minting | Option-1 reserve-backed entity notes, hard backing ratio in config, federation-tier gate. |
+| Weave | Notes circulate via Trading Floor stalls; exchange is player-to-player or stall-mediated. |
+
+**Gate:** taxes fund a treasury; a note is minted against reserves and redeemed at the issuing bank.
+
+### Cross-cutting polish (last)
+
+GUI (entity/law/treasury screens), `/realm map` border render, ITEM_BAN, config surface — after the
+three parts, blocking none of them.
+
+### One mod or three?
+
+The parts are designed to stand as **separate mods** (working names: `pcmc-territory` /
+`pcmc-realms` / `pcmc-mint`), each in its own repo per `docs/CUSTOM-MODS.md`, dependency chain
+**economy → government → claims**. Whether to actually split is a packaging call deferrable to Part 2
+kickoff:
+
+- **Three mods** buys independent versioning and release cadence (a treasury fix doesn't re-ship the
+  law engine), a smaller blast radius per release, and the option to ship Part 1 alone as a useful
+  "who governs here" utility. Cost: three repos/CI/manifests and a cross-mod API kept stable.
+- **One mod, three Gradle modules** keeps the plumbing cheap while preserving identical boundaries.
+
+Either way, the boundary contracts above (Part 1's `resolve` API, Part 2's `LawType` registry) are
+non-negotiable — they are what keep the split possible and the layers honest.
 
 ---
 
