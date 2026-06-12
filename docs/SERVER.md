@@ -72,7 +72,7 @@ A handful of pure-cosmetic client mods currently ride `both` and could be
 narrowed to `client` to slim the server (cosmetic-only, no registered content):
 `fogoverrides`, `particle-rain`, `blood-n-particles-mod`,
 `better-animations-collection`, `immersive-armor-hud`, `build-guide`,
-`durability-tooltip`, `mining-speed-tooltips`, `better-ping-display`,
+`durability-tooltip`, `better-ping-display`,
 `immersivemusicmod`, `sound-physics-remastered`. This is an optimization, not a
 fix — narrow only after a playtest confirms clients still connect (a wrong narrow
 on a content-registering mod breaks registry parity). Leaving them `both` is

@@ -52,6 +52,17 @@ is a vanilla ore-target list: one entry for `stone_ore_replaceables`, one for
 per-entry key is the vanilla `target` (the predicate) — don't confuse the two. Ores with no
 deepslate variant (magnetite, thorium) list the same block in both bands.
 
+## Tuning objective (read first)
+
+Scarcity is the product: regions specialize and **kingdoms form around rare-ore monopolies**, so the
+dial question is never "make X findable" — it's "is buying X from its region cheaper than the
+expedition?" **Two-dial principle:** `weight` sets *who has it* (keep it low for monopoly ores);
+`cluster_size × density` sets *how much the haves have* — strengthen a kingdom by making its ore
+**richer, not commoner**. Byproduct bands belong in the thin `between`/`sporadic` slots; promoting
+one to `secondary` turns a trickle into an industry (the salt-in-lithium case — #318 E3). The full
+lens, monopoly map, per-region/per-ore rarity math, and current review findings live on **#318**,
+the consolidated ore-gen tracker.
+
 ## Tuning knobs
 
 - **`cluster_size`** — vein footprint in blocks (the **v0.7.1 tuning uses 20–40 plus a 120 mega
@@ -290,9 +301,12 @@ Vanilla overworld ore is otherwise fully disabled.
 ## Applying & testing
 
 1. Files live in `kubejs/data/` → loaded as a global datapack automatically.
-2. **Worldgen only affects NEW chunks** — test in a fresh world or unexplored area; `/reload`
+2. Validate before committing: `python3 scripts/validate-ore-veins.py` — catches the crash
+   classes CI can't (the `targets` trap, unknown block states, missing tag files, small-ore
+   desyncs) and prints per-region vein shares + modeled per-ore output ratios for the rarity math.
+3. **Worldgen only affects NEW chunks** — test in a fresh world or unexplored area; `/reload`
    won't regenerate existing terrain.
-3. Playtest checklist: veins appear in the right biomes at the expected size/rarity; vanilla ore
+4. Playtest checklist: veins appear in the right biomes at the expected size/rarity; vanilla ore
    is scarce but a starter amount still exists; no `worldgen`/`biome_modifier` errors in the log.
 
 > **Verified from jars:** modded ore IDs (zinc/thorium/silver) and the per-mod biome-modifier override
