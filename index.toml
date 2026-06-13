@@ -482,7 +482,7 @@ hash = "3315a399bf54a2ade87a2cc8903c4a7c3469bfbe02407a8622509c3821fa1b6a"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/coal_mega.json"
-hash = "6aaf5cd7dab7acc802c2751241e4435919c281efad07789c7d68b79d032ab4ec"
+hash = "1718515f46a5984c9dc70c9ea195e0d8f3a6bee8d9fbcb40029626ba9edbfc41"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/copper.json"
@@ -498,7 +498,7 @@ hash = "4f7a6f43edb132f82499bd8c9e6f0411f06e2eb22c2d8474864d4f119773a339"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/copper_mega.json"
-hash = "cd9b4920dfd8dd25f02b4f977a1db7fe2b1bc0401da4833a371cb292bb98bb74"
+hash = "27d2e3877dbbbd9cc3dc9c33ea65eb48e7ae3483da54beb485c59a3905c21433"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/copper_warm_ocean.json"
@@ -538,7 +538,7 @@ hash = "6b5e55170901dfe18b2f337950d53738f623a2019b382a1b705ca708340f5a9b"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/iron_mega.json"
-hash = "fe0b84da9314db0bf8d28d30653ba6e66859208337330e9407bcf500accf51d4"
+hash = "e6a3ab93f3d0d561824d2831971ae3674ca0eb036b1209a6581b527d33fe4fdc"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/iron_swamp.json"
