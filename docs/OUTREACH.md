@@ -197,31 +197,17 @@ drop-required).
 the format **whitelists `github.com`, `raw.githubusercontent.com`, and `gitlab.com`** alongside
 `cdn.modrinth.com`, so a jar hosted on any of those can be referenced **directly**, with no need to get
 it onto Modrinth itself. (Other launchers may widen the list, but these are the safe set.) Mapping the 12
-CF-only mods against that:
+CF-only mods against that — same rows as the license audit, with the actual sourcing path:
 
-- **Verified *not* cleanly on Modrinth (name-collision / version gaps):**
-  - `configured` — the Modrinth `configured` slug is a **different mod** (`fooeyround/Configured`, MIT,
-    server-side), not the pack's **MrCrayfish Configured** (LGPL, client-side config GUI, CF `457570`).
-    MrCrayfish's Configured isn't surfaced on Modrinth at all. Treat as not-on-Modrinth.
-  - `veil-lib` — the pinned **4.1.3** jar (sha1 `36699c…`) is **404 on Modrinth's global hash index**;
-    FoundryMC's official Veil on Modrinth went **4.1.2 → 4.1.4** and never published 4.1.3. The pack's
-    "Veil Lib" (CF `1517006`) is a separate distribution/fork (the audit's "same terms as the gtmogs
-    fork"). **Don't swap it for upstream Veil** — that changes the jar and risks the pinned Sable-bridge
-    quartet (`CLAUDE.md`).
-- **Not on Modrinth, GPL/LGPL/MIT → self-mirror to our own whitelisted host (legal):** the **ldtteam
-  family** (`minecolonies`, `blockui`, `structurize`, `domum-ornamentum`, `multi-piston`,
-  `minecolonies-compatibility`, `minecolonies-tweaks`), plus `veil-lib` (LGPL) and MrCrayfish's
-  `configured` (LGPL). MineColonies *has* a Modrinth page but it only carries **1.18.2**; for 1.21.1
-  ldtteam ships via CurseForge + their own maven, and **does not attach jars to GitHub releases** — so for
-  these there's no upstream whitelisted URL to point at, and the path is to **mirror the jars to our own
-  GitHub release** (legal under GPL/LGPL: unmodified + source link).
-- **Possibly referenceable from the author's own release (verify jar assets):** `dynamic-trees-ars-nouveau`
-  (MIT) publishes GitHub **releases** (DynamicTreesTeam) — if those attach jars, point at them directly;
-  else self-mirror (MIT, unconditional).
-- **The 2 ARR holdouts — the real blockers:** `stylecolonies` (public ldtteam GitHub repo, but ARR jar)
-  and `towntalk` — not rehostable without author permission; both optional addons. `towntalk` has a
-  Modrinth-hosted near-equivalent, **Talking Colonists (Minecolonies Addon)** (1.21.1, CoFH "don't be a
-  jerk" license) — swap tracked in **#342**. `stylecolonies`: drop or ask permission.
+| Mod(s) | License | Modrinth-compatible source |
+|---|---|---|
+| minecolonies, blockui, structurize, domum-ornamentum, multi-piston | GPL-3.0 | **Self-mirror** — not on Modrinth (page is 1.18.2 only); ldtteam ships CF + own maven, **no release jars**. Mirror to our own GitHub release (unmodified + source link) |
+| minecolonies-compatibility, minecolonies-tweaks | GPL-3.0 | **Self-mirror** — same; verify source repos public first |
+| configured (MrCrayfish) | LGPL-3.0 | **Self-mirror** — Modrinth `configured` is a *different* mod (`fooeyround`, MIT, server-side); MrCrayfish's isn't on Modrinth |
+| veil-lib | LGPL-3.0 | **Self-mirror, don't swap** — pinned 4.1.3 fork; not on Modrinth (upstream Veil skips 4.1.3→goes 4.1.2/4.1.4); swapping risks the Sable bridge (`CLAUDE.md`) |
+| dynamic-trees-ars-nouveau | MIT | **Own GitHub release** (DynamicTreesTeam) if it attaches jars — verify; else self-mirror (unconditional) |
+| stylecolonies | ARR | **Blocked** — drop or ask author permission |
+| towntalk | ARR | **Substitute** — Talking Colonists (Minecolonies Addon), on Modrinth, 1.21.1 (#342) |
 
 **Net:** still no hard dead-end — the permissively-licensed mods can always be **self-mirrored** to a
 whitelisted host, so the only true blockers are the 2 optional ARR addons. But the cost is higher than a
