@@ -1,7 +1,7 @@
 {
-  "cluster_size": 32,
-  "density": 0.2,
-  "weight": 55,
+  "cluster_size": 24,
+  "density": 0.125,
+  "weight": 16,
   "layer": "stone",
   "dimension_filter": [
     "minecraft:overworld"
@@ -13,12 +13,12 @@
         "absolute": 0
       },
       "max_inclusive": {
-        "absolute": 80
+        "absolute": 64
       }
     }
   },
   "discard_chance_on_air_exposure": 0.0,
-  "biomes": "#pcmc:vein_zinc",
+  "biomes": "#pcmc:vein_copper_forest",
   "generator": {
     "type": "gtmogs:classic",
     "primary": {
@@ -29,7 +29,7 @@
             "tag": "minecraft:stone_ore_replaceables"
           },
           "state": {
-            "Name": "create:zinc_ore"
+            "Name": "minecraft:copper_ore"
           }
         },
         {
@@ -38,7 +38,7 @@
             "tag": "minecraft:deepslate_ore_replaceables"
           },
           "state": {
-            "Name": "create:deepslate_zinc_ore"
+            "Name": "minecraft:deepslate_copper_ore"
           }
         }
       ],
@@ -52,7 +52,7 @@
             "tag": "minecraft:stone_ore_replaceables"
           },
           "state": {
-            "Name": "create_ironworks:tin_ore"
+            "Name": "minecraft:copper_ore"
           }
         },
         {
@@ -61,7 +61,7 @@
             "tag": "minecraft:deepslate_ore_replaceables"
           },
           "state": {
-            "Name": "create_ironworks:deepslate_tin_ore"
+            "Name": "minecraft:deepslate_copper_ore"
           }
         }
       ],
@@ -98,7 +98,7 @@
             "tag": "minecraft:stone_ore_replaceables"
           },
           "state": {
-            "Name": "tfmg:nickel_ore"
+            "Name": "minecraft:copper_ore"
           }
         },
         {
@@ -107,7 +107,7 @@
             "tag": "minecraft:deepslate_ore_replaceables"
           },
           "state": {
-            "Name": "tfmg:deepslate_nickel_ore"
+            "Name": "minecraft:deepslate_copper_ore"
           }
         }
       ],

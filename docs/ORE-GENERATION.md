@@ -73,7 +73,8 @@ the consolidated ore-gen tracker.
   stay modest while a mega find is the regional jackpot.
 - **`weight`** — relative chance this vein wins a roll *against other veins eligible at that spot*.
   Commons 55–80, mid 30–45, rare 10–20.
-- **`density`** — 0–1 fill probability inside the vein body. Commons ~0.4, rare ~0.2.
+- **`density`** — 0–1 fill probability inside the vein body. Commons ~0.2, rare ~0.1, megas 0.25
+  (all densities were halved across the board in v0.7.1 — "veins should be lighter").
 - **`height_range`** — `{ "height": { "type": "uniform"|"trapezoid", "min_inclusive"/"max_inclusive": {"absolute": N} } }`. Match real ore depth. ⚠️ Keep the band **under the region's terrain surface**: anchors rolled above ground have no stone to replace and place nothing, silently wasting that share of the vein's rolls (bauxite at 32…128 under ~y70 jungle canopy was the proven case — effectively unfindable until re-banded to 8…72 in v0.7.1). Above-surface bands are legitimate only where terrain actually reaches them (emerald in peaks).
 - **`dimension_filter`** — `["minecraft:overworld"]` for now; the engine also supports nether/end via the `layer` field (`stone`/`deepslate`/`netherrack`/`endstone`).
 - **`biomes`** — a single biome tag (e.g. `#pcmc:vein_iron`) keeps the vein regional. **Don't**
@@ -83,7 +84,7 @@ the consolidated ore-gen tracker.
 ### Mega veins (v0.7.1)
 
 A second rarity class on the same grid: `iron_mega` (mountains), `copper_mega` (badlands) and
-`coal_mega` (taiga/forest) are `cluster_size` 120 / `density` 0.5 / `y_radius` 8 bodies whose low
+`coal_mega` (taiga/forest) are `cluster_size` 120 / `density` 0.25 / `y_radius` 8 bodies whose low
 `weight` makes them win only ~8% of their region's anchors — roughly **one per ~300 chunks** of
 region (grid 5 ⇒ one anchor per 25 chunks). They're deliberate trade/logistics anchors: a find worth
 building an outpost and a route around (#296). Each points at an **alias biome tag**
@@ -229,25 +230,43 @@ biome tag (edit the tag to move a vein). **Composition** is primary → secondar
 | gold | savanna / badlands | -48…40 | 40 | 45 | gold → nickel → copper → zinc |
 | redstone | desert | -60…-8 | 40 | 45 | redstone → redstone → lithium → lapis |
 | lapis | snowy | -32…40 | 35 | 35 | lapis → lapis → iron → lithium |
-| diamond | jungle (deep) | -60…-16 | 30 | 15 | diamond → diamond → jade → emerald |
+| diamond | jungle (deep) | -60…-16 | 30 | 8 | diamond → diamond → jade → emerald |
 | emerald | mountain peaks | 64…256 | 20 | 20 | emerald → emerald → gold → mithril |
 | zinc | plains / savanna | 0…80 | 32 | 55 | zinc → tin → copper → nickel |
 | tin | hills / plains | 0…96 | 32 | 55 | tin → zinc → iron → copper |
 | silver | hills / rocky mtns | -32…48 | 40 | 15 | silver → lead → nickel → palladium |
 | lead | hills / mountains | -32…64 | 40 | 40 | lead → zinc → silver → copper |
 | lithium | desert / badlands | -48…16 | 40 | 35 | lithium → salt → redstone → nickel |
-| salt | ocean / beach | 0…72 | 24 | 25 | salt → salt → lithium → salt |
+| salt | ocean / beach | 0…72 | 24 | 165 | salt → salt → lithium → salt |
 | nickel | savanna / mountain | -32…48 | 40 | 40 | nickel → iron → gold → palladium |
 | magnetite | hills / mountains | 0…72 | 40 | 40 | magnetite → iron → gold → nickel |
 | thorium | badlands / volcanic | 0…48 | 30 | 15 | thorium → thorium → thorium → lithium |
 | mithril | special (Terralith) | -48…16 | 30 | 10 | mithril → mithril → silver → emerald |
-| jade | jungle | -24…48 | 40 | 30 | jade → jade → emerald → diamond |
-| palladium | mountains | -56…24 | 30 | 12 (density 0.3) | palladium → palladium → nickel → silver |
+| jade | jungle | -24…48 | 40 | 22 | jade → jade → emerald → diamond |
+| palladium | mountains | -56…24 | 30 | 12 (density 0.15) | palladium → palladium → nickel → silver |
 | bauxite | jungle / savanna | 8…72 | 32 | 30 | bauxite → iron → zinc → gold |
 | lignite | swamp / plains | 8…72 | 32 | 45 | lignite → fireclay → coal → lithium |
 | iron_mega | mountains (alias of iron) | -24…64 | 120 | 20 | iron → iron → magnetite → nickel |
 | copper_mega | badlands (alias of copper) | -16…112 | 120 | 14 | copper → copper → iron → gold |
 | coal_mega | taiga / forest (alias of coal) | 0…112 | 120 | 7 | coal → coal → lithium → iron |
+
+**Satellite veins (v0.7.1 retune)** — small *pure* veins (all four bands the same ore, size 20–28,
+density 0.1–0.125) whose only job is adding a region-specific percentage without touching the global
+weights. Five share the warm-ocean tag (warm/lukewarm oceans + beaches), four the deep/cold-ocean
+tag (deep, deep_lukewarm, cold, deep_cold, frozen, deep_frozen); plain temperate `ocean` stays
+salt-only.
+
+| Vein | Region | Y-band | Weight | Share of region |
+|---|---|---|---|---|
+| copper/zinc/lead/gold/silver_warm_ocean | warm oceans + coasts | -16…40 | 11 each | 5% each (salt 75%) |
+| nickel/copper/palladium_deep_ocean | deep/cold oceans | -16…35 | 10 each | 5% each (salt 82%) |
+| mithril_deep_ocean | deep/cold oceans | -16…35 | 5 | 2.5% |
+| gold_forest / copper_forest | forests | 0…64 | 5 / 16 | 5% / 15% |
+| gold_hills | hills | -16…64 | 8 | 5% |
+| diamond_mountains | mountains | -60…-8 | 6 | 2% |
+| redstone_mountains | mountains | -32…40 | 22 | 8% |
+| lapis_jungle | jungle | -24…48 | 15 | 20% |
+| iron_swamp | swamps (swamp biomes only, not lignite's plains) | 0…64 | 5 | 10% |
 
 > **v0.7.0:** the uranium vein was removed with Create: Nuclear (#289) — thorium and lead absorbed its
 > slots in their own chains. Salt was deliberately shrunk (24/25) from its early oversized preset. The

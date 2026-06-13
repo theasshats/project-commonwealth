@@ -29,6 +29,20 @@ expedition over. Ore generation only affects newly generated chunks.
   enormous deposit at roughly one per three hundred chunks of its region — a find worth building a
   mining outpost and a trade route around.
 
+### Regional mix retune
+
+- Veins are lighter across the board: ore density inside every vein is halved, so a deposit fills
+  less of its footprint. Where veins spawn and how often is unchanged.
+- Oceans are no longer salt-only. Warm and lukewarm oceans and coasts carry very rare copper, zinc,
+  lead, gold, and silver deposits (5% of finds each); deep, cold, and frozen oceans carry nickel,
+  copper, and palladium (5% each) plus a trace of mithril (2.5%). Salt remains the dominant ocean
+  find.
+- Forests gain gold (5%) and copper (15%) alongside coal; hills gain gold (5%); mountains gain
+  diamond (2%) and redstone (8%).
+- Jungles trade some jade and diamond for lapis: lapis is now 20% of jungle finds, with jade and
+  diamond each down about ten points.
+- Swamps gain iron (10% of finds) alongside lignite.
+
 ### World generation
 
 - Archwood forests are much rarer. Ars Nouveau's default biome weight handed a single biome

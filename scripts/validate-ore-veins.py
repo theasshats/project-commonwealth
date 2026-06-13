@@ -125,17 +125,19 @@ def region_shares(weights, compositions):
     # region -> member veins, mirrors the vein_* tag files; update when regions move.
     # Singletons get their own rows: every anchor in that region is that vein.
     regions = {
-        "hills": ["tin", "lead", "magnetite", "silver"],
-        "mountains": ["iron", "lead", "magnetite", "nickel", "emerald", "palladium", "iron_mega"],
+        "hills": ["tin", "lead", "magnetite", "silver", "gold_hills"],
+        "mountains": ["iron", "lead", "magnetite", "nickel", "emerald", "palladium", "iron_mega", "diamond_mountains", "redstone_mountains"],
         "badlands": ["copper", "gold", "lithium", "thorium", "copper_mega"],
-        "taiga/forest": ["coal", "coal_mega"],
+        "taiga": ["coal", "coal_mega"],
+        "forest": ["coal", "coal_mega", "gold_forest", "copper_forest"],
         "savanna": ["zinc", "gold", "nickel", "bauxite"],
         "plains": ["tin", "zinc", "lignite"],
         "desert": ["redstone", "lithium"],
-        "jungle": ["bauxite", "jade", "diamond"],
+        "jungle": ["bauxite", "jade", "diamond", "lapis_jungle"],
         "snowy [singleton]": ["lapis"],
-        "coasts [singleton]": ["salt"],
-        "swamps [singleton]": ["lignite"],
+        "warm oceans/coasts": ["salt", "copper_warm_ocean", "zinc_warm_ocean", "lead_warm_ocean", "gold_warm_ocean", "silver_warm_ocean"],
+        "deep/cold oceans": ["salt", "nickel_deep_ocean", "copper_deep_ocean", "palladium_deep_ocean", "mithril_deep_ocean"],
+        "swamps": ["lignite", "iron_swamp"],
         "Terralith specials [singleton]": ["mithril"],
     }
     print("\nper-region shares (anchor every grid^2 chunks; grid 5 = 25).")
