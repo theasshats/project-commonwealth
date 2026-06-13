@@ -1885,7 +1885,7 @@ metafile = true
 
 [[files]]
 file = "mods/gtmogs.pw.toml"
-hash = "9c97b31f1ec9a095ea2aff45730835bd521a5ed955c8134f6cc50394de32b6e6"
+hash = "f1cda78c4b0027e93f452b2b7110aa33e4fcc56c6c0ccdacaeebc95f70a85bb4"
 metafile = true
 
 [[files]]
