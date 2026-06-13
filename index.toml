@@ -61,8 +61,12 @@ file = "kubejs/assets/inventoryprofilesnext/textures/gui/overlay_new.png"
 hash = "cce47379706d8eb5075a66e9710353bc659971b4f26f1fe1e9813956fdfe0ee4"
 
 [[files]]
+file = "kubejs/client_scripts/hide-default-tacz-jei.js"
+hash = "d6d76fbcef53296769fc44e39ca0e9230bc58d1c888d6cbba7cd767076e4eabc"
+
+[[files]]
 file = "kubejs/client_scripts/mining-speed-tooltip.js"
-hash = "aad40ea1cf31d88a0ec23cfc55b9e279a51db47cb84f5764c191c63c24a169b1"
+hash = "203899fae6626c0b7bb4f54aad3c94b82fd549e6dd769c9bc428c1fdc820b238"
 
 [[files]]
 file = "kubejs/data/born_in_chaos_v1/neoforge/biome_modifier/infected_deepslate_diamond_ore_feature_biome_modifier.json"
@@ -103,6 +107,14 @@ hash = "5173d39e99585f9346d4b60f32c39f53abdd9f6d76186506406420da2fa04d70"
 [[files]]
 file = "kubejs/data/create_armorer/data/blocks/create_workbench.json"
 hash = "2fe0d845b737b1648e9bcc193d5584bb4f1b0faeb411977a664099ac27476714"
+
+[[files]]
+file = "kubejs/data/create_armorer/data/guns/cannon_40mm_salamander_data.json"
+hash = "5a9dec638b3863517002ed4cff16e276c0c677651575a5e0971cb6f05f354bbe"
+
+[[files]]
+file = "kubejs/data/create_armorer/data/guns/gl_revolver_devastator_data.json"
+hash = "917821eefaa6d733721aeaff2f1904ad98ab0ded34382229ad7f20a4af876e27"
 
 [[files]]
 file = "kubejs/data/create_ironworks/neoforge/biome_modifier/deepslate_tin_ore_biome_modifier.json"
@@ -818,7 +830,7 @@ hash = "cd82b7d39d0aabec0160decce26d25daa3a36a700e6215042d48b2f13bfa2555"
 
 [[files]]
 file = "kubejs/server_scripts/mining-hunger.js"
-hash = "744b4b6cf5ae217e448c8229439437d35bf87fb8530358e3008f5d2b11bcc118"
+hash = "e0f92357225e1e426135025060c8b78bf46b120e1d9ef998e5c4a98c3b63c8bc"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/00-create-ify.js"
@@ -1007,6 +1019,10 @@ hash = "83257926e2952d7b5da23a097381c435b5698a9f94f19423a802ece9eb1ebfd9"
 [[files]]
 file = "kubejs/startup_scripts/01-intermediate-parts.js"
 hash = "91a9288b4c6589ecb3c41e05f23c7ae4a79facfe6453bf8e5d0c507e2c41c7bf"
+
+[[files]]
+file = "kubejs/startup_scripts/hide-default-tacz-creative.js"
+hash = "380bbbedb2ddc7336b526aebcc8053a8aa5f4956ebfac0c1be31a07b671a5544"
 
 [[files]]
 file = "mods/accelerated-decay.pw.toml"
