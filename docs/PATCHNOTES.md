@@ -31,8 +31,9 @@ expedition over. Ore generation only affects newly generated chunks.
 
 ### Regional mix retune
 
-- Veins are lighter across the board: ore density inside every vein is halved, so a deposit fills
-  less of its footprint. Where veins spawn and how often is unchanged.
+- Veins are lighter: ore density inside ordinary veins is halved, so a deposit fills less of its
+  footprint. Where veins spawn and how often is unchanged, and the rare mega veins stay as dense as
+  before.
 - Oceans are no longer salt-only. Warm and lukewarm oceans and coasts carry very rare copper, zinc,
   lead, gold, and silver deposits (5% of finds each); deep, cold, and frozen oceans carry nickel,
   copper, and palladium (5% each) plus a trace of mithril (2.5%). Salt remains the dominant ocean

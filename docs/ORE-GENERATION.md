@@ -73,8 +73,9 @@ the consolidated ore-gen tracker.
   stay modest while a mega find is the regional jackpot.
 - **`weight`** — relative chance this vein wins a roll *against other veins eligible at that spot*.
   Commons 55–80, mid 30–45, rare 10–20.
-- **`density`** — 0–1 fill probability inside the vein body. Commons ~0.2, rare ~0.1, megas 0.25
-  (all densities were halved across the board in v0.7.1 — "veins should be lighter").
+- **`density`** — 0–1 fill probability inside the vein body. Commons ~0.2, rare ~0.1 (regular-vein
+  densities were halved in v0.7.1 — "veins should be lighter"); **megas stay at 0.5** (they're the
+  deliberate jackpot — kept dense on purpose).
 - **`height_range`** — `{ "height": { "type": "uniform"|"trapezoid", "min_inclusive"/"max_inclusive": {"absolute": N} } }`. Match real ore depth. ⚠️ Keep the band **under the region's terrain surface**: anchors rolled above ground have no stone to replace and place nothing, silently wasting that share of the vein's rolls (bauxite at 32…128 under ~y70 jungle canopy was the proven case — effectively unfindable until re-banded to 8…72 in v0.7.1). Above-surface bands are legitimate only where terrain actually reaches them (emerald in peaks).
 - **`dimension_filter`** — `["minecraft:overworld"]` for now; the engine also supports nether/end via the `layer` field (`stone`/`deepslate`/`netherrack`/`endstone`).
 - **`biomes`** — a single biome tag (e.g. `#pcmc:vein_iron`) keeps the vein regional. **Don't**
@@ -84,7 +85,7 @@ the consolidated ore-gen tracker.
 ### Mega veins (v0.7.1)
 
 A second rarity class on the same grid: `iron_mega` (mountains), `copper_mega` (badlands) and
-`coal_mega` (taiga/forest) are `cluster_size` 120 / `density` 0.25 / `y_radius` 8 bodies whose low
+`coal_mega` (taiga/forest) are `cluster_size` 120 / `density` 0.5 / `y_radius` 8 bodies whose low
 `weight` makes them win only ~8% of their region's anchors — roughly **one per ~300 chunks** of
 region (grid 5 ⇒ one anchor per 25 chunks). They're deliberate trade/logistics anchors: a find worth
 building an outpost and a route around (#296). Each points at an **alias biome tag**
