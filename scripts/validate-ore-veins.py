@@ -137,7 +137,6 @@ def region_shares(weights, compositions):
         "coasts [singleton]": ["salt"],
         "swamps [singleton]": ["lignite"],
         "Terralith specials [singleton]": ["mithril"],
-        "dripstone/deep_dark pockets [singleton]": ["palladium"],
     }
     print("\nper-region shares (anchor every grid^2 chunks; grid 5 = 25).")
     print("ore output model: bands P/S/B/Sp = 3/3/2/1 of 9 layers (between/sporadic are engine-")

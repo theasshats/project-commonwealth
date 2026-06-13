@@ -38,7 +38,7 @@ hash = "abe2744c46c81c28ef0bee5cc5cbf63c6982ee589f54ec06c9b31d258f841051"
 
 [[files]]
 file = "config/gtmogs.yaml"
-hash = "139b9efbbd940d797a0abc5673c040f14081853477cfb7a86a46cd9a7d9dd534"
+hash = "1caabd1805deea78f724bc3ad0e684f8526571cab359af3ea5bb910b097187ca"
 
 [[files]]
 file = "config/immersivepaintings.json"
@@ -546,7 +546,7 @@ hash = "74964478dd9be211c1d7a45146a3abc3f9dd7f8455f950ef3c39aa9d12302735"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/palladium.json"
-hash = "adc244492f30402b21d0830da2130f27498c571ab9fe134f96f39301420cb112"
+hash = "c0747317b8aaf932faf25cf878b5ba35c8cc776cd7e237dbc0088e401f0d0da3"
 
 [[files]]
 file = "kubejs/data/pcmc/gtmogs/ore_vein/redstone.json"
@@ -670,7 +670,7 @@ hash = "92b4906a9b9aeb3c3d92474e8fef13be557f88a1fb45eced8fba52e481cf34d3"
 
 [[files]]
 file = "kubejs/data/pcmc/tags/worldgen/biome/vein_palladium.json"
-hash = "bc23c67b515bc789a978c01a4765fbc3642e4d0fb1543a5d7fcf9b3659c503e9"
+hash = "7cfba4135b5d57f24187386754e157c5e4d7176fcdd1fa2ef81886eaffbfb45b"
 
 [[files]]
 file = "kubejs/data/pcmc/tags/worldgen/biome/vein_redstone.json"
@@ -1885,7 +1885,7 @@ metafile = true
 
 [[files]]
 file = "mods/gtmogs.pw.toml"
-hash = "f1cda78c4b0027e93f452b2b7110aa33e4fcc56c6c0ccdacaeebc95f70a85bb4"
+hash = "68e7c07f9614741ed75a4d3e2ec5877d4fbf5a71c3f18823ed155f0b133252b4"
 metafile = true
 
 [[files]]
@@ -2705,12 +2705,12 @@ metafile = true
 
 [[files]]
 file = "mods/xaeros-minimap.pw.toml"
-hash = "9a60aff89f6c8f896c7e4c1d6132fa4aa9ef986f576132191ba263e4ad39b651"
+hash = "c66f08eac85d2c685625b2851c6967db9d94c516f1228d3533634f517f2a1b20"
 metafile = true
 
 [[files]]
 file = "mods/xaeros-world-map.pw.toml"
-hash = "c59ee2266db82da66bc7251471fe3171117f386777c4f11582ddd325c233af4d"
+hash = "bdfc8ca72a410e304aaafec4d89c45fdf8d720dd8fa9a5c2384b9cdaf4d32e4b"
 metafile = true
 
 [[files]]

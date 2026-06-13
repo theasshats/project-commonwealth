@@ -1,5 +1,5 @@
 name = "Gregtech: Modern Ore Generation Standalone"
-filename = "gtmogs-1.21.1-1.0.6-pcmc.1.jar"
+filename = "gtmogs-1.21.1-1.0.6-pcmc.4.jar"
 side = "both"
 # PCMC fork build (theasshats/gtmogs, branch pcmc/main): upstream 1.0.6 +
 # the Xaero WM 1.40+ compat patch (WM 1.40.0 deleted the ModSettings waypoint fields
@@ -10,6 +10,6 @@ side = "both"
 pin = true
 
 [download]
-url = "https://github.com/theasshats/gtmogs/releases/download/1.0.6-pcmc.1/gtmogs-1.21.1-1.0.6-pcmc.1.jar"
+url = "https://github.com/theasshats/gtmogs/releases/download/1.0.6-pcmc.4/gtmogs-1.21.1-1.0.6-pcmc.4.jar"
 hash-format = "sha512"
-hash = "1e0a983a9f97a6c857a9a5130c2e41043b272ef11189b505faa302b39055b03059cfd967e667f0c547e4bab0f871643649c1ea736ed74eed5d65908b78f1d02a"
+hash = "f14cfa0ea88f15b62ae4bbfabf784667176a3e88d59d38d586d02e5bfbcdebed9cb5de80a4c5cf914fef5ec5133d20986911a13f8aff6e50f71051b72a32e240"

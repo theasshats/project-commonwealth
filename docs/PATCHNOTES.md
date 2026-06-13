@@ -37,10 +37,14 @@ expedition over. Ore generation only affects newly generated chunks.
 
 ### Mods
 
-- Prospected ore veins draw on Xaero's maps again, and the vein-layer buttons are back on the
-  fullscreen map. Xaero's World Map 1.40 removed internals the ore-vein map integration read,
-  which silently disabled the whole layer; the pack now ships a patched build of the ore
-  generation mod that no longer depends on them, so the map mods stay current.
+- Prospected ore veins now draw on Xaero's maps, with a toggle button on the fullscreen map —
+  it turns out this feature had never actually worked: the ore generation mod shipped the map
+  renderers but never registered them. The pack now runs its own maintained build of the mod,
+  which wires the integration up properly and keeps the map mods current.
+- Ore veins now follow the surface landscape. Vein eligibility used to be decided by the
+  underground cave biome at depth, which silently blanked or hijacked cells under every region;
+  it is now decided by the biome you see on the surface. Palladium, which previously leaned on
+  cave biomes, is re-homed to mountains with richer deposits. Applies to newly generated chunks.
 - Diet - AppleSeed Edition updates to 2.1.0 and installs from Modrinth again. The dedicated-server
   startup fix the pack had carried as a custom build is in the official release, which also adds a
   filter to the automatic food-group calculator.

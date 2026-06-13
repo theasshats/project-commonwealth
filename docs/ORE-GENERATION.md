@@ -115,9 +115,14 @@ tags (verified), so one vanilla tag covers all the matching Terralith biomes too
 Use a **specific biome ID** only for special cases (e.g. diamonds *only* in `terralith:amethyst_rainforest`).
 You can also list several: `"biomes": ["terralith:alpine_highlands", "terralith:rocky_mountains"]`.
 
-> **Underground = different biomes (important).** MC 1.21 biomes are 3D. GTMOGS samples the biome
-> at the **vein's Y position** (`getUncachedNoiseBiome`), so the *depth* biome decides eligibility,
-> not the surface. Below ground the world is mostly **cave biomes** (`dripstone_caves`/`lush_caves`/
+> **Underground = different biomes (important).** MC 1.21 biomes are 3D. stock GTMOGS samples the 3D noise biome
+> at the vein center's **y=0** (`getUncachedNoiseBiome` — corrected from the earlier "vein's Y" read by
+> the fork's yield-math analysis), so cave pockets at depth decide eligibility, not the surface.
+> **Since gtmogs `1.0.6-pcmc.3` the pack flips `sampleSurfaceBiome: true` (+ `surfaceBiomeSampleY: 200`)
+> in `config/gtmogs.yaml`: the column's surface biome decides** — "the ore under a mountain is the
+> mountain's ore" is real now. Cave-biome tag entries therefore match nothing (palladium was re-homed
+> to mountains-only, density-compensated). Skylands caveat: if playtest shows dead cells under
+> Terralith skylands, tune the sample Y — no rebuild needed. Below ground the world is mostly **cave biomes** (`dripstone_caves`/`lush_caves`/
 > `deep_dark` + Terralith `#terralith:reference/cave`, Galosphere, Northstar, Quark…), pooled into
 > `#c:is_underground`. **Current choice (strict regional):** `vein_*` tags list **only their region's
 > biomes** — no `#c:is_underground` / generic-cave fallback. A vein generates where its surface biome
@@ -237,7 +242,7 @@ biome tag (edit the tag to move a vein). **Composition** is primary → secondar
 | thorium | badlands / volcanic | 0…48 | 30 | 15 | thorium → thorium → thorium → lithium |
 | mithril | special (Terralith) | -48…16 | 30 | 10 | mithril → mithril → silver → emerald |
 | jade | jungle | -24…48 | 40 | 30 | jade → jade → emerald → diamond |
-| palladium | mountains / deep_dark | -56…24 | 30 | 12 | palladium → palladium → nickel → silver |
+| palladium | mountains | -56…24 | 30 | 12 (density 0.3) | palladium → palladium → nickel → silver |
 | bauxite | jungle / savanna | 8…72 | 32 | 30 | bauxite → iron → zinc → gold |
 | lignite | swamp / plains | 8…72 | 32 | 45 | lignite → fireclay → coal → lithium |
 | iron_mega | mountains (alias of iron) | -24…64 | 120 | 20 | iron → iron → magnetite → nickel |
