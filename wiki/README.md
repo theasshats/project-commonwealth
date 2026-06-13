@@ -4,7 +4,7 @@ Source for the **player-facing wiki**. These are plain-Markdown guides written f
 not collaborators — keep them in the professional, no-emoji house style (see `CLAUDE.md`).
 
 This folder is a staging ground. It is not shipped in the pack (it is `.packwizignore`'d) and
-is not yet wired into the site. The plan to render these on `pcmc.ishimura.xyz` is tracked
+is not yet wired into the site. The plan to render these on `www.project-commonwealth.com` is tracked
 in the wiki issue. Until then, add pages here as Markdown and link them from this README.
 
 ## Pages

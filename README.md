@@ -12,7 +12,7 @@ It's a **cooperative PvPvE** pack for a small crew (~10), **scarcity-driven**: o
 
 ## For players
 
-**Everything players need is on the website — [pcmc.ishimura.xyz](https://pcmc.ishimura.xyz).** The download, live server status, how to join, the rules, and the FAQ all live there; you shouldn't need to touch this repo at all. Reporting a problem will go through the site too (no GitHub account needed — see #77). The steps below are the same ones the site walks you through, kept here as the canonical reference.
+**Everything players need is on the website — [www.project-commonwealth.com](https://www.project-commonwealth.com).** The download, live server status, how to join, the rules, and the FAQ all live there; you shouldn't need to touch this repo at all. Reporting a problem will go through the site too (no GitHub account needed — see #77). The steps below are the same ones the site walks you through, kept here as the canonical reference.
 
 **Community:** join the Discord — [discord.gg/AxfjYbQ86K](https://discord.gg/AxfjYbQ86K).
 
@@ -158,7 +158,7 @@ If the editor doesn't work for you (no Windows machine, can't install Java, what
 The player-facing site lives in its **own repo** now —
 [`theasshats/pcmc-site`](https://github.com/theasshats/pcmc-site)
 (split out of this repo's former `site/` directory). It's served at
-**`pcmc.ishimura.xyz`**: how to join, what's in
+**[`www.project-commonwealth.com`](https://www.project-commonwealth.com)**: how to join, what's in
 the pack, rules, FAQ, a live server-status badge, and a download button that
 auto-resolves to the latest release's Prism installer (so it never points at a
 dead/stale asset). A player bug/issue report form is planned (#77) so problems
